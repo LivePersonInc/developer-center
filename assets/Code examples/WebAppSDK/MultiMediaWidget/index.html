@@ -1,0 +1,235 @@
+<html lang="en" ng-app="example2">
+    <head>
+        <meta charset="utf-8">
+        <title>LivePerson LE Widget Menu</title>
+        <script src="bower_components/angular/angular2.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+        <script src="bower_components/json-formatter/dist/json-formatter.js"></script>
+        <script src="js/example2.js"></script>
+        <script src="js/example3.js"></script>
+        <link rel="stylesheet" href="css/example2.css">
+        <link rel="stylesheet" href="bower_components/json-formatter/dist/json-formatter.css">
+        <link rel="stylesheet" href="css/bootstrap-slate.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+        <style>
+            /* centered columns styles */
+            .row-centered {
+                text-align:center;
+            }
+            .col-centered{
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body ng-controller="MainCtrl">
+        <div class="container">
+              <div class="row row-centered">
+                <div class="col-md-12 page-header">
+                  <h1>LivePerson LE Widget</h1>
+                </div>
+              </div>
+                <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#myModal">Send HTML Code</button>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+              <br />
+              <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#myModal2">Send Image</button>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+              <br />
+              <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#myModal3">Send Youtube Video</button>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+              <br />
+              <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#myModal4">Send File</button>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send HTML Code</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row row-centered">
+                <div class="col-md-12 col-centered">
+                  <p><span class="badge">1</span> Paste your code</p>
+                        <div class="commandBox">
+                            <textarea id="tarea" name="textarea" rows="5" ng-model="commandInput" class="commandInput"></textarea><br /><br />
+                            <p><span class="badge">2</span> Click to send your code</p>
+                    </div>
+                </div>
+                </div>
+                <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                         <button ng-click="command($event)" class="commandButton btn btn-block btn-default" >Send Code</button><br />
+                        <p><span class="badge">Tip</span> Press the 'Enter' key to send message to visitor </p>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+      </div>
+      <div class="modal-footer"> 
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Image -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send Image</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row row-centered">
+                <div class="col-md-12 col-centered">
+                  <p><span class="badge">1</span> Paste the image URL</p>
+                        <div class="commandBox">
+                            <textarea id="tarea2" name="textarea" rows="5" ng-model="commandInput" class="commandInput"></textarea><br /><br />
+                            <p><span class="badge">2</span> Click to send your image</p>
+                    </div>
+                </div>
+                </div>
+                <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <button ng-click="command2($event)" class="commandButton btn btn-block btn-default">Send Image</button><br />
+                        <p><span class="badge">Tip</span> Press the 'Enter' key to send message to visitor </p>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal Video -->
+<div id="myModal3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send Video</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row row-centered">
+                <div class="col-md-12 col-centered">
+                  <p><span class="badge">1</span> Paste the youtube video URL</p>
+                        <div class="commandBox">
+                            <textarea id="tarea3" name="textarea" rows="5" ng-model="commandInput" class="commandInput"></textarea><br /><br />
+                            <p><span class="badge">2</span> Click to send your video</p>
+                    </div>
+                </div>
+                </div>
+                <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <button ng-click="command3($event)" class="commandButton btn btn-block btn-default">Send Video</button><br />
+                        <p><span class="badge">Tip</span> Press the 'Enter' key to send message to visitor </p>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal File -->
+<div id="myModal4" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send File</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row row-centered">
+                <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                    <!--Add a file picker for the user to start the upload process -->
+                        <input type="file" id="filePicker" style="display: none" />
+                        <input type="button" id="authorizeButton" style="display: none" value="Authorize" />
+                         <br /> <div id="fileURL2"></div> <br />
+                         <div id="fileURL" style="display: none;"></div>
+                    </div>
+                    <div class="col-md-4 col-centered"></div>
+                </div>
+                <div class="row row-centered">
+                    <div class="col-md-4 col-centered"></div>
+                    <div class="col-md-4 col-centered">
+                        <button ng-click="command4($event)" class="commandButton btn btn-block btn-default">Send File</button><br />
+                        <p><span class="badge">Tip</span> Press the 'Enter' key to send message to visitor </p>
+                  </div>
+                  <div class="col-md-4 col-centered"></div>
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<script>
+    $(".commandButton").click(function() {
+        document.getElementById("tarea").value = '';
+        document.getElementById("tarea2").value = '';
+        document.getElementById("tarea3").value = '';
+        document.getElementById("fileURL").value = '';
+        document.getElementById("fileURL2").value = '';
+        //$( ".lpview_send_msg_button " ).trigger( "click" );
+    });
+</script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+
+<h2>{{ include.title }} </h2>
+{% if include.type == 'req'%}
+<span class="label label-warning">
+	<i class="fa fa-user" aria-hidden="true"></i>
+	<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+	<i class="fa fa-server" aria-hidden="true"></i>
+</span>
+{% endif %}
+{% if include.type == 'resp'%}
+<span class="label label-success"> 
+	<i class="fa fa-user" aria-hidden="true"></i>
+	<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+	<i class="fa fa-server" aria-hidden="true"></i>
+</span>
+{% endif %}
+{% if include.type == 'notif'%}
+<span class="label label-info"> 
+	<i class="fa fa-user" aria-hidden="true"></i>
+	<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+	<i class="fa fa-server" aria-hidden="true"></i>
+</span>
+{% endif %}

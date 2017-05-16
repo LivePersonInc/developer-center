@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "consumerId": {
+            "type": "string"
+        }
+    },
+    "required": ["consumerId"]
+}

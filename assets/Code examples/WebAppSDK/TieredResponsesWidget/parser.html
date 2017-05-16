@@ -1,0 +1,69 @@
+<!-- 
+
+    The following are instructions to using this parser:
+
+    -Export predefined content from Legacy for each category
+    -Combine the excel files into one. 
+    -If each category has a different max-depth, create "Title" columns for the absolute maximum depth and left-align the information such that the list builds out from left to right. 
+    -Expandable menus (categories and subcategories) should be denoted with an X in the first column of the excel file.
+    -Main categories should be on column 2 on a line of its own
+    -Subcategories be in the column of its respective level on a line of its own.
+    -Response titles should be on the same line as the response text itself
+    -All responses should be in the same column titled "Response Text"
+
+    For example:
+    
+    Is menus    Title       Title           Title           Title           Title               Response Text
+    X           Category
+    X                       Subcategory
+                                            Response-Title                                      Response
+    X                       Subcategory
+    X                                       Subcategory
+    X                                                       Subcategory
+                                                                            Response-Title      Response
+    X           Category
+                            Response-Title                                                      Response
+    X           Category
+    X                       Subcategory
+    X                                       Subcategory
+                                                            Response-Title                      Response
+
+
+    See player.js for more information on the actual code behind this.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Predefined Content Parser</title>
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/papaparse.min.js"></script>
+    <script src="js/player.js"></script>
+    <style>
+        textarea {
+            width: 300px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <input type="file" id="files" multiple>
+
+    <br>
+    <br>
+
+    <button id="submit-parse">Parse</button>
+
+    <br>
+    <br>
+    <textarea id="output" rows="10" cols="50">
+    </textarea>
+</body>
+
+</html>

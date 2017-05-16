@@ -1,0 +1,115 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Domain Discovery
+  description: Find the domain for service/account pair
+  version: "1.0.0"
+# the domain of the service
+host: api.liveperson.net
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /api/account/
+produces:
+  - application/json
+paths:
+  /{accountId}/service/{serviceName}/baseURI.json:
+    get:
+      summary: Single Domain Query
+      description: |
+        The Products endpoint returns information about the *Uber* products
+        offered at a given location. The response includes the display name
+        and other details about each product, and lists the products in the
+        proper display order.
+      parameters:
+        - name: accountId
+          in: path
+          description: account d
+          required: true
+          type: string
+        - name: serviceName
+          in: path
+          description: Longitude component of location.
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: version
+          required: true
+          type: number
+        - name: kuku
+          in: body
+          description: version
+          required: true
+          schema:
+            $ref: 'cm/consumerRequestConversation.json'
+      tags:
+        - Products
+      responses:
+        200:
+          description: An array of products
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Product:
+    type: object
+    properties:
+      product_id:
+        type: string
+        description: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
+      description:
+        type: string
+        description: Description of product.
+      display_name:
+        type: string
+        description: Display name of product.
+      capacity:
+        type: string
+        description: Capacity of product. For example, 4 people.
+      image:
+        type: string
+        description: Image URL representing the product.
+      image2:
+        $ref: "#/definitions/PriceEstimate"
+  PriceEstimate:
+    type: object
+    properties:
+      product_id:
+        type: string
+        description: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles
+      currency_code:
+        type: string
+        description: "[ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code."
+      display_name:
+        type: string
+        description: Display name of product.
+      estimate:
+        type: string
+        description: Formatted string of estimate in local currency of the start location. Estimate could be a range, a single number (flat rate) or "Metered" for TAXI.
+      low_estimate:
+        type: number
+        description: Lower bound of the estimated price.
+      high_estimate:
+        type: number
+        description: Upper bound of the estimated price.
+      surge_multiplier:
+        type: number
+        description: Expected surge multiplier. Surge is active if surge_multiplier is greater than 1. Price estimate already factors in the surge multiplier.
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

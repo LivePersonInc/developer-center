@@ -1,0 +1,106 @@
+{
+    "title": "Customer Infomration",
+    "description": "Customer Infomration",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "ctmrinfo",
+            "readonly": "true"
+        },
+        "auth": {
+            "$ref": "authinfo.json"
+        },
+        "info": {
+            "type": "object",
+            "properties": {
+                "cstatus": {
+                    "type": "string",
+                    "description" : "CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST."
+                },
+                "ctype": {
+                    "type": "string",
+                    "description" : "CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST"
+                },
+                "customerId": {
+                    "type": "string",
+                    "description" : "UNIQUE CUSTOMER IDENTIFIER"
+                },
+                "balance": {
+                    "type": "number",
+                    "description" : "THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE"
+                },
+                "socialId": {
+                    "type": "string",
+                    "description" : "SOCIAL ID OF YOUR CHOICE: FACEBOOK, TWITTER ETC..."
+                },
+                "imei": {
+                    "type": "string",
+                    "description" : "UNIQUE DEVICE OR PHONE IDENTIFIER"
+                },
+                "userName": {
+                    "type": "string",
+                    "description" : "CONSUMER NICKNAME OR USERNAME"
+                },
+                "companySize": {
+                    "type": "integer",
+                    "description" : "COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description" : "THE CUSTOMER'S COMPANY NAME"
+                },
+                "role": {
+                    "type": "string",
+                    "description" : "CONSUMER ROLE TITLE"
+                },
+                "lastPaymentDate": {
+                    "type": "object",
+                    "properties": {
+                        "day": {
+                            "type": "integer",
+                    "description" : ""
+                        },
+                        "month": {
+                            "type": "integer",
+                    "description" : ""
+                        },
+                        "year": {
+                            "type": "integer",
+                    "description" : ""
+                        }
+                    },
+                    "required": [
+                        "day",
+                        "month",
+                        "year"
+                    ]
+                },
+                "registrationDate": {
+                    "type": "object",
+                    "description" : "",
+                    "properties": {
+                        "day": {
+                            "type": "integer"
+                        },
+                        "month": {
+                            "type": "integer"
+                        },
+                        "year": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "day",
+                        "month",
+                        "year"
+                    ]
+                }
+            }
+        }
+    },
+    "required": [
+        "type",
+        "info"
+    ]
+}

@@ -1,0 +1,50 @@
+.result {
+    padding: 1em;
+    border: 1px solid #eee;
+    margin-bottom: 2em;
+    overflow: auto;
+}
+.dark {
+    background: #333;
+}
+.col2 {
+    width: 47%;
+    float: left;
+}
+.commandBox {
+    width: 97%;
+    margin-bottom: 10px;
+}
+.commandInput {
+    width: 70%;
+    width: calc(100% - 55px);
+}
+.commandButton {
+    width: 50px;
+}
+.getBox {
+    margin-right: 20px;
+}
+.getInput {
+    width: 70%;
+    width: calc(100% - 45px);
+}
+.getButton {
+    width: 40px;
+}
+.bindInput {
+    width: 60%;
+    width: calc(100% - 113px);
+}
+.bindButton {
+    width: 45px;
+}
+.unbindButton {
+    width: 58px;
+}
+@media only screen and (max-width:400px) {
+    .col2 {
+        width: 100%;
+        float: none;
+    }
+}

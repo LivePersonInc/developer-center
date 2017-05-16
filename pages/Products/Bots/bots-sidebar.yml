@@ -1,0 +1,23 @@
+- title: Bots
+      output: ga, qa
+      folderitems:
+      - title: Overview
+        url: /products-bots-overview.html
+        output: ga, qa
+      - title: Prerequisites
+        url: /products-bots-prerequisites.html
+        output: qa, ga
+      - title: Getting Started
+        url: /products-bots-getstarted.html
+        output: ga, qa
+      - title: Step 1 Chat Agent API doc
+        url: /products-bots-step1.html
+        output: ga, qa 
+      - title: Step 2 Start a Session in LiveEngage
+        url: /products-bots-step2.html
+        output: ga, qa 
+      - title: Step 3 Virtual Agent Simulator
+        url: /products-bots-step3.html
+        output: ga, qa 
+
+ 

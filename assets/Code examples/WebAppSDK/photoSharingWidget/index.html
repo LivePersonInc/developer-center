@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Photo Sharing Widget Example</title>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-slate.min.css">
+    <link rel="stylesheet" href="css/example2.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/example3.js"></script>
+            <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-centered">
+            <div class="col-md-12 page-header">
+                <h4>Customer's Files</h4>
+                <button onclick="sendForm()" class="btn btn-default">Send Form</button>
+            </div>
+        </div>
+        <div class="row row-centered">
+            <div class="col-md-4 col-centered"></div>
+            <div class="col-md-4 col-centered">
+                  <div id="result"></div>
+                <div id="result2"></div>
+            </div>
+            <div class="col-md-4 col-centered"></div>
+        </div>
+         <div class="row row-centered">
+            <div class="col-md-12 page-header">
+                <h4>Send Photo To Customer</h4>
+            </div>
+        </div>
+        <div class="row row-centered">
+            <div class="col-md-4 col-centered"></div>
+            <div class="col-md-4 col-centered">
+                 <!--Add a file picker for the user to start the upload process -->
+                        <input type="file" id="filePicker" style="display: none" />
+                        <input type="button" id="authorizeButton" style="display: none" value="Authorize" />
+                         <br /> <div id="fileURL2"></div> <br />
+                         <div id="fileURL" style="display: none;"></div>
+            </div>
+            <div class="col-md-4 col-centered"></div>
+        </div>
+         <div class="row row-centered">
+            <div class="col-md-4 col-centered"></div>
+            <div class="col-md-4 col-centered">
+                 <button onclick="sendFile()" class="btn btn-block btn-default">Send Photo</button>
+            </div>
+            <div class="col-md-4 col-centered"></div>
+        </div>
+    </div>
+    <script>
+        var SDK = lpTag.agentSDK;
+        SDK.init();
+$(document).ready(function(){
+    checkFiles();
+window.setInterval(function(){
+  checkFiles();
+}, 5000);
+});
+       function sendFile() {
+     var urlTest = document.getElementById("fileURL").innerHTML;
+          console.log(urlTest);
+            var data = {
+            text: '<img src="'+urlTest+'" style="max-width: 100%;">'
+        };
+        // sends a command to the agent console
+        SDK.command('Write ChatLine', data);
+
+} 
+        function sendForm() {
+            //add your google script url here
+               var data = {
+            text: 'Please upload the file using this form: <a href="Your google script here">File Upload</a>'
+        };
+        // sends a command to the agent console
+        SDK.command('Write ChatLine', data);
+        }
+        function checkFiles() {
+            // you will need to update this with your google drive folder id here, and you google drive api key.
+                      $.get("https://www.googleapis.com/drive/v2/files?orderBy=createdDate&q=trashed%3Dfalse+and+'Google Drive Folder ID'+in+parents&key=Your API KEY Here", function(data, status){
+            console.log(data);
+              console.log(data.items.length);
+              console.log(data.items[data.items.length - 1].alternateLink);
+              $( "#result" ).html( 'Newest File<br><a target="_top" href="'+data.items[data.items.length - 1].alternateLink+'">'+data.items[data.items.length - 1].title+'</a><br><br><img class="img-responsive" src="https://drive.google.com/uc?id='+data.items[data.items.length - 1].id+'"><br>' );
+              var tempHtml ="All Files<br>";
+              for(var x = 0; x < data.items.length;x++){
+                  tempHtml += '<a target="_top" href="'+data.items[x].alternateLink+'">'+data.items[x].title+'</a><br>';
+              }
+        });
+        }
+    </script>
+</body>
+
+</html>

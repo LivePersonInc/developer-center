@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    {% include head.html %}
+
+     <link rel="stylesheet" type="text/css" href="css/inner-page.css">
+     <meta name="description" content="LivePerson for Developers. Build on LiveEngage with our powerful digital toolbox">
+     <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
+     <meta name="author" content="LivePerson Inc.">
+     
+</head>
+<body>
+{% include topnav.html %}
+{% if page.public == false %} 
+{% include not-available.html %}
+{% else %}
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">
+    {% include nav-breadcrumbs.html %}
+    </div>
+   <div class="sidebarTitle fixed"><span>{{ page.level3 }}</span></div>
+   <div class="sidebarTitle-holder">{{ page.level3 }}</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3 side-bar">
+
+          {% include sidebar.html  %}
+        </div>
+    <!-- Content Column -->
+    <div class="col-md-9 inside-page-content">   
+        {% if page.level4 %}
+        <div class="h2">{{ page.level4 }}</div>
+        {% endif %}
+        <div class="h3">{{ page.title }}</div>
+        {{content}}
+        <br />
+        <br />
+         <br />
+        <br />
+        <div class="visible-xs visible-sm">
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+{% endif %}
+<!-- /.container -->
+    </div>
+ {% include footer.html %}
+</body>
+{% if site.google_analytics %}
+{% include google_analytics.html %}
+{% endif %}
+
+</html>

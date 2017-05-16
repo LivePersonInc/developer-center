@@ -1,0 +1,30 @@
+.documents {
+  margin-top: 67px;
+  width: 70%;
+}
+
+.container.documents {
+    padding-left: 10%;
+    /*padding-bottom: 24%;*/
+    vertical-align: top;
+}
+
+html body div.container.documents div.title{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: #33c6f4 solid 2pt;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #162036;
+}
+html body div.container.documents div.text{
+    margin-bottom: 80px;
+    font-size: 0.866em;
+   
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+}
+html body div.container.documents div.text a{
+    display: block;
+    margin-bottom: 15px;
+    color:#5879da;
+}

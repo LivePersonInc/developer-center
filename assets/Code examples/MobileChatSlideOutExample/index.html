@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- User Style Sheet CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel='stylesheet' id='wpfai_font-awesome-css' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- LivePerson Monitoring Tag Goes Here -->
+<!-- BEGIN LivePerson Monitor. -->
+<!-- END LivePerson Monitor. -->
+</head>
+
+<body>
+    This is an example mobile slide out that was created for a client. If you resize your browser, visit on a mobile device, or emulate a mobile device, you will see the slideout appear.
+    <div id="chatSlideOut" class="closed" style="display:none;">
+        <div class="innerWrap">
+            <div class="topWrap">
+                <div class="imgWrap">
+                    <img src="images/agent.png" class="img-responsive img-circle">
+                </div>
+                <div class="contentWrap">
+                    <p>Hi, my name is Jane.</p>
+                    <p>How can I help you today?</p>
+                </div>
+                <div class="arrowWrap">
+                    <a href="#" class="open"><i class="fa fa-angle-up"></i></a>
+                    <a href="#" class="close"><i class="fa fa-angle-down"></i></a>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="bottomWrap">
+                <ul class="nav-justified">
+                    <li>
+
+                        <a href="#" class="live-engage-link1"><img src="images/Chat-32.png" class="center"></a>
+                    </li>
+                    <li>
+                        <a href="sms:+17138694747"><img src="images/text-32.png" class="center"></a>
+                    </li>
+                    <li>
+                        <a href="mailto:contact@thedoanlawfirm.com"><img src="images/Message-Mail-32.png" class="center"></a>
+                    </li>
+                    <li>
+                        <a href="tel:+18008639110"><img src="images/Phone-32.png" class="center"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a class="live-person-ghost1" style="display:none">
+        <!-- you will need to update this div id with the id of your embedded chat button-->
+        <div id="slideout1"></div>
+    </a>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Fancybox JavaScript -->
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+    <!-- User JavaScript -->
+    <script type="text/javascript" src="js/main-js.js"></script>
+
+    <script>
+        (function($) {
+            $(function() {
+                $('.live-engage-link1').click(function(e) {
+                    e.preventDefault();
+                    $('a.live-person-ghost1').find('div').trigger('click');
+                    $('.close').trigger('click');
+                })
+            });
+        })(jQuery);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Table Widget</title>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-slate.min.css">
+    <link rel="stylesheet" href="css/example2.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+       <br/><br/>
+        <div class="row row-centered">
+            <div class="col-md-4 col-centered"></div>
+            <div class="col-md-4 col-centered">
+                <div>
+                    <textarea id="agentChat" rows="5" class="commandInput"></textarea>
+                    <br />
+                    <br />
+                    <button type="button" class="btn btn-block btn-default" onclick="sendTable()">Send</button>
+                    <div id="hiddenTable" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-centered"></div>
+        </div>
+    </div>
+    <script>
+        var SDK = lpTag.agentSDK;
+        SDK.init();
+        
+        function sendTable() {
+            //get the agents input
+            var tableText = $("#agentChat").val();
+            //create the table based on the input
+            $("#hiddenTable").html(tableText);
+            //add a special class to the first table row for styling
+             $( "tr:first th" ).addClass( "sizingWidgetClassForLE2" );
+            //add a special class to every othe table row for styling
+            $( "tr:odd td" ).addClass( "sizingWidgetClassForLE" );
+            //add a class to each element for styling
+            $( "table" ).addClass( "sizingWidgetClassForLETable" );
+            $( "td" ).addClass( "sizingWidgetClassForLETable" );
+            $( "th" ).addClass( "sizingWidgetClassForLETable" );
+            //get the new table html code
+            tableText = $("#hiddenTable").html();
+            //console.log(tableText);
+            //send the table to the chat window
+            SDK.command('Write ChatLine', {text: tableText});
+        }
+    </script>
+</body>
+
+</html>

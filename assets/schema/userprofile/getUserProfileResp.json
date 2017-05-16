@@ -1,0 +1,13 @@
+{
+    "type": "array",
+    "items": {
+        "oneOf": [{
+                "title": "CustomerInfo",
+                "$ref": "customerInfo.json"
+            }, {
+                "title": "PersonalInfo",
+                "$ref": "personalInfo.json"
+            }]
+    },
+    "default": []
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+
+    
+    <div id="container">
+        <div id="container-header">
+            <label for="website">Current URL:</label>
+            <input type="text" id="currentURL" value="" placeholder="Loading..."/>
+                <button type="button" class="btn myButtons" id="copyButton" style="margin-left:2px;" data-clipboard-target="#currentURL">
+                    <div class="btnText">Copy</div>
+                </button>
+                <button type="button" class="btn myButtons" onclick="popoutWindow(); return false;">
+                    <div class="btnText">Popout</div>
+                </button>
+         </div>
+        <div id="btnToggle" class="toggleImg" data-tooltip="Show refresh countdown" onclick="toggle();"></div>
+        <i><div class="myTimer">
+            <span id="countdown" class="togOn">Refreshing in (approx.) 20 seconds.</span>
+            <span class="togOff" style="visibility:hidden;">(Click to turn on Auto Refresh countdown)</span>
+        </div></i>                
+        
+    </div>
+
+    <div class ="aspect-ratio iframeStyle">
+      <iframe id="myFrame" class="iframeStyle" height=100% width=100% frameborder="0" allowfullscreen></iframe>
+    </div>
+        
+    <script>
+
+        var counter = 20;
+        var id;
+        var visitorURL = "";
+    	var SDK = lpTag.agentSDK;
+        var clipboard;
+        SDK.init();
+
+        var updateCallback = function(data) {
+            visitorURL = data.newValue[0].url;
+            document.getElementById("myFrame").src = visitorURL;
+            document.getElementById("currentURL").value = visitorURL;
+            clearInterval(id);
+            startCounting();
+        };
+
+        var notifyWhenDone = function(err) {
+            if (err){
+                console.log("onError: " + err);
+            }
+            console.log("notify completed successfully");
+        }
+
+        SDK.bind("visitorJourney.pages",updateCallback,notifyWhenDone);
+
+        function startCounting(){
+            counter = 21;
+            id = setInterval(function() {
+                counter--;
+                document.getElementById("countdown").innerHTML = "Refreshing in (approx.) " + counter.toString() + " seconds.";
+
+                if(counter <= 0)
+                    clearInterval(id);
+            }, 1000);
+        }                
+
+        function popoutWindow(){
+            window.open(visitorURL, "", "width=1000,height=600");
+        }
+
+        function toggle(){
+            var bTog = $('#btnToggle');
+            var bTogOn = $('.togOn');
+            var bTogOff = $('.togOff');
+
+            if (bTog.hasClass('toggleImg')){
+                bTog.addClass('toggleImgOff').removeClass('toggleImg');
+                bTogOn.attr('style','visibility:hidden');
+                bTogOff.attr('style','visibility:visible');
+            }
+            else if (bTog.hasClass('toggleImgOff')){
+                bTog.addClass('toggleImg').removeClass('toggleImgOff');
+                bTogOff.attr('style','visibility:hidden');
+                bTogOn.attr('style','visibility:visible');
+            }
+        }
+
+        $('#copyButton').tooltip({
+          trigger: 'click',
+          placement: 'bottom'
+        });
+
+        function setTooltip(btn, message) {
+          $(btn).tooltip('hide')
+            .attr('data-original-title', message)
+            .tooltip('show');
+        }
+
+        function hideTooltip(btn) {
+          setTimeout(function() {
+            $(btn).tooltip('hide');
+          }, 1000);
+        }
+
+        clipboard = new Clipboard('#copyButton');
+
+        clipboard.on('success', function(e) {
+          setTooltip(e.trigger, 'Copied!');
+          hideTooltip(e.trigger);
+          clipboard.destroy();
+          clipboard = new Clipboard('#copyButton');
+        });
+
+        clipboard.on('error', function(e) {
+          setTooltip(e.trigger, 'Failed!');
+          hideTooltip(e.trigger);
+        });
+
+    </script>
+    
+  </body>
+</html>
+

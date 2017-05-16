@@ -1,0 +1,22 @@
+{
+    "title": "AcceptStatusEvent",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "AcceptStatusEvent",
+            "readonly": "true"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["ACCEPT", "READ", "ACCESS", "NACK"]
+        },
+        "sequenceList": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            }
+        }
+    },
+    "required": ["type", "status", "sequenceList"]
+}

@@ -1,0 +1,179 @@
+<!-- Notes: If the visitor keeps sending chat lines, this widget will only translate one at a time -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Translate Widget Example</title>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-slate.min.css">
+    <link rel="stylesheet" href="css/example2.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://www.microsoftTranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&widget=none" type="text/javascript"></script>
+    <style>
+        /* centered columns styles */
+        
+        .row-centered {
+            text-align: center;
+        }
+        
+        .col-centered {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .LTRStyle {
+            display: none !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Start of Container -->
+    <div class="container">
+        <div class="row row-centered">
+            <div class="col-md-12 page-header">
+                <h1 translate="no">Translate Chat</h1>
+            </div>
+        </div>
+        <!-- Visitor Chat Area -->
+        <div class="row row-centered">
+            <div class="col-md-4 col-centered"></div>
+            <div class="col-md-4 col-centered">
+                <div translate="no">
+                    <h2>Visitor Chat</h2>
+                </div>
+                <div>
+                    <textarea id="visitorChat" rows="5" class="commandInput" disabled></textarea>
+                </div>
+                <div id="visitorChat2" style="display: none;"></div>
+            </div>
+            <div class="col-md-4 col-centered"></div>
+        </div>
+        <br />
+        <!-- End of Visitor Chat Area -->
+        <!-- Start of Agent Chat Area -->
+        <div class="row row-centered">
+            <div class="col-md-4 col-centered"></div>
+            <div class="col-md-4 col-centered">
+                <div translate="no">
+                    <h2>Agent Chat</h2>
+                    <textarea id="agentChat" rows="5" class="commandInput"></textarea>
+                    <br />
+                    <br />
+                    <button type="button" class="btn btn-block btn-default" onclick="translateChat()">Translate</button>
+                </div>
+                <div id="agentChatTranslated" style="display: none;"></div>
+            </div>
+            <div class="col-md-4 col-centered"></div>
+        </div>
+        <!-- Start of Agent Chat Area -->
+    </div>
+    <!-- End of Container -->
+    <script>
+        var skill;
+        var SDK = lpTag.agentSDK;
+        SDK.init();
+        //success function for getting the engagement info from the sdk
+        var onSuccess = function(data) {
+            //if the skill is not set, it will be a null value, not unskilled
+            skill = data.skill;
+            console.log(skill);
+        };
+        //error is called if we are not able to get the engagement infor from the sdk
+        var onError = function(err) {
+            // Do something with the error
+            console.log(err);
+        };
+        var updateCallback = function(data) {
+            // called each time the value is updated; if there is an existing value when bind
+            //is called - this callback will be called with the existing value
+            //console.log(data.newValue);
+            //strip the html elements from the chat line
+            var chatLine = data.newValue.lines[0].text.replace(/(<p[^>]*>|<\/p>)/g, "");
+            //console.log(chatLine);
+            //add new chat line to page if it is from the visitor
+            if (data.newValue.lines[0].source == 'visitor') {
+                //update the hidden div with the visitors chat line
+                document.getElementById('visitorChat2').innerHTML = chatLine;
+                //translate the visitors chat line based on skill group
+                
+                if (skill == "Spanish") {
+                    Microsoft.Translator.Widget.Translate('es', 'en', onProgress, onError, onComplete2, onRestoreOriginal);
+                } else if (skill == "Russian") {
+                    Microsoft.Translator.Widget.Translate('ru', 'en', onProgress, onError, onComplete2, onRestoreOriginal);
+                } else {
+                    Microsoft.Translator.Widget.Translate('en', 'es', onProgress, onError, onComplete2, onRestoreOriginal);
+                }
+            }
+        };
+        var notifyWhenDone = function(err) {
+            if (err) {
+                // Do something with the error
+            }
+            // called when the bind is completed successfully,
+            // or when the action terminated with an error
+        };
+
+        //path to the engagementInfo from the sdk
+        var pathToEngagementInfo = "engagementInfo";
+        SDK.get(pathToEngagementInfo, onSuccess, onError);
+
+        //path to the chat transcript from the sdk
+        var pathToData = "chatTranscript";
+        //bin the chat transcript so it will listen for new chatlines
+        SDK.bind(pathToData, updateCallback, notifyWhenDone);
+        //translate the agents message
+        function translateChat() {
+            //update the hidden div
+            document.getElementById('agentChatTranslated').innerHTML = document.getElementById('agentChat').value;
+            //transalte the agents message
+            if (skill == "Spanish") {
+                Microsoft.Translator.Widget.Translate('en', 'es', onProgress, onError, onComplete, onRestoreOriginal);
+            } else if (skill == "Russian") {
+                Microsoft.Translator.Widget.Translate('en', 'ru', onProgress, onError, onComplete, onRestoreOriginal);
+            } else {
+                Microsoft.Translator.Widget.Translate('es', 'en', onProgress, onError, onComplete, onRestoreOriginal);
+            }
+        }
+        //called when the translation is complete
+        function onComplete() {
+            //alert("Done");
+            //get the translated text
+            var translation = document.getElementById('agentChatTranslated').innerHTML;
+            var data = {
+                text: translation
+            };
+            //send the translation to the agent console
+            SDK.command('Write ChatLine', data);
+            //close the translation widget
+            $('#WidgetCloseImage').trigger("click");
+        }
+        //called when the translation is complete
+        function onComplete2() {
+            //alert("Done");
+            //update the text area with the translation
+            document.getElementById('visitorChat').value = document.getElementById('visitorChat2').innerHTML;
+            //close the translation widget
+            $('#WidgetCloseImage').trigger("click");
+        }
+        //called while the translation is in progress
+        function onProgress(value) {
+
+        }
+        //called if there is an error translating
+        function onError(error) {
+            alert("Translation Error: " + error);
+        }
+        //called when the widget is closed
+        function onRestoreOriginal() {
+            //alert("The page was reverted to the original language. This message is not part of the widget.");
+        }
+
+    </script>
+</body>
+
+</html>

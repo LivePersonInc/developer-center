@@ -1,0 +1,25 @@
+{
+    "title": "ParticipantsChange (for agents)",
+    "type": "object",
+    "properties": {
+        "field": {
+            "type": "string",
+            "enum": ["ParticipantsChange"],
+            "default": "ParticipantsChange",
+            "readonly": true
+        },
+        "type": {
+            "type": "string",
+            "enum": ["ADD", "REMOVE", "UPDATE"]
+        },
+        "role": {
+            "type": "string",
+            "enum": ["MANAGER", "READER", "ASSIGNED_AGENT"]
+        }
+    },
+    "required": [
+        "field",
+        "type",
+        "role"
+    ]
+}

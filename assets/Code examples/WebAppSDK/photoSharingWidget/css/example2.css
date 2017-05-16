@@ -1,0 +1,14 @@
+.commandInput {
+    width: 70%;
+    width: calc(100% - 55px);
+}
+.row-centered {
+            text-align: center;
+        }
+        
+        .col-centered {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }

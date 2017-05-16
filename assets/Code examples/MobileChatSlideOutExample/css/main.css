@@ -1,0 +1,270 @@
+@media (min-width: 500px) {
+    #chatSlideOut {
+        display: none !important;
+    }
+}
+.center {
+    margin: auto;
+    padding: 10px;
+}
+#chatSlideOut {
+    position: fixed;
+    right: 10%;
+    width: 330px;
+    z-index: 7000;
+    transition: bottom 0.4s ease-in-out;
+}
+@media (max-width: 500px) {
+    #chatSlideOut {
+        right: 1%;
+        width: 98%;
+    }
+}
+#chatSlideOut .innerWrap {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+#chatSlideOut .innerWrap .topWrap {
+    float: left;
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 14px;
+    background: #0F1F3A;
+    position: relative;
+    border-bottom: 1px solid #0F1F3A;
+}
+#chatSlideOut .innerWrap .topWrap .imgWrap {
+    float: left;
+    margin-right: 14px;
+}
+#chatSlideOut .innerWrap .topWrap .imgWrap img {
+    border: 1px solid #FFF;
+}
+#chatSlideOut .innerWrap .topWrap .contentWrap {
+    float: left;
+    margin-top: 2px;
+}
+#chatSlideOut .innerWrap .topWrap .contentWrap p {
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+#chatSlideOut .innerWrap .topWrap .contentWrap p.blueText {
+    color: #58b8dd;
+}
+#chatSlideOut .innerWrap .topWrap .arrowWrap {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+}
+#chatSlideOut .innerWrap .topWrap .arrowWrap i {
+    color: #FFF;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #FFF;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    background: #0F1F3A;
+}
+#chatSlideOut .innerWrap .bottomWrap {
+    border-top: 1px solid #4F78A7;
+    float: left;
+    width: 100%;
+    padding: 14px;
+    background: #2F4668;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: relative;
+}
+#chatSlideOut .innerWrap .bottomWrap:after {
+    content: '';
+    position: absolute;
+    left: 48%;
+    bottom: -16px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 15px 0 15px;
+    border-color: #2F4668 transparent transparent transparent;
+    opacity: 0.87;
+}
+#chatSlideOut .innerWrap .bottomWrap ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#chatSlideOut .innerWrap .bottomWrap ul li {
+    text-align: center;
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+#chatSlideOut .innerWrap .bottomWrap ul li a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+    height: 70px;
+    line-height: 65px;
+    border-radius: 10px;
+    border: 2px solid #466D9D;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}
+@media (max-width: 500px) {
+    #chatSlideOut .innerWrap .bottomWrap ul li a {
+        width: 60px;
+    }
+}
+#chatSlideOut .innerWrap .bottomWrap ul li a:hover {
+    background: #0F1F3A;
+}
+#chatSlideOut .innerWrap .bottomWrap ul li a:focus,
+#chatSlideOut .innerWrap .bottomWrap ul li a:active {
+    background: #556480;
+}
+#chatSlideOut.closed {
+    bottom: -107px;
+}
+#chatSlideOut.closed .arrowWrap .close {
+    display: none;
+    opacity: 0;
+}
+#chatSlideOut.closed .arrowWrap .open {
+    display: block;
+    opacity: 1;
+}
+#chatSlideOut.opened {
+    bottom: 28px;
+}
+#chatSlideOut.opened .arrowWrap .open {
+    display: none;
+    opacity: 0;
+}
+#chatSlideOut.opened .arrowWrap .close {
+    display: block;
+    opacity: 1;
+}
+.popupsMain {
+    display: none;
+    float: left;
+    width: 100%;
+    background: #2F4668;
+    border: 7px solid #2F4668;
+}
+.popupsMain ul,
+.popupsMain li {
+    float: left;
+    width: 100%;
+}
+.popupsMain ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.popupsMain ul li {
+    background: #0F1F3A;
+    margin-bottom: 5px;
+    padding: 25px 30px;
+}
+@media (max-width: 500px) {
+    .popupsMain ul li {
+        padding: 15px;
+    }
+}
+.popupsMain ul li h2 {
+    float: left;
+    margin: 0;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 32px;
+}
+@media (max-width: 500px) {
+    .popupsMain ul li h2 {
+        font-size: 24px;
+    }
+}
+.popupsMain ul li a {
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    font-family: "myriad-pro", "Lucidia Grande", Arial, sans-serif;
+    color: #2F4668;
+    padding: 22px 72px;
+    text-decoration: none;
+    border-radius: 0;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    text-decoration: none;
+    line-height: 1.2;
+    font-family: "myriad-pro", "Lucidia Grande", Arial, sans-serif;
+    padding: 7px 35px;
+    background: none;
+    color: #FFF;
+    border: 1px solid #2F4668;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    background: #0F1F3A;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px 30px;
+}
+.popupsMain ul li a:hover,
+.popupsMain ul li a:active,
+.popupsMain ul li a:focus {
+    text-decoration: none;
+}
+.popupsMain ul li a:hover,
+.popupsMain ul li a:active,
+.popupsMain ul li a:focus {
+    background: #466D9D;
+    color: #FFF;
+}
+#chatEmailPopup {
+    float: left;
+    width: 100%;
+    background: #FFF;
+}
+#chatEmailPopup .innerWrap {
+    padding: 20px 15px 0 15px;
+}
+#chatEmailPopup .btn {
+    text-align: center;
+    font-size: 14px;
+    font-family: "myriad-pro", "Lucidia Grande", Arial, sans-serif;
+    color: #FFF;
+    padding: 22px 72px;
+    text-decoration: none;
+    border-radius: 0;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    color: #FFF;
+    background: #f68b1f;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    width: 100%;
+    padding: 18px 0;
+}
+#chatEmailPopup .btn:hover,
+#chatEmailPopup .btn:active,
+#chatEmailPopup .btn:focus {
+    text-decoration: none;
+}
+#chatEmailPopup .btn:hover,
+#chatEmailPopup .btn:focus,
+#chatEmailPopup .btn:active {
+    background: #d97109;
+}

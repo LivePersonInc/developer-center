@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/CollapsibleLists.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <style>
+        .collapsibleList li {
+            list-style-image: url('img/button1.png');
+        }
+        
+        li.collapsibleListOpen {
+            list-style-image: url('img/button-open.png');
+            cursor: pointer;
+        }
+        
+        li.collapsibleListClosed {
+            list-style-image: url('img/button-closed.png');
+            cursor: pointer;
+        }
+        
+        .titles {
+            font-weight: bold;
+        }
+        
+        .item {
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>Knowledge Base, Version 1.03</h3>
+    <input class="filterinput" type="text" id="filterinput">
+    <!--Paste Code Below This Line -->
+    <ul id='list' class='collapsibleList'>
+        <li class='titles'>Promotions
+            <ul>
+                <li class='titles'>Weekly
+                    <ul>
+                        <li class='titles pitem'>Buy 2 Get 1
+                            <div class='item'>Have you heard of our Buy 2, Get 1 promotion, valid this week?</div>
+                        </li>
+                        <li class='titles pitem'>Free Shipping
+                            <div class='item'>We have a Free Shipping offer until Sunday, code ABCD</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class='titles'>Monthly
+                    <ul>
+                        <li class='titles pitem'>Promo Code
+                            <div class='item'>Until the end of the month, you get a free $10 credit to your next purchase, code: FREE10</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class='titles'>Social
+                    <ul>
+                        <li class='titles pitem'>Facebook
+                            <div class='item'>Like us on <a href="https://www.facebook.com/LivePersonInc/" target="_blank">Facebook</a>, and get 5% off your next order</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class='titles'>Products
+            <ul>
+                <li class='titles'>Hot Phones
+                    <ul>
+                        <li class='titles pitem'>Samsung Phone
+                            <div class='item'>Here is our latest Samsung Phone:<br /> <img src="https://s.tmocache.com/images/png/products/phones/Samsung-Galaxy-S7-edge-Silver-Titanium/250x270_1.png" style="max-width: 100%;"></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class='titles'>T&C
+            <ul>
+                <li class='titles pitem'>Short Version
+                    <div class='item'>Please review our policies <a href="http://www.liveperson.com/" target="_blank">here.</a></div>
+                </li>
+                <li class='titles pitem'>Long Version
+                    <div class='item'>
+There has never been an effective and unbiased method to measure the relationship between brands and consumers. Until now... Today's current metrics: net promoter score (NPS), customer satisfaction (CSAT), and customer effort score (CES), all rely on customer surveys. But these methods have many issues. Surveys disrupt the customer journey. This means, those who actually take the time to respond are usually your happiest customers, which skews your results. Using a select group to represent an entire customer pool also leads to grossly inaccurate information, since respondents opinions might be inconsistent with the broader population. But all that's changed.</div>
+                </li>
+            </ul>
+        </li>
+
+        
+        <li class='titles'>Agent Suggested Content (Approved)
+            <ul>
+                <li class='titles'>Greeting
+                    <ul>
+
+                        <li class='titles pitem'>General
+                            <div class='item'>Welcome to our company! We're always happy to help :)</div>
+                        </li>
+                        <li class='titles pitem'>Greeting
+                            <div class='item'>Welcome I'll be your helper today and my name is $!{operator.nickname}! How may assist you?</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>AGENT: To Suggest Content, please click <a href="http://goo.gl/forms/COhQCJxzhE" target="_blank">here</a></p>
+    <!--Paste Code Above This Line -->
+    <script>
+        var SDK = lpTag.agentSDK;
+        SDK.init();
+        // make the appropriate lists collapsible
+        CollapsibleLists.apply();
+        $(".pitem > .item").click(function() {
+            var data = {
+                text: $(this).html()
+            };
+            SDK.command('Write ChatLine', data);
+            console.log("item");
+            event.stopPropagation();
+        });
+
+        $(".pitem").click(function() {
+            var data = {
+                text: $("div", this).html()
+            };
+            SDK.command('Write ChatLine', data);
+            console.log("pitem");
+        });
+
+        (function($) {
+            // custom css expression for a case-insensitive contains()
+            jQuery.expr[":"].contains = jQuery.expr.createPseudo(function(arg) {
+                return function(elem) {
+                    return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                };
+            });
+
+            // this function calls itself, to search in every level
+            function hasChild(list) {
+                // the searched value
+                var filter = $('#filterinput').val();
+                // for every children, do function:
+                list.children('li').each(function() {
+                    // see if the list contains the filter
+                    // if you don't want to use span,  you can  write the following function:
+                    //find("a:contains(" + filter + ")")
+                    if ($(this).find(":contains(" + filter + ")").length > 0) {
+                        // see if it has nested levels
+                        if ($(this).find('ul :first').length > 0) {
+                            $(this).show();
+                            // recall function
+                            hasChild($(this).find('ul :first').parent());
+                        } else {
+                            $(this).show();
+                        }
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            };
+            $('#filterinput').keyup(function() {
+                // the id of the filtered list
+                var list = '#list';
+                // the searched value
+                var filter = $('#filterinput').val();
+                if (filter) {
+                    // call previous function
+                    hasChild($(list));
+                } else {
+                    // show all
+                    $(list).find("li").show();
+                }
+                return false;
+            });
+        }(jQuery));
+
+    </script>
+</body>
+
+</html>

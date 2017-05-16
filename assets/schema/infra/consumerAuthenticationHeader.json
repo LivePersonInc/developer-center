@@ -1,0 +1,19 @@
+{
+    "title": "com.liveperson.api.ams.headers.ConsumerAuthentication",
+    "description": "Information about the client: hardware, software, timeZone, IP etc...",
+    "type": "object",
+    "properties": {
+        "type": {
+          "type": "string",
+          "enum": [".ams.headers.ConsumerAuthentication"],
+          "default": ".ams.headers.ConsumerAuthentication",
+          "readonly": true
+        },
+        "jwt": {
+          "maxLength":2048,
+          "description": "jwt issued by LivePerson idp service for this consumer",
+          "type": "string"
+        }
+    },
+    "required" : [ "type", "jwt" ]
+}

@@ -1,0 +1,17 @@
+{
+    "description": "General response message with string description.",
+    "allOf": [{
+            "$ref": "../infra/resp.json"
+        }, {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "default": ".ReqBody$StringResp",
+                    "readonly": "true"
+                },
+                "body": {
+                    "$ref": "stringRespBody.json"
+                }
+            }
+        }]
+}

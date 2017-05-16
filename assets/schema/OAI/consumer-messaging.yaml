@@ -1,0 +1,372 @@
+swagger: '2.0'
+info:
+  title: Consumer Messaging API
+  version: "1.0.0"
+  x-logo:
+    url: 'img/liveperson-inc-logo.jpg'
+  description: |
+    # Introduction
+    
+    ## Connection Establishment
+    Open a websocket connection to the following url:
+    
+    ```
+    wss://{ASYNCMESSAGINGENT}/ws_api/account/{accountId}/messaging/consumer?v=3
+    ```
+    * ASYNCMESSAGINGENT -  See Domain discovery api.
+    
+    ### Headers
+    Clients that can use websocket headers can add headers to the connection request:
+    
+    * ``Authorization:jwt {LP_JWT}`` (see consumer authentication api)
+    * ``Client-Properties:{LP_PROPS}`` (see ``Client-Properties`` TBD)
+    
+    
+    
+    Clients that cannot use websocket headers can use the ``InitConnection`` call after
+    the connection establishment.
+    
+    ## Keep Alive
+    TBD.
+    
+    ## Disconnection
+    When the API token expires, the WebSocket connection will be closed with ``4401/4407`` closereason. 
+    The client should return to the [initation](#initiation) step, issue a fresh token, and reestablish the connection.
+    For any other ``closeReason``, the client should wait a few seconds and then try reconnecting.
+
+    ## Requests, Responses and Notifications
+    Each API message can be one of the following kinds:
+
+    * **Request** - A message sent from the client. The server will reply with a response message.
+    * **Response** - A message sent by the server in response to a client request message.
+    * **Notification** - A message sent from the server to the client, triggered by a server decision. The trigger can be based on a prior ``Subscription`` request made by the client, or on an implicit subscription made by the server.
+
+    The kind of message is denoted by the ``kind`` property in the top level of the JSON object, and can be any of the following: ``req``, ``resp``, ``notification``. Below is an example of a request message:
+
+    ```json
+    {
+        "kind" : "req",
+        "type" : "cm.AgentRequestConversation",
+        "id" : "hsjshka8162s",
+        "body" : { "ttrDefName" : "NORMAL" }
+    }
+    ```
+
+    ## Message Types
+    Every message has a type. The structure of the body of the message can be changed for different types. The type of message is denoted by the ``type`` property in the top level of the JSON object. Below is an example of a message with the type of``cm.MyRequest``:
+
+    ```json
+    {
+            "kind" : "req",
+            "type" : "cm.MyRequest",
+            "id" : "hsjshka8162s",
+            "body" : { "ttrDefName" : "NORMAL" }
+    }
+    ``` 
+
+    ## Responses
+    Responses should be sent with some kind of correlation to the request that they are answering. For this purpose, every request message must state the ``id`` string for the request. The server will reply with the same ``id`` in the response message as the value of the ``reqId`` field in the top level JSON object of the response message. Below is an example of a response message to the request from the above section:
+
+    ```json
+    {
+            "kind" : "resp",
+            "reqId" : "hsjshka8162s",
+            "type" : "cm.MyRequestResponse",
+            "code" : 200,
+            "body" : { "conversationId" : "hdjsdhksh2" }
+    }
+    ```
+
+    The response message will also contain a ``code`` field. 
+    This field will be populated with the status code of the request. 
+    The values of this field will be taken from the [HTTP Semantics](https://tools.ietf.org/html/rfc7231).
+
+    ## Subscriptions
+    In this pattern the client has to send some kind of request message to the server.
+    In response, it will receive a response message with a success indication and a subscription ID. 
+    Following this, the server will start sending notifications with the subscription ID. 
+
+    ## API Client Requirements
+
+    ### Client Future Compatibility
+    In order for the client to be compatible with future API changes, it should:
+    * Ignore any field that is not documented in the [API reference](consumer-int-api-reference.html). This includes existing fields that are not documented (for deprecation reasons), as well as new fields that will be added to the messages in newer versions.
+    * Ignore any enum fields that contain undocumented values.
+
+    ### Single Element Arrays
+    An array containing a single element may be sent using the element itself instead of the array.
+
+
+tags:
+  - name: Conversation
+    description: Mangage conversation lifecycle and metadata.
+  - name: Messaging
+    description: Pubish and subscribe to the content of the conversation.
+
+host: ws
+schemes:
+  - api
+produces:
+  - application/json
+paths:
+  /cm.ConsumerRequestConversation:
+    js:
+      tags:
+        - Conversation
+      summary: Consumer Request Conversation
+      description: |
+        This request is used by the consumer to create a new conversation with the brand.
+      parameters:
+      responses:
+        200:
+          description: Success - cm.RequestConversationResponse
+          schema:
+            $ref: ../cm/consumerRequestConversationResp.json
+        400:
+          description: Bad Request
+          schema:
+            $ref: ../infra/stringRespBody.json
+  /GetClock:
+    js:
+      tags:
+        - infra
+      summary: Get Clock
+      description: |
+        Returns the service clock.
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /InitConnection:
+    js:
+      tags:
+        - infra
+      summary: Init Connection (Browsers)
+      description: |
+        This request is needed only for clients that cannot send websocket headers. It can include the authentication and the clientProperties information.
+      parameters:
+        - name: headers
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+                $ref: ../infra/header.json
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: ../infra/stringRespBody.json
+  /ms.PublishEvent#content:
+    js:
+      tags:
+        - Messaging
+      summary: Publish Event (Text Content)
+      description: |
+        Publishes text messages to existing dialog.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+                dialogId:
+                    type: string
+                event:
+                    $ref: ../ms/TextValue.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /ms.PublishEvent#accept:
+    js:
+      tags:
+        - Messaging
+      summary: Publish Event (Accept)
+      description: |
+        Publishes accept/read events to existing dialog.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+                dialogId:
+                    type: string
+                event:
+                    $ref: ../ms/AcceptStatusEvent.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /ms.PublishEvent#typing:
+    js:
+      tags:
+        - Messaging
+      summary: Publish Event (Typing)
+      description: |
+        Publishes user state events to existing dialog.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+                dialogId:
+                    type: string
+                event:
+                    $ref: ../ms/ChatStateEvent.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /ms.SubscribeMessagingEvents:
+    js:
+      tags:
+        - Messaging
+      summary: Subscribe Messaging Events
+      description: |
+        Subscribes to get the events of a conversation. 
+        Existing events will be sent immediately, while new events will be notified as they happen.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: ../ms/subscribeMessagingEvents.json
+      responses:
+        100:
+          description: ms.messagingEventNotification
+          schema:
+            $ref: ../ms/messagingEventNotification.json
+        200:
+          description: Success
+          schema:
+            type: object
+  /cqm.SubscribeExConversations:
+    js:
+      tags:
+        - Conversation
+      summary: Subscribe Conversations Metadata
+      description: |
+        Subscribes to any changes in the medata of the conversations of this user.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: ../aam/subscribeExConversations.json
+      responses:
+        100:
+          description: cqm.ExConversationChangeNotification
+          schema:
+            $ref: ../aam/subscribeExConversationsNotification.json
+        200:
+          description: Success
+          schema:
+            $ref: ../aam/subscribeExConversationsResp.json
+  /cqm.UnsubscribeExConversations:
+    js:
+      tags:
+        - Conversation
+      summary: Unsubscribe Conversations Metadata
+      description: |
+        TBD
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: ../aam/unsubscribeExConversations.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /cm.UpdateConversationField#State:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (Close)
+      description: |
+        Close the conversation.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/StateChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: ../infra/stringRespBody.json
+  /cm.UpdateConversationField#TTR:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (TTR)
+      description: |
+        Mark conversation urgency.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/TTRChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: ../infra/stringRespBody.json
+   
+  /cm.UpdateConversationField#CSAT:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (CSAT)
+      description: |
+        Update CSAT (Consumer Satisfaction) survey.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/CsatChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: ../infra/stringRespBody.json
+ 

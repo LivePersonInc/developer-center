@@ -1,0 +1,25 @@
+{
+    "allOf": [{
+        "$ref": "../infra/resp.json"
+    }, {
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "default": "ms.PublishEventResponse",
+                "readonly": "true"
+            },
+            "body": {
+                "type": "object",
+                "properties": {
+                    "sequence": {
+                        "description":"content and read receipt events get a sequential ID in the conversation.",
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": []
+            }
+        }
+    }]
+}

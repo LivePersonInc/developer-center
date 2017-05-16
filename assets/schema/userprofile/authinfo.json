@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "amr": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["face", "fpt", "geo", "hwk", "iris", "kba", "mca", "mfa", "otp", "pin", "pwd", "rba", "retina", "sc", "sms", "swk", "tel", "user", "vbm", "wia"],
+                "description": "Authentication Methods References, see https://tools.ietf.org/html/draft-ietf-oauth-amr-values-05."
+            }                    
+        },
+        "iss": {
+            "type": "string",
+            "description": "Issuer URI"
+        }
+    }
+}

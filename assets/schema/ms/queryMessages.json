@@ -1,0 +1,30 @@
+{
+    "description": "Pulls the exisitng messages in a specific conversation.<br/><b>Warning:</b> This request is going to be deprecated soon.",
+    "allOf": [{
+        "$ref": "../infra/req.json"
+    }, {
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "default": ".ams.ms.QueryMessages",
+                "readonly": "true"
+            },
+            "body": {
+                "type": "object",
+                "properties": {
+                    "fromSeq": {
+                      "description": "Fetch events with sequence greater or equal to this value",  
+                      "type": "integer",
+                      "default": 0              
+                  },
+                  "dialogId": {
+                      "type": "string"
+                  }              
+              },
+              "required": ["dialogId"]
+          }
+      },
+      "required": ["body"]        
+  }]
+}

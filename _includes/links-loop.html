@@ -1,0 +1,6 @@
+{% assign filtered = site.pages | where_exp:"p","p.level1 == include.level1" | where_exp:"p","p.level2 == include.level2" | where_exp:"p","p.root-link == true" %}
+{% assign visible = filtered | where_exp:"item","item.visible != false" %}
+{% assign sorted = visible | sort: "level-order" %}
+{% for p in sorted %}
+    <li><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.level3}}</a></li>
+{% endfor %}

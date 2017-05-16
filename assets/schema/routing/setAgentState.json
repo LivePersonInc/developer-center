@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "availability": {
+            "type": "string",
+            "enum": ["AWAY", "BACK_SOON", "OFFLINE", "ONLINE"]
+        }
+    },
+    "required": [
+        "availability"
+    ]
+}

@@ -1,0 +1,43 @@
+.commandInput {
+    width: 70%;
+    width: calc(100% - 55px);
+}
+.row-centered {
+    text-align: center;
+}
+.col-centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.LTRStyle {
+    display: none !important;
+}
+.specialText{
+  font-family: trebuchet ms;
+    font-size: 16px;
+    color: #767678;
+    font-weight: bold;
+}
+.specialText2{
+  font-family: trebuchet ms;
+    font-size: 13px;
+     color: #767678;
+    font-weight: bold;
+}
+body {
+    background-color: #F0F0F0;
+}
+/* This class is added to all of the td elements in every other row of the table starting with the second */
+.sizingWidgetClassForLE {
+    background-color: #FFDEAD !important;
+}
+/* This class is added to all of the td elements in the first row of the table */
+.sizingWidgetClassForLE2 {
+    background-color: #2F4F4F !important;
+}
+/* This class is added to every td element of the table */
+.sizingWidgetClassForLETable{
+border: 1px solid yellow !important;
+}

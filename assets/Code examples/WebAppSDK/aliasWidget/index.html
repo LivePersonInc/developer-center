@@ -1,0 +1,330 @@
+<!-- To Customize: you can remove any engagment attribute panel that you are not using. To do so, you will need to remove them from the body, and from the JavaScript at the end of the body.
+To use an alias, you will just need to add in a check for that value, and have the text change to what you would like it to be. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>SDE Alias Widget</h2>
+        <div class="panel-group">
+            <!-- Start of Alisas Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse0">Alias</a>
+        </h4>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="alias"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Alisas Panel -->
+            <!-- Start of Personal Info Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse9">Personal Info</a>
+        </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="personalInfo"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Personal Info Panel -->
+            <!-- Start of Customer Info Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Customer Info</a>
+        </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="customerInfo"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Customer Info Panel -->
+            <!-- Start of Marketing Source Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">Marketing Source</a>
+        </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="marketingSource"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Marketing Source Panel -->
+            <!-- Start of Visitor Error Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse3">Visitor Error</a>
+        </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="visitorError"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Visitor Error Panel -->
+            <!-- Start of Lead Generation Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse4">Lead Generation</a>
+        </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="leadGen"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Lead Generation Panel -->
+            <!-- Start of Service Activity Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse5">Service Activity</a>
+        </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="serviceActivity"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Service Activity Panel -->
+            <!-- Start of Transation Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse6">Transaction</a>
+        </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="transaction"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Transaction Panel -->
+            <!-- Start of Shopping Cart Update Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse7">Shopping Cart Update</a>
+        </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="cart"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Shopping Cart Panel -->
+            <!-- Start of Viewed Products Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse8">Viewed Products</a>
+        </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="products"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Viewed Products Panel -->
+        </div>
+    </div>
+
+    <script>
+        var txt = ""; //variable used to display the text in the div
+        var counter = 0; //counter for attributes that are arrays
+        var SDK = lpTag.agentSDK; //the web app sdk
+        SDK.init(); //initialize the sdk
+
+        //customer info engagement attribute
+        var customerDetails = "customerDetails";
+        var onSuccess = function(data) {
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("customerInfo").innerHTML = txt;
+            txt = "";
+        };
+
+        var onError = function(err) {
+            // Do something with the error
+            console.log("error");
+        };
+
+        //error engagement attribute
+        var error = "error";
+        var onSuccess2 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Error ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("visitorError").innerHTML = txt;
+            txt = "";
+        };
+
+        //marketing source engagement attribute
+        var marketingSource = "marketingSource";
+        var onSuccess3 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Marketing Source ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("marketingSource").innerHTML = txt;
+            txt = "";
+        };
+
+        //lead gen engagement attribute
+        var leadGeneration = "leadGeneration";
+        var onSuccess4 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Lead ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("leadGen").innerHTML = txt;
+            txt = "";
+        };
+
+        //service activity engagement attribute
+        var serviceActivity = "serviceActivity";
+        var onSuccess5 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Activity ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("serviceActivity").innerHTML = txt;
+            txt = "";
+        };
+
+        //transaction engagement attribute
+        var transaction = "transaction";
+        var onSuccess6 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Transaction ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("transaction").innerHTML = txt;
+            txt = "";
+        };
+
+        //cart engagement attribute
+        var shoppingCart = "shoppingCart";
+        var onSuccess7 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Cart Update ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("cart").innerHTML = txt;
+            txt = "";
+        };
+
+        //viewed products engagement attribute
+        var viewedProducts = "viewedProducts";
+        var onSuccess8 = function(data) {
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Viewed Product ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("products").innerHTML = txt;
+            txt = "";
+            for (var i = 0; i < data.length; i++) {
+                counter = i + 1;
+                txt += 'Viewed Product ' + counter + ':<br/>';
+                for (var property in data[i]) {
+                    txt += 'variable: ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("alias").innerHTML = txt;
+            txt = "";
+        };
+
+        //personal info engagement attribute
+        var personalInfo = "personalInfo";
+        var onSuccess9 = function(data) {
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                for (var property in data[i]) {
+                    txt += property + ': ' + data[i][property] + '<br/>';
+                }
+                txt += '<br/>'
+            }
+            document.getElementById("personalInfo").innerHTML = txt;
+            txt = "";
+        };
+        //get all of the engagement attributes
+        SDK.get(customerDetails, onSuccess, onError);
+        SDK.get(error, onSuccess2, onError);
+        SDK.get(marketingSource, onSuccess3, onError);
+        SDK.get(leadGeneration, onSuccess4, onError);
+        SDK.get(serviceActivity, onSuccess5, onError);
+        SDK.get(transaction, onSuccess6, onError);
+        SDK.get(shoppingCart, onSuccess7, onError);
+        SDK.get(viewedProducts, onSuccess8, onError);
+        SDK.get(personalInfo, onSuccess9, onError);
+
+    </script>
+</body>
+
+</html>

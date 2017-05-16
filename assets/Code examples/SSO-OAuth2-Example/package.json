@@ -1,0 +1,28 @@
+{
+  "name": "sso-example",
+  "version": "0.2.5",
+  "description": "An example NodeJS App that shows how to implement the OAuth SSO implicit flow for LiveEngage.",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "2.4.1",
+    "express": "4.13.3",
+    "jsonwebtoken": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - UMS js example</title>
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+  
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <div class="container">
+  <form class="form-inline" onsubmit="return false">
+    <div class="form-group">
+      <label for="account">Account:</label>
+      <input id="account" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="textline">Text:</label>
+      <input id="textline" type="text" class="form-control">
+    </div>
+    <button id="send" class="btn btn-default" disabled>send</button>
+    <button id="connect" class="btn btn-default">connect</button>
+  </form>
+  <textarea id="log" rows="40" cols="80"></textarea>
+</div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://codepen.io/liveperson/pen/oYyLJr.js'></script>
+
+    <script>
+    "use strict";
+
+// const account = "qa20971604";
+var apiRequestTypes = [".ams.aam.SubscribeExConversations", ".ams.ms.PublishEvent", ".ams.cm.ConsumerRequestConversation", ".ams.ms.SubscribeMessagingEvents"];
+
+function prepareToConnect() {
+  $("#connect").text("connect").unbind("click").click(function () {
+    $("#connect").text("connecting...");
+    var account = $("#account").prop('disabled', true).val();
+    LPUtils.getJWT(account).then(function (jwt) {
+      LPUtils.getDomain(account, "asyncMessagingEnt").then(function (umsDomain) {
+        LPWs.connect("wss://" + umsDomain + "/ws_api/account/" + account + "/messaging/consumer/" + jwt + "?v=3").then(function (s) {
+          s.registerRequests(apiRequestTypes);
+
+          var me = myId(jwt);
+          $("#log").html("connection is opened for account " + account + ".\n");
+
+          s.onNotification(withType("MessagingEvent"), function (body) {
+            return body.changes.forEach(function (change) {
+              switch (change.event.type) {
+                case "ContentEvent":
+                  $("#log").append((change.originatorId === me ? "you" : "agent") + ": " + change.event.message + "\n");
+              };
+            });
+          });
+
+          // subscribe to open conversations metadata
+          s.subscribeExConversations({
+            "convState": ["OPEN"]
+          }).then(function (resp) {
+            var openConvs = {};
+            s.onNotification(withSubscriptionID(resp.body.subscriptionId), function (notificationBody) {
+              notificationBody.changes.forEach(function (change) {
+                if (change.type === "UPSERT") {
+                  if (!openConvs[change.result.convId]) {
+                    openConvs[change.result.convId] = change.result;
+                    s.subscribeMessagingEvents({
+                      fromSeq: 0,
+                      dialogId: change.result.convId
+                    });
+                  }
+                } else if (change.type === "DELETE") {
+                  delete openConvs[change.result.convId];
+                  $("#log").append("conversation was closed.\n");
+                }
+              });
+            });
+
+            var publishTo = function publishTo(convID) {
+              return s.publishEvent({
+                dialogId: convID,
+                event: {
+                  type: "ContentEvent",
+                  contentType: "text/plain",
+                  message: $('#textline').val()
+                }
+              }).then(function (resp) {
+                return $('#textline').val("");
+              });
+            };
+
+            $('#send').prop('disabled', false).click(function () {
+              if (Object.keys(openConvs)[0]) publishTo(Object.keys(openConvs)[0]);else s.consumerRequestConversation().then(function (resp) {
+                return publishTo(resp.body.conversationId);
+              });
+            });
+          });
+          $("#connect").text("disconnect").unbind("click").click(function () {
+            return s.ws.close();
+          });
+          s.ws.onclose = function (evt) {
+            s.ws = null;
+            $("#log").append("connection was closed with code " + evt.code + "\n");
+            prepareToConnect();
+            $('#send').prop('disabled', true).unbind("click");
+            $("#account").prop('disabled', false).val();
+          };
+        }, function (er) {
+          $("#log").append("error opening connection\n");
+          prepareToConnect();
+        });
+      });
+    }, function (errorGettingJwt) {
+      $("#connect").text("connect");
+      $("#account").prop('disabled', false).val();
+      $("#log").append("error getting jwt for account " + account + "\n");
+    });
+  });
+}
+
+function withSubscriptionID(subscriptionID) {
+  return function (notif) {
+    return notif.body.subscriptionId == subscriptionID;
+  };
+}
+
+function withType(type) {
+  return function (notif) {
+    return notif.type.includes(type);
+  };
+}
+
+function myId(jwt) {
+  return JSON.parse(atob(jwt.split('.')[1])).sub;
+}
+
+$(document).ready(function () {
+  prepareToConnect();
+});
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 

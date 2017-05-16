@@ -1,0 +1,3 @@
+https://developers.liveperson.com:
+  type: upstream
+  upstream: jekyll_app:http

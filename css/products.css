@@ -1,0 +1,41 @@
+.products {
+  margin-top: 80px;
+  width: 73%;
+}
+
+.container.products {
+  padding-left: 10%;
+  padding-bottom: 24%;
+  vertical-align: top;
+}
+
+html body div.container.products div.title {
+  border-bottom: 2pt solid #33c6f4;
+  color: #162036;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+html body div.container.products div.sub-title {
+  color: #808080;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  display: inline-block;
+  font-size: 0.866em;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+}
+.preview div.container.products div.sub-title {
+    display:none;
+}
+
+html body div.container.products div.text{
+    margin-bottom: 80px;
+    font-size: 0.866em;    
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+}
+html body div.container.products div.text a{
+    display: block;
+    margin-bottom: 15px;
+    color:#5879da;
+}

@@ -1,0 +1,36 @@
+<html lang="en" ng-app="example2">
+    <head>
+        <meta charset="utf-8">
+        <title>LivePerson SDK client example 2 - Angular</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="https://ctvr-wap21.dev.lprnd.net/webagent/client-SDK.min.js"></script>
+        <script src="bower_components/json-formatter/dist/json-formatter.js"></script>
+        <script src="js/example2.js"></script>
+        <link rel="stylesheet" href="css/example2.css">
+        <link rel="stylesheet" href="bower_components/json-formatter/dist/json-formatter.css">
+    </head>
+    <body ng-controller="MainCtrl">
+        <div class="commandBox">
+            <input type="text" name="commandInput" ng-model="commandInput" class="commandInput">
+            <button ng-click="command($event)" class="commandButton">Write</button>
+        </div>
+
+        <div class="getBox col2">
+            <input type="text" name="getInput" ng-model="getInput" class="getInput">
+            <button ng-click="get($event)" class="getButton">Get</button>
+            <div class="result dark">
+                <json-formatter json="getResult" open="1" class="getResult json-formatter-dark"></json-formatter>
+            </div>
+        </div>
+
+        <div class="bindBox col2">
+            <input type="text" name="bindInput" ng-model="bindInput" class="bindInput">
+            <button ng-click="bind($event)" class="bindButton">Bind</button>
+            <button ng-click="unbind($event)" class="unbindButton">Unbind</button>
+            <div class="result dark">
+                <json-formatter json="bindResult" open="1" class="bindResult json-formatter-dark"></json-formatter>
+            </div>
+        </div>
+    </body>
+</html>

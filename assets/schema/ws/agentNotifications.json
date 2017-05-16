@@ -1,0 +1,80 @@
+{
+    "anyOf": [{
+            "title": "MessagingEventNotification",
+            "allOf": [
+                {
+                    "$ref": "../infra/notification.json"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "default": "ms.MessagingEventNotification",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/messagingEventNotification.json"
+                        }
+                    }
+                }
+            ]
+        }, {
+            "title": "ExConversationChangeNotification",
+            "description": "Sent once there is a change in convesation metadata",
+            "allOf": [{
+                    "$ref": "../infra/notification.json"
+                }, 
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cqm.ExConversationChangeNotification"],
+                            "default": "cqm.ExConversationChangeNotification",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/subscribeExConversationsNotification.json"                            
+                        }
+                    }
+                }]
+        }, {
+            "title": "routingTaskNotification",
+            "description": "Sent once there is a change in a routing task",
+            "allOf": [{
+                    "$ref": "../infra/notification.json"
+                }, 
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["routing.routingTaskNotification"],
+                            "default": "routing.routingTaskNotification",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../routing/routingTaskNotification.json"                            
+                        }
+                    }
+                }]
+        }, {
+            "title": "agentStateNotification",
+            "description": "Sent once there is a change in the state of the agent",
+            "allOf": [{
+                    "$ref": "../infra/notification.json"
+                }, 
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["routing.agentStateNotification"],
+                            "default": "routing.agentStateNotification",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../routing/agentStateNotification.json"                            
+                        }
+                    }
+                }]
+        }]
+}

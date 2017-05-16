@@ -1,0 +1,75 @@
+{
+    "title": "Personal Infomration",
+    "description": "Personal Infomration",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "personal",
+            "readonly": "true"
+        },
+        "auth": {
+            "$ref": "authinfo.json"
+        },
+        "personal": {
+            "type": "object",
+            "properties": {
+                "firstname": {
+                    "type": "string",
+                    "encryption" : "optional"
+                },
+                "lastname": {
+                    "type": "string",
+                    "encryption" : "optional"
+                },
+                "age": {
+                    "type": "object",
+                    "properties": {
+                        "age": {
+                            "type": "integer"
+                        },
+                        "year": {
+                            "type": "integer"
+                        },
+                        "month": {
+                            "type": "integer"
+                        },
+                        "day": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "contacts": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "email": {
+                                "type": "string",
+                    "encryption" : "optional"
+                            },
+                            "phone": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "gender": {
+                    "type": "string",
+                    "enum": ["MALE", "FEMALE", "OTHER"]
+                },
+                "language": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string",
+                    "description": "Company name."
+                }
+            }
+        }
+    },
+    "required": [
+        "type",
+        "personal"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "anyOf": [{
+            "title": "MessagingEventNotification",
+            "allOf": [
+                {
+                    "$ref": "../infra/notification.json"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.MessagingEventNotification"],
+                            "default": "ms.MessagingEventNotification",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/messagingEventNotification.json"
+                        }
+                    }
+                }
+            ]
+        }, {
+            "title": "ExConversationChangeNotification",
+            "description": "Sent once there is a change in convesation metadata",
+            "allOf": [{
+                    "$ref": "../infra/notification.json"
+                }, 
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cqm.ExConversationChangeNotification"],
+                            "default": "cqm.ExConversationChangeNotification",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/subscribeExConversationsNotification.json"                            
+                        }
+                    }
+                }]
+        }]
+}

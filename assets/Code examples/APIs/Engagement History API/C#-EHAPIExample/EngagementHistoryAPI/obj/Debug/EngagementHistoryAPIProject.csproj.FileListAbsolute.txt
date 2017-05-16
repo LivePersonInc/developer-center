@@ -1,0 +1,5 @@
+c:\users\swestover\documents\visual studio 2015\Projects\EngagementHistoryAPI\EngagementHistoryAPI\bin\Debug\EngagementHistoryAPI.exe.config
+c:\users\swestover\documents\visual studio 2015\Projects\EngagementHistoryAPI\EngagementHistoryAPI\bin\Debug\EngagementHistoryAPI.exe
+c:\users\swestover\documents\visual studio 2015\Projects\EngagementHistoryAPI\EngagementHistoryAPI\bin\Debug\EngagementHistoryAPI.pdb
+c:\users\swestover\documents\visual studio 2015\Projects\EngagementHistoryAPI\EngagementHistoryAPI\obj\Debug\EngagementHistoryAPI.exe
+c:\users\swestover\documents\visual studio 2015\Projects\EngagementHistoryAPI\EngagementHistoryAPI\obj\Debug\EngagementHistoryAPI.pdb

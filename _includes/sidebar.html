@@ -1,0 +1,62 @@
+{% include custom/sidebarconfigs.html %}
+
+
+
+
+<ul id="mysidebar" class="nav fixed" >
+  {% assign level4 = null %}
+  <!--loop over all the level3 documents -->
+  {% assign filtered = site.pages | where_exp:"p","p.level1 == page.level1" | where_exp:"p","p.level2 == page.level2" | where_exp:"p","p.level3 == page.level3" %}
+  {% assign visible = filtered | where_exp:"item","item.visible != false" %}
+  {% assign sorted = visible | sort: "order" %}
+  {% for p in sorted %}
+    {% if (level4 != null and level4 != p.level4) %}
+        </ul>
+      </li>
+    {% endif %}
+    {% if (p.level4 != null and level4 != p.level4) %}
+      <li class="folder">
+        <a href="#">{{ p.level4 }}</a>
+        <ul>
+    {% endif %}
+    {% if p.permalink == page.permalink %}
+       <li class="activepage"><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
+    {% else %}
+       <li><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
+    {% endif %}
+     
+    {% assign level4 = p.level4 %}
+  {% endfor %}
+  {% if (level4 != null) %}
+      </ul>
+    </li>
+  {% endif %}
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. 
+this is critical so that the parent expands when you're viewing a page. 
+This must appear below the sidebar code above. Otherwise, 
+if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!--<script>$("li.active").parents('li').toggleClass("active");</script>-->
+
+<!--set the width of the side menu to the width of the text -->
+<script>
+   // $("div#toc").css("max-width",($(".sidebarTitle").width() + 35));
+    //$("#mysidebar.nav li.active").parents('li').toggleClass("active");
+    
+    if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
+     
+    } 
+    else{
+         //$("#mysidebar.nav").css("width","auto");
+    }
+    window.onresize = function(){
+      if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
+       
+      }
+      else{
+         //$("#mysidebar.nav").css("width","auto");
+      }
+
+    }
+</script>

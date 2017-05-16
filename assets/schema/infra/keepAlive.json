@@ -1,0 +1,14 @@
+{
+    "description": "Prevents the server from closing the connection due to idleness.",
+    "allOf": [{
+        "$ref": "../infra/req.json"
+    }, {
+        "type": "object",
+        "properties": {
+            "type": {
+                "default": "KeepAlive",
+                "readonly": "true"
+            }
+        }
+    }]
+}

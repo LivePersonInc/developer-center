@@ -1,0 +1,428 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Chat API (REST)",
+		"_postman_id": "883aeadb-f8fd-f3ed-da9e-6ce0e44e8ae8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "a. CSDS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var conversationVep = jsonData.baseURIs.filter(function(uri){ return uri.service === \"conversationVep\" })[0].baseURI;",
+							"var smt = jsonData.baseURIs.filter(function(uri){ return uri.service === \"smt\" })[0].baseURI;",
+							"",
+							"// postman.setEnvironmentVariable(\"domain_conversationVep\", \"server.iad.liveperson.net\"); // GA",
+							"// postman.setEnvironmentVariable(\"domain_conversationVep\", \"base.liveperson.net\"); // ALPHA",
+							"// postman.setEnvironmentVariable(\"domain_conversationVep\", \"hc1.dev.lprnd.net\"); //QA",
+							"",
+							"postman.setEnvironmentVariable(\"domain_conversationVep\", conversationVep);",
+							"postman.setEnvironmentVariable(\"domain_smt\", smt);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{csdsDomain}}/csdr/account/{{accountId}}/service/baseURI.json?version=1.0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "b. Get Engagement",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"sessionId\", jsonData.sessionId);",
+							"postman.setEnvironmentVariable(\"visitorId\", jsonData.visitorId);",
+							"postman.setEnvironmentVariable(\"campaignId\", jsonData.engagementDetails.campaignId);",
+							"postman.setEnvironmentVariable(\"engagementId\", jsonData.engagementDetails.engagementId);",
+							"postman.setEnvironmentVariable(\"contextId\", jsonData.engagementDetails.contextId);",
+							"postman.setEnvironmentVariable(\"skillId\", jsonData.engagementDetails.skillId);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://{{domain_smt}}/api/account/{{accountId}}/app/engagement/visitors/?v=1.0",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"appType\": \"EXTERNAL\",\n \"appDetails\":{\n   \"os\": \"MAC_OSX\",\n   \"osVersion\": \"1.2\",\n   \"appVersion\": \"1.0\",\n   \"deviceFamily\": \"MOBILE\",\n   \"ipAddress\": \"192.168.5.2\"\n },\n \"consumerSections\":[\n   \"Support\",\n   \"English\",\n   \"other\"\n ],\n \"engagementAttributes\": [\n   {\n     \"type\": \"personal\",\n     \"personal\": {\n       \"contacts\": [{\"email\":\"test.com\",\"phone\":\"12345678\"},{\"email\":\"test2.co.il\",\"phone\":\"98765430\"}],\n       \"age\": {\n         \"age\":30.0,\n         \"year\":1985,\n         \"month\":7,\n         \"day\":22\n       },\n       \"firstname\": \"test\",\n       \"lastname\": \"test2\",\n       \"gender\": \"FEMALE\",\n       \"company\": \"liveperson\"\n     }\n   }\n ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c. Chat Availability",
+			"request": {
+				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/availability.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c. Estimated Wait Time",
+			"request": {
+				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/estimatedWaitTime.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c. Chat Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"chat_session_uri\", postman.getResponseHeader('Location'));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/request.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"request\": {\n\t\t\"LETagVisitorId\": \"{{visitorId}}\",\n\t\t\"LETagSessionId\": \"{{sessionId}}\",\n\t\t\"LETagContextId\": \"{{contextId}}\",\n\t\t\"engagementId\": \"{{engagementId}}\",\n\t\t\"campaignId\": \"{{campaignId}}\",\n\t\t\"skillId\": \"{{skillId}}\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c. Pre-Chat Survey",
+			"request": {
+				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/preSurvey.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c. Offline Survey",
+			"request": {
+				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/offlineSurvey.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c. Chat Session URI",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"rel_events\", jsonData.chat.link[1][\"@href\"]);",
+							"postman.setEnvironmentVariable(\"rel_info\", jsonData.chat.link[2][\"@href\"]);",
+							"postman.setEnvironmentVariable(\"rel_next\", jsonData.chat.link[3][\"@href\"]);",
+							"postman.setEnvironmentVariable(\"rel_transcript-request\", jsonData.chat.link[4][\"@href\"]);",
+							"postman.setEnvironmentVariable(\"rel_transcript-with-subject-request\", jsonData.chat.link[5][\"@href\"]);",
+							"postman.setEnvironmentVariable(\"rel_exit-survey\", jsonData.chat.link[6][\"@href\"]);",
+							"postman.setEnvironmentVariable(\"rel_custom-variables\", jsonData.chat.link[7][\"@href\"]);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{chat_session_uri}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "d. Chat Events",
+			"request": {
+				"url": "{{rel_events}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "d. Add Line",
+			"request": {
+				"url": "{{rel_events}}.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": {\n\t\t\"@type\":\"line\",\n\t\t\"text\":\"hi\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "d. End Chat",
+			"request": {
+				"url": "{{rel_events}}.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": {\n\t\t\"@type\":\"state\",\n\t\t\"state\":\"ended\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "d. Chat Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"rel_visitor-name\", jsonData.info.link[1][\"href\"]);",
+							"postman.setEnvironmentVariable(\"rel_visitor-typing\", jsonData.info.link[2][\"href\"]);",
+							"postman.setEnvironmentVariable(\"rel_agent-typing\", jsonData.info.link[3][\"href\"]);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{rel_info}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Retrieve Visitor Name",
+			"request": {
+				"url": "{{rel_visitor-name}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"visitorName\": \"visitor1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Set Visitor Name",
+			"request": {
+				"url": "{{rel_visitor-name}}.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HTTP-Method-Override",
+						"value": "PUT",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"visitorName\": \"visitor1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Retrieve Agent's Typing Status",
+			"request": {
+				"url": "{{rel_agent-typing}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Retrieve Visitor's Typing Status",
+			"request": {
+				"url": "{{rel_visitor-typing}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Set Visitor's Typing Status",
+			"request": {
+				"url": "{{rel_visitor-typing}}.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HTTP-Method-Override",
+						"value": "PUT",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"visitorTyping\": \"typing\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Retrieve Exit Survey Structure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"exit_survey_id\", jsonData.survey.id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{rel_exit-survey}}.json?v=1&appKey={{appKey}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Submit Survey Data",
+			"request": {
+				"url": "{{rel_exit-survey}}.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HTTP-Method-Override",
+						"value": "PUT",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"survey\": {\n\t\t\"id\": {{exit_survey_id}},\n\t\t\"question\": {\n\t\t\t\"id\": \"123\",\n\t\t\t\"answer\": \"answer1\"\n\t\t}\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "e. Send Transcript",
+			"request": {
+				"url": "{{rel_transcript-request}}.json?v=1&appKey={{appKey}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HTTP-Method-Override",
+						"value": "PUT",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"email@domain\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

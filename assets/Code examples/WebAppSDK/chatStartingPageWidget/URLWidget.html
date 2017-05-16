@@ -1,0 +1,110 @@
+<!--
+Created By: Scott Westover
+Version: 1.1
+Date: 8/7/15
+Email: swestover@liveperson.com
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>LivePerson LE - Starting URL Widget</title>
+        <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>This widget is gathering data.<br /> Please do not refresh the widget.</h1>
+        <form id="foo" name="foo" style="display:none">
+                <label for="url">A URL</label>
+                <input id="url" name="url" type="text" value="" />
+                <label for="sessionID">An ID</label>
+                <input id="sessionID" name="sessionID" type="text" value="" />
+                <input id="mytbn" type="submit" value="Send" name="mysub" />
+            </form>
+            <script>
+            $( document ).ready(function() {
+                // Variable to hold request
+                var request;
+                
+                // Bind to the submit event of our form
+                $("#foo").submit(function(event){
+                
+                    // Abort any pending request
+                    if (request) {
+                        request.abort();
+                    }
+                    // setup some local variables
+                    var $form = $(this);
+                
+                    // Let's select and cache all the fields
+                    var $inputs = $form.find("input, select, button, textarea");
+                
+                    // Serialize the data in the form
+                    var serializedData = $form.serialize();
+                
+                    // Let's disable the inputs for the duration of the Ajax request.
+                    // Note: we disable elements AFTER the form data has been serialized.
+                    // Disabled form elements will not be serialized.
+                    $inputs.prop("disabled", true);
+                
+                    // Fire off the request to /form.php
+                    request = $.ajax({
+//
+//You will need to update the URL below with the URL of your Google Script
+//
+//
+                        url: "Your Google Scripts URL Here",
+                        type: "post",
+                        data: serializedData
+                    });
+                
+                    // Callback handler that will be called on success
+                    request.done(function (response, textStatus, jqXHR){
+                        // Log a message to the console
+                        console.log("Hooray, it worked!");
+                    });
+                
+                    // Callback handler that will be called on failure
+                    request.fail(function (jqXHR, textStatus, errorThrown){
+                        // Log the error to the console
+                        console.error(
+                            "The following error occurred: "+
+                            textStatus, errorThrown
+                        );
+                    });
+                
+                    // Callback handler that will be called regardless
+                    // if the request failed or succeeded
+                    request.always(function () {
+                        // Reenable the <inputs></inputs>
+                        $inputs.prop("disabled", false);
+                    });
+                
+                    // Prevent default posting of form
+                    event.preventDefault();
+                });
+                var SDK = lpTag.agentSDK;
+                SDK.init();
+                var data = {text: "This test worked!"};
+                SDK.command('Write ChatLine',data);
+                var onSuccess = function(data) {
+                // Do something with the returning data
+                var countData = data.length;
+                document.getElementById("url").value = data[countData-1].affiliate;
+                };
+                var onSuccess2 = function(data) {
+                // Do something with the returning data
+                document.getElementById("sessionID").value = data.rtSessionId;
+                document.foo.mysub.click();
+                };
+                var onError = function(err) {
+                // Do something with the error
+                SDK.get(pathToData2, onSuccess2, onError);
+                };
+                var pathToData = "SDE.marketingSource";
+                var pathToData2 = "chatInfo";
+                SDK.get(pathToData, onSuccess, onError);
+                SDK.get(pathToData2, onSuccess2, onError);
+                });
+        </script>
+    </body>
+</html>

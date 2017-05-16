@@ -1,0 +1,45 @@
+{
+    "anyOf": [{
+            "title": "RequestConversationResponse",
+            "allOf": [{
+                    "$ref": "../infra/resp.json"
+                }, {
+                    "description": "Upon successful conversation creation, this reponse will be sent by the server",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "default": "cm.RequestConversationResponse",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../cm/consumerRequestConversationResp.json"
+                        }
+                    }
+                }]
+        }, {
+            "title": "StringResp",
+            "$ref": "../infra/stringResp.json"
+        }, {
+            "title": "PublishEventResponse",
+            "$ref": "../ms/PublishEventSuccess.json"
+        }, {
+            "title": "GenericSubscribeResponse",
+            "$ref": "../types/genericSubscribeResp.json"
+        }, {
+            "title": "SubscribeExConversationsResponse",
+            "allOf": [{
+                    "$ref": "../infra/resp.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "default": "cqm.SubscribeExConversationsResponse",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/subscribeExConversationsResp.json"
+                        }
+                    }
+                }]
+        }]
+}

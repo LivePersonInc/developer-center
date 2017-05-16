@@ -1,0 +1,24 @@
+- title: Knowledge Base Integration
+      output: ga, qa
+      folderitems:
+      - title: Overview
+        url: /products-kb-overview.html
+        output: ga, qa 
+      - title: Prerequisites
+        url: /products-kb-prerequisites.html
+        output: ga, qa 
+      - title: Getting Started
+        url: /products-kb-getstarted.html
+        output: ga, qa
+      - title: Step 1 Review Agent Widget SDK doc
+        url: /products-kb-step1.html
+        output: ga, qa 
+      - title: Step 2 Review Agent Widget SDK doc
+        url: /products-kb-step2.html
+        output: ga, qa 
+      - title: Step 3 Build your integration
+        url: /products-kb-step3.html
+        output: ga, qa 
+
+
+ 

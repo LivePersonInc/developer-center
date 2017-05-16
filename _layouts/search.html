@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    {% include head.html %}
+   <link rel="stylesheet" href="css/search.css">
+
+    
+</head>
+
+<body>
+    {% include topnav.html %}
+    <!-- Page Content -->
+    <div id="resultPageRecordTemplate" style="display:none;">
+        <a class="row result" href="{url}">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="text">{text}</div>   
+            </div>           
+            <div class="location col-lg-10 col-md-10 col-sm-10 col-xs-12">{level1}<span class="r-a">></span>{level2}<span class="r-a">></span>{level3}<span class="r-a">></span>{level4}{title}</div>
+            <div class="mentions col-lg-2 col-md-2 col-sm-2 col-xs-12">{mentionsCount} Mentions</div>
+        </a>
+    </div>
+    
+
+    <div class="container search">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="header">Search Results</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-title">
+                <i class='fa fa-cog fa-spin fa-3x fa-fw'></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-title">
+                In this document (<span class="resultsInDocumentCount">0</span>)
+            </div>
+        </div>
+        <div class="pageResultsInDocument">
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-title">
+                Documents (<span class="resultsInDocumentsCount">0</span>)
+            </div>
+        </div>
+        <div class="pageResultsInDocuments">
+        </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-title">
+               Products (<span class="resultsInProductsCount">0</span>)
+            </div>
+        </div>
+        <div class="pageResultsInProducts">
+        </div>
+        <br><br><br>
+        {% include footer.html %}
+    </div>
+    
+ 
+ {% include footer.html %}
+</body>
+{% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
+
+</html>

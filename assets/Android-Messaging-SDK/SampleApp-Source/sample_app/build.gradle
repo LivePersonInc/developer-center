@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.liveperson.sample.app"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 2150
+        versionName "2.1.5.0"
+    }
+    buildTypes {
+
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    repositories {
+        flatDir {
+            dirs project(':lp_messaging_sdk').file('aars')
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile project(':lp_messaging_sdk')
+    compile 'com.google.android.gms:play-services-gcm:9.8.0'
+    compile 'com.google.firebase:firebase-messaging:9.8.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:gridlayout-v7:25.1.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

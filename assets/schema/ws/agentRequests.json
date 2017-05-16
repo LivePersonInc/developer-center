@@ -1,0 +1,229 @@
+{
+    "oneOf": [{
+            "title": "KeepAlive",
+            "description": "Prevents the server from closing the connection due to idleness.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["KeepAlive"],
+                            "default": "KeepAlive",
+                            "readonly": "true"
+                        }
+                    }
+                }]
+        }, {
+            "title": "GetClock",
+            "description": "Returns the service clock.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["GetClock"],
+                            "default": "GetClock",
+                            "readonly": "true"
+                        }
+                    }
+                }]
+        }, {
+            "title": "agentRequestConversation",
+            "description": "This request is used by the agent to create a new conversation with a specific consumer.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cm.AgentRequestConversation"],
+                            "default": "cm.AgentRequestConversation",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../cm/AgentRequestConversation.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "updateRingState",
+            "description": "The agent can accept or reject rings by changing their state.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["routing.UpdateRingState"],
+                            "default": "routing.UpdateRingState",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../routing/updateRingState.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "subscribeRoutingTasks",
+            "description": "Subscribes the agent to get notifications on his routing tasks.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["routing.SubscribeRoutingTasks"],
+                            "default": "routing.SubscribeRoutingTasks",
+                            "readonly": "true"
+                        }
+                    }
+                }]
+        }, {
+            "title": "setAgentState",
+            "description": "Registers the agent to the routing service. While the agent is online the routing service will send him rings.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["routing.SetAgentState"],
+                            "default": "routing.SetAgentState",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../routing/setAgentState.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "subscribeAgentsState",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["routing.SubscribeAgentsState"],
+                            "default": "routing.SubscribeAgentsState",
+                            "readonly": "true"
+                        }
+                    }
+                }]
+        }, {
+            "title": "getUserProfile",
+            "description": "Gets customer and personal info for the given consumerId.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "default": "up.GetUserProfile",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../userprofile/getUserProfile.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "updateConversationField",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "default": "cm.UpdateConversationField",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../cm/UpdateConversationFieldBody.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "PublishEvent",
+            "description": "Publishes events to existing dialog. Events can be: <ul><li>text-content</li><li>photo-reference-content</li><li>read-reciepts (accept status)</li><li>presense/typing events (chat-state)</li></ul>",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.PublishEvent"],
+                            "default": "ms.PublishEvent",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/PublishEvent.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "SubscribeMessagingEvents",
+            "description": "Subscribes to get the events of a conversation. Existing events will be sent immediately, while new events will be notified as they happen.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.SubscribeMessagingEvents"],
+                            "default": "ms.SubscribeMessagingEvents",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/subscribeMessagingEvents.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "SubscribeExConversations",
+            "description": "Subscribes to any changes in the medata of the conversations of this user. Existing conversations that matches the filter will also be sent.<h4>Responses</h4><ul><li>200: SubscribeExConversationsResponse</li><li>Notification: ExConversationChangeNotification</li></ul>",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cqm.SubscribeExConversations"],
+                            "default": "cqm.SubscribeExConversations",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/subscribeExConversations.json"
+                        }
+                    }
+                }]
+        }, {
+            "title": "UnsubscribeExConversations",
+            "description": "Unsubcribes the user from getting notifications on conversation metadata changes.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cqm.UnsubscribeExConversations"],
+                            "default": "cqm.UnsubscribeExConversations",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/unsubscribeExConversations.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }]
+}

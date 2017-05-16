@@ -1,0 +1,36 @@
+{
+    "title": "HostedFile",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "ContentEvent",
+            "readonly": "true"
+        },
+        "contentType": {
+            "type": "string",
+            "default": "HostedFile",
+            "readonly": "true"
+        },
+        "message": {
+            "type": "object",
+            "properties": {
+                "caption": {
+                    "type": "string"
+                },
+                "relativePath": {
+                    "type": "string"
+                },
+                "fileType": {
+                    "type": "string",
+                    "enum": ["IMG", "JPG", "PNG", "GIF", "TXT", "PDF"]
+                },
+                "preview": {
+                    "type": "any"
+                }
+            },
+            "required": ["caption", "relativePath", "fileType"]
+        }
+    },
+    "required": ["type","contentType", "message"]
+}

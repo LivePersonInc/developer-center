@@ -1,0 +1,87 @@
+{
+    "description": "Information about the client: hardware, software, timeZone, IP etc...",
+    "type": "object",
+    "properties": {
+        "type": {
+          "type": "string",
+          "enum": [".ams.headers.ClientProperties"],
+          "default": ".ams.headers.ClientProperties",
+          "readonly": true
+        },
+        "appId": {
+          "description": "Identifies the application",
+          "type": "string",
+          "maxLength":64
+        },
+        "appVersion": {
+          "description": "The application version, for example, in the case of mobile it will be the host app version",
+          "maxLength":32,
+          "type": "string"
+        },
+        "ipAddress": {
+          "maxLength":32,
+          "format":"ipv4",
+          "type": "string"
+        },
+        "deviceFamily": {
+          "type":"string",
+          "enum":["DESKTOP","TABLET","MOBILE","OTHER"]
+        },
+        "os": {
+          "type":"string",
+          "enum":["WINDOWS","LINUX","OSX","ANDROID","IOS","OTHER"]
+        },
+        "osVersion": {
+          "maxLength":64,
+          "description": "Specifies the operating system version, and distribution type (if relevant)\n Examples: Ubuntu 15.00",
+          "type": "string"
+        },
+        "osName": {
+          "maxLength":64,
+          "description": "OS name is a text describing the operating system\n Examples: WindowsXP",
+          "type": "string"
+        },
+        "integration": {
+          "type":"string",
+          "enum":["WEB_SDK","MOBILE_SDK","BRAND_SDK"]
+        },
+        "integrationVersion": {
+          "maxLength":64,
+          "type": "string"
+        },
+        "browser": {
+          "maxLength":64,
+          "description": "For example: chrome, firefox, etc...",
+          "type":"string"
+        },
+        "browserVersion": {
+          "maxLength":64,
+          "description": "Detailed version info of the user agent (browser or host-application)",
+          "type": "string"
+        },
+        "timeZone": {
+          "description": "For example: \"America/Los_Angeles\"",
+          "maxLength":64,
+          "type": "string"
+        },
+        "deviceManufacture": {
+          "description": "For example LG, HP, Microsoft....",
+          "maxLength":64,
+          "type": "string"
+        },
+        "deviceModel": {
+          "description": "For example for G3 for LG, iPhone6s for Apple...",
+          "maxLength":64,
+          "type": "string"
+        },
+        "features": {
+          "type":"array",
+          "description":"Some of the client capablities are not supported by default. In order to enable them, the client should include the feature name in this field.",
+          "items": {
+            "type":"string",
+            "enum":[ "CO_BROWSE", "CO_APP", "PHOTO_SHARING", "SECURE_FORMS" ]
+          }
+        }
+    },
+    "required" : [ "type" ]
+}

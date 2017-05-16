@@ -1,0 +1,83 @@
+---
+title: Transfer a Chat
+Keywords:
+level1: Documents
+level2: Agent Interactions
+level3: Chat Agent API
+level4: Methods
+
+order: 210
+permalink: agent-transfer-chat.html
+
+---
+
+This method transfers a chat from an agent to a specific skill or agent.
+
+### Request
+
+| Method | URL |
+| :--- | :--- |
+| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer  |
+
+**Request Headers**
+
+| Header | Description |
+| :--- | :--- |
+| Authorization| Bearer {bearer-from-login} |
+| Content-Type | application/json |
+| Accept | application/json |
+
+**Formats**
+
+The body media type must have one of the following formats:
+
+- XML
+- JSON
+
+**Body Parameters**
+
+You must pass either agent ID or skill ID to transfer the chat.
+
+*Note: If both parameters are stated, the agent ID will be used, and the skill ID will be ignored.*
+
+The following parameters can be used in the XML body:
+
+| Name | Description | Type/Value | Notes |
+| :--- | :--- | :--- | :--- |
+| skill | The skill ID to which the chat will be transferred. | numeric | |
+| agent | The agent ID to which the chat will be transferred. | numeric | |
+| text | Optional message from the current agent. | alphanumeric | These lines are only available to an agent to whom the chat was transferred and will not be seen by the visitor. |
+
+Request body example for JSON (skill):
+
+    {
+        "transfer": {
+            "skill":
+                    {
+                      "id": 2
+                  }
+              ,
+        "text" : "I think this person needs some help from you."
+        }
+    }
+
+Request body example for JSON (agent):
+
+    {
+          "transfer": {
+                "agent":
+                          {
+                              "id": 6
+                          }
+                ,
+                "text" : "I think this person needs some help from you."
+                }
+    }
+
+### Response
+
+**Response Codes**
+
+| Code | Response |
+| :--- | :--- |
+| 200 | OK |

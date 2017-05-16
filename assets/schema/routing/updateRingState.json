@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "ringId": {
+            "type": "string"
+        },
+        "ringState": {
+            "type": "string",
+            "enum": ["ACCEPTED", "REJECTED"]
+        }
+    },
+    "required": ["ringId", "ringState"]
+}

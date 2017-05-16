@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "minLastUpdatedTime": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Do not fetch conversation which have not been updated after this timestamp"
+        },
+        "convState": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["OPEN", "CLOSE"]
+            }
+        }
+    }
+}

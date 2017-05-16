@@ -1,0 +1,21 @@
+{
+    "title": "TextValue",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "ContentEvent",
+            "readonly": "true"
+        },
+        "contentType": {
+            "type": "string",
+            "default": "text/plain",
+            "readonly": "true"
+        },
+        "message": {
+            "type": "string",
+            "encryption": "always"
+        }
+    },
+    "required": ["type", "contentType", "message"]
+}

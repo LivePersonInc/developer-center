@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    {% include topnav.html %}
+    <!-- Page Content -->
+    <div class="banner-container">
+        <div class="container">
+
+            <!-- Content Row -->
+            <div class="row banner">
+                <!-- Content Column -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text">
+                        <div class="first-line">LivePerson for Developers.</div>
+                        <div class="second-line">Build on LiveEngage with our powerful <span class="orange">digital toolbox</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img src="images/briefcase-liveperson.png" class="briefcase ell hidden-sm hidden-xs" />
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+    </div>
+    <div class="centralized header homepage"> Build a customized digital experience or integrate LiveEngage to your business.</div>
+    <div class="orange-line centralized"></div>
+    <div class="container">
+        <div class="row home-first-line">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="images/channels-logo.png" />
+                <div class="title">Channels</div>
+                <div class="text">
+                    Create digital connections from email, social media, or any messaging app.
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="images/bots-logo.png" />
+                <div class="title">Bots</div>
+                <div class="text">
+                    Integrate chat bots into your messaging with seamless agent escalation.
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="images/agent-logo.png" />
+                <div class="title">Efficiency</div>
+                <div class="text">
+                    Enable agents to be more effective with AI & other tools.
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="images/rich-media-logo.png" />
+                <div class="title">Rich Media</div>
+                <div class="text">
+                    Transform text conversations to interactive - digital video, voice, images & more
+                </div>
+            </div>
+        </div>
+        <div class="row home-second-line">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="images/data-logo.png" />
+                <div class="title">Data</div>
+                <div class="text">
+                    Utilize the powerful real-time and overtime data for custom dashboards & analytics integrations.
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="images/operations-logo.png" />
+                <div class="title">Contact Center</div>
+                <div class="text">
+                    Embed LiveEngage into your contact center operations such as WFM integration.
+                </div>
+            </div>
+            <div class="clearfix visible-sm "></div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="images/admin-logo.png" />
+                <div class="title">Admin</div>
+                <div class="text">
+                    Automate large scale operative tasks such as user set up, predefined content update and more.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a class="view-all-products" href="/products.html">View all products</a>
+            </div>
+        </div>
+    </div>
+
+ {% include footer.html %}
+</body>
+{% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
+
+</html>

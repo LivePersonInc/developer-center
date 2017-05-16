@@ -1,0 +1,16 @@
+{
+    "title": "ChatStateEvent",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "ChatStateEvent",
+            "readonly": "true"
+        },
+        "chatState": {
+            "type": "string",
+            "enum": ["ACTIVE", "INACTIVE", "GONE", "COMPOSING", "PAUSE"]
+        }
+    },
+    "required": ["type", "chatState"]
+}

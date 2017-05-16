@@ -1,0 +1,281 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/CollapsibleLists.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            left: 50%;
+            margin-left: -60px;
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1.5s;
+            padding: 5px;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        body {
+            font-family: "Myriad pro", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+            font-size: 13px;
+            background-color: #F0F0F0;
+            line-height: 25px;
+            color: #767678;
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0 0 0 30;
+        }
+        #list {
+            margin: 5 0 0 0;
+            padding: 0;
+        }
+        .collapsibleList li {
+            list-style-image: none;
+            cursor: pointer;
+        }
+        li.collapsibleListClosed {            
+            list-style-image: url('img/button-closed.png');
+            list-style-position: inside;
+            cursor: pointer;
+            color: #767678;
+        }
+        li.collapsibleListOpen {            
+            list-style-image: url('img/button-open.png');
+            list-style-position: inside;
+            cursor: pointer;
+            color: #515254;
+        }
+        li.response {
+            padding: 5px 0px 5px 10px;
+            border-top: 1px solid rgba(193, 194, 195, .4);
+        }
+        li.subcategory {
+            padding: 5px 0px 5px 10px;
+            border-top: 1px solid rgba(193, 194, 195, .7);
+        }
+        li.category {
+            padding: 5px 0px 5px 10px;
+            border-top: 1px solid rgba(193, 194, 195, 1);
+        }
+        .titles {
+            font-weight: bold;
+            padding: 10px auto 10px auto;
+        }
+        .item {
+            font-weight: normal;
+        }
+        .lpview_search_input_container {
+            height: 28px;
+            width: 276.25px;
+        }
+        .lpview_search_input_container:hover {
+            border: 1px solid #c6c6c6;
+        }
+        .lpview_search_input_container:hover .lpview_clear_search_icon {
+            display: block;
+        }
+        .lpview_search_input {
+            height: 28px;
+            width: -webkit-calc(100% - 48px);
+            margin: 0 26px 0 22px;
+            border: 0;
+        }
+        .lpview_search_input:focus {
+            outline: none !important;
+        }
+        .lpview_search_icon {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            height: 12px;
+            width: 12px;
+            background: url('img/12x12-sprite.png') -860px 0 no-repeat;
+        }
+        .text_input_field {
+            height: 30px;
+            font-size: 12px;
+            line-height: 23px;
+            border: 1px solid #dcdcdc;
+            background: #fff;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 4px !important;
+            border-radius: 1px;
+        }
+        .lpview_clear_search_icon:hover {
+            background: url('img/16x16-sprite.png') -680px -20px no-repeat;
+            opacity: .35;
+        }
+        .lpview_clear_search_icon {
+            display: none;
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            height: 16px;
+            width: 16px;
+            background: url('img/16x16-sprite.png') -400px 0 no-repeat;
+            opacity: .85;
+        }
+        .searchCat,.searchSub,.searchResp{
+            display:inline-block !important;
+        }
+      </style>
+</head>
+<body>
+    <div id="LP_SearchInputViewController_1" style="display: block;">
+        <div class="lpview_search_input_container text_input_field" style="width:100%">
+            <div class="lpview_search_icon search_icon"></div>
+            <div class="lpview_clear_search_icon clear_search_icon"></div>
+            <input type="text" class="lpview_search_input search_input"></div>
+    </div>
+    <!--Paste Code Below This Line --><ul id='list' class='collapsibleList'><li class='titles category' id='catTitles'><div class='searchCat' id='searchableText'>Promotions</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Weekly</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Buy 2 Get 1<div class='item tooltiptext'>Have you heard of our Buy 2, Get 1 promotion, valid this week?</div></div></li><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Free Shipping<div class='item tooltiptext'>We have a Free Shipping offer until Sunday, code ABCD</div></div></li></ul></li><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Monthly</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Promo Code<div class='item tooltiptext'>Until the end of the month, you get a free $10 credit to your next purchase, code: FREE10</div></div></li></ul></li><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Social</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Facebook<div class='item tooltiptext'>Like us on <a href="https://www.facebook.com/LivePersonInc/" target="_blank">Facebook</a>, and get 5% off your next order</div></div></li></ul></li></ul></li><li class='titles category' id='catTitles'><div class='searchCat' id='searchableText'>Products</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Hot Phones</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Samsung Phone<div class='item tooltiptext'>Here is our latest Samsung Phone:</div></div></li></ul></li></ul></li><li class='titles category' id='catTitles'><div class='searchCat' id='searchableText'>T&C</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Short Version<div class='item tooltiptext'>Please review our policies <a href="http://www.liveperson.com/" target="_blank">here.</a></div></div></li><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Long Version<div class='item tooltiptext'>There has never been an effective and unbiased method to measure the relationship between brands and consumers. Until now... Today's current metrics: net promoter score (NPS), customer satisfaction (CSAT), and customer effort score (CES), all rely on customer surveys. But these methods have many issues. Surveys disrupt the customer journey. This means, those who actually take the time to respond are usually your happiest customers, which skews your results. Using a select group to represent an entire customer pool also leads to grossly inaccurate information, since respondents opinions might be inconsistent with the broader population. But all that's changed.</div></div></li></ul></li><li class='titles category' id='catTitles'><div class='searchCat' id='searchableText'>Agent Suggested Content (Approved)</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Greeting</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>General<div class='item tooltiptext'>Welcome to our company! We're always happy to help :)</div></div></li><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Greeting<div class='item tooltiptext'>Welcome I'll be your helper today and my name is $!{operator.nickname}! How may assist you?</div></div></li></ul></li></ul></li><li class='titles category' id='catTitles'><div class='searchCat' id='searchableText'>Technical Support</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Client can't connect</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Software Issues</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Network setup</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>IP Address Setup</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Verify IP<div class='item tooltiptext'>Please verify that you are receiving the correct IP Address from the DHCP server. Let's go ahead and open command prompt and then typing "ipconfig" without quotes and then hitting enter.</div></div></li></ul></li></ul></li></ul></li><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Hardware issues</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Server Room</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Ports</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Verify Port<div class='item tooltiptext'>Please verify that you are isolating the correct port by using a tone generator. This will help us identify it it's a problem with the port or your computer.</div></div></li></ul></li></ul></li><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Computer Issues</div><ul><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>Ethernet</div><ul><li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>Verify Cable<div class='item tooltiptext'>Please verify that the ethernet is hooked up properly to your computer. There should be a data link light visible when connected.</div></div></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><!--Paste Code Above This Line -->
+    <script>
+         var SDK = lpTag.agentSDK;
+        SDK.init();
+        // make the appropriate lists collapsible
+        CollapsibleLists.apply();
+
+        $(".response .searchResp .item").click(function() {
+            var data = {
+                text: $(this).html()
+            };
+            SDK.command('Write ChatLine', data);
+            //console.log("item: " + data.text);
+            event.stopPropagation();
+        });
+        $(".response").click(function() {
+            var data = {
+                text: $(".item", this).html()
+            };
+            SDK.command('Write ChatLine', data);
+            //console.log("response: " + data.text);
+        });
+        //delay for keyup to reduce lag
+        //i.e. searches after typing stops + delay time elapses
+        function delay(fn, duration) {
+            var timer;
+            return function() {
+                clearTimeout(timer);
+                timer = setTimeout(fn, duration);
+            }
+        }
+
+        (function($) {
+            function searchList(elm, list) { // elm is any element, list is an unordered list
+
+                $(".lpview_search_input").bind('input', delay(function() {
+                    var query = $(".lpview_search_input").val().toLowerCase();
+                    //console.log("Input change");
+
+                    //Reset state
+                    $('#list').find('.hidethis,.showthis').removeClass('hidethis showthis').show();
+                    $('#list').find('.category,.subcategory').removeClass('collapsibleListOpen').addClass('collapsibleListClosed');
+                    $('#list').find('ul').css('display', 'none');
+
+                    if (query.length) {
+
+                        //For the text of each category title
+                        $('.category > .searchCat').each(function() {
+                            if ($(this).text().toLowerCase().indexOf(query) >= 0) {
+                                $(this).parent().removeClass('collapsibleListClosed').addClass('collapsibleListOpen showthis').show();
+                                $(this).parent().children().css('display', 'block');
+                            }
+                        });
+
+                        //For the text of each subcategory title
+                        $('.subcategory > .searchSub').each(function() {
+                            if ($(this).text().toLowerCase().indexOf(query) >= 0) {
+                                $(this).parent().removeClass('collapsibleListClosed').addClass('collapsibleListOpen showthis').show();
+                                $(this).parent().children().css('display', 'block');
+                                $(this).parents('ul').css('display', 'block');
+                                $(this).parents('li').removeClass('collapsibleListClosed').addClass('collapsibleListOpen');
+                            }
+                        });
+
+                        //For the text of each response title
+                        $('.response > .searchResp').each(function() {
+                            if ($(this).text().toLowerCase().indexOf(query) >= 0) {
+                                $(this).parent().children().css('display', 'block');
+                                $(this).parents('ul').css('display', 'block');
+                                $(this).parents().not('.response').removeClass('collapsibleListClosed').addClass('collapsibleListOpen');
+                            }
+                        });
+
+                        $('.titles').each(function() {
+                            if (!$(this).find('.showthis').length && $(this).text().toLowerCase().indexOf(query) < 0) {
+                                $(this).addClass('hidethis').hide();
+                            }
+                        });
+
+                        $('.showthis > ul li').removeClass('hidethis').addClass('showthis').show();
+                    }
+
+                }, 300));
+            }
+            //ondomready
+            $(function() {
+                searchList($(".lpview_search_input"), $("#list"));
+            });
+            $(function() { //clear search and reset state
+                $(".clear_search_icon").click(function() {
+                    $(".lpview_search_input").val("");
+                    $('#list').find('.hidethis,.showthis').removeClass('hidethis showthis').show();
+                    $('#list').find('.category,.subcategory').removeClass('collapsibleListOpen').addClass('collapsibleListClosed');
+                    $('#list').find('ul').css('display', 'none');
+                });
+            });
+        }(jQuery));
+
+        // For the hilight hover color
+        var hoverColor = "#61AECF";
+        $(".titles.response")
+            .mouseover(function() {
+                $(this).css("background-color", hoverColor);
+                $(this).css("color", "white");
+            })
+            .mouseout(function() {
+                $(this).css("background-color", "");
+                $(this).css("color", "");
+            });
+
+        $('.lpview_search_input')
+            .focusin(function() {
+                $('.lpview_clear_search_icon').css('display', 'block');
+            })
+            .focusout(function() {
+                $('.lpview_clear_search_icon').css('display', '');
+            });
+         
+      </script>
+</body>
+</html>

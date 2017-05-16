@@ -1,0 +1,15 @@
+{
+    "oneOf": [{
+            "title" : "TextValue",
+            "$ref": "TextValue.json"
+        }, {
+            "title" : "HostedFile",
+            "$ref": "HostedFile.json"            
+        }, {
+            "title" : "ChatStateEvent",
+            "$ref": "ChatStateEvent.json"
+        }, {
+            "title" : "AcceptStatusEvent",
+            "$ref": "AcceptStatusEvent.json"
+        }]
+}

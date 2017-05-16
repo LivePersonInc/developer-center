@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "subscriptionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+        }
+    },
+    "required": [
+        "subscriptionId"
+    ]
+}

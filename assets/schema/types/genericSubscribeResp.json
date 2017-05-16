@@ -1,0 +1,17 @@
+{
+    "allOf": [{
+        "$ref": "../infra/resp.json"
+    }, {
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "default": "GenericSubscribeResponse",
+                "readonly": "true"
+            },
+            "body": {
+                "type":"object"
+            }
+        }
+    }]
+}

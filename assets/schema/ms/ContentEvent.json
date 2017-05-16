@@ -1,0 +1,12 @@
+{
+    "title": "ContentValue",
+    "type": "object",
+    "oneOf": [{
+            "title": "TextValue",
+            "$ref": "TextValue.json"
+        }, {
+            "title": "HostedFile",
+            "$ref": "HostedFile.json"            
+        }
+    ]
+}

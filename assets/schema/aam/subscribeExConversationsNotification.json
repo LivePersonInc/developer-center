@@ -1,0 +1,128 @@
+{
+    "type": "object",
+    "properties": {
+        "subscriptionId": {
+            "type": "string"
+        },
+        "changes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["UPSERT", "DELETE"]
+                    },
+                    "result": {
+                        "type": "object",
+                        "properties": {
+                            "convId": {
+                                "type": "string"
+                            },
+                            "conversationDetails": {
+                                "type": "object",
+                                "properties": {
+                                    "participants": {
+                                        "description": "Contains the IDs of the conversation participants from each role, both consumers and agents",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "role": {
+                                                    "type": "string",
+                                                    "enum": ["CONSUMER","ASSIGNED_AGENT","MANAGER"]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "enum": ["OPEN", "CLOSE"]
+                                    },
+                                    "startTs": {
+                                        "type": "integer",
+                                        "description": "Time stamp of the conversation beginning"
+                                    },
+                                    "endTs": {
+                                        "type": "integer",
+                                        "description": "Time stamp of the conversation end"
+                                    },
+                                    "ttr": {
+                                        "type": "object",
+                                        "description": "Time To Respond. The contact center response SLA for this conversation",
+                                        "properties": {
+                                            "ttrType": {
+                                                "type": "string",
+                                                "description": "A label for the SLA policy",
+                                                "enum": ["CUSTOM", "NORMAL", "PRIORITIZED", "URGENT"]
+                                            },
+                                            "value": {
+                                                "description": "Seconds from consumer input till agent response.",
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "ttrType",
+                                            "value"
+                                        ]
+                                    },
+                                    "delay": {
+                                        "type": "object",
+                                        "description": "If the contact center is not available, this field indicates until when the handling of the current conversation will be delayed.<br><b>Note: </b> The delay value affects the TTR (see above) calculation. The TTR counts the number of seconds from the consumer response, but if there is a delay the counting will start only from the availablity point of the contact center.",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "description": "A label for the delay type",
+                                                "enum": ["NIGHT", "WEEKEND", "HOLIDAY"]
+                                            },
+                                            "tillWhen": {
+                                                "description": "Time stamp of when the contact center will be available again to handle this conversation.",
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": [
+                                            "type",
+                                            "tillWhen"
+                                        ]
+                                    },
+                                    "csat": {
+                                        "description": "Consumer statisfaction information. The data that was submitted by the consumer after the conversation was closed.",
+                                        "$ref": "../types/csat.json"
+                                    },
+                                    "manualETTR": {
+                                        "description": "Timestamp of the 'Manual Effective Time To Response'. The agent can manually set the expected timestamp of the next response. This will override any value of the above TTR and Delay fields",
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "participants",
+                                    "state",
+                                    "startTs"
+                                ]
+                            },
+                            "lastUpdateTime": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "convId",
+                            "conversationDetails",
+                            "lastUpdateTime"
+                        ]
+                    }
+                },
+                "required": [
+                    "type",
+                    "result"
+                ]
+            }
+        }
+    },
+    "required": [
+        "subscriptionId",
+        "changes"
+    ]
+}

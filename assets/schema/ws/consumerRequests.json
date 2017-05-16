@@ -1,0 +1,135 @@
+{
+    "anyOf": [{
+            "title": "InitConnection",
+            "description": "This request is needed only for clients that cannot send websocket headers. It can include the authentication and the clientProperties information.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["InitConnection"],
+                            "type": "string",
+                            "default": "InitConnection",
+                            "readonly": "true"
+                        },
+                        "headers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../infra/header.json"
+                            }
+                        }
+                    },
+                    "required": ["headers"]        
+                }]
+        }, {
+            "title": "UpdateConversationField",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cm.UpdateConversationField"],
+                            "default": "cm.UpdateConversationField",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../cm/updateConversationFieldBody.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "ConsumerRequestConversation",
+            "description": "This request is used by the consumer to request a new conversation",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cm.ConsumerRequestConversation"],
+                            "type": "string",
+                            "default": "cm.ConsumerRequestConversation",
+                            "readonly": "true"
+                        }
+                    }
+                }]
+        }, {
+            "title": "PublishEvent",
+            "description": "Publishes events to existing dialog. Events can be: <ul><li>text-content</li><li>photo-reference-content</li><li>read-reciepts (accept status)</li><li>presense/typing events (chat-state)</li></ul>",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.PublishEvent"],
+                            "default": "ms.PublishEvent",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/PublishEvent.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "SubscribeMessagingEvents",
+            "description": "Subscribes to get the events of a conversation. Existing events will be sent immediately, while new events will be notified as they happen.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.SubscribeMessagingEvents"],
+                            "default": "ms.SubscribeMessagingEvents",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/subscribeMessagingEvents.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "SubscribeExConversations",
+            "description": "Subscribes to any changes in the medata of the conversations of this user. Existing conversations that matches the filter will also be sent.<h4>Responses</h4><ul><li>200: SubscribeExConversationsResponse</li><li>Notification: ExConversationChangeNotification</li></ul>",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cqm.SubscribeExConversations"],
+                            "default": "cqm.SubscribeExConversations",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/subscribeExConversations.json"
+                        }
+                    }
+                }]
+        }, {
+            "title": "UnsubscribeExConversations",
+            "description": "Unsubcribes the user from getting notifications on conversation metadata changes.",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["cqm.UnsubscribeExConversations"],
+                            "default": "cqm.UnsubscribeExConversations",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../aam/unsubscribeExConversations.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }]
+}

@@ -1,0 +1,406 @@
+swagger: '2.0'
+info:
+  title: Agent Messaging API
+  version: "1.0.0"
+  x-logo:
+    url: 'img/liveperson-inc-logo.jpg'
+  description: |
+    # Introduction
+    This is documentation of the API capabilites. This api can be consumed currently only via the 
+    [node-agent-sdk](https://github.com/LivePersonInc/node-agent-sdk)
+    # Happy Flow
+    1. An agent creates a connection using username password.
+    2. The agent subscribes to get notification rings on new conversation tasks from the routing service (``subscribeRoutingTasks``).
+    3. The agent subscribes to get his list of existing assigned conversations (``subscribeExConversations``).
+    3. The agent sets his availablity to online (``setAgentState``)
+    4. The agent gets a ring notifying on a new conversation task. (``routingTaskNotification``)
+    5. The agent send his acceptance to get the task (``updateRoutingTask``).
+    6. The agent get a notification on the new conversation added to his list of assigned conversations. (``ExConversationNotification``)
+    7. The agent subscribes to get the content of this conversation. (``subscribeMessagingEvents``)
+    8. The agent gets existing content events, and possibly other realtime notification about messages 
+    events that are being published to the conversation. (``messagingEventNotification``)
+    9. The agent publish his own text messages, recipt events and presence events to the conversations. (``publishEvent``)
+    10. The agent can remove his assignment to the conversation sending it back to the queue, or close it. (``updateConversationField``)
+
+tags:
+  - name: Conversation
+    description: Mangage conversation lifecycle and metadata.
+  - name: Messaging
+    description: Pubish and subscribe to the content of the conversation.
+  - name: Profile
+    description: Getting information about the consumer.
+  - name: Routing
+    description: Register and get tasks from the routing service for agent to conversation matching.
+
+host: sdk
+schemes:
+  - api
+produces:
+  - application/json
+paths:
+  /agentRequestConversation:
+    js:
+      tags:
+        - Conversation
+      summary: Agent Request Conversation
+      description: |
+        This request is used by the agent to create a new conversation with a specific consumer.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            $ref: ../cm/agentRequestConversation.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+        401:
+          description: Unauthorized
+  /getClock:
+    js:
+      tags:
+        - infra
+      summary: Get Clock
+      description: |
+        Returns the service clock.
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /updateRingState:
+    js:
+      tags:
+        - Routing
+      summary: Update Ring State
+      description: |
+        The agent can accept or reject rings by changing their state.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            "$ref": ../routing/updateRingState.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /subscribeRoutingTasks:
+    js:
+      tags:
+        - Routing
+      summary: Subscribe Routing Tasks
+      description: |
+        Subscribes the agent to get notifications on his routing tasks.
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+        100:
+          description: routing.routingTaskNotification
+          schema:
+            $ref: ../routing/routingTaskNotification.json
+  /setAgentState:
+    js:
+      tags:
+        - Routing
+      summary: Set Agent State
+      description: |
+        Registers the agent to the routing service. While the agent is online the 
+        routing service will send him rings.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            $ref: ../routing/setAgentState.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /subscribeAgentsState:
+    js:
+      tags:
+        - Routing
+      summary: Subscribe Agent State
+      description: |
+        Subscribe to changes in the agent state.
+      responses:
+        100:
+          description: routing.agentStateNotification
+          schema:
+            $ref: ../routing/agentStateNotification.json
+        200:
+          description: Success
+          schema:
+            type: string
+  /getUserProfile:
+    js:
+      tags:
+        - Profile
+      summary: Get User Profile
+      description: |
+        Gets customer and personal info for the given consumerId.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            $ref: ../userprofile/getUserProfile.json
+      responses:
+        200:
+          description: Array of Consumer SDEs
+          schema:
+            # should be array of oneOfs, fix redoc to support and change.
+            oneOf:
+                - $ref: ../userprofile/customerInfo.json
+                - $ref: ../userprofile/personalInfo.json
+  /publishEvent#content:
+    js:
+      tags:
+        - Messaging
+      summary: Publish Event (Text Content)
+      description: |
+        Publishes text messages to existing dialog.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+                dialogId:
+                    type: string
+                event:
+                    $ref: ../ms/TextValue.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /publishEvent#accept:
+    js:
+      tags:
+        - Messaging
+      summary: Publish Event (Accept)
+      description: |
+        Publishes accept/read events to existing dialog.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+                dialogId:
+                    type: string
+                event:
+                    $ref: ../ms/AcceptStatusEvent.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /publishEvent#typing:
+    js:
+      tags:
+        - Messaging
+      summary: Publish Event (Typing)
+      description: |
+        Publishes user state events to existing dialog.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+                dialogId:
+                    type: string
+                event:
+                    $ref: ../ms/ChatStateEvent.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /subscribeMessagingEvents:
+    js:
+      tags:
+        - Messaging
+      summary: Subscribe Messaging Events
+      description: |
+        Subscribes to get the events of a conversation. 
+        Existing events will be sent immediately, while new events will be notified as they happen.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: ../ms/subscribeMessagingEvents.json
+      responses:
+        100:
+          description: ms.messagingEventNotification
+          schema:
+            $ref: ../ms/messagingEventNotification.json
+        200:
+          description: Success
+          schema:
+            type: string
+  /subscribeExConversations:
+    js:
+      tags:
+        - Conversation
+      summary: Subscribe Conversations Metadata
+      description: |
+        Subscribes to any changes in the medata of the conversations of this user.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: ../aam/subscribeExConversations.json
+      responses:
+        100:
+          description: cqm.ExConversationChangeNotification
+          schema:
+            $ref: ../aam/subscribeExConversationsNotification.json
+        200:
+          description: Success
+          schema:
+            type: string
+  /unsubscribeExConversations:
+    js:
+      tags:
+        - Conversation
+      summary: Unsubscribe Conversations Metadata
+      description: |
+        TBD
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: ../aam/unsubscribeExConversations.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /updateConversationField#State:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (Close)
+      description: |
+        Close the conversation.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/StateChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /updateConversationField#participants:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (Participants)
+      description: |
+        Change agent participation on a conversation. Agent can join by adding himself to the participants set,
+        or return the conversation to queue by deleting himself from this set.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/ParticipantsChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /updateConversationField#skill:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (Skill)
+      description: |
+        Changing the skill of the conversation. The change will affect the routing process when the no assigned
+        agent is present on the coversation.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/SkillChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
+  /cm.UpdateConversationField#TTR:
+    js:
+      tags:
+        - Conversation
+      summary: Update Conversation Field (TTR)
+      description: |
+        Mark conversation urgency.
+      parameters:
+        - name: body
+          in: body
+          description: TBD
+          required: true
+          schema:
+            type: object
+            properties:
+                conversationId:
+                    type: string
+                conversationField:
+                    type: array
+                    items:
+                        $ref: ../cm/types/TTRChange.json
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: ../infra/stringRespBody.json
+            
+ 

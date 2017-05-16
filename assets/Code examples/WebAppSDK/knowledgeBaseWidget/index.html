@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/CollapsibleLists.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <style>
+        .collapsibleList li {
+            list-style-image: url('img/button1.png');
+        }
+        
+        li.collapsibleListOpen {
+            list-style-image: url('img/button-open.png');
+            cursor: pointer;
+        }
+        
+        li.collapsibleListClosed {
+            list-style-image: url('img/button-closed.png');
+            cursor: pointer;
+        }
+        
+        .titles {
+            font-weight: bold;
+        }
+        
+        .item {
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input class="filterinput" type="text" id="filterinput">
+    <!--Paste Code Below This Line -->
+    <ul id='list' class='collapsibleList'>
+        <li class='titles'>Set 1
+            <ul>
+                <li class='titles pitem'>Closing
+                    <div class='item'>Have a good day.</div>
+                </li>
+                <li class='titles pitem'>Greeting
+                    <div class='item'>Hi! Thank you for chatting with us today.</div>
+                </li>
+            </ul>
+        </li>
+        <li class='titles'>Set 2
+            <ul>
+                <li class='titles pitem'>Product
+                    <div class='item'>That is a great item.</div>
+                </li>
+                <li class='titles pitem'>Support
+                    <ul>
+                <li class='titles pitem'>Closing
+                    <div class='item'>Have a good day.</div>
+                </li>
+                <li class='titles pitem'>Greeting
+                    <div class='item'>Hi! Thank you for chatting with us today.</div>
+                </li>
+            </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </li>
+    <!--Paste Code Above This Line -->
+    <script>
+        var SDK = lpTag.agentSDK;
+        SDK.init();
+        // make the appropriate lists collapsible
+        CollapsibleLists.apply();
+        $(".pitem > .item").click(function() {
+            var data = {
+                text: $(this).html()
+            };
+            SDK.command('Write ChatLine', data);
+            console.log("item");
+            event.stopPropagation();
+        });
+
+        $(".pitem").click(function() {
+            var data = {
+                text: $("div", this).html()
+            };
+            SDK.command('Write ChatLine', data);
+            console.log("pitem");
+        });
+
+        (function($) {
+            // custom css expression for a case-insensitive contains()
+            jQuery.expr[":"].contains = jQuery.expr.createPseudo(function(arg) {
+                return function(elem) {
+                    return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                };
+            });
+
+            // this function calls itself, to search in every level
+            function hasChild(list) {
+                // the searched value
+                var filter = $('#filterinput').val();
+                // for every children, do function:
+                list.children('li').each(function() {
+                    // see if the list contains the filter
+                    // if you don't want to use span,  you can  write the following function:
+                    //find("a:contains(" + filter + ")")
+                    if ($(this).find(":contains(" + filter + ")").length > 0) {
+                        // see if it has nested levels
+                        if ($(this).find('ul :first').length > 0) {
+                            $(this).show();
+                            // recall function
+                            hasChild($(this).find('ul :first').parent());
+                        } else {
+                            $(this).show();
+                        }
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            };
+            $('#filterinput').keyup(function() {
+                // the id of the filtered list
+                var list = '#list';
+                // the searched value
+                var filter = $('#filterinput').val();
+                if (filter) {
+                    // call previous function
+                    hasChild($(list));
+                } else {
+                    // show all
+                    $(list).find("li").show();
+                }
+                return false;
+            });
+        }(jQuery));
+
+    </script>
+</body>
+
+</html>

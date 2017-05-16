@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "dialogId": {
+            "type": "string"
+        },
+        "event": {
+            "$ref": "../ms/AbstractMessagingEvent.json"
+        }
+    },
+    "required": ["dialogId", "event"]
+}

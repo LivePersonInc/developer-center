@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Table Widget</title>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-slate.min.css">
+    <link rel="stylesheet" href="css/example2.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="../ckeditor.js"></script>
+    <script src="js/sample.js"></script>
+    <link rel="stylesheet" href="css/samples.css">
+</head>
+
+<body>
+    <div class="container">
+       <br/>
+       <div class="row row-centered">
+            <div class="col-md-12 col-centered">
+                <div id="editor">
+                </div><br><br>
+                <button type="button" class="btn btn-block btn-default" onclick="sendTable()">Send</button>
+                    <div id="hiddenTable" style="display: none;"></div>
+           </div>
+        </div><br>
+    </div>
+    <script>
+        var SDK = lpTag.agentSDK;
+        SDK.init();
+        
+        function sendTable() {
+            //get the agents input
+            var tableText = $("#cke_editor iframe").contents().find("body").html();
+            //create the table based on the input
+            $("#hiddenTable").html(tableText);
+            //remove the styling of the table
+            $("#hiddenTable table").removeAttr("style");
+            //add a special class to the first table row for styling
+             $( "tr:first td" ).addClass( "sizingWidgetClassForLE2" );
+            //add a special class to every othe table row for styling
+            $( "tr:odd td" ).addClass( "sizingWidgetClassForLE" );
+            //add a class to each element for styling
+            $( "table" ).addClass( "sizingWidgetClassForLETable" );
+            $( "td" ).addClass( "sizingWidgetClassForLETable" );
+            $( "th" ).addClass( "sizingWidgetClassForLETable" );
+            //get the new table html code
+            tableText = $("#hiddenTable").html();
+            //console.log(tableText);
+            //send the table to the chat window
+            SDK.command('Write ChatLine', {text: tableText});
+        }
+
+        $("textarea").change(function(){
+            console.log("change");
+        });
+
+        initSample();
+    </script>
+</body>
+
+</html>

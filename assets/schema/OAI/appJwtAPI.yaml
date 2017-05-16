@@ -1,0 +1,90 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+
+# This is your document metadata
+info:
+  version: "1.0.0"
+  title: App Jwt API
+host: va-idp.liveperson.com  
+
+schemes:
+  - https
+# Describe your paths here
+paths:
+  
+  # This is a path endpoint. Change it.
+  /api/account/{accountId}/token:
+    # This is a HTTP operation
+    post:
+      consumes: 
+      - application/x-www-form-urlencoded
+      produces:
+      - application/json
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        Authentication for app JWT
+      # This is array of GET operation parameters:
+      parameters:
+        # An example parameter that is in query and is required
+        -
+          name: accountId
+          in: path
+          description: account id
+          required: true
+          type: string
+        -
+          name: client_id
+          in: formData
+          description: client id
+          required: true
+          type: string
+        -
+          name: client_secret
+          in: formData
+          description: secret
+          required: true
+          type: string
+        -
+          name: scope
+          in: formData
+          description: scope
+          required: true
+          type: array
+          items: {
+            type: string
+          }
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        '200':
+          description: Successful response
+          examples: 
+            application/json: "eyJraWQiOiIwMDAwMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiam5lcjk4N2JoZ3JlODkzNGludWRmcmV0ZyIsInN1YiI6ImFiYy1kZWYtaGdpLTEyMyIsImF1ZCI6InVtcyIsInJvbGUiOiJzZXJ2ZXIiLCJhenAiOiJpZHAiLCJpc3MiOiJsaXZlcGVyc29uLm5ldCIsImV4cCI6MTU0ODY3MDg1NCwiaWF0IjoxNDg4MTkwODU0LCJqdGkiOiI2ZjgxOTRydC1nNHQtaThoLWJlYTAtNXlmZmc2NTk2MTFjIn0.YK_5LxCTumnHqCsJNwz5C85DUa6xbxnOg6tir3axo3MRGzmpdqd3eyuDOMNMcKXritTep83Ugw-9YQIyFaaNp-Zzv4r5XN-310rCHoI21trnr5W1a0H8R0_ZpX7KxtA-yKwJOCCRXCFB0IomiqYT-XVon4h8qUXNEi-GjpnpLqw"
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: App LP-JWT
+            type: object
+            properties:
+                id_token: 
+                  type: string
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'   
+            
+definitions:
+   errorModel:
+    type: object
+    required:
+      - internalErrorCode
+    properties:
+      internalErrorCode:
+        type: integer
+        format: int32
+            
+          
+        

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 215
+        versionName "2.1.5"
+    }
+
+    defaultConfig {
+        consumerProguardFiles 'proguard.cfg'
+    }
+
+    repositories {
+        flatDir {
+            dirs 'aars'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:percent:25.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.neovisionaries:nv-websocket-client:1.31'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+
+    compile(name: 'infra', ext: 'aar')
+    compile(name: 'messaging', ext: 'aar')
+    compile(name: 'messaging_ui', ext: 'aar')
+    compile(name: 'ui', ext: 'aar')
+}

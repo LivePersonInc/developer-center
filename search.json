@@ -1,0 +1,24 @@
+---
+title: search
+layout: none
+search: exclude
+---
+
+[
+{% for page in site.pages %}
+{% unless page.search == "exclude" %}
+{
+    "level1": "{{ page.level1 }}",
+    "level2": "{{ page.level2 }}",
+    "level3": "{{ page.level3 }}",
+    "level4": "{{ page.level4 }}",
+    "title": "{{ page.title | escape }}",
+    "tags": "{{ page.tags }}",
+    "keywords": "{{page.keywords}}",
+    "url": "{{ page.url | remove: "/"}}",
+    "content": "{{page.content | strip | strip_html | strip_newlines | url_escape | url_encode }}"
+}
+{% unless forloop.last %},{% endunless %}
+{% endunless %}
+{% endfor %}
+]

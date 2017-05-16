@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "subscriptionId": {
+            "type": "string"
+        },
+        "changes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["DELETE", "UPSERT"]
+                    },
+                    "result": {
+                        "type": "object",
+                        "properties": {
+                            "taskCompleted": {
+                                "type": "boolean"
+                            },
+                            "conversationId": {
+                                "type": "string"
+                            },
+                            "consumerId": {
+                                "type": "string"
+                            },
+                            "skillId": {
+                                "type": "string"
+                            },
+                            "ringsDetails": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "ringId": {
+                                            "type": "string"
+                                        },
+                                        "ringExpiration": {
+                                            "type": "integer"
+                                        },
+                                        "ringState": {
+                                            "type": "string",
+                                            "enum": ["ACCEPTED", "AUTO_ACCEPT", "CANCELLED", "EXPIRED", "REJECTED", "WAITING"]
+                                        },
+                                        "weight": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": ["ringState"]
+                                }
+                            }
+                        },
+                        "required": ["routingTaskId", "taskCompleted", "conversationId", "consumerId", "skillId", "ringsDetails"]
+                    }
+                },
+                "required": ["type", "result"]
+            }
+        }
+    },
+    "required": ["subscriptionId", "changes"]
+}

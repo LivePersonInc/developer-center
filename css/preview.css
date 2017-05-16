@@ -1,0 +1,63 @@
+body {
+  overflow-y: auto;
+}
+
+html body .preview-page div.container div.title {
+  border-bottom: medium none;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color:#33c6f4;
+  font-family: "Open Sans";
+}
+html body .preview-page div.container div.text a {
+    margin-bottom: 4px ;  
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 12px;
+    text-decoration: none;
+    border-top:none;
+}
+
+.preview {
+  background-color: #162036;
+  display: none;
+  left: -11px;
+  /* commented out to prevent button flicker
+  margin-top: 17px;*/
+  position: absolute;
+  width: 800px;
+}
+
+.preview-page .documents, .preview-page .products, .preview-page .events {
+    margin-top: 0px;
+    width: 95%;
+    padding-top: 30px;
+    background-color: inherit;
+}
+html body .preview-page div.container div.text {
+    margin-bottom: 36px;
+    margin-left: -8px;
+}
+html body .preview-page div .more-btn{
+    display: none !important;
+}
+
+ .nav li a:hover {
+    background-color:initial !important;
+    color: #ff720b;
+}
+
+.preview-page .container.products, .preview-page .container.documents {
+  padding-left: 0%;
+}
+html body  .preview-page footer{
+    display: none;
+}
+@media (max-width:1000px){
+   html body .preview {
+    position: fixed !important;
+    width: 100%;
+    left: 0px;
+}
+}

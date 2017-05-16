@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "changes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sequence": {
+                        "type": "integer"
+                    },
+                    "originatorId": {
+                        "type": "string"
+                    },
+                    "serverTimestamp": {
+                        "type": "integer"
+                    },
+                    "event": {
+                        "$ref": "AbstractMessagingEvent.json"
+                    },
+                    "dialogId": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "sequence",
+                    "originatorId",
+                    "serverTimestamp",
+                    "event",
+                    "dialogId"
+                ]
+            }
+        }
+    },
+    "required": [
+        "changes"
+    ]
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LE-Marketo Integration</title>
+    <script type="text/javascript" charset="utf8" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+       
+  </head>
+  <body>
+    <h3 style="padding-left:20px;padding-top:10px;">Marketo Example</h3>
+    
+    <div style="padding-left:20px;"><i>The following information will be sent</i>:</div>
+    <br>
+    <div id="toSend" style="padding-left:20px;"></div>
+
+    <div id="container">
+        <div id="container-header">
+            <button type="button" class="btn" onclick="toMarketo(); return false;">
+                Send to Marketo
+            </button>
+        </div>
+    </div>
+
+    <div id="msg" style="padding-left:20px;"></div>
+
+    
+        
+    <script>
+        var arr;
+
+        (function() {
+            var notificationHandler = function(data) {};
+            lpTag.agentSDK.init({
+                notificationCallback: notificationHandler
+            });
+            getParams();
+        })();
+
+        function getParams() {
+            var formId = "ENTER_FORM_ID_HERE";
+            var munchkinId = "ENTER_MUNCHKIN_ID_HERE";
+
+            var paramString = "";
+
+            var onSuccess = function(data) {
+                arr = [
+                    {"displayName":data.name.displayName,"value":data.name.value},
+                    {"displayName":data.email.displayName,"value":data.email.value},
+                    {"displayName":data.phone.displayName,"value":data.phone.value}
+                ];
+
+                str = "<b>" + arr[0].displayName + "</b>: " + arr[0].value + "<br/><b>" + arr[1].displayName + "</b>: " + arr[1].value + "<br/><b>" + arr[2].displayName + "</b>: " + arr[2].value + "<br/>";
+
+                for (var i = 0; i < data.customizedQuestions.length; i++){
+                    arr.push(data.customizedQuestions[i]);
+                    str += "<b>" + data.customizedQuestions[i].displayName + "</b>: " + data.customizedQuestions[i].value + "<br/>";
+                }
+                str += "<br/><i>Marketo information is as follows</i>:<br/><br/><b>Form Id</b>: " + formId + "<br/><b>Munchkin Id</b>: " + munchkinId + "<br/><br/>";
+
+                document.getElementById("toSend").innerHTML = str;
+            }
+            var onError = function(err) {
+                console.log(err);
+                str = "Error: " + err;
+                document.getElementById("toSend").innerHTML = str;
+            }
+            lpTag.agentSDK.get("surveyQuestions.preChat", onSuccess, onError);
+        }
+
+        function toMarketo() {
+            document.getElementById("msg").innerHTML = "Sending to Marketo... please wait.";
+            $.ajax({
+                url: "https://app-ab15.marketo.com/index.php/leadCapture/save/index.php/leadCapture/save",
+                type: "POST",
+                contentType: 'application/x-www-form-urlencoded',
+                data: {
+                    FirstName: arr[0].value,
+                    Email: arr[1].value,
+                    Phone: arr[2].value,
+                    practicename: arr[3].value,
+                    formid: ENTER_FORM_ID_HERE,
+                    munchkinId: 'ENTER_MUNCHKIN_ID_HERE'
+                },
+                success: function(response) {
+                    console.log("Response is: ", response);
+                    document.getElementById("msg").innerHTML = "Successfully sent ticket to Marketo!!";
+                },
+                error: function(err) {
+                    console.log("Error is: ", err);
+                    document.getElementById("msg").innerHTML = "Unfortunately there was a problem sending this to Marketo.";
+                }
+            });
+        }
+    </script>
+    
+  </body>
+</html>
+
