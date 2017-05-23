@@ -57,6 +57,22 @@ public class ConsumerProfile {
 }
 ```
 
+### PushMessage
+
+```javascript
+
+{
+public class PushMessage {
+    private String mBrandId;
+    private String mMessage;
+    private String mFrom;
+    private String mConversationId;
+    private String mBackendService;
+    private String mCollapseKey;
+    private int mCurrentUnreadMessagesCounter = -1;
+//if we get unread messages counter from push message this value will contain it. 
+}
+```
 
 ### LPConversationData
 

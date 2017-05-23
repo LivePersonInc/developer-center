@@ -1,5 +1,5 @@
 ---
-title: handlePush
+title: handlePush (Deprecated)
 Keywords:
 
 level2: Consumer Experience
@@ -18,9 +18,9 @@ Handling the push message allows the host app to do the following:
 - Receive non-messaging related push messages.
 - Handle custom in-app alerts upon an incoming message.
 
-*Note: Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePush method.*
+*Note: Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePushMessage method.*
 
-`public static void handlePush(Context context, Bundle data, String brandId, Boolean showNotification)`
+`public static void handlePushMessage(Context context, Bundle data, String brandId, Boolean showNotification)`
 
 | Parameter | Description |
 | :--- | :--- |

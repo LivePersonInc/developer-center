@@ -17,7 +17,7 @@ This method returns the name that was set by the visitor (default: visitor).
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/visitorName |
+| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/visitorName?v=1&NC=true |
 
 **Request Headers**
 

@@ -17,7 +17,7 @@ This method retrieves the events, information and resources of multiple chats. U
 
 | Method | URI |
 | :--- | :--- |
-| GET | Resource is not exposed but can be used with any given valid agent session. {agent-session}/chat?chatSessionKeys=CSK1,CSK2,...&fromEventIds=EID1,EID2,...&v=1 |
+| GET | Resource is not exposed but can be used with any given valid agent session. {agent-session}/chat?chatSessionKeys=CSK1,CSK2,...&fromEventIds=EID1,EID2,...&v=1&NC=true |
 
 **Request Headers**
 

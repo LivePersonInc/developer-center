@@ -333,6 +333,10 @@ div.sidebarTitle-holder {
   font-weight: lighter;
 }
 
+.post-content,.post-content *{
+  overflow-wrap: break-word;
+}
+
 
 pre {
   margin: 20px 0;
@@ -400,7 +404,7 @@ pre {
 
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1190px){
     div.sidebarTitle{
       margin-top: 68px;
     }

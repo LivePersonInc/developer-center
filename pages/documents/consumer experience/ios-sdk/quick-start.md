@@ -26,7 +26,7 @@ _Note: For information on supported operating systems and devices, refer to [Sys
 
 ### Step 1: Download and Unzip the SDK
 
-1. Click [here](https://github.com/EdenKupe/liveperson/tree/master/assets/iOS-Messaging-SDK){:target="_blank"} to download the SDK package.
+1. Click [here](https://github.com/LivePersonInc/developers-community/tree/master/assets/iOS-Messaging-SDK){:target="_blank"} to download the SDK package.
 2.  Once downloaded, extract the ZIP file to a folder on your Mac.
 
 ### Step 2: Configure project settings to connect LiveEngage SDK
@@ -37,7 +37,11 @@ _Note: For information on supported operating systems and devices, refer to [Sys
 
 3. **If you're using XCode version 8.2 or later, skip to step 4**. In order to use LiveEngage SDK on an iOS 10 simulator, you must have at least one Project Capability enabled such as Keychain Sharing or Push Notifications.  To enable Capabilities: In project setting, navigate to Capabilities and enable Keychain Sharing . LiveEngage In-App Messaging SDK for iOS uses keychain to store sensitive settings and data. [This step is a workaround for an open Apple bug that fails to use keychain store in Xcode 8 and iOS 10](https://openradar.appspot.com/27422249){:target="_blank"}.
 
-4. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project 
+4. In the **General** tab, make sure that the framework files are under **Embedded Libraries**.
+
+5. In Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
+
+6. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project 
 settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html){:target="_blank"}. 
 <br>If you are using Xcode 8 with iOS 10 (or later), in the info.plist of the project, add two new privacy keys and values: 
 * Key: NSPhotoLibraryUsageDescription, Value: "Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS",
@@ -45,10 +49,18 @@ settings which privacy settings may be used. For more information, refer to [App
 <br>This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. 
 Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK. 
 
-5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
-`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"`
+7. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
+
+	* If you installed frameworks using CocoaPods, use the following script: 
+
+	`bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"`
+
+	* If you installed frameworks using copy to Xcode project, use the following script:
+
+	`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"`
 
 ### Step 3: Initialization
+
 1. Inside `AppDelegate`, under `didFinishLaunchingWithOptions`, add the following code:
 
 ```javascript
@@ -68,7 +80,3 @@ return
 
 	`let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
 	 LPMessagingSDK.instance.removeConversation(conversationQuery)`
-
-4. In the **General** tab, make sure that the framework files are under **Embedded Libraries**.
-
-5. In Build settings, make sure **Embedded content contains Swift code** is set to **YES**.

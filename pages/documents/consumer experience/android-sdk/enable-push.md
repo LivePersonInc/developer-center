@@ -19,22 +19,21 @@ To implement push notifications on the client side:
 - Get your app’s AppKey from [Google GCM](https://developers.google.com/cloud-messaging/gcm){:target="_blank"} or [Google FCM](https://firebase.google.com/docs/cloud-messaging/){:target="_blank"} and set it in the LiveEngage backend, as explained [here](android-pushnotifications.html){:target="_blank"}, to identify your app by LiveEngage.
 - On every app launch get the GCM Token from your device and register it on the LiveEngage push service using the [registerLPPusher()](android-registerlppusher.html){:target="_blank"} API call so it knows which device should get each push message.
 - Upon receiving a push message to your app, [handle](android-handlepush.html){:target="_blank"} it so it is displayed to the customer.
-public class MyGcmListenerService extends GcmListenerService {
+
+`public class MyFirebase extends FirebaseMessagingService {`
 
 ```javascript
 {
 /**
  * Called when message is received.
  *
- * @param from SenderID of the sender.
- * @param data Data bundle containing message data as key/value pairs.
- *             For Set of keys use data.keySet().
+ * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
  */
 @Override
-public void onMessageReceived(String from, Bundle data) {
+public void onMessageReceived(RemoteMessage remoteMessage) {
 
    // Sends the message into the SDK
-   LivePerson.handlePush(this, data, lpAccount, true);
+   LivePerson.handlePushMessage(this, remoteMessage.getData(), lpAccount, true);
 }
 }
 ```

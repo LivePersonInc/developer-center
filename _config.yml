@@ -19,6 +19,7 @@ host: 127.0.0.1
 port: 4000
 # the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
 
+google_analytics: UA-96175782-1
 #baseurl: /liveperson
 
 exclude:
@@ -28,7 +29,7 @@ exclude:
 
 feedback_subject_line: LivePerson APIs
 
-feedback_email: netanel@mangonet.co.il
+feedback_email: edenk@liveperson.com
 # used as a contact email for the Feedback link in the top navigation bar
 
 feedback_disable: true

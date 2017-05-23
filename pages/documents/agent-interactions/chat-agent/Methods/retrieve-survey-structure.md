@@ -16,7 +16,7 @@ This method returns the agent survey structure. The survey structure is in XML t
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/survey  |
+| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/survey?v=1&NC=true  |
 
 **Request Headers**
 

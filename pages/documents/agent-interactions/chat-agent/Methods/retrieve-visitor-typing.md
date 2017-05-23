@@ -17,7 +17,7 @@ This method retrieves the visitor's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/visitorTyping |
+| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/visitorTyping?v=1&NC=true |
 
 *Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.* 
 

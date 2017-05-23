@@ -42,3 +42,4 @@ The automatic messages can be manually updated within LiveEngage. Each message c
 ![AutomaticMessages](img/automaticmessages.png)
 
 
+

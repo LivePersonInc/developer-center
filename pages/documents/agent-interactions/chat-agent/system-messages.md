@@ -5,7 +5,7 @@ level1: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 
-order: 9
+order: 8
 permalink: agent-system-messages.html
 
 ---

@@ -17,7 +17,7 @@ Use this request to end a chat.
 
 | Method | URL                                                                                               |
 |--------|---------------------------------------------------------------------------------------------------|
-| POST   | https://{domain}/api/account/{accountId}/agentSession/agentSessionId/incomingRequests?v=1&NC=true |
+| POST   | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events?v=1&NC=true |
 
 **Request Headers**
 

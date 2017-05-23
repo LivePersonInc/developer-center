@@ -17,7 +17,7 @@ Use this method to periodically poll for new events in the chat session. The met
 
  |Method  |URL |
  |:---|  :---| 
- |GET|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events |
+ |GET|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events?v=1&NC=true |
 
 **Request Headers**
 

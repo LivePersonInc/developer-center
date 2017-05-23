@@ -23,7 +23,8 @@ Definition:
 
     void onError(TaskType type, String message);
     void onTokenExpired();
-    void onConversationStarted();
+    void onConversationStarted(LPConversationData convData);
+    void onConversationResolved(LPConversationData convData);
     void onConversationResolved();
     void onConnectionChanged(boolean isConnected);
     void onAgentTyping(boolean isTyping);
@@ -60,7 +61,6 @@ The onError(TaskType type, String message) method is called to indicate that an 
 | IDP                  | An error occurred during the authentication process. This is usually due to a wrong or expired authentication key. |   |
 | VERSION              | Your host app is using an old SDK version and cannot be initialized.                                               |   |
 | OPEN_SOCKET          | Error opening a socket to the server.                                                                              |   |
-| MESSAGE_SEND_FAILURE | Called when a sent message has failed.                                                                             |   |
 
 ###  Token Expired
 
@@ -73,6 +73,8 @@ The onConversationStarted() method is called whenever a new conversation is star
 ###  Conversation resolved
 
 The onConversationResolved() method is called when the current conversation is marked as resolved by either the consumer or the agent.
+
+_Note : onConversationResolved() and onConversationResolved(CloseReason reason) are deprecated._
 
 ###  Connection state has changed
 

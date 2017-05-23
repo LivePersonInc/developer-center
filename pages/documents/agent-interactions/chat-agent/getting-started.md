@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Chat Agent API
 
 level-order: 4
-order: 8
+order: 7
 permalink: chat-agent-getting-started.html
 root-link: true
 ---
@@ -64,7 +64,7 @@ There are two primary reasons to utilize the Chat Agent API:
 
 ### Samples
 
-Refer to the [Agent Sample App](https://github.com/LivePersonInc/agent-sample-app){:target="_blank"}.
+Refer to the [Agent Sample App](chat-agent-sample-app.html){:target="_blank"}.
 
 
 

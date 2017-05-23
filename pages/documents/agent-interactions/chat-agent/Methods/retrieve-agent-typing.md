@@ -17,7 +17,7 @@ This method returns the agent's typing status.
 
 | Method | URL                                                                                                   |
 |--------|-------------------------------------------------------------------------------------------------------|
-| GET    | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping |
+| GET    | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true |
 
 **Request Headers**
 

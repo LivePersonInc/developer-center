@@ -16,7 +16,7 @@ Time-shifted messaging is more convenient than phone calls.
 
 The typical **Millennial** exchanges an average of **67 text messages per day.  - Business Insider**
 
-Americans now spend around **5 times longer **in messaging apps each day than on voice calls. - nielsen
+Americans now spend around **5 times longer** in messaging apps each day than on voice calls. - nielsen
 
 WhatsApp and Facebook Messenger alone carry **22 trillion messages per year. - facebook**
 
