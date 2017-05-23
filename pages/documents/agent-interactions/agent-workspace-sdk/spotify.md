@@ -4,6 +4,7 @@ Keywords:
 level1: Documents
 level2: Agent Interactions
 
+
 order: 80
 permalink: agent-workspace-sdk-spotify-use-case.html
 
@@ -16,6 +17,8 @@ The repository below contains sample code to provide guidance with using LiveEng
 ### Overview
 
 The file transfer widget is a Node.js web app that uploads files to Amazon Simple Storage Service (S3) and generates access links that can be provided to share a file. The widget uses LiveEngage SDKs (Agent Workspace Widget SDK and Engagement Window Widget SDK) to display file transfer forms, links, and alerts between Agent and Client Sessions. The agent and consumer connection is maintained by an authenticated Pusher.js service. The repo also provides one method of localization that can be used to translate phrases between multiple languages. The service makes use of a SPA architecture on the client side.
+
+[You can find the repository through this link.](https://github.com/cjames1224/filetransferle)
 
 In order to view the widget in action:
 

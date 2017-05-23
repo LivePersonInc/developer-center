@@ -17,7 +17,7 @@ This method retrieves information regarding the current status of the chat. The 
 
 | Method | URL                                                                                       |
 |--------|-------------------------------------------------------------------------------------------|
-| GET    | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info |
+| GET    | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info?v=1&NC=true |
 
 **Request Headers**
 

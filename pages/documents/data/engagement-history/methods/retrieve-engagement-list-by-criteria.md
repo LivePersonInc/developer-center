@@ -27,7 +27,7 @@ This returns a list of engagements with all their metadata and related transcrip
 | offset | The offset from where to retrieve the chat. | numeric | Optional | Default is 0.  |
 | limit | Max chats to be received in the response.  | numeric | Optional | Default is 50. Max value is 100. The remaining chats can be obtained using pagination (using offset, in a subsequent request). |
 | sort | Sort the results in a predefined order. | string | Optional | Example: start:des will order chats by descending value of the start time. start:asc,duration:desc will orders chat by ascending value of start time AND then by descending value of duration. <br> Valid values: "start", "end", "duration", "visitor", "engagementId", "interactive", "visitor", "agentId", "skillId"(multiple values are valid). Order:[asc/des] |
-
+
 **BODY/POST Parameters**
 
 Filter is sent in the POST data with the following JSON structure.
@@ -46,7 +46,7 @@ Filter is sent in the POST data with the following JSON structure.
 | channel | Engagement channel ID. | Integer representing one of the following options: UNKNOWN(-1)WEB(1), VOICE(2); | Optional | |
 | engagementId | Engagement ID. | numeric | Optional | When used, all time limitations are ignored. |
 | alertedMcsValues | Alerted MCS of the chat. | Array `<alertedMCS>` | Optional | Valid values: "-1", "0", "1" |
-| chatMCS {from,to} | Range of Meaningful Connection Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
+| chatMCS {from,to} | Range of Meaningful Connection Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
 | hasCoBrowse | Indication whether a CoBrowse session occurred during the chat | Boolean | Optional |  |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
@@ -82,7 +82,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
             "start":{
                  "from":1433140200000,"to":1435645800000
              },
-       	   “keyword”: “ipad”,
+       	   "keyword": "ipad",
        "keyword_search_area": {
            "types": [
                "chatLine",

@@ -1,16 +1,16 @@
 ---
-title: Demo App
+title: Sample App
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 
 order: 5
-permalink: consumer-experience-javascript-chat-demo.html
+permalink: consumer-experience-javascript-chat-sample.html
 
 ---
 
-This demo app includes information on how to work with the SDK. There are two flows:
+This sample app includes information on how to work with the SDK. There are two flows:
 
 - [Unmonitored Flow](#unmonitored-flow)
 - [Monitored Flow](#monitored-flow)
@@ -21,7 +21,7 @@ Download the Sample App from the following [Github repository](https://github.co
 
 ###  Prerequisites for un-monitored flow
 
-- An existing LiveEngage site - [click here](https://register.liveperson.com/){:target="_blank"} to create a site.
+- An existing LiveEngage site - [click here](https://register.liveperson.com/){:target="_blank"} to create a site.      
 - An existing API-based engagement window configured in LiveEngage.
 - An existing External engagement configured in LiveEngage, which refers to the above API-based engagement window. 
 - An available user (agent) who is logged into LiveEngage.

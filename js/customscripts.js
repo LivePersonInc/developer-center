@@ -20,6 +20,9 @@ $( document ).ready(function() {
      */
     anchors.add('h2,h3,h4,h5');
 
+    //solve problem with width tables in mobile
+    $( "table" ).wrap( "<div style='max-width:100%;overflow:scroll'></div>" );
+
 });
 
 // needed for nav tabs on pages. See Formatting > Nav tabs for more details.
@@ -159,6 +162,43 @@ $(function() {
     })
 });
 
+//need for open and close search input on mobile
+$(function() {
+    var mobile_open = false;
+    $("#search-icon-mobile").click(function(){
+        if(mobile_open == false){
+            var width = $(window).width() - ($("#search-icon-mobile").width() + $(".mobilresizee-search-container .close-btn").outerWidth() + 35);
+            $("#search-input-mobile").animate({'width': width},function() {
+                setTimeout(function(){
+                    $("#search-input-mobile").focus();
+                },200);
+            });
+            $(".mobile-search-container").animate({'right': '9px'},200);
+            $(".mobile-search-container .close-btn").show();
+            $(".mobile-search-container").addClass("under-line");
+            mobile_open = true;
+        }
+         if(mobile_open == true){
+             //NEED TO DO SERACH
+         }
+        $(".mobile-search-container .close-btn").click(function(){
+            $("#search-input-mobile").animate({'width': 0},200);
+            
+            $(".mobile-search-container").animate({'right': '46px'},200);
+            $(".mobile-search-container .close-btn").hide();
+            $(".mobile-search-container").removeClass("under-line");
+            mobile_open = false;
+        })
+
+    })
+    $(window).on("resize",function(){
+        if(mobile_open){
+            var width = $(window).width() - ($("#search-icon-mobile").width() + $(".mobilresizee-search-container .close-btn").outerWidth() + 35);
+            $("#search-input-mobile").css({'width': width});
+        }
+    })
+});
+
 //need for open the preview on navigation documents and products
 $(function(){
     var interval=0;
@@ -200,33 +240,31 @@ $(function(){
 var breadcrumbs = {
     isOpen: 0,
     init: function() {
-        $(".toc").ready(function(){
+        $("#toc").ready(function(){
             setTimeout(function(){
+                if ($("div#toc ul li").length == 0) {
+                    breadcrumbs.disable();
+                    return;
+                }
 
-            },100);
-        });
-
-        if ($("div#toc ul li").length == 0) {
-            breadcrumbs.disable();
-            return;
-        }
-
-        $("div#toc > ul > li a").click(function(event){
-            event.preventDefault();
-
-            var top = $(target).offset().top;                         
-            $('html, body').animate({
-                scrollTop: top - 120
-            }, 500);
-            breadcrumbs.hide();
-        });
-        $(".breadcrumb-item.active").on("click",function(){
-            if (breadcrumbs.isOpen) breadcrumbs.hide();
-            else breadcrumbs.show();
-        });
-        
-        $("body").click(function(){
-            if (breadcrumbs.isOpen) breadcrumbs.hide();
+                $("div#toc > ul > li a").click(function(event){
+                    event.preventDefault();
+                    var target = $(this).attr("href");
+                    var top = $(target).offset().top;                         
+                    $('html, body').animate({
+                        scrollTop: top - 120
+                    }, 500);
+                    breadcrumbs.hide();
+                });
+                $(".breadcrumb-item.active").on("click",function(){
+                    if (breadcrumbs.isOpen) breadcrumbs.hide();
+                    else breadcrumbs.show();
+                });
+                
+                $("body").click(function(){
+                    if (breadcrumbs.isOpen && $(event.target).parents(".breadcrumb-item.active").length == 0) breadcrumbs.hide();
+                });
+            },150);
         });
     },
     show: function() {
@@ -242,13 +280,13 @@ var breadcrumbs = {
         breadcrumbs.isOpen = false;
     },
     disable: function() {
-        $("div#toc").remove();
-        $(".breadcrumb-item.active").find(".down-arrow").removeClass("fa-chevron-down");
-        $(".breadcrumb-item.active").removeClass("active");
+        //$("div#toc").remove();
+        //$(".breadcrumb-item.active").find(".down-arrow").removeClass("fa-chevron-down");
+        //$(".breadcrumb-item.active").removeClass("active");
     }
 }
-
 $(breadcrumbs.init);
+
 
 
 
@@ -278,6 +316,14 @@ $(breadcrumbs.init);
                     search.showOnPage();
                     search.search(search.term, search.showAsOverlay);
                 },400);
+            });
+            $('#search-input-mobile').keypress(function (e) {
+                if (e.which == 13) {
+                    search.term = $("#search-input-mobile").val().trim().toLowerCase();
+                    var href = "search.html?term="+search.term;
+                    if (search.level3) href += "&level3="+search.level3;
+                    location.href = href;
+                }
             });
             //we return the search result if field not empty
             $("#search-input").on("focus",function(){
@@ -388,6 +434,10 @@ $(breadcrumbs.init);
                     if (resultsInProductsCount <= 3) $(template(result)).appendTo(resultsClass);
                 }
             });
+            $(".resultsInDocumentsTitle,.resultsInProductsTitle,.resultsInDocumentTitle").show();
+            if (resultsInDocumentsCount == 0) $(".resultsInDocumentsTitle").hide();
+            if (resultsInProductsCount == 0) $(".resultsInProductsTitle").hide();
+            if (resultsInDocumentCount == 0) $(".resultsInDocumentTitle").hide();
 
             $(".resultsInDocumentsCount").text(resultsInDocumentsCount);
             $(".resultsInProductsCount").text(resultsInProductsCount);
@@ -448,6 +498,11 @@ $(breadcrumbs.init);
                     $(template(result)).appendTo(resultsClass);
                 }
             });
+
+            $(".resultsInDocumentsTitle,.resultsInProductsTitle,.resultsInDocumentTitle").show();
+            if (resultsInDocumentsCount == 0) $(".resultsInDocumentsTitle").hide();
+            if (resultsInProductsCount == 0) $(".resultsInProductsCount").hide();
+            if (resultsInDocumentCount == 0) $(".resultsInDocumentCount").hide();
 
             $(".resultsInDocumentsCount").text(resultsInDocumentsCount);
             $(".resultsInProductsCount").text(resultsInProductsCount);

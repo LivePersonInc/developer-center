@@ -10,7 +10,7 @@ order: 2
 
 ### Configure the Engagement Window
 
-An “API-based” engagement window must be configured in LiveEngage.
+An "API-based" engagement window must be configured in LiveEngage.
 
 Mandatory fields:
 
@@ -21,7 +21,7 @@ Mandatory fields:
 Optional fields:
 
 * jsContext: the Javascript context where the jsMethodName is located.
-Default value: “window”
+Default value: "window"
 
 [Read more about Javascript’s context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call){:target="_blank"}.
 

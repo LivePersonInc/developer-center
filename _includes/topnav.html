@@ -12,6 +12,12 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="fa fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> <img src="images/company_logo.png" ></span></a>
+            <div class="mobile-search-container">
+            <div class="close-btn">×</div>
+            <input type="text" id="search-input-mobile"  placeholder="{{site.data.strings.search_placeholder_text}}" autocomplete="off" class="visible-xs" >
+            <img src="images/Search-icon.png" alt="Click to search" id="search-icon-mobile" class="visible-xs" />
+            </div>
+            
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
@@ -65,16 +71,16 @@
                         <div class="close-btn ">&times;</div>
                         <div class="search-line "></div>
                         <ul id="results-container">
-                            <li class="nolink">In this document (<span class="resultsInDocumentCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
+                            <li class="nolink resultsInDocumentTitle">In this document (<span class="resultsInDocumentCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
                             <li>
                                 <ul class="resultsInDocument"></ul>
                             </li>                         
                            <li class="grey-line"></li>
-                            <li class="nolink">Documents (<span class="resultsInDocumentsCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
+                            <li class="nolink resultsInDocumentsTitle">Documents (<span class="resultsInDocumentsCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
                             <li>
                                 <ul class="resultsInDocuments"></ul>
                             </li>    
-                            <li class="nolink">Products (<span class="resultsInProductsCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
+                            <li class="nolink resultsInProductsTitle">Products (<span class="resultsInProductsCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
                             <li>
                                 <ul class="resultsInProducts"></ul>
                             </li>    

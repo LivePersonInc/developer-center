@@ -19,14 +19,14 @@ Possible Causes/Solutions:
 
 * User was not logged-in to Salesforce with the same browser.
 
-* Wrong widget URL in LE: missing “ChatLink” wording.
+* Wrong widget URL in LE: missing "ChatLink" wording.
 
 * Wrong widget URL in LE: installed in SandBox but URL refers to production.
 
 * Missing SF configuration - skill is not associated with an object
 
 {:start="2"}
-2. **Issue**:  “Waiting to initialize session” appears in the Salesforce widget, and the widget doesn’t load.
+2. **Issue**:  "Waiting to initialize session" appears in the Salesforce widget, and the widget doesn’t load.
 
 ![WaitingSession](img/waitingsession.png)
 

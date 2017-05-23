@@ -639,6 +639,8 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+}
 .container:before,
 .container:after {
   content: " ";

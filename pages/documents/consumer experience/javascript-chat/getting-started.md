@@ -20,7 +20,9 @@ A few things you'll need to get started with this API:
 
 	* conversationVep
 
-3. This SDK implements and uses LivePerson's Global key. There is no need for further authentication steps on your end.
+3. This SDK implements and uses LivePerson's Global key:
+
+	* appKey=721c180b09eb463d9f3191c41762bb68
 
 4. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
 

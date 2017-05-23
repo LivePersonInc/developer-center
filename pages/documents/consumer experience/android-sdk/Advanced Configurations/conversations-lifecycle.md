@@ -30,8 +30,8 @@ public static boolean clearHistory()
 Also via Callbacks:
 
 ```javascript
-void onConversationStarted();
-void onConversationResolved();
+void onConversationStarted(LPConversationData convData);
+void onConversationResolved(LPConversationData convData);
 void onConnectionChanged(boolean isConnected);
 ```
 

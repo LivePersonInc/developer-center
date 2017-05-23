@@ -17,7 +17,7 @@ This method transfers a chat from an agent to a specific skill or agent.
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer  |
+| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer?v=1&NC=true  |
 
 **Request Headers**
 

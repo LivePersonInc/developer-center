@@ -13,207 +13,1151 @@ permalink: android-attributes.html
 
 ### Brand
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| `````````<string name="brand_name">````````` | The brand name will be shown as a title on the toolbar when there is no active conversation. | My Brand |
-| `````````<integer name="message_receive_icons">````````` | For each message, there are three indicators available: Message sent, Message received, Message read. You can customize the indicators according to your needs, by using a number between 1 and 3: <br> 0 - text (sent, delivered etc.) instead of icons <br> 1 - Sent only <br> 2 - Sent+received <br> 3 - Sent+received+read | |
-| `````````<string-array name="message_receive_text">````````` | If you set 0 in the resource message_receive_icons, you can specify what texts appears for each state. You must have 4 items, in the following order: <br> 1st item - message sent <br> 2nd item - message delivered <br> 3rd item - message read <br> 4th item - message not delivered <br> 5th item - message sending | |
-| `````````<bool name="clear_history_show_confirm_dialog">````````` | Define if to show confirm dialog before clearing history or not. | true |
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;string name=&quot;brand_name&quot;&gt;</td>
+    <td>The brand name will be shown as a title on the toolbar when there is no active conversation.</td>
+    <td>My Brand</td>
+    <td><img src="img/brandname.png" alt="brandname"></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;message_receive_icons&quot;&gt;
+</td>
+    <td>For each message, there are three indicators available: Message sent, Message received, Message read. You can customize the indicators according to your needs, by using a number between 1 and 3:<br>0 - text (sent, delivered etc.) instead of icons<br>1 - Sent only<br>2 - Sent+received<br>3 - Sent+received+read</td>
+  <td></td>
+  <td><img src="img/receiveicons.png" alt="receiveicons"></td>
+  </tr>
+  <tr>
+    <td>&lt;string-array name=&quot;message_receive_text&quot;&gt;
+</td>
+    <td>If you set 0 in the resource message_receive_icons, you can specify what texts appears for each state. You must have 4 items, in the following order: <br>1st item -message sent<br>2nd item - message delivered<br>3rd item - message read<br>4th item - message not delivered<br>5th item - message sending</td>
+  <td></td>
+  <td><img src="img/receivetext.png" alt="receivetext"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;clear_history_show_confirm_dialog&quot;&gt;
+</td>
+    <td>Define if to show confirm dialog before clearing history or not. True by default.</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
-###  Brand Message Bubble - the first brand message
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| `````````<dimen name="brand_bubble_stroke_width">````````` | Int number for the outline width. | 0dp |
-| `````````<color name="brand_bubble_stroke_color">````````` | Color code for the outline color. | #004DC9 (blue) |
-| `````````<color name="brand_bubble_message_text_color">````````` | Color code for the text of the brand bubble | @android:color/white |
-| ```<color name="brand_bubble_message_link_text_color">``` | Color code for links in the text of the brand bubble. | @android:color/white |
-| ```<color name="brand_bubble_timestamp_text_color">``` | Color code for the timestamp of the brand bubble. | #46474A (dark gray) |
-| ```<color name="brand_bubble_background_color">``` | Color code for the background of the brand bubble. | #004DC9 (blue) |
-| ```<color name="brand_logo_background_color">``` | Color code for the background of the default brand logo next to the bubble. | #007AFF (light blue) |
+### Brand Message Bubble - the first brand message
 
-###  Agent Message Bubbles
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_stroke_width&quot;&gt;
+</td>
+    <td>Int number for the outline width.</td>
+    <td>0dp</td>
+    <td><img src="img/strokewidth.png" alt="strokewidth"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;brand_bubble_stroke_color&quot;&gt;
+</td>
+    <td>Color code for the outline color.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/strokecolor.png" alt="strokecolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;brand_bubble_message_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the brand bubble</td>
+    <td>@android:color/white</td>
+    <td><img src="img/textcolor.png" alt="textcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;brand_bubble_message_link_text_color&quot;&gt;
+</td>
+    <td>Color code for links in the text of the brand bubble.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/linktextcolor.png" alt="linktextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;brand_bubble_timestamp_text_color&quot;&gt;
+</td>
+    <td>Color code for the timestamp of the brand bubble.</td>
+    <td>#46474A (dark gray)</td>
+    <td><img src="img/timestamptextcolor.png" alt="timestamptextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;brand_bubble_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the brand bubble.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/backgroundcolor.png" alt="backgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;brand_logo_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the default brand logo next to the bubble.</td>
+    <td>#007AFF (light blue)</td>
+    <td><img src="img/logobackgroundcolor.png" alt="logobackgroundcolor"></td>
+  </tr>
+</tbody>
+</table>
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<dimen name="agent_bubble_stroke_width">``` | Int number for the outline width. | 0dp |
-| ```<color name="agent_bubble_stroke_color">``` | Color code for the outline color. | #004DC9 (blue) |
-| ```<color name="agent_bubble_message_text_color">``` | Color code for the text of the agent bubble. | @android:color/white |
-| ```<color name="agent_bubble_message_link_text_color">``` | Color code for links in the text of the agent bubble. | @android:color/white |
-| ```<color name="agent_bubble_timestamp_text_color">``` | Color code for the timestamp of the agent bubble. | #46474A (dark gray) |
-| ```<color name="agent_bubble_background_color">``` | Color code for the background of the agent bubble. | #004DC9 (blue) |
-| ```<color name="agent_avatar_background_color">``` | Color code for the background of the agent default avatar next to the bubble | #949596 (gray) |
-| ```<color name="agent_avatar_icon_color">``` | Color code for the agent default icon in the avatar next to the bubble. | @android:color/white |
-| ```<color name="agent_bubble_link_preview_background_color">``` | Color code for the background of the agent bubble when url is presented. | @android:color/white |
-| ```<color name="agent_bubble_link_preview_title_text_color">``` | Color code for the background of the agent title text color when url is presented. | @android:color/black |
-| ```<color name="agent_bubble_link_preview_description_text_color">``` | Color code for the background of the agent description text color when url is presented. | #555555 (gray) |
 
-###  Consumer Bubbles
+### Agent Message Bubbles
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<dimen name="consumer_bubble_stroke_width">``` | integer in dp for the bubble stroke width of the consumer bubble. | 1dp |
-| ```<color name="consumer_bubble_message_text_color">``` | Color code for the text of the consumer bubble. | @android:color/black |
-| ```<color name="consumer_bubble_message_link_text_color">``` | Color code for links in the text of the consumer bubble. | #004DC9 (blue) |
-| ```<color name="consumer_bubble_timestamp_text_color">``` | Color code for the timestamp of the consumer bubble. | #46474A (dark gray) |
-| ```<color name="consumer_bubble_background_color">``` | Color code for the background of the consumer bubble. | #EDEDED (light gray) |
-| ```<color name="consumer_bubble_state_text_color">``` | Color code for state text next to the consumer bubble. | #46474A (dark gray) |
-| ```<color name="consumer_bubble_stroke_color">``` | Color code for the stroke of the consumer bubble. | #EDEDED (light gray) |
-| ```<color name="consumer_bubble_link_preview_background_color">``` | Color code for the background of the consumer bubble when url is presented. | @android:color/white |
-| ```<color name="consumer_bubble_link_preview_title_text_color">``` | Color code for the background of the consumer title text color when url is presented. | @android:color/black |
-| ```<color name="consumer_bubble_link_preview_description_text_color">``` | Color code for the background of the consumer description text color when url is presented | #555555 (gray) |
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;dimen name=&quot;agent_bubble_stroke_width&quot;&gt;
+</td>
+    <td>Int number for the outline width.</td>
+    <td>0dp</td>
+    <td><img src="img/agent_bubble_stroke_width.png" alt="strokewidth"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_stroke_color&quot;&gt;
+</td>
+    <td>Color code for the outline color.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/agent_bubble_stroke_color.png" alt="strokecolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_message_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the agent bubble.</td>
+    <td>white</td>
+    <td><img src="img/agent_bubble_message_link_text_color.png" alt="textcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_message_link_text_color&quot;&gt;
+</td>
+    <td>Color code for links in the text of the agent bubble.</td>
+    <td>white</td>
+    <td><img src="img/agent_bubble_message_link_text_color.png" alt="linktextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_timestamp_text_color&quot;&gt;
+</td>
+    <td>Color code for the timestamp of the agent bubble.</td>
+    <td>#46474A (dark gray)</td>
+    <td><img src="img/agent_bubble_timestamp_text_color.png" alt="timestamptextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the agent bubble.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/agentbubblebackgroundcolor.png" alt="backgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_avatar_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the agent default avatar next to the bubble</td>
+    <td>#949596 (gray)</td>
+    <td><img src="img/agentavatarbackgroundcolor.png" alt="agentavatarbackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_avatar_icon_color&quot;&gt;
+</td>
+    <td>Color code for the agent default icon in the avatar next to the bubble.</td>
+    <td>#ffffffff></td>
+    <td><img src="img/agent_avatar_icon_color.png" alt="iconcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_link_preview_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the agent bubble when url is presented</td>
+    <td>#ffffffff</td>
+    <td><img src="img/agent_bubble_link_preview_background_color.png" alt="previewbackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_link_preview_title_text_color&quot;&gt;
+</td>
+    <td>Color code for the background of the agent title text color when url is presented</td>
+    <td>#ffffffff</td>
+    <td><img src="img/agent_bubble_link_preview_title_text_color.png" alt="titletextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_link_preview_description_text_color&quot;&gt;
+</td>
+    <td>Color code for the background of the agent description text color when url is presented</td>
+    <td>#555555 (gray)</td>
+    <td><img src="img/agent_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_background_color&quot;&gt;
+</td>
+    <td>background color of the form invitation bubble</td>
+    <td>#ffffffff</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_background_color.png" alt="invitationbackgroundcolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_background_btn_color&quot;&gt;
+</td>
+    <td>background color of the form invitation button only</td>
+    <td>#ffffffff</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="buttontextcolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_stroke_color&quot;&gt;
+</td>
+    <td>color of the stroke (border) of the form invitation bubble</td>
+    <td>#949596 (gray)</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_stroke_color.png" alt="strokecolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_button_text_color&quot;&gt;
+</td>
+    <td>color of the text on the button  </td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="invitationbuttoncolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_description_text_color&quot;&gt;
+</td>
+    <td>Text color on the description in the form invitation bubble</td>
+    <td>#949596 (gray)</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_description_text_color.png" alt="descriptiontextcolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_title_text_color&quot;&gt;
+ </td>
+    <td>text color on the title in the form invitation bubble</td>
+    <td>#ff000000</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_title_text_color.png" alt="titletextcolor"></td>
+  </tr>
+    <tr>
+    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_icon_tint_color&quot;&gt;
+ </td>
+    <td>color of the icon in the form invitation bubble</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor"></td>
+  </tr>
+  
+</tbody>
+</table>
 
-###  System messages
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<color name="system_bubble_text_color">``` | Color code for the text of the system messages. | #46474A (dark gray) |
-| ```<bool name="enable_conversation_resolved_message">``` | Enable/disable the conversation resolved message. | true |
-| ```<bool name="enable_conversation_resolved_separator">``` | Enable/disable separators between conversations. | true |
-| ```<color name="conversation_separator_text_color">``` | Color code for the conversation resolved message and separator. | #555555 (gray) |
+### Consumer Bubbles
 
-###  Unread messages indicator Bubbles
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;dimen name=&quot;consumer_bubble_stroke_width&quot;&gt;
+</td>
+    <td>integer in dp for the bubble stroke width of the consumer bubble.</td>
+    <td>1dp</td>
+    <td><img src="img/consumer_bubble_stroke_width.png" alt="strokewidth"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_message_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the consumer bubble.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/consumer_bubble_message_text_color.png" alt="messagetextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_message_link_text_color&quot;&gt;
+</td>
+    <td>Color code for links in the text of the consumer bubble.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/consumer_bubble_message_link_text_color.png" alt="linktextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_timestamp_text_color&quot;&gt;
+</td>
+    <td>Color code for the timestamp of the consumer bubble.</td>
+    <td>#46474A (dark gray)</td>
+    <td><img src="img/consumer_bubble_timestamp_text_color.png" alt="timestamptextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the consumer bubble.</td>
+    <td>#EDEDED (light gray)</td>
+    <td><img src="img/consumer_bubble_background_color.png" alt="bubblebackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_state_text_color&quot;&gt;
+</td>
+    <td>Color code for state text next to the consumer bubble.</td>
+    <td>#46474A (dark gray)</td>
+    <td><img src="img/consumer_bubble_state_text_color.png" alt="statetextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_stroke_color&quot;&gt;
+</td>
+    <td>Color code for the stroke of the consumer bubble.</td>
+    <td>#EDEDED (light gray)</td>
+    <td><img src="img/consumer_bubble_stroke_color.png" alt="strokecolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_link_preview_background_color&quot;&gt;
+</td>
+    <td>Color code for the background of the consumer bubble when url is presented</td>
+    <td>white</td>
+    <td><img src="img/consumer_bubble_link_preview_background_color.png" alt="previewbackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_link_preview_title_text_color&quot;&gt;
+</td>
+    <td>Color code for the background of the consumer title text color when url is presented</td>
+    <td>black</td>
+    <td><img src="img/consumer_bubble_link_preview_title_text_color.png" alt="titletextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_link_preview_description_text_color&quot;&gt;
+</td>
+    <td>Color code for the background of the consumer description text color when url is presented</td>
+    <td>#555555 (gray)</td>
+    <td><img src="img/consumer_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_read_status_color&quot;&gt;
+</td>
+    <td>Color code for the read status icon (if enable)</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/consumer_bubble_read_status_color.png" alt="readstatuscolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_received_status_color&quot;&gt;
+</td>
+    <td>Color code for the received status icon (if enable)</td>
+    <td>#CECECE</td>
+    <td><img src="img/consumer_bubble_received_status_color.png" alt="statuscolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_sent_status_color&quot;&gt;
+</td>
+    <td>Color code for the sent status icon (if enable)</td>
+    <td>#CECECE</td>
+    <td><img src="img/consumer_bubble_sent_status_color.png" alt="sentstatuscolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_sending_status_color&quot;&gt;
+</td>
+    <td>Color code for the sending status icon (if enable)</td>
+    <td>#949596 (gray)</td>
+    <td><img src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor"></td>
+  </tr>
+</tbody>
+</table>
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<bool name="unread_indicator_bubble_enable">``` | Enable/disable the unread message indicator (shown or invisible)  | true |
-| ```<color name="unread_indicator_bubble_text_color">``` | Enable/disable the unread message indicator (shown or invisible) - true by default. | #004DC9 (blue) |
-| ```<color name="unread_indicator_bubble_background_color">``` | Color code for the background of the unread messages bubble. | #EDEDED (light gray) |
 
-###  Survey screen
+### System messages
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<integer name="csatSurveyExpirationInMinutes">``` | Define the expiration time in minutes for the survey to appear after closing the conversation. | 1440 |
-| ```<color name="feedback_fragment_background_color">``` | Feedback dialog background color. | @android:color/white |
-| ```<color name="feedback_fragment_title_question">``` | Feedback dialog title color. | @android:color/black |
-| ```<color name="feedback_fragment_star">``` | Feedback dialog star color. | #229A49 (green) |
-| ```<color name="feedback_fragment_rate_text">``` | Feedback dialog rating title color. | #5b5c5e (dark grey) |
- | ```<color name="feedback_fragment_title_yesno">``` | Feedback dialog yes/no color. | #5b5c5e (dark grey) |
-| ```<color name="feedback_fragment_yesno_btn_selected_background">``` | Feedback dialog yes/no selected background color. | #229A49 |
-| ```<color name="feedback_fragment_yesno_btn_default_background">``` | Feedback dialog yes/no default background. | @android:color/white |
-| ```<color name="feedback_fragment_yesno_btn_text_selected">``` | Feedback dialog yes/no text color when selected. | @android:color/white |
-| ```<color name="feedback_fragment_yesno_btn_text_default">``` | Feedback dialog yes/no text color when in default. | #5B5C5E |
-| ```<color name="feedback_fragment_yesno_btn_stroke_default">``` | Feedback dialog yes/no stroke color when in default. | #E2E2E3 |
-| ```<color name="feedback_fragment_yesno_btn_stroke_selected">``` | Feedback dialog yes/no stroke color when selected. | #229A49 |
-| ```<dimen name="feedback_fragment_yesno_btn_stroke_width_default">``` | Feedback dialog yes/no stroke width size when in default. | 1dp |
-| ```<dimen name="feedback_fragment_yesno_btn_stroke_width_selected">``` | Feedback dialog yes/no stroke width size when in selected. | 1dp |
-| ```<color name="feedback_fragment_submit_message">``` | Feedback dialog submit message text color. | #565656 |
-| ```<color name="feedback_fragment_submit_btn_enabled">``` | Feedback dialog submit button color when enabled. | #229A49 |
-| ```<color name="feedback_fragment_submit_btn_text_enabled">``` | Feedback dialog submit button text color when enabled. | @android:color/white |
-| ```<color name="feedback_fragment_submit_btn_disabled">``` | Feedback dialog submit button color when disabled. | @android:color/white |
-| ```<color name="feedback_fragment_submit_btn_text_disabled">``` | Feedback dialog submit button text color when disabled. | #BDBDBD |
-| ```<color name="feedback_fragment_submit_btn_stroke_enabled">``` | Feedback dialog submit button stroke color when enabled. | #229A49 |
-| ```<color name="feedback_fragment_submit_btn_stroke_disabled">``` | Feedback dialog submit button stroke color when disabled. | #E2E2E3 |
-| ```<dimen name="feedback_fragment_submit_btn_stroke_width_enabled">``` | Feedback dialog submit button stroke width size when enabled. | 1dp |
-| ```<dimen name="feedback_fragment_submit_btn_stroke_width_disabled">``` | Feedback dialog submit button stroke width size when disabled. | 1dp |
-| ```<color name="feedback_fragment_agent_details_name">``` | Define the color of the agent name on agent details section in feedback dialog. | Visible only if show_agent_details_csat is true. | @android:color/black |
-| ```<bool name="show_feedback">``` | Defines whether to show the feedback dialog. | true |
-| ```<bool name="show_agent_details_csat">``` | Define if the agent’s name and avatar are visible on top of feedback dialog. (true=show, false=hide) <br> *NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.* | true |
-| ```<bool name="show_yes_no_question">``` | Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide) <br> *NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.* | true |
-| ```<bool name="show_csat_thank_you">``` | Define if "thank you" screen will appear after submitting the survey. (true=show, false=hide) | true |
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;system_bubble_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the system messages.</td>
+    <td>#46474A (dark gray)</td>
+    <td><img src="img/conversation_separator_text_color.png" alt="separatortextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enable_conversation_resolved_message&quot;&gt;
+</td>
+    <td>Enable/disable the conversation resolved message</td>
+    <td>true</td>
+    <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enable_conversation_resolved_separator&quot;&gt;
+</td>
+    <td>Enable/disable separators between conversations</td>
+    <td>true</td>
+    <td><img src="img/enable_conversation_resolved_separator.png" alt="conversationresolvedseparator"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;conversation_separator_text_color&quot;&gt;
+</td>
+    <td>Color code for the conversation resolved message and separator</td>
+    <td>#555555 (gray)</td>
+    <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
+  </tr>
+</tbody>
+</table>
 
-###  Message Edit Text
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<color name="edit_text_underline_color">``` | Color code for the Enter Message control underline color. | #90CAF9 |
-| ```<color name="lp_enter_msg_text">``` | Define the input message text color. | @android:color/black |
-| ```<color name="lp_enter_msg_hint">``` | Define the input message hint color. | @android:color/darker_gray |
-| ```<color name="lp_send_button_text_enable">``` | Define the color of the send button when it’s enabled. | #004DC9 (blue) |
-| ```<color name="lp_send_button_text_disable">``` | Define the color of the send button when it’s disabled. | #B7B8B9 |
-| ```<bool name="use_send_image_button">``` | Use an icon for the send button instead of "Send" text |  false |
+### Unread messages indicator Bubbles
 
-###  Connection status bar
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&lt;bool name=&quot;unread_indicator_bubble_enable&quot;&gt;</td>
+    <td>Enable/disable the unread message indicator (shown or invisible) - true by default.</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;unread_indicator_bubble_text_color&quot;&gt;</td>
+    <td>Enable/disable the unread message indicator (shown or invisible) - true by default.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;unread_indicator_bubble_background_color&quot;&gt;</td>
+    <td>Color code for the background of the unread messages bubble.</td>
+    <td>#EDEDED (light gray)</td>
+    <td><img src="img/unread_indicator_bubble_background_color.png" alt="unread_indicator_bubble_background_color"></td>
+  </tr>
+</tbody>
+</table>
 
-| Name |  Description | Default |
-| :--- | :--- | :--- |
-| ```<color name="connection_status_connecting_bg_color">``` | Define the color of statusbar background color while trying to connect. | #F2F5F5F5 |
-| ```<color name="connection_status_not_connected_bg_color">``` | Define the color of statusbar background color when connection is unavailable. | #CC000000 |
-| ```<color name="connection_status_connecting_text_color">``` | Define the color of statusbar text color while trying to connect. | #46474A |
-| ```<color name="connection_status_not_connected_text_color">``` | Define the color of statusbar text color when connection is unavailable. | @android:color/black |
 
-###  In page navigation -  Scroll down indicator
+### Survey screen
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<bool name="scroll_down_indicator_enabled">``` | Enable/disable the scroll down indicator (shown or invisible). | true |
-| ```<bool name="scroll_down_indicator_unread_summary_enabled">``` | Enable/disable the summary in scroll down indicator (shown or invisible).  If unread_indicator_bubble_enable is false, it will be in minimized mode without a badge indicating number of unread message. And tap will scroll to the last message. | true |
-| ```<color name="scroll_down_indicator_unread_counter_text_color">``` | Define the color of the unread messages counter text color. | @android:color/white |
-| ```<color name="scroll_down_indicator_unread_summary_text_color">``` | Define the color of the unread message summary (preview) text color. | @android:color/white |
-| ```<color name="scroll_down_indicator_unread_counter_stroke_color">``` | Define the color of the unread messages counter stroke color. | #CC000000 |
-| ```<dimen name="scroll_down_indicator_unread_counter_stroke_width">``` | Define the dimen of the unread messages counter stroke width. | 1dp |
-| ```<color name="scroll_down_indicator_unread_counter_solid_color">``` | Define the color of the unread messages counter solid color. | #FF0000 (red) |
-| ```<color name="scroll_down_indicator_background_color">``` | Define the color of the scroll down background color. | #CC000000 |
-| ```<color name="scroll_down_indicator_arrow_down_color">``` | Define the color of the image arrow scrolling down. | @android:color/white |
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;integer name=&quot;csatSurveyExpirationInMinutes&quot;&gt;</td>
+    <td>Define the expiration time in minutes for the survey to appear after closing the conversation.</td>
+    <td>1440</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_background_color&quot;&gt;</td>
+    <td>Feedback dialog background color.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/fragmentbackground.png" alt="fragmentbackground"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_title_question&quot;&gt;</td>
+    <td>Feedback dialog title color.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/fragmenttitle.png" alt="fragmenttitle"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_star&quot;&gt;</td>
+    <td>Feedback dialog star color.</td>
+    <td>#229A49 (green)</td>
+    <td><img src="img/fragmentstar.png" alt="fragmentstar"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_rate_text&quot;&gt;</td>
+    <td>Feedback dialog rating title color.</td>
+    <td>#5b5c5e (dark grey)</td>
+    <td><img src="img/fragmentratetext.png" alt="fragmentratetext"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_title_yesno&quot;&gt;</td>
+    <td>Feedback dialog yes/no color.</td>
+    <td>#5b5c5e (dark grey)</td>
+    <td><img src="img/fragmenttitleyesno.png" alt="fragmenttitleyesno"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_yesno_btn_selected_background&quot;&gt;</td>
+    <td>Feedback dialog yes/no selected background color.</td>
+    <td>#229A49</td>
+    <td><img src="img/fragmentyesnobtn.png" alt="fragmentyexnobtn"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_yesno_btn_default_background&quot;&gt;</td>
+    <td>Feedback dialog yes/no default background.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/fragmenyesnobtndeafult.png" alt="feedback_fragment_yesno_btn_default_background"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_yesno_btn_text_selected&quot;&gt;</td>
+    <td>Feedback dialog yes/no text color when selected.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/fragmentyesnobtntext.png" alt="fragmentratetext"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_yesno_btn_text_default&quot;&gt;</td>
+    <td>Feedback dialog yes/no text color when in default.</td>
+    <td>#5B5C5E</td>
+    <td><img src="img/fragmentbtntextdefault.png" alt="fragmentbtntextdefault"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_yesno_btn_stroke_default&quot;&gt;</td>
+    <td>Feedback dialog yes/no stroke color when in default.</td>
+    <td>#E2E2E3</td>
+    <td><img src="img/fragmentyesnobtbstroke.png" alt="fragmentyesnobtbstroke"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_yesno_btn_stroke_selected&quot;&gt;</td>
+    <td>Feedback dialog yes/no stroke color when selected.</td>
+    <td>#229A49</td>
+    <td><img src="img/yesnobtnstrokeselected.png" alt="yesnobtnstrokeselected"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;feedback_fragment_yesno_btn_stroke_width_default&quot;&gt;</td>
+    <td>Feedback dialog yes/no stroke width size when in default.</td>
+    <td>1dp</td>
+    <td><img src="img/yesnobtbnstrokewidth.png" alt="yesnobtbnstrokewidth"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;feedback_fragment_yesno_btn_stroke_width_selected&quot;&gt;</td>
+    <td>Feedback dialog yes/no stroke width size when in selected.</td>
+    <td>1dp</td>
+    <td><img src="img/yesnobtnstrokewidthselected.png" alt="yesnobtnstrokewidthselected"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_message&quot;&gt;</td>
+    <td>Feedback dialog submit message text color.</td>
+    <td>#565656</td>
+    <td><img src="img/fragmentsubmitmessage.png" alt="fragmentsubmitmessage"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_btn_enabled&quot;&gt;</td>
+    <td>Feedback dialog submit button color when enabled.</td>
+    <td>#229A49</td>
+    <td><img src="img/fragmentsubmitbtnenabled.png" alt="fragmentsubmitbtnenabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_btn_text_enabled&quot;&gt;</td>
+    <td>Feedback dialog submit button text color when enabled.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/fragmentbtntextenabled.png" alt ="fragmentbtntextenabled"></td>
+    </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_btn_disabled&quot;&gt;</td>
+    <td>Feedback dialog submit button color when disabled.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/fragmentsubmitbtndisabled.png" alt="fragmentsubmitbtndisabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_btn_text_disabled&quot;&gt;</td>
+    <td>Feedback dialog submit button text color when disabled.</td>
+    <td>#BDBDBD</td>
+    <td><img src="img/submitbtntextdisabled.png" alt="submitbtntextdisabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_btn_stroke_enabled&quot;&gt;</td>
+    <td>Feedback dialog submit button stroke color when enabled.</td>
+    <td>#229A49</td>
+    <td><img src="img/submitbtnstrokeenabled.png" alt="submitbtnstrokeenabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_submit_btn_stroke_disabled&quot;&gt;</td>
+    <td>Feedback dialog submit button stroke color when disabled.</td>
+    <td>#E2E2E3</td>
+    <td><img src="img/submitbtnstrokedisabled.png" alt="submitbtnstrokedisabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;feedback_fragment_submit_btn_stroke_width_enabled&quot;&gt;</td>
+    <td>Feedback dialog submit button stroke width size when enabled.</td>
+    <td>1dp</td>
+    <td><img src="img/btnstrokewidthenabled.png" alt="btnstrokewidthenabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;feedback_fragment_submit_btn_stroke_width_disabled&quot;&gt;</td>
+    <td>Feedback dialog submit button stroke width size when disabled.</td>
+    <td>1dp</td>
+    <td><img src="img/btnstrokewidthdisabled.png" alt="btnstrokewidthdisabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;feedback_fragment_agent_details_name&quot;&gt;</td>
+    <td>Define the color of the agent name on agent details section in feedback dialog.Visible only if show_agent_details_csat is true.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/fragmentagentdetailnames.png" alt="fragmentagentdetailnames"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_feedback&quot;&gt;</td>
+    <td>Defines whether to show the feedback dialog.</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_agent_details_csat&quot;&gt;</td>
+    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>true</td>
+    <td><img src="img/showyesno.png" alt="showyesno"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_yes_no_question&quot;&gt;</td>
+    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>true</td>
+    <td><img src="img/showyesno.png" alt="showyesno"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_csat_thank_you&quot;&gt;</td>
+    <td>Define if "thank you" screen will appear after submitting the survey. (true=show, false=hide)</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
-###  Photo Sharing
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<bool name="enable_photo_sharing">``` | Enable/disable the photo sharing feature. True by default. | false |
-| ```<integer name="max_number_stored_images">``` | Define the max number of images that will be stored locally. | 20 |
-|```<integer name="full_image_compression_rate">``` | Define the image compression rate (percentage). | 50 |
-| ```<integer name="thumbnail_longer_dimension_resize">``` | Define the size of the thumbnail image longer dimension after resizing it (pixels). | 100 |
-| ```<integer name="full_image_longer_dimension_resize">``` | Define the size of the full image longer dimension after resizing it (pixels). | 800 |
-| ```<integer name="max_image_size_kb">``` | Define the maximum image size in KB. | 3000 |
-| ```<color name="attachment_menu_item_background_color">``` | Define the background color of the item attachment menu. | #004DC9 (blue) |
+### Message Edit Text
 
-###  General Style
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;edit_text_underline_color&quot;&gt;</td>
+    <td>Color code for the Enter Message control underline color.</td>
+    <td>#90CAF9</td>
+    <td><img src="img/underlinecolor.png" alt="underlinecolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_enter_msg_text&quot;&gt;</td>
+    <td>Define the input message text color.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/entermsgtext.png" alt="entermsgtext"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_enter_msg_hint&quot;&gt;</td>
+    <td>Define the input message hint color.</td>
+    <td>@android:color/darker_gray</td>
+    <td><img src="img/entermsghint.png" alt="entermsghint"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_send_button_text_enable&quot;&gt;</td>
+    <td>Define the color of the send button when it’s enabled.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/buttontextenable.png" alt="buttontextenable"><br><img src="img/buttontextenable2.png" alt="buttontextenable2"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_send_button_text_disable&quot;&gt;</td>
+    <td>Define the color of the send button when it’s disabled.</td>
+    <td>#B7B8B9</td>
+    <td><img src="img/buttontextdisable.png" alt="buttontextdisable"><br><img src="img/buttontextdisable2.png" alt="buttontextdisable2"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;use_send_image_button&quot;&gt;</td>
+    <td>Use an icon for the send button instead of "Send" text</td>
+    <td>false</td>
+    <td><img src="img/sendimagebutton.png" alt="sendimagebutton"></td>
+  </tr>
+</tbody>
+</table>
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<color name="conversation_background">``` | Define the color code for the entire view background.  In activity mode - Also the color of android:windowBackground | @android:color/white |
-| ```<bool name="link_preview_use_big_picture">``` | Define which configuration to show when sending / receiving s link (big / small picture). | true | 
-| ```<bool name="link_preview_enable_real_time_preview">``` | Define whether or not we should show a real time link preview. A preview while the consumer is typing an url | true  |
-| ```<bool name="link_preview_to_use_more_than_og_tags">``` | parse only ```<og:>``` tags or others as well. | false - use ```<og:title>``` tags only. <br> true - use ```<og:title>``` and ```<title>``` tags |
 
-###  Conversation Activity Style - (activity mode only!)
+### Connection status bar
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<color name="lp_colorPrimary">``` | Define the primary color of the activity. | android:colorPrimary |
-| ```<color name="lp_colorPrimaryDark">``` | Define the primary dark color of the activity. | android:colorPrimaryDark |
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th> 
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;connection_status_connecting_bg_color&quot;&gt;</td>
+    <td>Define the color of statusbar background color while trying to connect.</td>
+    <td>#F2F5F5F5</td>
+    <td><img src="img/connectingbgcolor.png" alt="connectingbgcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;connection_status_not_connected_bg_color&quot;&gt;</td>
+    <td>Define the color of statusbar background color when connection is unavailable.</td>
+    <td>#CC000000</td>
+    <td><img src="img/notconnectedbgcolor.png" alt="notconnectedbgcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;connection_status_connecting_text_color&quot;&gt;</td>
+    <td>Define the color of statusbar text color while trying to connect.</td>
+    <td>#46474A</td>
+    <td><img src="img/connectingtextcolor.png" alt="connectingtextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;connection_status_not_connected_text_color&quot;&gt;</td>
+    <td>Define the color of statusbar text color when connection is unavailable.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/notconnectedtextcolor.png" alt="notconnectedtextcolor"></td>
+  </tr>
+</tbody>
+</table>
 
-###  Accessibility
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<integer name="snachbar_duration_for_accessibility">``` | Number of milliseconds to show the TTR snackbar if the accessibility TalkBack option is on. | 60,000 |
+### In page navigation -  Scroll down indicator
 
-###  Miscellaneous
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;bool name=&quot;scroll_down_indicator_enabled&quot;&gt;</td>
+    <td>Enable/disable the scroll down indicator (shown or invisible). True by default</td>
+    <td>true</td>
+    <td><img src="img/indicatorenabled.png" alt="indicatorenabled"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;scroll_down_indicator_unread_summary_enabled&quot;&gt;</td>
+    <td>Enable/disable the summary in scroll down indicator (shown or invisible). <br>If unread_indicator_bubble_enable is false, it will be in minimized mode without a badge indicating number of unread message. And tap will scroll to the last message.</td>
+    <td>true</td>
+    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"><br><img src="img/summaryenabled2.png" alt="summaryenabled2"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;scroll_down_indicator_unread_counter_text_color&quot;&gt;</td>
+    <td>Define the color of the unread messages counter text color.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/unreadcountertextcolor.png" alt="unreadcountertextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;scroll_down_indicator_unread_summary_text_color&quot;&gt;</td>
+    <td>Define the color of the unread message summary (preview) text color.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/unreadsummarytextcolor.png" alt="unreadsummarytextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;scroll_down_indicator_unread_counter_stroke_color&quot;&gt;</td>
+    <td>Define the color of the unread messages counter stroke color.</td>
+    <td>#CC000000</td>
+    <td><img src="img/unreadcounterstrokecolor.png" alt="unreadcounterstrokecolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_unread_counter_stroke_width&quot;&gt;</td>
+    <td>Define the dimen of the unread messages counter stroke width.</td>
+    <td>1dp</td>
+    <td><img src="img/unreadcounterstrokewidth.png" alt="unreadcounterstrokewidth"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;scroll_down_indicator_unread_counter_solid_color&quot;&gt;</td>
+    <td>Define the color of the unread messages counter solid color.</td>
+    <td>#FF0000 (red)</td>
+    <td><img src="img/unreadcountersolidcolor.png" alt="unreadcountersolidcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;scroll_down_indicator_background_color&quot;&gt;</td>
+    <td>Define the color of the scroll down background color.</td>
+    <td>#CC000000</td>
+    <td><img src="img/scrolldownindicatorbackgroundcolor.png" alt="scrolldownindicatorbackgroundcolor"><br><img src="img/scrolldownindicatorbackgroundcolor2.png" alt="scrolldownindicatorbackgroundcolor2"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;scroll_down_indicator_arrow_down_color&quot;&gt;</td>
+    <td>Define the color of the image arrow scrolling down.</td>
+    <td>@android:color/white</td>
+    <td><img src="img/scrolldownindicatorarrowcolor.png" alt="scrolldownindicatorarrowcolor"><br><img src="img/scrolldownindicatorarrowcolor2.png" alt="scrolldownindicatorarrowcolor2"></td>
+  </tr>
+</tbody>
+</table>
 
-| Name | Description | Default |
-| :--- | :--- | :--- |
-| ```<bool name="disableTTRPopup">``` | Defines whether to disable the TTR snackbar popup (true=disable) | false |
-| ```<bool name="contextual_menu_on_toolbar">``` | Enable multiple message copy menu over the app toolbar. If true, when long pressing a message on chat it will select the message and enable a context menu over the toolbar, enabling the user to copy multiple messages. If false, long pressing a message will display a copy popup menu. | true |
-| ```<color name="bubble_selected_background_color">``` | Define the background color of item when it’s selected to be copied (if multiple message copy is enabled). | #5597a7e3 |
-| ```<integer name="encryptionVersion">``` | Defines the encryption version to use. Currently available version 1 only. <br> 1 - encrypt data <br> 0 - disable encryption | 1 |
-| ```<string name="csds_url">``` | For vanity URL purposes. For regular use please use: adminlogin.liveperson.net. | adminlogin.liveperson.net |
-| ```<integer name="idp_num_history_conversation">``` | When user is authenticated, this indicates the number of recent conversations to reload from the server (including their messages) when running for the first time. | 2 |
-| ```<bool name="show_timestamp_in_ttr_notification">``` |When true the TTR snackbar will display the time until the agent responds. If set to false, a general message is displayed. | true |
-| ```<integer name="ttr_duration">``` | Set the duration that the TTR snackbar will be visible (ms). | 3,000 |
-| ```<bool name="send_agent_profile_updates_when_conversation_closed">``` | When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active.  | true |
-| ```<bool name="ttr_message_off_hours_enabled">``` | Defines whether to show the off hours snackbar popup (true=enable). | true |
-| ```<integer name="ttrShowFrequencyInSeconds">``` | Define the frequency of the TTR (time to response) messages. | 8 |
-| ```<bool name="enable_client_only_masking">``` | Defines whether to enable or disable client side only masking.  | false |
-| ```<bool name="enable_real_time_masking">``` | Defines whether to enable or disable real time masking. | false |
-| ```<string name="client_only_masking_regex">``` | Defines the java regex for client side only masking. | No value |
-| ```<string name="client_only_mask_character">``` | The character used to mask client only string. | ‘*’ |
-| ```<string name="real_time_masking_regex">``` | Defines the Java regex for real time masking. | No value |
-| ```<string name="real_time_mask_character">``` | The character used to mask the real time message. | ‘*’ |
-| ```<string name="lp_bubble_phone_links_regex">``` | Defines the java regex for phone links in bubble messages.  | No value |
-| ```<string name="lp_bubble_url_links_regex">``` | Defines the java regex for url links in bubble messages.  | No value |
-| ```<string name="lp_bubble_email_links_regex">``` | Defines the java regex for email links in bubble messages.  | No value |
-| ```<string name="lp_date_format">``` | Define date format.  | No value |
-|```<string name="lp_time_format">``` | Define time format.  | No value |
-| ```<string name="lp_date_time_format">``` | Define date-time format. | No value |
-| ```<integer name="sendingMessageTimeoutInMinutes">``` | Define timeout for automatic resending pending message before moving it to failed. | 60 |
 
-###  Deprecated Attributes
+### Photo Sharing
 
-| Name | Description | 
-| :--- | :--- |
-| ```<string name="custom_button_icon_name">``` | Custom button icon filename without extension. This will be displayed on the toolbar. |
-| ```<string name="custom_button_icon_description">``` | Content description for custom button. It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application. |
-| ```<string name="notification_large_icon_name">``` | The name of a resource to use as the large icon of the push notification. |
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;bool name=&quot;enable_photo_sharing&quot;&gt;</td>
+    <td>Enable/disable the photo sharing feature. </td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;max_number_stored_images&quot;&gt;</td>
+    <td>Define the max number of images that will be stored locally.</td>
+    <td>20</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;full_image_compression_rate&quot;&gt;</td>
+    <td>Define the image compression rate (percentage)</td>
+    <td>50</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;thumbnail_longer_dimension_resize&quot;&gt;</td>
+    <td>Define the size of the thumbnail image longer dimension after resizing it (pixels)</td>
+    <td>100</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;full_image_longer_dimension_resize&quot;&gt;</td>
+    <td>Define the size of the full image longer dimension after resizing it (pixels).</td>
+    <td>800</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;max_image_size_kb&quot;&gt;</td>
+    <td>Define the maximum image size in KB that can be uploaded.</td>
+    <td>3000</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;attachment_menu_item_background_color&quot;&gt;</td>
+    <td>Define the background color of the items in the attachment menu.</td>
+    <td>#004DC9 (blue)</td>
+    <td><img src="img/menuitembackgroundcolor.png" alt="menuitembackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_attachment_menu_background_color&quot;&gt;</td>
+    <td>Define the background color of the attachment menu</td>
+    <td>#F5F5F5 (light gray)</td>
+    <td><img src="img/attachmentmenubackgroundcolor.png" alt="attachmentmenubackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_attachment_menu_item_text_color&quot;&gt;</td>
+    <td>Define the items’ text color in the attachment menu</td>
+    <td>#46474A(gray)</td>
+    <td><img src="img/attachmentmenuitemtextcolor.png" alt="attachmentmenuitemtextcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_attachment_menu_item_icon_color&quot;&gt;</td>
+    <td>Define the items’ icon color in the attachment menu</td>
+    <td>#F5F5F5 (light gray)</td>
+    <td><img src="img/menuitemiconcolor.png" alt="menuitemiconcolor"></td>
+  </tr>
+</tbody>
+</table>
+
+
+### General Style
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;conversation_background&quot;&gt;
+</td>
+    <td>Define the color code for the entire view background. <br>In activity mode - Also the color of android:windowBackground</td>
+    <td>white</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;link_preview_use_big_picture&quot;&gt;
+</td>
+    <td>Define which configuration to show when sending / receiving s link (big / small picture)</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;link_preview_enable_real_time_preview&quot;&gt;</td>
+    <td>Define whether or not we should show a real time link preview. A preview while the consumer is typing an url</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;link_preview_to_use_more_than_og_tags&quot;&gt;</td>
+    <td>parse only &lt;og:> tags or others as well</td>
+    <td>false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title&gt; tags</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Conversation Activity Style - (activity mode only!)
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;lp_colorPrimary&quot;&gt;
+</td>
+    <td>Define the primary color of the activity.</td>
+    <td>android:colorPrimary</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_colorPrimaryDark&quot;&gt;
+</td>
+    <td>Define the primary dark color of the activity.</td>
+    <td>android:colorPrimaryDark</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Accessibility
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;integer name=&quot;snachbar_duration_for_accessibility&quot;&gt;</td>
+    <td>Number of milliseconds to show the TTR snackbar if the accessibility TalkBack option is on</td>
+    <td>60,000</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Miscellaneous
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;bool name=&quot;disableTTRPopup&quot;&gt;</td>
+    <td>Defines whether to disable the TTR snackbar popup (true=disable) false by default.</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;vibrate_enabled&quot;&gt;</td>
+    <td>Enable/Disable vibrate upon receiving messages from agent while conversation screen is in foreground. false by default.</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;contextual_menu_on_toolbar&quot;&gt;</td>
+    <td>Enable multiple message copy menu over the app toolbar. If true, when long pressing a message on chat it will select the message and enable a context menu over the toolbar, enabling the user to copy multiple messages. If false, long pressing a message will display a copy popup menu.</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;bubble_selected_background_color&quot;&gt;</td>
+    <td>Define the background color of item when it’s selected to be copied (if multiple message copy is enabled).</td>
+    <td>#5597a7e3</td>
+    <td><img src="img/bubbleselectedbackgroundcolor.png" alt="bubbleselectedbackgroundcolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;encryptionVersion&quot;&gt;</td>
+    <td>Defines the encryption version to use. Currently available version 1 only.<br>1 - encrypt data<br> 0 - disable encryption</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;csds_url&quot;&gt;</td>
+    <td>For vanity URL purposes. For regular use please use: adminlogin.liveperson.net</td>
+    <td>adminlogin.liveperson.net</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;idp_num_history_conversation&quot;&gt;</td>
+    <td>When user is authenticated, this indicates the number of recent conversations to reload from the server (including their messages) when running for the first time.</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_timestamp_in_ttr_notification&quot;&gt;</td>
+    <td>When true the TTR snackbar will display the time until the agent responds. If set to false, a general message is displayed.</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;ttr_duration&quot;&gt;</td>
+    <td>Set the duration that the TTR snackbar will be visible (ms).</td>
+    <td>3,000</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;ttrFirstTimeDelaySeconds&quot;&gt;</td>
+    <td>Set the time in seconds before the first the TTR snackbar will be displayed</td>
+    <td>10</td>
+    <td></td>
+  <tr>
+    <td>&lt;bool name=&quot;send_agent_profile_updates_when_conversation_closed&quot;&gt;</td>
+    <td>When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. </td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;ttr_message_off_hours_enabled&quot;&gt;</td>
+    <td>Defines whether to show the off hours snackbar popup (true=enable).</td>
+    <td>true</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;ttrShowFrequencyInSeconds&quot;&gt;</td>
+    <td>Define the frequency of the TTR (time to response) messages.</td>
+    <td>8</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enable_client_only_masking&quot;&gt;</td>
+    <td>Defines whether to enable or disable client side only masking. False by default.</td>
+    <td>false</td>
+    <td><img src="img/clientonlymasking.png" alt="clientonlymasking"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enable_real_time_masking&quot;&gt;</td>
+    <td>Defines whether to enable or disable real time masking. False by default.</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;client_only_masking_regex&quot;&gt;</td>
+    <td>Defines the java regex for client side only masking. By default does not contain any value.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;client_only_mask_character&quot;&gt;</td>
+    <td>The character used to mask client only string.</td>
+    <td>‘*’</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;real_time_masking_regex&quot;&gt;</td>
+    <td>Defines the Java regex for real time masking.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;real_time_mask_character&quot;&gt;</td>
+    <td>The character used to mask the real time message.</td>
+    <td>‘*’</td>
+    <td><img src="img/realtimemaskcharacter.png" alt="realtimemaskcharacter"></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_bubble_phone_links_regex&quot;&gt;</td>
+    <td>Defines the java regex for phone links in bubble messages. By default does not contain any value.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_bubble_url_links_regex&quot;&gt;</td>
+    <td>Defines the java regex for url links in bubble messages. By default does not contain any value.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_bubble_email_links_regex&quot;&gt;</td>
+    <td>Defines the java regex for email links in bubble messages. By default does not contain any value.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_date_format&quot;&gt;</td>
+    <td>Define date format. More info here.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_time_format&quot;&gt;</td>
+    <td>Define time format . More info here.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_date_time_format&quot;&gt;</td>
+    <td>Define date-time format. More info here.</td>
+    <td>No value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;sendingMessageTimeoutInMinutes&quot;&gt;</td>
+    <td>Define timeout for automatic resending pending message before moving it to failed.</td>
+    <td>60</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Deprecated Attributes
+
+<table>
+<thead>
+  <tr>
+    <td>Name</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;custom_button_icon_name&quot;&gt;</td>
+    <td>Custom button icon filename without extension. This will be displayed on the toolbar.</td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;custom_button_icon_description&quot;&gt;</td>
+    <td>Content description for custom button.It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>
+    <td>The name of a resource to use as the large icon of the push notification</td>
+  </tr>
+</tbody>
+</table>

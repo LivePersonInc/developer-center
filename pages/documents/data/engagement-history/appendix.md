@@ -72,6 +72,7 @@ Example:
 | companySize | The company size. | alphanumeric | |
 | storeNumber | Customer's specific store number. | alphanumeric | |
 | storeZipCode | Customer's store zip code. | alphanumeric | |
+| currency | Currency code. | alphanumeric | |
 
 Example:
  
@@ -86,6 +87,7 @@ Example:
               "customerStatus": "cancelled",
               "customerType": "vip",
               "balance": "-400.99",
+              "Currency": "USD"
               "customerId": "138766AC",
               "socialId": 4444,
               "imei": null,
@@ -122,6 +124,7 @@ Example:
 | topic | Topic lead. | alphanumeric |
 | value | Value lead. | alphanumeric |
 | leadId | Lead ID. | alphanumeric |
+| currency | Currency code. | alphanumeric |
  
 Example:
  
@@ -134,6 +137,7 @@ Example:
             "lead": {
               "topic": "luxury car test drive 2015",
               "value": "22.22",
+              "currency": "USD"
               "leadId": "xyz123"
             },
             "serverTimeStamp": "1440412721836"

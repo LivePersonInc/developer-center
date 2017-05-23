@@ -161,7 +161,16 @@ Called after calling [handlePush](consumer-experience-ios-sdk-handlepush.html), 
 
 ###  LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView
 
-If shouldShowPushNotification is not implemented, or it returns yes, the app can implement this method for showing an in-app notification in the UI. In case the method is not implemented, the SDK will provide and show its own view. 
+If shouldShowPushNotification is not implemented, or it returns yes, the app can implement this method for showing an in-app notification in the UI. In case the method is not implemented, the SDK will provide and show its own view. Note that it is advised to set the custom view's Frame and not its Bounds.
+
+```javascript
+func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView { 
+    guard let delegate = UIApplication.shared.delegate as? AppDelegate, let window =   delegate.window else { return UIView() }
+
+   view.frame = CGRect(x: 0, y: 0, width: window.bounds.size.width, height: 85) 
+   return view 
+ }
+ ```
 
 ###  LPMessagingSDKNotification(notificationTapped notification: LPNotification)
 Called when tapping a local notification message bar when a remote push notification received. You should implement this delegate method if you wish to navigate and show the conversation screen.

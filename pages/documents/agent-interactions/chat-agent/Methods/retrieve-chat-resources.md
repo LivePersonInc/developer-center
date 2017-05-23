@@ -17,7 +17,7 @@ This method retrieves the chat events, information and resources.
 
  |Method|  URL| 
  |:---  |:--- |
- |GET|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId} |
+ |GET|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}?v=1&NC=true |
 
 **Request Headers**
 

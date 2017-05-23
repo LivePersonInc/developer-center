@@ -15,7 +15,7 @@ permalink: android-methods.html
 
 *This method was deprecated - please use the [new method](android-initializeproperties.html){:target="_blank"}.*
 
-To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK. All subsequent API calls, except to the handlePush, assume that the SDK has been initialized.
+To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK. All subsequent API calls, except to the handlePushMessage, assume that the SDK has been initialized.
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session.
 
 `public static void initialize (Context context, String brandId, InitLivePersonCallBack initCallBack)`
@@ -29,7 +29,7 @@ When the conversation screen is displayed, the server connection for messaging w
 
 ### initialize (with SDK properties object)
 
-To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePush, assume that the SDK has been initialized.
+To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePushMessage, assume that the SDK has been initialized.
 
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session. This method gets InitLivePersonProperties, which includes the properties needed for the init phase of the SDK.
 
@@ -158,7 +158,26 @@ Unregister from registered push notification service.
 | brandId | The account ID. |
 | appId | The host app ID. |
 
-### handlePush
+### handlePushMessage
+
+All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification.
+
+In a case host app decide to show its own custom notification, it can call handlePushMessage() with showNotification parameter set to false and will parse and return a PushMessage object. In any case the push message not related to the SDK, it will return null. 
+
+_Note: To get unread messages feature will work properly - host app must call this method upon receiving SDK push messages (whether showing custom notification or not)_.
+
+`public static PushMessage handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)`
+
+| Parameter | Description |
+| :--- | :--- |
+| Context | A context from the host app. |
+| remoteMessage | A Map that contains the push message. Push service sends RemoteMessage object - To get the map from this object - call remoteMessage.getData().  |
+| brandId | The account Id. |
+| remoteMessage | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
+
+### handlePush (Deprecated)
+
+**(Deprecated. Please use the above handlePushMessage() method)**
 
 All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification.
 
@@ -167,9 +186,9 @@ Handling the push message allows the host app to do the following:
 - Receive non-messaging related push messages.
 - Handle custom in-app alerts upon an incoming message.
 
-*Note: Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePush method.*
+*Note: Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePushMessage method.*
 
-`public static void handlePush(Context context, Bundle data, String brandId, Boolean showNotification)`
+`public static void handlePushMessage(Context context, Bundle data, String brandId, Boolean showNotification)`
 
 | Parameter | Description |
 | :--- | :--- |
@@ -177,6 +196,20 @@ Handling the push message allows the host app to do the following:
 | data | A Bundle that contains the message. The bundle should hold a string with key named "message". |
 | brandId | The account ID. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false. |
+
+### getNumUnreadMessages
+
+Returns the counter of the unread messages - the number of push messages received. This number is set to 0 when opening the conversation screen.
+
+To get updates on the unread messages counter: create a BroadcastReceiver that will listen to the following Action: **LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_ACTION;**
+
+To get the number of unread messages out of the intent use the following extra key: **LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA;**
+
+`public static int getNumUnreadMessages(String brandId)`
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID. |
 
 ### getSDKVersion
 

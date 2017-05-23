@@ -17,7 +17,7 @@ This method submits the survey data.
 
 | Method | URL |
 | :--- | :--- |
-| PUT | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/survey | 
+| PUT | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/survey?v=1&NC=true | 
 
 *Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.* 
 
