@@ -700,6 +700,8 @@ permalink: android-attributes.html
     <th>Default</th>
     <th>Example</th> 
   </tr>
+</thead>
+<tbody>
   <tr>
     <td>&lt;color name=&quot;connection_status_connecting_bg_color&quot;&gt;</td>
     <td>Define the color of statusbar background color while trying to connect.</td>
@@ -748,9 +750,9 @@ permalink: android-attributes.html
   </tr>
   <tr>
     <td>&lt;bool name=&quot;scroll_down_indicator_unread_summary_enabled&quot;&gt;</td>
-    <td>Enable/disable the summary in scroll down indicator (shown or invisible). <br>If unread_indicator_bubble_enable is false, it will be in minimized mode without a badge indicating number of unread message. And tap will scroll to the last message.</td>
+    <td>Enable/disable the summary in scroll down indicator (shown or invisible). If unread_indicator_bubble_enable is false, it will be in minimized mode without a badge indicating number of unread message. And tap will scroll to the last message.</td>
     <td>true</td>
-    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"><br><img src="img/summaryenabled2.png" alt="summaryenabled2"></td>
+    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"><img src="img/summaryenabled2.png" alt="summaryenabled2"></td>
   </tr>
   <tr>
     <td>&lt;color name=&quot;scroll_down_indicator_unread_counter_text_color&quot;&gt;</td>
@@ -786,7 +788,7 @@ permalink: android-attributes.html
     <td>&lt;color name=&quot;scroll_down_indicator_background_color&quot;&gt;</td>
     <td>Define the color of the scroll down background color.</td>
     <td>#CC000000</td>
-    <td><img src="img/scrolldownindicatorbackgroundcolor.png" alt="scrolldownindicatorbackgroundcolor"><br><img src="img/scrolldownindicatorbackgroundcolor2.png" alt="scrolldownindicatorbackgroundcolor2"></td>
+    <td><img src="img/scrolldownindicatorbackgroundcolor.png" alt="scrolldownindicatorbackgroundcolor"><img src="img/scrolldownindicatorbackgroundcolor2.png" alt="scrolldownindicatorbackgroundcolor2"></td>
   </tr>
   <tr>
     <td>&lt;color name=&quot;scroll_down_indicator_arrow_down_color&quot;&gt;</td>
@@ -1139,13 +1141,16 @@ permalink: android-attributes.html
 </table>
 
 
+
 ### Deprecated Attributes
 
 <table>
 <thead>
   <tr>
-    <td>Name</td>
-    <td>Description</td>
+    <th>Name</th>
+    <th>Description</th>
+</thead>
+<tbody>    
   </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_name&quot;&gt;</td>

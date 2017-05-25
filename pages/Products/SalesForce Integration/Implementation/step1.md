@@ -27,12 +27,12 @@ Here are the steps in order to install the LiveEngage App in Salesforce:
 
 3. Enter your Salesforce credentials and log in.
 
-4. Select "Install for All Users", click "Install". When you complete the installation, make sure to limit the app and tabs
+4. Select "Install for All Users”, click "Install". When you complete the installation, make sure to limit the app and tabs
 only to the relevant authorized profiles, so the agents will not be able to modify the app configuration and setup
 (Admin, Management).
 
-5. "Approve Third-Party Access" - The App will ask you to install "Remote Site Settings", mark the checkbox "Yes,
-grant access to these third party web sites" and click continue, to allow communication to LivePerson Servers (this
+5. “Approve Third-Party Access” - The App will ask you to install “Remote Site Settings”, mark the checkbox “Yes,
+grant access to these third party web sites” and click continue, to allow communication to LivePerson Servers (this
 is mandatory for the app to work).
 
 ![ApproveThirdPartyAccess](img/approvethirdpartyaccess.png)
