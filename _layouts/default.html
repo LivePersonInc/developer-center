@@ -32,7 +32,7 @@
         {% if page.level4 %}
         <div class="h2">{{ page.level4 }}</div>
         {% endif %}
-        <div class="h3">{{ page.title }}</div>
+        <div class="h2">{{ page.title }}</div>
         {{content}}
         <br />
         <br />
@@ -50,15 +50,9 @@
 {% endif %}
 <!-- /.container -->
     </div>
-<script>
-  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/86551/script.js');
-</script>
  {% include footer.html %}
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}
 {% endif %}
-
 </html>

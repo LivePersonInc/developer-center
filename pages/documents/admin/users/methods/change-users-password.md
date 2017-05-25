@@ -46,3 +46,5 @@ This API changes a user’s password.
 **Response Body**
 
 [Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+
+

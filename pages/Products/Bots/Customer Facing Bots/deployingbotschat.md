@@ -46,7 +46,7 @@ Once your bot is created, it must be assigned into a LiveEngage campaign in orde
 4. Publish your campaign. 
 
 **Manage escalations**
-In cases where your bot will not be able to solve the consumer queries, escalation to a human agent should be determined. Your bot can be coached to perform escalation in several ways: Consumer types "Agent" to escalate, or using your AI and NLP service to perform intent matching for an escalation to the right skill. 
+In cases where your bot will not be able to solve the consumer queries, escalation to a human agent should be determined. Your bot can be coached to perform escalation in several ways: Consumer types “Agent” to escalate, or using your AI and NLP service to perform intent matching for an escalation to the right skill. 
 
 ### Step 4 - Test your bot
 

@@ -34,9 +34,9 @@ JSON Example:
 
 ```json
 {
- 	service: "agentVep",
- 	account: "1234",
- 	baseURI: "exampleDomain.liveperson.net"
+ "service": "agentVep",
+ "account": "1234",
+ "baseURI": "exampleDomain.liveperson.net"
 }
 ```
 

@@ -16,11 +16,11 @@ Now that we can create records from LiveEngage, you may view all your Chat Trans
 
 1. Login to Salesforce – click on the application menu in the top right of your screen.
 
-2. Make sure you have the "LiveEngage" application selected (or any other app in which you’ve included the tab).
+2. Make sure you have the “LiveEngage” application selected (or any other app in which you’ve included the tab).
 
-3. Click on the "Chat Transcripts" tab.
+3. Click on the “Chat Transcripts” tab.
 
-4. Select one of the recently synced chat transcripts by clicking on the "Chat Transcript Name" under the Recent ChatTranscript list.
+4. Select one of the recently synced chat transcripts by clicking on the “Chat Transcript Name” under the Recent ChatTranscript list.
 
 5. There you have it – depending on your chat transcript settings, you will see a number of fields populated.
 

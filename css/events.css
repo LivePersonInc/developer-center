@@ -1,0 +1,135 @@
+/* banner home page */
+.container{
+  width: 100%;
+  max-width: 100%;
+}
+
+.banner-container{
+    width: 100%;
+    background-color: #f8f8f8;  
+}
+.banner{
+    width:100%;
+    height:250px;
+    background-color: #f8f8f8; 
+}
+.banner .text {
+  color: #162036;
+  float: left;
+  font-family: "Roboto Slab",serif;
+  margin-left: 50px;
+  margin-top: 90px;
+}
+.banner .text .first-line{
+    font-size: 1.066em;
+}
+.banner .text .second-line{
+    font-size:1.866em;
+    max-width: 400px;
+
+}
+
+.banner .events img{
+    width: 100%;
+
+}
+
+.img-responsive-mobile img {
+  display: none;
+}
+
+  a.typeform-share.button {
+    width:10%;
+  }
+
+@media only screen and (max-device-width: 480px) {
+  .banner {
+    height:auto;
+  }
+  
+  .banner .events img {
+    display: none;
+  }
+  .img-responsive-mobile img {
+    display: block;
+    width: 100%;
+  }
+  
+  a.typeform-share.button {
+    width:40%;
+  }
+
+}
+    
+}
+
+.home-first-line {
+  width: 70%;  
+  margin: 50px auto;
+}
+.home-second-line {
+  width: 55%;
+  margin: 54px auto;
+
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+}
+
+}
+html body div.container div div.title{
+    font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #162036;
+}
+html body div.container div.home-first-line div.text, html body div.container div.home-second-line div.text {
+  color: #808080;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 0.8em;
+  /*margin-bottom: 10px;*/
+  max-width: 90%;
+}
+.header.homepage{
+   max-width: 800px;
+   margin-top: 80px;
+}
+
+.header.homepage.berlin{
+   max-width: 800px;
+   font-size: 1em;
+   text-align: center;
+   margin-top: 10px;
+   margin: auto;
+}
+
+a.view-all-products {
+  border: 1px solid #6d6d6d;
+  color: #162036;
+  display: table;
+  font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto 50px;
+  padding: 7px 28px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.view-all-products::after{
+    content: '';
+}
+
+@media (max-width: 990px) {
+  
+    .home-first-line {     
+        margin-bottom:0px;
+    }
+    .home-second-line {
+        width: 70%;
+        margin-bottom: 16%;
+        margin-top: 0px;
+    }
+    
+}
