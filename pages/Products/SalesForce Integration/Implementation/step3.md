@@ -24,7 +24,7 @@ The sync process includes 4 sync options:
 
 3. **Manual Sync** - allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc...).
 
-4. **"Sync Chat"** Button on the Chat Transcript Record - allows on-demand sync with LE servers for a specific Chat Transcript record.
+4. **“Sync Chat”** Button on the Chat Transcript Record - allows on-demand sync with LE servers for a specific Chat Transcript record.
 
 **Note!** These sync processes are one sided, from LiveEngage to Salesforce only, no information is transferred from
 Salesforce to LiveEngage.
@@ -45,32 +45,32 @@ Daily Sync Jobs will sync any chats that may encountered errors during the time 
 
 Daily Sync Jobs allow you to select the hour that your job will run.
 
-1. Scroll down to "Daily Sync Job".
+1. Scroll down to “Daily Sync Job”.
 
-2. "Select Hour" that the job will run.
+2. “Select Hour” that the job will run.
 
-3. Click "Schedule Daily Job" to activate.
+3. Click “Schedule Daily Job” to activate.
 
 ### Run a Manual Job
 
 In case the periodic or daily sync did not capture a chat due to any reason (Errors etc.), you can run a manual job.
 
-1. Scroll down to the "Manual Sync Job" section.
+1. Scroll down to the “Manual Sync Job” section.
 
-2. Select "Start Time".
+2. Select “Start Time”.
 
-3. Select "End Time".
+3. Select “End Time”.
 
-4. Click "Schedule Manual Job".
+4. Click “Schedule Manual Job”.
 
 **Note!** The limitation for the ‘Manual job’ is 30 Days. 
 
-### "Sync Chat" Button on Chat Transcript Record
+### “Sync Chat” Button on Chat Transcript Record
 
-After the chat transcript has been created in Salesforce, and only when the chat already ended, you may update it by clicking on "Sync Chat" button at the top of the record page. 
+After the chat transcript has been created in Salesforce, and only when the chat already ended, you may update it by clicking on “Sync Chat” button at the top of the record page. 
 
 ![SyncChat](img/syncchat.png)
 
 ### "Event Log" Tab
 
-The "Event Log" includes information about any sync errors that may have occurred. Click on the dropdown list, select the "Callout Errors" list view and view any errors that occurred during the sync.
+The “Event Log” includes information about any sync errors that may have occurred. Click on the dropdown list, select the “Callout Errors” list view and view any errors that occurred during the sync.

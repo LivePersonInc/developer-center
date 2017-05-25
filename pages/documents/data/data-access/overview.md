@@ -53,7 +53,7 @@ JSON-Generating Data Flow Process:
 
 1. Every visitor and/or agent action triggers an event.
 2. Events are stored in HDFS (Hadoop File System). 
-3. Job processes the events (in the Hadoop environment) and generates a grouping of all the events related to each session once they are considered "closed".
+3. Job processes the events (in the Hadoop environment) and generates a grouping of all the events related to each session once they are considered “closed”.
 4. A data access job then runs
 
 ![DataAccessAPI02](img/Data access-02.png)

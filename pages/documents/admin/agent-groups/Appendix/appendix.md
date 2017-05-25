@@ -58,7 +58,6 @@ Read only:
 | :--------- | :------------- | :------------ |
 | id | Account Config object’s unique ID.| long number |
 | deleted | Whether or not the item is deleted | boolean |
-| numOfSubGroups | The number of sub groups of agent group.| long number |
 
 Required:
 
