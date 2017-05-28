@@ -11,7 +11,7 @@ permalink: consumer-experience-javascript-chat-requestchat.html
 
 ---
 
-This method queues a chat request to the agents. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.
+This method queues a chat request. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.
 
 **Notes**:
 
@@ -24,8 +24,8 @@ This method queues a chat request to the agents. It has a number of possible pro
 
 | Element | Description | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| skill |   A specific skill requested for this chat. | string | Will be ignored if an agent was specified. |
-| serviceQueue | A ServiceQueue for this chat. | string | Will be ignored if an agent or skill property are passed. Must be supplied with the maxWaitTime property. |
+| skill |   A specific skill requested for this chat. | string | |
+| serviceQueue | A ServiceQueue for this chat. | string | Will be ignored if a skill property is passed. Must be supplied with the maxWaitTime property. |
 | maxWaitTime   | The number of seconds the visitor can wait for a chat. | number | Must be supplied in conjunction with the serviceQueue property. |
 | referrer  | The referrer for this chat. | string | If not supplied, will default to the document.referrer property of the browser. |
 | preChatLines  | An array of strings that should be received by the agent immediately when the chat starts. | array |  |
