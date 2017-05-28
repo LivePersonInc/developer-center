@@ -20,12 +20,12 @@ order: 2
 
 **On create campaign flow and after setting up the Engagement you will need to choose or create a window.**
 
-### Step 1
+### Step 1 - Create an API based window
 **In the window gallery page click the top right “Action” dropdown menu and select “Add API-based window”.**
 
 ![Apibasedwindow1](img/apibasedwindow1.png)
 
-### Step 2
+### Step 2 - initialization settings
 **Fill in the necessary properties:**
 
 ![Apibasedwindow2](img/apibasedwindow2.png)
@@ -43,7 +43,7 @@ Default value: “window”
 
 [Read more about Javascript’s context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call){:target="_blank"}.
 
-### Step 3
+### Step 3 - confirmation
 **Save your settings and choose the API Based Window you have just created.**
 
 ![Apibasedwindow3](img/apibasedwindow3.png)
