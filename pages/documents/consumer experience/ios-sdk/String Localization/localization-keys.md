@@ -1,4 +1,4 @@
----
+Â---
 title: Localization Keys
 Keywords:
 level1: Documents
@@ -17,6 +17,14 @@ Listed below are all localized keys with the English localization string.
   <tr>
     <th>Attribute name</th>
     <th>String Localization</th>
+  </tr>
+  <tr>
+    <td>csatResolutionFeedbackText</td>
+    <td>"Your feedback helps us serve you better.\n It will not be shared with any customer service representatives."</td>
+  </tr>
+  <tr>
+    <td>csatResolutionQuestionText</td>
+    <td>"Did we solve your issue today?"</td>
   </tr>
   <tr>
     <td>customButtonAccessibilityDescription</td>
