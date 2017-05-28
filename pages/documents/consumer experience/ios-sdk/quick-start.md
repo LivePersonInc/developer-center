@@ -26,7 +26,7 @@ _Note: For information on supported operating systems and devices, refer to [Sys
 
 ### Step 1: Download and Unzip the SDK
 
-1. Click [here](https://github.com/LivePersonInc/developers-community/tree/master/assets/iOS-Messaging-SDK){:target="_blank"} to download the SDK package.
+1. Click [here](https://github.com/LP-Messaging/iOS-Messaging-SDK){:target="_blank"} to download the SDK package.
 2.  Once downloaded, extract the ZIP file to a folder on your Mac.
 
 ### Step 2: Configure project settings to connect LiveEngage SDK

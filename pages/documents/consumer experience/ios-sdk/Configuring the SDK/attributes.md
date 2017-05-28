@@ -360,6 +360,10 @@ Disables Photo Sharing</td>
   </tr>
   <tr>
   <td align="left">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledColor and sendButtonEnabledColor configurations.</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
   </tr>
 </tbody>
 </table>
