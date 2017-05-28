@@ -1,7 +1,7 @@
 ---
 title: Appendix
-level1: Products
-level2: Channels
+level1: Documents
+level2: Guides
 level3: Customized Chat Windows
 
 permalink: guides-customizedchat-appendix.html
