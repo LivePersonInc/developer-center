@@ -1,4 +1,4 @@
-Â---
+---
 title: Localization Keys
 Keywords:
 level1: Documents
