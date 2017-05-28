@@ -358,6 +358,9 @@ Disables Photo Sharing</td>
     <td align="left"><img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
+  <tr>
+  <td align="left">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledColor and sendButtonEnabledColor configurations.</td>
+  </tr>
 </tbody>
 </table>
 
@@ -377,14 +380,14 @@ Disables Photo Sharing</td>
   <tr>
     <td align="left">sendButtonDisabledColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for Send button title in disabled mode.</td>
+    <td align="left">Color code for Send and Camera (of Photo Sharing) buttons in disabled mode</td>
     <td align="left"></td>
     <td align="left">#AAAAAA</td>
   </tr>
   <tr>
-    <td align="left">sendButtonEnabledTextColor</td>
+    <td align="left">sendButtonEnabledColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for Send button title in enabled mode.</td>
+    <td align="left">Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.</td>
     <td align="left"></td>
     <td align="left">#0362AC</td>
   </tr>
