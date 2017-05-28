@@ -478,8 +478,12 @@ Listed below are all localized keys with the English localization string.
     <td>"Secure form has expired. Please ask the agent to resend the form."</td>
   </tr>
   <tr>
-    <td>secureFormViewedOrErrorMessage</td>
-    <td>"Please ask the agent to resend the form."</td>
+    <td>secureFormErrorMessage</td>
+    <td>"There was a problem opening this form. Please ask the agent to resend the form."</td>
+  </tr>
+  <tr>
+  <td>secureFormViewedMessage</td>
+  <td>"This form has already been viewed. Please ask the agent to resend the form."</td>
   </tr>
   <tr>
     <td>secureFormFillFormButtonTitle
