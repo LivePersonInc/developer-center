@@ -359,7 +359,7 @@ Disables Photo Sharing</td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
-  <td align="left" colspan="4">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledTextColor and sendButtonEnabledTextColor configurations.</td>
+  <td align="left" colspan="5">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledTextColor and sendButtonEnabledTextColor configurations.</td>
   </tr>
 </tbody>
 </table>
