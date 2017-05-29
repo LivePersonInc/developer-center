@@ -359,14 +359,20 @@ Disables Photo Sharing</td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
+<<<<<<< HEAD
   <td align="left">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledColor and sendButtonEnabledColor configurations.</td>
   <td></td>
   <td></td>
   <td></td>
   <td></td>
+=======
+    <td align="left" colspan="4">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledTextColor and sendButtonEnabledTextColor configurations.</td>
+>>>>>>> refs/remotes/origin/in_app_messaging_sdk_ios-2.3
   </tr>
 </tbody>
 </table>
+
+
 
 ### Send Button
 
@@ -445,7 +451,7 @@ Disables Photo Sharing</td>
     <td align="left">customButtonImage</td>
     <td align="left">UIImage</td>
     <td align="left">In window mode only:
-Custom button icon image. This will be displayed on the navigation bar. 
+Custom button icon image. This will be displayed on the navigation bar.
 When the button is pressed, a dedicated callback will be invoked. (See LPMessagingSDKCustomButtonTapped for more information).</td>
     <td align="left"><img src="img/custombuttonimage.png" alt="custombuttonimage"></td>
     <td align="left">nil</td>
@@ -505,7 +511,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 </tbody>
 </table>
 
-### CSAT Buttons
+### Surveys Buttons (CSAT and FCR)
 
 <table>
 <thead>
@@ -549,26 +555,10 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   <tr>
     <td align="left">csatResolutionButtonSelectedColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for the resolution confirmation buttons (YES/NO) when selected.</td>
+    <td align="left">Color code for the FCR survey buttons (YES/NO) when selected.</td>
     <td align="left"><img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor"></td>
     <td align="left">#229A49</td>
   </tr>
-</tbody>
-</table>
-
-### CSAT Survey
-
-<table>
-<thead>
-   <tr>
-  <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Example</th>
-    <th>Default</th>
-  </tr>
-  </thead>
-<tbody>
   <tr>
     <td align="left">csatAllTitlesTextColor</td>
     <td align="left">UIColor</td>
@@ -579,7 +569,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   <tr>
     <td align="left">csatResolutionHidden</td>
     <td align="left">Bool</td>
-    <td align="left">Hides the yes/no question.</td>
+    <td align="left">Hides the FCR survey (YES/NO) question.</td>
     <td align="left"><img src="img/csatresolutionhidden.png" alt="csatResolutionHidden"></td>
     <td align="left">false</td>
   </tr>
@@ -1025,7 +1015,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"><img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp"><br><img src="img/ttrshouldshowtimestamp1.png" alt="ttrShouldShowTimestamp"></td>
     <td align="left">false</td>
   </tr>
-  <tr> 
+  <tr>
   </tr>
   <tr>
     <td align="left">ttrShowFrequencyInSeconds</td>
@@ -1034,7 +1024,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"></td>
     <td align="left">8</td>
   </tr>
-  <tr> 
+  <tr>
   </tr>
   <tr>
     <td align="left">showUrgentButtonInTTRNotification</td>
@@ -1146,7 +1136,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">toastNotificationsEnabled</td>
     <td align="left">Bool</td>
-    <td align="left">Enable toast notifications such as offline and TTR notifications. 
+    <td align="left">Enable toast notifications such as offline and TTR notifications.
     False: Disable toast notifications.</td>
     <td align="left"></td>
     <td align="left">true</td>
@@ -1183,7 +1173,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"></td>
     <td align="left">#004DC9</td>
   </tr>
-  <tr> 
+  <tr>
   </tr>
   <tr>
     <td align="left">remoteUserAvatarIconColor</td>
@@ -1199,7 +1189,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"></td>
     <td align="left">nil</td>
   </tr>
-  <tr> 
+  <tr>
   </tr>
   <tr>
     <td align="left">csatAgentAvatarBackgroundColor</td>
@@ -1247,7 +1237,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"></td>
     <td align="left">false</td>
   </tr>
- 
+
   <tr>
     <td align="left">clientOnlyMaskingRegex</td>
     <td align="left">String</td>
@@ -1401,5 +1391,3 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
 </tbody>
 </table>
-
-
