@@ -4,7 +4,6 @@ Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
-level4: Release Notes
 
 order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
@@ -87,6 +86,12 @@ The following devices are now also supported and/or certified to host our in-app
 |    iPad 5 (2017)      |    N/A                 |    N/A          |    Supported    |
 
 
+### Presence enablement for photo sharing - beta*
+Presence enablement for photo sharing provides consumers with the ability to receive notifications while uploading a photo, whether they remain within the app or keep it running in the background.
+
+The Web Socket remains open for a maximum of 60 seconds (using Background Task) when the app or conversation window moves to the background. This scenario is also applicable for non photo sharing flows.
+
+*Photo sharing is a beta feature.
 
 
 
