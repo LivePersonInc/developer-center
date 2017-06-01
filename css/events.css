@@ -98,7 +98,7 @@ html body div.container div.home-first-line div.text, html body div.container di
 .header.homepage{
    max-width: 800px;
    margin-top: 80px;
-   font-size: 1.6
+   font-size: 1.6em;
 }
 
 .header.homepage.berlin{
