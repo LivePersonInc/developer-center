@@ -110,8 +110,8 @@ html body div.container div.home-first-line div.text, html body div.container di
 }
 
 .fineprint{
-  font-size: 0.6em !important;
-  text-align: center !important;
+  font-size: 1em !important;
+  text-align: left !important;
 }
 
 a.view-all-products {
