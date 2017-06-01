@@ -109,6 +109,11 @@ html body div.container div.home-first-line div.text, html body div.container di
    margin: auto;
 }
 
+.fineprint{
+  font-size: 0.6em !important;
+  text-align: center !important;
+}
+
 a.view-all-products {
   border: 1px solid #6d6d6d;
   color: #162036;

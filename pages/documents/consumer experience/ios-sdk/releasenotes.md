@@ -4,7 +4,6 @@ Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
-level4: Release Notes
 
 order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
