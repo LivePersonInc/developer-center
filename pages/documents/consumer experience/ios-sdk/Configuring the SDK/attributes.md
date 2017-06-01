@@ -840,7 +840,7 @@ It will affect the following areas:
     <td align="left">String</td>
     <td align="left">The brand name will be shown as a title on toolbar when there is no active conversation. </td>
     <td align="left"></td>
-    <td align="left">"BrandName"</td>
+    <td align="left">"" (Empty String)</td>
   </tr>
   <tr>
     <td align="left">conversationBackgroundColor</td>
@@ -848,6 +848,21 @@ It will affect the following areas:
     <td align="left">Color code for the entire view background.</td>
     <td align="left"></td>
     <td align="left">UIColor.white</td>
+  </tr>
+  <tr>
+    <td align="left">customFontNameConversationFeed</td>
+    <td align="left">String?</td>
+    <td align="left"> Custom font name for conversation feed. This font will affect all Messages, Timestamp and Separators. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">customFontNameNonConversationFeed</td>
+    <td align="left">String?</td>
+    <td align="left"> Custom font name for all non conversation feed controls. Such as: Buttons, Alerts, Banners, Menu and External Windows.
+    Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
   </tr>
 </tbody>
 </table>
