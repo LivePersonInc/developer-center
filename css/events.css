@@ -50,7 +50,7 @@
     height:auto;
   }
 
-  .banner .events img {
+  .banner-container .events img {
     display: none;
   }
   .img-responsive-mobile img {
