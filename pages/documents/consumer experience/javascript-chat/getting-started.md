@@ -10,6 +10,18 @@ order: 1
 permalink: consumer-experience-javascript-chat-getting-started.html
 root-link: true
 ---
+
+### Introduction
+
+
+The JavaScript Chat SDK is a wrapper for the Server Chat API. For this reason, before starting to work with the JavaScript Chat SDK, we recommend you refer to the [Server Chat API documentation](consumer-experience-server-chat-getting-started.html){:target="_blank"} and follow the guidelines.
+
+The JavaScript Chat SDK supports chat from a browser on the LiveEngage platform. The SDK is designed to help simplify chat on the browser with modern UI behavior. In addition to chat, this SDK also supports LiveEngage Pre-chat, Exit and Offline surveys.
+
+LiveEngage offers a chat window for desktop and mobile web out of the box, and brands can customize the window behavior and look and feel.
+
+For complete control over the chat window look, behavior and implementation source, utilize the Javascript Chat Window SDK to create your window from scratch. 
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -25,17 +37,6 @@ A few things you'll need to get started with this API:
 	* appKey=721c180b09eb463d9f3191c41762bb68
 
 4. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
-
-### Introduction
-
-
-The JavaScript Chat SDK is a wrapper for the Server Chat API. For this reason, before starting to work with the JavaScript Chat SDK, we recommend you refer to the [Server Chat API documentation](consumer-experience-server-chat-getting-started.html){:target="_blank"} and follow the guidelines.
-
-The JavaScript Chat SDK supports chat from a browser on the LiveEngage platform. The SDK is designed to help simplify chat on the browser with modern UI behavior. In addition to chat, this SDK also supports LiveEngage Pre-chat, Exit and Offline surveys.
-
-LiveEngage offers a chat window for desktop and mobile web out of the box, and brands can customize the window behavior and look and feel.
-
-For complete control over the chat window look, behavior and implementation source, utilize the Javascript Chat Window SDK to create your window from scratch. 
 
 ### Use Cases
 

@@ -26,7 +26,7 @@ _Note: For information on supported operating systems and devices, refer to [Sys
 
 Follow the steps below to download and unzip the
 
-1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LivePersonInc/developers-community/tree/master/assets/Android-Messaging-SDK){:target="_blank"}. 
+1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK){:target="_blank"}. 
 
 2. Extract the ZIP file to a folder on your computer.
 
