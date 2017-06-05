@@ -62,6 +62,7 @@ This section contains API details that are common to every API’s resource and 
 | agentGroupId | Agent group ID for which we are specifying the priority and splitPercentage. | string | Required | AgentGroupId must already exist in account config. <br> Required if skillRoutingConfiguration specified.  |
 | priority | Routing cascading order if agent group is in full capacity, first to priority 1 then to 2 then to 3 then to …. n. | number | Required | Required if skillRoutingConfiguration specified. |
 | splitPercentage | Split of chats to provide for each chat center (agent group). | number | Required | Required if skillRoutingConfiguration specified. 
+| wrapUpTime | The period time since the chat ends, till the agent will get the new chat | Integer | Optional | this feature is within the ACD settings |
 
 ### Entity Example
 
