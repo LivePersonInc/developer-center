@@ -4,6 +4,7 @@ https://developers.liveperson.com:
 
 https://{default}/events:
   type: upstream
+  upstream: jekyll_app:http
   redirects:
     paths:
       "/events":
