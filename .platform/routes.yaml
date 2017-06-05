@@ -3,9 +3,7 @@ https://developers.liveperson.com:
   upstream: jekyll_app:http
 
 https://{default}/:
-  type: upstream
+  # [...]
   redirects:
     paths:
-      "/events":
-         to: "https://{default}/events.html"
-         prefix: false
+      "/events": { "to": "https://{default}/events.html" }
