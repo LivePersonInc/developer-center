@@ -41,4 +41,4 @@ This API retrieves a single skill (by ID) for a specific account.
 
 **Response Body**
 
-[Appendix](administration-skills-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+Please see the [Appendix](administration-skills-appendix.html){:target="_blank"} for Entity Structure and Entity Example.

@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: Appendix
 
-order: 243
+order: 244
 
 permalink: consumer-experience-ios-sdk-security.html
 
@@ -22,4 +22,3 @@ LivePerson has a comprehensive security compliance program to help ensure adhere
 Our applications are developed under a strict and controlled Secure Development Life-Cycle: Developers undergo secure development training, and security architects are involved in all major projects and influence the design process. Static and Dynamic Code Analysis is an inherent part of the development process and, upon maturity, the application is tested for vulnerabilities by an independent penetration testing vendor. On average, LivePerson undergoes 30 penetration tests each year.
 
 [LiveEngage Messaging Platform Security Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/LiveEngage+Messaging+Platform+Security+Overview.pdf){:target="_blank"}
-
