@@ -6,6 +6,6 @@ https://{default}/:
   type: upstream
   redirects:
     paths:
-      "/from": https://{default}/events
+      "/events":
          to: "https://{default}/events.html"
          prefix: false
