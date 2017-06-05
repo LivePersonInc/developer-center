@@ -2,6 +2,10 @@ https://developers.liveperson.com:
   type: upstream
   upstream: jekyll_app:http
 
-https://{default}/events:
-  type: redirect
-  to: https://{default}/events.html
+https://{default}/:
+  type: upstream
+  redirects:
+    paths:
+      "/from": https://{default}/events
+         to: "https://{default}/events.html"
+         prefix: false
