@@ -12,12 +12,13 @@ permalink: consumer-experience-ios-sdk-release-notes.html
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
-### Symptom:
-For one minute after the consumer has navigated away from the conversation window, any arriving messages will not display. They will only appear in the conversation window after the minute has passed.
+**Symptom**:
 
-### Fix:
-The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”. 
+For one minute after the consumer had navigated away from the conversation window, any arriving messages would not display. They would only appear in the conversation window after the minute had passed.
 
+**Fix**:
+
+The following capability, which was first introduced in v2.3, has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”. 
 
 ### In-App Messaging SDK Version 2.3
 
