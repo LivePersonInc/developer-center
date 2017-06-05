@@ -17,11 +17,11 @@
             <input type="text" id="search-input-mobile"  placeholder="{{site.data.strings.search_placeholder_text}}" autocomplete="off" class="visible-xs" >
             <img src="images/Search-icon.png" alt="Click to search" id="search-icon-mobile" class="visible-xs" />
             </div>
-            
+
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
-               
+
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 {% for entry in site.data.topnav.topnav_dropdowns %}
@@ -60,13 +60,13 @@
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
-                
+
             </ul>
              <!--comment out this block if you want to hide search-->
-                
+
                     <!--start search -->
-            
-                    <div id="search-demo-container"  >                        
+
+                    <div id="search-demo-container"  >
                         <input type="text" id="search-input"  placeholder="{{site.data.strings.search_placeholder_text}}" autocomplete="off" >
                         <div class="close-btn ">&times;</div>
                         <div class="search-line "></div>
@@ -74,24 +74,24 @@
                             <li class="nolink resultsInDocumentTitle">In this document (<span class="resultsInDocumentCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
                             <li>
                                 <ul class="resultsInDocument"></ul>
-                            </li>                         
+                            </li>
                            <li class="grey-line"></li>
                             <li class="nolink resultsInDocumentsTitle">Documents (<span class="resultsInDocumentsCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
                             <li>
                                 <ul class="resultsInDocuments"></ul>
-                            </li>    
+                            </li>
                             <li class="nolink resultsInProductsTitle">Products (<span class="resultsInProductsCount">0</span>) <i class='fa fa-cog fa-spin fa-fw'></i></li>
                             <li>
                                 <ul class="resultsInProducts"></ul>
-                            </li>    
+                            </li>
                             <li class="nolink"><a href="{{site.baseurl}}/search.html" id="searchPageLink">Show all</a></li>
                         </ul>
                     </div>
-                    <img src="images/Search-icon.png" alt="Click to search" id="search-icon" class="hidden-xs" />
-                    
-                    <!--<script src="{{ "js/jekyll-search.js"}}" type="text/javascript"></script> 
+                    <img src="/images/Search-icon.png" alt="Click to search" id="search-icon" class="hidden-xs" />
+
+                    <!--<script src="{{ "js/jekyll-search.js"}}" type="text/javascript"></script>
                     <script type="text/javascript">
-                            
+
                             SimpleJekyllSearch.init({
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
@@ -107,8 +107,8 @@
                     </script> -->
                     <!--end search-->
         </div>
-       
-            
+
+
         </div>
         <!-- /.container -->
 </nav>
