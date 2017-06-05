@@ -1201,6 +1201,13 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">#FFFFFF</td>
   </tr>
   <tr>
+    <td align="left">remoteUserDefaultAvatarImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Default Avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations.  If remote user has an avatar image in his profile, this attribute will be ignored.</td>
+    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"</td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
     <td align="left">brandAvatarImage</td>
     <td align="left">UIImage?</td>
     <td align="left">Set avatar image for brand. This is an optional UIImage that if is set to nil a default avatar will be presented. Image ratio should be 1:1 (square) and at least 50x50 pixels.</td>
