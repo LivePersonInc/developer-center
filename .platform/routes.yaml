@@ -1,0 +1,6 @@
+https://{default}/:
+  type: upstream
+  redirects:
+    paths:
+      "/events":
+         to: "https://{default}/events.html"
