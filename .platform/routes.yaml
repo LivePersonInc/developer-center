@@ -6,4 +6,4 @@ https://{default}/:
   # [...]
   redirects:
     paths:
-      "/events": { "to": "https://{default}/events.html" }
+      "/https://{default}/events": { "to": "https://{default}/events.html" }
