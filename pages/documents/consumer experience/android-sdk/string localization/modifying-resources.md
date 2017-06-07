@@ -4,7 +4,7 @@ Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for Android
-level4: String Localization
+level4: Customization and Branding
 
 order: 264
 permalink: android-modifying-resources.html
