@@ -5,7 +5,9 @@ level1: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 level4: Methods
-order: 200
+
+order: 191
+
 permalink: consumer-experience-javascript-chat-getestimatedwaittime.html
 ---
 

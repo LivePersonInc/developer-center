@@ -257,7 +257,7 @@ permalink: android-attributes.html
     <td>#004DC9 (blue)</td>
     <td><img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor"></td>
   </tr>
-  
+
 </tbody>
 </table>
 
@@ -698,7 +698,7 @@ permalink: android-attributes.html
     <th>Name</th>
     <th>Description</th>
     <th>Default</th>
-    <th>Example</th> 
+    <th>Example</th>
   </tr>
 </thead>
 <tbody>
