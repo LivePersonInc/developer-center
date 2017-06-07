@@ -101,7 +101,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 
 
-#### In-App Messaging SDK Version 2.0
+### In-App Messaging SDK Version 2.0
 
 These are the main feature releases available in the In-App Messaging SDK version 2.0.
 
