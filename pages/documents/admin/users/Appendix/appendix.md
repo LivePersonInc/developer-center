@@ -19,6 +19,8 @@ This section contains API details that are common to every API’s resource and 
 | :--------   | :--- |
 | Update attribute | Cannot update a single requested attribute. Need to add a body full of other attributes and if certain attributes are missing from the body, they will be deleted. |
 | API User | A User which is created as an API User doesn't have a password |
+| User profile role change from Agent | When changing the role of a user from Agent to another role, the relevant user fields associated with agent role are reset: 'maxChats', 'maxAsyncChats', 'memberOf', 'skillIds' |
+| User profile role change from Agent Manager | When changing the role of a user from Agent Manager to another role, the 'managerOf' field associated with agent manager role is reset |
 
 ### Request Headers
 
