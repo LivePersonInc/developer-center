@@ -11,7 +11,9 @@ permalink: consumer-experience-android-sdk-release-notes.html
 ### In-App Messaging SDK version 2.3 for Android
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.
 
+
 #### Presence enablement for photo sharing - beta
+
 Presence enablement for photo sharing provides consumers with the ability to receive notifications while uploading a photo, whether they remain within the app or keep it running in the background. The Web Socket remains open for a maximum of 5 seconds when the app moves to the background. This scenario is also applicable for non photo sharing flows.
 
 In addition, brands can also customize notifications for photo sharing, indicating to the consumer when a photo is loading, has successfully sent or has failed to send
@@ -21,14 +23,18 @@ In addition, brands can also customize notifications for photo sharing, indicati
 Related API: Photo sharing
 Related strings: Photo sharing upload status
 
+
 #### In-app unread messages badge enablement
+
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualisation of a badge, such as a number, icon or other marker to show unread messages.
 
 ![Unread Messages Badge](img/releaseunread.png)
 
 Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
+
 #### Secure form for in-app messaging
+
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the in-app messaging experience and has a time-out expiry, for added security.
 
 _This feature requires consulting services support. For more information, please refer to the LiveEngage ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf){:target="_blank"}_.
@@ -38,7 +44,9 @@ _This feature requires consulting services support. For more information, please
 Related properties: Agent PCI bubble
 Related strings: PCI
 
+
 #### List of certified and supported devices extended
+
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 **Mobile**
@@ -59,6 +67,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 **Tablet**
 
+
 |              | Operating System |                 |                    |               |
 |--------------|------------------|-----------------|--------------------|---------------|
 | Device       | V4.4X (KitKat)   | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
@@ -67,7 +76,9 @@ The following devices are now also supported and/or certified to host our in-app
 | Nexus        | Supported        | Supported       | Supported          | -             |
 | HTC          | -                | -               | Supported          | Supported     |
 
+
 #### New APIS
+
 
 **handlePushMessage**
 
@@ -113,7 +124,9 @@ Set a notification builder for the image down foreground service notification -
 
 `setImageServiceDownloadNotificationBuilder(Notification.Builder builder)`
 
+
 #### Deprecated API
+
 
 The following API has been deprecated:
 
@@ -123,6 +136,7 @@ showNotification)`
 Please use the above ​handlePushMessage()​ method instead.
 
 #### New properties
+
 
 **agent PCI bubble**
 
@@ -180,6 +194,7 @@ Color of the sending status indicator in the consumer message status line -
 
 `<color ​name=​"​consumer_bubble_sending_status_color​"​>​@color/lp_gray​</color>`
 
+
 #### New strings keys
 
 **Photo Sharing Upload Status**
@@ -228,5 +243,5 @@ Please ask the agent to resend the form.​</string>`
 `<string​ ​name=​"lpmessaging_ui_secure_form_submitted_message"​>​This form has been
 submitted and cannot be reopened for security reasons.​</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_consumer_submitted_message"​>​I have submitted
-the %s form​</string>`
+`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
+form, you will not be able to access it again.​</string>`
