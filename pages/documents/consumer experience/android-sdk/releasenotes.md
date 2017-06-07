@@ -92,8 +92,130 @@ This number is set to 0 when opening the conversation screen.
 
 To get updates on the unread messages counter: create a BroadcastReceiver that will listen to the following Action:
 
-**LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_ACTION;**
+_LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_ACTION;_
 
 To get the number of unread messages out of the intent, use the following extra key:
 
-**LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA;**
+_LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA;_
+
+**Photo Sharing**
+
+Set a pending intent for the image upload foreground service notification -
+
+`setImageServicePendingIntent(PendingIntent pendingIntent)`
+
+Set a notification builder for the image upload foreground service notification -
+
+`setImageServiceUploadNotificationBuilder(Notification.Builder builder)`
+
+Set a notification builder for the image down foreground service notification -
+
+`setImageServiceDownloadNotificationBuilder(Notification.Builder builder)`
+
+### Deprecated API
+
+The following API has been deprecated:
+
+`public static void handlePush(Context context, Bundle data, String brandId, boolean
+showNotification)`
+
+Please use the above ​handlePushMessage()​ method instead.
+
+### New properties
+
+**agent PCI bubble**
+
+The following properties of the secure form bubble on the agent side can now be configured:
+
+Background color of the form invitation bubble -
+
+`<color​ ​name=​"agent_bubble_pci_form_invitation_background_color"​>
+@android:color/white​</color>`
+
+Background color of the form invitation button only -
+
+`<color​ ​name=​"agent_bubble_pci_form_invitation_background_btn_color"​>
+@android:color/white​</color>`
+
+Color of the stroke (border) of the form invitation bubble -
+
+`<color​ ​name=​"agent_bubble_pci_form_invitation_stroke_color"​>​ ​@color/lp_gray​</color>`
+
+Color of the text on the button -
+
+`<color ​name=​"agent_bubble_pci_form_invitation_button_text_color"​>
+@color/lp_blue​</color>​`
+
+Text color on the description in the form invitation bubble -
+
+`<color ​name=​"agent_bubble_pci_form_invitation_description_text_color"​>
+@color/lp_gray​</color>`
+
+Text color on the title in the form invitation bubble -
+
+`<color​ ​name=​"agent_bubble_pci_form_invitation_title_text_color"​>
+@android:color/black​</color>`
+
+Color of the icon in the form invitation bubble -
+
+`<color ​name=​"agent_bubble_pci_form_invitation_icon_tint_color"​>
+@color/lp_blue​</color>`
+
+**consumer read status**
+
+Color of the read status indicator in the consumer message status line -
+
+`<color​ ​name=​"​consumer_bubble_read_status_color​"​>​@color/lp_blue​</color>`
+
+Color of the received status indicator in the consumer message status line -
+
+`<color ​name=​"​consumer_bubble_received_status_color​"​>​#cecece​</color>`
+
+Color of the sent status indicator in the consumer message status line -
+
+`<color​ ​name=​"​consumer_bubble_sent_status_color​"​>​#cecece​</color>`
+
+Color of the sending status indicator in the consumer message status line -
+
+`<color ​name=​"​consumer_bubble_sending_status_color​"​>​@color/lp_gray​</color>`
+
+### New strings keys
+
+**Photo Sharing Upload Status**
+
+`<string​ ​name=​"uploading_image"​>​Uploading image...​</string>`
+`<string​ ​name=​"downloading_image"​>​Downloading image...​</string>`
+
+**Accessibility**
+
+`<string​ ​name=​"lp_accessibility_message_preview_close_description"​>​Close​</string>``
+`<string​ ​name=​"lp_accessibility_scroll_down_indicator_description"​>​scroll
+down​</string>`
+
+**Connection Status**
+
+`<string​ ​name=​"lp_connection_status_trying_to_connect"​>​Still trying to
+connect…​</string>`
+`<string​ ​name=​"lp_connection_status_no_connection"​>​Offline. Please check your
+connection.​</string>`
+
+**PCI**
+
+`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_title"​>​Are you sure?​</string>`
+`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
+form, you will not be able to access it again.​</string>`
+`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_positive"​>​OK​</string>`
+`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_negative"​>​STAY​</string>`
+`<string​ ​name=​"lpmessaging_ui_fill_in_form_text_button"​>​Fill in form​</string>`
+`<string​ ​name=​"lpmessaging_ui_secure_form_to_fill_in_message"​>​This is a secure form.
+Information entered here is protected and cannot be accessed once submitted.​</string>`
+`<string​ ​name=​"lpmessaging_ui_secure_form_viewed_message"​>​This form has already been
+viewed. Please ask the agent to resend the form.​</string>`
+`<string​ ​name=​"lpmessaging_ui_secure_form_error_message"​>​There was a problem opening
+this form. Please ask the agent to resend the form.​</string>`
+`<string​ ​name=​"lpmessaging_ui_secure_form_expired_message"​>​Secure form has expired.
+Please ask the agent to resend the form.​</string>`
+`<string​ ​name=​"lpmessaging_ui_secure_form_submitted_message"​>​This form has been
+submitted and cannot be reopened for security reasons.​</string>`
+`<string​ ​name=​"lpmessaging_ui_secure_form_consumer_submitted_message"​>​I have submitted
+the %s form​</string>`
