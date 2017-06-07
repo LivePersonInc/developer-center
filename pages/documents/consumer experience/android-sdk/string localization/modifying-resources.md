@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
-order: 264
+order: 265
 permalink: android-modifying-resources.html
 
 ---
