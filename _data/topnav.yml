@@ -15,3 +15,8 @@ topnav:
   items:
     - title: Events
       url: /events.html
+
+- title: Signup
+  items:
+    - title: Signup
+      external_url: http://register.liveperson.com/developer/signup
