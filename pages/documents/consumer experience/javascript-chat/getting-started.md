@@ -13,14 +13,13 @@ root-link: true
 
 ### Introduction
 
+LiveEngage offers a chat window for desktop and mobile web out of the box, and brands can customize the window behavior and look and feel.
+
+For complete control over the chat window look, behavior and implementation source, utilize the Javascript Chat Window SDK to create your window from scratch. 
 
 The JavaScript Chat SDK is a wrapper for the Server Chat API. For this reason, before starting to work with the JavaScript Chat SDK, we recommend you refer to the [Server Chat API documentation](consumer-experience-server-chat-getting-started.html){:target="_blank"} and follow the guidelines.
 
 The JavaScript Chat SDK supports chat from a browser on the LiveEngage platform. The SDK is designed to help simplify chat on the browser with modern UI behavior. In addition to chat, this SDK also supports LiveEngage Pre-chat, Exit and Offline surveys.
-
-LiveEngage offers a chat window for desktop and mobile web out of the box, and brands can customize the window behavior and look and feel.
-
-For complete control over the chat window look, behavior and implementation source, utilize the Javascript Chat Window SDK to create your window from scratch. 
 
 ### Getting Started
 
@@ -42,7 +41,7 @@ A few things you'll need to get started with this API:
 
 * Create a chat window experience that is completely different than the out of the box window LIveEngage offers - for example - a window that takes up the entire screen.
 
-* Utilize a different platform to manage the user view of the chat and integrate LiveEngage window logic 
+* Utilize a different platform to manage the user view of the chat and integrate LiveEngage window logic
 
 * Control and manage the window resources on your systems
 
@@ -56,9 +55,3 @@ Example of an implementation of an embedded customized chat window using this AP
 The JavaScript Chat SDK is a wrapper for the Server Chat API. For this reason, before starting to work with the JavaScript Chat SDK, we recommend you refer to the [Server Chat API documentation](consumer-experience-server-chat-getting-started.html){:target="_blank"} and follow the guidelines.
 
 The JavaScript Chat SDK supports chat from a browser on the LiveEngage platform. The SDK is designed to help simplify chat on the browser with modern UI behavior. In addition to chat, this SDK also supports LiveEngage Pre-chat, Exit and Offline surveys.
-
-
-
-
-
-
