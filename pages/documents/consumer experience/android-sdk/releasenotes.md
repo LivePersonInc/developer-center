@@ -203,20 +203,30 @@ connection.​</string>`
 **PCI**
 
 `<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_title"​>​Are you sure?​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
 form, you will not be able to access it again.​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_positive"​>​OK​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_negative"​>​STAY​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_fill_in_form_text_button"​>​Fill in form​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_secure_form_to_fill_in_message"​>​This is a secure form.
 Information entered here is protected and cannot be accessed once submitted.​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_secure_form_viewed_message"​>​This form has already been
 viewed. Please ask the agent to resend the form.​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_secure_form_error_message"​>​There was a problem opening
 this form. Please ask the agent to resend the form.​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_secure_form_expired_message"​>​Secure form has expired.
 Please ask the agent to resend the form.​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_secure_form_submitted_message"​>​This form has been
 submitted and cannot be reopened for security reasons.​</string>`
+
 `<string​ ​name=​"lpmessaging_ui_secure_form_consumer_submitted_message"​>​I have submitted
 the %s form​</string>`
