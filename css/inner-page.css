@@ -20,14 +20,15 @@ h3[id]{
 h4[id]{
   font-family: Roboto, Arial;
   color:#5879da;
-  font-size: 0.9em;
+  font-size: 0.86em;
+  font-weight: 600;
 }
 .h2 {
   color: #162036;
   font-family: Roboto,Arial;
   font-size: 1.0666em;
   margin-bottom: 30px;
- 
+
 }
 .h3 {
   color: #5879da;
@@ -39,7 +40,8 @@ h4[id]{
 .h4 {
   color: #5879da;
   font-family: Roboto,Arial;
-  font-size: 0.9em;
+  font-size: 0.86em;
+  font-weight: 600;
   margin-bottom: 8px;
   margin-top: 7px;
 }
@@ -54,7 +56,7 @@ h4[id]{
 }
 .post-content table  tr  td {
    font-size: 0.8em;
-   font-family: "Open Sans"; 
+   font-family: "Open Sans";
     color: #666666;
     word-wrap:break-word;
 }
@@ -67,7 +69,7 @@ h4[id]{
 }
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
   border-top: 1px solid #162036;
-  
+
 }
 table > thead > tr > th {
  border-bottom: none;
@@ -92,11 +94,11 @@ div#toc {
   display: none;
   margin-top: 14px;
   /*min-width: 300px;*/
-  
+
   position: absolute;
   z-index: 1;
 }
-div#toc ul { 
+div#toc ul {
   width:100%;
   font-size: 11px;
   text-decoration: none;
@@ -139,7 +141,7 @@ div#toc > ul > li:first-child{
 }
 div#toc > ul > li > a {
   vertical-align: top;
- 
+
 }
 div#toc > ul > li > a span {
   display: inline-block;
@@ -179,7 +181,7 @@ ul#mysidebar.nav {
   border-right: 1px solid lightgray;
   margin-left: 10px;
   height: 100%;
-  
+
 }
 
 ul#mysidebar > li.folder::before{
@@ -200,7 +202,7 @@ ul#mysidebar > li.folder ul.folderactive{
 
 ul#mysiderbar li{
   display: inline-block;
-  
+
 }
 #mysidebar > li:not(.folder) {
   font-size: 1.1em;
@@ -226,7 +228,7 @@ ul#mysidebar.nav li.activepage{
   background-color: #F2F2F2;
 }
 ul#mysidebar.nav li.activepage a{
-  background-color: #F2F2F2; 
+  background-color: #F2F2F2;
 }
 #mysidebar.nav li.folder > a{
  font-size: 1.1em;
@@ -238,7 +240,7 @@ ul#mysidebar.nav li ul li {
  ul#mysidebar.nav ul li a {
   border-top: none;
   padding-left: 0px;
- 
+
 }
 
 div.sidebarTitle {
@@ -289,8 +291,8 @@ div.sidebarTitle-holder {
   text-decoration:none;
 }
 
-.breadcrumbs .breadcrumb-item.clicked::after {  
-    content: "\f077"; 
+.breadcrumbs .breadcrumb-item.clicked::after {
+    content: "\f077";
 }
 .breadcrumbs .breadcrumb-item.no-after{
   content: '';
@@ -299,7 +301,7 @@ div.sidebarTitle-holder {
    display: inline-block;
     padding-right: 1em;
     padding-left: 0em;
-    color: #5896ed;   
+    color: #5896ed;
     font-size: 0.8em;
     font-weight: bold;
     text-decoration: none;
@@ -330,7 +332,7 @@ div.sidebarTitle-holder {
 .post-content p strong {
   color: #181818;
   font-family: "Open Sans","Roboto",Arial,Helvetica,sans-serif;
-  font-weight: lighter;
+  /*font-weight: lighter;*/
 }
 
 .post-content,.post-content *{
@@ -397,7 +399,7 @@ pre {
 }
 
 .inside-page-content {
-  margin-left: 0; 
+  margin-left: 0;
   padding-left: 0;
 }
 
@@ -412,9 +414,9 @@ pre {
      display: none !important;
     }
     div.inside-page-content, .inside-page-content .h2{
-      
+
     }
-    
+
 
 }
 
@@ -423,7 +425,7 @@ pre {
     margin-top: 30px;
   }
   div.inside-page-content {
-   
+
     margin-left: 12px;
   }
   .post-content table tr td{
@@ -449,4 +451,3 @@ pre {
       margin-top: 84px;
   }
 }
-
