@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: Appendix
 
-order: 244
+order: 245
 permalink: consumer-experience-ios-sdk-createcertificate.html
 
 ---
@@ -30,7 +30,7 @@ To manually generate a Certificate, you need a Certificate Signing Request (CSR)
 **Step 2**
 
 - In the Certificate Information window, enter the following information:
-	- In the User Email Address field, enter your email address.	
+	- In the User Email Address field, enter your email address.
 	- In the Common Name field, create a name for your private key, for example,John Doe Dev Key.
 	- The CA Email Address field should be left empty.
 	- In the Request is group, select the Saved to disk option.
@@ -63,7 +63,7 @@ Download and run the certificate. The certificate is now added to your Keychain,
 
 ![createpush](img/createpush.png)
 
-- Under Push Notification service SSL Certificates, select **Create Certificate** (Developer or Production). 
+- Under Push Notification service SSL Certificates, select **Create Certificate** (Developer or Production).
 
 ![uploadcsrfile](img/uploadcsrfile.png)
 
@@ -86,10 +86,7 @@ Download and run the certificate. The certificate is now added to your Keychain,
 **openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12**
 You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step.
 
-- RSA .pem key (no password) 
+- RSA .pem key (no password)
 	**openssl rsa -in hostkey.pem -out hostkey.pem**
-	
+
 	You will be prompted to enter a passphrase. Enter the same passphrase you used in the previous step.
-
-
-

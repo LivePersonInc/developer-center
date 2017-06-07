@@ -50,7 +50,8 @@
     height:auto;
   }
 
-  .banner .events img {
+  .events img {
+
     display: none;
   }
   .img-responsive-mobile img {
@@ -107,6 +108,11 @@ html body div.container div.home-first-line div.text, html body div.container di
    text-align: left;
    margin-top: 10px;
    margin: auto;
+}
+
+.fineprint{
+  font-size: 1em !important;
+  text-align: left !important;
 }
 
 a.view-all-products {
