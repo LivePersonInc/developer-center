@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: String Localization
 
-order: 271
+order: 264
 permalink: android-modifying-resources.html
 
 ---
