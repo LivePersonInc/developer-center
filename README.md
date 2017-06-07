@@ -36,7 +36,7 @@ Contents:
 
 1. **Acceptance**
 
-In addition to any agreement that You have with LivePerson ("Agreement"), the services that LivePerson provides to You are subject to the following Terms of Use ("TOU"). LivePerson reserves the right to update the TOU at any time without notice. The most current version of the TOU can be reviewed by clicking on the "Terms of Use" hypertext link located at the bottom of our web pages.  Liveperson may change the terms of this TOU from time to time.  Any changes to the TOU will be effective immediately upon posting on the LivePerson website and You agree to the TOU by continuing the use of the Services (as defined below).
+ In addition to any agreement that You have with LivePerson ("Agreement"), the services that LivePerson provides to You are subject to the following Terms of Use ("TOU"). LivePerson reserves the right to update the TOU at any time without notice. The most current version of the TOU can be reviewed by clicking on the "Terms of Use" hypertext link located at the bottom of our web pages.  Liveperson may change the terms of this TOU from time to time.  Any changes to the TOU will be effective immediately upon posting on the LivePerson website and You agree to the TOU by continuing the use of the Services (as defined below).
 
 2. **Services**
 
