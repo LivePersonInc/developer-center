@@ -18,6 +18,7 @@ This section contains API details that are common to every API’s resource and 
 | Title | Description |
 | :--------   | :--- |
 | Update attribute | Cannot update a single requested attribute. Need to add a body full of other attributes and if certain attributes are missing from the body, they will be deleted. |
+| API User | A User which is created as an API User doesn't have a password |
 
 ### Request Headers
 
