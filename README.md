@@ -40,99 +40,99 @@ Contents:
 
 2. **Services**
 
-LivePerson provides You with access to a variety of software and services as well as information, communities, forums and the like on our website (collectively, "Services"). All Services are subject to the TOU, as revised from time to time.
+ LivePerson provides You with access to a variety of software and services as well as information, communities, forums and the like on our website (collectively, "Services"). All Services are subject to the TOU, as revised from time to time.
 
 3. **Ownership**
 
-LivePerson and its suppliers are the sole owners of all the intellectual property, and in particular the copyright, trademarks (including, LiveEngage, LivePerson, and all related logos), trade secrets, database and patents, in the Services. LivePerson shall retain all ownership in and to Services and, subject to the Agreement, all data transferred or received through the Services.
-
-You shall not use the Services or LivePerson's intellectual property except as specifically authorized under Your Agreement and this TOU. Without limiting the foregoing, except as expressly authorized by applicable law or Your Agreement, You shall not modify, rent, lease, loan, sell, distribute, transmit, broadcast, publicly perform or create derivative works based on the Services. In addition, You shall not adapt or use any trademark, trade name, or domain name similar to or likely to be confused with that of LivePerson or LivePerson.com, or take any other action which infringes or impairs LivePerson's trademark rights.
-
-Any reproduction, redistribution or use of the Services not in accordance with the Agreement and this TOU is expressly prohibited.
-
-Certain of the Services allow You to upload or import photos and other intellectual property. By uploading or importing such intellectual property, You thereby grant to LivePerson and its subsidiaries, agents, contractors, licensees and successors in business an irrevocable, perpetual, worldwide, royalty-free, and non-exclusive license to reproduce, distribute, modify, edit, display, adapt, create derivative works from the content, for any commercial purposes, in any medium now existing or hereinafter developed, and may sublicense to a third party the same, and to use, or allow such third party to use, Your name, and likeness without Your prior approval or the payment of any compensation.
-
-In addition, You agree that by submitting content to the site, You hereby expressly permit LivePerson, and any third party permitted by LivePerson, to identify You as the contributor of such content. You represent and warrant that You have all of the foregoing rights in the intellectual property to grant to LivePerson and its subsidiaries, agents, contractors, licensees and successors in business.
+ LivePerson and its suppliers are the sole owners of all the intellectual property, and in particular the copyright, trademarks (including, LiveEngage, LivePerson, and all related logos), trade secrets, database and patents, in the Services. LivePerson shall retain all ownership in and to Services and, subject to the Agreement, all data transferred or received through the Services.
+ 
+ You shall not use the Services or LivePerson's intellectual property except as specifically authorized under Your Agreement and this TOU. Without limiting the foregoing, except as expressly authorized by applicable law or Your Agreement, You shall not modify, rent, lease, loan, sell, distribute, transmit, broadcast, publicly perform or create derivative works based on the Services. In addition, You shall not adapt or use any trademark, trade name, or domain name similar to or likely to be confused with that of LivePerson or LivePerson.com, or take any other action which infringes or impairs LivePerson's trademark rights.
+ 
+ Any reproduction, redistribution or use of the Services not in accordance with the Agreement and this TOU is expressly prohibited.
+ 
+ Certain of the Services allow You to upload or import photos and other intellectual property. By uploading or importing such intellectual property, You thereby grant to LivePerson and its subsidiaries, agents, contractors, licensees and successors in business an irrevocable, perpetual, worldwide, royalty-free, and non-exclusive license to reproduce, distribute, modify, edit, display, adapt, create derivative works from the content, for any commercial purposes, in any medium now existing or hereinafter developed, and may sublicense to a third party the same, and to use, or allow such third party to use, Your name, and likeness without Your prior approval or the payment of any compensation.
+ 
+ In addition, You agree that by submitting content to the site, You hereby expressly permit LivePerson, and any third party permitted by LivePerson, to identify You as the contributor of such content. You represent and warrant that You have all of the foregoing rights in the intellectual property to grant to LivePerson and its subsidiaries, agents, contractors, licensees and successors in business.
 
 4. **Registration**
 
-If any portion of the Services requires You to register, You must complete the registration process by providing us with current, complete and accurate information as prompted by the applicable registration form. You are responsible for any and all activities that occur under Your account.
+ If any portion of the Services requires You to register, You must complete the registration process by providing us with current, complete and accurate information as prompted by the applicable registration form. You are responsible for any and all activities that occur under Your account.
 
 5. **Prohibited Use**
 
-You shall not use the Services or any portion of Your website(s) or mobile applications for any purpose that is unlawful, unethical, prohibited by the Agreement or this TOU or that could create liability for LivePerson. You must not use the Services in any manner that could damage, disable, overburden, or impair any LivePerson server, or the network(s) connected to any LivePerson server, or interfere with any other party's use and enjoyment of any Services. You shall not attempt to gain unauthorized access to any Services, other accounts, computer systems or networks connected to any LivePerson server or to any of the Services, through hacking, password mining or any other means. You shall not operate robots or spiders to scan LivePerson's databases or web pages. You shall not use "deep linking" to LivePerson's web pages.
+ You shall not use the Services or any portion of Your website(s) or mobile applications for any purpose that is unlawful, unethical, prohibited by the Agreement or this TOU or that could create liability for LivePerson. You must not use the Services in any manner that could damage, disable, overburden, or impair any LivePerson server, or the network(s) connected to any LivePerson server, or interfere with any other party's use and enjoyment of any Services. You shall not attempt to gain unauthorized access to any Services, other accounts, computer systems or networks connected to any LivePerson server or to any of the Services, through hacking, password mining or any other means. You shall not operate robots or spiders to scan LivePerson's databases or web pages. You shall not use "deep linking" to LivePerson's web pages.
 
-The Services contain message and communication facilities designed to enable You to communicate with others. You agree to use the Services only to post, send, and receive messages and material that are proper and permitted by applicable law, and will not:
-
-Violate any patent, trademark, trade secret, copyright, right to privacy, publicity, or other proprietary right of any party.
-Reverse engineer, decompile, disassemble or translate or otherwise attempt to derive the source code of any part of LivePerson systems.
-Use the Services in connection with contests, pyramid schemes, chain letters, junk email, spamming or any duplicative or unsolicited messages (commercial or otherwise) or to commit fraud.
-Defame, abuse, harass, stalk, threaten or otherwise violate the legal rights (such as rights of privacy and publicity) of others.
-Send or otherwise make available any inappropriate, profane, defamatory, obscene, abusive, racist, indecent or unlawful topic, name, material or information.
-Send or otherwise make available any information or material that may constitute or encourage conduct that is a criminal offense or civil wrong,
-Impersonate any person or entity or make any false statements regarding any agency or affiliation with any entity or create a false identity.
-Send files that contain viruses, Trojan horses, worms, time bombs, cancelbots, corrupted files, or any other similar software or programs that may damage the operation of another's computer or property of another.
-Falsify or delete any copyright management information, such as author attributions, legal or other proper notices or proprietary designations or labels of the origin or source of software or other material that is sent.
-Provide material support or resources (or conceal or disguise the nature, location, source or ownership of material support or resources) to any organization designated as a foreign terrorist organization by the U.S. government.
-As a condition of using the Services, You shall (a) as required by applicable law, provide notice to Your customers and obtain consent if required for use of LivePerson's Services (such as, regarding LivePerson's monitoring features), in Your privacy policy and as otherwise required; (b) be responsible for Your employees, representatives, users, and agents that use the Services provided by LivePerson; (c) comply with any limitations or restrictions set forth in these TOU and the Agreement, and (d) use the Services only in compliance with applicable law.
+ The Services contain message and communication facilities designed to enable You to communicate with others. You agree to use the Services only to post, send, and receive messages and material that are proper and permitted by applicable law, and will not:
+ 
+ Violate any patent, trademark, trade secret, copyright, right to privacy, publicity, or other proprietary right of any party.
+ Reverse engineer, decompile, disassemble or translate or otherwise attempt to derive the source code of any part of LivePerson systems.
+ Use the Services in connection with contests, pyramid schemes, chain letters, junk email, spamming or any duplicative or unsolicited messages (commercial or otherwise) or to commit fraud.
+ Defame, abuse, harass, stalk, threaten or otherwise violate the legal rights (such as rights of privacy and publicity) of others.
+ Send or otherwise make available any inappropriate, profane, defamatory, obscene, abusive, racist, indecent or unlawful topic, name, material or information.
+ Send or otherwise make available any information or material that may constitute or encourage conduct that is a criminal offense or civil wrong,
+ Impersonate any person or entity or make any false statements regarding any agency or affiliation with any entity or create a false identity.
+ Send files that contain viruses, Trojan horses, worms, time bombs, cancelbots, corrupted files, or any other similar software or programs that may damage the operation of another's computer or property of another.
+ Falsify or delete any copyright management information, such as author attributions, legal or other proper notices or proprietary designations or labels of the origin or source of software or other material that is sent.
+ Provide material support or resources (or conceal or disguise the nature, location, source or ownership of material support or resources) to any organization designated as a foreign terrorist organization by the U.S. government.
+ As a condition of using the Services, You shall (a) as required by applicable law, provide notice to Your customers and obtain consent if required for use of LivePerson's Services (such as, regarding LivePerson's monitoring features), in Your privacy policy and as otherwise required; (b) be responsible for Your employees, representatives, users, and agents that use the Services provided by LivePerson; (c) comply with any limitations or restrictions set forth in these TOU and the Agreement, and (d) use the Services only in compliance with applicable law.
 
 6. **Monitoring**
 
-LivePerson has no obligation to monitor the Services. However, LivePerson reserves the right to review materials sent through the Services and to remove any materials in its sole discretion.  LivePerson does not control or endorse the content, messages or information found in any Services and, therefore, LivePerson specifically disclaims any liability with regard to such content, messages or information.
+ LivePerson has no obligation to monitor the Services. However, LivePerson reserves the right to review materials sent through the Services and to remove any materials in its sole discretion.  LivePerson does not control or endorse the content, messages or information found in any Services and, therefore, LivePerson specifically disclaims any liability with regard to such content, messages or information.
 
 7. **Warranty Disclaimers and Limitation of Liability**
 
-EXCEPT AS EXPRESSLY WARRANTED IN THE AGREEMENT, ALL SERVICES ARE PROVIDED "AS IS" AND LIVEPERSON HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO THE SERVICES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
-
-EXCEPT AS OTHERWISE EXPRESSLY STATED IN THE AGREEMENT, IN NO EVENT SHALL LIVEPERSON OR ITS RESPECTIVE SUPPLIERS BE LIABLE FOR ANY DAMAGES WHATSOEVER ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE SERVICES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF USE, DATA OR PROFITS OR DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES. THIS DISCLAIMER OF LIABILITY APPLIES TO ALL CAUSES OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE AND REGARDLESS OF WHETHER ANY REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
+ EXCEPT AS EXPRESSLY WARRANTED IN THE AGREEMENT, ALL SERVICES ARE PROVIDED "AS IS" AND LIVEPERSON HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO THE SERVICES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
+ 
+ EXCEPT AS OTHERWISE EXPRESSLY STATED IN THE AGREEMENT, IN NO EVENT SHALL LIVEPERSON OR ITS RESPECTIVE SUPPLIERS BE LIABLE FOR ANY DAMAGES WHATSOEVER ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE SERVICES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF USE, DATA OR PROFITS OR DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES. THIS DISCLAIMER OF LIABILITY APPLIES TO ALL CAUSES OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE AND REGARDLESS OF WHETHER ANY REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
 
 8. **Privacy**
 
-See our Privacy Policy relating to the collection and use of information in connection with the Services stated here: [http://www.liveperson.com/policies/privacy](http://www.liveperson.com/policies/privacy)
+ See our Privacy Policy relating to the collection and use of information in connection with the Services stated here: [http://www.liveperson.com/policies/privacy](http://www.liveperson.com/policies/privacy)
 
 9. **Applications**
 
-From time to time, third-party software applications, plug in, or other add-on online applications that integrate, interoperate, or interact with LivePerson's Services ("Applications") may become available. If You choose to install, access, or enable an Application, You agree that the third-party Application provider may acquire access to Your account data and information data as required for the interoperation or integration of such Application, and Applications are not considered Services under these Terms of Use and are not maintained, monitored, tested, controlled, endorsed, provided, verified, validated, or reviewed by LivePerson. Accordingly, such Applications are governed by their own terms and conditions and are not considered Services under the Agreement. You assume full responsibility for any damages, losses, costs, or harms arising from the use of or inability to use such Applications. To the extent permitted by law, LivePerson disclaims all liabilities with respect to Your use of or inability to use such Applications and the performance or non-performance of such Applications (including direct, indirect, incidental, punitive, or consequential damages). LivePerson has no obligation to monitor such Applications and does not control or endorse the content, messages, or information found in such Applications and specifically disclaims any liability with regard to such content, messages, or information. LivePerson does not monitor or control such Applications’ service limitation, suspension, or termination of their services and specifically disclaims any liability with regard to such Applications’ service limitation, suspension, or termination. EXCEPT AS EXPRESSLY WARRANTED IN THIS TOU, ALL SUCH APPLICATIONS SERVICES ARE PROVIDED "AS IS" AND LIVEPERSON HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO SUCH APPLICATIONS’ SERVICES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
+ From time to time, third-party software applications, plug in, or other add-on online applications that integrate, interoperate, or interact with LivePerson's Services ("Applications") may become available. If You choose to install, access, or enable an Application, You agree that the third-party Application provider may acquire access to Your account data and information data as required for the interoperation or integration of such Application, and Applications are not considered Services under these Terms of Use and are not maintained, monitored, tested, controlled, endorsed, provided, verified, validated, or reviewed by LivePerson. Accordingly, such Applications are governed by their own terms and conditions and are not considered Services under the Agreement. You assume full responsibility for any damages, losses, costs, or harms arising from the use of or inability to use such Applications. To the extent permitted by law, LivePerson disclaims all liabilities with respect to Your use of or inability to use such Applications and the performance or non-performance of such Applications (including direct, indirect, incidental, punitive, or consequential damages). LivePerson has no obligation to monitor such Applications and does not control or endorse the content, messages, or information found in such Applications and specifically disclaims any liability with regard to such content, messages, or information. LivePerson does not monitor or control such Applications’ service limitation, suspension, or termination of their services and specifically disclaims any liability with regard to such Applications’ service limitation, suspension, or termination. EXCEPT AS EXPRESSLY WARRANTED IN THIS TOU, ALL SUCH APPLICATIONS SERVICES ARE PROVIDED "AS IS" AND LIVEPERSON HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO SUCH APPLICATIONS’ SERVICES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
 
 10. **LivePerson Insights**
 
-See our LivePerson Insights Terms of Use here: [http://www.liveperson.com/policies/terms-of-use/lp-insights](http://www.liveperson.com/policies/terms-of-use/lp-insights)
+ See our LivePerson Insights Terms of Use here: [http://www.liveperson.com/policies/terms-of-use/lp-insights](http://www.liveperson.com/policies/terms-of-use/lp-insights)
 
 11. **Termination**
 
-If You wish to terminate the Services for any reason, You must comply with the termination provisions set forth in the Agreement. For the Agreement that is the online EULA, LivePerson's cancellation procedure is stated here: [http://www.liveperson.com/policies/license-agreement](http://www.liveperson.com/policies/license-agreement)
+ If You wish to terminate the Services for any reason, You must comply with the termination provisions set forth in the Agreement. For the Agreement that is the online EULA, LivePerson's cancellation procedure is stated here: [http://www.liveperson.com/policies/license-agreement](http://www.liveperson.com/policies/license-agreement)
 
-LivePerson reserves the right to terminate Your access to any or all of the Services at any time, without notice, for any reason whatsoever.
+ LivePerson reserves the right to terminate Your access to any or all of the Services at any time, without notice, for any reason whatsoever.
 
 12. **U.S. Government Rights**
 
-Any software which is downloaded from the Services for or on behalf of the United States of America, its agencies and/or instrumentalities ("U.S. Government"), is provided with Restricted Rights. Use, duplication, or disclosure by the U.S. Government is subject to restrictions as set forth in the Agreement and this TOU, as applicable. Manufacturer is LivePerson, Inc.
+ Any software which is downloaded from the Services for or on behalf of the United States of America, its agencies and/or instrumentalities ("U.S. Government"), is provided with Restricted Rights. Use, duplication, or disclosure by the U.S. Government is subject to restrictions as set forth in the Agreement and this TOU, as applicable. Manufacturer is LivePerson, Inc.
 
 13. **Procedure for Claims of Copyright Infringement**
 
-LivePerson respects the intellectual property of others, and we ask our customers to do the same. LivePerson may, in appropriate circumstances and at its discretion, terminate the account or access of customers who infringe the intellectual property rights of others.
-
-If You believe that Your work has been copied in a way that constitutes copyright infringement, please provide LivePerson's Copyright Agent the following information:
-
-an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest;
-a description of the copyrighted work that You claim has been infringed, including the URL (Web page address) of the location where the copyrighted work exists or a copy of the copyrighted work;
-a description of where the material that You claim is infringing is located on the site, including the URL;
-Your address, telephone number, and email address;
-a statement by You that You have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and
-a statement by You, made under penalty of perjury, that the above information in Your Notice is accurate and that You are the copyright owner or authorized to act on the copyright owner's behalf.
-LivePerson's Copyright Agent for Notice of claims of copyright infringement can be reached as follows:
-
-Copyright Agent
-c/o LivePerson, Inc., Legal Department
-475 10th Avenue, 5th Floor
-New York, NY 10018
-USA
-
-copyright@liveperson.com
+ LivePerson respects the intellectual property of others, and we ask our customers to do the same. LivePerson may, in appropriate circumstances and at its discretion, terminate the account or access of customers who infringe the intellectual property rights of others.
+ 
+ If You believe that Your work has been copied in a way that constitutes copyright infringement, please provide LivePerson's Copyright Agent the following information:
+ 
+ an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest;
+ a description of the copyrighted work that You claim has been infringed, including the URL (Web page address) of the location where the copyrighted work exists or a copy of the copyrighted work;
+ a description of where the material that You claim is infringing is located on the site, including the URL;
+ Your address, telephone number, and email address;
+ a statement by You that You have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and
+ a statement by You, made under penalty of perjury, that the above information in Your Notice is accurate and that You are the copyright owner or authorized to act on the copyright owner's behalf.
+ LivePerson's Copyright Agent for Notice of claims of copyright infringement can be reached as follows:
+ 
+ Copyright Agent
+ c/o LivePerson, Inc., Legal Department
+ 475 10th Avenue, 5th Floor
+ New York, NY 10018
+ USA
+ 
+ copyright@liveperson.com
 
 14. **General**
 
-This TOU will be governed by the laws of the State of New York, without regard to or application of conflicts of law rules or principles, and You hereby consent to the exclusive jurisdiction of the federal and state courts located in New York, New York with regard to any dispute arising out of or related to this TOU. If any provision of this TOU or part thereof is held to be unenforceable, that provision or part thereof will be removed, a substitute provision implied that meets as closely as possible the intent of the severed provision and the remaining provisions will remain in full force. The waiver by LivePerson of any default or breach of this TOU shall not constitute a waiver of any other or subsequent default or breach. You may not assign, transfer, or encumber this TOU, by contract or by law, in any way without LivePerson’s prior written consent; any attempted assignment, transfer, or encumbrance in violation of the foregoing shall be null and void and of no effect. No person that is not a party to this TOU shall have or acquire any rights by reason of this TOU, nor shall LivePerson have any obligation or liability whatsoever to any such person except as otherwise expressly set forth herein. This TOU constitutes the complete and exclusive understanding and agreement of LivePerson and You relating to the subject matter hereof, and supersedes all prior or contemporaneous understandings, agreements, and communications, and or advertising with respect thereto.
+ This TOU will be governed by the laws of the State of New York, without regard to or application of conflicts of law rules or principles, and You hereby consent to the exclusive jurisdiction of the federal and state courts located in New York, New York with regard to any dispute arising out of or related to this TOU. If any provision of this TOU or part thereof is held to be unenforceable, that provision or part thereof will be removed, a substitute provision implied that meets as closely as possible the intent of the severed provision and the remaining provisions will remain in full force. The waiver by LivePerson of any default or breach of this TOU shall not constitute a waiver of any other or subsequent default or breach. You may not assign, transfer, or encumber this TOU, by contract or by law, in any way without LivePerson’s prior written consent; any attempted assignment, transfer, or encumbrance in violation of the foregoing shall be null and void and of no effect. No person that is not a party to this TOU shall have or acquire any rights by reason of this TOU, nor shall LivePerson have any obligation or liability whatsoever to any such person except as otherwise expressly set forth herein. This TOU constitutes the complete and exclusive understanding and agreement of LivePerson and You relating to the subject matter hereof, and supersedes all prior or contemporaneous understandings, agreements, and communications, and or advertising with respect thereto.
 
 ## ADDITIONAL TERMS APPLICABLE TO THE USE OF THE LIVEPERSON COMMUNITY PORTION OF THE LIVEPERSON.COM WEBSITE
 
