@@ -58,6 +58,7 @@ The following devices are now also supported and/or certified to host our in-app
 | Sony Xperia X          | -                | Certified          | Supported     |
 
 **Tablet**
+
 |              | Operating System |                 |                    |               |
 |--------------|------------------|-----------------|--------------------|---------------|
 | Device       | V4.4X (KitKat)   | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
