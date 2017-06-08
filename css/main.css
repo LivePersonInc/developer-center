@@ -307,14 +307,15 @@ ul#results-container li a {
   color: #00ccff;
   border-radius: 5px;
   text-align: center;
-  padding: 15px 32px;
+  padding: 6px 45px;
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 600;
   border: 2px solid #00ccff;
-  margin-top: 40px;
-  margin-left: 30px;
+  margin-top: 15px;
+  position: relative;
+  top: 300px;
 }
 
 .button:hover{
