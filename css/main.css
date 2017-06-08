@@ -38,7 +38,7 @@
     font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
     font-size: 1.2em;
     margin-top: 35px;
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
     color: #162036;
@@ -48,7 +48,7 @@
   margin-left: 0;
   margin-right: 0;
 }
-.container { 
+.container {
   padding-left: 0px;
   padding-right: 0px;
   max-width: 1280px;
@@ -105,9 +105,9 @@
   width: 252px;
   display: none;
 }
-#search-demo-container ul#results-container {   
+#search-demo-container ul#results-container {
     border-left: none;
-    box-shadow:none; 
+    box-shadow:none;
     right: 10px;
     width: 255px;
     background-color: #f8f8f8;
@@ -138,7 +138,7 @@ ul#results-container li a {
 }
 #search-demo-container ul#results-container li:not(:last-child):hover a{
   color:#808080;
-} 
+}
 
 /*#search-demo-container ul#results-container li:not(:last-child):hover a::after{
   padding-top: 1px;
@@ -151,7 +151,7 @@ ul#results-container li a {
 
 #search-demo-container ul#results-container li a:hover{
   text-decoration: none;
- 
+
 }
 
 #search-demo-container ul#results-container li:first-child{
@@ -161,7 +161,7 @@ ul#results-container li a {
   margin-bottom: 10px;
   padding-right: 10px;
   text-align: right;
- 
+
 }
 
 #search-demo-container ul#results-container > li:last-child a {
@@ -196,7 +196,7 @@ ul#results-container li a {
 }
 
 .collapse.height {
- 
+
   height: 0;
   overflow: hidden;
   -webkit-transition: height 0.35s ease;
@@ -206,7 +206,7 @@ ul#results-container li a {
 }
 
 .collapse.width {
- 
+
   width: 0;
   overflow: hidden;
   -webkit-transition: width  0.35s ease;
@@ -243,7 +243,7 @@ ul#results-container li a {
 {
   footer {
     padding-bottom: 15px;
-   
+
 }
 }
 
@@ -267,7 +267,7 @@ ul#results-container li a {
       width: auto;
       height:42px;
       display: block;
-    
+
 
     }
     .mobile-search-container.under-line{
@@ -281,7 +281,7 @@ ul#results-container li a {
       font-size: 0.9em;
       margin-top: 7px;
       width: 0;
-      
+
       border:none;
     }
     #search-icon-mobile {
@@ -303,5 +303,14 @@ ul#results-container li a {
     }
 }
 
-
-
+.button {
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 1.2em;
+  font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  border: 2px solid #ffffff
+}
