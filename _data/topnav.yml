@@ -18,6 +18,5 @@ topnav:
 
 - title: Signup
   items:
-    - title: Signup
+    - title: Create Developer Account
       external_url: http://register.liveperson.com/developer/signup
-      
