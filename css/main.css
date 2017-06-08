@@ -304,7 +304,7 @@ ul#results-container li a {
 }
 
 .button {
-  color: #ffffff;
+  color: #00ccff;
   border-radius: 5px;
   text-align: center;
   padding: 15px 32px;
@@ -312,5 +312,13 @@ ul#results-container li a {
   font-size: 1.2em;
   font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 600;
-  border: 2px solid #ffffff
+  border: 2px solid #00ccff;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.button:hover{
+  color: #5879DA;
+  background: #162036;
+  transition: background .25s;
 }
