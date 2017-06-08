@@ -304,22 +304,22 @@ ul#results-container li a {
 }
 
 .button {
-  color: #00ccff;
+  color: #5576dd !important;
   border-radius: 5px;
   text-align: center;
   padding: 6px 45px;
-  display: inline-block;
-  font-size: 1em;
+  display: inline-block !important;
+  font-size: 1.2em;
   font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 600;
-  border: 2px solid #00ccff;
+  border: 2px solid #5576dd;
   margin-top: 15px;
   position: relative;
-  top: 300px;
 }
 
 .button:hover{
-  color: #5879DA;
-  background: #162036;
+  color: #ffffff !important;
+  background: #162036 !important;
   transition: background .25s;
+  border: 2px solid #ffffff;
 }

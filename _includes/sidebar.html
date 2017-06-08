@@ -24,18 +24,21 @@
     {% else %}
        <li><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
     {% endif %}
-     
+
     {% assign level4 = p.level4 %}
   {% endfor %}
   {% if (level4 != null) %}
       </ul>
     </li>
   {% endif %}
+
+  <a class="button" href="https://github.com/LivePersonInc/developers-community/issues/new" target="_blank">Report an Issue</a>
+
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. 
-this is critical so that the parent expands when you're viewing a page. 
-This must appear below the sidebar code above. Otherwise, 
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise,
 if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <!--<script>$("li.active").parents('li').toggleClass("active");</script>-->
 
@@ -43,16 +46,16 @@ if placed inside customscripts.js, the script runs before the sidebar code runs 
 <script>
    // $("div#toc").css("max-width",($(".sidebarTitle").width() + 35));
     //$("#mysidebar.nav li.active").parents('li').toggleClass("active");
-    
+
     if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
-     
-    } 
+
+    }
     else{
          //$("#mysidebar.nav").css("width","auto");
     }
     window.onresize = function(){
       if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
-       
+
       }
       else{
          //$("#mysidebar.nav").css("width","auto");
