@@ -33,6 +33,6 @@ The LiveEngage chat window is based on a browser and will display in any desktop
 
 For a sample postman collection for the Server Chat API, click [here](consumer-experience-server-chat-sample.html){:target="_blank"}.
 
-# RSS section
+# RSS section - new
 
-Adding this section to get a notification pushed to RSS. It will appear only on Staging. I'll remove it once the RSS integration works properly and has been tested.
+I'm adding this section again to see if it pops up in a notification on Feedly. Hoping this shows up on Feedly and posts on Slack. Writing some more just for volume's sake.
