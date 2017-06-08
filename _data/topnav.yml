@@ -15,3 +15,8 @@ topnav:
   items:
     - title: Events
       url: /events.html
+
+- title: Create a Developer Account
+  items:
+    - title: Create a Developer Account
+      external_url: http://register.liveperson.com/developer/signup
