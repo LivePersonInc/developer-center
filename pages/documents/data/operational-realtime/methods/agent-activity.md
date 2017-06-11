@@ -26,14 +26,22 @@ For each state, the following is indicated:
 
 | Method | URL |
 | :------ | :---- |
-| GET | `https://<domain>/operations/api/account/{accountID}/agentactivity?timeframe=<timeframe in minutes>&agentIds=all&interval=<interval size in minutes>&v=<version>` |
+| GET | `https://<domain>/operations/api/account/{accountID}/agentactivity?timeframe=<timeframe in minutes>&agentIds=<comma seperated agent ids list>&interval=<interval size in minutes>&v=<version>` |
+
+ - Use POST request to pass long list of agentIds
+
+| Method | URL | BODY (Json) |
+| :------ | :---- | :---- |
+| POST | `https://<domain>/operations/api/account/{accountID}/agentactivity` | `{"timeframe":"<timeframe in minutes>" , "agentIds":"<comma seperated agent ids list>", "interval":"<interval size in minutes>" , "v":"<version>" }` |
+
+ - Example: `{"timeframe":"1440","v":"1","agentIds":"2152260212,2152260212","interval":"1440"}`
 
 **URL Parameters**
 
 | Name | Description | Type / Value | Required |
 | :------ | :------------ | :--------------- | :--- |
 | timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time - timeframe. | numeric | required |
-| agentIds | When provided, metrics on the response will be grouped by the requested agent/s' id/s. If there is no data for the specified agent/s, an object will be returned with an empty value for key: "metricsPerAgent" with a map including all metrics valued zero. To retrieve all active agents for the time period, use agentIds=all. <br> Notes: <br> Totals are not currently supported. <br> Currently, only agentIds=all is supported. <br> Selecting specific agents is not currently supported. | numeric, comma separated | required |
+| agentIds | When provided, metrics on the response will be grouped by the requested agent/s' id/s. If there is no data for the specified agent/s, an object will be returned with an empty value for key: "metricsPerAgent" with a map including all metrics valued zero. To retrieve all active agents for the time period, use agentIds=all.  | numeric, comma separated | required |
 | v | Version of API, for example, v=1.| numeric | required |
 | interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame, and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
 
