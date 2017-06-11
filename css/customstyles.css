@@ -260,7 +260,7 @@ div#toc ul li {
     list-style: square;
 }
 div#toc ul {
-   
+
     padding: 5px;
     border-radius: 5px;
     max-width: 300px;
@@ -318,14 +318,14 @@ footer {
 	width: 100%;
 	background-color: #162036;
 	min-height: 40px;
-	
+
 	position: fixed;
 	bottom: -50px;
 }
 
 footer .container  #footer_logo_white{
     width:100px;
-    
+
 }
 footer .container .row ul{
     list-style:none;
@@ -341,7 +341,7 @@ footer .container .row ul li {
 }
 footer .container .row ul li a{
     color: white;
-   
+
 }
 footer .container .row ul li.logo{
     max-width: 134px;
@@ -412,6 +412,24 @@ a.accordion-toggle, a.accordion-collapsed {
     -moz-border-radius: 4px;
     border-radius: 4px;*/
     text-decoration: none;
+}
+
+.report {
+  color: #5879da !important;
+  display: block;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding-left: 11px;
+  margin: 1px 0;
+  position: relative;
+  font-family: "Open Sans","Roboto Slab",Arial,Helvetica,sans-serif;
+  margin-top: 30px;
+}
+
+.report:hover{
+  color: #5879da !important;
+  background-color: #ffffff !important;
 }
 
 .nav li > a > span {
@@ -934,7 +952,7 @@ span.soft {
     #mysidebar {
         position: relative;
     }
-  
+
 }
 
 @media (min-width: 1000px) {
