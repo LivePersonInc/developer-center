@@ -22,6 +22,13 @@ port: 4000
 google_analytics: UA-96175782-1
 #baseurl: /liveperson
 
+gems:
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: "1ITT6KY19C"
+  index_name: "dev_BASE"
+
 exclude:
   - .idea/
   - .gitignore
