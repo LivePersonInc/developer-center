@@ -36,3 +36,5 @@ For a sample postman collection for the Server Chat API, click [here](consumer-e
 # RSS section - new
 
 I'm adding this section again to see if it pops up in a notification on Feedly. Hoping this shows up on Feedly and posts on Slack. Writing some more just for volume's sake.
+
+Trying again with RSS, hopefully this is the last time. Adding a line to push so that the feed sees new content and updates me. That's what I'm looking for.
