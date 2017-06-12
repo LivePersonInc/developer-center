@@ -45,10 +45,14 @@ The body media type must have one of the following formats:
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
 | chat | Sets the agent’s availability. | string | Valid values: "Online", "Away", "Occupied" |
+| chatReasonId | Sets a reason id for the availability state | string | | |
+
+*Note: chatReasonId is optional and defaults to null.
+Each reasonId represents a String value as configured in  the account.*
 
 **Body**
 
-Example for JSON: 
+Examples for JSON:
 
 ```json
 {
@@ -56,7 +60,15 @@ Example for JSON:
     "chat" : "Online"
     }
 }
+```
 
+```json
+{
+"availability": {
+    "chat" : "Online",
+    "chatReasonId" : "123"
+    }
+}
 ```
 
 ### Response
