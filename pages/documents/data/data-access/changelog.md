@@ -20,4 +20,4 @@ Fixed a bug where some of the conversation records created by the Data Access jo
 
 **Data Access Schema (version 1.0.0.34)**  
 
-The `isInteractive` boolean field was added to the transfer section. This fields indicates whether the transfer part of the conversation is interactive or not. _To clarify_, the `isInteractive` field in the main conversation section relates to the last part of the conversation.
+The `isInteractive` boolean field was added to the transfer section. This field indicates whether the transfer part of the conversation is interactive or not. _To clarify_, the `isInteractive` field in the main conversation section relates to the last part of the conversation.
