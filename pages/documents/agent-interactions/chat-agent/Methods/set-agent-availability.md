@@ -60,7 +60,6 @@ Examples for JSON:
     "chat" : "Online"
     }
 }
-
 ```
 
 ```json
@@ -70,7 +69,6 @@ Examples for JSON:
     "chatReasonId" : "123"
     }
 }
-
 ```
 
 ### Response
