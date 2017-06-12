@@ -16,7 +16,7 @@ root-link: true
 
 "Americans now spend around **5 times longer** in messaging apps each day than on voice calls". - _Nielsen Social Media Report, 2016._
 
-"WhatsApp and Facebook Messenger alone carry **22 trillion messages per year**." -_Facebook._
+"WhatsApp and Facebook Messenger alone carry **22 trillion messages per year**." - _Facebook._
 
 **Add messaging directly within your app to enjoy the following benefits:**
 
