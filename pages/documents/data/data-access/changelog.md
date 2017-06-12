@@ -8,7 +8,7 @@ order: 62
 permalink: data-data-access-changelog.html
 
 ---
-This document describes changes made to the API over time. Entries will appear under their date and will detail the changes made to either the documentation or the API itself. All changes should be backwards compatible but where they are not or extra work is needed to make sure that backwards compatibility is maintained, the Changelog will mention this.
+This document describes changes made to the Data Access API. Entries will appear under a relevant date and will detail changes made to either the documentation or the API itself. All changes should be backwards compatible but where they are not or extra work is needed to make sure that backwards compatibility is maintained, the Changelog will mention this.
 
 All future dates found in this documentation reflect approximations for upcoming additions or corrections and are subject to change.
 
