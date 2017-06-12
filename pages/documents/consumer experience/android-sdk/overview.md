@@ -11,17 +11,17 @@ permalink: android-overview.html
 root-link: true
 ---
 
-**Consumers worldwide have moved to messaging**; time-shifted messaging is more convenient than phone calls.
+**Consumers worldwide have moved to messaging**; time-shifted messaging is more convenient than phone calls. In addition, as millennials become an increasingly crucial demographic, the importance of messaing is only increasing:
 
-"The typical **millennial** exchanges an average of **67 text messages per day**."  _- Business Insider_
+"The typical **millennial** exchanges an average of **67 text messages per day**." - _Business Insider._
 
-"Americans now spend around **5 times longer** in messaging apps each day than on voice calls". - Nielsen Social Media Report, 2016.
+"Americans now spend around **5 times longer** in messaging apps each day than on voice calls". - _Nielsen Social Media Report, 2016._
 
-"WhatsApp and Facebook Messenger alone carry **22 trillion messages per year**." -Facebook
+"WhatsApp and Facebook Messenger alone carry **22 trillion messages per year**." -_Facebook._
 
 **Add messaging directly within your app to enjoy the following benefits:**
 
-* In-app messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation. 
+* In-app messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
 
 * Increase the stickiness of your app through the added value of in-app messaging.
 
