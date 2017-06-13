@@ -61,7 +61,7 @@ Filters examples:
 | keyword | {"start":{"from":1470037448000,"to":1472543048000},"keyword":"bonus"} |
 | summary | {"start":{"from":1481694532185,"to":1482324227482},"summary":"purchase"} | 
 | duration | {"start":{"from":1470037448000,"to":1472543048000}, "duration":{"from":0,"to":1000}} | 
-| mcs | {"start":{"from":1470037448000,"to":1472543048000}, "mcs":{"from":0,"to":100}} | 
+| mcs | {"start":{"from":1470037448000,"to":1472543048000}, "mcs":{"from":-100,"to":100}} | 
 | alertedMcsValues | {"start": {"from": "1485330205108", "to": "1485942798000"}, "alertedMcsValues": ["-1","1"]} |
 | csat | {"start":{"from":1470037448000,"to":1472543048000}, "csat":{"from":4,"to":5}} | 
 | source | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]} | 
@@ -111,7 +111,7 @@ Filters examples:
 | closeReason  | Reason for closing the conversation - by agent / consumer. | string | |
 | firstConversation | Whether it is the consumer’s first conversation.| Boolean| |
 | csat | CSAT score of the conversation (as given in the answer). | int | Range: 1 to 5. |
-| mcs | Meaningful Connection Score of the conversation.  | int| Range: 0-100. If it is for an open conversation, the score is take from the conversation up until the most recent interaction. |
+| mcs | Meaningful Connection Score of the conversation.  | int| Range: [-100,100]. If it is for an open conversation, the score is take from the conversation up until the most recent interaction. |
 | alertedMCS | Divides the MCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1 |
 | source           | Source origin (Facebook, app, etc).  | string | |
 | device           | Device origin (desktop, smartphone, etc.). | string | |
@@ -179,7 +179,7 @@ Filters examples:
 | messageId   | ID of message.                              | string| |
 | time        | Time the MCS was calculated.                | string| |
 | timeL       | Time the MCS was calculated, in long format.| long| |
-| mcs | Meaningful Connection Score of the conversation up to this message | int | Range: 0 - 100. | 
+| mcs | Meaningful Connection Score of the conversation up to this message | int | Range: [-100,100]. | 
 | messageRawScore | Score of message.| int| |
 
 *Participating Agent info*
