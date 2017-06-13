@@ -48,12 +48,13 @@ The body media type must have one of the following formats:
 | id           | The agent's unique ID.                                                                                                       | numeric      |                                            |
 | maxChats     | The maximum number of chats the agent can handle simultaneously.                                                             | numeric      |                                            |
 | availability | The availability state of the agent.                                                                                         | string       | Valid values: "Online", "Away", "Occupied" |
+| chatReasonId | Availability state reason id (represents the state's reason as configured in the account).  | string       | | |
 
 **Response Codes**
 
-| Code|  Response| 
+| Code|  Response|
  |:---  |:--- |
- |200|  OK| 
+ |200|  OK|
 
 Response example:
 
