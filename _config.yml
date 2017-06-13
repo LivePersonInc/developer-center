@@ -28,7 +28,6 @@ gems:
 algolia:
   application_id: "1ITT6KY19C"
   index_name: "dev_BASE"
-  record_css_selector: "div.col-md-9 inside-page-content"
 
 exclude:
   - .idea/
