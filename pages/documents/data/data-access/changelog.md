@@ -14,7 +14,7 @@ All future dates found in this documentation reflect approximations for upcoming
 
 ### June 18th, 2017
 
-**Data Access job (version 1.0.0.57)**
+**Bug Fixes**
 
 Fixed a bug where some of the conversation records created by the Data Access job had missing conversation IDs.
 
