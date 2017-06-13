@@ -268,6 +268,70 @@ div.sidebarTitle-holder {
     font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
 }
 
+/*CSS for general styling of Chat/Messaging Indicator*/
+.indicator{
+  color: #FFFFFF;
+  background-color: #162036;
+  display: inline-block;
+  border: 1px #FFFFFF;
+  border-radius: 2px;
+  font-size: 0.8em;
+  padding: 2px 4px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/*CSS for tooltip of Indicator*/
+
+.indicator .indicatortooltip{
+  visibility: hidden;
+  width: 120px;
+  background-color: #162036;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: -389%;  /* positioning the tooltip on the "C"*/
+  margin-top: 9px;
+
+}
+
+/*CSS for tooltip arrow*/
+.indicator .indicatortooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #162036 transparent;
+}
+
+.indicator:hover .indicatortooltip{
+  visibility: visible;
+}
+
+/*CSS for specific styling of Chat Indicator*/
+.chat{
+  background-color: #162036;
+}
+
+.messaging{
+  background-color: #5879DA !important;
+}
+
+.messaging > .indicatortooltip{
+  background-color: #5879DA !important;
+  left: -319% !important;
+}
+
+.messaging > .indicatortooltip::after{
+  border-color: transparent transparent #5879DA transparent !important;
+}
+
 .breadcrumbs {
   background-color: white;
   border-bottom: 1px solid lightgray;
