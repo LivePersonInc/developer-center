@@ -30,6 +30,6 @@ root-link: true
 
 - Optimized for the network bandwidth as well as battery usage.
 
-![InAppOverview1](img/inappoverview1.png) ![InAppOverview2](img/inappoverview2.png) ![InAppOverview3](img/inappoverview3.png)
+<img src="img/inappoverview1.png" alt="InAppOverview1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="max-width:230px;max-height:700px;">
 
 For guidance on considerations and how to get started with in-app messaging, [click here](products-channels-inapp-messaging.html){:target="_blank"}.
