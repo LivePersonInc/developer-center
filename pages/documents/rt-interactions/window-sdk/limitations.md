@@ -7,7 +7,7 @@ level3: Engagement Window Widget SDK
 order: 3
 permalink: rt-interactions-window-sdk-limitations.html
 
-indicator: both
+indicator: chat
 ---
 
 - The SDK will only communicate with the Engagement Window if the account has

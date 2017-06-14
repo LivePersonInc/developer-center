@@ -8,7 +8,7 @@ level4: Events
 order: 20
 permalink: lp-tag-engagement.html
 
-indicator:
+indicator: both
 ---
 
 These are engagement-related events, including rendering, display and interactions with the engagement.

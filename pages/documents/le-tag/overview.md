@@ -8,7 +8,7 @@ level-order: 3
 order: 1
 permalink: lp-tag-tag-events-overview.html
 root-link: true
-indicator:
+indicator: both
 ---
 
 This document outlines all the events published on the brand’s page by the LiveEngage Tag.

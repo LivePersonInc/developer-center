@@ -7,7 +7,7 @@ level4: Methods
 order: 60
 permalink: data-data-access-schema.html
 
-indicator: both
+indicator: chat
 ---
 
 The Schema is the JSON format blueprint for creating Data Access files. Specific and history schemas are retrievable.

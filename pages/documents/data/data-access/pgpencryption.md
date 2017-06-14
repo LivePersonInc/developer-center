@@ -7,7 +7,7 @@ level3: Data Access API
 order: 61
 permalink: data-data-access-pgp-encryption.html
 
-indicator: both
+indicator: chat
 ---
 
 Data Access provides customers with the ability to encrypt their sensitive data using PGP encryption. The data of the customer must be encrypted by our own encryption in LP storages. For the Data Access API we are offering the ability to encrypt this data using PGP encryption.

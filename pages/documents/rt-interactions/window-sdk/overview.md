@@ -8,7 +8,7 @@ order: 1
 level-order: 4
 permalink: rt-interactions-window-sdk-overview.html
 root-link: true
-indicator: both
+indicator: chat
 ---
 ### Getting Started
 

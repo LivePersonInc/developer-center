@@ -9,7 +9,7 @@ permalink: rt-interactions-engagement-attributes-overview.html
 root-link: true
 level-order: 6
 
-indicator:
+indicator: chat:
 ---
 ### Getting Started
 
