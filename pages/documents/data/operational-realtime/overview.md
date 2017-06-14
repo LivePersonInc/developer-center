@@ -8,6 +8,7 @@ level-order: 5
 order: 1
 permalink: data-operational-realtime-overview.html
 root-link: true
+indicator: chat
 ---
 ### Getting Started
 

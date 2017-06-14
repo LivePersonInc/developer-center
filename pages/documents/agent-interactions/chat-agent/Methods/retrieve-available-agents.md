@@ -9,6 +9,7 @@ level4: Methods
 order: 40
 permalink: agent-retrieve-available-agents.html
 
+indicator: chat
 ---
 
 This resource returns all agents which are not disabled in the system for the account provided in the request. The agents returned include both online and offline agents, but not agents that were disabled (for any reason).  For each agent, this resource returns details such as ID, username, nickname, and more. The resource also returns, for each agent, the agent's skills and the agent's availability to accept chats (the number of chats this agent is configured to take and the number of chats in which this agent is already involved).

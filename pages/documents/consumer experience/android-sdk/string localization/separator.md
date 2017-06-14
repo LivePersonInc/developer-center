@@ -9,6 +9,7 @@ level4: String Localization
 order: 276
 permalink: android-separator.html
 
+indicator: messaging
 ---
 
 Separator contains only date in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} date format, according to the locale (default or custom) and to device setting. 

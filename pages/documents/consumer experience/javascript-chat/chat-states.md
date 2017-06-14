@@ -8,6 +8,7 @@ level3: Javascript Chat SDK
 order: 2
 permalink: consumer-experience-javascript-chat-chat-states.html
 
+indicator: messaging
 ---
 
 This is the list of chat states that are published throughout the lifetime of the chat.  

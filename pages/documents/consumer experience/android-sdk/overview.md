@@ -9,6 +9,7 @@ level-order: 2
 order: 0
 permalink: android-overview.html
 root-link: true
+indicator: messaging
 ---
 
 **Consumers worldwide have moved to messaging**; time-shifted messaging is more convenient than phone calls.

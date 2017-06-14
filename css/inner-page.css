@@ -279,6 +279,7 @@ div.sidebarTitle-holder {
   padding: 2px 4px;
   margin-bottom: 10px;
   position: relative;
+  font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
 }
 
 /*CSS for tooltip of Indicator*/

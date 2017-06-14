@@ -9,6 +9,7 @@ level4: Methods
 order: 90
 permalink: agent-retrieve-chat-sessions.html
 
+indicator: chat
 ---
 
 This method returns a list of the chat-session URIs that this agent managed in the previous session.

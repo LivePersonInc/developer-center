@@ -9,6 +9,7 @@ level4: Configuration
 order: 6
 permalink: consumer-experience-ios-sdk-UI.html
 
+indicator: chat messaging
 ---
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, custom buttons, typing indication, etc.

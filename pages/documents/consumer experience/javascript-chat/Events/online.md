@@ -9,6 +9,7 @@ level4: Events
 order: 260
 permalink: consumer-experience-javascript-chat-online.html
 
+indicator: messaging
 ---
 
 Triggered any time a line is added to the chat. The data here can be a single line or multiple lines.

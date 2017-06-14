@@ -9,6 +9,7 @@ level4: Methods
 order: 210
 permalink: android-checkurgent.html
 
+indicator: messaging
 ---
 
 Checks whether the current conversation is marked as urgent. The result is returned through the provided callback.

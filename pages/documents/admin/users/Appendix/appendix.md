@@ -9,6 +9,7 @@ level3: Users API
 order: 101
 permalink: administration-users-appendix.html
 
+indicator: both
 ---
 
 This section contains API details that are common to every API’s resource and action.

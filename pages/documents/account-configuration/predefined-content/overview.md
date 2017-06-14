@@ -9,6 +9,7 @@ level-order: 2
 order: 9
 permalink: account-configuration-predefined-content-overview.html
 root-link: true
+indicator: both
 ---
 
 ### Getting Started

@@ -9,6 +9,7 @@ level4: String Localization
 order: 270
 permalink: android-modifying-string.html
 
+indicator: messaging
 ---
 
 You may change every string appearing on the SDK interface by overriding the respective string key.

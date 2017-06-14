@@ -7,6 +7,7 @@ level3: Messaging Interactions API (Beta)
 order: 32
 permalink: data-messaging-interactions-appendix.html
 
+indicator: messaging
 ---
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 

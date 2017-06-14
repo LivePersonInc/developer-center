@@ -2,6 +2,7 @@
 title: Getting Started for iOS
 permalink: /products-inapp-getstartedios.html
 toc: false
+indicator:
 ---
 
 Follow the steps below to get started.

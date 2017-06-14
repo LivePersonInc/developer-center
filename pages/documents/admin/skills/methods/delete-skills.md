@@ -10,6 +10,7 @@ level4: Methods
 order: 70
 permalink: administration-delete-skills.html
 
+indicator: both
 ---
 
 This API deletes skills from a specific account.

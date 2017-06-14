@@ -8,6 +8,7 @@ level4: Methods
 order: 10
 permalink: rt-interactions-create-session.html
 
+indicator: both
 ---
 
 Use this method to start a new session and to get an engagement according to the SDEs provided.

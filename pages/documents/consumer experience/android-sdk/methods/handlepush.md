@@ -9,6 +9,7 @@ level4: Methods
 order: 130
 permalink: android-handlepush.html
 
+indicator: messaging
 ---
 
 All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification.

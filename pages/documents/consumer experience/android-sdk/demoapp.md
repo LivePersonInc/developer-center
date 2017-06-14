@@ -9,6 +9,7 @@ level4: Appendix
 order: 283
 permalink: android-demo-app.html
 
+indicator: messaging
 ---
 
 The SDK is provided with a sample application called "SampleApp" that demonstrate the use of the SDK in a host app.

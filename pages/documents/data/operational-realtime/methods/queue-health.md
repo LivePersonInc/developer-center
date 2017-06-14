@@ -7,6 +7,7 @@ level4: Methods
 order: 10
 permalink: data-operational-realtime-queue-health.html
 
+indicator: chat
 ---
 
 Retrieves queue-related metrics at the account or skill level. 

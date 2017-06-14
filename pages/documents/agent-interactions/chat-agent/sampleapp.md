@@ -7,6 +7,7 @@ level3: Chat Agent API
 
 order: 9
 permalink: chat-agent-sample-app.html
+indicator: chat
 ---
 
 ### Introduction

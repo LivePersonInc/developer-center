@@ -9,6 +9,7 @@ level4: Customization and Branding
 order: 264
 permalink: android-attributes.html
 
+indicator: messaging
 ---
 
 ### Brand

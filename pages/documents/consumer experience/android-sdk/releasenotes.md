@@ -7,6 +7,7 @@ level3: In-App Messaging SDK for Android
 
 order: 281
 permalink: consumer-experience-android-sdk-release-notes.html
+indicator: messaging
 ---
 ### In-App Messaging SDK version 2.3 for Android
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.

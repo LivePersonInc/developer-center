@@ -6,6 +6,7 @@ level3: Messaging Interactions API (Beta)
 level4: Methods
 order: 10
 permalink: data-messaging-interactions-conversations.html
+indicator: messaging
 ---
 
 This method retrieves a list of conversations with all their metadata and related messages based on a predefined search criteria. Search criteria includes filtering by time range, agent, skill, etc.

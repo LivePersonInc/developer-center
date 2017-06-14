@@ -9,6 +9,7 @@ level4: Events
 order: 320
 permalink: consumer-experience-javascript-chat-onaccounttoaccounttransfer.html
 
+indicator: messaging
 ---
 
 Triggered in response to the agent transferring the chat to another account.

@@ -9,6 +9,7 @@ level4: Methods
 order: 10
 permalink: agent-start-agent-session.html
 
+indicator: chat
 ---
 
 ### Request

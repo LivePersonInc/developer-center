@@ -7,6 +7,7 @@ level3: LE-Tag
 order: 2
 permalink: lp-tag-tag-events-how.html
 
+indicator:
 ---
 
 To listen to an event you can either:

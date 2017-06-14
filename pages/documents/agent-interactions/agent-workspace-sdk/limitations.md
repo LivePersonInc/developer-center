@@ -8,6 +8,7 @@ level3: Agent Workspace Widget SDK
 order: 30
 permalink: agent-workspace-sdk-limitations.html
 
+indicator: both
 ---
 
 - The SDK will only communicate with LivePerson's Agent Workspace if the account has configured an iframe widget that refers to a web page developed using the SDK.

@@ -9,6 +9,7 @@ level4: Appendix
 order: 246
 permalink: consumer-experience-ios-sdk-opensource.html
 
+indicator: chat messaging
 ---
 
 The following open source code is used within the LiveEngage SDK.  Licensing terms for use of this code require you to mention the list of these sources in the end customer product or documentation.  No additional fees or costs are associated with use of these sources.

@@ -7,6 +7,7 @@ level4: Methods
 order: 30
 permalink: data-operational-realtime-agent-activity.html
 
+indicator: chat
 ---
 
 Retrieves Agent State Distribution data, which includes the following states:

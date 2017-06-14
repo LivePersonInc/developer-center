@@ -9,6 +9,7 @@ level4: String Localization
 order: 272
 permalink: android-plural-string.html
 
+indicator: messaging
 ---
 
 Following is an example on how to add a plural string resource:

@@ -8,6 +8,7 @@ level4: Methods
 order: 20
 permalink: consumer-experience-server-chat-retrieve-available-slots.html
 
+indicator: chat
 ---
 
 The capacity (or number of slots) in the chat system, is the total  number of chats that can be handled simultaneously by all online agents. Since some agents can handle multiple chats, the number of slots is usually larger than the number of agents. Available Slots refers to the number of slots that are free at the current time.

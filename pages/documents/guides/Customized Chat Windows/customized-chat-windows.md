@@ -8,6 +8,7 @@ permalink: guides-customizedchat.html
 root-link: true
 level-order: 3
 order: 1
+indicator:
 ---
 
 ### Introduction 

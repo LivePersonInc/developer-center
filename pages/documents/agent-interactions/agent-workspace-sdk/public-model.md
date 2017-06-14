@@ -8,6 +8,7 @@ level3: Agent Workspace Widget SDK
 order: 60
 permalink: agent-workspace-sdk-public-model.html
 
+indicator: both
 ---
 
 **Notes**: 

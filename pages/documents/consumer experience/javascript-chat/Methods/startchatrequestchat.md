@@ -9,6 +9,7 @@ level4: Methods
 order: 30
 permalink: consumer-experience-javascript-chat-requestchat.html
 
+indicator: messaging
 ---
 
 This method queues a chat request. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.

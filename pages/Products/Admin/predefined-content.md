@@ -8,11 +8,12 @@ order: 1
 level-order: 1
 root-link: true
 permalink: products-admin-predefined-content.html
+indicator:
 ---
 
 ### Overview
 
-The predefined content tool within LIveEngage is one which agents rely on to provide quick answers to repeating or long questions.  Agents are able to either search for predefined answers and push them directly into the conversations, or utilize hotkeys for quick entries.  
+The predefined content tool within LiveEngage is one which agents rely on to provide quick answers to repeating or long questions.  Agents are able to either search for predefined answers and push them directly into the conversations, or utilize hotkeys for quick entries.  
 
 ![Predefined Content 1](img/predefinedcontent1.png)
 
@@ -28,7 +29,7 @@ Building and maintaining a current and comprehensive set of pre-defined content 
 
 ### Deployment Overview
 
-1. Ensure you generate the API key with ‘write’ permissions (click ‘advanced’) when generating your key. 
+1. Ensure you generate the API key with ‘write’ permissions (click ‘advanced’) when generating your key.
 
 2. Issue a REST request to create a new predefined content entry
 
@@ -66,7 +67,7 @@ _Note: To get the `accountConfigReadWriteDomain` for your account, see the [Gett
 
 ![Predefined Content 3](img/predefinedcontent3.png)
 
-Set the the new predefined content JSON object into the request's body section. 
+Set the the new predefined content JSON object into the request's body section.
 Example:
 
 ```json
@@ -100,4 +101,3 @@ Example:
 Open the predefined content library from the link on the campaigns footnote to view the newly created content entry.
 
 ![Predefined Content 5](img/predefinedcontent5.png)
-

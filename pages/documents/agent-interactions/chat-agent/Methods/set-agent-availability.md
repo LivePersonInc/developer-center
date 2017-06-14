@@ -9,6 +9,7 @@ level4: Methods
 order: 30
 permalink: agent-set-agent-availability.html
 
+indicator: chat
 ---
 
 This method sets the agent's availability to one of the following states:

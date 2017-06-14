@@ -7,6 +7,7 @@ level-order: 6
 order: 1
 permalink: consumer-experience-server-chat-getting-started.html
 root-link: true
+indicator: chat
 ---
 
 # Getting Started with the Server Chat API

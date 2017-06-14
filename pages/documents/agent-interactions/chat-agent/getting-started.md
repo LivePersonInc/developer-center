@@ -9,6 +9,7 @@ level-order: 4
 order: 7
 permalink: chat-agent-getting-started.html
 root-link: true
+indicator: chat
 ---
 ### Getting Started with the Chat Agent API
 

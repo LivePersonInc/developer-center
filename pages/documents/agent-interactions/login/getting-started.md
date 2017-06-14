@@ -10,6 +10,7 @@ permalink: login-getting-started.html
 root-link: true
 level-order: 6
 
+indicator: both
 ---
 
 ### Getting Started

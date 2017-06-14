@@ -9,6 +9,7 @@ level4: Methods
 order: 40
 permalink: consumer-experience-javascript-chat-addline.html
 
+indicator: messaging
 ---
 
 Sends a chat line to the agent. The response will echo the line sent.

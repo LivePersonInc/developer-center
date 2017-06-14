@@ -9,6 +9,7 @@ level4: Methods
 order: 230
 permalink: agent-submit-survey.html
 
+indicator: chat
 ---
 
 This method submits the survey data.

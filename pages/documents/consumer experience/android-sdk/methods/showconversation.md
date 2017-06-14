@@ -9,6 +9,7 @@ level4: Methods
 order: 30
 permalink: android-showconversation.html
 
+indicator: messaging
 ---
 
 The showConversation API displays the messaging screen as a new activity with the conversation fragment. The consumer can then start or continue a conversation. The conversation screen is controlled entirely by the SDK.

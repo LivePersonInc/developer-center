@@ -8,6 +8,7 @@ level-order: 2
 order: 1
 permalink: data-messaging-agent-metrics-overview.html
 root-link: true
+indicator: messaging
 ---
 ### Getting Started
 

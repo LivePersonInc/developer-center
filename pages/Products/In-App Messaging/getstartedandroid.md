@@ -2,6 +2,7 @@
 title: Getting Started for Android
 permalink: /products-inapp-getstartedandroid.html
 toc: false
+indicator:
 ---
 
 Follow the steps below to get started.

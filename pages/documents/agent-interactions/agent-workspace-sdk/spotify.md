@@ -8,6 +8,7 @@ level2: Agent Interactions
 order: 80
 permalink: agent-workspace-sdk-spotify-use-case.html
 
+indicator: both
 ---
 
 ### Disclaimer

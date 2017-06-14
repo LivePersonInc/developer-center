@@ -9,6 +9,7 @@ level4: Methods
 order: 120
 permalink: consumer-experience-ios-sdk-logout.html
 
+indicator: chat messaging
 ---
 
 This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device. This method conducts the following:

@@ -9,6 +9,7 @@ level4: Methods
 order: 170
 permalink: android-checkactiveconversation.html
 
+indicator: messaging
 ---
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.

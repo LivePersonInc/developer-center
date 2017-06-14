@@ -8,6 +8,7 @@ level4: Methods
 order: 170
 permalink: consumer-experience-server-chat-send-transcript.html
 
+indicator: chat
 ---
 
 Sends a transcript of the chat to the visitor's email address.

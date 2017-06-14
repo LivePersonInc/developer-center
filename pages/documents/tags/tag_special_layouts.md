@@ -5,6 +5,7 @@ search: exclude
 permalink: tag_special_layouts.html
 sidebar: mydoc_sidebar
 folder: tags
+indicator:
 ---
 
 {% include taglogic.html %}

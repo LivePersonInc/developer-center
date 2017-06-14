@@ -6,6 +6,7 @@ level3: Customized Chat Windows
 
 permalink: guides-customizedchat-create-an-external-engagement.html
 order: 3
+indicator:
 ---
 
 ### Step 1 - Create new engagement

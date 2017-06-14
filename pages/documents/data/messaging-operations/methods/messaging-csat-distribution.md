@@ -7,6 +7,7 @@ level4: Methods
 order: 20
 permalink: data-messaging-operations-messaging-csat-distribution.html
 
+indicator: messaging
 ---
 
 Retrieves messaging CSAT (Customer Satisfaction) distribution related metrics at the site, skill or agent level.

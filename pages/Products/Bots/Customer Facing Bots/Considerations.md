@@ -8,6 +8,7 @@ order: 4
 
 permalink: products-bots-considerations.html
 
+indicator:
 ---
 
 The following considerations should be kept in mind when setting up Bots:

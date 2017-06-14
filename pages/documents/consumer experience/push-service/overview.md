@@ -9,6 +9,7 @@ level-order: 7
 order: 10
 permalink: push-service-overview.html
 root-link: true
+indicator: messaging
 ---
 ### Getting Started
 

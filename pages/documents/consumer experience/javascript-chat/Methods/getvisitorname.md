@@ -9,6 +9,7 @@ level4: Methods
 order: 150
 permalink: consumer-experience-javascript-chat-getvisitorname.html
 
+indicator: messaging
 ---
 
 Returns the visitor's name string according to the latest events received.

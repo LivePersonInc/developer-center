@@ -9,6 +9,7 @@ level4: Methods
 order: 60
 permalink: agent-retrieve-agent-information.html
 
+indicator: chat
 ---
 
 This method returns the agent's information such as name, maximum number of chats allowed, and availability.

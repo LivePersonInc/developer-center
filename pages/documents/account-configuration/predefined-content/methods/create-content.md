@@ -9,6 +9,7 @@ level4: Methods
 order: 40
 permalink: account-configuration-predefined-content-create-content.html
 
+indicator: both
 ---
 
 Creates new Predefined Content for an account.

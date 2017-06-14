@@ -8,6 +8,7 @@ permalink: guides-agent-workspace-widget.html
 root-link: true
 level-order: 3
 order: 1
+indicator:
 ---
 
 Agents often need to access external systems while they are working in the agent workspace, and to do so, they need to open additional tabs or browsers. Now, you can

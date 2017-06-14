@@ -8,6 +8,7 @@ level3: Agent Groups API
 order: 110
 permalink: administration-agent-groups-appendix.html
 
+indicator: both
 ---
 
 This section contains API details that are common to every API’s resource and action.

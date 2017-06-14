@@ -6,6 +6,7 @@ level3: Messaging Window API
 level4: API Reference
 permalink: common-consumer-token-creation.html
 order: 210
+indicator:
 ---
 
 ### Unauthenticated Consumer Token

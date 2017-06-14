@@ -8,6 +8,7 @@ level-order: 5
 order: 1
 permalink: rt-interactions-validate-engagement-overview.html
 root-link: true
+indicator: both
 ---
 ### Getting Started
 

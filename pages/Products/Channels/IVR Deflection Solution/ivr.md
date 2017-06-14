@@ -8,6 +8,7 @@ order: 1
 level-order: 2
 root-link: true
 permalink: products-channels-ivr-deflection-solution-introduction.html
+indicator:
 ---
 
 In addition to cost-effectiveness over voice, live messaging and chat interactions have also been proven to drive higher CSAT. In a [study

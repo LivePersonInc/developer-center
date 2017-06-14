@@ -9,6 +9,7 @@ level-order: 1
 order: 0
 permalink: consumer-experience-ios-sdk-overview.html
 root-link: true
+indicator: chat messaging
 ---
 
 **Consumers worldwide have moved to messaging**; time-shifted messaging is more convenient than phone calls.

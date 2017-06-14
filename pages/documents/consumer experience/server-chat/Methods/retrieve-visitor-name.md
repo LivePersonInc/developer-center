@@ -8,6 +8,7 @@ level4: Methods
 order: 120
 permalink: consumer-experience-server-chat-retrieve-visitor-name.html
 
+indicator: chat
 ---
 
 Returns the visitor's name that was set by the visitor. The default is "you".

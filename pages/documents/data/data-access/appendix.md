@@ -7,6 +7,7 @@ level3: Data Access API
 order: 62
 permalink: data-data-access-appendix.html
 
+indicator: both
 ---
 
 This section contains API details that are common to every API’s resource and action.

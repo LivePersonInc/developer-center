@@ -9,6 +9,7 @@ level4: Methods
 order: 30
 permalink: account-configuration-automatic-messages-update-an-automatic-message.html
 
+indicator: both
 ---
 
 Updates an existing Automatic Message for a specific account.

@@ -9,6 +9,7 @@ level4: Methods
 order: 180
 permalink: agent-set-agent-typing.html
 
+indicator: chat
 ---
 
 This method sets the agent's typing status.

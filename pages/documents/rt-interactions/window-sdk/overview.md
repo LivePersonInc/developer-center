@@ -8,6 +8,7 @@ order: 1
 level-order: 4
 permalink: rt-interactions-window-sdk-overview.html
 root-link: true
+indicator: both
 ---
 ### Getting Started
 
@@ -47,4 +48,3 @@ Main capabilities of this SDK include:
 * Diversify the chat experience through rich media and web app integrations in a dedicated widget.
 
 * Streamline session and participant data, based upon which brands are able to provide content custom tailored to the visitor.
-

@@ -6,6 +6,7 @@ level3: Engagement History API
 
 order: 2
 permalink: data-engagement-history-methods.html
+indicator: chat
 ---
 
 The LiveEngage Engagement History API includes one method, Retrieve Engagement List by Criteria.

@@ -8,6 +8,7 @@ level3: In-App Messaging SDK for iOS
 order: 1
 permalink: consumer-experience-ios-sdk-quick-start.html
 
+indicator: chat messaging
 ---
 
 The LivePerson SDK provides brands with a simple, yet enterprise-grade and secure in-app messaging solution. Through in-app messaging, brands will foster connections with their customers and increase app engagement and retention.

@@ -9,6 +9,7 @@ level4: SDK APIs
 order: 12
 permalink: consumer-experience-ios-sdk-callbacks-index.html
 
+indicator: chat messaging
 ---
 
 The SDK uses 2 delegates: 

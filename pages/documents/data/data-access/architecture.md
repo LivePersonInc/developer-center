@@ -7,6 +7,7 @@ level3: Data Access API
 order: 2
 permalink: data-data-access-architecture.html
 
+indicator: both
 ---
 
 

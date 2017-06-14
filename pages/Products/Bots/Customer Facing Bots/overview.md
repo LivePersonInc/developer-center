@@ -8,6 +8,7 @@ order: 1
 level-order: 1
 root-link: true
 permalink: products-customer-facing-bots-overview.html
+indicator:
 ---
 
 Bots can conduct several automatic tasks and communicate with your consumers to help take the load off your agents.

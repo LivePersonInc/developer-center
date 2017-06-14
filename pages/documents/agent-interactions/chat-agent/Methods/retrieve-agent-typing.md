@@ -9,6 +9,7 @@ level4: Methods
 order: 170
 permalink: agent-retrieve-agent-typing.html
 
+indicator: chat
 ---
 
 This method returns the agent's typing status.

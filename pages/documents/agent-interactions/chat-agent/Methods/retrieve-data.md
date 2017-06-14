@@ -9,6 +9,7 @@ level4: Methods
 order: 110
 permalink: agent-retrieve-data.html
 
+indicator: chat
 ---
 
 This method retrieves the events, information and resources of multiple chats. Use this method to periodically poll for new data of multiple chat sessions.

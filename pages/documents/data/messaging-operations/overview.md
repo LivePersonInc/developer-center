@@ -8,6 +8,7 @@ level-order: 4
 order: 1
 permalink: data-messaging-operations-overview.html
 root-link: true
+indicator: messaging
 ---
 ### Getting Started
 

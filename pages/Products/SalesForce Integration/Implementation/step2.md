@@ -8,6 +8,7 @@ level4: Implementation
 order: 20
 permalink: products-agent-efficiency-salesforce-integration-step2.html
 
+indicator:
 ---
 
 ### Navigating to the LiveEngage Application in Salesforce

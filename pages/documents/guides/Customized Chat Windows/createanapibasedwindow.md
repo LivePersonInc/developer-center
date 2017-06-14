@@ -6,6 +6,7 @@ level3: Customized Chat Windows
 
 permalink: guides-customizedchat-create-an-api-based-window.html
 order: 2
+indicator:
 ---
     
 **An “API-based” engagement window must be configured in LiveEngage.**

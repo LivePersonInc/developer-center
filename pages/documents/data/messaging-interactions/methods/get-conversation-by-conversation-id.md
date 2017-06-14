@@ -7,6 +7,7 @@ level4: Methods
 order: 20
 permalink: data-messaging-interactions-get-conversation-by-conversation-id.html
 
+indicator: messaging
 ---
 
 This method retrieves a conversation according to the given conversation ID.

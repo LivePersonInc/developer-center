@@ -9,6 +9,7 @@ level4: Methods
 order: 10
 permalink: agent-login.html
 
+indicator: both
 ---
 
 ### Request

@@ -9,6 +9,7 @@ level4: Configuration
 order: 8
 permalink: android-logs.html
 
+indicator: messaging
 ---
 
 Upon errors, we send logs including different severity levels of errors and warnings.

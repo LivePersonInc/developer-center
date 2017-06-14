@@ -8,6 +8,7 @@ level-order: 2
 order: 1
 permalink: rt-interactions-visit-information-overview.html
 root-link: true
+indicator: both
 ---
 ### Getting Started
 

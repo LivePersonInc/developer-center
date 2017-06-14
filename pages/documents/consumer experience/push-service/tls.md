@@ -8,6 +8,7 @@ level3: Push Notification Service (iOS and Android)
 order: 20
 permalink: push-service-tls.html
 
+indicator: messaging
 ---
 
 Customers supply a valid client key and certificate for a TLS connection (two-way SSL). The

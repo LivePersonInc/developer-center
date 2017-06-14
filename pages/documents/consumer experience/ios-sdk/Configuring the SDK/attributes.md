@@ -9,6 +9,7 @@ level4: Customization and Branding
 order: 224
 permalink: consumer-experience-ios-sdk-attributes.html
 
+indicator: chat messaging
 ---
 
 The table below lists the available attributes which can be used to personalize your app. The **Default / Customer notes** column includes space for you to add your own branding.

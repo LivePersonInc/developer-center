@@ -7,6 +7,7 @@ level3: Operational Realtime API
 order: 51
 permalink: data-operational-realtime-sample-code.html
 
+indicator: chat
 ---
 
 This is a sample application written in Spring, Maven, Java, and HTML, that demonstrates how to call the LiveEngage Operational Real-Time API.

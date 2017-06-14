@@ -9,6 +9,7 @@ order: 200
 layout: page
 
 permalink: consumer-int-msg-sub-events.html
+indicator:
 ---
 {% include msgtype.html title='Request' type='req' %}
 {% include json.html name="req_editor" 

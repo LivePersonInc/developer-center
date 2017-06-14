@@ -9,6 +9,7 @@ level4: Methods
 order: 160
 permalink: android-removecallback.html
 
+indicator: messaging
 ---
 
 Removes the registered [LivePersonCallback](android-callbacks-index.html){:target="_blank"} callback.

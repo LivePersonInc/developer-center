@@ -9,6 +9,7 @@ level4: SDK APIs
 order: 10
 permalink: android-methods.html
 
+indicator: messaging
 ---
 
 ### initialize (deprecated)

@@ -9,6 +9,7 @@ level4: Events
 order: 200
 permalink: consumer-experience-javascript-chat-onengagement.html
 
+indicator: messaging
 ---
 
 ### Request

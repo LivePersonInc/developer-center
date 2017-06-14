@@ -2,6 +2,7 @@
 title: Set up your app key
 permalink: /products-inapp-appkeyios.html
 toc: false
+indicator:
 ---
 
 Production and Dev are handled as two separate applications.

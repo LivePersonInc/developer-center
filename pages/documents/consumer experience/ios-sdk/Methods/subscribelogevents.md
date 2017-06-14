@@ -9,6 +9,7 @@ level4: Methods
 order: 180
 permalink: consumer-experience-ios-sdk-subscribelogevents.html
 
+indicator: chat messaging
 ---
 
 Subscribe to log events (Trace, Debug, Info, Warning, Error). Each time a log event with the passed log level occurs, the callback will be invoked with the log object.

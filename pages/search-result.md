@@ -4,6 +4,7 @@ permalink: search.html
 layout: search
 search: exclude
 
+indicator:
 ---
 
 <head>

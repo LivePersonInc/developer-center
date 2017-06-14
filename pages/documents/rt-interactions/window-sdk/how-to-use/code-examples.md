@@ -8,6 +8,7 @@ level4: Instructions
 order: 40
 permalink: rt-interactions-window-sdk-code-examples.html
 
+indicator: both
 ---
 
 **‘Init’ and ‘bind’ (Single event)**

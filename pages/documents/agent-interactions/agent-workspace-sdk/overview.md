@@ -9,6 +9,7 @@ level-order: 5
 order: 10
 permalink: agent-workspace-sdk-overview.html
 root-link: true
+indicator: both
 ---
 
 ### Getting Started

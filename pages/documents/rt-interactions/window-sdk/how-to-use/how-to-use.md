@@ -8,6 +8,7 @@ level4: Instructions
 
 order: 20
 permalink: rt-interactions-window-sdk-how-to-use.html
+indicator: both
 ---
 
 All public properties and methods can be found in the namespace lpTag.LPWidgetSDK.

@@ -7,6 +7,7 @@ level4: Methods
 order: 30  
 permalink: data-messaging-interactions-get-conversations-by-consumer-id.html
 
+indicator: messaging
 ---
 
 This method retrieves a list of conversations that the consumer participated in.

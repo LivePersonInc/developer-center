@@ -9,6 +9,7 @@ level4: Methods
 order: 50
 permalink: consumer-experience-ios-sdk-togglechatactions.html
 
+indicator: chat messaging
 ---
 
 This API call is used to open or close the SDK menu. 

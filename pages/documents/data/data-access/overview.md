@@ -8,6 +8,7 @@ level-order: 1
 order: 1
 permalink: data-data-access-overview.html
 root-link: true
+indicator: both
 ---
 ### Getting Started
 

@@ -8,6 +8,7 @@ level-order: 6
 order: 1
 permalink: data-engagement-history-overview.html
 root-link: true
+indicator: chat
 ---
 ### Getting Started
 

@@ -8,6 +8,7 @@ level3: Push Notification Service (iOS and Android)
 order: 40
 permalink: push-service-configuration.html
 
+indicator: messaging
 ---
 
 The push proxy is configured the same way as any other static app with configurable

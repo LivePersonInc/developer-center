@@ -8,6 +8,7 @@ level4: Methods
 order: 100
 permalink: consumer-experience-server-chat-add-lines.html
 
+indicator: chat
 ---
 
 

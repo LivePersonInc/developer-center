@@ -7,6 +7,7 @@ level4: Methods
 order: 50
 permalink: data-operational-realtime-sla-histogram.html
 
+indicator: chat
 ---
 
 Retrieves the distribution of visitors’ wait time in the queue, before an agent replies to their chat. The wait time in the histogram is accurate (no more than +/- 5 seconds). Histogram bucket sizes are specified in multiples of 5 seconds.

@@ -9,6 +9,7 @@ level4: Methods
 order: 10
 permalink: consumer-experience-javascript-chat-getprechatsurvey.html
 
+indicator: messaging
 ---
 
 Retrieves the Pre-chat survey according to the criteria passed.

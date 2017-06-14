@@ -9,6 +9,7 @@ level4: Methods
 order: 190
 permalink: consumer-experience-ios-sdk-getsdkversion.html
 
+indicator: chat messaging
 ---
 
 Get current SDK version string.

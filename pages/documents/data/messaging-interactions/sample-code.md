@@ -7,6 +7,7 @@ level3: Messaging Interactions API (Beta)
 order: 31
 permalink: data-messaging-interactions-sample-code.html
 
+indicator: messaging
 ---
 
 This is a sample application written in Spring, Maven, Java, and HTML, that demonstrates how to call the LiveEngage Operational Real-Time API. OAuth is a server-to-server authentication method, but the example also includes a basic client-to-server implementation (attached in a zip file).

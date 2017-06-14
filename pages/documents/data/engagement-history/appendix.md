@@ -7,6 +7,7 @@ level3: Engagement History API
 order: 12
 permalink: data-engagement-history-appendix.html
 
+indicator: chat
 ---
 
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).

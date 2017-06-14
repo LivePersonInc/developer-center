@@ -9,6 +9,7 @@ level4: Events
 order: 270
 permalink: consumer-experience-javascript-chat-onstate.html
 
+indicator: messaging
 ---
 
 This is the current chat state.

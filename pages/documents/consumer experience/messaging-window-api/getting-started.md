@@ -7,6 +7,7 @@ level3: Messaging Window API
 order: 2
 permalink: consumer-int-getting-started.html
 
+indicator:
 ---
 
 In this tutorial you will create a new conversation with your contact center, publish text messages, and receive agent responses.

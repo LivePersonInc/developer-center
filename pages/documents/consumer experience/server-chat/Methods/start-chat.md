@@ -8,6 +8,7 @@ level4: Methods
 order: 70
 permalink: consumer-experience-server-chat-start-chat.html
 
+indicator: chat
 ---
 
 Initiates a request to chat. If successful, a new chat session will be created, and the session will be placed in the queue until an agent accepts the chat. This URI returns a "session-URI" which uniquely identifies this session, and can be used for further interaction with the session.

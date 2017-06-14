@@ -9,6 +9,7 @@ level4: Methods
 order: 190
 permalink: android-markurgent.html
 
+indicator: messaging
 ---
 
 Marks the current conversation as urgent.

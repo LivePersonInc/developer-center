@@ -9,6 +9,7 @@ level4: Advanced Features
 order: 280
 permalink: android-photo-sharing.html
 
+indicator: messaging
 ---
 
 ### Overview

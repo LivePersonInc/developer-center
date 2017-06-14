@@ -9,6 +9,7 @@ level4: Methods
 order: 230
 permalink: android-shutdown.html
 
+indicator: messaging
 ---
 
 `public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)`

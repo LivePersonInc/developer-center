@@ -8,6 +8,7 @@ level4: Methods
 order: 160
 permalink: consumer-experience-server-chat-submit-survey-data.html
 
+indicator: chat
 ---
 
 Used to submit the survey data.
