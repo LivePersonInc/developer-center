@@ -8,7 +8,7 @@ level4: Tutorials
 order: 70
 permalink: consumer-int-client-props.html
 
-indicator:
+indicator: messaging
 ---
 
 The client can send information about its type, for example, mobile, desktop, browser type, OS version, etc. In this tutorial, we will see how to attach this information to client requests, and where to read the equivalent information about the agent.

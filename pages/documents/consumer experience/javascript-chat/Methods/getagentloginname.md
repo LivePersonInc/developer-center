@@ -9,7 +9,7 @@ level4: Methods
 order: 140
 permalink: consumer-experience-javascript-chat-getagentloginname.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Returns the agent's name string according to the latest events received.

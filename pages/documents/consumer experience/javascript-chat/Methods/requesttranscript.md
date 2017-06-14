@@ -9,7 +9,7 @@ level4: Methods
 order: 80
 permalink: consumer-experience-javascript-chat-requesttranscript.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Sends a copy of the chat transcript to an email address at the end of the chat session. The response will echo the email data.

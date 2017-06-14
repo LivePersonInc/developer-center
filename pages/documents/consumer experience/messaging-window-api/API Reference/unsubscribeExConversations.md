@@ -9,7 +9,7 @@ order: 180
 layout: page
 
 permalink: consumer-int-msg-unsub-conv.html
-indicator:
+indicator: messaging
 ---
 
 {% include msgtype.html title='Request' type='req' %}

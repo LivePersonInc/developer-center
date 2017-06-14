@@ -9,7 +9,7 @@ level4: Events
 order: 300
 permalink: consumer-experience-javascript-chat-onexitsurvey.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Triggered in response to the [getExitSurvey](consumer-experience-javascript-chat-getexitsurvey.html){:target="_blank"} method.

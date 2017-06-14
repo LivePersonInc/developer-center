@@ -9,7 +9,7 @@ level4: Methods
 order: 60
 permalink: consumer-experience-javascript-chat-setvisitorname.html
 
-indicator: messaging
+indicator: chat
 ---
 
 This updates the visitor's name in the chat. The response echoes the original request data.

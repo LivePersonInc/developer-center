@@ -9,7 +9,7 @@ level4: Events
 order: 280
 permalink: consumer-experience-javascript-chat-oninfo.html
 
-indicator: messaging
+indicator: chat
 ---
 
 This is published when there is a change in the chat information.

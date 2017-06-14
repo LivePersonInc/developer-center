@@ -9,7 +9,7 @@ level4: Methods
 order: 160
 permalink: consumer-experience-javascript-chat-getagentid.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Returns the agent ID string according to the latest events received.

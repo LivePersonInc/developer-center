@@ -8,7 +8,7 @@ level3: Javascript Chat SDK
 order: 4
 permalink: consumer-experience-javascript-chat-creating-an-instance.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Creating your instance is the first thing to do when using the SDK.   

@@ -9,7 +9,7 @@ level4: Methods
 order: 90
 permalink: consumer-experience-javascript-chat-getexitsurvey.html
 
-indicator: messaging
+indicator: chat
 ---
 
 The Exit survey will be displayed after the chat has ended if one was configured for the account.

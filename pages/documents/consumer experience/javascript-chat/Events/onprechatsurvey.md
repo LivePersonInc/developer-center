@@ -9,7 +9,7 @@ level4: Events
 order: 210
 permalink: consumer-experience-javascript-chat-onprechatsurvey.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Triggered in response to getPreChatSurvey.

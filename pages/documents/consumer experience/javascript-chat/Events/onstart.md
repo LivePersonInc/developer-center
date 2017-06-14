@@ -9,7 +9,7 @@ level4: Events
 order: 220
 permalink: consumer-experience-javascript-chat-onstart.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Triggered when a chat starts in response to [requestChat](consumer-experience-javascript-chat-startchatrequestchat.html){:target="_blank"}.

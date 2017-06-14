@@ -9,7 +9,7 @@ level4: Methods
 order: 120
 permalink: consumer-experience-javascript-chat-submitofflinesurvey.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Used to submit the Offline survey.

@@ -9,7 +9,7 @@ level4: Methods
 order: 170
 permalink: consumer-experience-javascript-chat-getrtsessionid.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Returns the chat rtSessionId string according to the latest events received.

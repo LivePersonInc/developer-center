@@ -9,7 +9,7 @@ level4: Methods
 order: 191
 
 permalink: consumer-experience-javascript-chat-getestimatedwaittime.html
-indicator: messaging
+indicator: chat
 ---
 
 This method returns the estimated wait time in seconds before a chat starts.

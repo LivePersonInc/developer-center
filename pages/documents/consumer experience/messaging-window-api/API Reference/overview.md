@@ -12,7 +12,7 @@ folder: messaging-apis
 docs: https://lpgithub.dev.lprnd.net/pages/Architecture/api-ums/2.0.0.10-SNAPSHOT
 icon_style: style="width:16px; height:16px;" height="16" width="16"
 wide_icon_style: style="width:32px; height:16px;" height="16" width="32"
-indicator:
+indicator: messaging
 ---
 
 ### Connection Establishment

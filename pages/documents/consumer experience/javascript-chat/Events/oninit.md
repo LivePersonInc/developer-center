@@ -9,7 +9,7 @@ level4: Events
 order: 193
 permalink: consumer-experience-javascript-chat-oninit.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Triggers when you can request some information about the chat. The following methods are supported after this event has triggered:

@@ -10,7 +10,7 @@ order: 40
 
 permalink: consumer-int-authentication.html
 keywords: oauth2.0 jwt token
-indicator:
+indicator: messaging
 ---
 
 In this tutorial you will use the APIs with the authenticated identity of the consumer using a [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519){:target="_blank"}.

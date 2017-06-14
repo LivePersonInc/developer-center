@@ -9,7 +9,7 @@ level4: Methods
 order: 100
 permalink: consumer-experience-javascript-chat-submitexitsurvey.html
 
-indicator: messaging
+indicator: chat
 ---
 
 Submits the Exit survey results to the server. For more information about the Survey Object see [Surveys](consumer-experience-javascript-chat-surveys.html){:target="_blank"}.

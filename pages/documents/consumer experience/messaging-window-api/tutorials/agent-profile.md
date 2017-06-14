@@ -10,7 +10,7 @@ order: 50
 
 permalink: consumer-int-agent-profile.html
 keywords: picture name
-indicator:
+indicator: messaging
 ---
 When you want to present the name or picture of an agent to a consumer, you will need to pull this information using the agent public ID.
 

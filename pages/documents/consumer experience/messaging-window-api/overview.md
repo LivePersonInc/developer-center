@@ -8,7 +8,7 @@ level-order: 3
 order: 0
 permalink: consumer-int-overview.html
 root-link: true
-indicator:
+indicator: messaging
 ---
 ### Getting Started
 
