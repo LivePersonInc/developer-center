@@ -294,7 +294,7 @@ div.sidebarTitle-holder {
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  left: -389%;  /* positioning the tooltip on the "C"*/
+  left: -349%;  /* positioning the tooltip on the "C"*/
   margin-top: 9px;
 
 }
