@@ -13,7 +13,7 @@ indicator:
 
 ### Overview
 
-The predefined content tool within LiveEngage is one which agents rely on to provide quick answers to repeating or long questions.  Agents are able to either search for predefined answers and push them directly into the conversations, or utilize hotkeys for quick entries.  
+The predefined content tool within LiveEngage is one which agents rely on to provide quick answers to repeating or long questions.  Agents are able to either search for predefined answers and push them directly into the conversations, or utilize hotkeys for quick entries.
 
 ![Predefined Content 1](img/predefinedcontent1.png)
 
