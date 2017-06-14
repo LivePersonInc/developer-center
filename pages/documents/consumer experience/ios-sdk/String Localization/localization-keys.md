@@ -9,7 +9,7 @@ level4: String Localization
 order: 227
 permalink: consumer-experience-ios-sdk-localizationkeys.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 Listed below are all localized keys with the English localization string.

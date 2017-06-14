@@ -9,7 +9,7 @@ level4: Methods
 order: 130
 permalink: consumer-experience-ios-sdk-destruct.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 `func destruct()`

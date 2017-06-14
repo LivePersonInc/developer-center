@@ -9,7 +9,7 @@ level4: String Localization
 order: 228
 permalink: consumer-experience-ios-sdk-timestamps.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 ### Time/Date Styles

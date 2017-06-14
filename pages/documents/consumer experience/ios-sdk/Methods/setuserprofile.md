@@ -9,7 +9,7 @@ level4: Methods
 order: 160
 permalink: consumer-experience-ios-sdk-setuserprofile.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 Add custom parameters about the user and set them for the messaging agent. 

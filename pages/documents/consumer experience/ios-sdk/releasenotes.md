@@ -7,7 +7,7 @@ level3: In-App Messaging SDK for iOS
 
 order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
-indicator: chat messaging
+indicator: messaging
 ---
 
 ### In-App Messaging SDK Version 2.3.1

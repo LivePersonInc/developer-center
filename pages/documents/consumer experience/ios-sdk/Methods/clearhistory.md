@@ -9,7 +9,7 @@ level4: Methods
 order: 110
 permalink: consumer-experience-ios-sdk-clearhistory.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made. 

@@ -9,7 +9,7 @@ level4: Methods
 order: 210
 permalink: consumer-experience-ios-sdk-printsupportedlanguages.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 Prints the SDK's supported languages

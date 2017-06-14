@@ -9,7 +9,7 @@ level4: SDK APIs
 order: 11
 permalink: consumer-experience-ios-sdk-interfacedefinitions.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 ### LPUser

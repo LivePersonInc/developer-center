@@ -9,7 +9,7 @@ level4: Methods
 order: 20
 permalink: consumer-experience-ios-sdk-showconversation.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 This method is used to open the conversation screen.

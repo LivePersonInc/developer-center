@@ -9,7 +9,7 @@ level4: Configuration
 order: 7
 permalink: consumer-experience-ios-sdk-user-data.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 Pass and display consumer information to agents, and agent information to consumers.

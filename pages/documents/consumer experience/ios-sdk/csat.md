@@ -9,7 +9,7 @@ level4: Advanced Features
 order: 233
 permalink: consumer-experience-ios-sdk-advanced-csat.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 This document describes the CSAT behaviour and configurations in the Messaging SDK.

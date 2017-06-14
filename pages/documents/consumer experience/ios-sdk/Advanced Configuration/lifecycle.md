@@ -9,7 +9,7 @@ level4: Configuration
 order: 5
 permalink: consumer-experience-ios-sdk-lifecycle.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 During the course of the conversation, consumers can take several actions such as Mark as urgent to receive a faster service, or Resolve conversation to let your agents know they have received their answers.  

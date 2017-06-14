@@ -9,7 +9,7 @@ level4: Appendix
 order: 245
 permalink: consumer-experience-ios-sdk-createcertificate.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 In order for the push notification to work, you will need two .pem files:

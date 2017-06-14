@@ -9,7 +9,7 @@ level4: Methods
 order: 100
 permalink: consumer-experience-ios-sdk-resolveconversation.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 This API enables a conversation to be resolved. The API will request the server to mark the active conversation as resolved. If there is no active conversation, an alert will be displayed. 

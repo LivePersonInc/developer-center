@@ -9,7 +9,7 @@ level4: Configuration
 order: 4
 permalink: consumer-experience-ios-sdk-delegates.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 The SDK uses 2 delegates:
 

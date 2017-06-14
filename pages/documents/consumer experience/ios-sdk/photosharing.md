@@ -9,7 +9,7 @@ level4: Advanced Features
 order: 234
 permalink: consumer-experience-ios-sdk-photosharing.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 This section describes the photo sharing behavior and configurations in the Messaging SDK.

@@ -9,7 +9,7 @@ level4: Methods
 order: 150
 permalink: consumer-experience-ios-sdk-registerpushnotifications.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 Register to LPMessagingSDK push notifications with the following code in AppDelegate:

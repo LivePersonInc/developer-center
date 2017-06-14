@@ -9,7 +9,7 @@ level4: Methods
 order: 170
 permalink: consumer-experience-ios-sdk-getassignedagent.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 
 Get assigned agent details of the last or current conversation - depending on retrieveAssignedAgentFromLastClosedConversation in the LPConfig defaultConfiguration. 

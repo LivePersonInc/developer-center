@@ -9,7 +9,7 @@ level4: Configuration
 order: 9
 permalink: consumer-experience-ios-sdk-app-extensions.html
 
-indicator: chat messaging
+indicator: messaging
 ---
 In order to make sure the SDK uses the iOS keyboard only, and not third party ones, disable app extensions for keyboard as follows:
 In your AppDelegate, add the method application(_:shouldAllowExtensionPointIdentifier:)
