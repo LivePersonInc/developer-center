@@ -2,7 +2,7 @@
 title: Engagement Attributes
 level1: Documents
 level2: Data
-level3: Messaging Interactions API (Beta)
+level3: Messaging Interactions API
 
 order: 32
 permalink: data-messaging-interactions-appendix.html
@@ -45,5 +45,3 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | email           | Visitor email.         | alphanumeric|
 | phone           | Visitor phone number.  | alphanumeric|
 | language        | Visitor language.      | alphanumeric|
-
-

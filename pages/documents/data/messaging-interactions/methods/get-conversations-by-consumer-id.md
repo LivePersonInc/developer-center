@@ -2,7 +2,7 @@
 title: Get Conversations by Consumer ID
 level1: Documents
 level2: Data
-level3: Messaging Interactions API (Beta)
+level3: Messaging Interactions API
 level4: Methods
 order: 30  
 permalink: data-messaging-interactions-get-conversations-by-consumer-id.html
