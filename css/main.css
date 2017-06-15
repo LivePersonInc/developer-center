@@ -66,12 +66,20 @@
     color: #ff720b;
 }
 
+/* Algolia styling */
+
 .aa-input-container {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  color: #ffffff;
+  background-color: #162036;
+  margin-left: 100px;
+  margin-top: 6px;
+}
+
 .aa-input-search {
   width: 300px;
-  border: 1px solid rgba(228, 228, 228, 0.6);
+  border: 1px solid #162036;
   padding: 12px 28px 12px 12px;
   box-sizing: border-box;
   -webkit-appearance: none;

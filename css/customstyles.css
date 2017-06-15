@@ -1049,29 +1049,9 @@ a.no_icon:after
     margin-bottom: 10px;
 }
 
-/* algolia search */
-
-.search {
-    text-align: left;
-}
-.search input {
-    font-size: 20px;
-    width: 300px;
-}
-.results {
-    margin: auto;
-    text-align: left;
-}
-.results ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* algolia */
-
 div.results {
     position: absolute;
-    background-color: white;
+    background-color: #162036;
     width: 100%;
 }
 
