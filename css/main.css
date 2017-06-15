@@ -71,8 +71,8 @@
 .aa-input-container {
   display: inline-block;
   position: relative;
-  color: #ffffff;
-  background-color: #162036;
+  color: #ffffff !important;
+  background-color: #162036 !important;
   margin-left: 100px;
   margin-top: 6px;
 }
