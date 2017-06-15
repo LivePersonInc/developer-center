@@ -7,14 +7,14 @@ level3: Engagement Attributes API
 order: 2
 permalink: rt-interactions-engagement-attributes-engagement-attributes.html
 
-indicator: chat:
+indicator: chat
 ---
 
 
-### Request 
+### Request
 
-| Method    | URL | 
-| :------ | :------- | 
+| Method    | URL |
+| :------ | :------- |
 | POST | https://{LivePerson domain}/api/account/{account}/monitoring/visitors/{visitor}/visits/current/events |
 
 **OAuth**
@@ -23,8 +23,8 @@ This API supports OAuth 1.0.
 
 **Headers**
 
-| Parameter    | Description | 
-| :------ | :------- | 
+| Parameter    | Description |
+| :------ | :------- |
 | Authorization | Contains token string to allow request authorization |
 | Content-Type | Set to "application/json" (encoded in UTF-8) |
 | x-http-method-override | Set to "PUT" |
@@ -49,8 +49,8 @@ This API supports OAuth 1.0.
 
 **BODY/POST Parameters**
 
-| Parameter    | Description | 
-| :------ | :------- | 
+| Parameter    | Description |
+| :------ | :------- |
 | Engagement Attributes Array | Array of Engagement Attribute. For more information about the available Engagement Attributes, refer to [Engagement Attributes Overview document](https://ce-sr.s3.amazonaws.com/CA/Campaigns/Engagement%20Attributes%20Overview.pdf){:target="_blank"}. |
 
 **Request URL Example**
@@ -59,7 +59,7 @@ https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/curr
 
 **Request BODY Example**
 
-    
+
 ```javascript
     [{
            "type": "lead", //MANDATORY
@@ -75,8 +75,8 @@ https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/curr
               "topic": "add authorized user to the account ", // SERVICE ACTIVITY TOPIC OR NAME
               "status": 0, // STATUS ENUM
               // 0-Complete, 1-In Progress, 2-Approved, 3-cancelled, 4-Not Approved,
-              // 5-Reviewed, 6-Missing Details, 7-Closed, 8-Removed, 9-Assigned, 
-              // 10-Waiting for Customer Response, 11-Waiting for Response, 12-Pending, 13-Resolved 
+              // 5-Reviewed, 6-Missing Details, 7-Closed, 8-Removed, 9-Assigned,
+              // 10-Waiting for Customer Response, 11-Waiting for Response, 12-Pending, 13-Resolved
               "category": "account maintenance", // SERVICE CATEGORY NAME
               "serviceId": "service12" // SERVICE UNIQUE IDENTIFIER OR TICKET ID
            }
@@ -87,15 +87,15 @@ https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/curr
 
 **Response Example**
 
-     http status 200 ok and empty json 
+     http status 200 ok and empty json
 
 **Response Codes**
 
-| Code     | Description | 
-| :------ | :------- | 
+| Code     | Description |
+| :------ | :------- |
 | 200 | OK; Operation performed successfully |
 | 400 | Bad Request; Problem with body or query parameters |  
 | 401 | Unauthorized (no permissions) |
 | 404 | Not Found |      
 | 422 | Invalid Account ID |
-| 500 | Internal Server Error | 
+| 500 | Internal Server Error |

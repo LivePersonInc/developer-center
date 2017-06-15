@@ -9,7 +9,7 @@ permalink: rt-interactions-engagement-attributes-overview.html
 root-link: true
 level-order: 6
 
-indicator: chat:
+indicator: chat
 ---
 ### Getting Started
 
@@ -26,4 +26,3 @@ A few things you'll need to get started with this API:
 ### Introduction
 
 This API provides a way to report back to LivePerson consumer events such as the topic and resolution of the conversation during the session (e.g., call). This information is added to the existing session and can be used in the goal reached calculation.
-

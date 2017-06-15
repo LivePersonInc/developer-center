@@ -280,6 +280,7 @@ div.sidebarTitle-holder {
   margin-bottom: 10px;
   position: relative;
   font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
+  cursor: default;
 }
 
 /*CSS for tooltip of Indicator*/
