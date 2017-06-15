@@ -88,8 +88,8 @@
                 //'suggestion' templating function used to render a single suggestion
                 suggestion: function(suggestion) {
                   return '<span>' +
-                    suggestion._highlightResult.h2.value + '</span><span>' +
-                    suggestion._highlightResult.h3.value + '</span>';
+                    suggestion._highlightResult.title.value + '</span><span>' +
+                    suggestion._highlightResult.text.value + '</span>';
                 }
             }
         });
