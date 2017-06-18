@@ -7,6 +7,7 @@ level3: Server Chat API
 order: 171
 permalink: consumer-experience-server-chat-sample.html
 
+indicator: chat
 ---
 
 **Download the Chat API resources by a Postman collection**. Use the following [link](assets/content/ServerChatAPI.postman_collection){:target="_blank"}

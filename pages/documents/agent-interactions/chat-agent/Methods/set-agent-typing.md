@@ -9,6 +9,7 @@ level4: Methods
 order: 180
 permalink: agent-set-agent-typing.html
 
+indicator: chat
 ---
 
 This method sets the agent's typing status.
@@ -17,9 +18,9 @@ This method sets the agent's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| PUT | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true|
+| PUT | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true| 
 
-*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.*
+*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.* 
 
 **Request Headers**
 
@@ -36,14 +37,6 @@ The body media type must have one of the following formats:
 - XML
 - JSON
 
-**Body**
-
-```json
-{
-"agentTyping" : "typing"
-}
-```
-
 ### Response
 
 **Elements in the response**
@@ -54,7 +47,7 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
-| Code | Response |
+| Code | Response | 
 | :--- | :--- |
 | 201 | Created |
 

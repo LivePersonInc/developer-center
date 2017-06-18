@@ -10,6 +10,7 @@ level4: Methods
 order: 70
 permalink: administration-delete-user.html
 
+indicator: both
 ---
 
 This API deletes a user from a specific account.

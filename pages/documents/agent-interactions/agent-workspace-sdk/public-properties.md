@@ -8,6 +8,7 @@ level3: Agent Workspace Widget SDK
 order: 70
 permalink: agent-workspace-sdk-public-properties.html
 
+indicator: both
 ---
 
 | Property   | Description                                     |   |

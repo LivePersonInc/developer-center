@@ -9,6 +9,7 @@ level4: Methods
 order: 210
 permalink: agent-transfer-chat.html
 
+indicator: chat
 ---
 
 This method transfers a chat from an agent to a specific skill or agent.

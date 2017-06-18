@@ -10,6 +10,7 @@ level4: Methods
 order: 80
 permalink: administration-delete-agent-group.html
 
+indicator: both
 ---
 
 This API deletes an agent group from a specific account.

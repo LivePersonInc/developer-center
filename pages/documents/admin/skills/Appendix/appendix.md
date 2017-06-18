@@ -9,6 +9,7 @@ level3: Skills API
 order: 100
 permalink: administration-skills-appendix.html
 
+indicator: both
 ---
 
 This section contains API details that are common to every API’s resource and action.

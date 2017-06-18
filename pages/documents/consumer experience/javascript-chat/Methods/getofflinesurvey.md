@@ -9,6 +9,7 @@ level4: Methods
 order: 110
 permalink: consumer-experience-javascript-chat-getofflinesurvey.html
 
+indicator: chat
 ---
 
 Retrieves the Offline survey to be displayed to the visitor, if no agent is available to chat.

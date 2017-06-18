@@ -10,6 +10,7 @@ level4: Methods
 order: 60
 permalink: administration-update-skill.html
 
+indicator: both
 ---
 
 This API updates a skill for a specific account.

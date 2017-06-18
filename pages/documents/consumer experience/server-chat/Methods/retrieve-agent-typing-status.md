@@ -10,6 +10,7 @@ order: 131
 
 permalink: consumer-experience-server-chat-retrieve-agent-typing-status.html
 
+indicator: chat
 ---
 
 Returns the agent's typing status.

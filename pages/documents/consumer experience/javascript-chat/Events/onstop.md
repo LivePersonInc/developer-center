@@ -9,6 +9,7 @@ level4: Events
 order: 230
 permalink: consumer-experience-javascript-chat-onstop.html
 
+indicator: chat
 ---
 
 Triggered when a chat has ended. Can be in response to [endChat](consumer-experience-javascript-chat-endchat.html){:target="_blank"} or if the agent has ended the chat.

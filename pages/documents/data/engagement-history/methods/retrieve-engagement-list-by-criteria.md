@@ -6,6 +6,7 @@ level3: Engagement History API
 
 order: 2
 permalink: data-engagement-history-methods.html
+indicator: chat
 ---
 
 The LiveEngage Engagement History API includes one method, Retrieve Engagement List by Criteria.
@@ -1114,6 +1115,7 @@ Example:
 | lobId | ID of the line of business of the campaign. | alphanumeric | |
 | lobName | Name of the line of business of the campaign. | alphanumeric | |
 | lines | Lines of a specific chat. | container | |
+| lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
 | time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
 | textType | Type of text. | alphanumeric  | Valid formats: plain, html, url |
 | text | The actual text in the chat line. | alphanumeric | |
@@ -1122,10 +1124,6 @@ Example:
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
 | cannedAnswerType | Type of canned answer (Predefined Content). | numeric | |
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
-| lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container | |
-| lineSeq | The line sequence within the chat | alphanumeric | |
-| lineRawScore | The score of the line | numeric | |
-| mcs | Meaningful Connection Score of the chat up to this line | numeric | Range: [-100,100] |
 | country | The country indicated by the visitor’s IP address. | alphanumeric | |
 | countryCode | The country code indicated by the visitor’s IP address. | alphanumeric | |
 | state | The state indicated by the visitor’s IP address. | alphanumeric | |

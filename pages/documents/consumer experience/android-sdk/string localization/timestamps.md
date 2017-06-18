@@ -9,6 +9,7 @@ level4: String Localization
 order: 273
 permalink: android-timestamps.html
 
+indicator: messaging
 ---
 
 Android provides 4 different default types of date and time formats:

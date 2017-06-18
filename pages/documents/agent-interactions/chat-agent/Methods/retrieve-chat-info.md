@@ -9,6 +9,7 @@ level4: Methods
 order: 150
 permalink: agent-retrieve-chat-info.html
 
+indicator: chat
 ---
 
 This method retrieves information regarding the current status of the chat. The information section includes the agent's state, agent's name, start time of the chat, last update, visitor's ID, agent typing, visitor typing, and the visitor's name.

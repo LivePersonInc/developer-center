@@ -2,11 +2,12 @@
 title: Get Conversations by Consumer ID
 level1: Documents
 level2: Data
-level3: Messaging Interactions API
+level3: Messaging Interactions API (Beta)
 level4: Methods
 order: 30  
 permalink: data-messaging-interactions-get-conversations-by-consumer-id.html
 
+indicator: messaging
 ---
 
 This method retrieves a list of conversations that the consumer participated in.

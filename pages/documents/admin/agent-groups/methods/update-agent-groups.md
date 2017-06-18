@@ -11,6 +11,7 @@ order: 50
 
 permalink: administration-update-agent-groups.html
 
+indicator: both
 ---
 
 This API updates an agent group for a specific account.

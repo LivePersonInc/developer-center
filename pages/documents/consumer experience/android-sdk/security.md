@@ -9,6 +9,7 @@ level4: Appendix
 order: 282
 permalink: android-security.html
 
+indicator: messaging
 ---
 
 Security is a top priority and key for enabling trusted, meaningful engagements.

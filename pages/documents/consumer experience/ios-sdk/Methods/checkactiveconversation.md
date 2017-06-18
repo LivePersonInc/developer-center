@@ -9,6 +9,7 @@ level4: Methods
 order: 60
 permalink: consumer-experience-ios-sdk-checkactiveconversation.html
 
+indicator: messaging
 ---
 
 Check if there is an active conversation by passing a conversation query. 

@@ -8,6 +8,7 @@ level4: Implementation
 order: 50
 permalink: products-agent-efficiency-salesforce-integration-step5.html
 
+indicator:
 ---
 
 Now that we can create records from LiveEngage, you may view all your Chat Transcripts from Salesforce as well, as well as create reports for them.

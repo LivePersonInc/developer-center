@@ -8,6 +8,7 @@ level4: Tutorials
 order: 89
 permalink: consumer-int-publishing-images.html
 
+indicator: messaging
 ---
 
 In this tutorial we will publish images to a conversation.

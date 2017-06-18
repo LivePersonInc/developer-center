@@ -7,6 +7,7 @@ level3: IVR Deflection Solution
 order: 2
 
 permalink: products-channels-ivr-deflection-solution-setting-up-ivr.html
+indicator:
 ---
 
 To start using the IVR Deflection Solution, set up a LiveEngage campaign with IVR engagement following the key steps listed below:

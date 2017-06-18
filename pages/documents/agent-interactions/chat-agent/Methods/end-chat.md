@@ -9,6 +9,7 @@ level4: Methods
 order: 140
 permalink: agent-end-chat.html
 
+indicator: chat
 ---
 
 Use this request to end a chat.

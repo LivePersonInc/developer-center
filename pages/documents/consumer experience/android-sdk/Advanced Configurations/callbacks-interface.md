@@ -9,6 +9,7 @@ level4: Configuration
 order: 3
 permalink: android-callbacks-interface.html
 
+indicator: messaging
 ---
 
 The SDK provides a callback mechanism to keep the host app updated on events related to the conversation.

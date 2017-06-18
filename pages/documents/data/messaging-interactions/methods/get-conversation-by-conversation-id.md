@@ -2,11 +2,12 @@
 title: Get conversation by conversation ID
 level1: Documents
 level2: Data
-level3: Messaging Interactions API
+level3: Messaging Interactions API (Beta)
 level4: Methods
 order: 20
 permalink: data-messaging-interactions-get-conversation-by-conversation-id.html
 
+indicator: messaging
 ---
 
 This method retrieves a conversation according to the given conversation ID.

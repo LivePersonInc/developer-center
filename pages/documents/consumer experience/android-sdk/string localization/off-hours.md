@@ -9,6 +9,7 @@ level4: String Localization
 order: 274
 permalink: android-off-hours.html
 
+indicator: messaging
 ---
 
 Today and tomorrow off hours message use default SHORT time without date according to the locale (default or custom) and to device setting.

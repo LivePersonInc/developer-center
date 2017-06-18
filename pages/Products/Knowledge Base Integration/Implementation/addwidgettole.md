@@ -8,6 +8,7 @@ level4: Implementation
 order: 30
 permalink: products-agent-efficiency-kbintegration-addwidgettole.html
 
+indicator:
 ---
 
 Once your widget is ready, you need to add it to the LiveEngage Agent Workspace.  Follow these steps:

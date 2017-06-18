@@ -9,6 +9,7 @@ level4: Methods
 order: 80
 permalink: agent-accept-chat.html
 
+indicator: chat
 ---
 
 This method accepts the next chat request.

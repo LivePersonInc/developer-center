@@ -9,6 +9,7 @@ level4: Methods
 order: 160
 permalink: agent-retrieve-visitor-name.html
 
+indicator: chat
 ---
 
 This method returns the name that was set by the visitor (default: visitor).

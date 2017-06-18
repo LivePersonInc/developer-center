@@ -9,6 +9,7 @@ level4: Methods
 order: 20
 permalink: consumer-experience-javascript-chat-getengagement.html
 
+indicator: chat
 ---
 
 Executes engagements eligibility and availability check.   

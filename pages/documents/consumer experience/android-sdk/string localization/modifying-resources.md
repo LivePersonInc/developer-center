@@ -9,6 +9,7 @@ level4: Customization and Branding
 order: 265
 permalink: android-modifying-resources.html
 
+indicator: messaging
 ---
 
 The SDK utilizes several resources as part of its GUI. To customize those resources, please add appropriate resources to your project:

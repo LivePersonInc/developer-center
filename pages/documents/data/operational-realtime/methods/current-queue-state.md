@@ -7,6 +7,7 @@ level4: Methods
 order: 40
 permalink: data-operational-realtime-current-queue-state.html
 
+indicator: chat
 ---
 
 Retrieves the current queue state related metrics at the skill level:

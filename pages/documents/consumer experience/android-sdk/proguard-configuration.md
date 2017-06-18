@@ -9,6 +9,7 @@ level4: Configuration
 order: 9
 permalink: android-proguard.html
 
+indicator: messaging
 ---
 
 The SDK handles its own obfuscation and all its dependencies according to ProGuard rules. There is no need to add any ProGuard specific rules that relate to the SDK.

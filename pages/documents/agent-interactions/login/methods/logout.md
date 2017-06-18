@@ -9,6 +9,7 @@ level4: Methods
 order: 30
 permalink: agent-logout.html
 
+indicator: both
 ---
 
 ### Request

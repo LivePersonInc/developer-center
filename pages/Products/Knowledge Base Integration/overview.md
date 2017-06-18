@@ -10,6 +10,7 @@ level-order: 1
 root-link: true
 permalink: products-agent-efficiency-kbintegration-overview.html
 
+indicator:
 ---
 
 Brands that use a Knowledge Base (KB) for agent answers or information can benefit from integrating this app directly into the LiveEngage Agent Workspace.  Agents will save time for themselves and lower the time it takes for them to reply through this easy access to the information and answers they need. 

@@ -8,6 +8,7 @@ level4: Methods
 order: 40
 permalink: consumer-experience-server-chat-retrieve-pre-chat-survey.html
 
+indicator: chat
 ---
 
 Returns an XML or JSON response with the Pre-Chat survey.

@@ -9,6 +9,7 @@ level4: Methods
 order: 60
 permalink: account-configuration-predefined-content-update-content.html
 
+indicator: both
 ---
 
 Updates an existing Predefined Content item for a specific account.

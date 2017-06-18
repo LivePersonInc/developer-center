@@ -9,6 +9,7 @@ level4: Methods
 order: 70
 permalink: account-configuration-predefined-content-get-by-id.html
 
+indicator: both
 ---
 
 Retrieves a Predefined Content item by ID from a specific account.

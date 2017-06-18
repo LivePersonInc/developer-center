@@ -9,6 +9,7 @@ level4: Methods
 order: 40
 permalink: agent-retrieve-available-agents.html
 
+indicator: chat
 ---
 
 This resource returns all agents which are not disabled in the system for the account provided in the request. The agents returned include both online and offline agents, but not agents that were disabled (for any reason).  For each agent, this resource returns details such as ID, username, nickname, and more. The resource also returns, for each agent, the agent's skills and the agent's availability to accept chats (the number of chats this agent is configured to take and the number of chats in which this agent is already involved).
@@ -27,7 +28,7 @@ This resource can be used to know to which other agents you can transfer chats. 
 |------------------------------------------|------------------|
 | Authorization Bearer {bearer-from-login} |                  |
 | Content-Type                             | application/json |
-| Accept                                   | application/json |
+| Accept                                   | application/json | 
 
 **Formats**
 
@@ -55,7 +56,6 @@ The body media type must have one of the following formats:
 | agent                | Contains the agent's details (as attributes its ID, chatState, voiceState, maxChats) and more details as child elements. | element           |                                                                                                                                                                                                                   |
 | id                   | The ID associated with this agent.                                                                                       | numeric           |                                                                                                                                                                                                                   |
 | chatState            | The state of the agent for chat.                                                                                         | numeric           | 1 - Offline - Agent is logged off. 2 - Online - Agent can accept chat requests. 3 - Occupied - Agent can receive chats that were transferred to him/her. 4 - Away - Agent cannot accept chat requests.            |
-| chatReasonId           | chat state reason id (represents a reason as configured in the account) voice.                                                                                        | alphanumeric           |  |
 | voiceState           | The state of the agent for voice.                                                                                        | numeric           | 1 - Offline - Agent is logged off. 2 - Online - Agent can accept voice requests. 3 - Occupied - Agent can receive voice requests that were transferred to him/her. 4 - Away - Agent cannot accept voice requests. |
 | maxChats             | The maximum number of chats this agent can take, according to his/her current availability.                              | numeric           |                                                                                                                                                                                                                   |
 | userName             | The username of this agent.                                                                                              | alphanumeric      |                                                                                                                                                                                                                   |
@@ -63,12 +63,12 @@ The body media type must have one of the following formats:
 | skills               | The list of skills for this agent.                                                                                       | element           |                                                                                                                                                                                                                   |
 | skill                | A skill ID for this agent.                                                                                               | numeric           |                                                                                                                                                                                                                   |
 | chats                | The current number of chats for the agent.                                                                               | numeric           |                                                                                                                                                                                                                   |
-| link with rel="next" | Use this link to call the next available agents request.                                                                 | link relationship |                                                                                                                                                                                                                   |
+| link with rel="next" | Use this link to call the next available agents request.                                                                 | link relationship |                                                                                                                                                                                                                   | 
 
 **Response Codes**
 
-| Code|  Response|
- |:---|  :---|
+| Code|  Response| 
+ |:---|  :---| 
  |200  |OK |
 
 Response example for JSON:
@@ -91,3 +91,4 @@ Response example for JSON:
                         "@rel" : "next"
                 }
         }}
+

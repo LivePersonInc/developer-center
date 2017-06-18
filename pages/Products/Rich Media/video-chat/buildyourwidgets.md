@@ -7,6 +7,7 @@ level3: Video Chat
 order: 4
 
 permalink: products-video-chat-build-your-widgets.html
+indicator:
 ---
 
 

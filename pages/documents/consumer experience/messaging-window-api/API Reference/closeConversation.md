@@ -9,6 +9,7 @@ order: 150
 layout: page
 
 permalink: consumer-int-msg-close-conv.html
+indicator: messaging
 ---
 
 {% include msgtype.html title='Request' type='req' %}

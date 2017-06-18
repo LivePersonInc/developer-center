@@ -7,6 +7,7 @@ level3: Custom Dashboard
 order: 3
 
 permalink: products-data-custom-dashboard-messaging-metrics.html
+indicator:
 ---
 
 In order to create dashboard based on messaging data (in-app messaging, web messaging, facebook or sms), there are three APIs available to you.

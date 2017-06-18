@@ -8,7 +8,22 @@ level-order: 3
 order: 1
 permalink: rt-interactions-ivr-engagement-overview.html
 root-link: true
+indicator: chat
 ---
+### Getting Started
+
+A few things you'll need to get started with this API:
+
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+
+	* smt
+
+2. This API requires authorization using API key. 
+
+	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+
+3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+
 ### Introduction
 
 In addition to cost-effectiveness over voice, live messaging and chat interactions have also been proven to drive higher CSAT. In a study conducted by Amdocs, 76% of consumers say they prefer to communicate with brands via mobile messaging. However, 92% of interactions with brands are still conducted over the phone.
@@ -33,16 +48,4 @@ Top use cases of deflecting calls to mobile messaging are for inquiries that are
 
 In addition to this API, please see [IVR Call Deflection document](products-channels-ivr-deflection-solution-introduction.html){:target="_blank"}.
 
-### Getting Started
 
-A few things you'll need to get started with this API:
-
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
-
-	* smt
-
-2. This API requires authorization using API key.
-
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
-
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.

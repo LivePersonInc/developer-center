@@ -9,6 +9,7 @@ level-order: 4
 order: 1
 permalink: consumer-experience-javascript-chat-getting-started.html
 root-link: true
+indicator: chat
 ---
 
 ### Introduction

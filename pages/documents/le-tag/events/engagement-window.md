@@ -8,6 +8,7 @@ level4: Events
 order: 30
 permalink: lp-tag-engagement-window.html
 
+indicator: both
 ---
 
 These are engagement window related events, including rendering, display and interactions with the engagement.

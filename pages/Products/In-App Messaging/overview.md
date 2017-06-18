@@ -2,6 +2,7 @@
 title: Overview
 permalink: /products-inapp-overview.html
 toc: false
+indicator:
 ---
 
 Add messaging to your app - enable consumers to communicate with your agents through their channel of choice, on either Android or iOS.

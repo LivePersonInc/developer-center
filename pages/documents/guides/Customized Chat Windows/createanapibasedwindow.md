@@ -6,12 +6,13 @@ level3: Customized Chat Windows
 
 permalink: guides-customizedchat-create-an-api-based-window.html
 order: 2
+indicator: chat
 ---
-    
+
 **An “API-based” engagement window must be configured in LiveEngage.**
 
-* On a monitored flow 
-	Attach the API-based window to the relevant web engagement/campaign. 
+* On a monitored flow
+	Attach the API-based window to the relevant web engagement/campaign.
 
 * On an unmonitored flow
 	Attach the API-based window to the relevant external engagement.
@@ -47,5 +48,3 @@ Default value: “window”
 **Save your settings and choose the API Based Window you have just created.**
 
 ![Apibasedwindow3](img/apibasedwindow3.png)
-
-

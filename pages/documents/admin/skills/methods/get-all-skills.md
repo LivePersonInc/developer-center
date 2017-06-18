@@ -10,6 +10,7 @@ level4: Methods
 order: 10
 permalink: administration-get-all-skills.html
 
+indicator: both
 ---
 
 This API retrieves a list of skills for a specific account.

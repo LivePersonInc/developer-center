@@ -9,6 +9,7 @@ level4: Methods
 order: 30
 permalink: account-configuration-predefined-content-query-delta.html
 
+indicator: both
 ---
 
 Changes Queries in Predefined Content data.

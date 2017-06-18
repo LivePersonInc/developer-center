@@ -9,6 +9,7 @@ order: 120
 layout: page
 
 permalink: consumer-int-msg-resps.html
+indicator: messaging
 ---
 
 Use the following form to build the API request messages you want to send.

@@ -8,6 +8,7 @@ level3: Agent Workspace Widget SDK
 order: 60
 permalink: agent-workspace-sdk-public-model.html
 
+indicator: both
 ---
 
 **Notes**: 
@@ -38,7 +39,6 @@ permalink: agent-workspace-sdk-public-model.html
 | agentInfo.agentNickname                     | The nickname of the agent                                                                            | The nickname of the agent                                                                | string  |                                                            |
 | agentInfo.agentEmail                        | The email of the agent                                                                               | The email of the agent                                                                   | string  |                                                            |
 | agentInfo.maxChats                          | The maximum number of chats the agent can be in                                                      | The maximum number of (real-time) chats the agent can be in                              | number  |                                                            |
-| agentInfo.employeeId                        | The employeeId of the agent                                                                          | The employeeId of the agent                                                              | string  |                                                            |
 | chatTranscript.lines                        | Array of chat lines                                                                                  | Array of chat lines                                                                      | array   |                                                            |
 | **surveyQuestions**                         | All the survey questions divided by survey type                                                      | Profile information about the consumer                                                   | object  |                                                            |
 | surveyQuestions.preChat                     | All the pre-chat survey questions, with separated special questions                                  | Profile information about the consumer                                                   | object  |                                                            |
@@ -134,7 +134,6 @@ Structure example:
         agentNickname: '',
         agentEmail: '',
         maxChats: 1,
-        employeeId: ''
     }
     chatTranscript: {
         lines: []

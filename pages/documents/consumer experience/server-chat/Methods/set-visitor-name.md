@@ -2,6 +2,7 @@
 title: Set the Visitor's Name
 permalink: consumer-experience-server-chat-set-visitor-name.html
 
+indicator: chat
 ---
 
 Sets the visitor's name. The default is "you".

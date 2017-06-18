@@ -9,6 +9,7 @@ level4: Methods
 order: 120
 permalink: android-unregisterlppusher.html
 
+indicator: messaging
 ---
 
 Unregister from registered push notification service. 

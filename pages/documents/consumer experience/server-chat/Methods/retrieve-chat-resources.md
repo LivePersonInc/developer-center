@@ -8,6 +8,7 @@ level4: Methods
 order: 80
 permalink: consumer-experience-server-chat-retrieve-chat-resources.html
 
+indicator: chat
 ---
 
 Retrieves all information available for this chat, including both Events and Information sections of the chat.

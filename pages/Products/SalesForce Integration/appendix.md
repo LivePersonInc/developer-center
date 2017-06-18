@@ -7,6 +7,7 @@ level3: SalesForce Integration
 order: 52
 permalink: products-agent-efficiency-salesforce-integration-appendix.html
 
+indicator:
 ---
 
 ### Mapping Your Own LiveEngage Fields

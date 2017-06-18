@@ -5,21 +5,13 @@ level1: Documents
 level2: Admin
 level3: Agent Groups API
 
+
 level-order: 3
 order: 9
 permalink: administration-agent-groups-overview.html
 root-link: true
+indicator: both
 ---
-### Introduction
-
-Businesses are often divided into groups that reflect their organization and hierarchy. A connection center can be thought of as group: in which sub-groups of agents are each responsible for a different area of support. To help you mirror your connection center structure in LiveEngage, we’ve created the Agent Groups capability.
-
-![AgentGroupsOverview](img/agentgroupsoverview.png)
-
-Brands can create and edit as many agent groups as required in order to mirror your contact center hierarchy.  The agent groups functionality is used by agent managers to view a shift operations as well as in the reporting and analytics.
-
-![EditAgentGroup](img/editagentgroup.png)
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -37,6 +29,16 @@ A few things you'll need to get started with this API:
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+
+### Introduction
+
+Businesses are often divided into groups that reflect their organization and hierarchy. A connection center can be thought of as group: in which sub-groups of agents are each responsible for a different area of support. To help you mirror your connection center structure in LiveEngage, we’ve created the Agent Groups capability.
+
+![AgentGroupsOverview](img/agentgroupsoverview.png)
+
+Brands can create and edit as many agent groups as required in order to mirror your contact center hierarchy.  The agent groups functionality is used by agent managers to view a shift operations as well as in the reporting and analytics.
+
+![EditAgentGroup](img/editagentgroup.png)
 
 ### Use Cases for the Agent Groups API
 

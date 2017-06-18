@@ -8,6 +8,7 @@ order: 20
 
 permalink: data-data-access-agent-activity.html
 
+indicator: chat
 ---
 
 Agent Activity retrieves the agent’s session data in .zip format files. The agent’s activity data is a list of sessions which occur from the agent’s login time to the agent’s logout time. This data is used to analyze agent efficiency and availability. Each session includes the agent’s information, such as login name, nickname, status changes, number of concurrent chats, etc. 

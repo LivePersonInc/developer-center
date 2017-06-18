@@ -9,6 +9,7 @@ level4: Methods
 order: 70
 permalink: consumer-experience-javascript-chat-endchat.html
 
+indicator: chat
 ---
 
 Method to notify the agent that the visitor has ended the chat. The method publishes the new state as the response.

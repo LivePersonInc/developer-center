@@ -10,6 +10,7 @@ level4: Methods
 order: 90
 permalink: administration-reset-users-password.html
 
+indicator: both
 ---
 
 This API resets a user’s password.

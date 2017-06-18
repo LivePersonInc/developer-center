@@ -8,6 +8,7 @@ level4: Methods
 order: 30
 permalink: consumer-experience-server-chat-retrieve-estimated-wait-time.html
 
+indicator: chat
 ---
 
 Returns the estimated wait time in seconds before a chat starts. 

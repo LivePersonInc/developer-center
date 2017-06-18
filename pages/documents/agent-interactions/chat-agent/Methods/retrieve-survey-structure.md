@@ -9,6 +9,7 @@ level4: Methods
 order: 220
 permalink: agent-retrieve-survey-structure.html
 
+indicator: chat
 ---
 This method returns the agent survey structure. The survey structure is in XML that describes the questions of the survey as well as the logic of which questions are hidden.
 

@@ -9,6 +9,7 @@ level4: Methods
 order: 220
 permalink: android-resolveconversation.html
 
+indicator: messaging
 ---
 
 Resolves the current conversation. 

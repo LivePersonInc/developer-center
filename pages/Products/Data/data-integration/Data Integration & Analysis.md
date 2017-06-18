@@ -8,6 +8,7 @@ order: 1
 level-order: 1
 root-link: true
 permalink: products-data-integration-and-analysis-overview.html
+indicator:
 ---
 
 ### Overview

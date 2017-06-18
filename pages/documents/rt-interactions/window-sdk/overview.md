@@ -8,13 +8,8 @@ order: 1
 level-order: 4
 permalink: rt-interactions-window-sdk-overview.html
 root-link: true
+indicator: chat
 ---
-### Introduction
-
-The SDK is a lightweight, client-side code package for communicating with the LiveEngage Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wV9ecP0n7d4" frameborder="0" allowfullscreen></iframe>
-
 ### Getting Started
 
 Once an application is developed, follow these two steps in order to integrate it into the
@@ -25,6 +20,12 @@ window SDK:
 Team to configure the widget over the "LP Unified Window" taglet.
 
 In the near future, Widget configuration will be available directly via LiveEngage.
+
+### Introduction
+
+The SDK is a lightweight, client-side code package for communicating with the LiveEngage Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wV9ecP0n7d4" frameborder="0" allowfullscreen></iframe>
 
 ### Use Cases
 

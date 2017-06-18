@@ -7,6 +7,7 @@ level3: SalesForce Integration
 order: 51
 permalink: products-agent-efficiency-salesforce-known-issues.html
 
+indicator:
 ---
 
 ### Known Issues

@@ -9,6 +9,7 @@ order: 3
 
 permalink: products-bots-gettingstarted.html
 
+indicator:
 ---
 
 Follow the steps below to get started.

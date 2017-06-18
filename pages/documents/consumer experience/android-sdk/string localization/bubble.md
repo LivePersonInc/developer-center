@@ -9,6 +9,7 @@ level4: String Localization
 order: 276
 permalink: android-bubble.html
 
+indicator: messaging
 ---
 
 Bubbles contains only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} time format, according to the locale (default or custom) and to device setting.

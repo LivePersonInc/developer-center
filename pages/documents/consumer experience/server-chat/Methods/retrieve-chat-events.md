@@ -8,6 +8,7 @@ level4: Methods
 order: 90
 permalink: consumer-experience-server-chat-retrieve-chat-events.html
 
+indicator: chat
 ---
 
 

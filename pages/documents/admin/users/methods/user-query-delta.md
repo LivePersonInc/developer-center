@@ -10,6 +10,7 @@ level4: Methods
 order: 100
 permalink: administration-user-query-delta.html
 
+indicator: both
 ---
 
 This API queries changes in user data.

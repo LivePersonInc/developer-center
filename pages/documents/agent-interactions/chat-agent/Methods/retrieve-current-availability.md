@@ -9,6 +9,7 @@ level4: Methods
 order: 20
 permalink: agent-retrieve-current-availability.html
 
+indicator: chat
 ---
 
 This method returns the agent's availability to accept chat requests. 

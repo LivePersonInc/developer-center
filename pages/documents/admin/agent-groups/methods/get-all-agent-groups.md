@@ -10,6 +10,7 @@ level4: Methods
 order: 10
 permalink: administration-get-all-agent-groups.html
 
+indicator: both
 ---
 
 This API retrieves a list of agent groups for a specific account.

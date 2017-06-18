@@ -7,6 +7,7 @@ level4: Methods
 order: 10
 permalink: data-messaging-operations-messaging-conversation.html
 
+indicator: messaging
 ---
 
 Retrieves messaging conversation related metrics at the site, skill or agent level.

@@ -7,6 +7,7 @@ level-order: 5
 order: 10
 permalink: guides-cookies.html
 root-link: true
+indicator:
 ---
 
 A cookie is a small piece of data sent from a website and stored in the visitors' web browser. It helps the website to remember information about a visit; so when a visitor browses the same website in the future, the data stored in the cookie is sent back to the website by the browser.

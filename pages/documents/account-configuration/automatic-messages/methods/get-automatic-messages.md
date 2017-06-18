@@ -9,6 +9,7 @@ level4: Methods
 order: 10
 permalink: account-configuration-automatic-messages-get-automatic-messages.html
 
+indicator: both
 ---
 
 Retrieves a list of Automatic Messages for a specific account.

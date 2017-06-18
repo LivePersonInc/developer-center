@@ -11,6 +11,7 @@ order: 70
 
 permalink: administration-delete-agent-groups.html
 
+indicator: both
 ---
 
 This API deletes agent groups from a specific account.

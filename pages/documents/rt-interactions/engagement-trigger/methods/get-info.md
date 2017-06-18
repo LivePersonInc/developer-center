@@ -7,6 +7,7 @@ level4: Methods
 order: 20
 permalink: trigger-getinfo.html
 
+indicator:
 ---
 
 This method receives an engagement ID and returns the engagement information if it exists on the page, or an empty object if it does not.

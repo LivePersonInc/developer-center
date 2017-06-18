@@ -2,6 +2,7 @@
 title: Prepare files for upload
 permalink: /products-inapp-preparefilesios.html
 toc: false
+indicator:
 ---
 
 Each certificate is attached to a private key. The keychain contains the following:

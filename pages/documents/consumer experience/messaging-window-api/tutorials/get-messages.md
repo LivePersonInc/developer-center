@@ -8,6 +8,7 @@ level4: Tutorials
 order: 10
 permalink: consumer-int-get-msg.html
 
+indicator: messaging
 ---
 
 In this tutorial we will demonstrate the mechanism that enables the consumer to get messages sent by the agent. These messages may be sent while the consumer is connected or offline.
