@@ -1,5 +1,5 @@
 ---
-title: Import Account Categories
+title: Import Categories Pre Validation
 level1: Documents
 level2: Account Configuration
 level3: Predefined Categories API

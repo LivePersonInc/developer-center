@@ -9,6 +9,14 @@ order: 1
 permalink: rt-interactions-app-engagement-overview.html
 root-link: true
 ---
+### Introduction
+
+When implementing an API based chat windows in non-monitored flow (When the LiveEngage LpTag is not part of the flow), getting the Engagement is within the responsibility of the Chat API Based window Service.
+
+In order to present a "Click to Chat" button with an updated state of availability, you must access the LP Monitoring system to create a visitor session and get an engagement. This call can be made by the getEngagement() function by the App Engagement API.
+
+The App Engagement API exposes an eligibility and availability check for engagements for any specific consumer from an external application. This API enables you to start a session, and update the session with SDEs.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -19,14 +27,6 @@ A few things you'll need to get started with this API:
 
 2. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
 
-### Introduction
-
-When implementing an API based chat windows in non-monitored flow (When the LiveEngage LpTag is not part of the flow), getting the Engagement is within the responsibility of the Chat API Based window Service.
-
-In order to present a "Click to Chat" button with an updated state of availability, you must access the LP Monitoring system to create a visitor session and get an engagement. This call can be made by the getEngagement() function by the App Engagement API.
-
-The App Engagement API exposes an eligibility and availability check for engagements for any specific consumer from an external application. This API enables you to start a session, and update the session with SDEs.
-
 ### Use Cases
 
 * Incorporate LiveEngage chat window into a desktop application (gaming app, trading app, etc)
@@ -34,4 +34,3 @@ The App Engagement API exposes an eligibility and availability check for engagem
 * Add chat into dedicated desktop music application
 
 * Add chat into your mobile app
-
