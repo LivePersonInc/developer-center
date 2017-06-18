@@ -21,6 +21,14 @@ Messaging Conversation is calculated using bucket aggregation techniques where e
 | :--- | :--- |
 | GET | https://<domain>/operations/api/account/{accountID}/msgconversation?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version> |
 
+ - Use POST request to pass a long list of agentIds
+
+| Method | URL | BODY (Json) |
+| :------ | :---- | :---- |
+| POST | `https://<domain>/operations/api/account/{accountID}/agentactivity` | `{"timeframe":"<timeframe in minutes>" , "skillIds":"<skillIds>", "agentIds":"<comma seperated agent ids list>", "interval":"<interval size in minutes>" , "v":"<version>" }` |
+
+ - Example: `{"timeframe":"1440","v":"1","agentIds":"2152260212,2152260212","interval":"1440","skillIds":"1,2"}`
+
 **URL Parameters**
 
 | Name | Description | Type / Value | Required |
