@@ -4,6 +4,16 @@
 
 
 <ul id="mysidebar" class="nav fixed" >
+  {% if (page.indicator != null and (page.indicator == "both" or page.indicator == "chat")) %}
+  <div class="indicator chat">C
+    <span class="indicatortooltip">Applies to Live Chat</span>
+  </div>
+  {% endif %}
+  {% if (page.indicator != null and (page.indicator == "both" or page.indicator == "messaging")) %}
+  <div class="indicator messaging">M
+    <span class="indicatortooltip">Applies to Messaging</span>
+  </div>
+  {% endif %}
   {% assign level4 = null %}
   <!--loop over all the level3 documents -->
   {% assign filtered = site.pages | where_exp:"p","p.level1 == page.level1" | where_exp:"p","p.level2 == page.level2" | where_exp:"p","p.level3 == page.level3" %}
