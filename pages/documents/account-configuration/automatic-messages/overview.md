@@ -11,6 +11,17 @@ permalink: account-configuration-automatic-messages-overview.html
 root-link: true
 indicator: both
 ---
+### Introduction
+
+Automatic messages are messages that are triggered automatically during a conversation to inform visitors of the status of the conversation. The messages appear in the selected visitor language to the consumer in the engagement window and to the Agent in their agent workspace.
+
+The Automatic Messages API enables brands to find and modify Automatic Messages, which in turn support and enhance the conversation between Agent and visitor. The API facilitates the  editing of automatic messages onto LiveEngage e.g. in the case these messages are translated by an external vendor .
+
+The API is based on the REST architecture style.
+
+The automatic messages can be manually updated within LiveEngage. Each message can be translated to all the LE visitor languages and can have different text for different skills.
+
+![AutomaticMessages](img/automaticmessages.png)
 
 ### Getting Started
 
@@ -29,15 +40,3 @@ A few things you'll need to get started with this API:
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
-
-### Introduction
-
-Automatic messages are messages that are triggered automatically during a conversation to inform visitors of the status of the conversation. The messages appear in the selected visitor language to the consumer in the engagement window and to the Agent in their agent workspace.
-
-The Automatic Messages API enables brands to find and modify Automatic Messages, which in turn support and enhance the conversation between Agent and visitor. The API facilitates the  editing of automatic messages onto LiveEngage e.g. in the case these messages are translated by an external vendor .
-
-The API is based on the REST architecture style.
-
-The automatic messages can be manually updated within LiveEngage. Each message can be translated to all the LE visitor languages and can have different text for different skills.
-
-![AutomaticMessages](img/automaticmessages.png)

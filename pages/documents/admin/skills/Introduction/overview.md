@@ -12,6 +12,14 @@ permalink: overview.html
 root-link: true
 indicator: both
 ---
+### Introduction
+
+Your agents are trained to help visitors according to your business needs. An agent’s area of expertise is referred to as a skill. For example, you can create the skill, Sales, for agents who are sales representatives. When visitors click an engagement assigned to Sales, they are routed to the first available Sales agent.
+
+Skills are assigned to agents as well as to engagements.  This creates the ‘link’ between the right topic of conversation and the agent best equipped to handle it.
+
+![SkillsOverivew](img/skillsoverview.png)
+
 
 ### Getting Started
 
@@ -31,13 +39,7 @@ A few things you'll need to get started with this API:
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
 
-### Introduction
 
-Your agents are trained to help visitors according to your business needs. An agent’s area of expertise is referred to as a skill. For example, you can create the skill, Sales, for agents who are sales representatives. When visitors click an engagement assigned to Sales, they are routed to the first available Sales agent.
-
-Skills are assigned to agents as well as to engagements.  This creates the ‘link’ between the right topic of conversation and the agent best equipped to handle it.
-
-![SkillsOverivew](img/skillsoverview.png)
 
 ### Use Cases for Skills API
 
