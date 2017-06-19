@@ -20,14 +20,13 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
 **Use Cases**
 
-1. User Login - use this method when you need to provide a programmatic way for _users_ to access and manage a LiveEngage session such as customized agent workspace or hosting a LiveEngage user in an external app.
+1. User Login - use this method when you need to provide a programmatic way for _users_ to access and manage a LiveEngage session such as customized agent workspace or hosting a LiveEngage user in an external app. _Note_
 
- _Note_
+    * Using the User Login method, logged in users will be managed under the same restrictions as normal users in LiveEngage, including (for example) password expiration, concurrent conversations limits, skill groups and so on.
 
- * Using the User Login method, logged in users will be managed under the same restrictions as normal users in LiveEngage, including (for example) password expiration, concurrent conversations limits, skill groups and so on.
+    * Using the User Login method, if your account has SSO enabled, this method will not be standalone and you will have to register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.
 
- * Using the User Login method, if your account has SSO enabled, this method will not be standalone and you will have to register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.
-
+{:start="2"}
 2. Appplication Login - use this method when you need to provide a programmatic way for _applications_ to access and manage a LiveEngage session such as bots, virtual agents or any other app that needs to act as an agent in the LiveEngage.
 
   * _Note_: the Application Login method overcomes both issues detailed above with the User Login method, for example password expiration or SSO integration.
@@ -38,14 +37,15 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
 	* agentVep
 
-  **Request example**:
+    **Request example**:
 
-  [http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0](http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0){:target="_blank"}
+    [http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0](http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0){:target="_blank"}
 
+{:start="2"}
 2. Choose your method of login:
 
-  * As a user - use your LiveEngage username and password to [login](/agent-login.html){:target="_blank"}.
+    * As a user - use your LiveEngage username and password to [login](/agent-login.html){:target="_blank"}.
 
-  * As an application - [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
+    * As an application - [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
 
   ![APIKeyCreation](img/APIKeyCreation.png)
