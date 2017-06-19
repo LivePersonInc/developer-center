@@ -46,13 +46,13 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
   As a user:
 
-    * use your LiveEngage username and password to [login](/agent-login.html){:target="_blank"}.
+  * use your LiveEngage username and password to [login](/agent-login.html){:target="_blank"}.
 
   As an application:
 
   _Note_: In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward.
 
-    * [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
+  * [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
 
       ![APIKeyCreation](img/APIKeyCreation.png)
 
@@ -62,26 +62,14 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
       ![APIKeyCreation1](img/apikeycreation1.png)
 
-    * Create a new user from within LiveEngage and set the user type to "Bot":
+  * Create a new user from within LiveEngage and set the user type to "Bot":
 
       ![SetBot](img/setbot.png)
 
-    * Select "App Key" from the Login Method dropdown:
+  * Select "App Key" from the Login Method dropdown:
 
       ![LoginMethod](img/loginmethod.png)
 
-    * Paste the app key you generated earlier into the app key field and finish creating the user (fill in all mandatory fields). Once done, click save at the top right.
+  * Paste the app key you generated earlier into the app key field and finish creating the user (fill in all mandatory fields). Once done, click save at the top right.
 
       ![UserWithKey](img/userwithkey.png)
-
-
-
-
-
-    * Once you have generated your application, you will need to associate it with a bot user.
-
-
-
-    * Once the user is created, copy paste your application key into the "app key" field in the user generation menu:
-
-    ![AppKey](images/appkey.png)
