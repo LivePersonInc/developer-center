@@ -1,17 +1,16 @@
 ---
-title: User Login
+title: Application Login
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Login Service API
 level4: Methods
 
-order: 10
-permalink: agent-user-login.html
+order: 11
+permalink: agent-app-login.html
 
 indicator: both
 ---
-
 ### Request
 
 | Method | URL |
@@ -35,11 +34,15 @@ indicator: both
 
 Example:
 
-    {
-        "username": "name",
-        "Password": "password"
-    }
-
+```json
+{
+   "username": "name",
+   "appKey": "appKey_value",
+   "secret": "secret_value",
+   "accessToken": "accessToken_value",
+   "accessTokenSecret": "accessTokenSecret_value"
+}
+```
 
 ### Response
 
