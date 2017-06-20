@@ -41,7 +41,7 @@ For each state, the following is indicated:
 | Name | Description | Type / Value | Required |
 | :------ | :------------ | :--------------- | :--- |
 | timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time - timeframe. | numeric | required |
-| agentIds | When provided, metrics on the response will be grouped by the requested agent/s' id/s. If there is no data for the specified agent/s, an object will be returned with an empty value for key: "metricsPerAgent" with a map including all metrics valued zero. To retrieve all active agents for the time period, use agentIds=all.  | numeric, comma separated | required |
+| agentIds | When provided, metrics on the response will be grouped by the requested agents' IDs. If there is no data for the specified agents, an object will be returned with an empty value for key: "metricsPerAgent" with a map including all metrics valued zero. To retrieve all active agents for the time period, use agentIds=all.  | numeric, comma separated | required |
 | v | Version of API, for example, v=1.| numeric | required |
 | interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame, and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
 
