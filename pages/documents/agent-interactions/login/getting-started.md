@@ -29,7 +29,7 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 {:start="2"}
 2. Appplication Login - use this method when you need to provide a programmatic way for _applications_ to access and manage a LiveEngage session such as bots, virtual agents or any other app that needs to act as an agent in the LiveEngage.
 
-    * _Note_: the Application Login method overcomes both issues detailed above with the User Login method, for example password expiration or SSO integration.
+    * *_Note_: the Application Login method overcomes both issues detailed above with the User Login method, for example password expiration or SSO integration*.
 
 ### Getting Started
 
@@ -50,7 +50,7 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
   As an application:
 
-  *Note*: _In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward_.
+  *Note: _In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward_*.
 
   * [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
 
