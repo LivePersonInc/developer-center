@@ -24,12 +24,6 @@ permalink: android-attributes.html
 </thead>
 <tbody>  
   <tr>
-    <td>&lt;string name=&quot;brand_name&quot;&gt;</td>
-    <td>The brand name will be shown as a title on the toolbar when there is no active conversation.</td>
-    <td>My Brand</td>
-    <td><img src="img/brandname.png" alt="brandname"></td>
-  </tr>
-  <tr>
     <td>&lt;integer name=&quot;message_receive_icons&quot;&gt;
 </td>
     <td>For each message, there are three indicators available: Message sent, Message received, Message read. You can customize the indicators according to your needs, by using a number between 1 and 3:<br>0 - text (sent, delivered etc.) instead of icons<br>1 - Sent only<br>2 - Sent+received<br>3 - Sent+received+read</td>
@@ -970,6 +964,7 @@ permalink: android-attributes.html
 </table>
 
 
+<a name="custom_fonts"></a>
 ### Custom Fonts
 
 <table>
