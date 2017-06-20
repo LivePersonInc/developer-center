@@ -50,7 +50,7 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
   As an application:
 
-  _Note_: In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward.
+  *Note*: _In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward_.
 
   * [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
 

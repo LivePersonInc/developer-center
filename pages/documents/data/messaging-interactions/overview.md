@@ -2,7 +2,7 @@
 title: Overview
 level1: Documents
 level2: Data
-level3: Messaging Interactions API (Beta)
+level3: Messaging Interactions API
 
 level-order: 3
 order: 1
@@ -16,7 +16,7 @@ The LiveEngage Messaging Interactions API retrieves the most up to date informat
 
 The API returns the conversation’s transcripts and all of its related metadata such as start time, end time, MCS, CSAT, summary, participated agents, the reason the conversation was closed etc.
 
-This API supports the HTTP POST functionality (data retrieval), and all data is returned in JSON format. 
+This API supports the HTTP POST functionality (data retrieval), and all data is returned in JSON format.
 
 ### Getting Started
 
@@ -28,7 +28,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Temporarily, please utilize the same key as the Engagement History API.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
 
