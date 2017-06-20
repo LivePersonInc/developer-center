@@ -18,8 +18,6 @@ The LivePerson IVR Deflection Solution provides brands with the opportunity to f
 
 Providing consumers with a digital choice lowers the volume of calls connected with agents, decreases the length of call queues, and provides an overall improved customer experience.
 
-<img src="img/ivr1.png" alt="IVR1" width="577" height="565"
-
 ![IVR1](img/ivr1.png)
 
 This document outlines the LivePerson solution for deflecting calls from within the IVR into mobile messaging.
@@ -53,4 +51,3 @@ Brands can now view the eligibility and availability of engagement from IVR syst
 Thus, when consumers initiate a voice call, the IVR system can check engagement availability and, if available, provide consumers with the option to press a number and move to mobile messaging. When selecting this option, consumers receive a link via SMS, which they can click to start chatting with an agent without having to wait on hold.
 
 In some cases, brands can choose to skip the availability check and provide the option to move to mobile messaging regardless using a static link. In this this case, it is the brand’s responsibility to ensure that their service center is properly staffed.
-
