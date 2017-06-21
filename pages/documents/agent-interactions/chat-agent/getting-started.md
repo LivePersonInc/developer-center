@@ -19,6 +19,8 @@ The Chat Agent API is a REST style API with relation links, and provides the mai
 
 ### Getting Started with the Chat Agent API
 
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
 In order to use the Chat Agent API, please follow the steps below:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information.

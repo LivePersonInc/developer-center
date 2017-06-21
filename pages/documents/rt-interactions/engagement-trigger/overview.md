@@ -21,7 +21,7 @@ API namespace: ```lpTag.taglets.rendererStub```
 
 A few things you'll need to get started with this API:
 
-1. [The API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+1. [The API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 
 

@@ -18,6 +18,8 @@ This API allows you to Login to LiveEngage, as a *user*, using a username and pa
 
 This API provides endpoints for managing the User Session (User Login, Application Login, Logout and Refresh).
 
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
 **Use Cases**
 
 1. User Login - use this method when you need to provide a programmatic way for _users_ to access and manage a LiveEngage session such as customized agent workspace or hosting a LiveEngage user in an external app. _Note_:

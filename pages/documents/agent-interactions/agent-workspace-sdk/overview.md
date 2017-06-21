@@ -37,6 +37,8 @@ Instead of flipping between browser tabs, use the Agent Workspace Widget to conn
 
 ### Getting Started
 
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
 Follow the steps below to integrate the application you developed using the client.
 
 1. Reference the [Client SDK](https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js){:target="_blank"}.

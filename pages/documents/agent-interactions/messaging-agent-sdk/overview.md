@@ -14,7 +14,9 @@ indicator: messaging
 ---
 ### Introduction
 
-The Messaging Agent SDK (Node.JS) was built in order to help developers and our partners quickly integrate a messaging bot into the LiveEngage framework, enabling the bot to handle consumer conversations, escalate to a human when needed, and programmatically perform all agent actions. 
+The Messaging Agent SDK (Node.JS) was built in order to help developers and our partners quickly integrate a messaging bot into the LiveEngage framework, enabling the bot to handle consumer conversations, escalate to a human when needed, and programmatically perform all agent actions.
+
+[Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 
 ### Getting Started

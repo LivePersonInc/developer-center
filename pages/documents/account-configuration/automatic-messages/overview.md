@@ -39,4 +39,4 @@ A few things you'll need to get started with this API:
 
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.

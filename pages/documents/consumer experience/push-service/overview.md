@@ -21,8 +21,8 @@ LivePerson’s push service interfaces directly with Apple’s APNS and Google�
 
 ### Getting Started
 
-A few things you'll need to get started with this API:
-
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
 	* pusher
+
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
