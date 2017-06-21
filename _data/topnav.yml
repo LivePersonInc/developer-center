@@ -11,10 +11,10 @@ topnav:
     - title: Documents
       url: /documents.html
 
-- title: Events
+- title: Bot Platform
   items:
-    - title: Events
-      url: /events.html
+    - title: Bot Platform
+      url: /bot-platform.html
 
 - title: Signup
   items:
