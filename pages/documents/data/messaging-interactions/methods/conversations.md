@@ -298,9 +298,9 @@ sdeType         | Type of sde.                                | enum
         "conversationId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
         "brandId": "qa26409991",
         "latestAgentId": "3677470410",
-        "latestAgentNickname": "michalby@liveperson.com",
-        "latestAgentFullName": "michalby@liveperson.com",
-        "latestAgentLoginName": "michalby@liveperson.com",
+        "latestAgentNickname": "michal@lp.com",
+        "latestAgentFullName": "michal@lp.com",
+        "latestAgentLoginName": "michal@lp.com",
         "latestSkillId": -1,
         "latestSkillName": "Unassigned",
         "source": "APP",
@@ -351,9 +351,9 @@ sdeType         | Type of sde.                                | enum
       ],
       "agentParticipants": [
         {
-          "agentFullName": "michalby@liveperson.com",
-          "agentNickname": "michalby@liveperson.com",
-          "agentLoginName": "michalby@liveperson.com",
+          "agentFullName": "michal@lp.com",
+          "agentNickname": "michal@lp.com",
+          "agentLoginName": "michal@lp.com",
           "agentId": "3677470410",
           "role": "AGENT",
           "agentGroupName": "Unassigned",
@@ -372,13 +372,44 @@ sdeType         | Type of sde.                                | enum
           "consumerName": "Visitor"
         }
       ],
-      "transfers": [],
+      "transfers": [
+        {
+          "timeL": 1498127364726,
+          "time": "2017-06-22 10:29:24.726+0000",
+          "assignedAgentId": "null",
+          "targetSkillId": 2,
+          "targetSkillName": "cats",
+          "reason": "Skill",
+          "by": "196875613",
+          "sourceSkillId": -1,
+          "sourceSkillName": "Unassigned",
+          "sourceAgentId": "196875613",
+          "sourceAgentFullName": "michal1",
+          "sourceAgentLoginName": "michal1",
+          "sourceAgentNickname": "michal1"
+        },
+        {
+          "timeL": 1498127562332,
+          "time": "2017-06-22 10:32:42.332+0000",
+          "assignedAgentId": "null",
+          "targetSkillId": 3,
+          "targetSkillName": "lpsocial",
+          "reason": "Skill",
+          "by": "7",
+          "sourceSkillId": 2,
+          "sourceSkillName": "cats",
+          "sourceAgentId": "7",
+          "sourceAgentFullName": "michal",
+          "sourceAgentLoginName": "michal@lp.com",
+          "sourceAgentNickname": "michal"
+        }
+      ],
       "interactions": [
         {
           "assignedAgentId": "3677470410",
-          "assignedAgentFullName": "michalby@liveperson.com",
-          "assignedAgentLoginName": "michalby@liveperson.com",
-          "assignedAgentNickname": "michalby@liveperson.com",
+          "assignedAgentFullName": "michal@lp.com",
+          "assignedAgentLoginName": "michal@lp.com",
+          "assignedAgentNickname": "michal@lp.com",
           "interactionTimeL": 1472483644999,
           "interactionTime": "2016-08-29 15:14:04.999+0000",
           "interactiveSequence": 1
@@ -427,6 +458,40 @@ sdeType         | Type of sde.                                | enum
           "messageDeliveryStatus": "READ"
         }
       ],
+      "sdes": {
+        "events": [
+          {
+            "customerInfo": {
+              "serverTimeStamp": "1497871291351",
+              "customerInfo": {
+                "customerId": "12345678",
+                "companyBranch": "dummyCompanyBranch"
+              }
+            },
+            "sdeType": "CUSTOMER_INFO",
+            "serverTimeStamp": "1497871291351"
+          },
+          {
+            "personalInfo": {
+              "serverTimeStamp": "1497871291351",
+              "personalInfo": {
+                "name": "dummyName",
+                "surname": "dummySurename",
+                "contacts": [
+                  {
+                    "personalContact": {
+                      "email": "dummy@mail.com",
+                      "phone": "12345678"
+                    }
+                  }
+                ]
+              }
+            },
+            "sdeType": "PERSONAL_INFO",
+            "serverTimeStamp": "1497871291351"
+          }
+        ]
+      },
       "summary": {
         "text": "summary",
         "lastUpdatedTime": 1482333795318
