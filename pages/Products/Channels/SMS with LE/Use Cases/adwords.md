@@ -44,23 +44,23 @@ For brands, creating a presence on the channels used by their consumers is key t
 
 You’ll need to provide the following information:
 
-        1. **Business Name (25 Characters)**: Provide a business name people are familiar with.
+1. **Business Name (25 Characters)**: Provide a business name people are familiar with.
 
-        2. **Text Phone Number**: This is the number that people will be sending SMS messages to. The only requirement here is that this number can receive SMS text messages. *Please speak with your LivePerson representative for onboarding.*
+2. **Text Phone Number**: This is the number that people will be sending SMS messages to. The only requirement here is that this number can receive SMS text messages. *Please speak with your LivePerson representative for onboarding.*
 
-        3. **Extension Text (35 Characters)**: This is the text that will appear on the search engine results page alongside your ad. Use language like "Text us" or “Message us” within this extension text so that it’s clear to searchers that by clicking here, they should expect to send you a text.
+3. **Extension Text (35 Characters)**: This is the text that will appear on the search engine results page alongside your ad. Use language like "Text us" or “Message us” within this extension text so that it’s clear to searchers that by clicking here, they should expect to send you a text.
 
-        4. **Message Text (100 Characters)**: After a user clicks on your extension, Google will populate this message in the text field of their native messaging app. Use this message to help your prospects begin a conversation with your sales team. Specific messages like "I’d like to schedule an appointment" or “I’d like to hear about upcoming events in Boston” will help your team answering these texts begin a useful conversation and ultimately close more deals than generic messages like “I’d like to know more,” or “Call me.”
+4. **Message Text (100 Characters)**: After a user clicks on your extension, Google will populate this message in the text field of their native messaging app. Use this message to help your prospects begin a conversation with your sales team. Specific messages like "I’d like to schedule an appointment" or “I’d like to hear about upcoming events in Boston” will help your team answering these texts begin a useful conversation and ultimately close more deals than generic messages like “I’d like to know more,” or “Call me.”
 
-            1. *Please note: certain Android devices do not support this feature. In these cases, the number will be populated but there will be no default text.*
+    1. *Please note: certain Android devices do not support this feature. In these cases, the number will be populated but there will be no default text.*
 
-        5. **Schedule your extensions**: If your brand isn’t available to answer SMS messages outside of business hours or on the weekend, be sure to schedule your extensions to only show during hours your team is ready to respond to consumer’s messages.
+5. **Schedule your extensions**: If your brand isn’t available to answer SMS messages outside of business hours or on the weekend, be sure to schedule your extensions to only show during hours your team is ready to respond to consumer’s messages.
 
-            2. Expand the Advanced setting
+    2. Expand the Advanced setting
 
-            3. See options for adjusting the extension with your own custom scheduling.
+    3. See options for adjusting the extension with your own custom scheduling.
 
-            4. Click Save, and the extension is ready.
+    4. Click Save, and the extension is ready.
 
 
 
