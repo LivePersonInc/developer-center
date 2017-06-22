@@ -35,10 +35,15 @@ The body media type must have one of the following formats:
 
 **Body**
 
+For backwards compatibility purposes, you must include the following request body:
+
 Example for JSON:
 
 ```json
-{"loginData": ""}
+{
+  "loginData": ""
+}
+```
 
 ### Response
 
