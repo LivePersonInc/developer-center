@@ -3,7 +3,7 @@ title: Desktop content campaign
 level1: Products
 level2: Channels
 level3: SMS with LiveEngage
-level4: Use Cases
+
 permalink: products-channels-sms-desktop.html
 order: 30
 indicator:

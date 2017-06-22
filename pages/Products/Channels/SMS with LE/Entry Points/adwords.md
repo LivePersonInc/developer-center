@@ -3,7 +3,7 @@ title: Google AdWords - Click-to-Message
 level1: Products
 level2: Channels
 level3: SMS with LiveEngage
-level4: Use Cases
+
 permalink: products-channels-sms-adwords.html
 order: 31
 indicator:

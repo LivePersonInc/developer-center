@@ -3,7 +3,7 @@ title: Clickable Mobile Content to SMS
 level1: Products
 level2: Channels
 level3: SMS with LiveEngage
-level4: Use Cases
+
 permalink: products-channels-sms-clickable.html
 order: 20
 indicator:

@@ -3,7 +3,7 @@ title: SMS via In-App Messaging
 level1: Products
 level2: Channels
 level3: SMS with LiveEngage
-level4: Use Cases
+
 permalink: products-channels-sms-inapp.html
 order: 40
 indicator:
