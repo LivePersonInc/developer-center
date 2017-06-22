@@ -11,7 +11,7 @@ indicator:
 
 Based on our messaging expertise and know-how, here are the best practices that we suggest to make SMS more successful for your brand. See below for links to additional best practices for messaging resources.
 
-**Preventing network filtering for outbound and IVR entry-points **
+**Preventing network filtering for outbound and IVR entry-points**
 
 Brands in North America will need to purchase short-codes instead of regular long-code phone numbers if sending outbound SMS messages from an IVR or partner tool.  This is to prevent 'Carrier Filtering' (a process in which networks block long-code numbers if they are used as an outbound channel for 200 or more messages a day).
 
