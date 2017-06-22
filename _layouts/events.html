@@ -4,7 +4,7 @@
       {% include head.html %}
       <link rel="stylesheet" href="css/events.css">
    </head>
-   <body>
+   <body class="bot-platform">
      <!-- BEGIN LivePerson Monitor. -->
 <script type="text/javascript">window.lpTag=window.lpTag||{},"undefined"==typeof window.lpTag._tagCount?(window.lpTag={site:'31991735'||"",section:lpTag.section||"",tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:"1.7.0",_tagCount:1,protocol:"https:",events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0==e?(this._defB=this._defB||[],this._defB.push(t)):1==e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+"//"+(this.ovr&&this.ovr.domain?this.ovr.domain:"lptag.liveperson.net")+"/tag/tag.js?site="+this.site);var a=document.createElement("script");a.setAttribute("charset",e?e:"UTF-8"),i&&a.setAttribute("id",i),a.setAttribute("src",n),document.getElementsByTagName("head").item(0).appendChild(a)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent("onload",function(){t._domReady("domReady")}):(window.addEventListener("DOMContentLoaded",function(){t._domReady("contReady")},!1),window.addEventListener("load",function(){t._domReady("domReady")},!1)),"undefined"==typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger("LPT","DOM_READY",{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;</script>
 <!-- END LivePerson Monitor. -->
@@ -13,68 +13,74 @@
       {% include topnav.html %}
       <!-- Page Content -->
       <!-- Page Content -->
-      <div class="banner-container">
+      <div class="pane banner-container">
          <div class="container">
             <!-- Content Row -->
-            <div class="row banner">
+            <div class="row">
+				<div class="col-md-12">
+					<h1>LiveEngage for Bots</h1>
+					<h2>LiveEngage for Bots offers bot makers and enterprises the world’s first enterprise bot lifecycle management. To get your bot live on the platform, sign up for a developer account.</h2>
+					<a class="btn orange" href="#">Sign up for a developer account</a>
+				</div>
                <!-- /.row -->
             </div>
          </div>
       </div>
-      <!--<div class="events">
-         <img src="images/banner_draft2.png" alt="events banner">
-      </div>-->
-      <div class="img-responsive-mobile">
-         <img src="images/cover_image.png" alt="events mobile banner">
-      </div>
-      <div class="centralized header homepage">  LivePerson offers bot makers and brands the world’s first “bot lifecycle platform”</div>
-      <div class="orange-line centralized"></div>
-      <br>
-      <div class="header homepage berlin">LiveEngage for Bots is the first comprehensive platform to launch, manage, secure and optimize bots at a massive scale. We’ve made our wide array of APIs and SDKs available to bot builders to develop human-like bot experiences that consumers love and large brands can scale across their customer base.
-        <br>
-        <br>
-        <b>Adding your bot to the LiveEngage platform means you can take advantage of our 20 years of experience in providing customer-service technology used by the world’s top brands.</b>
-        <br>
-        <br>
-        Develop your bot on our bot platform and you can enjoy all of the benefits our advanced technology brings:
-        <br>
-        <ul>
-          <li>Deployment across our messaging channels: SMS, Facebook, Web Messaging & In-app Messaging</li>
-          <li>Real time sentiment analysis and reporting</li>
-          <li>Queue management and advanced routing</li>
-          <li>Conversation management, including escalation to human agents and transfer back and forth</li>
-          <li>Secure access to our backend systems via integration engines </li>
-          <li>Use of our bot studio to design and track bots</li>
-          <li>Detailed analytics and reports on bot performance</li>
-        </ul>
-        <br>
-        <br>
-        <a href="http://register.liveperson.com/developer/signup" target="_blank">To get your bot live on our platform, sign up for a developer account</a>
-        <br>
-        <br>
-        <div class="botplaform"><img src="img/botplatform.png" alt="botplatform"></div>
-        <br>
-        <br>
-        The above image is an illustration of the benefits of the LiveEngage Bot Platform.  Bots symbolized in blue become part of the overall system.
-       <br>
-       <br>
-       Within LiveEngage, any bot will be treated as an agent.  What does this mean? Watch this video:
-       <br>
-       <br>
-        <div style="display: block; position: relative; max-width: 70%;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-        <br>
-        <br>
-        Our Developer Community hosts detailed documentation on numerous APIs and SDKs. Use our Messaging Agent SDK, Agent Workspace Widget SDK and Messaging Window API (see links in the Documentation section) to build custom agent tools and applications on top of LiveEngage. Here's an overview of what's available:
-        <br>
-        <br>
-        <div style="display: block; position: relative; max-width: 70%;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5455956544001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-        <br>
-        <br>
-        We have several partners already working with LivePerson - hear from them directly:
-        <br>
-        <br>
-        <div style="display: block; position: relative; max-width: 70%; margin-bottom: 2%;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5429282421001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-      </div>
+	  
+	  <div class="pane section1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<p>LiveEngage for Bots is the first comprehensive platform that enables developers to launch, manage, secure and optimize bots at a massive scale. A wide array of APIs and SDKs is now available to bot makers to develop human-like bot experiences that consumers love and large brands can scale across their customer base.</p>
+				</div>
+			</div>
+		</div>	  
+	  </div>
+	  
+	  <div class="pane section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h2>Develop your bot on our platform and enjoy all of the benefits our advanced technology brings</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 col-md-offset-1">
+					<ul>
+						<li>Deployment across our messaging channels: SMS, Facebook, Web Messaging & In-app Messaging</li>
+						<li>Real time sentiment analysis and reporting</li>
+						<li>Queue management and advanced routing</li>
+					</ul>
+				</div>
+				<div class="col-md-5">
+					<ul>
+						<li>Conversation management, including escalation to human agents and transfer back and forth</li>
+						<li>Secure access to our backend systems via integration engines</li>
+						<li>Use of our bot studio to design and track bots</li>
+						<li>Detailed analytics and reports on bot performance</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  
+	  <div class="pane section3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;margin-bottom:24px"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5455956544001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+					<p>Our developer community has documentation on the many APIs and SDKs you can use to build custom agent tools and applications.</p>
+				</div>
+				<div class="col-md-6">
+					<div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;margin-bottom:24px"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+					<p>In LiveEngage, bots are treated as agents, which enables them to become an integral part of a scalable and efficient customer care system.</p>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  
+
       <br>
       <br>
       {% include footer.html %}
