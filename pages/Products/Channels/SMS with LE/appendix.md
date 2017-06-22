@@ -35,7 +35,7 @@ To help brands navigate security challenges, minimize risk to a brand and its co
 
 While LiveEngage's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation.  The LiveEngage integration with the Twilio framework provides a solution for this in the form of Twilio functions which can be used to mask sensitive data from the conversation [Click here to read more on this solution.](https://docs.google.com/a/liveperson.com/document/d/1KXr6OeQqB6-kQAXBqpXGLxFQHsX3adma-pnHdhi3xvY/edit?usp=sharing){:target="_blank"}
 
-**System Messages **
+**System Messages**
 
 Business requirement for many brands include the ability to send automated responses to consumers for a variety of reasons, including but not limited to:
 
