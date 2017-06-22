@@ -64,8 +64,8 @@ Use the following code template for your engagement. The capitalized portions sh
 <table>
 <thead>
   <th>
-    <td>Element</td>
-    <td>Description</td>
+    <th>Element</th>
+    <th>Description</th>
   </th>
 </thead>
 <tbody>
