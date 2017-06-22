@@ -63,10 +63,10 @@ Use the following code template for your engagement. The capitalized portions sh
 
 <table>
 <thead>
-  <tr>
+  <th>
     <td>Element</td>
     <td>Description</td>
-  </tr>
+  </th>
 </thead>
 <tbody>
   <tr>
@@ -93,6 +93,7 @@ Example:
 <img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png">
 </a>
 </div>
+```
 
 ![Clickable SMS](img/clickablesms.png)
 
@@ -214,3 +215,4 @@ This option is for providing the invitation outside of LiveEngage (example size 
    <p><a style="color:blue;" href="sms:+SMS_NUMBER_WITH_COUNTRY_CODE&body=TEXT_MESSAGE_URI_ENCODED">I Agree ›</a></p>
  </div>
 </div>
+```

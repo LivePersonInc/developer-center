@@ -66,7 +66,7 @@ The overall flow looks like the following:
 
 Twilio APIs are very simple and straightforward. Your brand will need to establish a connection and send the initial SMS message. See the example of the API for messaging below:
 
-```Java
+```java
 // Install the Java helper library from twilio.com/docs/java/install
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;

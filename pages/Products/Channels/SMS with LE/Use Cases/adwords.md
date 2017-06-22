@@ -29,6 +29,7 @@ For brands, creating a presence on the channels used by their consumers is key t
 
 ![All Campaigns](img/adwords.png)
 
+
 ![Extensions](img/adwords1.png)
 
 {:start="3"}
@@ -39,7 +40,9 @@ For brands, creating a presence on the channels used by their consumers is key t
 {:start="4"}
 4. Creating a new message extension opens the following prompt:
 
-    1. You’ll need to provide the following information:
+![Extension Final](img/adwords4.png)
+
+You’ll need to provide the following information:
 
         1. **Business Name (25 Characters)**: Provide a business name people are familiar with.
 
@@ -59,8 +62,9 @@ For brands, creating a presence on the channels used by their consumers is key t
 
             4. Click Save, and the extension is ready.
 
-![Extension Final](img/adwords4.png)
 
+
+{:start="5"}
 5. For best practices please see the Google AdWords support page here: [https://support.google.com/adwords/answer/7182126](https://support.google.com/adwords/answer/7182126){:target="_blank"}
 
 ### Ensuring the best consumer experience
