@@ -75,7 +75,7 @@ Use the following code template for your engagement. The capitalized portions sh
   </tr>
   <tr>
     <td>TEXT_MESSAGE_URI_ENCODED</td>
-    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site <a href="http://meyerweb.com/eric/tools/dencoder/" targert="_blank">http://meyerweb.com/eric/tools/dencoder/</a>"</td>
+    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site <a href="http://meyerweb.com/eric/tools/dencoder/" target="_blank">http://meyerweb.com/eric/tools/dencoder/</a></td>
   </tr>
   <tr>
     <td>CALL_TO_ACTION</td>
