@@ -4,7 +4,7 @@ level1: Products
 level2: Channels
 level3: SMS with LiveEngage
 level4: Use Cases
-permalink: /sms-inapp.html
+permalink: products-channels-sms-inapp.html
 order: 40
 indicator:
 ---

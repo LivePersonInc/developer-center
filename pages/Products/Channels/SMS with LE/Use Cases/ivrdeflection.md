@@ -4,7 +4,7 @@ level1: Products
 level2: Channels
 level3: SMS with LiveEngage
 level4: Use Cases
-permalink: /sms-ivr.html
+permalink: products-channels-sms-ivr.html
 order: 10
 indicator:
 ---
