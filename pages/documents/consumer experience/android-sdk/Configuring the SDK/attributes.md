@@ -964,7 +964,6 @@ permalink: android-attributes.html
 </table>
 
 
-<a name="custom_fonts"></a>
 ### Custom Fonts
 
 <table>

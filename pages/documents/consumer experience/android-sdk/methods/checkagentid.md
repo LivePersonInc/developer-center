@@ -14,7 +14,7 @@ permalink: android-checkagentid.html
 
 If there is an active conversation, this API returns agent data through the provided callback. If there is no active conversation, the API returns null.
 
-[AgentData definition](android-interface-and-class-definitions.html){:target="_blank"}
+[AgentData definition](android-interface-definitions.html){:target="_blank"}
 
 `public static void checkAgentID(final ICallback<AgentData, Exception> callback)`
 
