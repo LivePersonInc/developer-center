@@ -1345,5 +1345,11 @@ only screen and (                min-resolution: 2dppx) {
 	
 }
 
+@media (max-width:992px){
+	.bot-platform .section3 p{
+		margin-bottom:40px;
+	}
+}
+
 
 /* End Bots platform page */
