@@ -17,7 +17,7 @@ This data contains information about the vistor’s web journey. The web session
 
 **Use case example**: If you have customer membership programs, you can learn whether your premium members are indeed the heaviest buyers. You can use the order value variable from LivePerson against your own customer membership data and compare the Average Order Value for each membership segment.
 
-### Request 
+### Request
 
 **URL Parameters**
 
@@ -42,7 +42,7 @@ Request for account 75555851:
       "dataAccessFiles": {
         "@id": "75555851",
         "link": {
-          "@href": 
+          "@href":
     "https://va-a.da.liveperson.net/data_access_le/account/75555851/le/webSession",
           "@rel": "self"
         },
@@ -730,7 +730,7 @@ JSON Example
 
 ###  GEO
 
-Information about visitor geolocation. 
+Information about visitor geolocation.
 
 **Header**
 
@@ -753,9 +753,9 @@ The following table describes the information that is available in the geo data:
 | isp | Internet service provider. | string |
 | countryCode | Country code. | string |
 
-###  Navigation 
+###  Navigation
 
-Information about the navigated pages by the visitor on the brand’s website. The navigation is mainly based on the pages being monitored by the Monitor Tag. If a customer has non-monitored pages it will not be reflected in the data displayed here. 
+Information about the navigated pages by the visitor on the brand’s website. The navigation is mainly based on the pages being monitored by the Monitor Tag. If a customer has non-monitored pages it will not be reflected in the data displayed here.
 
 **Header**
 
@@ -774,9 +774,9 @@ The following table describes the information that is available in the navigatio
 | referrerUrl | The URL representation of the last page the visitor visited. | string |
 | sections | A list of the sections/tabs of the page the visitor visited. | string |
 
-###  Session Info 
+###  Session Info
 
-Information about the visitor’s browsing session. 
+Information about the visitor’s browsing session.
 
 **Header**
 
@@ -832,7 +832,7 @@ The following table describes the information that is available in the eligibili
 | :------- | :----------- | :----------- |
 | id | Engagement ID. | long |
 | channel | Channel type. | string |
-| type | Engagement type. | string |
+| type | Engagement type. | string. Values: <br> peeling corner = 0 <br> overlay = 1 <br> toaster = 2 <br> slide-out = 3 <br> embedded = 5 <br> sticky = 6 |
 | visitorBehaviors | List of visitor behaviors. | container |
 | skillId | Engagement skill ID (in case a skill was defined for it). | int |
 | skillName | Engagement skill name (in case a skill was defined for it). | string |
@@ -856,7 +856,7 @@ The following table describes the information that is available in the eligibili
 | id | Unique skill identifier. | long |
 | name | Skill name. | string |
 
-### Campaign 
+### Campaign
 
 | Parameter | Description | Type / Value |
 | :------- | :-------- | :--------- |
@@ -879,9 +879,9 @@ The following table describes the information that is available in the eligibili
 | type | Goal type. | int |
 | indicatorType | Goal indicator type. | int |
 
-### Impression 
+### Impression
 
-Information about impressions that the visitor was exposed to during their session. 
+Information about impressions that the visitor was exposed to during their session.
 
 **Header**
 
@@ -926,7 +926,7 @@ The following table describes the information available in the goal achieved dat
 | campaignGoalType | Goal type. | int |
 | goalMetaData | Contains goal metadata, can be one of the following:  UrlGoalMetadata, PurchaseMetadata, ReduceAbandonmentGoalMetadata, LeadMetadata, ServiceActivityMetadata. | container |
 
-### UrlGoalMetadata 
+### UrlGoalMetadata
 
 | Parameter | Description | Type / Value |
 | :----- | :----------- | :------------- |
@@ -966,7 +966,7 @@ The following table describes the information available in the goal achieved dat
 | Parameter | Description | Type / Value |
 | :-------- | :-------- | :----------- |
 | topic | Topic of service activity. | string |
-| status | Status of service activity. | int | 
+| status | Status of service activity. | int |
 | category | Category of service activity. | string |
 | serviceId | Unique service identifier. | string |
 
@@ -1080,7 +1080,7 @@ Here is a description of the data structure of the existing engagement attribute
 | email | Contact email. | string |
 | phone | Contact phone number. | string |
 
-### CartStatus 
+### CartStatus
 
 | Parameter | Description | Type / Value |
 | :-------- | :----------- | :----------- |

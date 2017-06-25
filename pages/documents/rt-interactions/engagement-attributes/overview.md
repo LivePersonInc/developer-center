@@ -9,7 +9,7 @@ permalink: rt-interactions-engagement-attributes-overview.html
 root-link: true
 level-order: 6
 
-indicator: chat
+indicator: both
 ---
 ### Introduction
 
@@ -26,4 +26,3 @@ A few things you'll need to get started with this API:
 2. In order to utilize this API, you will need an API key. [Here are the instructions on how to get that](guides-gettingstarted.html){:target="_blank"}.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
-
