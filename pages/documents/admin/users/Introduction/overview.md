@@ -39,7 +39,6 @@ A few things you'll need to get started with this API:
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 
-
 ### Use Cases for Users API
 
 * Automatically update user information such as profile picture, login name, or password

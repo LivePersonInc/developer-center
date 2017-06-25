@@ -11,12 +11,12 @@ topnav:
     - title: Documents
       url: /documents.html
 
-- title: Events
+- title: Bot Platform
   items:
-    - title: Events
-      url: /events.html
+    - title: LiveEngage for Bots
+      url: /bot-platform.html
 
-- title: Create a Developer Account
+- title: Signup
   items:
-    - title: Create a Developer Account
+    - title: Sign Up
       external_url: http://register.liveperson.com/developer/signup

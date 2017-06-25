@@ -351,9 +351,11 @@ sdeType         | Type of sde.                                | enum
       ],
       "agentParticipants": [
         {
+
           "agentFullName": "michal@lp.com",
           "agentNickname": "michal@lp.com",
           "agentLoginName": "michal@lp.com",
+
           "agentId": "3677470410",
           "role": "AGENT",
           "agentGroupName": "Unassigned",
@@ -372,6 +374,7 @@ sdeType         | Type of sde.                                | enum
           "consumerName": "Visitor"
         }
       ],
+
       "transfers": [
         {
           "timeL": 1498127364726,
@@ -458,6 +461,7 @@ sdeType         | Type of sde.                                | enum
           "messageDeliveryStatus": "READ"
         }
       ],
+
       "sdes": {
         "events": [
           {
@@ -492,6 +496,7 @@ sdeType         | Type of sde.                                | enum
           }
         ]
       },
+
       "summary": {
         "text": "summary",
         "lastUpdatedTime": 1482333795318

@@ -10,7 +10,9 @@ root-link: true
 indicator: chat
 ---
 
+
 ### Getting Started with the Server Chat API
+
 
 In order to use the Server Chat API, please follow the steps below:
 
@@ -22,9 +24,11 @@ In order to use the Server Chat API, please follow the steps below:
 
 The LiveEngage chat window is based on a browser and will display in any desktop or mobile browser. In order to re-create and build the chat window in order to integrated into non-browser applications, brands can utilize the Server Chat API.
 
+
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
-### Use Cases
+
+# Use Cases
 
 - Incorporate LiveEngage chat window into a desktop application (gaming app, trading app, etc)
 
@@ -32,6 +36,6 @@ The LiveEngage chat window is based on a browser and will display in any desktop
 
 - Add chat into your mobile app
 
-### Sample Postman Collection
+# Sample Postman Collection
 
 For a sample postman collection for the Server Chat API, click [here](consumer-experience-server-chat-sample.html){:target="_blank"}.
