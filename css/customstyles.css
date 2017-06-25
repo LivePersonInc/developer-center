@@ -1307,7 +1307,7 @@ html body div.container div.text li a.more-btn.active {
 	font-size:16px;
 }
 
-.bot-platform p, .bot-platform li{
+.bot-platform p, .bot-platform > ul > li{
 	color:#162036;
 	font-size:16px;
 	line-height:22px;
