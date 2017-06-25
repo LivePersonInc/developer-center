@@ -1315,7 +1315,7 @@ html body div.container div.text li a.more-btn.active {
 	font-weight:300;
 }
 
-.bot-platform > li{
+.bot-platform > ul > li{
 	margin-bottom:20px;
 }
 
