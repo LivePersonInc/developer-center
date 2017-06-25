@@ -12,6 +12,13 @@ permalink: administration-users-overview.html
 root-link: true
 indicator: both
 ---
+### Introduction
+
+Users within LiveEngage can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
+
+
+![UsersOverview](img/usersoverview.png)
+
 
 ### Getting Started
 
@@ -29,14 +36,8 @@ A few things you'll need to get started with this API:
 
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
-### Introduction
-
-Users within LiveEngage can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
-
-
-![UsersOverview](img/usersoverview.png)
 
 ### Use Cases for Users API
 

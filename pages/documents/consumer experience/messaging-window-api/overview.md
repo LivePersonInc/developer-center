@@ -18,7 +18,7 @@ A few things you'll need to get started with this API:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 ### Introduction
 

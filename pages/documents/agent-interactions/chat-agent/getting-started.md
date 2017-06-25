@@ -11,7 +11,15 @@ permalink: chat-agent-getting-started.html
 root-link: true
 indicator: chat
 ---
+### Introduction
+
+Agents within LiveEngage play the crucial role of interfacing with customers by answering chat conversations and communicating with customers. The Chat Agent API provides the capabilities of programmatically running agent activities without human intervention.
+
+The Chat Agent API is a REST style API with relation links, and provides the main functionality for the Agent Workspace in LiveEngage.
+
 ### Getting Started with the Chat Agent API
+
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 In order to use the Chat Agent API, please follow the steps below:
 
@@ -20,11 +28,7 @@ In order to use the Chat Agent API, please follow the steps below:
 3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html){:target="_blank"}.
 4. **Log out** using the [Login Service API](login-getting-started.html){:target="_blank"}.
 
-### Introduction
 
-Agents within LiveEngage play the crucial role of interfacing with customers by answering chat conversations and communicating with customers. The Chat Agent API provides the capabilities of programmatically running agent activities without human intervention.
-
-The Chat Agent API is a REST style API with relation links, and provides the main functionality for the Agent Workspace in LiveEngage. 
 
 ### Use Cases
 
@@ -38,7 +42,7 @@ There are two primary reasons to utilize the Chat Agent API:
 
 	* Bot as a listener to a conversation to provide tips for human agents
 
-<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe> 
+<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
 
 {:start="2"}
 2. Build your own custom agent workspace
@@ -66,9 +70,3 @@ There are two primary reasons to utilize the Chat Agent API:
 ### Samples
 
 Refer to the [Agent Sample App](chat-agent-sample-app.html){:target="_blank"}.
-
-
-
-
-
-

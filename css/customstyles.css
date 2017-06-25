@@ -415,6 +415,7 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .report {
+
   color: #5879da !important;
   display: block;
   outline: none;
@@ -1253,6 +1254,7 @@ html body div.container div.text li a.more-btn.active {
 }
 
 
+
 /* Bots platform page */
 
 .bot-platform .banner-container{
@@ -1330,7 +1332,6 @@ html body div.container div.text li a.more-btn.active {
 	border:0;
 }
 
-
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -1351,5 +1352,5 @@ only screen and (                min-resolution: 2dppx) {
 	}
 }
 
-
 /* End Bots platform page */
+
