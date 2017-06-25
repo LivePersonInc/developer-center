@@ -1315,7 +1315,7 @@ html body div.container div.text li a.more-btn.active {
 	font-weight:300;
 }
 
-.bot-platform li{
+.bot-platform > li{
 	margin-bottom:20px;
 }
 
@@ -1339,11 +1339,11 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-	
+
 	.bot-platform .banner-container{
 		background:url(/images/background-le-for-bots@2x.png) no-repeat center center / cover;
 	}
-	
+
 }
 
 @media (max-width:992px){
@@ -1353,4 +1353,3 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* End Bots platform page */
-
