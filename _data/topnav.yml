@@ -13,10 +13,10 @@ topnav:
 
 - title: Bot Platform
   items:
-    - title: Bot Platform
+    - title: LiveEngage for Bots
       url: /bot-platform.html
 
 - title: Signup
   items:
-    - title: Create Developer Account
+    - title: Sign Up
       external_url: http://register.liveperson.com/developer/signup
