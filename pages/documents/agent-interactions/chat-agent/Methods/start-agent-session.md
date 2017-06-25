@@ -26,6 +26,15 @@ indicator: chat
 | Content-Type | application/json |
 | Accept | application/json |
 
+**Request Body**
+
+Request example for JSON: 
+
+ {"loginData": {
+            
+        }
+ }
+
 **Formats**
 
 The body media type must have one of the following formats:
