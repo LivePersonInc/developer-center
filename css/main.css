@@ -165,6 +165,24 @@
   padding: 2px 0 2px 2px;
 }
 
+.input-has-value .aa-input-icon {
+  opacity: 0; }
+.aa-input-close {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: #e4e4e4;
+  visibility: hidden;
+  opacity: 0; }
+  .input-has-value .aa-input-close {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer; }
+
 #search-demo-container {
     float: right;
     max-height: 4em;
