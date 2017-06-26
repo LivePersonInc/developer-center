@@ -11,6 +11,10 @@ level-order: 6
 
 indicator: chat
 ---
+### Introduction
+
+This API provides a way to report back to LivePerson consumer events such as the topic and resolution of the conversation during the session (e.g., call). This information is added to the existing session and can be used in the goal reached calculation.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -23,6 +27,3 @@ A few things you'll need to get started with this API:
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
 
-### Introduction
-
-This API provides a way to report back to LivePerson consumer events such as the topic and resolution of the conversation during the session (e.g., call). This information is added to the existing session and can be used in the goal reached calculation.

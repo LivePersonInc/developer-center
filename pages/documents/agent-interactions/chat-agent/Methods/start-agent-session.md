@@ -33,6 +33,18 @@ The body media type must have one of the following formats:
 - XML
 - JSON
 
+**Body**
+
+For backwards compatibility purposes, you must include the following request body:
+
+Example for JSON:
+
+```json
+{
+  "loginData": ""
+}
+```
+
 ### Response
 
 **Elements in the response**
@@ -47,7 +59,7 @@ The body media type must have one of the following formats:
 | :--- | :--- |
 | 200 | OK |
 
-Response example for JSON: 
+Response example for JSON:
 
     {
      "agentSessionLocation": {

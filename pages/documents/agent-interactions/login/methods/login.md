@@ -1,5 +1,5 @@
 ---
-title: Login
+title: User Login
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +7,7 @@ level3: Login Service API
 level4: Methods
 
 order: 10
-permalink: agent-login.html
+permalink: agent-user-login.html
 
 indicator: both
 ---
@@ -26,14 +26,14 @@ indicator: both
 
 **Headers**
 
-| Header |  Description | 
+| Header |  Description |
 | :--- | :--- |
 | Content-Type | Application/JSON |
 | Accept | Application/JSON |
 
 **Body**
 
-Example: 
+Example:
 
     {
         "username": "name",

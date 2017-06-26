@@ -36,7 +36,7 @@ A few things you'll need to get started with this API:
 
 	* appKey=721c180b09eb463d9f3191c41762bb68
 
-4. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+4. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 ### Use Cases
 
