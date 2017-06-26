@@ -48,7 +48,7 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
   As a user:
 
-  * use your LiveEngage username and password to [login](/agent-login.html){:target="_blank"}.
+  * use your LiveEngage username and password to [login](/agent-user-login.html){:target="_blank"}.
 
   As an application:
 
