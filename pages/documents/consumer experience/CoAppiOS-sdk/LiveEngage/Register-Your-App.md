@@ -18,23 +18,23 @@ In order to use your app with your LiveEngage account, you need to register it. 
   * Open **Campaigns** tab
   * Select **Datasources** label below the campaigns list
 
-![img/le_campaigns_datasources.png]
+![Data Sources](img/le_campaigns_datasources.png)
 
   * Select **APP** tab
   * Under **Mobile App Management** choose **Manage**
 
-![img/le_campaigns_datasources_apps.png]
+![Data Sources Apps](img/le_campaigns_datasources_apps.png)
 
   * Click **+ Add New**
 
-![img/le_campaigns_datasources_apps_02.png]
+![Data Sources Apps2](img/le_campaigns_datasources_apps_02.png)
 
   * Choose [*iOS*] as Platform
   * Enter your app's **Bundle ID** prefixed with `voip:` in **Mobile App name**, for example: **`voip:com.mybrand.app`**. Adding the prefix is mandatory to receive VoIP calls.
   * Press __Create app__
   * Wait for a confirmation, then __Close__
 
-![img/le_campaigns_datasources_apps_03.png]
+![Data Sources Apps3](img/le_campaigns_datasources_apps_03.png)
 
 ***
 
@@ -43,13 +43,13 @@ In order to use your app with your LiveEngage account, you need to register it. 
   * Choose your app from the list
   * Click **Edit** when hovering
 
-![img/le_campaigns_datasources_apps_04.png]
+![Data Sources Apps4](img/le_campaigns_datasources_apps_04.png)
 
   1. Upload your **Certificate file**
   2. Upload your **Key file**
   3. Save changes
 
-![img/le_campaigns_datasources_apps_05.png]
+![Data Sources Apps5](img/le_campaigns_datasources_apps_05.png)
 _Note_: If you followed the [VoIP Example Setup](VoIP-Configuration), these are `myvoipapp-certificate.pem` and private-key `myvoipapp-private-key-nopass.pem`, respectively.
 
 Your app registration is now complete.

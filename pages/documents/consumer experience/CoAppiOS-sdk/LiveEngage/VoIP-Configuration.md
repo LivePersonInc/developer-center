@@ -31,7 +31,7 @@ To make full use of **LivePerson's Live Voice & Video** SDK, you should add Voic
 
 First login to the [**Apple Member Center**](https://developer.apple.com/account/). Once logged in, you should open the section **Certificates, IDs & Profiles** from your sidebar.
 
-![img/member_ceter_certificates.png]
+![Certificates](img/member_ceter_certificates.png)
 
 #### Step 2: Create an App ID
 
@@ -41,16 +41,16 @@ In order to use Push notifications your app requires an **Explicit App ID** matc
   * Under **Identifiers**, select App IDs.
   * Press **+** in top-right corner
 
-![img/member_ceter_app_ids.png]
+![App IDs](img/member_ceter_app_ids.png)
 
   * Enter the app’s name
   * Select **Explicit App Id** and enter the app's full bundle ID in the **Bundle ID** field
 
-![img/member_ceter_app_id_register_01.png]
+![App ID Register](img/member_ceter_app_id_register_01.png)
 
   * From the list of **App Services** check **Push Notifications**
 
-![img/member_ceter_app_id_register_02.png]
+![App ID Register2](img/member_ceter_app_id_register_02.png)
 
 Now press **Continue** and you're done with this step.
 
@@ -63,12 +63,12 @@ In order to send VoIP-Push notifications to your app's users, a server-side SSL 
   * Under **Certificates**, select All.
   * Press **+** in top-right corner
 
-![img/member_ceter_certificates_new.png]
+![Certificates New](img/member_ceter_certificates_new.png)
 
   * Check **VoIP Services Certificate** from the list
   * Press **Continue**
 
-![img/member_ceter_certificates_new_02.png]
+![Certificates New 2](img/member_ceter_certificates_new_02.png)
 
 In the next step you will need to select the **Bundle ID** of your app (created OR edited in _Step #2_). The displayed bundle ID contains a random prefix, which you can ignore. You will be asked to create a CSR (certificate-signing-request), so follow the on-screen instructions.
 
@@ -88,7 +88,7 @@ In order for Apple VoIP Push services to be used through LivePerson's PusherServ
    * Select **login** on top-left & **Certificates** bottom-left
    * You should see a list of certificates on your Mac
 
-![img/keychain_export_01.png]
+![Keychain Export](img/keychain_export_01.png)
 
    * Select the VoIP certificate you just created (it's name includes **VoIP Services**)
    * Dropdown the selection
@@ -97,7 +97,7 @@ In order for Apple VoIP Push services to be used through LivePerson's PusherServ
    * Choose a _save location_ on your Mac, let's name it: `myvoipapp-certificate.p12`
    * You will be asked to enter a password. Choose any and remember it.
 
-![img/keychain_export_02.png]
+![Keychain Export2](img/keychain_export_02.png)
 
    * Now repeat the steps above, this time by selecting the **private key** just below the certificate
    * When saving let's name it `myvoipapp-private-key.p12`
@@ -133,7 +133,7 @@ Now delete `myvoipapp-private-key.pem` again.You should end up with two remainin
   * `myvoipapp-certificate.pem`
   * `myvoipapp-private-key-nopass.pem`
 
-This is it. The created files are required to be uploaded to LivePerson's App Configurations of your LiveEngage Account. To learn how to upload your certificates, please continue reading [Register Your App](Register Your App).
+This is it. The created files are required to be uploaded to LivePerson's App Configurations of your LiveEngage Account. To learn how to upload your certificates, please continue reading [Register Your App](consumer-experience-voice-video-ios-register-app.html){:target="_blank"}.
 
 
 ### Push via Tokens

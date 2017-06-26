@@ -20,7 +20,7 @@ Add the following Frameworks to your build target's __Build Phases -> Link Binar
   * `GLKit.framework`
   * `VideoToolbox.framework`
 
-![img/link_frameworks.png]
+![Frameworks](img/link_frameworks.png)
 
 ### Step 3: Adjust Build Settings
 Under your target's **Build Settings**, adjust the following:

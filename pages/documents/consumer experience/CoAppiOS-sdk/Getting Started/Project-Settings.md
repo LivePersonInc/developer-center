@@ -27,7 +27,7 @@ In the app `Capabilities` section, enable **`Background Mode`**, and check the f
   * [x] _Voice over IP_
   * [x] _Remote notifications_
 
-![img/capabilities_voip.png]
+![Capabilities](img/capabilities_voip.png)
 
 Your app will now be able to receive background calls and continue voice-conversations while the app is running in the background.
 
@@ -42,7 +42,7 @@ Please add the following keys to your app's `Info.plist`:
 |  **NSMicrophoneUsageDescription** (Privacy - Microphone Usage Description) | String  | Needed for voice calls |
 |  **NSCameraUsageDescription** (Privacy - Camera Usage Description) | String  | Needed for video calls  |
 
-![img/settings_privacy.png]
+![Settings Privacy](img/settings_privacy.png)
 
 If you wish to localize the user message, create a *localized* file called `InfoPlist.strings` and add translations like this:
 ```

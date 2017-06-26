@@ -24,7 +24,7 @@ By default, these settings are enabled for your agents role. If you wish to disa
   3. Select the profile you wish to edit (usually: **Agent**)
 
 
-![img/le_profiles_01.png]
+![Profiles1](img/le_profiles_01.png)
 
 Enable the permissions you wish to _grant_ to your group:
 
@@ -36,11 +36,11 @@ Enable the permissions you wish to _grant_ to your group:
 
 All of these settings should be self-explanatory.
 
-![img/le_profiles_02.png]
+![Profiles2](img/le_profiles_02.png)
 
 _Scroll-only is currently supported in Web-based CoBrowse only. For in-app CoBrowse this setting is identical to the normal view-only mode._
 
 ### Invitation Options
 The settings you chose in **User Profiles** will be reflected in all of your account's **Messaging conversations** (not Chat). Depending on the features you enabled, you will see something like below:
 
-![img/le_conv_features.png]
+![Conversations Features](img/le_conv_features.png)
