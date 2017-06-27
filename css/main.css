@@ -76,11 +76,10 @@
 
 .aa-input-search {
   color: white;
-  padding: 12px 28px 12px 12px;
-  border-color: transparent;
-  border-radius: 4px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  padding: 12px 80px 12px 12px;
+  border-color: #5879DA;
+  border-radius: 50px;
+  border-style: solid;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -95,9 +94,8 @@
     display: none;
   }
 
-  .aa-input-search:focus {
-    outline: 0;
-    border-color: #3a96cf;
+  .aa-input-search::-webkit-input-placeholder {
+    color: #fff;
   }
 
 .aa-input-icon {
