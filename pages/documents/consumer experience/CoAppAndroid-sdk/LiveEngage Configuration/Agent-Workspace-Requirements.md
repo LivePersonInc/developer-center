@@ -22,8 +22,9 @@ Your agents will be using LiveEngage from a supported web browser to make calls 
 **Note:** Only web browsers listed here are supported. When using LiveEngage from an unsupported browser the feature is automatically disabled from the agent workspace.
 
 ### Required Hardware
-| Feature | Hardware |  Note |
-| ------------- |:-------------:|:-------------|
-| Voice Calls | Microphone  | - |
-| Video Calls | Microphone + Webcam  | - |
-| In-App CoBrowse | -  | requires a voice-call|
+
+| Feature	| Hardware | Note |
+| --------|:---------|:-----|
+| Voice Calls |	Microphone | - |
+| Video Calls |	Microphone + Webcam |	- |
+| In-app CoBrowse |	- | requires a voice-call |
