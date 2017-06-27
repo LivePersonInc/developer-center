@@ -311,27 +311,6 @@ Disables Photo Sharing</td>
     <td align="left">20</td>
   </tr>
   <tr>
-    <td align="left">fileCellLoaderFillColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Radial loader fill color</td>
-    <td align="left"><img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor"></td>
-    <td align="left">UIColor(white: 0.0, alpha: 0.5)</td>
-  </tr>
-  <tr>
-    <td align="left">fileCellLoaderRingProgressColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Radial loader progress color</td>
-    <td align="left"><img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor"></td>
-    <td align="left">UIColor.white</td>
-  </tr>
-  <tr>
-    <td align="left">fileCellLoaderRingBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Radial loader progress background color</td>
-    <td align="left"><img src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor"></td>
-    <td align="left">UIColor.lightGray</td>
-  </tr>
-  <tr>
     <td align="left">photosharingMenuBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Photo Sharing menu background color</td>
@@ -358,6 +337,27 @@ Disables Photo Sharing</td>
     <td align="left">Photo Sharing menu buttons text color</td>
     <td align="left"><img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor"></td>
     <td align="left">UIColor.white</td>
+  </tr>
+  <tr>
+    <td align="left">fileCellLoaderFillColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Radial loader fill color</td>
+    <td align="left"><img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor"></td>
+    <td align="left">UIColor(white: 0.0, alpha: 0.5)</td>
+  </tr>
+  <tr>
+    <td align="left">fileCellLoaderRingProgressColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Radial loader progress color</td>
+    <td align="left"><img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor"></td>
+    <td align="left">UIColor.white</td>
+  </tr>
+  <tr>
+    <td align="left">fileCellLoaderRingBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Radial loader progress background color</td>
+    <td align="left"><img src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor"></td>
+    <td align="left">UIColor.lightGray</td>
   </tr>
   <tr>
   <td align="left" colspan="5">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledTextColor and sendButtonEnabledTextColor configurations.</td>
