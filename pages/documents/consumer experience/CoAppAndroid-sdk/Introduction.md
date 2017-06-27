@@ -13,7 +13,7 @@ indicator: messaging
 
 LivePerson's **Voice & Video SDK** allows you to communicate with your customers in realtime through your brand's app. The SDK enriches your app with realtime voice & video calling capabilities, built atop of our highly scalable **Messaging SDK** solution.
 
-![img/screenshot_coapp.png|alt=Android Screenshot|width=45%|align=center]]
+![screenshot_coapp](img/screenshot_coapp.png)
 
 Your agents engage from a web browser using our LiveEngage platform, while your consumers will be using your brand's own app, obtained from the PlayStore.
 
