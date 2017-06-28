@@ -16,7 +16,7 @@ topnav:
     - title: LiveEngage for Bots
       url: /bot-platform.html
 
-- title: Signup
+- title: Create a Developer Account
   items:
-    - title: Sign Up
+    - title: Create a Developer Account
       external_url: http://register.liveperson.com/developer/signup
