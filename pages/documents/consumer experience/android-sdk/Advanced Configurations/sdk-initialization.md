@@ -45,7 +45,26 @@ To start LivePerson's Activity mode:
 `LivePerson.showConversation(Activity activity);`
 
 To start LivePerson's Fragment mode: (Attach the returned fragment to a container in your activity) :
-    
+
 `LivePerson.getConversationFragment();`
 
 When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+
+***
+
+**Shut Down**
+
+Close LivePerson Messaging SDK- Uninitialized SDK without cleaning data.
+
+`public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)`
+
+Click [here](android-shutdown.html){:target="_blank"} for more information.
+
+**Logout**
+
+Close LivePerson Messaging SDK- Clear LivePerson Messaging SDK data and unregistering push.
+
+`public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)`
+
+Click [here](android-logout.html){:target="_blank"} for more information.

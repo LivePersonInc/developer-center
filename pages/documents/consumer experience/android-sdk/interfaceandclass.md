@@ -11,6 +11,16 @@ permalink: android-interface-definitions.html
 
 ---
 
+### ICallback
+
+```javascript
+{
+public interface ICallback<T, E extends Throwable> {
+   void onSuccess(T value);
+   void onError(E exception);
+}
+```
+
 ### AgentData
 
 ```javascript
@@ -70,7 +80,7 @@ public class PushMessage {
     private String mBackendService;
     private String mCollapseKey;
     private int mCurrentUnreadMessagesCounter = -1;
-//if we get unread messages counter from push message this value will contain it. 
+//if we get unread messages counter from push message this value will contain it.
 }
 ```
 
