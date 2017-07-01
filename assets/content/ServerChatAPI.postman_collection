@@ -67,7 +67,7 @@
 							"postman.setEnvironmentVariable(\"campaignId\", jsonData.engagementDetails.campaignId);",
 							"postman.setEnvironmentVariable(\"engagementId\", jsonData.engagementDetails.engagementId);",
 							"postman.setEnvironmentVariable(\"contextId\", jsonData.engagementDetails.contextId);",
-							"postman.setEnvironmentVariable(\"skillId\", jsonData.engagementDetails.skillId);"
+							"postman.setEnvironmentVariable(\"skillName\", jsonData.engagementDetails.skillName);"
 						]
 					}
 				}
@@ -137,7 +137,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"request\": {\n\t\t\"LETagVisitorId\": \"{{visitorId}}\",\n\t\t\"LETagSessionId\": \"{{sessionId}}\",\n\t\t\"LETagContextId\": \"{{contextId}}\",\n\t\t\"engagementId\": \"{{engagementId}}\",\n\t\t\"campaignId\": \"{{campaignId}}\",\n\t\t\"skillId\": \"{{skillId}}\"\n\t}\n}"
+					"raw": "{\n\t\"request\": {\n\t\t\"LETagVisitorId\": \"{{visitorId}}\",\n\t\t\"LETagSessionId\": \"{{sessionId}}\",\n\t\t\"LETagContextId\": \"{{contextId}}\",\n\t\t\"engagementId\": \"{{engagementId}}\",\n\t\t\"campaignId\": \"{{campaignId}}\",\n\t\t\"skill\": \"{{skillName}}\"\n\t}\n}"
 				},
 				"description": ""
 			},
