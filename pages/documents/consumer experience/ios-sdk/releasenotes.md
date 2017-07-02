@@ -8,7 +8,112 @@ level3: In-App Messaging SDK for iOS
 order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
 ---
-### In-App Messaging SDK Version 2.3.1
+### <u>In-App Messaging SDK Version 2.5.0</u>
+
+These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
+
+Version 2.5 roll-out: July 2nd 2017
+
+### New functionalities
+
+### Custom fonts
+
+in order for consumers to enjoy the full brand experience while messaging in-app, brands are able to configure certified operating system fonts to appear in the messaging window. The fonts can be used across all elements, or only for the font within the message bubble.
+
+The SDK also supports the use of a brand’s own customized fonts (although these are not certified).
+
+Custom fonts are not supported for Native iOS properties such as:
+* Activity mode - Overflow menu
+* Popup messages
+
+###### Related properties: Custom fonts
+
+The following additional conditions and configurations are required:*
+
+
+
+| Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| N/A | N/A | N/A | N/A | Yes |
+
+### Tablet supportability
+To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
+
+All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
+
+| Device | iOS 8.x | iOS 9.x | iOS 10.x |
+| ------------ | ------------ | ------------ | ------------ |
+| iPad 5 (2017) | N/A  | N/A | Certified |
+
+A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
+
+### Connectivity improvements
+The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
+
+In addition, other aspects such as feature and conversation history will also be more rapid as a result of the improvements.
+
+The following additional conditions and configurations are required*:
+
+| Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| N/A | N/A | N/A | N/A | N/A |
+
+### Default Agent Avatar
+The SDK now offers brands a to use a default agent avatar of their own.
+
+Related properties: User avatar
+
+The following additional conditions and configurations are required*:
+
+| Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| N/A | N/A | N/A | N/A | Yes |
+
+* Key for items as follows:
+Backend update: This feature requires an update to the backend.
+Backend enablement: This feature requires items to be toggled on in the backend.
+Backend configuration: This feature requires configuration in the backend.
+SDK enablement: This feature requires items to be toggled on in the SDK.
+SDK configuration: This features requires items to be configured in the SDK.
+
+### Photo Sharing Button Colors
+Brands now have the ability to set camera button colors in addition to the Send button colors.
+
+Related properties: Photo sharing
+
+The following additional conditions and configurations are required*:
+
+| Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| N/A | N/A | N/A | N/A | Yes |
+
+## New properties
+The following properties of the secure form bubble on the agent side can now be configured:
+
+#### Custom Fonts
+
+| Name | Description  | Example | Default |
+| ------------ | ------------ | ------------ | ------------ |
+| customFontNameConversationFeed: String? = nil | The font name for all elements of the conversation feed. | ![CustomFonts](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/customFontConversationFeed.png) | Empty (use the device font) |
+| customFontNameNonConversationFeed: String? = nil | The font name for all elements that are not in the conversation feed. | ![CustomFonts](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/customFontNonConvrsationFeed.png) | Empty (use the device font) |
+
+#### Photo Sharing
+Configuring Camera's button colors
+
+| Name | Description | Example | Default |
+| ------------ | ------------ | ------------ | ------------ |
+| cameraButtonEnabledColor | The camera button color when in enabled mode in the conversation screen. The button will be presented only if the photo sharing feature is enabled. | ![CameraColor](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/cameraButtonEnabledColor.png) | #0362AC |
+| cameraButtonDisabledColor | The camera button color when in disabled mode in the conversation screen. The button will be presented only if the photo sharing feature is enabled. | ![CameraColor](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/cameraButtonEnabledColor.png) | #8B8A8F |
+
+#### User Avatar
+Configuring Camera's button colors
+
+| Name  | Description  | Default  |
+| ------------ | ------------ | ------------ |
+| remoteUserDefaultAvatarImage | The default avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations. If the remote user has an avatar image in his profile, this attribute will be ignored. | nil |
+
+
+### <u>In-App Messaging SDK Version 2.3.1</u>
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
@@ -16,10 +121,10 @@ In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 For one minute after the consumer has navigated away from the conversation window, any arriving messages will not display. They will only appear in the conversation window after the minute has passed.
 
 ### Fix:
-The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”. 
+The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
 
-### In-App Messaging SDK Version 2.3
+### <u>In-App Messaging SDK Version 2.3.0</u>
 
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for iOS**.
 
