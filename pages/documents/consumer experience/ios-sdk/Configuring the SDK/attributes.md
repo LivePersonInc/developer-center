@@ -362,14 +362,14 @@ Disables Photo Sharing</td>
     <td align="left">cameraButtonEnabledColor</td>
     <td align="left">UIColor</td>
     <td align="left">Photo Sharing Camera button color in enabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled</td>
-    <td align="left"></td>
+    <td align="left"><img src="img/cameraButtonColor.png" alt="cameraButtonColor"></td>
     <td align="left">#0362AC</td>
   </tr>
   <tr>
     <td align="left">cameraButtonDisabledColor</td>
     <td align="left">UIColor</td>
     <td align="left">Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled</td>
-    <td align="left"></td>
+    <td align="left"><img src="img/cameraButtonColor.png" alt="cameraButtonColor"></td>
     <td align="left">#8B8A8F</td>
   </tr>
 </tbody>
@@ -853,7 +853,7 @@ It will affect the following areas:
     <td align="left">customFontNameConversationFeed</td>
     <td align="left">String?</td>
     <td align="left"> Custom font name for conversation feed. This font will affect all Messages, Timestamp and Separators. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
-    <td align="left"></td>
+    <td align="left"><img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed"></td>
     <td align="left">nil</td>
   </tr>
   <tr>
@@ -861,7 +861,7 @@ It will affect the following areas:
     <td align="left">String?</td>
     <td align="left"> Custom font name for all non conversation feed controls. Such as: Buttons, Alerts, Banners, Menu and External Windows.
     Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
-    <td align="left"></td>
+    <td align="left"><img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed"></td>
     <td align="left">nil</td>
   </tr>
 </tbody>
