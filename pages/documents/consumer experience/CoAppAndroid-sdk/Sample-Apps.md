@@ -8,4 +8,4 @@ permalink: consumer-experience-voice-video-android-sample-app.html
 indicator: messaging
 ---
 
-Bundled with our SDK are two sample applications - `GreatBank`and `CoApp-Sample`. They showcase a minimal setup of LivePerson's __LivePerson Live Voice & Video__ integrated with the __Messaging SDK__.
+Bundled with our SDK are two sample applications - `GreatBank` and `CoApp-Sample`. They showcase a minimal setup of LivePerson's __LivePerson Live Voice & Video__ integrated with the __Messaging SDK__.

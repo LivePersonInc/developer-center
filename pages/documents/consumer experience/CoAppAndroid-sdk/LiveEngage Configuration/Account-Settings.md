@@ -42,6 +42,6 @@ _(1) Scroll-only is currently supported in Web-based CoBrowse only. For in-app C
 
 
 ### Invitation Options
-The settings you chose in **User Profiles** will be reflected in all of your account's **Messaging conversations** (not Chat). Depending on the features you enabled, you will see something like below:
+The settings you chose in **User Profiles** will be reflected in all of your account's **Messaging conversations** (not Chat). Depending on the features you enabled, you will see something similar to below:
 
   ![Conversation Features](img/le_conv_features.png)

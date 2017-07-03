@@ -10,11 +10,11 @@ permalink: consumer-experience-voice-video-ios-prerequisites.html
 indicator: messaging
 ---
 
-LivePerson Voice & Video is an SDK (_Source Development Kit_) for the **Apple iOS** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.
+LivePerson Voice & Video is a SDK (_Source Development Kit_) for the **Apple iOS** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.
 
 
 ### Dependencies
-The SDK requires our LivePerson **Messaging SDK** integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
+The SDK requires our LivePerson [**Messaging SDK**](https://developers.liveperson.com/consumer-experience-ios-sdk-overview.html){:target="_blank"} integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
 
 ### Supported iOS Versions
 
@@ -33,6 +33,7 @@ The SDK requires our LivePerson **Messaging SDK** integrated into your app. Your
 
 ### Supported Programming Languages
 Only **native applications** written in the either or both programming languages:
+
   * **Swift**
   * **Objective-C**
 
@@ -40,6 +41,8 @@ Cross-platform apps using native wrappers (e.g. Cordova) can be made to integrat
 
 
 ### Other Features
-| Feature | Support |  Comment |
+
+| Feature | Support | Comment |
 | ------------- |:-------------:|:-------------|
 | **Bitcode** | (currently) **not** supported | Set **Enable Bitcode** in your Build Settings to **NO** |
+
