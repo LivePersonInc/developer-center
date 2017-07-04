@@ -49,7 +49,7 @@ td:first-child {
 
 | Key        | Type | Default Value | About  |
 | ------------- |:-------------:|:-------------:|:-----|
-| **coapp_frame_color** | Color | #ff007aff | The color of the frame surrounding the app's screen during a In-app CoBrowse session. Use a HEX color value, including a leading hash (#) |
+| **coapp_frame_color** | Color | #ff007aff | The color of the frame surrounding the app's screen during an In-app CoBrowse session. Use a HEX color value, including a leading hash (#) |
 
 ### Settings
 
