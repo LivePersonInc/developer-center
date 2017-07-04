@@ -11,21 +11,21 @@ indicator: messaging
 
 ### Setting up Android Studio
 
-In order to use the CoApp SDK within your project, you need to have the LP-Messaging-SDK for Android preconfigured and set up in your project (minimum required version is [**v2.0**](https://github.com/LP-Messaging/Android-Messaging-SDK/tree/v2.0.0)). Please take a look at the [Official Documentation](https://developers.liveperson.com/android-overview.html) for further information.
+In order to use the Voice & Video SDK within your project, you need to have the LP-Messaging-SDK for Android preconfigured and set up in your project (minimum required version is [**v2.0**](https://github.com/LP-Messaging/Android-Messaging-SDK/tree/v2.0.0)). Please take a look at the [Official Documentation](https://developers.liveperson.com/android-overview.html) for further information.
 
 ### Setting up with Gradle (recommended)
 
-**NOTE: Gradle dependency is currently only available in intranet, i.e. with connection to LivePerson artifactory**!
+**NOTE: Gradle installation is currently not publicly available**!
 
-To add the CoApp SDK to your project, just add the following dependency to your `build.gradle`:
+To add the SDK to your project, just add the following dependency to your `build.gradle`:
 
 ```gradle
     compile 'com.liveperson:coapp:LATEST@aar'
 ```
 
-### Manually
+### Manual Installation
 
-If you do not want to use dependency management you can add the desired CoApp SDK Android archive `*.aar` file manually. Just add the `coapp-release.aar` to the project's `libs` folder and adjust your Gradle build file like shown below:
+If you do not want to use dependency management you can add the desired Android SDK archive `*.aar` file manually. Just add the `coapp-release.aar` to the project's `libs` folder and adjust your Gradle build file like shown below:
 
 ```gradle
 ...
@@ -47,8 +47,8 @@ dependencies {
 }
 ```
 
-**Hint:** If you have trouble integrating the CoApp SDK in your project you should take a look at our [CoApp SDK Sample App](consumer-experience-voice-video-android-sample-app.html) project which is already preconfigured and ready to go.
+**Hint:** If you have trouble integrating the SDK in your project you should take a look at our [Sample App](consumer-experience-voice-video-android-sample-app.html) project which is already preconfigured and ready to go.
 
 ### Next steps
 
-After the SDK is added as a dependency to your app's project, you can now proceed with our [Coding Guide](Integration Guide) to see how to use the LP-CoApp SDK in your code, enable Push Notifications, start a call, and much more.
+After the SDK is added as a dependency to your app's project, you can now proceed with our [Integration Guide](consumer-experience-voice-video-android-integrate-the-sdk.html) to see how to use the Voice & Video SDK in your code, enable Push Notifications, start a call, and more.

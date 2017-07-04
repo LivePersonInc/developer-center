@@ -11,7 +11,7 @@ indicator: messaging
 
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, please don't hesitate to contact your LivePerson account manager for help.
 
-Below you'll learn how to customise various SDK settings to fit your app's needs. You can customize different aspects of the SDK like:
+Below you'll learn how to customise various SDK settings to fit your app's needs. You can customize different aspects of the SDK including:
 
    * [Colors](consumer-experience-voice-video-android-appearance-behavior.html#colors)
    * [Settings](consumer-experience-voice-video-android-appearance-behavior.html#settings)
@@ -19,7 +19,7 @@ Below you'll learn how to customise various SDK settings to fit your app's needs
    * [Fieldmasking](consumer-experience-voice-video-android-appearance-behavior.html#secure-fields-fieldmasking)
 
 
-The CoApp Android SDK allows you to customize its appearance via Android resource files. With these you can change colors, default images, text strings, etc. By convention, all resources specified by CoApp SDK are prefixed with `coapp_`. The following resources are available for customization:
+The Voice & Video Android SDK allows you to customize its appearance via Android resource files. With these you can change colors, default images, text strings, etc. By convention, all resources specified by the SDK are prefixed with `coapp_`. The following resources are available for customization:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -41,10 +41,15 @@ The CoApp Android SDK allows you to customize its appearance via Android resourc
 ```
 
 ### Colors
+<style>
+td:first-child {
+  width: 200px!important;
+}
+</style>
 
 | Key        | Type | Default Value | About  |
 | ------------- |:-------------:|:-------------:|:-----|
-| **coapp_frame_color** | Color | #ff007aff | The color of the frame surrounding the app's screen during a CoBrowse session. Use a HEX color value, including a leading hash (#) |
+| **coapp_frame_color** | Color | #ff007aff | The color of the frame surrounding the app's screen during an In-app CoBrowse session. Use a HEX color value, including a leading hash (#) |
 
 ### Settings
 
@@ -59,17 +64,14 @@ You can also adjust ringtones and the default avatar by overriding non-xml resou
 | Resource                          | Description                                                     | Notes                                                                             |
 |-----------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | res/drawable/coapp_default_avatar | Default avatar used when agent does not actively supply one     | The default avatar is the LivePerson logo                                         |
-| res/raw/notification_ringtone     | Ringtone sound to be played on a CoApp invitation or escalation | You can override these with `coapp_ringtone_call` and `coapp_ringtone_escalation` |
-|     
-
-| Key        | Type | Default Value | About  |
-| ------------- |:-------------:|:-------------:|:-----|
-| **coapp_ringtone_call** | String | ring.caf | The ring sound file in you `Main.bundle`, played when an incoming call is presented to the user. __Note__: This does not affect the ring of push-calls. Push-calls always use a file called `ring.caf` |
-| **coapp_ringtone_escalation** | String | escalation.caf | The sound in your `Main.bundle`, played when a call escalation (permissions request) is presented to the user. This sound is played once and should be no more than `3 seconds`long |
+| res/raw/notification_ringtone     | Ringtone sound to be played on a In-app CoBrowsing invitation or escalation | You can override these with `coapp_ringtone_call` and `coapp_ringtone_escalation` |
+| 
 
 ### Secure fields & fieldmasking
 
-Since the LPCoApp-SDK offers Screen Sharing capabilities, it might be of interest to black out some fields the agent should not see in a screensharing session. For that, the SDK offers a mechanism to flag `View` instances which are covered by a black rectangle. **Note:** this feature is still in BETA and in some cases, the fieldmasking might not cover all sensitive screen areas.
+Since the SDK offers screen sharing capabilities, it might be of interest to black out some fields the agent should not see in a screensharing session. For this, the SDK offers a mechanism to flag `View` instances which are covered by a black rectangle.
+
+**Note:** this feature is still in BETA and in some cases, the fieldmasking might not cover all sensitive screen areas.
 
 To try the fieldmasking option you can either add a `android:tag` on the layout resources or call `setTag()` programmatically:
 

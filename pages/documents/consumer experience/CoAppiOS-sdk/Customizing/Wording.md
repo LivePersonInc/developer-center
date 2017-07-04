@@ -13,11 +13,17 @@ These settings should only be used to customize the wording according to you app
 ### Step 1: Setup
 
 In your XCode project, create a new file named:
+
   * `LPCoAppSDK.strings` and enable __Localization__ for this file.
 
 This will put the file under your `[Language].lproj` (e.g. `EN.lproj`) folders.
 
 ### Step 2: Edit Wording
+<style>
+td:first-child {
+  width: 150px!important;
+}
+</style>
 
 Open your `LPCoAppSDK.strings` in the language you wish to edit and add (ONLY!) those keys you wish to edit. Non specified keys will use the default wording.
 

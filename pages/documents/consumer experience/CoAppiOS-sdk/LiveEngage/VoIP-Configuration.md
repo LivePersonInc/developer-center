@@ -25,19 +25,20 @@ To make full use of **LivePerson's Live Voice & Video** SDK, you should add Voic
 
 
 
-### Setting up your App
+## Setting up your App
 
-#### Step 1: Login to Apple Member Center
+### Step 1: Login to Apple Member Center
 
 First login to the [**Apple Member Center**](https://developer.apple.com/account/). Once logged in, you should open the section **Certificates, IDs & Profiles** from your sidebar.
 
-![Certificates](img/member_ceter_certificates.png)
+![Certificates](img/member_ceter_certificates.png){:style="max-height:350px"}
 
-#### Step 2: Create an App ID
+### Step 2: Create an App ID
 
 **Note:** If you already have an explicit App ID with `Push Notifications` capability you can skip to Step 3.
 
 In order to use Push notifications your app requires an **Explicit App ID** matching your app's `bundle Id`. Wildcard app IDs are not possible. To create a new App Id:
+
   * Under **Identifiers**, select App IDs.
   * Press **+** in top-right corner
 
@@ -54,9 +55,9 @@ In order to use Push notifications your app requires an **Explicit App ID** matc
 
 Now press **Continue** and you're done with this step.
 
-### Push via SSL certificate
+## Push via SSL certificate
 
-#### Step 1: Create a server-side VoIP push certificate
+### Step 1: Create a server-side VoIP push certificate
 
 In order to send VoIP-Push notifications to your app's users, a server-side SSL certificate is required. The certificate ensures that no untrusted party can send push-calls to your users.
 
@@ -130,13 +131,14 @@ openssl rsa -in myvoipapp-private-key.pem -out myvoipapp-private-key-nopass.pem
 
 #### Store Certificates
 Now delete `myvoipapp-private-key.pem` again.You should end up with two remaining new files, which you should store safely:
+
   * `myvoipapp-certificate.pem`
   * `myvoipapp-private-key-nopass.pem`
 
 This is it. The created files are required to be uploaded to LivePerson's App Configurations of your LiveEngage Account. To learn how to upload your certificates, please continue reading [Register Your App](consumer-experience-voice-video-ios-register-app.html){:target="_blank"}.
 
 
-### Push via Tokens
+## Push via Tokens
 
 **Coming soon!**
 

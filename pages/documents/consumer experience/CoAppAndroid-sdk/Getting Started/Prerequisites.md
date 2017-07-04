@@ -6,7 +6,6 @@ level3: Voice & Video for Android SDK (BETA)
 level4: Getting Started
 order: 10
 permalink: consumer-experience-voice-video-android-prerequisites.html
-root-link: true
 indicator: messaging
 ---
 
@@ -14,20 +13,20 @@ LivePerson Voice & Video is an SDK (_Source Development Kit_) for the **Google A
 
 ### Dependencies
 
-The SDK requires our LivePerson **Messaging SDK** integrated into your app (see [LP-Messaging SDK](https://developers.liveperson.com/android-overview.html)). Your consumers will always engage in a _LiveEngage_ messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
+The SDK requires our LivePerson [**Messaging SDK**](https://developers.liveperson.com/android-overview.html){:target="_blank"} integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
 
-Please make sure your App meets the following minimal requirements:
+Please make sure your app meets the following minimal requirements:
 
 - Minimal supported API level is 21 (Lollipop, Android 5.0)
 - Recommended minimal API level is 23 (Marshmallow, Android 6.0)
-- CoApp Screen Sharing is only supported in API levels >= 21 (Lollipop) due to [MediaProjection API](https://developer.android.com/reference/android/media/projection/MediaProjection.html)
+- In-app CoBrwosing is only supported in API levels >= 21 (Lollipop) due to [MediaProjection API](https://developer.android.com/reference/android/media/projection/MediaProjection.html)
 
 ### Supported Android Versions
 
 | Android API level | Support |  Limitations |
 | ------------- |:-------------:|:-------------|
 | 20 or less | not supported  | - |
-| 21 + | supported | Fully supported |
+| 21 + | supported | fully supported |
 
 ### Supported Devices
 
