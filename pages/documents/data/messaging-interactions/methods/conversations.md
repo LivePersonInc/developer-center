@@ -304,14 +304,18 @@ sdeType         | Type of sde.                                | enum
         "latestSkillId": -1,
         "latestSkillName": "Unassigned",
         "source": "APP",
+        "closeReason": "AGENT",
+	    "closeReasonDescription": "MANUAL_CLOSE",
         "mcs": 67,
         "alertedMCS": 1,
         "status": "OPEN",
         "firstConversation": false,
+        "csatRate": 5,
         "device": "undefined",
         "latestAgentGroupId": -1,
         "latestAgentGroupName": "Unassigned",
-        "latestQueueState": "ACTIVE"
+        "latestQueueState": "ACTIVE",
+        "isPartial": false
       },
       "messageRecords": [
         {
@@ -355,8 +359,9 @@ sdeType         | Type of sde.                                | enum
           "agentFullName": "michal@lp.com",
           "agentNickname": "michal@lp.com",
           "agentLoginName": "michal@lp.com",
-
           "agentId": "3677470410",
+          "userType": "1",
+		  "userTypeName": "Human",
           "role": "AGENT",
           "agentGroupName": "Unassigned",
           "agentGroupId": -1,
@@ -367,11 +372,16 @@ sdeType         | Type of sde.                                | enum
       ],
       "consumerParticipant": [
         {
-          "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
-          "firstName": "Visitor",
-          "time": "2016-08-29 14:30:24.573+0000",
-          "timeL": 1472481024573,
-          "consumerName": "Visitor"
+          	"participantId": "f92c9890-2c95-428b-8a32-083528620d31",
+			"firstName": "Visitor",
+			"lastName": "Test",
+			"token": "undefined",
+			"email": "undefined",
+			"phone": "0",
+			"avatarURL": "undefined",
+			"time": "2016-08-29 14:30:24.573+0000",
+			"timeL": 1472481024573,
+			"consumerName": "Visitor"
         }
       ],
 
@@ -421,13 +431,15 @@ sdeType         | Type of sde.                                | enum
       "messageScore": [
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
-          "score": 0,
+          "messageRawScore": 0,
+		  "mcs": 0,
           "time": "2016-08-29 15:14:26.314+0000",
           "timeL": 1472483666314
         },
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
-          "score": 2,
+          "messageRawScore": 0,
+		  "mcs": 0,
           "time": "2016-08-29 15:15:49.225+0000",
           "timeL": 1472483749225
         }
@@ -461,7 +473,18 @@ sdeType         | Type of sde.                                | enum
           "messageDeliveryStatus": "READ"
         }
       ],
-
+	"conversationSurveys": [
+				{
+					"surveyType": "Satisfaction",
+					"surveyStatus": "FILLED",
+					"surveyData": [
+						{
+							"question": "Confirm Resolution",
+							"answer": "Yes"
+						}
+					]
+				}
+			],
       "sdes": {
         "events": [
           {
