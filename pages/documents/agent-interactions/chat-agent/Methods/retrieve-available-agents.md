@@ -28,7 +28,7 @@ This resource can be used to know to which other agents you can transfer chats. 
 |------------------------------------------|------------------|
 | Authorization Bearer {bearer-from-login} |                  |
 | Content-Type                             | application/json |
-| Accept                                   | application/json | 
+| Accept                                   | application/json |
 
 **Formats**
 
@@ -43,6 +43,7 @@ The body media type must have one of the following formats:
 |------------|-------------------------------------------------------------------------|--------------|-------------------------------------------------------|
 | skill      | Skill name. Filter the returned agents list by the requested skill.     | alphanumeric | Example: {available-agents}?skill=Default&v=1.        |
 | chatState  | State name. Filter the returned agents list by the agent's chat state.  | string       | Valid values: "Online", "Offline", "Occupied", "Away" |
+| chatReasonId           | chat state reason id (represents a reason as configured in the account) voice.                                                                                        | alphanumeric           | Optional - reasonID is currently not retrievable, contact your Account Team if necessary |
 | voiceState | State name. Filter the returned agents list by the agent's voice state. | string       | Valid values: "Online", "Offline", "Occupied", "Away" |
 
 ### Response
@@ -63,12 +64,12 @@ The body media type must have one of the following formats:
 | skills               | The list of skills for this agent.                                                                                       | element           |                                                                                                                                                                                                                   |
 | skill                | A skill ID for this agent.                                                                                               | numeric           |                                                                                                                                                                                                                   |
 | chats                | The current number of chats for the agent.                                                                               | numeric           |                                                                                                                                                                                                                   |
-| link with rel="next" | Use this link to call the next available agents request.                                                                 | link relationship |                                                                                                                                                                                                                   | 
+| link with rel="next" | Use this link to call the next available agents request.                                                                 | link relationship |                                                                                                                                                                                                                   |
 
 **Response Codes**
 
-| Code|  Response| 
- |:---|  :---| 
+| Code|  Response|
+ |:---|  :---|
  |200  |OK |
 
 Response example for JSON:
@@ -91,4 +92,3 @@ Response example for JSON:
                         "@rel" : "next"
                 }
         }}
-
