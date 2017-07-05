@@ -10,6 +10,7 @@ level4: Methods
 order: 80
 permalink: administration-change-users-password.html
 
+indicator: both
 ---
 
 This API changes a user’s password.

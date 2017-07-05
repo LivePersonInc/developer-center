@@ -7,6 +7,7 @@ level3: Messaging Agent SDK
 
 order: 2
 permalink: messaging-agent-sdk-examples.html
+indicator: messaging
 ---
 
 Here are a few sample bot integrations, which demonstrates some of the use cases that can be achieved with the SDK:

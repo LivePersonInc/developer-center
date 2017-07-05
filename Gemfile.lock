@@ -171,8 +171,8 @@ PLATFORMS
 DEPENDENCIES
   algoliasearch-jekyll (~> 0.8.0)
   github-pages (~> 106)
-  jekyll (= 3.3.1)
+  jekyll (~> 3.3.1)
   jekyll-feed (~> 0.6)
 
 BUNDLED WITH
-   1.14.6
+   1.15.1

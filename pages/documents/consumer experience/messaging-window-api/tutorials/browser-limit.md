@@ -8,6 +8,7 @@ level4: Tutorials
 order: 80
 permalink: consumer-int-no-headers.html
 
+indicator: messaging
 ---
 
 In the previous tutorials we used websocket headers to pass authentication token and ``ClientProperties``. While native apps can use this method, browsers do not have standard API to control the websocket headers. Thus the api has another mechanism to pass this information.

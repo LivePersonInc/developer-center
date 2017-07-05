@@ -9,6 +9,7 @@ level4: Methods
 order: 40
 permalink: android-showconversationauth.html
 
+indicator: messaging
 ---
 
 Same as [showConversation](android-showconversation.html){:target="_blank"} with the addition of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.

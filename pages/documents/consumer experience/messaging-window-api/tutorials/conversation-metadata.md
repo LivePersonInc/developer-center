@@ -8,6 +8,7 @@ level4: Tutorials
 order: 20
 
 permalink: consumer-int-conversation-md.html
+indicator: messaging
 ---
 
 This API exposes another mechanism to enable the client to get conversation metadata. The metadata includes the following:

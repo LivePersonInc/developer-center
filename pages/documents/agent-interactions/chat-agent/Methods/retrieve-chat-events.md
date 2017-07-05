@@ -9,6 +9,7 @@ level4: Methods
 order: 120
 permalink: agent-retrieve-chat-events.html
 
+indicator: chat
 ---
 
 Use this method to periodically poll for new events in the chat session. The method for polling should always be the URI specified in the "next" link. This will only retrieve events added after your last poll.

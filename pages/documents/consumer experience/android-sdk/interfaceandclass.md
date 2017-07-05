@@ -9,6 +9,7 @@ level4: SDK APIs
 order: 11
 permalink: android-interface-definitions.html
 
+indicator: messaging
 ---
 
 ### AgentData

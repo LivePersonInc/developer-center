@@ -9,6 +9,7 @@ level4: Methods
 order: 12
 permalink: android-initializedeprecated.html
 
+indicator: messaging
 ---
 
 *This method was deprecated - please use the [new method](android-initializeproperties.html){:target="_blank"}.*

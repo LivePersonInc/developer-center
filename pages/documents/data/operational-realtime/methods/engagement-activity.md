@@ -7,6 +7,7 @@ level4: Methods
 order: 20
 permalink: data-operational-realtime-engagement-activity.html
 
+indicator: chat
 ---
 
 Retrieves engagement activity-related metrics at the account, skill, or agent level.

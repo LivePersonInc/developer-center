@@ -9,6 +9,7 @@ level4: Methods
 order: 200
 permalink: android-marknormal.html
 
+indicator: messaging
 ---
 
 Marks the current conversation as normal. 

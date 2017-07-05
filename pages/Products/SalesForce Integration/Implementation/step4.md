@@ -8,6 +8,7 @@ level4: Implementation
 order: 40
 permalink: products-agent-efficiency-salesforce-integration-step4.html
 
+indicator:
 ---
 
 Now that you’ve configured your LiveEngage App in Salesforce, it’s time to go back to LiveEngage and configure the widget in LiveEngage.

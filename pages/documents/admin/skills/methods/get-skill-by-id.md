@@ -10,6 +10,7 @@ level4: Methods
 order: 20
 permalink: administration-get-skill-by-id.html
 
+indicator: both
 ---
 
 This API retrieves a single skill (by ID) for a specific account.

@@ -8,6 +8,7 @@ level4: Implementation
 order: 10
 permalink: products-agent-efficiency-salesforce-integration-step1.html
 
+indicator:
 ---
 
 Here are the steps in order to install the LiveEngage App in Salesforce:

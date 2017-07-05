@@ -8,6 +8,7 @@ permalink: guides-agent-workspace-widget.html
 root-link: true
 level-order: 3
 order: 1
+indicator: both
 ---
 
 Agents often need to access external systems while they are working in the agent workspace, and to do so, they need to open additional tabs or browsers. Now, you can
@@ -16,15 +17,15 @@ integrate external systems right into the agent workspace, allotting them their 
 The integration allows you to transfer information directly from the Visit Info to external web pages and applications, and to open relevant records in your system. For example, add a SalesForce widget to view your visitor’s Salesforce records.
 
 In addition, external web page fields can be pre-populated with visitor information, for example, you can pass the Visitor’s name and email parameters from the pre-chat survey
-into the application to pre-populate specific fields. 
+into the application to pre-populate specific fields.
 
-The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Engagement History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets. 
+The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Engagement History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
 
 ![AgentWorkspaceScreenshot](img/agentworkspacewidget1.png)
 
 Let’s say that your agents use a knowledgebase or an external CRM such as SalesForce, while they are chatting. Up until now they have had to access it in a separate window. Now, you can add a widget that displays Salesforce right next to the existing widgets, allowing agents to quickly view and utilize the information they need at any given moment. You can configure parameters to be passed from LiveEngage to your external system.
 
-You can even define the width of the new widget; it can be the same width as each of the standard widgets or it can be the width of two, three or four widgets combined. You can add as many as five additional widgets to the agent workspace. 
+You can even define the width of the new widget; it can be the same width as each of the standard widgets or it can be the width of two, three or four widgets combined. You can add as many as five additional widgets to the agent workspace.
 
 To ensure your Agents are focused on the tools most relevant for them, Admins have the option of assigning widgets to one or more skill. The widget will subsequently only appear to Agents handling chats associated with that skill. Widgets not assigned to specific skills will still appear to all Agents handling any chat.
 
@@ -50,12 +51,12 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 6. If you would like the widget to appear alongside chats associated with a specific skill or skills, select the relevant option(s) from the **Assigned Skills field**. If no skill is assigned, the widget will appear to all chats.
 
-7. Enter the **URL** of the webpage or external application that you wish to display within the widget. 
+7. Enter the **URL** of the webpage or external application that you wish to display within the widget.
 
 8. If you want to add more parameters to the URL, click **Add Visit Info Parameters**. The **Visit info parameters** window will open.
 
 9. Add visit info parameters:
-	
+
 	a. In the **Parameter** name field, enter the identifier of your HTML element (see **Finding the Identifier of your Webpage Field below).
 
 	b. From the **Map to field**, select the LiveEngage parameter that you want to transfer.
@@ -107,4 +108,3 @@ Your new widget will now be displayed as an additional icon next to the existing
 * **Automatic focus management may be problematic:** Applications with focus stealing can cause issues in the user interface of the Agent Workspace.
 
 **Note**: To integrate with your **Salesforce** application, open a ticket to Salesforce support and request the removal of the X-Frame option from your organization’s Salesforce pages. This will allow you to open Salesforce in the widget. Agents must log into Salesforce in a separate browser tab (or through SSO) prior to accepting chats.
-

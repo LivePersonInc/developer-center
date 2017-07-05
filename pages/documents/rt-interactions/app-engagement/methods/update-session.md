@@ -8,6 +8,7 @@ level4: Methods
 order: 20
 permalink: rt-interactions-update-session.html
 
+indicator: both
 ---
 
 Use this method to update the session and add SDEs.

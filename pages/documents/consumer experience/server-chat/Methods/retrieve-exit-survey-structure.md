@@ -8,6 +8,7 @@ level4: Methods
 order: 150
 permalink: consumer-experience-server-chat-retrieve-exit-survey-structure.html
 
+indicator: chat
 ---
 
 Used to retrieve the Exit survey structure.

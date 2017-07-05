@@ -9,6 +9,7 @@ level4: String Localization
 order: 226
 permalink: consumer-experience-ios-sdk-stringlocalization.html
 
+indicator: messaging
 ---
 
 TThe SDK contains language folders for each language supported. For a list of supported languages, see [LiveEngage System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf){:target="_blank"}. Each folder contains LPLocalizable.strings file, where all strings are located for a specific language.

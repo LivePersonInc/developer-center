@@ -7,6 +7,7 @@ level3: App Engagement API
 order: 22
 permalink: rt-interactions-example.html
 
+indicator: both
 ---
 
 ImpressionAcceptEvent, ImpressionDisplayEvent

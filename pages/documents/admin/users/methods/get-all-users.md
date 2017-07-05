@@ -10,6 +10,7 @@ level4: Methods
 order: 10
 permalink: administration-get-all-users.html
 
+indicator: both
 ---
 
 This API retrieves a list of users for a specific account.

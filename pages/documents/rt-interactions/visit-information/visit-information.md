@@ -7,6 +7,7 @@ level3: Visit Information API
 order: 2
 permalink: rt-interactions-visit-information-visit-information.html
 
+indicator: both
 ---
 
 ### Request

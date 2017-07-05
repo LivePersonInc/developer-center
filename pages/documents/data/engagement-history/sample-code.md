@@ -7,6 +7,7 @@ level3: Engagement History API
 order: 11
 permalink: data-engagement-history-sample-code.html
 
+indicator: chat
 ---
 
 This is a basic example of how to connect to the Engagement History API in Java by using Scribe.

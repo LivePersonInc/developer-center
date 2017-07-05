@@ -2,6 +2,7 @@
 title: Configure Push Notifications (Android)
 permalink: /products-inapp-configurepushandroid.html
 toc: false
+indicator:
 ---
 
 Set up your app key to enable push notifications

@@ -9,6 +9,7 @@ level4: Configuration
 order: 8
 permalink: consumer-experience-ios-sdk-logs-info.html
 
+indicator: messaging
 ---
 
 

@@ -9,6 +9,7 @@ level4: Configuration
 order: 3
 permalink: consumer-experience-ios-sdk-initialization.html
 
+indicator: messaging
 ---
 
 In order to get started and initialize the In-App Messaging SDK, utilize the following functions:

@@ -9,6 +9,7 @@ level4: Methods
 order: 10
 permalink: account-configuration-predefined-content-get-default-items-by-id.html
 
+indicator: both
 ---
 
 Retrieves a single, default Predefined Content item by template ID from a specific account.

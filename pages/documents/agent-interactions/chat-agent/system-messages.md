@@ -8,6 +8,7 @@ level3: Chat Agent API
 order: 8
 permalink: agent-system-messages.html
 
+indicator: chat
 ---
 
 Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs:

@@ -9,6 +9,7 @@ level4: Methods
 order: 70
 permalink: account-configuration-predefined-content-delete-content.html
 
+indicator: both
 ---
 
 Deletes a Predefined Content item from a specific account.

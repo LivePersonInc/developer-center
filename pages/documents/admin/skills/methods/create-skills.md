@@ -10,6 +10,7 @@ level4: Methods
 order: 30
 permalink: administration-create-skills.html
 
+indicator: both
 ---
 
 This API creates a list of skills for a specific account.

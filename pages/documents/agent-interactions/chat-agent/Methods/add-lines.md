@@ -9,6 +9,7 @@ level4: Methods
 order: 130
 permalink: agent-add-lines.html
 
+indicator: chat
 ---
 
 Use this method to add a line.

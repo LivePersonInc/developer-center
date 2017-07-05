@@ -8,6 +8,7 @@ level3: Agent Workspace Widget SDK
 order: 40
 permalink: agent-workspace-sdk-how-to-use.html
 
+indicator: both
 ---
 
 All public properties and methods can be found in the namespace lpTag.agentSDK.

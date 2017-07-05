@@ -8,6 +8,7 @@ level4: Methods
 order: 20
 permalink: data-messaging-interactions-methods-summary.html
 
+indicator: messaging
 ---
 
 Returns a summary on the current state of the contact center. This includes number of agents in the different logged in statuses, weighted average of the agents’ load etc.

@@ -8,6 +8,7 @@ order: 1
 level-order: 1
 root-link: true
 permalink: products-channels-inapp-messaging.html
+indicator:
 ---
 
 ### Overview

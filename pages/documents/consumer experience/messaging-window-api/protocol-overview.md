@@ -7,6 +7,7 @@ level3: Messaging Window API
 order: 1
 permalink: consumer-int-protocol-overview.html
 
+indicator: messaging
 ---
 
 ### API Endpoints

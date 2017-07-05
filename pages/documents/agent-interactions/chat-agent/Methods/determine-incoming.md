@@ -9,6 +9,7 @@ level4: Methods
 order: 70
 permalink: agent-determine-incoming.html
 
+indicator: chat
 ---
 
 This method returns the number of incoming chat requests assigned to the logged in agent and a link to accept the next chat request.

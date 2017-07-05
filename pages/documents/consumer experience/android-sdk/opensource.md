@@ -9,6 +9,7 @@ level4: Appendix
 order: 284
 permalink: android-opensource.html
 
+indicator: messaging
 ---
 
 ### Open Source List

@@ -9,6 +9,7 @@ level4: Events
 order: 250
 permalink: consumer-experience-javascript-chat-ontranscript.html
 
+indicator: chat
 ---
 
 Triggered when a transcript has been requested from the server.

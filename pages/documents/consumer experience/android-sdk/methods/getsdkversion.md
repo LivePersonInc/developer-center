@@ -9,6 +9,7 @@ level4: Methods
 order: 140
 permalink: android-getsdkversion.html
 
+indicator: messaging
 ---
 
 Returns the SDK version.

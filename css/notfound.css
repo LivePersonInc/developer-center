@@ -1,0 +1,69 @@
+/* Styling for 404 page */
+body {
+  background-color: #162036;
+}
+
+.notfoundtitle {
+  width: 70%;
+  height: 70%;
+  background-color: #00ccff;
+  font-size: 14em;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  padding: 40px;
+  text-align: center;
+  color: #ffffff;
+  border: solid 5px;
+  font-family: "Open Sans", Arial, Helvetica;
+}
+
+.notfoundbody {
+  width: 50%;
+  height: 50%;
+  font-size: 4em;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, Helvetica;
+}
+
+.notfoundlink{
+  font-size: 2em;
+  margin: auto;
+  position: relative;
+  top: 600px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+strong {
+  color: #162036;
+}
+
+a {
+  color: #162036
+}
+
+@media only screen and (max-width: 480px){
+  .notfoundbody {
+    display: none;
+  }
+  .notfoundtitle {
+    font-size: 7em
+  }
+  .notfoundlink {
+    font-size: 1.4em
+  }
+}

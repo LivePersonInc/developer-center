@@ -7,6 +7,7 @@ level4: Methods
 order: 10
 permalink: data-messaging-interactions-methods-agent-status.html
 
+indicator: messaging
 ---
 
 Returns the current state of logged in agents that are handling messaging conversations with all its related data, including status, number of open conversations, load, skills etc. 

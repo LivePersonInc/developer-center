@@ -7,6 +7,7 @@ level3: Video Chat
 order: 3
 
 permalink: products-video-chat-develop-the-services.html
+indicator:
 ---
 
 ### Video Service

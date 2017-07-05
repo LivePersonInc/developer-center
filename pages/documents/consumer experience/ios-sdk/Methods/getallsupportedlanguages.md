@@ -9,6 +9,7 @@ level4: Methods
 order: 220
 permalink: consumer-experience-ios-sdk-getallsupportedlanguages.html
 
+indicator: messaging
 ---
 
 Get all supported languages as Strings dictionary where:

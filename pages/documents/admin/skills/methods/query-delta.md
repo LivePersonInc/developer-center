@@ -10,6 +10,7 @@ level4: Methods
 order: 90
 permalink: administration-skills-query-delta.html
 
+indicator: both
 ---
 
 This API queries changes in skills data.

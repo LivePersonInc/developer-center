@@ -8,6 +8,7 @@ level3: In-App Messaging SDK for Android
 order: 13
 permalink: android-authentication.html
 
+indicator: messaging
 ---
 
 For users of OAuth 2.0 for customer authentication, the following functions apply: 

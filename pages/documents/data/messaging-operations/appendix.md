@@ -7,6 +7,7 @@ level3: Messaging Operations API
 order: 21
 permalink: data-messaging-operations-appendix.html
 
+indicator: messaging
 ---
 
 This section contains API details that are common to every API’s resource and action.

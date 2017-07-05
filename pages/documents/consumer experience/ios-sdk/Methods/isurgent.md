@@ -9,6 +9,7 @@ level4: Methods
 order: 80
 permalink: consumer-experience-ios-sdk-isurgent.html
 
+indicator: messaging
 ---
 
 Checks if the active conversation (if existing) is marked as urgent. Otherwise returns false. 

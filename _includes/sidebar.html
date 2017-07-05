@@ -4,6 +4,16 @@
 
 
 <ul id="mysidebar" class="nav fixed" >
+  {% if (page.indicator != null and (page.indicator == "both" or page.indicator == "chat")) %}
+  <div class="indicator chat">C
+    <span class="indicatortooltip">Applies to Live Chat</span>
+  </div>
+  {% endif %}
+  {% if (page.indicator != null and (page.indicator == "both" or page.indicator == "messaging")) %}
+  <div class="indicator messaging">M
+    <span class="indicatortooltip">Applies to Messaging</span>
+  </div>
+  {% endif %}
   {% assign level4 = null %}
   <!--loop over all the level3 documents -->
   {% assign filtered = site.pages | where_exp:"p","p.level1 == page.level1" | where_exp:"p","p.level2 == page.level2" | where_exp:"p","p.level3 == page.level3" %}
@@ -24,18 +34,19 @@
     {% else %}
        <li><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
     {% endif %}
-     
+
     {% assign level4 = p.level4 %}
   {% endfor %}
   {% if (level4 != null) %}
       </ul>
     </li>
   {% endif %}
+  <a class="report" href="https://github.com/LivePersonInc/developers-community/issues/new" target="_blank">Found an Issue?</a>
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. 
-this is critical so that the parent expands when you're viewing a page. 
-This must appear below the sidebar code above. Otherwise, 
+<!-- this highlights the active parent class in the navgoco sidebar.
+this is critical so that the parent expands when you're viewing a page.
+This must appear below the sidebar code above. Otherwise,
 if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <!--<script>$("li.active").parents('li').toggleClass("active");</script>-->
 
@@ -43,16 +54,16 @@ if placed inside customscripts.js, the script runs before the sidebar code runs 
 <script>
    // $("div#toc").css("max-width",($(".sidebarTitle").width() + 35));
     //$("#mysidebar.nav li.active").parents('li').toggleClass("active");
-    
+
     if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
-     
-    } 
+
+    }
     else{
          //$("#mysidebar.nav").css("width","auto");
     }
     window.onresize = function(){
       if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
-       
+
       }
       else{
          //$("#mysidebar.nav").css("width","auto");

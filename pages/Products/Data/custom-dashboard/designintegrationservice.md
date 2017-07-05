@@ -7,6 +7,7 @@ level3: Custom Dashboard
 order: 4
 
 permalink: products-data-custom-dashboard-design-integration-service.html
+indicator:
 ---
 
 Once you have identified the goals and audience of your dashboard and determined what data points to utilize, you’re ready to move forward with your designs. 

@@ -7,6 +7,7 @@ level4: Methods
 order: 10
 permalink: trigger-click.html
 
+indicator:
 ---
 
 This method simulates a mouse click on an engagement. For example, a virtual agent can programmatically start the conversation flow without knowing where in the DOM the engagement is. The method can receive information about the consumer's actions that lead to the "click". This information is displayed as an Automatic Message to both agent and consumer in the conversation window once the consumer is connected to an agent.

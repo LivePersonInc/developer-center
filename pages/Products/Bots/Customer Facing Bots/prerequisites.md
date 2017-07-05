@@ -10,6 +10,7 @@ order: 2
 
 permalink: products-bots-prerequisites.html
 
+indicator:
 ---
 
 The following prerequisites are required:

@@ -8,6 +8,7 @@ level4: Implementation
 order: 20
 permalink: products-agent-efficiency-kbintegration-developyourwidget.html
 
+indicator:
 ---
 
 In order to begin creating your widget, you would need to have a design in mind - both for required functionality as well as for the look and feel.

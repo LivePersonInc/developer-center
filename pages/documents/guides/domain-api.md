@@ -9,6 +9,7 @@ level-order: 2
 order: 10
 permalink: agent-domain-domain-api.html
 root-link: true
+indicator:
 ---
 
 ### Overview

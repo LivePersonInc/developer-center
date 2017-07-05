@@ -8,15 +8,16 @@ order: 3
 permalink: consumer-int-account-provision.html
 
 folder: Introduction
+indicator: messaging
 ---
 
-**Prerequisites**: The provisioning is currently not self service and can only be done internally by LivePerson. 
+**Prerequisites**: The provisioning is currently not self service and can only be done internally by LivePerson.
 
 Go to the LiveEngage login page and click on the Live Chat button. Ask LivePerson Support to enable the following features in your account:
 
   * Common.Async_Messaging
   * Common.Authenticated_Chat
-  
+
 If you have internal LPA (admin) credentials, you can enable these features by following the steps below:
 
 * hc1d > serverCommands > Account Config features

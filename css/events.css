@@ -50,7 +50,8 @@
     height:auto;
   }
 
-  .banner .events img {
+  .events img {
+
     display: none;
   }
   .img-responsive-mobile img {
@@ -141,4 +142,8 @@ a.view-all-products::after{
         margin-top: 0px;
     }
 
+}
+.botplaform > img {
+  width: 850px;
+  margin-top: 3%;
 }

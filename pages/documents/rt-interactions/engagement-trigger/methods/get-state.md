@@ -7,6 +7,7 @@ level4: Methods
 order: 30
 permalink: trigger-getstate.html
 
+indicator:
 ---
 
 

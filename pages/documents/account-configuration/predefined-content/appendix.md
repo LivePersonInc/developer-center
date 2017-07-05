@@ -8,6 +8,7 @@ level3: Predefined Content API
 order: 101
 permalink: account-configuration-predefined-content-appendix.html
 
+indicator: both
 ---
 
 This section contains API details that are common to every API’s resource and action.
