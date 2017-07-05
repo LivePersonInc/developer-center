@@ -296,10 +296,7 @@ The table below lists the available attributes which can be used to personalize 
   <tr>
     <td align="left">enablePhotoSharing</td>
     <td align="left">Bool</td>
-    <td align="left">True
-Enables Photo Sharing feature
-False
-Disables Photo Sharing</td>
+    <td align="left">True - Enables Photo Sharing feature, False - Disables Photo Sharing</td>
     <td align="left"></td>
     <td align="left">false</td>
   </tr>
@@ -351,6 +348,8 @@ Disables Photo Sharing</td>
     <td align="left">Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled</td>
     <td align="left"><img src="img/cameraButtonColor.png" alt="cameraButtonColor"></td>
     <td align="left">#8B8A8F</td>
+  </tr>
+  <tr>
     <td align="left">fileCellLoaderFillColor</td>
     <td align="left">UIColor</td>
     <td align="left">Radial loader fill color</td>
