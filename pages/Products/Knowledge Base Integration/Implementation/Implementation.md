@@ -8,6 +8,7 @@ level4: Implementation
 order: 10
 permalink: products-agent-efficiency-kbintegration-implementation.html
 
+indicator:
 ---
 
 This guide will take you through the 3 major steps you need to take in order to deploy this product:

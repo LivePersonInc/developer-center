@@ -8,6 +8,7 @@ level3: Push Notification Service (iOS and Android)
 order: 30
 permalink: push-service-codes.html
 
+indicator: messaging
 ---
 
 Listed below are the expected responses from the push endpoint:

@@ -9,6 +9,7 @@ level4: Methods
 order: 190
 permalink: consumer-experience-javascript-chat-getagenttyping.html
 
+indicator: chat
 ---
 
 Returns the current agent typing boolean state according to the latest events received.

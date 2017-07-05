@@ -9,6 +9,7 @@ level4: Configuration
 order: 6
 permalink: android-UI.html
 
+indicator: messaging
 ---
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, typing indication, etc.

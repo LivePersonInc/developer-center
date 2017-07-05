@@ -8,9 +8,10 @@ permalink: guides-customizedchat.html
 root-link: true
 level-order: 3
 order: 1
+indicator: chat
 ---
 
-### Introduction 
+### Introduction
 
 As part of our open platform, LiveEngage gives brands the ability to modify consumer interaction windows using APIs. These APIs allow brands to develop and deploy a unique chat experience for their consumers.
 
@@ -18,9 +19,9 @@ The triggering of an API-based consumer chat window is supported by both monitor
 
 Different types of engagements, funnel reporting, consumer authentication flow (oAuth2.0+OpenId Connect) and engagement attributes are supported as part of the solution.
 
-### Flows 
+### Flows
 
-#### Monitored 
+#### Monitored
 
 On a monitored flow, once a consumer enters a web page tagged with the LiveEngage Tag, a consumer session is created and monitored by the LiveEngage monitoring system.
 
@@ -29,7 +30,7 @@ In order to trigger a customized window, an engagement with a dedicated API-base
 Once an engagement is presented and clicked on by the consumer, the engagement will trigger the corresponding chat window.
 
 #### Unmonitored
-When the LiveEngage Tag is not part of the flow, retrieving an engagement is the responsibility of the Chat API-based window service, using the App Engagement API. 
+When the LiveEngage Tag is not part of the flow, retrieving an engagement is the responsibility of the Chat API-based window service, using the App Engagement API.
 
 **Engagement retrieval**
 
@@ -40,5 +41,3 @@ In order to display an engagement with an up-to-date availability state, you mus
 1. Before requesting a chat, the Chat API-based window service can be rechecked for availability.
 
 2. The service will then start a chat flow.
-
-

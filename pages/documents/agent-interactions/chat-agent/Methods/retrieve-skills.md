@@ -9,6 +9,7 @@ level4: Methods
 order: 200
 permalink: agent-chat-agent-retrieve-skills.html
 
+indicator: chat
 ---
 
 This method returns the available skills to transfer a chat. The list includes all skills that have at least one agent online and is not currently engaged in the chat.

@@ -9,6 +9,7 @@ level4: String Localization
 order: 279
 permalink: android-resolve.html
 
+indicator: messaging
 ---
 
 Resolve message use default SHORT date and SHORT time according to the locale (default or custom) and to device setting.

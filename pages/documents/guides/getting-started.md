@@ -8,6 +8,7 @@ permalink: guides-gettingstarted.html
 root-link: true
 level-order: 1
 order: 1
+indicator:
 ---
 
 If required by an API, create an Application Key. This Application Key will be installed automatically upon creation.

@@ -8,6 +8,7 @@ level4: Methods
 order: 130
 permalink: consumer-experience-server-chat-retrieve-visitor-typing-status.html
 
+indicator: chat
 ---
 
 Returns the visitor's typing status.

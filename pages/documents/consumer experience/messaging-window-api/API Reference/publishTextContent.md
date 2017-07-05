@@ -9,6 +9,7 @@ order: 190
 layout: page
 
 permalink: consumer-int-msg-text-cont.html
+indicator: messaging
 ---
 
 Using this request, the consumer can ask to publish text content to an existing conversation.

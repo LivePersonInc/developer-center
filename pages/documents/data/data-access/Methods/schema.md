@@ -2,11 +2,12 @@
 title: Schema
 level1: Documents
 level2: Data
-level3: Data Access API
+level3: Data Access API (BETA)
 level4: Methods
 order: 60
 permalink: data-data-access-schema.html
 
+indicator: chat
 ---
 
 The Schema is the JSON format blueprint for creating Data Access files. Specific and history schemas are retrievable.

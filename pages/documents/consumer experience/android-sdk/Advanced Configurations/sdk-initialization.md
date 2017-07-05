@@ -9,6 +9,7 @@ level4: Configuration
 order: 2
 permalink: android-initialization.html
 
+indicator: messaging
 ---
 
 Add the code below to initialize the SDK:

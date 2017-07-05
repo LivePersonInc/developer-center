@@ -260,7 +260,7 @@ div#toc ul li {
     list-style: square;
 }
 div#toc ul {
-   
+
     padding: 5px;
     border-radius: 5px;
     max-width: 300px;
@@ -318,14 +318,14 @@ footer {
 	width: 100%;
 	background-color: #162036;
 	min-height: 40px;
-	
+
 	position: fixed;
 	bottom: -50px;
 }
 
 footer .container  #footer_logo_white{
     width:100px;
-    
+
 }
 footer .container .row ul{
     list-style:none;
@@ -341,7 +341,7 @@ footer .container .row ul li {
 }
 footer .container .row ul li a{
     color: white;
-   
+
 }
 footer .container .row ul li.logo{
     max-width: 134px;
@@ -412,6 +412,25 @@ a.accordion-toggle, a.accordion-collapsed {
     -moz-border-radius: 4px;
     border-radius: 4px;*/
     text-decoration: none;
+}
+
+.report {
+
+  color: #5879da !important;
+  display: block;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding-left: 11px;
+  margin: 1px 0;
+  position: relative;
+  font-family: "Open Sans","Roboto Slab",Arial,Helvetica,sans-serif;
+  margin-top: 30px;
+}
+
+.report:hover{
+  color: #5879da !important;
+  background-color: #ffffff !important;
 }
 
 .nav li > a > span {
@@ -934,7 +953,7 @@ span.soft {
     #mysidebar {
         position: relative;
     }
-  
+
 }
 
 @media (min-width: 1000px) {
@@ -1031,29 +1050,9 @@ a.no_icon:after
     margin-bottom: 10px;
 }
 
-/* algolia search */
-
-.search {
-    text-align: left;
-}
-.search input {
-    font-size: 20px;
-    width: 300px;
-}
-.results {
-    margin: auto;
-    text-align: left;
-}
-.results ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* algolia */
-
 div.results {
     position: absolute;
-    background-color: white;
+    background-color: #162036;
     width: 100%;
 }
 
@@ -1253,3 +1252,104 @@ html body div.container div.text li a.more-btn{
 html body div.container div.text li a.more-btn.active {
   display:block;
 }
+
+
+
+/* Bots platform page */
+
+.bot-platform .banner-container{
+	text-align:center;
+	background:url(/images/background-le-for-bots.png) no-repeat center center / cover;
+	padding:96px 0;
+}
+
+.bot-platform .section1{
+	background:#ecf0f1;
+	text-align:center;
+	padding:72px 0;
+}
+
+.bot-platform .section2{
+	padding:72px 0 40px;
+	border-bottom:1px solid #ecf0f1;
+}
+
+.bot-platform .section3{
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+.bot-platform h1{
+	color:#ffffff;
+	font-size:48px;
+	line-height:64px;
+	font-family:'roboto slab',arial;
+	font-weight:300;
+	margin-top:0;
+	margin-bottom:24px;
+}
+
+.bot-platform h2{
+	color:#162036;
+	font-size:24px;
+	line-height:32px;
+	font-family:'open sans',arial;
+	font-weight:300;
+	margin-top:0;
+	padding-top:0;
+	text-align:center;
+}
+
+.bot-platform .orange{
+	color:#ffffff;
+	background:#ff720b;
+	padding:14px 26px;
+	font-size:16px;
+}
+
+.bot-platform p, .bot-platform > ul > li{
+	color:#162036;
+	font-size:16px;
+	line-height:22px;
+	font-family:'open sans',arial;
+	font-weight:300;
+}
+
+.bot-platform > ul > li{
+	margin-bottom:20px;
+}
+
+.bot-platform .banner-container h2{
+	color:#ffffff;
+	margin-bottom:32px;
+}
+
+.bot-platform .section2 h2{
+	margin-bottom:40px;
+}
+
+.bot-platform .section3 iframe{
+	border:0;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+	.bot-platform .banner-container{
+		background:url(/images/background-le-for-bots@2x.png) no-repeat center center / cover;
+	}
+
+}
+
+@media (max-width:992px){
+	.bot-platform .section3 p{
+		margin-bottom:40px;
+	}
+}
+
+/* End Bots platform page */

@@ -8,6 +8,7 @@ level4: Implementation
 order: 30
 permalink: products-agent-efficiency-salesforce-integration-step3.html
 
+indicator:
 ---
 
 ### Overview

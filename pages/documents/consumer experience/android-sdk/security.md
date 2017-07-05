@@ -6,9 +6,10 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Appendix
 
-order: 281
+order: 282
 permalink: android-security.html
 
+indicator: messaging
 ---
 
 Security is a top priority and key for enabling trusted, meaningful engagements.

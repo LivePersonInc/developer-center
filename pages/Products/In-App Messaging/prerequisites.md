@@ -2,6 +2,7 @@
 title: Prerequisites
 permalink: /products-inapp-prerequisites.html
 toc: false
+indicator:
 ---
 
 The following prerequisites are required:

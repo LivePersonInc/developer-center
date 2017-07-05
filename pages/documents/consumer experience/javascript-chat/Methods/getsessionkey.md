@@ -9,6 +9,7 @@ level4: Methods
 order: 180
 permalink: consumer-experience-javascript-chat-getsessionkey.html
 
+indicator: chat
 ---
 
 Returns the chat session key string according to the latest events received.

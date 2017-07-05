@@ -9,6 +9,7 @@ level4: Methods
 order: 100
 permalink: agent-retrieve-chat-resources.html
 
+indicator: chat
 ---
 
 This method retrieves the chat events, information and resources.

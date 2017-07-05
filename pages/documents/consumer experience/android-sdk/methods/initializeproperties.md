@@ -9,6 +9,7 @@ level4: Methods
 order: 20
 permalink: android-initializeproperties.html
 
+indicator: messaging
 ---
 
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePushMessage, assume that the SDK has been initialized.

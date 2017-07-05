@@ -7,6 +7,7 @@ level4: Methods
 order: 10
 permalink: rt-interactions-ivr-engagement-external engagement.html
 
+indicator: chat
 ---
 
 This method exposes a short-term, one-time, non-cacheable URL for starting the engagement.

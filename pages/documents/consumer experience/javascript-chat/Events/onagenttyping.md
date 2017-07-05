@@ -9,6 +9,7 @@ level4: Events
 order: 290
 permalink: consumer-experience-javascript-chat-onagenttyping.html
 
+indicator: chat
 ---
 
 Triggered when the agent typing status is changed. The agentTyping property is a boolean value. 

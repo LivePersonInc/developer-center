@@ -5,6 +5,7 @@ search: exclude
 permalink: tag_single_sourcing.html
 sidebar: mydoc_sidebar
 folder: tags
+indicator:
 ---
 {% include taglogic.html %}
 

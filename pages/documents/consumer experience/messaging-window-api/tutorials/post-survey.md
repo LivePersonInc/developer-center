@@ -8,6 +8,7 @@ level4: Tutorials
 order: 60
 permalink: consumer-int-post-survey.html
 
+indicator: messaging
 ---
 
 ### Prerequisites

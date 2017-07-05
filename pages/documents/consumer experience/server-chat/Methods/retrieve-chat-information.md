@@ -8,6 +8,7 @@ level4: Methods
 order: 110
 permalink: consumer-experience-server-chat-retrieve-chat-information.html
 
+indicator: chat
 ---
 
 Retrieves information regarding the current status of the chat. The information section includes the state, agent's name, start time of the chat, last update, visitor's ID, agent typing, visitor typing, and the visitor's name.

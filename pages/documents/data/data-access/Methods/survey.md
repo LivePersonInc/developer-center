@@ -2,11 +2,12 @@
 title: Survey
 level1: Documents
 level2: Data
-level3: Data Access API
+level3: Data Access API (BETA)
 level4: Methods
 order: 50
 permalink: data-data-access-survey.html
 
+indicator: chat
 ---
 
 Survey retrieves all the survey data in .zip format files. The survey data consists of information about the different surveys that occur during the visitor session. It can be all viewed or submitted pre/post/offline surveys as well as the operator survey that the agent viewed or submitted. 

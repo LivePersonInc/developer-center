@@ -8,6 +8,7 @@ level4: Methods
 order: 50
 permalink: consumer-experience-server-chat-retrieve-offline-survey.html
 
+indicator: chat
 ---
 
 Returns an XML or JSON response with an Offline survey, or posts an Offline survey.

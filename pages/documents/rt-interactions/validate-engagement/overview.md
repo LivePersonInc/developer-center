@@ -8,7 +8,12 @@ level-order: 5
 order: 1
 permalink: rt-interactions-validate-engagement-overview.html
 root-link: true
+indicator: both
 ---
+### Introduction
+
+The Validate Engagement API was designed to be used as part of a click-to-call solution to provide a way for brands to validate the trigger that was used to start the call was in fact a LivePerson engagement and not a phishing call.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -17,15 +22,13 @@ A few things you'll need to get started with this API:
 
 	* smt
 
-2. This API requires authorization using API key. 
+2. This API requires authorization using API key.
 
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
-### Introduction
 
-The Validate Engagement API was designed to be used as part of a click-to-call solution to provide a way for brands to validate the trigger that was used to start the call was in fact a LivePerson engagement and not a phishing call.
 
 ### Use cases
 
@@ -36,4 +39,3 @@ Example click-to-call invitation from a website:
 ![ValidateEngagement](img/validateengagement.png)
 
 Please refer to the [Click to Call solution document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/technical+doc/Click+to+Call+in+LE+v1.0.pdf){:target="_blank"} for more information.
-

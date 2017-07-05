@@ -8,6 +8,7 @@ level3: Javascript Chat SDK
 order: 5
 permalink: consumer-experience-javascript-chat-sample.html
 
+indicator: chat
 ---
 
 This sample app includes information on how to work with the SDK. There are two flows:

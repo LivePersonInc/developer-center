@@ -9,6 +9,7 @@ level4: Methods
 order: 50
 permalink: consumer-experience-javascript-chat-setvisitortyping.html
 
+indicator: chat
 ---
 
 This notifies the agent of the typing state of the visitor. The response echoes the request data.

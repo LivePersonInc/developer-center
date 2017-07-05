@@ -9,6 +9,7 @@ level4: Methods
 order: 60
 permalink: android-getconversationfrag.html
 
+indicator: messaging
 ---
 
 The getConversationFragment method creates and returns the conversation fragment.

@@ -9,6 +9,7 @@ level4: Methods
 order: 60
 permalink: account-configuration-predefined-content-get-items.html
 
+indicator: both
 ---
 
 Retrieves a list of Predefined Content items from a specific account.

@@ -8,6 +8,7 @@ level3: Agent Workspace Widget SDK
 order: 50
 permalink: agent-workspace-sdk-methods.html
 
+indicator: both
 ---
 
 _Note: You should call init once at the beginning before calling any other method._

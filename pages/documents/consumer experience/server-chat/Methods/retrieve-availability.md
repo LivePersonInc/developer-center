@@ -9,6 +9,7 @@ level4: Methods
 order: 10
 permalink: consumer-experience-server-chat-retrieve-availability.html
 
+indicator: chat
 ---
 
 This method checks whether there are agents on this account that are available for chat.

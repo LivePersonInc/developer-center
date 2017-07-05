@@ -9,6 +9,7 @@ level4: Methods
 order: 90
 permalink: account-configuration-predefined-content-get-default-items.html
 
+indicator: both
 ---
 
 Retrieves default Predefined Content items from a specific account.

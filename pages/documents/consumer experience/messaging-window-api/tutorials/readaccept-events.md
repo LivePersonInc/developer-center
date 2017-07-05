@@ -8,6 +8,7 @@ level4: Tutorials
 order: 30
 permalink: consumer-int-readaccept-events.html
 
+indicator: messaging
 ---
 
 In order to show the agent which messages were accepted by the consumer device and which were read by the consumer, the client should publish read/accept receipts. The same events are published by the agent side and may be displayed to the consumer. In this tutorial we will see how to publish these events.

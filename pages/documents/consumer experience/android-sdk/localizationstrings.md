@@ -9,6 +9,7 @@ level4: String Localization
 order: 278
 permalink: android-localization-strings.html
 
+indicator: messaging
 ---
 
 **Android resources introduction:**

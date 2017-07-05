@@ -8,6 +8,7 @@ level4: Methods
 order: 140
 permalink: consumer-experience-server-chat-set-visitor-typing-status.html
 
+indicator: chat
 ---
 
 Sets the visitor's typing status.

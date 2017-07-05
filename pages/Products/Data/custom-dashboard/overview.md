@@ -8,6 +8,7 @@ order: 1
 level-order: 2
 root-link: true
 permalink: products-data-custom-dashboard-overview.html
+indicator:
 ---
 
 ### Overview

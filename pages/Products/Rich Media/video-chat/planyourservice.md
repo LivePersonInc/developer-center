@@ -7,6 +7,7 @@ level3: Video Chat
 order: 2
 
 permalink: products-video-chat-plan-your-service.html
+indicator:
 ---
 
 ### Prerequisites

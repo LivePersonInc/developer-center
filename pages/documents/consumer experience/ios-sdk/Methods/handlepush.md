@@ -9,6 +9,7 @@ level4: Methods
 order: 140
 permalink: consumer-experience-ios-sdk-handlepush.html
 
+indicator: messaging
 ---
 
 In order to receive all incoming push notifications in a single function and handle them, add the following method. This method cooperates with two other API methods: 

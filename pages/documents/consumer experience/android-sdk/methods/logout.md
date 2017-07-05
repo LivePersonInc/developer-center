@@ -9,6 +9,7 @@ level4: Methods
 order: 260
 permalink: android-logout.html
 
+indicator: messaging
 ---
 
 Logout from the SDK - when all user data should be removed.

@@ -7,6 +7,7 @@ level3: Validate Engagement API
 order: 2
 permalink: rt-interactions-validate-engagement-validate-engagement.html
 
+indicator: both
 ---
 
 ### Request

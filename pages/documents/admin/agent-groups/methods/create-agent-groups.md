@@ -10,6 +10,7 @@ level4: Methods
 order: 30
 permalink: administration-create-agent-groups.html
 
+indicator: both
 ---
 
 This API creates an agent group for a specific account.

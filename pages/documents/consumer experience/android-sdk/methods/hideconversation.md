@@ -9,6 +9,7 @@ level4: Methods
 order: 50
 permalink: android-hideconversation.html
 
+indicator: messaging
 ---
 
 The hideConversation API hides the conversation activity. The conversation screen is shown again by calling Start Conversation. 

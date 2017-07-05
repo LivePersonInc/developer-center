@@ -8,6 +8,7 @@ level4: Methods
 order: 60
 permalink: consumer-experience-server-chat-post-offline-survey.html
 
+indicator: chat
 ---
 
 Posts an offline survey.

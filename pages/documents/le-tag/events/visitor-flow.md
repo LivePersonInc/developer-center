@@ -8,6 +8,7 @@ level4: Events
 order: 10
 permalink: lp-tag-visitor-flow.html
 
+indicator: both
 ---
 These events include monitoring and decision events.
 

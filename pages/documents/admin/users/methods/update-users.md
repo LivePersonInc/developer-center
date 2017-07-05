@@ -10,6 +10,7 @@ level4: Methods
 order: 40
 permalink: administration-update-users.html
 
+indicator: both
 ---
 
 This API updates a list of users for a specific account.

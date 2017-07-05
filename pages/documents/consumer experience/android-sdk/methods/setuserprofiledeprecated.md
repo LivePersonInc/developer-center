@@ -9,6 +9,7 @@ level4: Methods
 order: 100
 permalink: android-setuserprofiledeprecated.html
 
+indicator: messaging
 ---
 
 *Deprecated. Please use the [setUserProfile](android-setuserprofile.html){:target="_blank"} (String firstName, String lastName, String phone) method ).*

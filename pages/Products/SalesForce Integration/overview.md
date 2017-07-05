@@ -10,6 +10,7 @@ level-order: 2
 root-link: true
 permalink: products-agent-efficiency-salesforce-integration.html
 
+indicator:
 ---
 
 The LiveEngage Salesforce Widget will allow viewing of SFDC information inside the LiveEngage Platform, as well as creating records and attaching chat transcripts to them. In addition, the wdiget will include back-end setup that will allow the SFDC admin to customize the default settings of his organization. 

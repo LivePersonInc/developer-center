@@ -9,6 +9,7 @@ level4: Customization and Branding
 order: 223
 permalink: consumer-experience-ios-sdk-configuring-the-sdk.html
 
+indicator: messaging
 ---
 
 The SDK allows you to customize the look and feel of your app using LPConfig object. To apply a custom look and feel, create your own configuration instance and assign the attributes you want to customize. 

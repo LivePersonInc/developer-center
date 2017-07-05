@@ -6,6 +6,7 @@ level3: Customized Chat Windows
 
 permalink: guides-customizedchat-appendix.html
 order: 4
+indicator: chat
 ---
 
 ### Major components

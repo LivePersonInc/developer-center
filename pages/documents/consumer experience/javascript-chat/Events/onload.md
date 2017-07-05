@@ -9,6 +9,7 @@ level4: Events
 order: 192
 permalink: consumer-experience-javascript-chat-onload.html
 
+indicator: chat
 ---
 
 This event fires when the chat API instance has been created and the DOM has loaded. It contains the current state of the API. If you are creating an instance of the chat API on page refresh or navigation, the state published here will be resume.

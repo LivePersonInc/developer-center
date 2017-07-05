@@ -7,11 +7,12 @@ level4: Methods
 order: 20
 permalink: data-messaging-operations-messaging-csat-distribution.html
 
+indicator: messaging
 ---
 
 Retrieves messaging CSAT (Customer Satisfaction) distribution related metrics at the site, skill or agent level.
 
-Messaging CSAT Distribution is calculated using bucket aggregation techniques where events are collected into 5 minute buckets, therefore the API might include events which were not in the requested time frame. 
+Messaging CSAT Distribution is calculated using bucket aggregation techniques where events are collected into 5 minute buckets, therefore the API might include events which were not in the requested time frame.
 
 **Example**: If the time is now 13:29 and time frame is 7 minutes the API will use 2 buckets: 13:25 and 13:30. In other words in practice the time of the data is not 13:22-13:29 but 13:20-13:29.
 
@@ -19,7 +20,7 @@ Messaging CSAT Distribution is calculated using bucket aggregation techniques wh
 
 | Method | URL |
 | :-------- | :----- |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgconversation?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&v=<version>`
+| GET | `https://<domain>/operations/api/account/{accountID}/msgcsatdistribution?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&v=<version>`
 
 **URL Parameters**
 

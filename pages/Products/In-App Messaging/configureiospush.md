@@ -2,6 +2,7 @@
 title: Configure Push Notifications (iOS)
 permalink: /products-inapp-configurepushios.html
 toc: false
+indicator:
 ---
 
 1. Create a production certificate and Development certificate

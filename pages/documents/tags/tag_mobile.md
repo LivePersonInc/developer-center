@@ -5,6 +5,7 @@ tagName: mobile
 permalink: tag_mobile.html
 sidebar: mydoc_sidebar
 folder: tags
+indicator:
 ---
 {% include taglogic.html %}
 
