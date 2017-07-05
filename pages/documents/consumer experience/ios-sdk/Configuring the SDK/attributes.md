@@ -336,6 +336,7 @@ The table below lists the available attributes which can be used to personalize 
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
+
     <td align="left">cameraButtonEnabledColor</td>
     <td align="left">UIColor</td>
     <td align="left">Photo Sharing Camera button color in enabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled</td>
@@ -375,8 +376,6 @@ The table below lists the available attributes which can be used to personalize 
   </tr>
 </tbody>
 </table>
-
-
 
 ### Send Button
 

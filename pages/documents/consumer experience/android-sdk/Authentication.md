@@ -10,8 +10,7 @@ permalink: android-authentication.html
 
 indicator: messaging
 ---
-
-For users of OAuth 2.0 for customer authentication, the following functions apply: 
+For users of OAuth 2.0 for customer authentication, the following functions apply:
 
 To start LivePerson's Activity mode:
 
@@ -21,7 +20,7 @@ To start LivePerson's Fragment mode: (Attach the returned fragment to a containe
 
 `LivePerson : LivePerson.getConversationFragment(String authKey);`
 
-Once Authentication key is expired, you will be notified with callback ["void onTokenExpired()"](android-callbacks-index.html){:target="_blank"}. 
+Once Authentication key is expired, you will be notified with callback ["void onTokenExpired()"](android-callbacks-index.html){:target="_blank"}.
 
 To re-connect with new Authentication key:
 
