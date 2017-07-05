@@ -21,23 +21,21 @@ There are 2 ways to register to LivePerson events:
 
 #### Local Intents
 
-You can register to specific Action or to all of them.
-All the Actions are defined in LivePersonIntents.ILivePersonIntentAction Interface, all the additional data provided using Extras on the intents and defined in LivePersonIntents.ILivePersonIntentExtras Interface.
-LivePersonIntents class provides several methods that help get the data out of the intent, without dealing with the Extras.
+Using Local Intents, you can register to a specific Action or to all of them. All the Actions are defined in the LivePersonIntents.ILivePersonIntentAction Interface. All the additional data provided using Extras on the intents is defined in the LivePersonIntents.ILivePersonIntentExtras Interface. LivePersonIntents class provides several methods that help get the data out of the intent, without dealing with the Extras.
+
 For full list of all the methods click [here](android-callbacks-index.html).
 
-To easily register to all the intent Actions, we provide IntentFilter that already contains them all in LivePersonIntents.getIntentFilterForAllEvents().
+To easily register to all the intent Actions, we provide an IntentFilter that already contains them all in LivePersonIntents.getIntentFilterForAllEvents().
 
-To register BroadcastReceiver use this code:
+To register BroadcastReceiver, use this code:
 
-_ Note: Those Intent are local only and must by register via LocalBroadcastManager. _
+_ Note: Those Intent are local only and must by registered via LocalBroadcastManager. _
 
 ```javascript
 LocalBroadcastManager.getInstance(getApplicationContext())
                .registerReceiver(<your receiver>,
                  LivePersonIntents.getIntentFilterForAllEvents());
 ```
-
 
 ```javascript
  <your receiver> = new BroadcastReceiver(){

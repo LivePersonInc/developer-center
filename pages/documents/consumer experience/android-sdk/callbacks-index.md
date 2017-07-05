@@ -108,7 +108,7 @@ enum TaskType {
 
 ###  Token Expired
 
-Called if the token used in the session has expired and no longer valid. The host app needs to [reconnect](android-reconnect.html){:target="_blank"} with a new authentication key.
+Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-reconnect.html){:target="_blank"} with a new authentication key.
 
 __Intent Action:__ ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION.
 
@@ -132,7 +132,7 @@ __Callback:__ onConversationResolved() method. <BR> _Note : onConversationResolv
 
 ###  Connection state has changed
 
-Called when the connection to the conversation server has established or disconnected.
+Called when the connection to the conversation server has been established or disconnected.
 
 Parameters:
 isConnected - indicates the connection state. true - connection establish, false - disconnected.
