@@ -103,7 +103,7 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 | Error code | Meaning | Recommendation |
 | :--- | :--- | :--- |
 | 4xx | Client side error | Do not retry, fix problem in code |
-| 5xx | Error on server side | Retry 3 times with 5, 10, 15 second pause between retries |
+| 5xx | Loading Account; Error on server side | Retry 3 times with 5, 10, 15 second pause between retries, setting the 'visitorId' path parameter with the value of the 'vid' if it was provided in the initial response |
 
 **Entity Structure**
 
