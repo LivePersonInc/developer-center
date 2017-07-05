@@ -37,7 +37,7 @@ Example:
 
     {
         "username": "name",
-        "Password": "password"
+        "password": "password"
     }
 
 
