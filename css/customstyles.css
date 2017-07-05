@@ -516,6 +516,20 @@ span.projectTitle {
     font-weight: bold;
 }
 
+span.projectTitleHighRes {
+  display: none;
+}
+
+/*High res logo for homepage*/
+
+@media only screen and (min-width:3840px){
+  span.projectTitle {
+  display: none;
+  }
+  span.projectTitleHighRes{
+    display: inherit;
+  }
+}
 .footer {
     text-align: right;
 }
