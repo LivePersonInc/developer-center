@@ -9,7 +9,6 @@ order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
-<<<<<<< HEAD
 ### <u>In-App Messaging SDK Version 2.5.0</u>
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
@@ -116,10 +115,6 @@ Configuring Camera's button colors
 
 
 ### <u>In-App Messaging SDK Version 2.3.1</u>
-=======
-
-### In-App Messaging SDK Version 2.3.1
->>>>>>> master
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
@@ -127,14 +122,8 @@ In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
 For one minute after the consumer had navigated away from the conversation window, any arriving messages would not display. They would only appear in the conversation window after the minute had passed.
 
-<<<<<<< HEAD
 ### Fix:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
-=======
-**Fix**:
->>>>>>> master
-
-The following capability, which was first introduced in v2.3, has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
 ### <u>In-App Messaging SDK Version 2.3.0</u>
 
