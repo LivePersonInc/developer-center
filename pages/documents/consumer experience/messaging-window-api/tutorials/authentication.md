@@ -16,7 +16,7 @@ indicator: messaging
 In this tutorial you will use the APIs with the authenticated identity of the consumer using a [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519){:target="_blank"}.
 
 ### Prerequisites
-See [Prerequisites](`consumer-int-get-msg.html#prerequisites){:target="_blank"}.
+See [Prerequisites](consumer-int-get-msg.html#prerequisites){:target="_blank"}.
 In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator) according to [these instructions](consumer-int-account-provision.html){:target="_blank"}.
 
 ### Step 1 - Configure the Authentication Connector
@@ -29,7 +29,7 @@ In the connector configuration screen, set the following fields:
 
 * Choose from the dropdown ``oAuth 2.0 authentication (implicit)``.
 * **Authentication Endpoint** : ``https://dummy.com``.
-* In the ``JWT Public Key``, type: 
+* In the ``JWT Public Key``, type:
 
 ```sh
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdlatRjRjogo3WojgGHFHYLugdUWAY9iR3fy4arWNA1KoS8kVw33cJibXr8bvwUAUparCwlvdbH6dvEOfou0/gCFQsHUfQrSDv+MuSUMAe8jzKE4qW+jK+xQU9a03GUnKHkkle+Q0pX/g6jXZ7r1/xAK5Do2kQ+X5xK9cipRgEKwIDAQAB.
