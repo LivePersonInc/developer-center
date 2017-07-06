@@ -52,8 +52,6 @@ To start LivePerson's Fragment mode: (Attach the returned fragment to a containe
 When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
 
-***
-
 **Shut Down**
 
 Close LivePerson Messaging SDK- Uninitialized SDK without cleaning data.
@@ -64,7 +62,7 @@ Click [here](android-shutdown.html){:target="_blank"} for more information.
 
 **Logout**
 
-Close LivePerson Messaging SDK- Clear LivePerson Messaging SDK data and unregistering push.
+Close LivePerson Messaging SDK- Clear LivePerson Messaging SDK data and unregister push.
 
 `public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)`
 

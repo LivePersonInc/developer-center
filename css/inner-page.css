@@ -50,6 +50,17 @@ h4[id]{
   border: 1px solid #162036;
   width: 100%;
 }
+
+.designsheet td {
+  font-size: 1.2em;
+  line-height: 2.4em !important;
+}
+
+.designsheet img {
+    width: auto !important;
+    float: right;
+}
+
 .post-content table td:first-child {
   width:unset;
   max-width: 150px;
