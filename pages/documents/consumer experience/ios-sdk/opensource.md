@@ -20,3 +20,4 @@ The following open source code is used within the LiveEngage SDK.  Licensing ter
 | [SocketRocket](https://github.com/facebook/SocketRocket){:target="_blank"} | [BSD](https://github.com/facebook/SocketRocket/blob/master/LICENSE){:target="_blank"}	|
 | [UIRefreshControl+UITableView](https://github.com/danielgindi/UIRefreshControl-UITableView){:target="_blank"} | [MIT](https://github.com/danielgindi/UIRefreshControl-UITableView/blob/master/LICENSE){:target="_blank"} |
 | [TTTAttributedLabel](https://github.com/irccloud/ios/tree/master/TTTAttributedLabel){:target="_blank"} |  [Apache](https://github.com/irccloud/ios/blob/master/LICENSE.txt){:target="_blank"} |
+| [RNCryptor](https://github.com/RNCryptor/RNCryptor){:target="_blank"} |  [MIT](https://github.com/RNCryptor/RNCryptor/blob/master/LICENSE){:target="_blank"} |
