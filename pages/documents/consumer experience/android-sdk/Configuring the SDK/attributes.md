@@ -1144,9 +1144,9 @@ indicator: messaging
   <tr>
     <th>Name</th>
     <th>Description</th>
+  </tr>
 </thead>
 <tbody>    
-  </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_name&quot;&gt;</td>
     <td>Custom button icon filename without extension. This will be displayed on the toolbar.</td>
