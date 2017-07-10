@@ -179,7 +179,7 @@ Authorization | Contains token string to allow request authentication and author
 #### <a name="h.rxoo0tduo0i6"></a>Response Headers
 Header | Description
 --- | ---
-eTag | Account config object type collection revision
+ac-revision | Account config object type collection revision
 
 #### <a name="h.l7dmj35r0bil"></a>Body
 ```javascript
@@ -224,7 +224,7 @@ include_deleted | Whether include deleted items in the response or not | <ul><li
 
 Header | Description
 --- | ---
-eTag | Account config object type collection revision
+ac-revision | Account config object type collection revision
 
 #### <a name="h.at3vl7aaemrk"></a>Response Body
 ```javascript
@@ -300,7 +300,7 @@ id | Account Config object’s unique id. | <ul><il>Not used when creating items
 #### <a name="h.s772du1vfapu"></a>Response Headers
 Header | Description
 --- | ---
-eTag | Account config object type collection revision
+ac-revision | Account config object type collection revision
 
 
 #### <a name="h.poknstkp3xuo"></a> Response Body
@@ -363,7 +363,7 @@ X-HTTP-Method-Override=PUT | Tells to the backend this POST request is actually 
 
 Header | Description
 --- | ---
-eTag | Account config object type collection revision
+ac-revision | Account config object type collection revision
 
 #### Response Body
 
@@ -403,7 +403,7 @@ statusReasonId | Account Config object’s unique id. | <ul><li>Type: Positive l
 #### <a name="h.l5qbv558w5dj"></a>Response Headers
 Header | Description
 --- | ---
-eTag | Account config object type collection revision
+ac-revision | Account config object type collection revision
 #### <a name="h.p9qw7ks04bhv"></a>Response Body
 
 
