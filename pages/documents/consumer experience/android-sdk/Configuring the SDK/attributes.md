@@ -1066,6 +1066,7 @@ indicator: messaging
     <td>Set the time in seconds before the first the TTR snackbar will be displayed</td>
     <td>10</td>
     <td></td>
+  </tr>
   <tr>
     <td>&lt;bool name=&quot;send_agent_profile_updates_when_conversation_closed&quot;&gt;</td>
     <td>When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. </td>
