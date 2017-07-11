@@ -1416,3 +1416,37 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
 </tbody>
 </table>
+
+### Structured Content
+
+<table>
+<thead>
+   <tr>
+  <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default </th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td align="left">structuredContentBubbleBorderWidth</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content bubble border width in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.5</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBorderColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Structured Content bubble border color.</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>

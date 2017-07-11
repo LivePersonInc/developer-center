@@ -12,11 +12,39 @@ permalink: consumer-experience-ios-sdk-interfacedefinitions.html
 indicator: messaging
 ---
 
+### ConversationParamProtocol
+
+```javascript
+protocol ConversationParamProtocol {
+    func getConversations() -> [Conversation]?
+    func getConversations(_ predicate: NSPredicate?) -> [Conversation]?
+    func getClosedConversations() -> [Conversation]?
+    func getActiveConversation() -> Conversation?
+    func getOpenConversation() -> Conversation?
+    func getLatestClosedConversation(_ conversationsCount: Int) -> [Conversation]?
+    func createNewConversation() -> Conversation
+    func getQueryType() -> String
+    func isConversationRelatedToQuery(_ conversation: Conversation) -> Bool
+    func getBrandID() -> String
+    func getQueryUID() -> String
+    func getQueryProperties() -> [String : Any]
+}
+```
+
+### ConversationQueryType
+
+```javascript
+enum ConversationQueryType: String {
+    case Brand = "Brand"
+    case BrandAndSkill = "BrandAndSkill"
+    case Consumer = "Consumer"
+}
+```
+
 ### LPUser
 
 ```javascript
-{
-    class LPUser: NSObject {
+class LPUser: NSObject {
     var firstName: String?
     var lastName: String?
     var profileImageURL: String?
@@ -29,8 +57,7 @@ indicator: messaging
 ### LPLog
 
 ```javascript
-{
-    class LPLog: NSObject {
+class LPLog: NSObject {
     var timestamp: String?
     var className: String?
     var funcName: String?
@@ -42,8 +69,7 @@ indicator: messaging
 ### LogLevel
 
 ```javascript
-{
-    enum LogLevel: Int {
+enum LogLevel: Int {
     case TRACE
     case DEBUG
     case INFO
@@ -56,8 +82,7 @@ indicator: messaging
 ### LPNotification
 
 ```javascript
-{
-    class LPNotification: NSObject {
+class LPNotification: NSObject {
     var text: String
     var user: LPUser
     var accountID: String
@@ -69,18 +94,30 @@ indicator: messaging
 ### LPConversationCloseReason
 
 ```javascript
-{
-    public enum LPConversationCloseReason: Int {
+enum LPConversationCloseReason: Int {
         case agent = 0
         case consumer
         case system
 }
 ```
 
+### LPConversationCloseReason
 
+```javascript
+enum LPConversationCloseReason: Int {
+        case agent = 0
+        case consumer
+        case system
+}
+```
 
+### LPConversationViewParams
 
-
-
-
-
+```javascript
+enum LPConversationCloseReason: Int {
+  var conversationQuery: ConversationParamProtocol!
+  var authenticationCode: String?
+  var containerViewController: UIViewController?
+  var isViewOnly = false
+}
+```

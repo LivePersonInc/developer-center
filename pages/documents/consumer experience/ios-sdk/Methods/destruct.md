@@ -13,3 +13,11 @@ indicator: messaging
 ---
 
 `func destruct()`
+This method is a destructive method that is typically used stop and clear all the metadata of the SDK.
+
+This method conducts the following:
+* Clears all SDK non-persistent data.
+* Stops all connections and operations.
+* Remove Conversation View Controller
+
+`func destruct()`

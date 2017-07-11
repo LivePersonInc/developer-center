@@ -14,7 +14,7 @@ indicator: messaging
 
 ### initialize
 
-The SDK initialization is done only once, inside appdelegate. This function checks that the SDK has all mandatory preconditions. For example, it is able to find the bundle file, verify that all the pre-defined configurations are valid, and more. If any of the preconditions are not met, an exception is thrown. Once an exception is thrown, you must not do any other call to the SDK. 
+The SDK initialization is done only once, inside appdelegate. This function checks that the SDK has all mandatory preconditions. For example, it is able to find the bundle file, verify that all the pre-defined configurations are valid, and more. If any of the preconditions are not met, an exception is thrown. Once an exception is thrown, you must not do any other call to the SDK.
 
 `func initialize(_ brandID: String? = nil) throws`
 
@@ -23,6 +23,17 @@ The SDK initialization is done only once, inside appdelegate. This function chec
 | brandId | An account ID |
 
 ### showConversation
+
+This method is used to open the conversation screen.
+
+`func showConversation(_ conversationViewParams: LPConversationViewParams)`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationViewParams | Object type: LPConversationViewParams. Represents an object to determine on conversation mode, filter and container. | For object details see [LPConversationViewParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
+
+### showConversation (Deprecated)
+*This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams)](consumer-experience-ios-sdk-showconversation.html){:target="_blank"} instead*
 
 This method is used to open the conversation screen.
 
@@ -46,7 +57,7 @@ When navigating out of the conversation screen, remove the view controller from 
 
 ### Reconnect
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](consumer-experience-ios-sdk-showconversation.html){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks.html){:target="_blank"}). To reconnect with a new token, use the following ‘reconnect’ API and pass the new token. 
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](consumer-experience-ios-sdk-showconversation.html){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following ‘reconnect’ API and pass the new token.
 
 `func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationCode: String)`
 
@@ -57,10 +68,10 @@ When using SSO in an authenticated connection, an auth-code is passed to the SDK
 
 ### toggleChatActions
 
-This API call is used to open or close the SDK menu. 
+This API call is used to open or close the SDK menu.
 
-* If you’re using [window mode](consumer-experience-ios-sdk-showconversation.html){:target="_blank"}, you won’t need to utilize this method as the SDK will have a dedicated button in the navigation bar to toggle the menu. 
-* If you are using [view controller mode](consumer-experience-ios-sdk-showconversation.html){:target="_blank"}, you may call this API to open the SDK menu, or use other APIs to build your own menu. 
+* If you’re using [window mode](consumer-experience-ios-sdk-showconversation.html){:target="_blank"}, you won’t need to utilize this method as the SDK will have a dedicated button in the navigation bar to toggle the menu.
+* If you are using [view controller mode](consumer-experience-ios-sdk-showconversation.html){:target="_blank"}, you may call this API to open the SDK menu, or use other APIs to build your own menu.
 
 `func toggleChatActions(_ accountID: String, sender: UIBarButtonItem? = nil)`
 
@@ -71,7 +82,7 @@ This API call is used to open or close the SDK menu.
 
 ### checkActiveConversation
 
-Check if there is an active conversation by passing a conversation query. 
+Check if there is an active conversation by passing a conversation query.
 
 **Notes:**
 
@@ -87,7 +98,7 @@ Check if there is an active conversation by passing a conversation query.
 
 ### markAsUrgent
 
-A consumer can mark a conversation as urgent in order to request a faster response from the agent. You can call the API only if there’s an active conversation, otherwise an alert will be triggered. The conversation is marked as urgent only after an ACK is received from the server. 
+A consumer can mark a conversation as urgent in order to request a faster response from the agent. You can call the API only if there’s an active conversation, otherwise an alert will be triggered. The conversation is marked as urgent only after an ACK is received from the server.
 
 `func markAsUrgent(_ conversationQuery: ConversationParamProtocol)`
 
@@ -97,7 +108,7 @@ A consumer can mark a conversation as urgent in order to request a faster respon
 
 ### isUrgent
 
-Checks if the active conversation (if existing) is marked as urgent. Otherwise returns false. 
+Checks if the active conversation (if existing) is marked as urgent. Otherwise returns false.
 
 *Note: You must check that the SDK is in [ready state](consumer-experience-ios-sdk-advanced-configurations.html) before calling this method.*
 
@@ -120,7 +131,7 @@ This API is used to cancel the [markAsUrgent API](consumer-experience-ios-sdk-ma
 
 ### resolveConversation
 
-This API enables a conversation to be resolved. The API will request the server to mark the active conversation as resolved. If there is no active conversation, an alert will be displayed. 
+This API enables a conversation to be resolved. The API will request the server to mark the active conversation as resolved. If there is no active conversation, an alert will be displayed.
 
 `func resolveConversation(_ conversationQuery: ConversationParamProtocol)`
 
@@ -131,7 +142,7 @@ This API enables a conversation to be resolved. The API will request the server 
 
 ### clearHistory
 
-This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made. 
+This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made.
 
 `func clearHistory(_ conversationQuery: ConversationParamProtocol) throws`
 
@@ -141,7 +152,9 @@ This API may be used only when there is no active conversation. This API clears 
 
 ### logout
 
-This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device. This method conducts the following:
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to logs the current user out.
+
+This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
@@ -150,15 +163,21 @@ This method is a destructive method that is typically used to clean a user’s d
 `func logout()`
 
 ### destruct
+This method is a destructive method that is typically used stop and clear all the metadata of the SDK.
+
+This method conducts the following:
+* Clears all SDK non-persistent data.
+* Stops all connections and operations.
+* Remove Conversation View Controller
 
 `func destruct()`
 
 ### handlePush
 
-In order to receive all incoming push notifications in a single function and handle them, add the following method. This method cooperates with two other API methods: 
+In order to receive all incoming push notifications in a single function and handle them, add the following method. This method cooperates with two other API methods:
 
-* This method calls the shouldShowPushNotification method. If the host app returns false, the SDK will not show anything to the UI. 
-* Otherwise, the SDK will ask the host app to provide a view as an in-app notification. If the host app doesn’t implement this method, the SDK will use its own implementation. 
+* This method calls the shouldShowPushNotification method. If the host app returns false, the SDK will not show anything to the UI.
+* Otherwise, the SDK will ask the host app to provide a view as an in-app notification. If the host app doesn’t implement this method, the SDK will use its own implementation.
 
 ```javascript
 
@@ -185,7 +204,7 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 
 ### setUserProfile
 
-Add custom parameters about the user and set them for the messaging agent. 
+Add custom parameters about the user and set them for the messaging agent.
 
 `func setUserProfile(_ lpuser: LPUser, brandID: String)`
 
@@ -198,7 +217,7 @@ Add custom parameters about the user and set them for the messaging agent.
 ### getAssignedAgent
 
 
-Get assigned agent details of the last or current conversation - depending on retrieveAssignedAgentFromLastClosedConversation in the LPConfig defaultConfiguration. 
+Get assigned agent details of the last or current conversation - depending on retrieveAssignedAgentFromLastClosedConversation in the LPConfig defaultConfiguration.
 
 You must check that the SDK is ready before calling this method.
 
