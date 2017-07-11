@@ -964,6 +964,36 @@ indicator: messaging
 </tbody>
 </table>
 
+### Custom Fonts
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;string name=&quot;custom_font_name_conversation_feed&quot;&gt;
+</td>
+    <td>The font name for all conversation feed’s element.</td>
+    <td>Empty (use the device font)</td>
+    <td>sans-serif-thin</td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;
+</td>
+    <td>The font name for all elements that are not in the conversation feed.</td>
+    <td>Empty (use the device font)</td>
+    <td>customFont.ttf</td>
+  </tr>
+</tbody>
+</table>
+
+
 
 ### Miscellaneous
 
