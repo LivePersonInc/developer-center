@@ -3,7 +3,7 @@ title: Overview
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
-level-order: 6
+level-order: 7
 order: 1
 permalink: consumer-experience-server-chat-getting-started.html
 root-link: true

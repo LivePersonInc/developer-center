@@ -7,7 +7,7 @@ level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 266
-permalink: android-configuring-edittext.html
+permalink: android-configuring-changing-fonts.html
 
 ---
 

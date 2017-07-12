@@ -1,12 +1,12 @@
 /* banner home page */
 .banner-container{
     width: 100%;
-    background-color: #f8f8f8;  
+    background-color: #f8f8f8;
 }
 .banner{
     width:100%;
     height:250px;
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
 }
 .banner .text {
   color: #162036;
@@ -29,7 +29,7 @@
 }
 
 .home-first-line {
-  width: 70%;  
+  width: 70%;
   margin: 50px auto;
 }
 .home-second-line {
@@ -54,7 +54,8 @@ html body div.container div.home-first-line div.text, html body div.container di
 }
 
 a.view-all-products {
-  border: 1px solid #6d6d6d;
+  border: 2px solid #6d6d6d;
+  border-radius: 50px;
   color: #162036;
   display: table;
   font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
@@ -70,8 +71,8 @@ a.view-all-products::after{
 }
 
 @media (max-width: 990px) {
-  
-    .home-first-line {     
+
+    .home-first-line {
         margin-bottom:0px;
     }
     .home-second-line {
@@ -79,5 +80,5 @@ a.view-all-products::after{
         margin-bottom: 16%;
         margin-top: 0px;
     }
-    
+
 }

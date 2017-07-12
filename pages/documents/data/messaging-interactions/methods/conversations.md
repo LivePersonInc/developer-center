@@ -34,7 +34,7 @@ Name                | Description                                               
 start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
 skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
-latestSkillIds      | An array of latest skill IDs, represented as numbers.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
+latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
 agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional |
 latestAgentIds      | An array of latest agent IDs, represented as numbers.                                         | Array `<agentID>`                  | Optional | Filters only conversations whose latest agent appears in the array.
 agentGroupIds       | An array of agent group IDs, represented as numbers.                                          | Array `<agentGroupID>`             | Optional |
@@ -115,8 +115,8 @@ mcs                  | Meaningful Connection Score of the conversation.         
 alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
-latestSkillId        | Most recent skill id the conversation was routed to.                       | long       |
-latestSkillName      | Most recent skill name that the conversation was routed to.                | string     |
+latestSkillId        | Most recent skill id the conversation was assigned to an agent under.                       | long       |
+latestSkillName      | Most recent skill name that the conversation was assigned to an agent under.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
 latestAgentLoginName | The agent's login name.                                                    | string     |
 latestAgentNickname  | The agent's nickname.                                                      | string     |
