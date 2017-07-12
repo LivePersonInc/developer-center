@@ -12,7 +12,7 @@ permalink: consumer-experience-ios-sdk-attributes.html
 indicator: messaging
 ---
 
-The table below lists the available attributes which can be used to personalize your app. The **Default / Customer notes** column includes space for you to add your own branding.
+TThe goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element, please utilize the [Attributes Design Sheet](consumer-experience-ios-sdk-attributes-design-sheet.html){:target="_blank"}.
 
 
 ### Users Bubble
