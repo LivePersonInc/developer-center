@@ -613,13 +613,13 @@ indicator: messaging
   </tr>
   <tr>
     <td>&lt;bool name=&quot;show_agent_details_csat&quot;&gt;</td>
-    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide) <br> NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
     <td>true</td>
     <td><img src="img/showyesno.png" alt="showyesno"></td>
   </tr>
   <tr>
     <td>&lt;bool name=&quot;show_yes_no_question&quot;&gt;</td>
-    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide) <br> NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
     <td>true</td>
     <td><img src="img/showyesno.png" alt="showyesno"></td>
   </tr>
@@ -1172,7 +1172,7 @@ indicator: messaging
 <thead>
   <tr>
     <th>Name</th>
-    <th>Description</th>
+    <th>Description</th>    
   </tr>
 </thead>
 <tbody>
