@@ -993,6 +993,42 @@ indicator: messaging
 </tbody>
 </table>
 
+### Structured Content
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;structured_content_border_color&quot;&gt;
+</td>
+    <td>Color code for the structured content bubble outline color.</td>
+    <td>#EDEDED (light gray)</td>
+    <td><img src="img/strucuredcontentbordercolor.png" alt="strucuredcontentbordercolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_border_width&quot;&gt;
+  </td>
+    <td>Integer in dp for the bubble stroke width of the structured content bubble.</td>
+    <td>1dp</td>
+    <td><img src="img/strucuredcontentborderwidth.png" alt="strucuredcontentborderwidth"></td>
+  </tr>  
+  <tr>
+    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;
+  </td>
+    <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
+    <td>18</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
 
 
 ### Miscellaneous
@@ -1066,7 +1102,6 @@ indicator: messaging
     <td>Set the time in seconds before the first the TTR snackbar will be displayed</td>
     <td>10</td>
     <td></td>
-  </tr>
   <tr>
     <td>&lt;bool name=&quot;send_agent_profile_updates_when_conversation_closed&quot;&gt;</td>
     <td>When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. </td>
@@ -1166,6 +1201,8 @@ indicator: messaging
 </tbody>
 </table>
 
+
+
 ### Deprecated Attributes
 
 <table>
@@ -1173,16 +1210,16 @@ indicator: messaging
   <tr>
     <th>Name</th>
     <th>Description</th>
-  </tr>
 </thead>
-<tbody>
+<tbody>    
+  </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_name&quot;&gt;</td>
     <td>Custom button icon filename without extension. This will be displayed on the toolbar.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_description&quot;&gt;</td>
-    <td>Content description for custom button. It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
+    <td>Content description for custom button.It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>
