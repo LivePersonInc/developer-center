@@ -17,10 +17,10 @@ Retrieves Agent State Distribution data, which includes the following states:
 - Away
 - Back soon
 
-For each state, the following is indicated: 
+For each state, the following is indicated:
 
 - Time spent chatting
-- Time spent not chatting 
+- Time spent not chatting
 - Time spent logged in and chatting concurrently with the maximum allowed chats
 
 ### Request
@@ -44,7 +44,7 @@ For each state, the following is indicated:
 | timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time - timeframe. | numeric | required |
 | agentIds | When provided, metrics on the response will be grouped by the requested agents' IDs. If there is no data for the specified agents, an object will be returned with an empty value for key: "metricsPerAgent" with a map including all metrics valued zero. To retrieve all active agents for the time period, use agentIds=all.  | numeric, comma separated | required |
 | v | Version of API, for example, v=1.| numeric | required |
-| interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame, and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
+| interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame, and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
 
 ### Response
 
