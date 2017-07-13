@@ -12,7 +12,7 @@ permalink: consumer-experience-ios-sdk-attributes.html
 indicator: messaging
 ---
 
-TThe goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element, please utilize the [Attributes Design Sheet](consumer-experience-ios-sdk-attributes-design-sheet.html){:target="_blank"}.
+The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](consumer-experience-ios-sdk-attributes-design-sheet.html).
 
 
 ### Users Bubble
