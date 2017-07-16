@@ -20,6 +20,14 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 | :-------- | :------ |
 | GET | api/account/{accountId}/configuration/engagement-window/unified-auto-messages |
 
+**Request Headers**
+
+| Header | Description |
+| :------- | :-------------- |
+ |Authorization | Contains token string to allow request authentication and authorization. |
+| If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
+
+
 **Path Parameters**
 
  |Parameter|  Description|  Type|  Notes| 
@@ -35,9 +43,18 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 | sanitize_data   | Flag indicating whether the text should be sanitized (Antisamy).             | Boolean | Valid values: True/False. Default value: False |
 | lang            | Languages (separated by commas) to filter the response by.                   | string  | Format: en-US, en-UK. Default value: null      |
 | select          | Yoga selector expression.                                                    | string  | Example values: id, name. Default value: null  |
+| context_id      | Context Id                                                                   | string  | Optional Context id (default is account id for ACCOUNT context)     |
+| context_type    | Context Type                                                                 | string  | Optional request context type (default is ACCOUNT)     |
+| view            | view                                                                         | string  | Optional flag to indicate that the response should include SKILL context data as well     |
 
 
 ### Response
+
+**Response Headers**
+
+| Header|  Description |
+ |:-------  | :----- | 
+ |ac-revision | Account config object type collection revision. | 
 
 **Response Codes**
 
@@ -91,3 +108,41 @@ Retrieves a list of Unified Automatic Messages for a specific account.
             ]
         }
     {
+    
+Contexted response:
+
+    {
+		[
+		  {
+		    "messageEventId": "CHAT_STARTED",
+		    "enabled": true,
+		    "deleted": false
+		    "data": [
+		      {
+		        "lang": "en-US",
+		        "msg": "I'll be right with you"
+		      },
+		      {
+		        "lang": "cs-CZ",
+		        "msg": "Estaré con ustedes"
+		      }
+		    ],    
+		    "attributes": [
+		          {
+		              "timer": "60"
+		          }
+		    ]
+		    "contexts": {
+		      "SKILL": ["3"],
+		      "ACCOUNT": ["111"]
+		    },
+		    "attributes": [
+		      {
+		        "att1": "val1"
+		      }
+		    ],
+		  }
+		  ...
+		]
+	}
+

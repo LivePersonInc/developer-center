@@ -40,6 +40,9 @@ Updates an existing Unified Automatic Message for a specific account.
 | Header | Description |
 | :------- | :-------------- |
 | X-HTTP-Method-Override=PUT | Overrides unsupported HTTP methods. To be used with the ‘PUT’ value. |
+ |Authorization | Contains token string to allow request authentication and authorization. |
+| If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
+
 
 **Request Body**
 
@@ -88,3 +91,9 @@ The request body is able to accept single JSON object as shown below, or a JSON 
 **Response Body**
 
 Updated Unified Auto Message’s JSON.
+
+**Response Headers**
+
+| Header|  Description |
+ |:-------  | :----- | 
+ |ac-revision | Account config object type collection revision. | 
