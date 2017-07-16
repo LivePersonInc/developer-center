@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: Customization and Branding
 
-order: 225
+order: 226
 permalink: consumer-experience-ios-sdk-deprecated-attributes.html
 
 indicator: messaging
