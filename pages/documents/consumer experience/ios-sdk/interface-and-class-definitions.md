@@ -101,22 +101,13 @@ enum LPConversationCloseReason: Int {
 }
 ```
 
-### LPConversationCloseReason
-
-```javascript
-enum LPConversationCloseReason: Int {
-        case agent = 0
-        case consumer
-        case system
-}
-```
-
 ### LPConversationViewParams
 
 ```javascript
-enum LPConversationCloseReason: Int {
+enum LPConversationViewParams: Int {
   var conversationQuery: ConversationParamProtocol!
   var authenticationCode: String?
+  var jwt: String?
   var containerViewController: UIViewController?
   var isViewOnly = false
 }
