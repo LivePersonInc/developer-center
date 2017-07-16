@@ -18,7 +18,7 @@ Updates an existing Unified Automatic Message for a specific account.
 
 | Method | URL |
 | :-------- | :----- |
-| PUT | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{autoMessageId} |
+| PUT | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
 
 **Request Headers**
 

@@ -18,7 +18,7 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 
 | Method | URL |
 | :-------- | :---- |
-| GET | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{autoMessageId} |
+| GET | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
 
 **Path Parameters**
 
