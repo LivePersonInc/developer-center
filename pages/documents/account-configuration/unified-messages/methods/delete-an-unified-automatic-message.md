@@ -32,6 +32,12 @@ Updates an existing Unified Automatic Message for a specific account.
 | :----------- | :------------ | :--------------- |
 | unifiedAutoMessageId | Unique account config object ID  | Positive long number greater than zero |
 
+**Query Parameters**
+
+| Name            | Description                                                                  | Type    | Notes                                          |
+|-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
+| v               | API version                                                                  | String  | 2.0 is the current version                     |
+
 ### Response
 
 **Response Codes**

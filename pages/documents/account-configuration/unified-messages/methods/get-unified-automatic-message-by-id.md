@@ -22,9 +22,21 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 
 **Path Parameters**
 
-| Parameter |  Description        | Type / Value     |
-| :----------- | :--------------- | :--------------- |
-| unifiedAutoMessageId | Unique account config object ID | Positive long number greater than zero |
+ |Parameter|  Description|  Type|  Notes| 
+ |:----------|  :--------------|  :--------------|  :---| 
+ |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
+ | unifiedAutoMessageId | Unique account config object ID | Positive long number greater than zero |
+
+**Query Parameters**
+
+| Name            | Description                                                                  | Type    | Notes                                          |
+|-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
+| v               | API version                                                                  | String  | 2.0 is the current version                     |
+| include_deleted | Flag indicating whether deleted entities should be returned in the response. | Boolean | Valid values: True/False. Default value: False |
+| sanitize_data   | Flag indicating whether the text should be sanitized (Antisamy).             | Boolean | Valid values: True/False. Default value: False |
+| lang            | Languages (separated by commas) to filter the response by.                   | string  | Format: en-US, en-UK. Default value: null      |
+| select          | Yoga selector expression.                                                    | string  | Example values: id, name. Default value: null  |
+
 
 ### Response
 

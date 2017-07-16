@@ -20,6 +20,21 @@ Updates an existing Unified Automatic Message for a specific account.
 | :-------- | :----- |
 | PUT | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
 
+**Path Parameters**
+
+ |Parameter|  Description|  Type|  Notes| 
+ |:----------|  :--------------|  :--------------|  :---| 
+ |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
+
+
+**Query Parameters**
+
+| Name            | Description                                                                  | Type    | Notes                                          |
+|-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
+| v               | API version                                                                  | String  | 2.0 is the current version                     |
+| lang            | Languages (separated by commas) to filter the response by.                   | string  | Format: en-US, en-UK. Default value: null      |
+| select          | Yoga selector expression.                                                    | string  | Example values: id, name. Default value: null  |
+
 **Request Headers**
 
 | Header | Description |

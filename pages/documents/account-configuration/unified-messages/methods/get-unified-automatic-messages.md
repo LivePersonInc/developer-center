@@ -20,6 +20,23 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 | :-------- | :------ |
 | GET | api/account/{accountId}/configuration/engagement-window/unified-auto-messages |
 
+**Path Parameters**
+
+ |Parameter|  Description|  Type|  Notes| 
+ |:----------|  :--------------|  :--------------|  :---| 
+ |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
+
+**Query Parameters**
+
+| Name            | Description                                                                  | Type    | Notes                                          |
+|-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
+| v               | API version                                                                  | String  | 2.0 is the current version                     |
+| include_deleted | Flag indicating whether deleted entities should be returned in the response. | Boolean | Valid values: True/False. Default value: False |
+| sanitize_data   | Flag indicating whether the text should be sanitized (Antisamy).             | Boolean | Valid values: True/False. Default value: False |
+| lang            | Languages (separated by commas) to filter the response by.                   | string  | Format: en-US, en-UK. Default value: null      |
+| select          | Yoga selector expression.                                                    | string  | Example values: id, name. Default value: null  |
+
+
 ### Response
 
 **Response Codes**
