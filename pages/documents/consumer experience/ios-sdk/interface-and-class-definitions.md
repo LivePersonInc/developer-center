@@ -66,16 +66,23 @@ class LPLog: NSObject {
 }
 ```
 
-### LogLevel
+### LPConversationViewParams
 
 ```javascript
-enum LogLevel: Int {
-    case TRACE
-    case DEBUG
-    case INFO
-    case WARNING
-    case ERROR
-    case OFF
+class LPConversationViewParams: NSObject {
+  var conversationQuery: ConversationParamProtocol!
+  var containerViewController: UIViewController? // nil = WindowMode
+  var isViewOnly = false
+}
+```
+
+### LPAuthenticationParams
+
+```javascript
+class LPAuthenticationParams: NSObject {
+  var authenticationCode: String? // Code Flow authentication
+  var jwt: String? // Implicit Flow authentication
+  var redirectURI: String? // Code Flow authentication
 }
 ```
 
@@ -91,6 +98,19 @@ class LPNotification: NSObject {
 }
 ```
 
+### LogLevel
+
+```javascript
+enum LogLevel: Int {
+    case TRACE
+    case DEBUG
+    case INFO
+    case WARNING
+    case ERROR
+    case OFF
+}
+```
+
 ### LPConversationCloseReason
 
 ```javascript
@@ -98,17 +118,5 @@ enum LPConversationCloseReason: Int {
         case agent = 0
         case consumer
         case system
-}
-```
-
-### LPConversationViewParams
-
-```javascript
-enum LPConversationViewParams: Int {
-  var conversationQuery: ConversationParamProtocol!
-  var authenticationCode: String?
-  var jwt: String?
-  var containerViewController: UIViewController?
-  var isViewOnly = false
 }
 ```
