@@ -49,7 +49,9 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 | view            | view                                                                         | string  | Optional flag to indicate that the response should include SKILL context data as well     |
 | merge_data      | lag to indicate whether the data should be merge                             | Boolean | Optional flag to indicate whether the data should be merge with the default values, when false only override will be return. Default value is true.     |
 
-NOTE: if view=BY_CONTEXT, context parameters are irrelevant
+> NOTE: if view=BY_CONTEXT, context parameters are irrelevant
+
+
 
 ### Response
 
@@ -97,24 +99,26 @@ NOTE: if view=BY_CONTEXT, context parameters are irrelevant
 
 Contexted Response:
 
-{
-  "SKILL": {
-    "123": {
-      "messageEventId": "TestMessageEventId",
-      "deleted": false,
-      "skillId": 1,
-      "enabled": true,
-      "data": [...],
-      "attributes": [...]
-    }
-  },
-  "ACCOUNT": {
-    "456": {
-      "messageEventId": "TestMessageEventId",
-      "deleted": false,
-      "enabled": true,
-      "data": [...],
-      "attributes": [...]
-    }
-  }
-}
+    {
+	  "SKILL": {
+	    "123": {
+	      "messageEventId": "TestMessageEventId",
+	      "deleted": false,
+	      "skillId": 1,
+	      "enabled": true,
+	      "data": [...],
+	      "attributes": [...]
+	    }
+	  },
+	  "ACCOUNT": {
+	    "456": {
+	      "messageEventId": "TestMessageEventId",
+	      "deleted": false,
+	      "enabled": true,
+	      "data": [...],
+	      "attributes": [...]
+	    }
+	  }
+	}
+
+
