@@ -63,7 +63,7 @@ Changing the text type is handled as follows:
 | Name  | Description                                                             | Type/Value | Notes                                                                                                                               |
 |-------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | plain | The default type when non used, the text will be displayed as provided. | text       |                                                                                                                                     |
-| html  | For passing HTML content from the agent to the chat session.            | text       | The text must be escaped when provided and cannot include the following: Iframes, Scripts, DOM actions, Links with target="_blank". |
+| html  | For passing HTML content from the agent to the chat session.            | text       | The provided html cannot include the following: Iframes, Scripts, DOM actions, Links with target="_blank". |
 
 ### Response
 
