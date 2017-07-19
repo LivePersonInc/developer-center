@@ -55,8 +55,7 @@ The request body is able to accept single JSON object as shown below, or a JSON 
             "data": [
                 {
                     "msg":"I'll be right with you.",
-                    "lang":"en-us",
-                    "isDefault":true
+                    "lang":"en-us"
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
