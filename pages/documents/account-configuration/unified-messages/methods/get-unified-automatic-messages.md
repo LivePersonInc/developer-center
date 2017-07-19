@@ -75,13 +75,11 @@ Retrieves a list of Unified Automatic Messages for a specific account.
             "data": [
                 {
                     "msg": "You are chatting with {agent name}",
-                    "lang": "en-us",
-                     "isDefault":true
+                    "lang": "en-us"
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
-                    "lang": "ca-ES",
-                    "isDefault":true 
+                    "lang": "ca-ES" 
                 }
             ]
         },
@@ -92,13 +90,11 @@ Retrieves a list of Unified Automatic Messages for a specific account.
             "data": [
                 {
                     "msg": "I'll be right with you.",
-                    "lang": "en-us",
-                    "isDefault":true 
+                    "lang": "en-us" 
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
-                    "lang": "ca-ES",
-                    "isDefault":false 
+                    "lang": "ca-ES" 
                 }
             ],
             "attributes": [
