@@ -15,7 +15,7 @@ The LiveEngage Engagement History API includes one method, Retrieve Engagement L
 
 This returns a list of engagements with all their metadata and related transcripts, based on a given filter, for example, time range, skill/s, keywords, etc.
 
-## Request 
+## Request
 
 | Method | URL |
 | :------- | :---------- |
@@ -74,7 +74,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
 Keyword Search: Chat Search by time range and keyword
 
 In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word ‘iPad’ within the text available for lookup.
- 
+
 
 ```json
     {
@@ -107,7 +107,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
 **Request example 3:**
 
 In this example, we reduce the previous search, and require that the skill matches the skill IDs {14, 17, 18} that were conducted by agentID 109 or 169, where the duration was between 0 and 180 seconds, and focus only on the transcript.  
- 
+
 
 ```json
     {
@@ -140,7 +140,7 @@ In this example, we reduce the previous search, and require that the skill match
 Chat Search by time range and MCS.
 
 In this example, we are searching for chats that have a positive MCS.
- 
+
 
 ```json
      {
@@ -276,7 +276,7 @@ Example:
            "goalId": "1340122310",
            "goalName": "Interact with visitors",
            "visitorBehaviorId": "1340122110",
-           "visitorBehaviorName": "Any behavior",	
+           "visitorBehaviorName": "Any behavior",
            "visitorProfileId": "1340122010",
            "visitorProfileName": "All visitors"
            "lobId": "-1",
@@ -475,14 +475,14 @@ Example:
      ]
     }
 ```
- 
-    
+
+
 **Request example 5:**
 
 Chat Search by time range and chatMCS.
 
 In this example, we are searching for chats that have mcs between 30 to 60.
- 
+
 
 ```json
      {
@@ -495,9 +495,9 @@ In this example, we are searching for chats that have mcs between 30 to 60.
         "chatMCS": {"from":"30", "to": "60"}
     }
 ```
-    
+
 ## Response
-  
+
 
 ```json
     {
@@ -770,7 +770,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
 Chat Search by time range and alertedMCS.
 
 In this example, we are searching for chats that have a positive MCS.
- 
+
 ```json
     {
       "start": {
@@ -1098,7 +1098,7 @@ Example:
 | alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1 |
 | chatMCS | Meaningful Connection Score of the chat.  | int| Range: 0-100. |
 | chatDataEnriched | Indication whether chat was enriched with final data. | Boolean | If true, the enrichment process occurred. |
-| isPartial | Indicates whether the chat’s data is partial. | Boolean | In order to retrieve its full data use single chat request. |
+| isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data. |
 | chatStartUrl | The page’s URL from which the chat started. | alphanumeric | |
 | chatStartPage | The page’s title from which the chat started. | alphanumeric | |
 | campaign | Campaign data of the chat | container | |
