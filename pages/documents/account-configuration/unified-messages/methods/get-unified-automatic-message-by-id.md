@@ -81,13 +81,11 @@ Retrieves an Unified Automatic Message by ID for a specific account.
             "data": [
                 {
                     "msg": "I'll be right with you.",
-                    "lang": "en-us",
-                    "isDefault":true
+                    "lang": "en-us"
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
-                    "lang": "ca-ES",
-                    "isDefault":false
+                    "lang": "ca-ES"
                 }
             ],
             "attributes": [
