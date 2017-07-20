@@ -1462,3 +1462,54 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
 </tbody>
 </table>
+
+### Connection Status Bar
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusConnectingBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the background of the connection status bar while connecting.</td>
+    <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#f5f5f5f2</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusConnectingTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the connection status bar while connecting.</td>
+    <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#46474a</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusFailedToConnectBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the background of the connection status bar while connection failed.</td>
+    <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#000000cc</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusFailedToConnectTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the connection status bar while connection failed.</td>
+    <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
+    <td align="left">UIColor.white</td>
+  </tr>
+</tbody>
+
+</table>
