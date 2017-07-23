@@ -132,6 +132,17 @@
       <br>
       <br>
       {% include footer.html %}
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+      <script type="text/javascript"> docsearch({
+      apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
+      indexName: 'liveperson',
+      inputSelector: '.aa-input-search',
+      debug: false,
+      algoliaOptions: {
+        hitsPerPage: 10
+      }
+      });
+      </script>
    </body>
    {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
 </html>
