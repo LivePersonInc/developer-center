@@ -11,6 +11,8 @@ permalink: android-attributes.html
 
 indicator: messaging
 ---
+The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
+
 
 ### Brand
 
@@ -613,13 +615,13 @@ indicator: messaging
   </tr>
   <tr>
     <td>&lt;bool name=&quot;show_agent_details_csat&quot;&gt;</td>
-    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide) <br> NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
     <td>true</td>
     <td><img src="img/showyesno.png" alt="showyesno"></td>
   </tr>
   <tr>
     <td>&lt;bool name=&quot;show_yes_no_question&quot;&gt;</td>
-    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide) <br> NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
     <td>true</td>
     <td><img src="img/showyesno.png" alt="showyesno"></td>
   </tr>
@@ -968,31 +970,28 @@ indicator: messaging
 
 <table>
 <thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
+ <tr>
+   <th>Name</th>
+   <th>Description</th>
+   <th>Default</th>
+   <th>Example</th>
+ </tr>
 </thead>
 <tbody>  
-  <tr>
-    <td>&lt;string name=&quot;custom_font_name_conversation_feed&quot;&gt;
-</td>
-    <td>The font name for all conversation feed’s element.</td>
-    <td>Empty (use the device font)</td>
-    <td>sans-serif-thin</td>
+   <tr>
+     <td>&lt;string name=&quot;custom_font_name_conversation_feed&quot;&gt;</td>
+     <td>The font name for all conversation feed’s element.</td>
+     <td>Empty (use the device font)</td>
+     <td>sans-serif-thin</td>
   </tr>
   <tr>
-    <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;
-</td>
+    <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;</td>
     <td>The font name for all elements that are not in the conversation feed.</td>
     <td>Empty (use the device font)</td>
-    <td>customFont.ttf</td>
+<   td>customFont.ttf</td>
   </tr>
 </tbody>
 </table>
-
 
 
 ### Miscellaneous
@@ -1066,7 +1065,6 @@ indicator: messaging
     <td>Set the time in seconds before the first the TTR snackbar will be displayed</td>
     <td>10</td>
     <td></td>
-  </tr>
   <tr>
     <td>&lt;bool name=&quot;send_agent_profile_updates_when_conversation_closed&quot;&gt;</td>
     <td>When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. </td>
@@ -1166,6 +1164,8 @@ indicator: messaging
 </tbody>
 </table>
 
+
+
 ### Deprecated Attributes
 
 <table>
@@ -1175,14 +1175,15 @@ indicator: messaging
     <th>Description</th>
   </tr>
 </thead>
-<tbody>
+<tbody>    
+  </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_name&quot;&gt;</td>
     <td>Custom button icon filename without extension. This will be displayed on the toolbar.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_description&quot;&gt;</td>
-    <td>Content description for custom button. It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
+    <td>Content description for custom button.It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>

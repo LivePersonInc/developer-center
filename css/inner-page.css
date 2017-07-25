@@ -91,6 +91,42 @@ table > thead > tr > th {
     font-size: 0.8em;
 }
 
+.designsheet table tr td {
+  font-size: 0.9em;
+  line-height: 2.4em !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.designsheet table tr th {
+  background-color: #162036;
+  font-family: "Open Sans";
+  font-size: 0.8888em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.designsheet img {
+    width: auto !important;
+    float: right;
+}
+
+.designsheetnumber {
+  font-size: 2.5em;
+  margin-bottom: 7%;
+  padding-top: 1.5%;
+  margin-left: 40%;
+  border: 3px solid darkorange;
+  height: 50px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 50px;
+  background-color: orange;
+  color: #fff;
+}
+
+
 code {
   background-color: #f0f0f0;
   border-radius: 4px;

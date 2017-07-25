@@ -11,7 +11,7 @@ indicator: messaging
 
 This method retrieves a list of conversations with all their metadata and related messages based on a predefined search criteria. Search criteria includes filtering by time range, agent, skill, etc.
 
-# Request
+### Request
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
@@ -46,6 +46,7 @@ alertedMcsValues    | Alerted MCS of the conversation up until the most recent m
 csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
 source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, WEB, AGENT, SMS, FACEBOOK
 device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
+messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
 messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
 
 Filters examples:
@@ -68,7 +69,7 @@ source              | {"start":{"from":1470037448000,"to":1472543048000}, "sourc
 device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
 messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
 
-# Response
+### Response
 
 **Elements in the Response**
 
@@ -132,7 +133,7 @@ Name          | Description                                 | Type/Value | Notes
 :------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
 time          | Time the message was sent.                  | string     |
 timeL         | Time the message was sent in a long format. | long       |
-type          | Type of data                                | string     | Valid values: "text", "file"
+type          | Type of data                                | string     | Valid values: "text", "file",
 messageData   | Content of the message.                     | container  |
 messageId     | ID of message.                              | string     |
 seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, etc.
