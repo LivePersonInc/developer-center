@@ -993,6 +993,42 @@ The goal of the following document is to enumerate the different fields controll
 </tbody>
 </table>
 
+### Structured Content
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;structured_content_border_color&quot;&gt;
+</td>
+    <td>Color code for the structured content bubble outline color.</td>
+    <td>#EDEDED (light gray)</td>
+    <td><img src="img/strucuredcontentbordercolor.png" alt="strucuredcontentbordercolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_border_width&quot;&gt;
+  </td>
+    <td>Integer in dp for the bubble stroke width of the structured content bubble.</td>
+    <td>1dp</td>
+    <td><img src="img/strucuredcontentborderwidth.png" alt="strucuredcontentborderwidth"></td>
+  </tr>  
+  <tr>
+    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;
+  </td>
+    <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
+    <td>18</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
 
 ### Miscellaneous
 
@@ -1173,7 +1209,6 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <th>Name</th>
     <th>Description</th>
-  </tr>
 </thead>
 <tbody>    
   </tr>
