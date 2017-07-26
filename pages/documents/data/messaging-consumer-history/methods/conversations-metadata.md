@@ -47,61 +47,34 @@ state               | {"state":["CLOSE"]}
 
 **Elements in the Response**
 
-_Metadata info_
+_responseMetadata
 
-Name      | Description                                        | Type/Value
-:-------- | :------------------------------------------------- | :-----------------
-_metadata | All response-related Metadata.                     | container
-rel       | Name of a link to be used in the next request.     | alphanumeric (256)
-href      | A specific link to be used in the next request.    | alphanumeric (256)
-count     | Number of sessions using the current query/filter. | numeric
-info      | Information about a specific conversation.         | container
+Name              | Description                                        | Type/Value
+:---------------- | :------------------------------------------------- | :-----------------
+_responseMetadata | All response-related pagination Metadata.          | container
+rel               | Name of a link to be used in the next request.     | alphanumeric (256)
+href              | A specific link to be used in the next request.    | alphanumeric (256)
+count             | Number of sessions using the current query/filter. | numeric
 
-_Conversation record_
+_conversation record_
 
-Name                 | Description                                                                    | Type/Value
-:------------------- | :----------------------------------------------------------------------------- | :---------
-info                 | Contains information on the conversation.                                      | container
-messagesRecords      | Contains information about a specific message.                                 | container
-messageStatuses      | Contains information about message acceptance status (i.e. read/accept).       | container
-agentParticipants    | Contains information about the agent(s) participating in the conversation.     | container
-consumerParticipants | Contains information about the consumer(s) participating in the conversation.  | container
-transfers            | Contains information about transfers in the conversation.                      | container
-interactions         | Contains information about the interactions in the conversation.               | container
-messageScore         | Contains information about the message's score, including raw and MCS.         | container
-conversationSurveys  | Contains information about the different surveys for the current conversation. | container
-summary              | Contains information about the conversation's summary.                         | container
-sdes                 | List of Engagement Attributes.                                                 | container
+Name                 | Description                                                       | Type/Value
+:------------------- | :---------------------------------------------------------------- | :---------
+convId               | ID of the conversation.                                           | String     |
+participants         | Contains information about the participating in the conversation. | container  |
+startTs              | Start-time of the conversation.                                   | long       |
+endTs                | End-time of the conversation.                                     | long       |
+csat                 | Contains information about the csat given by the consumer.        | container  |
 
-_Conversation info_
+_Conversation participants
 
-Name                 | Description                                                                | Type/Value | Notes
-:------------------- | :------------------------------------------------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------
-conversationId       | ID of conversation.                                                        | string     |
-brandId              | ID of brand.                                                               | string     |
-status               | Latest status of the conversation.                                         | string     |
-startTime            | Start-time of the conversation.                                            | long       |
-endTime              | End-time of the conversation.                                              | long       |
-duration             | Time from when the consumer started the conversation until it ended.       | long       | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
-closeReason          | Reason for closing the conversation - by agent / consumer.                 | string     |
-firstConversation    | Whether it is the consumer's first conversation.                           | Boolean    |
-csat                 | CSAT score of the conversation (as given in the answer).                   | int        | Range: 1 to 5.
-mcs                  | Meaningful Connection Score of the conversation.                           | int        | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
-alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
-source               | Source origin (Facebook, app, etc).                                        | string     |
-device               | Device origin (desktop, smartphone, etc.).                                 | string     |
-latestSkillId        | Most recent skill id the conversation was assigned to an agent under.                       | long       |
-latestSkillName      | Most recent skill name that the conversation was assigned to an agent under.                | string     |
-latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
-latestAgentLoginName | The agent's login name.                                                    | string     |
-latestAgentNickname  | The agent's nickname.                                                      | string     |
-latestAgentFullName  | The agent's full name.                                                     | string     |
-latestAgentGroupId   | Group ID of the agent most recently assigned to the conversation.          | long       |
-latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
-latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
-isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
+Name                 | Description                                 | Type/Value | Notes
+:------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
+id                   | ID of the participant (Agent or Consumer).  | string     |
+role                 | The role pf the participant .               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
 
-_Message Info_
+
+_Conversation csat
 
 Name          | Description                                 | Type/Value | Notes
 :------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
@@ -110,115 +83,7 @@ timeL         | Time the message was sent in a long format. | long       |
 type          | Type of data                                | string     | Valid values: "text", "file",
 messageData   | Content of the message.                     | container  |
 messageId     | ID of message.                              | string     |
-seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, etc.
-dialogId      | ID of dialog bulk.                          | long       |
-participantId | ID of participant.                          | string     |
-source        | Message's origin.                           | string     |
-device        | Device the message was sent from.           | string     |
-sentBy        | Who sent the message                        | string     | Valid values: "agent", "consumer"
-
-_Message Text_
-
-Name | Description                      | Type/Value
-:--- | :------------------------------- | :---------
-text | The text content of the message. | string
-
-_Message File_
-
-Name         | Description                        | Type/Value | Notes
-:----------- | :--------------------------------- | :--------- | :----------------------------------------------
-relativePath | Relative path of the file.         | string     |
-fileType     | Type of the file.                  | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
-caption      | The caption (heading) of the file. | string
-
-_Message Link_
-
-Name             | Description            | Type/Value | Notes
-:--------------- | :--------------------- | :--------- | :----------------------------------------------
-externalFileLink | Link to external file. | string     |
-fileType         | Type of the file.      | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
-
-_Message Status info_
-
-Name                  | Description                                                 | Type/Value
-:-------------------- | :---------------------------------------------------------- | :---------
-messageId             | ID of message.                                              | string
-time                  | Time the change in message status occurred.                 | string
-timeL                 | Time the change in message status occurred, in long format. | long
-messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).   | long
-
-_Message Score info_
-
-Name            | Description                                                        | Type/Value | Notes
-:-------------- | :----------------------------------------------------------------- | :--------- | :--------------
-messageId       | ID of message.                                                     | string     |
-time            | Time the MCS was calculated.                                       | string     |
-timeL           | Time the MCS was calculated, in long format.                       | long       |
-mcs             | Meaningful Connection Score of the conversation up to this message | int        | Range: 0 - 100.
-messageRawScore | Score of message.                                                  | int
-
-_Participating Agent info_
-
-Name           | Description                                                        | Type/Value | Notes
-:------------- | :----------------------------------------------------------------- | :--------- | :---------------------------------
-agentId        | ID of agent.                                                       | string     |
-agentLoginName | Login name of the agent assigned to the conversation.              | string     |
-agentNickname  | Nickname of the agent assigned to the conversation.                | string     |
-agentFullName  | Full name of the agent assigned to the conversation.               | string     |
-time           | The time the agent was added to the conversation.                  | string     |
-timeL          | The time the agent was added to the conversation (in long format). | long       |
-role           | The agent's role in the conversation- assigned agent, manager etc. | string     |
-agentGroupId   | Agent's group ID.                                                  | long       |
-agentGroupName | The agent's group name.                                            | string     |
-permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"
-
-_Consumer Participant info_
-
-Name          | Description                                                      | Type/Value
-:------------ | :--------------------------------------------------------------- | :---------
-participantId | ID of consumer (in the LP database).                             | string
-time          | Time the consumer joined the conversation.                       | string
-timeL         | Time the consumer joined the conversation (in long format).      | long
-firstName     | Consumer's first name (provided by consumer in their profile).   | string
-lastName      | Consumer's last name (provided by consumer in their profile).    | string
-phone         | Consumer's phone number (provided by consumer in their profile). | string
-email         | Consumer's email (provided by consumer in their profile).        | string
-token         | Private identifier of the user.                                  | string
-
-_Transfer info_
-
-Name                   | Description                                                   | Type/Value
-:--------------------- | :------------------------------------------------------------ | :---------
-transfer               | Information about the transfer operation in the conversation. | container
-time                   | Time of transfer                                              | string
-timeL                  | Time of transfer (in long format).                            | long
-assignedAgentId        | Target agent ID (to transfer to).                             | string
-assignedAgentLoginName | The agent's login name.                                       | string
-assignedAgentNickname  | The agent's nickname.                                         | string
-assignedAgentFullName  | The agent's full name.                                        | string
-targetSkillId          | Target skill ID (to transfer to).                             | long
-targetSkillName        | Target skill name.                                            | string
-sourceSkillId          | The source skill ID.                                          | long
-sourceSkillName        | The source skill name.                                        | string
-sourceAgentId          | The source agent ID.                                          | string
-sourceAgentLoginName   | The source agent name.                                        | string
-sourceAgentNickname    | The source agent nickname.                                    | string
-sourceAgentFullName    | The source agent full name.                                   | string
-reason                 | Reason for transfer - back2Queue, etc.                        | string
-
-_Interaction info_
-
-Name                | Description                                               | Type/Value
-:------------------ | :-------------------------------------------------------- | :---------
-assignedAgentId     | ID of the agent participating in the current interaction. | string
-agentLoginName      | The agent's login name.                                   | string
-agentNickname       | The agent's nickname.                                     | string
-agentFullName       | The agent's full name.                                    | string
-interactionTime     | Interaction start time.                                   | string
-interactionTimeL    | Interaction start time (in long format).                  | long
-interactiveSequence | Interaction's sequence within the conversation.           | int
-
-
+seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, 
 
 **JSON Example**
 
