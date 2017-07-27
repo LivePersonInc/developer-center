@@ -64,10 +64,10 @@ This section contains API details that are common to every API’s resource and 
 | priority | Routing cascading order if agent group is in full capacity, first to priority 1 then to 2 then to 3 then to …. n. | number | Required | Required if skillRoutingConfiguration specified. |
 | splitPercentage | Split of chats to provide for each chat center (agent group). | number | Required | Required if skillRoutingConfiguration specified. 
 | wrapUpTime | The period of time between the end of the chat and until the agent will receive the new chat | Integer | Optional | this feature is within the ACD settings |
-| slaDefaultResponseTime | Default response time for all conversations in messaging per skill | Integer | Optional | Default value: null |
-| slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | Default value: null |
-| slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | Default value: null |
-| lobsIds | The list of LOB id's for skill | List<Long> | Optional |  |
+| slaDefaultResponseTime | Default response time for all conversations in messaging per skill | Integer | Optional | |
+| slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | |
+| slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | |
+| lobsIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
 
 ### Entity Example
 
