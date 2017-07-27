@@ -1197,6 +1197,18 @@ The goal of the following document is to enumerate the different fields controll
     <td>60</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;pci_form_hide_logo&quot;&gt;</td>
+    <td>Define if to hide logo inside the pci secure form web view</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;pci_form_font_name&quot;&gt;</td>
+    <td>Define the font of the pci secure form, by default - empty, use device's default</td>
+    <td></td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 

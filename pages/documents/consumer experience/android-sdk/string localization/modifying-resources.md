@@ -27,4 +27,17 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
     <td>Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.  In case you want to define the background color for this avatar, override "agent_avatar_background_color" resource id. </td>
     <td>lp_messaging_ui_ic_agent_avatar</td>
   </tr>
+  <tr>
+    <td>Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form).
+    To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
+   </td>
+    <td>lpmessaging_ui_secure_form_progress_bar.xml</td>
+  <tr>
+    <td>Default progress bar vector drawable for downloading \ uploading an image. it will appear on the image, inside the bubble until progress is done.  
+    To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
+   </td>
+    <td>lpmessaging_ui_image_progress_bar.xml</td>
+
+  </tr>
+
 </table>
