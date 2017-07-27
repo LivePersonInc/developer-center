@@ -78,12 +78,9 @@ _Conversation csat
 
 Name          | Description                                 | Type/Value | Notes
 :------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
-time          | Time the message was sent.                  | string     |
-timeL         | Time the message was sent in a long format. | long       |
-type          | Type of data                                | string     | Valid values: "text", "file",
-messageData   | Content of the message.                     | container  |
-messageId     | ID of message.                              | string     |
-seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, 
+csatRate                   | Time score given by the consumer.           | double     |
+csatResolutionConfirmation | Indicates whether the issue was resolved.   | boolean    |
+status                     | The status of the csat survey               | string     | Valid values: "FILLED", "PARTIALLY_FILLED","SKIPPED"
 
 **JSON Example**
 
