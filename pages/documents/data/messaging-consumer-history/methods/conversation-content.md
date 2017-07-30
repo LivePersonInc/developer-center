@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Consumer Messaging history API
 level4: Methods
 order: 10
-permalink: data-messaging-history-consumer-conversations-metadata.html
+permalink: data-messaging-history-consumer-conversation-content.html
 indicator: messaging
 ---
 
