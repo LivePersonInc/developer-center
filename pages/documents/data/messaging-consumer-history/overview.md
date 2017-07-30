@@ -10,6 +10,8 @@ root-link: true
 indicator: messaging
 ---
 
+**BETA**
+
 ### Introduction
 
 The LiveEngage Consumer Messaging History API allows to retrieve up to 13 months of historical conversations data, both metadata and content, for a consumer. This includes both archived and closed conversations.
