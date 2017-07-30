@@ -49,7 +49,7 @@ _messageEvent record_
 Name                 | Description                                               | Type/Value | Notes
 :------------------- | :-------------------------------------------------------- | :--------- | --------------
 sequence             | The event sequence within the conversation.               | Int        | Currently available only for message of type 'ContentEvent'
-originatorId         | The id of the participant who wrote/accept the message.   | String     |
+originatorId         | The id of the participant who wrote/accepted the message. | String     |
 serverTimestamp      | Event time stamp.                                         | long       |
 event                | Contains message event data.                              | container  |
 
