@@ -1,8 +1,8 @@
 ---
 title: Conversations
 level1: Documents
-level2: Data
-level3: Messaging history for consumer API
+level2: Consumer Experience
+level3: Consumer Messaging history API
 level4: Methods
 order: 10
 permalink: data-messaging-history-consumer-conversations-metadata.html
@@ -44,40 +44,40 @@ dialogId            | {"dialogId":"4a6ce154-a086-4bfb-8ab2-2658fd88157a"}
 
 **Elements in the Response**
 
-_responseMetadata
-
-Name              | Description                                        | Type/Value
-:---------------- | :------------------------------------------------- | :-----------------
-_responseMetadata | All response-related pagination Metadata.          | container
-rel               | Name of a link to be used in the next request.     | alphanumeric (256)
-href              | A specific link to be used in the next request.    | alphanumeric (256)
-count             | Number of sessions using the current query/filter. | numeric
-
-_conversation record_
+_messageEvent record_
 
 Name                 | Description                                                       | Type/Value
 :------------------- | :---------------------------------------------------------------- | :---------
-convId               | ID of the conversation.                                           | String     |
-participants         | Contains information about the participating in the conversation. | container  |
-startTs              | Start-time of the conversation.                                   | long       |
-endTs                | End-time of the conversation.                                     | long       |
-csat                 | Contains information about the csat given by the consumer.        | container  |
+sequence             | The event sequence within the conversation.                       | Int        |
+originatorId         | The id of the participant who wrote the message.                  | String     |
+serverTimestamp      | Event time stamp.                                                 | long       |
+event                | Contains message event data.                                     | container  |
 
-_Conversation participants
+_messageEvent ContentEvent (text/plain)
+
+Name                 | Description                | Type/Value | Notes
+:------------------- | :--------------------------| :--------- |--------------------------------------------- :------------------------------------------------------------------------------------------------------------
+type                 | The type of the message.   | string     |
+contentType          | The type of the contnet.   | string     | Valid values: "text/plain"
+message              | The message text.          | string     | 
+
+
+_messageEvent ContentEvent (HostedFile)
+
+Name                 | Description                | Type/Value | Notes
+:------------------- | :--------------------------| :--------- |--------------------------------------------- :------------------------------------------------------------------------------------------------------------
+type                 | The type of the message.   | string     |
+contentType          | The type of the contnet.   | string     | Valid values: "HostedFile"
+message              | The message text.          | string     | Valid values: "CONSUMER"
+
+
+_messageEvent AcceptStatusEvent
 
 Name                 | Description                                 | Type/Value | Notes
 :------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
-id                   | ID of the participant (Agent or Consumer).  | string     |
-role                 | The role pf the participant .               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
-
-
-_Conversation csat
-
-Name          | Description                                 | Type/Value | Notes
-:------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
-csatRate                   | Time score given by the consumer.           | double     |
-csatResolutionConfirmation | Indicates whether the issue was resolved.   | boolean    |
-status                     | The status of the csat survey               | string     | Valid values: "FILLED", "PARTIALLY_FILLED","SKIPPED"
+type                 | The type of the message.                    | string     |
+status               | The role pf the participant .               | string     | Valid values: "CONSUMER", 
+sequenceList         | The type of the message.                    | string     |
 
 **JSON Example**
 
