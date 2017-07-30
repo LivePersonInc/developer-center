@@ -89,10 +89,10 @@ status                     | The status of the csat survey               | strin
         "count": 1,
         "self": {
             "rel": "self",
-            "href": "http://qtvr-wto133:8080/messaging_history/api/account/le69322492/conversations/consumer/metadata/search?limit=50&offset=0&sort=start:desc"
+            "href": "http://localhost:8080/messaging_history/api/account/le69322492/conversations/consumer/metadata/search?limit=50&offset=0&sort=start:desc"
         },
         "shardsStatusResult": {
-            "partialResult": true
+            "partialResult": false
         }
     },
     "conversationHistoryMetadataRecords": [
