@@ -36,9 +36,9 @@ dialogId    | ID of the conversation to search.. | String.    | Required |
 
 Filters examples:
 
-Name                | Description
-:------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-dialogId            | {"dialogId":"4a6ce154-a086-4bfb-8ab2-2658fd88157a"}
+Name                | Description                                          |
+:------------------ | :--------------------------------------------------- |
+dialogId            | {"dialogId":"4a6ce154-a086-4bfb-8ab2-2658fd88157a"}  |
 
 ### Response
 
@@ -48,7 +48,6 @@ _messageEvent record_
 
 Name                 | Description                                               | Type/Value | Notes
 :------------------- | :-------------------------------------------------------- | :--------- | --------------
-:------------------------------------------------------------------------------------------------------
 sequence             | The event sequence within the conversation.               | Int        | Currently available only for message of type 'ContentEvent'
 originatorId         | The id of the participant who wrote/accept the message.   | String     |
 serverTimestamp      | Event time stamp.                                         | long       |
@@ -57,7 +56,7 @@ event                | Contains message event data.                             
 _messageEvent ContentEvent 
 
 Name                 | Description                | Type/Value | Notes
-:------------------- | :--------------------------| :--------- |--------------------------------------------- :------------------------------------------------------------------------------------------------------------
+:------------------- | :--------------------------| :--------- |---------------------------------------------
 type                 | The type of the message.   | string     | Valid values: "ContentEvent"
 contentType          | The type of the contnet.   | string     | Valid values: "text/plain"
 message              | The message text.          | string     | 
@@ -67,7 +66,7 @@ message              | The message text.          | string     |
 _messageEvent AcceptStatusEvent
 
 Name                 | Description                                        | Type/Value | Notes
-:------------------- | :--------------------------------------------------| :--------- | --------------------------------- :-------------------------------------------------------------------------------------------------------------------------
+:------------------- | :--------------------------------------------------| :--------- | ---------------------------------
 type                 | The type of the message.                           | string     | Valid values: "AcceptStatusEvent"
 status               | The status of the message event.                   | string     | Valid values: "ACCEPT","READ" 
 sequenceList         | The sequence of the message the status refers to.  | Array<Int> |
