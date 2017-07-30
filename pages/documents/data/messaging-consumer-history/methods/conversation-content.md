@@ -53,7 +53,7 @@ originatorId         | The id of the participant who wrote/accept the message.  
 serverTimestamp      | Event time stamp.                                         | long       |
 event                | Contains message event data.                              | container  |
 
-_messageEvent event - ContentEvent_ 
+_event - ContentEvent_ 
 
 Name                 | Description                | Type/Value | Notes
 :------------------- | :--------------------------| :--------- |---------------------------------------------
@@ -63,7 +63,7 @@ message              | The message text.          | string     |
 
 
 
-_messageEvent event - AcceptStatusEvent_
+_event - AcceptStatusEvent_
 
 Name                 | Description                                        | Type/Value | Notes
 :------------------- | :--------------------------------------------------| :--------- | ---------------------------------
