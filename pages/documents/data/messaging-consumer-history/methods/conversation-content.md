@@ -46,75 +46,102 @@ dialogId            | {"dialogId":"4a6ce154-a086-4bfb-8ab2-2658fd88157a"}
 
 _messageEvent record_
 
-Name                 | Description                                                       | Type/Value
-:------------------- | :---------------------------------------------------------------- | :---------
-sequence             | The event sequence within the conversation.                       | Int        |
-originatorId         | The id of the participant who wrote the message.                  | String     |
-serverTimestamp      | Event time stamp.                                                 | long       |
-event                | Contains message event data.                                     | container  |
+Name                 | Description                                               | Type/Value | Notes
+:------------------- | :-------------------------------------------------------- | :--------- | --------------
+:------------------------------------------------------------------------------------------------------
+sequence             | The event sequence within the conversation.               | Int        | Currently available only for message of type 'ContentEvent'
+originatorId         | The id of the participant who wrote/accept the message.   | String     |
+serverTimestamp      | Event time stamp.                                         | long       |
+event                | Contains message event data.                              | container  |
 
-_messageEvent ContentEvent (text/plain)
+_messageEvent ContentEvent 
 
 Name                 | Description                | Type/Value | Notes
 :------------------- | :--------------------------| :--------- |--------------------------------------------- :------------------------------------------------------------------------------------------------------------
-type                 | The type of the message.   | string     |
+type                 | The type of the message.   | string     | Valid values: "ContentEvent"
 contentType          | The type of the contnet.   | string     | Valid values: "text/plain"
 message              | The message text.          | string     | 
 
 
-_messageEvent ContentEvent (HostedFile)
-
-Name                 | Description                | Type/Value | Notes
-:------------------- | :--------------------------| :--------- |--------------------------------------------- :------------------------------------------------------------------------------------------------------------
-type                 | The type of the message.   | string     |
-contentType          | The type of the contnet.   | string     | Valid values: "HostedFile"
-message              | The message text.          | string     | Valid values: "CONSUMER"
-
 
 _messageEvent AcceptStatusEvent
 
-Name                 | Description                                 | Type/Value | Notes
-:------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
-type                 | The type of the message.                    | string     |
-status               | The role pf the participant .               | string     | Valid values: "CONSUMER", 
-sequenceList         | The type of the message.                    | string     |
+Name                 | Description                                        | Type/Value | Notes
+:------------------- | :--------------------------------------------------| :--------- | --------------------------------- :-------------------------------------------------------------------------------------------------------------------------
+type                 | The type of the message.                           | string     | Valid values: "AcceptStatusEvent"
+status               | The status of the message event.                   | string     | Valid values: "ACCEPT","READ" 
+sequenceList         | The sequence of the message the status refers to.  | Array<Int> |
 
 **JSON Example**
 
 ```
 {
-    "_responseMetadata": {
-        "count": 1,
-        "self": {
-            "rel": "self",
-            "href": "http://qtvr-wto133:8080/messaging_history/api/account/le69322492/conversations/consumer/metadata/search?limit=50&offset=0&sort=start:desc"
-        },
-        "shardsStatusResult": {
-            "partialResult": true
-        }
-    },
-    "conversationHistoryMetadataRecords": [
+    "messageEventRecords": [
         {
-            "convId": "2ba1f774-0455-4759-9e5c-42d9b67db3f1",
-            "participants": [
-                {
-                    "id": "d74812871d96945af08f77b95b16b39cc2f29438bbe48b0109e2719575787332",
-                    "role": "CONSUMER"
-                },
-                {
-                    "id": "eea399b9-fed0-5cb0-8d38-00e3bc50d79b",
-                    "role": "ASSIGNED_AGENT"
-                }
-            ],
-            "state": "CLOSE",
-            "startTs": 1501047777465,
-            "endTs": 1501047800467,
-            "csat": {
-                "csatRate": 3,
-                "csatResolutionConfirmation": false,
-                "status": "FILLED"
+            "sequence": 0,
+            "originatorId": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+            "serverTimestamp": 1501399092573,
+            "event": {
+                "type": "ContentEvent",
+                "contentType": "text/plain",
+                "message": "hello"
+            }
+        },
+        {
+            "sequence": 3,
+            "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
+            "serverTimestamp": 1501399110926,
+            "event": {
+                "type": "ContentEvent",
+                "contentType": "text/plain",
+                "message": "How can I help you?"
+            }
+        },
+        {
+            "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
+            "serverTimestamp": 1501399101110,
+            "event": {
+                "type": "AcceptStatusEvent",
+                "status": "ACCEPT",
+                "sequenceList": [
+                    0
+                ]
+            }
+        },
+        {
+            "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
+            "serverTimestamp": 1501399101249,
+            "event": {
+                "type": "AcceptStatusEvent",
+                "status": "READ",
+                "sequenceList": [
+                    0
+                ]
+            }
+        },
+        {
+            "originatorId": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+            "serverTimestamp": 1501399111006,
+            "event": {
+                "type": "AcceptStatusEvent",
+                "status": "ACCEPT",
+                "sequenceList": [
+                    3
+                ]
+            }
+        },
+        {
+            "originatorId": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+            "serverTimestamp": 1501399113240,
+            "event": {
+                "type": "AcceptStatusEvent",
+                "status": "READ",
+                "sequenceList": [
+                    3
+                ]
             }
         }
     ]
 }
+
 ```
