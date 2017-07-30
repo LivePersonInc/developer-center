@@ -2,7 +2,7 @@
 title: Overview
 level1: Documents
 level2: Consumer Experience
-level3: Consumer Messaging history API
+level3: Consumer Messaging history API (BETA)
 level-order: 3
 order: 1
 permalink: consumer-experience-messaging-history-overview.html
