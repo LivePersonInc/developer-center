@@ -24,7 +24,7 @@ A few things you'll need to get started with this API:
 
 	* msgHist
 
-2. This API is aimed to be used with JWT authentication. The JWT should be passed in the authorization header of the request.
+2. This API requires authorization using JWT bearer token passed in the authorization header of the request. 
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
