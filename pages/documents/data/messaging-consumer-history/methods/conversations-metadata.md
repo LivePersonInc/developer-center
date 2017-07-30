@@ -46,7 +46,7 @@ state               | {"state":["CLOSE"]}
 
 **Elements in the Response**
 
-_responseMetadata
+__responseMetadata_
 
 Name              | Description                                        | Type/Value
 :---------------- | :------------------------------------------------- | :-----------------
