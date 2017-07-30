@@ -35,7 +35,7 @@ This method queues a chat request. It has a number of possible properties that c
 | invitation    | Indication if this was a result of an invitation. | Boolean   |  |
 | siteContainer | In case of a federated site, you need to pass this in to locate the visitor in the secondary servers. | string | Exists in the Global variable on the parent page: window.lpMTagConfig.FPC_CONT. Required in case of federation. This is for the first chat only. |
 | runWithRules  | Specifies if you want rules to be evaluated on the Pre-chat survey and applied to the chat. | Boolean | Example: have a skill question change the chat skill. <br> Default: off |
-| interactionTimeout	| The number of seconds since stop sending requests to the server until it disconnects the chat. | number | <br> Default: 40 |
+| interactionTimeout	| The number of seconds that have passed since the last request was sent to the server until the server disconnects the chat. | number | <br> Default: 40 |
 | visitorSession | The monitored visitors session on the page. | string | Used to create pipeline reports from the page monitoring to the chat. |
 | visitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
 | sessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
@@ -52,9 +52,9 @@ This method queues a chat request. It has a number of possible properties that c
 *preChatLines*
 
 ```json
-{ "preChatLines" : [ 
+{ "preChatLines" : [
     "This chat started from a  mobile browser",
-    "Returning visitor from support" 
+    "Returning visitor from support"
   ]
 }
 ```
@@ -93,7 +93,7 @@ var failedRequest = chat.requestChat({
     context: myChat
 });
 ```
-                                                                                                                      
+
 ### Response
 
 **Data in the response**
