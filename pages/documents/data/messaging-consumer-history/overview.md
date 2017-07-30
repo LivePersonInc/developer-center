@@ -32,10 +32,5 @@ A few things you'll need to get started with this API:
 
 ### Use Cases
 
-* Extract all chat transcripts and accompanying data in order to integrate with any 3rd party application or database
+This is a complementary API for the Messaging Window API. It should be used to retrieve the historical conversations when using the Messaging Window API for the different use cases / scenarios described here  [LINK to the use cases] 
 
-* Extract a type of conversation (e.g. low CSAT score, high MCS) and take an action on them.
-
-Example of interactive tool created based on Messaging Interactions API.  This example utilizes the information to filter, sort and read through various transcripts:
-
-![MessagingInteractions](img/messaginginteractions.png)
