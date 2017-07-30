@@ -15,7 +15,7 @@ This method retrieves the content of specific conversation as message events lis
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?offset=0&limit=50`
+POST   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?offset=0&limit=50&sort=start:asc`
 
 **URL Parameters**
 
