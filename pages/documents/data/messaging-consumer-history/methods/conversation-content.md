@@ -65,11 +65,11 @@ message              | The message text.          | string     |
 
 _event - AcceptStatusEvent_
 
-Name                 | Description                                        | Type/Value | Notes
-:------------------- | :--------------------------------------------------| :--------- | ---------------------------------
-type                 | The type of the message.                           | string     | Valid values: "AcceptStatusEvent"
-status               | The status of the message event.                   | string     | Valid values: "ACCEPT","READ" 
-sequenceList         | The sequence of the message the status refers to.  | Array<Int> |
+Name                 | Description                                      | Type/Value   | Notes
+:------------------- | :------------------------------------------------| :----------- | ---------------------------------
+type                 | The type of the message.                         | string       | Valid values: "AcceptStatusEvent"
+status               | The status of the message event.                 | string       | Valid values: "ACCEPT","READ" 
+sequenceList         | The sequence of the message the status refers to | Array'<Int>' |
 
 **JSON Example**
 
