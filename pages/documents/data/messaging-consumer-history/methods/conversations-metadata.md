@@ -1,8 +1,8 @@
 ---
 title: Conversations
 level1: Documents
-level2: Data
-level3: Messaging history for consumer API
+level2: Consumer Experience
+level3: Consumer Messaging history API
 level4: Methods
 order: 10
 permalink: data-messaging-history-consumer-conversations-metadata.html
