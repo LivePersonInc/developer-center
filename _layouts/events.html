@@ -3,6 +3,7 @@
    <head>
       {% include head.html %}
       <link rel="stylesheet" href="css/events.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
    </head>
    <body class="bot-platform">
      <!-- BEGIN LivePerson Monitor. -->
@@ -83,16 +84,23 @@
       <br>
       <br>
       {% include footer.html %}
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-      <script type="text/javascript"> docsearch({
-      apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
-      indexName: 'liveperson',
-      inputSelector: '.aa-input-search',
-      debug: false,
-      algoliaOptions: {
-        hitsPerPage: 6
-      }
-      });
-   </body>
-   {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
-</html>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+     <script type="text/javascript"> docsearch({
+     apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
+     indexName: 'liveperson',
+     inputSelector: '.aa-input-search',
+     debug: true,
+     algoliaOptions: {
+       hitsPerPage: 8
+     },
+     autocompleteOptions: {
+       openOnFocus: true
+     }
+     });
+     </script>
+
+     </body>
+     {% if site.google_analytics %}
+     {% include google_analytics.html %}
+     {% endif %}
+     </html>
