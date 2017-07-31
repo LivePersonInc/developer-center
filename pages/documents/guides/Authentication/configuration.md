@@ -33,7 +33,7 @@ To define the OAuth 2.0 authentication:
 
 2.	In the Connectors area, next to the authentication server, click Configure. The Authentication Server page is displayed.
 
-[Selecting Implicit Flow or Code Flow](img/authenticationserver.png)
+![Selecting Implicit Flow or Code Flow](img/authenticationserver.png)
 
 {:start="3"}
 3.	From the dropdown menu, select your preferred authentication method, and then complete the required fields
