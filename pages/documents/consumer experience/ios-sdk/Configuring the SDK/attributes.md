@@ -78,6 +78,20 @@ The table below lists the available attributes which can be used to personalize 
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
+    <td align="left">remoteUserBubbleLongPressOverlayColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color of the remote user's bubble overlay when user use long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="example6"></td>
+    <td align="left">UIColor.black</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleLongPressOverlayAlpha</td>
+    <td align="left">Float</td>
+    <td align="left">Alpha of the remote user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="example6"></td>
+    <td align="left">0.3</td>
+  </tr>
+  <tr>
     <td align="left">userBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the visitor bubble.</td>
@@ -139,6 +153,20 @@ The table below lists the available attributes which can be used to personalize 
     <td align="left">Color code for the error view border of the visitor bubble.</td>
     <td align="left"><img src="img/userbubbleerrorbordercolor.png" alt="example15"></td>
     <td align="left">#DE0A23</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleLongPressOverlayColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color of the user bubble's overlay when user use long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/userBubbleOverlay.png" alt="example15"></td>
+    <td align="left">UIColor.black</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleLongPressOverlayAlpha</td>
+    <td align="left">Float</td>
+    <td align="left">Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/userBubbleOverlay.png" alt="example15"></td>
+    <td align="left">0.3</td>
   </tr>
   <tr>
     <td align="left">bubbleEmailLinksRegex</td>
