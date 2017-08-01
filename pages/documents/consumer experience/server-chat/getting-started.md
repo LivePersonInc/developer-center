@@ -13,7 +13,6 @@ indicator: chat
 
 ### Getting Started with the Server Chat API
 
-
 In order to use the Server Chat API, please follow the steps below:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
