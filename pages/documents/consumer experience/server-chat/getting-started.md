@@ -24,7 +24,7 @@ In order to use the Server Chat API, please follow the steps below:
 
   - appKey=721c180b09eb463d9f3191c41762bb68
 
-The LiveEngage chat window is based on a browser and will display in any desktop or mobile browser. In order to re-create and build the chat window in order to integrated into non-browser applications, brands can utilize the Server Chat API. Before using the Server Chat API, you'll need to create a visitor session. You can do that by utilizing getEngagement from the (App Engagement API)[rt-interactions-app-engagement-overview.html]{:target="_blank"}.
+The LiveEngage chat window is based on a browser and will display in any desktop or mobile browser. In order to re-create and build the chat window for integration into non-browser applications, brands can utilize the Server Chat API. Before using the Server Chat API, you'll need to create a visitor session. You can do that by utilizing getEngagement from the [App Engagement API](rt-interactions-app-engagement-overview.html){:target="_blank"}.
 
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
