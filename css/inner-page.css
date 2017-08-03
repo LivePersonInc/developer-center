@@ -47,29 +47,22 @@ h4[id]{
 }
 .post-content table{
   max-width: initial;
-  border: 1px solid #162036;
-  width: 100%;
-}
-
-.designsheet td {
-  font-size: 1.2em;
-  line-height: 2.4em !important;
-}
-
-.designsheet img {
-    width: auto !important;
-    float: right;
+  border: 1px solid #d6d6d6;
+  width: 125%;
 }
 
 .post-content table td:first-child {
   width:unset;
-  max-width: 150px;
+  /*max-width: 150px;*/
+  font-weight: bold;
 }
 .post-content table  tr  td {
    font-size: 0.8em;
    font-family: "Open Sans";
     color: #666666;
     word-wrap:break-word;
+    max-width: 160px;
+    height: 50px;
 }
 
 .post-content table > thead > tr > th {
@@ -79,7 +72,7 @@ h4[id]{
   font-weight: bold;
 }
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
-  border-top: 1px solid #162036;
+  border-top: 1px solid #d6d6d6;
 
 }
 table > thead > tr > th {
@@ -125,7 +118,6 @@ table > thead > tr > th {
   background-color: orange;
   color: #fff;
 }
-
 
 code {
   background-color: #f0f0f0;

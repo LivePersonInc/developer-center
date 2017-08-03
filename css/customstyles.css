@@ -122,6 +122,7 @@ caption {
     color: #777;
     text-align: left;
 }
+
 th {
     text-align: left;
 }
@@ -139,7 +140,7 @@ table > tbody > tr > td,
 table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857143;
-    vertical-align: top;
+    /*vertical-align: top;*/
     border-top: 1px solid #ddd;
 }
 table > thead > tr > th {
@@ -161,8 +162,8 @@ table > thead:first-child > tr:first-child > td {
 table > tbody + tbody {
     /* b */
 }
-table > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
+table > tbody > tr:nth-of-type(even) {
+    background-color: #f7f7f7;
 }
 
 table col[class*="col-"] {
