@@ -48,6 +48,7 @@ source              | Source origin (Facebook, App etc.) from which the conversa
 device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
 messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
+latestConversationQueueState | The queue state of the conversation                                                                      | String                   | Optional | Valid values: IN_QUEUE,ACTIVE
 
 Filters examples:
 
@@ -68,6 +69,7 @@ csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat"
 source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}
 device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
 messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
+latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": ["IN_QUEUE"]}
 
 ### Response
 
