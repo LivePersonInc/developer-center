@@ -1,6 +1,6 @@
 ---
-title: LivePerson
-level3: Developers' Community
+title: Developers' Community
+level3: LivePerson
 keywords: sample homepage
 #tags: [getting_started]
 permalink: index.html
