@@ -613,6 +613,23 @@ display: block;
   color: #e4e4e4;
 }
 
+.search-cancel {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 55%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: #fff;
+  border-radius: 50%;
+  display: none;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+  stroke: white;
+  cursor: pointer;
+}
 
 }
 
