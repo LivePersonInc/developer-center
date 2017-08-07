@@ -377,19 +377,19 @@ pre {
     border-bottom: 2px solid #5879DA ;
     display: none;
     margin-top: 8px;
-    margin-bottom: 24px;
+    /*margin-bottom: 24px;*/
     padding: 4px 0;
     font-size: 1.125em;
     color: #333333;
     font-weight: bold;
     font-family: "Roboto Slab","Open Sans",Arial,Helvetica,sans-serif;
-    width:60%;
+    /*width:60%;*/
 }
  .algolia-docsearch-suggestion--wrapper {
     width: 40%;
     float: left;
     padding: 8px 0 0;
-    margin-bottom: 24px;
+    /*margin-bottom: 24px;*/
 }
  .algolia-docsearch-suggestion--subcategory-column {
     float: left;
