@@ -15,30 +15,16 @@ This method retrieves the content of specific conversation as message events lis
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?offset=0&limit=50&sort=start:asc`
+GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157a&offset=0&limit=50&sort=start:asc`
 
 **URL Parameters**
 
 Name   | Description                                                          | Type/Value | Required | Notes
 :----- | :------------------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-offset | The offset specifies from which record to retrieve the conversation. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 20.
-limit  | Max amount of conversations to be received in the response.          | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
+conversationId | The id of the conversation to be retrieved. | numeric    | Required | 
+offset | The offset specifies from which record to retrieve the conversation. | numeric    | Optional | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 20.
+limit  | Max amount of conversations to be received in the response.          | numeric    | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                              | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
-
-**BODY/POST Parameters**
-
-Filter is sent in the POST data (body) with the following JSON structure.
-
-Name        | Description                        | Type/Value | Required | Notes
-:---------- | :----------------------------------| :----------| :------- | :----
-dialogId    | ID of the conversation to search.. | String.    | Required | 
-
-
-Filters examples:
-
-Name                | Description                                          |
-:------------------ | :--------------------------------------------------- |
-dialogId            | {"dialogId":"4a6ce154-a086-4bfb-8ab2-2658fd88157a"}  |
 
 ### Response
 
