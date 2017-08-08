@@ -2,7 +2,7 @@
 title: Setting up the IVR Deflection Solution
 level1: Products
 level2: Channels
-level3: IVR Deflection Solution
+level3: IVR Deflection Solution for Chat
 
 order: 2
 
@@ -10,7 +10,7 @@ permalink: products-channels-ivr-deflection-solution-setting-up-ivr.html
 indicator:
 ---
 
-To start using the IVR Deflection Solution, set up a LiveEngage campaign with IVR engagement following the key steps listed below:
+To start using the **IVR Deflection Solution for Chat**, set up a LiveEngage campaign with IVR engagement following the key steps listed below:
 
 1.  Create an engagement and select the IVR as the source.
 
@@ -18,7 +18,7 @@ To start using the IVR Deflection Solution, set up a LiveEngage campaign with IV
 
   * The page must contain the LiveEngage tag.
 
-  * The page should be a simple page with limited content so that itloads quickly.
+  * The page should be a simple page with limited content so that it loads quickly.
 
 3.  Copy the static link, as shown below, if choosing to skip the availability check.
 
@@ -48,18 +48,18 @@ The [Appendix](products-channels-ivr-deflection-solution-appendix.html){:target=
 
 ```xml
 
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <vxml version = "2.1">
-<meta name="maintainer" content="<author email>"/> 
-<form> 
+<meta name="maintainer" content="<author email>"/>
+<form>
 <var name="botkey" expr="*****"/>
 <var name="apimethod" expr="'send'"/>
 <var name="msg" expr="'<Enter the SMS text message and the short URL here. >'"/>
 <var name="network" expr="'SMS'"/>
 <var name="from" expr="<sender phone number>"/>
-<field name="user" type="digits"> 
+<field name="user" type="digits">
 <prompt>Please enter a your phone number including the country code and area number. To finish press the pound sign.</prompt>
-<filled> 
+<filled>
 <prompt>A chat link will be send to <say-as interpret-as="vxml:phone"><value expr="user"/></say-as>. Thank you and good bye.</prompt>
 
 ```
