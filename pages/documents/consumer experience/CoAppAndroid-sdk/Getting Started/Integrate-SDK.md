@@ -15,7 +15,7 @@ In order to use the Voice & Video SDK within your project, you need to have the 
 
 ### Setting up with Gradle (recommended)
 
-**NOTE: Gradle installation is currently not publicly available**!
+**NOTE: Gradle installation is currently not publicly available as this SDK is in BETA**!
 
 To add the SDK to your project, just add the following dependency to your `build.gradle`:
 

@@ -11,7 +11,7 @@ indicator: messaging
 
 This method retrieves a list of conversations with all their metadata and related messages based on a predefined search criteria. Search criteria includes filtering by time range, agent, skill, etc.
 
-# Request
+### Request
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ Name                | Description                                               
 start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
 skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
-latestSkillIds      | An array of latest skill IDs, represented as numbers.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
+latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
 agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional |
 latestAgentIds      | An array of latest agent IDs, represented as numbers.                                         | Array `<agentID>`                  | Optional | Filters only conversations whose latest agent appears in the array.
 agentGroupIds       | An array of agent group IDs, represented as numbers.                                          | Array `<agentGroupID>`             | Optional |
@@ -46,7 +46,9 @@ alertedMcsValues    | Alerted MCS of the conversation up until the most recent m
 csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
 source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, WEB, AGENT, SMS, FACEBOOK
 device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
+messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
 messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
+latestConversationQueueState | The queue state of the conversation                                                                      | String                   | Optional | Valid values: IN_QUEUE,ACTIVE
 
 Filters examples:
 
@@ -67,8 +69,9 @@ csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat"
 source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}
 device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
 messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
+latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": ["IN_QUEUE"]}
 
-# Response
+### Response
 
 **Elements in the Response**
 
@@ -115,8 +118,8 @@ mcs                  | Meaningful Connection Score of the conversation.         
 alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
-latestSkillId        | Most recent skill id the conversation was routed to.                       | long       |
-latestSkillName      | Most recent skill name that the conversation was routed to.                | string     |
+latestSkillId        | Most recent skill id the conversation was assigned to an agent under.                       | long       |
+latestSkillName      | Most recent skill name that the conversation was assigned to an agent under.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
 latestAgentLoginName | The agent's login name.                                                    | string     |
 latestAgentNickname  | The agent's nickname.                                                      | string     |
@@ -132,7 +135,7 @@ Name          | Description                                 | Type/Value | Notes
 :------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
 time          | Time the message was sent.                  | string     |
 timeL         | Time the message was sent in a long format. | long       |
-type          | Type of data                                | string     | Valid values: "text", "file"
+type          | Type of data                                | string     | Valid values: "text", "file",
 messageData   | Content of the message.                     | container  |
 messageId     | ID of message.                              | string     |
 seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, etc.

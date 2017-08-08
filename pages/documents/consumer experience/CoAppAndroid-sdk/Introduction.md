@@ -4,7 +4,7 @@ level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 
-level-order: 6
+level-order: 4
 order: 2
 permalink: consumer-experience-voice-video-android.html
 root-link: true

@@ -68,4 +68,4 @@ Response example for JSON:
       }
     }   
 
-*Note: This resource intends to provide a "continuity" ability to the agent while moving between one device to another. This means that the secondary agent session login action must take place while there is a current agent session active for that specific agent. In case the agent logs out of the system and then logs in again, any active chat session from the previous session will be returned back to the queue or disconnected in case there is no suitable agent to take the chat.*
+*Note: This resource is intended to provide a "continuity" ability to the agent while moving between one device to another. This means that the secondary agent session login action must take place while there is a current agent session active for that specific agent. In case the agent logs out of the system and then logs in again, any active chat session from the previous session will be returned back to the queue or disconnected in case there is no suitable agent to take the chat. Recommended polling interval should not be less that 2 seconds (2000 ms).*
