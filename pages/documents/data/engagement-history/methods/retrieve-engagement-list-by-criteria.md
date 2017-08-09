@@ -1097,7 +1097,7 @@ Example:
 | mcs | Divides the Meaningful Connection Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1 |
 | alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1 |
 | chatMCS | Meaningful Connection Score of the chat.  | int| Range: 0-100. |
-| chatDataEnriched | Indication whether chat was enriched with final data. | Boolean | If true, the enrichment process occurred. |
+| chatDataEnriched | Indication whether chat was enriched with final data (including sdes data). | Boolean | If true, the enrichment process occurred. |
 | isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data. |
 | chatStartUrl | The page’s URL from which the chat started. | alphanumeric | |
 | chatStartPage | The page’s title from which the chat started. | alphanumeric | |
