@@ -20,6 +20,7 @@ To start using the **IVR Deflection Solution for Chat**, set up a LiveEngage cam
 
   * The page should be a simple page with limited content so that it loads quickly.
 
+{:start="3"}
 3.  Copy the static link, as shown below, if choosing to skip the availability check.
 
     ![IVR3](img/ivr3.png)
