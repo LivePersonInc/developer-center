@@ -16,7 +16,9 @@ indicator: messaging
 
 The LiveEngage Consumer Messaging History API allows to retrieve up to 13 months of historical conversations data, both metadata and content, for a consumer. This includes both archived and closed conversations.
 
-This API is based on the REST architecture and supports the HTTPS POST protocol (data retrieval), all retrieved data is returned in JSON format.
+This API is based on the REST architecture and supports the HTTPS GET protocol, all retrieved data is returned in JSON format.
+
+This API supports CORS which enables cross-domain data transfers.
 
 ### Getting Started
 
