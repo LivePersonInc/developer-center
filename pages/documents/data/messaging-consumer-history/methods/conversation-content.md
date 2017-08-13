@@ -15,16 +15,13 @@ This method retrieves the content of specific conversation as message events lis
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157a&offset=0&limit=50&sort=start:asc`
+GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157
 
 **URL Parameters**
 
 Name   | Description                                                          | Type/Value | Required | Notes
 :----- | :------------------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
 conversationId | The id of the conversation to be retrieved. | numeric    | Required | 
-offset | The offset specifies from which record to retrieve the conversation. | numeric    | Optional | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 20.
-limit  | Max amount of conversations to be received in the response.          | numeric    | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
-sort   | Sort the results in a predefined order.                              | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 
 ### Response
 
@@ -37,7 +34,7 @@ Name                 | Description                                              
 sequence             | The event sequence within the conversation.               | Int        | Currently available only for message of type 'ContentEvent'
 originatorId         | The id of the participant who wrote/accepted the message. | String     |
 serverTimestamp      | Event time stamp.                                         | long       |
-event                | Contains message event data.                              | container  |
+event                | Contains message event data.                              | container  | Valid types: ContentEvent, AcceptStatusEvent  
 
 _event - ContentEvent_ 
 
