@@ -826,6 +826,20 @@ The following table describes the information that is available in the eligibili
 | goal | Contains goal information. | container |
 | controlGroupType | Type of the campaign control groups. Can be one of the following: NA, TEST, CONTROL. | ControlGroupEnum |
 
+### Campaign
+
+| Parameter | Description | Type / Value |
+| :------- | :-------- | :--------- |
+| id | Campaign ID | long |
+| visitorProfiles | Contains visitor profile (target audience) information| container |
+
+### Visitor Profiles
+
+| Parameter | Description | Type / Value |
+| :------- | :-------- | :--------- |
+| id | Visitor profile (target audience) unique identifier (LP ID). | long |
+| revision | Revision in visitor profile ID. | long |
+
 ### Engagement
 
 | Parameter | Description | Type / Value |
@@ -855,21 +869,6 @@ The following table describes the information that is available in the eligibili
 | :------- | :---------- | :---------- |
 | id | Unique skill identifier. | long |
 | name | Skill name. | string |
-
-### Campaign
-
-| Parameter | Description | Type / Value |
-| :------- | :-------- | :--------- |
-| channel | Channel type. | string |
-| type | Engagement type. | string |
-| visitorBehaviors | List of visitor behaviors. | container |
-| skillId | Engagement skill ID (in case a skill was defined for it). | int |
-| skillName | Engagement skill name (in case a skill was defined for it). | string |
-| surveySkills | Contains information about the goal. | container |
-| isOffsiteEngagement | Indication if it is offsite engagement. | boolean |
-| availabilityPolicy | The engagement state is changed according to this policy. | string |
-| interactionType | The engagement target - chat or messaging. | int |
-| renderingType | Determines the way the engagement will be showed. | int |
 
 ### Goal
 
