@@ -15,32 +15,20 @@ This method retrieves a list of consumer's conversations' metadata. The retrieve
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/consumer/metadata/search?offset=0&limit=50`
+GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/consumer/metadata/search?state=close&startFrom=1502628503961&startTo=1502628758614&offset=0&limit=50`
 
 **URL Parameters**
 
 Name   | Description                                                          | Type/Value | Required | Notes
 :----- | :------------------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-offset | The offset specifies from which record to retrieve the conversation. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 20.
-limit  | Max amount of conversations to be received in the response.          | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
-sort   | Sort the results in a predefined order.                              | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
+offset | The offset specifies from which record to retrieve the conversation. | numeric    | Optional | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 20.
+limit  | Max amount of conversations to be received in the response.          | numeric    | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
+sort   | Sort the results in a predefined order.                              | string     | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
+state        | State of the conversation.                 | Comma separated string             | Optional | Valid values: "close", "archive". Default value - archive
+startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months. 
+startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 
-**BODY/POST Parameters**
-
-Filter is sent in the POST data (body) with the following JSON structure.
-
-Name                | Description                                                                                   | Type/Value                         | Required | Notes
-:------------------ | :-------------------------------------------------------------------------------------------- | :--------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is 13 months. Larger intervals will be rejected.
-state               | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "CLOSE", "ARCHIVE". Default value - ARCHIVE
 =======
-
-Filters examples:
-
-Name                | Description
-:------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-start               | {″start″:{"from":1470037448000,"to":1472543048000}}
-state               | {"state":["CLOSE"]}
 
 ### Response
 
