@@ -238,7 +238,7 @@ Some of the public model data specified above returns an object or an array of o
 | text            | Contains the text/html content of the chat line                                                     | string |                                                  |
 | textType        | Can be 'plain' for plain text or 'html' for html content.                                           | string | All agent lines are html content.                |
 | time            | String representation of the time the line was added                                                | string |                                                  |
-| clientProperties| Object containing client properties                                                                 | object |                                                  |
+| [clientProperties](agent-workspace-sdk-public-model.html#clientproperties)| Object containing client properties                                                                 | object |                                                  |
 
 Structure example:
 
