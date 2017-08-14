@@ -144,9 +144,9 @@ Example:
 
 |Method|  Description|  Notes|  Required| 
 |:---  |:---  |:---  |:--- |
-|command | Sends a command to the agent. |  Only supported command is 'Write ChatLine': writes text to the agent's chat input. |
+|command | Sends a command to the agent. | supported commands are: 'Write ChatLine': writes text to the agent's chat input. 'Write StructuredContent': send a json that represents a structured content input. 'Send Notification': send notification to the agent workspace UI.|
 
- Example:
+ Example 1 - 'Write ChatLine':
 
 ```javascript
 {
@@ -165,7 +165,52 @@ Example:
 }
 ```
 
-*Note: Currently the write (Write ChatLine) command is the only supported command. It writes the text in the data to the chat input. notifyWhenDone is an optional callback.*
+Example 2 - 'Write StructuredContent':
+
+```javascript
+{
+    var notifyWhenDone = function(err) {
+        if (err) {
+            // Do something with the error
+        }
+        // called when the command is completed successfully,
+        // or when the action terminated with an error.
+    };
+
+    var cmdName = lpTag.agentSDK.cmdNames.writeSC; // = "Write StructuredContent"
+    var data = {json: {
+                       "type": "text",
+                       "text": "product name",
+                       "tooltip": "text tooltip",
+                       "style": {
+                         "bold": true,
+                         "size": "large"
+                       }}};
+
+    lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
+}
+```
+
+Example 3 - 'Send Notification':
+
+```javascript
+{
+    var notifyWhenDone = function(err) {
+        if (err) {
+            // Do something with the error
+        }
+        // called when the command is completed successfully,
+        // or when the action terminated with an error.
+    };
+
+    var cmdName = lpTag.agentSDK.cmdNames.notify; // = "Send Notification"
+    var data = {};
+
+    lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
+}
+```
+
+*Note: notifyWhenDone is an optional callback.*
 
 ### dispose
 
