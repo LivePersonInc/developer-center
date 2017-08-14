@@ -144,7 +144,7 @@ Example:
 
 |Method|  Description|  Notes|  Required| 
 |:---  |:---  |:---  |:--- |
-|command | Sends a command to the agent. |  supported commands are: 'Write ChatLine': writes text to the agent's chat input. 'Write StructuredContent': send structured content. 'Send Notification': send notification.|
+|command | Sends a command to the agent. | supported commands are: 'Write ChatLine': writes text to the agent's chat input. 'Write StructuredContent': send structured content. 'Send Notification': send notification to the agent workspace UI.|
 
  Example 1:
 
