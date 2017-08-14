@@ -146,7 +146,7 @@ Example:
 |:---  |:---  |:---  |:--- |
 |command | Sends a command to the agent. | supported commands are: 'Write ChatLine': writes text to the agent's chat input. 'Write StructuredContent': send structured content. 'Send Notification': send notification to the agent workspace UI.|
 
- Example 1:
+ Example 1 - 'Write ChatLine':
 
 ```javascript
 {
@@ -165,7 +165,7 @@ Example:
 }
 ```
 
-Example 2:
+Example 2 - 'Write StructuredContent':
 
 ```javascript
 {
@@ -191,7 +191,7 @@ Example 2:
 }
 ```
 
-Example 3:
+Example 3 - 'Send Notification':
 
 ```javascript
 {
