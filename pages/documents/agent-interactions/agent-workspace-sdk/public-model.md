@@ -238,6 +238,7 @@ Some of the public model data specified above returns an object or an array of o
 | text            | Contains the text/html content of the chat line                                                     | string |                                                  |
 | textType        | Can be 'plain' for plain text or 'html' for html content.                                           | string | All agent lines are html content.                |
 | time            | String representation of the time the line was added                                                | string |                                                  |
+| clientProperties| Object containing client properties                                                                 | object |                                                  |
 
 Structure example:
 
@@ -253,7 +254,31 @@ Structure example:
     systemMessageId: 1,
     text: '',
     textType: 'html',
-    time: ''
+    time: '',
+    clientProperties: {
+        appId: "LivePerson.SDK-Maker",
+        appVersion: "",
+        browser: "",
+        browserVersion: "",
+        deviceFamily: "TABLET",
+        deviceModel: "iPad4,1",
+        deviceManufacture: "",
+        integration: "MOBILE_SDK",
+        integrationVersion: "2.3.0.3",
+        ipAddress: "192.168.226.81",
+        os: "IOS",
+        osName: "IOS",
+        osVersion: "10.2.1",
+        timeZone: "US/Pacific",
+        features: {
+            "CO_BROWSE",
+            "CO_APP",
+            "PHOTO_SHARING",
+            "SECURE_FORMS",
+            "AUTO_MESSAGES",
+            "RICH_CONTENT"
+        }
+    }
 }
 ```
 
@@ -591,3 +616,23 @@ Structure example:
     resolved: true
 }
 ```
+
+### clientProperties
+
+| Property       | Description                                      | Type    |
+|----------------|--------------------------------------------------|---------|
+| appId          | String representation of the Identification of the application        | string  |
+| appVersion     | The application version, for example in case of mobile it will be the host app version | string  |
+| browser        | String represent the browser. For example: chrome, firefox, etc...    | string  |
+| browserVersion | Detailed version info of the user agent (browser or host-application) | string  |
+| deviceFamily   | For example: personal_computer/tablet/mobile_phone                    | string  |
+| deviceModel    | For example for G3 for LG, iPhone6s for Apple...                      | string  |
+| deviceManufacture| For example LG, HP, Microsoft...                                    | string  |
+| integration    | For example: web_sdk, mobile_sdk, and brand_sdk                       | string  |
+| integrationVersion| String representation of the integration version                   | string  |
+| ipAddress      | String representation of the ip address                               | string  |
+| os             | String representation of the OS. Contains the operating system, including version info | string  |
+| osName         | OS name is a text describing the operating system                     | string  |
+| osVersion      | Specifies the operating system version, and distribution type (if relevant) | string  |
+| timeZone       | String representation of the timeZone. For example: "America/Los_Angeles  | string  |
+| features       | Strings representation of the features the user have got.             | string  |
