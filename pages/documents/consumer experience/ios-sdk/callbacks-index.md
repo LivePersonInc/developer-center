@@ -44,6 +44,7 @@ The SDK uses 2 delegates:
   optional func LPMessagingSDKConversationEnded(_ conversationID: String?)
   optional func LPMessagingSDKConversationEnded(_ conversationID: String?, closeReason: LPConversationCloseReason)
   optional func LPMessagingSDKConversationCSATDismissedOnSubmittion(_ conversationID: String?)
+  optional func LPMessagingSDKConversationCSATDidLoad(_ conversationID: String?)
   optional func LPMessagingSDKConnectionStateChanged(_ isReady: Bool, brandID: String)
   optional func LPMessagingSDKOffHoursStateChanged(_ isOffHours: Bool, brandID: String)
   optional func LPMessagingSDKConversationViewControllerDidDismiss()
@@ -134,6 +135,10 @@ Called when an open conversation is ended by the consumer or by the agent.
 ###  LPMessagingSDKConversationCSATDismissedOnSubmittion(conversationID: String?)
 
 Called after CSAT screen is dismissed by clicking Submit.
+
+###  LPMessagingSDKConversationCSATDidLoad(_ conversationID: String?)
+
+Called when CSAT screen did loaded and presented to consumer
 
 ###  LPMessagingSDKConnectionStateChanged
 
