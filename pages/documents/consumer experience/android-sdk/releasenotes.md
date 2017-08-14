@@ -15,9 +15,9 @@ These are the main feature releases available in the In-App Messaging SDK versio
 
 Version 2.5 roll-out: July 2nd 2017
 
-## New functionalities
+### New functionalities
 
-### Custom fonts
+#### Custom fonts
 
 In order for consumers to enjoy the full brand experience while messaging in-app, brands are able to configure certified operating system fonts to appear in the messaging window. The fonts can be used across all elements, or only for the font within the message bubble.
 
@@ -35,7 +35,7 @@ Conversation Custom Fonts
 
 Non Conversation Custom Fonts
 
-###### Related properties: Custom fonts
+_Related properties_: Custom fonts
 
 The following additional conditions and configurations are required:*
 
@@ -43,21 +43,21 @@ The following additional conditions and configurations are required:*
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### New way to listen to LP events via local intents
+#### New way to listen to LP events via local intents
 
 A new method of listening to LP events has been added. This method allows the host app to register to receive a specific action or to receive all of them. All of the actions match and correspond to the existing callback method. LivePerson recommends using the SDK’s Broadcast Receiver to receive these intent actions, as this system allows the user to listen to specific actions, and is not reliant on the SDK’s life cycle.
 
 Note: Brands can still choose to use the callback method, which remains valid and supported.
 
-###### Related APIs: LivePersonIntents API
+_Related APIs_: LivePersonIntents API
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required**:
 
 | Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### Tablet supportability
+#### Tablet supportability
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
@@ -76,7 +76,7 @@ Tablet Portrait Mode
 
 Tablet Landscape Mode
 
-### List of certified and supported devices extended
+#### List of certified and supported devices extended
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 | Device | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
@@ -88,7 +88,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
 
-### Connectivity improvements
+#### Connectivity improvements
 The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
 
 In addition, other aspects such as feature and conversation history will also be more rapid as a result of the improvements.
@@ -99,7 +99,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### New APIs
+#### New APIs
 LivePersonIntents API
 * All Actions are defined in the LivePersonIntents.ILivePersonIntentAction Interface.
 * All additional data is provided using Extras on the intents and defined in the LivePersonIntents.ILivePersonIntentExtras Interface.
@@ -107,7 +107,7 @@ LivePersonIntents API
 
 For more information on this API, please refer to the deployment guide.
 
-## New properties
+### New properties
 The following properties of the secure form bubble on the agent side can now be configured:
 
 #### Custom Fonts
