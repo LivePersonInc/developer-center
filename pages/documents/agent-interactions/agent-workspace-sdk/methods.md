@@ -210,7 +210,7 @@ Example 3 - 'Send Notification':
 }
 ```
 
-*Note: Currently the write (Write ChatLine) command is the only supported command. It writes the text in the data to the chat input. notifyWhenDone is an optional callback.*
+*Note: notifyWhenDone is an optional callback.*
 
 ### dispose
 
