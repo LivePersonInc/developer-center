@@ -21,7 +21,7 @@ GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversation
 
 Name   | Description                                                          | Type/Value | Required | Notes
 :----- | :------------------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-conversationId | The id of the conversation to be retrieved. | numeric    | Required | 
+conversationId | The id of the conversation to be retrieved. | String    | Required | 
 
 ### Response
 
