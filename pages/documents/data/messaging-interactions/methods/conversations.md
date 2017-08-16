@@ -232,7 +232,7 @@ sourceAgentId          | The source agent ID.                                   
 sourceAgentLoginName   | The source agent name.                                        | string
 sourceAgentNickname    | The source agent nickname.                                    | string
 sourceAgentFullName    | The source agent full name.                                   | string
-reason                 | Reason for transfer - back2Queue, etc.                        | string
+reason                 | Reason for transfer (back2Q, Agent, Skill, TakeOver)          | string
 
 _Interaction info_
 

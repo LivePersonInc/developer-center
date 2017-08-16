@@ -24,12 +24,14 @@ in order for consumers to enjoy the full brand experience while messaging in-app
 The SDK also supports the use of a brand’s own customized fonts (although these are not certified).
 
 Custom fonts are not supported for Native iOS properties such as:
+
 * Activity mode - Overflow menu
+
 * Popup messages
 
 ###### Related properties: Custom fonts
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 
 
@@ -107,7 +109,6 @@ Configuring Camera's button colors
 | cameraButtonDisabledColor | The camera button color when in disabled mode in the conversation screen. The button will be presented only if the photo sharing feature is enabled. | ![CameraColor](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/cameraButtonEnabledColor.png) | #8B8A8F |
 
 #### User Avatar
-Configuring Camera's button colors
 
 | Name  | Description  | Default  |
 | ------------ | ------------ | ------------ |

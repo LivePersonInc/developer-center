@@ -1,7 +1,7 @@
 ---
-title: Conversations
+title: Conversations - Content
 level1: Documents
-level2: Consumer Experience
+level2: 
 level3: Consumer Messaging history API (BETA)
 level4: Methods
 order: 10
@@ -9,13 +9,13 @@ permalink: consumer-experience-messaging-history-conversation-content.html
 indicator: messaging
 ---
 
-This method retrieves the content of specific conversation as message events list.
+This method retrieves the content of specific conversations as a message events list.
 
 ### Request
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157
+GET   | https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157
 
 **URL Parameters**
 
@@ -56,7 +56,7 @@ sequenceList         | The sequence of the message the status refers to | Array[
 
 **JSON Example**
 
-```
+```json
 {
     "messageEventRecords": [
         {
