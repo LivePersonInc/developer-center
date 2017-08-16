@@ -1069,6 +1069,15 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
 </thead>
 <tbody>  
+
+<tr>
+  <td>&lt;bool name=&quot;enable_structured_content&quot;&gt;
+</td>
+  <td>Enable/Disable structured content feature</td>
+  <td>false</td>
+  <td></td>
+</tr>
+
   <tr>
     <td>&lt;color name=&quot;structured_content_border_color&quot;&gt;
 </td>

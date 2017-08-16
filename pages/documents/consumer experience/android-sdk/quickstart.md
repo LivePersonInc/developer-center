@@ -115,7 +115,15 @@ dependencies {
 
   * `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
 
+    Vibrate on new incoming msg (required if enabled) :
+
   * `<uses-permission android:name="android.permission.VIBRATE"/>`
+
+    For Photo Sharing (required if enabled) :
+
+  * `<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>`
+
+  * `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>`
 
 
 2. Add the following imports to your class imports section:
@@ -290,4 +298,21 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
         toolbar.setTitle("survey submitted");
     }
 }
+```
+
+
+### Screen Orientation
+
+In case of Fragment mode - set the desired orientation in your container Activity definition in AndroidManifest.xml
+
+https://developer.android.com/guide/topics/manifest/activity-element.html#screen
+
+
+In case of Activity mode - override in your application's AndroidManifest.xml the ConversationActivity definition and set the desired screen orientation:
+
+```javascript
+<activity
+      android:name="com.liveperson.infra.messaging_ui.ConversationActivity"
+      android:screenOrientation="your screen orientation" />
+
 ```
