@@ -1480,12 +1480,19 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
   </thead>
 <tbody>
+<tr>
+  <td align="left">enableStrucutredContent</td>
+  <td align="left">Bool</td>
+  <td align="left">Enable or Disable toggle for Structured Content feature in conversations</td>
+  <td align="left"></td>
+  <td align="left">false</td>
+</tr>
   <tr>
     <td align="left">structuredContentBubbleBorderWidth</td>
     <td align="left">Double</td>
     <td align="left">Structured Content bubble border width in pixels.</td>
     <td align="left"></td>
-    <td align="left">1.0</td>
+    <td align="left">0.3</td>
   </tr>
   <tr>
     <td align="left">structuredContentBubbleBorderColor</td>
