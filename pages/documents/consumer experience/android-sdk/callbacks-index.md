@@ -28,6 +28,7 @@ public interface ILivePersonIntentAction{
       String LP_ON_AGENT_TYPING_INTENT_ACTION = "LP_ON_AGENT_TYPING_INTENT_ACTION";
       String LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION = "LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION";
       String LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION = "LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION";
+      String LP_ON_CSAT_LAUNCHED_INTENT_ACTION = "LP_ON_CSAT_LAUNCHED_INTENT_ACTION";
       String LP_ON_CSAT_DISMISSED_INTENT_ACTION = "LP_ON_CSAT_DISMISSED_INTENT_ACTION";
       String LP_ON_CSAT_SUBMITTED_INTENT_ACTION = "LP_ON_CSAT_SUBMITTED_INTENT_ACTION";
       String LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION";
@@ -64,6 +65,7 @@ Definition:
     void onConnectionChanged(boolean isConnected);
     void onAgentTyping(boolean isTyping);
     void onAgentDetailsChanged(AgentData agentData);
+    void onCsatLaunched();
     void onCsatDismissed();
     void onCsatSubmitted(String conversationId);
     void onConversationMarkedAsUrgent();
@@ -183,6 +185,14 @@ __Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION.
 To get the isTyping param from the Intent use method: ILivePersonIntent.getAgentTypingValue(intent)
 
 __Callback:__ onAgentTyping(boolean isTyping) method.
+
+###  CSAT Screen launched
+
+Called when the feedback screen is launched.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_LAUNCHED_INTENT_ACTION.
+
+__Callback:__ onCsatLaunched() method.
 
 ###  CSAT Screen dismissed
 
