@@ -528,5 +528,8 @@ Listed below are all localized keys with the English localization string.
     <td>connectionStatusBarFailedToConnect</td>
     <td>"Failed to connect to the server."</td>
   </tr>
-
+  <tr>
+    <td>structuredContentAccessibilityMap</td>
+    <td>"Map"</td>
+  </tr>
 </table>
