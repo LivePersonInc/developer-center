@@ -24,12 +24,14 @@ in order for consumers to enjoy the full brand experience while messaging in-app
 The SDK also supports the use of a brand’s own customized fonts (although these are not certified).
 
 Custom fonts are not supported for Native iOS properties such as:
+
 * Activity mode - Overflow menu
+
 * Popup messages
 
 ###### Related properties: Custom fonts
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 
 
