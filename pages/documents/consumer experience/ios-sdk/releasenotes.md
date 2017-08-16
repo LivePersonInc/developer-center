@@ -109,7 +109,6 @@ Configuring Camera's button colors
 | cameraButtonDisabledColor | The camera button color when in disabled mode in the conversation screen. The button will be presented only if the photo sharing feature is enabled. | ![CameraColor](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/cameraButtonEnabledColor.png) | #8B8A8F |
 
 #### User Avatar
-Configuring Camera's button colors
 
 | Name  | Description  | Default  |
 | ------------ | ------------ | ------------ |
