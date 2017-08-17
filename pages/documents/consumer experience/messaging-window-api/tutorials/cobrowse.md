@@ -15,11 +15,11 @@ This tutorial explains how to start a CoBrowse session on consumer side using th
 
 ### Prerequisites
 * This guide is for web CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag. 
-* LivePerson account must be enabled with CoBrowse feature: ``CoBrowse_Integration`` (enabled by default) and Site-Setting ``coapp.enable`` If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
+* LivePerson account must be enabled with CoBrowse feature: ``Cobrowse.Cobrowse_Integration`` (enabled by default) and Site-Setting ``coapp.enabled``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Step 1 - Set CoBrowse Feature in Client Properties
 
-In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you add a ``features`` property to the clientProperties that contain the ``Co_BROWSE`` feature. An example initConnection request that enables CoBrowse would look like this:
+In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you add a ``features`` property to the clientProperties that contain the ``CO_BROWSE`` feature. An example initConnection request that enables CoBrowse would look like this:
 
 ```json
 {"id":"0","type":"InitConnection","headers":[{"type":".ams.headers.ClientProperties","deviceFamily":"DESKTOP","os":"WINDOWS","features":["CO_BROWSE"]},{"type":".ams.headers.ConsumerAuthentication","jwt":"..."}]}
