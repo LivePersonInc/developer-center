@@ -14,7 +14,7 @@ indicator: messaging
 This tutorial explains how to start a CoBrowse session on consumer side using the Messaging Window and CoBrowse APIs.
 
 ### Prerequisites
-* This guide is for web CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag. 
+* This guide is for Web-CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag. 
 * LivePerson account must be enabled with CoBrowse feature: ``Cobrowse.Cobrowse_Integration`` (enabled by default) and Site-Setting ``coapp.enabled``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Step 1 - Set CoBrowse Feature in Client Properties
@@ -22,17 +22,34 @@ This tutorial explains how to start a CoBrowse session on consumer side using th
 In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you add a ``features`` property to the clientProperties that contain the ``CO_BROWSE`` feature. An example initConnection request that enables CoBrowse would look like this:
 
 ```json
-{"id":"0","type":"InitConnection","headers":[{"type":".ams.headers.ClientProperties","deviceFamily":"DESKTOP","os":"WINDOWS","features":["CO_BROWSE"]},{"type":".ams.headers.ConsumerAuthentication","jwt":"..."}]}
+{
+   "id":"0",
+   "type":"InitConnection",
+   "headers":[
+      {
+         "type":".ams.headers.ClientProperties",
+         "deviceFamily":"DESKTOP",
+         "os":"WINDOWS",
+         "features":[
+            "CO_BROWSE"
+         ]
+      },
+      {
+         "type":".ams.headers.ConsumerAuthentication",
+         "jwt":"..."
+      }
+   ]
+}
 ```
 
 ### Step 2 - Start a conversation and trigger a CoBrowse invitation
-Start a conversation with an agent by following the steps described in the previous tutorials. The important part is to subscribe to [Conversation Metadata](/consumer-int-conversation-md.html) since the CoBrowse invitation is part of the metadata.
+Start a messaging conversation with an agent by following the steps described in the previous tutorials. The important part is to subscribe to [Conversation Metadata](/consumer-int-conversation-md.html) since the CoBrowse invitation is sent as part of the metadata.
 If your account is set up correctly, you should see the following button inside the Agent Workspace that allows you to send a CoBrowse invitation:
 
 ![agent_invitation](img/agent_cobrowse_invitation.png)
 
 ### Step 3 - Handle CoBrowse event on Consumer side
-Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, you'll see the ``conversationDetails`` containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
+Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
 {
@@ -116,7 +133,7 @@ lpTag.events.publish("lpUnifiedWindow", "cobrowseDeclined", {
 ```
 
 ### Cancelled invitation and expiry
-A CoBrowse invitation can be cancelled by the agent or expires after 2 minutes if not cancelled, accepted or rejected. In case of cancelation or expiry, the dialog will be updated and the ``sessionState`` equals ``CLOSED``.
+A CoBrowse invitation can be cancelled by the agent or expires after 2 minutes if not cancelled, accepted or rejected. In case of cancelation or expiry, a new ``cqm.ExConversationChangeNotification`` event is triggered with ``CLOSED`` as ``sessionState`` property.
 
 ```json
 {
