@@ -14,11 +14,18 @@ indicator: both
 
 | Method    | URL | 
 | :------ | :------- | 
-| GET | https://{LivePerson domain}/api/account/{account}/monitoring/visitors/{visitor}/visits/current/state |
+| GET | https://{LivePerson domain}/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
 
 **OAuth** 
 
 This API supports OAuth 1.0 and OAuth 2.0 authentication patterns and requires SSL protocol.
+
+**Path Parameters**
+
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- |
+| accountId | LP site ID | string | Required | ^[a-zA-Z0-9_]{1,20}$ |
+| visitorId | Visitor ID | string | Required | |
 
 **Query Parameters**
 
