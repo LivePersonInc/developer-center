@@ -29,8 +29,8 @@ The SDK uses 2 delegates:
     optional func LPMessagingSDKHasConnectionError(_ error: String?)
     optional func LPMessagingSDKCSATScoreSubmissionDidFinish(_ brandID: String, rating: Int)
     optional func LPMessagingSDKCSATCustomTitleView(_ brandID: String) -> UIView>
+    optional func LPMessagingSDKConversationCSATSkipped(_ conversationID: String?)
     optional func LPMessagingSDKUserDeniedPermission(_ permissionType: LPPermissionTypes)
-
 
   func LPMessagingSDKObseleteVersion(_ error: NSError)
   func LPMessagingSDKAuthenticationFailed(_ error: NSError)
@@ -91,6 +91,14 @@ This delegate method is invoked after the CSAT is submitted. If the user chooses
 ###  LPMessagingSDKCSATCustomTitleView(_ brandID: String) -> UIView
 
 Custom Title view for to display in the CSAT survey view.
+
+###  LPMessagingSDKConversationCSATSkipped
+Invoked when a CSAT page is skipped
+```javascript
+func LPMessagingSDKConversationCSATSkipped(_ conversationID: String?) {
+    print("LPMessagingSDKConversationCSATSkipped: \(conversationID)")
+}
+```
 
 ###  LPMessagingSDKUserDeniedPermission
 
