@@ -11,7 +11,7 @@ permalink: consumer-experience-ios-sdk-pushnotifications.html
 indicator: messaging
 ---
 
-Push and local notifications are a key factor that make the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available. 
+Push and local notifications are a key factor that make the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 Note: In order to enable push notifications, you must also configure them within the LiveEngage UI.  See instructions.
 
@@ -40,19 +40,19 @@ Follow the instructions below to set up your app key to enable push notification
 	* Password
 
 {:start="2"}
-2. Within LiveEngage, navigate to Campaigns. 
+2. Within LiveEngage, navigate to Campaigns.
 
 ![campaigns](img/campaigns.png)
 
 {:start="3"}
-3. Click **Data Sources**, and then select **App**. 
+3. Click **Data Sources**, and then select **Manage** under **Mobile App management**.
 
 ![app](img/App.png)
 
 {:start="4"}
 4. Click **Configure**.
 
-![keymanagement](img/keymanagement.png)
+![keymanagement](img/mobieAppManagement.png)
 
 {:start="5"}
 5. Click **Add new** to associate your app with the LiveEngage account.
