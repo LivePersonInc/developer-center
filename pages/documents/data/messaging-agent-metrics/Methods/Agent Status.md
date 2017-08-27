@@ -16,7 +16,7 @@ Returns the current state of logged in agents that are handling messaging conver
 
 | Method   |      URL      |
 |----------|:-------------:|
-| POST |  https://<domain>/messaging_history/api/account/{accountID}/agent-view/status |
+| POST |  https://{domain}/messaging_history/api/account/{accountID}/agent-view/status |
 
 _BODY / POST Parameters_
 
