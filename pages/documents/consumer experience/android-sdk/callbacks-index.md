@@ -17,35 +17,75 @@ The SDK provides a callback mechanism to keep the host app updated on events rel
 _Note: There are 2 ways to register to LivePerson events. to read more about it click [here](android-callbacks-interface.html)._
 
 ### LivePersonIntents
-Definition:
-```javascript
-public interface ILivePersonIntentAction{
-      String LP_ON_ERROR_INTENT_ACTION = "LP_ON_ERROR_INTENT_ACTION";
-      String LP_ON_TOKEN_EXPIRED_INTENT_ACTION = "LP_ON_TOKEN_EXPIRED_INTENT_ACTION";
-      String LP_ON_CONVERSATION_STARTED_INTENT_ACTION = "LP_ON_CONVERSATION_STARTED_INTENT_ACTION";
-      String LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION = "LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION";
-      String LP_ON_CONNECTION_CHANGED_INTENT_ACTION = "LP_ON_CONNECTION_CHANGED_INTENT_ACTION";
-      String LP_ON_AGENT_TYPING_INTENT_ACTION = "LP_ON_AGENT_TYPING_INTENT_ACTION";
-      String LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION = "LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION";
-      String LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION = "LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION";
-      String LP_ON_CSAT_LAUNCHED_INTENT_ACTION = "LP_ON_CSAT_LAUNCHED_INTENT_ACTION";
-      String LP_ON_CSAT_DISMISSED_INTENT_ACTION = "LP_ON_CSAT_DISMISSED_INTENT_ACTION";
-      String LP_ON_CSAT_SUBMITTED_INTENT_ACTION = "LP_ON_CSAT_SUBMITTED_INTENT_ACTION";
-      String LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION";
-      String LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION";
-      String LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION = "LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION";
-  }
+Definition:  
 
-  public interface ILivePersonIntentExtras{
-      String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";
-      String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";
-      String LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA = "LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA";
-      String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";
-      String LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA = "LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA";
-      String LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA = "LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA";
-      String LP_CONVERSATION_ID_INTENT_STRING_EXTRA = "LP_CONVERSATION_ID_INTENT_STRING_EXTRA";
-      String LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA = "LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA";
-  }
+```javascript  
+
+public interface ILivePersonIntentAction{  
+
+      String LP_ON_ERROR_INTENT_ACTION = "LP_ON_ERROR_INTENT_ACTION";  
+
+      String LP_ON_TOKEN_EXPIRED_INTENT_ACTION = "LP_ON_TOKEN_EXPIRED_INTENT_ACTION";  
+
+      String LP_ON_CONVERSATION_STARTED_INTENT_ACTION = "LP_ON_CONVERSATION_STARTED_INTENT_ACTION";  
+
+      String LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION = "LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION";  
+
+      String LP_ON_CONNECTION_CHANGED_INTENT_ACTION = "LP_ON_CONNECTION_CHANGED_INTENT_ACTION";  
+
+      String LP_ON_AGENT_TYPING_INTENT_ACTION = "LP_ON_AGENT_TYPING_INTENT_ACTION";  
+
+      String LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION = "LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION";  
+
+      String LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION = "LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION";  
+
+      String LP_ON_CSAT_LAUNCHED_INTENT_ACTION = "LP_ON_CSAT_LAUNCHED_INTENT_ACTION";  
+
+      String LP_ON_CSAT_DISMISSED_INTENT_ACTION = "LP_ON_CSAT_DISMISSED_INTENT_ACTION";  
+
+      String LP_ON_CSAT_SUBMITTED_INTENT_ACTION = "LP_ON_CSAT_SUBMITTED_INTENT_ACTION";  
+
+      String LP_ON_CSAT_SKIPPED_INTENT_ACTION = "LP_ON_CSAT_SKIPPED_INTENT_ACTION";  
+
+      String LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION";  
+
+      String LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION";  
+
+      String LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION = "LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION";  
+
+      String LP_ON_STRUCTURED_CONTENT_LINK_CLICKED = "LP_ON_STRUCTURED_CONTENT_LINK_CLICKED";  
+
+  }  
+
+```
+
+Intent parameters:
+
+```javascript  
+
+
+  public interface ILivePersonIntentExtras{  
+
+      String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";  
+
+      String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";  
+
+      String LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA = "LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA";  
+
+      String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";  
+
+      String LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA = "LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA";  
+
+      String LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA = "LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA";  
+
+      String LP_CONVERSATION_ID_INTENT_STRING_EXTRA = "LP_CONVERSATION_ID_INTENT_STRING_EXTRA";  
+
+      String LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA = "LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA";  
+
+      String LP_LINK_URI_EXTRA = "LP_LINK_URI_EXTRA";  
+
+  }  
+
 
 ```
 
@@ -68,9 +108,11 @@ Definition:
     void onCsatLaunched();
     void onCsatDismissed();
     void onCsatSubmitted(String conversationId);
+    void onCsatSkipped();
     void onConversationMarkedAsUrgent();
     void onConversationMarkedAsNormal();
     void onOfflineHoursChanges(boolean isOfflineHoursOn);
+    void onStructuredContentLinkClicked(String uri);
 }
 ```
 
@@ -210,11 +252,21 @@ conversationId - The id of the conversation the survey is related to.
 
 This callback comes in addition to the onCsatDismissed callback when clicking Submit .
 
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION.
-<br>
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION.  
+
 To get the isTyping param from the Intent use method: ILivePersonIntent.getConversationID(intent)
 
 __Callback:__ onCsatSubmitted(String conversationId) method.
+
+###  CSAT Screen skipped
+
+Called when the feedback screen is skipped (user clicked Skip button, user clicked Back button, etc.).
+
+Note that in case CSAT screen is skipped, both onCsatSkipped() and onCsatDismissed() are called.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SKIPPED_INTENT_ACTION.
+
+__Callback:__ onCsatSkipped() method.
 
 ###  Conversation marked as urgent
 
@@ -241,3 +293,15 @@ __Intent Action:__ ILivePersonIntentAction.LP_ON_OFFLINE_HOURS_CHANGES_INTENT_AC
 To get the isOfflineHoursOn param from the Intent use method: ILivePersonIntent.getOfflineHoursOn(intent)
 
 __Callback:__ onOfflineHoursChanges(boolean isOfflineHoursOn) method.
+
+###  Structured Content Link Clicked
+
+Called when a structured content control with Link action is clicked.  
+
+Note: this callback is called only if the [structured_content_link_as_callback](android-attributes.html){:target="_blank"} parameter in the branding.xml is set to true.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_STRUCTURED_CONTENT_LINK_CLICKED.
+<br>
+To get the uri param from the Intent use method: ILivePersonIntent.getLinkUri(intent)
+
+__Callback:__ onStructuredContentLinkClicked(String uri) method.

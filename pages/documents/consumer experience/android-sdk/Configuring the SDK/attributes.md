@@ -1052,7 +1052,7 @@ The goal of the following document is to enumerate the different fields controll
     <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;</td>
     <td>The font name for all elements that are not in the conversation feed.</td>
     <td>Empty (use the device font)</td>
-<   td>customFont.ttf</td>
+    <td>customFont.ttf</td>
   </tr>
 </tbody>
 </table>
@@ -1093,10 +1093,15 @@ The goal of the following document is to enumerate the different fields controll
     <td><img src="img/strucuredcontentborderwidth.png" alt="strucuredcontentborderwidth"></td>
   </tr>  
   <tr>
-    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;
-  </td>
+    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
     <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
     <td>18</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;structured_content_link_as_callback&quot;&gt;</td>
+    <td>Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent)</td>
+    <td>false</td>
     <td></td>
   </tr>
   </tbody>
