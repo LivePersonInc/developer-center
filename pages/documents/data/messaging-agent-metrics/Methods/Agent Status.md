@@ -109,18 +109,31 @@ _JSON Example_:
 | agentId |  Agent’s unique identifier   | alphanumeric |
 | lastUpdatedTime | Timestamp for the time the metrics were last updated.  |   alphanumeric (yyyyMMddThh:mm:ss.SSS+time zone) |
 | lastUpdatedTimeL | Timestamp for the time the metrics were last updated.  | Longnumeric |
+| currentStatusStartTime | Timestamp for the time the current status was last updated.  |   alphanumeric (yyyyMMddThh:mm:ss.SSS+time zone) |
+| currentStatusStartTimeL | Timestamp for the time the current status was last updated.  | Longnumeric |
+| currentStatusReasonStartTime | Timestamp for the time the reason for the current status was last updated.  |   alphanumeric (yyyyMMddThh:mm:ss.SSS+time zone) |
+| currentStatusReasonStartTimeL | Timestamp for the time the reason for the current status was last updated.  | Longnumeric |
 | agentName | The agent's full name | alphanumeric  |
+| agentNickname | The agent's nickname | alphanumeric  |
 | agentLoginName| The agent’s login name  | alphanumeric   |
 | agentPictureURL | URL for the picture of the agent  | alphanumeric|
-| agentSkills| List of current agent’s skills  |    container  |
-| skillId| Skill’s unique identifier |    alphanumeric  |
-| skillName| Skill’s name |    alphanumeric  |
+| agentSkills| List of current agent’s skills  |    Array`<Skill>`  |
 | agentGroupId| The agent’s group id |    alphanumeric  |
 | agentGroupName| The agent’s group name |    alphanumeric  |
 | currentStatus| The agent’s current status (can be ONLINE, AWAY, BACK_SOON) |    alphanumeric  |
+| currentStatusDuration | The duration of the current status (in Milliseconds) |    Longnumeric  |
+| currentStatusReason| The id of the reason for the agent’s current status |    alphanumeric  |
+| currentStatusReasonDuration | The duration of the reason for the current status (in Milliseconds) |    Longnumeric  |
 | load| Indication for the agent’s efficiency (i.e. the amount of work the agent needs to handle, relative to the maximum capacity). It is the total weight of the assigned conversations divided by the agent’s maximum capacity. This is represented in percentage value. |    alphanumeric  |
 | ringingSlots| Number of ringing slots |    alphanumeric  |
 | configuredMaxSlots| The agent’s number of configured maximum slots |    alphanumeric  |
 | busySlots| The agent’s number of busy slots |    alphanumeric  |
 | openAssignedConversations| The agent’s number of open assigned conversations|    alphanumeric  |
 | intenseConversations| The agent’s number of intense conversations |    alphanumeric  |
+
+_Skill_
+
+| Name   |      Description      |  Type/Value |
+|----------|-------------|------|
+| skillId| Skill’s unique identifier |    alphanumeric  |
+| skillName| Skill’s name |    alphanumeric  |
