@@ -11,24 +11,24 @@ permalink: push-service-configuration.html
 indicator: messaging
 ---
 
-The push proxy is configured the same way as any other static app with configurable
-parameters:
+Push proxy is configured by LivePerson. To enable this feature, please contact your account team.
+The data and files required for push proxy configuration are:
 
-- **endPointURL** - URL to be used for the relevant app.
-- **authorization** - BA header. (optional)
-- **key** - TLS key file location. (optional)
-- **cert** - TLS certification file location. (optional)
-- **push-service** - GCM to enforce GCM only, APN to enforce APN only or native to use
-the original device type (GCM for Android and APN for iOS).
+- **App Name** - The app ID used on registration for push from the mobile app.
+     Example: com.mybrand.app
+     - Android - See SDK’s  [registerLPPusher](https://developers.liveperson.com/android-registerlppusher.html) method.
+     - IOS - Usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#registerpushnotifications) method.
+Note that In debug mode, the SDK appends "-Dev" string to the bundle ID on registration to push.
+You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e com.mybrand.app-Dev).
 
-**Example of push proxy configuration:**
-
-```json    
-"test_endpoint":	{
-    "endPointURL":	"https://testun.tmocce.com:443/unionma/messaging/5.2/lp_push",
-    "authorization":"",
-    "key":	"./custom_certs/tmo.key",
-    "cert":	"./custom_certs/tmo.crt",
-    "push-service":	"native"
-}
-```
+- **End Point URL** - an end URL to be used for the relevant app’s push.
+- **Optional configuration**
+	- **Authorization** - HTTP Basic Authentication (BA) header. 
+		- Username. 
+		Example:  Aladdin.
+		- Password. 
+Example: opensesame.
+	- **Key** - TLS key file. 
+	Example: mybrandpushKey.pem
+	- **Certificate** - TLS certification file location. 
+Example: mybrandpushCrt.pem
