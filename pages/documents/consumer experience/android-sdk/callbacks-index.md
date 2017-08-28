@@ -120,6 +120,7 @@ Definition:
     void onConversationMarkedAsUrgent();
     void onConversationMarkedAsNormal();
     void onOfflineHoursChanges(boolean isOfflineHoursOn);
+    void onAgentAvatarTapped(AgentData agentData);  
     void onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);  
     void onUserActionOnPreventedPermission(PermissionType permissionType);
     void onStructuredContentLinkClicked(String uri);
@@ -206,7 +207,7 @@ Called when the user taps on the agent avatar.
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode)
 
 Parameters:      
-agentData - contains first name, last name, avatar url and employee ID.
+agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html){:target="_blank"}
 
 __Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION.  
 
