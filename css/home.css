@@ -1,18 +1,19 @@
+body {
+  background-color: #ecf0f1;
+}
+
 /* banner home page */
 .banner-container{
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #4c5883;
 }
 .banner{
     width:100%;
-    height:250px;
-    background-color: #f8f8f8;
+    background-color: inherit;
 }
 .banner .text {
-  color: #162036;
-  float: left;
+  color: #fff;
   font-family: "Roboto Slab",serif;
-  margin-left: 50px;
   margin-top: 90px;
 }
 .banner .text .first-line{
@@ -20,7 +21,14 @@
 }
 .banner .text .second-line{
     font-size:1.866em;
-    max-width: 400px;
+    /*max-width: 400px;*/
+}
+
+.textcontainer{
+  display: inline-block;
+  float:none;
+  width:100%;
+  text-align:center;
 }
 
 .banner img{
@@ -95,4 +103,162 @@ a.view-all-products::after{
   padding-left: 7%;
   padding-right: 7%;
   font-weight: bold;
+}
+
+.briefcase{
+  display:none;
+}
+
+ul > .aa-input-container{
+  display:none;
+}
+
+.aa-input-icon {
+  fill: #7f7f7f;
+}
+
+.aa-input-search{
+  background-color: #fff !important;
+  border-color: #fff;
+  padding: 12px 800px 12px 12px;
+  border-radius: 0;
+}
+
+.aa-input-container{
+  margin-left: 195px;
+  float:none;
+  margin-bottom: 100px;
+}
+
+.navbarhome {
+  background-color: #4c5883;
+  border-color: #4c5883;
+}
+
+.section1 {
+  background-color: #ecf0f1;
+}
+
+.ourplatform {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.ourplatformdetails{
+  float:left;
+  font-size: 1.2em;
+  width: 230px;
+}
+
+.section1 .row {
+  float: right;
+  width: 280px;
+  margin-top: 140px;
+  margin-right:50px;
+}
+
+img.mockup {
+  margin-top: 100px;
+  width: 900px;
+}
+
+.sectionbot{
+  background-color: #162036;
+  color: #fff;
+  height: 250px;
+  margin-top: 80px;
+}
+
+.sectionmessaging{
+  background-color: #FF720B;
+  color: #fff;
+  height: 250px;
+  margin-top: 80px;
+}
+
+.sectionchat{
+  background-color: #00ccff;
+  color: #fff;
+  height: 250px;
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+
+.bottitle{
+  float:left;
+  font-size: 3em;
+  margin-top: 50px;
+  line-height: 1.2em;
+  width:100px;
+  font-weight:bold;
+  margin-left: 100px;
+}
+
+.botdetail{
+  float:right;
+  width:330px;
+  margin-right: 100px;
+  background-color: #fff;
+  color: black;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.messagingtitle{
+  float:right;
+  font-size: 3em;
+  margin-top: 50px;
+  line-height: 1.2em;
+  width:260px;
+  font-weight:bold;
+  margin-right: 170px;
+}
+
+.messagingdetail{
+  float:left;
+  width:330px;
+  margin-right: 100px;
+  background-color: #fff;
+  color: black;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.chattitle{
+  float:left;
+  font-size: 3em;
+  margin-top: 50px;
+  line-height: 1.2em;
+  width:200px;
+  font-weight:bold;
+  margin-left:80px;
+}
+
+.chatdetail{
+  float:right;
+  width:330px;
+  margin-right: 100px;
+  background-color: #fff;
+  color: black;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.learnmore{
+  margin-top: 10px;
+  display: block;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 110px;
+  padding: 5px 10px 5px 10px;
+}
+
+.messagingdetail > .learnmore{
+  margin-top: 58px;
+}
+
+.chatdetail > .learnmore{
+margin-top: 58px;
 }
