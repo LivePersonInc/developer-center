@@ -88,9 +88,9 @@ lpTag.events.publish("lpUnifiedWindow", "cobrowseOffered", {
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	//optional parameters:
- 	ssid: "<Shark Session ID>", 
- 	svid: "<Shark Visitor ID>", 
- 	scid: "<Shark Context ID>", 
+ 	ssid: "<Monitoring Session ID>", 
+ 	svid: "<Monitoring Visitor ID>", 
+ 	scid: "<Monitoring Context ID>", 
  	cid: "<Engagement Context ID>", 
  	eid: "<Engagement ID>"
  }
@@ -106,9 +106,9 @@ lpTag.events.publish("lpUnifiedWindow", "cobrowseAccepted", {
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	//optional parameters:
- 	ssid: "<Shark Session ID>", 
- 	svid: "<Shark Visitor ID>", 
- 	scid: "<Shark Context ID>", 
+ 	ssid: "<Monitoring Session ID>", 
+ 	svid: "<Monitoring Visitor ID>", 
+ 	scid: "<Monitoring Context ID>", 
  	cid: "<Context ID>", 
  	eid: "<Engagement ID>"
  }
@@ -123,9 +123,9 @@ lpTag.events.publish("lpUnifiedWindow", "cobrowseDeclined", {
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	//optional parameters:
- 	ssid: "<Shark Session ID>", 
- 	svid: "<Shark Visitor ID>", 
- 	scid: "<Shark Context ID>", 
+ 	ssid: "<Monitoring Session ID>", 
+ 	svid: "<Monitoring Visitor ID>", 
+ 	scid: "<Monitoring Context ID>", 
  	cid: "<Context ID>", 
  	eid: "<Engagement ID>"
  }
