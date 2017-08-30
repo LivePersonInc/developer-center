@@ -65,7 +65,7 @@ You may change every string appearing on the SDK interface by overriding the res
 <tr>
   <td>lp_conversation_ended_by_agent_with_name</td>
   <td>Message when the conversation was resolved when we have an agent name.
-%1$s - agent name 
+%1$s - agent name
 %2$s - time</td>
   <td>Conversation resolved by %1$s \n %2$s</td>
 </tr>
@@ -163,7 +163,7 @@ You may change every string appearing on the SDK interface by overriding the res
 </tr>
 <tr>
   <td>lp_ttr_message_minutes</td>
-  <td>(plurals string that contains: "one" and "others") 
+  <td>(plurals string that contains: "one" and "others")
 The one or others strings is concatenated to the lp_ttr_message_with_timestamp string above according to whether it’s single minute multiple minutes.
 Example</td>
   <td></td>
@@ -180,7 +180,7 @@ Example</td>
 </tr>
 <tr>
   <td>lp_ttr_message_hours</td>
-  <td>(plurals string that contains: "one" and "others"). 
+  <td>(plurals string that contains: "one" and "others").
 The one or others strings is concatenated to the lp_ttr_message_with_timestamp string above according to whether it’s single hour multiple hours.
 Example</td>
   <td></td>
@@ -197,7 +197,7 @@ Example</td>
 </tr>
 <tr>
   <td>lp_ttr_message_days</td>
-  <td>(plurals string that contains: "one" and "others") 
+  <td>(plurals string that contains: "one" and "others")
 The one or others strings is concatenated to the lp_ttr_message_with_timestamp string above according to whether it’s single day multiple days.
 Example</td>
   <td></td>
@@ -351,15 +351,15 @@ For a full list of the available IDs, use the "Aliases" from here.</td>
 </tr>
 <tr>
   <td>lp_ttr_message_off_hours_message</td>
-  <td>Message to show when the online hours is more than 2 days from now. 
+  <td>Message to show when the online hours is more than 2 days from now.
 includes 1 param:
 %1$s - for the full date (MMM dd, yyyy hh:mm a)</td>
   <td>Thanks for your message. We will be back online at %1$s</td>
 </tr>
 <tr>
   <td>lp_unread_message</td>
-  <td>(plurals string that contains: "one" and "others"). 
-Used in the unread messages indicator to indicate how many unread messages 
+  <td>(plurals string that contains: "one" and "others").
+Used in the unread messages indicator to indicate how many unread messages
 Example</td>
   <td></td>
 </tr>
@@ -522,6 +522,27 @@ Example</td>
 </table>
 
 
+**Structured Content**
+
+<table>
+<tr>
+  <th>String name</th>
+  <th>Used in</th>
+  <th>Default value</th>
+</tr>
+<tr>
+  <td>lp_structured_content_display_failed</td>
+  <td>Message displayed in the conversation if there is an error parsing the structured content message</td>
+  <td>Content failed to display</td>
+</tr>
+<tr>
+  <td>lp_new_message</td>
+  <td>Message displayed on the scroll down indicator when a structured content message is received</td>
+  <td>New message</td>
+</tr>
+</table>
+
+
 **Accessibility strings (used by the Accessibility TalkBack)**
 
 <table>
@@ -624,5 +645,30 @@ Example</td>
   <td>lp_accessibility_new_system_message</td>
   <td>Used when receive an incoming system message</td>
   <td>New system message:</td>
+</tr>
+<tr>
+  <td>lp_accessibility_sc_map</td>
+  <td>Used on the map element in a structured content message</td>
+  <td>Map</td>
+</tr>
+<tr>
+  <td>lp_accessibility_sc_image</td>
+  <td>Used on the image element in a structured content message</td>
+  <td>Image</td>
+</tr>
+<tr>
+  <td>lp_accessibility_sc_button</td>
+  <td>Used on the button element in a structured content message</td>
+  <td>Button</td>
+</tr>
+<tr>
+  <td>lp_accessibility_sc_text</td>
+  <td>Used on the text element in a structured content message</td>
+  <td>Text</td>
+</tr>
+<tr>
+  <td>lp_accessibility_sc_destination</td>
+  <td>Used on the map pin on a structured content map element</td>
+  <td>Destination</td>
 </tr>
 </table>
