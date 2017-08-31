@@ -83,7 +83,7 @@ The relevant fields in this dialog are ``channelType`` and inside ``metaData`` t
 After the invitation has been received, the following event should be triggered on consumer side using the ``lpTag.events.publish`` function.
 
 ```js
-lpTag.events.publish("lpUnifiedWindow", "cobrowseOffered", {
+lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
  	serviceId: "<ServiceId from the dialog>", 
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
@@ -101,7 +101,7 @@ lpTag.events.publish("lpUnifiedWindow", "cobrowseOffered", {
 If the consumer decides to accept the invitation, the following event should be triggered in order to start the CoBrowse session:
 
 ```js
-lpTag.events.publish("lpUnifiedWindow", "cobrowseAccepted", {
+lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
  	serviceId: "<ServiceId from the dialog>", 
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
@@ -118,7 +118,7 @@ lpTag.events.publish("lpUnifiedWindow", "cobrowseAccepted", {
 In case the consumer rejects the invitation, you can trigger the following event to reject the invitation:
 
 ```js
-lpTag.events.publish("lpUnifiedWindow", "cobrowseDeclined", {
+lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
  	serviceId: "<ServiceId from the dialog>", 
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
