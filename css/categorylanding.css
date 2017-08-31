@@ -1,20 +1,11 @@
 body {
-  background-color: #f2f2f2;
+  background-color: #ecf0f1;
 }
 
 /* banner home page */
-
-.metabanner{
-  background: linear-gradient(rgba(47, 72, 131, 0.75), rgba(47, 72, 131, 0.75)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Header_Image.png");
-  background-size: cover;
-  background-position: center center;
-}
-
 .banner-container{
     width: 100%;
-    text-align: center;
-    height: 492px;
-    background-repeat: no-repeat;
+    background-color: #4c5883;
 }
 .banner{
     width:100%;
@@ -29,7 +20,7 @@ body {
     font-size: 1.066em;
 }
 .banner .text .second-line{
-    font-size:2.167em;
+    font-size:1.866em;
     /*max-width: 400px;*/
 }
 
@@ -37,8 +28,7 @@ body {
   display: inline-block;
   float:none;
   width:100%;
-  margin-bottom: 30px;
-  margin-top: 104px;
+  text-align:center;
 }
 
 .banner img{
@@ -132,36 +122,39 @@ ul > .aa-input-container{
   border-color: #fff;
   padding: 12px 800px 12px 12px;
   border-radius: 0;
-  width: 936px;
 }
 
 .aa-input-container{
+  margin-left: 164px;
   float:none;
   margin-bottom: 100px;
 }
 
+.navbarhome {
+  background-color: #4c5883;
+  border-color: #4c5883;
+}
+
 .section1 {
-  background-color: #f2f2f2;
-  height: 628px;
+  background-color: #ecf0f1;
 }
 
 .ourplatform {
-  font-size: 3.333em;
+  font-size: 3em;
   font-weight: bold;
 }
 
 .ourplatformdetails{
   float:left;
-  font-size: 1.5em;
-  width: 250px;
-  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 1.2em;
+  width: 230px;
 }
 
 .section1 .row {
   float: right;
-  width: 320px;
+  width: 280px;
   margin-top: 140px;
-  margin-right:10px;
+  margin-right:50px;
 }
 
 img.mockup {
@@ -170,116 +163,96 @@ img.mockup {
 }
 
 .sectionbot{
-  background: linear-gradient(rgba(20, 32, 54, 0.80), rgba(20, 32, 54, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Bot_Image.png");
-  background-size: cover;
-  background-position: center center;
+  background-color: #162036;
   color: #fff;
-  height: 357px;
+  height: 250px;
   margin-top: 80px;
 }
 
 .sectionmessaging{
-  background: linear-gradient(rgba(255, 113, 19, 0.80), rgba(255, 113, 19, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Messaging_Image.png");
-  background-size: cover;
-  background-position: center center;
+  background-color: #FF720B;
   color: #fff;
-  height: 357px;
+  height: 250px;
   margin-top: 80px;
 }
 
 .sectionchat{
-  background: linear-gradient(rgba(88, 121, 218, 0.80), rgba(88, 121, 218, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Developing_Image.png");
-  background-size: cover;
-  background-position: center center;
+  background-color: #00ccff;
   color: #fff;
-  height: 357px;
+  height: 250px;
   margin-top: 80px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .bottitle{
   float:left;
-  font-size: 5.417em;
-  margin-top: 80px;
+  font-size: 3em;
+  margin-top: 50px;
   line-height: 1.2em;
   width:100px;
   font-weight:bold;
-  margin-left: 28px;
+  margin-left: 100px;
 }
 
 .botdetail{
-  float: right;
-  width: 455px;
-  height: 343px;
-  margin-right: 140px;
+  float:right;
+  width:330px;
+  margin-right: 100px;
   background-color: #fff;
-  color: #0c1320;
-  padding: 40px 54px 40px;
-  margin-top: 38px;
-  font-family: "Open Sans",Arial,Helvetica,sans-serif;
-  font-size: 1.313em;
+  color: black;
+  padding: 30px;
+  margin-top: 30px;
 }
 
 .messagingtitle{
   float:right;
-  font-size: 5.417em;
-  margin-top: 80px;
+  font-size: 3em;
+  margin-top: 50px;
   line-height: 1.2em;
-  width:100px;
+  width:260px;
   font-weight:bold;
-  margin-left: 28px;
+  margin-right: 170px;
 }
 
 .messagingdetail{
-  float: left;
-  width: 455px;
-  height: 343px;
+  float:left;
+  width:330px;
   margin-right: 100px;
   background-color: #fff;
-  color: #0c1320;
-  padding: 40px 54px 40px;
-  margin-top: 38px;
-  font-family: "Open Sans",Arial,Helvetica,sans-serif;
-  font-size: 1.313em;
+  color: black;
+  padding: 30px;
+  margin-top: 30px;
 }
 
 .chattitle{
   float:left;
-  font-size: 5.417em;
-  margin-top: 80px;
+  font-size: 3em;
+  margin-top: 50px;
   line-height: 1.2em;
-  width:400px;
+  width:200px;
   font-weight:bold;
-  margin-left: 28px;
+  margin-left:80px;
 }
 
 .chatdetail{
-  float: right;
-  width: 455px;
-  height: 343px;
-  margin-right: 140px;
+  float:right;
+  width:330px;
+  margin-right: 100px;
   background-color: #fff;
-  color: #0c1320;
-  padding: 40px 54px 40px;
-  margin-top: 38px;
-  font-family: "Open Sans",Arial,Helvetica,sans-serif;
-  font-size: 1.313em;
+  color: black;
+  padding: 30px;
+  margin-top: 30px;
 }
 
 .learnmore{
   margin-top: 10px;
   display: block;
-  border: 1px solid #0f192b;
+  border: 1px solid black;
   text-align: center;
   border-radius: 4px;
   font-weight: bold;
-  width: 200px;
-  padding: 10px 40px 10px 40px;
-  text-decoration: none;
-  cursor: default;
-  color: black;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
-  color: #0f192b;
+  width: 110px;
+  padding: 5px 10px 5px 10px;
 }
 
 .messagingdetail > .learnmore{
@@ -288,8 +261,4 @@ img.mockup {
 
 .chatdetail > .learnmore{
 margin-top: 58px;
-}
-
-.navbar-inverse{
-  border-color: transparent;
 }
