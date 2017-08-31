@@ -22,7 +22,7 @@ body {
 }
 .banner .text {
   color: #fff;
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   margin-top: 90px;
 }
 .banner .text .first-line{
@@ -205,6 +205,7 @@ img.mockup {
   width:100px;
   font-weight:bold;
   margin-left: 28px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
 }
 
 .botdetail{
@@ -229,6 +230,7 @@ img.mockup {
   font-weight:bold;
   margin-left: 28px;
   margin-right: 120px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
 }
 
 .messagingdetail{
@@ -252,6 +254,7 @@ img.mockup {
   width:400px;
   font-weight:bold;
   margin-left: 28px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
 }
 
 .chatdetail{
@@ -273,14 +276,19 @@ img.mockup {
   border: 1px solid #0f192b;
   text-align: center;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 100;
   width: 200px;
   padding: 10px 40px 10px 40px;
   text-decoration: none;
-  cursor: default;
+  cursor: pointer;
   color: black;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
   color: #0f192b;
+}
+
+.learnmore:hover{
+  background-color: #0f192b;
+  color: #fff;
 }
 
 .messagingdetail > .learnmore{
