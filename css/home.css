@@ -125,6 +125,8 @@ ul > .aa-input-container{
 
 .aa-input-icon {
   fill: #7f7f7f;
+  top: 67%;
+  left: 30px;
 }
 
 .aa-input-search{
@@ -248,7 +250,7 @@ img.mockup {
   margin-top: 38px;
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
-  font-weight: 100
+  font-weight: 100;
   -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
   -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
   box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
@@ -303,6 +305,7 @@ img.mockup {
   color: black;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   color: #0f192b;
+  font-weight: bold;
 }
 
 .learnmore:hover{
@@ -320,4 +323,8 @@ margin-top: 58px;
 
 .navbar-inverse{
   border-color: transparent;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }
