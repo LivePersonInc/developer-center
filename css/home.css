@@ -199,9 +199,9 @@ img.mockup {
 
 .bottitle{
   float:left;
-  font-size: 5.417em;
+  font-size: 4.4em;
   margin-top: 80px;
-  line-height: 4.4em;
+  line-height: 1.2em;
   width:100px;
   font-weight:bold;
   margin-left: 28px;
@@ -220,13 +220,16 @@ img.mockup {
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
   font-weight: 100;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
 }
 
 .messagingtitle{
   float:right;
-  font-size: 5.417em;
+  font-size: 4.4em;
   margin-top: 80px;
-  line-height: 4.4em;
+  line-height: 1.2em;
   width:470px;
   font-weight:bold;
   margin-left: 28px;
@@ -245,7 +248,10 @@ img.mockup {
   margin-top: 38px;
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
-  font-weight: 100;
+  font-weight: 100
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
 }
 
 .messagingtext{
@@ -258,9 +264,9 @@ img.mockup {
 
 .chattitle{
   float:left;
-  font-size: 5.417em;
+  font-size: 4.4em;
   margin-top: 80px;
-  line-height: 4.4em;
+  line-height: 1.2em;
   width:400px;
   font-weight:bold;
   margin-left: 28px;
@@ -279,6 +285,9 @@ img.mockup {
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
   font-weight: 100;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
 }
 
 .learnmore{
