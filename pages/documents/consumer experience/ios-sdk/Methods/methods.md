@@ -14,7 +14,7 @@ indicator: messaging
 
 ### initialize
 
-The SDK initialization is done only once, inside appdelegate. This function checks that the SDK has all mandatory preconditions. For example, it is able to find the bundle file, verify that all the pre-defined configurations are valid, and more. If any of the preconditions are not met, an exception is thrown. Once an exception is thrown, you must not do any other call to the SDK.
+The SDK initialization is done only once, inside AppDelegate. This function checks that the SDK has all mandatory preconditions. For example, it is able to find the bundle file, verify that all the pre-defined configurations are valid, and more. If any of the preconditions are not met, an exception is thrown. Once an exception is thrown, you must not do any other call to the SDK.
 
 `func initialize(_ brandID: String? = nil) throws`
 
@@ -60,14 +60,14 @@ When navigating out of the conversation screen, remove the view controller from 
 When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following ‘reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
-Reconnect open related webSockets and sync the converstion with its latest updates.
+Reconnect open related webSockets and sync the conversation with its latest updates.
 
 `func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationCode: String)`
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
-| authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' paramater only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
+| authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' parameter only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### reconnect (Deprecated)
 *This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#reconnect){:target="_blank"} instead*
@@ -75,7 +75,7 @@ Reconnect open related webSockets and sync the converstion with its latest updat
 When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following ‘reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
-Reconnect open related webSockets and sync the converstion with its latest updates.
+Reconnect open related webSockets and sync the conversation with its latest updates.
 
 `func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationCode: String)`
 
