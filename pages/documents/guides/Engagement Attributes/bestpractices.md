@@ -12,6 +12,7 @@ indicator: both
 **Sending an SDE multiple times during a session**
 
 Consider the following implementation on a customer page:
+
 | Page | property1 Value | property2 Value | property3 Value |
 |----|--------------|--------------|--------------|
 | Page A | a1 | a2 | [Not supplied] |
