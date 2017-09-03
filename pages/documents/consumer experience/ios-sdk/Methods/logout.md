@@ -12,7 +12,7 @@ permalink: consumer-experience-ios-sdk-logout.html
 indicator: messaging
 ---
 
-This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to logs the current user out.
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
 
 This method conducts the following:
 
