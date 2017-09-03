@@ -68,6 +68,7 @@ This section contains API details that are common to every API’s resource and 
 | slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | |
 | slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | |
 | lobsIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
+| canTransfer | Whether the skill can transfer to other skills | Boolean  | Required | default value: True |
 
 ### Entity Example
 
@@ -80,6 +81,10 @@ This section contains API details that are common to every API’s resource and 
           "maxWaitTime":0,
           "deleted":true,
           "dateUpdated":"2015-11-25 14:18:11",
+          "canTransfer": true,
+          "skillTransferList": [
+            2286661812
+          ],
           "skillRoutingConfiguration":[  
              {  
                 "priority":1,
