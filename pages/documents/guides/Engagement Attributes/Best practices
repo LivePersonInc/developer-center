@@ -1,17 +1,15 @@
 ---
-title: Best practices
+title: Best Practices
 Keywords:
 level1: Documents
 level2: Guides
 level3: Engagement Attributes
-
-level-order: 3
 order: 40
-permalink: engagment-attributes-BestPractices.html
+permalink: engagment-attributes-bestpractices.html
 indicator: both
 ---
 
-*Sending an SDE multiple times during a session*
+**Sending an SDE multiple times during a session**
 
 Consider the following implementation on a customer page:
 | Page | property1 Value | property2 Value | property3 Value |
@@ -19,8 +17,7 @@ Consider the following implementation on a customer page:
 | Page A | a1 | a2 | [Not supplied] |
 | Page B | b1 | [Not supplied] | b3 |
 
-A visitor has been to pages A, then moved to page B. 
-How will the Engagement attributes will be updates? The behaviour depends on the EA type.
+A visitor has been to page A, then moved to page B.  How will the Engagement attributes be updated? The behavior depends on the Engagement Attribute (EA) type.
 
 | Behavior | Behavior description | Engagement attributes | Example Output |
 | *Update Properties* | Updates existing info, maintaining previous values of attributes that were not supplied in latest update | Personal Info (personal) <br> Customer Info (ctmrinfo) <br> Marketing Info (mrktInfo) <br> Service Activity (service) | Customer Info: <br> property1: b1 <br> property2: a2 <br> property3: b3
