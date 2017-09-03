@@ -55,7 +55,7 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
 ```
 	$ pod install
 ```
- 5. Incase you wish to upgrade to the latest SDK version and you have already ran 'pod install', Run the following command:
+ 5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
 ```
  $ pod update
 ```
