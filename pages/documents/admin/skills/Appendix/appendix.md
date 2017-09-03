@@ -67,9 +67,9 @@ This section contains API details that are common to every API’s resource and 
 | slaDefaultResponseTime | Default response time for all conversations in messaging per skill | Integer | Optional | |
 | slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | |
 | slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | |
-| lobsIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
+| lobsIds | The list of Lines Of Business ids for skill | List <Long> | Optional |  |
 | canTransfer | Whether the skill can transfer to other skills | Boolean  | Optional | Default: True. If False can only transfer to itself (requeue) |
-| skillTransferList | The list of Skill ids to which this skill can transfer conversations | List<Long> | Optional | Default: empty list (i.e. skill can transfer to all skills) |
+| skillTransferList | The list of Skill ids to which this skill can transfer conversations | List <Long> | Optional | Default: empty list (i.e. skill can transfer to all skills) |
 
 ### Entity Example
 
