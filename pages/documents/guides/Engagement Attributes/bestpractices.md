@@ -20,6 +20,7 @@ Consider the following implementation on a customer page:
 A visitor has been to page A, then moved to page B.  How will the Engagement attributes be updated? The behavior depends on the Engagement Attribute (EA) type.
 
 | Behavior | Behavior description | Engagement attributes | Example Output |
+|----|--------------|--------------|--------------|
 | *Update Properties* | Updates existing info, maintaining previous values of attributes that were not supplied in latest update | Personal Info (personal) <br> Customer Info (ctmrinfo) <br> Marketing Info (mrktInfo) <br> Service Activity (service) | Customer Info: <br> property1: b1 <br> property2: a2 <br> property3: b3
-| *Append New Item* | Appends new item each time EA is sent | Viewed Product (prodView) <br> Visitor Error (error) <br> Transaction (purchase) <br> Lead (lead) | Product 1: <br> property1: a1 <br> property2: a2 <br> Product 2: <br> property1: b1 <br> property3: b3 |
-| *Replace Item* | Updates existing info, does not maintain previous values of attributes that were not supplied in latest update | Cart (cart)| Cart: <br> property1: b1 <br> property3: b3 |
+| *Append New Item* | Appends new item each time EA is sent | Viewed Product (prodView) <br> Visitor Error (error) <br> Transaction (purchase) <br> Lead <br> Searched Content | Product 1: <br> property1: a1 <br> property2: a2 <br> Product 2: <br> property1: b1 <br> property3: b3 |
+| *Replace Item* | Updates existing info, does not maintain previous values of attributes that were not supplied in latest update | Cart update| Cart: <br> property1: b1 <br> property3: b3 |

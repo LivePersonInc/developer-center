@@ -1,11 +1,11 @@
 ---
-title: Get Messages 
+title: CoBrowse
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
 
-order: 10
+order: 89
 permalink: consumer-int-cobrowse.html
 
 indicator: messaging
@@ -14,7 +14,7 @@ indicator: messaging
 This tutorial explains how to start a CoBrowse session on consumer side using the Messaging Window and CoBrowse APIs.
 
 ### Prerequisites
-* This guide is for Web-CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag. 
+* This guide is for Web-CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag.
 * LivePerson account must be enabled with CoBrowse feature: ``Cobrowse.Cobrowse_Integration`` (enabled by default) and Site-Setting ``coapp.enabled``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Step 1 - Set CoBrowse Feature in Client Properties
@@ -84,14 +84,14 @@ After the invitation has been received, the following event should be triggered 
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
- 	serviceId: "<ServiceId from the dialog>", 
+ 	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	//optional parameters:
- 	ssid: "<Monitoring Session ID>", 
- 	svid: "<Monitoring Visitor ID>", 
- 	scid: "<Monitoring Context ID>", 
- 	cid: "<Engagement Context ID>", 
+ 	ssid: "<Monitoring Session ID>",
+ 	svid: "<Monitoring Visitor ID>",
+ 	scid: "<Monitoring Context ID>",
+ 	cid: "<Engagement Context ID>",
  	eid: "<Engagement ID>"
  }
 );
@@ -102,14 +102,14 @@ If the consumer decides to accept the invitation, the following event should be 
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
- 	serviceId: "<ServiceId from the dialog>", 
+ 	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	//optional parameters:
- 	ssid: "<Monitoring Session ID>", 
- 	svid: "<Monitoring Visitor ID>", 
- 	scid: "<Monitoring Context ID>", 
- 	cid: "<Context ID>", 
+ 	ssid: "<Monitoring Session ID>",
+ 	svid: "<Monitoring Visitor ID>",
+ 	scid: "<Monitoring Context ID>",
+ 	cid: "<Context ID>",
  	eid: "<Engagement ID>"
  }
 );
@@ -119,14 +119,14 @@ In case the consumer rejects the invitation, you can trigger the following event
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
- 	serviceId: "<ServiceId from the dialog>", 
+ 	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	//optional parameters:
- 	ssid: "<Monitoring Session ID>", 
- 	svid: "<Monitoring Visitor ID>", 
- 	scid: "<Monitoring Context ID>", 
- 	cid: "<Context ID>", 
+ 	ssid: "<Monitoring Session ID>",
+ 	svid: "<Monitoring Visitor ID>",
+ 	scid: "<Monitoring Context ID>",
+ 	cid: "<Context ID>",
  	eid: "<Engagement ID>"
  }
 );
