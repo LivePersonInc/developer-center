@@ -222,6 +222,9 @@ img.mockup {
   padding: 30px 61px 40px 40px;
   margin-top: 40px;
   margin-left: 50px;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
 }
 
 .messagingtitle{
@@ -1055,6 +1058,9 @@ ul#results-container li a {
   background-color: #fff;
   color: black;
   margin-top: 30px;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
 }
 
 .right {
