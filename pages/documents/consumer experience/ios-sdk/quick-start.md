@@ -74,11 +74,13 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
 
 3. Copy (Drag and Drop) all framework and bundle files into the project.
 
+
 ### Step 2: Configure project settings to connect LiveEngage SDK
 
 1. In project settings, navigate to the **General** tab, and add all Framework files to the **Embedded Binaries** section.
 
 2. In the **General** tab, make sure that the framework files are under **Embedded Libraries**.
+
 
 3. In Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
@@ -89,6 +91,7 @@ In Xcode info.plist of the project, add two new privacy keys and values:
  * Key: NSCameraUsageDescription, Value: "Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"
 <br>This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.
 Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.
+
 
 5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
 
