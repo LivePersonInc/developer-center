@@ -1,12 +1,12 @@
 /* banner home page */
 .banner-container{
     width: 100%;
-    background-color: #f8f8f8;  
+    background-color: #f8f8f8;
 }
 .banner{
     width:100%;
     height:250px;
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
 }
 .banner .text {
   color: #162036;
@@ -25,11 +25,11 @@
 
 .banner img{
     float:right;
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 .home-first-line {
-  width: 70%;  
+  width: 70%;
   margin: 50px auto;
 }
 .home-second-line {
@@ -54,7 +54,8 @@ html body div.container div.home-first-line div.text, html body div.container di
 }
 
 a.view-all-products {
-  border: 1px solid #6d6d6d;
+  border: 2px solid #6d6d6d;
+  border-radius: 50px;
   color: #162036;
   display: table;
   font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
@@ -70,8 +71,8 @@ a.view-all-products::after{
 }
 
 @media (max-width: 990px) {
-  
-    .home-first-line {     
+
+    .home-first-line {
         margin-bottom:0px;
     }
     .home-second-line {
@@ -79,5 +80,19 @@ a.view-all-products::after{
         margin-bottom: 16%;
         margin-top: 0px;
     }
-    
+
+}
+
+.viewbutton{
+  background-color: #ff720b;
+  color: #fff;
+  border: 2px solid #FF720B;
+  font-size: 1em;
+  float: left;
+  margin-top: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-weight: bold;
 }

@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: String Localization
 
-order: 227
+order: 228
 permalink: consumer-experience-ios-sdk-localizationkeys.html
 
 indicator: messaging

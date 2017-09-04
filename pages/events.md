@@ -1,5 +1,6 @@
 ---
-title: LivePerson Bot Platform
+title: LiveEngage and Bots
+level3: LivePerson
 keywords: bot Platform
 tags: [getting_started]
 permalink: bot-platform.html

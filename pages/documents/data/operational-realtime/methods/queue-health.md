@@ -10,13 +10,13 @@ permalink: data-operational-realtime-queue-health.html
 indicator: chat
 ---
 
-Retrieves queue-related metrics at the account or skill level. 
+Retrieves queue-related metrics at the account or skill level.
 
 *Note: Queue Health is calculated using bucket-based aggregation techniques, where events are collected into 5 minute buckets. For this reason, events may be included that took place outside of the requested time frame.*
 
 **Example**: If the time now is 13:29 and the time frame is 7 minutes, the API will use 2 buckets: 13:25 and 13:30. In other words, in practice the time of the data is not 13:22-13:29, but 13:20-13:29.
 
-### Request 
+### Request
 
 | Method | URL |
 | :------- | :------ |
@@ -29,7 +29,7 @@ Retrieves queue-related metrics at the account or skill level.
 | timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time - timeframe. The maximum timeframe value is 1440 minutes (24 hours). | numeric | required |
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, metrics on the response will be calculated at the account level. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all. | numeric, comma separated | optional |
-| interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
+| interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
 
 ### Response
 
@@ -107,7 +107,7 @@ Request by skillIds=199,200 (no interval)
             "queueSizeCount":8
         }
     }
-    
+
 Request by skillIds=11,21,269364510, interval=360, timeframe=720
 
     {  

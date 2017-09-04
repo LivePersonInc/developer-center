@@ -12,5 +12,6 @@ permalink: android-configuring-sdk.html
 indicator: messaging
 ---
 
-The SDK allows you to customize the look and feel of the conversation screen with your branding.xml file. In order to do so, you need to create, under the values folder, a new resource file called branding.xml. 
+The SDK allows you to customize the look and feel of the conversation screen with your branding.xml file. In order to do so, you need to create, under the values folder, a new resource file called branding.xml.
+
 This file MUST contain all the resource-names as listed below. The Customer notes column includes space for you to add your own branding.

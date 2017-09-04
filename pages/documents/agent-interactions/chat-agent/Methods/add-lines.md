@@ -16,17 +16,17 @@ Use this method to add a line.
 
 ### Request
 
-| Method|  URL| 
+| Method|  URL|
  |:---  |:--- |
  |POST|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events?v=1&NC=true |
 
 **Request Headers**
 
  |Header  |Description |
- |:---|  :---| 
+ |:---|  :---|
  |Authorization Bearer| {bearer-from-login} |
  |Content-Type  |application/json |
- |Accept|  application/json| 
+ |Accept|  application/json|
 
 **Formats**
 
@@ -37,9 +37,9 @@ The body media type must have one of the following formats:
 
 **Body Parameters**
 
- |Name|  Description|  Type/Value|  Required| 
+ |Name|  Description|  Type/Value|  Required|
  |:---|  :---|  :---|  :--- |
- |text|  Add a line of text to the visitor.|   alphanumeric|  Required| 
+ |text|  Add a line of text to the visitor.|   alphanumeric|  Required|
  |textType|  The type of message and its proper UI representation.|  plain/html|  
 
 Request body example:
@@ -47,8 +47,8 @@ Request body example:
     {
     "event": {
     "@type": "line",
-    "text": "this is a plain line",
-    "textType": "plain"
+    "text": "<div dir="ltr" style="direction: ltr; text-align: left;">this is a line of text</div>",
+    "textType": "html"
     }
     }
 
@@ -56,20 +56,22 @@ Request body example:
 
 It is possible to add different types of lines to the chat. When no text type is defined, it is assumed that a plain type was submitted.
 
+**Best Practice**: our embedded window relies on the LE Agent UI to display the above sent text in an HTML format with a "<div>" wrapper. Therefore, to make sure that the LiveEngage UI displays your text correctly, it is important to use the HTML format as seen in the example above. The provided html cannot include the following: Iframes, Scripts, DOM actions, Links with "target="_blank".
+
 Changing the text type is handled as follows:
 
 | Name  | Description                                                             | Type/Value | Notes                                                                                                                               |
 |-------|-------------------------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | plain | The default type when non used, the text will be displayed as provided. | text       |                                                                                                                                     |
-| html  | For passing HTML content from the agent to the chat session.            | text       | The text must be escaped when provided and cannot include the following: Iframes, Scripts, DOM actions, Links with target="_blank". | 
+| html  | For passing HTML content from the agent to the chat session.            | text       | The provided html cannot include the following: Iframes, Scripts, DOM actions, Links with target="_blank". |
 
 ### Response
 
 **Response Codes**
 
- |Code|  Response| 
+ |Code|  Response|
  |:---  |:--- |
- |201|  Created| 
+ |201|  Created|
 
 Response example for JSON (adding a line):
 

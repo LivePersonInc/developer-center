@@ -66,6 +66,7 @@ This section contains API details that are common to every API’s resource and 
 | attributes.*.value | Value of an attribute.                                           | string                 | Required |                                                                                                                                             |
 | categoriesIds      | Categories assigned to this object.                              | array of numbers       | Optional |                                                                                                                                             |
 | skillsIds          | Skill assigned to this object                                    | array of numbers       | Optional |                                                                                                                                             |
+| lobIds          | lob assigned to this object                                    | array of numbers       | Optional |                                                                                                                                             |
 
 ### Entity Example
 
@@ -90,7 +91,8 @@ This section contains API details that are common to every API’s resource and 
                 }
             ],
             "categoriesIds": [234,5674,4,3],
-            "skillIds": [234,5674,4,3]
+            "skillIds": [234,5674,4,3],
+            "lobIds": [10,11,12,13]
         }
 
 
