@@ -2,6 +2,15 @@ body {
   background-color: #ecf0f1;
 }
 
+.projectTitle{
+  margin-top: 3px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  font-family: "Open Sans", serif;
+  margin-top: 26px;
+}
+
 /* banner home page */
 .banner-container{
     width: 100%;
@@ -814,6 +823,7 @@ display: block;
   display: inline-block;
   position: relative;
   float: right;
+  width: 100px;
 }
 
 .aa-input-search {
@@ -846,7 +856,7 @@ display: block;
   width: 16px;
   position: absolute;
   top: 55%;
-  right: 16px;
+  right: -120px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   fill: #fff;
