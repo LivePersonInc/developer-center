@@ -819,8 +819,9 @@ display: block;
 .aa-input-search {
   color: white;
   padding: 12px 80px 12px 12px;
-  border-color: #33c6f4;
-  border-radius: 50px;
+  border-color: transparent;
+  border-bottom-color: #fff;
+  border-radius: 0;
   border-style: solid;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8em;
