@@ -19,7 +19,7 @@ body {
   margin-top: 52px;
 }
 .banner .text .first-line{
-    font-size:3.333em;
+    font-size:3em;
     font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
     color: #142036;
     font-weight: bold;
@@ -27,9 +27,9 @@ body {
 }
 .banner .text .second-line{
   color: #0c1320;
-  font-size: 2.000em;
+  font-size: 1.5em;
   font-weight: 100;
-  max-width: 900px;
+  width: 650px;
   margin-bottom: 38px;
   margin-left: auto;
   margin-right: auto;
@@ -183,7 +183,7 @@ img.mockup {
   height: 250px;
   margin-top: 80px;
   margin-bottom: 180px;
-  height: 600px;
+  height: 534px;
 }
 
 .sectionmessaging{
@@ -203,7 +203,7 @@ img.mockup {
 
 .bottitle{
   float: right;
-  font-size: 3em;
+  font-size: 2.6em;
   margin-top: 165px;
   line-height: 1.2em;
   width: 420px;
@@ -271,10 +271,10 @@ img.mockup {
   border-radius: 4px;
   font-size: 1.2em;
   width: 157px;
-  padding: 5px 10px 5px 10px;
+  padding: 10px 40px 10px 40px;
   background-color: #5f7ade;
   color: #fff;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
   margin: 0 auto;
 }
 
@@ -1078,7 +1078,7 @@ ul#results-container li a {
 
 .upperboxtitle{
   font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
-  font-size: 1.833em;
+  font-size: 1.5em;
   color: #0c1320;
   font-weight: bold;
   margin-bottom: 32px;
@@ -1087,7 +1087,7 @@ ul#results-container li a {
 }
 
 .upperboxdetails{
-  font-size: 1.300em;
+  font-size: 1.200em;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   font-weight: 100;
   width: 250px;
