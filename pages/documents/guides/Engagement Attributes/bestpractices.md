@@ -9,6 +9,9 @@ permalink: engagment-attributes-bestpractices.html
 indicator: both
 ---
 
+The SDEs are session based, hence, there is no need to report the SDEs on each page anew but only once per session. It is highly recommended to report the SDEs at the beginning of the session (as soon as the info exists, report on it). 
+In case there is any additional information about the user during the session, you may send the same SDEs again in order to enrich the existing data with the new information.
+
 **Sending an SDE multiple times during a session**
 
 Consider the following implementation on a customer page:

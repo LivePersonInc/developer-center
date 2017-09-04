@@ -81,13 +81,20 @@ Download and run the certificate. The certificate is now added to your Keychain,
 - Open the terminal and locate the folder in which you would like to save the file.
 
 - Create cert pem:
-**openssl x509 -in aps_development.cer -inform der -out cert.pem**
+**openssl x509 -in aps_development.cer -inform der -out dev-cert.pem**
+
 
 - Convert the private keys .p12 file into a .pem file:
-**openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12**
+Using the Certificates.p12 file
+**cp Certificates.p12 key.p12**
+and then the following command **openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12**
 You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step.
 
-- RSA .pem key (no password)
-	**openssl rsa -in hostkey.pem -out hostkey.pem**
+- RSA .pem key (enter a passphrase for the next step - I used “lpsn” as an example)
+	**openssl rsa -in keyWithPassword.pem -out hostkey.pem**
 
-	You will be prompted to enter a passphrase. Enter the same passphrase you used in the previous step.
+### Upload into LiveEngage
+- Certificate file should be : dev-cert.pem
+- Key file should be : hostkey.pem
+
+![uploadCertToLE](img/uploadCertToLE.png)
