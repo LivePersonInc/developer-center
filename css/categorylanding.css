@@ -181,7 +181,7 @@ img.mockup {
   background-color: #162036;
   color: #fff;
   height: 250px;
-  margin-top: 80px;
+  margin-top: 170px;
   margin-bottom: 180px;
   height: 534px;
 }
@@ -204,7 +204,7 @@ img.mockup {
 .bottitle{
   float: right;
   font-size: 2.6em;
-  margin-top: 165px;
+  margin-top: 150px;
   line-height: 1.2em;
   width: 420px;
   font-weight: 100;
@@ -270,7 +270,7 @@ img.mockup {
   text-align: center;
   border-radius: 4px;
   font-size: 1.2em;
-  width: 157px;
+  width: 178px;
   padding: 10px 40px 10px 40px;
   background-color: #5f7ade;
   color: #fff;
@@ -1081,8 +1081,8 @@ ul#results-container li a {
   font-size: 1.5em;
   color: #0c1320;
   font-weight: bold;
-  margin-bottom: 32px;
-  margin-top: 25px;
+  margin-bottom: 12px;
+  margin-top: 45px;
   display:block;
 }
 
@@ -1090,9 +1090,10 @@ ul#results-container li a {
   font-size: 1.200em;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   font-weight: 100;
-  width: 250px;
+  width: 266px;
   display: block;
   margin: 0 auto;
   text-align: center;
-  margin-bottom:30px;
+  margin-bottom:34px;
+  line-height: 1.6;
 }
