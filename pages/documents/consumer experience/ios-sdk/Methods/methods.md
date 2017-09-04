@@ -30,8 +30,8 @@ This method is used to open the conversation screen.
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationViewParams | Object type: LPConversationViewParams. Represents an object to determine on conversation mode, filter and container. Such as Container or Window or if ViewOnly. | For object details see [LPConversationViewParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
-| authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' paramater only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
+| conversationViewParams | Object type: LPConversationViewParams. Represents an object to determine conversation mode, filter and container. Such as Container or Window or if ViewOnly. | For object details see [LPConversationViewParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
+| authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' paramater only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### showConversation (Deprecated)
 *This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams)](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} instead*
@@ -170,7 +170,7 @@ This API may be used only when there is no active conversation. This API clears 
 
 ### logout
 
-This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to logs the current user out.
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
 
 This method conducts the following:
 
@@ -181,7 +181,7 @@ This method conducts the following:
 `func logout()`
 
 ### destruct
-This method is a destructive method that is typically used stop and clear all the metadata of the SDK.
+This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.
 
 This method conducts the following:
 * Clears all SDK non-persistent data.

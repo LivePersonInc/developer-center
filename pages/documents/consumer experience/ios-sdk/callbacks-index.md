@@ -146,7 +146,7 @@ Called after CSAT screen is dismissed by clicking Submit.
 
 ###  LPMessagingSDKConversationCSATDidLoad(_ conversationID: String?)
 
-Called when CSAT screen did loaded and presented to consumer
+Called when CSAT screen was loaded and presented to consumer
 
 ###  LPMessagingSDKConnectionStateChanged
 

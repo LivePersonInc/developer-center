@@ -80,14 +80,14 @@ The table below lists the available attributes which can be used to personalize 
   <tr>
     <td align="left">remoteUserBubbleLongPressOverlayColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color of the remote user's bubble overlay when user use long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left">Color of the remote user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
     <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay"></td>
     <td align="left">UIColor.black</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleLongPressOverlayAlpha</td>
     <td align="left">Float</td>
-    <td align="left">Alpha of the remote user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left">Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
     <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay"></td>
     <td align="left">0.3</td>
   </tr>
@@ -157,7 +157,7 @@ The table below lists the available attributes which can be used to personalize 
   <tr>
     <td align="left">userBubbleLongPressOverlayColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color of the user bubble's overlay when user use long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left">Color of the user bubble's overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
     <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
     <td align="left">UIColor.black</td>
   </tr>
@@ -1446,14 +1446,14 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">secureFormCustomFontName</td>
     <td align="left">String</td>
-    <td align="left">Secure form custom font name to be used while user filling the secure form. If not set, the default font will be used as Helvetica.</td>
+    <td align="left">Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica.</td>
     <td align="left"><img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"></td>
     <td align="left">Helvetica</td>
   </tr>
   <tr>
     <td align="left">secureFormHideLogo</td>
     <td align="left">Bool</td>
-    <td align="left">Secure form flag to hiding the secure form logo in the top of the form.</td>
+    <td align="left">Secure form flag for hiding the secure form logo in the top of the form.</td>
     <td align="left"><img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"></td>
     <td align="left">false</td>
   </tr>
@@ -1504,16 +1504,16 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
-    <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info: https://developer.apple.com/documentation/mapkit/mkcoordinatespan</td>
+    <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
+    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
     <td align="left"><img src="img/structuredContentMapSpan.png" alt="structuredContentMapSpan"></td>
     <td align="left">0.01</td>
   </tr>
   <tr>
     <td align="left">structuredContentMapLongitudeDeltaSpan</td>
     <td align="left">Double</td>
-    <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info: https://developer.apple.com/documentation/mapkit/mkcoordinatespan</td>
+    <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
+    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
     <td align="left"><img src="img/structuredContentMapSpan.png" alt="structuredContentMapSpan"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1554,7 +1554,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">connectionStatusFailedToConnectBackgroundColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for the background of the connection status bar while connection failed.</td>
+    <td align="left">Color code for the background of the connection status bar when connection failed.</td>
     <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
     <td align="left">#000000cc</td>
   </tr>
@@ -1563,7 +1563,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">connectionStatusFailedToConnectTextColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for the text of the connection status bar while connection failed.</td>
+    <td align="left">Color code for the text of the connection status bar when connection failed.</td>
     <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
     <td align="left">UIColor.white</td>
   </tr>
