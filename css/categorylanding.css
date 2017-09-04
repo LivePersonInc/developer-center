@@ -178,7 +178,7 @@ img.mockup {
 }
 
 .sectionbot{
-  background-color: linear-gradient(rgba(20, 32, 54, 0.80), rgba(20, 32, 54, 0.80));
+  background-color: rgba(20, 32, 54, 0.80);
   color: #fff;
   height: 250px;
   margin-top: 170px;
@@ -187,9 +187,8 @@ img.mockup {
 }
 
 .sectionmessaging{
-  background-color: linear-gradient(rgba(255, 113, 19, 0.80), rgba(255, 113, 19, 0.80));
+  background-color: rgba(255, 113, 19, 0.80);
   color: #fff;
-  height: 250px;
   margin-top: 170px;
   margin-bottom: 180px;
   height: 534px;
@@ -197,11 +196,12 @@ img.mockup {
 }
 
 .sectionchat{
-  background-color: linear-gradient(rgba(88, 121, 218, 0.80), rgba(88, 121, 218, 0.80));
+  background-color: rgba(88, 121, 218, 0.80);
   color: #fff;
   height: 250px;
-  margin-top: 80px;
-  margin-bottom: 200px;
+  margin-top: 170px;
+  margin-bottom: 180px;
+  height: 534px;
 }
 
 .bottitle{
