@@ -5,7 +5,9 @@ body {
 /* banner home page */
 .banner-container{
     width: 100%;
-    background-color: #4c5883;
+    background-color: #e4e9fa;
+    height: 400px;
+    margin-top: 50px;
 }
 .banner{
     width:100%;
@@ -13,15 +15,34 @@ body {
 }
 .banner .text {
   color: #fff;
-  font-family: "Roboto Slab",serif;
-  margin-top: 90px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  margin-top: 52px;
 }
 .banner .text .first-line{
-    font-size: 1.066em;
+    font-size:3.333em;
+    font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+    color: #142036;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 .banner .text .second-line{
-    font-size:1.866em;
-    /*max-width: 400px;*/
+  color: #0c1320;
+  font-size: 2.000em;
+  font-weight: 100;
+  max-width: 900px;
+  margin-bottom: 38px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.banner-hr{
+  background: #5f7ade;
+  margin: 30px 0px;
+  width: 53px;
+  height: 6px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .textcontainer{
@@ -130,6 +151,7 @@ ul > .aa-input-container{
 
 .section1 {
   background-color: #ecf0f1;
+  margin-top: 323px;
 }
 
 .ourplatform {
@@ -160,6 +182,8 @@ img.mockup {
   color: #fff;
   height: 250px;
   margin-top: 80px;
+  margin-bottom: 180px;
+  height: 600px;
 }
 
 .sectionmessaging{
@@ -178,23 +202,26 @@ img.mockup {
 }
 
 .bottitle{
-  float:left;
+  float: right;
   font-size: 3em;
-  margin-top: 50px;
+  margin-top: 165px;
   line-height: 1.2em;
-  width:100px;
-  font-weight:bold;
+  width: 420px;
+  font-weight: 100;
   margin-left: 100px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  margin-right: 232px;
 }
 
 .botdetail{
-  float:right;
-  width:330px;
+  float: left;
+  width: 370px;
   margin-right: 100px;
   background-color: #fff;
   color: black;
-  padding: 30px;
-  margin-top: 30px;
+  padding: 30px 61px 40px 40px;
+  margin-top: 40px;
+  margin-left: 50px;
 }
 
 .messagingtitle{
@@ -240,12 +267,15 @@ img.mockup {
 .learnmore{
   margin-top: 10px;
   display: block;
-  border: 1px solid black;
   text-align: center;
   border-radius: 4px;
-  font-weight: bold;
-  width: 110px;
+  font-size: 1.2em;
+  width: 157px;
   padding: 5px 10px 5px 10px;
+  background-color: #5f7ade;
+  color: #fff;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  margin: 0 auto;
 }
 
 .messagingdetail > .learnmore{
@@ -254,6 +284,25 @@ img.mockup {
 
 .chatdetail > .learnmore{
 margin-top: 58px;
+}
+
+.botdetailtitle {
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #0c1320;
+  font-size: 1.222em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.botdetailtext{
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: #333333;
+}
+
+.topbox{
+  margin-top: -30px;
 }
 
 /* Algolia styling */
@@ -990,4 +1039,60 @@ ul#results-container li a {
 }
 #search-demo-container ul#results-container li ul li {
   /*float:left;*/
+}
+
+.navbar {
+  max-height: 100px;
+}
+
+.topnavlinks {
+  margin-top: 20px;
+}
+
+.upperbox{
+  width:413px;
+  height: 340px;
+  background-color: #fff;
+  color: black;
+  margin-top: 30px;
+}
+
+.right {
+  float: right;
+}
+
+.middle {
+  float: right;
+  margin-right: 18px;
+}
+
+.left {
+  float: left;
+  margin-left: 5px;
+}
+
+.upperboxcontainer{
+  width: 100%;
+  text-align: center;
+}
+
+.upperboxtitle{
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-size: 1.833em;
+  color: #0c1320;
+  font-weight: bold;
+  margin-bottom: 32px;
+  margin-top: 25px;
+  display:block;
+}
+
+.upperboxdetails{
+  font-size: 1.300em;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom:30px;
 }
