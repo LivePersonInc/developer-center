@@ -239,7 +239,7 @@ This class represents an object to determine the properties of an authenticated 
 ## New APIs
 #### View-only API
 
-    func showConversation(_ conversationViewParams: LPConversationViewParams)
+    func showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)
 
 This method is used to open the conversation screen.
 
@@ -256,7 +256,7 @@ This method reconnects the conversation's connection for a conversation query an
   func showConversation(_ conversationQuery: ConversationParamProtocol, authenticationCode: String? = nil, containerViewController: UIViewController? = nil)
 ```
 This method has been deprecated in SDK version 2.7.
-Use showConversation(_ conversationViewParams: LPConversationViewParams)
+Use showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)
 
 ```
     func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationCode: String)
@@ -294,6 +294,7 @@ Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPara
 #### Accessibility
 
     "structuredContentAccessibilityMap" = "Map";
+
 
 ### In-App Messaging SDK Version 2.5.0
 
