@@ -32,28 +32,28 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">remoteUserBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubblebackgroundcolor.png" alt="Example1"></td>
+    <td align="left"><img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor"></td>
     <td align="left">#004DC9</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleBorderColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the outline color.</td>
-    <td align="left"><img src="img/remoteuserbubblebordercolor.png" alt="example2"></td>
+    <td align="left"><img src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor"></td>
     <td align="left">#004DC9</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleLinkColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for links in the text of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubblelinkcolor.png" alt="example3"></td>
+    <td align="left"><img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubbletextcolor.png" alt="example4"></td>
+    <td align="left"><img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
@@ -67,78 +67,106 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">remoteUserBubbleTimestampColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the timestamp of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubbletimestampcolor.png" alt="example5"></td>
+    <td align="left"><img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
   <tr>
     <td align="left">remoteUserTypingTintColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color of the remote user typing bubbles animation.</td>
-    <td align="left"><img src="img/remoteusertypingtintcolor.png" alt="example6"></td>
+    <td align="left"><img src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor"></td>
     <td align="left">UIColor.white</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleLongPressOverlayColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color of the remote user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay"></td>
+    <td align="left">UIColor.black</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleLongPressOverlayAlpha</td>
+    <td align="left">Float</td>
+    <td align="left">Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay"></td>
+    <td align="left">0.3</td>
   </tr>
   <tr>
     <td align="left">userBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubblebackgroundcolor.png" alt="example7"></td>
+    <td align="left"><img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor"></td>
     <td align="left">#EDEDED</td>
   </tr>
   <tr>
     <td align="left">userBubbleBorderColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the outline color.</td>
-    <td align="left"><img src="img/userbubblebordercolor.png" alt="exmaple8"></td>
+    <td align="left"><img src="img/userbubblebordercolor.png" alt="userbubblebordercolor"></td>
     <td align="left">#EDEDED</td>
   </tr>
   <tr>
     <td align="left">userBubbleLinkColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for links in the text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubblelinkcolor.png" alt="example9"></td>
+    <td align="left"><img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor"></td>
     <td align="left">#0000ee</td>
   </tr>
   <tr>
     <td align="left">userBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbletextcolor.png" alt="example10"></td>
+    <td align="left"><img src="img/userbubbletextcolor.png" alt="userbubbletextcolor"></td>
     <td align="left">UIColor.black</td>
   </tr>
   <tr>
     <td align="left">userBubbleBorderWidth</td>
     <td align="left">Double</td>
     <td align="left">Double number for the outline width.</td>
-    <td align="left"><img src="img/userbubbleborderwidth.png" alt="example11"></td>
+    <td align="left"><img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth"></td>
     <td align="left">1</td>
   </tr>
   <tr>
     <td align="left">userBubbleTimestampColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the timestamp of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbletimestampcolor.png" alt="example12"></td>
+    <td align="left"><img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
   <tr>
     <td align="left">userBubbleSendStatusTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the send status text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubblesendstatustextcolor.png" alt="example13"></td>
+    <td align="left"><img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
   <tr>
     <td align="left">userBubbleErrorTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the error view text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbleerrortextcolor.png" alt="example14"></td>
+    <td align="left"><img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor"></td>
     <td align="left">#DE0A23</td>
   </tr>
   <tr>
     <td align="left">userBubbleErrorBorderColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the error view border of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbleerrorbordercolor.png" alt="example15"></td>
+    <td align="left"><img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor"></td>
     <td align="left">#DE0A23</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleLongPressOverlayColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color of the user bubble's overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
+    <td align="left">UIColor.black</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleLongPressOverlayAlpha</td>
+    <td align="left">Float</td>
+    <td align="left">Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
+    <td align="left">0.3</td>
   </tr>
   <tr>
     <td align="left">bubbleEmailLinksRegex</td>
@@ -1414,5 +1442,131 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"></td>
     <td align="left">#004dc9</td>
   </tr>
+
+  <tr>
+    <td align="left">secureFormCustomFontName</td>
+    <td align="left">String</td>
+    <td align="left">Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica.</td>
+    <td align="left"><img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"></td>
+    <td align="left">Helvetica</td>
+  </tr>
+  <tr>
+    <td align="left">secureFormHideLogo</td>
+    <td align="left">Bool</td>
+    <td align="left">Secure form flag for hiding the secure form logo in the top of the form.</td>
+    <td align="left"><img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"></td>
+    <td align="left">false</td>
+  </tr>
+  <tr>
+    <td align="left">secureFormBubbleLoadingIndicatorColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Secure form loading indicator color while loading form before opening.</td>
+    <td align="left"><img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"></td>
+    <td align="left">#46474a</td>
+  </tr>
 </tbody>
+</table>
+
+### Structured Content
+
+<table>
+<thead>
+   <tr>
+  <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default </th>
+  </tr>
+  </thead>
+<tbody>
+<tr>
+  <td align="left">enableStrucutredContent</td>
+  <td align="left">Bool</td>
+  <td align="left">Enable or Disable toggle for Structured Content feature in conversations</td>
+  <td align="left"></td>
+  <td align="left">false</td>
+</tr>
+  <tr>
+    <td align="left">structuredContentBubbleBorderWidth</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content bubble border width in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.3</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBorderColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Structured Content bubble border color.</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
+    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    <td align="left"><img src="img/structuredContentMapSpan.png" alt="structuredContentMapSpan"></td>
+    <td align="left">0.01</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentMapLongitudeDeltaSpan</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
+    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    <td align="left"><img src="img/structuredContentMapSpan.png" alt="structuredContentMapSpan"></td>
+    <td align="left">0.01</td>
+  </tr>
+</tbody>
+</table>
+
+### Connection Status Bar
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusConnectingBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the background of the connection status bar while connecting.</td>
+    <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#f5f5f5f2</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusConnectingTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the connection status bar while connecting.</td>
+    <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#46474a</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusFailedToConnectBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the background of the connection status bar when connection failed.</td>
+    <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#000000cc</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusFailedToConnectTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the connection status bar when connection failed.</td>
+    <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
+    <td align="left">UIColor.white</td>
+  </tr>
+</tbody>
+
 </table>
