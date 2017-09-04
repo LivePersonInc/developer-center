@@ -178,7 +178,9 @@ img.mockup {
 }
 
 .sectionbot{
-  background-color: rgba(20, 32, 54, 0.80);
+  background: linear-gradient(rgba(20, 32, 54, 0.8), rgba(20, 32, 54, 0.8)) center center / cover, url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Develop_your_bot_Image+(1).png");
+  background-size: cover;
+  background-position: center center;
   color: #fff;
   height: 250px;
   margin-top: 170px;
@@ -309,6 +311,10 @@ margin-top: 58px;
 
 .topbox{
   margin-top: -30px;
+}
+
+.sectionchat .topbox {
+  margin-top: -70px;
 }
 
 /* Algolia styling */
