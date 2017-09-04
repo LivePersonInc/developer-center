@@ -66,4 +66,4 @@ Top use cases of deflecting calls to mobile messaging are for inquiries that are
 
 * Requests regarding services provided online or via mobile apps, for example, ordering checks or signing up for digital services such as automatic bill payment or alerts.
 
-In addition to this API, please see [IVR Call Deflection document](products-channels-ivr-deflection-solution-introduction.html){:target="_blank"}.
+In addition to this API, please see [IVR Call Deflection document](products-channels-ivr-deflection-solution-introduction.html){:target="_blank"}. For more detailed information on setting up IVR engagements (a type of offsite engagement) within LiveEngage, refer to the Offsite Engagements connection area article.
