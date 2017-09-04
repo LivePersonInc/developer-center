@@ -107,7 +107,7 @@ Aria, Arial, Arial Black, Bookman Old Style, Comic Sans MS, Courier New, Garamon
 
 ![PCI](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/02-pciBranding.jpg)
 
-######Related properties: [Secure form branding enhancements](#new-properties)
+###### Related properties: [Secure form branding enhancements](#new-properties)
 
 The following additional conditions and configurations are required*:
 
@@ -123,9 +123,10 @@ The following additional conditions and configurations are required*:
 When the consumer selects a message with a long tap, the background color of the message will change, to indicate to the user that it has been selected.
 The color of the selected message can be configured by the brand.
 
-######Related properties: [Message selection branding](#new-properties)
+###### Related properties: [Message selection branding](#new-properties)
 
 The following additional conditions and configurations are required*:
+
 | Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
@@ -146,7 +147,7 @@ Future SDKs will support additional modes.
 
 ![ViewOnly](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/03-viewOnlyMode.jpg)
 
-######Related properties: [View-only mode](#new-properties)
+###### Related properties: [View-only mode](#new-properties)
 
 The following additional conditions and configurations are required*:
 
@@ -163,7 +164,7 @@ In order to present a custom banner, brands can create and present a new UIAlert
 
 ![PCI](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/04-photoSharingCallback.jpg)
 
-######Related properties: [Photo sharing permissions callback](#new-properties)
+###### Related properties: [Photo sharing permissions callback](#new-properties)
 
 The following additional conditions and configurations are required*:
 
