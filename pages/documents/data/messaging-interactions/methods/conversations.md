@@ -69,7 +69,7 @@ csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat"
 source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}
 device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
 messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
-latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": ["IN_QUEUE"]}
+latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}
 
 ### Response
 
