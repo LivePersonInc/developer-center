@@ -41,15 +41,15 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
 
 
   <tr>
-    <td>Default progress bar vector drawable for downloading \ uploading an image. it will appear on the image, inside the bubble until progress is done.  
+    <td>Default progress bar vector drawable for downloading \ uploading an image. It will appear on the image, inside the bubble, until progress is done.  
     To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
    </td>
     <td>lpmessaging_ui_image_progress_bar.xml</td>
   </tr>
 
   <tr>
-    <td>Default send button icon vector drawable. it will appear on the send button.
-    The drawable is being colored when send button enable by the color configuration R.color.lp_send_button_text_enable. when send button is disable we color it by the color configuration R.color.lp_send_button_text_disable. see more here: [Configuring the SDK](https://developers.liveperson.com/android-attributes.html#Message Edit Text){:target="_blank"}
+    <td>Default send button icon vector drawable. It will appear on the send button.
+    The drawable is colored when the send button is enabled. The color configuration used is R.color.lp_send_button_text_enable. When the send button is disabled, we color it by the color configuration R.color.lp_send_button_text_disable. See more here: [Configuring the SDK](https://developers.liveperson.com/android-attributes.html#Message Edit Text){:target="_blank"}
     To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
    </td>
     <td>lpinfra_ui_ic_send_disabled.xml</td>
