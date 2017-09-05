@@ -46,7 +46,7 @@ Log into your LiveEngage account using an administrator’s credentials and navi
 
 **Step 1:** Click **Data Sources**, and then select **App**.
 
-![app](img/App.png)
+![app](img/mobieAppManagementAndroid.png)
 
 **Step 2:** Click **Configure**.
 

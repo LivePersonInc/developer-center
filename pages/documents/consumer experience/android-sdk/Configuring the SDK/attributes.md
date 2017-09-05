@@ -451,6 +451,70 @@ The goal of the following document is to enumerate the different fields controll
 </table>
 
 
+
+### Bubbles Corner Radius
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+    &lt;dimen name=&quot;end_bubble_bottom_left_radius&quot;&gt; <br />
+    &lt;dimen name=&quot;end_bubble_top_left_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;end_bubble_top_right_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;end_bubble_bottom_right_radius&quot;&gt;   
+    </td>
+    <td>Define the corners radius of all the consumer bubbles (on the right side) </td>
+    <td>10dp, bottom_right is 0dp </td>
+    <td><img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer"></td>
+
+  </tr>
+  <tr>
+    <td>
+    &lt;dimen name=&quot;start_bubble_bottom_left_radius&quot;&gt; <br />
+    &lt;dimen name=&quot;start_bubble_top_left_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;start_bubble_top_right_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;start_bubble_bottom_right_radius&quot;&gt;   
+    </td>
+    <td>Define the corners radius of all the agent/brand bubbles (on the left side) </td>
+    <td>10dp, bottom_left is 0dp </td>
+    <td><img src="img/strokewidth.png" alt="strokewidth_agnet"></td>
+
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;unread_indicator_bubble_radius&quot;&gt; </td>
+    <td>Define the corners radius of the unread messages bubble.</td>
+    <td>20dp for all the corners</td>  
+    <td><img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor"></td>  
+
+  </tr>
+
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_radius&quot;&gt;
+     </td>
+    <td>Define the left top and the left bottom corners radius of the scroll down indicator.</td>
+    <td>20dp for left top and the left bottom the corners</td>
+    <td><img src="img/indicatorenabled.png" alt="indicatorenabled"></td>
+
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_counter_radius&quot;&gt;
+     </td>
+    <td>Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
+    <td>20dp for all the corners</td>  
+    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"></td>
+
+  </tr>
+
+</tbody>
+</table>
 ### Survey screen
 
 <table>
@@ -993,6 +1057,56 @@ The goal of the following document is to enumerate the different fields controll
 </tbody>
 </table>
 
+### Structured Content
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+
+<tr>
+  <td>&lt;bool name=&quot;enable_structured_content&quot;&gt;
+</td>
+  <td>Enable/Disable structured content feature</td>
+  <td>false</td>
+  <td></td>
+</tr>
+
+  <tr>
+    <td>&lt;color name=&quot;structured_content_border_color&quot;&gt;
+</td>
+    <td>Color code for the structured content bubble outline color.</td>
+    <td>#EDEDED (light gray)</td>
+    <td><img src="img/strucuredcontentbordercolor.png" alt="strucuredcontentbordercolor"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_border_width&quot;&gt;
+  </td>
+    <td>Integer in dp for the bubble stroke width of the structured content bubble.</td>
+    <td>1dp</td>
+    <td><img src="img/strucuredcontentborderwidth.png" alt="strucuredcontentborderwidth"></td>
+  </tr>  
+  <tr>
+    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
+    <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
+    <td>18</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;structured_content_link_as_callback&quot;&gt;</td>
+    <td>Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent)</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
 
 ### Miscellaneous
 
@@ -1162,6 +1276,18 @@ The goal of the following document is to enumerate the different fields controll
     <td>60</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;pci_form_hide_logo&quot;&gt;</td>
+    <td>Define if to hide logo inside the pci secure form web view</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;pci_form_font_name&quot;&gt;</td>
+    <td>Define the font of the pci secure form, by default - empty, use device's default</td>
+    <td></td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
@@ -1174,7 +1300,6 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <th>Name</th>
     <th>Description</th>
-  </tr>
 </thead>
 <tbody>    
   <tr>
