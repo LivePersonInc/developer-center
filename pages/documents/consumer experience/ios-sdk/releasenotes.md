@@ -9,13 +9,17 @@ order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=rt-interactions-window-sdk-releasenotes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
-iOS Messaging SDK - Version 2.7.0
-=========================================
+## iOS Messaging SDK - Version 2.7.0
+
 These are the main feature releases available in the In-App Messaging SDK version 2.7 for iOS.
 Version 2.7 roll-out: September 3rd 2017
-## New functionalities
-### Structured content enablement (Beta)
+
+### New functionalities
+
+#### Structured content enablement (Beta)
+
 ![StructuredContent](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/00-structuredContent.jpg)
 
 **This version of the SDK delivers structured content enablement only; the feature will be made fully productive in October.*
@@ -62,7 +66,7 @@ The following additional conditions and configurations are required:*
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | Yes | Yes | Yes | Yes | Yes |
 
-### Tablet split-screen supportability
+#### Tablet split-screen supportability
 ![TabletSplitScreen](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/01-tabletSplitScreen.jpg)
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, brands can enable tablet applications to host the conversation window within an application page, as a fragment for Android or viewcontroller for iOS.
 
@@ -77,7 +81,7 @@ The following additional conditions and configurations are required:*
 | N/A | N/A | N/A | N/A | N/A |
 
 
-### Connectivity status bar
+#### Connectivity status bar
 The connectivity status bar ensures consumers are always kept informed about the status of their connection, including:
 
  - Online/ Offline status
@@ -93,7 +97,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### Secure form branding enhancements
+#### Secure form branding enhancements
 To enable brands to adjust the secure form visuals to accurately reflect their brand experience, the following configurations are now available:
 
  - Secure form fonts
@@ -119,7 +123,7 @@ The following additional conditions and configurations are required*:
 | N/A | N/A | N/A | N/A | Yes |
 
 
-### Message selection
+#### Message selection
 When the consumer selects a message with a long tap, the background color of the message will change, to indicate to the user that it has been selected.
 The color of the selected message can be configured by the brand.
 
@@ -131,7 +135,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### App level DB encryption
+#### App level DB encryption
 To protect and encrypt conversation data in DB on the application level, Jailbroken iPhone conversation data in DB is now protected with an app level key for encryption. Every message is now encrypted and decrypted in RunTime.
 
 The following additional conditions and configurations are required*:
@@ -140,7 +144,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### View-only mode
+#### View-only mode
 The SDK now offers a new RunTime mode in addition to the edit mode, known as view-only mode. View-only mode means consumers can see the full conversation, but the keyboard and text input area are not displayed. In this mode, new messages can arrive, but the consumer will not be able to respond.
 This mode gives brands greater control over how consumers are able to use messaging within the brand’s app.
 Future SDKs will support additional modes.
@@ -155,7 +159,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### Photo sharing permissions callback
+#### Photo sharing permissions callback
 When a consumer shares photos during a conversation, a banner appears asking them to grant permission for the app to have access to their camera and/ or photo library.
 
 If the consumer refuses permission, the SDK sends a callback to the host app. Brands are then able to run a customized and branded banner with a second request for the consumer to grant the appropriate photo sharing permissions.
@@ -172,7 +176,8 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-*Key for items as follows:
+**Key for items as follows**:
+
 Backend update: This feature requires an update to the backend.
 Backend enablement: This feature requires items to be toggled on in the backend.
 Backend configuration: This feature requires configuration in the backend.
@@ -180,7 +185,9 @@ SDK enablement: This feature requires items to be toggled on in the SDK.
 SDK configuration: This features requires items to be configured in the SDK.
 
 ## New properties
+
 #### Structured content
+
 The following properties for structured content can now be configured:
 
 | Name | Description | Default |
@@ -297,7 +304,7 @@ Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPara
     "structuredContentAccessibilityMap" = "Map";
 
 
-### In-App Messaging SDK Version 2.5.0
+## In-App Messaging SDK Version 2.5.0
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
 
@@ -305,7 +312,7 @@ Version 2.5 roll-out: July 2nd 2017
 
 ### New functionalities
 
-### Custom fonts
+#### Custom fonts
 
 in order for consumers to enjoy the full brand experience while messaging in-app, brands are able to configure certified operating system fonts to appear in the messaging window. The fonts can be used across all elements, or only for the font within the message bubble.
 
@@ -327,7 +334,7 @@ Custom fonts are not supported for Native iOS properties such as:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### Tablet supportability
+#### Tablet supportability
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
@@ -338,7 +345,7 @@ All supported devices have gone through automation tests and all certified devic
 
 A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
 
-### Connectivity improvements
+#### Connectivity improvements
 The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
 
 In addition, other aspects such as feature and conversation history will also be more rapid as a result of the improvements.
@@ -349,7 +356,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### Default Agent Avatar
+#### Default Agent Avatar
 The SDK now offers brands a to use a default agent avatar of their own.
 
 Related properties: User avatar
@@ -367,7 +374,7 @@ Backend configuration: This feature requires configuration in the backend.
 SDK enablement: This feature requires items to be toggled on in the SDK.
 SDK configuration: This features requires items to be configured in the SDK.
 
-### Photo Sharing Button Colors
+#### Photo Sharing Button Colors
 Brands now have the ability to set camera button colors in addition to the Send button colors.
 
 Related properties: Photo sharing
@@ -403,7 +410,7 @@ Configuring Camera's button colors
 | remoteUserDefaultAvatarImage | The default avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations. If the remote user has an avatar image in his profile, this attribute will be ignored. | nil |
 
 
-### In-App Messaging SDK Version 2.3.1
+## In-App Messaging SDK Version 2.3.1
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
@@ -414,7 +421,7 @@ For one minute after the consumer had navigated away from the conversation windo
 ### Fix:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
-### In-App Messaging SDK Version 2.3.0
+## In-App Messaging SDK Version 2.3.0
 
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for iOS**.
 
@@ -498,17 +505,14 @@ The following devices are now also supported and/or certified to host our in-app
 
 
 
-### Presence enablement for photo sharing - beta*
+#### Presence enablement for photo sharing - beta*
 Presence enablement for photo sharing provides consumers with the ability to receive notifications while uploading a photo, whether they remain within the app or keep it running in the background.
 
 The Web Socket remains open for a maximum of 60 seconds (using Background Task) when the app or conversation window moves to the background. This scenario is also applicable for non photo sharing flows.
 
-*Photo sharing is a beta feature.
+*Photo sharing is a beta feature*.
 
-
-
-
-### In-App Messaging SDK Version 2.0
+## In-App Messaging SDK Version 2.0
 
 These are the main feature releases available in the In-App Messaging SDK version 2.0.
 

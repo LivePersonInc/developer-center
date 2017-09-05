@@ -9,6 +9,8 @@ order: 281
 permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
 ---
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=rt-interactions-window-sdk-releasenotes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+
 ### In-App Messaging SDK version 2.5 for Android
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
