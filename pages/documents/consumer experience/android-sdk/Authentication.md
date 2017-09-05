@@ -22,16 +22,17 @@ To start LivePerson's Fragment mode: (Attach the returned fragment to a containe
 `LivePerson : LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);`
 
 
-There are 2 authentication ways to connect:
+There are 2 authenticated connection methods:
 
  1. with authenticationKey - Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
  To implement pass new LPAuthenticationParams().setAuthKey(yourAuthCode).
- Optional - when using this way, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+
+ _Optional_ - when using this method, you can also set a special redirect URL when authenticating by calling: lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
 
  2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
 
 
-Once Authentication key is expired, you will be notified with callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired){:target="_blank"}.
+Once the Authentication key is expired, you will be notified with callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired){:target="_blank"}.
 
 To re-connect with new Authentication key use [reconnect( LPAuthenticationParams lpAuthenticationParams) ](android-reconnectfull.html){:target="_blank"}
 
