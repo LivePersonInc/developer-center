@@ -13,7 +13,7 @@ body {
 .banner-container{
     width: 100%;
     text-align: center;
-    height: 492px;
+    height: 452px;
     background-repeat: no-repeat;
 }
 .banner{
@@ -38,7 +38,7 @@ body {
   float:none;
   width:100%;
   margin-bottom: 30px;
-  margin-top: 104px;
+  margin-top: 40px;
 }
 
 .banner img{
@@ -153,13 +153,16 @@ ul > .aa-input-container{
 .ourplatform {
   font-size: 3.333em;
   font-weight: bold;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
 }
 
 .ourplatformdetails{
   float:left;
-  font-size: 1.5em;
+  font-size: 1.3em;
   width: 250px;
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  line-height: 1.6em;
+  margin-top: 10px;
 }
 
 .section1 .row {
@@ -225,9 +228,9 @@ img.mockup {
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
   font-weight: 100;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
 }
 
 .messagingtitle{
@@ -249,14 +252,14 @@ img.mockup {
   margin-right: 100px;
   background-color: #fff;
   color: #0c1320;
-  padding: 40px 54px 40px;
+  padding: 60px 75px 40px 54px;
   margin-top: 38px;
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
   font-weight: 100;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
 }
 
 .messagingtext{
@@ -270,7 +273,7 @@ img.mockup {
 .chattitle{
   float:left;
   font-size: 4.4em;
-  margin-top: 80px;
+  margin-top: 90px;
   line-height: 1.2em;
   width:400px;
   font-weight:bold;
@@ -290,9 +293,9 @@ img.mockup {
   font-family: "Open Sans",Arial,Helvetica,sans-serif;
   font-size: 1.313em;
   font-weight: 100;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
 }
 
 .learnmore{
@@ -316,12 +319,16 @@ img.mockup {
   color: #fff;
 }
 
-.messagingdetail > .learnmore{
-  margin-top: 58px;
+.botdetail .learnmore {
+    margin-top: 30px;
+  }
+
+.messagingdetail .learnmore {
+  margin-top: 65px;
 }
 
-.chatdetail > .learnmore{
-margin-top: 58px;
+.chatdetail .learnmore {
+    margin-top: 55px;
 }
 
 .navbar-inverse{
@@ -343,4 +350,13 @@ a:-webkit-any-link {
 }
 .aa-input-search:-moz-placeholder { /* Firefox 18- */
   color: #636a79;
+}
+
+.ds-dropdown-menu [class^=ds-dataset-] {
+  width: 936px !important;
+  margin-left: -335px !important;
+}
+
+.ds-dropdown-menu:before {
+  right: 860px !important;
 }

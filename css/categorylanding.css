@@ -8,7 +8,6 @@ body {
 
 .navbar-inverse .navbar-nav > li > a {
   font-family: "Open Sans", serif;
-  margin-top: 26px;
 }
 
 /* banner home page */
@@ -16,7 +15,7 @@ body {
     width: 100%;
     background-color: #e4e9fa;
     height: 400px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .banner{
     width:100%;
@@ -37,7 +36,7 @@ body {
 .banner .text .second-line{
   color: #0c1320;
   font-size: 1.5em;
-  font-weight: 100;
+  font-weight: 500;
   width: 650px;
   margin-bottom: 38px;
   margin-left: auto;
@@ -164,14 +163,18 @@ ul > .aa-input-container{
 }
 
 .ourplatform {
-  font-size: 3em;
+  font-size: 3.333em;
   font-weight: bold;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
 }
 
 .ourplatformdetails{
   float:left;
-  font-size: 1.2em;
-  width: 230px;
+  font-size: 1.3em;
+  width: 250px;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  line-height: 1.6em;
+  margin-top: 10px;
 }
 
 .section1 .row {
@@ -236,9 +239,9 @@ img.mockup {
   padding: 30px 61px 40px 40px;
   margin-top: 40px;
   margin-left: 50px;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
 }
 
 .messagingtitle{
@@ -307,15 +310,16 @@ margin-top: 58px;
   font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: #0c1320;
-  font-size: 1.222em;
+  font-size: 1.5em;
   display: block;
   margin-bottom: 10px;
 }
 
 .botdetailtext{
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   color: #333333;
+  font-size: 1.200em;
 }
 
 .topbox{
@@ -385,16 +389,20 @@ margin-top: 58px;
     background: #fff
 }
 .searchbox__input::-webkit-input-placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__input::-moz-placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__input:-ms-input-placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__input::placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__submit {
     position: absolute;
@@ -521,8 +529,8 @@ margin-top: 58px;
     background: transparent;
     border: none;
     z-index: 1;
-    /*max-width: 600px;*/
-    min-width: 500px;
+    max-width: 1280px !important;
+    min-width: 1280px !important;
     /*box-shadow: 0 1px 0 0 rgba(0, 0, 0, .2), 0 2px 3px 0 rgba(0, 0, 0, .1)*/
     background-color: #162036;
     /*border: 2px solid rgba(228, 228, 228, 0.6);*/
@@ -556,7 +564,8 @@ margin-top: 58px;
     padding-left: 10.6%;
 }
  .ds-dropdown-menu .ds-suggestion {
-    cursor: pointer
+    cursor: pointer;
+    width: 1000px !important;
 }
 
 .aa-suggestion-title-separator {
@@ -574,7 +583,8 @@ margin-top: 58px;
     background: #fff;
     border-radius: 4px;
     overflow: auto;
-    padding: 0 8px 8px
+    padding: 0 8px 8px;
+    margin-right: -15px !important;
 }
  .ds-dropdown-menu * {
     box-sizing: border-box
@@ -828,11 +838,9 @@ display: block;
 
 .aa-input-search {
   color: white;
-  padding: 12px 80px 12px 12px;
-  border-color: transparent;
-  border-bottom-color: #fff;
-  border-radius: 0;
-  border-style: solid;
+  padding: 10px;
+  border: none;
+  width: 0px;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -841,6 +849,29 @@ display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  float:right;
+  margin-right: -121px;
+  z-index: 3;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.algolia-autocomplete {
+  float: right;
+}
+
+.aa-input-search:focus{
+  width: 240px;
+  border-bottom: 1px solid #8a909a;
+  padding: 12px 80px 12px 0px;
+  cursor: text;
+}
+
+.aa-input-icon{
+  position: fixed;
+  top: 5%;
+  right: 90px;
 }
 
   .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
@@ -872,7 +903,7 @@ display: block;
   width: 16px;
   position: absolute;
   top: 55%;
-  right: 16px;
+  right: -120px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   fill: #fff;
@@ -883,6 +914,7 @@ display: block;
   stroke-width: 5;
   stroke: white;
   cursor: pointer;
+  z-index: 5;
 }
 
 }
@@ -1065,11 +1097,7 @@ ul#results-container li a {
 }
 
 .navbar {
-  max-height: 100px;
-}
-
-.topnavlinks {
-  margin-top: 20px;
+  max-height: 60px;
 }
 
 .upperbox{
@@ -1078,9 +1106,9 @@ ul#results-container li a {
   background-color: #fff;
   color: black;
   margin-top: 30px;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
 }
 
 .right {
@@ -1115,7 +1143,7 @@ ul#results-container li a {
 .upperboxdetails{
   font-size: 1.200em;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   width: 266px;
   display: block;
   margin: 0 auto;
