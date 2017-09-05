@@ -8,7 +8,7 @@ level3: In-App Messaging SDK for Android
 order: 1
 permalink: android-quickstart.html
 
---- 
+---
 
 ###  Prerequisites
 
@@ -26,7 +26,7 @@ _Note: For information on supported operating systems and devices, refer to [Sys
 
 Follow the steps below to download and unzip the
 
-1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK){:target="_blank"}. 
+1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK){:target="_blank"}.
 
 2. Extract the ZIP file to a folder on your computer.
 
@@ -46,9 +46,9 @@ Follow the steps below to download and unzip the
 
 Follow the steps below to configure the project settings to connect to the SDK.
 
-1. Import the downloaded lp_messaging_sdk module into your project. 
+1. Import the downloaded lp_messaging_sdk module into your project.
 
-    * In the Android Studio menu bar, select: **File** → **New** → **Import module**. 
+    * In the Android Studio menu bar, select: **File** → **New** → **Import module**.
 
     * Navigate to the folder where you extracted the SDK project. Navigate to the lp_messaging_sdk module, and click **Finish**.
 
@@ -59,8 +59,8 @@ Follow the steps below to configure the project settings to connect to the SDK.
     * Add the following code under the Android section:
 
 ```javascript
-  repositories { 
-         flatDir { 
+  repositories {
+         flatDir {
             dirs project(':lp_messaging_sdk').file('aars')
          }
   }
@@ -79,13 +79,13 @@ apply plugin: 'com.android.application'
 android {
   compileSdkVersion 24
   buildToolsVersion "24.0.3"
- 
-  repositories { 
-         flatDir { 
-             dirs project(':lp_messaging_sdk').file('aars') 
+
+  repositories {
+         flatDir {
+             dirs project(':lp_messaging_sdk').file('aars')
          }
   }
- 
+
   defaultConfig {
       applicationId "xxx"
       minSdkVersion xx
@@ -100,7 +100,7 @@ android {
       }
   }
 }
- 
+
 dependencies {   
   compile project(':lp_messaging_sdk')
 }`
@@ -115,7 +115,15 @@ dependencies {
 
   * `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
 
+    Vibrate on new incoming msg (required if enabled) :
+
   * `<uses-permission android:name="android.permission.VIBRATE"/>`
+
+    For Photo Sharing (required if enabled) :
+
+  * `<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>`
+
+  * `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>`
 
 
 2. Add the following imports to your class imports section:
@@ -134,7 +142,7 @@ dependencies {
 
 3. Initialize the Messaging SDK
 
-  You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class. 
+  You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class.
 
 ```javascript
 {
@@ -184,7 +192,7 @@ LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, a
 
 _Example implementation:_
 
-    
+
 ```javascript
 {
 LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new  InitLivePersonCallBack() {
@@ -202,9 +210,9 @@ LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new 
 ```
 
 {:start="4"}
-4. Show conversation screen. 
+4. Show conversation screen.
 
-The SDK supports two operation modes: 
+The SDK supports two operation modes:
 
   * Activity mode
 
@@ -216,7 +224,7 @@ Activity mode implements the toolbar that displays the agent name the consumer i
 
 To open conversation window in separate activity. This will start a new conversation activity:
 
-`LivePerson.showConversation(getActivity());`
+`LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);`
 
 Using this method the SDK implements the controls on the action bar.
 
@@ -228,15 +236,15 @@ _Note: Ensure that the init process finished successfully. These should be calle
 
 To open conversation window in a fragment: This returns a conversation fragment to be placed in a container in your activity:
 
-`LivePerson.getConversationFragment();`
+`LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);`
 
 When using fragment mode, you should use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
 **Fragment mode - Handle CSAT (feedback)**
 
-In Fragment mode, there is an option to get notified of the CSAT screen state (visible/invisible). For example- show different title on Toolbar , show a close csat button etc... 
+In Fragment mode, there is an option to get notified of the CSAT screen state (visible/invisible). For example- show different title on Toolbar , show a close csat button etc...
 
-The container Activity (the Activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface: 
+The container Activity (the Activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
 ```javascript
 {
@@ -244,11 +252,11 @@ public interface ConversationFragmentCallbacks {
 
     void setFeedBackMode(boolean on, IFeedbackActions actions);
 
-      // boolean on - Notify whether feedback (csat) screen is visible or dismisses. 
-      // IFeedbackActions actions - provides set of actions for the feedback screen. 
+      // boolean on - Notify whether feedback (csat) screen is visible or dismisses.
+      // IFeedbackActions actions - provides set of actions for the feedback screen.
     void onSurveySubmitted(IFeedbackActions actions);
 
-      // IFeedbackActions actions - provides set of actions for the feedback screen. 
+      // IFeedbackActions actions - provides set of actions for the feedback screen.
 }
 public interface IFeedbackActions {
 
@@ -265,7 +273,7 @@ public interface IFeedbackActions {
 
 Once the CSAT screen is visible, "setFeedBackMode" will be called with "true" value, when the CSAT is not visible anymore (skip/submitted) - "setFeedBackMode" will be called with "false" value.
 
-Example - how to use "ConversationFragmentCallbacks" (code from the container Activity) 
+Example - how to use "ConversationFragmentCallbacks" (code from the container Activity)
 
 ```javascript
 {
@@ -290,4 +298,21 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
         toolbar.setTitle("survey submitted");
     }
 }
+```
+
+
+### Screen Orientation
+
+In case of Fragment mode - set the desired orientation in your container Activity definition in AndroidManifest.xml
+
+https://developer.android.com/guide/topics/manifest/activity-element.html#screen
+
+
+In case of Activity mode - override in your application's AndroidManifest.xml the ConversationActivity definition and set the desired screen orientation:
+
+```javascript
+<activity
+      android:name="com.liveperson.infra.messaging_ui.ConversationActivity"
+      android:screenOrientation="your screen orientation" />
+
 ```
