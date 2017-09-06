@@ -1,3 +1,7 @@
+body {
+  background-color: #F2F2F2;
+}
+
 .documents {
   margin-top: 67px;
   width: 70%;
@@ -20,11 +24,57 @@ html body div.container.documents div.title{
 html body div.container.documents div.text{
     margin-bottom: 80px;
     font-size: 0.866em;
-   
+
     font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 html body div.container.documents div.text a{
     display: block;
     margin-bottom: 15px;
     color:#5879da;
+}
+
+.documentbox{
+  width: 890px;
+  height: 236px;
+  background-color: #fff;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+}
+
+.categorytitle{
+  /* float:left; */
+  font-size: 26px;
+  margin-left: 0;
+  margin-right: 0;
+  margin: auto;
+  display: inline-block;
+  width: 100px;
+  margin-top: 68px;
+  margin-left: -190px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  color: #0c1320;
+}
+
+.categorysub{
+  float: left;
+  margin-top: 120px;
+  display: inline-block;
+  width: 250px;
+  margin-left: 60px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+
+.listbox {
+  float:right;
+  background-color: #ECF1FF;
+  display: block;
+  margin-top: -90px;
+  margin-right: 18px;
+  width: 550px;
+  line-height: 2.8;
+  font-size: 16px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }

@@ -2,19 +2,40 @@
 
 <head>
     {% include head.html %}
+    <link rel="stylesheet" href="css/categorylanding.css">
 
-    
+
 </head>
 
 <body>
     {% include topnav.html %}
-    <!-- Page Content -->
+    <!--Page Content-->
 
-    <div class="centralized header documents"> Utilize LiveEngage APIs</div>
-    <div class="orange-line centralized"></div>
-   
-     {% include documents-data.html %}
-    
+    <div class="centralized header documents"> Documents</div>
+    <hr class="banner-hr">
+    <div class="documentbox">
+      <div class="categorybox">
+        <span class="categorytitle">Guides</span><span class="categorysub">Use this document as a guide for building Customer Facing Bots</span>
+      </div>
+      <div class="listbox row">
+        <div class="col-md-6">
+        <ul>
+          <li>Retrive API Keys</li>
+          <li>Retrieve API Domains</li>
+          <li>Add Agent Widgets</li>
+          <li>Customized Chat Windows</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li>Engagement Attributes</li>
+          <li>Authentication</li>
+          <li style="line-height: 1.8;">Push Notification Service (iOS and Android)</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+
 
 </body>
 <!--{% if site.google_analytics %} {% include google_analytics.html %} {% endif %}-->
