@@ -386,3 +386,15 @@ a:-webkit-any-link {
   top: 77.7%;
   stroke: #333333;
 }
+
+.searchhome .ds-dropdown-menu .ds-suggestion
+    width: 720px !important;
+}
+
+.searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu {
+  left: 336px!important;
+}
+
+.searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu:before {
+    left: -295px;
+}
