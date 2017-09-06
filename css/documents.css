@@ -74,7 +74,11 @@ html body div.container.documents div.text a{
   margin-top: -90px;
   margin-right: 18px;
   width: 550px;
-  line-height: 2.8;
+  line-height: 3.1;
   font-size: 16px;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
+}
+
+.categoryimage{
+  float:left;
 }
