@@ -178,7 +178,7 @@ img.mockup {
 }
 
 .sectionbot{
-  background: linear-gradient(rgba(20, 32, 54, 0.80), rgba(20, 32, 54, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Bot_Image.png");
+  background: linear-gradient(rgba(20, 32, 54, 0.80), rgba(20, 32, 54, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Develop_your_bot_Image+(1).png");
   background-size: cover;
   background-position: center center;
   color: #fff;
@@ -320,7 +320,7 @@ img.mockup {
 }
 
 .botdetail .learnmore {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
 .messagingdetail .learnmore {

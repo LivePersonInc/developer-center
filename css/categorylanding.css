@@ -29,19 +29,18 @@ body {
 .banner .text .first-line{
     font-size:3em;
     font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
-    color: #142036;
+    color: #fff;
     font-weight: bold;
     margin-bottom: 15px;
 }
 .banner .text .second-line{
-  color: #0c1320;
+  color: #fff;
   font-size: 1.5em;
   font-weight: 500;
   width: 650px;
   margin-bottom: 38px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .banner-hr{
@@ -51,6 +50,7 @@ body {
   height: 6px;
   margin-left: auto;
   margin-right: auto;
+  display: none;
 }
 
 .textcontainer{
@@ -189,15 +189,32 @@ img.mockup {
   width: 900px;
 }
 
-.sectionbot{
-  background: linear-gradient(rgba(20, 32, 54, 0.8), rgba(20, 32, 54, 0.8)) center center / cover, url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Develop_your_bot_Image+(1).png");
+.bannerbot {
+  background: linear-gradient(rgba(56, 55, 54, 0.8), rgba(56, 55, 54, 0.8)) center center / cover, url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Develop_your_bot_Image+(1).png");
   background-size: cover;
   background-position: center center;
+}
+
+.bannermessaging {
+  background: linear-gradient(rgba(56, 55, 54, 0.8), rgba(56, 55, 54, 0.8)) center center / cover, url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Messaging_Image+(1).png");
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.bannerchat {
+  background: linear-gradient(rgba(56, 55, 54, 0.8), rgba(56, 55, 54, 0.8)) center center / cover, url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Developing_Image+(1).png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.sectionbot{
   color: #fff;
   height: 250px;
   margin-top: 170px;
   margin-bottom: 180px;
-  height: 534px;
+  height: 564px;
+  background-color: rgba(20, 32, 54, 0.80);
 }
 
 .sectionmessaging{
@@ -215,7 +232,7 @@ img.mockup {
   height: 250px;
   margin-top: 170px;
   margin-bottom: 180px;
-  height: 534px;
+  height: 564px;
 }
 
 .bottitle{
@@ -323,11 +340,15 @@ margin-top: 58px;
 }
 
 .topbox{
-  margin-top: -30px;
+  margin-top: -120px;
 }
 
 .sectionchat .topbox {
-  margin-top: -70px;
+  margin-top: -120px;
+}
+
+.sectionbot .topbox {
+  margin-top: -120px;
 }
 
 /* Algolia styling */
@@ -1098,6 +1119,7 @@ ul#results-container li a {
 
 .navbar {
   max-height: 60px;
+  border-color: transparent;
 }
 
 .upperbox{
@@ -1144,7 +1166,7 @@ ul#results-container li a {
   font-size: 1.200em;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   font-weight: 500;
-  width: 266px;
+  width: 275px;
   display: block;
   margin: 0 auto;
   text-align: center;
