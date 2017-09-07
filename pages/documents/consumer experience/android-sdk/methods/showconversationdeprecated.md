@@ -1,5 +1,5 @@
 ---
-title: showConversation
+title: showConversation (Deprecated)
 Keywords:
 
 level2: Consumer Experience
@@ -7,10 +7,11 @@ level3: In-App Messaging SDK for Android
 level4: Methods
 
 order: 30
-permalink: android-showconversation.html
+permalink: android-showconversationdeprecated.html
 
 indicator: messaging
 ---
+*This method was deprecated - please use the [showConversation(Activity, LPAuthenticationParams, ConversationViewParams) ](android-showconversationfull.html){:target="_blank"}.*
 
 The showConversation API displays the messaging screen as a new activity with the conversation fragment. The consumer can then start or continue a conversation. The conversation screen is controlled entirely by the SDK.
 
@@ -23,4 +24,3 @@ Initiating the conversation screen opens the WebSocket to the LivePerson Messagi
 | Parameter | Description |
 | :--- | :--- |
 | activity | The calling activity |
-
