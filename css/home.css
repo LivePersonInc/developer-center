@@ -387,7 +387,7 @@ a:-webkit-any-link {
   stroke: #333333;
 }
 
-.searchhome .ds-dropdown-menu .ds-suggestion
+.searchhome .ds-dropdown-menu .ds-suggestion{
     width: 720px !important;
 }
 

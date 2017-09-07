@@ -2,8 +2,8 @@
 title: Release Notes
 Keywords:
 level1: Documents
-level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level2: Agent Interactions
+level3: Messaging Agent SDK
 
 order: 120
 permalink: messaging-agent-sdk-releasenotes.html

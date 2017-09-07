@@ -2,8 +2,8 @@
 title: Release Notes
 Keywords:
 level1: Documents
-level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level2: Real Time Interactions
+level3: Engagement Window Widget SDK
 
 order: 120
 permalink: rt-interactions-window-sdk-releasenotes.html
