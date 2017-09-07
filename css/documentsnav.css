@@ -821,7 +821,7 @@ html body div.container.documents div.text a{
   display: inline-block;
   width: 100px;
   margin-top: 58px;
-  margin-left: -190px;
+  margin-left: -152px;
   font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   color: #0c1320;
 }
@@ -830,7 +830,7 @@ html body div.container.documents div.text a{
   float: left;
   margin-top: 110px;
   display: inline-block;
-  width: 250px;
+  width: 207px;
   margin-left: -41px;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   color: #333333;
@@ -844,7 +844,7 @@ html body div.container.documents div.text a{
   margin-right: 18px;
   width: 551px;
   line-height: 3;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   padding: 10px 0 0 0;
 }
