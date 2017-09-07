@@ -1185,10 +1185,15 @@ ul#results-container li a {
 
   .middle {
     float:right;
+    margin-right: 0;
   }
 
   .left {
     float:right;
+  }
+
+  .right {
+    margin-top: 50px;
   }
 
   .banner-container{
@@ -1199,11 +1204,24 @@ ul#results-container li a {
     margin-bottom: 321px;
   }
 
+  .sectionmessaging{
+    margin-bottom: 240px;
+    height: 720px;
+  }
+
 .sectionbot .row {
   display: none;
 }
 
-.pane .section1 .container{
+.sectionmessaging .row {
+  display:none;
+}
+
+.sectionchat .row{
+  display: none;
+}
+
+.section1{
   display: none;
 }
 
