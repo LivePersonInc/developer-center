@@ -376,7 +376,7 @@ a:-webkit-any-link {
 }
 
 .searchhome .ds-dropdown-menu [class^=ds-dataset-] {
-  width: 936px !important;
+  width: 896px !important;
   margin-left: -335px !important;
 }
 
@@ -536,4 +536,3 @@ img.mockup{
 }
 
 }
-

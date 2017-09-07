@@ -1172,3 +1172,39 @@ ul#results-container li a {
   margin-bottom:34px;
   line-height: 1.6;
 }
+
+@media (max-width: 425px) {
+
+  .banner .text .second-line {
+    width: 400px;
+  }
+
+  .upperboxcontainer {
+    width: 98.5%;
+  }
+
+  .middle {
+    float:right;
+  }
+
+  .left {
+    float:right;
+  }
+
+  .banner-container{
+    margin-top: 9px;
+  }
+
+  .sectionbot{
+    margin-bottom: 321px;
+  }
+
+.sectionbot .row {
+  display: none;
+}
+
+.pane .section1 .container{
+  display: none;
+}
+
+}
