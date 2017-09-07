@@ -386,3 +386,148 @@ a:-webkit-any-link {
   top: 77.7%;
   stroke: #333333;
 }
+
+.searchhome .ds-dropdown-menu .ds-suggestion
+    width: 720px !important;
+}
+
+.searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu {
+  left: 336px!important;
+}
+
+.searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu:before {
+    left: -295px;
+}
+
+.learnmoremobile {
+  display:none;
+  margin-top: 54px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 4px;
+  width: 265px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 85px;
+  font-size: 2em;
+}
+
+.sectionmessaging .learnmoremobile {
+  display: none;
+  margin-top: 176px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 4px;
+  width: 265px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 85px;
+  font-size: 2em;
+}
+
+.sectionchat .learnmoremobile{
+  display: none;
+  margin-top: 203px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 4px;
+  width: 265px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 85px;
+  font-size: 2em;
+}
+
+@media (max-width: 425px) {
+
+.searchhome .algolia-autocomplete{
+  float: left;
+}
+
+.searchhome .aa-input-search {
+  width: 309px;
+  margin-left: 59px;
+  padding: 12px 0px 12px 70px;
+}
+
+img.mockup{
+  width: 430px;
+}
+
+.section1 .row{
+  margin-top: 77px;
+  margin-right: 53px;
+  text-align: center;
+}
+
+.ourplatformdetails{
+  width: 331px;
+}
+
+.bottitle{
+  float:none;
+  margin-left: 19px;
+}
+
+.messagingtitle{
+  float: right;
+  font-size: 3.4em;
+  margin-top: 5px;
+  line-height: 1.2em;
+  width: 340px;
+  font-weight: bold;
+  margin-left: 27px;
+  margin-right: 37px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.chattitle{
+  float: left;
+  font-size: 4.4em;
+  margin-top: 6px;
+  line-height: 1.2em;
+  width: 400px;
+  font-weight: bold;
+  margin-left: 13px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.botdetail {
+  display: none;
+}
+
+.messagingdetail{
+  display:none;
+}
+
+.chatdetail{
+  display:none;
+}
+
+.learnmoremobile {
+  display: block;
+}
+
+.sectionmessaging .learnmoremobile {
+  display: block;
+}
+
+.sectionchat .learnmoremobile {
+  display:block;
+}
+
+}
