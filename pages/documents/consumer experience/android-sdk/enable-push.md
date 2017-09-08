@@ -40,22 +40,34 @@ public class MyFirebase extends FirebaseMessagingService {
 
 ### Configuring Push Notifcations
 
-Log into your LiveEngage account using an administrator’s credentials and navigate to **Campaigns**.
+Follow the instructions below to set up your app key to enable push notifications.
+
+*Note: Before you begin the setup, you must ensure your LiveEngage account is configured and connected to the SDK.*
+
+1. Enter your LiveEngage account through this [Login URL](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~){:target="_blank"}.
+
+	You will need the following info from your LivePerson account team:
+
+	* LiveEngage account number
+
+	* User ID (must be an administrator user)
+
+	* Password
+
+2. Within LiveEngage, navigate to **Campaigns**, and click **Data Sources**.
 
 ![campaigns](img/campaigns.png)
 
-**Step 1:** Click **Data Sources**, and then select **App**.
+3. Then select **Manage** under **Mobile App management**.
 
-![app](img/mobieAppManagementAndroid.png)
+![app](img/mobieAppManagement.png)
 
-**Step 2:** Click **Configure**.
+4. Click **Add new** to associate your app with the LiveEngage account.
 
 ![keymanagement](img/keymanagement.png)
-
-**Step 3:** Click **Add new** to associate your app with the LiveEngage account.
 
-**Step 4:** Select your platform as Android, enter your app’s name and your push notification API key, and then click **Create app**.
+5. Select your platform as Android, enter your app’s name and your push notification API key, and then click **Create app**.
 
 ![addnewapp](img/addnewapp.png)
 
-**Step 5:** Click **Close** to finish the process.
+6. Click **Close** to complete the process.
