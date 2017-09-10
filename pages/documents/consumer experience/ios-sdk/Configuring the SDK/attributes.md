@@ -1570,3 +1570,26 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 </tbody>
 
 </table>
+
+### Controller message
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">controllerBubbleTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the controller bubble.</td>
+    <td align="left"><img alt="controller bubble text color"></td>
+    <td align="left">#5b5c5e</td>
+  </tr>
+</tbody>
+</table>
