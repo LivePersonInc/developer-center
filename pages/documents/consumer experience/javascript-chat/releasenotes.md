@@ -4,7 +4,7 @@ level1: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 
-order: 300
+order: 500
 permalink: consumer-experience-javascript-chat-changelog.html
 indicator: chat
 ---
