@@ -433,6 +433,13 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">#0362AC</td>
   </tr>
   <tr>
+    <td align="left">sendButtonImage</td>
+    <td align="left">UIImage</td>
+    <td align="left">Send button Image in the conversation screen. The custom image will be changed only if isSendMessageButtonInTextMode = false. the send button image need to follow the Custom Icon documention (https://developer.apple.com/ios/human-interface-guidelines/graphics/custom-icons/)</td>
+    <td align="left"><img src="img/DefaultSendButton.png" alt="DefaultSendButton"></td>
+    <td align="left">SDK bundle sendMessageIcon Icon</td>
+  </tr>
+  <tr>
     <td align="left">isSendMessageButtonInTextMode</td>
     <td align="left">Bool</td>
     <td align="left">Two options for send message button mode:Send message button in "text mode" - will be taken from localized resources Send message button in "icon mode"</td>
