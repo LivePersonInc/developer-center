@@ -32,6 +32,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 Name                | Description                                                                                   | Type/Value                         | Required | Notes
 :------------------ | :-------------------------------------------------------------------------------------------- | :--------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+end {from, to}    | Conversation's end time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
 skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
 latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
@@ -55,6 +56,7 @@ Filters examples:
 Name                | Description
 :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 start               | {″start″:{"from":1470037448000,"to":1472543048000}}
+end                 | {″start″:{"from":1470037448000,"to":1472543048000},"end":{"from":1470908735000,"to":1472543048000}}
 status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}
 skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}
 latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}
