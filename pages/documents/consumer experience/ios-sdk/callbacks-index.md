@@ -36,6 +36,7 @@ The SDK uses 2 delegates:
   func LPMessagingSDKAuthenticationFailed(_ error: NSError)
   func LPMessagingSDKTokenExpired(_ brandID: String)
   func LPMessagingSDKError(_ error: NSError)
+  optional func LPMessagingSDKConnectionRetriesFailed(_ error: NSError)
 
 
 
@@ -127,6 +128,10 @@ Called when the current session fails due to an authentication error.
 Called when the SDK has a general error.
 If there is an SDK initialization error, the SDK can not proceed, and you should not call any other SDK API.
 There are also other possible errors such as send message error.
+
+###  LPMessagingSDKConnectionRetriesFailed(error: NSError)
+
+Called when the SDK failed to connect after all the reconnect retries.
 
 ###  LPMessagingSDKAgentIsTypingStateChanged(isTyping: Bool)
 
