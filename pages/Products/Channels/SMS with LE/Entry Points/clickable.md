@@ -89,7 +89,7 @@ Example:
 
 ```html
 <div>
-<a href="sms://+12062021280&body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
+<a href="sms://+12062021280?body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
 <img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png">
 </a>
 </div>
