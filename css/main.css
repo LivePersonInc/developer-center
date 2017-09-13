@@ -545,6 +545,8 @@ pre {
     line-height: 0
 }
 
+/*End Algolia */
+
 /*# sourceMappingURL=docsearch.min.css.map */
 
 body.search-opened #search-container {
@@ -839,6 +841,9 @@ ul#results-container li a {
 #search-demo-container ul#results-container li ul li {
   /*float:left;*/
 }
+
+/* End Algolia */
+
 
 *:focus {
     outline: none;

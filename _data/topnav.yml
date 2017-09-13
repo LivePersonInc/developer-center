@@ -6,9 +6,9 @@ topnav:
     - title: Documents
       url: /documents.html
 
-- title: Products
+- title: Use Cases
   items:
-    - title: Products
+    - title: Use Cases
       url: /products.html
 
 - title: Bot Platform
