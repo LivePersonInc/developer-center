@@ -61,9 +61,8 @@ There are 2 authenticated connection methods:
 
 _Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
 
+{:start="2"}
  2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
-
-2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
 
 if you want to connect in an *unAuthenticated* way, you can pass null or an empty LPAuthenticationParams.
 
@@ -108,7 +107,7 @@ Same as [showConversation](android-showconversation.html){:target="_blank"} with
 
 ### hideConversation
 
-The hideConversation API hides the conversation activity. The conversation screen is shown again by calling Start Conversation.
+The hideConversation API hides the conversation activity. The conversation screen is shown again by calling showConversation.
 
 `public static void hideConversation(Activity activity)`
 
@@ -139,6 +138,7 @@ There are 2 authenticated connection methods:
 
 _Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
 
+{:start="X"}
  2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
 
 if you want to connect in an *unAuthenticated* way, you can pass null or an empty LPAuthenticationParams.
