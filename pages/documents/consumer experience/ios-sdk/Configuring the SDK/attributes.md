@@ -335,7 +335,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td align="left">urlRealTimePreviewBorderWidth</td>
-    <td align="left">CGFloat</td>
+    <td align="left">Float</td>
     <td align="left">The border width of the url real time preview </td>
     <td align="left"><img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth"></td>
     <td align="left"></td>
@@ -491,7 +491,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">sendButtonImage</td>
     <td align="left">UIImage</td>
-    <td align="left">Send button Image in the conversation screen. The custom image will be changed only if isSendMessageButtonInTextMode = false. the send button image need to follow the Custom Icon documention (https://developer.apple.com/ios/human-interface-guidelines/graphics/custom-icons/)</td>
+    <td align="left">Send button Image in the conversation screen. The custom image will be changed only if isSendMessageButtonInTextMode = false. the send button image need to follow the Custom Icon documention (https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/)</td>
     <td align="left"><img src="img/DefaultSendButton.png" alt="DefaultSendButton"></td>
     <td align="left">SDK bundle sendMessageIcon Icon</td>
   </tr>
@@ -878,21 +878,21 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   </tr>
   <tr>
     <td align="left">unreadMessagesCornersRadius</td>
-    <td align="left">CGFloat</td>
+    <td align="left">Float</td>
     <td align="left">Define the corners radius of the unread messages bubble.</td>
     <td align="left"><img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius"></td>
     <td align="left">8 for all the corners</td>
   </tr>
   <tr>
     <td align="left">scrollToBottomButtonCornerRadius</td>
-    <td align="left">CGFloat</td>
+    <td align="left">Float</td>
     <td align="left">Define the left top and the left bottom corners radius of the scroll down indicator.</td>
     <td align="left"><img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius"></td>
     <td align="left">8 for left top and the left bottom the corners</td>
   </tr>
   <tr>
     <td align="left">scrollToBottomButtonBadgeCornerRadius</td>
-    <td align="left">CGFloat</td>
+    <td align="left">Float</td>
     <td align="left">Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
     <td align="left"><img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"></td>
     <td align="left">8 for all the corners	</td>
