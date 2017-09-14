@@ -467,6 +467,10 @@ a:-webkit-any-link {
   padding: 12px 0px 12px 70px;
 }
 
+.searchhome .aa-input-icon {
+  display:none;
+}
+
 img.mockup{
   width: 430px;
 }
