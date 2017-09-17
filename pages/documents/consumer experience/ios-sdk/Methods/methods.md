@@ -263,6 +263,19 @@ Get current SDK version string.
 `func getSDKVersion() -> String?`
 
 
+### getInactiveUserInteractionTimeInterval
+
+Get inactive time in seconds from the last time the user touched the screen.
+If the screen is not active or the application is in background this api will return -1
+
+`func getInactiveUserInteractionTimeInterval(_ conversationQuery: ConversationParamProtocol) -> TimeInterval`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+
+
+
 ### printAllLocalizedKeys
 
 Prints all localized strings’ keys
