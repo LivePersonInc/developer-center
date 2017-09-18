@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Push Notification Service (iOS and Android)
 
-order: 30
+order: 50
 permalink: push-service-whitelist.html
 
 indicator: messaging
