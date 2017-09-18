@@ -44,7 +44,7 @@ This method is used to open the conversation screen.
 | :--- | :--- | :--- |
 | conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
-| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | |  
+| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
 
 ### removeConversation
 
@@ -95,8 +95,8 @@ This API call is used to open or close the SDK menu.
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| accountID | An account ID |
-| sender | An optional UIBarButtonItem to use for toggling the chat actions |
+| accountID | An account ID | -- |
+| sender | An optional UIBarButtonItem to use for toggling the chat actions | -- |
 
 ### checkActiveConversation
 
@@ -229,7 +229,7 @@ Add custom parameters about the user and set them for the messaging agent.
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 |lpuser | object is an instance of LPUser. | Example: let user = LPUser(firstName: "John", lastName: "Doe", profileImageURL: "URL of image", phoneNumber: "555-555555") |
-| brandId  | An account ID | |
+| brandId  | An account ID | -- |
 
 
 ### getAssignedAgent
@@ -253,8 +253,8 @@ Subscribe to log events (Trace, Debug, Info, Warning, Error). Each time a log ev
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
-| logEvent | The completion block will pass [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"} object which consists all the information for the log. |
+| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. | |
+| logEvent | The completion block will pass  [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"} object which consists all the information for the log. | To get text, use log.text |
 
 ### getSDKVersion
 
