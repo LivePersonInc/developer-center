@@ -16,4 +16,4 @@ To ensure that your communications infrastructure doesn’t block communication 
 
 The complete list of IP ranges can be found [here](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=configuring-your-firewall){:target="_blank"}.
 
-* **_Note: the LiveEngage push service works over standard port 443. Make sure that you enable connections to this port_**.
+**_Note: the LiveEngage push service works over standard port 443. Make sure that you enable connections to this port_**.
