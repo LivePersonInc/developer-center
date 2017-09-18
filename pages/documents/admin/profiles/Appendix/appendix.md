@@ -24,12 +24,14 @@ This section contains API details that are common to every API’s resource and 
 
 | Header        | Description | Notes |
 | :------       | :--------   | :--- |
+| Authorization | Contains token string to allow request authentication and authorization. | |
 
 
 ### Response Headers
 
 | Header        | Description | Notes |
 | :------       | :--------   |  :--- |
+| X-LP-Last-Modified | Contains timestamp data of last modified action. | Allows optimization of the backend resources utilization. | |
 
 
 ### Query Parameters
