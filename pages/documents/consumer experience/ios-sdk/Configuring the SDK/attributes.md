@@ -888,14 +888,14 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">Float</td>
     <td align="left">Define the left top and the left bottom corners radius of the scroll down indicator.</td>
     <td align="left"><img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius"></td>
-    <td align="left">8 for left top and the left bottom the corners</td>
+    <td align="left">20 for left top and the left bottom the corners</td>
   </tr>
   <tr>
     <td align="left">scrollToBottomButtonBadgeCornerRadius</td>
     <td align="left">Float</td>
     <td align="left">Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
     <td align="left"><img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"></td>
-    <td align="left">8 for all the corners	</td>
+    <td align="left">12 for all the corners	</td>
   </tr>
 </tbody>
 </table>
