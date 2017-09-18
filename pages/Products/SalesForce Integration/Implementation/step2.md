@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Configuring the LiveEngage App in Salesforce
 level1: Products
-level2: Agent Efficiency
+level2: 
 level3: SalesForce Integration
 level4: Implementation
 

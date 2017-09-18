@@ -1,7 +1,7 @@
 ---
 title: Develop Your Widget
 level1: Products
-level2: Agent Efficiency
+level2: 
 level3: KnowledgeBase Integration
 level4: Implementation
 

@@ -1,12 +1,13 @@
 .products {
   margin-top: 80px;
-  width: 73%;
+  width: 483px !important;
 }
 
 .container.products {
   padding-left: 10%;
-  padding-bottom: 24%;
   vertical-align: top;
+  margin-left:17px;
+  display:none;
 }
 
 html body div.container.products div.title {
@@ -31,7 +32,7 @@ html body div.container.products div.sub-title {
 
 html body div.container.products div.text{
     margin-bottom: 80px;
-    font-size: 0.866em;    
+    font-size: 0.866em;
     font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 html body div.container.products div.text a{

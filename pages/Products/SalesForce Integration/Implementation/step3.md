@@ -1,7 +1,7 @@
 ---
 title: Step 3 - Configuring the App’s Sync Process Settings
 level1: Products
-level2: Agent Efficiency
+level2: 
 level3: SalesForce Integration
 level4: Implementation
 

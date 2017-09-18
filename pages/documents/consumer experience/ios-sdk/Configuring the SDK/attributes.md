@@ -1506,7 +1506,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
     For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
-    <td align="left"><img src="img/structuredContentMapSpan.png" alt="structuredContentMapSpan"></td>
+    <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
   <tr>
@@ -1514,7 +1514,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
     For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
-    <td align="left"><img src="img/structuredContentMapSpan.png" alt="structuredContentMapSpan"></td>
+    <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
 </tbody>

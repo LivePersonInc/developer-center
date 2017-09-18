@@ -1,7 +1,7 @@
 ---
 title: Step 4 - Setting up the Widget in LiveEngage
 level1: Products
-level2: Agent Efficiency
+level2: 
 level3: SalesForce Integration
 level4: Implementation
 
