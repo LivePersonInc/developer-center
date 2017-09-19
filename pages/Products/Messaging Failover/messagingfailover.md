@@ -45,7 +45,7 @@ The Messaging Failover Solution is comprised of the Reminder Scheduler service, 
 
 Example .env file:
 
-`TWILIO_ACCOUNT_SID=
+TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
 LE_ACCOUNT=
 LE_CONSUMER_KEY=
@@ -54,7 +54,7 @@ LE_TOKEN=
 LE_TOKEN_SECRET=
 PORT=
 SMTP_USER=
-SMTP_PASS=`
+SMTP_PASS=
 
 {:start="3"}
 3. If you wish to set email notifications, you will need to set up a GMAIL account to function as your SMTP server. Set up a new GMAIL account, log into it, then in settings, click on the **Forwarding/IMAP** tab and scroll down to the **IMAP Access** section: IMAP must be enabled in order for emails to be properly copied to your sent folder.
@@ -80,5 +80,4 @@ $.get('https://messagingfailover.herokuapp.com/helpers/msghist/' + lpTag.site + 
 });
 ```
 
-
-Note that the service is not a complete turnkey solution,  but has baseline functionality for sending reminder messages by polling the Messaging Interactions API for Open conversations that are Pending Consumer response for X period of time. These polls can be configured by skill and channel (SMS, Email)
+Note that the service is not a complete turnkey solution,  but has baseline functionality for sending reminder messages by polling the Messaging Interactions API for open conversations that are pending consumer response for a certain period of time. These polls can be configured by skill and channel (SMS, Email).
