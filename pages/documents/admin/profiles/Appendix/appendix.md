@@ -60,7 +60,10 @@ This section contains API details that are common to every API’s resource and 
 | description | The profile’s description | String | Optional | |
 | roleTypeId | The profile role type ID | Integer | Required | 1 - Admin, 2 - Agent, 3 - Agent Manager, 4 - Campaign Manager |
 | dateUpdated | The last update profile change date  | Date (numbers) | Optional | The format: year-month-date hrs:min:sec |
-| numOfAssignedUsers | How many users assigned to the specific profile | Long | Optional | 
+| numOfAssignedUsers | How many users assigned to the specific profile | Long | Optional | |
+| permissionPackages | List of permission packages | List of type PermissionsPackageDto | | |
+| permissions | | | | |
+| isAssignedToLPA | | | | |
 
 
  
