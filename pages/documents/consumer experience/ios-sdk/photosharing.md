@@ -14,10 +14,10 @@ indicator: messaging
 
 This section describes the photo sharing behavior and configurations in the Messaging SDK.
 
-You can find all the related configurations in the [resources ID table](consumer-experience-ios-sdk-attributes.html), under Photo Sharing. 
+You can find all the related configurations in the [resources ID table](consumer-experience-ios-sdk-attributes.html), under Photo Sharing.
 
 *Notes*:
- 
+
 - *This feature is available only for the In-App Messaging SDK*.
 - *This features enables photo sharing only (not video/files).*
 - *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
@@ -27,8 +27,7 @@ You can find all the related configurations in the [resources ID table](consumer
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value `LPConfig.defaultConfiguration.enablePhotoSharing`
-By default this value is set to false. 
+To enable/disable photo sharing you can change the boolean value `LPConfig.defaultConfiguration.enablePhotoSharing` By default this value is set to false. **Note that since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account**.
 
 ### Upload Photo
 
@@ -40,10 +39,10 @@ A menu will open with 2 options: Photo Library and Camera.
 
 ![uploadphoto2](img/uploadphoto2.png)
 
-Changing the background color of attachment menu is available with configuration: 
+Changing the background color of attachment menu is available with configuration:
 `LPConfig.defaultConfiguration.photosharingMenuBackgroundColor`
 
-Changing the text of buttons: 
+Changing the text of buttons:
 `LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor`
 
 Changing the menu button's background color:
