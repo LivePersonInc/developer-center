@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Structured Content Templates
 
-level-order:
+level-order: 8
 order: 10
 permalink: structured-content-templates.html
 root-link: true
