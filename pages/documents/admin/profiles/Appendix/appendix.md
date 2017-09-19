@@ -58,12 +58,12 @@ This section contains API details that are common to every API’s resource and 
 | deleted | Whether the item is deleted or not | Boolean | Read only | |
 | name | Profile’s unique name | String | Required | |
 | description | The profile’s description | String | Optional | |
-| roleTypeId | The profile role type ID | Integer | Required | 1 - Admin, 2 - Agent, 3 - Agent Manager, 4 - Campaign Manager |
-| dateUpdated | The last update profile change date  | Date (numbers) | Optional | The format: year-month-date hrs:min:sec |
-| numOfAssignedUsers | How many users assigned to the specific profile | Long | Optional | |
-| permissionPackages | List of permission packages | List of type PermissionsPackageDto | | |
-| permissions | | | | |
-| isAssignedToLPA | | | | |
+| roleTypeId | The profile role type ID | Integer | Required | 1-Admin, 2-Agent, 3-Agent Manager, 4-Campaign Manager, 5-LPA |
+| dateUpdated | The last update profile change date  | Date (numbers) | Read only | The format: year-month-date hrs:min:sec |
+| numOfAssignedUsers | How many users assigned to the specific profile | Long | Read only | |
+| permissionPackages | List of permission packages | List of type PermissionsPackageDto | Required | |
+| permissions | Set of all permissions of specific profile | Set of Integers | | |
+| isAssignedToLPA | Whether the profile assigned to LPA user or not | Boolean | Required | |
 
 
  
@@ -71,8 +71,37 @@ This section contains API details that are common to every API’s resource and 
 ### Entity Example
 
 ```json
+   {
+  "id": 2338395712,
+  "isAssignedToLPA": false,
+  "roleTypeId": 1,
+  "roleTypeName": "Administrator",
+  "description": "",
+  "name": "new",
+  "permissions": [
+    3,
+    5,
+    1737,
+    1738
+  ],
+  "permissionPackages": [
     {
-
-       
+      "id": 10006,
+      "isDisplayed": true,
+      "featureKeys": [
+        "Common.Api_key_management"
+      ],
+      "isEnabled": true
+    },
+    {
+      "id": 10015,
+      "isDisplayed": true,
+      "featureKeys": [
+        "Common.AuditTrail"
+      ],
+      "isEnabled": true
+    }
+  "deleted": false,
+  "dateUpdated": "2017-09-19 16:29:28"
     }  
 ```
