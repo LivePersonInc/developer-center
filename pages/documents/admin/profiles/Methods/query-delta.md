@@ -103,7 +103,6 @@ All changes:
 
 **Response Body for All Changes Query:**
 {
-[
     {
         "revisionsCollection": [
             {
@@ -142,5 +141,4 @@ All changes:
         ],
         "siteId": "le23319211"
     }
-]
 }
