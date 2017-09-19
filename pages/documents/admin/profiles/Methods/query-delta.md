@@ -41,7 +41,7 @@ Delta:
         "parameters":[
             {
               "site": "qa34649454",
-              "revision": 26
+              "revision": 0
              }
         ]
     }
@@ -53,8 +53,8 @@ All changes:
         "parameters":[
             {
               "site": "qa34649454",
-              "from": 20,
-              "to": 23
+              "from": 0,
+              "to": 3
              }
         ]
     }
@@ -71,12 +71,74 @@ All changes:
 **Response Body For Delta Query:**
 
     {
-
-    }
+    "appDataList": [
+        {
+            "appName": "le-users",
+            "accountList": {
+                "accountList": [
+                    {
+                        "siteId": "le23319211",
+                        "itemsCollection": {
+                            "revision": 3,
+                            "items": [
+                                {
+                                    "id": 2336300512,
+                                    "deleted": false,
+                                    "loginName": "dorinea@liveperson.com"
+                                },
+                                {
+                                    "id": 2337419712,
+                                    "deleted": false,
+                                    "loginName": "dorine"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "appApiVersion": 1
+        }
+    ]
+}
 
 **Response Body for All Changes Query:**
-
-    {  
-   
+[
+    {
+        "revisionsCollection": [
+            {
+                "revision": 1,
+                "items": [
+                    {
+                        "id": 2336300512,
+                        "deleted": false,
+                        "loginName": "dorinea@liveperson.com"
+                    }
+                ],
+                "revisionDate": "2017-09-18 13:55:14"
+            },
+            {
+                "revision": 2,
+                "items": [
+                    {
+                        "id": 2336300512,
+                        "deleted": false,
+                        "loginName": "dorinea@liveperson.com"
+                    }
+                ],
+                "revisionDate": "2017-09-18 15:15:06"
+            },
+            {
+                "revision": 3,
+                "items": [
+                    {
+                        "id": 2337419712,
+                        "deleted": false,
+                        "loginName": "dorine"
+                    }
+                ],
+                "revisionDate": "2017-09-19 11:48:07"
+            }
+        ],
+        "siteId": "le23319211"
     }
-
+]
