@@ -2,7 +2,7 @@
 title: Specifications
 Keywords:
 level1: Documents
-level2:
+level2: Guides
 level3: Structured Content Templates
 
 level-order:
