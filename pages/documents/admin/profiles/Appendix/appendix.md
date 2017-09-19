@@ -103,5 +103,5 @@ This section contains API details that are common to every API’s resource and 
     }
   "deleted": false,
   "dateUpdated": "2017-09-19 16:29:28"
-    }  
+  }  
 ```
