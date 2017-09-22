@@ -43,7 +43,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* The Data Access API has no self-serve through LiveEngage. You will receive the keys from your account manager after the agreement is approved.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
