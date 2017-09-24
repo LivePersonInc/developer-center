@@ -120,7 +120,7 @@ mcs                  | Meaningful Connection Score of the conversation.         
 alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
-latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation was started, assigned to an agent or transferred to skill.                       | long       |
+latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation is started, assigned to an agent or transferred to a skill.                       | long       |
 latestSkillName      | Most recent skill name that the conversation was assigned to.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
 latestAgentLoginName | The agent's login name.                                                    | string     |
