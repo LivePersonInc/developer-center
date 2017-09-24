@@ -2,7 +2,7 @@
 title: Overview
 level1: Products
 level2: Channels
-level3: Text Notifications for Web Messaging Solution
+level3: Alternate Messaging Notifications
 
 order: 1
 level-order: 10
@@ -11,9 +11,9 @@ permalink: usecases-failover-badge.html
 indicator: messaging
 ---
 
-The Text Notifications for Web Messaging Solution is for brands that cannot deploy in-app messaging, but still need a method to remind their visitors when they have a new message from an agent that they haven’t read in a while. Normally, this need is serviced by push notifications; however, since web messaging does not by definition has such notifications, a different solution is needed. The proposed solution aims to retain web messaging visitors by alerting them of any unread messages if they do not come back to the website, whether via an email/SMS (which are configured via the solution UI) or via a badge notification on the website's engagement button.
+The Alternate Messaging Notifications Solution is for brands that cannot deploy in-app messaging, but still need a method to remind their visitors when they have a new message from an agent that they haven’t read in a while. Normally, this need is serviced by push notifications; however, since web messaging does not by definition has such notifications, a different solution is needed. The proposed solution aims to retain web messaging visitors by alerting them of any unread messages if they do not come back to the website, whether via an email/SMS (which are configured via the solution UI) or via a badge notification on the website's engagement button.
 
-This document will highlight the features of the Text Notifications for Web Messaging Solution as well as the badge notification API layer, as well as steps and requirements for deploying this solution.
+This document will highlight the features of the Alternate Messaging Notifications Solution as well as the badge notification API layer, as well as steps and requirements for deploying this solution.
 
 ### Prerequisites
 
@@ -29,7 +29,7 @@ The below solution assumes the following prerequisites are met:
 
 ### Technical Description
 
-The Text Notifications for Web Messaging Solution is comprised of the Reminder Scheduler service, the badge notification API (which uses the Messaging Interactions API), and a front-end UI for configuring notifications. Administrators configure the Reminder Scheduler service using the UI to send out email and/or SMS notifications to visitors that provide email and phone number information configuring when to send such a reminder, how the reminder is phrased and more.
+The Alternate Messaging Notifications Solution is comprised of the Reminder Scheduler service, the badge notification API (which uses the Messaging Interactions API), and a front-end UI for configuring notifications. Administrators configure the Reminder Scheduler service using the UI to send out email and/or SMS notifications to visitors that provide email and phone number information configuring when to send such a reminder, how the reminder is phrased and more.
 
 ### Deployment Steps
 
