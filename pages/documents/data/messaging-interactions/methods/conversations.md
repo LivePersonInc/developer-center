@@ -120,7 +120,7 @@ mcs                  | Meaningful Connection Score of the conversation.         
 alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
-latestSkillId        | Most recent skill id the conversation was assigned to.                       | long       |
+latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation is started, assigned to an agent or transferred to a skill.                       | long       |
 latestSkillName      | Most recent skill name that the conversation was assigned to.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
 latestAgentLoginName | The agent's login name.                                                    | string     |
@@ -236,6 +236,8 @@ agentFullName  | Full name of the agent assigned to the conversation.           
 time           | The time the agent was added to the conversation.                  | string     |
 timeL          | The time the agent was added to the conversation (in long format). | long       |
 role           | The agent's role in the conversation- assigned agent, manager etc. | string     |
+userType       | The id of the user type, can be one of the following:0, 1, 2       | String     |
+userTypeName   | The name of the user type,can be one of the following: System, Human or Bot            | String     |
 agentGroupId   | Agent's group ID.                                                  | long       |
 agentGroupName | The agent's group name.                                            | string     |
 permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"
