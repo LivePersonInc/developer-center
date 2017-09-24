@@ -168,7 +168,7 @@ This API may be used only when there is no active conversation. This API clears 
 | :--- | :--- | :--- |
 | conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-### logout
+### logout (Deprecated)
 
 This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
 
@@ -178,7 +178,25 @@ This method conducts the following:
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
 
-`func logout()`
+`func logout() (Deprecated)`
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping (_ success: Bool)->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
+
+### logout
+
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
+
+This method conducts the following:
+
+* Unregisters from the push notification service.
+* Clears all SDK persistent data.
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+`func logout(completion: @escaping (_ success: Bool)->(), failure: @escaping (_ error: Error)->())`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| Completion block | The completion block will pass true on successfully logout  | |
+| Failure block | The failure block will pass Error on failer logout ||  |
+
 
 ### destruct
 This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.
