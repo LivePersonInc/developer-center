@@ -1254,19 +1254,19 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_date_format&quot;&gt;</td>
-    <td>Define date format. More info here.</td>
+    <td>Define date format.</td>
     <td>No value</td>
     <td></td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_time_format&quot;&gt;</td>
-    <td>Define time format . More info here.</td>
+    <td>Define time format.</td>
     <td>No value</td>
     <td></td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_date_time_format&quot;&gt;</td>
-    <td>Define date-time format. More info here.</td>
+    <td>Define date-time format.</td>
     <td>No value</td>
     <td></td>
   </tr>
