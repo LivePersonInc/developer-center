@@ -62,7 +62,7 @@ In order to have a successful deployment of messaging within your iOS or Android
 
 Deployment of the in-app messaging SDK can have several functions and tasks.  In order to make the process easier for you, we recommend you make decisions on the following topics before beginning your deployment:
 
-* **Supported and Certified Devices: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"} to view the LiveEngage System Requirements document. Under "LiveEngage Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
+* **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"} to view the LiveEngage System Requirements document. Under "LiveEngage Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
 
 * **Authentication**: The most important and potentially most complex portion of your in-app messaging deployment can be the the authentication.  
 
