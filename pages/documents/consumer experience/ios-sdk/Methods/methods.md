@@ -238,6 +238,21 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 | notificationDelegate | An implementer of LPMessagingSDKNotificationDelegate. | |
 | alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-dev" string to the bundle ID.  |
 
+### getUnreadMessagesCount
+
+Getting the unread message badge counter
+There are two options to get this counter:
+1. If the time condition is met we are preforming a REST request to get it from pusher
+2. otherwise, return the cached number we have
+
+`func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
+| failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
+
 ### setUserProfile
 
 Add custom parameters about the user and set them for the messaging agent.
