@@ -190,6 +190,7 @@ This method conducts the following:
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+
 `func logout(completion: @escaping (_ success: Bool)->(), failure: @escaping (_ error: Error)->())`
 
 | Parameter | Description | Notes |
