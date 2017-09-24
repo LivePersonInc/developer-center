@@ -176,7 +176,7 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct).
 
 `func logout()`
 
@@ -219,6 +219,21 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 | token | A token that identifies the device to APNs. The token is an opaque data type because that is the form that the provider needs to submit to the APNs servers when it sends a notification to a device. | The APNs servers require a binary format for performance reasons. <br> This is the exact same dictionary as received in application:didRegisterForRemoteNotificationsWithDeviceToken: method |
 | notificationDelegate | An implementer of LPMessagingSDKNotificationDelegate. | |
 | alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-dev" string to the bundle ID.  |
+
+### getUnreadMessagesCount
+
+Getting the unread message badge counter
+There are two options to get this counter:
+1. If the time condition is met we are preforming a REST request to get it from pusher
+2. otherwise, return the cached number we have
+
+`func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
+| failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
 
 ### setUserProfile
 
