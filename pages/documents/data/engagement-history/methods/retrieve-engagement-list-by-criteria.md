@@ -1116,7 +1116,7 @@ Example:
 | lobId | ID of the line of business of the campaign. | alphanumeric | |
 | lobName | Name of the line of business of the campaign. | alphanumeric | |
 | lines | Lines of a specific chat. | container | |
-| lineStatuses | Contains a list of line statues reported by the agent/visitor for referring chat lines | container | |
+| lineStatuses | Contains a list of line statuses reported by the agent/visitor for referring chat lines | container | |
 | lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
 | time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
 | textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content |
