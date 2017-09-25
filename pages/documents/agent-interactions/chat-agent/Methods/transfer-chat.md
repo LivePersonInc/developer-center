@@ -12,7 +12,9 @@ permalink: agent-transfer-chat.html
 indicator: chat
 ---
 
-This method transfers a chat from an agent to a specific skill or agent. **Note**: before using this method, it is recommended to use the [Retrieve Available Skills method](agent-chat-agent-retrieve-skills.html){:target="_blank"}. This will allow you to make sure that you're transferring the chat to a skill that's currently available. Transferring the chat to a skill that is not available, will result in an error.
+This method transfers a chat from an agent to a specific skill or agent.
+
+**Note**: before using this method, it is recommended to use the [Retrieve Available Skills method](agent-chat-agent-retrieve-skills.html){:target="_blank"}. This will allow you to make sure that you're transferring the chat to a skill that's currently available. Transferring the chat to a skill that is not available, will result in an error.
 
 ### Request
 
