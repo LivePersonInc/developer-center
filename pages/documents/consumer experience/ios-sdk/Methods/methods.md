@@ -179,7 +179,7 @@ This method conducts the following:
 * Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
 
 `func logout() (Deprecated)`
-*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping (_ success: Bool)->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
 
 ### logout
 
@@ -191,11 +191,11 @@ This method conducts the following:
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
 
-`func logout(completion: @escaping (_ success: Bool)->(), failure: @escaping (_ error: Error)->())`
+`func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())`
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| Completion block | The completion block will pass true on successfully logout  | |
+| Completion block | The completion block will called on successfully logout  | |
 | Failure block | The failure block will pass Error on failer logout ||  |
 
 
