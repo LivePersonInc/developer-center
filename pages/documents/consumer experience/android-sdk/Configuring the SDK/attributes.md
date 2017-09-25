@@ -416,6 +416,28 @@ The goal of the following document is to enumerate the different fields controll
 </tbody>
 </table>
 
+### Automatic Messages
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;conversation_controller_message_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the automatic messages.</td>
+    <td>#5b5c5e (dark gray)</td>
+    <td><img src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller"></td>
+  </tr>
+</tbody>
+</table>
+
 
 ### Unread messages indicator Bubbles
 
