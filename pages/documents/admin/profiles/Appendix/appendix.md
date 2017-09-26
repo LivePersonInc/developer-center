@@ -18,6 +18,7 @@ This section contains API details that are common to every API’s resource and 
 
 | Title | Description |
 | :--------   | :--- |
+| Update attribute | Cannot update a single requested attribute. Need to add a body full of other attributes and if certain attributes are missing from the body, they will be deleted. |
 
 
 ### Request Headers
@@ -25,20 +26,20 @@ This section contains API details that are common to every API’s resource and 
 | Header        | Description | Notes |
 | :------       | :--------   | :--- |
 | Authorization | Contains token string to allow request authentication and authorization. | |
-
+| X-LP-Last-Modified | Contains timestamp data of last modified action. | Allows optimization of the backend resources utilization. | 
 
 ### Response Headers
 
 | Header        | Description | Notes |
 | :------       | :--------   |  :--- |
-| X-LP-Last-Modified | Contains timestamp data of last modified action. | Allows optimization of the backend resources utilization. | |
+| X-LP-Last-Modified | Contains timestamp data of last modified action. | Allows optimization of the backend resources utilization. | 
 
 
 ### Query Parameters
 
 | Header   | Description         | Type/Value                       | Required       | Notes |
 | :------  | :--------           | :----------                      | :---           | :--- |
-| v        | API version number  | Double. |  Required      |  Default Value: 2.0 (Most updated: v=4.0) |
+| v        | API version number  | Double. | v=4.0 | Required |
 | select | Dynamic selection of the response fields | Type: YOGA 'gdata' dialect. Non-existing field: no error, blank in response. Supported fields: Any in response body. **yoga GData dialect builder url: https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI | Optional |
 | include_deleted | Whether or not deleted items in the response are included | Default: false | Optional |
 
@@ -48,7 +49,7 @@ This section contains API details that are common to every API’s resource and 
 | Parameter | Description  | Type/Value |
 | :------   | :--------    | :-------- |
 | accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
-
+| profileId | Profile ID | Positive long number greater than zero |
 
 ### Entity Structure
 
@@ -64,7 +65,6 @@ This section contains API details that are common to every API’s resource and 
 | permissionPackages | List of permission packages | List of type PermissionsPackageDto | Required | |
 | permissions | Set of all permissions of specific profile | Set of Integers | | |
 | isAssignedToLPA | Whether the profile assigned to LPA user or not | Boolean | Required | |
-
 
  
 
