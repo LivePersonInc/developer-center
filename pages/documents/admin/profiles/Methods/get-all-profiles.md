@@ -29,7 +29,7 @@ This API retrieves a list of profiles for a specific account.
 
 **Request Body**
 
-[Appendix](administration-profilesappendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
 
 **Path Parameters**
 
