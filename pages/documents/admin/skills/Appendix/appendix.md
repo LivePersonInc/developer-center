@@ -67,7 +67,7 @@ This section contains API details that are common to every API’s resource and 
 | slaDefaultResponseTime | Default response time for all conversations in messaging per skill | Integer | Optional | |
 | slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | |
 | slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | |
-| lobsIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
+| lobIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
 
 ### Entity Example
 
