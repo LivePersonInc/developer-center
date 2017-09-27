@@ -1,7 +1,7 @@
 ---
-title: Watson and LiveEngage Reporting
+title: Reporting
 keywords:
-level1: Products
+level1: Use Cases
 level2: Channels
 level3: Watson with LiveEngage
 order: 30
