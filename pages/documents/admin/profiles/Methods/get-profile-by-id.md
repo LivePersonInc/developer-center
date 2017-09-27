@@ -3,7 +3,7 @@ title: Get profile by ID
 keywords:
 level1: Documents
 level2: Admin
-level3: Profile API
+level3: Profiles API
 level4: Methods
 
 
@@ -43,4 +43,3 @@ This API retrieves a single profile (by ID) for a specific account.
 **Response Body**
 
 Please see the [Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

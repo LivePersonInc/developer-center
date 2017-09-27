@@ -3,7 +3,7 @@ title: Delete Profiles
 keywords:
 level1: Documents
 level2: Admin
-level3: Profile API
+level3: Profiles API
 level4: Methods
 
 
@@ -36,11 +36,10 @@ This API deletes profiles from a specific account.
 
 | Parameter|  Description |Type / Value |
  |:----------- |  :------------- | :------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$| 
+ |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$|
 
 ### Response
 
 **Response Body**
 
 [Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

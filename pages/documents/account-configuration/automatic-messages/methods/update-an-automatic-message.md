@@ -30,11 +30,12 @@ Updates an existing Automatic Message for a specific account.
 
 The request body is able to accept single JSON object as shown below, or a JSON array of such objects.
 
+```json
     {
             "deleted":false,
             "enabled":true,
             "messageEventId":"On-hold message #1",
-            "templateId":"On-hold message #1", 
+            "templateId":"On-hold message #1",
             "data": [
                 {
                     "msg":"I'll be right with you.",
@@ -53,6 +54,7 @@ The request body is able to accept single JSON object as shown below, or a JSON 
                 }
             ]
     }
+    ```
 
 **Path Parameters**
 

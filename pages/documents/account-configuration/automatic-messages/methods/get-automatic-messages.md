@@ -33,6 +33,7 @@ Retrieves a list of Automatic Messages for a specific account.
 
 **Response Body**
 
+```json
     {
         {
             "id": 1,
@@ -49,7 +50,7 @@ Retrieves a list of Automatic Messages for a specific account.
                 {
                     "msg": "Que está conversando {nombre del agente}",
                     "lang": "ca-ES",
-                    "isDefault":true 
+                    "isDefault":true
                 }
             ]
         },
@@ -63,12 +64,12 @@ Retrieves a list of Automatic Messages for a specific account.
                 {
                     "msg": "I'll be right with you.",
                     "lang": "en-us",
-                    "isDefault":true 
+                    "isDefault":true
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
                     "lang": "ca-ES",
-                    "isDefault":false 
+                    "isDefault":false
                 }
             ],
             "attributes": [
@@ -79,3 +80,4 @@ Retrieves a list of Automatic Messages for a specific account.
             ]
         }
     {
+```
