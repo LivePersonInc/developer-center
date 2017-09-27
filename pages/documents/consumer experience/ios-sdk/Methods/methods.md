@@ -44,7 +44,7 @@ This method is used to open the conversation screen.
 | :--- | :--- | :--- |
 | conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
-| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | |  
+| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
 
 ### removeConversation
 
@@ -95,8 +95,8 @@ This API call is used to open or close the SDK menu.
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| accountID | An account ID |
-| sender | An optional UIBarButtonItem to use for toggling the chat actions |
+| accountID | An account ID | -- |
+| sender | An optional UIBarButtonItem to use for toggling the chat actions | -- |
 
 ### checkActiveConversation
 
@@ -178,7 +178,25 @@ This method conducts the following:
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
 
-`func logout()`
+`func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| Completion block | A completion block for successfully logout. | Completion block will be invoked only if all logout steps succeeded. |
+| Failure block | A failure block with a specified error for logout failure. | Failure block will be invoked if at least one of the logout steps has failed. |
+
+### logout (Deprecated)
+
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
+
+This method conducts the following:
+
+* Unregisters from the push notification service.
+* Clears all SDK persistent data.
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+
+`func logout() (Deprecated)`
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
 
 ### destruct
 This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.
@@ -220,6 +238,21 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 | notificationDelegate | An implementer of LPMessagingSDKNotificationDelegate. | |
 | alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-dev" string to the bundle ID.  |
 
+### getUnreadMessagesCount
+
+Getting the unread message badge counter
+There are two options to get this counter:
+1. If the time condition is met we are preforming a REST request to get it from pusher
+2. otherwise, return the cached number we have
+
+`func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
+| failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
+
 ### setUserProfile
 
 Add custom parameters about the user and set them for the messaging agent.
@@ -229,7 +262,7 @@ Add custom parameters about the user and set them for the messaging agent.
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 |lpuser | object is an instance of LPUser. | Example: let user = LPUser(firstName: "John", lastName: "Doe", profileImageURL: "URL of image", phoneNumber: "555-555555") |
-| brandId  | An account ID | |
+| brandId  | An account ID | -- |
 
 
 ### getAssignedAgent
@@ -253,14 +286,27 @@ Subscribe to log events (Trace, Debug, Info, Warning, Error). Each time a log ev
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
-| logEvent | The completion block will pass [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"} object which consists all the information for the log. |
+| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. | |
+| logEvent | The completion block will pass  [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"} object which consists all the information for the log. | To get text, use log.text |
 
 ### getSDKVersion
 
 Get current SDK version string.
 
 `func getSDKVersion() -> String?`
+
+
+### getInactiveUserInteractionTimeInterval
+
+Get inactive time in seconds from the last time the user touched the screen.
+If the screen is not active or the application is in background this api will return -1
+
+`func getInactiveUserInteractionTimeInterval(_ conversationQuery: ConversationParamProtocol) -> TimeInterval`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+
 
 
 ### printAllLocalizedKeys

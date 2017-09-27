@@ -31,43 +31,40 @@ LiveEngage In-App Messaging SDK for iOS supports multiple methods of installatio
 
 The SDK is also compatible with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
 
-1. Install cocoapods using the following command:
-
-`$ gem install cocoapods`
-
-{:start="2"}
-2. Navigate to your project folder and init new pod using the following command:
-
-`$ pod init`
-
-{:start="3"}
-3. Podfile should be created under your project’s folder.
-
+ 1. Install cocoapods using the following command:
+```
+	$ gem install cocoapods
+```
+ 2. Navigate to your project folder and init new pod using the following command:
+```
+	$ pod init
+```
+ 3. Podfile should be created under your project’s folder.
  To integrate Liveperson Messaging SDK into your Xcode project using CocoaPods, specify it in your Podfile:
-
 ```
-source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-platform :ios, '9.0'
-use_frameworks!
+	source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
+	platform :ios, '9.0'
+	use_frameworks!
 
-target '<Your Target Name>' do
-	pod 'LPMessagingSDK'
-end
+	target '<Your Target Name>' do
+	    pod 'LPMessagingSDK'
+	end
 ```
 
-{:start="4"}
-4. Run the following command in the terminal under your project folder:
-`$ pod install`
+ 4. Run the following command in the terminal under your project folder:
+```
+	$ pod install
+```
+ 5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
+```
+ $ pod update
+```
 
-{:start="5"}
-5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
+ 6. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.**
 
-`$ pod update`
-
-{:start="6"}
-6. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.**
-
-`bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"`
+	```
+	bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
+	```
 
 **_Option 2: Using Libraries Copy to Xcode Project_**
 
@@ -76,6 +73,14 @@ end
 2. Once downloaded, extract the ZIP file to a folder on your Mac.
 
 3. Copy (Drag and Drop) all framework and bundle files into the project.
+
+4. In project settings, navigate to the Build Phases tab, and make sure to have **LPMessagingSDKModels.bundle** under **Copy Bundle Resources**.
+
+5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
+
+```
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
+```
 
 
 ### Step 2: Configure project settings to connect LiveEngage SDK
@@ -95,16 +100,6 @@ In Xcode info.plist of the project, add two new privacy keys and values:
 <br>This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.
 Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.
 
-
-5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
-
-* If frameworks installed using CocoaPods, use the following script:
-
-`bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"`
-
-* If frameworks installed using copy to Xcode project, use the following script:
-
-`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"`
 
 ### Step 3: Initialization
 
