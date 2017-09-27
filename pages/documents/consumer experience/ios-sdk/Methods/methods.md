@@ -168,19 +168,6 @@ This API may be used only when there is no active conversation. This API clears 
 | :--- | :--- | :--- |
 | conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-### logout (Deprecated)
-
-This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
-
-This method conducts the following:
-
-* Unregisters from the push notification service.
-* Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
-
-`func logout() (Deprecated)`
-*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
-
 ### logout
 
 This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
@@ -195,9 +182,21 @@ This method conducts the following:
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| Completion block | The completion block will called on successfully logout  | |
-| Failure block | The failure block will pass Error on failer logout ||  |
+| Completion block | A completion block for successfully logout. | Completion block will be invoked only if all logout steps succeeded. |
+| Failure block | A failure block with a specified error for logout failure. | Failure block will be invoked if at least one of the logout steps has failed. |
 
+### logout (Deprecated)
+
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
+
+This method conducts the following:
+
+* Unregisters from the push notification service.
+* Clears all SDK persistent data.
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+
+`func logout() (Deprecated)`
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
 
 ### destruct
 This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.

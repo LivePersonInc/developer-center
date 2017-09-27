@@ -94,28 +94,32 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">remoteUserBubbleTopLeftCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">top left Radius corner on the Remote bubble.</td>
+    <td align="left"> Top left Radius corner on the Remote bubble.
+     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/remoteTopLeft.png" alt="remoteTopLeft"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleTopRightCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">top right Radius corner on the Remote bubble.</td>
+    <td align="left"> Top right Radius corner on the Remote bubble.
+     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/remoteTopRight.png" alt="remoteTopRight"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleBottomLeftCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">bottom left Radius corner on the Remote bubble.</td>
+    <td align="left"> Bottom left Radius corner on the Remote bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/remoteBottomLeft.png" alt="remoteBottomLeft"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleBottomRightCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">bottom right Radius corner on the Remote bubble.</td>
+    <td align="left"> Bottom right Radius corner on the Remote bubble.
+   Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/remoteBottomRight.png" alt="remoteBottomRight"></td>
     <td align="left">8</td>
   </tr>
@@ -199,28 +203,32 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">userBubbleTopLeftCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">top left Radius corner on the User bubble.</td>
+    <td align="left"> Top left Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userTopLeft.png" alt="userTopLeft"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">userBubbleTopRightCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">top right Radius corner on the User bubble.</td>
+    <td align="left"> Top right Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userTopRight.png" alt="userTopRight"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">userBubbleBottomLeftCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">bottom left Radius corner on the User bubble.</td>
+    <td align="left"> Bottom left Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userBottomLeft.png" alt="userBottomLeft"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">userBubbleBottomRightCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left">bottom right Radius corner on the User bubble.</td>
+    <td align="left"> Bottom right Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userBottomRight.png" alt="userBottomRight"></td>
     <td align="left">8</td>
   </tr>
