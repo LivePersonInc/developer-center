@@ -298,8 +298,8 @@ Get current SDK version string.
 
 ### getInactiveUserInteractionTimeInterval
 
-Get inactive time in seconds from the last time the user touched the screen.
-If the screen is not active or the application is in background this api will return -1
+Get Inactive time interval in seconds of the user's last touch on screen. This interval applies to scroll/messaging/action menus and any other general action on the conversation screen.
+If the screen is not active or the application is in the background this API will return -1.
 
 `func getInactiveUserInteractionTimeInterval(_ conversationQuery: ConversationParamProtocol) -> TimeInterval`
 
