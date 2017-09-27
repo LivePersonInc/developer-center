@@ -9,7 +9,7 @@ level-order: 8
 order: 10
 permalink: structured-content-templates.html
 root-link: true
-indicator: messaging
+indicator: both
 ---
 
 ### Overview
