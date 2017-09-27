@@ -2,7 +2,11 @@
 <div style="display:none;" id="resultOverlayRecordTemplate">
     <li><a href="{url}">{title} {level3}</a></li>
 </div>
+{% if page.title == "Developers' Community" %}
+<nav class="navbar navbar-inverse navbarhome navbar-fixed-top">
+{% else %}
 <nav class="navbar navbar-inverse navbar-fixed-top">
+{% endif %}
     <div class="container topnavlinks">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -63,7 +67,9 @@
                 {% endfor %}
 
             </ul>
-
+            {% if page.title == "Developers' Community" %}
+            <div class="hidesearch"> </div>
+            {% else %}
             <div class="aa-input-container" id="aa-input-container">
     <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search..." name="search" autocomplete="on" />
     <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
@@ -75,6 +81,7 @@
   </svg>
 </div>
 </div>
+{% endif %}
              <!--comment out this block if you want to hide search-->
 
                     <!--start search

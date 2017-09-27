@@ -13,8 +13,8 @@ topnav:
 
 - title: Bot Platform
   items:
-    - title: LiveEngage and Bots
-      url: /bot-platform.html
+    - title: Bot Platform
+      url: /bot-integration.html
 
 - title: Create a Developer Account
   items:

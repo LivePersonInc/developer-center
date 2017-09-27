@@ -36,7 +36,6 @@ protocol ConversationParamProtocol {
 ```javascript
 enum ConversationQueryType: String {
     case Brand = "Brand"
-    case BrandAndSkill = "BrandAndSkill"
     case Consumer = "Consumer"
 }
 ```

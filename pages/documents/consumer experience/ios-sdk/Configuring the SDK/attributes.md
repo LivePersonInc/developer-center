@@ -92,6 +92,38 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">0.3</td>
   </tr>
   <tr>
+    <td align="left">remoteUserBubbleTopLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top left Radius corner on the Remote bubble.
+     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteTopLeft.png" alt="remoteTopLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleTopRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top right Radius corner on the Remote bubble.
+     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteTopRight.png" alt="remoteTopRight"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleBottomLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom left Radius corner on the Remote bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteBottomLeft.png" alt="remoteBottomLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleBottomRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom right Radius corner on the Remote bubble.
+   Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteBottomRight.png" alt="remoteBottomRight"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
     <td align="left">userBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the visitor bubble.</td>
@@ -167,6 +199,38 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
     <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
     <td align="left">0.3</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleTopLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top left Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userTopLeft.png" alt="userTopLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleTopRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top right Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userTopRight.png" alt="userTopRight"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleBottomLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom left Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userBottomLeft.png" alt="userBottomLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleBottomRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom right Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userBottomRight.png" alt="userBottomRight"></td>
+    <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">bubbleEmailLinksRegex</td>
@@ -279,7 +343,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td align="left">urlRealTimePreviewBorderWidth</td>
-    <td align="left">CGFloat</td>
+    <td align="left">Float</td>
     <td align="left">The border width of the url real time preview </td>
     <td align="left"><img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth"></td>
     <td align="left"></td>
@@ -431,6 +495,13 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.</td>
     <td align="left"></td>
     <td align="left">#0362AC</td>
+  </tr>
+  <tr>
+    <td align="left">sendButtonImage</td>
+    <td align="left">UIImage</td>
+    <td align="left">Send button Image in the conversation screen. The custom image will be changed only if isSendMessageButtonInTextMode = false. the send button image need to follow the Custom Icon documention (https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/)</td>
+    <td align="left"><img src="img/DefaultSendButton.png" alt="DefaultSendButton"></td>
+    <td align="left">SDK bundle sendMessageIcon Icon</td>
   </tr>
   <tr>
     <td align="left">isSendMessageButtonInTextMode</td>
@@ -812,6 +883,27 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom button will scroll to bottom although we can have new messages and don't show the badge at all nor "new message preview"</td>
     <td align="left"></td>
     <td align="left">true</td>
+  </tr>
+  <tr>
+    <td align="left">unreadMessagesCornersRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Define the corners radius of the unread messages bubble.</td>
+    <td align="left"><img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius"></td>
+    <td align="left">8 for all the corners</td>
+  </tr>
+  <tr>
+    <td align="left">scrollToBottomButtonCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Define the left top and the left bottom corners radius of the scroll down indicator.</td>
+    <td align="left"><img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius"></td>
+    <td align="left">20 for left top and the left bottom the corners</td>
+  </tr>
+  <tr>
+    <td align="left">scrollToBottomButtonBadgeCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
+    <td align="left"><img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"></td>
+    <td align="left">12 for all the corners	</td>
   </tr>
 </tbody>
 </table>
@@ -1569,4 +1661,27 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
 </tbody>
 
+</table>
+
+### Controller message
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">controllerBubbleTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the controller bubble.</td>
+    <td align="left"><img alt="controller bubble text color"></td>
+    <td align="left">#5b5c5e</td>
+  </tr>
+</tbody>
 </table>

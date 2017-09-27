@@ -9,13 +9,17 @@ order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
-iOS Messaging SDK - Version 2.7.0
-=========================================
+### iOS Messaging SDK - Version 2.7.0
+
 These are the main feature releases available in the In-App Messaging SDK version 2.7 for iOS.
 Version 2.7 roll-out: September 3rd 2017
-## New functionalities
-### Structured content enablement (Beta)
+
+#### New functionalities
+
+##### Structured content enablement (Beta)
+
 ![StructuredContent](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/00-structuredContent.jpg)
 
 **This version of the SDK delivers structured content enablement only; the feature will be made fully productive in October.*
@@ -62,7 +66,7 @@ The following additional conditions and configurations are required:*
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | Yes | Yes | Yes | Yes | Yes |
 
-### Tablet split-screen supportability
+##### Tablet split-screen supportability
 ![TabletSplitScreen](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/01-tabletSplitScreen.jpg)
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, brands can enable tablet applications to host the conversation window within an application page, as a fragment for Android or viewcontroller for iOS.
 
@@ -77,7 +81,7 @@ The following additional conditions and configurations are required:*
 | N/A | N/A | N/A | N/A | N/A |
 
 
-### Connectivity status bar
+##### Connectivity status bar
 The connectivity status bar ensures consumers are always kept informed about the status of their connection, including:
 
  - Online/ Offline status
@@ -93,7 +97,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### Secure form branding enhancements
+##### Secure form branding enhancements
 To enable brands to adjust the secure form visuals to accurately reflect their brand experience, the following configurations are now available:
 
  - Secure form fonts
@@ -119,7 +123,7 @@ The following additional conditions and configurations are required*:
 | N/A | N/A | N/A | N/A | Yes |
 
 
-### Message selection
+##### Message selection
 When the consumer selects a message with a long tap, the background color of the message will change, to indicate to the user that it has been selected.
 The color of the selected message can be configured by the brand.
 
@@ -131,7 +135,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### App level DB encryption
+##### App level DB encryption
 To protect and encrypt conversation data in DB on the application level, Jailbroken iPhone conversation data in DB is now protected with an app level key for encryption. Every message is now encrypted and decrypted in RunTime.
 
 The following additional conditions and configurations are required*:
@@ -140,7 +144,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### View-only mode
+##### View-only mode
 The SDK now offers a new RunTime mode in addition to the edit mode, known as view-only mode. View-only mode means consumers can see the full conversation, but the keyboard and text input area are not displayed. In this mode, new messages can arrive, but the consumer will not be able to respond.
 This mode gives brands greater control over how consumers are able to use messaging within the brand’s app.
 Future SDKs will support additional modes.
@@ -155,7 +159,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### Photo sharing permissions callback
+##### Photo sharing permissions callback
 When a consumer shares photos during a conversation, a banner appears asking them to grant permission for the app to have access to their camera and/ or photo library.
 
 If the consumer refuses permission, the SDK sends a callback to the host app. Brands are then able to run a customized and branded banner with a second request for the consumer to grant the appropriate photo sharing permissions.
@@ -172,15 +176,18 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-*Key for items as follows:
+**Key for items as follows**:
+
 Backend update: This feature requires an update to the backend.
 Backend enablement: This feature requires items to be toggled on in the backend.
 Backend configuration: This feature requires configuration in the backend.
 SDK enablement: This feature requires items to be toggled on in the SDK.
 SDK configuration: This features requires items to be configured in the SDK.
 
-## New properties
-#### Structured content
+#### New properties
+
+##### Structured content
+
 The following properties for structured content can now be configured:
 
 | Name | Description | Default |
@@ -189,7 +196,7 @@ The following properties for structured content can now be configured:
 | structuredContentBubbleBorderColor: UIColor | Structured Content bubble border color. | #004dc9 |
 | enableStrucutredContent: Bool | Enable or Disable toggle for Structured Content feature in conversations. | false |
 
-#### Connectivity status bar
+##### Connectivity status bar
 The following properties for the connectivity status bar can now be configured:
 
 | Name | Description | Default |
@@ -199,7 +206,7 @@ The following properties for the connectivity status bar can now be configured:
 | connectionStatusFailedToConnectBackgroundColor: UIColor | Color code for the background of the connectivity status bar when connection fails.| #000000cc |
  | connectionStatusFailedToConnectTextColor: UIColor | Color code for the text of the connectivity status bar when connection fails.| UIColor.white |
 
-#### Secure form branding
+##### Secure form branding
 The following properties for the secure form branding can now be configured:
 
 | Name | Description | Default |
@@ -208,7 +215,7 @@ The following properties for the secure form branding can now be configured:
 | secureFormHideLogo: Bool | Hiding the secure form logo at the top of the form. | false |
 | secureFormBubbleLoadingIndicatorColor: UIColor | Secure form loading indicator color when loading the form before opening.| #46474a |
 
-#### Message selection branding
+##### Message selection branding
 The following properties for the user avatar can now be configured:
 
 | Name | Description | Default |
@@ -218,8 +225,8 @@ The following properties for the user avatar can now be configured:
 | userBubbleLongPressOverlayColor: UIColor | Color code for the background of the visitor bubble.| UIColor.black |
 | userBubbleLongPressOverlayAlpha: Float | Color code for the outline color.| 0.3 |
 
-## New classes
-#### LPConversationViewParams
+#### New classes
+##### LPConversationViewParams
 This class represents an object to determine the conversation mode, filter and container, for example, Container, Window or ViewOnly.
 
     class LPConversationViewParams: NSObject {
@@ -228,7 +235,7 @@ This class represents an object to determine the conversation mode, filter and c
      	var isViewOnly = false
     }
 
-#### LPAuthenticationParams
+##### LPAuthenticationParams
 This class represents an object to determine the properties of an authenticated connection. If using an authenticated connection, this parameter must be passed: LPAuthenticationParams supports Code Flow login or Implicit Flow login. For Implicit Flow, pass 'jwt' parameter only. For Code Flow, pass 'authCode' and 'redirectURI' only.
 
     class LPAuthenticationParams: NSObject {
@@ -237,14 +244,14 @@ This class represents an object to determine the properties of an authenticated 
      	var redirectURI: String? // Code Flow authentication
     }
 
-## New APIs
-#### View-only API
+#### New APIs
+##### View-only API
 
     func showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)
 
 This method is used to open the conversation screen.
 
-#### New reconnect API
+##### New reconnect API
 
     func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams
 
@@ -252,7 +259,7 @@ When using SSO in an authenticated connection, an auth-code is passed to the SDK
 
 This method reconnects the conversation's connection for a conversation query and reconnects open related webSockets and sync the conversation with its latest updates.
 
-## Deprecated APIs
+#### Deprecated APIs
 ```
   func showConversation(_ conversationQuery: ConversationParamProtocol, authenticationCode: String? = nil, containerViewController: UIViewController? = nil)
 ```
@@ -266,33 +273,33 @@ Use showConversation(_ conversationViewParams: LPConversationViewParams, authent
 This method was deprecated since SDK version 2.7.0.
 Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams]
 
-## New callbacks
-#### Photo sharing permissions callback
+#### New callbacks
+##### Photo sharing permissions callback
 
     optional func LPMessagingSDKUserDeniedPermission(_ permissionType: LPPermissionTypes)
 
-#### CSAT launched callback
+##### CSAT launched callback
 
        optional func LPMessagingSDKConversationCSATDidLoad(_ conversationID: String?)
 
-#### CSAT skipped callback
+##### CSAT skipped callback
 
        optional func LPMessagingSDKConversationCSATSkipped(_ conversationID: String?)
 
-## New strings
-#### Structured content
+#### New strings
+##### Structured content
 
     "newStructuredContentMessage" = "New message";
     "structuredContentAccessibilityMap" = "Map";
 
-#### Connectivity status bar
+##### Connectivity status bar
 
     "connectionStatusBarConnecting" = "Connecting...";
     "connectionStatusBarStillConnecting" = "Still connecting...";
     "connectionStatusBarFailedToConnect" = "Failed to connect to the server.";
 
 
-#### Accessibility
+##### Accessibility
 
     "structuredContentAccessibilityMap" = "Map";
 
@@ -303,9 +310,9 @@ These are the main feature releases available in the In-App Messaging SDK versio
 
 Version 2.5 roll-out: July 2nd 2017
 
-### New functionalities
+##### New functionalities
 
-### Custom fonts
+##### Custom fonts
 
 in order for consumers to enjoy the full brand experience while messaging in-app, brands are able to configure certified operating system fonts to appear in the messaging window. The fonts can be used across all elements, or only for the font within the message bubble.
 
@@ -327,7 +334,7 @@ Custom fonts are not supported for Native iOS properties such as:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-### Tablet supportability
+##### Tablet supportability
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
@@ -338,7 +345,7 @@ All supported devices have gone through automation tests and all certified devic
 
 A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
 
-### Connectivity improvements
+##### Connectivity improvements
 The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
 
 In addition, other aspects such as feature and conversation history will also be more rapid as a result of the improvements.
@@ -349,7 +356,7 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-### Default Agent Avatar
+##### Default Agent Avatar
 The SDK now offers brands a to use a default agent avatar of their own.
 
 Related properties: User avatar
@@ -367,7 +374,7 @@ Backend configuration: This feature requires configuration in the backend.
 SDK enablement: This feature requires items to be toggled on in the SDK.
 SDK configuration: This features requires items to be configured in the SDK.
 
-### Photo Sharing Button Colors
+##### Photo Sharing Button Colors
 Brands now have the ability to set camera button colors in addition to the Send button colors.
 
 Related properties: Photo sharing
@@ -378,17 +385,17 @@ The following additional conditions and configurations are required*:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-## New properties
+#### New properties
 The following properties of the secure form bubble on the agent side can now be configured:
 
-#### Custom Fonts
+##### Custom Fonts
 
 | Name | Description  | Example | Default |
 | ------------ | ------------ | ------------ | ------------ |
 | customFontNameConversationFeed: String? = nil | The font name for all elements of the conversation feed. | ![CustomFonts](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/customFontConversationFeed.png) | Empty (use the device font) |
 | customFontNameNonConversationFeed: String? = nil | The font name for all elements that are not in the conversation feed. | ![CustomFonts](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/customFontNonConvrsationFeed.png) | Empty (use the device font) |
 
-#### Photo Sharing
+##### Photo Sharing
 Configuring Camera's button colors
 
 | Name | Description | Example | Default |
@@ -396,14 +403,14 @@ Configuring Camera's button colors
 | cameraButtonEnabledColor | The camera button color when in enabled mode in the conversation screen. The button will be presented only if the photo sharing feature is enabled. | ![CameraColor](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/cameraButtonEnabledColor.png) | #0362AC |
 | cameraButtonDisabledColor | The camera button color when in disabled mode in the conversation screen. The button will be presented only if the photo sharing feature is enabled. | ![CameraColor](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/cameraButtonEnabledColor.png) | #8B8A8F |
 
-#### User Avatar
+##### User Avatar
 
 | Name  | Description  | Default  |
 | ------------ | ------------ | ------------ |
 | remoteUserDefaultAvatarImage | The default avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations. If the remote user has an avatar image in his profile, this attribute will be ignored. | nil |
 
 
-### In-App Messaging SDK Version 2.3.1
+## In-App Messaging SDK Version 2.3.1
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
@@ -419,7 +426,7 @@ The following capability which was first introduced in v2.3 has been disabled to
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for iOS**.
 
 
-#### iOS Developer Enhancements
+##### iOS Developer Enhancements
 
 The LiveEngage in-app SDK is fully compatible with the most recent versions of Apple’s developer tools, XCode 8.3 and Swift 3.1.
 
@@ -460,7 +467,7 @@ bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks
 ```
 
 
-#### Secure form for in-app messaging
+##### Secure form for in-app messaging
 
 
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations.
@@ -475,7 +482,7 @@ _This feature requires consulting services support. For more information, please
 **Related strings**: PCI
 
 
-#### List of certified and supported devices extended
+##### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
@@ -498,29 +505,26 @@ The following devices are now also supported and/or certified to host our in-app
 
 
 
-### Presence enablement for photo sharing - beta*
+##### Presence enablement for photo sharing - beta*
 Presence enablement for photo sharing provides consumers with the ability to receive notifications while uploading a photo, whether they remain within the app or keep it running in the background.
 
 The Web Socket remains open for a maximum of 60 seconds (using Background Task) when the app or conversation window moves to the background. This scenario is also applicable for non photo sharing flows.
 
-*Photo sharing is a beta feature.
-
-
-
+*Photo sharing is a beta feature*.
 
 ### In-App Messaging SDK Version 2.0
 
 These are the main feature releases available in the In-App Messaging SDK version 2.0.
 
 
-#### Photo sharing for iOS and Android (Beta)
+##### Photo sharing for iOS and Android (Beta)
 
 Consumers can now add photos directly into a messaging conversation, enabling them to describe an item and share it with their agent. Photo sharing supports multiple image sizes, and all shared images are logged in All Connections. This feature is available for Facebook messenger, web messaging, and in-app messaging, on both Android and iOS.
 
 ![Release Notes Photo Sharing](img/releasenotessharing.png)
 
 
-#### Accessibility for messaging
+##### Accessibility for messaging
 
 
 The In-App Messaging SDK now supports accessibility WCAG Level A and Level AA and CATO.
@@ -528,7 +532,7 @@ The In-App Messaging SDK now supports accessibility WCAG Level A and Level AA an
 ![Release Note Accessibility](img/releasenotesaccessibility.png)
 
 
-#### Configure regular expressions to create hyperlinks in messages
+##### Configure regular expressions to create hyperlinks in messages
 
 
 Brands can now configure their own regular expressions to create hyperlinks which link directly to relevant pages or actions.
@@ -542,7 +546,7 @@ Expressions can be configured for the following commands:
 ![Release Notes Hyperlinks](img/releasenotes1.png)
 
 
-#### In-conversation shortcut to new messages
+##### In-conversation shortcut to new messages
 
 
 A shortcut can now be configured to appear within the conversation when there are new messages available. This saves the consumer time when scrolling within messaging conversations. Clicking on the shortcut navigates the visitor straight to the new messages so they can quickly and easily continue the conversation.
@@ -550,7 +554,7 @@ A shortcut can now be configured to appear within the conversation when there ar
 ![Release Note In-conversation](img/releasenotesinconversation.png)
 
 
-#### Set icon for send button
+##### Set icon for send button
 
 
 Brands now have the ability to replace the Send button in a messaging conversation with a paper plane (Android) or arrow (iOS). This icon can be customized to match the brand’s colors.
@@ -558,7 +562,7 @@ Brands now have the ability to replace the Send button in a messaging conversati
 ![Release Notes Set Icon](img/releasenotesseticon.png)
 
 
-#### Link preview within conversation
+##### Link preview within conversation
 
 
 When sending a link within an in-app messaging conversation, a preview of the link page will display within the thread, giving the consumer a useful overview of the link content.
@@ -566,7 +570,7 @@ When sending a link within an in-app messaging conversation, a preview of the li
 ![Release Notes Link Preview](img/releasenoteslinkpreview.png)
 
 
-#### Ability to remove resolved divider in thread
+##### Ability to remove resolved divider in thread
 
 
 Brands are now able to configure the removal of the resolved divider within a thread. The divider usually appears underneath the system message noting that the conversation has been resolved. This creates the feel of one ongoing, undisrupted conversation for consumers using messaging.
@@ -574,7 +578,7 @@ Brands are now able to configure the removal of the resolved divider within a th
 ![Release Notes Ability to Remove](img/releasenotesability1.png) ![Release Notes Ability to Remove](img/releasenotesability2.png)
 
 
-#### Add callback to SDK for agent picture click
+##### Add callback to SDK for agent picture click
 
 
 In order to provide brands with greater insight into consumer activity within the messaging window, LiveEngage will provide a callback when a consumer clicks on the agent’s picture in the conversation. The brand can then decide what action they would like to take, for example opening an agent profile or enlarging the picture.
@@ -582,7 +586,7 @@ In order to provide brands with greater insight into consumer activity within th
 ![Release Notes Add Callback](img/releasenotescallback.png)
 
 
-#### Enhancement: Configure CSAT Timeout
+##### Enhancement: Configure CSAT Timeout
 
 
 Brands can now configure for how long a CSAT form will be displayed to the consumer after the messaging conversation is resolved by the agent. This applies to consumers who exit the conversation before it is resolved.

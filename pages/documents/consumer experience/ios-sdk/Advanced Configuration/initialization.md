@@ -23,6 +23,5 @@ In order to get started and initialize the In-App Messaging SDK, utilize the fol
 
 ### Supporting functions:
   1. `public func getConversationBrandQuery(brandID: String) -> ConversationParamProtocol  `
-  2. `public func getConversationBrandAndSkillQuery(brandID: String, skillID: String) -> ConversationParamProtocol ` 
-  3. `public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol  `
-  4. `public func isBrandReady(brandID: String) -> Bool  `
+  2. `public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol  `
+  3. `public func isBrandReady(brandID: String) -> Bool  `
