@@ -14,7 +14,7 @@ indicator: messaging
 The API consists of two types of calls:
 
 * Peripheral APIs - Domains Discovery, Token creation, Agent Profile, etc. In most cases these calls are done using REST.
-* Messaging API - In this API, the WebSocket connection should be established. 
+* Messaging API - In this API, the WebSocket connection should be established.
 
 ### Messaging API WebSocket Connection
 
@@ -25,7 +25,7 @@ Refer to the [Getting Started](consumer-int-getting-started.html){:target="_blan
 The server will close any idle connection. In order to keep the connection open, the client should send a message every 60 seconds. For this purpose, the client can use one of the following:
 
 * Websocket Ping/Pong Mechanism
-* For clients that cannot send Ping messages (such as browsers): Utilize the applicative ``.GetClock`` request: ```{"kind":"req","id":"1","type":".GetClock"}```.
+* For clients that cannot send Ping messages (such as browsers): Utilize the applicative ``GetClock`` request: ```{"kind":"req","id":"1","type":"GetClock"}```.
 
 ###  Error Handling
 Upon disconnection, the client will receive a standard status code as defined by [rfc6455](https://tools.ietf.org/html/rfc6455#section-7.4){:target="_blank"}. Two custom status codes are used by the API:
@@ -68,7 +68,7 @@ Every message has a type. The structure of the body of the message can be change
 	"id" : "hsjshka8162s",
 	"body" : { "ttrDefName" : "NORMAL" }
 }
-``` 
+```
 
 ###  Responses
 Responses should be sent with some kind of correlation to the request that they are answering. For this purpose, every request message must state the ``id`` string for the request. The server will reply with the same ``id`` in the response message as the value of the ``reqId`` field in the top level JSON object of the response message. Below is an example of a response message to the request from the above section:
@@ -84,10 +84,10 @@ Responses should be sent with some kind of correlation to the request that they 
 ```
 
 The response message will also contain a ``code`` field. This field will be populated with the status code of the request. The values of this field will be taken from the [HTTP Semantics](https://tools.ietf.org/html/rfc7231){:target="_blank"}.
- 
+
 ###  Subscriptions
 
-In this pattern the client has to send some kind of request message to the server. In response, it will receive a response message with a success indication and a subscription ID. Following this, the server will start sending notifications with the subscription ID. 
+In this pattern the client has to send some kind of request message to the server. In response, it will receive a response message with a success indication and a subscription ID. Following this, the server will start sending notifications with the subscription ID.
 
 ### API Client Requirements
 
@@ -121,7 +121,7 @@ The user may now want to [continue an existing conversation](#continue-an-existi
 In the initation process, the client got the conversation list, including the existing conversation (with ``OPEN`` state). To enable the consumer to continue this conversation, the client should do the following:
 
 1. Subscribe to the conversation messaging events. If the client already has some of the messages of this conversation in its memory, it may want to subscribe only to the last messages sequence. This is to avoid sending over the network all the messages it already has.
-2. Receive notifications about the events of this conversation from the server. 
+2. Receive notifications about the events of this conversation from the server.
 	1. Text messages should be added to the presentation, ordered by their sequence.
 	2. Read/Accept events should add a graphical indication next to the text message they are referring to.
 3. Keep receiving notifications from the server about new events currently being published by the other side.
@@ -140,7 +140,7 @@ The client should continue as described above for an [existing conversation](#co
 
 ###  Finish a conversation
 
-The conversation can be closed either by the agent or by the consumer. 
+The conversation can be closed either by the agent or by the consumer.
 
 If the consumer wants to close the conversation by themselves, the client must send a request to update the conversation metadata and set the ``state`` to ``close``. This can also be done by the agent.
 
