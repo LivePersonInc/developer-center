@@ -15,6 +15,7 @@ indicator: messaging
 
 These are the main feature releases available in the In-App Messaging SDK version 2.7 for iOS.
 Version 2.7 roll-out: September 3rd 2017
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.9.pdf){:target="_blank"}
 
 #### New functionalities
 
@@ -309,6 +310,8 @@ Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPara
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
 
 Version 2.5 roll-out: July 2nd 2017
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
+
 
 ##### New functionalities
 
@@ -423,6 +426,9 @@ The following capability which was first introduced in v2.3 has been disabled to
 
 ### In-App Messaging SDK Version 2.3.0
 
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
+
+
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for iOS**.
 
 
@@ -513,6 +519,9 @@ The Web Socket remains open for a maximum of 60 seconds (using Background Task) 
 *Photo sharing is a beta feature*.
 
 ### In-App Messaging SDK Version 2.0
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf){:target="_blank"}
+
 
 These are the main feature releases available in the In-App Messaging SDK version 2.0.
 

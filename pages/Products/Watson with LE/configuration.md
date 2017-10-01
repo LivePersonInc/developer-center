@@ -4,71 +4,10 @@ keywords:
 level1: Use Cases
 level2: Channels
 level3: Watson with LiveEngage
-order: 25
-permalink: watson-how-it-works.html
+order: 27
+permalink: watson-configuration.html
 indicator: messaging
 ---
-
-### Prerequisites
-
-The following steps need to be taken prior to configuring the Watson connector with LiveEngage:
-
-1. **Setup Watson:** The Watson Virtual Agent (WVA) should be setup and configured (via IBM Global Business Service or a certified LivePerson professional service engineer).
-
-2. **Define your bot persona:** You will need to develop a persona, name and avatar for the bot, to match your understanding of your consumer’s needs and the brand experience you want to communicate via the bot.
-
-3. **Enable LiveEngage account**: Messaging must be preconfigured on your account, along with the messaging channels you wish to use. LiveEngage offers in-app messaging, web messaging and messaging via Facebook, SMS and Google My Business. Please contact your LivePerson account team to ensure messaging and Watson are fully enabled on your account.
-
-4. **Auto messages & Predefined Content:** You will need to define appropriate text for auto messages and predefined content, to ensure the consumer experience when communicating with a bot is as well-informed and seamless as possible.
-
-5. **Define routing logic:** In order to assign incoming conversations from the mapped bot journies to the bot skill, the brand should work with LivePerson CS to configure automatic skill selection.
-
-## Step 1: Planning
-
-### Define a vision for your Watson implementation strategy
-
-#### Set goals
-
-Brands must first define their business-driven vision for adding Watson to their contact center operations, by defining their business goals. These may include:
-
-* Decreasing operational costs
-
-* Enhancing the customer experience and increasing customer satisfaction
-
-* Increasing agent efficiency
-
-* Reducing agent attrition and boosting agent satisfaction
-
-#### Determine metrics
-
-Defining your goals for Watson should also lead you to determine what metrics you will use to measure the impact and success of your bot operations, and thereby deciding what a successful Watson deployment would look like for your contact center. This can include CSAT, NPS and MCS target KPIs, as well as for transfer or containment rates, and agent retention.  
-
-#### Map use cases
-
-Watson is most effective when handling simple and automatic tasks; those that can make the biggest difference to the workload of your human agents once Watson takes them over. It’s important to take the time to map these use cases effectively to determine which tasks will be the most appropriate for Watson to handle. Consider questions such as:
-
-* Evaluate the most common inquiries you handle from your consumers and determine if they are suitable for automation, or example, password reset, checking order status, account balance.
-
-    * A transcript analysis of your chat and messaging conversations can help you to understand your top queries.
-
-* Run a topic analysis on your conversations. LivePerson offers a specialized analytics service on natural language conversations - LivePerson Insights - that can be very useful in identifying topics for Watson’s actions.  
-
-#### Assess customer feedback
-
-LivePerson can help you to conduct user acceptance testing and validation to assess how consumers respond to journeys involving Watson, such as the following considerations:
-
-* Are customers aware they are chatting with a bot? What is their reaction?
-
-* How do they respond to terms such as virtual agent, Watson or bot?
-
-* What is their response to being transferred to a human?
-
-* Are your mapped use cases working? Are consumers behaving as you would expect?
-
-Committing to Watson as an agent in your enterprise contact center should occur in stages over a long term project. It is recommended to start small in order to check performance and business impact and scale slowly.  
-
-## Step 2: Configuring Watson with LiveEngage
-
 ### Bot as an agent setup
 
 For Watson to perform like any other human agent in your contact center team, we need to ensure LiveEngage is facilitating operational management and efficiency for Watson as an agent. As an agent user, Watson acts as an agent / agent manager with all the relevant permissions. It can also be tracked and managed in the same way as any other human agent. To enable automation, the bot user will be able to login automatically.

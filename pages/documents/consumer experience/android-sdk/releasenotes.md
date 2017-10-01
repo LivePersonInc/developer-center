@@ -16,6 +16,8 @@ indicator: messaging
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
 
 Version 2.5 roll-out: July 2nd 2017
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
+
 
 ### New functionalities
 
@@ -123,6 +125,9 @@ The following properties of the secure form bubble on the agent side can now be 
 
 ### In-App Messaging SDK version 2.3 for Android
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
+
 
 
 #### Presence enablement for photo sharing - beta
