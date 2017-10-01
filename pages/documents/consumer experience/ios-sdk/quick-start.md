@@ -19,8 +19,8 @@ This Quick Start will quickly get you up and running with a project powered by L
 
 To use the LivePerson In-App Messaging SDK, the following are required:
 
-* XCode 8.3 or later
-* Swift 3.1 or later, or Objective-C
+* XCode 9.0 or later
+* Swift 4.0 (sample compiler as 3.2) or later, or Objective-C
 
 _Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"}._
 
