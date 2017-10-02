@@ -16,6 +16,7 @@ indicator: messaging
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
 
 Version 2.5 roll-out: July 2nd 2017
+
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
 
 
