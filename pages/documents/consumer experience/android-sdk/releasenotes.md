@@ -122,6 +122,7 @@ The following messages remain in the SDK:
 * Conversation resolved message
 
 The following additional conditions and configurations are required:
+
 |Backend update |Backend enablement|Backend configuration|SDK enablement|SDK configuration|
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| Yes| Yes| Yes| Yes|
@@ -156,6 +157,7 @@ There are two options to set up this counter:
 **Related​ ​API**:​ Unread messages badge API
 
 The following additional conditions and configurations are required:
+
 |Backend update |Backend enablement|Backend configuration|SDK enablement|SDK configuration|
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| No| No| No| Yes|
