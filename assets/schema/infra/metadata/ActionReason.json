@@ -1,0 +1,21 @@
+{
+    "description": "Reason information while the conversation is being escalated by a bot to a human agent",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "type": {
+            "enum": ["ActionReason"],
+            "default": "ActionReason",
+            "type": "string"
+        },
+        "reasonId": {
+            "maxLength": 64,
+            "type": "string"
+        },
+        "reason": {
+            "maxLength": 64,
+            "type": "string"
+        }
+    },
+    "required" : ["type"] 
+}

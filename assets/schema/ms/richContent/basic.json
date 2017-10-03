@@ -1,0 +1,159 @@
+{            
+    "allOf": [{
+            "type": "object",
+            "properties": {
+                "rtl": {
+                    "type": "boolean"
+                },
+                "tooltip": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "style": {
+                    "$ref": "style.json"
+                },
+                "click": {
+                    "type": "object",
+                    "properties": {
+                        "actions": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "action.json",
+                                "maxLength": 4
+                            }
+                        },
+                        "metadata": {
+                            "$ref":"../../infra/metadata/Metadata.json"
+                        }
+                    }
+                }
+            },
+            "required": ["type"]
+        },
+        {
+            "oneOf": [{
+                    "type": "object",
+                    "title": "text",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["text"],
+                            "default": "text",
+                            "readonly": true
+                        },
+                        "text": {
+                            "type": "string",
+                            "maxLength": 5000
+                        }
+                    },
+                    "required": ["text"]
+                }, {
+                    "type": "object",
+                    "title": "image",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["image"],
+                            "default": "image",
+                            "readonly": true
+                        },
+                        "caption": {
+                            "type": "string",
+                            "maxLength": 128
+                        },
+                        "url": {
+                            "type": "string",
+                            "maxLength": 2048
+                        }
+                    },
+                    "required": ["url"]
+                }, {
+                    "type": "object",
+                    "title": "button",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["button"],
+                            "default": "button",
+                            "readonly": true
+                        },
+                        "title": {
+                            "type": "string",
+                            "maxLength": 128
+                        }
+                    },
+                    "required": ["title"]
+                }, {
+                    "type": "object",
+                    "title": "map",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["map"],
+                            "default": "map",
+                            "readonly": true
+                        },
+                        "lo": {
+                            "type": "number"
+                        },
+                        "la": {
+                            "type": "number"
+                        }
+                    },
+                    "required": ["lo", "la"]
+                }, {
+                    "type": "object",
+                    "title": "linkPreview",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["linkPreview"],
+                            "default": "linkPreview",
+                            "readonly": true
+                        },
+                        "url": {
+                            "type": "string",
+                            "maxLength": 2048
+                        },
+                        "title": {
+                            "type": "string",
+                            "maxLength": 128
+                        }
+                    },
+                    "required": ["url"]
+                }, {
+                    "type": "object",
+                    "title": "template",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["template"],
+                            "default": "template",
+                            "readonly": true
+                        },
+                        "templateType": {
+                            "type": "string",
+                            "enum": ["quickReply"],
+                            "default": "quickReply",
+                            "readonly": true
+                        },
+                        "title": {
+                            "type": "string",
+                            "maxLength": 5000
+                        },
+                        "resp": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "maxLength": 128
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": ["templateType", "title", "resp"]
+                }]
+        }
+    ]
+}

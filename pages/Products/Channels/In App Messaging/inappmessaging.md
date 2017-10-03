@@ -1,6 +1,6 @@
 ---
 title: Add Messaging to your app
-level1: Products
+level1: Solutions
 level2: Channels
 level3: In-App Messaging
 

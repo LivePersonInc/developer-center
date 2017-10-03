@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "bold": {
+            "type": "boolean"
+        },
+        "italic": {
+            "type": "boolean"
+        },
+        "color": {
+            "type": "string",
+            "format": "color"
+        },
+        "size": {
+            "type": "string",
+            "enum": ["small", "medium", "large"]
+        }
+    }
+}

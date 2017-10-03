@@ -1,6 +1,6 @@
 ---
 title: Automatically Update Predefined Content
-level1: Products
+level1: Solutions
 level2:
 level3: Predefined Content
 

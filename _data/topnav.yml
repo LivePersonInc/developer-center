@@ -6,10 +6,10 @@ topnav:
     - title: Documents
       url: /documents.html
 
-- title: Use Cases
+- title: Solutions
   items:
-    - title: Use Cases
-      url: /usecases.html
+    - title: Solutions
+      url: /solutions.html
 
 - title: Bot Platform
   items:

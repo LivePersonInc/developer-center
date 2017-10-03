@@ -1,0 +1,61 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Liveperson Domains API
+  description: |
+    This is a read-only API that returns the base domain of LivePerson that should be used in the APIs outlined in this document.
+host: api.liveperson.net  
+basePath: /api/account/
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /{accountId}/service/{serviceName}/baseURI.json:
+    get:
+      description: Returns all pets from the system that the user has access to
+      operationId: findPets
+      produces:
+        - application/json
+        - application/xml
+        - text/xml
+        - text/html
+      parameters:
+        - name: accountId
+          in: path
+          description: LivePerson account ID
+          required: true
+          type: string
+        - name: serviceName
+          in: path
+          description: Service name according to the relevant API
+          required: true
+          type: string
+        - name: version
+          in: query
+          description: Should contain 1.0
+          required: true
+          default: 1.0
+          type: string
+      responses:
+        '200':
+          description: Successfully retrieved the data.
+          schema:
+            type: array
+            items:
+              properties:
+                account:
+                  type: string
+                baseURI:
+                  type: string
+                  description: hello world
+                service:
+                  type: string
+              type: object
+
+        '400':
+          description: Bad Request.  Problem with body or query parameters.
+        '401':
+          description: Unauthorized  Bad Authentication (invalid site or agent).

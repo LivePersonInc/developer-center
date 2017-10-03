@@ -1,6 +1,6 @@
 ---
 title: Clickable Mobile Content to SMS
-level1: Products
+level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 

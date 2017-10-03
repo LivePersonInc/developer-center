@@ -1,6 +1,6 @@
 ---
 title: Step 4 - Setting up the Widget in LiveEngage
-level1: Products
+level1: Solutions
 level2: 
 level3: SalesForce Integration
 level4: Implementation

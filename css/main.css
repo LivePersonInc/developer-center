@@ -8,6 +8,10 @@
     font-style: normal;
 }
 
+
+.flex {
+  display: flex;
+}
 /*colors */
 .find{
   background-color: yellow;
@@ -27,6 +31,8 @@
     height: 2pt;
     background-color: #ff720b;
 }
+
+/*colors*/
 
 .centralized{
     margin: 0 auto;

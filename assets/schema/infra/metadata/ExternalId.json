@@ -1,0 +1,17 @@
+{
+    "description": "External id of the action was made",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "type": {
+            "enum": ["ExternalId"],
+            "default": "ExternalId",
+            "type": "string"
+        },
+        "id": {
+            "maxLength": 64,
+            "type": "string"
+        }
+    },
+    "required" : ["type","id"] 
+}

@@ -1,6 +1,6 @@
 ---
 title: Step 1 - Installing the LiveEngage App for Salesforce
-level1: Products
+level1: Solutions
 level2: 
 level3: SalesForce Integration
 level4: Implementation

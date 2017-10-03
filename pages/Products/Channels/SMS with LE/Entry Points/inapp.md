@@ -1,6 +1,6 @@
 ---
 title: SMS via In-App Messaging
-level1: Products
+level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
