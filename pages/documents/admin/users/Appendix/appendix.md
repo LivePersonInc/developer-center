@@ -67,7 +67,6 @@ This section contains API details that are common to every API’s resource and 
 | nickname | A user’s nickname. | string | Required | |
 | isEnabled  | Indicates whether the user is enabled or not.  | Boolean | Required | |
 | maxChats | The maximum number of chats a user can take. | number | Required | |
-| isActive | Indicates whether the user is active or not. | Boolean | Required | |
 | skillIds   | The user’s skill IDs. | array of numbers | Optional | |
 | email   | The user's email | string | Required | |
 | memberOf   | The agent group that the agent is a member of.  | array of agentGroupId (number), assignmentDate (date, read only)  |
@@ -109,12 +108,17 @@ This section contains API details that are common to every API’s resource and 
        "passwordSh": "pppppp",
        "isEnabled": "true",
        "maxChats": "4",
-       "isActive": "true",
        "email": "myEmail@gmail.com",
        "disabledManually": false,
-       "skillIds": [],
-       "profileIds": [],  //Pending Review
-       “changePwdNextLogin”: “false”,
+       "skillIds": [
+            2359235912,
+            2359235922
+       ],
+       "profileIds": [
+           2359273612,
+           2359273512
+       ],
+       "changePwdNextLogin": false,
        "memberOf": {"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"},
        "managerOf": [{"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"}],
        "permissionGroups": ["1"],
@@ -126,7 +130,6 @@ This section contains API details that are common to every API’s resource and 
        "pnCertName": "lpMobileApp-123",
        "dateUpdated": "year-month-date hrs:min:sec",
        "lastPwdChangeDate": "year-month-date hrs:min:sec",
-       "isApiUser": false
        "isApiUser": false,
        "userTypeId": 1
        
