@@ -116,7 +116,7 @@ This section contains API details that are common to every API’s resource and 
        ],
        "profileIds": [
            2359273612,
-           2359273512,
+           2359273512
        ],
        "changePwdNextLogin": false,
        "memberOf": {"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"},
