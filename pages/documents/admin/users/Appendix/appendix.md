@@ -110,11 +110,13 @@ This section contains API details that are common to every API’s resource and 
        "maxChats": "4",
        "email": "myEmail@gmail.com",
        "disabledManually": false,
-       "skillIds": [2359235912,
-                    2359235922
+       "skillIds": [
+            2359235912,
+            2359235922
        ],
-       "profileIds": [2359273612,
-                     2359273512,
+       "profileIds": [
+           2359273612,
+           2359273512,
        ],
        "changePwdNextLogin": false,
        "memberOf": {"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"},
