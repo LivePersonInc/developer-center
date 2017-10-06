@@ -244,10 +244,10 @@ _Note: To get unread messages feature will work properly - host app must call th
 
 | Parameter | Description |
 | :--- | :--- |
-| Context | A context from the host app. |
+| context | A context from the host app. |
 | remoteMessage | A Map that contains the push message. Push service sends RemoteMessage object - To get the map from this object - call remoteMessage.getData().  |
 | brandId | The account Id. |
-| remoteMessage | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
+| showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
 ### handlePush (Deprecated)
 
