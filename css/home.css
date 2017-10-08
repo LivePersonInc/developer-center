@@ -378,6 +378,7 @@ a:-webkit-any-link {
 .searchhome .ds-dropdown-menu [class^=ds-dataset-] {
   width: 896px !important;
   margin-left: -335px !important;
+  max-height: 500px;
 }
 
 .searchhome .ds-dropdown-menu:before {
