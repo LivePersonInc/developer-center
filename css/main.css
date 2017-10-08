@@ -312,8 +312,6 @@ pre {
     z-index: 2;
     margin-top: 8px;
     padding-left: 10.6%;
-    overflow-y: scroll !important;
-    max-height: 500px;
 }
  .ds-dropdown-menu .ds-suggestion {
     cursor: pointer;
