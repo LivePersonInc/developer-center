@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 3
+order: 30
 permalink: android-callbacks-interface.html
 
 indicator: messaging

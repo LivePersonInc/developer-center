@@ -5,7 +5,7 @@ level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 
-order: 14
+order: 140
 permalink: android-push-notifications.html
 
 indicator: messaging

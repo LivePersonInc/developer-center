@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: SDK APIs
 
-order: 10
+order: 100
 permalink: android-methods.html
 
 indicator: messaging

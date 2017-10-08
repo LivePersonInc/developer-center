@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: String Localization
 
-order: 272
+order: 220
 permalink: android-plural-string.html
 
 indicator: messaging

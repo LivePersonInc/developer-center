@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Appendix
 
-order: 282
+order: 320
 permalink: android-security.html
 
 indicator: messaging
