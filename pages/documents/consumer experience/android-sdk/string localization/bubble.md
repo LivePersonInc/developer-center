@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: String Localization
 
-order: 276
+order: 250
 permalink: android-bubble.html
 
 indicator: messaging
@@ -19,8 +19,7 @@ Bubbles contains only time in [SHORT](https://developer.android.com/reference/ja
 - If you wish to configure this time format, override this resource ID:
 ```<string name="lp_time_format"></string>```
 
-With any **time** format. 
+With any **time** format.
 *Example: "hh:mm a", "HH:mm" etc.*
 
-This will apply to all bubble’s timestamp. 
-
+This will apply to all bubble’s timestamp.

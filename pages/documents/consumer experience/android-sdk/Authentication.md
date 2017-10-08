@@ -5,7 +5,7 @@ level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 
-order: 13
+order: 130
 permalink: android-authentication.html
 
 indicator: messaging

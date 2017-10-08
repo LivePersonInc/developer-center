@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 2
+order: 20
 permalink: android-initialization.html
 
 indicator: messaging

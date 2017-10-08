@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
-order: 264
+order: 160
 permalink: android-attributes.html
 
 indicator: messaging
@@ -412,6 +412,28 @@ The goal of the following document is to enumerate the different fields controll
     <td>Color code for the conversation resolved message and separator</td>
     <td>#555555 (gray)</td>
     <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
+  </tr>
+</tbody>
+</table>
+
+### Automatic Messages
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;conversation_controller_message_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the automatic messages.</td>
+    <td>#5b5c5e (dark gray)</td>
+    <td><img src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller"></td>
   </tr>
 </tbody>
 </table>
