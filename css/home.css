@@ -378,6 +378,8 @@ a:-webkit-any-link {
 .searchhome .ds-dropdown-menu [class^=ds-dataset-] {
   width: 896px !important;
   margin-left: -335px !important;
+  overflow-y: scroll !important;
+  max-height: 500px;
 }
 
 .searchhome .ds-dropdown-menu:before {
@@ -398,6 +400,7 @@ a:-webkit-any-link {
 
 .searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu {
   left: 336px!important;
+  box-shadow: none;
 }
 
 .searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu:before {
