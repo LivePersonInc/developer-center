@@ -5,7 +5,7 @@ level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 
-order: 1
+order: 10
 permalink: android-quickstart.html
 
 ---

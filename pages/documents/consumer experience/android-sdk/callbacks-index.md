@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: SDK APIs
 
-order: 12
+order: 120
 permalink: android-callbacks-index.html
 
 indicator: messaging

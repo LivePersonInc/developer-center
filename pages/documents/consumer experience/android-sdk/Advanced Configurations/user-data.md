@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 7
+order: 60
 permalink: android-user-data.html
 
 indicator: messaging
@@ -17,4 +17,3 @@ Pass and display consumer information to agents, and agent information to consum
 `public static void setUserProfile(ConsumerProfile profile)`
 
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)`
-

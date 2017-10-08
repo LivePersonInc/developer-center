@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
-order: 263
+order: 150
 permalink: android-configuring-sdk.html
 
 indicator: messaging

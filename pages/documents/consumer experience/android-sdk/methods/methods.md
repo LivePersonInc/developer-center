@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: SDK APIs
 
-order: 10
+order: 100
 permalink: android-methods.html
 
 indicator: messaging
@@ -271,7 +271,7 @@ Handling the push message allows the host app to do the following:
 | brandId | The account ID. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false. |
 
-### getNumUnreadMessages
+### getNumUnreadMessages (Deprecated)
 
 Returns the counter of the unread messages - the number of push messages received. This number is set to 0 when opening the conversation screen.
 
@@ -284,6 +284,20 @@ To get the number of unread messages out of the intent use the following extra k
 | Parameter | Description |
 | :--- | :--- |
 | brandId | The account ID. |
+
+### getNumUnreadMessages
+
+Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
+
+**Note:** the SDK needs to be initialized before calling this API.
+
+
+`public static void getNumUnreadMessages(String appId, final ICallback<Integer, Exception> callback)`
+
+| Parameter | Description |
+| :--- | :--- |
+| appId | The host app ID |
+| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
 
 ### getSDKVersion
 

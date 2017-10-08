@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Advanced Features
 
-order: 280
+order: 290
 permalink: android-csat.html
 
 indicator: messaging

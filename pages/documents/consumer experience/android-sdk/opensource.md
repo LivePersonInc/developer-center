@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Appendix
 
-order: 284
+order: 340
 permalink: android-opensource.html
 
 indicator: messaging
