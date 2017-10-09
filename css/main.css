@@ -61,6 +61,10 @@
   position: relative;
 }
 
+.container .usecases{
+  display: none;
+}
+
 pre code {
   color: #fff;
 }
