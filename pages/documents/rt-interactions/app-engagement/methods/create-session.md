@@ -120,6 +120,7 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 | engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is ‘Available’, otherwise is not returned |
 | engagementDetails.skillId | | number | Optional when the status is ‘Available’ |
 | engagementDetails.skillName | | string | Optional when the status is ‘Available’ |
+| engagementDetails.connectorId | | number | Optional when the status is ‘Available’ and engagement is being flagged as 'authenticated'|
 | pageId | Page identification ID for sending event on the current engagement | string | Required  |
 | sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
 | visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
@@ -142,7 +143,8 @@ Status code: 200 OK (engagement is available)
         "engagementRevision": 44,
         "validForSeconds": 900,
         "skillId": 23,
-        "skillName":"TestSkill"
+        "skillName":"TestSkill",
+        "connectorId":"568046210"
        }
     }
 

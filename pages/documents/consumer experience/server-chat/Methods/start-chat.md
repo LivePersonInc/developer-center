@@ -15,7 +15,11 @@ Initiates a request to chat. If successful, a new chat session will be created, 
 
 *Note: The URI of the chat session is returned in the Location header. This URI is referred to as the chat-session-uri in the rest of the document.*
 
-### Request
+### Chat Request
+
+_For Visitor Authentication flow please collect necessary parameters from the [following method](#visitor-authentication-request) first._
+
+#### Request
 
 | Method | URI  |
 | :--- | :--- |
@@ -39,8 +43,6 @@ Initiates a request to chat. If successful, a new chat session will be created, 
 | Name	| Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
 | skill | Requests a chat with a specific skill. | alphanumeric | |
-| ssoKey | Requests a Single Sign On chat. | alphanumeric | The SSO key is an encrypted set of custom variables. SSO  is an  account specific feature that is used by existing LivePerson customers. The account owner or LivePerson Account Manager will need to  be  involved in the implementation process.|
-| serviceQueue | Requests a chat with a specific Service Queue. | alphanumeric | This parameter must be used together with the maxWaitTime parameter. |
 | maxWaitTime | The maximum time in seconds that a visitor can wait before a chat starts. | numeric | This parameter must be between 0 and 86,400 seconds (24 hours). Use 0 for immediate availability. |
 | visitorIp | Sets the visitor's IP address. | alphanumeric (IP) | The IP address can be used to identify a visitor if that visitor has been marked as "blocked". This can be viewed in the Agent Console's Info tab (IP). The visitor's host name is found using this IP address. If no IP address is specified, the visitor's IP will be taken from the request's IP.  |
 | chatReferrer | Sets the location of where the chat button was clicked. | alphanumeric | Can have a URI format, but not mandatory. This is displayed in the Admin Console under Reporting & Analytics > Transcripts > select a transcript > Chat starting page (under General Chat Info). |
@@ -51,12 +53,14 @@ Initiates a request to chat. If successful, a new chat session will be created, 
 | engagementId | The ID of the engagement.  | alphanumeric | |
 | campaignId | The campaign ID to be used in this chat. | alphanumeric | |
 | language | The language code of the auto messages to be used in this chat i.e. en-US. | alphanumeric | |
+| participantId | Participant Id for Authentication flow | alphanumeric | mandatory for Visitor Authentication |
+| conversationId | Conversation Id for Authentication flow | alphanumeric | mandatory for Visitor Authentication|
 
 **Survey Body Parameters**
 
 | Name	| Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| question | Contains answer elements for the survey's question with this ID || | 
+| question | Contains answer elements for the survey's question with this ID || |
 | answer | Given answer for the container question. | alphanumeric | If the question is a multiselection type (CheckBox) it can contain more than one answer.|
 
 Request Body Example
@@ -68,10 +72,59 @@ Request Body Example
 - *If the userAgent parameter is in the standard "User-Agent" header format, the relevant browser will be shown in the "Browser" parameter in the Agent Workspace.*
 - *If the userAgent parameter is NOT in the standard header format, the userAgent parameter itself will be shown (unless its value includes a space character, in which case only the first word will be shown).*
 
-### Response
+#### Response
 
 **Response Codes**
 
 | Code | Description |
 | :--- | :--- |
 | 200 | Successful |
+
+### Visitor Authentication Request
+
+#### Request
+
+| Method | URI  |
+| :--- | :--- |
+| POST | https://{domain}/api/account/{accountId}/conversation.json?v=1&NC=true |
+
+**Formats**
+
+- XML
+- JSON
+
+**Request Headers**
+
+| Header | Description |
+| :--- | :--- |
+| Authorization | LivePerson appKey=721c180b09eb463d9f3191c41762bb68 |
+| Content-Type | application/json |
+| Accept | application/json |
+
+**Body Parameters**
+
+| Name	| Description | Type/Value | Notes |
+| :--- | :--- | :--- | :--- |
+| LETagSessionId | LiveEnagage Session Id | alphanumeric | Taken from the Engagement response |
+| authChatConnId | LiveEnagage Authenticated Chat Connector Id | numeric | Taken from the Engagement response (parameter name is 'connectorId' in case the engagement is being flagged as 'authenticated') |
+| LETagContextId | LiveEnagage context Id | alphanumeric | Taken from the Engagement response |
+| LETagVisitorId | LiveEnagage visitor Id | alphanumeric | Taken from the Engagement response |
+| engagementId | The ID of the engagement.   | numeric | Taken from the Engagement response |
+| ssoKey | An oAuth2.0 'code flow' token or 'implicit' JWT by oAuth2.0 RFC | alphanumeric | Provided by customer's IDP |
+| redirectUri | redirectURI parameter by oAuth2.0 RFC | alphanumeric | optional |
+
+Request Body Example
+
+    {"authChatConnId":568046210,"ssoKey":"k12197","engagementId":567609310,"LETagContextId":"2","LETagSessionId":"90o5l5twRUGu1rN7bzwNMA","LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"}
+
+#### Response
+
+  **Response Codes**
+
+  | Code | Description |
+  | :--- | :--- |
+  | 200 | Successful |
+
+JSON Example:
+
+    {"participantId":"6f22cb2d-7e87-41dd-bc1f-d9b740f1f09f","conversationId":"ff0ff4f4-29ec-4eff-82d0-4f047cdc01a0"}
