@@ -29,28 +29,28 @@ sort   | Sort the results in a predefined order.                      | string  
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
-Name                | Description                                                                                   | Type/Value                         | Required | Notes
-:------------------ | :-------------------------------------------------------------------------------------------- | :--------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
-end {from, to}    | Conversation's end time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
-status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
-skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
-latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
-agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional |
-latestAgentIds      | An array of latest agent IDs, represented as numbers.                                         | Array `<agentID>`                  | Optional | Filters only conversations whose latest agent appears in the array.
-agentGroupIds       | An array of agent group IDs, represented as numbers.                                          | Array `<agentGroupID>`             | Optional |
-keyword             | Specific word or phrase found in the messages of the conversation.                            | alphanumeric                       | Optional |
-summary             | Specific word or phrase found in the summary of the conversation.                             | alphanumeric                       | Optional |
-duration {from, to} | Range of conversation length (in seconds).                                                    | numeric, numeric                   | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
-mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
-alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
-csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
-source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, WEB, AGENT, SMS, FACEBOOK
-device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
-messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
-messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
-latestConversationQueueState | The queue state of the conversation                                                                      | String                   | Optional | Valid values: IN_QUEUE,ACTIVE
-| sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
+|Name  | Description | Type/Value  | Required | Notes|
+|:---- | :---------- | :---------- | :------- | :---|
+|start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|end {from, to}    | Conversation's end time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
+|skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
+|latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
+|agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional |
+|latestAgentIds      | An array of latest agent IDs, represented as numbers.                                         | Array `<agentID>`                  | Optional | Filters only conversations whose latest agent appears in the array.
+|agentGroupIds       | An array of agent group IDs, represented as numbers.                                          | Array `<agentGroupID>`             | Optional |
+|keyword             | Specific word or phrase found in the messages of the conversation.                            | alphanumeric                       | Optional |
+|summary             | Specific word or phrase found in the summary of the conversation.                             | alphanumeric                       | Optional |
+|duration {from, to} | Range of conversation length (in seconds).                                                    | numeric, numeric                   | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
+|mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
+|alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
+|csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
+|source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, WEB, AGENT, SMS, FACEBOOK
+|device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
+|messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
+|messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
+|latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
+|sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
 
 Filters examples:
 
@@ -61,7 +61,8 @@ Filters examples:
 |status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}|
 |skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}|
 |latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}|
-|agentIds            | {"start":{"from":1470037448000,"to":1472543048000},"agentIds":["11111111-2222-3333-4444-555555555555","2"]} latestAgentIds, {"start":{"from":1470148243000,"to":1472543048000},"latestAgentIds":[3678429210,3673269110]}|
+|agentIds            | {"start":{"from":1470037448000,"to":1472543048000},"agentIds":["11111111-2222-3333-4444-555555555555","2"]} |
+|latestAgentIds      | {"start":{"from":1470148243000,"to":1472543048000},"latestAgentIds":[3678429210,3673269110]}|
 |agentGroupIds       | {"start":{"from":1470037448000,"to":1472543048000},"agentGroupIds":["0","2"]}|
 |keyword             | {"start":{"from":1470037448000,"to":1472543048000},"keyword":"bonus"}|
 |summary             | {"start":{"from":1481694532185,"to":1482324227482},"summary":"purchase"}|
