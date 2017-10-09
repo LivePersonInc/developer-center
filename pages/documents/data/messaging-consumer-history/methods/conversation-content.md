@@ -1,7 +1,7 @@
 ---
 title: Conversations - Content
 level1: Documents
-level2: 
+level2:
 level3: Consumer Messaging history API (BETA)
 level4: Methods
 order: 10
@@ -13,15 +13,15 @@ This method retrieves the content of specific conversations as a message events 
 
 ### Request
 
-Method | URL
------- | ---------------------------------------------------------------------------------------------------
-GET   | https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157
+|Method | URL |
+|------|-----|
+|GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157`|
 
 **URL Parameters**
 
 Name   | Description                                                          | Type/Value | Required | Notes
 :----- | :------------------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-conversationId | The id of the conversation to be retrieved. | String    | Required | 
+conversationId | The id of the conversation to be retrieved. | String    | Required |
 
 ### Response
 
@@ -36,13 +36,13 @@ originatorId         | The id of the participant who wrote/accepted the message.
 serverTimestamp      | Event time stamp.                                         | long       |
 event                | Contains message event data.                              | container  | Valid types: ContentEvent, AcceptStatusEvent  
 
-_event - ContentEvent_ 
+_event - ContentEvent_
 
 Name                 | Description                | Type/Value | Notes
 :------------------- | :--------------------------| :--------- |---------------------------------------------
 type                 | The type of the message.   | string     | Valid values: "ContentEvent"
 contentType          | The type of the contnet.   | string     | Valid values: "text/plain"
-message              | The message text.          | string     | 
+message              | The message text.          | string     |
 
 
 
@@ -51,7 +51,7 @@ _event - AcceptStatusEvent_
 Name                 | Description                                      | Type/Value   | Notes
 :------------------- | :------------------------------------------------| :----------- | ---------------------------------
 type                 | The type of the message.                         | string       | Valid values: "AcceptStatusEvent"
-status               | The status of the message event.                 | string       | Valid values: "ACCEPT","READ" 
+status               | The status of the message event.                 | string       | Valid values: "ACCEPT","READ"
 sequenceList         | The sequence of the message the status refers to | Array[int]   |
 
 **JSON Example**

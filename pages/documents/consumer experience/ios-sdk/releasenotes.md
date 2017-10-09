@@ -16,6 +16,8 @@ indicator: messaging
 These are the main feature releases available in the In-App Messaging SDK version 2.7 for iOS.
 Version 2.7 roll-out: September 3rd 2017
 
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.9.pdf){:target="_blank"}
+
 #### New functionalities
 
 ##### Structured content enablement (Beta)
@@ -57,6 +59,7 @@ The toggle may be switched on as part of the SDK release within the host app, ho
 In addition to structured content enablement, SDK v2.7 also has a few branding properties and one callback which can be configured and used.
 
 ###### Related properties: [Structured content](#new-properties)
+
 ###### Related strings: [Structured content](#new-strings)
 
 The following additional conditions and configurations are required:*
@@ -88,7 +91,9 @@ The connectivity status bar ensures consumers are always kept informed about the
  - Attempting to connect to LiveEngage service
  - Continuing attempt to connect to LiveEngage service
  - Retry
+
 ###### Related properties: [Connectivity status bar](#new-properties)
+
 ###### Related strings: [Connectivity status bar](#new-strings)
 
 The following additional conditions and configurations are required*:
@@ -310,6 +315,9 @@ These are the main feature releases available in the In-App Messaging SDK versio
 
 Version 2.5 roll-out: July 2nd 2017
 
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
+
+
 ##### New functionalities
 
 ##### Custom fonts
@@ -423,6 +431,9 @@ The following capability which was first introduced in v2.3 has been disabled to
 
 ### In-App Messaging SDK Version 2.3.0
 
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
+
+
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for iOS**.
 
 
@@ -513,6 +524,9 @@ The Web Socket remains open for a maximum of 60 seconds (using Background Task) 
 *Photo sharing is a beta feature*.
 
 ### In-App Messaging SDK Version 2.0
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf){:target="_blank"}
+
 
 These are the main feature releases available in the In-App Messaging SDK version 2.0.
 

@@ -6,10 +6,10 @@ topnav:
     - title: Documents
       url: /documents.html
 
-- title: Products
+- title: Solutions
   items:
-    - title: Products
-      url: /products.html
+    - title: Solutions
+      url: /solutions.html
 
 - title: Bot Platform
   items:

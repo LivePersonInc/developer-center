@@ -32,6 +32,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 Name                | Description                                                                                   | Type/Value                         | Required | Notes
 :------------------ | :-------------------------------------------------------------------------------------------- | :--------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+end {from, to}    | Conversation's end time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
 skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
 latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
@@ -49,12 +50,14 @@ device              | Type of device from which the conversation was initially o
 messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
 messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
 latestConversationQueueState | The queue state of the conversation                                                                      | String                   | Optional | Valid values: IN_QUEUE,ACTIVE
+| sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
 
 Filters examples:
 
 Name                | Description
 :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 start               | {″start″:{"from":1470037448000,"to":1472543048000}}
+end                 | {″start″:{"from":1470037448000,"to":1472543048000},"end":{"from":1470908735000,"to":1472543048000}}
 status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}
 skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}
 latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}
@@ -69,8 +72,8 @@ csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat"
 source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}
 device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
 messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
-latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}
-
+latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
+sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}} 
 ### Response
 
 **Elements in the Response**
@@ -118,7 +121,7 @@ mcs                  | Meaningful Connection Score of the conversation.         
 alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
-latestSkillId        | Most recent skill id the conversation was assigned to.                       | long       |
+latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation is started, assigned to an agent or transferred to a skill.                       | long       |
 latestSkillName      | Most recent skill name that the conversation was assigned to.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
 latestAgentLoginName | The agent's login name.                                                    | string     |
@@ -234,6 +237,8 @@ agentFullName  | Full name of the agent assigned to the conversation.           
 time           | The time the agent was added to the conversation.                  | string     |
 timeL          | The time the agent was added to the conversation (in long format). | long       |
 role           | The agent's role in the conversation- assigned agent, manager etc. | string     |
+userType       | The id of the user type, can be one of the following:0, 1, 2       | String     |
+userTypeName   | The name of the user type,can be one of the following: System, Human or Bot            | String     |
 agentGroupId   | Agent's group ID.                                                  | long       |
 agentGroupName | The agent's group name.                                            | string     |
 permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"

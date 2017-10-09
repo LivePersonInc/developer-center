@@ -71,6 +71,18 @@ paths:
           description: Success
           schema:
             type: string
+  /keepAlive:
+    js:
+      tags:
+        - infra
+      summary: Keep Alive
+      description: |
+        Keeps the connection open for Browsers that cannots use the native websocket ping/pong mechanism.
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
   /updateRingState:
     js:
       tags:

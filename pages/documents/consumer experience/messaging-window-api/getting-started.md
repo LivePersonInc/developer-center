@@ -11,10 +11,10 @@ indicator: messaging
 ---
 
 In this tutorial you will create a new conversation with your contact center, publish text messages, and receive agent responses.
-  
+
 ### Prerequisites
 * [Docker](https://docs.docker.com/engine/installation){:target="_blank"}
-* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact [LivePerson Support](consumer-int-account-provision.html){:target="_blank"}. 
+* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact [LivePerson Support](consumer-int-account-provision.html){:target="_blank"}.
 
 ### Step 1 - Launch your Shell
 
@@ -35,7 +35,7 @@ In this demonstration we will create a new unauthenticated consumer identity. Ru
 LP_JWT=`curl -X POST https://$LP_IDP/api/account/$LP_ACCOUNT/signup | jq -r .jwt`
 ```
 
-This will request the creation of a new identity. Extract the ``JWT`` from the response, and set it as a variable called ``LP_JWT`` in your shell. This new identity will be used in the next step.
+This will request the creation of a new identity, extract the ``JWT`` from the response, and set it as a variable called ``LP_JWT`` in your shell. This new identity will be used in the next step.
 
 To check the value inside the ``LP_JWT``, type:
 
@@ -85,12 +85,12 @@ Open the Agent Workspace (from Step 1), and accept the incoming request by click
 
 ### Step 5 - Publish a Text Message
 
-In order to publish content to a conversation, substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``consersationId`` you got in the response of Step 4, and paste it into the opened WebSocket. 
+In order to publish content to a conversation, substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``consersationId`` you got in the response of Step 4, and paste it into the opened WebSocket.
 
 ```json
 {"kind":"req","id":2,"type":"ms.PublishEvent","body":{"dialogId":"__YOUR_CONVERSATION_ID__","event":{"type":"ContentEvent","contentType":"text/plain","message":"hi there"}}}
 ```
-**Note**: you can use the message builder (<a href="consumer-int-msg-text-cont.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message. 
+**Note**: you can use the message builder (<a href="consumer-int-msg-text-cont.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 
 The published message will be displayed on the agent side:

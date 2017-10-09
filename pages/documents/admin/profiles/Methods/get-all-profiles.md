@@ -3,7 +3,7 @@ title: Get all profiles
 keywords:
 level1: Documents
 level2: Admin
-level3: Profile API
+level3: Profiles API
 level4: Methods
 
 
@@ -29,7 +29,7 @@ This API retrieves a list of profiles for a specific account.
 
 **Request Body**
 
-[Appendix](administration-profilesappendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
 
 **Path Parameters**
 
@@ -42,4 +42,3 @@ This API retrieves a list of profiles for a specific account.
 **Response Body**
 
 [Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

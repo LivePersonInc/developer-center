@@ -8,6 +8,10 @@
     font-style: normal;
 }
 
+
+.flex {
+  display: flex;
+}
 /*colors */
 .find{
   background-color: yellow;
@@ -27,6 +31,8 @@
     height: 2pt;
     background-color: #ff720b;
 }
+
+/*colors*/
 
 .centralized{
     margin: 0 auto;
@@ -53,6 +59,10 @@
   padding-right: 0px;
   max-width: 1280px;
   position: relative;
+}
+
+.container .usecases{
+  display: none;
 }
 
 pre code {
@@ -329,6 +339,7 @@ pre {
     overflow: auto;
     padding: 0 8px 8px;
     margin-right: -15px !important;
+    max-height: 500px;
 }
  .ds-dropdown-menu * {
     box-sizing: border-box
@@ -544,6 +555,8 @@ pre {
     font-size: 0;
     line-height: 0
 }
+
+/*End Algolia */
 
 /*# sourceMappingURL=docsearch.min.css.map */
 
@@ -839,6 +852,9 @@ ul#results-container li a {
 #search-demo-container ul#results-container li ul li {
   /*float:left;*/
 }
+
+/* End Algolia */
+
 
 *:focus {
     outline: none;

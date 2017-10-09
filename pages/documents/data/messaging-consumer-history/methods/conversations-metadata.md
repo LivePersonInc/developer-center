@@ -1,7 +1,7 @@
 ---
 title: Conversations - Metadata
 level1: Documents
-level2: 
+level2:
 level3: Consumer Messaging history API (BETA)
 level4: Methods
 order: 10
@@ -13,9 +13,9 @@ This method retrieves a list of a consumer's conversations' metadata. The retrie
 
 ### Request
 
-Method | URL
------- | ---------------------------------------------------------------------------------------------------
-GET   | https://<domain>/messaging_history/api/account/{accountID}/conversations/consumer/metadata/search?state=close&startFrom=1502628503961&startTo=1502628758614&offset=0&limit=50
+|Method| URL |
+|------|-----|
+|GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/consumer/metadata/search?state=close&startFrom=1502628503961&startTo=1502628758614&offset=0&limit=50`|
 
 **URL Parameters**
 
@@ -25,7 +25,7 @@ offset | The offset specifies from which record to retrieve the conversation. | 
 limit  | Max amount of conversations to be received in the response.          | numeric    | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                              | string     | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 state        | State of the conversation.                 | Comma separated string             | Optional | Valid values: "close", "archive". Example: state=close,archive. Default value - archive
-startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months. 
+startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 
 =======

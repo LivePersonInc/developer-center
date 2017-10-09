@@ -1,0 +1,46 @@
+{
+    "description": "Information coming back from the bot provider",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "type": {
+            "enum": ["BotResponse"],
+            "default": "BotResponse",
+            "type": "string"
+        },
+        "externalConversationId": {
+            "maxLength": 64,
+            "type": "string"
+        },
+        "businessCases": {
+            "type": "array",
+            "items": {
+                "maxLength": 64,
+                "type": "string"                
+            }
+        },
+        "intents": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "maxLength": 64,
+                        "type": "string"
+                    },
+                    "id": {
+                        "maxLength": 64,
+                        "type": "string"
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                    }
+                },
+                "required": ["id","confidence"]
+            }
+        }
+    },
+    "required": ["type"] 
+}

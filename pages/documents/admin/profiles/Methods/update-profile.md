@@ -3,7 +3,7 @@ title: Update profile
 keywords:
 level1: Documents
 level2: Admin
-level3: Profile API
+level3: Profiles API
 level4: Methods
 
 
@@ -17,15 +17,15 @@ This API updates a profile for a specific account.
 
 ### Request
 
-| Method | URL| 
+| Method | URL|
  |:--------- | :-------- |
- |PUT|  /api/account/{accountId}/configuration/le-users/profiles/{profileId}| 
+ |PUT|  /api/account/{accountId}/configuration/le-users/profiles/{profileId}|
 
 **Request Headers**
 
- |Header | Description| 
+ |Header | Description|
  |:-------  | :------------  |
- |Authorization | Contains token string to allow request authentication and authorization.| 
+ |Authorization | Contains token string to allow request authentication and authorization.|
 
 **Request Body**
 
@@ -34,7 +34,7 @@ This API updates a profile for a specific account.
 **Path Parameters**
 
 | Parameter   |   Description   |  Type / Value |
- |:----------- |  :------------  | :--------------| 
+ |:----------- |  :------------  | :--------------|
 | accountId   |   LP site ID    |  String ^[a-zA-Z0-9_]{1,20}$ |
 | profileId    |    Profile ID      |  Positive long number greater than zero |
 
@@ -43,4 +43,3 @@ This API updates a profile for a specific account.
 **Response Body**
 
 [Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

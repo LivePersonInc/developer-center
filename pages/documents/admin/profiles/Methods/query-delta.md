@@ -3,7 +3,7 @@ title: Profiles Query Delta
 keywords:
 level1: Documents
 level2: Admin
-level3: Profile API
+level3: Profiles API
 level4: Methods
 
 

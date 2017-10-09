@@ -15,11 +15,13 @@ indicator: messaging
 The SDK utilizes several resources as part of its GUI. To customize those resources, please add appropriate resources to your project:
 
 <table>
+<thead>
   <tr>
     <th>Description</th>
     <th>Resources name</th>
   </tr>
-
+</thead>
+<tbody>
   <tr>
     <td>Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned. In case you want to define the background color for this avatar - override "brand_logo_background_color" resource id. (This is relevant for bubble brand’s avatar only. Background color of agent avatar on action bar is "agent_avatar_background_color").</td>
     <td>lp_messaging_ui_brand_logo </td>
@@ -54,5 +56,5 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
    </td>
     <td>lpinfra_ui_ic_send_disabled.xml</td>
   </tr>
-
+</tbody>
 </table>

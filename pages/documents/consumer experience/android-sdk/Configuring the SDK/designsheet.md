@@ -22,7 +22,7 @@ indicator: messaging
   </thead>
   <tbody>
   <tr>
-    <td><div class="designsheetnumber" style="font-size: 1.5em">1 / 2</div> &lt;integer name=&quot;message_receive_icons&quot;&gt; , &lt;string-array name=&quot;message_receive_text&quot;&gt; , &lt;bool name=&quot;clear_history_show_confirm_dialog&quot;&gt;</td>
+    <td><div class="designsheetnumber" style="font-size: 1.5em">1 / 2</div>&lt;string name=&quot;brand_name&quot;&gt;&lt;/string&gt;, &lt;integer name=&quot;message_receive_icons&quot;&gt; , &lt;string-array name=&quot;message_receive_text&quot;&gt; , &lt;bool name=&quot;clear_history_show_confirm_dialog&quot;&gt;</td>
     <td><img src="img/Brand (1,2).png"/></td>
   </tr>
   <tr>

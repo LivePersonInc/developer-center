@@ -3,6 +3,9 @@
             "title" : "TextValue",
             "$ref": "TextValue.json"
         }, {
+            "title" : "RichContent",
+            "$ref": "RichContent.json"            
+        }, {
             "title" : "HostedFile",
             "$ref": "HostedFile.json"            
         }, {

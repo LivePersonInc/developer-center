@@ -1,6 +1,6 @@
 ---
 title: Setting up the IVR Deflection Solution
-level1: Products
+level1: Solutions
 level2: Channels
 level3: IVR Deflection Solution for Chat
 

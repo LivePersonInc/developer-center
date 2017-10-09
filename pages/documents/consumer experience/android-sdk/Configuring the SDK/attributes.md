@@ -1105,14 +1105,14 @@ The goal of the following document is to enumerate the different fields controll
 </td>
     <td>Color code for the structured content bubble outline color.</td>
     <td>#EDEDED (light gray)</td>
-    <td><img src="img/strucuredcontentbordercolor.png" alt="strucuredcontentbordercolor"></td>
+    <td></td>
   </tr>
   <tr>
     <td>&lt;dimen name=&quot;structured_content_border_width&quot;&gt;
   </td>
     <td>Integer in dp for the bubble stroke width of the structured content bubble.</td>
     <td>1dp</td>
-    <td><img src="img/strucuredcontentborderwidth.png" alt="strucuredcontentborderwidth"></td>
+    <td></td>
   </tr>  
   <tr>
     <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
@@ -1276,19 +1276,19 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_date_format&quot;&gt;</td>
-    <td>Define date format. More info here.</td>
+    <td>Define date format.</td>
     <td>No value</td>
     <td></td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_time_format&quot;&gt;</td>
-    <td>Define time format . More info here.</td>
+    <td>Define time format.</td>
     <td>No value</td>
     <td></td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_date_time_format&quot;&gt;</td>
-    <td>Define date-time format. More info here.</td>
+    <td>Define date-time format.</td>
     <td>No value</td>
     <td></td>
   </tr>

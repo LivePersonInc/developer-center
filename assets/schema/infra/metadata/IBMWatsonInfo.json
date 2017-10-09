@@ -1,0 +1,68 @@
+{
+    "description": "Information coming back from the IBM Watson virtual agent",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "type": {
+            "enum": ["IBMWatsonInfo"],
+            "default": "IBMWatsonInfo",
+            "type": "string"
+        },
+        "branch_exited": {
+            "type": "boolean"
+        },
+        "branch_exited_reason": {
+            "maxLength": 64,
+            "type": "string"
+        },
+        "capability": {
+            "maxLength": 64,
+            "type": "string"
+        },
+        "nodes_visited": {
+            "items": {
+                "maxLength": 64,
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "referred_capability": {
+            "maxLength": 64,
+            "type": "string"
+        },
+        "referred_nodes": {
+            "items": {
+                "maxLength": 64,
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "referred_visitor_message_sequences": {
+            "items": {
+                "type": "integer"
+            },
+            "type": "array"
+        },
+        "entities": {
+            "items": {
+                "properties": {
+                    "entity": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "items": {
+                            "type": "integer"
+                        },
+                        "type": "array"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    },
+    "required": ["type", "referred_visitor_message_sequences"] 
+}

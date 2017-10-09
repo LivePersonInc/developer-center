@@ -16,6 +16,8 @@ indicator:
 
 This is a read-only API that returns the base domain of LivePerson that should be used in the APIs outlined in this document.
 
+**Note**: service names are _case sensitive_. Please make sure to input serviceName as it is provided in each document's overview.
+
 ###  Request
 
 | Method | URL |
@@ -56,8 +58,3 @@ JSON Example:
 | 200 OK | Successfully retrieved the data. |
 | 400 Bad Request | Problem with body or query parameters. |
 | 401 Unauthorized | Bad Authentication (invalid site or agent). |
-
-
-
-
-

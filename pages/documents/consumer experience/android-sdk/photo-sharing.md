@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Advanced Features
 
-order: 300
+order: 280
 permalink: android-photo-sharing.html
 
 indicator: messaging
@@ -14,8 +14,7 @@ indicator: messaging
 
 ### Overview
 
-This section describes the photo sharing behavior and configurations in the Messaging SDK.
-You can find all the related configurations in the resources ID table, under Photo Sharing.
+This section describes the photo sharing behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under Photo Sharing.
 
 **Notes:**
 
@@ -29,7 +28,7 @@ You can find all the related configurations in the resources ID table, under Pho
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.
+To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account**.
 
 ###  Upload Photo
 
