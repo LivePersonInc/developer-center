@@ -51,7 +51,6 @@ Filter is sent in the POST data with the following JSON structure.
 | hasCoBrowse | Indication whether a CoBrowse session occurred during the chat | Boolean | Optional |  |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
-| lineContentTypes | The type of content in the chat lines | Array `<String>` | Optional | Valid values: RICH_ONTENT |
 
 **Request Example 1:**
 
@@ -1116,12 +1115,10 @@ Example:
 | lobId | ID of the line of business of the campaign. | alphanumeric | |
 | lobName | Name of the line of business of the campaign. | alphanumeric | |
 | lines | Lines of a specific chat. | container | |
-| lineStatuses | Contains a list of line statuses reported by the agent/visitor for referring chat lines | container | |
 | lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
 | time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
-| textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content |
+| textType | Type of text. | alphanumeric  | Valid formats: plain, html, url |
 | text | The actual text in the chat line. | alphanumeric | |
-| json | The actual json content of the chat line. | container | In cases where the textType is `rich-content` |
 | by | Name of the visitor or the agent’s nickname. | alphanumeric | |
 | source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system" |
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
@@ -1161,5 +1158,3 @@ Example:
 | time | This survey’s submitted event time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
 | timeL | This survey’s time in milliseconds. | numeric | |
 | sdes | List of Engagement Attributes. | container | See [Appendix](data-engagement-history-appendix.html) |
-| refLineSequenceId | The referring line sequence Id | numeric | |
-| status | The status reported for the referenced line | alphanumeric | Valid values: "ACCEPT", "READ", "ACTION" |
