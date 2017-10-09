@@ -204,8 +204,6 @@ Example for Mandatory+Standard+Custom Claims JWT:
 }
 ```
 
-Customized claim sets, for example credit card, will be supported in a future version.
-
 ### OpenID JWT Encryption
 
 *	Encryption ensures that only the addressee will be able to read it (for example the consumer itself won't be able to read the content.)
