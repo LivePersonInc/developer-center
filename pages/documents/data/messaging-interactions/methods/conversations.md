@@ -54,26 +54,27 @@ latestConversationQueueState | The queue state of the conversation              
 
 Filters examples:
 
-Name                | Description
-:------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-start               | {″start″:{"from":1470037448000,"to":1472543048000}}
-end                 | {″start″:{"from":1470037448000,"to":1472543048000},"end":{"from":1470908735000,"to":1472543048000}}
-status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}
-skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}
-latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}
-agentIds            | {"start":{"from":1470037448000,"to":1472543048000},"agentIds":["11111111-2222-3333-4444-555555555555","2"]} latestAgentIds {"start":{"from":1470148243000,"to":1472543048000},"latestAgentIds":[3678429210,3673269110]}
-agentGroupIds       | {"start":{"from":1470037448000,"to":1472543048000},"agentGroupIds":["0","2"]}
-keyword             | {"start":{"from":1470037448000,"to":1472543048000},"keyword":"bonus"}
-summary             | {"start":{"from":1481694532185,"to":1482324227482},"summary":"purchase"}
-duration            | {"start":{"from":1470037448000,"to":1472543048000}, "duration":{"from":0,"to":1000}}
-mcs                 | {"start":{"from":1470037448000,"to":1472543048000}, "mcs":{"from":0,"to":100}}
-alertedMcsValues    | {"start": {"from": "1485330205108", "to": "1485942798000"}, "alertedMcsValues": ["-1","1"]}
-csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat":{"from":4,"to":5}}
-source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}
-device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
-messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
-latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
-sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}} 
+|Name                | Description |
+|:------------------ |:------------------------------------------------|
+|start               | {″start″:{"from":1470037448000,"to":1472543048000}}|
+|end                 | {″start″:{"from":1470037448000,"to":1472543048000},"end":{"from":1470908735000,"to":1472543048000}}|
+|status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}|
+|skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}|
+|latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}|
+|agentIds            | {"start":{"from":1470037448000,"to":1472543048000},"agentIds":["11111111-2222-3333-4444-555555555555","2"]} latestAgentIds, {"start":{"from":1470148243000,"to":1472543048000},"latestAgentIds":[3678429210,3673269110]}|
+|agentGroupIds       | {"start":{"from":1470037448000,"to":1472543048000},"agentGroupIds":["0","2"]}|
+|keyword             | {"start":{"from":1470037448000,"to":1472543048000},"keyword":"bonus"}|
+|summary             | {"start":{"from":1481694532185,"to":1482324227482},"summary":"purchase"}|
+|duration            | {"start":{"from":1470037448000,"to":1472543048000}, "duration":{"from":0,"to":1000}}|
+|mcs                 | {"start":{"from":1470037448000,"to":1472543048000}, "mcs":{"from":0,"to":100}}|
+|alertedMcsValues    | {"start": {"from": "1485330205108", "to": "1485942798000"}, "alertedMcsValues": ["-1","1"]}|
+|csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat":{"from":4,"to":5}}|
+|source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}|
+|device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}|
+|messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
+|latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
+|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
+
 ### Response
 
 **Elements in the Response**
