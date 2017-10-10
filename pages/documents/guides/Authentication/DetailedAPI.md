@@ -86,8 +86,8 @@ The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with t
 {
 "sub": "4255551212",
 "iss" : "https://www.YourBrand.com",
-"exp" : 1446115352000,
-"iat" : 1446111752000,
+"exp" : 1446115352,
+"iat" : 1446111752,
 "extended claims set  - ref: OpenIdConnect token structure"
 }
 ```
@@ -153,8 +153,8 @@ LivePerson supports the following claims set, which will be displayed to the age
 {
 "sub": "4255551212",
 "iss" : "https://www.YourBrand.com",
-"exp" : 1446115352000,
-"iat" : 1446111752000,
+"exp" : 1446115352,
+"iat" : 1446111752,
 "preferred_username" : "JohnDoe",
 "phone_number" : "+1-10-344-3765333"
 }
@@ -170,8 +170,8 @@ Example for Mandatory+Standard+Custom Claims JWT:
 {  
    "sub":"4255551212",
    "iss":"https://www.YourBrand.com",
-   "exp":1446115352000,
-   "iat":1446111752000,
+   "exp":1446115352,
+   "iat":1446111752,
    "preferred_username":"JohnDoe",
    "phone_number":"+1-10-344-3765333",
    "lp_sdes":[  
