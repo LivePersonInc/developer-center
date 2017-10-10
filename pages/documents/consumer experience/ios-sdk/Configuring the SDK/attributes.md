@@ -836,7 +836,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   <tr>
     <td align="left">conversationClosedSeparatorFontSize</td>
     <td align="left">UIFontTextStyle</td>
-    <td align="left">Define the Date Separator font size</td>
+    <td align="left">Define the Close Separator font size</td>
     <td align="left"><img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"></td>
     <td align="left">UIFontTextStyle.caption1</td>
   </tr>
