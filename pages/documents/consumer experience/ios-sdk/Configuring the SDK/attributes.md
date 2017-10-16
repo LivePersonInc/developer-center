@@ -1435,14 +1435,14 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">remoteUserAvatarLeading</td>
     <td align="left">Float</td>
-    <td align="left">Define the remote avatar Leading padding.</td>
+    <td align="left">Define the remote avatar Leading padding (left edge to avatar).</td>
     <td align="left"><img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"></td>
     <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">remoteUserAvatarTrailingPadding</td>
     <td align="left">Float</td>
-    <td align="left">Define the remote avatar Trailing padding.</td>
+    <td align="left">Define the remote avatar Trailing padding (Avatar to bubble).</td>
     <td align="left"><img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"></td>
     <td align="left">8</td>
   </tr>
