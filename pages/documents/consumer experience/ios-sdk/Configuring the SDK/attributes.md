@@ -834,28 +834,28 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">true</td>
   </tr>
   <tr>
-    <td align="left">conversationClosedSeparatorFontSize</td>
+    <td align="left">conversationSeparatorFontSize</td>
     <td align="left">UIFontTextStyle</td>
     <td align="left">Define the Close Separator font size</td>
     <td align="left"><img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"></td>
     <td align="left">UIFontTextStyle.caption1</td>
   </tr>
   <tr>
-    <td align="left">conversationClosedSeparatorBottomPadding</td>
+    <td align="left">conversationSeparatorBottomPadding</td>
     <td align="left">Float</td>
     <td align="left">Define the conversation Closed label to separator line padding</td>
     <td align="left"><img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding"></td>
     <td align="left">7</td>
   </tr>
   <tr>
-    <td align="left">conversationClosedSeparatorFontName</td>
+    <td align="left">conversationSeparatorFontName</td>
     <td align="left">Float</td>
     <td align="left">Define the conversation separator view bottom padding</td>
     <td align="left"><img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"></td>
     <td align="left">7</td>
   </tr>
   <tr>
-    <td align="left">conversationClosedSeparatorViewBottomPadding</td>
+    <td align="left">conversationSeparatorViewBottomPadding</td>
     <td align="left">String</td>
     <td align="left">Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
     <td align="left"><img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding"></td>
@@ -1063,7 +1063,7 @@ It will affect the following areas:
   </tr>
   <tr>
     <td align="left">customRefreshControllerImagesArray</td>
-    <td align="left">Array<UIImage></td>
+    <td align="left">Array<UIImage>?</td>
     <td align="left">Array of images for creating the custom refresh controller</td>
     <td align="left"><img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"></td>
     <td align="left">nil</td>
@@ -1133,7 +1133,7 @@ It will affect the following areas:
     <td align="left">UIFontTextStyle.footnote</td>
   </tr>
   <tr>
-    <td align="left">customFontNameSeparatorTimestampFeed</td>
+    <td align="left">customFontNameDateSeparator</td>
     <td align="left">String</td>
     <td align="left">Custom font name for Timestamp.
     Fonts that are not part of the iOS families, must be defined in App's Info.plist.</td>
