@@ -836,7 +836,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   <tr>
     <td align="left">conversationSeparatorFontSize</td>
     <td align="left">UIFontTextStyle</td>
-    <td align="left">Define the Close Separator font size</td>
+    <td align="left">Define the conversation closed separator font size</td>
     <td align="left"><img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"></td>
     <td align="left">UIFontTextStyle.caption1</td>
   </tr>
@@ -850,14 +850,14 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   <tr>
     <td align="left">conversationSeparatorFontName</td>
     <td align="left">Float</td>
-    <td align="left">Define the conversation separator view bottom padding</td>
+    <td align="left">Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
     <td align="left"><img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"></td>
     <td align="left">7</td>
   </tr>
   <tr>
     <td align="left">conversationSeparatorViewBottomPadding</td>
     <td align="left">String</td>
-    <td align="left">Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
+    <td align="left">Define the conversation separator view bottom padding</td>
     <td align="left"><img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding"></td>
     <td align="left">nil</td>
   </tr>
@@ -1064,14 +1064,15 @@ It will affect the following areas:
   <tr>
     <td align="left">customRefreshControllerImagesArray</td>
     <td align="left">Array<UIImage>?</td>
-    <td align="left">Array of images for creating the custom refresh controller</td>
+    <td align="left">Array of images for creating the custom refresh controller the controller will loop the images from the array need two or more images in the array for take effect</td>
     <td align="left"><img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"></td>
     <td align="left">nil</td>
   </tr>
   <tr>
     <td align="left">customRefreshControllerAnimationSpeed</td>
     <td align="left">Float<UIImage></td>
-    <td align="left">custom refresh controller speed animation </td>
+    <td align="left">custom refresh controller speed animation define the full images loop time
+Smaller value will create high speed animation </td>
     <td align="left"></td>
     <td align="left">2</td>
   </tr>
