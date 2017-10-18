@@ -40,8 +40,8 @@ The body media type must have one of the following formats:
  |Name|  Description|  Type/Value|  Required|
  |:---|  :---|  :---|  :--- |
  |text|  Add a line of text to the visitor.|   alphanumeric|  Required|
- |textType|  The type of message and its proper UI representation.|  plain/html/rich-content|
- |json | The JSON payload for the structured content template, as shown [here](structured-content-templates.html) |
+ |textType|  The type of message and its proper UI representation.|  plain/html/rich-content| |
+ |json | The JSON payload for the structured content template, as shown [here](structured-content-templates.html) | JSON | |
 
 Request body example:
 
@@ -61,8 +61,8 @@ It is possible to add different types of lines to the chat. When no text type is
 
 Changing the text type is handled as follows:
 
-| Name  | Description  | Type/Value | Notes |
-|-------|----------------|-----|----------|
+| Name  | Description  | Notes |
+|-------|-------------|----------|
 | plain | The default type when non used, the text will be displayed as provided |    |
 | html | For passing HTML content from the agent to the chat session.  | The provided html cannot include the following: Iframes, Scripts, DOM actions, Links with target="_blank". |
 | rich-content | For passing Structured Content templates | [Refer to the Structured Content Templates document](structured-content-templates.html)  |
