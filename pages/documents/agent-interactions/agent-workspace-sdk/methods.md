@@ -15,7 +15,7 @@ _Note: You should call init once at the beginning before calling any other metho
 
 ### init
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |init|  Initializes the service and performs the handshake with the agent.  | Can be provided with an optional callback for notifications. |
 
@@ -48,9 +48,9 @@ Example:
 
 ### get
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
-|get | Gets data from the public model.  | The data that arrives in the callback is the data from the model. If no data can be found in the provided key: null.| 
+|get | Gets data from the public model.  | The data that arrives in the callback is the data from the model. If no data can be found in the provided key: null.|
 
 Example:
 
@@ -72,7 +72,7 @@ Example:
 
 ### bind
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |bind | Binds to data in the public model. |  The data returns in the following structure {key: '', newValue: {}}, where the key is the location of the data within the public model, and the newValue is the data update. When binding, you will first receive a callback with existing data (if there is any), and then you will receive updates of the current data.  |
 
@@ -106,7 +106,7 @@ Example:
 
 ### unbind
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |unbind | Unbinds from data in the public model. |  The provided key and callback must be identical to those used to bind in order for the unbind operation to work. |
 
@@ -142,7 +142,7 @@ Example:
 
 ### command
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |command | Sends a command to the agent. | supported commands are: 'Write ChatLine': writes text to the agent's chat input. 'Write StructuredContent': send a json that represents a structured content input. 'Send Notification': send notification to the agent workspace UI.|
 
@@ -203,7 +203,7 @@ Example 3 - 'Send Notification':
         // or when the action terminated with an error.
     };
 
-    var cmdName = lpTag.agentSDK.cmdNames.notify; // = "Send Notification"
+    var cmdName = "Send Notification";
     var data = {};
 
     lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
@@ -214,7 +214,7 @@ Example 3 - 'Send Notification':
 
 ### dispose
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |dispose | Disposes of the service.| | Optional|
 
@@ -226,7 +226,7 @@ Example
 
 ### onNotify
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |onNotify  |Adds a listener to the Notify event.   | Notify events are sent. |Currently no|
 
@@ -245,7 +245,7 @@ Example
 
 ### onVisitorFocused
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
 |onVisitorFocused | Adds a listener to the Visitor Focus event.   |Sent whenever the visitor of the iFrame widget is focused. Assume the visitor is focused to begin with. |
 
@@ -255,7 +255,7 @@ Example
         // Do something when the visitor is focused
         // Assume the visitor is focused to begin with
     };
-    
+
     // Add a visitor focus handler.
     lpTag.agentSDK.onVisitorFocused(focusHandler);
 }
@@ -265,9 +265,9 @@ Example
 
 ### onVisitorBlurred
 
-|Method|  Description|  Notes|  Required| 
+|Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
-|onVisitorBlurred | Adds a listener to the Visitor Blur event.  | Sent whenever the visitor of the iFrame widget is blurred. Assume the visitor is focused to begin with.| 
+|onVisitorBlurred | Adds a listener to the Visitor Blur event.  | Sent whenever the visitor of the iFrame widget is blurred. Assume the visitor is focused to begin with.|
 
 ```javascript
 {
