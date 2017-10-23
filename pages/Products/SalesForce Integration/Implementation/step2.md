@@ -97,9 +97,9 @@ Objects” and click “Add” to move them to the “Selected Objects” side o
 {:start="4"}
 4. In order to configure the skills further and define which Objects each skill can view (along with other Skill-specific definitions), click on the “Configure Skills” link under “Advanced Settings”.
 
-5. The full list of the ‘Selected skills’ will be shown (The skills you selected from the previous screen).
+5. The full list of the 'Selected skills’ will be shown (The skills you selected from the previous screen).
 
-6. In order to customize the SFDC widget based on LE Skills, Click “Edit” next to one of the ‘selected skills’:
+6. In order to customize the SFDC widget based on LE Skills, Click “Edit” next to one of the 'selected skills’:
 
 	* Select which objects the relevant Skill can work with in the SFDC widget.
 
@@ -121,13 +121,13 @@ Objects” and click “Add” to move them to the “Selected Objects” side o
 
 2. Select from one of the following values in the “Chat Transcript Save Mode” picklist:
 
-	* **Field** – will insert the full transcript of the chat into the ‘Transcript’ field on the Chat Transcript record.
+	* **Field** – will insert the full transcript of the chat into the 'Transcript’ field on the Chat Transcript record.
 
 	* **Attachment** – will insert the full transcript of the chat as a related File Attachment on the chat transcript record.
 
 	* **Field and Attachment** – this will save the transcript by both the above methods to the chat transcript record.
 
-3. Click on “Configure field mapping” under ‘Advanced Settings’ to determine the values saved into the Chat
+3. Click on “Configure field mapping” under 'Advanced Settings’ to determine the values saved into the Chat
 Transcript record. Note the following instructions:
 
 	* Custom fields need to be added to the Chat Transcript object for them to show up in this list.
@@ -170,13 +170,13 @@ These settings allow you to choose which fields of each object will be available
 
 	* Choose a SF Field Name
 
-	* Choose ‘Editability’ mode
+	* Choose 'Editability’ mode
 
 	**Note!** Editability mode may sometimes be enforced according to your SF settings and permissions.
 
 	* LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other”, to manually configure a specific LP Value not included in the list (PreChat Survey, PostChat Survey, Extra SDEs, etc…) – See Appendix #1 for advanced instructions on how to set this.
 
-	* Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget).
+	* Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking 'i’ next to the Account/Contact from the main Search screen of the widget).
 
 	**Note!** Only the first 5 fields will be shown in the bubble
 
@@ -231,7 +231,7 @@ For example: you can use this to limit the Accounts your agents see to Account T
 
 2. Click on the “Allow Account Creation” checkbox if you permit your LiveEngage users to create a new Account from the LiveEngage SFDC widget (this is only on top of existing restrictions on their profiles).
 
-3. Click on ‘Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Account object (see the above “Enabled Object Settings” section for further explanation on this screen).
+3. Click on 'Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Account object (see the above “Enabled Object Settings” section for further explanation on this screen).
 
 ### Contact Settings
 
@@ -239,7 +239,7 @@ For example: you can use this to limit the Accounts your agents see to Account T
 
 2. Click on the “Allow Contact Creation” checkbox if you permit your LiveEngage users to create new Contacs from the LiveEngage SFDC widget.
 
-3. Click on ‘Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Contact object (see the above “Enabled Object Settings” section for further explanation on this screen).
+3. Click on 'Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Contact object (see the above “Enabled Object Settings” section for further explanation on this screen).
 
 ### Lead Settings
 
@@ -253,7 +253,7 @@ For example: you can use this to limit the Accounts your agents see to Account T
 
 	**Note!** _Check this checkbox if you want to enable Lead Assignment Rules but want to give your LiveEngage users the ability to decide whether or not they should be upheld when creating a new record in LiveEngage. This is on a case by case basis. Checking this checkbox will add a checkbox to the LiveEngage SFDC Widget interface, indicating whether or not they would like the new record to be assigned using existing sharing rules._
 
-4. Click on ‘Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Lead object
+4. Click on 'Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Lead object
 (see the above “Enabled Object Settings” section for further explanation on this screen).
 
 ### Case Settings
@@ -278,7 +278,7 @@ For example: you can use this to limit the Accounts your agents see to Account T
 
 	**Note!** _Check this checkbox if you want to enable Case Assignment Rules but want to give your LiveEngage usersthe ability to decide whether or not they should be upheld when creating a new record in LiveEngage. This is on acase by case basis. Checking this checkbox will add a checkbox to the LiveEngage SFDC Widget interface, indicating whether or not they would like the new record to be assigned using existing sharing rules)_.
 
-6. Click on ‘Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Case object (see the above “Enabled Object Settings” section for further explanation on this screen).
+6. Click on 'Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Case object (see the above “Enabled Object Settings” section for further explanation on this screen).
 
 	**Note!** The Account and Contact lookup fields have to be included in the Field Mapping list if you want the Cases
 	you create using the widget to be attached to them. 
@@ -292,7 +292,7 @@ For example: you can use this to limit the Accounts your agents see to Account T
 	**Note!** Checking this checkbox will require an Account name to be populated when creating an Opportunity record
 	from within the widget.
 
-3. Click on ‘Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Opportunity object (see the above “Enabled Object Settings” section for further explanation on this screen).
+3. Click on 'Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Opportunity object (see the above “Enabled Object Settings” section for further explanation on this screen).
 
 	**Note!** The Account lookup field has to be included in the Field Mapping list if you want the Opportunity you create
 	using the widget to be attached to it.
@@ -327,5 +327,5 @@ For example: you can use this to limit the Accounts your agents see to Account T
 	**Note!** The Contact Field list will allow you to choose any of the Contact Lookup fields on your custom object, in
 	case there are any.
 
-6. Click on ‘Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Custom
+6. Click on 'Configure Field Mapping, Related Lists, and Search Filters’ to configure all of settings for the Custom
 object (see the above “Enabled Object Settings” section for further explanation on this screen).

@@ -1133,7 +1133,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">ttrShowShiftBanner</td>
     <td align="left">Bool</td>
-    <td align="left">Ability to enable/disable shift toaster (‘An agent will respond...’)</td>
+    <td align="left">Ability to enable/disable shift toaster ('An agent will respond...’)</td>
     <td align="left"></td>
     <td align="left">true</td>
   </tr>

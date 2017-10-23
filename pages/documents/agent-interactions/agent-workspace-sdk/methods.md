@@ -22,6 +22,7 @@ _Note: You should call init once at the beginning before calling any other metho
 Example:
 
 ```javascript
+
 {
     var notificationHandler = function(data) {
     // Do something with the notifications
@@ -36,7 +37,7 @@ Example:
     // Do something when the visitor is blurred
     // Assume the visitor is focused to begin with
     };
-
+}
     lpTag.agentSDK.init({
     notificationCallback: notificationHandler,
     visitorFocusedCallback: focusHandler,

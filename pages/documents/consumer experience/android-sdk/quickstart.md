@@ -220,7 +220,7 @@ The SDK supports two operation modes:
 
 **Activity mode**
 
-Activity mode implements the toolbar that displays the agent name the consumer is talking with. The ‘Is Typing’ indicator displays when the agent is typing.
+Activity mode implements the toolbar that displays the agent name the consumer is talking with. The 'Is Typing’ indicator displays when the agent is typing.
 
 To open conversation window in separate activity use the following. This will start a new conversation activity:
 

@@ -24,7 +24,7 @@ Updates an existing Automatic Message for a specific account.
 
 | Header | Description |
 | :------- | :-------------- |
-| X-HTTP-Method-Override=PUT | Overrides unsupported HTTP methods. To be used with the ‘PUT’ value. |
+| X-HTTP-Method-Override=PUT | Overrides unsupported HTTP methods. To be used with the 'PUT’ value. |
 
 **Request Body**
 

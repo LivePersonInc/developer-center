@@ -92,7 +92,7 @@ When you create predefined responses, take into consideration what kind of phras
 
 ### Deployment Overview
 
-1. Ensure you generate the API key with ‘write’ permissions (click ‘advanced’) when generating your key.
+1. Ensure you generate the API key with 'write’ permissions (click 'advanced’) when generating your key.
 
 2. Issue a REST request to create a new predefined content entry
 

@@ -73,7 +73,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
 
 Keyword Search: Chat Search by time range and keyword
 
-In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word ‘iPad’ within the text available for lookup.
+In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word 'iPad’ within the text available for lookup.
 
 
 ```json

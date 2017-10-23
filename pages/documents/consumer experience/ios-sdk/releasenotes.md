@@ -241,7 +241,7 @@ The following additional conditions and configurations are required*:
 
 ### Set icon for "Send" button
 
-Brands are now able to choose and configure their own icon for the ‘Send’ button for in-app messaging conversations.
+Brands are now able to choose and configure their own icon for the 'Send’ button for in-app messaging conversations.
 
 **How to configure the send button icon:**
 
@@ -943,7 +943,7 @@ This method is used to open the conversation screen.
 
     func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK. The session in this case might have an expiration date. To reconnect with a new token, use the ‘reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK. The session in this case might have an expiration date. To reconnect with a new token, use the 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for a conversation query and reconnects open related webSockets and sync the conversation with its latest updates.
 

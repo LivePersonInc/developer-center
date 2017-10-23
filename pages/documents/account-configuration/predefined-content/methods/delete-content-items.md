@@ -24,11 +24,11 @@ Deletes Predefined Content items from a specific account.
 
 | Header | Description |
  |:-------- | :------------ |
-| X-HTTP-Method-Override=DELETE | Overrides unsupported HTTP methods. To be used with the ‘DELETE’ value. |
+| X-HTTP-Method-Override=DELETE | Overrides unsupported HTTP methods. To be used with the 'DELETE’ value. |
 
 **Request Body**
 
-`[‘12345’,’67890’]`
+`['12345’,’67890’]`
 
 **Path Parameters**
 

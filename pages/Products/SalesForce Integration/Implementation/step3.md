@@ -64,7 +64,7 @@ In case the periodic or daily sync did not capture a chat due to any reason (Err
 
 4. Click “Schedule Manual Job”.
 
-**Note!** The limitation for the ‘Manual job’ is 30 Days. 
+**Note!** The limitation for the 'Manual job’ is 30 Days. 
 
 ### “Sync Chat” Button on Chat Transcript Record
 

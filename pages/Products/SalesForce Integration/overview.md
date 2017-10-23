@@ -95,7 +95,7 @@ This will save the Account record in SF and link the existing chat to this Accou
 
 	This will save the Custom Object record in SF and link the existing chat to this Custom Object.
 
-	**Note!** If the ‘Custom Object’ has lookup fields for Account and/or Contact in Salesforce, and the Admin also defined this in the apps admin settings, the chat will be linked to the Account/Contact as well. 
+	**Note!** If the 'Custom Object’ has lookup fields for Account and/or Contact in Salesforce, and the Admin also defined this in the apps admin settings, the chat will be linked to the Account/Contact as well. 
 
 7. Linking a chat to an existing Salesforce Record
 
@@ -103,7 +103,7 @@ This will save the Account record in SF and link the existing chat to this Accou
 
 	2. Click on the "i" icon next to the relevant Contact, the “Info Bubble” will open and present the data from Salesforce.
 
-	3. Look for the relevant Case/Opportunity in the bubble, click ‘Link Chat’
+	3. Look for the relevant Case/Opportunity in the bubble, click 'Link Chat’
 
 	![IIcon](img/iicon.png)
 
@@ -113,8 +113,8 @@ This will save the Account record in SF and link the existing chat to this Accou
 	![LinkChat](img/linkchat.png)
 
 	{:start="5"}
-	5. Once the chat is linked to the record, the ‘Quick Links’ icon will become Orange. By clicking on it you will be
+	5. Once the chat is linked to the record, the 'Quick Links’ icon will become Orange. By clicking on it you will be
 	able to view the relevant records the chat is linked to.
 
-	6. In case you mistakenly linked the chat to the wrong record, you may always ‘Unlink’, Click on ‘Actions’ menu from the record page and choose ‘Unlink Chat’. 
+	6. In case you mistakenly linked the chat to the wrong record, you may always 'Unlink’, Click on 'Actions’ menu from the record page and choose 'Unlink Chat’. 
 

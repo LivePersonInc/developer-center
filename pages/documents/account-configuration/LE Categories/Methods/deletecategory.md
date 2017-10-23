@@ -85,11 +85,11 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   <tr>
     <td>return</td>
     <td>determine the return policy </td>
-    <td>Default: none - return the active revision with no response body. ‘order’ attribute is not maintained by the server
+    <td>Default: none - return the active revision with no response body. 'order’ attribute is not maintained by the server
 Also accepts:
 active - return all active (non-deleted) categories with the response body
 all - return all categories with the response body, including the deleted categories
-On both ‘active’ and ‘all’ the ‘order’ attribute is maintained by the server</td>
+On both 'active’ and 'all’ the 'order’ attribute is maintained by the server</td>
   </tr>
 </table>
 
@@ -128,7 +128,7 @@ On both ‘active’ and ‘all’ the ‘order’ attribute is maintained by th
 
 **Response Body**
 
-Delete a single category data, depends on the ‘return’ query parameter
+Delete a single category data, depends on the 'return’ query parameter
 
 Delete category example:
 
