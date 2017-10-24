@@ -120,11 +120,11 @@ table > thead > tr > th {
 }
 
 code {
-  background-color: #f0f0f0;
+  background-color: #162036;
   border-radius: 4px;
-  color: #444;
-  padding: 2px 4px;
-  white-space: initial;
+  color: #fff;
+  padding: 2px 10px;
+  /*white-space: initial;*/
 }
 
 /*toc nav bar */
