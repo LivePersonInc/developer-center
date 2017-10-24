@@ -74,6 +74,8 @@ The id_token in the response is standard JWT and can be translated to the unpack
 }
 ```
 
+[//]: # (TODO:Cleanup - Should add another component - Customer Authorization Endpoint, which is mandatory for external windows. This is the endpoint where users will log in and then be redirected to the external widnow page with the code/JWT as a query/hash param. Auth0 is an example for such a service, but the customer may want to implement their own landing page to manipulate query parameters and redirects rather than rely on a provided Auth service as is.)
+
 ### LivePerson SDK
 
 This is a LivePerson layer embedded into the customer app (mobile/web). It mediates between the app and the LivePerson Service and provides the interaction conversation UI. This layer calls the mobile app to supply an OAuth 2.0 code whenever the LivePerson Service needs it.
