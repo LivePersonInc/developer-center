@@ -51,6 +51,8 @@ Filter is sent in the POST data with the following JSON structure.
 | hasCoBrowse | Indication whether a CoBrowse session occurred during the chat | Boolean | Optional |  |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
+| lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
+
 
 **Request Example 1:**
 
@@ -1117,8 +1119,9 @@ Example:
 | lines | Lines of a specific chat. | container | |
 | lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
 | time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
-| textType | Type of text. | alphanumeric  | Valid formats: plain, html, url |
+| textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content |
 | text | The actual text in the chat line. | alphanumeric | |
+| json | The payload of the rich-content. | container | Relevant for lines of textType `rich-content` |
 | by | Name of the visitor or the agent’s nickname. | alphanumeric | |
 | source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system" |
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
