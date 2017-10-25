@@ -166,7 +166,7 @@ Example:
 }
 ```
 
-Example 2 - 'Write StructuredContent':
+Example 2 - 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
 
 ```javascript
 {
