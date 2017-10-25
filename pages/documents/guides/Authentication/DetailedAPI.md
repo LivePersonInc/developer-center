@@ -15,7 +15,7 @@ In this use case, it is the Customer’s Web App responsibility to generate a va
 
 The callback method accepts two parameters:
 
-*	token - a string token
+*	token - a string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only). 
 
 *	error - any value except null or undefined to describe the error that has occurred
 
@@ -33,7 +33,16 @@ The Customer web page method name can be either the default LivePerson method na
             // On Success
             callback(id_token);
             // On Failure
-            callback("","error reason");
+            callback("", "error reason");
+        },
+        // Or, if you want to provide a redirect_uri as well (instead of the default "https://liveperson.net")
+        lpGetAuthenticationTokenWithRedirectURI: function(callback) {
+            log("LP asked for id_token");
+            // Do your magic...
+            // On Success
+            callback({ssoKey: id_token, redirect_uri: uri});
+            // On Failure
+            callback({}, "error reason");
         }
     };
 ```
@@ -48,7 +57,7 @@ The Customer web page method name can be either the default LivePerson method na
 
   code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
   grant_type=authorization_code
-  redirect_uri=https://www.liveperson.com
+  redirect_uri=https://liveperson.net
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
 
