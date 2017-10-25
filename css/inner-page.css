@@ -127,6 +127,10 @@ code {
   /*white-space: initial;*/
 }
 
+td code {
+  color: #666666;
+}
+
 /*toc nav bar */
 div#toc {
   background-color: #f2f2f2;
