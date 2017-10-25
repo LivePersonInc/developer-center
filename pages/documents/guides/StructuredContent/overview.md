@@ -336,7 +336,7 @@ Each basic element can have a style.
 	"italic": true,
 	"color": "#453533",
 	"background-color": "#3E47A0",
-	"size": small
+	"size": "small"
 }
 ```
 
