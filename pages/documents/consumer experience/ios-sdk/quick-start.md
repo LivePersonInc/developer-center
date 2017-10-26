@@ -32,40 +32,40 @@ LiveEngage In-App Messaging SDK for iOS supports multiple methods of installatio
 The SDK is also compatible with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
 
  1. Install cocoapods using the following command:
-```bash
-	$ gem install cocoapods
-```
+    ```bash
+    $ gem install cocoapods
+    ```
  2. Navigate to your project folder and init new pod using the following command:
-```bash
-	$ pod init
-```
+    ```bash
+    $ pod init
+    ```
  3. Podfile should be created under your project’s folder.
  To integrate Liveperson Messaging SDK into your Xcode project using CocoaPods, specify it in your Podfile:
 
-```
-	source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-	platform :ios, '9.0'
-	use_frameworks!
+    ```
+    source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
+    platform :ios, '9.0'
+    use_frameworks!
 
-	target '<Your Target Name>' do
-	    pod 'LPMessagingSDK'
-	end
-```
+    target '<Your Target Name>' do
+        pod 'LPMessagingSDK'
+    end
+    ```
 
  4. Run the following command in the terminal under your project folder:
-```bash
+    ```bash
     $ pod install
-```
+    ```
  5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
-```bash
+    ```bash
     $ pod update
-```
+    ```
 
  6. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.**
 
-	```bash
-	bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
-	```
+    ```bash
+    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
+    ```
 
 **_Option 2: Using Libraries Copy to Xcode Project_**
 
@@ -79,9 +79,9 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
 
 5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
 
-```
-bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
-```
+    ```
+    bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
+    ```
 
 
 ### Step 2: Configure project settings to connect LiveEngage SDK
@@ -107,33 +107,30 @@ Note: Due to Apple policy, this step is mandatory even if the photo sharing feat
 ### Step 3: Initialization
 
 1. Inside `viewController` add the following imports:
-```swift
+    ```swift
     import LPMessagingSDK
     import LPInfra
-```
+    ```
 
 2. Also inside `ViewController`, under `viewDidLoad`, add the following code:
-
-```swift
+    ```swift
     do {
         try LPMessagingSDK.instance.initialize("Your account ID")
     } catch {
         return
     }
-```
+    ```
 
 3. Set up and call the conversation view. You’ll need to provide your LivePerson account number and a container view controller.
-
-```swift
+    ```swift
     let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("Your account ID")
     let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
 
     LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: nil)
-```
+    ```
 
 4. In order to remove the conversation view when your container is deallocated, run the following code:
-
-```swift
+    ```swift
     let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
     LPMessagingSDK.instance.removeConversation(conversationQuery)
-```
+    ```
