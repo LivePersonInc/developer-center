@@ -36,15 +36,15 @@ There are 2 types of query:
 
 Delta:
 
+{
+  "type": 0,
+  "parameters": [
     {
-        "type":0,
-        "parameters":[
-            {
-              "site": "qa34649454",
-              "revision": 26
-             }
-        ]
+      "site": "le77658829",
+      "revision": 0
     }
+  ]
+}
 
 All changes:
 
@@ -52,7 +52,7 @@ All changes:
         "type":1,
         "parameters":[
             {
-              "site": "qa34649454",
+              "site": "le77658829",
               "from": 20,
               "to": 23
              }
@@ -71,25 +71,48 @@ All changes:
 **Response Body For Delta Query:**
 
     {
-       
+       {
+    "appDataList": [
+        {
+            "appName": "le-users",
+            "accountList": {
+                "accountList": [
+                    {
+                        "siteId": "le77658829",
+                        "itemsCollection": {
+                            "revision": 1,
+                            "items": [
+                                {
+                                    "id": 2398413012,
+                                    "name": "test"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "appApiVersion": 1
+        }
+    ]
+}
     }
 
 **Response Body for All Changes Query:**
 
-    {  
-       
-             },
-             {  
-               
-                   }
-                ]
-             },
-             {  
-               
-                   }
-                ]
-             }
-          ]
-       }
+    [
+    {
+        "revisionsCollection": [
+            {
+                "revision": 1,
+                "items": [
+                    {
+                        "id": 2398413012,
+                        "name": "test"
+                    }
+                ],
+                "revisionDate": "2017-10-26 18:29:22"
+            }
+        ],
+        "siteId": "le77658829"
     }
-
+]
