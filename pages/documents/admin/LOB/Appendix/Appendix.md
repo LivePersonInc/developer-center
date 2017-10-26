@@ -44,6 +44,7 @@ This section contains API details that are common to every API’s resource and 
 | userId | User ID | Positive long number greater than zero |
 | skillId | Skill ID | Positive long number greater than zero |
 | agentGroupId | Agent group ID | Positive long number greater than zero |
+| lobId | LOB ID | Positive long number greater than zero |
 
 ### Entity Structure
 
