@@ -1,5 +1,5 @@
 ---
-title: Sample App
+title: Using LivePerson SDK
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -12,7 +12,27 @@ permalink: consumer-experience-ios-sdk-sampleapp.html
 indicator: messaging
 ---
 
-### LivePerson Sample APP ( SDK 2.8.0, iOS 11.0, Swift 4)
+##### Table of Contents  
+
+### SDK 2.8.0, iOS 11.0, Swift 4
+
+[Installing the SDK](#2.8step1)  
+[Configure project settings](#2.8step2)  
+[Using the SDK](#2.8step3)  
+[Customizing the SDK](#2,8step4)  
+[Configuring App for Push Notifications](#2.8step5)  
+
+### SDK 2.5.3.0, iOS 10.3, Swift 3
+
+[Installing the SDK](#2.5step1)  
+[Configure project settings](#2.5step2)  
+[Using the SDK](#2.5step3)  
+[Customizing the SDK](#2,5step4)  
+[Configuring App for Push Notifications](#2.5step5)  
+
+<a name="2.8step1"/>
+
+## SDK 2.8.0, iOS 11.0, Swift 4
 
 #### Step 1: Installing the SDK
 
@@ -105,6 +125,8 @@ indicator: messaging
 
 3. Copy (Drag and Drop) all framework and bundle files into the project.
 
+<a name="2.8step2"/>
+
 #### Step 2: Configure project settings
 
 - If you’re not using Cocoapods, you will have to add the Frameworks to your Project:
@@ -139,6 +161,8 @@ indicator: messaging
             bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 
         ```
+        
+<a name="2.8step3"/>
 
 #### Step 3: Using the SDK
 
@@ -199,6 +223,8 @@ indicator: messaging
   LPMessagingSDK.instance.toggleChatActions("Your Account Number")
 
 ```
+
+<a name="2.8step4"/>
 
 #### Step 3: Customizing the SDK
 
@@ -342,6 +368,8 @@ indicator: messaging
   // Print Configurations
   LPConfig.printAllConfigurations()
 ```
+
+<a name="2.8step5"/>
 
 ### Step 4: Configuring App for Push Notifications
 
@@ -600,9 +628,10 @@ It's important to make sure your **Certificates** are correct and everything is 
 **Note**: this only ensure that the **Apple Development IOS Push Service Certificate** is able to push Notifications, this process it's not related to **LiveEngage**
 
 
-### LivePerson Sample APP ( SDK 2.5.3.0, iOS 10.3, Swift 3)
+<a name="2.5step1"/>
 
-[The app itself can be found on GitHub, here](https://lpgithub.dev.lprnd.net/dvillacis/SwiftSDK). What follows are the instructions on initializing, configuring and customizing it.
+## SDK 2.5.3.0, iOS 10.3, Swift 3
+
 
 #### Step 1: Installing the SDK
 
@@ -682,6 +711,8 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 3. Copy (Drag and Drop) all framework and bundle files into the project.
 
+<a name="2.5step2"/>
+
 #### Step 2: Configure project settings
 
 * If you’re not using Cocoapods, you will have to add the Frameworks to your Project:
@@ -712,6 +743,8 @@ It's important to make sure your **Certificates** are correct and everything is 
 ```sh
   bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 ```
+
+<a name="2.5step3"/>
 
 #### Step 3: Using the SDK
 
@@ -761,6 +794,8 @@ It's important to make sure your **Certificates** are correct and everything is 
   // Call LPMessagingSDK Menu
   LPMessagingSDK.instance.toggleChatActions(“Your Account Number”)
 ```
+
+<a name="2.5step4"/>
 
 #### Step 4: Customizing the SDK
 
@@ -904,6 +939,8 @@ Note: this object gives you access to all the different attributes you are able 
     // Print Configurations
     LPConfig.printAllConfigurations()
 ```
+
+<a name="2.5step5"/>
 
 #### Step 4: Configuring App for Push Notifications
 
