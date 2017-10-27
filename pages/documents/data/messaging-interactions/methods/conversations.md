@@ -15,7 +15,7 @@ This method retrieves a list of conversations with all their metadata and relate
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | https://<domain>/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
+POST   | https://{domain}/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
 
 **URL Parameters**
 
