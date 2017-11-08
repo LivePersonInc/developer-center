@@ -28,8 +28,6 @@ state        | State of the conversation.                 | Comma separated stri
 startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 
-=======
-
 ### Response
 
 **Elements in the Response**

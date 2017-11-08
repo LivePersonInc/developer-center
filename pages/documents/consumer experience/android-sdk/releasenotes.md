@@ -4,7 +4,6 @@ Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for Android
-level4: Appendix
 
 order: 310
 permalink: consumer-experience-android-sdk-release-notes.html
