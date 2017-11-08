@@ -90,7 +90,6 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/framewor
 
 2. In the **General** tab, make sure that the framework files are under **Embedded Libraries**.
 
-
 3. In Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
 4. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project

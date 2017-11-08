@@ -585,7 +585,7 @@ The following properties for customizable bubble corners can now be configured:
 </table>
 
 
-### Unread messages badge
+#### Unread messages badge
 
 The following properties for the unread messages badge can be configured:
 
@@ -607,7 +607,7 @@ The following properties for the unread messages badge can be configured:
 </table>
 
 
-### Scroll to bottom button
+#### Scroll to bottom button
 
 The following properties for the scroll to bottom button can now be configured:
 
@@ -634,7 +634,7 @@ The following properties for the scroll to bottom button can now be configured:
 </table>
 
 
-### Send button
+#### Send button
 
 The following properties for the send button can now be configured:
 
@@ -656,7 +656,7 @@ The following properties for the send button can now be configured:
 </table>
 
 
-### Controller bubble
+#### Controller bubble
 
 The following properties for the controller bubble can now be configured:
 
