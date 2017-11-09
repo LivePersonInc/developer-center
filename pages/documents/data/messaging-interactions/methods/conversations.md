@@ -151,9 +151,9 @@ Name                 | Description                                              
 | lobId | ID of the line of business of the campaign. | numeric(long) | |
 | lobName | Name of the line of business of the campaign. | alphanumeric | |
 | LocationId | ID of the location of the engagement on the screen. | numeric  | |
-| LocationName | describes where an engagement can be displayed. | alphanumeric | The default location is the entire website. |
-
-
+| LocationName | describes the engagement display location. | alphanumeric | The default location is the entire website. |
+| behaviorSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
+| profileSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 
 _Message Info_
 
