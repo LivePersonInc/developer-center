@@ -33,7 +33,7 @@ android {
     ...
     repositories {
         ...
-        flatDirs {
+        flatDir {
             dirs 'libs' // i.e. if LPCoapp-SDK-Android-0.1.0-release.aar resides in <your-project>/libs
         }
     }
@@ -41,7 +41,7 @@ android {
 
 dependencies {
     ...
-    compile(name:'LPCoapp-SDK-Android-0.1.0-release.aar', ext:'aar')
+    compile(name:'LPCoapp-SDK-Android-0.1.0-release', ext:'aar')
     // add 3rd-party dependency for Dexter as well
     compile 'com.karumi:dexter:2.3.1'
 }

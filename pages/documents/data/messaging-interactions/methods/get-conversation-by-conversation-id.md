@@ -16,7 +16,7 @@ This method retrieves a conversation according to the given conversation ID.
 
 Method     | URL
 --------   | ---
-POST       | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/search`
+POST       | https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/search
 
 **BODY/POST Parameters**
 

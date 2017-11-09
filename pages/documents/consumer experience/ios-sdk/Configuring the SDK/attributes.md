@@ -1133,7 +1133,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">ttrShowShiftBanner</td>
     <td align="left">Bool</td>
-    <td align="left">Ability to enable/disable shift toaster (‘An agent will respond...’)</td>
+    <td align="left">Ability to enable/disable shift toaster ('An agent will respond...’)</td>
     <td align="left"></td>
     <td align="left">true</td>
   </tr>
@@ -1393,7 +1393,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">realTimeMaskingRegex</td>
     <td align="left">String</td>
-    <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server unmasked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
+    <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server masked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
     <td align="left"></td>
     <td align="left">""</td>
   </tr>

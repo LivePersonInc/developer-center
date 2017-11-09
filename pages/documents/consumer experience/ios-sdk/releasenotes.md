@@ -29,12 +29,6 @@ _The beta version was released in v2.7 (for a full description, refer to the [v2
 
 The dictionary of template elements can be found [here](https://developers.liveperson.com/structured-content-templates.html).
 
-**Configurations**
-
-Some XCode Project's Capabilities need to be switched on in order to support Map items in Structured content feature.
-In XCode, navigate to project's Targets settings and select the relevant target of your app, then navigate to 'Capabilities' tab.
-Map items require MapKit framework to show location in map. To use map items, switch on 'Maps' toggle.  
-
 **What does enablement mean?**
 
 Until rollout is complete, the structured content capability in SDK v2.7 was flagged as a Beta feature. The feature has an enablement toggle in the SDK which was disabled by default.
@@ -585,7 +579,7 @@ The following properties for customizable bubble corners can now be configured:
 </table>
 
 
-#### Unread messages badge
+### Unread messages badge
 
 The following properties for the unread messages badge can be configured:
 
@@ -607,7 +601,7 @@ The following properties for the unread messages badge can be configured:
 </table>
 
 
-#### Scroll to bottom button
+### Scroll to bottom button
 
 The following properties for the scroll to bottom button can now be configured:
 
@@ -634,7 +628,7 @@ The following properties for the scroll to bottom button can now be configured:
 </table>
 
 
-#### Send button
+### Send button
 
 The following properties for the send button can now be configured:
 
@@ -656,7 +650,7 @@ The following properties for the send button can now be configured:
 </table>
 
 
-#### Controller bubble
+### Controller bubble
 
 The following properties for the controller bubble can now be configured:
 

@@ -52,7 +52,7 @@ Steps for resolving the problem:
 
 2. Within SF you must grant access to the relevant objects:
 	
-	* Create a new ‘modify all’ permission set to the relevant SF object (in this example – Opportunities) and assign it to the user who encountered the problem.
+	* Create a new 'modify all’ permission set to the relevant SF object (in this example – Opportunities) and assign it to the user who encountered the problem.
 
 {:start="4"}
 4. **Issue**: Chat transcripts are not synced to SF
@@ -65,7 +65,7 @@ Possible causes:
 
 ### Known Limitations
 
-1. The SF feature ‘Person accounts’ is not supported: Person accounts is a SF feature which stores information about individual consumers (Account = Contact).
+1. The SF feature 'Person accounts’ is not supported: Person accounts is a SF feature which stores information about individual consumers (Account = Contact).
 
 2. The transcript for converted leads is not accessible.
 

@@ -1241,7 +1241,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td>&lt;string name=&quot;client_only_mask_character&quot;&gt;</td>
     <td>The character used to mask client only string.</td>
-    <td>‘*’</td>
+    <td>'*’</td>
     <td></td>
   </tr>
   <tr>

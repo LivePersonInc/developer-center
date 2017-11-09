@@ -17,7 +17,7 @@ Watson integrates with the LiveEngage platform, logging in as an agent with the 
 
 Watson provides the artificial intelligence solution to power chatbots, and to understand the intent of the consumer. This means it can take on a significant amount of work in the contact center, freeing up human agents for more complex tasks and higher levels of consumer care.  
 
-Because it runs on LiveEngage, the bot seamlessly routes the conversation to a human agent when it cannot understand the consumer. This ‘hybrid bot’ approach with Watson’s technology allows agents and agent managers to monitor interactions, and also see full conversation history to better assist customers if a transition from a bot to human agent is made.
+Because it runs on LiveEngage, the bot seamlessly routes the conversation to a human agent when it cannot understand the consumer. This 'hybrid bot’ approach with Watson’s technology allows agents and agent managers to monitor interactions, and also see full conversation history to better assist customers if a transition from a bot to human agent is made.
 
 By treating the bot as any other human agent, the connector enables brands enjoy all the benefits the LiveEngage platform brings, from agent and agent manager workspace tools, to performance tracking and detailed reporting and analysis.  Our connector allows the rapid and efficient deployment of this bot activity at the scale required by the world’s largest brands.
 

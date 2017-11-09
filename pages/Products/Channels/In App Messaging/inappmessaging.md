@@ -36,7 +36,7 @@ The following prerequisites are required:
 
 * iOS or Android native app
 
-* LiveEngage account with messaging enabled (contact your LivePerson representative to enable messaging on your account.  (hint: if you see ‘all connections’ when you login, your account has messaging)
+* LiveEngage account with messaging enabled (contact your LivePerson representative to enable messaging on your account.  (hint: if you see 'all connections’ when you login, your account has messaging)
 
 * iOS Apps must have a bundle ID, registered in an Apple developer account
 
