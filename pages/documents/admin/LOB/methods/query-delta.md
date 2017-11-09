@@ -3,7 +3,7 @@ title: Lobs Query Delta
 keywords:
 level1: Documents
 level2: Admin
-level3: Lobs API
+level3: LOBs API
 level4: Methods
 
 
@@ -13,7 +13,7 @@ permalink: administration-lobs-query-delta.html
 indicator: both
 ---
 
-This API queries changes in lobs data.
+This API queries changes in LoBs data.
 
 ### Request
 
