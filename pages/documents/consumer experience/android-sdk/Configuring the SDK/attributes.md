@@ -1444,6 +1444,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <th>Name</th>
     <th>Description</th>
+  </tr>
 </thead>
 <tbody>    
   <tr>
@@ -1452,7 +1453,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_description&quot;&gt;</td>
-    <td>Content description for custom button.It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
+    <td>Content description for custom button. It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>
