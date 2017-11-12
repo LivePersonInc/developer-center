@@ -90,16 +90,19 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/framewor
 
 2. In the **General** tab, make sure that the framework files are under **Embedded Libraries**.
 
-
 3. In Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
 4. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project
-settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html){:target="_blank"}.
+settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html)
 In Xcode info.plist of the project, add two new privacy keys and values:
  * Key: NSPhotoLibraryUsageDescription, Value: "Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS",
  * Key: NSCameraUsageDescription, Value: "Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"
 <br>This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.
 Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.
+5. Some XCode Project's Capabilities need to be switched on in order to support SDK specific features.
+In XCode, navigate to project's Targets settings and select the relevant target of your app, then navigate to 'Capabilities' tab.
+ * **Push Notifications**: SDK uses remote push notification to notify the user whenever a new message from remote user has been received. To use remote push notifications, switch on 'Push Notifications' toggle.  
+ * **Structured Content**: map items require MapKit framework to show location in map. To use map items, switch on 'Maps' toggle.  
 
 
 ### Step 3: Initialization
