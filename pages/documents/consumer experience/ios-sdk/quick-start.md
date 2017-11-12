@@ -19,8 +19,8 @@ This Quick Start will quickly get you up and running with a project powered by L
 
 To use the LivePerson In-App Messaging SDK, the following are required:
 
-* XCode 9.0 or later
-* Swift 4.0 (sample compiler as 3.2) or later, or Objective-C
+* XCode 9.1 or later
+* Swift 4.0.2 or later, or Objective-C
 
 _Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"}._
 
@@ -69,7 +69,7 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
 
 **_Option 2: Using Libraries Copy to Xcode Project_**
 
-1. Click [here](https://github.com/LP-Messaging/iOS-Messaging-SDK){:target="_blank"} to download the SDK package.
+1. Click [here](https://github.com/LP-Messaging/iOS-Messaging-SDK) to download the SDK package.
 
 2. Once downloaded, extract the ZIP file to a folder on your Mac.
 
@@ -77,7 +77,7 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
 
 4. In project settings, navigate to the Build Phases tab, and make sure to have **LPMessagingSDKModels.bundle** under **Copy Bundle Resources**.
 
-5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
+5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216) and is necessary for archiving your app before publishing it to the App Store.
 
 ```
 bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
