@@ -43,6 +43,8 @@ cases will be "ams").
 - **brandId** - The account number associated with the push.
 - **notificationType** - The type of notification (APN or GCM).
 - **device-token** - The device token used for the push.
+- **badge** - The number of unread messages to be displayed on the unread messages badge.
+- **sequence** - 
 
 iOS (APNS) only:
 
@@ -51,7 +53,7 @@ iOS (APNS) only:
 Android (GCM) only:
 
 - **data** - Contains payload and raw message objects.
-- **payload** - Contains backendService, conversationId, originatorId and brandID.
+- **payload** - Contains backendService, conversationId, originatorId, brandID, badge and sequence.
 - **message** - Raw message text.
 
 **iOS JSON:**
@@ -67,6 +69,8 @@ Android (GCM) only:
     "conversationId":	"13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
     "originatorId":	"qa90588718.2333061110",
     "brandId":	"qa90588711",
+    "badge":1,
+    "sequence":8,
     "notificationType":	"apn"
     }
 
@@ -79,7 +83,9 @@ Android (GCM) only:
     "backendService":	"ams",
     "conversationId":	"ff816d0d-3572-4430-956f-cab638d18826",
     "originatorId":	"qa90588718.2333061110",
-    "brandId":	"qa90588711"
+    "brandId":	"qa90588711",
+    "badge":4,
+    "sequence":6
     }
     },
     "push-service":	2,
