@@ -1024,13 +1024,13 @@ It will affect the following areas:
 <table>
 <thead>
    <tr>
-  <th>Name</th>
+    <th>Name</th>
     <th>Type</th>
     <th>Description</th>
     <th>Example</th>
     <th>Default </th>
   </tr>
-  </thead>
+</thead>
 <tbody>
   <tr>
     <td align="left">brandName</td>
@@ -1063,16 +1063,15 @@ It will affect the following areas:
   </tr>
   <tr>
     <td align="left">customRefreshControllerImagesArray</td>
-    <td align="left">Array<UIImage>?</td>
+    <td align="left">&lt;ArrayUIImage&gt;?</td>
     <td align="left">Array of images for creating the custom refresh controller the controller will loop the images from the array need two or more images in the array for take effect</td>
     <td align="left"><img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"></td>
     <td align="left">nil</td>
   </tr>
   <tr>
     <td align="left">customRefreshControllerAnimationSpeed</td>
-    <td align="left">Float<UIImage></td>
-    <td align="left">custom refresh controller speed animation define the full images loop time
-Smaller value will create high speed animation </td>
+    <td align="left">Float&lt;UIImage&gt;</td>
+    <td align="left">custom refresh controller speed animation define the full images loop time. Smaller value will create high speed animation </td>
     <td align="left"></td>
     <td align="left">2</td>
   </tr>
@@ -1082,81 +1081,75 @@ Smaller value will create high speed animation </td>
 ### Date Separator
 
 <table>
-<thead>
-   <tr>
-  <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Example</th>
-    <th>Default </th>
-  </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td align="left">dateSeparatorTitleBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator title background color.</td>
-    <td align="left"><img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"></td>
-    <td align="left">UIColor.white</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorTextColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator text color.</td>
-    <td align="left"><img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"></td>
-    <td align="left">#46474A</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorLineBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator line background color.</td>
-    <td align="left"><img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"></td>
-    <td align="left">UIColor.clear</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator background color.</td>
-    <td align="left"><img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"></td>
-    <td align="left">#FFFFFF</td>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorFontSize</td>
-    <td align="left">UIFontTextStyle</td>
-    <td align="left">Define the Date Separator font text style.</td>
-    <td align="left"><img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize"></td>
-    <td align="left">UIFontTextStyle.footnote</td>
-  </tr>
-  <tr>
-    <td align="left">customFontNameDateSeparator</td>
-    <td align="left">String</td>
-    <td align="left">Custom font name for Timestamp.
-    Fonts that are not part of the iOS families, must be defined in App's Info.plist.</td>
-    <td align="left"><img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"></td>
-    <td align="left">nil</td>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorTopPadding</td>
-    <td align="left">Float</td>
-    <td align="left">Define the Date Separator Top padding.</td>
-    <td align="left"><img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"></td>
-    <td align="left">0</td>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorBottomPadding</td>
-    <td align="left">Float</td>
-    <td align="left">Define the Date Separator bottom padding.</td>
-    <td align="left"><img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"></td>
-    <td align="left">0</td>
-  </tr>
-</tbody>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Example</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="left">dateSeparatorTitleBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator title background color.</td>
+			<td align="left"><img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"></td>
+			<td align="left">UIColor.white</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorTextColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator text color.</td>
+			<td align="left"><img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"></td>
+			<td align="left">#46474A</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorLineBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator line background color.</td>
+			<td align="left"><img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"></td>
+			<td align="left">UIColor.clear</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator background color.</td>
+			<td align="left"><img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"></td>
+			<td align="left">#FFFFFF</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorFontSize</td>
+			<td align="left">UIFontTextStyle</td>
+			<td align="left">Define the Date Separator font text style.</td>
+			<td align="left"><img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize"></td>
+			<td align="left">UIFontTextStyle.footnote</td>
+		</tr>
+		<tr>
+			<td align="left">customFontNameDateSeparator</td>
+			<td align="left">String</td>
+			<td align="left">Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist.</td>
+			<td align="left"><img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"></td>
+			<td align="left">nil</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorTopPadding</td>
+			<td align="left">Float</td>
+			<td align="left">Define the Date Separator Top padding.</td>
+			<td align="left"><img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"></td>
+			<td align="left">0</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorBottomPadding</td>
+			<td align="left">Float</td>
+			<td align="left">Define the Date Separator bottom padding.</td>
+			<td align="left"><img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"></td>
+			<td align="left">0</td>
+		</tr>
+	</tbody>
 </table>
+
 
 ### User input view
 
