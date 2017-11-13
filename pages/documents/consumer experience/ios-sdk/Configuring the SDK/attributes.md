@@ -1818,3 +1818,26 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
 </tbody>
 </table>
+
+### Accessibility
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">announceAgentTyping</td>
+    <td align="left">Bool</td>
+    <td align="left">If true, accessibility will announce when agent is typing a message to the consumer.</td>
+    <td align="left"></td>
+    <td align="left">true</td>
+  </tr>
+</tbody>
+</table>
