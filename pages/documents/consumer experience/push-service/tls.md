@@ -44,7 +44,7 @@ cases will be "ams").
 - **notificationType** - The type of notification (APN or GCM).
 - **device-token** - The device token used for the push.
 - **badge** - The number of unread messages to be displayed on the unread messages badge.
-- **sequence** - 
+- **sequence** - The sequence id of the message which triggered the push.
 
 iOS (APNS) only:
 
