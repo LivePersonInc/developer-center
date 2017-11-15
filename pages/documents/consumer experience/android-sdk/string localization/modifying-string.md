@@ -671,4 +671,14 @@ Example</td>
   <td>Used on the map pin on a structured content map element</td>
   <td>Destination</td>
 </tr>
+<tr>
+  <td>lp_accessibility_is_typing</td>
+  <td>Announced when an agent with nickname is typing (applicable only in Activity mode)</td>
+  <td>%1$s is typing</td>
+</tr>
+<tr>
+  <td>lp_accessibility_agent_is_typing</td>
+  <td>Announced when an agent without a nickname is typing (applicable only in Activity mode)</td>
+  <td>Agent is typing</td>
+</tr>
 </table>
