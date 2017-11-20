@@ -1171,6 +1171,12 @@ The goal of the following document is to enumerate the different fields controll
     <td>60,000</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;announce_agent_typing&quot;&gt;</td>
+    <td>Announce when the agent is typing. This is applicable only in Activity mode</td>
+    <td>true</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
@@ -1246,6 +1252,12 @@ The goal of the following document is to enumerate the different fields controll
     <td>&lt;bool name=&quot;structured_content_link_as_callback&quot;&gt;</td>
     <td>Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent)</td>
     <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_google_maps_key&quot;&gt;</td>
+    <td>Set the host app's Google Map key to enable map views in Structured Content</td>
+    <td>no value</td>
     <td></td>
   </tr>
   </tbody>
