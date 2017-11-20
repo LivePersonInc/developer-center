@@ -1,5 +1,5 @@
 ---
-title: Using LivePerson SDK
+title: Using LivePerson SDK - iOS
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -161,7 +161,7 @@ indicator: messaging
             bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 
         ```
-        
+
 <a name="2.8step3"/>
 
 #### Step 3: Using the SDK
