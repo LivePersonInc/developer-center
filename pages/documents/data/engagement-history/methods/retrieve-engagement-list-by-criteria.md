@@ -236,7 +236,7 @@ Example:
                "source": "system",
                "subType": "REGULAR",
                "textType": "plain",
-               "cannedAnswerType": 0
+               "cannedAnswerType": 0,
                "lineSeq": "80"
              },
              {
@@ -248,7 +248,7 @@ Example:
                "source": "system",
                "subType": "REGULAR",
                "textType": "plain",
-               "cannedAnswerType": 0
+               "cannedAnswerType": 0,
                "lineSeq": "81"
              }
            ]
