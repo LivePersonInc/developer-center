@@ -109,17 +109,17 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 
 | Attribute | Description | Type | Required|
 | :--- | :--- | :--- | :--- |
-| status | Availability status | enum (‘Available’, ‘NotAvailable’) | Required |
-| engagementDetails | The details of an engagement when it is available | object | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.campaignId | | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.engagementId | | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.contextId | | string | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.windowId | | string | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.language | | string | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.engagementRevision | | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.skillId | | number | Optional when the status is ‘Available’ |
-| engagementDetails.skillName | | string | Optional when the status is ‘Available’ |
+| status | Availability status | enum ('Available’, 'NotAvailable’) | Required |
+| engagementDetails | The details of an engagement when it is available | object | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.campaignId | | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.engagementId | | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.contextId | | string | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.windowId | | string | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.language | | string | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.engagementRevision | | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.skillId | | number | Optional when the status is 'Available’ |
+| engagementDetails.skillName | | string | Optional when the status is 'Available’ |
 | pageId | Page identification ID for sending event on the current engagement | string | Required  |
 | sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
 | visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |

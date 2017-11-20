@@ -3,7 +3,7 @@ title: Get lob by ID
 keywords:
 level1: Documents
 level2: Admin
-level3: Lobs API
+level3: LOBs API
 level4: Methods
 
 
@@ -13,7 +13,7 @@ permalink: administration-get-lob-by-id.html
 indicator: both
 ---
 
-This API retrieves a single lob (by ID) for a specific account.
+This API retrieves a single LoB (by ID) for a specific account.
 
 ### Request
 
@@ -43,4 +43,3 @@ This API retrieves a single lob (by ID) for a specific account.
 **Response Body**
 
 Please see the [Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

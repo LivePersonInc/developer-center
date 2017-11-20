@@ -104,8 +104,10 @@ In the payload, put something similar to the below:
   "aud": "acc:qa57221676",
   "exp": 1534971930,
   "iat": 1471899942,
-  "name": "Eitan"
+  "given_name": "Eitan"
 }
 ```
+
+For a full list of values that can be passed here, please refer to the [Authentication](https://developers.liveperson.com/guides-authentication-detailedapi.html) document.
 
 {% include links.html %}

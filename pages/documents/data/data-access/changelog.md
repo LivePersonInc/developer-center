@@ -15,6 +15,23 @@ This document describes changes made to the Data Access API. Entries will appear
 
 All future dates found in this documentation reflect approximations for upcoming additions or corrections and are subject to change.
 
+### October 30th, 2017
+
+**Bug fixes**:
+
+1. Missing sporadic engagements and surveys
+
+2. Data Access job failed with arrayIndex error
+
+**Improvements**:
+
+1. Improve decryption algorithm
+
+2. Scan for files according to the request's parameters (reduce probability of timeout).
+
+3. In  Web Session, add to impression section controlGroup field ( a new field that will be added to the schema - version 1.0.0.35)
+
+
 ### June 18th, 2017
 
 **Bug Fixes**

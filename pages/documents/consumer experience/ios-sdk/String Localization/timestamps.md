@@ -28,11 +28,11 @@ The iOS platform provides four different default types of date and time styles:
 - LONG January 12, 1952 or 3:30:32 PM
 - FULL Tuesday, April 12, 1952 AD or 3:30:42 PM PST.
 
-The LPMessagingSDK uses default styles. Each feature has its own style. The style is flexible and adapts the ‘locale’ configuration of the device.
+The LPMessagingSDK uses default styles. Each feature has its own style. The style is flexible and adapts the 'locale’ configuration of the device.
 
 *Example: US locale SHORT date is displayed as "9/25/16", whereas Japanese locale SHORT date is displayed as "2016/9/25".*
 
-A specific ‘locale’ which is different from the device locale can be set through the language and country configurations.
+A specific 'locale’ which is different from the device locale can be set through the language and country configurations.
 
 *Example: country: String?,  language: String?*
 
@@ -40,7 +40,7 @@ A specific ‘locale’ which is different from the device locale can be set thr
 
 It is also possible to configure a specific format for time and date instead of style.
 
-If the host app has configured its own formatting, this formatting will be used instead of style (and therefore will not be affected by ‘locale’).
+If the host app has configured its own formatting, this formatting will be used instead of style (and therefore will not be affected by 'locale’).
 
 To configure the formatting by the host app, three configurable formatting resources have been added:
 For date only (separator):

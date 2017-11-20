@@ -3,7 +3,7 @@ title: Delete Lobs
 keywords:
 level1: Documents
 level2: Admin
-level3: Lobs API
+level3: LOBs API
 level4: Methods
 
 
@@ -13,7 +13,7 @@ permalink: administration-delete-lobs.html
 indicator: both
 ---
 
-This API deletes lobs from a specific account.
+This API deletes LoBs from a specific account.
 
 ### Request
 
@@ -36,11 +36,10 @@ This API deletes lobs from a specific account.
 
 | Parameter|  Description |Type / Value |
  |:----------- |  :------------- | :------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$| 
+ |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$|
 
 ### Response
 
 **Response Body**
 
 [Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

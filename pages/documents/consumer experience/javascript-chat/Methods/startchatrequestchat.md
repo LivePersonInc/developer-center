@@ -37,9 +37,9 @@ This method queues a chat request. It has a number of possible properties that c
 | runWithRules  | Specifies if you want rules to be evaluated on the Pre-chat survey and applied to the chat. | Boolean | Example: have a skill question change the chat skill. <br> Default: off |
 | interactionTimeout	| The number of seconds that have passed since the last request was sent to the server until the server disconnects the chat. | number | <br> Default: 40 |
 | visitorSession | The monitored visitors session on the page. | string | Used to create pipeline reports from the page monitoring to the chat. |
-| LETagVisitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
-| LETagSessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
-| LETagContextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
+| visitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
+| sessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
+| contextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
 | engagementId  | The engagement ID in case of a LiveEngage account. | string   | |
 | campaignId    | The campaign ID in case of a LiveEngage account. | string | |
 | language  | The language set in the engagement in case of a LiveEngage account (sets the system messages language for the chat). | string | |
@@ -91,7 +91,8 @@ var failedRequest = chat.requestChat({
     success: myChat.showStartAnimation,
     error: myChat.showFailedRequest,
     context: myChat
-});
+}});
+
 ```
 
 ### Response

@@ -11,7 +11,7 @@ permalink: rt-interactions-window-sdk-code-examples.html
 indicator: chat
 ---
 
-**‘Init’ and ‘bind’ (Single event)**
+**'Init’ and 'bind’ (Single event)**
 
 ```javascript
 {
@@ -26,7 +26,7 @@ indicator: chat
 }
 ```
 
-**‘Init’ with ‘bind’ (Multiple events)**
+**'Init’ with 'bind’ (Multiple events)**
 
 
 ```javascript

@@ -623,7 +623,7 @@ Example</td>
 </tr>
 <tr>
   <td>lp_accessibility_chat_message</td>
-  <td>Used as a label on the ‘Enter message’ EditText control</td>
+  <td>Used as a label on the 'Enter message’ EditText control</td>
   <td>Chat message</td>
 </tr>
 <tr>

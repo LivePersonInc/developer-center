@@ -45,7 +45,7 @@ Filter is sent in the POST data with the following JSON structure.
 | keyword | Keyword or phrases to search in the selected areas. | alphanumeric | Optional | In order to search for a phrase, wrap the phrase with quotation marks. Multiple phrases are not supported. |
 | visitor | Visitor ID. | alphanumeric | Optional | When used, all time limitations are ignored. |
 | channel | Engagement channel ID. | Integer representing one of the following options: UNKNOWN(-1)WEB(1), VOICE(2); | Optional | |
-| engagementId | Engagement ID. | numeric | Optional | When used, all time limitations are ignored. |
+| engagementId | Engagement ID. | numeric | Optional | When used, all time limitations are ignored. The format should be the account id + chat id (same as the engagementId returned in the response). |
 | alertedMcsValues | Alerted MCS of the chat. | Array `<alertedMCS>` | Optional | Valid values: "-1", "0", "1" |
 | chatMCS {from,to} | Range of Meaningful Connection Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
 | hasCoBrowse | Indication whether a CoBrowse session occurred during the chat | Boolean | Optional |  |
@@ -75,7 +75,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
 
 Keyword Search: Chat Search by time range and keyword
 
-In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word ‘iPad’ within the text available for lookup.
+In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word 'iPad’ within the text available for lookup.
 
 
 ```json

@@ -3,7 +3,7 @@ title: Update Lobs
 keywords:
 level1: Documents
 level2: Admin
-level3: Lobs API
+level3: LOBs API
 level4: Methods
 
 
@@ -13,7 +13,7 @@ permalink: administration.update-lobs.html
 indicator: both
 ---
 
-This API updates a list of lobs for a specific account.
+This API updates a list of LoBs for a specific account.
 
 ### Request
 
@@ -28,7 +28,7 @@ This API updates a list of lobs for a specific account.
  |Authorization  |Contains token string to allow request authentication and authorization. |
  |If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
 
-**Request Body** 
+**Request Body**
 
 [Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
 

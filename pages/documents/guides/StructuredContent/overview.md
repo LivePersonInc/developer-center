@@ -14,7 +14,9 @@ indicator: both
 
 ### Overview
 
-Our messaging solution allows to send messages in a variety of ways: you can send simple text and images, or use our structured content templates to build your own layout with images, buttons and multiple actions in one message. The following document lists the different types of entries available for use with such a layout and includes templates for how to write hem in JSON.
+Our solution allows to send messages (both Chat messages and "pure" Messaging) in a variety of ways: you can send simple text and images, or use our structured content templates to build your own layout with images, buttons and multiple actions in one message. The following document lists the different types of entries available for use with such a layout and includes templates for how to write them in JSON.
+
+You can use [this tool](https://livepersoninc.github.io/json-pollock/editor/) to render your JSON in advance and get a sense of how your card will look.
 
 ### Specifications
 
@@ -132,8 +134,8 @@ Map that points to a specific location.
 ```json
 {
 	"type": "map",
-	"lo": "2323231312",
-	"la": "313145",
+  "la": 313145,
+  "lo": 2323231312,
 	"click": {
 		"metadata": [{
 	        }],
@@ -311,8 +313,6 @@ Note: each basic element can hold only one action.
 
 Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block.
 
-Please refer to the UMS's documentation area in LivePerson's Developer Community.
-
 **Style**
 
 Each basic element can have a style.
@@ -336,7 +336,7 @@ Each basic element can have a style.
 	"italic": true,
 	"color": "#453533",
 	"background-color": "#3E47A0",
-	"size": small
+	"size": "small"
 }
 ```
 
@@ -421,8 +421,8 @@ Each basic element can have a style.
    			}],
    			"actions": [{
    					"type": "navigate",
-   					"lo": "23423423",
-   					"la": "2423423423"
+            "la": 2423423423
+            "lo": 23423423,
    				},
    				{
    					"type": "publishText",
@@ -451,3 +451,41 @@ Each basic element can have a style.
    		}
    	}]
    	}
+
+### Limitations
+
+#### Maps
+
+Both the web window (visitor side) and the workspace (agent side) do not show map by user-specific location but instead shows a static snapshot, the default map view defined.
+
+#### Styling
+
+**Mobile**
+
+1. Only the following parameters can be configured in Bubble branding when using the In-App SDK. All other attributes are inherited from the SDK configuration:
+
+  * Card border width
+
+  * Card border color
+
+2. Structured content JSON affects text formatting in the structured content “Text” element. Only the following parameters can be configured for the "Text" element:
+
+  * Font size
+
+  * Font style (Italic, Bold)
+
+  * Font color
+
+  * Background color
+
+**Web (Chat/Messaging)**
+
+You cannot customize the branding of the structured content bubble in the web window view. Cards may be branded using the JSON schema only.
+
+### Accessibility
+
+Structured Content does not yet contain Accessibility support. This is planned for 2018.
+
+### Structured Content Notes
+
+1. Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported.

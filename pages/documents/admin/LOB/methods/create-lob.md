@@ -3,7 +3,7 @@ title: Create lob
 keywords:
 level1: Documents
 level2: Admin
-level3: Lobs API
+level3: LOBs API
 level4: Methods
 
 
@@ -13,7 +13,7 @@ permalink: administration-create-lob.html
 indicator: both
 ---
 
-This API creates a list of lobs for a specific account.
+This API creates a list of LoBs for a specific account.
 
 ### Request
 

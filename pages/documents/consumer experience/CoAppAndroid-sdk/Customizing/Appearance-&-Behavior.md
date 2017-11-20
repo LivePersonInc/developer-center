@@ -63,9 +63,9 @@ You can also adjust ringtones and the default avatar by overriding non-xml resou
 
 | Resource                          | Description                                                     | Notes                                                                             |
 |-----------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| res/drawable/coapp_default_avatar | Default avatar used when agent does not actively supply one     | The default avatar is the LivePerson logo                                         |
+| res/drawable-nodpi/coapp_default_avatar | Default avatar used when agent does not actively supply one     | The default avatar is the LivePerson logo                                         |
 | res/raw/notification_ringtone     | Ringtone sound to be played on a In-app CoBrowsing invitation or escalation | You can override these with `coapp_ringtone_call` and `coapp_ringtone_escalation` |
-| 
+|
 
 ### Secure fields & fieldmasking
 

@@ -34,7 +34,7 @@ Define which parameters you’d like to use from the SDK in order to connect bet
 
 Design html elements that will enable your customers to run the video session.
 
-* Invite to video chat - html service that will display in the widget when an agent invites a customer to video chat.  This should include an ‘accept’ and ‘decline’ capabilities. 
+* Invite to video chat - html service that will display in the widget when an agent invites a customer to video chat.  This should include an 'accept’ and 'decline’ capabilities. 
 
 * End Chat - how will you enable your customers to have control and end the video chat at any moment? 
 

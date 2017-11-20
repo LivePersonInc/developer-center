@@ -3,7 +3,7 @@ title: Get all lobs
 keywords:
 level1: Documents
 level2: Admin
-level3: Lobs API
+level3: LOBs API
 level4: Methods
 
 
@@ -13,7 +13,7 @@ permalink: administration-get-all-lobs.html
 indicator: both
 ---
 
-This API retrieves a list of lobs for a specific account.
+This API retrieves a list of LoBs for a specific account.
 
 ### Request
 
@@ -42,4 +42,3 @@ This API retrieves a list of lobs for a specific account.
 **Response Body**
 
 [Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
-

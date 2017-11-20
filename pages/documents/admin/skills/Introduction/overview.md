@@ -16,7 +16,7 @@ indicator: both
 
 Your agents are trained to help visitors according to your business needs. An agent’s area of expertise is referred to as a skill. For example, you can create the skill, Sales, for agents who are sales representatives. When visitors click an engagement assigned to Sales, they are routed to the first available Sales agent.
 
-Skills are assigned to agents as well as to engagements.  This creates the ‘link’ between the right topic of conversation and the agent best equipped to handle it.
+Skills are assigned to agents as well as to engagements.  This creates the 'link’ between the right topic of conversation and the agent best equipped to handle it.
 
 ![SkillsOverivew](img/skillsoverview.png)
 

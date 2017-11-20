@@ -28,7 +28,7 @@ other side.
 - If the visitor refreshes the iframe widget, the page is reloaded from scratch. Any
 databindings that existed before refreshing are removed.
 - The application you are developing must be able to open within an iframe. Some
-applications, known as ‘Frame Busters’, prevent themselves from opening within an
+applications, known as 'Frame Busters’, prevent themselves from opening within an
 iframe.
 - The application must be hosted over SSL, meaning that the URL must start with https.
 - Custom widgets should not include LiveEngage chat buttons or any other LiveEngage

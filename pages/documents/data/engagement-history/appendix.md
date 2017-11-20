@@ -15,7 +15,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 ###  CartStatus
 
 | Name |  Description | Type / Value |
-| :----- | :------- | :------ | 
+| :----- | :------- | :------ |
 | serverTimeStamp | Event time stamp. | long – epoch time in milliseconds |
 | total | Total cart value. | alphanumeric |
 | numItems | Number of items. | alphanumeric |
@@ -25,8 +25,8 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | sku | Product stocking unit (unique identifier). | alphanumeric |
 | price | Price of this product. | alphanumeric |
 | currency | Currency code. | alphanumeric |
- 
-Example: 
+
+Example:
 
     {
     "sdes": {
@@ -76,7 +76,7 @@ Example:
 | currency | Currency code. | alphanumeric | |
 
 Example:
- 
+
 
     {
     "sdes": {
@@ -115,9 +115,9 @@ Example:
     }
     }
 
- 
 
-###  Lead 
+
+###  Lead
 
 | Name | Description | Type / Value |
 | :---- | :----------- | :-------- |
@@ -126,9 +126,9 @@ Example:
 | value | Value lead. | alphanumeric |
 | leadId | Lead ID. | alphanumeric |
 | currency | Currency code. | alphanumeric |
- 
+
 Example:
- 
+
 
     {
     "sdes": {
@@ -138,7 +138,7 @@ Example:
             "lead": {
               "topic": "luxury car test drive 2015",
               "value": "22.22",
-              "currency": "USD"
+              "currency": "USD",
               "leadId": "xyz123"
             },
             "serverTimeStamp": "1440412721836"
@@ -148,15 +148,15 @@ Example:
     }
     }
 
-###  marketingCampaignInfo 
- 
+###  marketingCampaignInfo
+
 | Name | Description | Type / Value | Notes |
 | :---- | :-------- | :---------- | :--- |
 | serverTimeStamp | Event time stamp. | long – epoch time in milliseconds | |
 | originatingChannel | Marketing channel. | alphanumeric | 0-Direct, 1-Search, 2-Social, 3-Email, 4-Referral, 5-Paid Search, 6-Display |
 | affiliate | Affiliate name. | alphanumeric | |
 | campaignId | Campaign ID. | alphanumeric | |
- 
+
 Example:
 
     {
@@ -191,7 +191,7 @@ Example:
 | language | Visitor's language. | alphanumeric | |
 
 Example:
- 
+
 
     {
     "sdes": {
@@ -226,7 +226,7 @@ Example:
     }
     }
 
- 
+
 ###  Purchase
 
 | Name | Description | Type / Value |
@@ -243,9 +243,9 @@ Example:
 | numItems | Number of items. | alphanumeric |
 | orderId | Unique order ID. | alphanumeric |
 | currency | Currency code. | alphanumeric |
- 
+
 Example:
- 
+
 
     {
     "purchase": {
@@ -277,12 +277,12 @@ Example:
 | :------- | :---------- | :-------- | :--- |
 | serverTimeStamp | Event time stamp. | long – epoch time in milliseconds | |
 | topic | The service topic. | alphanumeric | |
-| status | Activity status | alphanumeric | 0-Complete, 1-In Progress, 2-Approved, 3-cancelled, 4-Not Approved, 5-Reviewed, 6-Missing Details, 7-Closed, 8-Removed, 9-Assigned, 10-Waiting for Customer Response, 11-Waiting for Response, 12-Pending, 13-Resolved | 
+| status | Activity status | alphanumeric | 0-Complete, 1-In Progress, 2-Approved, 3-cancelled, 4-Not Approved, 5-Reviewed, 6-Missing Details, 7-Closed, 8-Removed, 9-Assigned, 10-Waiting for Customer Response, 11-Waiting for Response, 12-Pending, 13-Resolved |
 | category | Category name. | alphanumeric | |
 | serviceId | Service ID. | alphanumeric | |
- 
+
 Example:
- 
+
 
     {
     "sdes": {
@@ -313,7 +313,7 @@ Example:
 | resolved | Resolution status (false.true). | alphanumeric |
 
 Example:
- 
+
 
     {
     "sdes": {
@@ -344,9 +344,9 @@ Example:
 | sku | Product SKU. | alphanumeric |
 | price | Product price. | alphanumeric |
 | currency | Currency code. | alphanumeric |
- 
+
  Example:
- 
+
 
     {
     "sdes": {
@@ -394,6 +394,4 @@ Example:
               }
             ]
           }
-    } 
-
-
+    }

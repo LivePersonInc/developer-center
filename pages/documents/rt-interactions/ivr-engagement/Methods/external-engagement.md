@@ -62,7 +62,7 @@ Example:
 
 | Name | Description | Type/Value |
 | :--- | :--- | :--- |
-| status | Availability status. | enum (‘Available’, ‘Not Available’) |
+| status | Availability status. | enum ('Available’, 'Not Available’) |
 | engagementDetails | The details of an engagement when it is available. Returned when the status is Available. | container |
 | expectedWaitTimeSeconds | Expected wait time (in seconds). Returned when the status is Available. | integer |
 | queueSize | Current queue size. Returned when the status is Available. | integer |

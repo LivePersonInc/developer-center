@@ -1,8 +1,8 @@
 ---
 title: Conversations - Metadata
 level1: Documents
-level2:
-level3: Consumer Messaging history API (BETA)
+level2: Data
+level3: Consumer Messaging History API
 level4: Methods
 order: 10
 permalink: consumer-experience-messaging-history-conversations-metadata.html
@@ -27,8 +27,6 @@ sort   | Sort the results in a predefined order.                              | 
 state        | State of the conversation.                 | Comma separated string             | Optional | Valid values: "close", "archive". Example: state=close,archive. Default value - archive
 startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
-
-=======
 
 ### Response
 

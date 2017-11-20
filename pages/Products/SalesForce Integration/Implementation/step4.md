@@ -13,12 +13,12 @@ indicator:
 
 Now that you’ve configured your LiveEngage App in Salesforce, it’s time to go back to LiveEngage and configure the widget in LiveEngage.
 
-1. Click on ‘Night Vision’ icon on the top.
+1. Click on 'Night Vision’ icon on the top.
 
 ![NightVision](img/night_vision.png)
 
 {:start="2"}
-2. Click on ‘Agent Workspace Configuration’.
+2. Click on 'Agent Workspace Configuration’.
 
 3. Click on the “+” next to the existing widget labels (**Note!** The limit is 5 widgets).
 
@@ -45,8 +45,8 @@ Tip: From the Customization Settings tab, you can copy the first part of the URL
 {:start="7"}
 7. Open the “Advanced settings for LivePerson integration SDK”
 
-	* Define the following URL under ‘In case widget didn't load, display the following link’-
-	‘https://login.salesforce.com’ (or ‘https://test.salesforce.com’)
+	* Define the following URL under 'In case widget didn't load, display the following link’-
+	'https://login.salesforce.com’ (or 'https://test.salesforce.com’)
 
 	* “Show link after” – Define 30 seconds, this means that if the agent is not logged in to SF, after 30 seconds he
 	will see the message you defined with the link defined above.

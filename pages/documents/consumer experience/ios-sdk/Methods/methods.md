@@ -42,7 +42,7 @@ This method is used to open the conversation screen.
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
 | containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
 
@@ -54,10 +54,10 @@ When navigating out of the conversation screen, remove the view controller from 
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### reconnect
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following ‘reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -66,13 +66,13 @@ Reconnect open related webSockets and sync the conversation with its latest upda
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' parameter only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### reconnect (Deprecated)
 *This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#reconnect){:target="_blank"} instead*
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following ‘reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -81,7 +81,7 @@ Reconnect open related webSockets and sync the conversation with its latest upda
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
 
 ### toggleChatActions
@@ -105,14 +105,14 @@ Check if there is an active conversation by passing a conversation query.
 **Notes:**
 
 * Conversation query defines a filter that fetches conversations which match certain conditions. Each query can have one active conversation at most.*
-* Conversation is said to be active the moment an ‘ack’ is received from the server. It may not yet have an assigned agent.*
+* Conversation is said to be active the moment an 'ack’ is received from the server. It may not yet have an assigned agent.*
 * You may call this API only if you are sure that the SDK is in sync with the server, meaning LPMessagingSDKConnectionStateChanged was invoked and isReady is set to true.*
 
 `func checkActiveConversation(_ conversationQuery: ConversationParamProtocol) -> Bool`
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### markAsUrgent
 
@@ -122,7 +122,7 @@ A consumer can mark a conversation as urgent in order to request a faster respon
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### isUrgent
 
@@ -134,7 +134,7 @@ Checks if the active conversation (if existing) is marked as urgent. Otherwise r
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### dismissUrgent
 
@@ -144,7 +144,7 @@ This API is used to cancel the [markAsUrgent API](https://developers.liveperson.
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 
 ### resolveConversation
@@ -156,7 +156,7 @@ This API enables a conversation to be resolved. The API will request the server 
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### clearHistory
 
@@ -166,7 +166,7 @@ This API may be used only when there is no active conversation. This API clears 
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### logout
 
@@ -249,7 +249,7 @@ There are two options to get this counter:
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
 | failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
 
@@ -276,7 +276,7 @@ You must check that the SDK is ready before calling this method.
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### subscribeLogEvents
 
@@ -305,7 +305,7 @@ If the screen is not active or the application is in the background this API wil
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| conversationQuery | Represents a ‘filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 
 

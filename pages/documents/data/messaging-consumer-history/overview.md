@@ -1,17 +1,14 @@
 ---
 title: Overview
 level1: Documents
-level2: 
-level3: Consumer Messaging history API (BETA)
+level2: Data
+level3: Consumer Messaging History API
 level-order: 7
 order: 1
 permalink: consumer-experience-messaging-history-overview.html
 root-link: true
 indicator: messaging
 ---
-
-**BETA**
-
 ### Introduction
 
 The LiveEngage Consumer Messaging History API allows retrieval of up to 13 months of historical conversations data, both metadata and content, for a specific consumer. This includes both archived and closed conversations.
@@ -33,4 +30,3 @@ A few things you'll need to get started with this API:
 ### Use Cases
 
 This is a complementary API for the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html). It should be used to retrieve the historical conversations when using the Messaging Window API for the different use cases / scenarios described [here](https://developers.liveperson.com/consumer-int-overview.html#use-cases).
-
