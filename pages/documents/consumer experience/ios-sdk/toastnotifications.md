@@ -21,7 +21,7 @@ This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
 ### Step 1: LPMessagingSDK Notification Delegate
 
-1. On your AppDelegate declaration, add the```LPMessagingSDKNotificationDelegate```
+1. On your AppDelegate declaration, add the ```LPMessagingSDKNotificationDelegate```
 
   ```swift
     class AppDelegate: UIResponder, UIApplicationDelegate, LPMessagingSDKNotificationDelegate {
@@ -36,7 +36,7 @@ This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
 Note: if you were using the ```LPMessagingSDK.instance.registerPushNotifications(token: deviceToken)```, you'll need to change your method to match this one.
 
-3. Implementing the```LPMessagingSDKNotificationDelegate```, gives you access to the following methods:
+3. Implementing the ```LPMessagingSDKNotificationDelegate```, gives you access to the following methods:
 
 ```swift
   /*Will handle custom behavior if received Push Notification*/
@@ -278,7 +278,7 @@ func LPMessagingSDKNotification(customLocalPushNotificationView notification: LP
 
 **Note**:
 
- - First, the```@objc```prefix will let this method be use as a ```#selector```,
+ - First, the ```@objc```prefix will let this method be use as a ```#selector```,
 
  - Second, we use self.window?.viewWithTag(tag:int) to get our View,
 
