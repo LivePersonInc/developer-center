@@ -1,9 +1,9 @@
 ---
-title: Specifications
+title: Structured Content Templates
 Keywords:
 level1: Documents
 level2: Guides
-level3: Structured Content Templates
+level3: Structured Content
 
 level-order: 8
 order: 10

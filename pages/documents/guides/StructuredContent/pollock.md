@@ -3,7 +3,7 @@ title: Structured Content Rendering Tool
 Keywords:
 level1: Documents
 level2: Guides
-level3: Structured Content Templates
+level3: Structured Content
 order: 11
 permalink: structured-content-pollock.html
 indicator: both
