@@ -11,20 +11,21 @@ indicator: both
 
 The **Json-Pollock** package renders live DOM elements out of JSON according to the [Structured Messaging Templates specification](https://developers.liveperson.com/structured-content-templates.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
 
-Installation
--------
+### Installation
+
 ```
 npm i json-pollock --save
 ```
+
 In the `dist` folder you'll find a the following files:
 
-`json-pollock.bundle.min.js`  - this script bundle both package and styles, once you import it into your code it will inject the needed styles into your page header - no additional actions are needed from your side. it is also supports umd - meaning you can consume it using AMD, CommonJS and as simple script (see [examples](#examples))
+`json-pollock.bundle.min.js`  - this script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header - no additional actions are needed from your side. It also supports umd - meaning you can consume it using AMD, CommonJS and as simple script (see examples below)
 
-`json-pollock.min.js` - use this script if you want to handle the import of the styles by youself, if you use it you should also take care to link `json-pollock.min.css` to your web page. also supports umd.
+`json-pollock.min.js` - use this script if you want to handle the import of the styles by yourself. If you use this option. you should also take care to link `json-pollock.min.css` to your web page. Also supports umd.
 
-`json-pollock.global.min.js` - this script is the same as `json-pollock.min.js`, however is does not support umd - it only puts JsonPollock on the current `this` (usually the `window` object). use this in case you inject the package into sites that are not managed by you and you dont know if it uses AMD or not.
+`json-pollock.global.min.js` - this script is the same as `json-pollock.min.js`, however it does not support umd - it only puts JsonPollock on the current `this` (usually the `window` object). Use this in case you inject the package into sites that are not managed by you and you don't know if it uses AMD or not.
 
-#### **examples**
+### Examples
 
 A `script` tag:
 
@@ -42,30 +43,35 @@ Following examples are relevant only for `json-pollock.bundle.min.js` and `json-
 Using [RequireJS](http://requirejs.org/):
 
 Map the JsonPollock path in the RequireJs config, and then:
+
 ```js
 require(["JsonPollock"],(jsonPollock) => {
     ...
 })
 ```
-Using [CommonJS](http://requirejs.org/docs/commonjs.html):
+
+Using [CommonJS](http://requirejs.org/docs/commonjs.html):.
+
 ```js
 const JsonPollock = require("JsonPollock");
 ```
 
-Usage
--------
+### Usage
 
 **init**
 
-You can call the *init* function if you want to configure JsonPollock - it is not mandatory, if you won't call it JsonPollock will be initialized with defaults.
+You can call the `init` function if you want to configure JsonPollock - it is not mandatory; if you don't call it, JsonPollock will be initialized with defaults.
+
 ```js
 JsonPollock.init({
-	maxAllowedElements: 50    // max DOM elements that will be rendere, dother elements will be ignored, default is 50.
+	maxAllowedElements: 50    // max DOM elements that will be rendered, other elements will be ignored, default is 50.
 });
 ```
+
 **render**
 
 The *render* function renders json into a DOM element.
+
 ```js
 const content = {
 	"type": "vertical",
@@ -86,9 +92,11 @@ const content = {
 const rooEl = JsonPollock.render(content);
 document.getElementById('container').appendChild(rooEl);
 ```
+
 **registerAction**
 
-The *registerAction* function allow to register a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+The *registerAction* function allows to register a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+
 ```js
 const linkCallback = (data) => {
 	//data => {actionData: <action configuration>, metadata: <metadata configuration, if given>}
@@ -96,11 +104,12 @@ const linkCallback = (data) => {
 };
 JsonPollock.registerAction('link', linkCallback);
 ```
-Error Handling
--------
-*JsonPollock.render()* will throw an Error if it fails from any reason, the error object will have a *message* property that will give the error description.
 
-Perior to the rendering the JSON object is validated against the JSON [schema](js/schema), if it fails to validate the error object will also include an *errors* property that will hold the validation errors.
+### Error Handling
+
+*JsonPollock.render()* will throw an Error if it fails for any reason. The error object will have a *message* property that will supply the error description.
+
+Prior to the rendering the JSON object is validated against the JSON [schema](js/schema), if it fails to validate the error object will also include an *errors* property that will hold the validation errors.
 ```js
 ...
 try {
