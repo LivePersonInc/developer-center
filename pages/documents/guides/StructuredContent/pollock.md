@@ -124,4 +124,4 @@ try {
 
 ### Playground
 
-[Here](https://livepersoninc.github.io/json-pollock/editor/)
+A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).
