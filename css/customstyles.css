@@ -423,8 +423,8 @@ a.accordion-toggle, a.accordion-collapsed {
   font-size: 1.1em;
   margin: 1px 0;
   font-family: "Roboto Slab", "Open Sans", Arial,Helvetica,sans-serif;
-  position: absolute;
-  top: 610px;
+  position: relative;
+  top: 75px;
   font-weight: bold;
   border: solid 1px;
   border-radius: 3px;
@@ -432,6 +432,7 @@ a.accordion-toggle, a.accordion-collapsed {
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  width: 62%;
 }
 
 .report:hover{
