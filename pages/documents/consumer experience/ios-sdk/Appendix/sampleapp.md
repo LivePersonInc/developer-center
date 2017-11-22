@@ -12,6 +12,23 @@ permalink: consumer-experience-ios-sdk-sampleapp.html
 indicator: messaging
 ---
 
+##### Table of Contents  
+
+### SDK 2.8.0, iOS 11.0, Swift 4
+
+[Installing the SDK](#2.8step1)  
+[Configure project settings](#2.8step2)  
+[Using the SDK](#2.8step3)  
+[Customizing the SDK](#2.8step4)  
+[Configuring App for Push Notifications](#2.8step5)  
+
+### SDK 2.5.3.0, iOS 10.3, Swift 3
+
+[Installing the SDK](#2.5step1)  
+[Configure project settings](#2.5step2)  
+[Using the SDK](#2.5step3)  
+[Customizing the SDK](#2.5step4)  
+[Configuring App for Push Notifications](#2.5step5)  
 
 <a name="2.8step1"/>
 
@@ -500,8 +517,8 @@ Creating both **key.pem** file and **cert.pem** file
 
 1. In the **Applications** folder on your Mac, open the **Utilities** folder, and launch **Keychain Access**,
 2. Under the **Category** section on the left, look for the **Certificates** item and click on it,
-3. Look for the item with the name: **Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>**,
-4. Select the **Certificate** and right click on it, then select the option **Export "Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>"**,
+3. Look for the item with the name: Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>,
+4. Select the **Certificate** and right click on it, then select the option Export "Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>",
 5. Select a location for your **Certificate**,
 
 **Note**: is recommended to save the file in the same folder you saved the **aps_development.cert** file, as you need to access both files on the following steps.
