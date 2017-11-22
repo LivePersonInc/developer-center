@@ -416,16 +416,27 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .report {
-  color: #5879da !important;
+  color: #333 !important;
   display: block;
   outline: none;
   text-decoration: none;
   font-size: 1.1em;
-  padding-left: 11px;
   margin: 1px 0;
-  position: relative;
-  font-family: "Open Sans","Roboto Slab",Arial,Helvetica,sans-serif;
-  margin-top: 30px;
+  font-family: "Roboto Slab", "Open Sans", Arial,Helvetica,sans-serif;
+  position: absolute;
+  top: 610px;
+  font-weight: bold;
+  border: solid 1px;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.report:hover{
+  background-color: #333;
+  color: #fff !important;
 }
 
 .updates{
