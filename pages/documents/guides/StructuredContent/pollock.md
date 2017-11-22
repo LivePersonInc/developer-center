@@ -11,6 +11,8 @@ indicator: both
 
 The **Json-Pollock** package renders live DOM elements out of JSON according to the [Structured Messaging Templates specification](https://developers.liveperson.com/structured-content-templates.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
 
+**A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
+
 ### Installation
 
 ```
@@ -121,7 +123,3 @@ try {
 	console.log(e.errors);     // validation errors
 }
 ```
-
-### Playground
-
-A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).
