@@ -440,6 +440,14 @@ a.accordion-toggle, a.accordion-collapsed {
   color: #fff !important;
 }
 
+@media only screen and (max-width:425px){
+  .report{
+    top: 15px;
+    margin-bottom: 40px;
+    width: 37%;
+  }
+}
+
 .updates{
 color: #5879da !important;
 display: block;
