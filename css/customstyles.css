@@ -433,6 +433,8 @@ a.accordion-toggle, a.accordion-collapsed {
   padding-left: 10px;
   padding-right: 10px;
   width: 62%;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .report:hover{
@@ -444,7 +446,6 @@ a.accordion-toggle, a.accordion-collapsed {
   .report{
     top: 15px;
     margin-bottom: 40px;
-    width: 37%;
   }
 }
 
