@@ -8,7 +8,7 @@ order: 10
 permalink: data-messaging-interactions-conversations.html
 indicator: messaging
 ---
- 
+
 This method retrieves a list of conversations with all their metadata and related messages based on a predefined search criteria. Search criteria includes filtering by time range, agent, skill, etc.
 
 ### Request
@@ -94,7 +94,7 @@ _Conversation record_
 Name                 | Description                                                                    | Type/Value
 :------------------- | :----------------------------------------------------------------------------- | :---------
 info                 | Contains information on the conversation.                                      | container
-campaign             | Campaign data of the messaging.                                                | container
+campaign             | Campaign data of the messaging interaction.                                    | container
 messagesRecords      | Contains information about a specific message.                                 | container
 messageStatuses      | Contains information about message acceptance status (i.e. read/accept).       | container
 agentParticipants    | Contains information about the agent(s) participating in the conversation.     | container
@@ -144,7 +144,7 @@ Name                 | Description                                              
 | campaignName | Name of the campaign. | alphanumeric (50) | |
 | goalId | ID of the campaign's goal. | numeric | |
 | goalName | Name of the campaign's goal. | alphanumeric (50) | |
-| engagementAgentNote | Note to the Agent defined for the campaign's engagement. | alphanumeric  | |
+| engagementAgentNote | Note to the Agent specified for the campaign's engagement. | alphanumeric  | |
 | visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
 | visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
 | visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
