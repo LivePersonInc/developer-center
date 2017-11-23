@@ -8,7 +8,7 @@ order: 10
 permalink: data-messaging-interactions-conversations.html
 indicator: messaging
 ---
-
+ 
 This method retrieves a list of conversations with all their metadata and related messages based on a predefined search criteria. Search criteria includes filtering by time range, agent, skill, etc.
 
 ### Request
@@ -94,6 +94,7 @@ _Conversation record_
 Name                 | Description                                                                    | Type/Value
 :------------------- | :----------------------------------------------------------------------------- | :---------
 info                 | Contains information on the conversation.                                      | container
+campaign             | Campaign data of the messaging.                                                | container
 messagesRecords      | Contains information about a specific message.                                 | container
 messageStatuses      | Contains information about message acceptance status (i.e. read/accept).       | container
 agentParticipants    | Contains information about the agent(s) participating in the conversation.     | container
@@ -132,6 +133,28 @@ latestAgentGroupId   | Group ID of the agent most recently assigned to the conve
 latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
+
+_Campaign info_
+
+Name                 | Description                                                                | Type/Value | Notes
+:------------------- | :------------------------------------------------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------
+| campaignEngagementId |  ID of the campaign's engagement. | numeric | |
+| campaignEngagementName | Name of the campaign's engagement. | alphanumeric (50) | |
+| campaignId | ID of the campaign. | numeric  | |
+| campaignName | Name of the campaign. | alphanumeric (50) | |
+| goalId | ID of the campaign's goal. | numeric | |
+| goalName | Name of the campaign's goal. | alphanumeric (50) | |
+| engagementAgentNote | Note to the Agent defined for the campaign's engagement. | alphanumeric  | |
+| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
+| visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
+| visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
+| visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) | |
+| lobId | ID of the line of business of the campaign. | numeric(long) | |
+| lobName | Name of the line of business of the campaign. | alphanumeric | |
+| LocationId | ID of the location of the engagement on the screen. | numeric  | |
+| LocationName | describes the engagement display location. | alphanumeric | The default location is the entire website. |
+| behaviorSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
+| profileSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 
 _Message Info_
 
