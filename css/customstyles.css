@@ -449,7 +449,7 @@ a.accordion-toggle, a.accordion-collapsed {
   }
 
   .report:hover{
-    background-color: none;
+    background-color: initial;
     color: #333 !important;
   }
 }
