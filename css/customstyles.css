@@ -454,6 +454,18 @@ a.accordion-toggle, a.accordion-collapsed {
   }
 }
 
+@media only screen and (max-width:768px){
+  .report{
+    margin-bottom: 75px;
+    width: 26%;
+  }
+
+  .report:hover{
+    background-color: none;
+    color: #333 !important;
+  }
+}
+
 
 .updates{
 color: #5879da !important;
