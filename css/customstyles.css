@@ -447,7 +447,13 @@ a.accordion-toggle, a.accordion-collapsed {
     top: 15px;
     margin-bottom: 40px;
   }
+
+  .report:hover{
+    background-color: none;
+    color: #333 !important;
+  }
 }
+
 
 .updates{
 color: #5879da !important;
