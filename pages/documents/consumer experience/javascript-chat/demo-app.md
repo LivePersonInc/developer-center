@@ -51,3 +51,12 @@ Download the Sample App from the following [Github repository](https://github.co
 2. Once open in the browser add the following query params `/index.html?site={siteId}&lptag=true`. 
 3. An engagement button should be displayed on this page.
 4. Click the chat button to start a chat.
+
+
+### Authenticated users Flow
+
+####  Prerequisites for authentication flow
+
+- In our Sample App project there is an example of using [Auth0](https://auth0.com/) with liveEngage authenticated visitors flow.
+- Inside script.js you will find two parameters: AUTH0_CLIENT_ID, AUTH0_DOMAIN fill them with your own data.
+- Fill the correct data in the [Data Sources](/guides-authentication-configuration.html){:target="_blank"} section on liveEngage;

@@ -14,11 +14,13 @@ indicator: chat
 
 This method queues a chat request. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.
 
+**For consumer Authentication flow please collect the necessary parameters from the [authenticate](consumer-experience-javascript-chat-authenticate.html) method first.**
+The parameters in question are `conversationId`, `participantId`. You will need to add this parameters to the request body for the requestChat method.
+
 **Notes**:
 
 - *If you displayed a Pre-chat survey, this is where you submit the answers to that survey.*
 - *In response to a chat starting, the following events will be triggered: onStart, onState, onInfo and onLine (if there are any chat lines).*
-- *For consumer Authentication flow please collect necessary parameters from the [authenticate](consumer-experience-javascript-chat-authenticate.html) first.*
 
 ### Request
 
