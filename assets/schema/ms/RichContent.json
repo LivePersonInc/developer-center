@@ -1,11 +1,11 @@
 {
-    "title": "RichContent",
+    "title": "RichContentEvent",
     "type": "object",
     "properties": {
         "type": {
             "type": "string",
-            "default": "RichContent",
-            "enum": ["RichContent"],
+            "default": "RichContentEvent",
+            "enum": ["RichContentEvent"],
             "readonly": "true"
         },
         "message": {
