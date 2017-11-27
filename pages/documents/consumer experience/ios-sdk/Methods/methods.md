@@ -62,7 +62,7 @@ When using SSO in an authenticated connection, an auth-code is passed to the SDK
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
 
-`func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationCode: String)`
+`func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams)`
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
