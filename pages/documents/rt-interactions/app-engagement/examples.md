@@ -1,5 +1,5 @@
 ---
-title: Engagement Attributes Body Example
+title: Impression Events Body Example
 level1: Documents
 level2: Real Time Interactions
 level3: App Engagement API
@@ -41,7 +41,7 @@ ImpressionAcceptEvent, ImpressionDisplayEvent
         }
       ]
     }
-      
+
 ImpressionExpandedEvent:
 
     {
@@ -80,5 +80,3 @@ ImpressionCloseEvent:
       "engId": 3115242810,
       "revision": 537
     }
-
-
