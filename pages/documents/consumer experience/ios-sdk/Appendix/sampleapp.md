@@ -1,5 +1,5 @@
 ---
-title: Using LivePerson SDK
+title: Using LivePerson SDK - iOS
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -19,7 +19,7 @@ indicator: messaging
 [Installing the SDK](#2.8step1)  
 [Configure project settings](#2.8step2)  
 [Using the SDK](#2.8step3)  
-[Customizing the SDK](#2,8step4)  
+[Customizing the SDK](#2.8step4)  
 [Configuring App for Push Notifications](#2.8step5)  
 
 ### SDK 2.5.3.0, iOS 10.3, Swift 3
@@ -27,7 +27,7 @@ indicator: messaging
 [Installing the SDK](#2.5step1)  
 [Configure project settings](#2.5step2)  
 [Using the SDK](#2.5step3)  
-[Customizing the SDK](#2,5step4)  
+[Customizing the SDK](#2.5step4)  
 [Configuring App for Push Notifications](#2.5step5)  
 
 <a name="2.8step1"/>
@@ -147,13 +147,12 @@ indicator: messaging
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**
 
-    * If frameworks installed using CocoaPods, use the following script:
+    - If frameworks installed using CocoaPods, use the following script:
 
         ```sh
-
             bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
-
         ```
+
     -   If frameworks installed by coping Libraries to Xcode project, use the following script:
 
         ```sh
@@ -161,14 +160,14 @@ indicator: messaging
             bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 
         ```
-        
+
 <a name="2.8step3"/>
 
 #### Step 3: Using the SDK
 
 * On the ViewController.swift that will host the LPMessagingSDK add the following Imports:
 
-```Swift
+```swift
 
   import LPMessagingSDK
   import LPAMS
@@ -177,19 +176,17 @@ indicator: messaging
 ```
 * Locate the function ```viewDidLoad()``` and Initialize your LPMessagingSDK instance:
 
-```Swift
-
+```swift
   do {
       try LPMessagingSDK.instance.initialize()
   } catch {
    	return
  	}
-
 ```
 
 *  To start a conversation, add the following code after initializing the ```LPMessagingSDK.instance```
 
-```Swift
+```swift
 
   // Get Conversation - ConversationParamProtocol
   let conversationParamProtocol = LPMessagingSDK.instance.getConversationBrandQuery("Your Account Number")
@@ -206,7 +203,7 @@ indicator: messaging
 
     1.  Manually ending a conversation, on your ```@IBAction``` call the following code:
 
-```Swift
+```swift
 
   // Get your Conversation Parameters
   let conversationParamProtocol = LPMessagingSDK.instance.getConversationBrandQuery("Your Account Number")
@@ -215,9 +212,9 @@ indicator: messaging
 
 ```
 
-    2. Call the following code on your ```@IBAction``` to access LPMessagingSDK Menu, this will give you a couple more options like **Mark as urgent**, **Clear history**, and **Resolve the conversation**:
+2. Call the following code on your ```@IBAction``` to access LPMessagingSDK Menu, this will give you a couple more options like **Mark as urgent**, **Clear history**, and **Resolve the conversation**:
 
-```Swift
+```swift
 
   // Call LPMessagingSDK Menu
   LPMessagingSDK.instance.toggleChatActions("Your Account Number")
@@ -234,7 +231,7 @@ indicator: messaging
 
 1. Get the object containing the default configurations:
 
-```Swift
+```swift
 
   // Configuration instance
   let configuration = LPConfig.defaultConfiguration
@@ -244,7 +241,7 @@ indicator: messaging
 {:start="2"}
 2. Once you have your configuration object you simply call the predefine customization methods like this:
 
-```Swift
+```swift
 
   // Set Agent User Bubble Background Color
   configuration.remoteUserBubbleBackgroundColor = UIColor.lightGray
@@ -269,7 +266,7 @@ indicator: messaging
 
 * At the end just print the configurations using:
 
-```Swift
+```swift
   // Print Configurations
   LPConfig.printAllConfigurations()
 ```
@@ -282,7 +279,7 @@ indicator: messaging
 
 1. Get the object containing the default configurations:
 
-```Swift
+```swift
     // Configuration instance
     let configuration = LPConfig.defaultConfiguration
 ```
@@ -290,7 +287,7 @@ indicator: messaging
 {:start="2"}
 2. Once you have your configuration object you simply call the predefine customization methods like this:
 
-```Swift
+```swift
     // Configuration instance
     let configuration = LPConfig.defaultConfiguration
     // Set Survey Button Background Color
@@ -305,9 +302,9 @@ indicator: messaging
     configuration.csatNavigationBackgroundColor = UIColor.lightGray
 ```
 
-    * At the end just print the configurations using:
+* At the end just print the configurations using:
 
-```Swift
+```swift
     // Print Configurations
     LPConfig.printAllConfigurations()
 ```
@@ -335,14 +332,14 @@ indicator: messaging
 
  1. To enable/disable Photo Sharing on your App, just change the following property during the Configurations:
 
-```Swift
+```swift
 
     // Enable Photo Sharing
     LPConfig.defaultConfiguration.enablePhotoSharing = true
 
 ```
 
-    **Note**: Since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account, if not, even if you enable this property, you won't be able to see the Photo Sharing Button
+**Note**: Since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account, if not, even if you enable this property, you won't be able to see the Photo Sharing Button
 
 
 {:start="2"}
@@ -351,7 +348,7 @@ indicator: messaging
     **Note**: as with the Messaging & Customer Experience Survey, you can also customize some of the elements on the Photo Sharing UI, for the complete list of Attributes visit [LivePerson](https://developers.liveperson.com/consumer-experience-ios-sdk-attributes.html#photo-sharing)
 
 
-```Swift
+```swift
     // Set the Background Color on Photo Sharing Menu
     configuration.photosharingMenuBackgroundColor = UIColor.lightGray
     // Set the text of buttons on Photo Sharing Menu
@@ -362,16 +359,16 @@ indicator: messaging
     configuration.photosharingMenuButtonsTintColor = UIColor.lightGray
 ```
 
-    * At the end just print the configurations using:
+* At the end just print the configurations using:
 
-```Swift
+```swift
   // Print Configurations
   LPConfig.printAllConfigurations()
 ```
 
 <a name="2.8step5"/>
 
-### Step 4: Configuring App for Push Notifications
+#### Step 4: Configuring App for Push Notifications
 
 **Note**: In order for the push notification to work, you will need a **Physical Device**, and two .pem files for **LiveEngage**:
 
@@ -401,7 +398,7 @@ indicator: messaging
 
 4. Add the following imports to your ```AppDelegate```:
 
-```Swift
+```swift
   // Required LivePerson Import
   import LPMessagingSDK
   // Required Notification Import
@@ -410,14 +407,14 @@ indicator: messaging
 
 5. Add the ```LPMessagingSDKNotificationDelegate``` to your ```AppDelegate```
 
-```Swift
+```swift
   @UIApplicationMain
   class AppDelegate: UIResponder, UIApplicationDelegate, LPMessagingSDKNotificationDelegate {
 ```
 
 6. To Register for **Push Notifications** on your **AppDelegate.swift** file, locate the method ```didFinishLaunchingWithOptions```, and add the following code:
 
-```Swift
+```swift
   // Check if iOS 10.0
   if #available(iOS 10.0, *) {
     // Register for push remote push notifications
@@ -440,7 +437,7 @@ indicator: messaging
 
 7. Add the following Methods to your ```AppDelegate``` to handle for Registering and Receiving Push Notifications:
 
-```Swift
+```swift
   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
       // Get Token & Parse it
       let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
@@ -520,8 +517,8 @@ Creating both **key.pem** file and **cert.pem** file
 
 1. In the **Applications** folder on your Mac, open the **Utilities** folder, and launch **Keychain Access**,
 2. Under the **Category** section on the left, look for the **Certificates** item and click on it,
-3. Look for the item with the name: **Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>**,
-4. Select the **Certificate** and right click on it, then select the option **Export "Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>"**,
+3. Look for the item with the name: Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>,
+4. Select the **Certificate** and right click on it, then select the option Export "Apple Development IOS Push Service:<YOUR_BUNDLE_IDENTIFIER>",
 5. Select a location for your **Certificate**,
 
 **Note**: is recommended to save the file in the same folder you saved the **aps_development.cert** file, as you need to access both files on the following steps.
@@ -604,7 +601,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 1. From the App Store on your Mac, download the following App [Easy APNs Provider](https://itunes.apple.com/us/app/easy-apns-provider-push-notification-service-testing-tool/id989622350?mt=12)
 2. To get your Device Token, on your Xcode project, on the **AppDelegate.swift** file, locate the method ```didRegisterForRemoteNotificationsWithDeviceToken```, and add the following:
 
-```Swift
+```swift
   // Get Token & Parse it
   let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
   // Print Token
@@ -750,7 +747,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 * On the ViewController.swift that will host the LPMessagingSDK add the following Imports:
 
-```Swift
+```swift
   import LPMessagingSDK
   import LPAMS
   import LPInfra
@@ -758,7 +755,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 * Locate the function ```viewDidLoad()``` and Initialize your LPMessagingSDK instance:
 
-```Swift
+```swift
   do {
       try LPMessagingSDK.instance.initialize(“Your Account Number”)
   } catch {
@@ -768,7 +765,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 *  To start a conversation, add the following code after initializing the ```LPMessagingSDK.instance```
 
-```Swift
+```swift
   // Get Conversation - ConversationParamProtocol
   let conversationParamProtocol = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
   // Show Agent Conversation
@@ -781,7 +778,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 1.  Manually ending a conversation, on your ```@IBAction``` call the following code:
 
-```Swift
+```swift
   // Get your Conversation Parameters
   let conversationParamProtocol = LPMessagingSDK.instance.getConversationBrandQuery(“Your Account Number”)
   // Remove the Conversation
@@ -790,7 +787,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 2. Call the following code on your ```@IBAction``` to access LPMessagingSDK Menu, this will give you a couple more options like **Mark as urgent**, **Clear history**, and **Resolve the conversation**:
 
-```Swift
+```swift
   // Call LPMessagingSDK Menu
   LPMessagingSDK.instance.toggleChatActions(“Your Account Number”)
 ```
@@ -805,7 +802,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 1. Get the object containing the default configurations:
 
-```Swift
+```swift
   // Configuration instance
   let configuration = LPConfig.defaultConfiguration
 ```
@@ -813,7 +810,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 {:start="2"}
 2. Once you have your configuration object you simply call the predefine customization methods like this:
 
-```Swift
+```swift
 
   // Set Agent User Bubble Background Color
   configuration.remoteUserBubbleBackgroundColor = UIColor.lightGray
@@ -838,7 +835,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 * At the end just print the configurations using:
 
-```Swift
+```swift
   // Print Configurations
   LPConfig.printAllConfigurations()
 ```
@@ -851,7 +848,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 1. Get the object containing the default configurations:
 
-```Swift
+```swift
 
   // Configuration instance
   let configuration = LPConfig.defaultConfiguration
@@ -861,7 +858,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 {:start="2"}
 2. Once you have your configuration object you simply call the predefine customization methods like this:
 
-```Swift
+```swift
 
   // Configuration instance
   let configuration = LPConfig.defaultConfiguration
@@ -880,7 +877,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 * At the end just print the configurations using:
 
-```Swift
+```swift
 
   // Print Configurations
   LPConfig.printAllConfigurations()
@@ -910,7 +907,7 @@ Note: this object gives you access to all the different attributes you are able 
 
 1. To enable/disable Photo Sharing on your App, just change the following property during the Configurations:
 
-    ```Swift
+    ```swift
         // Enable Photo Sharing
         LPConfig.defaultConfiguration.enablePhotoSharing = true
     ```
@@ -922,7 +919,7 @@ Note: this object gives you access to all the different attributes you are able 
 
 **Note**: as with the Messaging & Customer Experience Survey, you can also customize some of the elements on the Photo Sharing UI, for the complete list of Attributes visit [the relevant section in this document](https://developers.liveperson.com/consumer-experience-ios-sdk-attributes.html#photo-sharing).
 
-```Swift
+```swift
   // Set the Background Color on Photo Sharing Menu
   configuration.photosharingMenuBackgroundColor = UIColor.lightGray
   // Set the text of buttons on Photo Sharing Menu
@@ -935,7 +932,7 @@ Note: this object gives you access to all the different attributes you are able 
 
 * At the end just print the configurations using:
 
-```Swift
+```swift
     // Print Configurations
     LPConfig.printAllConfigurations()
 ```
@@ -972,7 +969,7 @@ Note: this object gives you access to all the different attributes you are able 
 
 1. Add the following imports to your ```AppDelegate```:
 
-```Swift
+```swift
   // Required LivePerson Import
   import LPMessagingSDK
   // Required Notification Import
@@ -982,7 +979,7 @@ Note: this object gives you access to all the different attributes you are able 
 {:start="2"}
 2. Add the ```LPMessagingSDKNotificationDelegate``` to your ```AppDelegate```
 
-```Swift
+```swift
   @UIApplicationMain
   class AppDelegate: UIResponder, UIApplicationDelegate, LPMessagingSDKNotificationDelegate {
 ```
@@ -990,7 +987,7 @@ Note: this object gives you access to all the different attributes you are able 
 {:start="3"}
 3. To Register for **Push Notifications** on your **AppDelegate.swift** file, locate the method ```didFinishLaunchingWithOptions```, and add the following code:
 
-```Swift
+```swift
   // Check if iOS 10.0
   if #available(iOS 10.0, *) {
     // Register for push remote push notifications
@@ -1012,7 +1009,7 @@ Note: this object gives you access to all the different attributes you are able 
 {:start="4"}
 4. Add the following Methods to your ```AppDelegate``` to handle for Registering and Receiving Push Notifications:
 
-```Swift
+```swift
   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
       // Register Push on LPMessagingSDK
       LPMessagingSDK.instance.registerPushNotifications(token: deviceToken, notificationDelegate: self)
@@ -1197,7 +1194,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 2. To get your Device Token, on your Xcode project, on the **AppDelegate.swift** file, locate the method ```didRegisterForRemoteNotificationsWithDeviceToken```, and add the following:
 
-    ```Swift
+    ```swift
         // Get Token & Parse it
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         // Print Token

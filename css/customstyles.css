@@ -416,17 +416,56 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .report {
-  color: #5879da !important;
+  color: #333 !important;
   display: block;
   outline: none;
   text-decoration: none;
   font-size: 1.1em;
-  padding-left: 11px;
   margin: 1px 0;
+  font-family: "Roboto Slab", "Open Sans", Arial,Helvetica,sans-serif;
   position: relative;
-  font-family: "Open Sans","Roboto Slab",Arial,Helvetica,sans-serif;
-  margin-top: 30px;
+  top: 75px;
+  font-weight: bold;
+  border: solid 1px;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 62%;
+  margin-bottom: 40px;
+  text-align: center;
 }
+
+.report:hover{
+  background-color: #333;
+  color: #fff !important;
+}
+
+@media only screen and (max-width:425px){
+  .report{
+    top: 15px;
+    margin-bottom: 40px;
+  }
+
+  .report:hover{
+    background-color: initial;
+    color: #333 !important;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .report{
+    margin-bottom: 75px;
+    width: 26%;
+  }
+
+  .report:hover{
+    background-color: none;
+    color: #333 !important;
+  }
+}
+
 
 .updates{
 color: #5879da !important;

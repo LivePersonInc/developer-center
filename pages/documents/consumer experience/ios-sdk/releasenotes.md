@@ -15,7 +15,7 @@ indicator: messaging
 
 **Version 2.9 planned roll-out: November 12th 2017**
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
 
 These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
 

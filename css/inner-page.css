@@ -23,6 +23,12 @@ h4[id]{
   font-size: 0.86em;
   font-weight: 600;
 }
+
+h4 code.highlighter-rouge {
+    color: #fff;
+    margin-left: 5px;
+}
+
 .h2 {
   color: #162036;
   font-family: Roboto,Arial;
@@ -70,6 +76,18 @@ h4[id]{
   font-family: "Open Sans";
   font-size: 0.8888em;
   font-weight: bold;
+}
+
+@media screen and (max-width:768px){
+  .post-content table{
+    max-width: 88%;
+  }
+}
+
+@media screen and (max-width:425px){
+  .post-content table{
+    max-width: 90%;
+  }
 }
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
   border-top: 1px solid #d6d6d6;
@@ -588,3 +606,40 @@ pre {
   text-decoration: none;
 }
 
+/**
+   This div contains the iframe and is set to be responsive
+   Edit the max-with to suit your needs
+   **/
+   .visualping-container {
+     position: relative;
+     width: 100%;
+     overflow: hidden;
+     max-width: 230px;
+     margin: 0 auto;
+   }
+
+   /**Position of the iframe inside the reponsive div **/
+   .visualping-container iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+   }
+
+   /** hides the ugly borders **/
+   iframe {
+     border: 0;
+   }
+
+
+   @media only screen and (max-width: 767px) {
+
+     /* the div containing the iframe is responsive */
+     .visualping-container {
+       -webkit-box-sizing: inherit;
+       -moz-box-sizing: inherit;
+       box-sizing: inherit;
+       max-width: 95%;
+     }
+   }
