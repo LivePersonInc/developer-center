@@ -12,7 +12,7 @@ root-link: true
 indicator: both
 ---
 
-### Overview
+### **Overview**
 
 Our solution allows to send messages (both Chat messages and "pure" Messaging) in a variety of ways: you can send simple text and images, or use our structured content templates to build your own layout with images, buttons and multiple actions in one message. The following document lists the different types of entries available for use with such a layout and includes templates for how to write them in JSON.
 
@@ -33,7 +33,7 @@ Types of basic elements supported by the platform:
  * Image
  * Map
 
-**Text**
+##### **Text**
 
 Simple plain text message.
 
@@ -134,8 +134,8 @@ Map that points to a specific location.
 ```json
 {
 	"type": "map",
-  "la": 313145,
-  "lo": 2323231312,
+  "la": 40.75620,
+  "lo": -73.99861,
 	"click": {
 		"metadata": [{
 	        }],
@@ -151,8 +151,8 @@ Map that points to a specific location.
 | Property Name | Description                    | Type   | Required |
 |---------------|--------------------------------|--------|----------|
 | type          | Type of element. Must be map   | Enum   | Y        |
-| lo            | Longitude                      | String | Y        |
-| la            | Latitude                       | String | Y        |
+| lo            | Longitude                      | Float  | Y        |
+| la            | Latitude                       | Float  | Y        |
 | actions       | List of Actions                | Action | N        |
 | tooltip       | Map tooltip, used also as aria | String | N        |
 
@@ -246,8 +246,8 @@ This actions has two use cases:
 ```json
 {
 	"type": "navigate",
-	"lo": "23423423",
-	"la": "2423423423"
+	"lo": 40.75620,
+	"la": -73.99861
 }
 ```
 **Fields**
@@ -255,8 +255,8 @@ This actions has two use cases:
 | Property Name | Description                                 | Type   | Required |
 |---------------|---------------------------------------------|--------|----------|
 | type          | Type of action. Must be navigate            | Enum   | Y        |
-| lo            | Longitude                                   | String | Y        |
-| la            | Latitude                                    | String | Y        |
+| lo            | Longitude                                   | Float  | Y        |
+| la            | Latitude                                    | Float  | Y        |
 
 
 **Link**
@@ -421,8 +421,8 @@ Each basic element can have a style.
    			}],
    			"actions": [{
    					"type": "navigate",
-            "la": 2423423423
-            "lo": 23423423,
+            "la": 40.75620
+            "lo": -73.99861,
    				},
    				{
    					"type": "publishText",
@@ -432,7 +432,7 @@ Each basic element can have a style.
    		}
    	}, {
    		"type": "button",
-   		"title": "Open web page",
+   		"title": "Navigate",
    		"click": {
    			"metadata": [{
    				"type": "ExternalId",
@@ -440,8 +440,8 @@ Each basic element can have a style.
    			}],
    			"actions": [{
    					"type": "navigate",
-   					"lo": "23423423",
-   					"la": "2423423423"
+   					"lo": 40.75620,
+   					"la": -73.99861
    				},
    				{
    					"type": "publishText",
