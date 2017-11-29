@@ -345,7 +345,8 @@ Each basic element can have a style.
 
 **Card 1:**
 
-    {
+```json
+  {
     	"type": "vertical",
     	"elements": [{
     		"type": "image",
@@ -365,10 +366,11 @@ Each basic element can have a style.
     		"tooltip": "$155.99"
     	}]
     }
-
+```
 
 **Card 2:**
 
+```json
       {
    	"type": "vertical",
    	"elements": [{
@@ -421,7 +423,7 @@ Each basic element can have a style.
    			}],
    			"actions": [{
    					"type": "navigate",
-            "la": 40.75620
+            "la": 40.75620,
             "lo": -73.99861,
    				},
    				{
@@ -451,6 +453,7 @@ Each basic element can have a style.
    		}
    	}]
    	}
+```
 
 ### Limitations
 
