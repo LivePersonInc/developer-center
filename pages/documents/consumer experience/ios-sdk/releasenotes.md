@@ -33,7 +33,18 @@ _Fix_:
 
 SDK will now trim the whitespace of the device modelName and connectivity will work as expected.
 
-**Bug: Structured content image resolution
+**Bug: Structured content image resolution**
+
+_Symptom_:
+
+UI overlaps of time stamp label over the message when sending a Link Preview message, while setting 'bubbleTimestampTopPadding' with a value.
+
+_Fix_:
+
+Overlap will no longer occur due to backend fixes.
+
+
+
 
 ### iOS Messaging SDK - Version 2.9.0
 
