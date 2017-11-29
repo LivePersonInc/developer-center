@@ -424,7 +424,7 @@ a.accordion-toggle, a.accordion-collapsed {
   margin: 1px 0;
   font-family: "Roboto Slab", "Open Sans", Arial,Helvetica,sans-serif;
   position: relative;
-  top: 75px;
+  top: 135px;
   font-weight: bold;
   border: solid 1px;
   border-radius: 3px;
@@ -433,7 +433,6 @@ a.accordion-toggle, a.accordion-collapsed {
   padding-left: 10px;
   padding-right: 10px;
   width: 62%;
-  margin-bottom: 40px;
   text-align: center;
 }
 

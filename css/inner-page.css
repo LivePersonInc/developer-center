@@ -242,6 +242,7 @@ ul#mysidebar.nav {
   border-right: 1px solid lightgray;
   margin-left: 10px;
   height: 100%;
+  position: initial;
 
 }
 
@@ -606,7 +607,7 @@ pre {
   text-decoration: none;
 }
 
-/**
+/** VisualPing Styling Begin
    This div contains the iframe and is set to be responsive
    Edit the max-with to suit your needs
    **/
@@ -614,8 +615,10 @@ pre {
      position: relative;
      width: 100%;
      overflow: hidden;
-     max-width: 230px;
+     max-width: 235px;
      margin: 0 auto;
+     margin-left: 2px;
+     margin-top: -33px;
    }
 
    /**Position of the iframe inside the reponsive div **/
@@ -643,3 +646,4 @@ pre {
        max-width: 95%;
      }
    }
+/*visualping ends*/
