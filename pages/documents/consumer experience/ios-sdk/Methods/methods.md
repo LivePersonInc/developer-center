@@ -193,10 +193,10 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct)
 
 `func logout() (Deprecated)`
-*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout){:target="_blank"} instead*
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout) instead*
 
 ### destruct
 This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.
@@ -228,7 +228,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 Register to LPMessagingSDK push notifications with the following code in AppDelegate:
 
-*Note: Push notifications must be pre-configured, and an APN certificate has to be uploaded to the LiveEngage platform. See more info on [how to configure push notifications](push-service-overview.html){:target="_blank"}.*
+*Note: Push notifications must be pre-configured, and an APN certificate has to be uploaded to the LiveEngage platform. See more info on [how to configure push notifications](push-service-overview.html).*
 
 `func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil)`
 
@@ -240,10 +240,8 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 
 ### getUnreadMessagesCount
 
-Getting the unread message badge counter
-There are two options to get this counter:
-1. If the time condition is met we are preforming a REST request to get it from pusher
-2. otherwise, return the cached number we have
+Getting the unread message badge counter.
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from server. If calling this method within less than 10 seconds, the counter will be returned from cache, else it will be fetched from Pusher service.
 
 `func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())`
 
