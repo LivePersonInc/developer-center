@@ -57,7 +57,7 @@ Simple plain text message.
 | rtl           | Default is false.                | Boolean | N        |
 
 
-**Button**
+#### Button
 
 Simple Button which triggers an Action when clicked.
 
@@ -90,7 +90,7 @@ Simple Button which triggers an Action when clicked.
 
 For the Metadata field, please see the Metadata section in this document, below.
 
-**Image**
+#### Image
 
 You can send images by sharing a URL. Supported formats are JPG and PNG.
 
@@ -127,7 +127,7 @@ For the Metadata field, please see the Metadata section in this document, below.
 
 **Note**: all images must be hosted on an HTTPS secure URL.
 
-**Map**
+#### Map
 
 Map that points to a specific location.
 
@@ -160,7 +160,7 @@ Map that points to a specific location.
 
 For the Metadata field, please see the Metadata section in this document, below.
 
-**Complex layouts**
+#### Complex layouts
 
 
 Complex layouts have a different JSON structure - the basic elements which make up the layout are contained in another hierarchy which specifies their ordering. This adds the option to send cards with more friendly structure, including more elements and actions.
@@ -172,7 +172,7 @@ The layouts we support are:
  * **Vertical:** the block layout allows you to present a set of items vertically.
  * **Horizontal:** the block layout allows you to present a set of items horizontally.
 
-**Vertical**
+#### Vertical
 
 Layout that allows you to present a set of items (elements/layouts) vertically.
 
@@ -193,7 +193,7 @@ Layout that allows you to present a set of items (elements/layouts) vertically.
 | elements      | Array of Elements/Layouts         | Elements/Layouts  | Y        |
 
 
-**Horizontal**
+#### Horizontal
 
 Layout that allows you to present a set of items (elements/layouts) horizontally.
 
@@ -215,7 +215,7 @@ Layout that allows you to present a set of items (elements/layouts) horizontally
 | elements      | Array of Elements/Layouts           | Elements/Layouts  | Y        |
 
 
-**Click Operations**
+#### Click Operations
 
 Each basic element can have on click operations that is executed when the consumer clicks on the element.
 
@@ -225,7 +225,7 @@ On-click objects can include two object types:
 
  * Metadata: list of UMS predefined objects to send back to the agent.
 
-**Actions**
+#### Actions
 
 Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of operation. For instance: navigate with one of the navigation apps to a predefined place.
 
@@ -243,7 +243,7 @@ This actions has two use cases:
 
 * Mobile: navigate to the location with one of the navigation apps.
 
-**Example**
+_Example_
 
 ```json
 {
@@ -252,7 +252,7 @@ This actions has two use cases:
 	"la": -73.99861
 }
 ```
-**Fields**
+_Fields_
 
 | Property Name | Description                                 | Type   | Required |
 |---------------|---------------------------------------------|--------|----------|
@@ -268,7 +268,7 @@ Open a URL in a web view when opened in mobile, or in a new tab for web.This act
 Each environment can override the URI for their specific needs.
 
 
-**Example**
+_Example_
 
 ```json
 {
@@ -286,7 +286,7 @@ Each environment can override the URI for their specific needs.
 }
 ```
 
-**Fields**
+_Fields_
 
 | Property Name | Description                     | Type   | Required |
 |---------------|---------------------------------|--------|----------|
@@ -302,8 +302,7 @@ This action will be used also by the clients (Mobile, VX) to send a response whe
 
 Note: each basic element can hold only one action.
 
-**Example**
-
+_Example_
 ```json
 {
 	"type": "publishText",
@@ -311,7 +310,7 @@ Note: each basic element can hold only one action.
 }
 ```
 
-**Metadata**
+#### Metadata
 
 Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block.
 
@@ -342,7 +341,7 @@ Each basic element can have a style.
 }
 ```
 
-**JSON examples:**
+#### JSON examples:
 
 
 **Card 1:**
