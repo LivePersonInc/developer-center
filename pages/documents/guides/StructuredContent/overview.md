@@ -99,7 +99,7 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 ```json
 {
 	"type": "image",
-	"url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpg?quality=98&strip=all",
+	"url": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpg?quality=98&strip=all",
 	"caption": "This is an example of image caption",
 	"click": {
 		"metadata": [{
@@ -124,6 +124,8 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 | tooltip       | Image tooltip, used also as aria | String  | N        |
 
 For the Metadata field, please see the Metadata section in this document, below.
+
+**Note**: all images must be hosted on an HTTPS secure URL.
 
 **Map**
 
@@ -350,7 +352,7 @@ Each basic element can have a style.
     	"type": "vertical",
     	"elements": [{
     		"type": "image",
-    		"url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
+    		"url": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
     		"tooltip": "image tooltip"
     	}, {
     		"type": "text",
@@ -375,7 +377,7 @@ Each basic element can have a style.
    	"type": "vertical",
    	"elements": [{
    		"type": "image",
-   		"url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpgl",
+   		"url": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpgl",
    		"tooltip": "image tooltip"
    	}, {
    		"type": "text",
@@ -491,4 +493,4 @@ Structured Content does not yet contain Accessibility support. This is planned f
 
 ### Structured Content Notes
 
-1. Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported.
+1. Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
