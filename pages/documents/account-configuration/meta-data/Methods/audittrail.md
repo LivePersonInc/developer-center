@@ -122,4 +122,4 @@ and the required fields subselect. For details see [graphql website](http://grap
         "originatorIsLpa": false
       }
     ]
-}'''
+}
