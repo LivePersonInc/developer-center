@@ -70,12 +70,23 @@ JSON
 Contains a json object with single "query" field which define the requested graphql query for api auditData
 and the required fields subselect. For details see [graphql website](http://graphql.org/)
 
-<table>
-  <tr>
-    <td>{"query" : "{auditData  {accountId objectType objectName actionType element oldValue newValue changeDate originator originatorLoginName originatorUserId originatorUserAgent originatorAuthType originatorIsLpa}}"}</td>
-  </tr>
-</table>
-
+```json
+{"query" : "{auditData  
+              {accountId 
+              objectType 
+              objectName 
+              actionType 
+              element 
+              oldValue 
+              newValue 
+              changeDate 
+              originator 
+              originatorLoginName 
+              originatorUserId 
+              originatorUserAgent 
+              originatorAuthType 
+              originatorIsLpa}}"}
+```
 
 ### Request Headers
 
@@ -86,7 +97,7 @@ and the required fields subselect. For details see [graphql website](http://grap
   </tr>
   <tr>
     <td>Authorization</td>
-    <td>Contains token string to allow request authentication and authorization. See the doc for more details.</td>
+    <td>Contains token string to allow request authentication and authorization. See the introduction doc for more details.</td>
   </tr>
 </table>
 
@@ -123,3 +134,4 @@ and the required fields subselect. For details see [graphql website](http://grap
       }
     ]
 }
+```
