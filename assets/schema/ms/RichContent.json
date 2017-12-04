@@ -1,0 +1,18 @@
+{
+    "title": "RichContentEvent",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "RichContentEvent",
+            "enum": ["RichContentEvent"],
+            "readonly": "true"
+        },
+        "message": {
+            "type": "object",
+            "title" : "element",
+            "$ref": "richContent/element.json"
+        }
+    },
+    "required": ["type", "message"]
+}

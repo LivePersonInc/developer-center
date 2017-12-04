@@ -1,6 +1,6 @@
 ---
 title: Setting up the IVR Deflection Solution
-level1: Products
+level1: Solutions
 level2: Channels
 level3: IVR Deflection Solution for Chat
 
@@ -25,7 +25,7 @@ To start using the **IVR Deflection Solution for Chat**, set up a LiveEngage cam
 
     ![IVR3](img/ivr3.png)
 
-For detailed information on how to create a campaign, refer to the [*LiveEngage Offsite Campaigns Tutorial*](https://ce-sr.s3.amazonaws.com/CA/Campaign%20Manager/Offsite%20Engagements/70a_Engage.Anywhere.pdf){:target="_blank"}.
+
 
 ### Best Practices for Setting up your IVR
 

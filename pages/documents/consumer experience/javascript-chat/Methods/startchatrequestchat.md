@@ -91,7 +91,8 @@ var failedRequest = chat.requestChat({
     success: myChat.showStartAnimation,
     error: myChat.showFailedRequest,
     context: myChat
-});
+}});
+
 ```
 
 ### Response

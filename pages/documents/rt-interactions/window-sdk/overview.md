@@ -44,7 +44,7 @@ In the near future, Widget configuration will be available directly via LiveEnga
 
 Main capabilities of this SDK include:
 
-* Obtain/bind/unbind any data that can be found within the public model, end commands/notifications to the engagement window, such as a ‘Widget Disposal’ command, which signals to the Engagement Window to immediately close the widget.
+* Obtain/bind/unbind any data that can be found within the public model, end commands/notifications to the engagement window, such as a 'Widget Disposal’ command, which signals to the Engagement Window to immediately close the widget.
 
 * Allow external applications to communicate and integrate with LiveEngage.
 

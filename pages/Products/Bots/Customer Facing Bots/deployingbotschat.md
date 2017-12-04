@@ -1,7 +1,7 @@
 ---
 title: Deploying Bots on Live Chat
 
-level1: Products
+level1: Solutions
 level2: Bots
 level3: Customer Facing Bots
 
@@ -19,7 +19,7 @@ If your brand is using Live Chat - both desktop and mobile web chats can incorpo
 
 1. Create a user for your bot: Go to the users tab and create a new user > populate the form with the bot information including the name that will display to customers as well as the icon.
 
-2. Create a skill for your bot. From the same users tab, navigate to ‘skills’ and create a  new skill. Name the skill as appropriate for the use case of your bot and **ensure it has the word ‘bot’ in the skill name.** This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
+2. Create a skill for your bot. From the same users tab, navigate to 'skills’ and create a  new skill. Name the skill as appropriate for the use case of your bot and **ensure it has the word 'bot’ in the skill name.** This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
 
 ### Step 2 - Implement the Chat Agent API
 
@@ -41,9 +41,9 @@ You can also use the chatbot simulator in order to learn how to implement the ma
 
 Once your bot is created, it must be assigned into a LiveEngage campaign in order to be assigned to the right engagements and skills.
 
-1. Create a new campaign within LiveEngage by navigating to the ‘campaigns’ tab and click on new campaign.
+1. Create a new campaign within LiveEngage by navigating to the 'campaigns’ tab and click on new campaign.
 
-2. Create a new engagement - this is the button that invites visitors to begin a chat.  The engagement can be in any format, size, shape of even a simple link (Ensure that in the first step, you select ‘conversation type - Live Chat’).
+2. Create a new engagement - this is the button that invites visitors to begin a chat.  The engagement can be in any format, size, shape of even a simple link (Ensure that in the first step, you select 'conversation type - Live Chat’).
 
 3. Configure the skill for this engagement via the studio - this should match the skill for your bot
 

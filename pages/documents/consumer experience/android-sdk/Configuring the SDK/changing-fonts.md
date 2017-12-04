@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
-order: 267
+order: 200
 permalink: android-configuring-changing-fonts.html
 
 ---

@@ -9,7 +9,7 @@
         },
         "status": {
             "type": "string",
-            "enum": ["ACCEPT", "READ", "ACCESS", "NACK"]
+            "enum": ["ACCEPT", "READ", "ACCESS", "NACK", "ACTION"]
         },
         "sequenceList": {
             "type": "array",

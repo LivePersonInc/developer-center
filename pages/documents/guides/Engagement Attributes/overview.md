@@ -44,6 +44,6 @@ Described below are some of the uses of Engagement Attributes in LiveEngage.
 
 ### Important notes
 
-1. In order for targeting rules (related to target audience or visitor behavior) to be validated, each Engagement Attribute **MUST** be implemented on the visitor's page.
+1. In order for targeting rules (related to target audience or visitor behavior) to be validated, each Engagement Attribute **MUST** be implemented on the visitor's page at least once during a session.
 
 2. For example, a brand wants to exclude all consumers who have received a specific error code on their site from receiving an engagement. In order for the targeting rule to be checked by LiveEngage, **an engagement attribute must be sent** both if the error code was received and also if it was not received, so that LiveEngage can determine which consumers to display the engagement to.

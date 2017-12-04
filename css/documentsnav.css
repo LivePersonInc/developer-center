@@ -1,0 +1,253 @@
+
+
+.bodygrey {
+  background-color: #F2F2F2;
+}
+
+.documents {
+  margin-top: 67px;
+  width: 70%;
+  font-size: 3em;
+}
+
+.container.documents {
+    padding-left: 10%;
+    /*padding-bottom: 24%;*/
+    vertical-align: top;
+}
+
+.documentbox{
+  width: 890px;
+  height: 220px;
+  background-color: #fff;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.categorytitle{
+  /* float:left; */
+  font-size: 26px;
+  margin-left: 0;
+  margin-right: 0;
+  margin: auto;
+  display: inline-block;
+  width: 100px;
+  margin-top: 58px;
+  margin-left: -152px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  color: #0c1320;
+}
+
+.categorysub{
+  float: left;
+  margin-top: 110px;
+  display: inline-block;
+  width: 207px;
+  margin-left: -41px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+
+.listbox {
+  float:right;
+  background-color: #ECF1FF;
+  display: block;
+  margin-top: -80px;
+  margin-right: 18px;
+  width: 551px;
+  line-height: 3;
+  font-size: 14px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  padding: 10px 0 0 0;
+}
+
+.categoryimage{
+  float:left;
+  width: 50px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+.lower{
+  margin-top: -120px;
+}
+
+@media (max-width: 425px) {
+  .documentbox {
+    width: 890px;
+    height: 328px;
+    margin-bottom: 55px;
+  }
+
+  .categoryimage {
+    margin-top: 8px;
+    margin-left: 136px;
+  }
+
+  .categorytitle {
+    margin-left: 9px;
+    margin-top: 14px !important;
+  }
+
+  .categorysub {
+    display:none;
+  }
+
+  .listbox {
+    float: none;
+    background-color: #ECF1FF;
+    display: inline-block;
+    margin-top: 21px;
+    margin-right: 1px;
+    width: 405px;
+    height: 168px;
+    line-height: 2;
+    font-size: 14px;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+    padding: 0px 0 0 0;
+    margin-left: -177px;
+    margin-bottom: 4px;
+  }
+
+  .listmobile {
+    float: left;
+    width: 49%;
+    display: inline-block;
+
+  }
+
+  .listmobilesecond {
+    float:right;
+    display: block;
+    width: 51%;
+  }
+
+  .lower {
+    margin-left: 12px;
+    height: 212px;
+    margin-top: 17px !important;
+  }
+
+  .listboxleft {
+    margin-left: -176px;
+  }
+
+  .documentlast {
+    height: 207px !important;
+  }
+
+  .listboxlast {
+    margin-left: -177px;
+    height: 94px;
+    margin-top: 40px !important;
+  }
+
+  .titlelast {
+    margin-top: 34px !important;
+  }
+
+}
+
+.usecasebox {
+  width: 24%;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding-left: initial;
+  padding-right: initial;
+}
+
+.usecasebox:hover {
+  -webkit-box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
+  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+  -moz-box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
+  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+  box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
+  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+  transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+  transition-delay: .1s;
+  transform: translate(0, -4px);
+  cursor: pointer;
+}
+
+.leftbox {
+  float: left;
+  margin-right: 20px;
+}
+
+.rightbox {
+  float: left;
+  margin-right: 20px;
+}
+
+.centerbox {
+  margin: 0 auto;
+}
+
+.usecasebox img {
+  width: 100%;
+}
+
+.usecasetext {
+  margin-top: 27px;
+  margin-left: 38px;
+}
+
+.usecasetext .banner-hr {
+  float: left;
+  background: #ff7113;
+  height: 3px;
+  width: 38px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  clear: both;
+  border: none;
+}
+
+.usecasetitle {
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  color: #333333;
+  font-size: 1.625em;
+  float:left;
+}
+
+.usecaseinner {
+  display: inline-block;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  margin-bottom: 30px;
+  float:left;
+  clear: both;
+  width: 85%;
+  color: #333333;
+}
+
+.boximage {
+  padding-left: initial;
+  padding-right: initial;
+}
+
+.usecasescontainer {
+  margin-left: 12.666667%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.bottomrow {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 425px) {
+  .usecasebox {
+    float:right;
+    margin-right: 22%;
+    width: 81%;
+  }
+}
+
+.documentlast {
+  margin-bottom: 100px;
+}

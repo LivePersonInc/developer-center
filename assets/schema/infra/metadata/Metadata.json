@@ -1,0 +1,18 @@
+{
+    "type": "array",
+    "items": {
+        "oneOf": [{
+                "title": "Action Reason",
+                "$ref": "ActionReason.json"
+            }, {
+                "title": "Bot Response",
+                "$ref": "BotResponse.json"
+            }, {
+                "title": "IBM Watson Info",
+                "$ref": "IBMWatsonInfo.json"
+            }, {
+                "title": "External Id",
+                "$ref": "ExternalId.json"
+            }]
+    }
+}

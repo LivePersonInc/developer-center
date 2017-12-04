@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 2
+order: 20
 permalink: android-initialization.html
 
 indicator: messaging
@@ -43,11 +43,11 @@ The SDK supports two operation modes: Activity and Fragment. For more informatio
 
 To start LivePerson's Activity mode:
 
-`LivePerson.showConversation(Activity activity);`
+`LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);`
 
 To start LivePerson's Fragment mode: (Attach the returned fragment to a container in your activity) :
 
-`LivePerson.getConversationFragment();`
+`LivePerson.getConversationFragment( LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);`
 
 When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 

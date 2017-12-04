@@ -8,7 +8,7 @@ level4: Methods
 
 order: 20
 permalink: account-configuration-automatic-messages-get-automatic-message-by-id.html
- 
+
 indicator: both
 ---
 
@@ -41,6 +41,7 @@ Retrieves an Automatic Message by ID for a specific account.
 
 **Response Body**
 
+```json
     {
             "id": 2,
             "deleted": false,
@@ -66,3 +67,4 @@ Retrieves an Automatic Message by ID for a specific account.
                 }
             ]
     }
+```

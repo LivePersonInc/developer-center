@@ -1,0 +1,59 @@
+{
+    "oneOf": [{
+            "title": "Publish Text",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["publishText"],
+                    "default": "publishText",
+                    "readonly": true
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": ["type", "text"]
+        }, {
+            "title": "navigate",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["navigate"],
+                    "default": "navigate",
+                    "readonly": true
+                },
+                "la": {
+                    "type": "number"
+                },
+                "lo": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": ["type", "la", "lo"]
+        }, {
+            "title": "link",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["link"],
+                    "default": "link",
+                    "readonly": true
+                },
+                "uri": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": ["type", "uri"]
+        }
+    ]
+}

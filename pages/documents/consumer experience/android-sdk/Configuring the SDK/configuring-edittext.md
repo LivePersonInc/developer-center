@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
-order: 266
+order: 190
 permalink: android-configuring-edittext.html
 
 indicator: messaging
@@ -16,6 +16,8 @@ There is an option to change the whole style of the message EditText. In the app
 
 *Example:*
 
-```<style name="lp_enter_message_style" parent="Theme.AppCompat.Light.NoActionBar">           <item name="colorControlActivated">#F8BBD0</item>```
-```...```
-```</style>```
+```xml
+<style name="lp_enter_message_style" parent="Theme.AppCompat.Light.NoActionBar">
+<item name="colorControlActivated">#F8BBD0</item>
+</style>
+```

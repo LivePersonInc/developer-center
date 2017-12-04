@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: SDK APIs
 
-order: 11
+order: 110
 permalink: android-interface-definitions.html
 
 indicator: messaging
@@ -15,7 +15,7 @@ indicator: messaging
 ### ICallback
 
 ```javascript
-{
+
 public interface ICallback<T, E extends Throwable> {
    void onSuccess(T value);
    void onError(E exception);
@@ -25,19 +25,14 @@ public interface ICallback<T, E extends Throwable> {
 ### AgentData
 
 ```javascript
-{
-    public class AgentData {
+
+public class AgentData {
 
     public String mFirstName;
-
     public String mLastName;
-
     public String mAvatarURL;
-
     public String mEmployeeId;
-
     public String mNickName;
-
 }
 ```
 
@@ -46,8 +41,8 @@ public interface ICallback<T, E extends Throwable> {
 ### InitLivePersonProperties
 
 ```javascript
-{
-    Public class InitLivePersonProperties{
+
+Public class InitLivePersonProperties{
     Private string brandId;
     Private string appId;
     Private InitLivePersonCallBack initCallBack;
@@ -58,7 +53,7 @@ public interface ICallback<T, E extends Throwable> {
 ### ConsumerProfile
 
 ```javascript
-{
+
 public class ConsumerProfile {
     private String mFirstName;
     private String mLastName;
@@ -72,7 +67,6 @@ public class ConsumerProfile {
 
 ```javascript
 
-{
 public class PushMessage {
     private String mBrandId;
     private String mMessage;
@@ -89,9 +83,19 @@ public class PushMessage {
 
 
 ```javascript
-{
+
 Public class LPConversationData{
     Private CloseReason closeReason;
     Private String conversationId;
 }
+```  
+
+### PermissionType
+
+
+```javascript
+
+public enum PermissionType {
+  	PHOTO_SHARING
+}  
 ```

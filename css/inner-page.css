@@ -23,6 +23,12 @@ h4[id]{
   font-size: 0.86em;
   font-weight: 600;
 }
+
+h4 code.highlighter-rouge {
+    color: #fff;
+    margin-left: 5px;
+}
+
 .h2 {
   color: #162036;
   font-family: Roboto,Arial;
@@ -71,6 +77,18 @@ h4[id]{
   font-size: 0.8888em;
   font-weight: bold;
 }
+
+@media screen and (max-width:768px){
+  .post-content table{
+    max-width: 88%;
+  }
+}
+
+@media screen and (max-width:425px){
+  .post-content table{
+    max-width: 90%;
+  }
+}
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
   border-top: 1px solid #d6d6d6;
 
@@ -81,7 +99,7 @@ table > thead > tr > th {
 .post-content > ul {
     color: #666666;
     font-family: "Open Sans",Arial;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .designsheet table tr td {
@@ -120,11 +138,15 @@ table > thead > tr > th {
 }
 
 code {
-  background-color: #f0f0f0;
+  background-color: #162036;
   border-radius: 4px;
-  color: #444;
-  padding: 2px 4px;
-  white-space: initial;
+  color: #fff;
+  padding: 2px 10px;
+  /*white-space: initial;*/
+}
+
+td code {
+  color: #666666;
 }
 
 /*toc nav bar */
@@ -220,6 +242,7 @@ ul#mysidebar.nav {
   border-right: 1px solid lightgray;
   margin-left: 10px;
   height: 100%;
+  position: initial;
 
 }
 
@@ -289,10 +312,11 @@ div.sidebarTitle {
   margin-bottom: 9px;
   margin-left: 26px;
   width: 270px;
-  top: 123px;
+  top: 67px;
   font-family:  "Roboto", "Open Sans", Helvetica, sans-serif;
   white-space:nowrap;
   visibility: hidden;
+  position: relative;
 }
 
 div.sidebarTitle span{
@@ -302,7 +326,7 @@ div.sidebarTitle-holder {
     font-size: 1.333em;
     font-weight: normal;
     visibility: hidden;
-    margin-top: 82px;
+    margin-top: 50px;
     position: relative;
     font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
 }
@@ -430,7 +454,7 @@ div.sidebarTitle-holder {
 .post-content > p, .post-content ol,.post-content u {
   color: #666666;
   font-family: "Open Sans",Arial;
-  font-size: 0.8em;
+  font-size: 0.9em;
   overflow-wrap: break-word;
 }
 
@@ -556,3 +580,71 @@ pre {
       margin-top: 84px;
   }
 }
+
+.contactusBtn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.contactusBtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/** VisualPing Styling Begin
+   This div contains the iframe and is set to be responsive
+   Edit the max-with to suit your needs
+   **/
+   .visualping-container {
+     position: relative;
+     width: 100%;
+     overflow: hidden;
+     max-width: 235px;
+     margin: 0 auto;
+     margin-left: 2px;
+     margin-top: -33px;
+   }
+
+   /**Position of the iframe inside the reponsive div **/
+   .visualping-container iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+   }
+
+   /** hides the ugly borders **/
+   iframe {
+     border: 0;
+   }
+
+
+   @media only screen and (max-width: 767px) {
+
+     /* the div containing the iframe is responsive */
+     .visualping-container {
+       -webkit-box-sizing: inherit;
+       -moz-box-sizing: inherit;
+       box-sizing: inherit;
+       max-width: 95%;
+     }
+   }
+/*visualping ends*/

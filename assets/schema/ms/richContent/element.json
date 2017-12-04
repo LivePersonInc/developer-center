@@ -1,0 +1,47 @@
+{
+    "oneOf": [
+        {
+            "title": "basic",
+            "$ref": "basic.json"
+        },
+        {
+            "type": "object",
+            "title": "horizontal",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["horizontal"],
+                    "default": "horizontal",
+                    "readonly": true
+                },
+                "elements": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "element.json"
+                    }
+                }
+            },
+            "required": ["type", "elements"]
+        },
+        {
+            "type": "object",
+            "title": "vertical",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["vertical"],
+                    "default": "vertical",
+                    "readonly": true
+                },
+                "elements": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "element.json"
+                    }
+                }
+            },
+            "required": ["type", "elements"]
+        }
+
+    ]
+}

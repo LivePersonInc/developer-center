@@ -32,28 +32,28 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">remoteUserBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubblebackgroundcolor.png" alt="Example1"></td>
+    <td align="left"><img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor"></td>
     <td align="left">#004DC9</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleBorderColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the outline color.</td>
-    <td align="left"><img src="img/remoteuserbubblebordercolor.png" alt="example2"></td>
+    <td align="left"><img src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor"></td>
     <td align="left">#004DC9</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleLinkColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for links in the text of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubblelinkcolor.png" alt="example3"></td>
+    <td align="left"><img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubbletextcolor.png" alt="example4"></td>
+    <td align="left"><img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
@@ -67,78 +67,170 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">remoteUserBubbleTimestampColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the timestamp of the remote user bubble.</td>
-    <td align="left"><img src="img/remoteuserbubbletimestampcolor.png" alt="example5"></td>
+    <td align="left"><img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
   <tr>
     <td align="left">remoteUserTypingTintColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color of the remote user typing bubbles animation.</td>
-    <td align="left"><img src="img/remoteusertypingtintcolor.png" alt="example6"></td>
+    <td align="left"><img src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor"></td>
     <td align="left">UIColor.white</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleLongPressOverlayColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color of the remote user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay"></td>
+    <td align="left">UIColor.black</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleLongPressOverlayAlpha</td>
+    <td align="left">Float</td>
+    <td align="left">Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay"></td>
+    <td align="left">0.3</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleTopLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top left Radius corner on the Remote bubble.
+     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteTopLeft.png" alt="remoteTopLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleTopRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top right Radius corner on the Remote bubble.
+     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteTopRight.png" alt="remoteTopRight"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleBottomLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom left Radius corner on the Remote bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteBottomLeft.png" alt="remoteBottomLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserBubbleBottomRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom right Radius corner on the Remote bubble.
+   Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/remoteBottomRight.png" alt="remoteBottomRight"></td>
+    <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">userBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubblebackgroundcolor.png" alt="example7"></td>
+    <td align="left"><img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor"></td>
     <td align="left">#EDEDED</td>
   </tr>
   <tr>
     <td align="left">userBubbleBorderColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the outline color.</td>
-    <td align="left"><img src="img/userbubblebordercolor.png" alt="exmaple8"></td>
+    <td align="left"><img src="img/userbubblebordercolor.png" alt="userbubblebordercolor"></td>
     <td align="left">#EDEDED</td>
   </tr>
   <tr>
     <td align="left">userBubbleLinkColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for links in the text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubblelinkcolor.png" alt="example9"></td>
+    <td align="left"><img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor"></td>
     <td align="left">#0000ee</td>
   </tr>
   <tr>
     <td align="left">userBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbletextcolor.png" alt="example10"></td>
+    <td align="left"><img src="img/userbubbletextcolor.png" alt="userbubbletextcolor"></td>
     <td align="left">UIColor.black</td>
   </tr>
   <tr>
     <td align="left">userBubbleBorderWidth</td>
     <td align="left">Double</td>
     <td align="left">Double number for the outline width.</td>
-    <td align="left"><img src="img/userbubbleborderwidth.png" alt="example11"></td>
+    <td align="left"><img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth"></td>
     <td align="left">1</td>
   </tr>
   <tr>
     <td align="left">userBubbleTimestampColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the timestamp of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbletimestampcolor.png" alt="example12"></td>
+    <td align="left"><img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
   <tr>
     <td align="left">userBubbleSendStatusTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the send status text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubblesendstatustextcolor.png" alt="example13"></td>
+    <td align="left"><img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
   <tr>
     <td align="left">userBubbleErrorTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the error view text of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbleerrortextcolor.png" alt="example14"></td>
+    <td align="left"><img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor"></td>
     <td align="left">#DE0A23</td>
   </tr>
   <tr>
     <td align="left">userBubbleErrorBorderColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the error view border of the visitor bubble.</td>
-    <td align="left"><img src="img/userbubbleerrorbordercolor.png" alt="example15"></td>
+    <td align="left"><img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor"></td>
     <td align="left">#DE0A23</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleLongPressOverlayColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color of the user bubble's overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
+    <td align="left">UIColor.black</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleLongPressOverlayAlpha</td>
+    <td align="left">Float</td>
+    <td align="left">Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
+    <td align="left">0.3</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleTopLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top left Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userTopLeft.png" alt="userTopLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleTopRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Top right Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userTopRight.png" alt="userTopRight"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleBottomLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom left Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userBottomLeft.png" alt="userBottomLeft"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">userBubbleBottomRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left"> Bottom right Radius corner on the User bubble.
+    Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
+    <td align="left"><img src="img/userBottomRight.png" alt="userBottomRight"></td>
+    <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">bubbleEmailLinksRegex</td>
@@ -160,6 +252,48 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled</td>
     <td align="left"></td>
     <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTopPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Top Padding</td>
+    <td align="left"><img src="img/bubbleTopPadding.png" alt="bubbleTopPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleBottomPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble bottom Padding</td>
+    <td align="left"><img src="img/bubbleBottomPadding.png" alt="bubbleBottomPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleLeadingPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Leading Padding</td>
+    <td align="left"><img src="img/bubbleLeadingPadding.png" alt="bubbleLeadingPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTrailingPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Trailing Padding</td>
+    <td align="left"><img src="img/bubbleTrailingPadding.png" alt="bubbleTrailingPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTimestampBottomPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Trailing Padding</td>
+    <td align="left"><img src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding"></td>
+    <td align="left">5</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTimestampTopPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Timestamp Top Padding</td>
+    <td align="left"><img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding"></td>
+    <td align="left">5</td>
   </tr>
 </tbody>
 </table>
@@ -251,7 +385,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td align="left">urlRealTimePreviewBorderWidth</td>
-    <td align="left">CGFloat</td>
+    <td align="left">Float</td>
     <td align="left">The border width of the url real time preview </td>
     <td align="left"><img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth"></td>
     <td align="left"></td>
@@ -403,6 +537,13 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.</td>
     <td align="left"></td>
     <td align="left">#0362AC</td>
+  </tr>
+  <tr>
+    <td align="left">sendButtonImage</td>
+    <td align="left">UIImage</td>
+    <td align="left">Send button Image in the conversation screen. The custom image will be changed only if isSendMessageButtonInTextMode = false. the send button image need to follow the Custom Icon documention (https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/)</td>
+    <td align="left"><img src="img/DefaultSendButton.png" alt="DefaultSendButton"></td>
+    <td align="left">SDK bundle sendMessageIcon Icon</td>
   </tr>
   <tr>
     <td align="left">isSendMessageButtonInTextMode</td>
@@ -693,6 +834,41 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">true</td>
   </tr>
   <tr>
+    <td align="left">conversationSeparatorFontSize</td>
+    <td align="left">UIFontTextStyle</td>
+    <td align="left">Define the conversation closed separator font size</td>
+    <td align="left"><img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"></td>
+    <td align="left">UIFontTextStyle.caption1</td>
+  </tr>
+  <tr>
+    <td align="left">conversationSeparatorBottomPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the conversation Closed label to separator line padding</td>
+    <td align="left"><img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding"></td>
+    <td align="left">7</td>
+  </tr>
+  <tr>
+    <td align="left">conversationSeparatorFontName</td>
+    <td align="left">Float</td>
+    <td align="left">Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
+    <td align="left"><img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"></td>
+    <td align="left">7</td>
+  </tr>
+  <tr>
+    <td align="left">conversationSeparatorViewBottomPadding</td>
+    <td align="left">String</td>
+    <td align="left">Define the conversation separator view bottom padding</td>
+    <td align="left"><img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">conversationClosedSeparatorTopPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the conversation Closed Separator Top padding</td>
+    <td align="left"><img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding"></td>
+    <td align="left">5</td>
+  </tr>
+  <tr>
     <td align="left">enableVibrationOnMessageFromRemoteUser</td>
     <td align="left">Bool</td>
     <td align="left">Toggle vibration sound when a new message from a remote user received</td>
@@ -785,6 +961,27 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"></td>
     <td align="left">true</td>
   </tr>
+  <tr>
+    <td align="left">unreadMessagesCornersRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Define the corners radius of the unread messages bubble.</td>
+    <td align="left"><img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius"></td>
+    <td align="left">8 for all the corners</td>
+  </tr>
+  <tr>
+    <td align="left">scrollToBottomButtonCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Define the left top and the left bottom corners radius of the scroll down indicator.</td>
+    <td align="left"><img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius"></td>
+    <td align="left">20 for left top and the left bottom the corners</td>
+  </tr>
+  <tr>
+    <td align="left">scrollToBottomButtonBadgeCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
+    <td align="left"><img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"></td>
+    <td align="left">12 for all the corners	</td>
+  </tr>
 </tbody>
 </table>
 
@@ -827,13 +1024,13 @@ It will affect the following areas:
 <table>
 <thead>
    <tr>
-  <th>Name</th>
+    <th>Name</th>
     <th>Type</th>
     <th>Description</th>
     <th>Example</th>
     <th>Default </th>
   </tr>
-  </thead>
+</thead>
 <tbody>
   <tr>
     <td align="left">brandName</td>
@@ -864,58 +1061,95 @@ It will affect the following areas:
     <td align="left"><img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed"></td>
     <td align="left">nil</td>
   </tr>
+  <tr>
+    <td align="left">customRefreshControllerImagesArray</td>
+    <td align="left">&lt;ArrayUIImage&gt;?</td>
+    <td align="left">Array of images for creating the custom refresh controller the controller will loop the images from the array need two or more images in the array for take effect</td>
+    <td align="left"><img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">customRefreshControllerAnimationSpeed</td>
+    <td align="left">Float&lt;UIImage&gt;</td>
+    <td align="left">custom refresh controller speed animation define the full images loop time. Smaller value will create high speed animation </td>
+    <td align="left"></td>
+    <td align="left">2</td>
+  </tr>
 </tbody>
 </table>
 
 ### Date Separator
 
 <table>
-<thead>
-   <tr>
-  <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Example</th>
-    <th>Default </th>
-  </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td align="left">dateSeparatorTitleBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator title background color.</td>
-    <td align="left"><img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"></td>
-    <td align="left">UIColor.white</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorTextColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator text color.</td>
-    <td align="left"><img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"></td>
-    <td align="left">#46474A</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorLineBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator line background color.</td>
-    <td align="left"><img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"></td>
-    <td align="left">UIColor.clear</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator background color.</td>
-    <td align="left"><img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"></td>
-    <td align="left">#FFFFFF</td>
-  </tr>
-</tbody>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Example</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="left">dateSeparatorTitleBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator title background color.</td>
+			<td align="left"><img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"></td>
+			<td align="left">UIColor.white</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorTextColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator text color.</td>
+			<td align="left"><img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"></td>
+			<td align="left">#46474A</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorLineBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator line background color.</td>
+			<td align="left"><img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"></td>
+			<td align="left">UIColor.clear</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator background color.</td>
+			<td align="left"><img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"></td>
+			<td align="left">#FFFFFF</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorFontSize</td>
+			<td align="left">UIFontTextStyle</td>
+			<td align="left">Define the Date Separator font text style.</td>
+			<td align="left"><img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize"></td>
+			<td align="left">UIFontTextStyle.footnote</td>
+		</tr>
+		<tr>
+			<td align="left">customFontNameDateSeparator</td>
+			<td align="left">String</td>
+			<td align="left">Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist.</td>
+			<td align="left"><img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"></td>
+			<td align="left">nil</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorTopPadding</td>
+			<td align="left">Float</td>
+			<td align="left">Define the Date Separator Top padding.</td>
+			<td align="left"><img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"></td>
+			<td align="left">0</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorBottomPadding</td>
+			<td align="left">Float</td>
+			<td align="left">Define the Date Separator bottom padding.</td>
+			<td align="left"><img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"></td>
+			<td align="left">0</td>
+		</tr>
+	</tbody>
 </table>
+
 
 ### User input view
 
@@ -1013,7 +1247,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">ttrShowShiftBanner</td>
     <td align="left">Bool</td>
-    <td align="left">Ability to enable/disable shift toaster (‘An agent will respond...’)</td>
+    <td align="left">Ability to enable/disable shift toaster ('An agent will respond...’)</td>
     <td align="left"></td>
     <td align="left">true</td>
   </tr>
@@ -1192,6 +1426,18 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">#004DC9</td>
   </tr>
   <tr>
+    <td align="left">remoteUserAvatarLeading</td>
+    <td align="left">Float</td>
+    <td align="left">Define the remote avatar Leading padding (left edge to avatar).</td>
+    <td align="left"><img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserAvatarTrailingPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the remote avatar Trailing padding (Avatar to bubble).</td>
+    <td align="left"><img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"></td>
+    <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">remoteUserAvatarIconColor</td>
@@ -1273,7 +1519,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">realTimeMaskingRegex</td>
     <td align="left">String</td>
-    <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server unmasked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
+    <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server masked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
     <td align="left"></td>
     <td align="left">""</td>
   </tr>
@@ -1413,6 +1659,178 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">Secure form bubble form image tint color</td>
     <td align="left"></td>
     <td align="left">#004dc9</td>
+  </tr>
+
+  <tr>
+    <td align="left">secureFormCustomFontName</td>
+    <td align="left">String</td>
+    <td align="left">Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica.</td>
+    <td align="left"><img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"></td>
+    <td align="left">Helvetica</td>
+  </tr>
+  <tr>
+    <td align="left">secureFormHideLogo</td>
+    <td align="left">Bool</td>
+    <td align="left">Secure form flag for hiding the secure form logo in the top of the form.</td>
+    <td align="left"><img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"></td>
+    <td align="left">false</td>
+  </tr>
+  <tr>
+    <td align="left">secureFormBubbleLoadingIndicatorColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Secure form loading indicator color while loading form before opening.</td>
+    <td align="left"><img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"></td>
+    <td align="left">#46474a</td>
+  </tr>
+</tbody>
+</table>
+
+### Structured Content
+
+<table>
+<thead>
+   <tr>
+  <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default </th>
+  </tr>
+  </thead>
+<tbody>
+<tr>
+  <td align="left">enableStrucutredContent</td>
+  <td align="left">Bool</td>
+  <td align="left">Enable or Disable toggle for Structured Content feature in conversations</td>
+  <td align="left"></td>
+  <td align="left">false</td>
+</tr>
+  <tr>
+    <td align="left">structuredContentBubbleBorderWidth</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content bubble border width in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.3</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBorderColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Structured Content bubble border color.</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
+    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    <td align="left"></td>
+    <td align="left">0.01</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentMapLongitudeDeltaSpan</td>
+    <td align="left">Double</td>
+    <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
+    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    <td align="left"></td>
+    <td align="left">0.01</td>
+  </tr>
+</tbody>
+</table>
+
+### Connection Status Bar
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusConnectingBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the background of the connection status bar while connecting.</td>
+    <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#f5f5f5f2</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusConnectingTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the connection status bar while connecting.</td>
+    <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#46474a</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusFailedToConnectBackgroundColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the background of the connection status bar when connection failed.</td>
+    <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
+    <td align="left">#000000cc</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td align="left">connectionStatusFailedToConnectTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the connection status bar when connection failed.</td>
+    <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
+    <td align="left">UIColor.white</td>
+  </tr>
+</tbody>
+
+</table>
+
+### Controller message
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">controllerBubbleTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the text of the controller bubble.</td>
+    <td align="left"><img alt="controller bubble text color"></td>
+    <td align="left">#5b5c5e</td>
+  </tr>
+</tbody>
+</table>
+
+### Accessibility
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">announceAgentTyping</td>
+    <td align="left">Bool</td>
+    <td align="left">If true, accessibility will announce when agent is typing a message to the consumer.</td>
+    <td align="left"></td>
+    <td align="left">true</td>
   </tr>
 </tbody>
 </table>

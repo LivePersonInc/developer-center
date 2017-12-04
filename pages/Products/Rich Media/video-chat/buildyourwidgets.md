@@ -1,6 +1,6 @@
 ---
 title: Build Your Widgets
-level1: Products
+level1: Solutions
 level2: Rich Media
 level3: Video Chat
 
@@ -47,7 +47,7 @@ Recommendations:
 
 * Status of the request needs to be accepted
 
-* The widget (slider to the right of the window) opens when you trigger the widget ‘start state’.  This should trigger based on the acceptance of the request the agent sends. 
+* The widget (slider to the right of the window) opens when you trigger the widget 'start state’.  This should trigger based on the acceptance of the request the agent sends. 
 
 **Implement the window application**
 

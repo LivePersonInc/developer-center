@@ -1,6 +1,6 @@
 ---
 title: Clickable Mobile Content to SMS
-level1: Products
+level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
@@ -63,10 +63,10 @@ Use the following code template for your engagement. The capitalized portions sh
 
 <table>
 <thead>
-  <th>
+  <tr>
     <th>Element</th>
     <th>Description</th>
-  </th>
+  </tr>
 </thead>
 <tbody>
   <tr>
@@ -75,7 +75,10 @@ Use the following code template for your engagement. The capitalized portions sh
   </tr>
   <tr>
     <td>TEXT_MESSAGE_URI_ENCODED</td>
-    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site http://meyerweb.com/eric/tools/dencoder/</td>
+    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site http://meyerweb.com/eric/tools/dencoder/<br>
+    Note: separate the number and text with:<br>
+    an '&' for iOS<br>
+    a '?' for Android</td>
   </tr>
   <tr>
     <td>CALL_TO_ACTION</td>
@@ -85,7 +88,7 @@ Use the following code template for your engagement. The capitalized portions sh
 </table>
 
 
-Example:
+Example (_iOS_):
 
 ```html
 <div>

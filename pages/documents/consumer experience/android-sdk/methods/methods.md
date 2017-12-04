@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: SDK APIs
 
-order: 10
+order: 100
 permalink: android-methods.html
 
 indicator: messaging
@@ -41,7 +41,46 @@ When the conversation screen is displayed, the server connection for messaging w
 | context | A context from the host app |
 | initProperties | An object with all the properties needed to initialize the SDK |
 
-### showConversation
+
+### showConversation (with full authentication support)
+
+The showConversation API displays the messaging screen as a new activity with the conversation fragment. The consumer can then start or continue a conversation. The conversation screen is controlled entirely by the SDK.
+
+This method returns a Boolean value to indicate success or failure in opening the messaging screen. If the operation is successful, this method returns true, else it returns false.
+
+Initiating the conversation screen opens the WebSocket to the LivePerson Messaging Server.
+
+**LPAuthenticationParams:**
+
+If your system implementation involves an authentication step - pass LPAuthenticationParams.
+
+There are 2 authenticated connection methods:
+
+ 1. with authenticationKey - Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
+  new LPAuthenticationParams().setAuthKey(yourAuthCode).
+
+_Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+
+{:start="2"}
+ 2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
+
+if you want to connect in an *unAuthenticated* way, you can pass null or an empty LPAuthenticationParams.
+
+**ConversationViewParams:**
+
+boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
+
+`public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
+
+| Parameter | Description |
+| :--- | :--- |
+| activity | The calling activity |
+| LPAuthenticationParams | authentication params |
+| ConversationViewParams | view params |
+
+
+
+### showConversation (Deprecated)
 
 The showConversation API displays the messaging screen as a new activity with the conversation fragment. The consumer can then start or continue a conversation. The conversation screen is controlled entirely by the SDK.
 
@@ -55,7 +94,7 @@ Initiating the conversation screen opens the WebSocket to the LivePerson Messagi
 | :--- | :--- |
 | activity | The calling activity |
 
-### showConversation (with authentication support)
+### showConversation (with authentication support) (Deprecated)
 
 Same as [showConversation](android-showconversation.html){:target="_blank"} with the addition of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
@@ -68,7 +107,7 @@ Same as [showConversation](android-showconversation.html){:target="_blank"} with
 
 ### hideConversation
 
-The hideConversation API hides the conversation activity. The conversation screen is shown again by calling Start Conversation. 
+The hideConversation API hides the conversation activity. The conversation screen is shown again by calling showConversation.
 
 `public static void hideConversation(Activity activity)`
 
@@ -76,12 +115,46 @@ The hideConversation API hides the conversation activity. The conversation scree
 | :--- | :--- |
 | activity | The calling activity |
 
-*Notes*: 
+*Notes*:
 
 - *Hiding the conversation closes the WebSocket.*
 - *When using the SDK’s activity, the back button performs the same function.*
 
-### getConversationFrgament
+
+### getConversationFrgament (with full authentication support)
+
+The getConversationFragment method creates and returns the conversation fragment.
+
+*Note: This API does not show the actual screen, but only creates the fragment. Your implementation needs to handle when and how to show it.*
+
+**LPAuthenticationParams:**
+
+If your system implementation involves an authentication step - pass LPAuthenticationParams.
+
+There are 2 authenticated connection methods:
+
+ 1. with authenticationKey - Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
+  new LPAuthenticationParams().setAuthKey(yourAuthCode).
+
+_Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+
+{:start="X"}
+ 2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
+
+if you want to connect in an *unAuthenticated* way, you can pass null or an empty LPAuthenticationParams.
+
+**ConversationViewParams:**
+
+boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
+
+`public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
+
+| Parameter | Description |
+| :--- | :--- |
+| LPAuthenticationParams | authentication params |
+| ConversationViewParams | view params |
+
+### getConversationFrgament (Deprecated)
 
 The getConversationFragment method creates and returns the conversation fragment.
 
@@ -150,7 +223,7 @@ The setUserProfile API takes custom parameters about the consumer as an input an
 
 ### unregisterLPPusher
 
-Unregister from registered push notification service. 
+Unregister from registered push notification service.
 
 `public static void unregisterLPPusher(String brandId, String appId)`
 
@@ -163,7 +236,7 @@ Unregister from registered push notification service.
 
 All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification.
 
-In a case host app decide to show its own custom notification, it can call handlePushMessage() with showNotification parameter set to false and will parse and return a PushMessage object. In any case the push message not related to the SDK, it will return null. 
+In case a host app decides to show its own custom notification, it can call handlePushMessage() with showNotification parameter set to false. That will parse and return a PushMessage object. In a case where the push message is not related to the SDK, it will return null.
 
 _Note: To get unread messages feature will work properly - host app must call this method upon receiving SDK push messages (whether showing custom notification or not)_.
 
@@ -171,10 +244,10 @@ _Note: To get unread messages feature will work properly - host app must call th
 
 | Parameter | Description |
 | :--- | :--- |
-| Context | A context from the host app. |
+| context | A context from the host app. |
 | remoteMessage | A Map that contains the push message. Push service sends RemoteMessage object - To get the map from this object - call remoteMessage.getData().  |
 | brandId | The account Id. |
-| remoteMessage | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
+| showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
 ### handlePush (Deprecated)
 
@@ -198,7 +271,7 @@ Handling the push message allows the host app to do the following:
 | brandId | The account ID. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false. |
 
-### getNumUnreadMessages
+### getNumUnreadMessages (Deprecated)
 
 Returns the counter of the unread messages - the number of push messages received. This number is set to 0 when opening the conversation screen.
 
@@ -211,6 +284,20 @@ To get the number of unread messages out of the intent use the following extra k
 | Parameter | Description |
 | :--- | :--- |
 | brandId | The account ID. |
+
+### getNumUnreadMessages
+
+Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
+
+**Note:** the SDK needs to be initialized before calling this API.
+
+
+`public static void getNumUnreadMessages(String appId, final ICallback<Integer, Exception> callback)`
+
+| Parameter | Description |
+| :--- | :--- |
+| appId | The host app ID |
+| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
 
 ### getSDKVersion
 
@@ -264,7 +351,7 @@ Marks the current conversation as urgent.
 
 ### markConversationAsNormal
 
-Marks the current conversation as normal. 
+Marks the current conversation as normal.
 
 `public static void markConversationAsNormal()`
 
@@ -280,7 +367,7 @@ Checks whether the current conversation is marked as urgent. The result is retur
 
 ### resolveConversation
 
-Resolves the current conversation. 
+Resolves the current conversation.
 
 `public static void resolveConversation()`
 
@@ -292,7 +379,7 @@ Resolves the current conversation.
 | :--- | :--- |
 | shutdownCallback | A [ShutDownLivePersonCallback](android-callbacks-index.html){:target="_blank"} implementation to get indication whether the shutdown succeeded or failed |
 
-Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
+Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection.
 
 The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"} API.
 
@@ -307,9 +394,9 @@ ShutDownLivePersonCallback callback description:
 
 *Deprecated. Please use the [shutDown(ShutDownLivePersonCallback)](android-shutdown.html){:target="_blank"} method.*
 
-Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
+Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection.
 
-The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"} API. 
+The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"} API.
 
 `public static void shutDown()`
 
@@ -334,16 +421,16 @@ The return value indicates whether the action was completed successfully or not:
 
 Logout from the SDK - when all user data should be removed.
 
-Calls [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"}, [shutDown](android-shutdown.html){:target="_blank"} and, in addition, deletes all user data (messages and user details) from the device. 
+Calls [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"}, [shutDown](android-shutdown.html){:target="_blank"} and, in addition, deletes all user data (messages and user details) from the device.
 
 In order to unregister from push, it must be called when there is network available. After logout the SDK is unavailable until re-initiated.
 
-**This method does not require the SDK to be initialized.** 
+**This method does not require the SDK to be initialized.**
 
 *Note: This does not end the current messaging conversation.*
 
 **Important: This method must not be called when the conversation screen is displayed.**
-	
+
 `public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback){`
 
 | Parameter | Description |

@@ -7,7 +7,7 @@ level4: Methods
 order: 30
 permalink: trigger-getstate.html
 
-indicator:
+indicator: both
 ---
 
 
@@ -34,7 +34,7 @@ This method receives an engagement ID and returns the engagement state if it exi
 
 **Return value**
 
-The method returns a JSON with the engagement information. 
+The method returns a JSON with the engagement information.
 
 *Example*
 
@@ -51,6 +51,3 @@ The method returns a JSON with the engagement information.
 | state  | The engagement state (defined by the availability of agents within the skill group). Available value: 0 - NA, 1 - online, 2 - offline | numeric |
 | desc | State description (matching ENUM state): "NA", "online", "offline" | string |
 | engagementId | The engagement ID. | ALPHA_NUMERIC |
-
-
-

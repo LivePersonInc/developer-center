@@ -6,7 +6,7 @@ info:
     url: 'img/liveperson-inc-logo.jpg'
   description: |
     # Introduction
-    This is documentation of the API capabilites. This api can be consumed currently only via the 
+    This is documentation of the API capabilites. This api can be consumed currently only via the
     [node-agent-sdk](https://github.com/LivePersonInc/node-agent-sdk)
     # Happy Flow
     1. An agent creates a connection using username password.
@@ -17,7 +17,7 @@ info:
     5. The agent send his acceptance to get the task (``updateRoutingTask``).
     6. The agent get a notification on the new conversation added to his list of assigned conversations. (``ExConversationNotification``)
     7. The agent subscribes to get the content of this conversation. (``subscribeMessagingEvents``)
-    8. The agent gets existing content events, and possibly other realtime notification about messages 
+    8. The agent gets existing content events, and possibly other realtime notification about messages
     events that are being published to the conversation. (``messagingEventNotification``)
     9. The agent publish his own text messages, recipt events and presence events to the conversations. (``publishEvent``)
     10. The agent can remove his assignment to the conversation sending it back to the queue, or close it. (``updateConversationField``)
@@ -71,6 +71,18 @@ paths:
           description: Success
           schema:
             type: string
+  /keepAlive:
+    js:
+      tags:
+        - infra
+      summary: Keep Alive
+      description: |
+        Keeps the connection open for Browsers that cannots use the native websocket ping/pong mechanism.
+      responses:
+        200:
+          description: Success
+          schema:
+            type: string
   /updateRingState:
     js:
       tags:
@@ -112,7 +124,7 @@ paths:
         - Routing
       summary: Set Agent State
       description: |
-        Registers the agent to the routing service. While the agent is online the 
+        Registers the agent to the routing service. While the agent is online the
         routing service will send him rings.
       parameters:
         - name: body
@@ -239,7 +251,7 @@ paths:
         - Messaging
       summary: Subscribe Messaging Events
       description: |
-        Subscribes to get the events of a conversation. 
+        Subscribes to get the events of a conversation.
         Existing events will be sent immediately, while new events will be notified as they happen.
       parameters:
         - name: body
@@ -402,5 +414,3 @@ paths:
           description: Success
           schema:
             $ref: ../infra/stringRespBody.json
-            
- 

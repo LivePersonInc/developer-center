@@ -1,7 +1,7 @@
 ---
 title: Sample Code
 level1: Documents
-level2: Data
+
 level3: Messaging Interactions API
 
 order: 31

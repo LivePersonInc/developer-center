@@ -1,6 +1,6 @@
 ---
 title: Plan Your Service
-level1: Products
+level1: Solutions
 level2: Rich Media
 level3: Video Chat
 
@@ -40,7 +40,7 @@ The following prerequisites are required in order to build a video service on yo
 
 ### Best practice
 
-In order to define the correct agent permissions, use ‘skills’ within LiveEngage.
+In order to define the correct agent permissions, use 'skills’ within LiveEngage.
 
 * Create a skill in LiveEngage that is dedicated to video agents in order to define what agents can have access to launch video conversations with consumers.  You may not want to offer this capability to all of the agents. 
 

@@ -9,7 +9,7 @@ permalink: trigger-overview.html
 root-link: true
 level-order: 7
 
-indicator:
+indicator: both
 ---
 ### Introduction
 

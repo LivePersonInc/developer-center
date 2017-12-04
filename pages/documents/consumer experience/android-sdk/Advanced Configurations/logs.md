@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 8
+order: 70
 permalink: android-logs.html
 
 indicator: messaging

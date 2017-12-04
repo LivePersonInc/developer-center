@@ -23,7 +23,7 @@ The Chat Agent API is a REST style API with relation links, and provides the mai
 
 In order to use the Chat Agent API, please follow the steps below:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information.
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information. The API's serviceName is agentVep.
 2. **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html){:target="_blank"}. Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all Chat Agent API requests.
 3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html){:target="_blank"}.
 4. **Log out** using the [Login Service API](login-getting-started.html){:target="_blank"}.
