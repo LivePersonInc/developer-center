@@ -64,11 +64,23 @@ JSON
   </tr>
 </table>
 
+### Request Headers
+
+<table>
+  <tr>
+    <td>Header</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>Authorization</td>
+    <td>Contains token string to allow request authentication and authorization. See the introduction doc for more details.</td>
+  </tr>
+</table> 
 
 ###Request Body
 
 Contains a json object with single "query" field which define the requested graphql query for api auditData
-and the required fields subselect. For details see [graphql website](http://graphql.org/)
+and the fields subselect. For details see [graphql website](http://graphql.org/)
 
 ```json
 {"query" : "{auditData  
@@ -88,19 +100,75 @@ and the required fields subselect. For details see [graphql website](http://grap
               originatorIsLpa}}"}
 ```
 
-### Request Headers
+### Optional graphql parameters
 
 <table>
   <tr>
-    <td>Header</td>
+    <td>name</td>
     <td>Description</td>
+    <td>Notes</td>
   </tr>
   <tr>
-    <td>Authorization</td>
-    <td>Contains token string to allow request authentication and authorization. See the introduction doc for more details.</td>
+    <td>fromDate</td>
+    <td>Start date for filtering</td>
+    <td>Format: yyyy-MM-dd</td>
+  </tr>
+  <tr>
+    <td>toDate</td>
+    <td>End date for filtering</td>
+    <td>Format: yyyy-MM-dd</td>
+  </tr>
+  <tr>
+    <td>first</td>
+    <td>Number of records to return</td>
+    <td>Default: 50</td>
+  </tr>
+  <tr>
+    <td>offset</td>
+    <td>Offset to start returning records from</td>
+    <td/>
+  </tr>
+  <tr>
+    <td>orderBy</td>
+    <td>List of columns to order by</td>
+    <td>Default: changeTimestamp</td>
+  </tr>
+  <tr>
+    <td>orderDirection</td>
+    <td>List of ordering direction(ASC, DESC), in relevance to orderBy list</td>
+    <td>Default: DESC</td>
+  </tr>
+  <tr>
+    <td>users</td>
+    <td>List of users for filtering</td>
+    <td/>
+  </tr>
+  <tr>
+    <td>componentTypes</td>
+    <td>List of component types for filtering</td>
+    <td/>
+  </tr>
+  <tr>
+    <td>language</td>
+    <td>Language to return the results in</td>
+    <td>Default: en-US</td>
+  </tr>
+  <tr>
+    <td>timezone</td>
+    <td>Time zone to use in results</td>
+    <td>Default: US/Eastern</td>
+  </tr>
+  <tr>
+    <td>lpa</td>
+    <td>Boolean, Include changes done by LPAs in the results</td>
+    <td>Default: false</td>
+  </tr>
+  <tr>
+    <td>automaticUpdates</td>
+    <td>Boolean, Include automatic updates in the results</td>
+    <td>Default: false</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
