@@ -347,14 +347,10 @@ A push is sent to the last device which was registered to the LP push service, m
 
 * In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
 
-**How to enable the unread messages counter**
+**Getting the unread message badge counter**
 
-There are two options to set up this counter:
-
-1. If the time condition is met, a REST request is performed to get the counter from the pusher
-
-2. Return the cached number on the app
-
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise, it will be fetched again with new data.
+​ ​
 **Parameters**:
 
 * conversationQuery: conversationQuery: used to identify the related brand
