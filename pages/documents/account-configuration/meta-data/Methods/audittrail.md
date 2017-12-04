@@ -1,5 +1,5 @@
 ---
-title: Get Audit trail
+title: Audit Trail
 level1: Documents
 level2: Account Configuration
 level3: Meta Data
