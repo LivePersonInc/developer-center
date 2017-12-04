@@ -106,7 +106,12 @@ and the required fields subselect. For details see [graphql website](http://grap
 
 <table>
   <tr>
-    <td>N/A</td>
+    <td>Header</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>X-Total-Count</td>
+    <td>Contains the count of returned audit items</td>
   </tr>
 </table>
 
