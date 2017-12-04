@@ -176,6 +176,18 @@ Same as [getConversationFragment](android-getconversationfrag.html){:target="_bl
 
 ### reconnect
 
+Reconnect with a new LPAuthenticationParams object: that contains String mAuthKey, String mHostAppJWT, String mHostAppRedirectUri .
+When connecting, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
+When creating a new LPAuthenticationParams - you may call empty constructor and then call setAuthKey() or setHostAppJWT() according to the host parameter
+
+`public static void reconnect(LPAuthenticationParams lPAuthenticationParams)`
+
+| Parameter | Description |
+| :--- | :--- |
+| LPAuthenticationParams | authentication key / JWT |
+
+### reconnect (Deprecated)
+
 Reconnect with a new authentication key. When connecting with an authentication key, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 
 `public static void reconnect(String authKey)`
@@ -288,6 +300,10 @@ To get the number of unread messages out of the intent use the following extra k
 ### getNumUnreadMessages
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
+When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,
+it will be fetched again with new data.
+
 
 **Note:** the SDK needs to be initialized before calling this API.
 
