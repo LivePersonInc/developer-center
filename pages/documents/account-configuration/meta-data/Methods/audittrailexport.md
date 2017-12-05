@@ -81,21 +81,14 @@ The response is comma divided file with the following structure:
 **Example resposne**
 
 Search Criteria
-
+```
 Account ID,Start(Europe/London),End(Europe/London),Object types,Originators,Include Automatic Updates,Include LPA Users
-
 le33192344,2017-11-29,2017-12-05,"ACUserObject,ACSkillObject,ACProfileObject,ACAgentGroupObject",All,true,true
-
 Total Items
-
 168
-
 Results
-
 Object type,Object ID,Object name,Action type,Element,Old value,New value,Date and time,Originator,Originator Employee ID,Originator Profiles
-
 Users,objectId0,objectName0,Add new,property,oldValue,newValue,2017-12-05T11:47:06,user name,employeeId,"[profile1, profile2]"
-
 Users,objectId1,objectName0,Edit,property,oldValue,newValue,2017-12-05T11:47:06,user name,employeeId,"[profile1, profile2]"
-
+```
 
