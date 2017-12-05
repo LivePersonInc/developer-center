@@ -73,10 +73,12 @@ NA
 **Response Body**
 
 The response is comma divided file with the following structure:
-1. Search critiria table
-2. count of the result rows
-3. results Table
 
+1. Search critiria table
+2. Count of the result rows
+3. Results Table
+
+**Example resposne**
 Search Criteria
 Account ID,Start(Europe/London),End(Europe/London),Object types,Originators,Include Automatic Updates,Include LPA Users
 le33192344,2017-11-29,2017-12-05,"ACUserObject,ACSkillObject,ACProfileObject,ACAgentGroupObject",All,true,true
