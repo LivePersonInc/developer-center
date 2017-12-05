@@ -78,7 +78,7 @@ The response is comma divided file with the following structure:
 2. Count of the result rows
 3. Results Table
 
-**Example resposne**
+Example resposne:
 ```
 Search Criteria
 Account ID,Start(Europe/London),End(Europe/London),Object types,Originators,Include Automatic Updates,Include LPA Users
