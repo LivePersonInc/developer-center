@@ -24,15 +24,15 @@ Exports account audit trail to csv file.
 
 | Header | Description |
 | :------- | :-------------- |
- |Authorization | Contains token string to allow request authentication and authorization. See the introduction doc for more details. |
+|Authorization | Contains token string to allow request authentication and authorization. See the introduction doc for more details. |
 
 
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes| 
- |:----------|  :--------------|  :--------------|  :---| 
- |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
+|Parameter|  Description|  Type|  Notes| 
+|:----------|  :--------------|  :--------------|  :---| 
+|accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
 
 **Query Parameters**
 
@@ -72,14 +72,18 @@ JSON - for error message
 
 **Response Body**
 The response is comma divided file with the following structure:
+
 Search Criteria
+
 | Account ID | Start(Europe/London) | End(Europe/London) | Object types | Originators | Include Automatic Updates | Include LPA | Users |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |le33192344|2017-11-29|2017-12-05|"ACUserObject,ACSkillObject,ACProfileObject,ACAgentGroupObject"|All|true|true|
+
 Total Items
 168
 
 Results
+
 | Object type | Object ID | Object name | Action type | Element | Old value | New value | Date and time | Originator | Originator Employee ID | Originator Profiles |
 | --- | --- | --- | --- | --- | --- | --- | --- |--- | --- | --- |
 | Users | objectId0 | objectName0 | Add new | property | oldValue | newValue | 2017-12-05T11:47:06 | user name | employeeId | "[profile1, profile2]" |
