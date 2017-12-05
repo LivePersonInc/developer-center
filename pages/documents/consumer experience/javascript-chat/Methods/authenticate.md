@@ -39,7 +39,7 @@ This resource enables consumer SSO with liveEngage.
 
 ```json
 {
-    "connectorId": 12345,
+    "authChatConnId": 12345,
     "ssoKey": 'SDFKN33LJjksf843jioer09jjiodfs8sfd89fsd7fds6werhuer9ret8h',
     "redirectUri": 'https://liveperson.net',
     "engagementId": 3333,
