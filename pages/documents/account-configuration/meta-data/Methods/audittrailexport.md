@@ -56,9 +56,7 @@ JSON - for error message
 
 **Response Headers**
 
-| Header|  Description |
- |:-------  | :----- | 
- |ac-revision | Account config object type collection revision. | 
+NA 
 
 **Response Codes**
 
