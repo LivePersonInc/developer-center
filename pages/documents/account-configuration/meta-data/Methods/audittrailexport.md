@@ -71,6 +71,7 @@ NA
 | 500 | Internal Server Error |
 
 **Response Body**
+
 The response is comma divided file with the following structure:
 
 Search Criteria
