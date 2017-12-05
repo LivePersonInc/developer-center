@@ -1,150 +1,88 @@
 ---
-title: Categories Query Delta
+title: Export Audit Trail to CSV file
+keywords:
 level1: Documents
 level2: Account Configuration
-level3: Predefined Categories API
+level3: Meta Data
 level4: Methods
 
-permalink: account-configuration-categories-delta.html
-order: 40
+order: 10
+permalink: account-configuration-meta-data-audit-trail-export.html
+
 indicator: both
 ---
-### Description
 
-Query changes in Categories data.
+Exports account audit trail to csv file.
 
-### URI
+### Request
 
-/api/account/configuration/le-categories/categories/query?v=2.0
+| Method | URL |
+| :-------- | :------ |
+| GET | /api/account/{accountId}/configuration/metadata/audit/export |
 
-### HTTP Methods
+**Request Headers**
 
-POST
-
-### Response Codes
-
-200 OK
-
-400 Bad Request
-
-401 Not Authorized
-
-500 Internal server error
-
-### Formats
-
-JSON
-
-### Path Parameters
-
-<table>
-  <tr>
-    <td>N/A</td>
-  </tr>
-</table>
+| Header | Description |
+| :------- | :-------------- |
+ |Authorization | Contains token string to allow request authentication and authorization. See the introduction doc for more details. |
 
 
-### Query Parameters
 
-<table>
-  <tr>
-    <td>Parameter</td>
-    <td>Description</td>
-    <td>Notes</td>
-  </tr>
-  <tr>
-    <td>select</td>
-    <td>dynamic selection of response fields</td>
-    <td>Default: $summary alias: id,deleted,name
-Available aliases:
-$all: id,deleted,name,order,proposed
-$summary: id,deleted,name
-type: YOGA 'gdata' dialect
-validation error: 400
-supported fields: any in response body
-**yoga GData dialect builder url:
-https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
-  </tr>
-</table>
+**Path Parameters**
 
+ |Parameter|  Description|  Type|  Notes| 
+ |:----------|  :--------------|  :--------------|  :---| 
+ |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
 
-**Request Body**
+**Query Parameters**
 
-Contains query parameters - a mapping between account id and revision number
+| Name            | Description                                                                  | Type    | Notes                                          |
+|-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
+|fromDate|Start date for filtering|Date|Format: yyyy-MM-dd|
+|toDate|End date for filtering|Date|Format: yyyy-MM-dd|
+|limit|Number of records to return|Integer| Default: 1000000|
+|users|List of users for filtering|String|Comma divided list of users|
+|componentTypes|List of component types for filtering|String|Comma divided list of users|
+|language|Language to return the results in|String|Default: en-US|
+|timezone|Time zone to use in results|String|Default: US/Eastern|
+|lpa|Include changes done by LPAs in the results|Boolean|Default: false|
+|automaticUpdates|Include automatic updates in the results|Boolean|Default: false|
 
-<table>
-  <tr>
-    <td>{
-    " type": 0,
-    "parameters":
-    [
-        {
-            "site": "1236744443",
-            "revision": 17890
-        },
-        {
-            "site": "243256785",
-            "revision": 2456
-        }
-    ]
-}</td>
-  </tr>
-</table>
+### Response
 
+**Response type**
+CSV
+JSON - for error message
 
-### Request Headers
+**Response Headers**
 
-<table>
-  <tr>
-    <td>Header</td>
-    <td>Description</td>
-  </tr>
-  <tr>
-    <td>Authorization</td>
-    <td>Contains token string to allow request authentication and authorization. See the doc for more details.</td>
-  </tr>
-</table>
+| Header|  Description |
+ |:-------  | :----- | 
+ |ac-revision | Account config object type collection revision. | 
+
+**Response Codes**
+
+| Code | Description |
+| :----- | :------------ |
+| 200 | OK |
+| 400 | Bad Request |
+| 401 | Not Authenticated |
+| 403 | Not Authorized |
+| 500 | Internal Server Error |
+
+**Response Body**
+The response is comma divided file with the following structure:
+Search Criteria
+| Account ID | Start(Europe/London) | End(Europe/London) | Object types | Originators | Include Automatic Updates | Include LPA | Users |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|le33192344|2017-11-29|2017-12-05|"ACUserObject,ACSkillObject,ACProfileObject,ACAgentGroupObject"|All|true|true|
+Total Items
+168
+
+Results
+| Object type | Object ID | Object name | Action type | Element | Old value | New value | Date and time | Originator | Originator Employee ID | Originator Profiles |
+| --- | --- | --- | --- | --- | --- | --- | --- |--- | --- | --- |
+| Users | objectId0 | objectName0 | Add new | property | oldValue | newValue | 2017-12-05T11:47:06 | user name | employeeId | "[profile1, profile2]" |
+|Users | objectId1 | objectName0 | Edit | property | oldValue | newValue | 2017-12-05T11:47:06 | user name | employeeId | "[profile1, profile2]"|
 
 
-### Response Headers
-
-<table>
-  <tr>
-    <td>N/A</td>
-  </tr>
-</table>
-
-
-### Response Body
-
-<table>
-  <tr>
-    <td>{
-    "appDataList": [
-        {
-            "appName": "categories",
-            "appApiVersion": 1,
-            "accountList": {
-                "accountList": [
-                    {
-                        "siteId": "TEST_SITE_ID",
-                        "itemsCollection": {
-                            "items": [
-                                {
-                                     "id":1,
-                                     "deleted":false,
-                                     "name":"iPhone4",
-                                     "order":1,
-                                     "proposed":true
-                                }
-                            ],
-                            "revision": 123123
-                        }
-                    }
-                ]
-            }
-        }
-    ]
-}</td>
-  </tr>
-</table>
