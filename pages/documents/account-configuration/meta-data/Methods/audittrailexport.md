@@ -51,7 +51,9 @@ Exports account audit trail to csv file.
 ### Response
 
 **Response type**
+
 CSV
+
 JSON - for error message
 
 **Response Headers**
