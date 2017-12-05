@@ -32,8 +32,6 @@ POST
 
 403 Forbidden
 
-400 Bad Request
-
 500 Internal server error
 
 ### Formats
