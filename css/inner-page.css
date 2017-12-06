@@ -515,6 +515,7 @@ pre {
 
 .margin-top-68{
   margin-top: 68px;
+  position: initial !important;
 }
 @media (min-width: 1114px)
 {
