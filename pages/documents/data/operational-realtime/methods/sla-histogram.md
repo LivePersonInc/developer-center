@@ -16,6 +16,8 @@ Retrieves the distribution of visitors’ wait time in the queue, before an agen
 
 *Example: If the current time is 13:29 and the required time frame is 7 minutes, the API will use 2 buckets: 13:25 and 13:30. The time of the collected data is actually not 13:22-13:29, but 13:20-13:29.*
 
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+
 ### Request
 
 | Method | URL |
