@@ -27,6 +27,12 @@
   margin-bottom: 18px;
 }
 
+.categorybox {
+  width: 30%;
+  margin-top: 15px;
+  display: inline-block;
+}
+
 .categorytitle{
   /* float:left; */
   font-size: 26px;
@@ -35,7 +41,7 @@
   margin: auto;
   display: inline-block;
   width: 100px;
-  margin-top: 58px;
+  margin-top: 28px;
   margin-left: -152px;
   font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   color: #0c1320;
@@ -55,7 +61,7 @@
   float:right;
   background-color: #ECF1FF;
   display: block;
-  margin-top: -80px;
+  margin-top: 17px;
   margin-right: 18px;
   width: 551px;
   line-height: 3;
@@ -67,12 +73,12 @@
 .categoryimage{
   float:left;
   width: 50px;
-  margin-top: 50px;
+  margin-top: 29px;
   margin-left: 40px;
 }
 
 .lower{
-  margin-top: -120px;
+  margin-top: 17px;
 }
 
 @media (max-width: 425px) {
@@ -250,4 +256,14 @@
 
 .documentlast {
   margin-bottom: 100px;
+}
+
+.guides .listbox {
+
+  line-height: 2.8;
+
+}
+
+.realtimeint .listbox {
+  line-height: 2.8;
 }
