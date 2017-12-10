@@ -1244,7 +1244,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>  
   <tr>
     <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
-    <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
+    <td>Integer that defines the zoom level of the structured content map view. Refer to <a href="https://developers.google.com/maps/documentation/android-api/views#zoom" target="_blank">[Google map API]</a> for details)</td>
     <td>18</td>
     <td></td>
   </tr>

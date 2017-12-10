@@ -293,7 +293,7 @@ The following properties for structured content can now be configured:
 
 |Name|Description|Default|
 |----|-----------|-------|
-|<bool name="enable_structured_content">|Enable or Disable toggle for Structured Content feature in conversations.|True|
+|&lt;bool name="enable_structured_content"&gt;|Enable or Disable toggle for Structured Content feature in conversations.|True|
 
 ### New APIs
 
