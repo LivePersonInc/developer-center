@@ -71,9 +71,9 @@ Simple Button which triggers an Action when clicked.
 		"metadata": [{
 	        }],
 		"actions": [{
-      "type": "link",
-      "name": "Add to cart",
-      "uri": "https://www.example.com"
+        "type": "link",
+        "name": "Add to cart",
+        "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "button tooltip",
