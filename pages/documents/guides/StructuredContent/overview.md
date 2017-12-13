@@ -71,7 +71,9 @@ Simple Button which triggers an Action when clicked.
 		"metadata": [{
 	        }],
 		"actions": [{
-
+      "type": "link",
+      "name": "Add to cart",
+      "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "button tooltip",
@@ -104,8 +106,10 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 	"click": {
 		"metadata": [{
 	        }],
-		"actions": [{
-
+    "actions": [{
+      "type": "link",
+      "name": "Add to cart",
+      "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "image tooltip",
@@ -141,8 +145,10 @@ Map that points to a specific location.
 	"click": {
 		"metadata": [{
 	        }],
-		"actions": [{
-
+    "actions": [{
+        "type": "navigate",
+        "la": 40.75620,
+        "lo": -73.99861,
 		}]
 	},
 	"tooltip": "map tooltip"
