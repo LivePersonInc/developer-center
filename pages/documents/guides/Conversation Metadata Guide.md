@@ -1,11 +1,14 @@
 ---
 title: Conversation Metadata Guide
+Keywords:
 level1: Documents
 level2: Guides
 level3: Conversation Metadata Guide
-permalink: guides-conversation-metadata-guide.html
+
 level-order: 9
-order: 1
+order: 10
+permalink: guides-conversation-metadata-guide.html
+root-link: true
 indicator: both
 ---
 
