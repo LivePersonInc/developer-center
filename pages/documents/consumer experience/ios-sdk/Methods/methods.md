@@ -340,3 +340,29 @@ Get all supported languages as Strings dictionary where:
 * Value - explicit language name (example: "English", "Portuguese (Brazil)", ...)
 
 `func getAllSupportedLanguages() -> [String : String]`
+
+
+### getConversationBrandQuery
+
+Create ConversationParamProtocol of Brand query type.
+ConversationParamProtocol represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens.
+
+`func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| brandID | brandID to request the conversation query for | -- |
+| campaignInfo | an optional campaign info (LPCampaignInfo) to use advanced routing for the consumer. This object based on campaignID and engagementID |  -- |
+
+### getConversationConsumerQuery
+
+Create ConversationParamProtocol of Consumer and Skill query type.
+ConversationParamProtocol represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens.
+
+`func getConversationConsumerQuery(_ consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol`
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| consumerID | consumerID to request the conversation query for | -- |
+| brandID | brandID to request the conversation query for | -- |
+| agentToken | a unique token for agent aka Agent Bearer |  -- |
