@@ -12,7 +12,7 @@ indicator: both
 ---
 ### Introduction
 
-This API provides a way to pull data in real-time about the visitor, engagement and session to be used by the agent during the conversation, for example, referrer, engagement attributes, etc. 
+This API provides a way to pull data in real-time about the visitor, engagement and session to be used by the agent during the conversation, for example, referrer, engagement attributes, etc.
 
 ### Getting Started
 
@@ -29,6 +29,8 @@ A few things you'll need to get started with this API:
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
 
 
 

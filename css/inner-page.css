@@ -52,9 +52,12 @@ h4 code.highlighter-rouge {
   margin-top: 7px;
 }
 .post-content table{
-  max-width: initial;
   border: 1px solid #d6d6d6;
   width: 125%;
+}
+
+.bigtable {
+  max-width: initial;
 }
 
 .post-content table td:first-child {
@@ -118,8 +121,8 @@ table > thead > tr > th {
 }
 
 .designsheet img {
-    width: auto !important;
-    float: right;
+    width: 100% !important;
+    margin: 0 auto;
 }
 
 .designsheetnumber {
@@ -312,7 +315,7 @@ div.sidebarTitle {
   margin-bottom: 9px;
   margin-left: 26px;
   width: 270px;
-  top: 67px;
+  top: 68px;
   font-family:  "Roboto", "Open Sans", Helvetica, sans-serif;
   white-space:nowrap;
   visibility: hidden;

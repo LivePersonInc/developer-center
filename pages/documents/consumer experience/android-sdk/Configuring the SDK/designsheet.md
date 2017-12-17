@@ -12,7 +12,7 @@ indicator: messaging
 
 
 <div class="designsheet">
-<table rules="all">
+<table rules="all" class="bigtable">
   <thead>
   <col width="60%">
   <tr>

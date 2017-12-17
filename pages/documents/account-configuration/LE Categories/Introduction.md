@@ -30,6 +30,8 @@ A few things you'll need to get started with this API:
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+
 ### Authentication
 
 This API supports both LP OAuth1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](https://developers.liveperson.com/guides-gettingstarted.html){:target="_blank"}.
