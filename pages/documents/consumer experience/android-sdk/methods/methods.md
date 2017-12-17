@@ -121,7 +121,7 @@ The hideConversation API hides the conversation activity. The conversation scree
 - *When using the SDK’s activity, the back button performs the same function.*
 
 
-### getConversationFrgament (with full authentication support)
+### getConversationFragment (with full authentication support)
 
 The getConversationFragment method creates and returns the conversation fragment.
 
@@ -154,7 +154,7 @@ boolean viewOnlyMode : define if to show /hide the enter message area (under the
 | LPAuthenticationParams | authentication params |
 | ConversationViewParams | view params |
 
-### getConversationFrgament (Deprecated)
+### getConversationFragment (Deprecated)
 
 The getConversationFragment method creates and returns the conversation fragment.
 
