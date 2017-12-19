@@ -54,4 +54,4 @@ Below you will find the recommended intervals for KeepAlive per product:
 
 Once you’ve implemented a retry mechanism, it’s important to test and make sure it works as expected.
 
-It’s also recommendקג that the application should log the details of faults and failing operations. This information is useful later for troubleshootןמע the root cause of a failure.
+It’s also recommended that the application should log the details of faults and failing operations. This information is useful later for troubleshooting the root cause of a failure.
