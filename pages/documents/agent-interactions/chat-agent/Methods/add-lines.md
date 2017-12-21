@@ -1,5 +1,5 @@
 ---
-title: Add Lines
+title: Send Lines & Structured Content
 Keywords:
 level1: Documents
 level2: Agent Interactions

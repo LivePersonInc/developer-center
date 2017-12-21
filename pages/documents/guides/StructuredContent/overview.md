@@ -12,7 +12,7 @@ root-link: true
 indicator: both
 ---
 
-### Overview
+### **Overview**
 
 Our solution allows to send messages (both Chat messages and "pure" Messaging) in a variety of ways: you can send simple text and images, or use our structured content templates to build your own layout with images, buttons and multiple actions in one message. The following document lists the different types of entries available for use with such a layout and includes templates for how to write them in JSON.
 
@@ -33,7 +33,7 @@ Types of basic elements supported by the platform:
  * Image
  * Map
 
-**Text**
+##### **Text**
 
 Simple plain text message.
 
@@ -57,7 +57,7 @@ Simple plain text message.
 | rtl           | Default is false.                | Boolean | N        |
 
 
-**Button**
+#### Button
 
 Simple Button which triggers an Action when clicked.
 
@@ -71,7 +71,9 @@ Simple Button which triggers an Action when clicked.
 		"metadata": [{
 	        }],
 		"actions": [{
-
+        "type": "link",
+        "name": "Add to cart",
+        "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "button tooltip",
@@ -90,7 +92,7 @@ Simple Button which triggers an Action when clicked.
 
 For the Metadata field, please see the Metadata section in this document, below.
 
-**Image**
+#### Image
 
 You can send images by sharing a URL. Supported formats are JPG and PNG.
 
@@ -99,13 +101,15 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 ```json
 {
 	"type": "image",
-	"url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpg?quality=98&strip=all",
+	"url": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpg?quality=98&strip=all",
 	"caption": "This is an example of image caption",
 	"click": {
 		"metadata": [{
 	        }],
-		"actions": [{
-
+    "actions": [{
+      "type": "link",
+      "name": "Add to cart",
+      "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "image tooltip",
@@ -125,7 +129,9 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 
 For the Metadata field, please see the Metadata section in this document, below.
 
-**Map**
+**Note**: all images must be hosted on an HTTPS secure URL.
+
+#### Map
 
 Map that points to a specific location.
 
@@ -134,13 +140,15 @@ Map that points to a specific location.
 ```json
 {
 	"type": "map",
-  "la": 313145,
-  "lo": 2323231312,
+  "la": 40.75620,
+  "lo": -73.99861,
 	"click": {
 		"metadata": [{
 	        }],
-		"actions": [{
-
+    "actions": [{
+        "type": "navigate",
+        "la": 40.75620,
+        "lo": -73.99861,
 		}]
 	},
 	"tooltip": "map tooltip"
@@ -151,14 +159,14 @@ Map that points to a specific location.
 | Property Name | Description                    | Type   | Required |
 |---------------|--------------------------------|--------|----------|
 | type          | Type of element. Must be map   | Enum   | Y        |
-| lo            | Longitude                      | String | Y        |
-| la            | Latitude                       | String | Y        |
+| lo            | Longitude                      | Float  | Y        |
+| la            | Latitude                       | Float  | Y        |
 | actions       | List of Actions                | Action | N        |
 | tooltip       | Map tooltip, used also as aria | String | N        |
 
 For the Metadata field, please see the Metadata section in this document, below.
 
-**Complex layouts**
+#### Complex layouts
 
 
 Complex layouts have a different JSON structure - the basic elements which make up the layout are contained in another hierarchy which specifies their ordering. This adds the option to send cards with more friendly structure, including more elements and actions.
@@ -170,7 +178,7 @@ The layouts we support are:
  * **Vertical:** the block layout allows you to present a set of items vertically.
  * **Horizontal:** the block layout allows you to present a set of items horizontally.
 
-**Vertical**
+#### Vertical
 
 Layout that allows you to present a set of items (elements/layouts) vertically.
 
@@ -191,7 +199,7 @@ Layout that allows you to present a set of items (elements/layouts) vertically.
 | elements      | Array of Elements/Layouts         | Elements/Layouts  | Y        |
 
 
-**Horizontal**
+#### Horizontal
 
 Layout that allows you to present a set of items (elements/layouts) horizontally.
 
@@ -213,7 +221,7 @@ Layout that allows you to present a set of items (elements/layouts) horizontally
 | elements      | Array of Elements/Layouts           | Elements/Layouts  | Y        |
 
 
-**Click Operations**
+#### Click Operations
 
 Each basic element can have on click operations that is executed when the consumer clicks on the element.
 
@@ -223,7 +231,7 @@ On-click objects can include two object types:
 
  * Metadata: list of UMS predefined objects to send back to the agent.
 
-**Actions**
+#### Actions
 
 Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of operation. For instance: navigate with one of the navigation apps to a predefined place.
 
@@ -241,22 +249,22 @@ This actions has two use cases:
 
 * Mobile: navigate to the location with one of the navigation apps.
 
-**Example**
+_Example_
 
 ```json
 {
 	"type": "navigate",
-	"lo": "23423423",
-	"la": "2423423423"
+	"lo": 40.75620,
+	"la": -73.99861
 }
 ```
-**Fields**
+_Fields_
 
 | Property Name | Description                                 | Type   | Required |
 |---------------|---------------------------------------------|--------|----------|
 | type          | Type of action. Must be navigate            | Enum   | Y        |
-| lo            | Longitude                                   | String | Y        |
-| la            | Latitude                                    | String | Y        |
+| lo            | Longitude                                   | Float  | Y        |
+| la            | Latitude                                    | Float  | Y        |
 
 
 **Link**
@@ -266,7 +274,7 @@ Open a URL in a web view when opened in mobile, or in a new tab for web.This act
 Each environment can override the URI for their specific needs.
 
 
-**Example**
+_Example_
 
 ```json
 {
@@ -284,7 +292,7 @@ Each environment can override the URI for their specific needs.
 }
 ```
 
-**Fields**
+_Fields_
 
 | Property Name | Description                     | Type   | Required |
 |---------------|---------------------------------|--------|----------|
@@ -300,8 +308,7 @@ This action will be used also by the clients (Mobile, VX) to send a response whe
 
 Note: each basic element can hold only one action.
 
-**Example**
-
+_Example_
 ```json
 {
 	"type": "publishText",
@@ -309,9 +316,9 @@ Note: each basic element can hold only one action.
 }
 ```
 
-**Metadata**
+#### Metadata
 
-Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block.
+Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
 
 **Style**
 
@@ -340,16 +347,17 @@ Each basic element can have a style.
 }
 ```
 
-**JSON examples:**
+#### JSON examples:
 
 
 **Card 1:**
 
-    {
+```json
+  {
     	"type": "vertical",
     	"elements": [{
     		"type": "image",
-    		"url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
+    		"url": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
     		"tooltip": "image tooltip"
     	}, {
     		"type": "text",
@@ -365,15 +373,16 @@ Each basic element can have a style.
     		"tooltip": "$155.99"
     	}]
     }
-
+```
 
 **Card 2:**
 
+```json
       {
    	"type": "vertical",
    	"elements": [{
    		"type": "image",
-   		"url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpgl",
+   		"url": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpgl",
    		"tooltip": "image tooltip"
    	}, {
    		"type": "text",
@@ -421,8 +430,8 @@ Each basic element can have a style.
    			}],
    			"actions": [{
    					"type": "navigate",
-            "la": 2423423423
-            "lo": 23423423,
+            "la": 40.75620,
+            "lo": -73.99861,
    				},
    				{
    					"type": "publishText",
@@ -432,7 +441,7 @@ Each basic element can have a style.
    		}
    	}, {
    		"type": "button",
-   		"title": "Open web page",
+   		"title": "Navigate",
    		"click": {
    			"metadata": [{
    				"type": "ExternalId",
@@ -440,8 +449,8 @@ Each basic element can have a style.
    			}],
    			"actions": [{
    					"type": "navigate",
-   					"lo": "23423423",
-   					"la": "2423423423"
+   					"lo": 40.75620,
+   					"la": -73.99861
    				},
    				{
    					"type": "publishText",
@@ -451,6 +460,7 @@ Each basic element can have a style.
    		}
    	}]
    	}
+```
 
 ### Limitations
 
@@ -488,4 +498,4 @@ Structured Content does not yet contain Accessibility support. This is planned f
 
 ### Structured Content Notes
 
-1. Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported.
+1. Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.

@@ -38,6 +38,8 @@ A few things you'll need to get started with this API:
 
 4. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
+5. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+
 ### Use Cases
 
 * Create a chat window experience that is completely different than the out of the box window LIveEngage offers - for example - a window that takes up the entire screen.

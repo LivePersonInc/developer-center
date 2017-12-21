@@ -73,10 +73,9 @@ if placed inside customscripts.js, the script runs before the sidebar code runs 
 
     }
 </script>
-<!--<script type="text/javascript">
-document.write(
-  '<iframbunde src="https://www.visualping.io/externalfiles/widget/vpwidget.html?clientid=12&csspreselect=tcb-formInner&style=custom&url=' +
+<script type="text/javascript">
+  document.write(
+    '<div class="visualping-container" style="height:118px;"><iframe id="iframe" src="https://visualping.io/externalfiles/widget/vpwidget.html?clientid=12&csspreselect=targetedcsstocrop&style=custom&url=' +
     parent.document.URL +
-    '" width="230" height:"140"></iframe>'
-);
-</script>-->
+    '" width="230" height="118" ></iframe></div>');
+</script>

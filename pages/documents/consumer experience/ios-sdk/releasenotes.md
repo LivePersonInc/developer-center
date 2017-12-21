@@ -11,6 +11,41 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+### iOS Messaging SDK - Version 2.9.3
+
+**Version 2.9.3 planned roll-out: November 29th 2017**
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+
+These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+
+#### Accessibility Updates
+
+**Bug: Structured content focus for new messages**
+
+_Symptom_:
+
+When consumer has opened the conversation screen, connectivity bar shows there is no connection and there is no connectivity to the messaging service. This symptom will occur in the following case:
+
+Brands which implement UIDevice Extension with 'var modelName: String' that returns device name string containing white spaces.
+
+_Fix_:
+
+SDK will now trim the whitespace of the device modelName and connectivity will work as expected.
+
+**Bug: Structured content image resolution**
+
+_Symptom_:
+
+UI overlaps of time stamp label over the message when sending a Link Preview message, while setting 'bubbleTimestampTopPadding' with a value.
+
+_Fix_:
+
+Overlap will no longer occur due to backend fixes.
+
+
+
+
 ### iOS Messaging SDK - Version 2.9.0
 
 **Version 2.9 planned roll-out: November 12th 2017**
@@ -1253,11 +1288,11 @@ Configuring Camera's button colors
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
-**Symptom**:
+_Symptom_:
 
 For one minute after the consumer had navigated away from the conversation window, any arriving messages would not display. They would only appear in the conversation window after the minute had passed.
 
-### Fix:
+_Fix_:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
 ### In-App Messaging SDK Version 2.3.0

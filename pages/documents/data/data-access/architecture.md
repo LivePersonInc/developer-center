@@ -3,10 +3,8 @@ title: Architecture
 level1: Documents
 level2: Data
 level3: Data Access API (BETA)
-
 order: 2
 permalink: data-data-access-architecture.html
-
 indicator: chat
 ---
 
@@ -20,7 +18,7 @@ indicator: chat
 
 ![Flow](/img/Flow.png)
 
-Data access is not a default function of LiveEngage; it must be configured separately for each account. 
+Data access is not a default function of LiveEngage; it must be configured separately for each account.
 The four types of data supported and configurable in each account are as follows:
 
 - Agent Activity
@@ -31,4 +29,3 @@ The four types of data supported and configurable in each account are as follows
 The Data Access API retrieves historical data. The SLA for data retrieval can be up to 6 hours from the time the data is considered "closed" (for 99.5% of the data).
 
 This API supports the HTTPS GET protocol (data retrieval), and all retrieved data is returned in JSON format based on the AVRO schema.
-

@@ -107,6 +107,22 @@ const linkCallback = (data) => {
 JsonPollock.registerAction('link', linkCallback);
 ```
 
+**unregisterAction**
+
+The *unregisterAction* function allow to unregister a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+
+```js
+JsonPollock.unregisterAction('link');
+```
+
+**unregisterAllActions**
+
+The *unregisterAllActions* function allow to unregister all callbacks to all action types.
+
+```js
+JsonPollock.unregisterAllActions();
+```
+
 ### Error Handling
 
 *JsonPollock.render()* will throw an Error if it fails for any reason. The error object will have a *message* property that will supply the error description.

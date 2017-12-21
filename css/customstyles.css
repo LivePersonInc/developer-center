@@ -127,7 +127,7 @@ th {
     text-align: left;
 }
 table {
-    max-width: 90%;
+    max-width: 100%;
     margin-bottom: 20px;
     border: 1px solid #dedede;
 }
@@ -187,11 +187,6 @@ table td:first-child {
 table.boldFirstColumn td:first-child {
     font-weight: bold;
 }
-
-table tr td {
-    hyphens: auto;
-}
-
 
 p.external a {
     text-align:right;
@@ -319,7 +314,6 @@ footer {
 	width: 100%;
 	background-color: #162036;
 	min-height: 40px;
-
 	position: fixed;
 	bottom: -50px;
 }
@@ -424,7 +418,7 @@ a.accordion-toggle, a.accordion-collapsed {
   margin: 1px 0;
   font-family: "Roboto Slab", "Open Sans", Arial,Helvetica,sans-serif;
   position: relative;
-  top: 75px;
+  top: 135px;
   font-weight: bold;
   border: solid 1px;
   border-radius: 3px;
@@ -433,7 +427,6 @@ a.accordion-toggle, a.accordion-collapsed {
   padding-left: 10px;
   padding-right: 10px;
   width: 62%;
-  margin-bottom: 40px;
   text-align: center;
 }
 
