@@ -188,11 +188,6 @@ table.boldFirstColumn td:first-child {
     font-weight: bold;
 }
 
-table tr td {
-    hyphens: auto;
-}
-
-
 p.external a {
     text-align:right;
     font-size:12px;
