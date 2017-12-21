@@ -24,11 +24,11 @@ A few things you'll need to get started with this API:
 1. **Currently there's no need to reterive your domain for this API**.
 Here are the different domains by geo location:
 
-	* US accounts: data-mng.liveperson.net
+	* US accounts: va.data-mng.liveperson.net
 
-	* UK accounts: data-mng.liveperson.net
+	* UK accounts: lo.data-mng.liveperson.net
 
-	* APAC accounts: data-mng.liveperson.net
+	* APAC accounts: sy.data-mng.liveperson.net
 
 
 2. This API requires authorization using API key or using user's authentication (after granting it a specific privilege)
