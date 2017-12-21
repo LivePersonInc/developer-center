@@ -124,7 +124,7 @@ enum LPConversationCloseReason: Int {
 
 ```javascript
 class LPCampaignInfo: NSObject {
-    var campaignID: String
-    var engagementID: String
+    var campaignID: Int64
+    var engagementID: Int64
 }
 ```
