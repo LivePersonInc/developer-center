@@ -11,6 +11,9 @@ permalink: push-service-overview.html
 root-link: true
 indicator: messaging
 ---
+
+*Note* - the push service is available only for customers using the In-App Messaging SDK, for [iOS](https://developers.liveperson.com/consumer-experience-ios-sdk-overview.html) or [Android](https://developers.liveperson.com/android-overview.html).
+
 ### Introduction
 
 In-app messaging provides brands with the ability to provide their customers with an ongoing, continuous conversation that takes place on their time.  For in-app messaging to be successful, push notifications must be configured in order to send customers incoming messages when they are not inside the app.
