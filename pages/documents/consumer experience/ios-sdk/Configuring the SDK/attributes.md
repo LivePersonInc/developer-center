@@ -668,13 +668,19 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   </tr>
   </thead>
 <tbody>
-  <tr>
-    <td align="left">csatSubmitButtonCornerRadius</td>
-    <td align="left">Double</td>
-    <td align="left">Corner radius of the Submit button.</td>
-    <td align="left"><img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"></td>
-    <td align="left">30</td>
-  </tr>
+<tr>
+  <td align="left">csatSubmitButtonCornerRadius</td>
+  <td align="left">Double</td>
+  <td align="left">Corner radius of the Submit button.</td>
+  <td align="left"><img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"></td>
+  <td align="left">30</td>
+</tr><tr>
+  <td align="left">csatYesNoButtonsCornerRadius</td>
+  <td align="left">Double</td>
+  <td align="left">Corner radius of the resolution Yes/No buttons.</td>
+  <td align="left"><img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius"></td>
+  <td align="left">25</td>
+</tr>
   <tr>
     <td align="left">csatSubmitButtonBackgroundColor</td>
     <td align="left">UIColor</td>
