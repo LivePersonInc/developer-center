@@ -92,7 +92,8 @@ This section contains API details that are common to every API’s resource and 
 | profileIds  | The user’s profile IDs. | array of numbers| Required | |
 | isApiUser | Indicates whether the user is an api user (not a real user/ bot)  | Boolean | Optional (Default: false) | It has the ability to login via API (instead of username and password) |
 | userType | The user's type  | integer number | Required | 0 - system; 1 - human; 2 - bot; (Default: 1) |
-| allowedAppKeys | The api user's application keys | string | Required (for api user) |  |
+| allowedAppKeys | The api user's application keys | string | Required (for api user) |  
+| lobIds | The user’s LOB IDs | array of numbers | Optional |  ||
 
  
 
@@ -117,6 +118,9 @@ This section contains API details that are common to every API’s resource and 
        "profileIds": [
            2359273612,
            2359273512
+       ],
+       "lobIds": [
+           6549273612
        ],
        "changePwdNextLogin": false,
        "memberOf": {"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"},
