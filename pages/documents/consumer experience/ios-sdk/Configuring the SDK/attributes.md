@@ -17,7 +17,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Users Bubble
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -300,7 +300,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Link Preview
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -416,7 +416,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Photo Sharing
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -513,7 +513,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Send Button
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -557,7 +557,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### System Messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -580,7 +580,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Window Mode
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -606,7 +606,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Delivery Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -657,7 +657,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Surveys Buttons (CSAT and FCR)
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -779,7 +779,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Conversations
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
   <th>Name</th>
@@ -880,7 +880,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Unread Messages
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -987,7 +987,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Localization
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1021,7 +1021,7 @@ It will affect the following areas:
 
 ### Brand
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1080,7 +1080,7 @@ It will affect the following areas:
 
 ### Date Separator
 
-<table>
+<table class="bigtable">
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -1153,7 +1153,7 @@ It will affect the following areas:
 
 ### User input view
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1185,7 +1185,7 @@ It will affect the following areas:
 
 ### Agent Assignment
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1208,7 +1208,7 @@ It will affect the following areas:
 
 ### Duration of Local Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1233,7 +1233,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Time To Response and Off hours
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1333,7 +1333,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Date and Time
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1374,7 +1374,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Toast Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1407,7 +1407,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### User Avatar
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1483,7 +1483,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Data Masking
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1528,7 +1528,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Navigation
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1565,7 +1565,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Secure Form
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1687,7 +1687,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Structured Content
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1723,7 +1723,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1731,7 +1731,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLongitudeDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1740,7 +1740,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Connection Status Bar
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1791,7 +1791,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Controller message
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1814,7 +1814,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Accessibility
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>

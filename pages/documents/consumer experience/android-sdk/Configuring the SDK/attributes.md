@@ -16,7 +16,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Brand
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -53,7 +53,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Brand Message Bubble - the first brand message
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -142,7 +142,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Agent Message Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -308,7 +308,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Consumer Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -446,7 +446,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### System messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -505,7 +505,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Automatic Messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -528,7 +528,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Unread messages indicator Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -563,7 +563,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Bubbles Corner Radius
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -627,7 +627,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Date Headers
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -654,7 +654,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Survey screen
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -838,7 +838,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Message Edit Text
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -890,7 +890,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Connection status bar
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -930,7 +930,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### In page navigation -  Scroll down indicator
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1000,7 +1000,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Photo Sharing
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1076,7 +1076,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### General Style
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1118,7 +1118,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Conversation Activity Style - (activity mode only!)
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1155,7 +1155,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Accessibility
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1182,7 +1182,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Custom Fonts
 
-<table>
+<table class="bigtable">
 <thead>
  <tr>
    <th>Name</th>
@@ -1209,7 +1209,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Structured Content
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1244,7 +1244,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>  
   <tr>
     <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
-    <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
+    <td>Integer that defines the zoom level of the structured content map view. Refer to <a href="https://developers.google.com/maps/documentation/android-api/views#zoom" target="_blank">[Google map API]</a> for details)</td>
     <td>18</td>
     <td></td>
   </tr>
@@ -1266,7 +1266,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Miscellaneous
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1451,7 +1451,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Deprecated Attributes
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>

@@ -144,7 +144,8 @@ Name                 | Description                                              
 | campaignName | Name of the campaign. | alphanumeric (50) | |
 | goalId | ID of the campaign's goal. | numeric | |
 | goalName | Name of the campaign's goal. | alphanumeric (50) | |
-| engagementAgentNote | Note to the Agent specified for the campaign's engagement. | alphanumeric  | |
+| engagementAgentNote | Note to the Agent defined for the campaign's engagement. | alphanumeric  | |
+| engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
 | visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
 | visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
 | visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |

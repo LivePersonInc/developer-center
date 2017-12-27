@@ -11,6 +11,16 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+### iOS Messaging SDK - Version 2.9.4
+
+**Version 2.9.4 planned roll-out: December 21th 2017**
+
+#### Symptom:
+For iOS 11, the app might crash when closing the conversation screen while receiving new messages.
+
+#### Fix:
+Improved memory allocation for conversation screen
+
 ### iOS Messaging SDK - Version 2.9.3
 
 **Version 2.9.3 planned roll-out: November 29th 2017**

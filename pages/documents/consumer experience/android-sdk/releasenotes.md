@@ -255,13 +255,10 @@ The unread messages number is passed to the SDK through LP Push service with eve
 :
 The number of unread messages are fetched by the API from the pusher regardless of whether it’s registered to the LP push service.
 
-**How​ ​to​ ​enable​ ​the​ ​unread​ ​messages​ ​counter**
+**Getting the unread message badge counter**
 
-There are two options to set up this counter:
-
-1. If the time condition is met, a REST request is performed to get the counter from the pusher
-
-2. Return the cached number on the app
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,
+it will be fetched again with new data.
 
 **Parameters**​:
 
@@ -296,7 +293,7 @@ The following properties for structured content can now be configured:
 
 |Name|Description|Default|
 |----|-----------|-------|
-|<bool name="enable_structured_content">|Enable or Disable toggle for Structured Content feature in conversations.|True|
+|&lt;bool name="enable_structured_content"&gt;|Enable or Disable toggle for Structured Content feature in conversations.|True|
 
 ### New APIs
 
