@@ -88,6 +88,9 @@ This section contains API details that are common to every API’s resource and 
             2286661812,
             2286661912
           ],
+          "lobIds": [
+            766661812
+          ],
           "skillRoutingConfiguration":[  
              {  
                 "priority":1,
