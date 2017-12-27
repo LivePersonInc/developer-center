@@ -119,6 +119,9 @@ This section contains API details that are common to every API’s resource and 
            2359273612,
            2359273512
        ],
+       "lobIds": [
+           6549273612
+       ],
        "changePwdNextLogin": false,
        "memberOf": {"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"},
        "managerOf": [{"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"}],
