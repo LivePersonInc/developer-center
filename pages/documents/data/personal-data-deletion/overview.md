@@ -10,18 +10,21 @@ permalink: personal-data-deletion-overview.html
 root-link: true
 indicator: chat & messaging
 ---
+
+**BETA**
+
 ### Introduction
 
 Personal Data Deletion API allows brands to comply with the right to be forgotten requirement (that is part of the GDPR).
-This API will delete permanently, with no way to restore it any personal data that is asked for deletion.
+This API will delete permanently, with no way to restore it, any personal data that is asked for deletion.
 This includes full conversation's transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII.
-Data will be deleted within 30 days from the time of the request. There will be some approval process from LP side in the early stages to make sure we are deleting the correct data.
+Data will be deleted within 30 days from the time of the request. There will be some approval process from LP side in the early stages to make sure we are deleting the data as requested.
 
 ### Getting Started
 
 A few things you'll need to get started with this API:
 
-1. **Currently there's no need to reterive your domain for this API**.
+1. **Currently there's no need to retrieve your domain for this API**.
 Here are the different domains by geo location:
 
 	* US accounts: va.data-mng.liveperson.net
