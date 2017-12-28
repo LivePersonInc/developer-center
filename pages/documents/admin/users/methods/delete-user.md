@@ -29,7 +29,7 @@ This API deletes a user from a specific account.
  |If-Match|  Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization.  |
 
 **Request Body**
- 
+
 `["987654321", "1232455"]`
 
 **Path Parameters**

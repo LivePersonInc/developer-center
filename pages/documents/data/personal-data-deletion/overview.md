@@ -33,7 +33,6 @@ Here are the different domains by geo location:
 
 2. This API requires authorization using API key or using user's authentication (after granting it a specific privilege)
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
@@ -41,18 +40,37 @@ Here are the different domains by geo location:
 
 ### Main flows
 
-* Consumer requests for one or all of his conversations to be deleted.
-For chat:
+** Chat - Visitor requests for one or all of his chats to be deleted.
 
+The brand will need to follow the bellow steps:
+Step1: Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
 
-Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
-
-
-
-Search in Engagement History API for engagements with the identification value
+Step 2: Search in Engagement History API for engagements with the identification value
 Find all relevant engagements and detect the engagement id to delete
-Call Deletion Service API
 
-You will need to retrieve the conversation id (for messaging) or engagement id (for chat) from the Messaging Interactions API or Engagement History API retrospectively by searching by your customer identification in the engagement attributes
+Step 3: Use {link ...} with the list of engagement to delete.
 
-* Messaging only - since LP stores data in the consumer level, it is possible to ask for this data to be deleted as well.
+** Messaging - Consumer requests for one or all of his conversations to be deleted.
+
+The brand will need to follow the bellow steps:
+Step1: Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+
+Step 2: Search in Messaging Interactions API for conversations with the identification value. Find all relevant conversation ids for deletion.
+
+Step 3: Use {link ...} with the list of conversations to delete.
+
+** Messaging - Consumer requests for all of his personal data to be deleted.
+
+The brand will need to follow the bellow steps:
+Step1: Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+
+Step 2: Search in Messaging Interactions API for conversations with the identification value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
+
+Step 3: Use {link ...} and make two requests: one with the list of conversations to delete and another with the consumerId
+
+
+### Limitations:
+The following types are not supported in the current beta phase:
+ - For messaging only - messaging conversations are still not deleted from one of the  messaging repositories
+ - Unauthenticated engagement attributes - customer info and personal info
+ - File sharing data
