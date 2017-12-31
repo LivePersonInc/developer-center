@@ -1,18 +1,15 @@
+---
 title: Get Deletion Requests
 keywords:
 level1: Documents
-level2: Admin
 level3: Personal Data Deletion API
 level4: Methods
-
-
 order: 30
 permalink: personal-data-deletion-get-deletion-requests.html
-
 indicator: both
 ---
 
-This API returns the metadata related to the deletion requests that were submitted by the brand, including their current status
+This API returns the metadata related to the deletion requests that were submitted by the brand, including their current status.
 
 ### Request
 
@@ -46,18 +43,20 @@ This API returns the metadata related to the deletion requests that were submitt
 
  **Elements in the Response**
 
- Name                 | Description                                                                    | Type/Value
- :------------------- | :----------------------------------------------------------------------------- | :---------
- request_id           | ID of the deletion request                                     | String
- siteId               | LP account id                                  | string
- request_time         | Time in which the deletion request was requested                                | string
- requested_by         | The user id who requested to delete     | string
- status               | The current status of the deletion request     | string
+ |Name                 | Description                                                                    | Type/Value
+ |:------------------- | :----------------------------------------------------------------------------- | :---------
+ |request_id           | ID of the deletion request                                     | String |
+ |siteId               | LP account id                                  | string|
+ |request_time         | Time in which the deletion request was requested                                | string|
+ |requested_by         | The user id who requested to delete     | string|
+ |status               | The current status of the deletion request     | string|
 
 
  **Response Example**
 
-Response is in a JSON format
+Response is in a JSON format.
+
+```json
 [
     {
         "request_id": 323,
@@ -81,3 +80,5 @@ Response is in a JSON format
         "status": "CANCELED"
     }
 ]
+
+```

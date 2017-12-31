@@ -1,18 +1,15 @@
+---
 title: Create Deletion Request
 keywords:
 level1: Documents
-level2: Admin
 level3: Personal Data Deletion API
 level4: Methods
-
-
-order: 30
+order: 10
 permalink: personal-data-deletion-delete-request.html
-
 indicator: both
 ---
 
-This API allows to submit a deletion request. 
+This API allows a consumer to submit a deletion request.
 
 ### Request
 
@@ -40,17 +37,22 @@ All fields are sent in a JSON format
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
  | engagement| Engagement ids for deletion (chat) | list of ids | Optional | Only one of the deletion types can be sent in a single request |
-| conversation| Conversation ids for deletion (messaging) | list of  ids | Optional | Only one of the deletion types can be sent in a request |
-| consumerId| Consumer ids for deletion | list of ids | Optional | Only one of the deletion types can be sent in a request |
+ | conversation| Conversation ids for deletion (messaging) | list of  ids | Optional | Only one of the deletion types can be sent in a request |
+ | consumerId| Consumer ids for deletion | list of ids | Optional | Only one of the deletion types can be sent in a request |
 
 BODY Examples:
 
-{
-  "engagement": [1,2,3]
-}
-{
-  "consumer": [11,22,33]
-}
-{
-  "conversation": [111,222,333]
-}
+```json
+
+[
+  {
+    "engagement": [1,2,3]
+  }
+  {
+    "consumer": [11,22,33]
+  }
+  {
+    "conversation": [111,222,333]
+  }
+]
+```
