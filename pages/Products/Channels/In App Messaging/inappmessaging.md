@@ -74,7 +74,7 @@ Deployment of the in-app messaging SDK can have several functions and tasks.  In
 
     * Do you have your own a push service?
 
-    * Will you use LivePerson’s [push services](push-service-overview.html){:target="_blank"} only?
+    * Will you use LivePerson’s push services only?
 
 * **How much control do you want to have over the conversation window?** You can customize the conversations window offered through the SDK in two different levels of control:
 
