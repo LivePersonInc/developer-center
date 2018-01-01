@@ -39,7 +39,7 @@ This API returns the metadata related to the deletion requests that were submitt
  | toDate| The end of the timeframe for returning the deletion requests| long  - represents the end time| Optional | Default is current time. Can be used only without request_id parameter. |
 
 
- ### Response
+### Response
 
  **Elements in the Response**
 
