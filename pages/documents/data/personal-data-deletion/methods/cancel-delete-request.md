@@ -30,7 +30,7 @@ This API allows cancellation of an existing deletion request.
   |site_id|  LP account id|   String ^[a-zA-Z0-9_]{1,20}$|
   |request_id  |Specific request id   |String|
 
-  ### Response
+### Response
 
   **Elements in the Response**
 
@@ -42,7 +42,7 @@ This API allows cancellation of an existing deletion request.
   |requested_by         | The user id who requested to delete     | string
   |cancelled_by         | The user who canceled the deletion request                                | string
   |cancel_timestamp     | Time in which the deletion request was requested                                | string
-  |is_canceled          | Boolean indicates if the deletion request was cancelled or not     | boolean 
+  |is_canceled          | Boolean indicates if the deletion request was cancelled or not     | boolean
 
 
   **Response Example**
