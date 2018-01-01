@@ -21,6 +21,7 @@ Sends a copy of the chat transcript to an email address at the end of the chat s
 | Value | Description | Type | Required |
 | :--- | :--- | :--- | :--- |
 | email	| This must be a valid email address or the request will not be sent. | string | Required |
+| timezoneOffset	| A number representing the time-zone offset from UTC, in milliseconds, for the date based on current host system settings. The number will be used to adjust the timestamps in the email| string | Required |
 
 **Sample code**
 
@@ -31,12 +32,12 @@ var  failedRequest = myChat.requestTranscript({
     error: myChat.transcriptRequestFailed,
     context: myChat
 });
- 
+
 if(failedRequest && failedRequest.error){
     alert(failedRequest.error);
 }
 ```
-                                                                                                                      
+
 ### Response
 
 **Sample response**
@@ -44,4 +45,3 @@ if(failedRequest && failedRequest.error){
 ```json
 { "email" : "me@me.com" }
 ```
-
