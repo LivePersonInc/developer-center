@@ -15,7 +15,7 @@ This API returns the metadata related to the deletion requests that were submitt
 
  |Method|      URL|
  |:--------  |:---  |
- |GET|  https://{domain}/api/account/{site_id}/personal-data-deletion |
+ |GET|  https://{domain}/api/account/{site_id}/personal-data-deletion{request_id} |
 
 **Request Headers**
 
@@ -34,9 +34,9 @@ This API returns the metadata related to the deletion requests that were submitt
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (OPEN,APPROVED)  | string| Optional | Default is all requests |
- | fromDate| The start of the timeframe for returning the deletion requests | long - represents the start time| Optional | Default is the start time |
- | toDate| The end of the timeframe for returning the deletion requests| long  - represents the end time| Optional | Default is current time |
+ | status| Filter by status of the deletion request (OPEN,APPROVED)  | string| Optional | Default is all requests. Can be used only without request_id parameter |
+ | fromDate| The start of the timeframe for returning the deletion requests | long - represents the start time| Optional | Default is 1/1/1970. Can be used only without request_id parameter. |
+ | toDate| The end of the timeframe for returning the deletion requests| long  - represents the end time| Optional | Default is current time. Can be used only without request_id parameter. |
 
 
  ### Response
@@ -45,7 +45,7 @@ This API returns the metadata related to the deletion requests that were submitt
 
  |Name                 | Description                                                                    | Type/Value
  |:------------------- | :----------------------------------------------------------------------------- | :---------
- |request_id           | ID of the deletion request                                     | String |
+ |request_id           | ID of the deletion request                                     | long |
  |siteId               | LP account id                                  | string|
  |request_time         | Time in which the deletion request was requested                                | string|
  |requested_by         | The user id who requested to delete     | string|
