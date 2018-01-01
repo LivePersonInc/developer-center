@@ -81,6 +81,4 @@ The following types are not supported in the current beta phase:
 
  * For messaging only - messaging conversations are still not deleted from one of the  messaging repositories
 
- * Unauthenticated engagement attributes - customer info and personal info
-
  * File sharing data
