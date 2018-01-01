@@ -42,17 +42,27 @@ All fields are sent in a JSON format
 
 BODY Examples:
 
+Example 1:
+
 ```json
 
-[
   {
     "engagement": [1,2,3]
   }
+  ```
+  
+  Example 2:
+  
+  ```json
   {
     "consumer": [11,22,33]
   }
+    ```
+  Example 3:
+  
+    ```json
   {
     "conversation": [111,222,333]
   }
-]
+
 ```
