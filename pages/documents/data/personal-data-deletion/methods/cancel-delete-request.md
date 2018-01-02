@@ -9,7 +9,7 @@ permalink: personal-data-deletion-cancel-delete-request.html
 indicator: both
 ---
 
-This API allows cancellation of an existing deletion request.
+This API allows cancellation of an existing deletion request in the time period before it is approved by LP.
 
 ### Request
 
