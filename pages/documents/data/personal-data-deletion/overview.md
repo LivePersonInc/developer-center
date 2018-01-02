@@ -77,8 +77,10 @@ The brand will need to follow the below steps to achieve this:
 
 ### Limitations:
 
-The following types are not supported in the current beta phase:
+The following is not supported in the current beta phase:
 
  * For messaging only - messaging conversations are still not deleted from one of the  messaging repositories
 
  * File sharing data
+ 
+ * Authentication via login will be available during the beta period.
