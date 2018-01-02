@@ -9,10 +9,13 @@ permalink: personal-data-deletion-delete-request.html
 indicator: both
 ---
 
-This API allows a the brand to submit a deletion request by one of the following: 
-Engagement - deletion of the personal data that is related to the chat (including transcripts, PII etc.). 
-Conversation - deletion of personal data that is related to the conversation (including transcripts, PII etc.)
-ConsumerId - deletion of perosanl data that is related to the consumer (doesn't include the consumer's conversations)
+This API allows a the brand to submit a deletion request via one of the following methods:
+
+By engagement - deletion of the personal data that is related to a specific engagement (including transcripts, PII etc.).
+
+By conversation - deletion of personal data that is related to a specific messaging conversation (including transcripts, PII etc.).
+
+By consumerId - deletion of personal data that is related to a specific consumer (doesn't include the consumer's conversations).
 
 ### Request
 
