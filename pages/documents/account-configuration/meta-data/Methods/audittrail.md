@@ -41,7 +41,7 @@ JSON
 ### Path Parameters
 
 |Parameter|Description|Notes|
-| -- | -- | -- |
+| :--- | :--- | :--- |
 |accountId|LP site id|Validation fail error code: 400<br>Type: String ^[a-zA-Z0-9_]{1,20}$|
 
 
@@ -52,7 +52,7 @@ N/A
 ### Request Headers
 
 |Header|Description|
-| -- | -- |
+| :--- | :--- |
 |Authorization|Contains token string to allow request authentication and authorization. See the introduction doc for more details.|
 
 ###Request Body
@@ -80,7 +80,7 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 
 ### Optional graphql parameters
 |name|Description|Notes|
-| -- | -- | -- |
+| :--- | :--- | :--- |
 |fromDate|Start date for filtering|Format: yyyy-MM-dd|
 |toDate|End date for filtering|Format: yyyy-MM-dd|
 |first|Number of records to return|Default: 50|
@@ -96,7 +96,7 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 
 ### Response Headers
 |Header|Description|
-| -- | -- |
+| :--- | :--- |
 |X-Total-Count|Contains the count of returned audit items|
 
 
