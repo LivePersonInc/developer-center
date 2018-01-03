@@ -42,9 +42,9 @@ All fields are sent in a JSON format
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | engagement| Engagement ids for deletion (chat) | list of ids | Optional | Only one of the deletion types can be sent in a single request |
- | conversation| Conversation ids for deletion (messaging) | list of  ids | Optional | Only one of the deletion types can be sent in a request |
- | consumerId| Consumer ids for deletion | list of ids | Optional | Only one of the deletion types can be sent in a request |
+ | engagement| Engagement ids for deletion (chat) | list of string ids | Optional | Only one of the deletion types can be sent in a single request |
+ | conversation| Conversation ids for deletion (messaging) | list of string ids | Optional | Only one of the deletion types can be sent in a request |
+ | consumer| Consumer ids for deletion | list of string ids | Optional | Only one of the deletion types can be sent in a request |
 
 BODY Examples:
 
@@ -52,7 +52,7 @@ Example 1:
 
 ```json
   {
-    "engagement": [1,2,3]
+    "engagement": ["le207623244295067780"]
   }
 ```
 
@@ -60,7 +60,7 @@ Example 2:
 
 ```json
   {
-    "consumer": [11,22,33]
+    "consumer": ["7524a955-db4b-4a6c-b2b4-66f520a7895e"]
   }
 ```
 
@@ -68,6 +68,6 @@ Example 3:
 
 ```json
   {
-    "conversation": [111,222,333]
+    "conversation": ["0345bf7d-08dc-4e61-8a11-e566e3bcd787","a2776761-5e66-4ea8-83e7-a955cd925471"]
   }
 ```
