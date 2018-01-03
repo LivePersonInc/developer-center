@@ -40,40 +40,20 @@ JSON
 
 ### Path Parameters
 
-<table>
-  <tr>
-    <td>Parameter</td>
-    <td>Description</td>
-    <td>Notes</td>
-  </tr>
-  <tr>
-    <td>accountId</td>
-    <td>LP site id</td>
-    <td>Validation fail error code: 400<br>Type: String ^[a-zA-Z0-9_]{1,20}$</td>
-  </tr>
-</table>
+|Parameter|Description|Notes|
+| -- | -- | -- |
+|accountId|LP site id|Validation fail error code: 400<br>Type: String ^[a-zA-Z0-9_]{1,20}$|
 
 
 ### Query Parameters
 
-<table>
-  <tr>
-    <td>N/A</td>
-  </tr>
-</table>
+N/A
 
 ### Request Headers
 
-<table>
-  <tr>
-    <td>Header</td>
-    <td>Description</td>
-  </tr>
-  <tr>
-    <td>Authorization</td>
-    <td>Contains token string to allow request authentication and authorization. See the introduction doc for more details.</td>
-  </tr>
-</table> 
+|Header|Description|
+| -- | -- |
+|Authorization|Contains token string to allow request authentication and authorization. See the introduction doc for more details.|
 
 ###Request Body
 
@@ -99,87 +79,25 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 ```
 
 ### Optional graphql parameters
-
-<table>
-  <tr>
-    <td>name</td>
-    <td>Description</td>
-    <td>Notes</td>
-  </tr>
-  <tr>
-    <td>fromDate</td>
-    <td>Start date for filtering</td>
-    <td>Format: yyyy-MM-dd</td>
-  </tr>
-  <tr>
-    <td>toDate</td>
-    <td>End date for filtering</td>
-    <td>Format: yyyy-MM-dd</td>
-  </tr>
-  <tr>
-    <td>first</td>
-    <td>Number of records to return</td>
-    <td>Default: 50</td>
-  </tr>
-  <tr>
-    <td>offset</td>
-    <td>Offset to start returning records from</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>orderBy</td>
-    <td>List of columns to order by</td>
-    <td>Default: changeTimestamp</td>
-  </tr>
-  <tr>
-    <td>orderDirection</td>
-    <td>List of ordering direction(ASC, DESC), in relevance to orderBy list</td>
-    <td>Default: DESC</td>
-  </tr>
-  <tr>
-    <td>users</td>
-    <td>List of users for filtering</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>componentTypes</td>
-    <td>List of component types for filtering</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>language</td>
-    <td>Language to return the results in</td>
-    <td>Default: en-US</td>
-  </tr>
-  <tr>
-    <td>timezone</td>
-    <td>Time zone to use in results</td>
-    <td>Default: US/Eastern</td>
-  </tr>
-  <tr>
-    <td>lpa</td>
-    <td>Boolean, Include changes done by LPAs in the results</td>
-    <td>Default: false</td>
-  </tr>
-  <tr>
-    <td>automaticUpdates</td>
-    <td>Boolean, Include automatic updates in the results</td>
-    <td>Default: false</td>
-  </tr>
-</table>
+|name|Description|Notes|
+| -- | -- | -- |
+|fromDate|Start date for filtering|Format: yyyy-MM-dd|
+|toDate|End date for filtering|Format: yyyy-MM-dd|
+|first|Number of records to return|Default: 50|
+|offset|Offset to start returning records from||
+|orderBy|List of columns to order by|Default: changeTimestamp|
+|orderDirection|List of ordering direction(ASC, DESC), in relevance to orderBy list|Default: DESC|
+|users|List of users for filtering||
+|componentTypes|List of component types for filtering||
+|language|Language to return the results in|Default: en-US|
+|timezone|Time zone to use in results|Default: US/Eastern|
+|lpa|Boolean, Include changes done by LPAs in the results|Default: false|
+|automaticUpdates|Boolean, Include automatic updates in the results|Default: false|
 
 ### Response Headers
-
-<table>
-  <tr>
-    <td>Header</td>
-    <td>Description</td>
-  </tr>
-  <tr>
-    <td>X-Total-Count</td>
-    <td>Contains the count of returned audit items</td>
-  </tr>
-</table>
+|Header|Description|
+| -- | -- |
+|X-Total-Count|Contains the count of returned audit items|
 
 
 ### Response Body
@@ -206,3 +124,4 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
     ]
 }
 ```
+
