@@ -36,7 +36,7 @@ This API allows cancellation of an existing deletion request in the time period 
 
   |Name                 | Description                                                                    | Type/Value
   |:------------------- | :----------------------------------------------------------------------------- | :---------
-  |request_id           | ID of the deletion request                                     | string
+  |request_id           | ID of the deletion request                                     | long
   |siteId               | LP account id                                  | string
   |request_time         | Time in which the deletion request was requested                                | string
   |requested_by         | The user id who requested to delete     | string
