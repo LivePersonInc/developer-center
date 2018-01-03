@@ -79,8 +79,8 @@ The brand will need to follow the below steps to achieve this:
 
 The following is not supported in the current beta phase:
 
- * For messaging only - messaging conversations are still not deleted from one of the  messaging repositories
+ * For messaging only - messaging conversations are still not deleted from one of LP's messaging repositories.
 
- * File sharing data
+ * File sharing / secure form data is not deleted.
  
  * Authentication via login will be available during the beta period.
