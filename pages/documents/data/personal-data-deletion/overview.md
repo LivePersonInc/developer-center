@@ -81,6 +81,8 @@ The following is not supported in the current beta phase:
 
  * For messaging only - messaging conversations are still not deleted from one of LP's messaging repositories.
 
- * File sharing / secure form data is not deleted.
+ * Photo / file sharing data is not deleted.
+ 
+ * Secure form data is not deleted.
  
  * Authentication via login will be available during the beta period.
