@@ -68,3 +68,43 @@ Example 3:
     "conversation": ["0345bf7d-08dc-4e61-8a11-e566e3bcd787","a2776761-5e66-4ea8-83e7-a955cd925471"]
   }
 ```
+### Response
+
+ **Response Codes**
+ 
+  |Code|  Response|  
+  |:------    |:-------- |
+  |201 |  Created|  
+  |400 |  Bad request|  
+  |401 |  Unauthorized request|  
+  |403 |  Not sufficient priviliges|  
+  |500 |  Internal server error|  
+  
+  **Elements in the Response**
+
+ |Name                 | Description                                                                    | Type/Value
+ |:------------------- | :----------------------------------------------------------------------------- | :---------
+ |request_id           | ID of the deletion request                                     | long |
+ |siteId               | LP account id                                  | string|
+ |request_time         | Time in which the deletion request was requested                                | string|
+ |requested_by         | The user who requested to delete     | string|
+ |cancelled_by         | The user who canceled the deletion request     | string|
+ |delete_json          | The body parameter of the request     | string|
+ |cancel_timestamp     | Time in which the deletion request was requested      | string|
+ |is_canceled          | Boolean indicates if the deletion request was cancelled or not     | boolean|
+
+ **Response Example**
+
+Response is in a JSON format.
+
+```json
+{
+    "request_id": 127223,
+    "siteid": "le20762324",
+    "request_time": "2018-01-04T14:07:32.000Z",
+    "requested_by": "Mike",
+    "cancelled_by": null,
+    "delete_json": "{\"engagement\":["le207623244295067780"]}",
+    "cancel_timestamp": null,
+    "is_canceled": false
+}
