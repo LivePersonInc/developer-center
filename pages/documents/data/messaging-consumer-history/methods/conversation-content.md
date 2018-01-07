@@ -42,7 +42,7 @@ Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
 type                 | The type of the message.   | string              | Valid values: "ContentEvent"
 contentType          | The type of the contnet.   | string              | Valid values: "text/plain", "hosted/file", "forms/secure-submission", "forms/secure-invitation"
-message              | The message text.          | MessageContent      | The content is different per type 
+message              | The message content.       | MessageContent      | The content structure is different per type 
 
 
 _message - text/plain_
