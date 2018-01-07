@@ -4,7 +4,7 @@ level1: Documents
 level2: Account Configuration
 level3: Meta Data API
 
-permalink: account-configuration-metadata-introduction.html
+permalink: account-configuration-meta-data-introduction.html
 root-link: true
 level-order: 3
 order: 1
