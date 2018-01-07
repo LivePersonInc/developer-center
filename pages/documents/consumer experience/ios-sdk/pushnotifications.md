@@ -56,7 +56,7 @@ Follow the instructions below to set up your certificate and key file to enable 
 {:start="5"}
 5. Select your platform as iOS, enter your app’s name, and then click **Create app**. Then, upload your app certificate and key file in the appropriate locations. For more information on your app certificate, please [click here](consumer-experience-ios-sdk-createcertificate.html){:target="_blank"}.
 
-*Note: If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name.For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-DEV". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.*
+*Note: If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name.For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.*
 
 *Note: there is a 50 character limit for your Bundle ID*
 

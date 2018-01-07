@@ -101,6 +101,7 @@ Example:
         var pathToData = "visitorInfo.visitorName";
 
         lpTag.agentSDK.bind(pathToData, updateCallback, notifyWhenDone);
+}
 ```
 
 *Note: notifyWhenDone is an optional callback.*
@@ -139,13 +140,21 @@ Example:
 }
 ```
 
-*Note: The updateCallback must be the same callback provided for the bind.*
+_Note: The updateCallback must be the same callback provided for the bind._
 
 ### command
 
 |Method|  Description|  Notes|  Required|
 |:---  |:---  |:---  |:--- |
-|command | Sends a command to the agent. | supported commands are: 'Write ChatLine': writes text to the agent's chat input. 'Write StructuredContent': send a json that represents a structured content input. 'Send Notification': send notification to the agent workspace UI.|
+|command | Sends a command to the agent. | |
+
+#### Supported commands
+
+|Command |Description |Const |Payload |
+|:--- |:--- |:--- |:--- |
+| "Write ChatLine" | write text to the chat input | lpTag.agentSDK.cmdNames.write | {text: "text to write"} |
+| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, metadata: [...]} <br><br> matadata is optional |
+| "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
 
  Example 1 - 'Write ChatLine':
 
@@ -179,14 +188,21 @@ Example 2 - 'Write StructuredContent'. Please see [this link](structured-content
     };
 
     var cmdName = lpTag.agentSDK.cmdNames.writeSC; // = "Write StructuredContent"
-    var data = {json: {
-                       "type": "text",
-                       "text": "product name",
-                       "tooltip": "text tooltip",
-                       "style": {
-                         "bold": true,
-                         "size": "large"
-                       }}};
+    var data = {
+		json: {
+			"type": "text",
+			"text": "product name",
+			"tooltip": "text tooltip",
+			"style": {
+				"bold": true,
+				"size": "large"
+			}
+		},
+		metadata: [	//metadata is optional
+			{"type":"ExternalId","id":"running364"},
+			{"type":"ExternalId","id":"soccer486"}
+		]
+	};
 
     lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
 }

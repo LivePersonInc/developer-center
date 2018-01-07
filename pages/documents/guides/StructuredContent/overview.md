@@ -71,7 +71,9 @@ Simple Button which triggers an Action when clicked.
 		"metadata": [{
 	        }],
 		"actions": [{
-
+        "type": "link",
+        "name": "Add to cart",
+        "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "button tooltip",
@@ -104,8 +106,10 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 	"click": {
 		"metadata": [{
 	        }],
-		"actions": [{
-
+    "actions": [{
+      "type": "link",
+      "name": "Add to cart",
+      "uri": "https://www.example.com"
 		}]
 	},
 	"tooltip": "image tooltip",
@@ -141,8 +145,10 @@ Map that points to a specific location.
 	"click": {
 		"metadata": [{
 	        }],
-		"actions": [{
-
+    "actions": [{
+        "type": "navigate",
+        "la": 40.75620,
+        "lo": -73.99861,
 		}]
 	},
 	"tooltip": "map tooltip"
@@ -312,7 +318,7 @@ _Example_
 
 #### Metadata
 
-Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block.
+Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
 
 **Style**
 

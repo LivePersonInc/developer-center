@@ -8,10 +8,10 @@
             "enum": ["RichContentEvent"],
             "readonly": "true"
         },
-        "message": {
+        "content": {
             "type": "object",
             "title" : "element",
-            "$ref": "richContent/element.json"
+            "description": "Refer to Structured Content documentation"
         }
     },
     "required": ["type", "message"]
