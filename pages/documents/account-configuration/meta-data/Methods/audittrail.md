@@ -81,6 +81,7 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 JSON
 
 **Response Headers**
+
 |Header|Description|
 | :--- | :--- |
 |X-Total-Count|Contains the count of returned audit items|
@@ -97,6 +98,7 @@ JSON
 
 
 **Response Body**
+
 ```json
 {
   "data": {
