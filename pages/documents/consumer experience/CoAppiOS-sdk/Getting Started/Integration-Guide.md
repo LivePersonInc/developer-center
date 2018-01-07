@@ -30,7 +30,7 @@ If you are using a **Swift** project, add this to your app's **Bridging-Header**
 
 Add the following to your *AppDelegate*'s `application:didFinishLaunchingWithOptions` function:
 
-```Swift
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // ... do your regular app setup here
 
@@ -53,7 +53,7 @@ To allow users to return to the messaging conversation from within a Voice/Video
 * Set itself as delegate
 * Implement a callback function:
 
-```Swift
+```swift
 class YourViewController: UIViewController,LPCoAppDelegate {
     override func viewDidLoad() {
         LPCoApp.shared().delegate = self;

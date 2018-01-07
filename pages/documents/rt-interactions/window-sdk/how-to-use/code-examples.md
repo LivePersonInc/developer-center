@@ -11,22 +11,22 @@ permalink: rt-interactions-window-sdk-code-examples.html
 indicator: chat
 ---
 
-**‘Init’ and ‘bind’ (Single event)**
+**'Init’ and 'bind’ (Single event)**
 
 ```javascript
 {
-  
+
   var lpWidgetSDK = lpTag.LPWidgetSDK.init();
   lpWidgetSDK.bind(lpTag.LPWidgetSDK.API.events.CONVERSATION_INFO, _onEvent, this);
-  
+
   function _onEvent(eventData) {
     if (eventData) {
         console.log(eventData);
-  
+
 }
 ```
 
-**‘Init’ with ‘bind’ (Multiple events)**
+**'Init’ with 'bind’ (Multiple events)**
 
 
 ```javascript
@@ -55,20 +55,20 @@ function _onEvent(eventData) {
 
 ```javascript
 {
-  
+
   var lpWidgetSDK = lpTag.LPWidgetSDK.init();
   lpWidgetSDK.bind(lpTag.LPWidgetSDK.API.events.CONVERSATION_INFO, _onEvent, this);
-  
+
   function _onEvent(eventData) {
     if (eventData) {
             lpWidgetSDK.notify("Data was received!", notificationCallback);
     }
   }
-  
+
   function notificationCallback(err) {
     if (err) {
          console.log("Error on sending notification from widget");
-    
+
 }
 ```
 
@@ -78,14 +78,14 @@ function _onEvent(eventData) {
 
 ```javascript
 {
-  
+
   var lpWidgetSDK = lpTag.LPWidgetSDK.init();
   lpWidgetSDK.dispose(disposeCallback);
-  
+
   function disposeCallback(err) {
     if (err) {
         console.log("Error on widget disposal");
-  
+
 }
 ```
 
@@ -105,17 +105,17 @@ function _onEvent(eventData) {
           window.addEventListener("load", function () {
               var bindingEvent = [widgetSDKAPI.events.CONVERSATION_INFO, widgetSDKAPI.events.MESSAGES],
                       opts = {bind: {}};
-    
+
               bindingEvent.forEach(function (eventName) {
                   opts.bind[eventName] = {func: _onEvent, context: this};
               });
-    
+
               lpWidgetSDK = lpTag.LPWidgetSDK.init(opts);
           }.bind(this));
-    
+
           function _onEvent(eventData) {
               if (eventData && widgetSDKAPI.events.MESSAGES === eventData.type) {
-                  var content =  eventData.data.content  "";
+                  var content =  eventData.data.content = "";
                   console.log("MESSAGES data: ", eventData );
                   if (content.indexOf("disposeWidget") > -1) {
                       disposeWidget();
@@ -142,5 +142,3 @@ function _onEvent(eventData) {
       })();
     </script>
     </body>
-
-

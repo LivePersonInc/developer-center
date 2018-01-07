@@ -511,4 +511,42 @@ Listed below are all localized keys with the English localization string.
     <td>secureFormConsumerSubmissionMessage</td>
     <td>"I have submitted the '%@' form"</td>
   </tr>
+  <tr>
+    <td>newStructuredContentMessage</td>
+    <td>"New message"</td>
+  </tr>
+
+  <tr>
+    <td>connectionStatusBarConnecting</td>
+    <td>"Connecting..."</td>
+  </tr>
+  <tr>
+    <td>connectionStatusBarStillConnecting</td>
+    <td>"Still connecting..."</td>
+  </tr>
+  <tr>
+    <td>connectionStatusBarFailedToConnect</td>
+    <td>"Failed to connect to the server."</td>
+  </tr>
+  <tr>
+    <td>structuredContentAccessibilityMap</td>
+    <td>"Map"</td>
+  </tr>
+  <tr>
+    <td>structuredContentAccessibilityImage</td>
+    <td>"Image"</td>
+  </tr>
+  <tr>
+    <td>structuredContentAccessibilityButton</td>
+    <td>"Button"</td>
+  </tr>
+  <tr>
+    <td>structuredContentAccessibilityText</td>
+    <td>"Text"</td>
+  </tr>
+  <tr>
+    <td>structuredContentItemError</td>
+    <td>"Content failed to display"</td>
+  </tr>
+
 </table>

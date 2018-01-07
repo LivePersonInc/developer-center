@@ -1,6 +1,6 @@
 ---
 title: Create a custom real time dashboard for your contact center
-level1: Products
+level1: Solutions
 level2: Data
 level3: Custom Dashboard
 

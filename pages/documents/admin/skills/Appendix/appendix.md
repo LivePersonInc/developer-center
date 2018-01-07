@@ -64,6 +64,13 @@ This section contains API details that are common to every API’s resource and 
 | priority | Routing cascading order if agent group is in full capacity, first to priority 1 then to 2 then to 3 then to …. n. | number | Required | Required if skillRoutingConfiguration specified. |
 | splitPercentage | Split of chats to provide for each chat center (agent group). | number | Required | Required if skillRoutingConfiguration specified. 
 | wrapUpTime | The period of time between the end of the chat and until the agent will receive the new chat | Integer | Optional | this feature is within the ACD settings |
+| slaDefaultResponseTime | Default response time for all conversations in messaging per skill | Integer | Optional | |
+| slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | |
+| slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | |
+| lobIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
+| canTransfer | Whether the skill can transfer to other skills | Boolean  | Optional | Default: true. If false can only transfer to itself (requeue) |
+| skillTransferList | The list of Skill ids to which this skill can transfer conversations | List <Long> | Optional | Default: null (i.e. skill can transfer to all skills) |
+| lobIds | The skill’s LOB IDs | array of numbers | Optional ||
 
 ### Entity Example
 
@@ -76,6 +83,14 @@ This section contains API details that are common to every API’s resource and 
           "maxWaitTime":0,
           "deleted":true,
           "dateUpdated":"2015-11-25 14:18:11",
+          "canTransfer": true,
+          "skillTransferList": [
+            2286661812,
+            2286661912
+          ],
+          "lobIds": [
+            766661812
+          ],
           "skillRoutingConfiguration":[  
              {  
                 "priority":1,

@@ -3,7 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">-->
 <!--<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">-->
-<title>{{ page.title }} | {{ site.site_title }}</title>
+{% if (level3 != null) %}
+<title>{{ page.level3 }} - {{ page.title }} | {{ site.site_title }}</title>
+{% else %}
+<title> {{ page.title }} | {{ site.site_title }}</title>
+{% endif %}
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
 
 
@@ -19,7 +23,7 @@
 <link rel="stylesheet" href="css/documents.css">
 <link rel="stylesheet" href="css/preview.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" > 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" >
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,600" >
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -8,6 +8,10 @@
     font-style: normal;
 }
 
+
+.flex {
+  display: flex;
+}
 /*colors */
 .find{
   background-color: yellow;
@@ -27,6 +31,8 @@
     height: 2pt;
     background-color: #ff720b;
 }
+
+/*colors*/
 
 .centralized{
     margin: 0 auto;
@@ -53,6 +59,18 @@
   padding-right: 0px;
   max-width: 1280px;
   position: relative;
+}
+
+.container .usecases{
+  display: none;
+}
+
+pre code {
+  color: #fff;
+}
+
+pre {
+  background-color: #162036;
 }
 
 /*left nav bar */
@@ -125,16 +143,20 @@
     background: #fff
 }
 .searchbox__input::-webkit-input-placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__input::-moz-placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__input:-ms-input-placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__input::placeholder {
-    color: #aaa
+    color: #8a909a;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
 }
 .searchbox__submit {
     position: absolute;
@@ -261,9 +283,18 @@
     background: transparent;
     border: none;
     z-index: 1;
-    max-width: 600px;
-    min-width: 500px;
+    max-width: 1280px !important;
+    min-width: 1280px !important;
     /*box-shadow: 0 1px 0 0 rgba(0, 0, 0, .2), 0 2px 3px 0 rgba(0, 0, 0, .1)*/
+    background-color: #162036;
+    /*border: 2px solid rgba(228, 228, 228, 0.6);*/
+
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    margin-top: 10px;
+    /*font-size: 11px;*/
+    border-radius: 4px;
+    box-sizing: border-box;
 }
  .ds-dropdown-menu:before {
     display: block;
@@ -283,10 +314,18 @@
  .ds-dropdown-menu .ds-suggestions {
     position: relative;
     z-index: 2;
-    margin-top: 8px
+    margin-top: 8px;
+    padding-left: 10.6%;
 }
  .ds-dropdown-menu .ds-suggestion {
-    cursor: pointer
+    cursor: pointer;
+    width: 1000px !important;
+}
+
+.aa-suggestion-title-separator {
+  font-size: 1.5em;
+  padding-left: 10px;
+  padding-right: 10px;
 }
  .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion.suggestion-layout-simple,
  .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion:not(.suggestion-layout-simple) .algolia-docsearch-suggestion--content {
@@ -294,11 +333,13 @@
 }
  .ds-dropdown-menu [class^=ds-dataset-] {
     position: relative;
-    border: 1px solid #d9d9d9;
+    /*border: 1px solid #d9d9d9;*/
     background: #fff;
     border-radius: 4px;
     overflow: auto;
-    padding: 0 8px 8px
+    padding: 0 8px 8px;
+    margin-right: -15px !important;
+    max-height: 500px;
 }
  .ds-dropdown-menu * {
     box-sizing: border-box
@@ -311,9 +352,10 @@
     overflow: hidden
 }
  .algolia-docsearch-suggestion--highlight {
-    color: #174d8c;
-    background: rgba(143, 187, 237, .1);
-    padding: .1em .05em
+    /*color: #174d8c;*/
+    /*background: rgba(143, 187, 237, .1);*/
+    box-shadow: inset 0 -2px 0 0 rgba(69, 142, 225, .8);
+    padding: .1em .05em;
 }
  .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--category-header-lvl0 .algolia-docsearch-suggestion--highlight,
  .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--category-header-lvl1 .algolia-docsearch-suggestion--highlight {
@@ -332,7 +374,9 @@
     width: 70%;
     position: relative;
     padding: 5.33333px 0 5.33333px 10.66667px;
-    cursor: pointer
+    cursor: pointer;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
  .algolia-docsearch-suggestion--content:before {
     content: "";
@@ -342,33 +386,43 @@
     height: 100%;
     width: 1px;
     background: #ddd;
-    left: -1px
+    left: -1px;
+    right: 50
 }
  .algolia-docsearch-suggestion--category-header {
     position: relative;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #5879DA ;
     display: none;
     margin-top: 8px;
+    /*margin-bottom: 24px;*/
     padding: 4px 0;
-    font-size: 1em;
-    color: #33363d
+    font-size: 1.125em;
+    color: #333333;
+    font-weight: bold;
+    font-family: "Roboto Slab","Open Sans",Arial,Helvetica,sans-serif;
+    /*width:60%;*/
 }
  .algolia-docsearch-suggestion--wrapper {
-    width: 100%;
+    width: 40%;
     float: left;
-    padding: 8px 0 0
+    padding: 8px 0 0;
+    /*margin-bottom: 24px;*/
 }
  .algolia-docsearch-suggestion--subcategory-column {
     float: left;
     width: 30%;
     display: none;
     padding-left: 0;
-    text-align: right;
+    /*text-align: right;*/
     position: relative;
-    padding: 5.33333px 10.66667px;
+    padding: 5.33333px 0px;
     color: #a4a7ae;
-    font-size: .9em;
-    word-wrap: break-word
+    font-size: 1.1em;
+    font-weight: bold;
+    word-wrap: break-word;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
 }
  .algolia-docsearch-suggestion--subcategory-column:before {
     content: "";
@@ -389,14 +443,14 @@
 }
  .algolia-docsearch-suggestion--title {
     margin-bottom: 4px;
-    color: #02060c;
-    font-size: .9em;
+    /*color: #5879DA;*/
+    font-size: 1.063em;
     font-weight: 700
 }
  .algolia-docsearch-suggestion--text {
     display: block;
-    line-height: 1.2em;
-    font-size: .85em;
+    /*line-height: 1.2em;*/
+    font-size: 1em;
     color: #63676d
 }
  .algolia-docsearch-suggestion--no-results {
@@ -502,6 +556,8 @@
     line-height: 0
 }
 
+/*End Algolia */
+
 /*# sourceMappingURL=docsearch.min.css.map */
 
 body.search-opened #search-container {
@@ -510,7 +566,7 @@ display: block;
 
 #search-container {
   background-color:rgb(255, 255, 255);
-  /*box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;*/
+  box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
   box-sizing:border-box;
   color:rgb(24, 35, 89);
   display:none;
@@ -520,7 +576,7 @@ display: block;
   left:0px;
   line-height:20px;
   min-height:853px;
-  position:absolute;
+  position:absolute !important;
   text-size-adjust:100%;
   top:60px;
   width:1920px;
@@ -534,14 +590,14 @@ display: block;
   display: inline-block;
   position: relative;
   float: right;
+  width: 100px;
 }
 
 .aa-input-search {
   color: white;
-  padding: 12px 80px 12px 12px;
-  border-color: #33c6f4;
-  border-radius: 50px;
-  border-style: solid;
+  padding: 10px;
+  border: none;
+  width: 0px;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -550,6 +606,31 @@ display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: .8s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  float:right;
+  margin-right: -121px;
+  z-index: 3;
+  cursor: pointer;
+  margin-top: 14px;
+  opacity: 0;
+}
+
+.algolia-autocomplete {
+  float: right;
+}
+
+.aa-input-search:focus{
+  width: 240px;
+  border-bottom: 1px solid #8a909a;
+  padding: 7px 80px 12px 0px;
+  cursor: text;
+  opacity: 1;
+}
+
+.aa-input-icon{
+  position: fixed;
+  top: 5%;
+  right: 90px;
 }
 
   .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
@@ -565,30 +646,38 @@ display: block;
   width: 16px;
   position: absolute;
   top: 55%;
-  right: 16px;
+  right: -120px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   fill: #fff;
 }
 
+
 .aa-hint {
   color: #e4e4e4;
 }
 
-.ds-dropdown-menu {
-  background-color: #162036;
-  /*border: 2px solid rgba(228, 228, 228, 0.6);*/
-  border-top-width: 1px;
-  font-family: "Montserrat", sans-serif;
-  width: 300px;
-  margin-top: 10px;
-  /*font-size: 11px;*/
-  border-radius: 4px;
-  box-sizing: border-box;
+.search-cancel {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 55%;
+  right: -120px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: #fff;
+  border-radius: 50%;
+  display: none;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+  stroke: white;
+  cursor: pointer;
+  z-index: 5;
 }
- .ds-dropdown-menu {
 
 }
+
 .aa-suggestion {
   padding: 12px;
   border-top: 1px solid rgba(228, 228, 228, 0.6);
@@ -765,6 +854,10 @@ ul#results-container li a {
 #search-demo-container ul#results-container li ul li {
   /*float:left;*/
 }
+
+/* End Algolia */
+
+
 *:focus {
     outline: none;
 }
@@ -865,6 +958,7 @@ ul#results-container li a {
     #search-icon-mobile {
         float: right;
         width: 37px;
+        display: none;
     }
 
     .mobile-search-container .close-btn {
@@ -900,4 +994,53 @@ ul#results-container li a {
   background: #162036 !important;
   transition: background .25s;
   border: 2px solid #ffffff;
+}
+
+@media (max-width: 425px) {
+.navbar-inverse .navbar-nav > li > a {
+  margin-bottom: 10px;
+}
+
+#search-icon-mobile{
+  display:none !important;
+}
+
+#bs-example-navbar-collapse-1{
+  background-color: #162036;
+  border-color: #162036 !important;
+}
+
+.aa-input-container{
+  display: none;
+}
+}
+
+@media (max-width: 1024px) {
+  .solutionscontainer {
+    width: 100% !important;
+}
+}
+
+@media (max-width: 768px) {
+
+  .solutionscontainer {
+  width: 78% !important;
+}
+
+.solutionsrow{
+    display:block !important;
+}
+  .aa-input-container {
+    display: none;
+}
+  .navbar-collapse .navbar-nav.navbar-left:first-child {
+    margin-left: 0px;
+}
+
+}
+
+@media (min-width: 2560px){
+  .solutionscontainer{
+    width: 65%;
+}
 }

@@ -97,14 +97,14 @@ This event triggers when the state changes to "chatting" to show the engagement 
 
 | Name | Description | Type |
 | :--- | :--- | :--- |
-| engagementId | The engagement ID that was clicked to open the chat. | ALPHA_NUMERIC | |
+| engagementName | The engagement name as defined in LiveEngage UI | string | |
 | state | The chat state ("chatting"). | string |
 
 *Example:*
 
 ```json
 {
-    "engagementId" : 1213313213,
+    "engagementName" : "Sticky chat button",
     "state": "chatting"
 }
 ```

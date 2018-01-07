@@ -37,7 +37,7 @@ Use this method to start a new session and to get an engagement according to the
 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ | 
+| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
 | visitorId | Visitor ID | string | Optional (Required on second request) |
 
 **Query parameters**
@@ -89,13 +89,13 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 
 **Response Codes**
 
-| Code | Response | 
+| Code | Response |
 | :--- | :--- |
 | 200 | OK |
 | 400 | Validation error |
 | 401 | Unauthorized |
 | 404 | Data not found |
-| 500 | Internal server error |
+| 500 | Internal server error - If using a test account (or any account that has extremely low volume), when making the getEngagement call, you will get a 500 error with the following error: "{"time":1499263964605,"message":"Loading account: {{accountId}}, vid: {{vid}}","internalCode":20}" This is due to the way our accounts are loaded on the server side. It takes a short period of time for an account with low volume to load in and get a 200 response with the correct engagement. |
 | 503 | The server is temporarily unavailable |
 
 **Retry Policy Recommendation**
@@ -109,17 +109,17 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 
 | Attribute | Description | Type | Required|
 | :--- | :--- | :--- | :--- |
-| status | Availability status | enum (‘Available’, ‘NotAvailable’) | Required |
-| engagementDetails | The details of an engagement when it is available | object | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.campaignId | | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.engagementId | | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.contextId | | string | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.windowId | | string | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.language | | string | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.engagementRevision | | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is ‘Available’, otherwise is not returned |
-| engagementDetails.skillId | | number | Optional when the status is ‘Available’ |
-| engagementDetails.skillName | | string | Optional when the status is ‘Available’ |
+| status | Availability status | enum ('Available’, 'NotAvailable’) | Required |
+| engagementDetails | The details of an engagement when it is available | object | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.campaignId | | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.engagementId | | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.contextId | | string | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.windowId | | string | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.language | | string | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.engagementRevision | | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is 'Available’, otherwise is not returned |
+| engagementDetails.skillId | | number | Optional when the status is 'Available’ |
+| engagementDetails.skillName | | string | Optional when the status is 'Available’ |
 | pageId | Page identification ID for sending event on the current engagement | string | Required  |
 | sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
 | visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
@@ -142,7 +142,7 @@ Status code: 200 OK (engagement is available)
         "engagementRevision": 44,
         "validForSeconds": 900,
         "skillId": 23,
-        "skillName":"TestSkill" 
+        "skillName":"TestSkill"
        }
     }
 

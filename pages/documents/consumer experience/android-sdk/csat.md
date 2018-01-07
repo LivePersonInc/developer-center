@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Advanced Features
 
-order: 280
+order: 290
 permalink: android-csat.html
 
 indicator: messaging
@@ -14,8 +14,7 @@ indicator: messaging
 
 ### Overview
 
-This document describes the CSAT behavior and configurations in the Messaging SDK.
-You can find all the related configurations in the resources ID table, under [Survey Screen](android-attributes.html){:target="_blank"}.
+This document describes the CSAT behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under [Survey Screen](android-attributes.html){:target="_blank"}.
 
 ### Show CSAT flow
 
@@ -27,7 +26,7 @@ Show if:
 
 ### Dismiss CSAT
 
-The CSAT view is dismissed in one of four cases: 
+The CSAT view is dismissed in one of four cases:
 
 - User pressed the submit button (answers are sent to the survey).
 - User choose to skip the CSAT (skipped button is pressed).
@@ -50,9 +49,9 @@ CSAT screen includes several content containers:
 
 **ratingQuestionView (stars)**
 
-- Always visible - can’t configure its visibility. 
+- Always visible - can’t configure its visibility.
 - Stars color is defined by ```<color name="feedback_fragment_star"> ```
-- Rating question includes ‘Agent’ by default in the text. If conversation has assigned agent and the agent’s nickName is not empty, this nickName will be used instead.
+- Rating question includes 'Agent’ by default in the text. If conversation has assigned agent and the agent’s nickName is not empty, this nickName will be used instead.
 
 **resolutionConfirmationView (yes/no)**
 

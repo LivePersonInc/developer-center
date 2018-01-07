@@ -1,7 +1,7 @@
 ---
 title: Appendix
-level1: Products
-level2: Agent Efficiency
+level1: Solutions
+level2: 
 level3: SalesForce Integration
 
 order: 52
@@ -21,7 +21,7 @@ When adding a Field Mapping, you can choose to use one of LiveEngage predefined 
 
 To use “Other”, you need to manually populate two fields: one is the address of your parameter in our LivePerson SDK Field (The API used on the widget/client side of our package) and one is our LivePerson API Field (The API used on the back-end sync process of our package).
 
-The complete structure of the data in the “WebApp SDK” and “Engagement History API” is described in their own documents which update all the time and you can find through the Connection Panel on your LiveEngage Account.
+The complete structure of the data in the [Agent Workspace Widget SDK](https://developers.liveperson.com/agent-workspace-sdk-overview.html){:target="_blank"} and [Engagement History API](https://developers.liveperson.com/data-engagement-history-overview.html){:target="_blank"} is described in their own documents which update all the time and can be found in the links above.
 
 In order to make this a simple as possible for you, we’ve included a few examples for how to build these addresses for your different parameters:
 
@@ -183,7 +183,6 @@ For a Custom Object to appear in the list, you need to first create a lookup fie
 
 Please verify that the Case / Opportunity settings has the Account and Contact lookup fields included in the fieldmapping. If you have more than one lookup field to Account /Contact on the object, make sure you include the standard one from Salesforce (they are called “Account ID” and “Contact ID” on the field mapping list).
 
-10. Why does the sync process doesn’t happen on the exact hour I chose for it, but slightly after? 
+10. Why does the sync process doesn’t happen on the exact hour I chose for it, but slightly after?
 
 The daily sync process will happen in an offset of minutes, but within the hour, of the time you chose for it, which might change between different orgs. The periodic sync will happen every 3 hours, but at an offset as well.
-

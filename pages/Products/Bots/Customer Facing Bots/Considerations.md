@@ -1,6 +1,6 @@
 ---
 title: Considerations
-level1: Products
+level1: Solutions
 level2: Bots
 level3: Customer Facing Bots
 
@@ -37,4 +37,4 @@ The following considerations should be kept in mind when setting up Bots:
 * Match the skills of your bots to the operational structure of the contact center operations
 
 	* Associate bots to the appropriate skill and group
-	* Best practice, have the word ‘bot’ in the skill you assign the bot to (e.g. address_chage_bot).  This will help with tracking and reporting
+	* Best practice, have the word 'bot’ in the skill you assign the bot to (e.g. address_chage_bot).  This will help with tracking and reporting

@@ -1,20 +1,20 @@
 ## Topnav single links
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
 topnav:
-- title: Products
-  items:
-    - title: Products
-      url: /products.html
-
 - title: Documents
   items:
     - title: Documents
       url: /documents.html
 
+- title: Solutions
+  items:
+    - title: Solutions
+      url: /solutions.html
+
 - title: Bot Platform
   items:
-    - title: LiveEngage for Bots
-      url: /bot-platform.html
+    - title: Bot Platform
+      url: /bot-integration.html
 
 - title: Create a Developer Account
   items:

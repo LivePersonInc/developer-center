@@ -1,6 +1,6 @@
 ---
 title: Appendix
-level1: Products
+level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 permalink: products-channels-sms-appendix.html
@@ -33,7 +33,7 @@ To help brands navigate security challenges, minimize risk to a brand and its co
 
 **Data Masking**
 
-While LiveEngage's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation.  The LiveEngage integration with the Twilio framework provides a solution for this in the form of Twilio functions which can be used to mask sensitive data from the conversation [Click here to read more on this solution.](https://docs.google.com/a/liveperson.com/document/d/1KXr6OeQqB6-kQAXBqpXGLxFQHsX3adma-pnHdhi3xvY/edit?usp=sharing){:target="_blank"}
+While LiveEngage's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation.  The LiveEngage integration with the Twilio framework provides a solution for this in the form of Twilio functions which can be used to mask sensitive data from the conversation [Click here to read more on this solution.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf){:target="_blank"}
 
 **System Messages**
 
@@ -45,4 +45,4 @@ Business requirement for many brands include the ability to send automated respo
 
 * Expectation setting for SLA's (first time consumers)
 
-* Although system messages are not yet available as features within LiveEngage, all of the above can be achieved with Twilio functions [Click here to read more.](https://docs.google.com/a/liveperson.com/document/d/1KXr6OeQqB6-kQAXBqpXGLxFQHsX3adma-pnHdhi3xvY/edit?usp=sharing){:target="_blank"}
+* Although system messages are not yet available as features within LiveEngage, all of the above can be achieved with Twilio functions [Click here to read more.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf){:target="_blank"}

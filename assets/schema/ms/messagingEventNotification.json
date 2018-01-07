@@ -12,6 +12,9 @@
                     "originatorId": {
                         "type": "string"
                     },
+                    "metadata": {
+                        "$ref": "../infra/metadata/Metadata.json"
+                    },
                     "serverTimestamp": {
                         "type": "integer"
                     },

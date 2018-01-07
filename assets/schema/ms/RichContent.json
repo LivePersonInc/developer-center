@@ -1,0 +1,18 @@
+{
+    "title": "RichContentEvent",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "default": "RichContentEvent",
+            "enum": ["RichContentEvent"],
+            "readonly": "true"
+        },
+        "content": {
+            "type": "object",
+            "title" : "element",
+            "description": "Refer to Structured Content documentation"
+        }
+    },
+    "required": ["type", "message"]
+}

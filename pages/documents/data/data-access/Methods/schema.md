@@ -24,7 +24,7 @@ Required:
 
 | Parameter | Description | Type / Value |
 | :--------- | :------------ | :------------ |
-| schemaId | The schema ID to retrieve. To retrieve a specific schema, specify its number or ‘latest’ as the newest available schema. | alphanumeric |
+| schemaId | The schema ID to retrieve. To retrieve a specific schema, specify its number or 'latest’ as the newest available schema. | alphanumeric |
 
 ### Response
 

@@ -1,35 +1,54 @@
+body {
+  background-color: #f2f2f2;
+}
+
 /* banner home page */
+
+.metabanner{
+  background: linear-gradient(rgba(47, 72, 131, 0.75), rgba(47, 72, 131, 0.75)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Header_Image.png");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
 .banner-container{
     width: 100%;
-    background-color: #f8f8f8;  
+    text-align: center;
+    height: 452px;
+    background-repeat: no-repeat;
 }
 .banner{
     width:100%;
-    height:250px;
-    background-color: #f8f8f8; 
+    background-color: inherit;
 }
 .banner .text {
-  color: #162036;
-  float: left;
-  font-family: "Roboto Slab",serif;
-  margin-left: 50px;
+  color: #fff;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   margin-top: 90px;
 }
 .banner .text .first-line{
     font-size: 1.066em;
 }
 .banner .text .second-line{
-    font-size:1.866em;
-    max-width: 400px;
+    font-size:2.167em;
+    /*max-width: 400px;*/
+}
+
+.textcontainer{
+  display: inline-block;
+  float:none;
+  width:100%;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 .banner img{
     float:right;
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 .home-first-line {
-  width: 70%;  
+  width: 70%;
   margin: 50px auto;
 }
 .home-second-line {
@@ -54,7 +73,8 @@ html body div.container div.home-first-line div.text, html body div.container di
 }
 
 a.view-all-products {
-  border: 1px solid #6d6d6d;
+  border: 2px solid #6d6d6d;
+  border-radius: 50px;
   color: #162036;
   display: table;
   font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
@@ -70,8 +90,8 @@ a.view-all-products::after{
 }
 
 @media (max-width: 990px) {
-  
-    .home-first-line {     
+
+    .home-first-line {
         margin-bottom:0px;
     }
     .home-second-line {
@@ -79,5 +99,455 @@ a.view-all-products::after{
         margin-bottom: 16%;
         margin-top: 0px;
     }
-    
+
+}
+
+.viewbutton{
+  background-color: #ff720b;
+  color: #fff;
+  border: 2px solid #FF720B;
+  font-size: 1em;
+  float: left;
+  margin-top: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-weight: bold;
+}
+
+.briefcase{
+  display:none;
+}
+
+ul > .aa-input-container{
+  display:none;
+}
+
+.searchhome .aa-input-icon {
+  fill: #B0B5BC;
+  top: 272px;
+  left: 202px;
+  z-index: 3;
+}
+
+.searchhome .aa-input-search{
+  background-color: #fff !important;
+  border-color: #fff;
+  padding: 12px 0px 12px 35px;
+  border-radius: 0;
+  width: 896px;
+  color: #636a79;
+  display: block;
+  margin: 0 auto;
+  cursor: text;
+  transition: none;
+}
+
+.searchhome .aa-input-container{
+  float: none;
+  margin-bottom: 100px;
+  display: inherit;
+  position: inherit;
+  width: 1087px;
+
+}
+
+.searchhome .aa-input-container:focus{
+  outline: inherit;
+}
+
+.section1 {
+  background-color: #f2f2f2;
+  height: 628px;
+}
+
+.ourplatform {
+  font-size: 3.333em;
+  font-weight: bold;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+}
+
+.ourplatformdetails{
+  float:left;
+  font-size: 1.3em;
+  width: 250px;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  line-height: 1.6em;
+  margin-top: 10px;
+}
+
+.section1 .row {
+  float: right;
+  width: 320px;
+  margin-top: 140px;
+  margin-right:10px;
+}
+
+img.mockup {
+  margin-top: 100px;
+  width: 900px;
+}
+
+.sectionbot{
+  background: linear-gradient(rgba(20, 32, 54, 0.80), rgba(20, 32, 54, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Develop_your_bot_Image+(1).png");
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  height: 357px;
+  margin-top: 80px;
+}
+
+.sectionmessaging{
+  background: linear-gradient(rgba(255, 113, 19, 0.80), rgba(255, 113, 19, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Messaging_Image.png");
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  height: 357px;
+  margin-top: 80px;
+}
+
+.sectionchat{
+  background: linear-gradient(rgba(88, 121, 218, 0.80), rgba(88, 121, 218, 0.80)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Developing_Image.png");
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  height: 357px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.bottitle{
+  float:left;
+  font-size: 4.4em;
+  margin-top: 80px;
+  line-height: 1.2em;
+  width:100px;
+  font-weight:bold;
+  margin-left: 28px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+}
+
+.botdetail{
+  float: right;
+  width: 455px;
+  height: 343px;
+  margin-right: 140px;
+  background-color: #fff;
+  color: #0c1320;
+  padding: 40px 46px 40px;
+  margin-top: 38px;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 1.313em;
+  font-weight: 100;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+}
+
+.messagingtitle{
+  float:right;
+  font-size: 4.4em;
+  margin-top: 80px;
+  line-height: 1.2em;
+  width:470px;
+  font-weight:bold;
+  margin-left: 28px;
+  margin-right: 120px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+}
+
+.messagingdetail{
+  float: left;
+  width: 455px;
+  height: 343px;
+  margin-right: 100px;
+  background-color: #fff;
+  color: #0c1320;
+  padding: 60px 75px 40px 54px;
+  margin-top: 38px;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 1.313em;
+  font-weight: 100;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+}
+
+.messagingtext{
+  width: 90%;
+}
+
+.chattext{
+  width: 90%;
+}
+
+.chattitle{
+  float:left;
+  font-size: 4.4em;
+  margin-top: 90px;
+  line-height: 1.2em;
+  width:400px;
+  font-weight:bold;
+  margin-left: 28px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+}
+
+.chatdetail{
+  float: right;
+  width: 455px;
+  height: 343px;
+  margin-right: 140px;
+  background-color: #fff;
+  color: #0c1320;
+  padding: 40px 54px 40px;
+  margin-top: 38px;
+  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 1.313em;
+  font-weight: 100;
+  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+}
+
+.learnmore{
+  margin-top: 10px;
+  display: block;
+  border: 1px solid #0f192b;
+  text-align: center;
+  border-radius: 4px;
+  width: 200px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #0f192b;
+  font-weight: bold;
+}
+
+.learnmore:hover{
+  background-color: #0f192b;
+  color: #fff;
+}
+
+.botdetail .learnmore {
+    margin-top: 25px;
+  }
+
+.messagingdetail .learnmore {
+  margin-top: 71px;
+}
+
+.chatdetail .learnmore {
+    margin-top: 115px;
+}
+
+.navbar-inverse{
+  border-color: transparent;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+.aa-input-search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #B0B5BC;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.200em;
+  font-weight: 100;
+}
+.aa-input-search::-moz-placeholder { /* Firefox 19+ */
+  color: #B0B5BC;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.200em;
+  font-weight: 100;
+}
+.aa-input-search:-ms-input-placeholder { /* IE 10+ */
+  color: #B0B5BC;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.200em;
+  font-weight: 100;
+}
+.aa-input-search:-moz-placeholder { /* Firefox 18- */
+  color: #B0B5BC;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.200em;
+  font-weight: 100;
+}
+
+.searchhome .ds-dropdown-menu [class^=ds-dataset-] {
+  width: 896px !important;
+  margin-left: -335px !important;
+  max-height: 500px;
+}
+
+.searchhome .ds-dropdown-menu:before {
+  right: 860px !important;
+}
+
+.searchhome .search-cancel {
+  display: none;
+  right: 200px;
+  top: 77.7%;
+  stroke: #333333;
+}
+
+
+.searchhome .ds-dropdown-menu .ds-suggestion{
+    width: 720px !important;
+}
+
+.searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu {
+  left: 336px!important;
+  box-shadow: none;
+}
+
+.searchhome .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu:before {
+    left: -295px;
+}
+
+.learnmoremobile {
+  display:none;
+  margin-top: 54px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 4px;
+  width: 265px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 85px;
+  font-size: 2em;
+}
+
+.sectionmessaging .learnmoremobile {
+  display: none;
+  margin-top: 176px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 4px;
+  width: 265px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 85px;
+  font-size: 2em;
+}
+
+.sectionchat .learnmoremobile{
+  display: none;
+  margin-top: 203px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 4px;
+  width: 265px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 85px;
+  font-size: 2em;
+}
+
+@media (max-width: 425px) {
+
+.aa-input-container {
+  display: none;
+}
+
+.metabanner {
+  width: 102%;
+}
+
+.searchhome .algolia-autocomplete{
+  float: left;
+}
+
+.searchhome .aa-input-search {
+  width: 309px;
+  margin-left: 59px;
+  padding: 12px 0px 12px 70px;
+}
+
+.searchhome .aa-input-icon {
+  display:none;
+}
+
+img.mockup{
+  width: 430px;
+}
+
+.section1 .row{
+  margin-top: 77px;
+  margin-right: 53px;
+  text-align: center;
+}
+
+.ourplatformdetails{
+  width: 331px;
+}
+
+.bottitle{
+  float:none;
+  margin-left: 19px;
+}
+
+.messagingtitle{
+  float: right;
+  font-size: 3.4em;
+  margin-top: 5px;
+  line-height: 1.2em;
+  width: 340px;
+  font-weight: bold;
+  margin-left: 27px;
+  margin-right: 37px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.chattitle{
+  float: left;
+  font-size: 4.4em;
+  margin-top: 6px;
+  line-height: 1.2em;
+  width: 400px;
+  font-weight: bold;
+  margin-left: 13px;
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.botdetail {
+  display: none;
+}
+
+.messagingdetail{
+  display:none;
+}
+
+.chatdetail{
+  display:none;
+}
+
+.learnmoremobile {
+  display: block;
+}
+
+.sectionmessaging .learnmoremobile {
+  display: block;
+}
+
+.sectionchat .learnmoremobile {
+  display:block;
+}
+
 }

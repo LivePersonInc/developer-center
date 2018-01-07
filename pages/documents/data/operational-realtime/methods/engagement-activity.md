@@ -16,9 +16,11 @@ Retrieves engagement activity-related metrics at the account, skill, or agent le
 
 *Example: If the time now is 13:29 and time frame is 7 minutes, the API will use 2 buckets: 13:25 and 13:30. In other words, in practice the time of the data is not 13:22-13:29, but 13:20-13:29.*
 
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+
 ### Request
 
-| Method | URL | 
+| Method | URL |
 | :-------- | :----- |
 | GET | `https://<domain>/operations/api/account/{accountID}/engactivity?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version>` |
 
@@ -30,7 +32,7 @@ Retrieves engagement activity-related metrics at the account, skill, or agent le
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skill/s' id/s. For each skill, the metrics will be grouped per agent and also in total for all the skills specified. When neither skill id nor agent ID are provided, metrics on the response will be calculated at the account level. <br> If there is no data for the specified skill/s, an object will be returned with an empty value for key: "metricsPerSkill" and "metricsTotal" key, with a map including all metrics valued zero. You can provide one or more skill IDs. <br> Example: skillIds=4,15,3. <br> To retrieve all skills active for the time period, use skillIds=all. | numeric, comma separated | optional |
 | agentIds | When provided, metrics on the response will be grouped by the requested agent/s' ID/s. The metrics will also be grouped in total for all specified agent/s' id/s. When neither skill id nor agent ID are provided, metrics on the response will be calculated at the account level. <br> If there is no data for the specified agent/s, an object will be returned with an empty value for key: "metricsPerAgent" and "metricsTotal" key, with a map including all metrics valued zero. You can provide one or more skillIDs. <br> Example: agentIds=4,15,3. <br> To retrieve all skills active for the time period, use agentIds=all. | numeric, comma separated | optional |
-| interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame, and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
+| interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame, and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
 
 ### Response
 

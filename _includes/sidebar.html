@@ -41,7 +41,9 @@
       </ul>
     </li>
   {% endif %}
-  <a class="report" href="https://github.com/LivePersonInc/developers-community/issues/new" target="_blank">Found an Issue?</a>
+<a class="report" href="https://github.com/LivePersonInc/developers-community/issues/new" target="_blank">Looking for Support?</a>
+    <!--<br>
+    <button type="button" onclick="window.open('https://github.com/LivePersonInc/developers-community/issues/new', '_blank');" class="contactusBtn">Need assistance?<br>Contact us via our GitHub space</button>=-->
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar.
@@ -70,4 +72,10 @@ if placed inside customscripts.js, the script runs before the sidebar code runs 
       }
 
     }
+</script>
+<script type="text/javascript">
+  document.write(
+    '<div class="visualping-container" style="height:118px;"><iframe id="iframe" src="https://visualping.io/externalfiles/widget/vpwidget.html?clientid=12&csspreselect=targetedcsstocrop&style=custom&url=' +
+    parent.document.URL +
+    '" width="230" height="118" ></iframe></div>');
 </script>

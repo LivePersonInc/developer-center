@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 5
+order: 40
 permalink: android-conversations-lifecycle.html
 
 indicator: messaging
@@ -18,7 +18,7 @@ LivePerson API:
 
 ```javascript
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
-public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Exception> callback) 
+public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Exception> callback)
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 public static void markConversationAsUrgent()
 public static void markConversationAsNormal()

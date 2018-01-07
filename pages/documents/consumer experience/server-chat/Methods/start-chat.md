@@ -51,12 +51,13 @@ Initiates a request to chat. If successful, a new chat session will be created, 
 | engagementId | The ID of the engagement.  | alphanumeric | |
 | campaignId | The campaign ID to be used in this chat. | alphanumeric | |
 | language | The language code of the auto messages to be used in this chat i.e. en-US. | alphanumeric | |
+| interactionTimeout | Setting the timeout for a user interaction in seconds. [optional] | numeric | |
 
 **Survey Body Parameters**
 
 | Name	| Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| question | Contains answer elements for the survey's question with this ID || | 
+| question | Contains answer elements for the survey's question with this ID || |
 | answer | Given answer for the container question. | alphanumeric | If the question is a multiselection type (CheckBox) it can contain more than one answer.|
 
 Request Body Example

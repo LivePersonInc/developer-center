@@ -1,6 +1,6 @@
 ---
 title: SMS via In-App Messaging
-level1: Products
+level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
@@ -28,7 +28,7 @@ This document will review the benefits of SMS via in-app messaging in addition t
 
 ### How the capability works
 
-When a consumer visits a brand’s app, they will see the option to message within the app. Upon clicking the ‘message’ button, they will be immediately sent to their native SMS messaging app and can seamlessly start messaging with the brand. This is in contrast to the In-App Messaging SDK, which would keep the consumer within the app for an in-app messaging experience.
+When a consumer visits a brand’s app, they will see the option to message within the app. Upon clicking the 'message’ button, they will be immediately sent to their native SMS messaging app and can seamlessly start messaging with the brand. This is in contrast to the In-App Messaging SDK, which would keep the consumer within the app for an in-app messaging experience.
 
 ### Prerequisites for using the solution
 

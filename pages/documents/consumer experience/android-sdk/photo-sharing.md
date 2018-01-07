@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Advanced Features
 
-order: 280
+order: 285
 permalink: android-photo-sharing.html
 
 indicator: messaging
@@ -14,8 +14,7 @@ indicator: messaging
 
 ### Overview
 
-This section describes the photo sharing behavior and configurations in the Messaging SDK.
-You can find all the related configurations in the resources ID table, under Photo Sharing. 
+This section describes the photo sharing behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under Photo Sharing.
 
 **Notes:**
 
@@ -29,7 +28,7 @@ You can find all the related configurations in the resources ID table, under Pho
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false. 
+To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account**.
 
 ###  Upload Photo
 
@@ -37,16 +36,16 @@ To upload a photo, press on the "attach" button next to the "enter message" edit
 
 ![Photosharing1](img/photosharing1.png)
 
-A menu will open with 2 options: Gallery and Camera. If the user had set a default app for any of those action- it will be open by default. Otherwise Android OS will open a popup menu with all the available apps for the relevant category (gallery or camera). 
+A menu will open with 2 options: Gallery and Camera. If the user had set a default app for any of those action- it will be open by default. Otherwise Android OS will open a popup menu with all the available apps for the relevant category (gallery or camera).
 
 ![Photosharing2](img/photosharing2.png)
 
-Changing the background color of the attachment menu is available with configuration : 
+Changing the background color of the attachment menu is available with configuration :
 ```<color name="attachment_menu_item_background_color">```
-Changing the text of Gallery/Camera: 
+Changing the text of Gallery/Camera:
 ```<string name="lp_accessibility_gallery">```
 ```<string name="lp_accessibility_camera">```
 
-### Advanced features 
+### Advanced features
 
 More advanced configurations (image size, compression rate, etc..) can be found under Photo Sharing in the Configuring the SDK section.remo

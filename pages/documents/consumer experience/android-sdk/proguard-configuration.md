@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Configuration
 
-order: 9
+order: 80
 permalink: android-proguard.html
 
 indicator: messaging

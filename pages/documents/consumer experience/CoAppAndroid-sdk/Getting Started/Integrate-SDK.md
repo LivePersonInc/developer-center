@@ -15,7 +15,7 @@ In order to use the Voice & Video SDK within your project, you need to have the 
 
 ### Setting up with Gradle (recommended)
 
-**NOTE: Gradle installation is currently not publicly available**!
+**NOTE: Gradle installation is currently not publicly available as this SDK is in BETA**!
 
 To add the SDK to your project, just add the following dependency to your `build.gradle`:
 
@@ -33,7 +33,7 @@ android {
     ...
     repositories {
         ...
-        flatDirs {
+        flatDir {
             dirs 'libs' // i.e. if LPCoapp-SDK-Android-0.1.0-release.aar resides in <your-project>/libs
         }
     }
@@ -41,7 +41,7 @@ android {
 
 dependencies {
     ...
-    compile(name:'LPCoapp-SDK-Android-0.1.0-release.aar', ext:'aar')
+    compile(name:'LPCoapp-SDK-Android-0.1.0-release', ext:'aar')
     // add 3rd-party dependency for Dexter as well
     compile 'com.karumi:dexter:2.3.1'
 }

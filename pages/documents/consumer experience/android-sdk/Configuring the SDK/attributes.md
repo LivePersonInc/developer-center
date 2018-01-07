@@ -6,15 +6,17 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Customization and Branding
 
-order: 264
+order: 160
 permalink: android-attributes.html
 
 indicator: messaging
 ---
+The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
+
 
 ### Brand
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -51,7 +53,7 @@ indicator: messaging
 
 ### Brand Message Bubble - the first brand message
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -110,13 +112,37 @@ indicator: messaging
     <td>#007AFF (light blue)</td>
     <td><img src="img/logobackgroundcolor.png" alt="logobackgroundcolor"></td>
   </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_right&quot;&gt;</td>
+    <td>Brand's welcome message bubble right padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_right_padding.png" alt="brand_bubble_right_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_left&quot;&gt;</td>
+    <td>Brand's welcome message bubble left padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_left_padding.png" alt="brand_bubble_left_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_top&quot;&gt;</td>
+    <td>Brand's welcome message bubble top padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_top_padding.png" alt="brand_bubble_top_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_bottom&quot;&gt;</td>
+    <td>Brand's welcome message bubble bottom padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding"></td>
+  </tr>
 </tbody>
 </table>
 
 
 ### Agent Message Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -252,14 +278,37 @@ indicator: messaging
     <td>#004DC9 (blue)</td>
     <td><img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor"></td>
   </tr>
-
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_right&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble right padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_right_padding.png" alt="agent_bubble_right_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_left&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble left padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_left_padding.png" alt="agent_bubble_left_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_top&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble top padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_top_padding.png" alt="agent_bubble_top_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_bottom&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble bottom padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding"></td>
+  </tr>
 </tbody>
 </table>
 
 
 ### Consumer Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -367,13 +416,37 @@ indicator: messaging
     <td>#949596 (gray)</td>
     <td><img src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor"></td>
   </tr>
-</tbody>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_right&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble right padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_right_padding.png" alt="consumer_bubble_right_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_left&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble left padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_left_padding.png" alt="consumer_bubble_left_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_top&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble top padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_top_padding.png" alt="consumer_bubble_top_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_bottom&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble bottom padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_bottom_padding.png" alt="consumer_bubble_bottom_padding"></td>
+  </tr>
+  </tbody>
 </table>
 
 
 ### System messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -384,15 +457,31 @@ indicator: messaging
 </thead>
 <tbody>  
   <tr>
-    <td>&lt;color name=&quot;system_bubble_text_color&quot;&gt;
-</td>
+    <td>&lt;color name=&quot;system_bubble_text_color&quot;&gt;</td>
     <td>Color code for the text of the system messages.</td>
     <td>#46474A (dark gray)</td>
     <td><img src="img/conversation_separator_text_color.png" alt="separatortextcolor"></td>
   </tr>
   <tr>
-    <td>&lt;bool name=&quot;enable_conversation_resolved_message&quot;&gt;
-</td>
+    <td>&lt;dimen name=&quot;bubble_system_resolved_text_size&quot;&gt;</td>
+    <td>Conversation resolved message text size.</td>
+    <td>12sp</td>
+    <td><img src="img/android_resolved_message_text_size.png" alt="resolved_message_text_size"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;bubble_system_resolved_padding&quot;&gt;</td>
+    <td>Conversation resolved message padding.</td>
+    <td>4sp</td>
+    <td><img src="img/android_resolved_message_padding.png" alt="resolved_message_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;bubble_system_resolved_line_spacing&quot;&gt;</td>
+    <td>Conversation resolved message line spacing.</td>
+    <td>0dp</td>
+    <td><img src="img/android_resolved_message_line_spacing.png" alt="resolved_message_line_spacing"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enable_conversation_resolved_message&quot;&gt;</td>
     <td>Enable/disable the conversation resolved message</td>
     <td>true</td>
     <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
@@ -414,10 +503,32 @@ indicator: messaging
 </tbody>
 </table>
 
+### Automatic Messages
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;color name=&quot;conversation_controller_message_text_color&quot;&gt;
+</td>
+    <td>Color code for the text of the automatic messages.</td>
+    <td>#5b5c5e (dark gray)</td>
+    <td><img src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller"></td>
+  </tr>
+</tbody>
+</table>
+
 
 ### Unread messages indicator Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -449,9 +560,101 @@ indicator: messaging
 </table>
 
 
+
+### Bubbles Corner Radius
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+    &lt;dimen name=&quot;end_bubble_bottom_left_radius&quot;&gt; <br />
+    &lt;dimen name=&quot;end_bubble_top_left_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;end_bubble_top_right_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;end_bubble_bottom_right_radius&quot;&gt;   
+    </td>
+    <td>Define the corners radius of all the consumer bubbles (on the right side) </td>
+    <td>10dp, bottom_right is 0dp </td>
+    <td><img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer"></td>
+
+  </tr>
+  <tr>
+    <td>
+    &lt;dimen name=&quot;start_bubble_bottom_left_radius&quot;&gt; <br />
+    &lt;dimen name=&quot;start_bubble_top_left_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;start_bubble_top_right_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;start_bubble_bottom_right_radius&quot;&gt;   
+    </td>
+    <td>Define the corners radius of all the agent/brand bubbles (on the left side) </td>
+    <td>10dp, bottom_left is 0dp </td>
+    <td><img src="img/strokewidth.png" alt="strokewidth_agnet"></td>
+
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;unread_indicator_bubble_radius&quot;&gt; </td>
+    <td>Define the corners radius of the unread messages bubble.</td>
+    <td>20dp for all the corners</td>  
+    <td><img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor"></td>  
+
+  </tr>
+
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_radius&quot;&gt;
+     </td>
+    <td>Define the left top and the left bottom corners radius of the scroll down indicator.</td>
+    <td>20dp for left top and the left bottom the corners</td>
+    <td><img src="img/indicatorenabled.png" alt="indicatorenabled"></td>
+
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_counter_radius&quot;&gt;
+     </td>
+    <td>Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
+    <td>20dp for all the corners</td>  
+    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"></td>
+
+  </tr>
+
+</tbody>
+</table>
+
+### Date Headers
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&lt;color name=&quot;lp_header_text_color&quot;&gt;</td>
+    <td>Day/date header text color</td>
+    <td>Dark gray (#46474a)</td>
+    <td><img src="img/android_header_text_color.png" alt="header_text_color"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_header_background_color&quot;&gt;</td>
+    <td>Day/date header background color</td>
+    <td>@android:color/white</td>
+    <td><img src="img/android_header_background_color.png" alt="header_background_color"></td>
+  </tr>
+</tbody>
+</table>
+
 ### Survey screen
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -613,13 +816,13 @@ indicator: messaging
   </tr>
   <tr>
     <td>&lt;bool name=&quot;show_agent_details_csat&quot;&gt;</td>
-    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide) <br> NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
     <td>true</td>
     <td><img src="img/showyesno.png" alt="showyesno"></td>
   </tr>
   <tr>
     <td>&lt;bool name=&quot;show_yes_no_question&quot;&gt;</td>
-    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide)</br>NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
+    <td>Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide) <br> NOTE: if both show_yes_no_question and show_agent_details_csat are set to true, show_yes_no_question will be ignored and will not be visible.</td>
     <td>true</td>
     <td><img src="img/showyesno.png" alt="showyesno"></td>
   </tr>
@@ -635,7 +838,7 @@ indicator: messaging
 
 ### Message Edit Text
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -687,7 +890,7 @@ indicator: messaging
 
 ### Connection status bar
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -727,7 +930,7 @@ indicator: messaging
 
 ### In page navigation -  Scroll down indicator
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -797,7 +1000,7 @@ indicator: messaging
 
 ### Photo Sharing
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -873,7 +1076,7 @@ indicator: messaging
 
 ### General Style
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -915,7 +1118,7 @@ indicator: messaging
 
 ### Conversation Activity Style - (activity mode only!)
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -939,13 +1142,20 @@ indicator: messaging
     <td>android:colorPrimaryDark</td>
     <td></td>
   </tr>
-</tbody>
+  <tr>
+    <td>&lt;color name=&quot;lp_textColorSecondary&quot;&gt;
+  </td>
+    <td>Define the color of menu button and back arrow on toolbar.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/android_secondary_color.png" alt="secondarycolor"></td>
+  </tr>
+  </tbody>
 </table>
 
 
 ### Accessibility
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -961,12 +1171,45 @@ indicator: messaging
     <td>60,000</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;announce_agent_typing&quot;&gt;</td>
+    <td>Announce when the agent is typing. This is applicable only in Activity mode</td>
+    <td>true</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
 ### Custom Fonts
 
-<table>
+<table class="bigtable">
+<thead>
+ <tr>
+   <th>Name</th>
+   <th>Description</th>
+   <th>Default</th>
+   <th>Example</th>
+ </tr>
+</thead>
+<tbody>  
+   <tr>
+     <td>&lt;string name=&quot;custom_font_name_conversation_feed&quot;&gt;</td>
+     <td>The font name for all conversation feed’s element.</td>
+     <td>Empty (use the device font)</td>
+     <td>sans-serif-thin</td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;</td>
+    <td>The font name for all elements that are not in the conversation feed.</td>
+    <td>Empty (use the device font)</td>
+    <td>customFont.ttf</td>
+  </tr>
+</tbody>
+</table>
+
+### Structured Content
+
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -976,28 +1219,54 @@ indicator: messaging
   </tr>
 </thead>
 <tbody>  
-  <tr>
-    <td>&lt;string name=&quot;custom_font_name_conversation_feed&quot;&gt;
-</td>
-    <td>The font name for all conversation feed’s element.</td>
-    <td>Empty (use the device font)</td>
-    <td>sans-serif-thin</td>
-  </tr>
-  <tr>
-    <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;
-</td>
-    <td>The font name for all elements that are not in the conversation feed.</td>
-    <td>Empty (use the device font)</td>
-    <td>customFont.ttf</td>
-  </tr>
-</tbody>
-</table>
 
+<tr>
+  <td>&lt;bool name=&quot;enable_structured_content&quot;&gt;
+</td>
+  <td>Enable/Disable structured content feature</td>
+  <td>false</td>
+  <td></td>
+</tr>
+
+  <tr>
+    <td>&lt;color name=&quot;structured_content_border_color&quot;&gt;
+</td>
+    <td>Color code for the structured content bubble outline color.</td>
+    <td>#EDEDED (light gray)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_border_width&quot;&gt;
+  </td>
+    <td>Integer in dp for the bubble stroke width of the structured content bubble.</td>
+    <td>1dp</td>
+    <td></td>
+  </tr>  
+  <tr>
+    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
+    <td>Integer that defines the zoom level of the structured content map view. Refer to <a href="https://developers.google.com/maps/documentation/android-api/views#zoom" target="_blank">[Google map API]</a> for details)</td>
+    <td>18</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;structured_content_link_as_callback&quot;&gt;</td>
+    <td>Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent)</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_google_maps_key&quot;&gt;</td>
+    <td>Set the host app's Google Map key to enable map views in Structured Content</td>
+    <td>no value</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
 
 
 ### Miscellaneous
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1066,6 +1335,7 @@ indicator: messaging
     <td>Set the time in seconds before the first the TTR snackbar will be displayed</td>
     <td>10</td>
     <td></td>
+    </tr>
   <tr>
     <td>&lt;bool name=&quot;send_agent_profile_updates_when_conversation_closed&quot;&gt;</td>
     <td>When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. </td>
@@ -1105,7 +1375,7 @@ indicator: messaging
   <tr>
     <td>&lt;string name=&quot;client_only_mask_character&quot;&gt;</td>
     <td>The character used to mask client only string.</td>
-    <td>‘*’</td>
+    <td>'*’</td>
     <td></td>
   </tr>
   <tr>
@@ -1117,7 +1387,7 @@ indicator: messaging
   <tr>
     <td>&lt;string name=&quot;real_time_mask_character&quot;&gt;</td>
     <td>The character used to mask the real time message.</td>
-    <td>‘*’</td>
+    <td>'*'</td>
     <td><img src="img/realtimemaskcharacter.png" alt="realtimemaskcharacter"></td>
   </tr>
   <tr>
@@ -1140,19 +1410,19 @@ indicator: messaging
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_date_format&quot;&gt;</td>
-    <td>Define date format. More info here.</td>
+    <td>Define date format.</td>
     <td>No value</td>
     <td></td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_time_format&quot;&gt;</td>
-    <td>Define time format . More info here.</td>
+    <td>Define time format.</td>
     <td>No value</td>
     <td></td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;lp_date_time_format&quot;&gt;</td>
-    <td>Define date-time format. More info here.</td>
+    <td>Define date-time format.</td>
     <td>No value</td>
     <td></td>
   </tr>
@@ -1162,6 +1432,18 @@ indicator: messaging
     <td>60</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;pci_form_hide_logo&quot;&gt;</td>
+    <td>Define if to hide logo inside the pci secure form web view</td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;pci_form_font_name&quot;&gt;</td>
+    <td>Define the font of the pci secure form, by default - empty, use device's default</td>
+    <td></td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
@@ -1169,21 +1451,21 @@ indicator: messaging
 
 ### Deprecated Attributes
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
     <th>Description</th>
+  </tr>
 </thead>
 <tbody>    
-  </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_name&quot;&gt;</td>
     <td>Custom button icon filename without extension. This will be displayed on the toolbar.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_description&quot;&gt;</td>
-    <td>Content description for custom button.It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
+    <td>Content description for custom button. It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>

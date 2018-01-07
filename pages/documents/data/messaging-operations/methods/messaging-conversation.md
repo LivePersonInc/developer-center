@@ -16,17 +16,19 @@ Messaging Conversation is calculated using bucket aggregation techniques where e
 
 **Example**: If the time is now 13:29 and time frame is 7 minutes the API will use 2 buckets: 13:25 and 13:30. In other words in practice the time of the data is not 13:22-13:29 but 13:20-13:29.
 
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+
 ### Retrieving Messaging Conversation Data by Account and Skills
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://<domain>/operations/api/account/{accountID}/msgconversation?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version> |
+| GET | https://{domain}/operations/api/account/{accountID}/msgconversation?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version> |
 
  - Use POST request to pass a long list of agentIds
 
 | Method | URL | BODY (Json) |
 | :------ | :---- | :---- |
-| POST | `https://<domain>/operations/api/account/{accountID}/agentactivity` | `{"timeframe":"<timeframe in minutes>" , "skillIds":"<skillIds>", "agentIds":"<comma seperated agent ids list>", "interval":"<interval size in minutes>" , "v":"<version>" }` |
+| POST | `https://<domain>/operations/api/account/{accountID}/msgconversation` | `{"timeframe":"<timeframe in minutes>" , "skillIds":"<skillIds>", "agentIds":"<comma seperated agent ids list>", "interval":"<interval size in minutes>" , "v":"<version>" }` |
 
  - Example: `{"timeframe":"1440","v":"1","agentIds":"2152260212,2152260212","interval":"1440","skillIds":"1,2"}`
 

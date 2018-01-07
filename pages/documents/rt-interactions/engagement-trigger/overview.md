@@ -9,7 +9,7 @@ permalink: trigger-overview.html
 root-link: true
 level-order: 7
 
-indicator:
+indicator: both
 ---
 ### Introduction
 
@@ -22,6 +22,8 @@ API namespace: ```lpTag.taglets.rendererStub```
 A few things you'll need to get started with this API:
 
 1. [The API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
+2. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
 
 
 

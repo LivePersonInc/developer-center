@@ -12,6 +12,8 @@ order: 20
 indicator: both
 ---
 
+_Note_: as a Best Practice recommendation, it is best to call this method every three to five minutes to make sure the Login Service stays refreshed.
+
 ### Request
 
 | Method | URL |
@@ -37,7 +39,7 @@ indicator: both
 | :--- | :--- |
 | csrf | CSRF - Taken from the Login response body. |
 
-Example: 
+Example:
 
     {
         "csrf":"87f9c1e535b03494194d0b5e76b48ca8f4497114a8ba20afb22a67f375a29adb"

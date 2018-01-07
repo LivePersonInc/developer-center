@@ -50,7 +50,7 @@ CSAT screen includes several content containers:
 
 - Always visible - can’t configure its visibility. 
 - Stars color is defined by `LPConfig.defaultConfiguration.csatRatingButtonSelectedColor`
-- Rating question includes ‘Agent’ by default in the text. If conversation has assigned agent and the agent’s nickName is not empty, this nickName will be used instead.
+- Rating question includes 'Agent’ by default in the text. If conversation has assigned agent and the agent’s nickName is not empty, this nickName will be used instead.
 
 **Resolution Confirmation View (yes/no)**
 
