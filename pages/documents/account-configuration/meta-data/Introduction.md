@@ -1,16 +1,16 @@
 ---
 title: Introduction
 level1: Documents
-level2: Account Configuration
-level3: Meta Data API
 
+level3: Meta Data API
 permalink: account-configuration-meta-data-introduction.html
 root-link: true
-level-order: 3
+level-order: 6
 order: 1
 indicator: both
 ---
-This document covers the LiveEngage (LE) Meta Data backend logic and the capabilities and description of its various APIs. The purpose of meta data is to allow actions across multiple types or actions which are not spcific to single type.
+
+This document covers the LiveEngage (LE) Meta Data backend logic and the capabilities and description of its various APIs. The purpose of meta data is to allow actions across multiple types of engagements or actions which are not specific to single type.
 
 ### Getting Started
 
