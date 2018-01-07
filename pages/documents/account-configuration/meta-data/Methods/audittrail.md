@@ -10,52 +10,31 @@ order: 50
 indicator: both
 ---
 
-### Description
-
 Get account's audit trail records
 
-### URI
+### Request
 
-/api/account/{accountId}/configuration/metadata/audit
+| Method | URL |
+| :-------- | :------ |
+| POST | /api/account/{accountId}/configuration/metadata/audit |
 
-### HTTP Methods
+**Request Headers**
 
-POST
+| Header | Description |
+| :------- | :-------------- |
+|Authorization | Contains token string to allow request authentication and authorization. See the introduction doc for more details. |
 
-### Response Codes
+**Path Parameters**
 
-200 OK
+|Parameter|  Description|  Type|  Notes| 
+|:----------|  :--------------|  :--------------|  :---| 
+|accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
 
-400 Bad Request
-
-401 Not Authorized
-
-403 Forbidden
-
-500 Internal server error
-
-### Formats
-
-JSON
-
-### Path Parameters
-
-|Parameter|Description|Notes|
-| :--- | :--- | :--- |
-|accountId|LP site id|Validation fail error code: 400<br>Type: String ^[a-zA-Z0-9_]{1,20}$|
-
-
-### Query Parameters
+**Query Parameters**
 
 N/A
 
-### Request Headers
-
-|Header|Description|
-| :--- | :--- |
-|Authorization|Contains token string to allow request authentication and authorization. See the introduction doc for more details.|
-
-###Request Body
+**Request Body**
 
 Contains a json object with single "query" field which define the requested graphql query for api auditData
 and the fields subselect. For details see [graphql website](http://graphql.org/)
@@ -78,7 +57,8 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
               originatorIsLpa}}"}
 ```
 
-### Optional graphql parameters
+**Optional graphql parameters**
+
 |name|Description|Notes|
 | :--- | :--- | :--- |
 |fromDate|Start date for filtering|Format: yyyy-MM-dd|
@@ -94,13 +74,31 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 |lpa|Boolean, Include changes done by LPAs in the results|Default: false|
 |automaticUpdates|Boolean, Include automatic updates in the results|Default: false|
 
-### Response Headers
+### Response
+
+**Response type**
+
+JSON
+
+**Response Headers**
+
 |Header|Description|
 | :--- | :--- |
 |X-Total-Count|Contains the count of returned audit items|
 
+**Response Codes**
 
-### Response Body
+| Code | Description |
+| :----- | :------------ |
+| 200 | OK |
+| 400 | Bad Request |
+| 401 | Not Authenticated |
+| 403 | Not Authorized |
+| 500 | Internal Server Error |
+
+
+**Response Body**
+
 ```json
 {
   "data": {

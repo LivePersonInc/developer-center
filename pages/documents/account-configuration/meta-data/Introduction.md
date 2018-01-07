@@ -2,21 +2,21 @@
 title: Introduction
 level1: Documents
 level2: Account Configuration
-level3: Predefined Categories API
+level3: Meta Data API
 
-permalink: account-configuration-categories-introduction.html
+permalink: account-configuration-meta-data-introduction.html
 root-link: true
 level-order: 3
 order: 1
 indicator: both
 ---
-This document covers the LiveEngage (LE) Categories backend logic and the capabilities and description of the Predefined Categories API. The purpose of Predefined Categories is to group LE **Predefined Content** elements by category in order to allow personalization of the user’s experience. The API allows you to manipulate this grouping in order to edit, remove or create new Predefined Categories or retrieve information on single/multiple categories more easily.
+This document covers the LiveEngage (LE) Meta Data backend logic and the capabilities and description of its various APIs. The purpose of meta data is to allow actions across multiple types or actions which are not spcific to single type.
 
 ### Getting Started
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
     * Read only: accountConfigReadOnly
 
@@ -24,12 +24,12 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-    * **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html){:target="_blank"}. Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+    * **Log a user into LiveEngage** using the [Login Service API](https://developers.liveperson.com/login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-    * [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+    * [Follow these instructions](https://developers.liveperson.com/guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Authentication
 
-This API supports both LP OAuth1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](https://developers.liveperson.com/guides-gettingstarted.html){:target="_blank"}.
+This API supports both LP OAuth1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](https://developers.liveperson.com/guides-gettingstarted.html).
