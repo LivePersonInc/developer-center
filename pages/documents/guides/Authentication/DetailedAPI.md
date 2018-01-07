@@ -11,7 +11,11 @@ indicator: both
 
 ### Web Interaction Embedded Window API
 
-In this use case, it is the Customer’s Web App responsibility to generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
+In order to enable targeting for messaging engagements, configure the CustomerId Engagement Attribute in order to identify the visitor utilizing LivePerson’s backend authentication services. The CustomerId variable is part of CustomerInfo Engagement Attribute set. It is not used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor.
+
+By attributing the conversation to the CustomerID, new incoming messages will be delivered and displayed as a window in a minimized state, with new message notifications.
+
+In this use case, it is the Customer’s Web App responsibility to set the customerId and generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
 
 The callback method accepts two parameters:
 
@@ -26,6 +30,14 @@ The Customer web page method name can be either the default LivePerson method na
 **Code Example**
 
 ```javascript
+    log("set customerId");
+    lpTag.sdes.push({
+        "type": "ctmrinfo",
+        "info": {
+            "customerId": customerId
+        }
+    });
+
     var lpMethods = {
         lpGetAuthenticationToken: function(callback) {
             log("LP asked for id_token");
