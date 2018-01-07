@@ -131,17 +131,6 @@ sequenceList         | The sequence of the message the status refers to | Array[
             }
         },
         {
-            "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
-            "serverTimestamp": 1501399101110,
-            "event": {
-                "type": "AcceptStatusEvent",
-                "status": "ACCEPT",
-                "sequenceList": [
-                    0
-                ]
-            }
-        },
-        {
             "sequence": 4,
             "originatorId": "5fd32975-1874-5db2-a1eb-affbbe99cc98",
             "serverTimestamp": 1514985573710,
@@ -205,6 +194,17 @@ sequenceList         | The sequence of the message the status refers to | Array[
                 "status": "READ",
                 "sequenceList": [
                     3
+                ]
+            }
+        },
+        {
+            "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
+            "serverTimestamp": 1501399101110,
+            "event": {
+                "type": "AcceptStatusEvent",
+                "status": "ACCEPT",
+                "sequenceList": [
+                    0
                 ]
             }
         }
