@@ -58,6 +58,7 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 ```
 
 **Optional graphql parameters**
+
 |name|Description|Notes|
 | :--- | :--- | :--- |
 |fromDate|Start date for filtering|Format: yyyy-MM-dd|
