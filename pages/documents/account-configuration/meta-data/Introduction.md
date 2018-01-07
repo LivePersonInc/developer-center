@@ -16,7 +16,7 @@ This document covers the LiveEngage (LE) Meta Data backend logic and the capabil
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
     * Read only: accountConfigReadOnly
 
