@@ -16,14 +16,14 @@ This method retrieves the chat events, information and resources.
 
 ### Request
 
- |Method|  URL| 
+ |Method|  URL|
  |:---  |:--- |
  |GET|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}?v=1&NC=true |
 
 **Request Headers**
 
  |Header  |Description |
- |:---|  :---| 
+ |:---|  :---|
  |Authorization| Bearer {bearer-from-login} |
  |Content-Type|  application/json |
  |Accept|  application/json |
@@ -48,17 +48,17 @@ The body media type must have one of the following formats:
 | info         | Retrieves information regarding the current status of the chat.                                                                       | link relationship |
 | next         | The method for polling additional events. This will retrieve events added after your last poll.                                       | link relationship |
 | ``           | The chat events. See [Chat events](agent-retrieve-chat-events.html){:target="_blank"}.                                                                  | -                 |
-| ``           | The actual information about the chat. See [Chat information](agent-retrieve-chat-info.html){:target="_blank"}.                                           |                   | 
+| ``           | The actual information about the chat. See [Chat information](agent-retrieve-chat-info.html){:target="_blank"}.                                           |                   |
 
 **Response Codes**
 
 | Code|  Response |
- |:---|  :---| 
+ |:---|  :---|
  |200  |OK |
 
 Response example:
 
-```javascript
+```json
 {
   "info": {
    "link": {
@@ -92,14 +92,12 @@ Response example:
    }
   }
   }
-  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true
   {
   "availability": {
    "chat": "Online",
    "voice": "Offline"
   }
   }
-  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true
   {"availability": {"chat": "Online"}}
   {
   "availableAgents": {
@@ -226,13 +224,10 @@ Response example:
          "@id": "26729413",
          "@chatState": "1",
          "@voiceState": "1",
-  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/availableAgents?v=1&NC=true
-  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/availableSlots?v=1&NC=true
+       }
   {
   "availableSlots": 1
   }
-  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chatSessions?v=1&NC=true
-  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}
   {
   "chat": {
    "link": [
@@ -279,5 +274,6 @@ Response example:
          "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events",
          "@rel": "self"
        },
-{
+     ]}
+}
 ```
