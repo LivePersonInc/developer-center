@@ -652,6 +652,13 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"><img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode"></td>
     <td align="left">true</td>
   </tr>
+  <tr>
+    <td align="left">messageStatusNumericTimestampOnly</td>
+    <td align="left">Bool</td>
+    <td align="left">When false (default), time stamps will display information relative to when sent/distributed/read (e.g. 'sent 5 minutes ago'. When true, will show as numeric only (e.g. '11:32').</td>
+    <td align="left"><img src="messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly"></td>
+    <td align="left">true</td>
+  </tr>
 </tbody>
 </table>
 
