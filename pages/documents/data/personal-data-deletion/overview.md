@@ -78,7 +78,7 @@ The brand will need to follow the below steps to achieve this:
 
 ### Limitations:
 
-The following is not supported in the current beta phase:
+1. The following is not supported in the current beta phase:
 
  * For messaging only - messaging conversations are still not deleted from one of LP's messaging repositories.
 
@@ -86,4 +86,6 @@ The following is not supported in the current beta phase:
  
  * Secure form data is not deleted.
  
- * Authentication via login will be available during the beta period.
+2. Authentication via login will be available during the beta period.
+
+3. This API is not aimed for massive deletion of data, there is interanl mechanism that will protect the system from such misuse of the API.
