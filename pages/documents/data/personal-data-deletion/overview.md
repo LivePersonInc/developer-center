@@ -80,7 +80,7 @@ The brand will need to follow the below steps to achieve this:
 
 1. The following is not supported in the current beta phase:
 
- * For messaging only - messaging conversations are still not deleted from one of LP's messaging repositories.
+ * For messaging only - messaging conversations are still stored in one of LP's messaging repositories and therefore once entering a closed conversation from the “all connections” tab to view the conversation in its full view you will be able to see the entire transcript even after the deletion process.
 
  * Photo / file sharing data is not deleted.
  
