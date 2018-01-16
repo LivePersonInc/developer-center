@@ -58,5 +58,5 @@ Download the Sample App from the following [Github repository](https://github.co
 ####  Prerequisites for authentication flow
 
 - In our Sample App project there is an example of using [Auth0](https://auth0.com/) with liveEngage authenticated visitors flow.
-- Inside script.js you will find two parameters: AUTH0_CLIENT_ID, AUTH0_DOMAIN fill them with your own data.
-- Fill the correct data in the [Data Sources](/guides-authentication-configuration.html){:target="_blank"} section on liveEngage;
+- Inside script.js you will find two parameters: AUTH0_CLIENT_ID, AUTH0_DOMAIN, fill them with your own data.
+- Fill the correct data in the [Data Sources](/guides-authentication-configuration.html){:target="_blank"} section on LiveEngage;
