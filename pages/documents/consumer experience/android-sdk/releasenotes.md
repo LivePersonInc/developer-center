@@ -11,6 +11,124 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+### In-App Messaging SDK Version 2.9 for android
+
+These are the main feature releases available in the In-App Messaging SDK version 2.9 for Android.
+
+Version 2.9 planned roll-out: November 12th 2017
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+
+### New functionalities
+
+#### Oreo Support - Android API Level Support Update
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 was built and certified within the host app on Android API level 26.
+
+The In-app Messaging SDK should remain on Android API level 25, while the host app may use Android API level 26.
+
+**Important:**
+
+The SDK Android API level should remain on level 25. Please do not change SDK Android API level to 26; support for this level 26 will be provided in 2018.
+
+### New parameters
+
+#### Branding and Configuration Parameters
+
+**Type:** Parameters
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 exposes additional branding configuration parameters.
+
+New parameters may control text, padding of conversation UI elements and more.
+
+<table>
+<thead>
+ <tr>
+ <th>Parameter name and default value</th>
+ <th>Description</th>
+ <th>Image</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>&lt;color name="lp_header_background_color"&gt;@android:color/white (#FFFFFF)</td>
+ <td>Day/date sticky header background color.</td>
+ <td><img src="img/androidheaderbackground.png" alt="androidheaderbackground"></td>
+ </tr>
+ <tr>
+ <td>&lt;color name="lp_header_text_color"&gt;@color/lp_dark_gray_1 (#46474a)</td>
+ <td>Day/date sticky header text color.</td>
+ <td><img src="img/androidtextcolor.png" alt="androidtextcolor"></td>
+ </tr>
+ <tr>
+ <td>&lt;color name="lp_textColorSecondary"&gt;@android:color/black (#000000)</td>
+ <td>Color of menu button and back arrow on toolbar (Activity Mode).</td>
+ <td><img src="img/textcolorsecondary.png" alt="lp_textColorSecondary"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="brand_bubble_padding_bottom"&gt;8dp</td>
+ <td>Brand welcome message bubble (brand) bottom spacing.</td>
+ <td><img src="img/androidpaddingbottom.png" alt="androidpaddingbottom"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="brand_bubble_padding_left"&gt;8dp</td>
+ <td>Brand welcome message bubble (brand) left spacing.</td>
+ <td><img src="img/androidpaddingleft.png" alt="androidpaddingleft"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="brand_bubble_padding_right"&gt;8dp</td>
+ <td>Brand welcome message bubble (brand) right spacing.</td>
+ <td><img src="img/androidpaddingright.png" alt="androidpaddingright"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="brand_bubble_padding_top"&gt;8dp</td>
+ <td>Brand welcome message bubble (brand) top spacing.</td>
+ <td><img src="img/androidpaddingtop.png" alt="androidpaddingtop"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_line_spacing"&gt;0dp</td>
+ <td>Resolve message spacing from above.</td>
+ <td><img src="img/linespacing.png" alt="linespacing"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half (4dp)</td>
+ <td>Resolve message spacing from below.</td>
+ <td><img src="img/systemresolved.png" alt="systemresolved"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size (12sp)</td>
+ <td>Resolve message text size.</td>
+ <td><img src="img/androidtextsize.png" alt="androidtextsize"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="chat_bubble_padding_bottom"&gt;8dp</td>
+ <td>Conversation message (agent / consumer) bottom spacing.</td>
+ <td><img src="img/androidbubblepaddingbottom.png" alt="androidbubblepaddingbottom"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="chat_bubble_padding_left"&gt;8dp</td>
+ <td>Conversation message (agent / consumer) left spacing.</td>
+ <td><img src="img/androidbubblepaddingleft.png" alt="androidbubblepaddingleft"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="chat_bubble_padding_right"&gt;8dp</td>
+ <td>Conversation message (agent / consumer) right spacing.</td>
+ <td><img src="img/androidbubblepaddingright.png" alt="androidbubblepaddingright"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="chat_bubble_padding_top"&gt;8dp</td>
+ <td>Conversation message (agent / consumer) top padding</td>
+ <td><img src="img/androidbubblepaddingtop.png" alt="androidbubblepaddingtop"></td>
+ </tr>
+ </tbody>
+</table>
+
 ### In-App Messaging SDK version 2.8 for Android
 
 These are the main feature releases available in the In-App Messaging SDK version 2.8 for Android.
@@ -137,13 +255,10 @@ The unread messages number is passed to the SDK through LP Push service with eve
 :
 The number of unread messages are fetched by the API from the pusher regardless of whether it’s registered to the LP push service.
 
-**How​ ​to​ ​enable​ ​the​ ​unread​ ​messages​ ​counter**
+**Getting the unread message badge counter**
 
-There are two options to set up this counter:
-
-1. If the time condition is met, a REST request is performed to get the counter from the pusher
-
-2. Return the cached number on the app
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,
+it will be fetched again with new data.
 
 **Parameters**​:
 
@@ -178,7 +293,7 @@ The following properties for structured content can now be configured:
 
 |Name|Description|Default|
 |----|-----------|-------|
-|<bool name="enable_structured_content">|Enable or Disable toggle for Structured Content feature in conversations.|True|
+|&lt;bool name="enable_structured_content"&gt;|Enable or Disable toggle for Structured Content feature in conversations.|True|
 
 ### New APIs
 

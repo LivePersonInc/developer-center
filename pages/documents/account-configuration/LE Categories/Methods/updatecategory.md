@@ -153,7 +153,7 @@ Notes**:**
 
 **Response Body**
 
-Updated category data, depends on the ‘return’ query parameter
+Updated category data, depends on the 'return’ query parameter
 
 Update order example (based on the above request body):
 

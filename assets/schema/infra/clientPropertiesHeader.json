@@ -79,7 +79,7 @@
           "description":"Some of the client capablities are not supported by default. In order to enable them, the client should include the feature name in this field.",
           "items": {
             "type":"string",
-            "enum":[ "CO_BROWSE", "CO_APP", "PHOTO_SHARING", "SECURE_FORMS" ]
+            "enum":[ "CO_BROWSE", "CO_APP", "PHOTO_SHARING", "SECURE_FORMS", "AUTO_MESSAGES", "RICH_CONTENT"]
           }
         }
     },

@@ -50,6 +50,6 @@ In order to use your app with your LiveEngage account, you need to register it. 
   3. Save changes
 
 ![Data Sources Apps5](img/le_campaigns_datasources_apps_05.png)
-_Note_: If you followed the [VoIP Example Setup](VoIP-Configuration), these are `myvoipapp-certificate.pem` and private-key `myvoipapp-private-key-nopass.pem`, respectively.
+_Note_: If you followed the [VoIP Example Setup](consumer-experience-voice-video-ios-voip-configuration.html){:target="_blank"}, these are `myvoipapp-certificate.pem` and private-key `myvoipapp-private-key-nopass.pem`, respectively.
 
 Your app registration is now complete.

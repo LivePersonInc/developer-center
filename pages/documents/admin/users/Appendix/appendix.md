@@ -28,28 +28,28 @@ This section contains API details that are common to every API’s resource and 
 | Header        | Description | Notes |
 | :------       | :--------   | :--- |
 | Authorization | Contains token string to allow request authentication and authorization.  | |
-| If-Match      | Contains data revision as known by the client. | Allows optimization of the backend, networking and client resources utilization. | 
+| If-Match      | Contains data revision as known by the client. | Allows optimization of the backend, networking and client resources utilization. |
 
 ### Response Headers
 
 | Header        | Description | Notes |
 | :------       | :--------   |  :--- |
 | eTag | Account config object type collection revision  |  |
-| location      | URI Location of the newly created resource. | Included only when the request created single object. | 
+| location      | URI Location of the newly created resource. | Included only when the request created single object. |
 
 ### Query Parameters
 
 | Header   | Description         | Type/Value                       | Required       | Notes |
 | :------  | :--------           | :----------                      | :---           | :--- |
 | v        | API version number  | Double. |  Required      |  Default Value: 2.0 (Most updated: v=4.0) |
-| select   | Dynamic selection of the response fields  | YOGA 'gdata' dialect.  | Optional | Non-existing field: no error, blank in response supported fields: any in response body <br> yoga GData dialect builder url: https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI | 
+| select   | Dynamic selection of the response fields  | YOGA 'gdata' dialect.  | Optional | Non-existing field: no error, blank in response supported fields: any in response body <br> yoga GData dialect builder url: https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI |
 | include_deleted | Whether or not deleted items in the response are included | Optional | Default: false |
 
 ### Path Parameters
 
 | Parameter | Description  | Type/Value |
 | :------   | :--------    | :-------- |
-| accountId | LP site ID   | string ^[a-zA-Z0-9_]{1,20}$ | 
+| accountId | LP site ID   | string ^[a-zA-Z0-9_]{1,20}$ |
 | userId    | User ID      | Positive long number greater than zero |
 | skillId   | Skill ID     | Positive long number greater than zero |
 | agentGroupId  | Agent group ID  | Positive long number greater than zero |
@@ -92,9 +92,10 @@ This section contains API details that are common to every API’s resource and 
 | profileIds  | The user’s profile IDs. | array of numbers| Required | |
 | isApiUser | Indicates whether the user is an api user (not a real user/ bot)  | Boolean | Optional (Default: false) | It has the ability to login via API (instead of username and password) |
 | userType | The user's type  | integer number | Required | 0 - system; 1 - human; 2 - bot; (Default: 1) |
-| allowedAppKeys | The api user's application keys | string | Required (for api user) |  |
+| allowedAppKeys | The API user's application keys | string | Required (for API user) |  
+| lobIds | The user’s LOB IDs | array of numbers | Optional |  ||
 
- 
+
 
 ### Entity Example
 
@@ -118,6 +119,9 @@ This section contains API details that are common to every API’s resource and 
            2359273612,
            2359273512
        ],
+       "lobIds": [
+           6549273612
+       ],
        "changePwdNextLogin": false,
        "memberOf": {"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"},
        "managerOf": [{"agentGroupId": "1", "assignmentDate": "2015-06-22 19:20:03"}],
@@ -132,6 +136,6 @@ This section contains API details that are common to every API’s resource and 
        "lastPwdChangeDate": "year-month-date hrs:min:sec",
        "isApiUser": false,
        "userTypeId": 1
-       
+
     }  
 ```

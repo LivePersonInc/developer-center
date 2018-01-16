@@ -22,7 +22,7 @@ From lp-shell:
 wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
 ```
 
-Client properties can be added to the connection URL as query params. The full list of supported client properties can be found [here](consumer-int-msg-client-properties.html){:target="_blank"}.
+Client properties can be added to the connection URL as query params. The full list of supported client properties can be found [here](consumer-int-client-props.html){:target="_blank"}.
 
 
 Where LP_JWT is your token.
@@ -39,12 +39,12 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		<th>Response</th>
 		<th>Notifications</th>
 	</thead>
-	
+
 	<tr name="mbuilder">
 		<td rowspan="1">Message Builder</td>
 
 		<td>
-			
+
 		</td>
 
 		<!-- request -->
@@ -172,7 +172,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		</td>
 
 	</tr>
-	
+
 	<tr>
 		<td>SubscribeMessagingEvents</td>
 		<!-- request -->
@@ -191,7 +191,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		</td>
 
 	</tr>
-		
+
 	<tr>
 		<td rowspan="1">Browser Connection</td>
 		<td>InitConnection</td>
@@ -211,7 +211,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		</td>
 
 	</tr>
-		
+
 </table>
 
 ### Agent Public Profile

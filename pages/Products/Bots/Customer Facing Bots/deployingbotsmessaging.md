@@ -14,7 +14,7 @@ indicator:
 
 ### Step 1 - Set Up Your LiveEngage Configuration
 
-1. Ensure your LiveEngage account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the ‘all connections’ list displayed on your workspace).
+1. Ensure your LiveEngage account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the 'all connections’ list displayed on your workspace).
 
 2. Create a user for your bot. Go to the users tab in LiveEngage and create a new user.  Populate the form with the bot information including the name that will display to customers as well as the icon. Some best practices:
 
@@ -34,7 +34,7 @@ Based on the use cases identified for your bot, you can create a simple bot for 
 
 A simple bot within LiveEngage is one that handles a simple task and does not have any backend integrations. 
 
-The following example and sample code demonstrate an ‘automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message. 
+The following example and sample code demonstrate an 'automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message. 
 
 [Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} for sample code and instructions. 
 ​

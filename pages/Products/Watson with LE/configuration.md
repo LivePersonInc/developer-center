@@ -14,11 +14,11 @@ For Watson to perform like any other human agent in your contact center team, we
 
 Within LiveEngage, this means the following activities apply:
 
-* User creation: a user is created for Watson, with the type ‘bot’
+* User creation: a user is created for Watson, with the type 'bot’
 
 * Monitoring: Watson conversations are measure in the same way as human agent conversations
 
-    * When a conversation with Watson begins, it automatically appears in the ‘Active Connections’ tab within LiveEngage
+    * When a conversation with Watson begins, it automatically appears in the 'Active Connections’ tab within LiveEngage
 
     * Watson is measured on the same real time KPIs agents are
 
@@ -44,7 +44,7 @@ You should first **create a skill to be used only by the bot**. This will enable
 
 5. Name the new skill and type in a description.
 
-Note: the name given to the skill should be clear and easy to track, for example ‘watson-bot’.
+Note: the name given to the skill should be clear and easy to track, for example 'watson-bot’.
 
 6. Set the maximum wait time (in seconds) that you’re allowing your visitors to wait for agents with this skill. This ensures that your agents are fully occupied, yet not overextended, and that visitors won't wait longer than the maximum wait time.
 
@@ -56,7 +56,7 @@ You must also **create a bot type user**. The bot user can be configured with ro
 
 **To create a bot type user:**
 
-1. In the users tab, click on ‘new user’.
+1. In the users tab, click on 'new user’.
 
 2. In the *User type* dropdown select **Bot**.
 

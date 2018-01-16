@@ -11,6 +11,203 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+### iOS Messaging SDK - Version 2.9.4
+
+**Version 2.9.4 planned roll-out: December 21th 2017**
+
+#### Symptom:
+For iOS 11, the app might crash when closing the conversation screen while receiving new messages.
+
+#### Fix:
+Improved memory allocation for conversation screen
+
+### iOS Messaging SDK - Version 2.9.3
+
+**Version 2.9.3 planned roll-out: November 29th 2017**
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+
+These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+
+#### Accessibility Updates
+
+**Bug: Structured content focus for new messages**
+
+_Symptom_:
+
+When consumer has opened the conversation screen, connectivity bar shows there is no connection and there is no connectivity to the messaging service. This symptom will occur in the following case:
+
+Brands which implement UIDevice Extension with 'var modelName: String' that returns device name string containing white spaces.
+
+_Fix_:
+
+SDK will now trim the whitespace of the device modelName and connectivity will work as expected.
+
+**Bug: Structured content image resolution**
+
+_Symptom_:
+
+UI overlaps of time stamp label over the message when sending a Link Preview message, while setting 'bubbleTimestampTopPadding' with a value.
+
+_Fix_:
+
+Overlap will no longer occur due to backend fixes.
+
+
+
+
+### iOS Messaging SDK - Version 2.9.0
+
+**Version 2.9 planned roll-out: November 12th 2017**
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+
+These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+
+#### New functionalities
+
+##### XCode 9.1 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 was built and certified with XCode 9.1 in Swift 4.0.2.
+
+Customers wishing to use the In-app Messaging SDK v2.9 must upgrade their XCode to 9.1 and their Swift version to 4.0.2.
+
+##### iPhone X Device Support
+
+**Type:** Device Support Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 is now supported on the iPhone X.
+
+#### New parameters
+
+##### Branding and configuration parameters
+
+**Type:** Parameters
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 exposes additional branding configuration parameters.
+
+New parameters may control text, padding of conversation UI elements and more.
+
+<table>
+<thead>
+ <tr>
+   <th>Parameter name and default value</th>
+   <th>Description</th>
+   <th>Image</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>customFontNameDateSeparator: String?</td>
+ <td>Custom font for Timestamp. Fonts that are not part of the iOS families must be defined in the App's Info.plist.</td>
+ <td><img src="img/fontname.png" alt="fontname"></td>
+ </tr>
+ <tr>
+ <td>dateSeparatorFontSize : UIFontTextStyle = .footnote</td>
+ <td>Defines the Date Separator font text style.</td>
+ <td><img src="img/fontsize.png" alt="fontsize"></td>
+ </tr>
+ <tr>
+ <td>dateSeparatorTopPadding: Float = 0.0</td>
+ <td>Defines the Date Separator top spacing.</td>
+ <td><img src="img/toppadding.png" alt="toppadding"></td>
+ </tr>
+ <tr>
+ <td>dateSeparatorBottomPadding: Float = 0.0</td>
+ <td>Defines the Date Separator bottom spacing.</td>
+ <td><img src="img/bottompadding.png" alt="bottompadding"></td>
+ </tr>
+ <tr>
+ <td>remoteUserAvatarLeadingPadding: Float = 8.0</td>
+ <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
+ <td><img src="img/leadingpadding.png" alt="leadingpadding"></td>
+ </tr>
+ <tr>
+ <td>remoteUserAvatarTrailingPadding: Float = 8.0</td>
+ <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
+ <td><img src="img/trailingpadding.png" alt="trailingpadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleTopPadding: Float = 10.0</td>
+ <td>Defines the bubble top spacing.</td>
+ <td><img src="img/bubbletoppadding.png" alt="bubbleTopPadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleBottomPadding: Float = 10.0</td>
+ <td>Defines the bubble bottom spacing.</td>
+ <td><img src="img/bubblebottompadding.png" alt="bubbleBottomPadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleLeadingPadding: Float = 10.0</td>
+ <td>Defines the bubble leading spacing.</td>
+ <td><img src="img/bubbleleadingpadding.png" alt="bubbleLeadingPadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleTrailingPadding: Float = 10.0</td>
+ <td>Defines the bubble trailing spacing.</td>
+ <td><img src="img/bubbletrailingpadding.png" alt="bubbleTrailingPadding"></td>
+ </tr>
+ <tr>
+ <td>inputTextViewTopBorderColor: UIColor = UIColor.clear</td>
+ <td>Input TextView top border color. The default color is clear.</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorFontSize: UIFontTextStyle = .caption1</td>
+ <td>Defines the Conversation Closed separator font size.</td>
+ <td><img src="img/separatorfont.png" alt="separatorfont"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorFontName: String?</td>
+ <td>Custom font name for Conversation Closed separator. Fonts that are not part of the iOS families must be defined in App's Info.plist.</td>
+ <td><img src="img/separatorfontname.png" alt="separatorfontname"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorTopPadding: Float = 5.0</td>
+ <td>Defines the Conversation Closed Separator Top spacing.</td>
+ <td><img src="img/separatortoppadding.png" alt="separatortoppadding"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorBottomPadding: Float = 7.0</td>
+ <td>Defines the Conversation Closed label to separator line spacing.</td>
+ <td><img src="img/separatorbottompadding.png" alt="separatorbottompadding"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorViewBottomPadding: Float = 7.0</td>
+ <td>Defines the conversation separator view bottom spacing.</td>
+ <td><img src="img/viewbottompadding.png" alt="viewbottompadding"></td>
+ </tr>
+ <tr>
+ <td>customRefreshControllerImagesArray:Array&lt;UIImage&gt;? = nil</td>
+ <td>Array of images for creating the custom refresh controller. The controller will loop the images; two or more images are required for the array to take effect.</td>
+ <td><img src="img/imagesarray.png" alt="imagesarray"></td>
+ </tr>
+ <tr>
+ <td>customRefreshControllerAnimationSpeed:Float = 2</td>
+ <td>Custom refresh controller speed animation; defines the full images loop time. A smaller value will create a higher speed animation.</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>bubbleTimestampTopPadding: Float = 2.0</td>
+ <td>Defines the bubble Timestamp top spacing.</td>
+ <td><img src="img/timestamptoppadding.png" alt="timestamptoppadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleTimestampBottomPadding: Float = 5.0</td>
+ <td>Defines the bubble Timestamp bottom spacing.</td>
+ <td><img src="img/timestampbottompadding.png" alt="timestampbottompadding"></td>
+ </tr>
+ </tbody>
+</table>
+
 ### iOS Messaging SDK - Version 2.8.0
 
 **Version 2.8 planned roll-out: September 27th 2017**
@@ -28,12 +225,6 @@ These are the main feature releases available in the **In-App Messaging SDK vers
 _The beta version was released in v2.7 (for a full description, refer to the [v2.7 release notes](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/In-appSDKv2.7_ReleaseNotes-iOS.pdf)). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
 
 The dictionary of template elements can be found [here](https://developers.liveperson.com/structured-content-templates.html).
-
-**Configurations**
-
-Some XCode Project's Capabilities need to be switched on in order to support Map items in Structured content feature.
-In XCode, navigate to project's Targets settings and select the relevant target of your app, then navigate to 'Capabilities' tab.
-Map items require MapKit framework to show location in map. To use map items, switch on 'Maps' toggle.  
 
 **What does enablement mean?**
 
@@ -201,14 +392,10 @@ A push is sent to the last device which was registered to the LP push service, m
 
 * In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
 
-**How to enable the unread messages counter**
+**Getting the unread message badge counter**
 
-There are two options to set up this counter:
-
-1. If the time condition is met, a REST request is performed to get the counter from the pusher
-
-2. Return the cached number on the app
-
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise, it will be fetched again with new data.
+​ ​
 **Parameters**:
 
 * conversationQuery: conversationQuery: used to identify the related brand
@@ -585,7 +772,7 @@ The following properties for customizable bubble corners can now be configured:
 </table>
 
 
-#### Unread messages badge
+### Unread messages badge
 
 The following properties for the unread messages badge can be configured:
 
@@ -607,7 +794,7 @@ The following properties for the unread messages badge can be configured:
 </table>
 
 
-#### Scroll to bottom button
+### Scroll to bottom button
 
 The following properties for the scroll to bottom button can now be configured:
 
@@ -634,7 +821,7 @@ The following properties for the scroll to bottom button can now be configured:
 </table>
 
 
-#### Send button
+### Send button
 
 The following properties for the send button can now be configured:
 
@@ -656,7 +843,7 @@ The following properties for the send button can now be configured:
 </table>
 
 
-#### Controller bubble
+### Controller bubble
 
 The following properties for the controller bubble can now be configured:
 
@@ -1111,11 +1298,11 @@ Configuring Camera's button colors
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
-**Symptom**:
+_Symptom_:
 
 For one minute after the consumer had navigated away from the conversation window, any arriving messages would not display. They would only appear in the conversation window after the minute had passed.
 
-### Fix:
+_Fix_:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
 ### In-App Messaging SDK Version 2.3.0

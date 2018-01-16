@@ -39,6 +39,6 @@ _Note your user must be an administrator of the account._
 
   4. Type the secured URL of the widget you developed.
 
-**Step 5** - (optional) Set a login URL.  In case your KB requires agents to login, the widget will automatically login if they have the KB opened and logged into in a different tab in the browser.  By clicking on ‘Advanced Settings for LivePerson Integration SDK’, you can set up a login page to direct agents to in case the widget doesn't’ automatically load.
+**Step 5** - (optional) Set a login URL.  In case your KB requires agents to login, the widget will automatically login if they have the KB opened and logged into in a different tab in the browser.  By clicking on 'Advanced Settings for LivePerson Integration SDK’, you can set up a login page to direct agents to in case the widget doesn't’ automatically load.
 
 ![LoginURL](img/loginURL.png)

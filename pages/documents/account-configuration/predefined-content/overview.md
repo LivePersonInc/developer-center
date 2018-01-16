@@ -44,6 +44,8 @@ A few things you'll need to get started with this API:
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+
 
 
 **Tips for creating predefined content**
@@ -92,7 +94,7 @@ When you create predefined responses, take into consideration what kind of phras
 
 ### Deployment Overview
 
-1. Ensure you generate the API key with ‘write’ permissions (click ‘advanced’) when generating your key.
+1. Ensure you generate the API key with 'write’ permissions (click 'advanced’) when generating your key.
 
 2. Issue a REST request to create a new predefined content entry
 

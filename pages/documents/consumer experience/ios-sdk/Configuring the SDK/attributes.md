@@ -17,7 +17,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Users Bubble
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -253,12 +253,54 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left"></td>
     <td align="left">nil</td>
   </tr>
+  <tr>
+    <td align="left">bubbleTopPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Top Padding</td>
+    <td align="left"><img src="img/bubbleTopPadding.png" alt="bubbleTopPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleBottomPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble bottom Padding</td>
+    <td align="left"><img src="img/bubbleBottomPadding.png" alt="bubbleBottomPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleLeadingPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Leading Padding</td>
+    <td align="left"><img src="img/bubbleLeadingPadding.png" alt="bubbleLeadingPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTrailingPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Trailing Padding</td>
+    <td align="left"><img src="img/bubbleTrailingPadding.png" alt="bubbleTrailingPadding"></td>
+    <td align="left">10</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTimestampBottomPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Trailing Padding</td>
+    <td align="left"><img src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding"></td>
+    <td align="left">5</td>
+  </tr>
+  <tr>
+    <td align="left">bubbleTimestampTopPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the bubble Timestamp Top Padding</td>
+    <td align="left"><img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding"></td>
+    <td align="left">5</td>
+  </tr>
 </tbody>
 </table>
 
 ### Link Preview
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -374,7 +416,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Photo Sharing
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -471,7 +513,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Send Button
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -515,7 +557,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### System Messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -538,7 +580,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Window Mode
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -564,7 +606,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Delivery Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -615,7 +657,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Surveys Buttons (CSAT and FCR)
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -737,7 +779,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Conversations
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
   <th>Name</th>
@@ -792,6 +834,41 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">true</td>
   </tr>
   <tr>
+    <td align="left">conversationSeparatorFontSize</td>
+    <td align="left">UIFontTextStyle</td>
+    <td align="left">Define the conversation closed separator font size</td>
+    <td align="left"><img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"></td>
+    <td align="left">UIFontTextStyle.caption1</td>
+  </tr>
+  <tr>
+    <td align="left">conversationSeparatorBottomPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the conversation Closed label to separator line padding</td>
+    <td align="left"><img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding"></td>
+    <td align="left">7</td>
+  </tr>
+  <tr>
+    <td align="left">conversationSeparatorFontName</td>
+    <td align="left">Float</td>
+    <td align="left">Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in App's Info.plist</td>
+    <td align="left"><img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"></td>
+    <td align="left">7</td>
+  </tr>
+  <tr>
+    <td align="left">conversationSeparatorViewBottomPadding</td>
+    <td align="left">String</td>
+    <td align="left">Define the conversation separator view bottom padding</td>
+    <td align="left"><img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">conversationClosedSeparatorTopPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the conversation Closed Separator Top padding</td>
+    <td align="left"><img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding"></td>
+    <td align="left">5</td>
+  </tr>
+  <tr>
     <td align="left">enableVibrationOnMessageFromRemoteUser</td>
     <td align="left">Bool</td>
     <td align="left">Toggle vibration sound when a new message from a remote user received</td>
@@ -803,7 +880,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Unread Messages
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -910,7 +987,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Localization
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -944,16 +1021,16 @@ It will affect the following areas:
 
 ### Brand
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
-  <th>Name</th>
+    <th>Name</th>
     <th>Type</th>
     <th>Description</th>
     <th>Example</th>
     <th>Default </th>
   </tr>
-  </thead>
+</thead>
 <tbody>
   <tr>
     <td align="left">brandName</td>
@@ -984,62 +1061,99 @@ It will affect the following areas:
     <td align="left"><img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed"></td>
     <td align="left">nil</td>
   </tr>
+  <tr>
+    <td align="left">customRefreshControllerImagesArray</td>
+    <td align="left">&lt;ArrayUIImage&gt;?</td>
+    <td align="left">Array of images for creating the custom refresh controller the controller will loop the images from the array need two or more images in the array for take effect</td>
+    <td align="left"><img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">customRefreshControllerAnimationSpeed</td>
+    <td align="left">Float&lt;UIImage&gt;</td>
+    <td align="left">custom refresh controller speed animation define the full images loop time. Smaller value will create high speed animation </td>
+    <td align="left"></td>
+    <td align="left">2</td>
+  </tr>
 </tbody>
 </table>
 
 ### Date Separator
 
-<table>
-<thead>
-   <tr>
-  <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Example</th>
-    <th>Default </th>
-  </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td align="left">dateSeparatorTitleBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator title background color.</td>
-    <td align="left"><img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"></td>
-    <td align="left">UIColor.white</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorTextColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator text color.</td>
-    <td align="left"><img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"></td>
-    <td align="left">#46474A</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorLineBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator line background color.</td>
-    <td align="left"><img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"></td>
-    <td align="left">UIColor.clear</td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-    <td align="left">dateSeparatorBackgroundColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for date separator background color.</td>
-    <td align="left"><img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"></td>
-    <td align="left">#FFFFFF</td>
-  </tr>
-</tbody>
+<table class="bigtable">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Example</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="left">dateSeparatorTitleBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator title background color.</td>
+			<td align="left"><img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"></td>
+			<td align="left">UIColor.white</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorTextColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator text color.</td>
+			<td align="left"><img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"></td>
+			<td align="left">#46474A</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorLineBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator line background color.</td>
+			<td align="left"><img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"></td>
+			<td align="left">UIColor.clear</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorBackgroundColor</td>
+			<td align="left">UIColor</td>
+			<td align="left">Color code for date separator background color.</td>
+			<td align="left"><img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"></td>
+			<td align="left">#FFFFFF</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorFontSize</td>
+			<td align="left">UIFontTextStyle</td>
+			<td align="left">Define the Date Separator font text style.</td>
+			<td align="left"><img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize"></td>
+			<td align="left">UIFontTextStyle.footnote</td>
+		</tr>
+		<tr>
+			<td align="left">customFontNameDateSeparator</td>
+			<td align="left">String</td>
+			<td align="left">Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist.</td>
+			<td align="left"><img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"></td>
+			<td align="left">nil</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorTopPadding</td>
+			<td align="left">Float</td>
+			<td align="left">Define the Date Separator Top padding.</td>
+			<td align="left"><img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"></td>
+			<td align="left">0</td>
+		</tr>
+		<tr>
+			<td align="left">dateSeparatorBottomPadding</td>
+			<td align="left">Float</td>
+			<td align="left">Define the Date Separator bottom padding.</td>
+			<td align="left"><img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"></td>
+			<td align="left">0</td>
+		</tr>
+	</tbody>
 </table>
+
 
 ### User input view
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1071,7 +1185,7 @@ It will affect the following areas:
 
 ### Agent Assignment
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1094,7 +1208,7 @@ It will affect the following areas:
 
 ### Duration of Local Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1119,7 +1233,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Time To Response and Off hours
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1133,7 +1247,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">ttrShowShiftBanner</td>
     <td align="left">Bool</td>
-    <td align="left">Ability to enable/disable shift toaster (‘An agent will respond...’)</td>
+    <td align="left">Ability to enable/disable shift toaster ('An agent will respond...’)</td>
     <td align="left"></td>
     <td align="left">true</td>
   </tr>
@@ -1219,7 +1333,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Date and Time
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1260,7 +1374,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Toast Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1293,7 +1407,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### User Avatar
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1312,6 +1426,18 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">#004DC9</td>
   </tr>
   <tr>
+    <td align="left">remoteUserAvatarLeading</td>
+    <td align="left">Float</td>
+    <td align="left">Define the remote avatar Leading padding (left edge to avatar).</td>
+    <td align="left"><img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
+    <td align="left">remoteUserAvatarTrailingPadding</td>
+    <td align="left">Float</td>
+    <td align="left">Define the remote avatar Trailing padding (Avatar to bubble).</td>
+    <td align="left"><img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"></td>
+    <td align="left">8</td>
   </tr>
   <tr>
     <td align="left">remoteUserAvatarIconColor</td>
@@ -1357,7 +1483,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Data Masking
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1393,7 +1519,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   <tr>
     <td align="left">realTimeMaskingRegex</td>
     <td align="left">String</td>
-    <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server unmasked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
+    <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server masked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
     <td align="left"></td>
     <td align="left">""</td>
   </tr>
@@ -1402,7 +1528,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Navigation
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1439,7 +1565,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Secure Form
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1561,7 +1687,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Structured Content
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1597,7 +1723,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1605,7 +1731,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLongitudeDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1614,7 +1740,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Connection Status Bar
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1665,7 +1791,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Controller message
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1680,8 +1806,31 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">controllerBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the controller bubble.</td>
-    <td align="left"><img alt="controller bubble text color"></td>
+    <td align="left"><img src="img/controllerbubletextcolor.png" alt="controller bubble text color"></td>
     <td align="left">#5b5c5e</td>
+  </tr>
+</tbody>
+</table>
+
+### Accessibility
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">announceAgentTyping</td>
+    <td align="left">Bool</td>
+    <td align="left">If true, accessibility will announce when agent is typing a message to the consumer.</td>
+    <td align="left"></td>
+    <td align="left">true</td>
   </tr>
 </tbody>
 </table>
