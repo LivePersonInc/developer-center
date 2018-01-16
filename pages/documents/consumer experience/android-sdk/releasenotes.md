@@ -11,6 +11,270 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+**In-App Messaging SDK version 3.0 for Android**.
+
+**Version 3.0 planned roll-out: January 14th 2018**
+
+#### New functionalities
+
+##### Certificate Pinning
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** No. Contact support for more details.
+
+Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>No</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ </tr>
+</table>
+
+
+#### List of certified and supported devices extended
+
+The following devices are now also supported and/or certified to host our in-app messaging SDK:
+
+<table>
+ <tr>
+ <td></td>
+ <td>Operating system</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>Device</td>
+ <td>v5.X (Lollipop)</td>
+ <td>v6.X (Marshmallow)</td>
+ <td>v7.X (Nougat)</td>
+ <td>v8.X (Oreo)</td>
+ </tr>
+ <tr>
+ <td>Note 8</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ <td>Supported</td>
+ </tr>
+ <tr>
+ <td>Pixel</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ <tr>
+ <td>Pixel 2</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+</table>
+
+
+A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
+
+#### New APIs
+
+##### Cert-Pinning API
+
+**Available to all customers?** No. Contact support for more details.
+
+**Please note** Using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
+
+For Fragment window
+
+**public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎) **
+
+For Activity window
+
+**public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎****)**
+
+Please add the following new parameter:
+
+**private List<String> ****mCertificatePinningKeys**
+
+This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers. If this field is left empty, the Cert Pinning is disabled.
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ </tr>
+</table>
+
+
+#### New Callbacks
+
+##### Cert Pinning callback
+
+onError(TaskType.INVALID_CERTIFICATE)
+
+If the socket is closed due to certificate error, we broadcast an intent with action "BROADCAST_CONNECTING_TO_SERVER_ERROR"
+
+Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. or The server trusts’ evaluation failed: the server's certificate chain is not trusted.
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ </tr>
+</table>
+
+
+# New parameters
+
+## Branding and configuration parameters
+
+**Type:** Parameters
+
+**Available to all customers? **Yes
+
+The In-app Messaging SDK v3.0 exposes additional branding configuration parameters.
+
+New parameters may control text, padding of conversation UI elements and more.
+
+<table>
+ <tr>
+ <td>Parameter name and default value</td>
+ <td>Description</td>
+ <td>Image</td>
+ </tr>
+ <tr>
+ <td><dimen name="sticky_timestamp_text_size">@dimen/small_text_size</dimen></td>
+ <td>Defines the Date Separator font text size.</td>
+ <td><img src="android_sticky_timestamp_text_size.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
+ <td>Defines the Date Separator top spacing.</td>
+ <td><img src="android_sticky_timestamp_margin_top.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="avatar_margin_leading">@dimen/margin_regular</dimen></td>
+ <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
+ <td><img src="android_avatar_margin_leading.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="avatar_margin_trailing">@dimen/margin_regular</dimen></td>
+ <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
+ <td><img src="android_avatar_margin_trailing.png"></td>
+ </tr>
+ <tr>
+ <td><!--enter message Separator color-->
+<color name="enter_message_top_separator_color">@android:color/darker_gray</color></td>
+ <td>Input TextView top border color. The default color is clear.</td>
+ <td><img src="android_enter_message_top_separator_color.png"></td>
+ </tr>
+ <tr>
+ <td><bool name="enter_message_divider_visible">false</bool>
+</td>
+ <td>Determine if the Enter Message edit text divider is visible or not.</td>
+ <td><img src="android_enter_message_divider_visible.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="bubble_system_resolved_text_size">@dimen/small_text_size</dimen>
+</td>
+ <td>Defines the Resolved system message text size.</td>
+ <td><img src="android_bubble_system_resolved_text_size.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="bubble_system_resolved_padding">@dimen/margin_half</dimen></td>
+ <td>Defines the Resolved system message padding.</td>
+ <td><img src="android_bubble_system_resolved_padding.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
+</td>
+ <td>Defines the Resolved system message line spacing.</td>
+ <td><img src="android_bubble_system_resolved_line_spacing.png"></td>
+ </tr>
+ <tr>
+ <td><dimen name="bubble_system_resolved_separator_padding_bottom">@dimen/margin_half</dimen>
+</td>
+ <td>Defines the Resolved system message Separator padding.</td>
+ <td><img src="android_bubble_system_resolved_separator_padding_bottom.png"></td>
+ </tr>
+ <tr>
+ <td><drawable name="lp_progress_bar_image"></drawable></td>
+ <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
+ <td><img src="android_lp_progress_bar_image.png"></td>
+ </tr>
+</table>
+
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>Yes</td>
+ </tr>
+</table>
+
+
+* **Key for items as follows:**
+
+**Backend update:** This feature requires an update to the backend.
+
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+
+**Backend configuration**: This feature requires configuration in the backend.
+
+**SDK enablement:** This feature requires items to be toggled on in the SDK.
+
+**SDK configuration**: This features requires items to be configured in the SDK.
+
 ### In-App Messaging SDK Version 2.9 for android
 
 These are the main feature releases available in the In-App Messaging SDK version 2.9 for Android.
