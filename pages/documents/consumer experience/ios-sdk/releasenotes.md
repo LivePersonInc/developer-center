@@ -23,44 +23,32 @@ indicator: messaging
 
 **Available to all customers?** No. Contact support for more details.
 
-Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 #### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td></td>
- <td>Operating system</td>
- <td></td>
- <td></td>
+ <th></th>
+ <th colspan="4">Operating system</th>
  </tr>
  <tr>
- <td>Model</td>
- <td>iOS 9.x</td>
- <td>iOS 10.x</td>
- <td>iOS 11.x</td>
+ <th>Model</th>
+ <th>iOS 9.x</th>
+ <th>iOS 10.x</th>
+ <th>iOS 11.x</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>iPhone 8</td>
  <td>N/A</td>
@@ -79,8 +67,8 @@ The following devices are now also supported and/or certified to host our in-app
  <td>N/A</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
-
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
@@ -90,9 +78,9 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 **Available to all customers?** No. Contact support for more details.
 
-**Please note** Using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
+**Please note**: using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
 
-In order to use cert pinning public keys, you should pass a new property to the LPAuthenticationParams object init, when calling the API of:
+In order to use Cert Pinning public keys, you should pass a new property to the LPAuthenticationParams object init, when calling the API of:
 
 **showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)**
 
@@ -104,50 +92,24 @@ This API allows you to set the certificate public key hash. This API can receive
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 
 #### New Callbacks
 
 ##### Cert Pinning callback
 
-func LPMessagingSDKCertPinningFailed(_ error: NSError)
+`func LPMessagingSDKCertPinningFailed(_ error: NSError)`
 
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. or The server trust's evaluation failed: the server's certificate chain is not trusted.
+Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. Or, the server trust's evaluation failed: the server's certificate chain is not trusted.
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 
 * **Key for items as follows:**
@@ -742,7 +704,7 @@ Parameters:
 
 * failure: a failure block with a specified error for logout failure. The failure block will be invoked if at least one of the logout steps has failed.
 
-**Related API: **[Logout API](#heading=h.mr00ktj28srq)
+**Related API:** [Logout API](#heading=h.mr00ktj28srq)
 
 The following additional conditions and configurations are required*:
 

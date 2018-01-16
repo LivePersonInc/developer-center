@@ -23,26 +23,13 @@ indicator: messaging
 
 **Available to all customers?** No. Contact support for more details.
 
-Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>No</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 
 #### List of certified and supported devices extended
@@ -50,20 +37,20 @@ The following additional conditions and configurations are required:*
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td></td>
- <td>Operating system</td>
- <td></td>
- <td></td>
- <td></td>
+ <th></th>
+ <th colspan="4">Operating system</th>
  </tr>
  <tr>
- <td>Device</td>
- <td>v5.X (Lollipop)</td>
- <td>v6.X (Marshmallow)</td>
- <td>v7.X (Nougat)</td>
- <td>v8.X (Oreo)</td>
+ <th>Device</th>
+ <th>v5.X (Lollipop)</th>
+ <th>v6.X (Marshmallow)</th>
+ <th>v7.X (Nougat)</th>
+ <th>v8.X (Oreo)</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Note 8</td>
  <td>N/A</td>
@@ -85,8 +72,8 @@ The following devices are now also supported and/or certified to host our in-app
  <td>N/A</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
-
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
@@ -100,137 +87,114 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 For Fragment window
 
-**public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎) **
+**public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)**
 
 For Activity window
 
-**public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎****)**
+**public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)**
 
 Please add the following new parameter:
 
-**private List<String> ****mCertificatePinningKeys**
+**private List<String>** **mCertificatePinningKeys**
 
 This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers. If this field is left empty, the Cert Pinning is disabled.
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 
 #### New Callbacks
 
 ##### Cert Pinning callback
 
-onError(TaskType.INVALID_CERTIFICATE)
+`onError(TaskType.INVALID_CERTIFICATE)`
 
 If the socket is closed due to certificate error, we broadcast an intent with action "BROADCAST_CONNECTING_TO_SERVER_ERROR"
 
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. or The server trusts’ evaluation failed: the server's certificate chain is not trusted.
+Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. Or, the server trusts’ evaluation failed: the server's certificate chain is not trusted.
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 
-# New parameters
+### New parameters
 
-## Branding and configuration parameters
+#### Branding and configuration parameters
 
 **Type:** Parameters
 
-**Available to all customers? **Yes
+**Available to all customers?** Yes
 
 The In-app Messaging SDK v3.0 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
 <table>
+<thead>
  <tr>
- <td>Parameter name and default value</td>
- <td>Description</td>
- <td>Image</td>
+ <th>Parameter name and default value</th>
+ <th>Description</th>
+ <th>Image</th>
+ </thead>
+ <tbody>
  </tr>
  <tr>
- <td><dimen name="sticky_timestamp_text_size">@dimen/small_text_size</dimen></td>
+ <td>&lt;dimen name="sticky_timestamp_text_size"&gt;@dimen/small_text_size</dimen></td>
  <td>Defines the Date Separator font text size.</td>
  <td><img src="android_sticky_timestamp_text_size.png"></td>
  </tr>
  <tr>
- <td><dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
+ <td>&lt;dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
  <td>Defines the Date Separator top spacing.</td>
  <td><img src="android_sticky_timestamp_margin_top.png"></td>
  </tr>
  <tr>
- <td><dimen name="avatar_margin_leading">@dimen/margin_regular</dimen></td>
+ <td>&lt;dimen name="avatar_margin_leading"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
  <td><img src="android_avatar_margin_leading.png"></td>
  </tr>
  <tr>
- <td><dimen name="avatar_margin_trailing">@dimen/margin_regular</dimen></td>
+ <td>&lt;dimen name="avatar_margin_trailing"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
  <td><img src="android_avatar_margin_trailing.png"></td>
  </tr>
  <tr>
  <td><!--enter message Separator color-->
-<color name="enter_message_top_separator_color">@android:color/darker_gray</color></td>
+  &lt;color name="enter_message_top_separator_color"&gt;@android:color/darker_gray&lt;/color&gt;</td>
  <td>Input TextView top border color. The default color is clear.</td>
  <td><img src="android_enter_message_top_separator_color.png"></td>
  </tr>
  <tr>
- <td><bool name="enter_message_divider_visible">false</bool>
+ <td>&lt;bool name="enter_message_divider_visible"&gt;false&lt;/bool&gt;
 </td>
  <td>Determine if the Enter Message edit text divider is visible or not.</td>
  <td><img src="android_enter_message_divider_visible.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_text_size">@dimen/small_text_size</dimen>
+ <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size</dimen>
 </td>
  <td>Defines the Resolved system message text size.</td>
  <td><img src="android_bubble_system_resolved_text_size.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_padding">@dimen/margin_half</dimen></td>
+ <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half</dimen></td>
  <td>Defines the Resolved system message padding.</td>
  <td><img src="android_bubble_system_resolved_padding.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
+ <td>&lt;dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
 </td>
  <td>Defines the Resolved system message line spacing.</td>
  <td><img src="android_bubble_system_resolved_line_spacing.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_separator_padding_bottom">@dimen/margin_half</dimen>
+ <td>&lt;dimen name="bubble_system_resolved_separator_padding_bottom"&gt;@dimen/margin_half</dimen>
 </td>
  <td>Defines the Resolved system message Separator padding.</td>
  <td><img src="android_bubble_system_resolved_separator_padding_bottom.png"></td>
@@ -240,27 +204,15 @@ New parameters may control text, padding of conversation UI elements and more.
  <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
  <td><img src="android_lp_progress_bar_image.png"></td>
  </tr>
+ </tbody>
 </table>
 
 
 The following additional conditions and configurations are required:*
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| No | No | No | No | Yes |
 
 
 * **Key for items as follows:**
