@@ -6,19 +6,19 @@ level2: Consumer Experience
 level3: Javascript Chat SDK
 level4: Methods
 
-order: 30
+order: 31
 permalink: consumer-experience-javascript-chat-authenticate.html
 
 indicator: chat
 ---
 
-This resource enables consumer SSO with liveEngage.
+This resource enables consumer SSO with LiveEngage.
 
 
 **Notes**:
 
-- *Using this resource depends on authenticated engagement parameters.*
-- *In response of the authentication, the following events will be triggered: onAuthentication, onAuthenticationFail.*
+- **Using this resource depends on authenticated engagement parameters.**
+- **In the response for this authentication resource, the following events will be triggered: onAuthentication, onAuthenticationFail.**
 
 ### Request
 
