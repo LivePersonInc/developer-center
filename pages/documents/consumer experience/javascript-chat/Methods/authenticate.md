@@ -1,5 +1,5 @@
 ---
-title: authenticate
+title: Authenticate
 Keywords:
 level1: Documents
 level2: Consumer Experience
