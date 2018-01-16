@@ -10,6 +10,8 @@ permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<br>
+<br>
 
 **In-App Messaging SDK version 3.0 for Android**.
 
@@ -141,68 +143,68 @@ New parameters may control text, padding of conversation UI elements and more.
  <th>Parameter name and default value</th>
  <th>Description</th>
  <th>Image</th>
+ </tr>
  </thead>
  <tbody>
- </tr>
  <tr>
  <td>&lt;dimen name="sticky_timestamp_text_size"&gt;@dimen/small_text_size</dimen></td>
  <td>Defines the Date Separator font text size.</td>
- <td><img src="android_sticky_timestamp_text_size.png"></td>
+ <td><img src="img/android_sticky_timestamp_text_size.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
  <td>Defines the Date Separator top spacing.</td>
- <td><img src="android_sticky_timestamp_margin_top.png"></td>
+ <td><img src="img/android_sticky_timestamp_margin_top.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="avatar_margin_leading"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
- <td><img src="android_avatar_margin_leading.png"></td>
+ <td><img src="img/android_avatar_margin_leading.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="avatar_margin_trailing"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
- <td><img src="android_avatar_margin_trailing.png"></td>
+ <td><img src="img/android_avatar_margin_trailing.png"></td>
  </tr>
  <tr>
- <td><!--enter message Separator color-->
+ <td>
   &lt;color name="enter_message_top_separator_color"&gt;@android:color/darker_gray&lt;/color&gt;</td>
  <td>Input TextView top border color. The default color is clear.</td>
- <td><img src="android_enter_message_top_separator_color.png"></td>
+ <td><img src="img/android_enter_message_top_separator_color.png"></td>
  </tr>
  <tr>
  <td>&lt;bool name="enter_message_divider_visible"&gt;false&lt;/bool&gt;
 </td>
  <td>Determine if the Enter Message edit text divider is visible or not.</td>
- <td><img src="android_enter_message_divider_visible.png"></td>
+ <td><img src="img/android_enter_message_divider_visible.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size</dimen>
 </td>
  <td>Defines the Resolved system message text size.</td>
- <td><img src="android_bubble_system_resolved_text_size.png"></td>
+ <td><img src="img/android_bubble_system_resolved_text_size.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half</dimen></td>
  <td>Defines the Resolved system message padding.</td>
- <td><img src="android_bubble_system_resolved_padding.png"></td>
+ <td><img src="img/android_bubble_system_resolved_padding.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
 </td>
  <td>Defines the Resolved system message line spacing.</td>
- <td><img src="android_bubble_system_resolved_line_spacing.png"></td>
+ <td><img src="img/android_bubble_system_resolved_line_spacing.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_separator_padding_bottom"&gt;@dimen/margin_half</dimen>
 </td>
  <td>Defines the Resolved system message Separator padding.</td>
- <td><img src="android_bubble_system_resolved_separator_padding_bottom.png"></td>
+ <td><img src="img/android_bubble_system_resolved_separator_padding_bottom.png"></td>
  </tr>
  <tr>
  <td><drawable name="lp_progress_bar_image"></drawable></td>
  <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
- <td><img src="android_lp_progress_bar_image.png"></td>
+ <td><img src="img/android_lp_progress_bar_image.png"></td>
  </tr>
  </tbody>
 </table>
