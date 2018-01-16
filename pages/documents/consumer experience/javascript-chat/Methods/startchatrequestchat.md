@@ -15,7 +15,7 @@ indicator: chat
 This method queues a chat request. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.
 
 **For consumer Authentication flow please collect the necessary parameters from the [authenticate](consumer-experience-javascript-chat-authenticate.html) method first.**
-The parameters in question are `conversationId`, `participantId`. You will need to add this parameters to the request body for the requestChat method.
+The parameters in question are `conversationId`, `participantId`. You will need to add these parameters to the request body for the requestChat method.
 
 **Notes**:
 
