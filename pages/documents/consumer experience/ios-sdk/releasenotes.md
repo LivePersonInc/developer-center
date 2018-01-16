@@ -11,6 +11,8 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+I am adding a line.
+
 ### iOS Messaging SDK - Version 2.9.4
 
 **Version 2.9.4 planned roll-out: December 21th 2017**
