@@ -30,7 +30,8 @@ var  failedRequest = myChat.requestTranscript({
     email: "me@me.com",
     success: myChat.transcriptQueued,
     error: myChat.transcriptRequestFailed,
-    context: myChat
+    context: myChat,
+    timezoneOffset: -7200000
 });
 
 if(failedRequest && failedRequest.error){
