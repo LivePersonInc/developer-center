@@ -13,8 +13,6 @@ indicator: messaging
 
 ### In-App Messaging SDK version 3.0 for iOS.
 
-**Version 3.0 planned roll-out: January 14th 2018**
-
 #### New functionalities
 
 ##### Certificate Pinning
