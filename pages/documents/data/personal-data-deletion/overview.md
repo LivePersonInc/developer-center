@@ -16,6 +16,7 @@ indicator: both
 Personal Data Deletion API allows brands to comply with the European Union's Right to be Forgotten requirement (a part of the GDPR). This API will permanently delete any personal data that the consumer requests to be deleted. Once the data has been deleted there is no way to restore it.
 
 This data can include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 30 days from the time of the request. There will be some approval process on LivePerson's side in the early stages to make sure we are deleting the data as requested.
+Only closed conversations can be deleted.
 
 ### Getting Started
 
@@ -77,12 +78,14 @@ The brand will need to follow the below steps to achieve this:
 
 ### Limitations:
 
-The following is not supported in the current beta phase:
+1. The following is not supported in the current beta phase:
 
- * For messaging only - messaging conversations are still not deleted from one of LP's messaging repositories.
+ * For messaging only - messaging conversations are still stored in one of LP's messaging repositories and therefore, if you enter a closed conversation from the “All Connections” tab to view the conversation in its full view, you will be able to see the entire transcript even after the deletion process.
 
  * Photo / file sharing data is not deleted.
  
  * Secure form data is not deleted.
  
- * Authentication via login will be available during the beta period.
+2. Authentication via login will be available during the beta period.
+
+3. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.

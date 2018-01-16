@@ -1806,7 +1806,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">controllerBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the controller bubble.</td>
-    <td align="left"><img alt="controller bubble text color"></td>
+    <td align="left"><img src="img/controllerbubletextcolor.png" alt="controller bubble text color"></td>
     <td align="left">#5b5c5e</td>
   </tr>
 </tbody>
