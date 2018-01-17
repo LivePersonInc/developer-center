@@ -32,10 +32,13 @@ A few things you'll need to get started with this API:
 
 {:start="2"}
 2. This API requires authorization using API key or via login.
+*  The Personal Data Deletion API currently has no self-serve through LiveEngage. You will receive the keys from your account manager after the Beta User agreement is approved.
 
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
+{:start="4"}
+4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
 ### Main flows
 
@@ -83,9 +86,10 @@ The brand will need to follow the below steps to achieve this:
  * For messaging only - messaging conversations are still stored in one of LP's messaging repositories and therefore, if you enter a closed conversation from the “All Connections” tab to view the conversation in its full view, you will be able to see the entire transcript even after the deletion process.
 
  * Photo / file sharing data is not deleted.
- 
+
  * Secure form data is not deleted.
- 
+
+{:start="2"} 
 2. Authentication via login will be available during the beta period.
 
 3. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.

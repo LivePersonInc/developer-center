@@ -10,57 +10,45 @@ permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<br>
+<br>
 
 ### In-App Messaging SDK version 3.0 for iOS.
-
-**Version 3.0 planned roll-out: January 14th 2018**
 
 #### New functionalities
 
 ##### Certificate Pinning
 
-**Type:** Developer Experience Feature
+**Type:** Security Feature
 
 **Available to all customers?** No. Contact support for more details.
 
-Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
-The following additional conditions and configurations are required:*
+The following additional conditions and configurations are required:
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 #### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td></td>
- <td>Operating system</td>
- <td></td>
- <td></td>
+ <th></th>
+ <th colspan="4">Operating system</th>
  </tr>
  <tr>
- <td>Model</td>
- <td>iOS 9.x</td>
- <td>iOS 10.x</td>
- <td>iOS 11.x</td>
+ <th>Model</th>
+ <th>iOS 9.x</th>
+ <th>iOS 10.x</th>
+ <th>iOS 11.x</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>iPhone 8</td>
  <td>N/A</td>
@@ -79,8 +67,8 @@ The following devices are now also supported and/or certified to host our in-app
  <td>N/A</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
-
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
@@ -90,9 +78,9 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 **Available to all customers?** No. Contact support for more details.
 
-**Please note** Using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
+**Please note**: using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
 
-In order to use cert pinning public keys, you should pass a new property to the LPAuthenticationParams object init, when calling the API of:
+In order to use Cert Pinning public keys, you should pass a new property to the LPAuthenticationParams object init, when calling the API of:
 
 **showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)**
 
@@ -100,55 +88,15 @@ The new property that should be passed is:
 
 **LPAuthenticationParams → certPinningPublicKeys: [String]?**
 
-This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers. If this field is nil, the Cert Pinning is disabled.
-
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
-
+This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers.
 
 #### New Callbacks
 
 ##### Cert Pinning callback
 
-func LPMessagingSDKCertPinningFailed(_ error: NSError)
+`func LPMessagingSDKCertPinningFailed(_ error: NSError)`
 
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. or The server trust's evaluation failed: the server's certificate chain is not trusted.
-
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
-
+Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. Or, the server trust's evaluation failed: the server's certificate chain is not trusted.
 
 * **Key for items as follows:**
 
@@ -742,7 +690,7 @@ Parameters:
 
 * failure: a failure block with a specified error for logout failure. The failure block will be invoked if at least one of the logout steps has failed.
 
-**Related API: **[Logout API](#heading=h.mr00ktj28srq)
+**Related API:** [Logout API](#heading=h.mr00ktj28srq)
 
 The following additional conditions and configurations are required*:
 
