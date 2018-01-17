@@ -25,6 +25,10 @@ indicator: messaging
 
 Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
+The object mCertificatePinningKeys was added to the object LPAuthenticationParams.
+
+**Please note**: using the new object without completing the on-boarding process will result in failures while trying to communicate with LivePerson’s servers.
+
 The following additional conditions and configurations are required:
 
 | Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
@@ -78,36 +82,6 @@ The following devices are now also supported and/or certified to host our in-app
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
 #### New APIs
-
-##### Cert-Pinning API
-
-**Available to all customers?** No. Contact support for more details.
-
-**Please note** Using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
-
-For Fragment window
-
-`public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
-
-For Activity window
-
-`public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
-
-Please add the following new parameter:
-
-`private List<String> mCertificatePinningKeys`
-
-This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers.
-
-#### New Callbacks
-
-##### Cert Pinning callback
-
-`onError(TaskType.INVALID_CERTIFICATE)`
-
-If the socket is closed due to certificate error, we broadcast an intent with action "BROADCAST_CONNECTING_TO_SERVER_ERROR"
-
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. Or, the server trusts’ evaluation failed: the server's certificate chain is not trusted.
 
 ### New parameters
 
