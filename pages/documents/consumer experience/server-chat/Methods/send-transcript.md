@@ -37,7 +37,6 @@ Sends a transcript of the chat to the visitor's email address.
 
 **Parameters**
 
-
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
 | email | Email address to send the transcript to | String |
