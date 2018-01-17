@@ -32,10 +32,13 @@ A few things you'll need to get started with this API:
 
 {:start="2"}
 2. This API requires authorization using API key or via login.
+*  The Personal Data Deletion API currently has no self-serve through LiveEngage. You will receive the keys from your account manager after the Beta User agreement is approved.
 
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
+{:start="4"}
+4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
 ### Main flows
 
