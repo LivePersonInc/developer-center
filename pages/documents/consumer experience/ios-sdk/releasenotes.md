@@ -25,6 +25,9 @@ indicator: messaging
 
 Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
+The object certPinningPublicKeys was added to the object LPAuthenticationParams.
+**Please note**: using the new object without completing the onborading process will result in failures while trying to communicate with LivePerson’s servers.
+
 The following additional conditions and configurations are required:
 
 | Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
@@ -71,32 +74,6 @@ The following devices are now also supported and/or certified to host our in-app
 </table>
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
-
-#### New APIs
-
-##### Cert-Pinning API
-
-**Available to all customers?** No. Contact support for more details.
-
-**Please note**: using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
-
-In order to use Cert Pinning public keys, you should pass a new property to the LPAuthenticationParams object init, when calling the API of:
-
-**showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)**
-
-The new property that should be passed is:
-
-**LPAuthenticationParams → certPinningPublicKeys: [String]?**
-
-This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers.
-
-#### New Callbacks
-
-##### Cert Pinning callback
-
-`func LPMessagingSDKCertPinningFailed(_ error: NSError)`
-
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. Or, the server trust's evaluation failed: the server's certificate chain is not trusted.
 
 * **Key for items as follows:**
 
