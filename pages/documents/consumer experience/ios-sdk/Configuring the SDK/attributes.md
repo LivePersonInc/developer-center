@@ -1231,7 +1231,9 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 </tbody>
 </table>
 
-### Time To Response and Off hours
+### Time To Responsd and Off hours
+
+Please see [this document](local-message-notifications.html) for more in-depth information on how to configure and work with Time to Responsd (TTR) and Off Hours notifications.
 
 <table class="bigtable">
 <thead>
