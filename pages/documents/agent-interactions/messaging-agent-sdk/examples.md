@@ -16,23 +16,33 @@ Here are a few sample bot integrations, which demonstrates some of the use cases
 
 2. You must configure an agent in your LiveEngage account.
 
-3. You must have the latest version of node.js installed on your machine. Here's a guide on how to do so: [Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)/[Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
+3. You must have the latest version of node.js installed on your machine. Here's a guide on how to do so: [Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
 
 ### Greeting Bot Example
 
-This example demonstrates running a System Message type bot, which subscribes to all of the incoming conversation, and sends the first welcome message. In this example, you will run a bot on your account that answers a conversation, sends a greeting to the visitor and transfers the conversation to an agent. In order to setup the agent-side code which achieves the Greeting Bot, follow this link:
+This example demonstrates running a System Message type bot, which subscribes to all of the incoming conversation, and sends the first welcome message. In this example, you will:
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the greeting bot example on Github.
+* Run a bot on your account that answers a conversation.
 
-In order to generate a conversation with the account (and the Greeting Bot by extension), [follow the steps included in this guide inside the Messaging Window API](https://developers.liveperson.com/consumer-int-js-sample.html).
+* This bot will send a greeting to the visitor.
+
+* The bot will then transfer the conversation to an agent.
+
+There are two parts to making this example work:
+
+1. In order to setup the agent-side code which achieves the Greeting Bot, [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the greeting bot example on Github.
+
+2. In order to generate a conversation with the account (and the Greeting Bot by extension), [follow the steps included in this guide inside the Messaging Window API](https://developers.liveperson.com/consumer-int-js-sample.html).
 
 ### Agent Bot Example
 
-This example demonstrates running an Agent Bot, which serves as the standard agent of this account, and echoes every message sent to it. This example is meant to help you understand how to handle messages as a bot. In order to setup the agent-side code which achieves the Agent Bot example (echo bot), follow this link:
+This example demonstrates running an Agent Bot, which serves as the standard agent of this account, and echoes every message sent to it. This example is meant to help you understand how to handle messages as a bot.
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the Agent Bot (echo bot) example on Github.
+There are two parts to making this example work:
 
-In order to generate a conversation with the account (and the Echo Bot by extension), [follow the steps included in this guide inside the Messaging Window API](https://developers.liveperson.com/consumer-int-js-sample.html).
+1. In order to setup the agent-side code which achieves the Agent Bot example (echo bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the Agent Bot (echo bot) example on Github.
+
+2. In order to generate a conversation with the account (and the Echo Bot by extension), [follow the steps included in this guide inside the Messaging Window API](https://developers.liveperson.com/consumer-int-js-sample.html).
 
 Use the Agent Bot example when you are looking to review and develop with the various available API calls, such as:
 
