@@ -13,9 +13,10 @@ indicator: messaging
 ---
 
 ### Introduction
-Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, mobile apps have an additional validation of the server’s certificate.
+
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists in preventing certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, mobile apps have an additional validation of the server’s certificate.
 In order to use the feature, the brand will need to use the Vanity URL feature. Once the onboarding to Vanity URL is completed, the brand will be able to implement the feature inside its app.
-In order to use the feature, the brand will need to go through an onboarding process which includes the following steps:
+In order to use the feature, the brand will need to go through an on-boarding process which includes the following steps:
   * Request to use the feature from the account team
   * Filling the Vanity URL feature request form
   * Purchasing a SAN certificate according to a CSR which will be provided by the account team
