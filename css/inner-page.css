@@ -455,7 +455,6 @@ div.sidebarTitle-holder {
 }
 
 .post-content > p, .post-content ol,.post-content u {
-  color: #666666;
   font-family: "Open Sans",Arial;
   font-size: 0.9em;
   overflow-wrap: break-word;
