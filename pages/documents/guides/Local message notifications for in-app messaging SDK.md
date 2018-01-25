@@ -87,7 +87,7 @@ Time To Respond (TTR) has two configurable modes:
 
 In iOS these messages appear within the in-app messaging conversation window just under the navigationBar Window mode and ViewController Mode.
 
-<img src="ios_ttr.png">
+<img src="img/ios_ttr.png">
 
 *Image: iOS time to respond notification*
 
@@ -95,7 +95,7 @@ In Android these messages appear within the in-app messaging conversation window
 
 See the image below for examples of how the local messages will appear on Android:
 
-<img src="android_ttr.png">
+<img src="img/android_ttr.png">
 
 *Image: Android time to respond notification*
 
