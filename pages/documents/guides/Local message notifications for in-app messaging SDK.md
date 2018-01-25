@@ -5,7 +5,8 @@ level1: Documents
 level2: Guides
 level3: Local Message Notifications
 order: 10
-level-order: 8
+level-order: 10
+root-link: true
 permalink: local-message-notifications.html
 indicator: messaging
 ---

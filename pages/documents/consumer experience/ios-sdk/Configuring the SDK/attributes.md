@@ -1171,7 +1171,7 @@ It will affect the following areas:
     <td align="left"><img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"></td>
     <td align="left">#F5F5F5</td>
   </tr>
-  <tr>  
+  <tr>
   </tr>
   <tr>
     <td align="left">inputTextViewCornerRadius</td>
@@ -1452,7 +1452,7 @@ Please see [this document](local-message-notifications.html) for more in-depth i
     <td align="left">remoteUserDefaultAvatarImage</td>
     <td align="left">UIImage?</td>
     <td align="left">Default Avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations.  If remote user has an avatar image in his profile, this attribute will be ignored.</td>
-    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"</td>
+    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"></td>
     <td align="left">nil</td>
   </tr>
   <tr>
