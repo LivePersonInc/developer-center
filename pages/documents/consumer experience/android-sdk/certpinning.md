@@ -4,7 +4,7 @@ Keywords:
 level1: Documents
 level2:
 level3: In-App Messaging SDK for iOS
-level4: SDK APIs
+level4: Certificate Pinning
 
 order:
 permalink: consumer-experience-android-sdk-certpinning.html
