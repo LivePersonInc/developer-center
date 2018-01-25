@@ -99,8 +99,8 @@ public enum PermissionType {
   	PHOTO_SHARING
 }  
 ```
-### LPAuthenticationParams
 
+### LPAuthenticationParams
 
 ```javascript
 
