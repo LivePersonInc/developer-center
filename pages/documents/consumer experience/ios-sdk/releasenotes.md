@@ -75,7 +75,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
-* **Key for items as follows:**
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 

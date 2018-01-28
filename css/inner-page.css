@@ -7,18 +7,18 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], dt[id] {
 
 h2[id] {
   color: #162036;
-  font-family: Roboto,Arial;
+  font-family: "Roboto",Arial;
   font-size: 1.0666em;
   margin-bottom: 0;
   margin-top: 30px;
 }
 h3[id]{
-  font-family: Roboto, Arial;
+  font-family: "Roboto", Arial;
   color:#5879da;
   font-size: 0.9333em;
 }
 h4[id]{
-  font-family: Roboto, Arial;
+  font-family: "Roboto", Arial;
   color:#5879da;
   font-size: 0.86em;
   font-weight: 600;
@@ -31,14 +31,14 @@ h4 code.highlighter-rouge {
 
 .h2 {
   color: #162036;
-  font-family: Roboto,Arial;
+  font-family: "Roboto",Arial;
   font-size: 1.0666em;
   margin-bottom: 30px;
 
 }
 .h3 {
   color: #5879da;
-  font-family: Roboto,Arial;
+  font-family: "Roboto",Arial;
   font-size: 0.9333em;
   margin-bottom: 8px;
   margin-top: 14px;
@@ -55,6 +55,14 @@ h4 code.highlighter-rouge {
   border: 1px solid #d6d6d6;
   width: 125%;
 }
+
+:target::before {
+  content: "";
+  display:block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
 
 .bigtable {
   max-width: initial;
