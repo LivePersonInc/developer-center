@@ -1,3 +1,11 @@
+/* this is so the header won't overlap the links */
+:target::before {
+  content: "";
+  display:block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
 
 /*inner page css */
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], dt[id] {
@@ -54,13 +62,6 @@ h4 code.highlighter-rouge {
 .post-content table{
   border: 1px solid #d6d6d6;
   width: 125%;
-}
-
-:target::before {
-  content: "";
-  display:block;
-  height: 120px;
-  margin: -120px 0 0;
 }
 
 
