@@ -56,7 +56,7 @@ _For mobile app implementation_:
 
 *	Your mobile app users should be able to log into your backend in a secure manner.
 
-*	Your backend must be able to supply, upon request during the session, an OAuth 2.0 code (for Implicit Flow) or a JWT token (for Code Flow).
+*	Your backend must be able to supply, upon request during the session, an OAuth 2.0 code (for Code Flow) or a JWT token (for Implicit Flow).
 
 _For web implementation_:
 
