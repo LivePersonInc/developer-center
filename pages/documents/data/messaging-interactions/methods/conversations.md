@@ -128,6 +128,7 @@ latestAgentId        | Most recent agent ID the conversation was assigned to.   
 latestAgentLoginName | The agent's login name.                                                    | string     |
 latestAgentNickname  | The agent's nickname.                                                      | string     |
 latestAgentFullName  | The agent's full name.                                                     | string     |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
 latestAgentGroupId   | Group ID of the agent most recently assigned to the conversation.          | long       |
 latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
@@ -258,6 +259,7 @@ agentId        | ID of agent.                                                   
 agentLoginName | Login name of the agent assigned to the conversation.              | string     |
 agentNickname  | Nickname of the agent assigned to the conversation.                | string     |
 agentFullName  | Full name of the agent assigned to the conversation.               | string     |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
 time           | The time the agent was added to the conversation.                  | string     |
 timeL          | The time the agent was added to the conversation (in long format). | long       |
 role           | The agent's role in the conversation- assigned agent, manager etc. | string     |
