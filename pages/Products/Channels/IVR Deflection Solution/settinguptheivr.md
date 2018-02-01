@@ -1,13 +1,11 @@
 ---
-title: Setting up the IVR Deflection Solution
+title: Setting up the IVR Deflection Solution for Chat
 level1: Solutions
 level2: Channels
-level3: IVR Deflection Solution for Chat
-
-order: 2
-
+level3: IVR Deflection
+order: 30
 permalink: products-channels-ivr-deflection-solution-setting-up-ivr.html
-indicator:
+indicator: chat
 ---
 
 To start using the **IVR Deflection Solution for Chat**, set up a LiveEngage campaign with IVR engagement following the key steps listed below:

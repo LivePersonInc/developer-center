@@ -10,6 +10,92 @@ permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<br>
+<br>
+
+### In-App Messaging SDK version 3.0 for iOS.
+
+#### New functionalities
+
+##### Certificate Pinning
+
+**Type:** Security Feature
+
+**Available to all customers?** No. Contact support for more details.
+
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+
+The object certPinningPublicKeys was added to the object LPAuthenticationParams.
+**Please note**: using the new object without completing the onborading process will result in failures while trying to communicate with LivePerson’s servers.
+
+The following additional conditions and configurations are required:
+
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
+
+
+##### XCode 9.3 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
+
+#### List of certified and supported devices extended
+
+The following devices are now also supported and/or certified to host our in-app messaging SDK:
+
+<table>
+<thead>
+ <tr>
+ <th></th>
+ <th colspan="4">Operating system</th>
+ </tr>
+ <tr>
+ <th>Model</th>
+ <th>iOS 9.x</th>
+ <th>iOS 10.x</th>
+ <th>iOS 11.x</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>iPhone 8</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ <tr>
+ <td>iPhone 8+</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ <tr>
+ <td>iPhone X</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ </tbody>
+</table>
+
+A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
+
+* **Key for items as follows:**
+
+**Backend update:** This feature requires an update to the backend.
+
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+
+**Backend configuration**: This feature requires configuration in the backend.
+
+**SDK enablement:** This feature requires items to be toggled on in the SDK.
+
+**SDK configuration**: This features requires items to be configured in the SDK.
+
 
 ### iOS Messaging SDK - Version 2.9.4
 
@@ -590,7 +676,7 @@ Parameters:
 
 * failure: a failure block with a specified error for logout failure. The failure block will be invoked if at least one of the logout steps has failed.
 
-**Related API: **[Logout API](#heading=h.mr00ktj28srq)
+**Related API:** [Logout API](#heading=h.mr00ktj28srq)
 
 The following additional conditions and configurations are required*:
 

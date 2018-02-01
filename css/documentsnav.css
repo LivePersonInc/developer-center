@@ -16,153 +16,77 @@
     vertical-align: top;
 }
 
+.documentscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
 .documentbox{
+  height: 340px;
   width: 890px;
-  height: 220px;
   background-color: #fff;
   -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
   -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
   box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
   margin: 0 auto;
   margin-bottom: 18px;
+  display: flex;
 }
 
-.categorybox {
-  width: 30%;
-  margin-top: 15px;
-  display: inline-block;
+
+.documentbox img{
+  width: 60px;
+  height: 60px;
+  margin: 50px 10px 18px 22px;
 }
 
-.categorytitle{
-  /* float:left; */
-  font-size: 26px;
-  margin-left: 0;
-  margin-right: 0;
-  margin: auto;
-  display: inline-block;
-  width: 124px;
-  margin-top: 28px;
-  margin-left: -152px;
+.documentboxdetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.documentboxtitle {
+  display: flex;
+}
+
+.documentboxicon {
+  flex: 1;
+}
+
+.documentboxtitletext {
+  flex: 1;
   font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   color: #0c1320;
+  font-size: 26px;
+  margin-top: 62px;
+  margin-right: 16px;
 }
 
-.categorysub{
-  float: left;
-  margin-top: 110px;
-  display: inline-block;
-  width: 207px;
-  margin-left: -41px;
+.documentboxinfo {
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
   color: #333333;
+  font-size: 16px;
+  margin-left: 32px;
+  padding-right: 10px;
 }
 
-.listbox {
-  float:right;
+.documentboxlist {
+  flex: 2;
+  display: flex;
+  line-height: 2.8;
   background-color: #ECF1FF;
-  display: block;
-  margin-top: 17px;
-  margin-right: 18px;
-  width: 551px;
-  line-height: 3;
-  font-size: 14px;
   font-family: "Open Sans",Arial, Helvetica, sans-serif;
-  padding: 10px 0 0 0;
+  margin: 18px 18px 18px 10px;
 }
 
-.categoryimage{
-  float:left;
-  width: 50px;
-  margin-top: 29px;
-  margin-left: 40px;
+.linklist {
+  flex: 1;
 }
 
-.lower{
-  margin-top: 17px;
-}
-
-@media (max-width: 425px) {
-  .documentbox {
-    width: 890px;
-    height: 328px;
-    margin-bottom: 55px;
-    margin-top: 100px;
-  }
-
-  .categorybox {
-    display: block;
-    width: initial;
-}
-
-  .categoryimage {
-    margin-top: 8px;
-    margin-left: 188px;
-    float:none;
-    display: inline-block;
-    width: 50px;
-
-  }
-
-  .categorytitle {
-    display: block;
-    margin-left: 95px;
-    margin-top: 14px !important;
-    margin-bottom: 15px;
-    text-align: center;
-    width: 240px;
-  }
-
-  .categorysub {
-    display:none;
-  }
-
-  .listbox {
-    float: left;
-    display: block;
-    width: 432px;
-    height: 204px;
-    line-height: 2 !important;
-    font-size: 14px;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    padding: 0 0 0 0;
-    margin-bottom: 4px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .listmobile {
-    float: left;
-    width: 49%;
-    display: inline-block;
-    margin-top: 10px;
-
-  }
-
-  .listmobilesecond {
-    float:right;
-    display: block;
-    width: 51%;
-    margin-top: 10px;
-  }
-
-  .lower {
-    height: 212px;
-    margin-top: 17px !important;
-  }
-
-  .listboxleft {
-    margin-left: -176px;
-  }
-
-  .listboxlast {
-    height: 167px;
-  }
-
-  .titlelast {
-    margin-top: 34px !important;
-  }
-
-}
 
 .usecasebox {
   width: 24%;
@@ -247,8 +171,6 @@
   margin-left: 12.666667%;
   max-width: 100%;
   width: 100%;
-    display: flex;
-    justify-content: space-around;
 }
 
 .bottomrow {
@@ -265,16 +187,6 @@
 
 .documentlast {
   margin-bottom: 100px;
-}
-
-.guides .listbox {
-
-  line-height: 2.8;
-
-}
-
-.realtimeint .listbox {
-  line-height: 2.8;
 }
 
 .solutionscontainer {

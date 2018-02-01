@@ -61,7 +61,7 @@ JSON Example
             "mandatory" : "false",
             "order" : "0",
     
-            "validationType" : "alpha_numeric,
+            "validationType" : "alpha_numeric",
             "logicId" : "6",
             "id" : "13387460",
             "type" : "Text Area",
