@@ -1186,6 +1186,7 @@ Example:
 | agentName | The agent’s nickname. | alphanumeric (256) | |
 | agentLoginName | The agent’s login name. | alphanumeric (256) | |
 | agentFullname | The agent’s full name. | alphanumeric (256) | |
+| agentDeleted | Indicates whether agent was deleted. | Boolean | |
 | agentGroupId | Agent group ID. | numeric | |
 | agentGroupName | Name of the group the agent belongs to. | alphanumeric (256) | |
 | skillId | Skill ID. | numeric | |
