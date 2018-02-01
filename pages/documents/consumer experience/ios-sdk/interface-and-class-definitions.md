@@ -114,8 +114,19 @@ enum LogLevel: Int {
 
 ```javascript
 enum LPConversationCloseReason: Int {
-        case agent = 0
-        case consumer
-        case system
+    case agent = 0
+    case consumer
+    case system
+}
+```
+
+### LPCampaignInfo
+
+```javascript
+class LPCampaignInfo: NSObject {
+    var campaignID: Int64
+    var engagementID: Int64
+    var sessionId: String?
+    var visitorId: String?
 }
 ```
