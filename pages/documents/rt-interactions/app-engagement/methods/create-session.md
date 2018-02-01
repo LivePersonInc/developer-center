@@ -17,7 +17,7 @@ Use this method to start a new session and to get an engagement according to the
 
 | Method | URL |
 | :--- | :--- |
-|POST|`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}?sid={session-id}` |
+|POST|`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
 
 **Body Parameters**
 
