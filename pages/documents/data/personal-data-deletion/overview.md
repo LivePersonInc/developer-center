@@ -18,6 +18,8 @@ Personal Data Deletion API allows brands to comply with the European Union's Rig
 This data can include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 30 days from the time of the request. There will be some approval process on LivePerson's side in the early stages to make sure we are deleting the data as requested.
 Only closed conversations can be deleted.
 
+Note: deletion is actually masking of the perosnal data by replacing it with generic text.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
