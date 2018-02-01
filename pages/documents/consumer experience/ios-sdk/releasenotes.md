@@ -34,6 +34,15 @@ The following additional conditions and configurations are required:
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | Yes | Yes | Yes | Yes | Yes |
 
+
+##### XCode 9.3 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
+
 #### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
