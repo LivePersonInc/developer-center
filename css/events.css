@@ -180,6 +180,7 @@ a.view-all-products::after{
 
 .videorow {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .summitvideo {
