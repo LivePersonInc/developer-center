@@ -147,3 +147,239 @@ a.view-all-products::after{
   width: 850px;
   margin-top: 3%;
 }
+
+/* Codevelopment summit page */
+
+.developmentsummit .banner-container{
+	text-align:center;
+	background:url(/img/summit.gif) no-repeat center center / cover;
+	padding:96px 0;
+}
+
+.developmentsummit .section1{
+	background:#ecf0f1;
+	text-align:center;
+	padding:72px 0;
+}
+
+.developmentsummit .section2{
+	padding:72px 0 40px;
+	border-bottom:1px solid #ecf0f1;
+}
+
+.developmentsummit .section3{
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+.videocontainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1460px !important;
+}
+
+.videorow {
+  display: flex;
+}
+
+.summitvideo {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.videotitle {
+  position: relative;
+  margin: 0 auto;
+  width: 149px;
+  font-family: "Roboto";
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.videotitlewide {
+  width: 314px;
+}
+
+.developmentsummit h1{
+	color:#ffffff;
+	font-size:48px;
+	line-height:64px;
+	font-family:'roboto slab',arial;
+	font-weight:600;
+	margin-top:0;
+	margin-bottom:24px;
+}
+
+.developmentsummit h2{
+	color:#162036;
+	font-size:24px;
+	line-height:32px;
+	font-family:'open sans',arial;
+	font-weight:500;
+	margin-top:0;
+	padding-top:0;
+	text-align:center;
+}
+
+.developmentsummit .orange{
+	color:#ffffff;
+	background:#ff720b;
+	padding:14px 26px;
+	font-size:1.5em;
+  margin-bottom: 40px;
+}
+
+.developmentsummit p, .developmentsummit > ul > li{
+	color:#162036;
+	font-size:16px;
+	line-height:22px;
+	font-family:'open sans',arial;
+	font-weight:300;
+}
+
+.developmentsummit > ul > li{
+	margin-bottom:20px;
+}
+
+.developmentsummit .banner-container h2{
+	color:#ffffff;
+	margin-bottom:32px;
+}
+
+.developmentsummit .section2 h2{
+	margin-bottom:40px;
+}
+
+.developmentsummit .section3 iframe{
+	border:0;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+	.developmentsummit .banner-container{
+		background:url(/images/background-le-for-bots@2x.png) no-repeat center center / cover;
+	}
+
+}
+
+@media (max-width:992px){
+	.developmentsummit .section3 p{
+		margin-bottom:40px;
+	}
+}
+
+.video_overlays {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background: rgba(88, 121, 218, 0.75);
+  z-index: 300000;
+}
+
+.codev-slash{
+  display: inline;
+  color: #FF720B;
+}
+
+.achieve-left {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  float: left;
+  margin-top: 10px;
+}
+
+.achieve-right {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  float: right;
+  margin-top: 10px;
+}
+
+.achieve-main {
+  color: #162036;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.bottom-pane {
+  color: #162036;
+  font-size: 48px;
+  line-height: 64px;
+  font-family: 'roboto slab', arial;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.needtoknow {
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.achieve-list {
+  text-align: left;
+}
+
+.thumbnailrow {
+  display: flex;
+}
+
+.thumbnailimage {
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding: 4px;
+  flex: 1;
+}
+
+.thumbnailimage img {
+  width: 510px;
+  height: 270px;
+  margin-left: 70px;
+}
+
+.thumbnailtext {
+  margin-left: 88px;
+}
+
+.thumbnailtitle {
+    font-size: 1.575em;
+    font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+    width: 75%;
+    display: inline-block;
+    margin-top: 95px;
+    color: #142036;
+}
+
+.learnmore{
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1.2em;
+  width: 182px;
+  padding: 10px 40px 10px 40px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  border: 2px solid #a1a1a1;
+}
+
+.ds-dropdown-menu {
+  right: -105px !important;
+  left: auto !important;
+}
+
+/* End development summit page */
