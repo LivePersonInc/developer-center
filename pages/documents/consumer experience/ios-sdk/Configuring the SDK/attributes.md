@@ -485,6 +485,20 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">#8B8A8F</td>
   </tr>
   <tr>
+    <td align="left">photoSharingMenuCameraImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Custom Camera image in the photo Sharing Menu.</td>
+    <td align="left"><img src="img/camera_menu.png" alt="camera_menu"></td>
+    <td align="left">SDK bundle camera_menu Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingMenuLibraryImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Custom Library image in the photo Sharing Menu.</td>
+    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
+    <td align="left">SDK bundle gallery_menu Image</td>
+  </tr>
+  <tr>
     <td align="left">fileCellLoaderFillColor</td>
     <td align="left">UIColor</td>
     <td align="left">Radial loader fill color</td>
