@@ -44,7 +44,6 @@ Sends a transcript of the chat to the visitor's email address.
 
 ![EmailTranscript](img/EmailTranscriptScreenShot.png){:style="max-height:420px;"}
 
-
 Request Body Example:
 
     {
