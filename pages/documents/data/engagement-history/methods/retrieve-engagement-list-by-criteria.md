@@ -899,266 +899,328 @@ Example:
 
 
 ```json
-    {
-      "_metadata": {
-        "count": 1,
-        "self": {
-          "rel": "self",
-          "href": "https://localhost:8080/api/account/qa35931557/interactions/search?limit=50&offset=0"
-        },
-        "shardsStatusResult": {
-          "partialResult": false
-        }
-      },
-      "interactionHistoryRecords": [
-        {
-          "info": {
-            "startTime": "2017-02-01 17:11:59.916+0000",
-            "startTimeL": 1485969119916,
-            "endTime": "2017-02-01 17:26:47.735+0000",
-            "endTimeL": 1485970007735,
-            "duration": 887,
-            "visitorId": "UwYzRjYzJhMzQ0YTRlYzcz",
-            "visitorName": "You",
-            "engagementId": "qa359315574294967901",
-            "sharkEngagementId": "qa35931557_xMzD21hMRaOLuOl27h9yaw_1",
-            "isInteractive": true,
-            "accountId": "qa35931557",
-            "agentId": "213185812",
-            "agentNickName": "liorr@liveperson.com",
-            "agentLoginName": "liorr@liveperson.com",
-            "agentFullName": "liorr@liveperson.com",
-            "skillId": -1,
-            "skillName": "Unassigned",
-            "isAgentSurvey": false,
-            "isPostChatSurvey": false,
-            "isPreChatSurvey": false,
-            "channel": 1,
-            "startReason": "0",
-            "startReasonDesc": "Visitor request",
-            "endReason": "201",
-            "endReasonDesc": "Rep stopped chat",
-            "engagementSet": 0,
-            "engagementSequence": 0,
-            "agentGroupId": -1,
-            "agentGroupName": "Main Group",
-            "mcs": 1,
-            "alertedMCS": 1,
-            "chatMCS": 60,
-            "chatRequestedTime": "2017-02-01 17:11:55.781+0000",
-            "chatRequestedTimeL": 1485969115781,
-            "chatStartUrl": "http://hc1d.dev.lprnd.net/smt.jsp?siteid=qa35931557",
-            "chatStartPage": "LE 2.0 Test Page",
-            "isPartial": false,
-            "ended": true,
-            "interactive": true,
-            "chatDataEnriched": false
-          },
-          "transcript": {
-            "lines": [
-              {
-                "time": "2017-02-01 17:11:55.981+0000",
-                "timeL": 1485969115981,
-                "controlType": 4,
-                "text": "Thank you for choosing to chat with us.  An agent will be with you shortly.",
-                "by": "info",
-                "source": "system",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 0
-              },
-              {
-                "time": "2017-02-01 17:11:59.913+0000",
-                "timeL": 1485969119913,
-                "controlType": 3,
-                "text": "You are now chatting with liorr@liveperson.com.",
-                "by": "info",
-                "source": "system",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 0
-              },
-              {
-                "time": "2017-02-01 17:12:03.246+0000",
-                "timeL": 1485969123246,
-                "controlType": 0,
-                "text": "hello",
-                "by": "liorr@liveperson.com",
-                "source": "agent",
-                "subType": "REGULAR",
-                "textType": "html",
-                "cannedAnswerType": 0,
-                "agentId": 213185812
-              },
-              {
-                "time": "2017-02-01 17:12:16.179+0000",
-                "timeL": 1485969136179,
-                "controlType": 0,
-                "text": "I love your service",
-                "by": "You",
-                "source": "visitor",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 0
-              },
-              {
-                "time": "2017-02-01 17:13:11.491+0000",
-                "timeL": 1485969191491,
-                "controlType": 0,
-                "text": "I love your service very much",
-                "by": "You",
-                "source": "visitor",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 0
-              },
-              {
-                "time": "2017-02-01 17:16:11.501+0000",
-                "timeL": 1485969371501,
-                "controlType": 0,
-                "text": "I'm sorry for the delay. I'll be right with you.",
-                "by": "liorr@liveperson.com",
-                "source": "agent",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 213185812
-              },
-              {
-                "time": "2017-02-01 17:19:11.502+0000",
-                "timeL": 1485969551502,
-                "controlType": 0,
-                "text": "Thank you for waiting. I'll be with you in just a moment.",
-                "by": "liorr@liveperson.com",
-                "source": "agent",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 213185812
-              },
-              {
-                "time": "2017-02-01 17:20:45.197+0000",
-                "timeL": 1485969645197,
-                "controlType": 0,
-                "text": "fgdfdf",
-                "by": "liorr@liveperson.com",
-                "source": "agent",
-                "subType": "REGULAR",
-                "textType": "html",
-                "cannedAnswerType": 0,
-                "agentId": 213185812
-              },
-              {
-                "time": "2017-02-01 17:26:47.735+0000",
-                "timeL": 1485970007735,
-                "controlType": 5,
-                "text": "Thank you for chatting with us.",
-                "by": "info",
-                "source": "system",
-                "subType": "REGULAR",
-                "textType": "plain",
-                "cannedAnswerType": 0,
-                "agentId": 0
-              }
-            ]
-          },
-          "campaign": {
-            "campaignEngagementId": "213185212",
-            "campaignEngagementName": "Sticky chat button",
-            "campaignId": "213185112",
-            "campaignName": "Live Chat on your site",
-            "goalId": "213184812",
-            "goalName": "Interact with visitors",
-            "visitorBehaviorId": "213184912",
-            "visitorBehaviorName": "Any behavior",
-            "visitorProfileId": "213184712",
-            "visitorProfileName": "All visitors",
-            "lobId": -1,
-            "lobName": "NA"
-          },
-          "visitorInfo": {
-            "country": "",
-            "countryCode": "",
-            "state": "",
-            "city": "",
-            "isp": "",
-            "org": "",
-            "device": "DESKTOP",
-            "ipAddress": "192.168.20.237",
-            "browser": "Chrome 49.0.2623.87",
-            "operatingSystem": "MAC_OSX"
-          },
-          "coBrowseSessions": {
-                  "coBrowseSessionsList": [
-                    {
-                      "sessionId": "ffc41057-70fe-4a10-ab3e-6065a89dac64",
-                      "startTime": "2017-03-02 10:16:39.842+0000",
-                      "startTimeL": 1488449799842,
-                      "endTime": "2017-03-02 10:16:39.842+0000",
-                      "endTimeL": 1488449799842,
-                      "endReason": "SERVER",
-                      "duration": 29873,
-                      "interactive": false
-                    },
-                    {
-                      "sessionId": "d44796ae-4f3e-4b20-a2c8-eba5a4f20928",
-                      "startTime": "2017-03-02 10:24:51.510+0000",
-                      "startTimeL": 1488450291510,
-                      "endTime": "2017-03-02 10:24:51.510+0000",
-                      "endTimeL": 1488450291510,
-                      "interactiveTime": "2017-03-02 10:18:07.634+0000",
-                      "interactiveTimeL": 1488449887634,
-                      "endReason": "SERVER",
-                      "duration": 485279,
-                      "interactive": true
-                    }
-                  ]
-                },
-          "sdes": {
-            "events": [
-              {
-                "purchase": {
-                  "total": "77.0",
-                  "currency": null,
-                  "serverTimeStamp": "1485969113673",
-                  "cart": {
-                    "total": null,
-                    "serverTimeStamp": null,
-                    "products": [],
-                    "numItems": null
-                  },
-                  "orderId": "Test123"
-                },
-                "isAuthenticated": false,
-                "serverTimeStamp": "1485969113673",
-                "sdeType": "PURCHASE"
-              },
-              {
-                "purchase": {
-                  "total": "77.0",
-                  "currency": null,
-                  "serverTimeStamp": "1485970063032",
-                  "cart": {
-                    "total": null,
-                    "serverTimeStamp": null,
-                    "products": [],
-                    "numItems": null
-                  },
-                  "orderId": "Test123"
-                },
-                "isAuthenticated": false,
-                "serverTimeStamp": "1485970063032",
-                "sdeType": "PURCHASE"
-              }
-            ]
-          }
-        }
-      ]
-    }
+   {
+	"_metadata": {
+		"count": 1,
+		"self": {
+			"rel": "self",
+			"href": "https://localhost:8080/api/account/qa35931557/interactions/search?limit=50&offset=0"
+		},
+		"shardsStatusResult": {
+			"partialResult": false
+		}
+	},
+	"interactionHistoryRecords": [
+		{
+			"info": {
+				"startTime": "2017-02-01 17:11:59.916+0000",
+				"startTimeL": 1485969119916,
+				"endTime": "2017-02-01 17:26:47.735+0000",
+				"endTimeL": 1485970007735,
+				"duration": 887,
+				"visitorId": "UwYzRjYzJhMzQ0YTRlYzcz",
+				"visitorName": "You",
+				"engagementId": "qa359315574294967901",
+				"sharkEngagementId": "qa35931557_xMzD21hMRaOLuOl27h9yaw_1",
+				"isInteractive": true,
+				"accountId": "qa35931557",
+				"agentId": "213185812",
+				"agentNickName": "liorr@liveperson.com",
+				"agentLoginName": "liorr@liveperson.com",
+				"agentFullName": "liorr@liveperson.com",
+				"skillId": -1,
+				"skillName": "Unassigned",
+				"isAgentSurvey": false,
+				"isPostChatSurvey": true,
+				"isPreChatSurvey": true,
+				"channel": 1,
+				"startReason": "0",
+				"startReasonDesc": "Visitor request",
+				"endReason": "201",
+				"endReasonDesc": "Rep stopped chat",
+				"engagementSet": 0,
+				"engagementSequence": 0,
+				"agentGroupId": -1,
+				"agentGroupName": "Main Group",
+				"mcs": 1,
+				"alertedMCS": 1,
+				"chatMCS": 60,
+				"chatRequestedTime": "2017-02-01 17:11:55.781+0000",
+				"chatRequestedTimeL": 1485969115781,
+				"chatStartUrl": "http://hc1d.dev.lprnd.net/smt.jsp?siteid=qa35931557",
+				"chatStartPage": "LE 2.0 Test Page",
+				"isPartial": false,
+				"ended": true,
+				"interactive": true,
+				"chatDataEnriched": false
+			},
+			"transcript": {
+				"lines": [
+					{
+						"time": "2017-02-01 17:11:55.981+0000",
+						"timeL": 1485969115981,
+						"controlType": 4,
+						"text": "Thank you for choosing to chat with us.  An agent will be with you shortly.",
+						"by": "info",
+						"source": "system",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 0
+					},
+					{
+						"time": "2017-02-01 17:11:59.913+0000",
+						"timeL": 1485969119913,
+						"controlType": 3,
+						"text": "You are now chatting with liorr@liveperson.com.",
+						"by": "info",
+						"source": "system",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 0
+					},
+					{
+						"time": "2017-02-01 17:12:03.246+0000",
+						"timeL": 1485969123246,
+						"controlType": 0,
+						"text": "hello",
+						"by": "liorr@liveperson.com",
+						"source": "agent",
+						"subType": "REGULAR",
+						"textType": "html",
+						"cannedAnswerType": 0,
+						"agentId": 213185812
+					},
+					{
+						"time": "2017-02-01 17:12:16.179+0000",
+						"timeL": 1485969136179,
+						"controlType": 0,
+						"text": "I love your service",
+						"by": "You",
+						"source": "visitor",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 0
+					},
+					{
+						"time": "2017-02-01 17:13:11.491+0000",
+						"timeL": 1485969191491,
+						"controlType": 0,
+						"text": "I love your service very much",
+						"by": "You",
+						"source": "visitor",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 0
+					},
+					{
+						"time": "2017-02-01 17:16:11.501+0000",
+						"timeL": 1485969371501,
+						"controlType": 0,
+						"text": "I'm sorry for the delay. I'll be right with you.",
+						"by": "liorr@liveperson.com",
+						"source": "agent",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 213185812
+					},
+					{
+						"time": "2017-02-01 17:19:11.502+0000",
+						"timeL": 1485969551502,
+						"controlType": 0,
+						"text": "Thank you for waiting. I'll be with you in just a moment.",
+						"by": "liorr@liveperson.com",
+						"source": "agent",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 213185812
+					},
+					{
+						"time": "2017-02-01 17:20:45.197+0000",
+						"timeL": 1485969645197,
+						"controlType": 0,
+						"text": "fgdfdf",
+						"by": "liorr@liveperson.com",
+						"source": "agent",
+						"subType": "REGULAR",
+						"textType": "html",
+						"cannedAnswerType": 0,
+						"agentId": 213185812
+					},
+					{
+						"time": "2017-02-01 17:26:47.735+0000",
+						"timeL": 1485970007735,
+						"controlType": 5,
+						"text": "Thank you for chatting with us.",
+						"by": "info",
+						"source": "system",
+						"subType": "REGULAR",
+						"textType": "plain",
+						"cannedAnswerType": 0,
+						"agentId": 0
+					}
+				]
+			},
+			"surveys": {
+				"preChat": [
+					{
+						"scope": "Session",
+						"source": "Pre-Chat",
+						"displayName": "Name",
+						"value": "Irena",
+						"values": [
+							"Irena"
+						],
+						"name": "Pre-Chat Survey",
+						"time": "2017-02-01 17:11:55.700+0000",
+						"timeL": 1485969115981,
+						"questionID": 1,
+						"surveyID": 195991
+					},
+					{
+						"scope": "Session",
+						"source": "Pre-Chat",
+						"displayName": "Email",
+						"value": "irena@gmail.com",
+						"values": [
+							"irena@gmail.com"
+						],
+						"name": "Pre-Chat Survey ",
+						"time": "2017-02-01 17:11:55.700+0000",
+						"timeL": 1485969115981,
+						"questionID": 2,
+						"surveyID": 195991
+					}
+				],
+				"postChat": [
+					{
+						"scope": "Session",
+						"source": "Exit",
+						"displayName": "How was the visit ?",
+						"value": "It was good",
+						"values": [
+							"It was good"
+						],
+						"name": "Post-chat Survey v2 (All Channels)",
+						"time": "2017-02-01 17:26:55.700+0000",
+						"timeL": 1485969115981,
+						"questionID": 9,
+						"surveyID": 222726
+					},
+					{
+						"scope": "Session",
+						"source": "Exit",
+						"displayName": "Will you recommentd us ?",
+						"value": "Yes",
+						"values": [
+							"Yes"
+						],
+						"name": "Post-chat Survey v2 (All Channels)",
+						"time": "2018-02-07 17:26:55.429+0000",
+						"timeL": 1485969115981,
+						"questionID": 14,
+						"surveyID": 222726
+					}
+				]
+			},
+			"campaign": {
+				"campaignEngagementId": "213185212",
+				"campaignEngagementName": "Sticky chat button",
+				"campaignId": "213185112",
+				"campaignName": "Live Chat on your site",
+				"goalId": "213184812",
+				"goalName": "Interact with visitors",
+				"visitorBehaviorId": "213184912",
+				"visitorBehaviorName": "Any behavior",
+				"visitorProfileId": "213184712",
+				"visitorProfileName": "All visitors",
+				"lobId": -1,
+				"lobName": "NA"
+			},
+			"visitorInfo": {
+				"country": "",
+				"countryCode": "",
+				"state": "",
+				"city": "",
+				"isp": "",
+				"org": "",
+				"device": "DESKTOP",
+				"ipAddress": "192.168.20.237",
+				"browser": "Chrome 49.0.2623.87",
+				"operatingSystem": "MAC_OSX"
+			},
+			"coBrowseSessions": {
+				"coBrowseSessionsList": [
+					{
+						"sessionId": "ffc41057-70fe-4a10-ab3e-6065a89dac64",
+						"startTime": "2017-03-02 10:16:39.842+0000",
+						"startTimeL": 1488449799842,
+						"endTime": "2017-03-02 10:16:39.842+0000",
+						"endTimeL": 1488449799842,
+						"endReason": "SERVER",
+						"duration": 29873,
+						"interactive": false
+					},
+					{
+						"sessionId": "d44796ae-4f3e-4b20-a2c8-eba5a4f20928",
+						"startTime": "2017-03-02 10:24:51.510+0000",
+						"startTimeL": 1488450291510,
+						"endTime": "2017-03-02 10:24:51.510+0000",
+						"endTimeL": 1488450291510,
+						"interactiveTime": "2017-03-02 10:18:07.634+0000",
+						"interactiveTimeL": 1488449887634,
+						"endReason": "SERVER",
+						"duration": 485279,
+						"interactive": true
+					}
+				]
+			},
+			"sdes": {
+				"events": [
+					{
+						"purchase": {
+							"total": "77.0",
+							"currency": null,
+							"serverTimeStamp": "1485969113673",
+							"cart": {
+								"total": null,
+								"serverTimeStamp": null,
+								"products": [],
+								"numItems": null
+							},
+							"orderId": "Test123"
+						},
+						"isAuthenticated": false,
+						"serverTimeStamp": "1485969113673",
+						"sdeType": "PURCHASE"
+					},
+					{
+						"purchase": {
+							"total": "77.0",
+							"currency": null,
+							"serverTimeStamp": "1485970063032",
+							"cart": {
+								"total": null,
+								"serverTimeStamp": null,
+								"products": [],
+								"numItems": null
+							},
+							"orderId": "Test123"
+						},
+						"isAuthenticated": false,
+						"serverTimeStamp": "1485970063032",
+						"sdeType": "PURCHASE"
+					}
+				]
+			}
+		}
+	]
+}
 ```
 
 **Elements in the Response**
@@ -1268,4 +1330,6 @@ Example:
 | name | This survey’s name. | alphanumeric (256) | |
 | time | This survey’s submitted event time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
 | timeL | This survey’s time in milliseconds. | numeric | |
+| questionId | The question's id that is displayed in the survey (id is generated by the system). | numeric | |
+| surveyId | The survey's id (id is generated by the system). | numeric | |
 | sdes | List of Engagement Attributes. | container | See [Appendix](data-engagement-history-appendix.html) |
