@@ -374,6 +374,7 @@ sdeType         | Type of sde.                                | enum
         "latestAgentNickname": "michal@lp.com",
         "latestAgentFullName": "michal@lp.com",
         "latestAgentLoginName": "michal@lp.com",
+        "agentDeleted":false,
         "latestSkillId": -1,
         "latestSkillName": "Unassigned",
         "source": "APP",
@@ -389,6 +390,26 @@ sdeType         | Type of sde.                                | enum
         "latestAgentGroupName": "Unassigned",
         "latestQueueState": "ACTIVE",
         "isPartial": false
+      },
+       "campaign": {
+       "campaignEngagementId": "2330596212",
+       "campaignEngagementName": "Engagement-123",
+       "campaignId": "2266771712",
+       "campaignName": "Live_Chat_on_your_site",
+       "goalId": "2266719412",
+       "goalName": "Interact with visitors",
+       "engagementAgentNote": "agent-note-test-messaging",
+       "engagementSource": "WEB_SITE",
+       "visitorBehaviorId": "2379540212",
+       "visitorBehaviorName": "someVisitorBehavior",
+       "visitorProfileId": "2286779312",
+       "visitorProfileName": "All visitors",
+       "lobId": 2389848512,
+       "lobName": "lob_123",
+       "locationId": "2266779612",
+       "locationName": "Entire site",
+       "profileSystemDefault": true,
+       "behaviorSystemDefault": false
       },
       "messageRecords": [
         {
