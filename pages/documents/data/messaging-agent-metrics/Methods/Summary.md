@@ -17,7 +17,7 @@ Returns a summary on the current state of the contact center. This includes numb
 
 | Method   |      URL     |
 |----------|-------------|
-| POST |  https://<domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
+| POST |  https://&lt;domain&lg;/messaging_history/api/account/{accountID}/agent-view/summary   |
 
 _URL Parameters_
 
@@ -51,7 +51,7 @@ _JSON Example_
 			]
 		}`
 
-  
+
 **Elements in the Response**
 
 | Name   |      Description      |  Type/Value |
@@ -65,5 +65,3 @@ _JSON Example_
 | numAwayAgents |  Number of agents in AWAY status    | alphanumeric |
 | numBackSoonAgents|  Number of agents in BACK SOON status   | alphanumeric |
 | numOnlineAgents|  Number of agents in ONLINE status   | alphanumeric |
- 
-
