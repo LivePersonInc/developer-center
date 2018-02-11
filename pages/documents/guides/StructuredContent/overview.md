@@ -223,9 +223,9 @@ Layout that allows you to present a set of items (elements/layouts) horizontally
 
 #### Click Operations
 
-Each basic element can have on click operations that is executed when the consumer clicks on the element.
+An element which has an "actions" field, has an on-click operation that is executed when the consumer clicks on the element.
 
-On-click objects can include two object types:
+On-click operations can result from two object types:
 
  * Actions: a list of actions to execute (Navigate/Link/publish text).
 
@@ -234,6 +234,8 @@ On-click objects can include two object types:
 #### Actions
 
 Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of operation. For instance: navigate with one of the navigation apps to a predefined place.
+
+**Note**: Only button, image, and map objects can receive the actions field.
 
 Types of actions supported by the platform:
 

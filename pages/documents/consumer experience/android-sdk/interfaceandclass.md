@@ -42,10 +42,10 @@ public class AgentData {
 
 ```javascript
 
-Public class InitLivePersonProperties{
-    Private string brandId;
-    Private string appId;
-    Private InitLivePersonCallBack initCallBack;
+public class InitLivePersonProperties{
+    private String brandId;
+    private String appId;
+    private InitLivePersonCallBack initCallBack;
 }
 ```
 
@@ -84,9 +84,9 @@ public class PushMessage {
 
 ```javascript
 
-Public class LPConversationData{
-    Private CloseReason closeReason;
-    Private String conversationId;
+public class LPConversationData{
+    private CloseReason closeReason;
+    private String conversationId;
 }
 ```  
 
@@ -104,7 +104,7 @@ public enum PermissionType {
 
 ```javascript
 
-Public class LPAuthenticationParams{
+public class LPAuthenticationParams{
   private String mAuthKey;
   private String mHostAppJWT;
   private String mHostAppRedirectUri;

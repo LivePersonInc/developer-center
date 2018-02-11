@@ -2,6 +2,7 @@
 title: Create Deletion Request
 keywords:
 level1: Documents
+level2: 
 level3: Personal Data Deletion API
 level4: Methods
 order: 10
@@ -74,7 +75,7 @@ Example 3:
 ### Response
 
  **Response Codes**
- 
+
   |Code|  Response|  
   |:------    |:-------- |
   |201 |  Created|  
@@ -82,7 +83,7 @@ Example 3:
   |401 |  Unauthorized request|  
   |403 |  Not sufficient priviliges|  
   |500 |  Internal server error|  
-  
+
   **Elements in the Response**
 
  |Name                 | Description                                                                    | Type/Value

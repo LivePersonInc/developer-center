@@ -27,7 +27,7 @@ You can find all the related configurations in the [resources ID table](consumer
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value `LPConfig.defaultConfiguration.enablePhotoSharing` By default this value is set to false. **Note that since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account**.
+To enable/disable photo sharing you can change the boolean value `LPConfig.defaultConfiguration.enablePhotoSharing` By default this value is set to false. **Note that you will need to contact your Account Team in order to enable the feature on your account**.
 
 ### Upload Photo
 

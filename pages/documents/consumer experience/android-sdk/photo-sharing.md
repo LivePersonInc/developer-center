@@ -1,5 +1,5 @@
 ---
-title: Photo Sharing (Beta)
+title: Photo Sharing
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -28,7 +28,7 @@ This section describes the photo sharing behavior and configurations in the Mess
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account**.
+To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that you will need to contact your Account Team in order to enable the feature on your account**.
 
 ###  Upload Photo
 

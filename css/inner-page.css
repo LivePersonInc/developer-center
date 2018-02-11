@@ -81,6 +81,7 @@ h4 code.highlighter-rouge {
     word-wrap:break-word;
     max-width: 160px;
     height: 50px;
+    hyphens: none;
 }
 
 .post-content table > thead > tr > th {
