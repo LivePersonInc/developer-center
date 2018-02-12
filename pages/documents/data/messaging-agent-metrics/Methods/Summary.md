@@ -34,23 +34,22 @@ Optional:
 
 _JSON Example_
 
-		    {
-			 "accountID": "36703082",
-			  "summaryResults": {
-		    "openAssignedConversations": 0,
-		    "weightedAvgLoad": 2.1,
-		    "minLoad": 20,
-		    "maxLoad": 40,
-		    "minConfiguredMaxSlots": 2,
-		    "maxConfiguredMaxSlots": 3,
-		    "numAwayAgents": 0,
-		    "numBackSoonAgents": 0,
-		    "numOnlineAgents": 0
-
-				}
-			]
-		}`
-
+```json
+{
+	"accountID": "36703082",
+	"summaryResults": {
+		"openAssignedConversations": 0,
+		"weightedAvgLoad": 2.1,
+		"minLoad": 20,
+		"maxLoad": 40,
+		"minConfiguredMaxSlots": 2,
+		"maxConfiguredMaxSlots": 3,
+		"numAwayAgents": 0,
+		"numBackSoonAgents": 0,
+		"numOnlineAgents": 0
+	}
+}
+```
 
 **Elements in the Response**
 
