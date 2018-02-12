@@ -17,7 +17,7 @@ Returns a summary on the current state of the contact center. This includes numb
 
 | Method   |      URL     |
 |----------|-------------|
-| POST |  https://&lt;domain&lg;/messaging_history/api/account/{accountID}/agent-view/summary   |
+| POST |  https://&lt;domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
 
 _URL Parameters_
 
