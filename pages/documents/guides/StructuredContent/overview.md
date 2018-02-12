@@ -88,7 +88,7 @@ Simple Button which triggers an Action when clicked.
 | title         | Button title                      | String  | Y        |
 | actions       | List of Actions                   | Action  | Y        |
 | tooltip       | Button tooltip, used also as aria | String  | N        |
-| rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is true                   | Boolean | N        |
+| rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false.                   | Boolean | N        |
 
 For the Metadata field, please see the Metadata section in this document, below.
 
