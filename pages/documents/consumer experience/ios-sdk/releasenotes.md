@@ -35,7 +35,7 @@ The following additional conditions and configurations are required:
 | Yes | Yes | Yes | Yes | Yes |
 
 
-##### XCode 9.3 and Swift 4.0.2 Support
+##### XCode 9.2 and Swift 4.0.2 Support
 
 **Type:** Developer Experience Feature
 
@@ -101,11 +101,17 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 **Version 2.9.4 planned roll-out: December 21th 2017**
 
+### Fixed issue
+
 #### Symptom:
 For iOS 11, the app might crash when closing the conversation screen while receiving new messages.
 
 #### Fix:
 Improved memory allocation for conversation screen
+
+### XCode 9.2 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
 
 ### iOS Messaging SDK - Version 2.9.3
 
