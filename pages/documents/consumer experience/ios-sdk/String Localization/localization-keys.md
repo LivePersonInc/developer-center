@@ -548,5 +548,9 @@ Listed below are all localized keys with the English localization string.
     <td>structuredContentItemError</td>
     <td>"Content failed to display"</td>
   </tr>
+  <tr>
+    <td>conversationEmptyState</td>
+    <td>"There are currently no conversations at this time"</td>
+  </tr>
 
 </table>
