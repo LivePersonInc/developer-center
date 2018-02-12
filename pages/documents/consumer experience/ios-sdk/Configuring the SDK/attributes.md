@@ -902,6 +902,13 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"></td>
     <td align="left">false</td>
   </tr>
+  <tr>
+    <td align="left">conversationEmptyStateTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the empty state label.</td>
+    <td align="left"></td>
+    <td align="left">Black</td>
+  </tr>
 </tbody>
 </table>
 
