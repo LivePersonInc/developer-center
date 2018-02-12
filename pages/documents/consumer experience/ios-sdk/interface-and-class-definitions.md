@@ -71,7 +71,37 @@ class LPLog: NSObject {
 class LPConversationViewParams: NSObject {
   var conversationQuery: ConversationParamProtocol!
   var containerViewController: UIViewController? // nil = WindowMode
-  var isViewOnly = false
+  var isViewOnly = false1
+  var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
+}
+```
+
+### LPConversationHistoryControlParam
+
+```javascript
+class LPConversationHistoryControlParam: NSObject {
+  var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay? // control what kind of conversation to show (Open/Close)
+  var historyConversationsMaxDays: UInt? //get conversation that Closed/Opens in the last X days
+
+  historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType? //Control if filter the max days by conversation start date or by conversation close date
+}
+```
+
+### LPConversationsHistoryStateToDisplay
+
+```javascript
+enum LPConversationsHistoryStateToDisplay: Int {
+    case open
+    case close
+}
+```
+
+### LPConversationHistoryMaxDaysDateType
+
+```javascript
+enum LPConversationHistoryMaxDaysDateType: Int {
+    case startConversationDate    // Default
+    case endConversationDate
 }
 ```
 
