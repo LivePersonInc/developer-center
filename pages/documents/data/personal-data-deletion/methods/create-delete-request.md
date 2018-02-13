@@ -39,7 +39,8 @@ All fields are sent in a JSON format
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | engagement| Engagement ids for deletion (chat) | list of string ids | Optional | Only one of the deletion types can be sent in a single request |
+ | engagement| Engagement ids for deletion (chat) | list of string ids | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response) 
+ Only one of the deletion types can be sent in a single request |
  | conversation| Conversation ids for deletion (messaging) | list of string ids | Optional | Only one of the deletion types can be sent in a request |
  | consumer| Consumer ids for deletion | list of string ids | Optional | Only one of the deletion types can be sent in a request |
 
