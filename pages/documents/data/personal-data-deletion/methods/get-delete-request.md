@@ -16,13 +16,13 @@ This API returns the metadata related to the deletion requests that were submitt
 
  |Method|      URL|
  |:--------  |:---  |
- |GET|  https://{domain}/api/account/{site_id}/personal-data-deletion{request_id} |
+ |GET|  https://{domain}/api/account/{site_id}/personal-data-deletion(/{request_id}) |
 
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|  Contains token string to allow request authentication and authorization.  |
+ |Authorization|  Contains oAuth string to allow request authentication and authorization.  |
 
  **Path Parameters**
 
@@ -35,7 +35,7 @@ This API returns the metadata related to the deletion requests that were submitt
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (OPEN,APPROVED)  | string| Optional | Default is all requests. Can be used only without request_id parameter |
+ | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED)  | string| Optional | Default is all requests. Can be used only without request_id parameter |
  | fromDate| The start of the timeframe for returning the deletion requests | long - represents the start time| Optional | Default is 1/1/1970. Can be used only without request_id parameter. |
  | toDate| The end of the timeframe for returning the deletion requests| long  - represents the end time| Optional | Default is current time. Can be used only without request_id parameter. |
 
@@ -61,21 +61,21 @@ Response is in a JSON format.
 [
     {
         "request_id": 323,
-        "siteid": "le39913159",
+        "siteid": "39913159",
         "request_time": "2017-11-06T14:03:57.000Z",
         "requested_by": "John",
         "status": "IN_PROGRESS"
     },
     {
         "request_id": 23,
-        "siteid": "le39913159",
+        "siteid": "39913159",
         "request_time": "2017-11-21T11:08:54.000Z",
         "requested_by": "Mike",
         "status": "NOT_STARTED"
     },
     {
         "request_id": 123,
-        "siteid": "le39913159",
+        "siteid": "39913159",
         "request_time": "2017-11-21T12:14:41.000Z",
         "requested_by": "Lisa",
         "status": "CANCELED"
