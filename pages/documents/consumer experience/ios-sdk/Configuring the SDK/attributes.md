@@ -499,11 +499,18 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">SDK bundle Camera Image</td>
   </tr>
   <tr>
-    <td align="left">photoSharingImageButton</td>
+    <td align="left">photoSharingOpenMenuImageButton</td>
     <td align="left">UIImage?</td>
-    <td align="left">Custom Library image in the photo Sharing Menu.</td>
+    <td align="left">Photo sharing open menu custom button.</td>
     <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
     <td align="left">SDK bundle gallery_menu Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingCloseMenuImageButton</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing close menu custom button.</td>
+    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
+    <td align="left">SDK bundle menuClose Image</td>
   </tr>
   <tr>
     <td align="left">fileCellLoaderFillColor</td>
