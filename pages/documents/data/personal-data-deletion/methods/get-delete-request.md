@@ -10,7 +10,7 @@ permalink: personal-data-deletion-get-deletion-requests.html
 indicator: both
 ---
 
-This API returns the metadata related to the deletion requests that were submitted by the brand, including their current status.
+This API returns the metadata related to the deletion requests that were submitted by the brand, including their current status. It can be used to retrieve all requests, a specific request by ID, or a set of requests opened during a specified timeframe.
 
 ### Request
 
@@ -35,9 +35,9 @@ This API returns the metadata related to the deletion requests that were submitt
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED)  | string| Optional | Default is all requests. Can be used only without request_id parameter |
- | fromDate| The start of the timeframe for returning the deletion requests | long - represents the start time| Optional | Default is 1/1/1970. Can be used only without request_id parameter. |
- | toDate| The end of the timeframe for returning the deletion requests| long  - represents the end time| Optional | Default is current time. Can be used only without request_id parameter. |
+ | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
+ | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string - represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
+ | toDate| The end of the date range for returning the deletion requests| yyyy-mm-dd string  - represents the end date| Optional | Default is current time. Can't be used only with request_id parameter. |
 
 
 ### Response
