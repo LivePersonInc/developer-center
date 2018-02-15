@@ -26,7 +26,7 @@ Required:
 
 | Name            | Description                        | Type/Value | Notes |
 | :---------      | :---------------                   | :----------| :--- |
-| consumer | ID of the consumer to search.| string |  It is the participantId of the consumerParticipants (LP's identification| 
+| consumer | ID of the consumer to search.| string |  the consumerId is the same as the participantId in the consumerParticipants section (it is an LP unique identification of the consumer)| 
 | status | Latest status of the conversation. | `Array<status>` |  Valid values: "OPEN", " or "CLOSE" |
 
 ### Response
