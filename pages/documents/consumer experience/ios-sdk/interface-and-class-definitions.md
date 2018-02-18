@@ -154,9 +154,55 @@ enum LPConversationCloseReason: Int {
 
 ```javascript
 class LPCampaignInfo: NSObject {
-    var campaignID: Int64
-    var engagementID: Int64
+    var campaignID: Int
+    var engagementID: Int
+    var sessionID: String?
+    var visitorID: String?
+}
+```
+
+### LPMonitoringInitParams
+```javascript
+class : NSObject {
+    var appInstallID: String // App Install ID of the Mobile Campaign of the Brand
+}
+```
+
+
+### LPMonitoringParams
+```javascript
+class : NSObject {
+    var entryPoints: [String]? // Entry points array of the Mobile App
+    var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes
+    var pageID: String? // PageID to send the SDEs for
+}
+```
+
+### LPGetEngagementResponse
+```javascript
+class : NSObject {
+    var engagementDetails: [LPEngagementDetails]? // Optional Engagement Details response in case received from the server, per the Engagement's request
     var sessionId: String?
     var visitorId: String?
+    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
+}
+```
+
+### LPSendSDEResponse
+```javascript
+class : NSObject {
+    var sessionId: String?
+    var visitorId: String?
+    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
+}
+```
+
+### LPEngagementDetails
+```javascript
+class : NSObject {
+    var campaignId: Int // CampaignID
+    var engagementId: Int // EngagementID
+    var conversationId: String? // Returned when there's an open conversation
+    var status: String?
 }
 ```
