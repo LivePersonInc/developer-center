@@ -22,7 +22,7 @@ This API allows cancellation of an existing deletion request in the time period 
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|  Contains token string to allow request authentication and authorization.  |
+ |Authorization|  Contains oAuth string to allow request authentication and authorization.  |
 
  **Path Parameters**
 
@@ -54,7 +54,7 @@ This API allows cancellation of an existing deletion request in the time period 
   [
       {
           "request_id": 7723,
-          "siteid": "le92186583",
+          "siteid": "92186583",
           "request_time": "2017-12-24T09:31:25.000Z",
           "requested_by": "yyy",
           "cancelled_by": "acc",

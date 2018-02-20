@@ -464,7 +464,7 @@ div.sidebarTitle-holder {
   /*padding-top: 26px;*/
 }
 
-.post-content > p, .post-content ol,.post-content u {
+.post-content > p, .post-content ol,.post-content ul {
   font-family: "Open Sans",Arial;
   font-size: 0.9em;
   overflow-wrap: break-word;
