@@ -131,6 +131,8 @@ latestAgentFullName  | The agent's full name.                                   
 agentDeleted | Indicates whether agent was deleted. | Boolean |
 latestAgentGroupId   | Group ID of the agent most recently assigned to the conversation.          | long       |
 latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
+browser | The browser or hosted application of the engagement.                 | string     |
+operatingSystem |  Operating system of the device | string     | Possible values:WINDOWS, MAC_OSX, LINUX, IOS, ANDROID.
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
 
@@ -148,6 +150,10 @@ Name                 | Description                                              
 | engagementSource | The source of the campaign's engagement .e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
 | visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
 | visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
+| engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | |
+| engagementApplicationName | Engagement's application name. | alphanumeric | |
+| engagementApplicationTypeId | Engagement's application type id | alphanumeric | |
+| engagementApplicationTypeName | Engagement's application type name | alphanumeric | |
 | visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
 | visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) | |
 | lobId | ID of the line of business of the campaign. | numeric(long) | |
@@ -386,6 +392,8 @@ sdeType         | Type of sde.                                | enum
         "firstConversation": false,
         "csatRate": 5,
         "device": "undefined",
+        "browser": "chrome",
+        "operatingSystem": "NA",
         "latestAgentGroupId": -1,
         "latestAgentGroupName": "Unassigned",
         "latestQueueState": "ACTIVE",
@@ -402,6 +410,10 @@ sdeType         | Type of sde.                                | enum
        "engagementSource": "WEB_SITE",
        "visitorBehaviorId": "2379540212",
        "visitorBehaviorName": "someVisitorBehavior",
+       "engagementApplicationId": "28879660-84fd-4cd8-a1d7-ba3247bdb252",
+       "engagementApplicationName": "Mobile App",
+       "engagementApplicationTypeId": "92274cfd-29e7-4d94-a013-0646212d8075",
+       "engagementApplicationTypeName": "Mobile App",
        "visitorProfileId": "2286779312",
        "visitorProfileName": "All visitors",
        "lobId": 2389848512,
