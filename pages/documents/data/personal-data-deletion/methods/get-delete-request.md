@@ -39,6 +39,7 @@ This API returns the metadata related to the deletion requests that were submitt
  | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string - represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
  | toDate| The end of the date range for returning the deletion requests| yyyy-mm-dd string  - represents the end date| Optional | Default is current time. Can't be used only with request_id parameter. |
 
+**Note: The current date format (YYYY-MM-DD) will be deprecated in the near future and the new expected format will be unix timestamps.**
 
 ### Response
 
