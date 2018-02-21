@@ -19,7 +19,7 @@ This API resets a user’s password.
 
 | Method|      URL  |
 | :-------- | :---|  
- |PUT|  /api/account/{accountId}/configuration/le-users/users/{userId}/resetPassword |
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/users/{userId}/resetPassword |
 
 **Request Headers**
 

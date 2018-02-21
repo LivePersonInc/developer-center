@@ -19,7 +19,7 @@ This API deletes an agent group from a specific account.
 
 | Method|  URL| 
  |:--------  |:---- |
- |DELETE|  /api/account/{accountId}/configuration/le-users/agentGroups/{agentGroupId} |
+ |DELETE|  https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups/{agentGroupId} |
 
 **Request Headers**
 

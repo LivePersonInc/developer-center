@@ -19,7 +19,7 @@ This API updates a LoB for a specific account.
 
 | Method | URL|
  |:--------- | :-------- |
- |PUT|  /api/account/{accountId}/configuration/le-users/lobs/{lobId}|
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/lobs/{lobId}|
 
 **Request Headers**
 

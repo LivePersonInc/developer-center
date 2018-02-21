@@ -20,7 +20,7 @@ This API updates an agent group for a specific account.
 
  |Method | URL |
  |:-------- | :----| 
- |PUT|  /api/account/{accountId}/configuration/le-users/agentGroups |
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups |
 
 **Request Headers**
 

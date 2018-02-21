@@ -19,7 +19,7 @@ This API creates a list of users for a specific account.
 
  |Method|      URL|  
  |:--------  |:---  |
- |POST|  /api/account/{accountId}/configuration/le-users/users  |
+ |POST|  https://{domain}/api/account/{accountId}/configuration/le-users/users  |
 
 **Request Headers**
 

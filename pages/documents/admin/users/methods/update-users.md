@@ -19,7 +19,7 @@ This API updates a list of users for a specific account.
 
  |Method   |   URL  |
  |:--------  |:---  |
- |PUT|  /api/account/{accountId}/configuration/le-users/users  |
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/users  |
 
 **Request Headers**
 

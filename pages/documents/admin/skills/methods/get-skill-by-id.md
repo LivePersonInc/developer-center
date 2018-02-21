@@ -19,7 +19,7 @@ This API retrieves a single skill (by ID) for a specific account.
 
 |Method   |   URL    |            
 |:--------  | :----------------- |
-| GET     |    /api/account/{accountId}/configuration/le-users/skills/{skillId}|
+| GET     |    https://{domain}/api/account/{accountId}/configuration/le-users/skills/{skillId}|
 
 **Request Headers**
 
