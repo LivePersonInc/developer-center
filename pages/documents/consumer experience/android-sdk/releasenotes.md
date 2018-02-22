@@ -236,7 +236,7 @@ New parameters may control text, padding of conversation UI elements and more.
  <td><img src="android_bubble_system_resolved_separator_padding_bottom.png"></td>
  </tr>
  <tr>
- <td><drawable name="lp_progress_bar_image"></drawable></td>
+ <td><dimen>drawable name="lp_progress_bar_image"</drawable></dimen></td>
  <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
  <td><img src="android_lp_progress_bar_image.png"></td>
  </tr>
