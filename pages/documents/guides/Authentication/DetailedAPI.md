@@ -60,7 +60,7 @@ The Customer web page method name can be either the default LivePerson method na
 
   code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
   grant_type=authorization_code
-  redirect_uri=https://www.liveperson.com
+  redirect_uri=https://liveperson.net
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
 
@@ -74,7 +74,7 @@ POST /token HTTP/1.1
 Host: server.example.com   
 Content-Type: application/x-www-form-urlencoded   
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW    
-grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fwww.liveperson.com%2Fcb
+grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fliveperson.net%2Fcb
 ```
 
 **API Response**
