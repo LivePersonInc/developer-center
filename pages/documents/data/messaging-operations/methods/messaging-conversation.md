@@ -111,10 +111,11 @@ Request by skillIds=all & agent id=2 (there is data only for skill=3)
 | avgTime_resolvedConversations_bySystem | The average handling time of conversations that were marked as resolved by the system (ie: by timeout) in the current interval/time frame. | float |
 | avgTime_resolvedConversations | The average handling time of conversations that were marked as resolved in the current interval/time frame. | float |
 
-**Optional Response Codes**
+**Possible Response Codes**
 
 | Code | Response |
 | :----- | :--------- |
 | 200 | OK - Successfully retrieved the data. |
 | 400 | Bad request - Problem with body or query parameters. |
 | 401 | Unauthorized - Bad Authentication (invalid site or agent). |
+| 429 | Request blocked due to rate limiting |
