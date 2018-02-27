@@ -158,6 +158,7 @@ class LPCampaignInfo: NSObject {
     var engagementID: Int
     var sessionID: String?
     var visitorID: String?
+    var engagementContextID: String?
 }
 ```
 
@@ -204,5 +205,6 @@ class : NSObject {
     var engagementId: Int // EngagementID
     var conversationId: String? // Returned when there's an open conversation
     var status: String?
+    var contextId: String?
 }
 ```
