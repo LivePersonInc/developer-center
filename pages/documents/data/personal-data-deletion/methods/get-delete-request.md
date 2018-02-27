@@ -2,6 +2,7 @@
 title: Get Deletion Requests
 keywords:
 level1: Documents
+level2: 
 level3: Personal Data Deletion API
 level4: Methods
 order: 30
@@ -9,19 +10,19 @@ permalink: personal-data-deletion-get-deletion-requests.html
 indicator: both
 ---
 
-This API returns the metadata related to the deletion requests that were submitted by the brand, including their current status.
+This API returns the metadata related to the deletion requests that were submitted by the brand, including their current status. It can be used to retrieve all requests, a specific request by ID, or a set of requests opened during a specified timeframe.
 
 ### Request
 
  |Method|      URL|
  |:--------  |:---  |
- |GET|  https://{domain}/api/account/{site_id}/personal-data-deletion{request_id} |
+ |GET|  https://{domain}/api/account/{site_id}/personal-data-deletion(/{request_id}) |
 
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|  Contains token string to allow request authentication and authorization.  |
+ |Authorization|  Contains oAuth string to allow request authentication and authorization.  |
 
  **Path Parameters**
 
@@ -34,9 +35,9 @@ This API returns the metadata related to the deletion requests that were submitt
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (OPEN,APPROVED)  | string| Optional | Default is all requests. Can be used only without request_id parameter |
- | fromDate| The start of the timeframe for returning the deletion requests | long - represents the start time| Optional | Default is 1/1/1970. Can be used only without request_id parameter. |
- | toDate| The end of the timeframe for returning the deletion requests| long  - represents the end time| Optional | Default is current time. Can be used only without request_id parameter. |
+ | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
+ | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string - represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
+ | toDate| The end of the date range for returning the deletion requests| yyyy-mm-dd string  - represents the end date| Optional | Default is current time. Can't be used only with request_id parameter. |
 
 
 ### Response
@@ -60,21 +61,21 @@ Response is in a JSON format.
 [
     {
         "request_id": 323,
-        "siteid": "le39913159",
+        "siteid": "39913159",
         "request_time": "2017-11-06T14:03:57.000Z",
         "requested_by": "John",
         "status": "IN_PROGRESS"
     },
     {
         "request_id": 23,
-        "siteid": "le39913159",
+        "siteid": "39913159",
         "request_time": "2017-11-21T11:08:54.000Z",
         "requested_by": "Mike",
         "status": "NOT_STARTED"
     },
     {
         "request_id": 123,
-        "siteid": "le39913159",
+        "siteid": "39913159",
         "request_time": "2017-11-21T12:14:41.000Z",
         "requested_by": "Lisa",
         "status": "CANCELED"

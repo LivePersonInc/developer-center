@@ -11,10 +11,10 @@ topnav:
     - title: Solutions
       url: /solutions.html
 
-- title: Bot Platform
+- title: Events
   items:
-    - title: Bot Platform
-      url: /bot-integration.html
+    - title: Events
+      url: /summit.html
 
 - title: Create a Developer Account
   items:

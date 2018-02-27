@@ -1,8 +1,9 @@
 ---
 title: Overview
 level1: Documents
+level2:
 level3: Personal Data Deletion API
-level-order: 6
+level-order: 8
 order: 1
 permalink: personal-data-deletion-overview.html
 root-link: true
@@ -24,11 +25,11 @@ Only closed conversations can be deleted.
 
 A few things you'll need to get started with this API:
 
-1. **Currently there's no need to retrieve your domain for this API**. Here are the different domains by geo location:
+1. **Currently there's no need to retrieve your domain for this API**. Below you can find the different domains by geo location. In order to determine the region of your account log into LiveEngage and look at the URL in your address bar. If it begins with z1, your account is hosted in the US. If it begins with z2 it is hosted in the EMEA region. If it begins with z3 it is an APAC account:
 
 * US accounts: va.data-mng.liveperson.net
 
-* UK accounts: lo.data-mng.liveperson.net
+* EMEA accounts: lo.data-mng.liveperson.net
 
 * APAC accounts: sy.data-mng.liveperson.net
 
@@ -50,11 +51,11 @@ This flow is initiated by the consumer requesting for one or all of his chats to
 
 The brand will need to follow the below steps to achieve this:
 
-1. Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
-2. Use the [Engagement History API](https://developers.liveperson.com/data-engagement-history-overview.html) to search for engagements with the identification value. Find all relevant engagements and detect the engagement id to delete
+2. Use the [Engagement History API](https://developers.liveperson.com/data-engagement-history-overview.html) to search for engagements with the identifying value. Find all relevant engagements and make note of the engagement id(s) to delete
 
-3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of engagement to delete.
+3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of engagements to delete.
 
 **Messaging - Flow #1**
 
@@ -62,9 +63,9 @@ This flow is initiated by the consumer requesting for one or all of his conversa
 
 The brand will need to follow the below steps to achieve this:
 
-1. Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
-2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identification value. Find all relevant conversation ids for deletion.
+2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation id(s) for deletion.
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of conversations to delete.
 
@@ -74,9 +75,9 @@ This flow is initiated by the consumer requesting for all of his personal data t
 
 The brand will need to follow the below steps to achieve this:
 
-1. Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during this consumer's engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
-2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identification value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
+2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method and make two requests: one with the list of conversations to delete and another with the consumerId. This makes sure that both the conversation and the rest of the consumer's data is completely deleted.
 
@@ -93,7 +94,7 @@ The brand will need to follow the below steps to achieve this:
 
  * Secure form data is not deleted.
 
-{:start="2"} 
+{:start="2"}
 2. Authentication via login will be available during the beta period.
 
 3. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.

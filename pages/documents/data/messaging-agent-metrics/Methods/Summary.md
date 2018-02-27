@@ -17,7 +17,7 @@ Returns a summary on the current state of the contact center. This includes numb
 
 | Method   |      URL     |
 |----------|-------------|
-| POST |  https://<domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
+| POST |  https://&lt;domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
 
 _URL Parameters_
 
@@ -34,24 +34,23 @@ Optional:
 
 _JSON Example_
 
-		    {
-			 "accountID": "36703082",
-			  "summaryResults": {
-		    "openAssignedConversations": 0,
-		    "weightedAvgLoad": 2.1,
-		    "minLoad": 20,
-		    "maxLoad": 40,
-		    "minConfiguredMaxSlots": 2,
-		    "maxConfiguredMaxSlots": 3,
-		    "numAwayAgents": 0,
-		    "numBackSoonAgents": 0,
-		    "numOnlineAgents": 0
+```json
+{
+	"accountID": "36703082",
+	"summaryResults": {
+		"openAssignedConversations": 0,
+		"weightedAvgLoad": 2.1,
+		"minLoad": 20,
+		"maxLoad": 40,
+		"minConfiguredMaxSlots": 2,
+		"maxConfiguredMaxSlots": 3,
+		"numAwayAgents": 0,
+		"numBackSoonAgents": 0,
+		"numOnlineAgents": 0
+	}
+}
+```
 
-				}
-			]
-		}`
-
-  
 **Elements in the Response**
 
 | Name   |      Description      |  Type/Value |
@@ -65,5 +64,3 @@ _JSON Example_
 | numAwayAgents |  Number of agents in AWAY status    | alphanumeric |
 | numBackSoonAgents|  Number of agents in BACK SOON status   | alphanumeric |
 | numOnlineAgents|  Number of agents in ONLINE status   | alphanumeric |
- 
-
