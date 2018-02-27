@@ -10,6 +10,968 @@ permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<br>
+<br>
+
+### In-App Messaging SDK version 3.0 for iOS.
+
+#### New functionalities
+
+##### Certificate Pinning
+
+**Type:** Security Feature
+
+**Available to all customers?** No. Contact support for more details.
+
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+
+The object certPinningPublicKeys was added to the object LPAuthenticationParams.
+**Please note**: using the new object without completing the onborading process will result in failures while trying to communicate with LivePerson’s servers.
+
+The following additional conditions and configurations are required:
+
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
+
+
+##### XCode 9.3 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
+
+#### List of certified and supported devices extended
+
+The following devices are now also supported and/or certified to host our in-app messaging SDK:
+
+<table>
+<thead>
+ <tr>
+ <th></th>
+ <th colspan="4">Operating system</th>
+ </tr>
+ <tr>
+ <th>Model</th>
+ <th>iOS 9.x</th>
+ <th>iOS 10.x</th>
+ <th>iOS 11.x</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>iPhone 8</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ <tr>
+ <td>iPhone 8+</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ <tr>
+ <td>iPhone X</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Certified</td>
+ </tr>
+ </tbody>
+</table>
+
+A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
+
+**Key for items as follows:**
+
+**Backend update:** This feature requires an update to the backend.
+
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+
+**Backend configuration**: This feature requires configuration in the backend.
+
+**SDK enablement:** This feature requires items to be toggled on in the SDK.
+
+**SDK configuration**: This features requires items to be configured in the SDK.
+
+
+### iOS Messaging SDK - Version 2.9.4
+
+**Version 2.9.4 planned roll-out: December 21th 2017**
+
+#### Symptom:
+For iOS 11, the app might crash when closing the conversation screen while receiving new messages.
+
+#### Fix:
+Improved memory allocation for conversation screen
+
+### iOS Messaging SDK - Version 2.9.3
+
+**Version 2.9.3 planned roll-out: November 29th 2017**
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+
+These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+
+#### Accessibility Updates
+
+**Bug: Structured content focus for new messages**
+
+_Symptom_:
+
+When consumer has opened the conversation screen, connectivity bar shows there is no connection and there is no connectivity to the messaging service. This symptom will occur in the following case:
+
+Brands which implement UIDevice Extension with 'var modelName: String' that returns device name string containing white spaces.
+
+_Fix_:
+
+SDK will now trim the whitespace of the device modelName and connectivity will work as expected.
+
+**Bug: Structured content image resolution**
+
+_Symptom_:
+
+UI overlaps of time stamp label over the message when sending a Link Preview message, while setting 'bubbleTimestampTopPadding' with a value.
+
+_Fix_:
+
+Overlap will no longer occur due to backend fixes.
+
+
+
+
+### iOS Messaging SDK - Version 2.9.0
+
+**Version 2.9 planned roll-out: November 12th 2017**
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+
+These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+
+#### New functionalities
+
+##### XCode 9.1 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 was built and certified with XCode 9.1 in Swift 4.0.2.
+
+Customers wishing to use the In-app Messaging SDK v2.9 must upgrade their XCode to 9.1 and their Swift version to 4.0.2.
+
+##### iPhone X Device Support
+
+**Type:** Device Support Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 is now supported on the iPhone X.
+
+#### New parameters
+
+##### Branding and configuration parameters
+
+**Type:** Parameters
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v2.9 exposes additional branding configuration parameters.
+
+New parameters may control text, padding of conversation UI elements and more.
+
+<table>
+<thead>
+ <tr>
+   <th>Parameter name and default value</th>
+   <th>Description</th>
+   <th>Image</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>customFontNameDateSeparator: String?</td>
+ <td>Custom font for Timestamp. Fonts that are not part of the iOS families must be defined in the App's Info.plist.</td>
+ <td><img src="img/fontname.png" alt="fontname"></td>
+ </tr>
+ <tr>
+ <td>dateSeparatorFontSize : UIFontTextStyle = .footnote</td>
+ <td>Defines the Date Separator font text style.</td>
+ <td><img src="img/fontsize.png" alt="fontsize"></td>
+ </tr>
+ <tr>
+ <td>dateSeparatorTopPadding: Float = 0.0</td>
+ <td>Defines the Date Separator top spacing.</td>
+ <td><img src="img/toppadding.png" alt="toppadding"></td>
+ </tr>
+ <tr>
+ <td>dateSeparatorBottomPadding: Float = 0.0</td>
+ <td>Defines the Date Separator bottom spacing.</td>
+ <td><img src="img/bottompadding.png" alt="bottompadding"></td>
+ </tr>
+ <tr>
+ <td>remoteUserAvatarLeadingPadding: Float = 8.0</td>
+ <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
+ <td><img src="img/leadingpadding.png" alt="leadingpadding"></td>
+ </tr>
+ <tr>
+ <td>remoteUserAvatarTrailingPadding: Float = 8.0</td>
+ <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
+ <td><img src="img/trailingpadding.png" alt="trailingpadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleTopPadding: Float = 10.0</td>
+ <td>Defines the bubble top spacing.</td>
+ <td><img src="img/bubbletoppadding.png" alt="bubbleTopPadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleBottomPadding: Float = 10.0</td>
+ <td>Defines the bubble bottom spacing.</td>
+ <td><img src="img/bubblebottompadding.png" alt="bubbleBottomPadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleLeadingPadding: Float = 10.0</td>
+ <td>Defines the bubble leading spacing.</td>
+ <td><img src="img/bubbleleadingpadding.png" alt="bubbleLeadingPadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleTrailingPadding: Float = 10.0</td>
+ <td>Defines the bubble trailing spacing.</td>
+ <td><img src="img/bubbletrailingpadding.png" alt="bubbleTrailingPadding"></td>
+ </tr>
+ <tr>
+ <td>inputTextViewTopBorderColor: UIColor = UIColor.clear</td>
+ <td>Input TextView top border color. The default color is clear.</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorFontSize: UIFontTextStyle = .caption1</td>
+ <td>Defines the Conversation Closed separator font size.</td>
+ <td><img src="img/separatorfont.png" alt="separatorfont"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorFontName: String?</td>
+ <td>Custom font name for Conversation Closed separator. Fonts that are not part of the iOS families must be defined in App's Info.plist.</td>
+ <td><img src="img/separatorfontname.png" alt="separatorfontname"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorTopPadding: Float = 5.0</td>
+ <td>Defines the Conversation Closed Separator Top spacing.</td>
+ <td><img src="img/separatortoppadding.png" alt="separatortoppadding"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorBottomPadding: Float = 7.0</td>
+ <td>Defines the Conversation Closed label to separator line spacing.</td>
+ <td><img src="img/separatorbottompadding.png" alt="separatorbottompadding"></td>
+ </tr>
+ <tr>
+ <td>conversationSeparatorViewBottomPadding: Float = 7.0</td>
+ <td>Defines the conversation separator view bottom spacing.</td>
+ <td><img src="img/viewbottompadding.png" alt="viewbottompadding"></td>
+ </tr>
+ <tr>
+ <td>customRefreshControllerImagesArray:Array&lt;UIImage&gt;? = nil</td>
+ <td>Array of images for creating the custom refresh controller. The controller will loop the images; two or more images are required for the array to take effect.</td>
+ <td><img src="img/imagesarray.png" alt="imagesarray"></td>
+ </tr>
+ <tr>
+ <td>customRefreshControllerAnimationSpeed:Float = 2</td>
+ <td>Custom refresh controller speed animation; defines the full images loop time. A smaller value will create a higher speed animation.</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>bubbleTimestampTopPadding: Float = 2.0</td>
+ <td>Defines the bubble Timestamp top spacing.</td>
+ <td><img src="img/timestamptoppadding.png" alt="timestamptoppadding"></td>
+ </tr>
+ <tr>
+ <td>bubbleTimestampBottomPadding: Float = 5.0</td>
+ <td>Defines the bubble Timestamp bottom spacing.</td>
+ <td><img src="img/timestampbottompadding.png" alt="timestampbottompadding"></td>
+ </tr>
+ </tbody>
+</table>
+
+### iOS Messaging SDK - Version 2.8.0
+
+**Version 2.8 planned roll-out: September 27th 2017**
+
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
+
+These are the main feature releases available in the **In-App Messaging SDK version 2.8 for iOS**.
+
+### Structured content enablement (GA in SDK)
+
+**Type:** Feature
+
+**Available to all customers?** No - early adopters only.
+
+_The beta version was released in v2.7 (for a full description, refer to the [v2.7 release notes](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/In-appSDKv2.7_ReleaseNotes-iOS.pdf)). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
+
+The dictionary of template elements can be found [here](https://developers.liveperson.com/structured-content-templates.html).
+
+**What does enablement mean?**
+
+Until rollout is complete, the structured content capability in SDK v2.7 was flagged as a Beta feature. The feature has an enablement toggle in the SDK which was disabled by default.
+
+In SDK v2.8, it is enabled by default.
+
+The toggle may be switched on or off as part of the SDK implementation within the host app, however it is highly recommended not to release the SDK in the host app with structured content enabled until end to end flow has been fully tested on the brand’s account.
+
+**Inapp Messaging SDK toggle** -
+
+* iOS - enableStructuredContent
+
+
+**Related properties**: Structured content
+
+The following additional conditions and configurations are required:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+### Automatic messages for messaging
+
+**Type:** Feature
+
+**Available to all customers?** No - early adopters only.
+
+**Description**
+
+Automatic Messages (AKA System Messages) are predefined messages about events that occur in the conversation and are sent to the consumer as the events occur. Their purpose is to gain the consumer’s trust in the messaging channel, by setting expectations and giving the consumer visibility over the agent’s availability.
+
+Auto messages are triggered upon specific events that are detected by the system (e.g. the consumer opens a new conversation, the conversation is transferred to another agent, the time to respond is updated, etc.). When the auto messages are sent, they are displayed to the consumer and the agent within the conversation transcript, and they also appear in the conversation’s history both on the consumer’s side and in LE.
+
+**Notes**:
+
+* Messages are supported in all LiveEngage languages.
+
+* The content of each message can be edited by the brand.
+
+* Skill variation is supported, including enabling/disabling the messages for each skill.
+
+* Certain messages can have different parameters, such as the time the conversation is in the queue before the message is sent.
+
+* Dynamic text can be added to the messages, which will be replaced with a runtime value, such as agent name.
+
+* Auto messages do not affect whom the conversation is pending, nor the time to respond.
+
+* They are filtered out of the reports by default (unless manually included).
+
+The following auto messages are supported:
+
+* New conversations
+
+ * A consumer opens a conversation during working hours
+
+ * A consumer opens a conversation for the first time ever, during working hours
+
+* Off hours
+
+ * A consumer opens a conversation during off hours
+
+ * A consumer opens a conversation for the first time ever, during off hours
+
+ * The consumer sends the first message during off hours in an open conversation
+
+* Time to respond
+
+ * The response time is updated manually by the agent
+
+ * The consumer marks the conversation as urgent
+
+ * The consumer dismisses the conversation urgent state
+
+* Consumer/Agent non-responsive
+
+ * The consumer has not responded for X seconds/minutes/hours
+
+ * The agent did not respond for X seconds/minutes/hours
+
+ * Conversation is in queue for X mins/hours
+
+* Transfers and connection to agents
+
+ * The conversation is transferred to a different skill
+
+ * The agent returns the conversation to the queue
+
+ * The consumer is connected to an agent
+
+* Conversation participants
+
+ * Agent manager joins the conversation 	
+
+ * The joined agent manager leaves the conversation 	
+
+**How to enable auto messages**
+
+Auto messages will be enabled for early adopters upon release. Please contact your account manager for more information.
+
+**IMPORTANT NOTES**:
+
+When auto messages are enabled, they are all enabled by default and all have the default text. It is advised to review them immediately and modify them to suit the brand’s needs.
+
+Once auto messages are enabled, the SDK does not show toast messages which were presented in the past.
+
+The following messages remain in the SDK :
+
+* Introduction message from the consumer’s first ever conversation. Make sure you do not have a collision between that message and auto messages.
+
+* Conversation resolved message
+
+The following additional conditions and configurations are required:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### Unread messages badge
+
+When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
+
+The unread messages number is passed to the SDK through LP Push service with every push.
+
+**IMPORTANT NOTES :**
+
+A push is sent to the last device which was registered to the LP push service, meaning that the unread messages indication can be fetched by only one device.
+
+* If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once that a message has been sent from that device and the push arrives to it.
+
+* In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
+
+**Getting the unread message badge counter**
+
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise, it will be fetched again with new data.
+​ ​
+**Parameters**:
+
+* conversationQuery: conversationQuery: used to identify the related brand
+
+* completion: called once the operation ends successfully
+
+* failure: called once the operation failed
+
+**Related properties**: Unread messages badge
+
+**Related API**: Unread messages badge API
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>Yes</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### Set icon for "Send" button
+
+Brands are now able to choose and configure their own icon for the 'Send’ button for in-app messaging conversations.
+
+**How to configure the send button icon:**
+
+1. Ensure the SDK is set to use an icon and not text for the Send button (**isSendMessageButtonInTextMode = false**)
+
+2. Set the icon - sendButtonImage: UIImage
+
+**IMPORTANT NOTES**:
+
+The chosen icon must adhere to [Apple’s guidelines for custom icons](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
+
+**Related properties:** Send button
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
+
+The In-app Messaging SDK v.28 was built and certified with XCode 9 in Swift 4/ Swift 3.2 for iOS11.
+
+The following devices were certified with iOS11:
+
+* iPhone 6
+
+* iPhone 7
+
+With this new certification, support for iOS8 was removed.
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### Customizable bubble corners
+
+The radius of the corners of message bubbles can now be configured by the brand. There are 8 different parameters to be configured: the 4 corners of the agent message bubble and the 4 corners of the consumer message bubble.
+
+The corners of the scroll button may also be set.
+
+**Related properties**: Bubble corners
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### Reconnect attempt termination callback
+
+The new callback will be invoked when all connection retries have failed:
+
+**Related callback**: Reconnect attempt termination callback
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### Logout - add completion closure/failure
+
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or simply to log the current user out.
+
+The method carried out the following steps:
+
+* Unregisters from the push notification service.
+
+* Clears all SDK persistent data.
+
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html){:target="_blank"}).
+
+* Invokes destruct() method
+
+Parameters:
+
+* completion: a completion block for successful logout. The completion block will be invoked only if all logout steps succeeded.
+
+* failure: a failure block with a specified error for logout failure. The failure block will be invoked if at least one of the logout steps has failed.
+
+**Related API:** [Logout API](#heading=h.mr00ktj28srq)
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+### New event - conversation interactions
+
+The conversation interactions event communicates the Inactive time interval within seconds of the user last touching the screen. This interval applies to the scroll/messaging/action menus and any other general action on the conversation screen.
+
+_Note_: If the screen is not active or the application is running in the background, the API will return -1.
+
+Reset events:
+
+* send message
+
+* text edit change
+
+* scroll
+
+* viewDidAppear
+
+* appWillEnterForeground
+
+* tap
+
+* long press
+
+* WindowContainerViewController -
+
+* menuButtonClicked
+
+* WindowContainerViewController -
+
+* customButtonClicked
+
+Clear events:
+
+* viewDidDisappear
+
+* appWillEnterBackground
+
+**Related API**: Conversation interactions API
+
+The following additional conditions and configurations are required*:
+
+<table>
+<thead>
+ <tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>N/A</td>
+ <td>Yes</td>
+ </tr>
+</tbody>
+</table>
+
+
+* *Key for items as follows:*
+
+**Backend update:** This feature requires an update to the backend.
+
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+
+**Backend configuration**: This feature requires configuration in the backend.
+
+**SDK enablement:** This feature requires items to be toggled on in the SDK.
+
+**SDK configuration**: This features requires items to be configured in the SDK.
+
+### New properties
+
+#### Structured content
+
+The following properties for structured content can now be configured:
+
+<table>
+<thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>enableStrucutredContent: Bool</td>
+ <td>Enable or Disable toggle for Structured Content feature in conversations.</td>
+ <td>true</td>
+ </tr>
+ </tbody>
+</table>
+
+
+#### Bubble corners
+
+The following properties for customizable bubble corners can now be configured:
+
+<table>
+<thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>userBubbleTopLeftCornerRadius:Float = 8</td>
+ <td>Top left radius corner on the user bubble. Note (applies to all bubble corner properties): Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it is recommended to use a corner radius which at maximum equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause the text to cut visually.</td>
+ <td>8</td>
+ </tr>
+ <tr>
+ <td>userBubbleTopRightCornerRadius:Float = 8</td>
+ <td>Top right radius corner on the user bubble</td>
+ <td>8</td>
+ </tr>
+ <tr>
+ <td>userBubbleBottomLeftCornerRadius:Float = 8</td>
+ <td>Bottom left radius corner on the user bubble</td>
+ <td>8</td>
+ </tr>
+ <tr>
+ <td>userBubbleBottomRightCornerRadius:Float = 0</td>
+ <td>Bottom right radius corner on the user bubble</td>
+ <td>0</td>
+ </tr>
+ <tr>
+ <td>remoteUserBubbleTopLeftCornerRadius:Float = 8</td>
+ <td>Top left radius corner on the remote bubble</td>
+ <td>8</td>
+ </tr>
+ <tr>
+ <td>remoteUserBubbleTopRightCornerRadius:Float = 8</td>
+ <td>Top right radius corner on the remote bubble</td>
+ <td>8</td>
+ </tr>
+ <tr>
+ <td>remoteUserBubbleBottomLeftCornerRadius:Float = 0</td>
+ <td>Bottom left radius corner on the remote bubble</td>
+ <td>0</td>
+ </tr>
+ <tr>
+ <td>remoteUserBubbleBottomRightCornerRadius:Float = 8
+</td>
+ <td>Bottom right radius corner on the remote bubble</td>
+ <td>8</td>
+ </tr>
+ </tbody>
+</table>
+
+
+### Unread messages badge
+
+The following properties for the unread messages badge can be configured:
+
+<table>
+<thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>unreadMessagesCornersRadius:Float = 8</td>
+ <td>Sets the corner radius of the unread messages cell</td>
+ <td>8</td>
+ </tr>
+ </tbody>
+</table>
+
+
+### Scroll to bottom button
+
+The following properties for the scroll to bottom button can now be configured:
+
+<table>
+<thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>scrollToBottomButtonCornerRadius:Float = 20</td>
+ <td>Sets the top left and bottom left radius of the scroll to bottom button</td>
+ <td>20</td>
+ </tr>
+ <tr>
+ <td>scrollToBottomButtonBadgeCornerRadius:Float = 12</td>
+ <td>Sets the radius of the scroll to bottom badge corners </td>
+ <td>12</td>
+ </tr>
+ </tbody>
+</table>
+
+
+### Send button
+
+The following properties for the send button can now be configured:
+
+<table>
+<thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>sendButtonImage: UIImage</td>
+ <td>Custom send button image in the conversation screen</td>
+ <td>Arrow icon</td>
+ </tr>
+ </tbody>
+</table>
+
+
+### Controller bubble
+
+The following properties for the controller bubble can now be configured:
+
+<table>
+<thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>controllerBubbleTextColor : UIColor</td>
+ <td>Color code for the text of the controller bubble</td>
+ <td>UI color</td>
+ </tr>
+ </tbody>
+</table>
+
+
+### New APIs
+
+#### Conversation interactions API
+
+**func getInactiveUserInteractionTimeInterval(_conversationQuery: ConversationParamProtocol) -> TimeInterval**
+
+  - Returns: Inactive TimeInterval (Double)
+
+#### Unread messages badge API
+
+**func getUnreadMessagesCount(_conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)→())**
+
+#### Logout API
+
+**func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)→())**
+
+### New Callbacks
+
+##### Reconnect attempt termination callback
+
+**func LPMessagingSDKConnectionRetriesFailed(_error: NSError)**
 
 ### iOS Messaging SDK - Version 2.7.0
 
@@ -260,7 +1222,7 @@ This method is used to open the conversation screen.
 
     func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK. The session in this case might have an expiration date. To reconnect with a new token, use the ‘reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK. The session in this case might have an expiration date. To reconnect with a new token, use the 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for a conversation query and reconnects open related webSockets and sync the conversation with its latest updates.
 
@@ -422,11 +1384,11 @@ Configuring Camera's button colors
 
 In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
-**Symptom**:
+_Symptom_:
 
 For one minute after the consumer had navigated away from the conversation window, any arriving messages would not display. They would only appear in the conversation window after the minute had passed.
 
-### Fix:
+_Fix_:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
 ### In-App Messaging SDK Version 2.3.0

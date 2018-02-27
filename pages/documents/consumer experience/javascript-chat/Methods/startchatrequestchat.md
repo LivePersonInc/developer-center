@@ -14,6 +14,9 @@ indicator: chat
 
 This method queues a chat request. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.
 
+**For consumer Authentication flow please collect the necessary parameters from the [authenticate](consumer-experience-javascript-chat-authenticate.html) method first.**
+The parameters in question are `conversationId`, `participantId`. You will need to add these parameters to the request body for the requestChat method.
+
 **Notes**:
 
 - *If you displayed a Pre-chat survey, this is where you submit the answers to that survey.*
@@ -37,15 +40,17 @@ This method queues a chat request. It has a number of possible properties that c
 | runWithRules  | Specifies if you want rules to be evaluated on the Pre-chat survey and applied to the chat. | Boolean | Example: have a skill question change the chat skill. <br> Default: off |
 | interactionTimeout	| The number of seconds that have passed since the last request was sent to the server until the server disconnects the chat. | number | <br> Default: 40 |
 | visitorSession | The monitored visitors session on the page. | string | Used to create pipeline reports from the page monitoring to the chat. |
-| LETagVisitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
-| LETagSessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
-| LETagContextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
+| visitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
+| sessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
+| contextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
 | engagementId  | The engagement ID in case of a LiveEngage account. | string   | |
 | campaignId    | The campaign ID in case of a LiveEngage account. | string | |
 | language  | The language set in the engagement in case of a LiveEngage account (sets the system messages language for the chat). | string | |
 | a2aSourceSiteId   | The source site for the account to account transfer | string  | Supplied on the account to account event. You must have a valid API key for the new account. |
 | a2aSourceSessionId | The originating session ID for the account to account transfer | string | Supplied on the account to account event. You must have a valid API key for the new account |
 | a2aEventId | The event ID of the account to account transfer | string | Supplied on the account to account event. You must have a valid API key for the new account |
+| conversationId | The conversation ID required for authentication flow. | string | optional |
+| participantId | The participant ID required for authentication flow. | string | optional |
 
 **Sample code**
 
@@ -91,7 +96,8 @@ var failedRequest = chat.requestChat({
     success: myChat.showStartAnimation,
     error: myChat.showFailedRequest,
     context: myChat
-});
+}});
+
 ```
 
 ### Response

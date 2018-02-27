@@ -35,9 +35,20 @@ Sends a transcript of the chat to the visitor's email address.
 | Accept | application/json |
 | X-HTTP-Method-Override | PUT |
 
+**Parameters**
+
+| Name  | Description | Type/Value |
+| :--- | :--- | :--- |
+| email | Email address to send the transcript to | String |
+| timezoneOffset | Note: the chat start and end time displayed to the visitor will reflect the local time in their location. The offset parameter will only affect the value of the GMT offset printed next to the actual chat time (e.g. GMT +02:00).| number |
+
+
 Request Body Example:
 
-{ "email": "visitorEmail@gmail.com" }
+    {
+      "email": "visitorEmail@gmail.com",
+      "timezoneOffset": -7200000
+    }
 
 ### Response
 

@@ -28,6 +28,8 @@ The LiveEngage chat window is based on a browser and will display in any desktop
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+
 _Note_ - there is a known limitation with the reporting surrounding this API. The data returned on external engagements (like Abandoned Values or Interactive Chats) will be partial or incorrect. This will be fixed in the future but should be taken into consideration when working with the API currently.
 
 

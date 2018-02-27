@@ -3,7 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">-->
 <!--<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">-->
+{% if (level3 != null) %}
 <title>{{ page.level3 }} - {{ page.title }} | {{ site.site_title }}</title>
+{% else %}
+<title> {{ page.title }} | {{ site.site_title }}</title>
+{% endif %}
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
 
 
@@ -35,7 +39,7 @@
 
 <script src="{{ "js/toc.js" }}"></script>
 <script src="{{ "js/customscripts.js" }}"></script>
-
+<script src="{{ "js/additionalscripts.js" }}"></script>
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

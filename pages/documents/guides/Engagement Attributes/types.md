@@ -410,7 +410,7 @@ This information can be used to offer help to visitors who are struggling to com
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
 | type | The event name ("error")  | string | "error" | true | no |
-| error | Error details | Error object  | {<br>"contextId":<br>" application",<br>"message":<br>"Missing data",<br>"code":<br>"er100004"<br>"level": 10,<br>"resolved": false<br>} | false | no |
+| error | Error details | Error object  | {<br>"contextId":<br>" application",<br>"message":<br>"Missing data",<br>"code":<br>"er100004",<br>"level": 10,<br>"resolved": false<br>} | false | no |
 
 Error object:
 
@@ -430,8 +430,8 @@ Error object:
   "error": {
     "contextId": "Credit card application",
     "message": "Expiration date missing", // ERROR MESSAGE
-    "code": "er100004" // ERROR CODE
-      "level": 10,
+    "code": "er100004", // ERROR CODE
+    "level": 10,
     "resolved": false
   }
 }

@@ -15,7 +15,7 @@ This method retrieves a list of conversations with all their metadata and relate
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50`
+POST   | https://{domain}/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
 
 **URL Parameters**
 
@@ -29,51 +29,52 @@ sort   | Sort the results in a predefined order.                      | string  
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
-Name                | Description                                                                                   | Type/Value                         | Required | Notes
-:------------------ | :-------------------------------------------------------------------------------------------- | :--------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
-end {from, to}    | Conversation's end time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
-status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
-skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
-latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
-agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional |
-latestAgentIds      | An array of latest agent IDs, represented as numbers.                                         | Array `<agentID>`                  | Optional | Filters only conversations whose latest agent appears in the array.
-agentGroupIds       | An array of agent group IDs, represented as numbers.                                          | Array `<agentGroupID>`             | Optional |
-keyword             | Specific word or phrase found in the messages of the conversation.                            | alphanumeric                       | Optional |
-summary             | Specific word or phrase found in the summary of the conversation.                             | alphanumeric                       | Optional |
-duration {from, to} | Range of conversation length (in seconds).                                                    | numeric, numeric                   | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
-mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
-alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
-csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
-source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, WEB, AGENT, SMS, FACEBOOK
-device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
-messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT,
-messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT
-latestConversationQueueState | The queue state of the conversation                                                                      | String                   | Optional | Valid values: IN_QUEUE,ACTIVE
-| sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
+|Name  | Description | Type/Value  | Required | Notes|
+|:---- | :---------- | :---------- | :------- | :---|
+|start {from, to}    | Conversation's start time range.                                                              | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|end {from, to}    | Conversation's end time range.                                                              | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|status              | Latest status of the conversation.                                                            | Array `<status>`                   | Optional | Valid values: "OPEN", "CLOSE"
+|skillIds            | An array of skill IDs, represented as numbers.                                                | Array `<skillID>`                  | Optional | Any skill, through the entire flow of the conversation.
+|latestSkillIds      | An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.                                         | Array `<skillID>`                  | Optional | Filters only conversations whose latest skill appears in the array.
+|agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional |
+|latestAgentIds      | An array of latest agent IDs, represented as numbers.                                         | Array `<agentID>`                  | Optional | Filters only conversations whose latest agent appears in the array.
+|agentGroupIds       | An array of agent group IDs, represented as numbers.                                          | Array `<agentGroupID>`             | Optional |
+|keyword             | Specific word or phrase found in the messages of the conversation.                            | alphanumeric                       | Optional |
+|summary             | Specific word or phrase found in the summary of the conversation.                             | alphanumeric                       | Optional |
+|duration {from, to} | Range of conversation length (in seconds).                                                    | numeric, numeric                   | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
+|mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
+|alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
+|csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
+|source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK
+|device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
+|messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
+|latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
+|sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
 
 Filters examples:
 
-Name                | Description
-:------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-start               | {″start″:{"from":1470037448000,"to":1472543048000}}
-end                 | {″start″:{"from":1470037448000,"to":1472543048000},"end":{"from":1470908735000,"to":1472543048000}}
-status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}
-skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}
-latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}
-agentIds            | {"start":{"from":1470037448000,"to":1472543048000},"agentIds":["11111111-2222-3333-4444-555555555555","2"]} latestAgentIds {"start":{"from":1470148243000,"to":1472543048000},"latestAgentIds":[3678429210,3673269110]}
-agentGroupIds       | {"start":{"from":1470037448000,"to":1472543048000},"agentGroupIds":["0","2"]}
-keyword             | {"start":{"from":1470037448000,"to":1472543048000},"keyword":"bonus"}
-summary             | {"start":{"from":1481694532185,"to":1482324227482},"summary":"purchase"}
-duration            | {"start":{"from":1470037448000,"to":1472543048000}, "duration":{"from":0,"to":1000}}
-mcs                 | {"start":{"from":1470037448000,"to":1472543048000}, "mcs":{"from":0,"to":100}}
-alertedMcsValues    | {"start": {"from": "1485330205108", "to": "1485942798000"}, "alertedMcsValues": ["-1","1"]}
-csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat":{"from":4,"to":5}}
-source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}
-device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}
-messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}
-latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
-sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}} 
+|Name                | Description |
+|:------------------ |:------------------------------------------------|
+|start               | {″start″:{"from":1470037448000,"to":1472543048000}}|
+|end                 | {″start″:{"from":1470037448000,"to":1472543048000},"end":{"from":1470908735000,"to":1472543048000}}|
+|status              | {"start":{"from":1470037448000,"to":1472543048000},"status":["CLOSE","OPEN"]}|
+|skillIds            | {"start":{"from":1470037448000,"to":1472543048000},"skillIds":["-1","2"]}|
+|latestSkillIds      | {"start":{"from":1470037448000,"to":1472543048000},"latestSkillIds":["-1","2"]}|
+|agentIds            | {"start":{"from":1470037448000,"to":1472543048000},"agentIds":["11111111-2222-3333-4444-555555555555","2"]} |
+|latestAgentIds      | {"start":{"from":1470148243000,"to":1472543048000},"latestAgentIds":[3678429210,3673269110]}|
+|agentGroupIds       | {"start":{"from":1470037448000,"to":1472543048000},"agentGroupIds":["0","2"]}|
+|keyword             | {"start":{"from":1470037448000,"to":1472543048000},"keyword":"bonus"}|
+|summary             | {"start":{"from":1481694532185,"to":1482324227482},"summary":"purchase"}|
+|duration            | {"start":{"from":1470037448000,"to":1472543048000}, "duration":{"from":0,"to":1000}}|
+|mcs                 | {"start":{"from":1470037448000,"to":1472543048000}, "mcs":{"from":0,"to":100}}|
+|alertedMcsValues    | {"start": {"from": "1485330205108", "to": "1485942798000"}, "alertedMcsValues": ["-1","1"]}|
+|csat                | {"start":{"from":1470037448000,"to":1472543048000}, "csat":{"from":4,"to":5}}|
+|source              | {"start":{"from":1470037448000,"to":1472543048000}, "source":["APP"]}|
+|device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}|
+|messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
+|latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
+|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
+
 ### Response
 
 **Elements in the Response**
@@ -93,6 +94,7 @@ _Conversation record_
 Name                 | Description                                                                    | Type/Value
 :------------------- | :----------------------------------------------------------------------------- | :---------
 info                 | Contains information on the conversation.                                      | container
+campaign             | Campaign data of the messaging interaction.                                    | container
 messagesRecords      | Contains information about a specific message.                                 | container
 messageStatuses      | Contains information about message acceptance status (i.e. read/accept).       | container
 agentParticipants    | Contains information about the agent(s) participating in the conversation.     | container
@@ -127,10 +129,34 @@ latestAgentId        | Most recent agent ID the conversation was assigned to.   
 latestAgentLoginName | The agent's login name.                                                    | string     |
 latestAgentNickname  | The agent's nickname.                                                      | string     |
 latestAgentFullName  | The agent's full name.                                                     | string     |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
 latestAgentGroupId   | Group ID of the agent most recently assigned to the conversation.          | long       |
 latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
+
+_Campaign info_
+
+Name                 | Description                                                                | Type/Value | Notes
+:------------------- | :------------------------------------------------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------
+| campaignEngagementId |  ID of the campaign's engagement. | numeric | |
+| campaignEngagementName | Name of the campaign's engagement. | alphanumeric (50) | |
+| campaignId | ID of the campaign. | numeric  | |
+| campaignName | Name of the campaign. | alphanumeric (50) | |
+| goalId | ID of the campaign's goal. | numeric | |
+| goalName | Name of the campaign's goal. | alphanumeric (50) | |
+| engagementAgentNote | Note to the Agent defined for the campaign's engagement. | alphanumeric  | |
+| engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
+| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
+| visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
+| visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
+| visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) | |
+| lobId | ID of the line of business of the campaign. | numeric(long) | |
+| lobName | Name of the line of business of the campaign. | alphanumeric | |
+| LocationId | ID of the location of the engagement on the screen. | numeric  | |
+| LocationName | describes the engagement display location. | alphanumeric | The default location is the entire website. |
+| behaviorSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
+| profileSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 
 _Message Info_
 
@@ -207,6 +233,12 @@ Name             | Description            | Type/Value | Notes
 externalFileLink | Link to external file. | string     |
 fileType         | Type of the file.      | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
 
+_Message Rich Content_
+
+Name     | Description                    | Type/Value
+:------- | :----------------------------- | :---------
+content  | The json of rich content.      | string
+
 _Message Status info_
 
 Name                  | Description                                                 | Type/Value
@@ -234,6 +266,7 @@ agentId        | ID of agent.                                                   
 agentLoginName | Login name of the agent assigned to the conversation.              | string     |
 agentNickname  | Nickname of the agent assigned to the conversation.                | string     |
 agentFullName  | Full name of the agent assigned to the conversation.               | string     |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
 time           | The time the agent was added to the conversation.                  | string     |
 timeL          | The time the agent was added to the conversation (in long format). | long       |
 role           | The agent's role in the conversation- assigned agent, manager etc. | string     |
@@ -440,6 +473,23 @@ sdeType         | Type of sde.                                | enum
           "timeL": 1472483742568,
           "device": "undefined",
           "sentBy": "Consumer"
+        },
+        {
+          "type": "RICH_CONTENT",
+          "messageData": {
+            "richContent": {
+              "content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/3oKGzayyPJGE7xuytO/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}},{\"type\":\"text\",\"text\":\"Now on sale!\"},{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/xT9IgsjDkpectclUI0/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}}]}"
+            }
+          },
+          "messageId": "ms::conv:cd5926e0-5b57-4c82-85c5-9c95f88263a1::msg:8",
+          "seq": 3,
+          "dialogId": "undefined",
+          "participantId": "2198186612",
+          "source": "APP",
+          "time": "2017-10-24 10:24:52.962+0000",
+          "timeL": 1508840692962,
+          "device": "undefined",
+          "sentBy": "Agent"
         }
       ],
       "agentParticipants": [

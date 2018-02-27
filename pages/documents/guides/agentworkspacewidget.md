@@ -99,7 +99,7 @@ Your new widget will now be displayed as an additional icon next to the existing
 
 **For a succesful integration, please note:**
 
-* **The application must be able to open within an iFrame:** Some applications prevent themselves from opening within an iFrame (These are known as ‘Frame Busters’). If you try to integrate such an application within an Agent Workspace widget, you will get a blank widget, or an error message in the widget (depending on your browser).
+* **The application must be able to open within an iFrame:** Some applications prevent themselves from opening within an iFrame (These are known as 'Frame Busters’). If you try to integrate such an application within an Agent Workspace widget, you will get a blank widget, or an error message in the widget (depending on your browser).
 
 * **Internet Explorer support:** Custom widgets are supported on Internet Explorer 10 and higher only.
 

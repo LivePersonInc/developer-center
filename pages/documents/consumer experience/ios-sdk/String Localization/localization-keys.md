@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: String Localization
 
-order: 228
+order: 227
 permalink: consumer-experience-ios-sdk-localizationkeys.html
 
 indicator: messaging
@@ -532,4 +532,21 @@ Listed below are all localized keys with the English localization string.
     <td>structuredContentAccessibilityMap</td>
     <td>"Map"</td>
   </tr>
+  <tr>
+    <td>structuredContentAccessibilityImage</td>
+    <td>"Image"</td>
+  </tr>
+  <tr>
+    <td>structuredContentAccessibilityButton</td>
+    <td>"Button"</td>
+  </tr>
+  <tr>
+    <td>structuredContentAccessibilityText</td>
+    <td>"Text"</td>
+  </tr>
+  <tr>
+    <td>structuredContentItemError</td>
+    <td>"Content failed to display"</td>
+  </tr>
+
 </table>

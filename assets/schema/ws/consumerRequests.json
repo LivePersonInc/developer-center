@@ -20,7 +20,7 @@
                             }
                         }
                     },
-                    "required": ["headers"]        
+                    "required": ["headers"]
                 }]
         }, {
             "title": "UpdateConversationField",
@@ -58,7 +58,7 @@
                 }]
         }, {
             "title": "PublishEvent",
-            "description": "Publishes events to existing dialog. Events can be: <ul><li>text-content</li><li>photo-reference-content</li><li>read-reciepts (accept status)</li><li>presense/typing events (chat-state)</li></ul>",
+            "description": "Publishes events to existing dialog. Events can be: <ul><li>text-content</li><li>rich-content (structured content) - for more information about the supported structured content templates please refer to the Structured Content Templates page.</li><li>photo-reference-content</li><li>read-reciepts (accept status)</li><li>presense/typing events (chat-state)</li></ul>",
             "allOf": [{
                     "$ref": "../infra/req.json"
                 }, {

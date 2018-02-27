@@ -15,7 +15,7 @@ indicator: chat
 ![Customized1](img/customized1.png)
 
 ### Step 2 - Select engagement source
-**In the engagement template gallery, choose ‘External app’ from the Source dropdown menu.**
+**In the engagement template gallery, choose 'External app’ from the Source dropdown menu.**
 
 ![Customized2](img/customized2.png)
 
@@ -24,5 +24,5 @@ indicator: chat
 
 ![Customized3](img/customized3.png)
 
-###Step 4 - Confirmation
+### Step 4 - Confirmation
 **Click 'Next' and complete the remaining steps to set up your engagement.**

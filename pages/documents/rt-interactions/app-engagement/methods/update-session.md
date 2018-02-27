@@ -35,7 +35,11 @@ Use this method to update the session and add SDEs.
 
 **Body parameters**
 
-| pageId | 
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| pageId | Page identification ID for sending event on the current engagement | string | Required  ||
+| impAttributes | Array of impression events attributes | string | Optional | Can be used in order to update funnel. See [here](rt-interactions-example.html) for supported values examples |
+| engagementAttributes | Array of engagement attributes (SDEs) | string | Optional | Supported Values: all SDEs excluding the type of ImpressionEvent. See [here](engagment-attributes-types.html) for examples.  |
 
 **Body entity example**
 
@@ -68,6 +72,24 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitor/{visit
                 }
              ]
           }
+       ],
+       "engagementAttributes":[
+         {
+           "type": "personal",
+           "personal": {
+             "contacts": [{"email":"sarah@gmail.com","phone":"0987653"}],
+             "age": {
+               "age":30.0,
+               "year":1986,
+               "month":7,
+               "day":22
+             },
+             "firstname": "Sarah",
+             "lastname": "West",
+             "gender": "FEMALE",
+             "company": "liveperson"
+           }
+         }
        ]
     }
 
@@ -75,7 +97,7 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitor/{visit
 
 **Response Codes**
 
-| Code | Response | 
+| Code | Response |
 | :--- | :--- |
 | 200 | OK |
 | 400 | Validation error |
@@ -100,14 +122,12 @@ Error Response entity:
       "message" : String [Optional]
       "internalCode" : Integer
     }
-    
-    
+
+
 Example:
-  
+
     {
                  "time":1469543282471,
                  "message":"Illegal Version",
                  "internalCode":33
     }
-
-

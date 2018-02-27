@@ -16,7 +16,7 @@ indicator:
 
 This is a read-only API that returns the base domain of LivePerson that should be used in the APIs outlined in this document.
 
-**Note**: service names are _case sensitive_. Please make sure to input serviceName as it is provided in each document's overview.
+**Note**: The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are _case sensitive_. Please make sure to input serviceName as it is provided in each document's overview.
 
 ###  Request
 

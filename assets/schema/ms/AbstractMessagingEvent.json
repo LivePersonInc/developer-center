@@ -3,7 +3,7 @@
             "title" : "TextValue",
             "$ref": "TextValue.json"
         }, {
-            "title" : "RichContent",
+            "title" : "RichContentEvent",
             "$ref": "RichContent.json"            
         }, {
             "title" : "HostedFile",

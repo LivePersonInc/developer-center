@@ -16,7 +16,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Brand
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -53,7 +53,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Brand Message Bubble - the first brand message
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -112,13 +112,37 @@ The goal of the following document is to enumerate the different fields controll
     <td>#007AFF (light blue)</td>
     <td><img src="img/logobackgroundcolor.png" alt="logobackgroundcolor"></td>
   </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_right&quot;&gt;</td>
+    <td>Brand's welcome message bubble right padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_right_padding.png" alt="brand_bubble_right_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_left&quot;&gt;</td>
+    <td>Brand's welcome message bubble left padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_left_padding.png" alt="brand_bubble_left_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_top&quot;&gt;</td>
+    <td>Brand's welcome message bubble top padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_top_padding.png" alt="brand_bubble_top_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;brand_bubble_padding_bottom&quot;&gt;</td>
+    <td>Brand's welcome message bubble bottom padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding"></td>
+  </tr>
 </tbody>
 </table>
 
 
 ### Agent Message Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -254,14 +278,37 @@ The goal of the following document is to enumerate the different fields controll
     <td>#004DC9 (blue)</td>
     <td><img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor"></td>
   </tr>
-
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_right&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble right padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_right_padding.png" alt="agent_bubble_right_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_left&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble left padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_left_padding.png" alt="agent_bubble_left_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_top&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble top padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_top_padding.png" alt="agent_bubble_top_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_bottom&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble bottom padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding"></td>
+  </tr>
 </tbody>
 </table>
 
 
 ### Consumer Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -369,13 +416,37 @@ The goal of the following document is to enumerate the different fields controll
     <td>#949596 (gray)</td>
     <td><img src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor"></td>
   </tr>
-</tbody>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_right&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble right padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_right_padding.png" alt="consumer_bubble_right_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_left&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble left padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_left_padding.png" alt="consumer_bubble_left_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_top&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble top padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_top_padding.png" alt="consumer_bubble_top_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;chat_bubble_padding_bottom&quot;&gt;</td>
+    <td>Chat message (agent/consumer) bubble bottom padding.</td>
+    <td>8dp</td>
+    <td><img src="img/android_consumer_bubble_bottom_padding.png" alt="consumer_bubble_bottom_padding"></td>
+  </tr>
+  </tbody>
 </table>
 
 
 ### System messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -386,15 +457,31 @@ The goal of the following document is to enumerate the different fields controll
 </thead>
 <tbody>  
   <tr>
-    <td>&lt;color name=&quot;system_bubble_text_color&quot;&gt;
-</td>
+    <td>&lt;color name=&quot;system_bubble_text_color&quot;&gt;</td>
     <td>Color code for the text of the system messages.</td>
     <td>#46474A (dark gray)</td>
     <td><img src="img/conversation_separator_text_color.png" alt="separatortextcolor"></td>
   </tr>
   <tr>
-    <td>&lt;bool name=&quot;enable_conversation_resolved_message&quot;&gt;
-</td>
+    <td>&lt;dimen name=&quot;bubble_system_resolved_text_size&quot;&gt;</td>
+    <td>Conversation resolved message text size.</td>
+    <td>12sp</td>
+    <td><img src="img/android_resolved_message_text_size.png" alt="resolved_message_text_size"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;bubble_system_resolved_padding&quot;&gt;</td>
+    <td>Conversation resolved message padding.</td>
+    <td>4sp</td>
+    <td><img src="img/android_resolved_message_padding.png" alt="resolved_message_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;bubble_system_resolved_line_spacing&quot;&gt;</td>
+    <td>Conversation resolved message line spacing.</td>
+    <td>0dp</td>
+    <td><img src="img/android_resolved_message_line_spacing.png" alt="resolved_message_line_spacing"></td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enable_conversation_resolved_message&quot;&gt;</td>
     <td>Enable/disable the conversation resolved message</td>
     <td>true</td>
     <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
@@ -418,7 +505,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Automatic Messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -441,7 +528,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Unread messages indicator Bubbles
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -476,7 +563,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Bubbles Corner Radius
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -537,9 +624,37 @@ The goal of the following document is to enumerate the different fields controll
 
 </tbody>
 </table>
+
+### Date Headers
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&lt;color name=&quot;lp_header_text_color&quot;&gt;</td>
+    <td>Day/date header text color</td>
+    <td>Dark gray (#46474a)</td>
+    <td><img src="img/android_header_text_color.png" alt="header_text_color"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;lp_header_background_color&quot;&gt;</td>
+    <td>Day/date header background color</td>
+    <td>@android:color/white</td>
+    <td><img src="img/android_header_background_color.png" alt="header_background_color"></td>
+  </tr>
+</tbody>
+</table>
+
 ### Survey screen
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -723,7 +838,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Message Edit Text
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -775,7 +890,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Connection status bar
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -815,7 +930,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### In page navigation -  Scroll down indicator
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -885,7 +1000,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Photo Sharing
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -961,7 +1076,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### General Style
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1003,7 +1118,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Conversation Activity Style - (activity mode only!)
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1027,13 +1142,20 @@ The goal of the following document is to enumerate the different fields controll
     <td>android:colorPrimaryDark</td>
     <td></td>
   </tr>
-</tbody>
+  <tr>
+    <td>&lt;color name=&quot;lp_textColorSecondary&quot;&gt;
+  </td>
+    <td>Define the color of menu button and back arrow on toolbar.</td>
+    <td>@android:color/black</td>
+    <td><img src="img/android_secondary_color.png" alt="secondarycolor"></td>
+  </tr>
+  </tbody>
 </table>
 
 
 ### Accessibility
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1049,12 +1171,18 @@ The goal of the following document is to enumerate the different fields controll
     <td>60,000</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;announce_agent_typing&quot;&gt;</td>
+    <td>Announce when the agent is typing. This is applicable only in Activity mode</td>
+    <td>true</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
 ### Custom Fonts
 
-<table>
+<table class="bigtable">
 <thead>
  <tr>
    <th>Name</th>
@@ -1081,7 +1209,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Structured Content
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1116,7 +1244,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>  
   <tr>
     <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
-    <td>Integer that defines the zoom level of the structured content map view. (Refer to [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom){:target="_blank"} for details)</td>
+    <td>Integer that defines the zoom level of the structured content map view. Refer to <a href="https://developers.google.com/maps/documentation/android-api/views#zoom" target="_blank">[Google map API]</a> for details)</td>
     <td>18</td>
     <td></td>
   </tr>
@@ -1126,13 +1254,19 @@ The goal of the following document is to enumerate the different fields controll
     <td>false</td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;string name=&quot;lp_google_maps_key&quot;&gt;</td>
+    <td>Set the host app's Google Map key to enable map views in Structured Content</td>
+    <td>no value</td>
+    <td></td>
+  </tr>
   </tbody>
 </table>
 
 
 ### Miscellaneous
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1241,7 +1375,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td>&lt;string name=&quot;client_only_mask_character&quot;&gt;</td>
     <td>The character used to mask client only string.</td>
-    <td>‘*’</td>
+    <td>'*’</td>
     <td></td>
   </tr>
   <tr>
@@ -1317,11 +1451,12 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Deprecated Attributes
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
     <th>Description</th>
+  </tr>
 </thead>
 <tbody>    
   <tr>
@@ -1330,7 +1465,7 @@ The goal of the following document is to enumerate the different fields controll
   </tr>
   <tr>
     <td>&lt;string name=&quot;custom_button_icon_description&quot;&gt;</td>
-    <td>Content description for custom button.It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
+    <td>Content description for custom button. It briefly describes the view and is primarily used for accessibility support. Set this property to enable better accessibility support for your application.</td>
   </tr>
   <tr>
     <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>

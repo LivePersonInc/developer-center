@@ -16,7 +16,7 @@ This method retrieves a list of conversations that the consumer participated in.
 
 Method     | URL
 --------   | ---
-POST       | `https://<domain>/messaging_history/api/account/{accountID}/conversations/consumer/search`
+POST       | https://{domain}/messaging_history/api/account/{accountID}/conversations/consumer/search
 
 **BODY/POST Parameters**
 

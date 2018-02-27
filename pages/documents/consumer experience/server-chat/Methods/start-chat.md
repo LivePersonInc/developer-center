@@ -53,8 +53,12 @@ _For Visitor Authentication flow please collect necessary parameters from the [f
 | engagementId | The ID of the engagement.  | alphanumeric | |
 | campaignId | The campaign ID to be used in this chat. | alphanumeric | |
 | language | The language code of the auto messages to be used in this chat i.e. en-US. | alphanumeric | |
+<<<<<<< HEAD
 | participantId | Participant Id for Authentication flow | alphanumeric | mandatory for Visitor Authentication |
 | conversationId | Conversation Id for Authentication flow | alphanumeric | mandatory for Visitor Authentication|
+=======
+| interactionTimeout | Setting the timeout for a user interaction in seconds. [optional] | numeric | |
+>>>>>>> Development
 
 **Survey Body Parameters**
 
