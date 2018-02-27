@@ -57,7 +57,7 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 9. Add visit info parameters:
 
-	a. In the **Parameter** name field, enter the query string identifier you wish to bind the value.
+	a. In the **Parameter** name field, enter the query string identifier you wish to bind the value to.
 
 	b. From the **Map to field**, select the LiveEngage parameter that you want to transfer.
 
