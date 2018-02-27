@@ -19,7 +19,7 @@ This API queries changes in agent groups data.
 
 | Method | URL| 
 | :-------- | :---- |
- |POST | /api/account/configuration/le-users/agentGroups/query |
+ |POST | https://{domain}/api/account/configuration/le-users/agentGroups/query |
 
 **Request Headers**
 

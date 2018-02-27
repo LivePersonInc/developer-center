@@ -19,7 +19,7 @@ This API queries changes in user data.
 
 |Method    |  URL  |
 |-------- | ---  |
-|POST | /api/account/configuration/le-users/users/query |
+|POST | https://{domain}/api/account/configuration/le-users/users/query |
 
 **Request Headers**
 

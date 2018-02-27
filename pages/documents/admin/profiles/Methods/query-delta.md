@@ -19,7 +19,7 @@ This API queries changes in profiles data.
 
 | Method | URL |
  |:-------- | :----- |
- |POST  |/api/account/configuration/le-users/profiles/query |
+ |POST  |https://{domain}/api/account/configuration/le-users/profiles/query |
 
 **Request Headers**
 

@@ -1,5 +1,5 @@
 ---
-title: Photo Sharing (Beta)
+title: Photo Sharing
 Keywords:
 level1: Documents
 level2: Consumer Experience

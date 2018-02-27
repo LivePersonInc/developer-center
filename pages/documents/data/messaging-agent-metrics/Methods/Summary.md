@@ -22,6 +22,7 @@ Returns a summary on the current state of the contact center. This includes numb
 _URL Parameters_
 
 Optional:
+**Note that you must send a valid JSON object as your request body. If you are using none of the below filters send `{}`**
 
 | Name   |      Description      |  Type/Value |
 |----------|-------------|------|

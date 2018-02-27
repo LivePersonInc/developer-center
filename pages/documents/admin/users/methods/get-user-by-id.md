@@ -19,7 +19,7 @@ This API retrieves a single user (by ID) for a specific account.
 
  |Method|      URL  |
  |:--------  |:---  |
- |GET|  /api/account/{accountId}/configuration/le-users/users/{userId}  |
+ |GET|  https://{domain}/api/account/{accountId}/configuration/le-users/users/{userId}  |
 
 **Request Headers**
 

@@ -19,7 +19,7 @@ This API retrieves a list of agent groups for a specific account.
 
 | Method | URL |
 | :------- | :----- |
-| GET  |/api/account/{accountId}/configuration/le-users/agentGroups |
+| GET  |https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups |
 
 **Request Headers**
 

@@ -19,7 +19,7 @@ This API updates a profile for a specific account.
 
 | Method | URL|
  |:--------- | :-------- |
- |PUT|  /api/account/{accountId}/configuration/le-users/profiles/{profileId}|
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/profiles/{profileId}|
 
 **Request Headers**
 
