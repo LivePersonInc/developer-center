@@ -57,7 +57,7 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 9. Add visit info parameters:
 
-	a. In the **Parameter** name field, enter the identifier of your HTML element (see **Finding the Identifier of your Webpage Field below).
+	a. In the **Parameter** name field, enter the query string identifier you wish to bind the value.
 
 	b. From the **Map to field**, select the LiveEngage parameter that you want to transfer.
 
@@ -69,21 +69,8 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 <img src="img/visit_info_parameters.png" alt="VisitInfoParameters" width="596" height="790">
 
-#### Finding the Identifier of your Webpage Field
-
-The id attribute specifies a unique id for each HTML element. To find the element id in this example:
-
-1. Hover over the form and right click.
-
-	![TransactionForm](img/transaction_form.png)
-
-2. Click **inspect element**.
-
-3. In the Console that opens, you will see all the html attributes of this element. Look for the id and copy it into the parameter name field in the LivePerson mapping parameters form.
-
-![TransactionFormHTML](img/transaction_form_html.png)
-
-<img src="img/save_parameters.png" alt="save_parameters" width="690" height="898">
+### using the data in the widget
+In order to use the data sent to the widget, you can query the page **URL QueryString** using the [URLSearchParams API](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) or analaysing the window **location** property manually.
 
 ### Edit an Existing Widget
 
