@@ -9,18 +9,17 @@ In order to present a "Click to Chat" button with an updated state of availabili
 
 **Note**: This API works for engagements only of the APP_INSTALL type. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
 
-### Important Disclaimer
-
-The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA - session / context) is a pair of 2 parameters - 'vid' and 'sid'. It is highly (!) recommended to provide a valid value to both these parameters when accessing this resource:
-- A response code of **200 (OK)** 		- means that the values of the 'vid' and 'sid' query parameters that were provided are valid - the pair represents a valid state.
-- A response code of **201 (CREATED)** 	- means that no values were provided for the 'vid' and/or the 'sid' query parameters, or the values provided are otherwise invalid - therefore, a new state was created, which is represented by the 'vid' and 'sid' pair that appears in the response body.
-
 ### High Level Concepts
 * HTTP based - All information (both client to server and server to client) will be passed using an HTTP request-response model
 * HTTPS only - Only **secured** (SSL) requests will be handled
 * JSON based - All data (both directions) will be passed using a valid JSON
 * Same URL Path - All HTTP requests will be sent with the same URL path (query params may be different) 
 
+### Important Disclaimer
+
+The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA - session / context) is a pair of 2 parameters - 'vid' and 'sid'. It is highly (!) recommended to provide a valid value to both these parameters when accessing this resource:
+- A response code of **200 (OK)** 		- means that the values of the 'vid' and 'sid' query parameters that were provided are valid - the pair represents a valid state.
+- A response code of **201 (CREATED)** 	- means that no values were provided for the 'vid' and/or the 'sid' query parameters, or the values provided are otherwise invalid - therefore, a new state was created, which is represented by the 'vid' and 'sid' pair that appears in the response body.
 
 ### Assumptions 
 * There are three separate identifiers - consumerId (authenticated), lpConsumerId (unauthenticated) and the visitorId (shark vid). There can be several visitorIds for the same consumerId/lpConsumerId and vice versa. 
