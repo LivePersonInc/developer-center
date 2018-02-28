@@ -1,0 +1,171 @@
+#### Get Engagement  
+#### version 1.0
+
+### Description
+Use this API to get an engagement for a visitor in an appInstallationId context. 
+When calculating eligibility the decision is based on the SDEs and other parameters. 
+Based on messaging campaign concept
+
+### Use cases
+* Create new session and get engagements (for messaging engagement - if there is no open conversation)
+* Check and obtain active messaging conversation if there is an open conversation
+
+### Request
+
+| Method | URL |
+| :--- | :--- |
+|POST|`https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/engagement?v={version}&vid={visitor-id}&sid={session-id}` |
+
+### Path Parameters
+| Parameter | Description | Type | Notes |
+| :--- | :--- | :--- | :--- |
+| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ (Validation fail error code: 404) | 
+| appInstallationId | App installation id | string | String, Required (Validation fail error code: 400) |
+
+### Query parameters
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| v | API version number | double | Required | Supported Value: 1.0  |
+| vid | Visitor Id | String | Optional | If session doesn't exist, a new session will be generated and sent by the server (Validation fail error code: 401) |
+| sid | Session Id | String | Optional on first request, otherwise required | If session doesn't exist, a new session will be generated and sent by the server (Validation fail error code: 401) |
+
+### Body Parameters
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| consumerId | Consumer Id | String | Optional | (Validation fail error code: 401)  |
+| lpConsumerId | LPConsumer Id | String | Optional | (Validation fail error code: 401)  |
+| clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
+| clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
+| clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
+| clientProperties.ipAddress | IP address (V4) | string | Optional | (IP format XXX.XXX.XXX.XXX) <br> Validation: Real IP address (IPv6 or IPv4) |
+| clientProperties.os | Contains the operating system, including version info | string | Optional | Supported values: "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID" |
+| clientProperties.osVersion | OS version | string | Optional | Example: For Android it could be 2.4 |
+| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
+| engagementAttributes | Array of engagement attributes (SDEs) | string | Optional | Supported Values: all SDEs excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
+
+### POST Request & body entity example
+https://domainToLiveperson/api/account/{account-Id}/app/123/engagement?v=1.0&vid=myNewVisiorId&sid=myNewSessionId
+(API version number will be in query params)
+```json
+{
+ "clientProperties":{
+   "osName": "MAC_OSX",
+   "osVersion": "1.2",
+   "appVersion": "1.0",
+   "deviceFamily": "MOBILE",
+   "ipAddress": "192.168.5.2"
+ },
+ "consumerId":"uniqueIdInBrand",
+ "entryPoints":[
+   "tel://972737004000",
+   "http://www.liveperson.com",
+   "sec://Sport",
+   "lang://English"
+ ],
+ "engagementAttributes": [
+   {
+     "type": "personal",
+     "personal": {
+       "contacts": [{"email":"bbb@test.com","phone":"12345678"},{"email":"aaa@test2.co.il","phone":"98765430"}],
+       "age": {
+         "age":30.0,
+         "year":1985,
+         "month":7,
+         "day":22
+       },
+       "firstname": "test",
+       "lastname": "test2",
+       "gender": "FEMALE",
+       "company": "liveperson"
+     }
+   }
+ ]
+}
+```
+
+### Response 
+#### Response Codes
+* 200 OK
+* 201 Created
+* 400 Validation error
+* 401 Unauthorized
+* 404 Data not found
+* 500 Internal server error
+* 503 The server is temporarily unavailable
+
+#### Retry Policy Recommendation
+| Error code | Meaning | Recommendation |
+| :--- | :--- | :--- |
+| 4xx | Client side error | Do not retry, fix problems in code |
+| 5xx | There was an error on server side | Retry 3 times with 10, 30, 90 Seconds pause between retries |
+
+### Response format
+| Attribute | Description | Type | Required|
+| :--- | :--- | :--- | :--- |
+| engagementDetails | The details of an engagement when it is available | object | Required if there is an engagement  |
+| engagementDetails.campaignId | | number | Required if there is an engagement  |
+| engagementDetails.engagementId | | number | Required if there is an engagement  |
+| engagementDetails.conversationId | | string | Required if there is an engagement |
+| engagementDetails.windowId | | string | Required if there is an engagement  |
+| engagementDetails.language | | string | Required if there is an engagement  |
+| engagementDetails.engagementRevision | | number | Required if there is an engagement  |
+| engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |
+| pageId | Page identification ID for sending event on the current engagement | string | Required  |
+| sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
+| visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
+
+### POST Response entity examples
+Status code: 201 Created - Engagement is available, created new session:
+```json
+{
+  "sessionId": "abc",
+  "visitorId": "xyz",
+  "pageId": "595933432",
+  "engagementDetails": [
+    {
+      "campaignId": 880524023,
+      "engagementId": 880524123,
+      "engagementRevision": 21,
+      "contextId": "1",
+      "status": "expose"
+    }
+  ]
+}
+```
+
+Status code: 200 OK - Resume conversation same session:
+```json
+{
+  "sessionId": "abc",
+  "visitorId": "xyz",
+  "pageId": "2095636278",
+  "engagementDetails": [
+    {
+      "campaignId": 880524423,
+      "engagementId": 880524523,
+      "engagementRevision": 23,
+      "conversationId": "fdasfdas",
+      "status": "conversation"
+    }
+  ]
+}
+
+```
+Status code: 200 OK - Engagement is unavailable:
+```json
+{
+     "sessionId": "abc",
+     "visitorId": "xyz",
+     "pageId" : "4743822558"
+}
+```
+Status code: 500 Server Error - Loading account:
+```json
+{
+    "time":1501074704502,
+    "message":"Loading account: ta3hWd4IgG, vid: ahiel",
+    "internalCode":20
+}
+```
+
+***
