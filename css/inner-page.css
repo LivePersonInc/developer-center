@@ -23,7 +23,7 @@ h2[id] {
 h3[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 0.9333em;
+  font-size: 16px;
 }
 h4[id]{
   font-family: "Roboto", Arial;
@@ -37,10 +37,19 @@ h4 code.highlighter-rouge {
     margin-left: 5px;
 }
 
-.h2 {
-  color: #162036;
+.h1 {
+  color: #172136;
   font-family: "Roboto",Arial;
-  font-size: 1.0666em;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: -8px;
+}
+
+.h2 {
+  color: #172136;
+  font-family: "Roboto",Arial;
+  font-size: 18px;
   margin-bottom: 30px;
 
 }
@@ -286,8 +295,8 @@ ul#mysiderbar li{
 ul#mysidebar.nav li a {
   display: inline-block;
   color: #5879da;
-  font-family: "Open Sans","Roboto Slab",Arial,Helvetica,sans-serif;
-  font-size: 1em;
+  font-family: "Roboto","Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 12px;
   overflow-wrap:break-word;
 }
 ul#mysidebar.nav > li > a{
@@ -297,13 +306,17 @@ ul#mysidebar li ul li{
   margin-right: 0px;
 }
 ul#mysidebar.nav li a.active{
-  color: #162036;
+  color: #172136;
+  font-size: 14px;
+  font-weight: bold;
 }
 ul#mysidebar.nav li.activepage{
-  background-color: #F2F2F2;
+  background-color: inherit;
 }
 ul#mysidebar.nav li.activepage a{
-  background-color: #F2F2F2;
+  background-color: inherit;
+  font-weight: bold;
+  color: #172136;
 }
 #mysidebar.nav li.folder > a{
  font-size: 1.1em;
@@ -320,20 +333,20 @@ ul#mysidebar.nav li ul li {
 
 div.sidebarTitle {
   color: #162036;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: normal;
   margin-bottom: 9px;
   margin-left: 26px;
-  width: 270px;
+  width: 240px;
   top: 68px;
   font-family:  "Roboto", "Open Sans", Helvetica, sans-serif;
-  white-space:nowrap;
   visibility: hidden;
-  position: relative;
+  position: absolute;
 }
 
 div.sidebarTitle span{
   vertical-align: top;
+  font-family:  "Roboto", "Open Sans", Helvetica, sans-serif;
 }
 div.sidebarTitle-holder {
     font-size: 1.333em;
@@ -342,6 +355,10 @@ div.sidebarTitle-holder {
     margin-top: 50px;
     position: relative;
     font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+}
+
+.side-bar {
+  margin-top: 60px;
 }
 
 /*CSS for general styling of Chat/Messaging Indicator*/

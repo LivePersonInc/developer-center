@@ -152,8 +152,7 @@ _Note: The updateCallback must be the same callback provided for the bind._
 
 |Command |Description |Const |Payload |
 |:--- |:--- |:--- |:--- |
-| "Write ChatLine" | write text to the chat input. in real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.
- | lpTag.agentSDK.cmdNames.write | {text: "text to write"} |
+| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write"} |
 | "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, metadata: [...]} <br><br> matadata is optional |
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
 

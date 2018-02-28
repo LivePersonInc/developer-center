@@ -85,10 +85,13 @@ $(function() {
 
 $('.sidebarTitle').ready(function(){
         //resize title text size if too width
-        $('.sidebarTitle').textfill(20);
+        //$('.sidebarTitle').textfill(22);
         $('.sidebarTitle').css("visibility","visible");
+        //var size = $('.titlespan').css('font-size');
+        //$('.h1').css('font-size', size);
     }
 );
+
 //level4 collapsing
 $(function() {
 
