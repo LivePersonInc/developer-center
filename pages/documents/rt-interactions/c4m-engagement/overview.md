@@ -1,22 +1,17 @@
 
 ### Introduction
+** Sivan **
 
-When implementing an API based ???
-
-In order to present a "Click to Chat" button with an updated state of availability, you must access the LP Monitoring system to create a visitor session and get an engagement. This call can be made by the getEngagement() function by the Monitor API. 
-
-???
-
-**Note**: This API works for engagements only of the APP_INSTALL type. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
+**Note**: This API works for engagements only of the APP_INSTALL, MSDK and CHAT_API type with the same app-installation-id. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
 
 ### High Level Concepts
 * HTTP based - All information (both client to server and server to client) will be passed using an HTTP request-response model
 * HTTPS only - Only **secured** (SSL) requests will be handled
 * JSON based - All data (both directions) will be passed using a valid JSON
 * Same URL Path - All HTTP requests will be sent with the same URL path (query params may be different) 
+* Note the updated data that is returned in the response and use it - pageId, visitorId & sessionId 
 
 ### Important Disclaimer
-
 The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA - session / context) is a pair of 2 parameters - 'vid' and 'sid'. It is highly (!) recommended to provide a valid value to both these parameters when accessing this resource:
 - A response code of **200 (OK)** 		- means that the values of the 'vid' and 'sid' query parameters that were provided are valid - the pair represents a valid state.
 - A response code of **201 (CREATED)** 	- means that no values were provided for the 'vid' and/or the 'sid' query parameters, or the values provided are otherwise invalid - therefore, a new state was created, which is represented by the 'vid' and 'sid' pair that appears in the response body.
@@ -30,12 +25,10 @@ The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA 
 ### Authentication and Authorization
 This API is public and doesn’t require authentication or authorization.
 
-### Use Cases / Guidelines
-???
-* Note the updated data that is returned in the response and use it - pageId, visitorId & sessionId 
-* How frequent should they query? 
+### Use Cases 
+** Sivan **
 
-### Capping / System Protection
+### Capping
 * If the limit of events per session was reached, this session will be blocked and a new one will be created
 * When reached limit of sessions per account, an 5XX response will be sent back to client
 * When reached limit of sessions per visitor, an 5XX response will be sent back to client
@@ -45,6 +38,8 @@ This API is public and doesn’t require authentication or authorization.
 * When providing lpConsumerId/LPConsumer.id, should send only one or verify it matches (parameter and SDE)  
 * If the sent sessionId is invalid for some reason, a new session will be provided with 201 response 
 * For the PUT resource, an identifier should be provided for context - either consumerId, lpConsumerId or the visitorId
+
+### Happy Flow
 
 ### Error handling
 Any http error or timeout must be handled by a client as general error and retry according to its retry policy.
