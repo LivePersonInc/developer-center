@@ -39,7 +39,9 @@ This API is public and doesn’t require authentication or authorization.
 ???
 
 ### Validation
-???
+* When providing consumerId/CustomerInfo.customerId, should send only one or verify they match (parameter and SDE) 
+* When providing lpConsumerId/LPConsumer.id, should send only one or verify it matches (parameter and SDE)  
+* If the sent sessionId is invalid for some reason, a new session will be provided with 201 response 
 
 ### Error handling
 Any http error or timeout must be handled by a client as general error and retry according to its retry policy.
