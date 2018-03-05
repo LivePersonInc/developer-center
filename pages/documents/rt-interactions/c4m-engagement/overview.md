@@ -42,11 +42,6 @@ In case of unsuccessful http response (not 2xx code) the client must read all me
 * Error may be sent from a server at any point. 
 * First number in the error code defines the general meaning of the error. 4 meaning for client error, and 5 meaning of server error.
 
-#### Error categories
-1. session - The session is closed/not created. Need handshake in order to start new one. normally retry = false.
-1. request - The whole request was not processed. May retry sending the same request again (normally retry= true). for example: account not loaded.
-1. application - Applicative issue. Normally should not retry. Useful for debugging and informing the application developer that something is logically wrong. The server is not tolerant to partially invalid data and all the data will be ignored.  for example if some events can’t be parsed by server, the rest of the events will not be processed too.
-
 #### Response Errors
 | Status code | Internal code | Description | Notes |
 | :--- | :--- | :--- | :--- |
