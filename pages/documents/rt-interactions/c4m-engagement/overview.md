@@ -9,15 +9,11 @@
 * HTTPS only - Only **secured** (SSL) requests will be handled
 * JSON based - All data (both directions) will be passed using a valid JSON
 * Same URL Path - All HTTP requests will be sent with the same URL path (query params may be different) 
-* Note the updated data that is returned in the response and use it - pageId, visitorId & sessionId 
 
 ### Important Disclaimer
 The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA - session / context) is a pair of 2 parameters - 'vid' and 'sid'. It is highly (!) recommended to provide a valid value to both these parameters when accessing this resource:
 - A response code of **200 (OK)** 		- means that the values of the 'vid' and 'sid' query parameters that were provided are valid - the pair represents a valid state.
 - A response code of **201 (CREATED)** 	- means that no values were provided for the 'vid' and/or the 'sid' query parameters, or the values provided are otherwise invalid - therefore, a new state was created, which is represented by the 'vid' and 'sid' pair that appears in the response body.
-
-### Assumptions 
-* There are three separate identifiers - consumerId (authenticated), lpConsumerId (unauthenticated) and the visitorId (shark vid). There can be several visitorIds for the same consumerId/lpConsumerId and vice versa. 
 
 ### Forward Compatibility
 * Clients should not rely on a closed set of attributes since the format is JSON (no exceptions on marshaling objects).
@@ -29,6 +25,7 @@ This API is public and doesn’t require authentication or authorization.
 ** Sivan **
 
 ### Capping
+TODO: write the context, consult with Eitan/Miki regarding the capping section
 * If the limit of events per session was reached, this session will be blocked and a new one will be created
 * When reached limit of sessions per account, an 5XX response will be sent back to client
 * When reached limit of sessions per visitor, an 5XX response will be sent back to client
