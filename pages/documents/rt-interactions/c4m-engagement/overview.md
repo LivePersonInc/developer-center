@@ -31,8 +31,8 @@ TODO: write the context, consult with Eitan/Miki regarding the capping section
 * When reached limit of sessions per visitor, an 5XX response will be sent back to client
 
 ### Validation
-* When providing consumerId/CustomerInfo.customerId, should send only one or verify they match (parameter and SDE) 
-* When providing lpConsumerId/LPConsumer.id, should send only one or verify it matches (parameter and SDE)  
+* When providing consumerId/CustomerInfo.customerId, should send only one or verify they match (parameter and engagement attribute) 
+* When providing lpConsumerId/LPConsumer.id, should send only one or verify it matches (parameter and engagement attribute)  
 
 ### Happy Flow
 
