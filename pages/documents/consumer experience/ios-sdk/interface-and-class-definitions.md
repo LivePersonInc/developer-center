@@ -158,7 +158,7 @@ class LPCampaignInfo: NSObject {
     var engagementID: Int
     var sessionID: String?
     var visitorID: String?
-    var engagementContextID: String?
+    var contextID: String
 }
 ```
 
