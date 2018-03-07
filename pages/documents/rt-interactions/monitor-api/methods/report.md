@@ -2,43 +2,43 @@
 #### version 1.0
 
 ### Description
-Use this API to report an engagement attributes (SDEs) for a consumer in an appInstallationId context.
+Use this API to report an engagement attributes for a consumer in an appInstallationId context.
 
 ### Use cases
-* Report consumer SDEs from any entry point within the App
+* Report consumer engagement-attributes from any entry point within the App
 
 ### Request
 
 | Method | URL |
 | :--- | :--- |
-|PUT|`https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/report?v={version}&vid={visitor-id}&sid={session-id}` |
+|PUT|`https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}/report?v={api-version}&vid={visitor-id}&sid={session-id}` |
 
 ### Path Parameters
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ (Validation fail error code: 400) |
-| appInstallationId | App installation id | string | String, Required (Validation fail error code: 400) |
+| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
+| appInstallationId | App installation id | string | String, Required |
 
 ### Query parameters
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | v | API version number | double | Required | Supported Value: 1.0  |
-| vid | Visitor Id | String | Optional on first request, otherwise required | If session doesn't exist, a new session will be generated and sent by the server |
-| sid | Session Id | String | Optional on first request, otherwise required | If session doesn't exist, a new session will be generated and sent by the server |
+| vid | Visitor Id | String | Optional on first request <sup>[1]</sup>, otherwise required | If session doesn't exist, a new session will be generated and sent by the server |
+| sid | Session Id | String | Optional on first request, otherwise required |  Will be provided by the server-side in a 201.CREATED response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
 
 ### Body Parameters
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional <sup>[1]</sup> | (Validation fail error code: 400)  |
-| lpConsumerId | LPConsumer Id | String | Optional <sup>[1]</sup> | (Validation fail error code: 400)  |
-| engagementAttributes | Array of engagement attributes (SDEs) | string | Required | Supported all SDEs including the impression events (inherited from ImpressionEventBase), see [limitations](#limitations) item below |
+| consumerId | Consumer Id | String | Optional <sup>[1]</sup> | |
+| lpConsumerId | LPConsumer Id | String | Optional <sup>[1]</sup> | |
+| engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see [limitations](#limitations) item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
 <sup>[1]</sup> At list one form of identification is required (ConsumerID, LPConsumerID or VisitorID). Both ConsumerID and LPConsumerID cannot be used for the same request.
 
 ### PUT Request & body entity example
-https://domainToLiveperson/api/account/{account-Id}/app/123/report?v=1.0&vid=myVisiorId&sid=mySessionId
-(API version number will be in query params)
+https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.0&vid=myVisiorId&sid=mySessionId
+
 ```json
 {
  "consumerId":"myConsumerId",
@@ -71,7 +71,6 @@ https://domainToLiveperson/api/account/{account-Id}/app/123/report?v=1.0&vid=myV
 * 200 OK
 * 201 Created
 * 400 Validation error
-* 401 Unauthorized
 * 404 Data not found
 * 500 Internal server error
 * 503 The server is temporarily unavailable
