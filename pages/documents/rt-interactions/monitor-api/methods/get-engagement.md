@@ -36,7 +36,7 @@ The possible eligibility of an engagement is based on several parameters, such a
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
-| clientProperties.ipAddress | IP address (V4) | string | Optional | (IP format XXX.XXX.XXX.XXX) <br> Validation: Real IP address (IPv6 or IPv4) |
+| clientProperties.ipAddress | IP address (V4) | string | Optional | (IP format XXX.XXX.XXX.XXX) <br> Validation: Real IP address (IPv4) |
 | clientProperties.os | Contains the operating system, including version info | string | Optional | Supported values: "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID" |
 | clientProperties.osVersion | OS version | string | Optional | Example: For Android it could be 2.4 |
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
@@ -44,7 +44,7 @@ The possible eligibility of an engagement is based on several parameters, such a
 
 ### POST Request & body entity example
 https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?v=1.0&vid=myNewVisiorId&sid=myNewSessionId
-(API version number will be in query params)
+
 ```json
 {
  "clientProperties":{
