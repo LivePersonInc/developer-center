@@ -3,37 +3,36 @@
 
 ### Description
 Use this API to get an engagement for a visitor in an appInstallationId context. 
-When calculating eligibility the decision is based on the SDEs and other parameters. 
-Based on messaging campaign concept
+The possible eligibility of an engagement is based on several parameters, such a the list of engagement attributes provided in the client-side request. 
 
 ### Use cases
-* Create new session and get engagements (for messaging engagement - if there is no open conversation)
-* Check and obtain active messaging conversation if there is an open conversation
+* Get an engagement if (A) there is no active conversation for this consumer, and (B) the consumer is eligible for an engagement
+* Obtain the identifiers of the active conversation, if one exists
 
 ### Request
 
 | Method | URL |
 | :--- | :--- |
-|POST|`https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/engagement?v={version}&vid={visitor-id}&sid={session-id}` |
+|POST|`https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id}` |
 
 ### Path Parameters
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ (Validation fail error code: 404) | 
-| appInstallationId | App installation id | string | String, Required (Validation fail error code: 400) |
+| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ | 
+| appInstallationId | App installation id | string | String, Required |
 
 ### Query parameters
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | v | API version number | double | Required | Supported Value: 1.0  |
-| vid | Visitor Id | String | Optional | If session doesn't exist, a new session will be generated and sent by the server (Validation fail error code: 401) |
-| sid | Session Id | String | Optional on first request, otherwise required | If session doesn't exist, a new session will be generated and sent by the server (Validation fail error code: 401) |
+| vid | Visitor Id | String | Optional | Must be saved in order to reuse for future requests in the same visit |
+| sid | Session Id | String | Optional on first request, otherwise required | Will be provided by the server-side in a 201.CREATED response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
 
 ### Body Parameters
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional | (Validation fail error code: 401)  |
-| lpConsumerId | LPConsumer Id | String | Optional | (Validation fail error code: 401)  |
+| consumerId | Consumer Id | String | Optional | |
+| lpConsumerId | LPConsumer Id | String | Optional | |
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
@@ -41,10 +40,10 @@ Based on messaging campaign concept
 | clientProperties.os | Contains the operating system, including version info | string | Optional | Supported values: "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID" |
 | clientProperties.osVersion | OS version | string | Optional | Example: For Android it could be 2.4 |
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
-| engagementAttributes | Array of engagement attributes (SDEs) | string | Optional | Supported Values: all SDEs excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
+| engagementAttributes | Array of engagement attributes | string | Optional | Supported Values: all engagement-attributes excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
 
 ### POST Request & body entity example
-https://domainToLiveperson/api/account/{account-Id}/app/123/engagement?v=1.0&vid=myNewVisiorId&sid=myNewSessionId
+https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?v=1.0&vid=myNewVisiorId&sid=myNewSessionId
 (API version number will be in query params)
 ```json
 {
@@ -88,7 +87,6 @@ https://domainToLiveperson/api/account/{account-Id}/app/123/engagement?v=1.0&vid
 * 200 OK
 * 201 Created
 * 400 Validation error
-* 401 Unauthorized
 * 404 Data not found
 * 500 Internal server error
 * 503 The server is temporarily unavailable
@@ -159,6 +157,7 @@ Status code: 200 OK - Engagement is unavailable:
      "pageId" : "4743822558"
 }
 ```
+
 Status code: 500 Server Error - Loading account:
 ```json
 {
