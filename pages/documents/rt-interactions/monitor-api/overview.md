@@ -2,13 +2,12 @@
 ### Introduction
 ** Sivan **
 
-**Note**: This API works for engagements only of the APP_INSTALL, MSDK and CHAT_API type with the same app-installation-id. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
+**Note**: This API works for engagements only of the APP_INSTALL type with the same app-installation-id. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
 
 ### High Level Concepts
 * HTTP based - All information (both client to server and server to client) will be passed using an HTTP request-response model
 * HTTPS only - Only **secured** (SSL) requests will be handled
 * JSON based - All data (both directions) will be passed using a valid JSON
-* Same URL Path - All HTTP requests will be sent with the same URL path (query params may be different) 
 
 ### Important Disclaimer
 The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA - session / context) is a pair of 2 parameters - 'vid' and 'sid'. It is highly (!) recommended to provide a valid value to both these parameters when accessing this resource:
