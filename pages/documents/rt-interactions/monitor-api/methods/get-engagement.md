@@ -32,7 +32,6 @@ The possible eligibility of an engagement is based on several parameters, such a
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | consumerId | Consumer Id | String | Optional | |
-| lpConsumerId | LPConsumer Id | String | Optional | |
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |

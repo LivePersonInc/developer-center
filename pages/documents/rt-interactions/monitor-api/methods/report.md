@@ -30,11 +30,10 @@ Use this API to report an engagement attributes for a consumer in an appInstalla
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | consumerId | Consumer Id | String | Optional <sup>[1]</sup> | |
-| lpConsumerId | LPConsumer Id | String | Optional <sup>[1]</sup> | |
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see [limitations](#limitations) item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
-<sup>[1]</sup> At list one form of identification is required (ConsumerID, LPConsumerID or VisitorID). Both ConsumerID and LPConsumerID cannot be used for the same request.
+<sup>[1]</sup> At list one form of identification is required (ConsumerID or VisitorID).
 
 ### PUT Request & body entity example
 https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.0&vid=myVisiorId&sid=mySessionId

@@ -32,7 +32,6 @@ TODO: write the context, consult with Eitan/Miki regarding the capping section
 
 ### Validation
 * When providing consumerId/CustomerInfo.customerId, should send only one or verify they match (parameter and engagement attribute) 
-* When providing lpConsumerId/LPConsumer.id, should send only one or verify it matches (parameter and engagement attribute)  
 
 ### Happy Flow
 
