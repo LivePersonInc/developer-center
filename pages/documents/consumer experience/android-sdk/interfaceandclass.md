@@ -110,3 +110,26 @@ public class LPAuthenticationParams{
   private String mHostAppRedirectUri;
 }
 ```
+
+
+### LPConversationsHistoryStateToDisplay
+
+```javascript
+
+public enum LPConversationsHistoryStateToDisplay {
+  OPEN, CLOSE , ALL
+}
+
+```
+
+
+### LPConversationHistoryMaxDaysDateType
+
+```javascript
+
+public enum LPConversationHistoryMaxDaysDateType {
+  startConversationDate, endConversationDate
+}
+
+
+```

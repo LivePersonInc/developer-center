@@ -1445,6 +1445,18 @@ The goal of the following document is to enumerate the different fields controll
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;string name=&quot;push_notification_channel_id&quot;&gt;</td>
+    <td>Define the notification channel id to use in case of using LP default notification</td>
+    <td>LP_SDK_CHANNEL</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;push_notification_channel_name&quot;&gt;</td>
+    <td>Define the notification channel name to use in case of using LP default notification</td>
+    <td>LP SDK</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 

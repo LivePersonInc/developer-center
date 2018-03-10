@@ -69,7 +69,10 @@ if you want to connect in an *unAuthenticated* way, you can pass null or an empt
 **ConversationViewParams:**
 
 boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
-
+History control api- define to filter the shown messages.
+LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay : default value LPConversationsHistoryStateToDisplay.ALL
+LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType : default value LPConversationHistoryMaxDaysDateType.startConversationDate;
+int mHistoryConversationsMaxDays : default value -1; //no limit
 `public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 
 | Parameter | Description |
@@ -146,7 +149,10 @@ if you want to connect in an *unAuthenticated* way, you can pass null or an empt
 **ConversationViewParams:**
 
 boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
-
+History control api- define to filter the shown messages.
+LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay : default value LPConversationsHistoryStateToDisplay.ALL
+LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType : default value LPConversationHistoryMaxDaysDateType.startConversationDate;
+int mHistoryConversationsMaxDays : default value -1; //no limit
 `public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 
 | Parameter | Description |
