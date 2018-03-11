@@ -1,56 +1,59 @@
 
 ### Introduction
-** Sivan **
 
-**Note**: This API works for engagements only of the APP_INSTALL type with the same app-installation-id. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
+The "Monitor API" is meant to serve the consumer monitoring and engaging flows. In order to present a "Click to Chat" button (an engagement) with an updated state of availability, the LivePerson monitoring system must be accessed in order to create a monitor session and reply with an engagement. By doing so, the monitoring system tracks the consumer activity within the brand's system and engages the consumer based on campaign definitions.   
+
+### Terminology
+* consumer
+* `consumerId`
+* consumer device
+* monitor session
+* `visitorId` - the LivePerson identifier to the current consumer device 
+* `sessionId` - the LivePerson identifier to the current monitor session of this consumer device
+* `appInstallationId`
+* campaign
+* engagement
+
+
+### A sample flow:
+1. the consumer device sends a request to the [Engagement Resource](rt-interactions-get-engagement.html){:target="_blank"}. 
+** the above request can be added with the following information regarding consumer activity within the brand's system -  `consumerId`, entry points, engagement attributes, client properties, etc'...
+2. the monitoring system creates a monitor session for this consumer device and replies with an eligible engagement, including the `visitorId` and a `sessionId` in the response.
+3. the consumer device sends a request to the [Report Resource](rt-interactions-report.html){:target="_blank"}, specifying the `visitorId` and a `sessionId` in the request, in order to report about the status of the engagement usage - displayed, clicked, etc'... 
+
+
+### Notes (!)
+The "Monitor API" is a **stateful API**. This (server-side) state is the monitor session, identified by a pair of 2 parameters - `visitorId` and a `sessionId`. In order to maintain consistency, maintain a proper funnel and avoid unnecessary load, it is highly (!) advisable to provide the `sessionId` and `visitorId`, that are created in the first request for a consumer device monitor session, in all subsequent requests to all resources of the "Monitor API":
+
+* A response code of **200 (OK)** 		- means that the values of the `visitorId` and a `sessionId` that were provided are valid - the pair represents a valid monitor session.
+* A response code of **201 (CREATED)** 	- means that no values were provided for the `visitorId` and/or `sessionId` query parameters, or the values provided are otherwise invalid - therefore, a new monitor session was created (the new `visitorId` and  `sessionId` appear in the response body).
+
 
 ### High Level Concepts
 * HTTP based - All information (both client to server and server to client) will be passed using an HTTP request-response model
 * HTTPS only - Only **secured** (SSL) requests will be handled
-* JSON based - All data (both directions) will be passed using a valid JSON
+* JSON based - All data (both directions) will be passed using a valid JSON. **Note** - clients should not rely on a closed set of attributes since the format is JSON ("Forward Compatibility").
 
-### Important Disclaimer
-The "Monitor API" is a **stateful API**. The identifier of the API's state (AKA - session / context) is a pair of 2 parameters - 'vid' and 'sid'. It is highly (!) recommended to provide a valid value to both these parameters when accessing this resource:
-- A response code of **200 (OK)** 		- means that the values of the 'vid' and 'sid' query parameters that were provided are valid - the pair represents a valid state.
-- A response code of **201 (CREATED)** 	- means that no values were provided for the 'vid' and/or the 'sid' query parameters, or the values provided are otherwise invalid - therefore, a new state was created, which is represented by the 'vid' and 'sid' pair that appears in the response body.
-
-### Forward Compatibility
-* Clients should not rely on a closed set of attributes since the format is JSON (no exceptions on marshaling objects).
 
 ### Authentication and Authorization
-This API is public and doesn’t require authentication or authorization.
+This API is public. Aside from specifying a valid `appInstallationId` in the request, it does not require any further authentication or authorization.
 
-### Use Cases 
-** Sivan **
 
-### Capping
-TODO: write the context, consult with Eitan/Miki regarding the capping section
-* If the limit of events per session was reached, this session will be blocked and a new one will be created
-* When reached limit of sessions per account, an 5XX response will be sent back to client
-* When reached limit of sessions per visitor, an 5XX response will be sent back to client
+### Usage, Capping and Error handling
+* In order to avoid unnecessary load, **it is highly (!) advisable to provide the `sessionId` and `visitorId` of the consumer device** in all subsequent requests (e.g. the 2nd request onwards) spanning the current monitor session.
+* Not complying to the above usage of the `sessionId` and `visitorId` parameters may lead to an exceptional (abnormal) rate of monitor sessions' creation which will eventually be capped and will result in erroneous 5XX responses.    
 
-### Validation
-* When providing consumerId/CustomerInfo.customerId, should send only one or verify they match (parameter and engagement attribute) 
-
-### Happy Flow
-
-### Error handling
-Any http error or timeout must be handled by a client as general error and retry according to its retry policy.
-In case of unsuccessful http response (not 2xx code) the client must read all messages and handle errors according to the following definitions:
-* Error may be sent from a server at any point. 
-* First number in the error code defines the general meaning of the error. 4 meaning for client error, and 5 meaning of server error.
 
 #### Response Errors
 | Status code | Internal code | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| 400 | 33 | Illegal API version | |
-| 400 | 5 | Mandatory data is missing or invalid, parsing error | Request body is not a valid JSON, one or more SDE’s cannot be parsed, input validation errors |
-| 404 | 37 | Invalid or unknown visitor id | Visitor ID must be valid for PUT method |
-| 404 | 39 | Invalid or unknown session id | Session ID must be valid for PUT method |
-| 404 |  | App installation Id | App installation id must be valid |
-| 500 | 20 | Account not loaded or request timed out | First request for new account |
-| 500 | 18 | Internal Server Error | Unexpected server error |
+| 400 | 33 | illegal API version requested | |
+| 400 | 5 | request data is missing or invalid | request body is not a valid JSON ; input does not meet validation requirements; input cannot be parsed ... |
+| 404 | 37 | invalid visitorId | |
+| 404 | 39 | invalid sessionId | |
+| 404 |  | invalid appInstallationId | |
+| 500 | 20 | account not loaded or request timed out | |
+| 500 | 18 | internal server error | an unexpected server error occurred |
 
-
-
-
+### Use Cases 
+** Sivan **
