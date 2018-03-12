@@ -357,7 +357,7 @@ ConversationParamProtocol represents a 'filter’ for the conversation screen, d
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | brandID | brandID to request the conversation query for | -- |
-| campaignInfo | an optional campaign info (LPCampaignInfo) to use advanced routing for the consumer. This object based on campaignID, engagementID, sessionID(optional) and visitorID(optional) |  -- |
+| campaignInfo | an optional campaign info (LPCampaignInfo) to use advanced routing for the consumer. This object based on campaignID(mandatory), engagementID(mandatory), contextID(mandatory), sessionID(optional) and visitorID(optional) |  -- |
 
 ### getConversationConsumerQuery
 
