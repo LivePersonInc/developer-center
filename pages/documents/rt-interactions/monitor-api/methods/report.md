@@ -1,8 +1,12 @@
 ### Report 
 #### version 1.0
 
+### Note
+Please make sure the read the overview.
+
 ### Description
-Use this API to report an engagement attributes for a consumer in an appInstallationId context.
+Use this API to access the Liveperson monitoring system in order to report information regarding consumer activity within the brand's system. Such information can include engagement attributes, entry points.
+
 
 ### Use cases
 * Report consumer engagement-attributes from any entry point within the App
@@ -16,8 +20,8 @@ Use this API to report an engagement attributes for a consumer in an appInstalla
 ### Path Parameters
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
-| appInstallationId | App installation id | string | String, Required |
+| account-id | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
+| app-installation-id | App installation id | string | String, Required |
 
 ### Query parameters
 | Parameter | Description | Type | Required | Notes |

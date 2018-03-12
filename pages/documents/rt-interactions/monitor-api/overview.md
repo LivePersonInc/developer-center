@@ -4,15 +4,15 @@
 The "Monitor API" is meant to serve the consumer monitoring and engaging flows. In order to present a "Click to Chat" button (an engagement) with an updated state of availability, the LivePerson monitoring system must be accessed in order to create a monitor session and reply with an engagement. By doing so, the monitoring system tracks the consumer activity within the brand's system and engages the consumer based on campaign definitions.   
 
 ### Terminology
-* consumer
-* `consumerId`
-* consumer device
-* monitor session
+* consumer - TBD
+* `consumerId` - the brand's identifier for the consumer (e.g, email, telephone number or a generated unique id)
+* consumer device - TBD
+* monitor session - the server-side state of the current consumer device session
 * `visitorId` - the LivePerson identifier to the current consumer device 
 * `sessionId` - the LivePerson identifier to the current monitor session of this consumer device
-* `appInstallationId`
-* campaign
-* engagement
+* `appInstallationId` - TBD
+* campaign - TBD
+* engagement - TBD
 
 
 ### A sample flow:
@@ -51,7 +51,7 @@ This API is public. Aside from specifying a valid `appInstallationId` in the req
 | 400 | 5 | request data is missing or invalid | request body is not a valid JSON ; input does not meet validation requirements; input cannot be parsed ... |
 | 404 | 37 | invalid visitorId | |
 | 404 | 39 | invalid sessionId | |
-| 404 |  | invalid appInstallationId | |
+| 404 | TBD | invalid appInstallationId | |
 | 500 | 20 | account not loaded or request timed out | |
 | 500 | 18 | internal server error | an unexpected server error occurred |
 

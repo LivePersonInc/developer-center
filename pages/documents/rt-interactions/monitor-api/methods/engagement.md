@@ -1,13 +1,17 @@
-#### Get Engagement  
+#### Engagement  
 #### version 1.0
 
+### Note
+Please make sure the read the overview.
+
 ### Description
-Use this API to get an engagement for a visitor in an appInstallationId context. 
-The possible eligibility of an engagement is based on several parameters, such a the list of engagement attributes provided in the client-side request. 
+Use this API to access the Liveperson monitoring system in order to receive an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's system, such as engagement attributes.  
 
 ### Use cases
-* Get an engagement if (A) there is no active conversation for this consumer, and (B) the consumer is eligible for an engagement
-* Obtain the identifiers of the active conversation, if one exists
+1. Obtain an engagement. An engagement will be provided if both the following apply -
+* there is no active conversation for this consumer
+* the consumer is eligible for an engagement
+2. Obtain the identifiers of the active conversation for this consumer, if one exists.
 
 ### Request
 
@@ -18,8 +22,8 @@ The possible eligibility of an engagement is based on several parameters, such a
 ### Path Parameters
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ | 
-| appInstallationId | App installation id | string | String, Required |
+| account-id | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ | 
+| app-installation-id | App installation id | string | String, Required |
 
 ### Query parameters
 | Parameter | Description | Type | Required | Notes |
@@ -64,7 +68,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
    {
      "type": "personal",
      "personal": {
-       "contacts": [{"email":"bbb@test.com","phone":"12345678"},{"email":"aaa@test2.co.il","phone":"98765430"}],
+       "contacts": [{"email":"user123@gmail.com","phone":"12345678"},{"email":"aaa@domain.co.il","phone":"98765430"}],
        "age": {
          "age":30.0,
          "year":1985,
