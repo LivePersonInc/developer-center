@@ -15,6 +15,12 @@ indicator: both
 
 This API queries changes in user data.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://{domain}/api/account/{accountId}/configuration/le-users/users?v=4.0
+```
+
 ### Request
 
 |Method    |  URL  |
@@ -36,7 +42,7 @@ There are 3 types of query:
 - Snapshot (type 2): Returns the current snapshot of each site.
 
 Delta:
- 
+
 
     {
         "type":0,
@@ -73,7 +79,7 @@ Snapshot:
             {
               "site": "qa72268737"
              }
-    
+
         ]
     }
 
@@ -111,7 +117,7 @@ Snapshot:
                       "passwordSh": "<<slt>>1000:1e7b3e56b84d2ca9a5777bf806478e207efc9c5dfa3fc16c:38cbf5e917f22fea7f0fcf2a1c74144ede53f788ba6dc86d",
                       "email": "aaaa@a.com",
                       "skillIds": [
-                        
+
                       ],
                       "permissionGroups": [
                         1
@@ -136,7 +142,7 @@ Snapshot:
                       "passwordSh": "<<slt>>1000:01a08d0f30e60fb932bbd19e4aa67e2ca397567cfa5aaeaa:167aa6c03f6715a3df124939dbb163083e444a82fe1c6b7d",
                       "email": "aaaa@a.com",
                       "skillIds": [
-                        
+
                       ],
                       "permissionGroups": [
                         1
@@ -149,7 +155,7 @@ Snapshot:
                         }
                       ]
                     }
-                  ],	
+                  ],
                   "revision": 213
                 }
               }
@@ -181,7 +187,7 @@ Snapshot:
                 "passwordSh": "<<slt>>1000:f0b06d4fc207a5bd8e869a3cafdcf02187143d258cdf2dc1:3b15714a6b301e616853b6e5282c317ef3f9205b610a63e7",
                 "email": "aaaa@a.com",
                 "skillIds": [
-                  
+
                 ],
                 "permissionGroups": [
                   1
@@ -212,7 +218,7 @@ Snapshot:
                 "passwordSh": "<<slt>>1000:f97de18c8f0a4ddd0f9c45c41199d18b33cc809456d6d381:8b3606637bfcb8a9cec817a0dcdeb8e4370c70ddc3cc9ea7",
                 "email": "aaaa@a.com",
                 "skillIds": [
-                  
+
                 ],
                 "permissionGroups": [
                   1
@@ -243,7 +249,7 @@ Snapshot:
                 "passwordSh": "<<slt>>1000:9f770440630b382489122bf94c90731fc55d3f1571f3c9aa:3be4f22cd5e32965031d93ba1539663ceba3016a61b29134",
                 "email": "aaaa@a.com",
                 "skillIds": [
-                  
+
                 ],
                 "permissionGroups": [
                   1
@@ -276,10 +282,10 @@ Snapshot:
             "isActive": true,
             "id": 294935712,
             "managerOf": [
-              
+
             ],
             "skillIds": [
-              
+
             ],
             "email": "aaaa@a.com",
             "nickname": "agent1",
@@ -297,10 +303,10 @@ Snapshot:
             "isActive": true,
             "id": 294936212,
             "managerOf": [
-              
+
             ],
             "skillIds": [
-              
+
             ],
             "email": "aaaa@a.com",
             "nickname": "agent1",
@@ -318,7 +324,7 @@ Snapshot:
             "isActive": true,
             "id": 294936312,
             "managerOf": [
-              
+
             ],
             "skillIds": [
               294297012
@@ -339,7 +345,7 @@ Snapshot:
             "isActive": true,
             "id": 294936412,
             "managerOf": [
-              
+
             ],
             "skillIds": [
               294297012
@@ -360,7 +366,7 @@ Snapshot:
             "isActive": true,
             "id": 294936512,
             "managerOf": [
-              
+
             ],
             "skillIds": [
               294297012
@@ -381,7 +387,7 @@ Snapshot:
             "isActive": true,
             "id": 294936812,
             "managerOf": [
-              
+
             ],
             "skillIds": [
               294297012
@@ -397,7 +403,7 @@ Snapshot:
           },
           {
             "managerOf": [
-              
+
             ],
             "skillIds": [
               294297012
