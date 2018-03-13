@@ -1,4 +1,4 @@
----
+  ---
 title: Interface and class definitions
 Keywords:
 level1: Documents
@@ -154,18 +154,18 @@ enum LPConversationCloseReason: Int {
 
 ```javascript
 class LPCampaignInfo: NSObject {
-    var campaignID: Int
-    var engagementID: Int
-    var sessionID: String?
-    var visitorID: String?
-    var contextID: String
+    var campaignId: Int
+    var engagementId: Int
+    var sessionId: String?
+    var visitorId: String?
+    var contextId: String
 }
 ```
 
 ### LPMonitoringInitParams
 ```javascript
 class : NSObject {
-    var appInstallID: String // App Install ID of the Mobile Campaign of the Brand
+    var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
 }
 ```
 
@@ -175,7 +175,7 @@ class : NSObject {
 class : NSObject {
     var entryPoints: [String]? // Entry points array of the Mobile App
     var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes
-    var pageID: String? // PageID to send the SDEs for
+    var pageId: String? // PageID to send the SDEs for
 }
 ```
 
