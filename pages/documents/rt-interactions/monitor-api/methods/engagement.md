@@ -2,7 +2,7 @@
 #### version 1.0
 
 ### Note
-Please make sure the read the overview.
+Please make sure the read the [overview](rt-interactions-monitor-api-overview.html).
 
 ### Description
 Use this API to access the Liveperson monitoring system in order to receive an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's system, such as engagement attributes.  

@@ -2,7 +2,7 @@
 #### version 1.0
 
 ### Note
-Please make sure the read the overview.
+Please make sure the read the [overview](rt-interactions-monitor-api-overview.html).
 
 ### Description
 Use this API to access the Liveperson monitoring system in order to report information regarding consumer activity within the brand's system. Such information can include engagement attributes, entry points.
@@ -69,6 +69,72 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
  ]
 }
 ```
+#### Examples for engagement attributes to report impression events:
+ImpressionAcceptEvent:
+```json
+{
+  "type": "impAccept",
+  "campaign": 3115242510,
+  "engId": 3115242810,
+  "revision": 537,
+  "eContext": [
+    {
+      "type": "engagementContext",
+      "id": "1"
+    }
+  ]
+}
+```
+
+ImpressionDisplayEvent:
+```json
+{
+  "type": "impDisplay",
+  "campaign": 3115242510,
+  "engId": 3115242810,
+  "revision": 537,
+  "eContext": [
+    {
+      "type": "engagementContext",
+      "id": "1"
+    }
+  ]
+}
+```  
+
+ImpressionExpandedEvent:
+```json
+{
+  "type": "impExpanded",
+  "expanded": null,
+  "userInit": null,
+  "actionableItems": null,
+  "campaign": 3115242510,
+  "engId": 3115242810,
+  "revision": 537
+}
+``` 
+
+ImpressionTimeoutEvent:
+```json
+{
+  "type": "impTimeout",
+  "campaign": 3115242510,
+  "engId": 3115242810,
+  "revision": 537
+}
+``` 
+
+ImpressionCloseEvent:
+```json
+{
+  "type": "impClose",
+  "campaign": 3115242510,
+  "engId": 3115242810,
+  "revision": 537
+}
+```
+
 ### Response 
 #### Response Codes
 * 200 OK
@@ -119,4 +185,4 @@ Status code: 500 Server Error - Loading account:
 ### Limitations
 | Area | Description |
 | :--- | :--- |
-| impression events | All impression events could be reported only within same session where engagement has been created. That is, session must have engagement-context-id for corresponding engagement. The impression events cannot be reported to newly created session without invocation of /engagement API |
+| Impression Events | All impression events could be reported only within same session where engagement has been created. That is, session must have engagement-context-id for corresponding engagement. The impression events cannot be reported to newly created session without invocation of /engagement API |
