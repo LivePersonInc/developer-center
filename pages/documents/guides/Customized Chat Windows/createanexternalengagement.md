@@ -24,5 +24,5 @@ indicator: chat
 
 ![Customized3](img/customized3.png)
 
-###Step 4 - Confirmation
+### Step 4 - Confirmation
 **Click 'Next' and complete the remaining steps to set up your engagement.**

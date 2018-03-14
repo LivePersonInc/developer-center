@@ -78,6 +78,18 @@ pre {
     background-color: white;
 }
 
+.topnavlinks {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.navtext {
+  display: flex;
+  flex: 1;
+}
+
+
 /*top nav */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: inherit;
@@ -607,16 +619,25 @@ display: block;
   -moz-appearance: none;
   appearance: none;
   transition: .8s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-  float:right;
-  margin-right: -121px;
   z-index: 3;
   cursor: pointer;
   margin-top: 14px;
   opacity: 0;
+  height: 35px;
 }
 
 .algolia-autocomplete {
   float: right;
+}
+
+.aa-input-container:before {
+  font-family: FontAwesome;
+  content: "\f002";
+  color: white;
+  display: inline-block;
+  padding: 19px;
+  padding-left: 85px;
+  position: absolute;
 }
 
 .aa-input-search:focus{
@@ -627,10 +648,15 @@ display: block;
   opacity: 1;
 }
 
+.ds-hint {
+  cursor: default;
+}
+
 .aa-input-icon{
   position: fixed;
   top: 5%;
   right: 90px;
+  display: none;
 }
 
   .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
@@ -645,7 +671,7 @@ display: block;
   height: 16px;
   width: 16px;
   position: absolute;
-  top: 55%;
+  top: 76%;
   right: -120px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);

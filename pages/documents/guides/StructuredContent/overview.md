@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Structured Content
 
-level-order: 8
+level-order: 9
 order: 10
 permalink: structured-content-templates.html
 root-link: true
@@ -54,7 +54,7 @@ Simple plain text message.
 | type          | Type of element. Must be text.   | Enum    | Y        |
 | text          | The message.                     | String  | Y        |
 | tooltip       | Text tooltip, used also as aria. | String  | N        |
-| rtl           | Default is false.                | Boolean | N        |
+| rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false.                | Boolean | N        |
 
 
 #### Button
@@ -88,7 +88,7 @@ Simple Button which triggers an Action when clicked.
 | title         | Button title                      | String  | Y        |
 | actions       | List of Actions                   | Action  | Y        |
 | tooltip       | Button tooltip, used also as aria | String  | N        |
-| rtl           | Default is true                   | Boolean | N        |
+| rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false.                   | Boolean | N        |
 
 For the Metadata field, please see the Metadata section in this document, below.
 
@@ -123,7 +123,7 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 | type          | Type of element. Must be image   | Enum    | Y        |
 | url           | Image URL                        | String  | Y        |
 | caption       | Image caption                    | String  | N        |
-| rtl           | Default is false                 | Boolean | N        |
+| rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false                 | Boolean | N        |
 | actions       | List of Actions                  | Action  | N        |
 | tooltip       | Image tooltip, used also as aria | String  | N        |
 
@@ -223,9 +223,9 @@ Layout that allows you to present a set of items (elements/layouts) horizontally
 
 #### Click Operations
 
-Each basic element can have on click operations that is executed when the consumer clicks on the element.
+An element which has an "actions" field, has an on-click operation that is executed when the consumer clicks on the element.
 
-On-click objects can include two object types:
+On-click operations can result from two object types:
 
  * Actions: a list of actions to execute (Navigate/Link/publish text).
 
@@ -234,6 +234,8 @@ On-click objects can include two object types:
 #### Actions
 
 Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of operation. For instance: navigate with one of the navigation apps to a predefined place.
+
+**Note**: Only button, image, and map objects can receive the actions field.
 
 Types of actions supported by the platform:
 

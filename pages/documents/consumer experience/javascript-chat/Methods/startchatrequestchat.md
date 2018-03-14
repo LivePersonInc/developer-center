@@ -14,6 +14,9 @@ indicator: chat
 
 This method queues a chat request. It has a number of possible properties that can be passed to specify Skill or ServiceQueue requested and other information about the visitor.
 
+**For consumer Authentication flow please collect the necessary parameters from the [authenticate](consumer-experience-javascript-chat-authenticate.html) method first.**
+The parameters in question are `conversationId`, `participantId`. You will need to add these parameters to the request body for the requestChat method.
+
 **Notes**:
 
 - *If you displayed a Pre-chat survey, this is where you submit the answers to that survey.*
@@ -46,6 +49,8 @@ This method queues a chat request. It has a number of possible properties that c
 | a2aSourceSiteId   | The source site for the account to account transfer | string  | Supplied on the account to account event. You must have a valid API key for the new account. |
 | a2aSourceSessionId | The originating session ID for the account to account transfer | string | Supplied on the account to account event. You must have a valid API key for the new account |
 | a2aEventId | The event ID of the account to account transfer | string | Supplied on the account to account event. You must have a valid API key for the new account |
+| conversationId | The conversation ID required for authentication flow. | string | optional |
+| participantId | The participant ID required for authentication flow. | string | optional |
 
 **Sample code**
 

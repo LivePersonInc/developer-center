@@ -1,16 +1,15 @@
 ---
 title: Audit Trail
 level1: Documents
-level2: Account Configuration
-level3: Meta Data
-level4: Methods
 
+level3: Meta Data API
+level4: Methods
 permalink: account-configuration-meta-data-audit-trail.html
-order: 50
+order: 10
 indicator: both
 ---
 
-Get account's audit trail records
+Get an account's audit trail records.
 
 ### Request
 
@@ -22,12 +21,12 @@ Get account's audit trail records
 
 | Header | Description |
 | :------- | :-------------- |
-|Authorization | Contains token string to allow request authentication and authorization. See the introduction doc for more details. |
+|Authorization | Contains token string to allow request authentication and authorization. See the introduction page for more details. |
 
 **Path Parameters**
 
-|Parameter|  Description|  Type|  Notes| 
-|:----------|  :--------------|  :--------------|  :---| 
+|Parameter|  Description|  Type|  Notes|
+|:----------|  :--------------|  :--------------|  :---|
 |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
 
 **Query Parameters**
@@ -36,24 +35,23 @@ N/A
 
 **Request Body**
 
-Contains a json object with single "query" field which define the requested graphql query for api auditData
-and the fields subselect. For details see [graphql website](http://graphql.org/)
+Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/){:target="_blank"}.
 
 ```json
 {"query" : "{auditData  
-              {accountId 
-              objectType 
-              objectName 
-              actionType 
-              element 
-              oldValue 
-              newValue 
-              changeDate 
-              originator 
-              originatorLoginName 
-              originatorUserId 
-              originatorUserAgent 
-              originatorAuthType 
+              {accountId
+              objectType
+              objectName
+              actionType
+              element
+              oldValue
+              newValue
+              changeDate
+              originator
+              originatorLoginName
+              originatorUserId
+              originatorUserAgent
+              originatorAuthType
               originatorIsLpa}}"}
 ```
 
@@ -71,8 +69,8 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 |componentTypes|List of component types for filtering||
 |language|Language to return the results in|Default: en-US|
 |timezone|Time zone to use in results|Default: US/Eastern|
-|lpa|Boolean, Include changes done by LPAs in the results|Default: false|
-|automaticUpdates|Boolean, Include automatic updates in the results|Default: false|
+|lpa|Boolean, include changes done by LPAs in the results|Default: false|
+|automaticUpdates|Boolean, include automatic updates in the results|Default: false|
 
 ### Response
 
@@ -122,4 +120,3 @@ JSON
     ]
 }
 ```
-

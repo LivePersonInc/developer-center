@@ -51,10 +51,11 @@ Messaging CSAT Distribution is calculated using bucket aggregation techniques wh
 | positive_answers | The total number of CSAT 4 and 5 answers which were submitted in the current time frame. | long |
 | csat_score | The percentage of the total answers which were positive (scores 4 and 5) which were submitted in the current time frame. | float |
 
-**Optional Response Codes**
+**Potential Response Codes**
 
 | Code | Response |
 | :----- | :--------- |
 | 200 | OK - Successfully retrieved the data. |
 | 400 | Bad request - Problem with body or query parameters. |
 | 401 | Unauthorized - Bad Authentication (invalid site or agent). |
+| 429 | Request blocked due to rate limiting |

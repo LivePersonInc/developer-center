@@ -69,14 +69,13 @@ This section contains API details that are common to every API’s resource and 
 | maxChats | The maximum number of chats a user can take. | number | Required | |
 | skillIds   | The user’s skill IDs. | array of numbers | Optional | |
 | email   | The user's email | string | Required | |
-| memberOf   | The agent group that the agent is a member of.  | array of agentGroupId (number), assignmentDate (date, read only)  |
+| memberOf   | The agent group that the agent is a member of.  | array of agentGroupId (number), assignmentDate (date, read only)  |  Required | Required only if the user is an agent. |
 | managerOf | The user’s agent groups as a manager. | array of agentGroupId (number), assignmentDate (date, read only)  | Optional |  Optional if the user is an agent. Only an agent manager can manage agent groups. |
 | changePwdNextLogin | Flag that forces user to change password on next login. | Boolean | Optional | |
 | passwordSh    | A user’s password. | string | Required | Required only on add. On edit, to update a password, change passwordSh else - send null. |
 | oldPassword | A user’s previous password. | string | Required | Required only when a user updates their own password. |
  Required | Required only if the user is an agent. |
 | confirmPassword | A user’s confirmation password. | string | Required | Required only when a user updates their own password. |
- Required | Required only if the user is an agent. |
 | lastPwdChangeDate | The last password change date.  | Date (numbers) | Optional | The format: year-month-date hrs:min:sec |
 | dateUpdated | The last update user change date.  | Date (numbers) | Optional | The format: year-month-date hrs:min:sec |
 | permissionGroups | The user’s permission groups. | array of numbers | Optional | |

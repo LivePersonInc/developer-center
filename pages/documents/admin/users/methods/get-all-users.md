@@ -18,8 +18,8 @@ This API retrieves a list of users for a specific account.
 ### Request
 
  |Method|               URL |
- |:------              |:-------- | 
- |GET|                  /api/account/{accountId}/configuration/le-users/users  |
+ |:------              |:-------- |
+ |GET|                  https://{domain}/api/account/{accountId}/configuration/le-users/users  |
 
 **Request Headers**
 
@@ -34,7 +34,7 @@ This API retrieves a list of users for a specific account.
 **Path Parameters**
 
  |Parameter|            Description|             |Type/Value  |
- |:------              :--------     |          :--------| 
+ |:------              :--------     |          :--------|
  |AccountId|            LP site ID|              String ^[a-zA-Z0-9_]{1,20}$|
 
 ### Response

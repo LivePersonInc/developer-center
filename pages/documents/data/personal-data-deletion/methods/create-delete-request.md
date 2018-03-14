@@ -2,6 +2,7 @@
 title: Create Deletion Request
 keywords:
 level1: Documents
+level2: 
 level3: Personal Data Deletion API
 level4: Methods
 order: 10
@@ -9,7 +10,13 @@ permalink: personal-data-deletion-delete-request.html
 indicator: both
 ---
 
-This API allows a consumer to submit a deletion request.
+This API allows a the brand to submit a deletion request via one of the following methods:
+
+By Chat Engagement - deletion of the personal data that is related to specific chat engagement(s) (including transcripts, Personally identifiable information (PII), etc.).
+
+By Messaging Conversation - deletion of personal data that is related to specific messaging conversation(s) (including transcripts, PII, etc.).
+
+By consumerId - deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request).
 
 ### Request
 
@@ -21,7 +28,7 @@ This API allows a consumer to submit a deletion request.
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|  Contains token string to allow request authentication and authorization.  |
+ |Authorization|  Contains oAuth string to allow request authentication and authorization.  |
 
  **Path Parameters**
 
@@ -36,23 +43,74 @@ All fields are sent in a JSON format
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | engagement| Engagement ids for deletion (chat) | list of ids | Optional | Only one of the deletion types can be sent in a single request |
- | conversation| Conversation ids for deletion (messaging) | list of  ids | Optional | Only one of the deletion types can be sent in a request |
- | consumerId| Consumer ids for deletion | list of ids | Optional | Only one of the deletion types can be sent in a request |
+ | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response). Only one of the deletion types can be sent in a single request (either chat or messaging). |
+ | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | Only one of the deletion types can be sent in a request (either chat or messaging). |
+ | consumer| Consumer ids for deletion | array of strings | Optional | Only one of the deletion types can be sent in a request |
 
 BODY Examples:
 
-```json
+Example 1:
 
-[
+```json
   {
-    "engagement": [1,2,3]
+    "engagement": ["207623244295067780"]
   }
+```
+
+Example 2:
+
+```json
   {
-    "consumer": [11,22,33]
+    "consumer": ["7524a955-db4b-4a6c-b2b4-66f520a7895e"]
   }
+```
+
+Example 3:
+
+```json
   {
-    "conversation": [111,222,333]
+    "conversation": ["0345bf7d-08dc-4e61-8a11-e566e3bcd787","a2776761-5e66-4ea8-83e7-a955cd925471"]
   }
-]
+```
+
+### Response
+
+ **Response Codes**
+
+  |Code|  Response|  
+  |:------    |:-------- |
+  |201 |  Created|  
+  |400 |  Bad request|  
+  |401 |  Unauthorized request|  
+  |403 |  Not sufficient priviliges|  
+  |500 |  Internal server error|  
+
+  **Elements in the Response**
+
+ |Name                 | Description                                                                    | Type/Value
+ |:------------------- | :----------------------------------------------------------------------------- | :---------
+ |request_id           | ID of the deletion request                                     | long |
+ |siteId               | LP account id                                  | string|
+ |request_time         | Time in which the deletion request was requested                                | string|
+ |requested_by         | The user who requested to delete     | string|
+ |cancelled_by         | The user who canceled the deletion request     | string|
+ |delete_json          | The body parameter of the request     | string|
+ |cancel_timestamp     | Time in which the deletion request was requested      | string|
+ |is_canceled          | Boolean indicates if the deletion request was cancelled or not     | boolean|
+
+ **Response Example**
+
+Response is in a JSON format.
+
+```json
+{
+    "request_id": 127223,
+    "siteid": "20762324",
+    "request_time": "2018-01-04T14:07:32.000Z",
+    "requested_by": "Mike",
+    "cancelled_by": null,
+    "delete_json": "{\"engagement\":["207623244295067780"]}",
+    "cancel_timestamp": null,
+    "is_canceled": false
+}
 ```
