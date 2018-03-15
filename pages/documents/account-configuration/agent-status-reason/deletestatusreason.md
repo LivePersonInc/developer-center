@@ -23,8 +23,8 @@ Delete an existing status reason.
 
 |Parameter | Description | Notes|
 |--- | --- | ---|
-|accountId | LP site id | <ul><li>Validation fail error code: 400</li><li>Type: String ^[a-zA-Z0-9_]{1,20}$</li></ul>|
-|statusReasonId | Account Config object’s unique id. | <ul><li>Type: Positive long number greater than zero</li></ul>|
+|accountId | LP site id | Type: String |
+|statusReasonId | Account Config object’s unique id. | Type: Positive long number greater than zero|
 
 ### Request
 

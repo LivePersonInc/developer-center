@@ -24,11 +24,7 @@ Create new status reason for an account. It is possible to create several items 
 
 |Parameter | Description | Notes|
 |--- | --- | ---|
-|accountId | LP site id | <ul><li>Validation fail error code: 400</li><li>Type: String ^[a-zA-Z0-9_]{1,20}$</li></ul>
-
-### Parameters
-Parameter | Description | Notes
---- | --- | ---
+|accountId | LP site id | Type: String|
 
 ### Request
 

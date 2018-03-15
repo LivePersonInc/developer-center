@@ -20,14 +20,16 @@ Get list of all status reasons of an account, for all statuses.
 | GET | /api/account/{accountId}/configuration/le-agents/status-reasons |
 
 ### Path Parameters
+
 |Parameter | Description | Notes|
 |--- | --- | ---|
-|accountId | LP account ID | <ul><li>Type: String ^[a-zA-Z0-9_]{1,20}$</li><ul>|
+|accountId | LP account ID | Type: String |
 
 ### Query Parameters
+
 |Parameter | Description | Notes|
 |--- | --- | ---|
-|include_deleted | Whether the API should include deleted items in the response or not | <ul><li>Default: false</li></ul>|
+|include_deleted | Whether the API should include deleted items in the response or not | Default: false|
 
 ### Request
 

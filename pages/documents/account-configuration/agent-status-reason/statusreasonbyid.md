@@ -15,6 +15,7 @@ indicator: both
 Get one Status reason by ID.
 
 ### URI
+
 | Method | URL |
 | :-------- | :------ |
 | GET | /api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
@@ -23,13 +24,14 @@ Get one Status reason by ID.
 
 |Parameter | Description | Notes|
 |--- | --- | ---|
-|accountId | LP site id | <ul><li>Validation fail error code: 400</li><li>Type: String ^[a-zA-Z0-9_]{1,20}$</li></ul>|
-|statusReasonId | Account Config object’s unique id. | <ul><li>Type: Positive long number greater than zero</li></ul>|
+|accountId | LP site id | Type: String |
+|statusReasonId | Account Config object’s unique id. | Type: Positive long number greater than zero|
 
 ### Query Parameters
+
 |Parameter | Description | Notes|
 |--- | --- | ---|
-|include_deleted | Whether the API should include deleted items in the response or not | <ul><li>Default: false</li></ul>|
+|include_deleted | Whether the API should include deleted items in the response or not | Default: false|
 
 ### Request
 
