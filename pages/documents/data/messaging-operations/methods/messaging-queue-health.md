@@ -10,7 +10,7 @@ permalink: data-messaging-operations-messaging-queue-health.html
 indicator: messaging
 ---
 
-Retrieves messaging queue-related metrics at the account or skill level.
+Retrieves information about the state of the queue (with all related metrics) for up to the last 24 hours at the account or skill level.
 
 *Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
@@ -46,10 +46,7 @@ Request by skillIds=12,13 (no interval), timeframe=180
                 "actionableAndConsumerLastMessage": 3,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 4,
-                "webSource": 31,
-                "facebookSource": 3
-                
+                "unassignedConversationsAndFirstTimeConsumer": 4
             },
             "13": {
                 "unassignedConversations": 2,
@@ -60,8 +57,7 @@ Request by skillIds=12,13 (no interval), timeframe=180
                 "actionableAndConsumerLastMessage": 0,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 0,
-                "webSource": 2.7
+                "unassignedConversationsAndFirstTimeConsumer": 0
             }
         },
         "metricsTotal": {
@@ -73,13 +69,7 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "actionableAndConsumerLastMessage": 3,
             "notActionableDuringTransfer": 0,
             "notActionableAndManualSla": 0,
-            "unassignedConversationsAndFirstTimeConsumer": 4,
-            "webSource": 33,
-            "facebookSource": 3,
-            "smsSource": 0,
-            "proactiveSource": 0,
-            "mobileSource": 0,
-            "customSource": 0
+            "unassignedConversationsAndFirstTimeConsumer": 4
         }
     }
 
@@ -100,8 +90,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 7,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 30,
-                               "webSource": 50
+                               "unassignedConversationsAndFirstTimeConsumer": 30
                            },
                            "13": {
                                "unassignedConversations": 4,
@@ -112,8 +101,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 4,
-                               "webSource": 4
+                               "unassignedConversationsAndFirstTimeConsumer": 4
                            }
                        },
                        "metricsTotal": {
@@ -125,13 +113,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableAndConsumerLastMessage": 7,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
-                           "unassignedConversationsAndFirstTimeConsumer": 34,
-                           "webSource": 54,
-                           "facebookSource": 0,
-                           "smsSource": 0,
-                           "proactiveSource": 0,
-                           "mobileSource": 0,
-                           "customSource": 0
+                           "unassignedConversationsAndFirstTimeConsumer": 34
                        }
                 }
             },
@@ -160,8 +142,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 0,
-                               "webSource": 2
+                               "unassignedConversationsAndFirstTimeConsumer": 0
                            }
                        },
                        "metricsTotal": {
@@ -173,13 +154,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableAndConsumerLastMessage": 0,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
-                           "unassignedConversationsAndFirstTimeConsumer": 0,
-                           "webSource": 2
-                           "facebookSource": 0,
-                           "smsSource": 0,
-                           "proactiveSource": 0,
-                           "mobileSource": 0,
-                           "customSource": 0
+                           "unassignedConversationsAndFirstTimeConsumer": 0
                        }
                 }
             },
@@ -196,8 +171,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "actionableAndConsumerLastMessage": 0,
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
-                        "unassignedConversationsAndFirstTimeConsumer": 0,
-                        "smsSource": 1,
+                        "unassignedConversationsAndFirstTimeConsumer": 0
                         
                     },
                     "13": {
@@ -221,13 +195,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                     "actionableAndConsumerLastMessage": 0,
                     "notActionableDuringTransfer": 0,
                     "notActionableAndManualSla": 0,
-                    "unassignedConversationsAndFirstTimeConsumer": 0,
-                    "webSource": 0,
-                    "facebookSource": 0,
-                    "smsSource": 1,
-                    "proactiveSource": 0,
-                    "mobileSource": 0,
-                    "customSource": 0
+                    "unassignedConversationsAndFirstTimeConsumer": 0
                 }
                 }
             }
@@ -244,9 +212,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableAndConsumerLastMessage": 3,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
-                       "unassignedConversationsAndFirstTimeConsumer": 4,
-                       "webSource": 31,
-                       "facebookSource": 3
+                       "unassignedConversationsAndFirstTimeConsumer": 4
                        
                    },
                    "13": {
@@ -258,8 +224,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableAndConsumerLastMessage": 0,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
-                       "unassignedConversationsAndFirstTimeConsumer": 0,
-                       "webSource": 2
+                       "unassignedConversationsAndFirstTimeConsumer": 0
                    }
                },
                "metricsTotal": {
@@ -271,13 +236,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                    "actionableAndConsumerLastMessage": 3,
                    "notActionableDuringTransfer": 0,
                    "notActionableAndManualSla": 0,
-                   "unassignedConversationsAndFirstTimeConsumer": 4,
-                   "webSource": 33,
-                   "facebookSource": 3,
-                   "smsSource": 0,
-                   "proactiveSource": 0,
-                   "mobileSource": 0,
-                   "customSource": 0
+                   "unassignedConversationsAndFirstTimeConsumer": 4
                }
         }
     }
@@ -304,11 +263,5 @@ timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. | double |  
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
 | unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. | double | 
-| webSource | The number of unassigned conversations that originated from a web source. | double | 
-| facebookSource | The number of unassigned conversations that originated from a facebook source. | double |
-| smsSource | The number of unassigned conversations that originated from an SMS source. | double |
-| proactiveSource | The number of unassigned conversations that originated from a proactive source. | double |
-| mobileSource | The number of unassigned conversations that originated from a mobile source. | double | 
-| customSource | The number of unassigned conversations that originated from a custom source. | double |
  
  
