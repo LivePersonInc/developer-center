@@ -54,6 +54,7 @@ No body required.
 |ac-revision | Account config object type collection revision|
 
 **Response Body**
+
 ```json
 {
   "text":"some text",

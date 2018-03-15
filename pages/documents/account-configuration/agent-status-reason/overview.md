@@ -58,7 +58,7 @@ JSON
 
 This is the expected and general format for an Agent Status object, appearing in all methods of this API.
 
-```javascript
+```json
 {
   "id": 121212,
   "text": "some text252",
