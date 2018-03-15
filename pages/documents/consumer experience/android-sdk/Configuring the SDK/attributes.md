@@ -136,6 +136,12 @@ The goal of the following document is to enumerate the different fields controll
     <td>8dp</td>
     <td><img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding"></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_agent_typing_in_message_bubble&quot;&gt;</td>
+    <td>Defines the *agent-is-typing-indicator* location. Whether it will appear on a message bubble (Facebook Messenger style), with animated dots, or it will appear in the **activity**'s toolbar (WhatsApp style).</td>
+    <td>false</td>
+    <td><img src="img/android_show_agent_typing_in_message_bubble.jpeg" alt="secondarycolor"></td>
+  </tr>
 </tbody>
 </table>
 
