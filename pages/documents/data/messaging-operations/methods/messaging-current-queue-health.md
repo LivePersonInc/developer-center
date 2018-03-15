@@ -10,7 +10,7 @@ permalink: data-messaging-operations-messaging-current-queue-health.html
 indicator: messaging
 ---
 
-Retrieves current messaging queue-related metrics at the account or skill level.
+Retrieves the information about the current messaging queue state (and all its related metrics) in the account and skill level
 
 
 *Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
@@ -61,8 +61,7 @@ Request by skillIds=12,13
                 "actionableAndConsumerLastMessage": 0,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 0,
-                "webSource": 2
+                "unassignedConversationsAndFirstTimeConsumer": 0
             }
         },
         "metricsTotal": {
@@ -74,13 +73,7 @@ Request by skillIds=12,13
             "actionableAndConsumerLastMessage": 3,
             "notActionableDuringTransfer": 0,
             "notActionableAndManualSla": 0,
-            "unassignedConversationsAndFirstTimeConsumer": 4,
-            "webSource": 33,
-            "facebookSource": 3,
-            "smsSource": 0,
-            "proactiveSource": 0,
-            "mobileSource": 0,
-            "customSource": 0
+            "unassignedConversationsAndFirstTimeConsumer": 4
         }
     }
 
@@ -106,11 +99,6 @@ Metrics under the 'metricsTotal' entity will contain the summation of all skills
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. |long|
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. |long|
 | unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. |long| 
-| webSource | The number of unassigned conversations that originated from a web source. |long| 
-| facebookSource | The number of unassigned conversations that originated from a facebook source. |long|
-| smsSource | The number of unassigned conversations that originated from an SMS source. |long|
-| proactiveSource | The number of unassigned conversations that originated from a proactive source. |long|
-| mobileSource | The number of unassigned conversations that originated from a mobile source. |long| 
-| customSource | The number of unassigned conversations that originated from a custom source. |long|
+
  
  
