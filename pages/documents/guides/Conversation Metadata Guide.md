@@ -8,7 +8,7 @@ level-order: 10
 order: 10
 permalink: guides-conversation-metadata-guide.html
 root-link: true
-indicator: both
+indicator: messaging
 ---
 
 ### Overview
