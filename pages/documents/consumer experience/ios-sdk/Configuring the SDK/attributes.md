@@ -485,6 +485,34 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">#8B8A8F</td>
   </tr>
   <tr>
+    <td align="left">photoSharingMenuCameraImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Custom Camera image in the photo Sharing Menu.</td>
+    <td align="left"><img src="img/camera_menu.png" alt="camera_menu"></td>
+    <td align="left">SDK bundle camera_menu Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingMenuLibraryImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing custom button image.</td>
+    <td align="left"></td>
+    <td align="left">SDK bundle Camera Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingOpenMenuImageButton</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing open menu custom button.</td>
+    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
+    <td align="left">SDK bundle gallery_menu Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingCloseMenuImageButton</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing close menu custom button.</td>
+    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
+    <td align="left">SDK bundle menuClose Image</td>
+  </tr>
+  <tr>
     <td align="left">fileCellLoaderFillColor</td>
     <td align="left">UIColor</td>
     <td align="left">Radial loader fill color</td>
@@ -652,6 +680,13 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"><img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode"></td>
     <td align="left">true</td>
   </tr>
+  <tr>
+    <td align="left">messageStatusNumericTimestampOnly</td>
+    <td align="left">Bool</td>
+    <td align="left">When false (default), time stamps will display information relative to when sent/distributed/read (e.g. 'sent 5 minutes ago'. When true, will show as numeric only (e.g. '11:32').</td>
+    <td align="left"><img src="messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly"></td>
+    <td align="left">true</td>
+  </tr>
 </tbody>
 </table>
 
@@ -668,13 +703,19 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   </tr>
   </thead>
 <tbody>
-  <tr>
-    <td align="left">csatSubmitButtonCornerRadius</td>
-    <td align="left">Double</td>
-    <td align="left">Corner radius of the Submit button.</td>
-    <td align="left"><img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"></td>
-    <td align="left">30</td>
-  </tr>
+<tr>
+  <td align="left">csatSubmitButtonCornerRadius</td>
+  <td align="left">Double</td>
+  <td align="left">Corner radius of the Submit button.</td>
+  <td align="left"><img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"></td>
+  <td align="left">30</td>
+</tr><tr>
+  <td align="left">csatYesNoButtonsCornerRadius</td>
+  <td align="left">Double</td>
+  <td align="left">Corner radius of the resolution Yes/No buttons.</td>
+  <td align="left"><img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius"></td>
+  <td align="left">25</td>
+</tr>
   <tr>
     <td align="left">csatSubmitButtonBackgroundColor</td>
     <td align="left">UIColor</td>
@@ -874,6 +915,13 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">Toggle vibration sound when a new message from a remote user received</td>
     <td align="left"></td>
     <td align="left">false</td>
+  </tr>
+  <tr>
+    <td align="left">conversationEmptyStateTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the empty state label.</td>
+    <td align="left"></td>
+    <td align="left">Black</td>
   </tr>
 </tbody>
 </table>

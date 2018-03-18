@@ -71,7 +71,37 @@ class LPLog: NSObject {
 class LPConversationViewParams: NSObject {
   var conversationQuery: ConversationParamProtocol!
   var containerViewController: UIViewController? // nil = WindowMode
-  var isViewOnly = false
+  var isViewOnly = false1
+  var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
+}
+```
+
+### LPConversationHistoryControlParam
+
+```javascript
+class LPConversationHistoryControlParam: NSObject {
+  var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay? // control what kind of conversation to show (Open/Close)
+  var historyConversationsMaxDays: UInt? //get conversation that Closed/Opens in the last X days
+
+  historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType? //Control if filter the max days by conversation start date or by conversation close date
+}
+```
+
+### LPConversationsHistoryStateToDisplay
+
+```javascript
+enum LPConversationsHistoryStateToDisplay: Int {
+    case open
+    case close
+}
+```
+
+### LPConversationHistoryMaxDaysDateType
+
+```javascript
+enum LPConversationHistoryMaxDaysDateType: Int {
+    case startConversationDate    // Default
+    case endConversationDate
 }
 ```
 
@@ -114,8 +144,67 @@ enum LogLevel: Int {
 
 ```javascript
 enum LPConversationCloseReason: Int {
-        case agent = 0
-        case consumer
-        case system
+    case agent = 0
+    case consumer
+    case system
+}
+```
+
+### LPCampaignInfo
+
+```javascript
+class LPCampaignInfo: NSObject {
+    var campaignId: Int
+    var engagementId: Int
+    var sessionId: String?
+    var visitorId: String?
+    var contextId: String
+}
+```
+
+### LPMonitoringInitParams
+```javascript
+class : NSObject {
+    var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
+}
+```
+
+
+### LPMonitoringParams
+```javascript
+class : NSObject {
+    var entryPoints: [String]? // Entry points array of the Mobile App
+    var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes
+    var pageId: String? // PageID to send the SDEs for
+}
+```
+
+### LPGetEngagementResponse
+```javascript
+class : NSObject {
+    var engagementDetails: [LPEngagementDetails]? // Optional Engagement Details response in case received from the server, per the Engagement's request
+    var sessionId: String?
+    var visitorId: String?
+    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
+}
+```
+
+### LPSendSDEResponse
+```javascript
+class : NSObject {
+    var sessionId: String?
+    var visitorId: String?
+    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
+}
+```
+
+### LPEngagementDetails
+```javascript
+class : NSObject {
+    var campaignId: Int // CampaignID
+    var engagementId: Int // EngagementID
+    var conversationId: String? // Returned when there's an open conversation
+    var status: String?
+    var contextId: String?
 }
 ```
