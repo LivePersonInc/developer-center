@@ -56,7 +56,7 @@ Today, Report Builder offers a set of operational and funnel reports which insti
 Now a selection of dashboards have been expanded to reflect on the performance of campaigns which include a mix of engagements from web and non-web source.
 
 **This expansion includes**
-Opening the Business Activity dashboard to additional sources (non-web = Mobile App, Facebook, SMS, etc.)
-Aligning goal tracking from non-web sources to the existing web based attribution model
-Adding source type filtering to the Business Activity, Goal Tracker, and Agent Activity dashboards
-Aligning the terminology of funnel metrics to serve all sources
+1. Opening the Business Activity dashboard to additional sources (non-web = Mobile App, Facebook, SMS, etc.)
+2. Aligning goal tracking from non-web sources to the existing web based attribution model
+3. Adding source type filtering to the Business Activity, Goal Tracker, and Agent Activity dashboards
+4. Aligning the terminology of funnel metrics to serve all sources
