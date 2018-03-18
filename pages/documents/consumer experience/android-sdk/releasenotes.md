@@ -9,7 +9,7 @@ order: 310
 permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
 ---
-<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
 
@@ -17,15 +17,15 @@ These are the main feature releases available in the **In-App Messaging SDK vers
 
 **Version 3.1 planned roll-out: March 18h 2018**
 
-[[TOC]]
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="blank"}
 
-# New functionalities
+### New functionalities
 
-## Campaigns for Messaging - Monitoring APIs
+#### Campaigns for Messaging - Monitoring APIs
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 The addition of campaigns for mobile app and web messaging will allow brands to manage their engagements easily and efficiently across these channels, targeting customers based on unauthenticated attributes or locations and routing them to a desired skill.
 
@@ -39,7 +39,7 @@ Using the Monitoring APIs, brands can:
 
 3. Route conversations to a specific skill (based on engagements)
 
-## Monitoring APIs
+#### Monitoring APIs
 
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
@@ -113,7 +113,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-## Conversation History Control
+#### Conversation History Control
 
 **Type:** Developer Experience Feature
 
@@ -143,11 +143,11 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-## History and Active Conversation View
+#### History and Active Conversation View
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 New APIs will give brands control over the conversations presented in the conversation window. For example, brands can choose to present only the last 180 days of conversation history.
 
@@ -163,7 +163,7 @@ The new APIs allows:
 
  * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
 
-## History and Active Conversation APIs
+#### History and Active Conversation APIs
 
 <table>
  <tr>
@@ -212,7 +212,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-# New Strings Localizations
+### New Strings Localizations
 
 <table>
  <tr>
@@ -226,17 +226,15 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-# New parameters
+### New parameters
 
-## Branding and configuration parameters
+#### Branding and configuration parameters
 
 **Type:** Parameters
 
-**Available to all customers? **Yes
+**Available to all customers?** Yes
 
 The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
-
-
 
 The new parameters may control text, padding of conversation UI elements and more.
 
@@ -327,17 +325,17 @@ should be set to true</td>
 </table>
 
 
-# Additional Features
+### Additional Features
 
-## Adding Support to Android O
+#### Adding Support to Android O
 
 In-app messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
 
-## Wrapping Text in Edit Text Box
+#### Wrapping Text in Edit Text Box
 
 Parity with iOS in the Edit Text box.  The max lines is declared at 3. meaning when the text suppresses the length fit for 3 lines the first line will be hidden.
 
-## List of certified and supported devices extended
+#### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
@@ -364,7 +362,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
-* *Key for items as follows:*
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 

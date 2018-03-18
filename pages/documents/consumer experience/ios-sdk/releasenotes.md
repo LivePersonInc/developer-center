@@ -17,15 +17,16 @@ These are the main feature releases available in the **In-App Messaging SDK vers
 
 **Version 3.1 planned roll-out: March 18th 2018**
 
-[[TOC]]
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
 
-# New functionalities
 
-## Campaign for messaging
+### New functionalities
+
+#### Campaign for messaging
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 The addition of campaigns for mobile app and web messaging will allow brands to manage their engagements easily and efficiently across these channels, targeting customers based on unauthenticated attributes or locations and routing them to a desired skill.
 
@@ -39,7 +40,7 @@ Using the Monitoring APIs, brands can:
 
 3. Route conversations to a specific skill (based on engagements)
 
-## Monitoring APIs
+#### Monitoring APIs
 
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
@@ -111,11 +112,11 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-## Conversation History Control
+#### Conversation History Control
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 To enhance control of customer data retention, scalability and performance, and support the EU’s General Data Protection Regulation (GDPR), open conversations will be loaded from a real time service while closed conversations will be loaded from a history service.
 
@@ -141,11 +142,11 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-## History and Active Conversation View
+#### History and Active Conversation View
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 New APIs will give brands control over the conversations presented in the conversation window. For example, brands can choose to present only the last 180 days of conversation history.
 
@@ -161,7 +162,7 @@ The new APIs allows:
 
  * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
 
-## History and Active Conversation APIs
+#### History and Active Conversation APIs
 
 <table>
  <tr>
@@ -206,7 +207,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-# New Strings Localizations
+### New Strings Localizations
 
 <table>
  <tr>
@@ -220,17 +221,15 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-# New parameters
+### New parameters
 
-## Branding and configuration parameters
+#### Branding and configuration parameters
 
 **Type:** Parameters
 
-**Available to all customers? **Yes
+**Available to all customers?** Yes
 
 The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
-
-
 
 The new parameters may control text, padding of conversation UI elements and more.
 
@@ -278,7 +277,7 @@ The new parameters may control text, padding of conversation UI elements and mor
 </table>
 
 
-* *Key for items as follows:*
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 
