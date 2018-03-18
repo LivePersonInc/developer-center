@@ -1,10 +1,10 @@
 
 ### Introduction
-The "Monitor API" is meant to serve the consumer monitoring and engaging flows. In order to present a "Click to Engage" button (an engagement) with an updated state of availability, the LivePerson monitoring system must be accessed in order to create a monitor session and reply with an engagement. By doing so, the monitoring system tracks the consumer activity within the brand's system and engages the consumer based on campaign definitions.   
+The "Monitor API" is meant to serve the consumer monitoring and engaging flows. In order to present a "Click to Message" button (an engagement) with an updated state of availability, the LivePerson monitoring system must be accessed in order to create a monitor session and reply with an engagement. By doing so, the monitoring system tracks the consumer activity within the brand's system and engages the consumer based on campaign definitions.   
 
 ### Terminology
 * consumer - TBD
-* `consumerId` - the brand's identifier for the consumer (e.g, email, telephone number or a generated unique id)
+* `consumerId` - the brand's identifier for the consumer (e.g, email, phone number or a generated unique id)
 * consumer device - TBD
 * monitor session - the server-side state of the current consumer device session
 * `visitorId` - the LivePerson identifier to the current consumer device 
@@ -50,3 +50,13 @@ This API is public. When specifying `appInstallationId` and `accountId`, it does
 
 ### Use Cases 
 ** Sivan **
+
+### Reporting funnel:
+Today, Report Builder offers a set of operational and funnel reports which instill visibility into campaign performance, and agent performance against campaign goals. These reports currently cover both Chats and Messaging conversation types from Web sources. 
+Now a selection of dashboards have been expanded to reflect on the performance of campaigns which include a mix of engagements from web and non-web source.
+
+**This expansion includes**
+Opening the Business Activity dashboard to additional sources (non-web = Mobile App, Facebook, SMS, etc.)
+Aligning goal tracking from non-web sources to the existing web based attribution model
+Adding source type filtering to the Business Activity, Goal Tracker, and Agent Activity dashboards
+Aligning the terminology of funnel metrics to serve all sources
