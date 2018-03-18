@@ -101,7 +101,7 @@ This Engagement Attribute is used to track any money transaction, purchase of it
 
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
-| Products | Array of Items in cart | array of Products objects  | [ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | true | no |
+| products | Array of Items in cart | array of Products objects  | [ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | true | no |
 | numItems | Number of items in cart | integer  | 6 | false | no |
 
 **Transaction SDE JSON example**:
