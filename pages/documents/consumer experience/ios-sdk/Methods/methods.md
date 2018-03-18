@@ -349,8 +349,7 @@ Get all supported languages as Strings dictionary where:
 
 ### getConversationBrandQuery
 
-Create ConversationParamProtocol of Brand query type.
-ConversationParamProtocol represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens.
+Create ConversationParamProtocol of Brand query type. ConversationParamProtocol represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens.
 
 `func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol`
 
@@ -361,8 +360,7 @@ ConversationParamProtocol represents a 'filter’ for the conversation screen, d
 
 ### getConversationConsumerQuery
 
-Create ConversationParamProtocol of Consumer and Skill query type.
-ConversationParamProtocol represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens.
+Create ConversationParamProtocol of Consumer and Skill query type. ConversationParamProtocol represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens.
 
 `func getConversationConsumerQuery(_ consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol`
 
@@ -376,7 +374,8 @@ ConversationParamProtocol represents a 'filter’ for the conversation screen, d
 
 ### getEngagement
 
-Use this API to get an engagement for a consumer in an appInstallationId context. When calculating eligibility the decision is based on the SDEs and other parameters. Based on messaging campaign concept
+Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on messaging campaign concept.
+
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 
 `func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())`
@@ -390,7 +389,7 @@ As an optional parameter, you can pass SDE Data which includes Entry Points and 
 
 ### sendSDE
 
-Use this API to report an engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impression.
+Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impression.
 
 `func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
 
