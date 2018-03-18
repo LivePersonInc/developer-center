@@ -11,6 +11,283 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
+These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
+
+**Version 3.1 planned roll-out: March 18th 2018**
+
+[[TOC]]
+
+# New functionalities
+
+## Campaign for messaging
+
+**Type:** Developer Experience Feature
+
+**Available to all customers? **Yes.
+
+The addition of campaigns for mobile app and web messaging will allow brands to manage their engagements easily and efficiently across these channels, targeting customers based on unauthenticated attributes or locations and routing them to a desired skill.
+
+Being able to track customer activity in all areas of the brand app and provide information on these interactions to LiveEngage boosts agent efficiency and enables more accurate reporting.
+
+Using the Monitoring APIs, brands can:
+
+1. Report on the customer’s journey inside the app
+
+2. Get engagements based on the reported SDEs
+
+3. Route conversations to a specific skill (based on engagements)
+
+## Monitoring APIs
+
+The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
+
+<table>
+ <tr>
+ <td>New APIs</td>
+ <td>Description</td>
+ </tr>
+ <tr>
+ <td>Added monitoringInitParams to LPMessagingSDK.initialize() →
+func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInitParams? = nil) throws</td>
+ <td>Added new optional monitoringInitParams: LPMonitoringInitParams object to allow using Monitoring.
+SDK can be initialized once without monitoringInitParams and then have another initialize call using this param.
+Passing monitoringInitParams is mandatory when using MonitoringAPI capabilities</td>
+ </tr>
+ <tr>
+ <td>Added to LPMessasgingSDK.instance.getConversationBrandQuery →
+func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol</td>
+ <td>Added new optional campaignInfo: LPCampaignInfo object to be able to pass a new Campaign to conversation.
+Campaign includes Engagement info which allows to control the consumer's routing.</td>
+ </tr>
+ <tr>
+ <td>LPCampaignInfo initialization:
+LPCampaignInfo(campaignID: Int, engagementID: Int, engagementContextID: String, sessionID: String? = nil, visitorID: String? = nil)</td>
+ <td>Object to be able to pass a new Campaign to conversation.
+Campaign includes Engagement info which allows to control the consumer's routing.</td>
+ </tr>
+ <tr>
+ <td>LPMonitoringAPI → Added new API interface which should be called using:
+LPMonitoringAPI.instance.xxxx
+func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())</td>
+ <td>Use this API to get an engagement for a consumer in an appInstallationId context. When calculating eligibility the decision is based on the SDEs and other parameters. Based on messaging campaign concept
+As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
+- Parameters:
+      - consumerID: an optional brand app consumer ID to get the engagement for
+      - monitoringParams: an instance of includes optional Array of Entry Points and an optional dictionary of Engagement Attributes
+      - completion: completion block with response of type LPGetEngagementResponse. This response includes sessionID and visitorID along with LPEngagementDetails object.
+      - failure: failure block with an error in case the request fails </td>
+ </tr>
+ <tr>
+ <td>func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())</td>
+ <td>Use this API to report an engagement attributes (SDEs) for a consumer in an appInstallationId context.
+- Parameters:
+     - consumerID: brand app consumer ID to get the engagement for
+      - monitoringParams: an instance of LPMonitoringParams includes optional Array of Entry Points and an optional dictionary of Engagement Attributes. Additional optional parameter is PageID which is used for Page identification for sending events on the current engagement. PageID will be received in LPSendSDEResponse and in LPGetEngagementResponse
+    - completion: completion block with response of type LPSendSDEResponse. This response includes sessionID and visitorID and pageID for future use.
+     - failure: failure block with an error in case the request fails</td>
+ </tr>
+</table>
+
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ </tr>
+</table>
+
+
+## Conversation History Control
+
+**Type:** Developer Experience Feature
+
+**Available to all customers? **Yes.
+
+To enhance control of customer data retention, scalability and performance, and support the EU’s General Data Protection Regulation (GDPR), open conversations will be loaded from a real time service while closed conversations will be loaded from a history service.
+
+The change will be **seamless** for brands who upgrade to SDK version 3.1. Brands choosing not to upgrade to SDK v3.1 will be able to view the conversation history from the last 14 days. The history stored on the consumer’s device will also be available.
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>Yes</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ </tr>
+</table>
+
+
+## History and Active Conversation View
+
+**Type:** Developer Experience Feature
+
+**Available to all customers? **Yes.
+
+New APIs will give brands control over the conversations presented in the conversation window. For example, brands can choose to present only the last 180 days of conversation history.
+
+These APIs can be used together with getEngagment (Monitoring APIs) to decide how to present  conversations history according to whether there is an open conversation or not. For example, if there is no open conversation, brands can present a ‘View conversation history’ button which will present only the closed conversations from the last 180 days.
+
+The new APIs allows:
+
+* Getting an indication if there is an open conversation or not (Monitoring APIs)
+
+* Controlling which conversations will be presented by status (open\closed)
+
+* Controlling the time frame of presented conversations (by days)
+
+ * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
+
+## History and Active Conversation APIs
+
+<table>
+ <tr>
+ <td>New APIs</td>
+ <td>Description</td>
+ </tr>
+ <tr>
+ <td>LPConversationViewParams → LPConversationHistoryControlParam → historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay?</td>
+ <td>Allows to control which conversation will be presented when opening the conversation screen, by status (open or closed)</td>
+ </tr>
+ <tr>
+ <td>LPConversationViewParams → LPConversationHistoryControlParam →
+historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType? = startConversationDate</td>
+ <td>When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date.
+When not providing a value, startConversationDate will be the default.</td>
+ </tr>
+ <tr>
+ <td>LPConversationViewParams → LPConversationHistoryControlParam →
+historyConversationsMaxDays: UInt?</td>
+ <td>Allows to control the amount of conversations history that will be presented when opening the conversation screen by days.</td>
+ </tr>
+</table>
+
+
+The following additional conditions and configurations are required:*
+
+<table>
+ <tr>
+ <td>Backend update</td>
+ <td>Backend enablement</td>
+ <td>Backend configuration </td>
+ <td>SDK enablement </td>
+ <td>SDK configuration </td>
+ </tr>
+ <tr>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>Yes</td>
+ </tr>
+</table>
+
+
+# New Strings Localizations
+
+<table>
+ <tr>
+ <td>New Strings Localization</td>
+ <td>Description</td>
+ </tr>
+ <tr>
+ <td>conversationEmptyState</td>
+ <td>There are currently no conversations at this time</td>
+ </tr>
+</table>
+
+
+# New parameters
+
+## Branding and configuration parameters
+
+**Type:** Parameters
+
+**Available to all customers? **Yes
+
+The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
+
+
+
+The new parameters may control text, padding of conversation UI elements and more.
+
+<table>
+ <tr>
+ <td>Parameter name and default value</td>
+ <td>Description</td>
+ <td>Image</td>
+ </tr>
+ <tr>
+ <td>LPConfig → csatYesNoButtonsCornerRadius: Double = 25</td>
+ <td>Makes CSAT Yes/No buttons corner radiuses customizable (through LPConfig).</td>
+ <td><img src="ios_csat_yesno_buttons_radius.png"></td>
+ </tr>
+ <tr>
+ <td>LPConfig → messageStatusNumericTimestampOnly: Bool = false</td>
+ <td>When false (default), timestamps will display information relative to when sent/distributed/read (e.g. 'sent 5 minutes ago'. When true, will show as numeric only (e.g. '11:32').</td>
+ <td><img src="ios_numeric_timestamp.png"></td>
+ </tr>
+ <tr>
+ <td>LPConfig → photoSharingMenuCameraImage: UIImage </td>
+ <td>Custom Camera image in the photo sharing menu.</td>
+ <td><img src="ios_camera_button.png"></td>
+ </tr>
+ <tr>
+ <td>LPConfig → photoSharingMenuLibraryImage: UIImage </td>
+ <td>Custom Library image in the photo sharing menu.</td>
+ <td><img src="ios_gallery_button.png"></td>
+ </tr>
+ <tr>
+ <td>LPConfig → photoSharingOpenMenuImageButton: UIImage</td>
+ <td>Photo sharing open menu custom button.</td>
+ <td><img src="ios_attach_button.png"></td>
+ </tr>
+ <tr>
+ <td>LPConfig → photoSharingCloseMenuImageButton: UIImage</td>
+ <td>Photo sharing close menu custom button</td>
+ <td><img src="ios_ps_close_button.png"></td>
+ </tr>
+ <tr>
+ <td>LPConfig → conversationEmptyStateTextColor: UIColor() = black</td>
+ <td>Color code for the empty state label</td>
+ <td><img src="ios_empty_state_no_conversations.png"></td>
+ </tr>
+</table>
+
+
+* *Key for items as follows:*
+
+**Backend update:** This feature requires an update to the backend.
+
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+
+**Backend configuration**: This feature requires configuration in the backend.
+
+**SDK enablement:** This feature requires items to be toggled on in the SDK.
+
+**SDK configuration**: This features requires items to be configured in the SDK.
+
 ### In-App Messaging SDK version 3.0 for iOS.
 
 **Version 3.0 planned roll-out: January 14th 2018**
