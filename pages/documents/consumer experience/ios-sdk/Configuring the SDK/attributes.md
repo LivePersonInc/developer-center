@@ -485,34 +485,6 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">#8B8A8F</td>
   </tr>
   <tr>
-    <td align="left">photoSharingMenuCameraImage</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Custom Camera image in the photo Sharing Menu.</td>
-    <td align="left"><img src="img/camera_menu.png" alt="camera_menu"></td>
-    <td align="left">SDK bundle camera_menu Image</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingMenuLibraryImage</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Photo sharing custom button image.</td>
-    <td align="left"></td>
-    <td align="left">SDK bundle Camera Image</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingOpenMenuImageButton</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Photo sharing open menu custom button.</td>
-    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
-    <td align="left">SDK bundle gallery_menu Image</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingCloseMenuImageButton</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Photo sharing close menu custom button.</td>
-    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
-    <td align="left">SDK bundle menuClose Image</td>
-  </tr>
-  <tr>
     <td align="left">fileCellLoaderFillColor</td>
     <td align="left">UIColor</td>
     <td align="left">Radial loader fill color</td>
@@ -916,13 +888,6 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"></td>
     <td align="left">false</td>
   </tr>
-  <tr>
-    <td align="left">conversationEmptyStateTextColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for the empty state label.</td>
-    <td align="left"></td>
-    <td align="left">Black</td>
-  </tr>
 </tbody>
 </table>
 
@@ -1219,7 +1184,7 @@ It will affect the following areas:
     <td align="left"><img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"></td>
     <td align="left">#F5F5F5</td>
   </tr>
-  <tr>
+  <tr>  
   </tr>
   <tr>
     <td align="left">inputTextViewCornerRadius</td>
@@ -1279,9 +1244,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 </tbody>
 </table>
 
-### Time To Responsd and Off hours
-
-Please see [this document](local-message-notifications.html) for more in-depth information on how to configure and work with Time to Responsd (TTR) and Off Hours notifications.
+### Time To Response and Off hours
 
 <table class="bigtable">
 <thead>
@@ -1294,6 +1257,13 @@ Please see [this document](local-message-notifications.html) for more in-depth i
   </tr>
   </thead>
 <tbody>
+ <tr>
+   <td align="left">ttrShouldShow</td>
+   <td align="left">Bool</td>
+   <td align="left">Toggling this on will show TTR notifications including off hours. When the auto messages feature is enabled, TTR notifications will not be displayed regardless of this parameter.’)</td>
+   <td align="left"></td>
+   <td align="left">true</td>
+ </tr>
   <tr>
     <td align="left">ttrShowShiftBanner</td>
     <td align="left">Bool</td>
@@ -1500,7 +1470,7 @@ Please see [this document](local-message-notifications.html) for more in-depth i
     <td align="left">remoteUserDefaultAvatarImage</td>
     <td align="left">UIImage?</td>
     <td align="left">Default Avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations.  If remote user has an avatar image in his profile, this attribute will be ignored.</td>
-    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"></td>
+    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"</td>
     <td align="left">nil</td>
   </tr>
   <tr>
@@ -1856,7 +1826,7 @@ Please see [this document](local-message-notifications.html) for more in-depth i
     <td align="left">controllerBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the controller bubble.</td>
-    <td align="left"><img src="img/controllerbubletextcolor.png" alt="controller bubble text color"></td>
+    <td align="left"><img alt="controller bubble text color"></td>
     <td align="left">#5b5c5e</td>
   </tr>
 </tbody>
