@@ -13,7 +13,7 @@ indicator: messaging
 <br>
 <br>
 
-These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
+These are the main feature releases available in the **In-App Messaging SDK version 3.1 for iOS**.
 
 **Version 3.1 planned roll-out: March 18th 2018**
 
