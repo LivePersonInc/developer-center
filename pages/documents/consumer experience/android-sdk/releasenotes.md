@@ -93,7 +93,7 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
 </table>
 
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 <table>
  <tr>
@@ -117,7 +117,7 @@ The following additional conditions and configurations are required:*
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 To enhance control of customer data retention, scalability and performance, and support the EU’s General Data Protection Regulation (GDPR), open conversations will be loaded from a real time service while closed conversations will be loaded from a history service.
 
