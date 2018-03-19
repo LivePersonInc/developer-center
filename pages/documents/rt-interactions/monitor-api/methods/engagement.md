@@ -1,38 +1,53 @@
-#### Engagement  
-#### version 1.0
+---
+title: Engagement
 
-### Note
-Please make sure the read the [overview](rt-interactions-monitor-api-overview.html).
+level2: Real Time Interactions
+level3: Monitoring API
+level4: Methods
+order: 20
+permalink: rt-interactions-monitoring-methods-engagement.html
+indicator: messaging
+---
+
+**Note**: Please make sure the read the [overview](rt-interactions-monitor-api-overview.html) before getting started with this method.
 
 ### Description
-Use this API to access the Liveperson monitoring system in order to receive an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's system, such as engagement attributes.  
+
+Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.  
 
 ### Use cases
+
 1. Obtain an engagement. An engagement will be provided if both the following apply -
-* there is no active conversation for this consumer
-* the consumer is eligible for an engagement
-2. Obtain the identifiers of the active conversation for this consumer, if one exists.
+
+  * there is no active conversation for this consumer
+
+  * the consumer is eligible for an engagement
+
+2. Obtain the identifiers of an active conversation for this consumer, if one exists.
 
 ### Request
 
 | Method | URL |
 | :--- | :--- |
-|POST|`https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id}` |
+|POST|https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id} |
 
 ### Path Parameters
+
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| account-id | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ | 
+| account-id | LP site ID | string | |
 | app-installation-id | App installation id | string | String, Required |
 
 ### Query parameters
+
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | v | API version number | double | Required | Supported Value: 1.0  |
 | vid | Visitor Id | String | Optional | Must be saved in order to reuse for future requests in the same visit |
-| sid | Session Id | String | Optional on first request, otherwise required | Will be provided by the server-side in a 201.CREATED response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
+| sid | Session Id | String | Optional on first request, otherwise required | Will be provided by the server-side in a 201 (CREATED) response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
 
 ### Body Parameters
+
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | consumerId | Consumer Id | String | Optional | |
@@ -46,7 +61,12 @@ Use this API to access the Liveperson monitoring system in order to receive an e
 | engagementAttributes | Array of engagement attributes | string | Optional | Supported Values: all engagement-attributes excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
 
 ### POST Request & body entity example
+
+**Example call URL**
+
 https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?v=1.0&vid=myNewVisiorId&sid=myNewSessionId
+
+**Example Body Entity**
 
 ```json
 {
@@ -85,37 +105,9 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
 }
 ```
 
-### Response 
-#### Response Codes
-* 200 OK
-* 201 Created
-* 400 Validation error
-* 404 Data not found
-* 500 Internal server error
-* 503 The server is temporarily unavailable
+### Response
 
-#### Retry Policy Recommendation
-| Error code | Meaning | Recommendation |
-| :--- | :--- | :--- |
-| 4xx | Client side error | Do not retry, fix problems in code |
-| 5xx | There was an error on server side | Retry 3 times with 10, 30, 90 Seconds pause between retries |
-
-### Response format
-| Attribute | Description | Type | Required|
-| :--- | :--- | :--- | :--- |
-| engagementDetails | The details of an engagement when it is available | object | Required if there is an engagement  |
-| engagementDetails.campaignId | | number | Required if there is an engagement  |
-| engagementDetails.engagementId | | number | Required if there is an engagement  |
-| engagementDetails.conversationId | | string | Required if there is an engagement |
-| engagementDetails.windowId | | string | Required if there is an engagement  |
-| engagementDetails.language | | string | Required if there is an engagement  |
-| engagementDetails.engagementRevision | | number | Required if there is an engagement  |
-| engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |
-| pageId | Page identification ID for sending event on the current engagement | string | Required  |
-| sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
-| visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
-
-### POST Response entity examples
+#### Response entity examples
 Status code: 201 Created - Engagement is available, created new session:
 ```json
 {
@@ -170,4 +162,36 @@ Status code: 500 Server Error - Loading account:
 }
 ```
 
-***
+#### Response format
+
+| Attribute | Description | Type | Required|
+| :--- | :--- | :--- | :--- |
+| engagementDetails | The details of an engagement when it is available | object | Required if there is an engagement  |
+| engagementDetails.campaignId | | number | Required if there is an engagement  |
+| engagementDetails.engagementId | | number | Required if there is an engagement  |
+| engagementDetails.conversationId | | string | Required if there is an engagement |
+| engagementDetails.windowId | | string | Required if there is an engagement  |
+| engagementDetails.language | | string | Required if there is an engagement  |
+| engagementDetails.engagementRevision | | number | Required if there is an engagement  |
+| engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |
+| pageId | Page identification ID for sending event on the current engagement | string | Required  |
+| sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
+| visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
+
+#### Response Codes
+
+|Code|Description|
+|:----|:-----|
+|200 | OK|
+|201 |Created|
+|400 |Validation error|
+|404 |Data not found|
+|500 |Internal server error|
+|503 |The server is temporarily unavailable|
+
+#### Retry Policy Recommendation
+
+| Error code | Meaning | Recommendation |
+| :--- | :--- | :--- |
+| 4xx | Client side error | Do not retry, fix problems in code |
+| 5xx | There was an error on server side | Retry 3 times with 10, 30, 90 Seconds pause between retries |

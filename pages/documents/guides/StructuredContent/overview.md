@@ -12,7 +12,7 @@ root-link: true
 indicator: both
 ---
 
-### **Overview**
+### Overview
 
 Our solution allows to send messages (both Chat messages and "pure" Messaging) in a variety of ways: you can send simple text and images, or use our structured content templates to build your own layout with images, buttons and multiple actions in one message. The following document lists the different types of entries available for use with such a layout and includes templates for how to write them in JSON.
 
