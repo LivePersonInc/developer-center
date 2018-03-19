@@ -10,7 +10,7 @@ permalink: data-messaging-interactions-methods-agent-status.html
 indicator: messaging
 ---
 
-Returns the current state of logged in agents that are handling messaging conversations with all its related data, including status, number of open conversations, load, skills etc. 
+Returns the current state of logged in agents that are handling messaging conversations with all its related data, including status, number of open conversations, load, skills etc.
 
 **Request**
 
@@ -27,7 +27,7 @@ Filter is sent in the POST data (body) with the following JSON structure:
 | Status |  List of Agent’s statuses to be filtered  | Array`<String>` | |
 | agentIds |    List of agent ids - when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned.  |   Array`<String>` ||
 | skillIds | List of skill ids - when provided, data will be returned for the agents with the specified skills who are in logged in state. |    Array`<String>` ||
-| agentGroupIds | List of agent group ids - when provided, data will be returned for the agents that are member of the specified agent groups who are in logged in state.  |    Array`<String>` ||
+| agentGroupIds | List of agent group ids - when provided, data will be returned for the agents that are members of the specified agent groups who are in logged in state.  |    Array`<String>` ||
 | agentPresence | Indicates whether the agent is present  | Boolean | If the filter is not provided, a default filter with the value true will be used |
 | connectionStates | List of agent connection states  | Array`<String>` | Valid values: CONNECTED or DISCONNECTED |
 
@@ -82,7 +82,7 @@ _JSON Example_:
 					"openAssignedConversations": 0,
 					"intenseConversations": 0,
 					"agentPresence": "true",
-                    "currentConnectionState": "CONNECTED"
+          "currentConnectionState": "CONNECTED"
 				},
 				{
 					"agentId": "7",
