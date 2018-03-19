@@ -17,7 +17,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 ### Use cases
 
-1. Obtain an engagement. An engagement will be provided if both the following apply -
+1. Obtain an engagement. An engagement will be provided if both the following apply:
   * there is no active conversation for this consumer
   * the consumer is eligible for an engagement
 
