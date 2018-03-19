@@ -38,7 +38,7 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | v | API version number | double | Required | Supported Value: 1.0  |
-| vid | Visitor Id | String | Optional on first request <sup>[1]</sup>, otherwise required | If session doesn't exist, a new session will be generated and sent by the server |
+| vid | Visitor Id | String | Optional on first request, otherwise required | If session doesn't exist, a new session will be generated and sent by the server |
 | sid | Session Id | String | Optional on first request, otherwise required |  Will be provided by the server-side in a 201(CREATED) response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
 
 ### Body Parameters
@@ -48,8 +48,7 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | consumerId | Consumer Id | String | Optional <sup>[1]</sup> | |
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
-| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
-<sup>[1]</sup> At list one form of identification is required (ConsumerID or VisitorID).
+| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
 ### POST Request & body entity example
 

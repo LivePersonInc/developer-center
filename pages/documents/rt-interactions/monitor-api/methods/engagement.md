@@ -18,11 +18,10 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 ### Use cases
 
 1. Obtain an engagement. An engagement will be provided if both the following apply -
-
   * there is no active conversation for this consumer
-
   * the consumer is eligible for an engagement
 
+{:start="2"}
 2. Obtain the identifiers of an active conversation for this consumer, if one exists.
 
 ### Request
@@ -108,7 +107,9 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
 ### Response
 
 #### Response entity examples
+
 Status code: 201 Created - Engagement is available, created new session:
+
 ```json
 {
   "sessionId": "abc",
@@ -127,6 +128,7 @@ Status code: 201 Created - Engagement is available, created new session:
 ```
 
 Status code: 200 OK - Resume conversation same session:
+
 ```json
 {
   "sessionId": "abc",
@@ -145,6 +147,7 @@ Status code: 200 OK - Resume conversation same session:
 
 ```
 Status code: 200 OK - Engagement is unavailable:
+
 ```json
 {
      "sessionId": "abc",
@@ -154,6 +157,7 @@ Status code: 200 OK - Engagement is unavailable:
 ```
 
 Status code: 500 Server Error - Loading account:
+
 ```json
 {
     "time":1501074704502,
