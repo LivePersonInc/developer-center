@@ -4,7 +4,6 @@ Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: In-App Messaging SDK for Android
-
 order: 310
 permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
@@ -92,6 +91,7 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
  </tr>
 </table>
 
+**Please note: while the APIs are already available in the SDK, the backend will be available in mid-April. Please consult your account team before using the APIs.**
 
 **The following additional conditions and configurations are required:**
 

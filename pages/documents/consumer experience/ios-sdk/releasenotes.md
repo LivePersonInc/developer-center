@@ -91,6 +91,7 @@ As an optional parameter, you can pass SDE Data which includes Entry Points and 
  </tr>
 </table>
 
+**Please note: while the APIs are already available in the SDK, the backend will be available in mid-April. Please consult your account team before using the APIs.**
 
 The following additional conditions and configurations are required:*
 
