@@ -251,7 +251,7 @@ The new parameters may control text, padding of conversation UI elements and mor
  <td>The configuration to change the Brand name / Agent name text color in the header
 </td>
  <td>Black</td>
- <td><img src="android_brandname_color.png"></td>
+ <td><img src="img/android_brandname_color.png"></td>
  </tr>
  <tr>
  <td><bool name="show_agent_typing_in_message_bubble">false</bool></td>
@@ -262,14 +262,14 @@ This configuration is available as long as the announce_agent_typing configurati
 </td>
  <td>false
 </td>
-<td><img src="android_agent_typing_bubble.png"></td>
+<td><img src="img/android_agent_typing_bubble.png"></td>
  </tr>
  <tr>
  <td>lp_messaging_ui_typing_animation_frames.xml
 </td>
  <td>In case the brand wants to present a different animation / different image resources. They may create a file named "lp_messaging_ui_typing_animation_frames.xml", this will override the SDK's original animation.</td>
  <td>LivePerson animation</td>
- <td><img src="android_custom_agent_typing_bubble.png.png"></td>
+ <td><img src="img/android_custom_agent_typing_bubble.png.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_send_disabled.xml</td>
@@ -281,14 +281,14 @@ The brand create a drawable file named "lpinfra_ui_ic_send_disabled.xml" which w
 Please notice that in order to display an image instead of a text the boolean
 use_send_image_button
 should be set to true</td>
- <td><img src="android_disabled_send_button.png"></td>
+ <td><img src="img/android_disabled_send_button.png"></td>
  </tr>
  <tr>
  <td>lpmessaging_ui_ic_gallery.xml
 </td>
  <td> In order to replace the existing add image from library button (photo sharing). The brand may create a drawable file named "lpmessaging_ui_ic_gallery.xml" which will override the SDK's default drawable.</td>
  <td>LivePerson image</td>
- <td><img src="android_gallery_button.png"></td>
+ <td><img src="img/android_gallery_button.png"></td>
  </tr>
  </tr>
  <tr>
@@ -298,7 +298,7 @@ should be set to true</td>
 
 </td>
  <td>LivePerson image</td>
- <td><img src="android_camera_button.png"></td>
+ <td><img src="img/android_camera_button.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_attach.xml
@@ -307,20 +307,20 @@ should be set to true</td>
 
 </td>
  <td>LivePerson image</td>
- <td><img src="android_attach_button.png"></td>
+ <td><img src="img/android_attach_button.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_close.xml</td>
  <td>In case the brand wants to display a different drawable for closing the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_close.xml" which will override the SDK's default drawable.</td>
  <td>LivePerson image</td>
- <td><img src="android_ps_close_button.png"></td>
+ <td><img src="img/android_ps_close_button.png"></td>
  </tr>
  <tr>
  <td><dimen name="button_corner_radius">30dp</dimen>
 </td>
  <td>Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimens.xml).</td>
  <td>30dp</td>
- <td><img src="android_csat_yesno_radius.png"></td>
+ <td><img src="img/android_csat_yesno_radius.png"></td>
  </tr>
 </table>
 
