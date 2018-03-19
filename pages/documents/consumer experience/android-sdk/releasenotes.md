@@ -168,7 +168,7 @@ New parameters may control text, padding of conversation UI elements and more.
 </table>
 
 
-* **Key for items as follows:**
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 
@@ -446,7 +446,7 @@ The following additional conditions and configurations are required:
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| No| No| No| Yes|
 
-_Key for items as follows_:
+**Key for items as follows**:
 
 **Backend​ ​update**:​ This feature requires an update to the backend.
 **Backend​ ​enablement**​: This feature requires items to be toggled on in the backend.
