@@ -11,7 +11,7 @@ indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 
-These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
+These are the main feature releases available in the **In-App Messaging SDK version 3.1 for iOS**.
 
 **Version 3.1 planned roll-out: March 18th 2018**
 
@@ -88,6 +88,7 @@ As an optional parameter, you can pass SDE Data which includes Entry Points and 
  </tr>
 </table>
 
+**Please note: while the APIs are already available in the SDK, the backend will be available in mid-April. Please consult your account team before using the APIs.**
 
 The following additional conditions and configurations are required:*
 
