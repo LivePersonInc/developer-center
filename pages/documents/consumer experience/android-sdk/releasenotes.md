@@ -43,10 +43,13 @@ Using the Monitoring APIs, brands can:
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
 <table>
+<thead>
  <tr>
- <td>New APIs</td>
- <td> Description </td>
- </tr>
+ <th>New APIs</th>
+ <th> Description </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Added to Liveperson.initialize() →
 InitLivePersonProperties contains new MonitoringInitParams object</td>
@@ -89,6 +92,7 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
    onError() response with the MonitoringErrorType
 </td>
  </tr>
+ </tbody>
 </table>
 
 **Please note: while the APIs are already available in the SDK, the backend will be available in mid-April. Please consult your account team before using the APIs.**
@@ -96,13 +100,16 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
 **The following additional conditions and configurations are required:**
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Yes</td>
  <td>Yes</td>
@@ -110,6 +117,7 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
  <td>Yes</td>
  <td>Yes</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -126,20 +134,24 @@ The change will be **seamless** for brands who upgrade to SDK version 3.1. Brand
 The following additional conditions and configurations are required:*
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Yes</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -166,14 +178,16 @@ The new APIs allows:
 #### History and Active Conversation APIs
 
 <table>
+<thead>
  <tr>
- <td>New APIs</td>
- <td> Description </td>
- </tr>
+ <th>New APIs</th>
+ <th> Description </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>ConversationViewParams -> mHistoryConversationsStateToDisplay</td>
  <td>Allows to control which conversation will be presented when opening the conversation screen, by status (open or closed).
-
 (mHistoryConversationsStateToDisplay is of type LPConversationsHistoryStateToDisplay ENUM which has the following values:
 OPEN, CLOSE , ALL)</td>
  </tr>
@@ -189,40 +203,49 @@ startConversationDate, endConversationDate)</td>
  <td>Allows to control the amount of conversations history that will be presented when opening the conversation screen by days.
 (Default is -1 (no limit))</td>
  </tr>
+ </tbody>
 </table>
 
 
 The following additional conditions and configurations are required:*
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
  <td>Yes</td>
  </tr>
+ </tbody>
 </table>
 
 
 ### New Strings Localizations
 
 <table>
+<thead>
  <tr>
- <td>New Strings Localization</td>
- <td> Description </td>
- </tr>
+ <th>New Strings Localization</th>
+ <th> Description </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>lp_history_control_api_empty_state</td>
  <td>There are currently no conversations at this time</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -239,14 +262,17 @@ The In-app Messaging SDK v3.1 exposes additional branding configuration paramete
 The new parameters may control text, padding of conversation UI elements and more.
 
 <table>
+<thead>
  <tr>
- <td>Name</td>
- <td>Description</td>
- <td>Default</td>
- <td>Screenshot</td>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ <th>Screenshot</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td><color name="lp_brand_header_text_color">@android:color/black</color>
+ <td>&lt;color name="lp_brand_header_text_color"&gt;@android:color/black&lt;/color&gt;
 </td>
  <td>The configuration to change the Brand name / Agent name text color in the header
 </td>
@@ -254,10 +280,9 @@ The new parameters may control text, padding of conversation UI elements and mor
  <td><img src="img/android_brandname_color.png"></td>
  </tr>
  <tr>
- <td><bool name="show_agent_typing_in_message_bubble">false</bool></td>
+ <td>&lt;bool name="show_agent_typing_in_message_bubble"&gt;false&lt;/bool&gt;</td>
  <td>True - the agent-is-typing-indicator will appear in "temporary" bubble. This style is available in both fragment and activity modes.
 False - the agent-is-typing-indicator will appear in the status bar (under the agent name). This style is available only in activity mode.
-
 This configuration is available as long as the announce_agent_typing configuration is on (set as true).
 </td>
  <td>false
@@ -275,7 +300,6 @@ This configuration is available as long as the announce_agent_typing configurati
  <td>lpinfra_ui_ic_send_disabled.xml</td>
  <td>In case the brand wants to display a different drawable to represent sending a message.
 The brand create a drawable file named "lpinfra_ui_ic_send_disabled.xml" which will override the SDK's default drawable.
-
 </td>
  <td>The default image is the one from the screenshot to the to the right.
 Please notice that in order to display an image instead of a text the boolean
@@ -290,12 +314,10 @@ should be set to true</td>
  <td>LivePerson image</td>
  <td><img src="img/android_gallery_button.png"></td>
  </tr>
- </tr>
  <tr>
  <td>lpmessaging_ui_ic_camera.xml
 </td>
  <td>In Order to replace the add image from camera button (photo sharing), the brand may create a drawable file named "lpmessaging_ui_ic_camera.xml" which will override the SDK's default drawable.
-
 </td>
  <td>LivePerson image</td>
  <td><img src="img/android_camera_button.png"></td>
@@ -304,7 +326,6 @@ should be set to true</td>
  <td>lpinfra_ui_ic_attach.xml
 </td>
  <td>In case the brand wants to display a different drawable for opening the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_attach.xml" which will override the SDK's default drawable.
-
 </td>
  <td>LivePerson image</td>
  <td><img src="img/android_attach_button.png"></td>
@@ -316,12 +337,13 @@ should be set to true</td>
  <td><img src="img/android_ps_close_button.png"></td>
  </tr>
  <tr>
- <td><dimen name="button_corner_radius">30dp</dimen>
+ <td>&lt;dimen name="button_corner_radius"&gt;30dp&lt;/dimen&gt;
 </td>
  <td>Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimens.xml).</td>
  <td>30dp</td>
  <td><img src="img/android_csat_yesno_radius.png"></td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -340,9 +362,12 @@ Parity with iOS in the Edit Text box.  The max lines is declared at 3. meaning w
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td colspan="5">Operating system</td>
+ <th colspan="5">Operating system</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Device</td>
  <td>v5.X (Lollipop)</td>
@@ -357,6 +382,7 @@ The following devices are now also supported and/or certified to host our in-app
  <td>Supported</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -522,11 +548,7 @@ New parameters may control text, padding of conversation UI elements and more.
  <td><img src="img/android_bubble_system_resolved_separator_padding_bottom.png"></td>
  </tr>
  <tr>
-<<<<<<< HEAD
  <td>&lt;drawable name="lp_progress_bar_image"&gt;&lt;/drawable&gt;</td>
-=======
- <td><dimen>drawable name="lp_progress_bar_image"</drawable></dimen></td>
->>>>>>> 8a77ac06ab87649084fd868c2f9a86e7741bdd79
  <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
  <td><img src="img/android_lp_progress_bar_image.png"></td>
  </tr>
@@ -879,7 +901,7 @@ Non Conversation Custom Fonts
 
 _Related properties_: Custom fonts
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 | Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
