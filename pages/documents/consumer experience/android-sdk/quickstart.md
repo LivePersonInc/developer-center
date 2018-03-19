@@ -36,6 +36,8 @@ Follow the steps below to download and unzip the
 
       * LivePerson.java - Main entry point for the Messaging SDK
 
+      * LivepersonMonitoring - Entry point for the Monitoring API
+
       * Resources (.aars files)
 
   * SampleApp-Source - demonstrate how to use the Messaging SDK.
