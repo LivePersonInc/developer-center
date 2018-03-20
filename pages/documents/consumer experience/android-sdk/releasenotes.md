@@ -12,15 +12,17 @@ indicator: messaging
 <br>
 <br>
 
+### Android Messaging SDK -  Version 3.1
+
 These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
 
 **Version 3.1 planned roll-out: March 18h 2018**
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
 
-### New functionalities
+#### New functionalities
 
-#### Campaigns for Messaging - Monitoring APIs
+##### Campaigns for Messaging - Monitoring APIs
 
 **Type:** Developer Experience Feature
 
@@ -38,7 +40,7 @@ Using the Monitoring APIs, brands can:
 
 3. Route conversations to a specific skill (based on engagements)
 
-#### Monitoring APIs
+##### Monitoring APIs
 
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
@@ -121,7 +123,7 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
 </table>
 
 
-#### Conversation History Control
+##### Conversation History Control
 
 **Type:** Developer Experience Feature
 
@@ -155,7 +157,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-#### History and Active Conversation View
+##### History and Active Conversation View
 
 **Type:** Developer Experience Feature
 
@@ -175,7 +177,7 @@ The new APIs allows:
 
  * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
 
-#### History and Active Conversation APIs
+##### History and Active Conversation APIs
 
 <table>
 <thead>
@@ -231,7 +233,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-### New Strings Localizations
+#### New Strings Localizations
 
 <table>
 <thead>
@@ -249,9 +251,9 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-### New parameters
+#### New parameters
 
-#### Branding and configuration parameters
+##### Branding and configuration parameters
 
 **Type:** Parameters
 
@@ -347,17 +349,17 @@ should be set to true</td>
 </table>
 
 
-### Additional Features
+#### Additional Features
 
-#### Adding Support to Android O
+##### Adding Support for Android O
 
 In-app messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
 
-#### Wrapping Text in Edit Text Box
+##### Wrapping Text in Edit Text Box
 
 Parity with iOS in the Edit Text box.  The max lines is declared at 3. meaning when the text suppresses the length fit for 3 lines the first line will be hidden.
 
-#### List of certified and supported devices extended
+##### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
@@ -401,7 +403,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 **SDK configuration**: This features requires items to be configured in the SDK.
 
 
-**In-App Messaging SDK version 3.0 for Android**.
+**In-App Messaging SDK version 3.0 **.
 
 #### New functionalities
 
@@ -471,9 +473,9 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 #### New APIs
 
-### New parameters
+#### New parameters
 
-#### Branding and configuration parameters
+##### Branding and configuration parameters
 
 **Type:** Parameters
 
@@ -568,7 +570,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-### In-App Messaging SDK Version 2.9 for android
+### Android Messaging SDK -  Version 2.9
 
 These are the main feature releases available in the In-App Messaging SDK version 2.9 for Android.
 
@@ -576,9 +578,9 @@ Version 2.9 planned roll-out: November 12th 2017
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
 
-### New functionalities
+#### New functionalities
 
-#### Oreo Support - Android API Level Support Update
+##### Oreo Support - Android API Level Support Update
 
 **Type:** Developer Experience Feature
 
@@ -592,9 +594,9 @@ The In-app Messaging SDK should remain on Android API level 25, while the host a
 
 The SDK Android API level should remain on level 25. Please do not change SDK Android API level to 26; support for this level 26 will be provided in 2018.
 
-### New parameters
+#### New parameters
 
-#### Branding and Configuration Parameters
+##### Branding and Configuration Parameters
 
 **Type:** Parameters
 
@@ -686,7 +688,7 @@ New parameters may control text, padding of conversation UI elements and more.
  </tbody>
 </table>
 
-### In-App Messaging SDK version 2.8 for Android
+### Android Messaging SDK -  version 2.8
 
 These are the main feature releases available in the In-App Messaging SDK version 2.8 for Android.
 
@@ -694,9 +696,9 @@ Version 2.8 roll-out: October 3rd 2017
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
 
-### New functionalities
+#### New functionalities
 
-#### Structured content enablement (GA in SDK)
+##### Structured content enablement (GA in SDK)
 
 **Type**:​ Feature
 
@@ -724,7 +726,7 @@ The following additional conditions and configurations are required:
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| Yes| Yes| Yes| Yes|
 
-#### Automatic messages for messaging
+##### Automatic messages for messaging
 
 **Type**:​ Feature
 
@@ -802,7 +804,7 @@ The following additional conditions and configurations are required:
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| Yes| Yes| Yes| Yes|
 
-#### Unread messages badge
+##### Unread messages badge
 
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 
@@ -842,9 +844,9 @@ The following additional conditions and configurations are required:
 **SDK​ ​enablement**:​ This feature requires items to be toggled on in the SDK.
 **SDK​ ​configuration​**: This features requires items to be configured in the SDK.
 
-### New properties
+#### New properties
 
-#### Structured Content
+##### Structured Content
 
 The following properties for structured content can now be configured:
 
@@ -852,9 +854,9 @@ The following properties for structured content can now be configured:
 |----|-----------|-------|
 |&lt;bool name="enable_structured_content"&gt;|Enable or Disable toggle for Structured Content feature in conversations.|True|
 
-### New APIs
+#### New APIs
 
-#### Unread Messages Badge APIs
+##### Unread Messages Badge APIs
 
 ```javascript
 public​ ​static​ ​void​ ​getNumUnreadMessages(String​ ​appId,​ ​final​ ​ICallback<Integer,
@@ -870,7 +872,7 @@ appId,​ ​callback);
 
 To use this API, the SDK must be after initialization.
 
-### In-App Messaging SDK version 2.5 for Android
+### Android Messaging SDK -  version 2.5
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
 
@@ -879,9 +881,9 @@ Version 2.5 roll-out: July 2nd 2017
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
 
 
-### New functionalities
+#### New functionalities
 
-#### Custom fonts
+##### Custom fonts
 
 In order for consumers to enjoy the full brand experience while messaging in-app, brands are able to configure certified operating system fonts to appear in the messaging window. The fonts can be used across all elements, or only for the font within the message bubble.
 
@@ -907,7 +909,7 @@ _Related properties_: Custom fonts
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-#### New way to listen to LP events via local intents
+##### New way to listen to LP events via local intents
 
 A new method of listening to LP events has been added. This method allows the host app to register to receive a specific action or to receive all of them. All of the actions match and correspond to the existing callback method. LivePerson recommends using the SDK’s Broadcast Receiver to receive these intent actions, as this system allows the user to listen to specific actions, and is not reliant on the SDK’s life cycle.
 
@@ -921,7 +923,7 @@ _Related APIs_: LivePersonIntents API
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-#### Tablet supportability
+##### Tablet supportability
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
@@ -940,7 +942,7 @@ Tablet Portrait Mode
 
 Tablet Landscape Mode
 
-#### List of certified and supported devices extended
+##### List of certified and supported devices extended
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 | Device | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
@@ -952,7 +954,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
 
-#### Connectivity improvements
+##### Connectivity improvements
 The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
 
 In addition, other aspects such as feature and conversation history will also be more rapid as a result of the improvements.
@@ -971,10 +973,10 @@ LivePersonIntents API
 
 For more information on this API, please refer to the deployment guide.
 
-### New properties
+#### New properties
 The following properties of the secure form bubble on the agent side can now be configured:
 
-#### Custom Fonts
+##### Custom Fonts
 
 | Name  | Description  | Default  |
 | ------------ | ------------ | ------------ |
@@ -983,7 +985,7 @@ The following properties of the secure form bubble on the agent side can now be 
 
 
 
-### In-App Messaging SDK version 2.3 for Android
+### Android Messaging SDK -  version 2.3
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
