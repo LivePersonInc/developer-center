@@ -30,7 +30,7 @@ Use this API to access the LivePerson monitoring system in order to report infor
 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| account-id | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
+| account-id | LP site ID | string |  |
 | app-installation-id | App installation id | string | String, Required |
 
 ### Query parameters
