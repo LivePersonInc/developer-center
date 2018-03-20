@@ -1,6 +1,5 @@
 ---
 title: Report
-
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
