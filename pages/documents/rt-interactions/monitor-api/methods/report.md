@@ -191,6 +191,7 @@ Status code: 500 Server Error - Loading account:
 ```
 
 #### Response Format
+
 | Attribute | Description | Type | Required|
 | :--- | :--- | :--- | :--- |
 | sid | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
