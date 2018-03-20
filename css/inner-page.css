@@ -30,6 +30,7 @@ h4[id]{
   color:#5879da;
   font-size: 0.96em;
   font-weight: 600;
+  font-style: inherit;
 }
 
 h4 code.highlighter-rouge {
