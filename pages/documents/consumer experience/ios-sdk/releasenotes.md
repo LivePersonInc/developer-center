@@ -13,6 +13,9 @@ indicator: messaging
 <br>
 <br>
 
+
+### iOS Messaging SDK - Version 3.1
+
 These are the main feature releases available in the **In-App Messaging SDK version 3.1 for iOS**.
 
 **Version 3.1 planned roll-out: March 18th 2018**
@@ -20,9 +23,9 @@ These are the main feature releases available in the **In-App Messaging SDK vers
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
 
 
-### New functionalities
+#### New functionalities
 
-#### Campaign for messaging
+##### Campaign for messaging
 
 **Type:** Developer Experience Feature
 
@@ -40,7 +43,7 @@ Using the Monitoring APIs, brands can:
 
 3. Route conversations to a specific skill (based on engagements)
 
-#### Monitoring APIs
+##### Monitoring APIs
 
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
@@ -123,7 +126,7 @@ func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, c
 </table>
 
 
-#### Conversation History Control
+##### Conversation History Control
 
 **Type:** Developer Experience Feature
 
@@ -157,7 +160,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-#### History and Active Conversation View
+##### History and Active Conversation View
 
 **Type:** Developer Experience Feature
 
@@ -177,7 +180,7 @@ The new APIs allows:
 
  * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
 
-#### History and Active Conversation APIs
+##### History and Active Conversation APIs
 
 <table>
 <thead>
@@ -230,7 +233,7 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-### New Strings Localizations
+#### New Strings Localizations
 
 <table>
 <thead>
@@ -248,9 +251,9 @@ The following additional conditions and configurations are required:*
 </table>
 
 
-### New parameters
+#### New parameters
 
-#### Branding and configuration parameters
+##### Branding and configuration parameters
 
 **Type:** Parameters
 
@@ -320,7 +323,7 @@ The new parameters may control text, padding of conversation UI elements and mor
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-### In-App Messaging SDK version 3.0 for iOS.
+### iOS Messaging SDK - Version 3.0
 
 #### New functionalities
 
@@ -408,7 +411,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 **Version 2.9.4 planned roll-out: December 21th 2017**
 
-### Fixed issue
+#### Fixed issue
 
 #### Symptom:
 For iOS 11, the app might crash when closing the conversation screen while receiving new messages.
@@ -416,7 +419,7 @@ For iOS 11, the app might crash when closing the conversation screen while recei
 #### Fix:
 Improved memory allocation for conversation screen
 
-### XCode 9.2 and Swift 4.0.2 Support
+#### XCode 9.2 and Swift 4.0.2 Support
 
 **Type:** Developer Experience Feature
 
@@ -615,7 +618,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 These are the main feature releases available in the **In-App Messaging SDK version 2.8 for iOS**.
 
-### Structured content enablement (GA in SDK)
+#### Structured content enablement (GA in SDK)
 
 **Type:** Feature
 
@@ -663,7 +666,7 @@ The following additional conditions and configurations are required:
 </tbody>
 </table>
 
-### Automatic messages for messaging
+#### Automatic messages for messaging
 
 **Type:** Feature
 
@@ -777,7 +780,7 @@ The following additional conditions and configurations are required:
 </table>
 
 
-### Unread messages badge
+#### Unread messages badge
 
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 
@@ -831,7 +834,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Set icon for "Send" button
+#### Set icon for "Send" button
 
 Brands are now able to choose and configure their own icon for the 'Send’ button for in-app messaging conversations.
 
@@ -871,7 +874,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
+#### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
 
 The In-app Messaging SDK v.28 was built and certified with XCode 9 in Swift 4/ Swift 3.2 for iOS11.
 
@@ -907,7 +910,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Customizable bubble corners
+#### Customizable bubble corners
 
 The radius of the corners of message bubbles can now be configured by the brand. There are 8 different parameters to be configured: the 4 corners of the agent message bubble and the 4 corners of the consumer message bubble.
 
@@ -939,7 +942,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Reconnect attempt termination callback
+#### Reconnect attempt termination callback
 
 The new callback will be invoked when all connection retries have failed:
 
@@ -969,7 +972,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Logout - add completion closure/failure
+#### Logout - add completion closure/failure
 
 This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or simply to log the current user out.
 
@@ -1015,7 +1018,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### New event - conversation interactions
+#### New event - conversation interactions
 
 The conversation interactions event communicates the Inactive time interval within seconds of the user last touching the screen. This interval applies to the scroll/messaging/action menus and any other general action on the conversation screen.
 
@@ -1089,9 +1092,9 @@ The following additional conditions and configurations are required*:
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-### New properties
+#### New properties
 
-#### Structured content
+##### Structured content
 
 The following properties for structured content can now be configured:
 
@@ -1113,7 +1116,7 @@ The following properties for structured content can now be configured:
 </table>
 
 
-#### Bubble corners
+##### Bubble corners
 
 The following properties for customizable bubble corners can now be configured:
 
@@ -1171,7 +1174,7 @@ The following properties for customizable bubble corners can now be configured:
 </table>
 
 
-### Unread messages badge
+#### Unread messages badge
 
 The following properties for the unread messages badge can be configured:
 
@@ -1193,7 +1196,7 @@ The following properties for the unread messages badge can be configured:
 </table>
 
 
-### Scroll to bottom button
+#### Scroll to bottom button
 
 The following properties for the scroll to bottom button can now be configured:
 
@@ -1220,7 +1223,7 @@ The following properties for the scroll to bottom button can now be configured:
 </table>
 
 
-### Send button
+#### Send button
 
 The following properties for the send button can now be configured:
 
@@ -1242,7 +1245,7 @@ The following properties for the send button can now be configured:
 </table>
 
 
-### Controller bubble
+#### Controller bubble
 
 The following properties for the controller bubble can now be configured:
 
@@ -1264,7 +1267,7 @@ The following properties for the controller bubble can now be configured:
 </table>
 
 
-### New APIs
+#### New APIs
 
 #### Conversation interactions API
 
@@ -1280,7 +1283,7 @@ The following properties for the controller bubble can now be configured:
 
 **func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)→())**
 
-### New Callbacks
+####New Callbacks
 
 ##### Reconnect attempt termination callback
 
@@ -1584,7 +1587,7 @@ Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPara
     "structuredContentAccessibilityMap" = "Map";
 
 
-### In-App Messaging SDK Version 2.5.0
+### iOS Messaging SDK - Version 2.5.0
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
 
@@ -1704,7 +1707,7 @@ For one minute after the consumer had navigated away from the conversation windo
 _Fix_:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
-### In-App Messaging SDK Version 2.3.0
+### iOS Messaging SDK - Version 2.3.0
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
 
@@ -1798,7 +1801,7 @@ The Web Socket remains open for a maximum of 60 seconds (using Background Task) 
 
 *Photo sharing is a beta feature*.
 
-### In-App Messaging SDK Version 2.0
+### iOS Messaging SDK - Version 2.0
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf){:target="_blank"}
 
