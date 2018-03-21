@@ -80,6 +80,8 @@ This API is public. When specifying `appInstallationId` and `accountId`, the API
 
 ### Reporting funnel
 
+**Note**: the reporting funnel relies on terms and definitions explained as part of the Report method of this API. Please visit [this link](rt-interactions-monitoring-methods-report.html) for more information on these terms.
+
 Today, the Report Builder offers a set of operational and funnel reports which instill visibility into campaign performance and agent performance against campaign goals. These reports currently cover both Chat and Messaging conversation types from Web sources.
 
 Now a selection of dashboards has been released to reflect on the performance of campaigns which include a mix of engagements from web and non-web source.
