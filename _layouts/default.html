@@ -11,26 +11,18 @@
 
 </head>
 <body>
-{% include topnav.html %}
-{% if page.public == false %}
-{% include not-available.html %}
-{% else %}
 <!-- Page Content -->
 <div class="container">
-    <div class="col-lg-12">
-    {% include nav-breadcrumbs.html %}
-    </div>
-   <div class="sidebarTitle fixed"><span class="titlespan">{{ page.level3 }}</span></div>
-   <div class="sidebarTitle-holder">{{ page.level3 }}</div>
     <!-- Content Row -->
-    <div class="row">
+    <div class="sidebarrow">
         <!-- Sidebar Column -->
-        <div class="col-md-3 side-bar">
-
+        <div class="sidebar">
           {% include sidebar.html  %}
         </div>
     <!-- Content Column -->
-    <div class="col-md-9 inside-page-content">
+  </div>
+  <div class="contentrow">
+    <div class="inside-page-content">
         {% if page.level4 %}
         <div class="h1">{{ page.level4 }}</div>
         <div class="h2">{{ page.title }}</div>
@@ -50,11 +42,9 @@
         </div>
     </div>
     <!-- /.row -->
-</div>
-{% endif %}
+  </div>
 <!-- /.container -->
-    </div>
- {% include footer.html %}
+</div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 <script type="text/javascript">
 const search = docsearch({

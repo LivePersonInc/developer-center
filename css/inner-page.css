@@ -1,3 +1,12 @@
+
+.footer {
+  display: none;
+}
+
+.navbar-inverse {
+  display: none;
+}
+
 /* this is so the header won't overlap the links */
 :target::before {
   content: "";
@@ -262,10 +271,10 @@ ul#mysidebar.nav {
   font-size: 0.73em;
   text-decoration: none;
   margin-top: 0px;
-  border-right: 1px solid lightgray;
   margin-left: 10px;
   height: 100%;
   position: initial;
+  width: 100%;
 
 }
 
@@ -297,18 +306,17 @@ ul#mysidebar.nav li a {
   display: inline-block;
   color: #5879da;
   font-family: "Roboto","Open Sans",Arial,Helvetica,sans-serif;
-  font-size: 12px;
   overflow-wrap:break-word;
 }
 ul#mysidebar.nav > li > a{
   padding: 2px 10px 0 0;
+  font-size: 15px;
 }
 ul#mysidebar li ul li{
   margin-right: 0px;
 }
 ul#mysidebar.nav li a.active{
   color: #172136;
-  font-size: 14px;
   font-weight: bold;
 }
 ul#mysidebar.nav li.activepage{
@@ -320,7 +328,7 @@ ul#mysidebar.nav li.activepage a{
   color: #172136;
 }
 #mysidebar.nav li.folder > a{
- font-size: 1.1em;
+ font-size: 15px;
 }
 
 ul#mysidebar.nav li ul li {
@@ -333,6 +341,7 @@ ul#mysidebar.nav li ul li {
 }
 
 div.sidebarTitle {
+  display: none;
   color: #162036;
   font-size: 22px;
   font-weight: normal;
@@ -375,6 +384,7 @@ div.sidebarTitle-holder {
   position: relative;
   font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
   cursor: default;
+  display: none;
 }
 
 /*CSS for tooltip of Indicator*/
@@ -429,6 +439,7 @@ div.sidebarTitle-holder {
 }
 
 .breadcrumbs {
+  display: none;
   background-color: white;
   border-bottom: 1px solid lightgray;
   border-radius: 0;
@@ -550,7 +561,6 @@ pre {
 @media (min-width: 1114px)
 {
   ul#mysidebar {
-  border-right: 1px solid lightgray;
   margin-left: 9px;
   top: 160px;
   width: 230px;
@@ -651,6 +661,7 @@ pre {
      margin: 0 auto;
      margin-left: 2px;
      margin-top: -33px;
+     display: none;
    }
 
    /**Position of the iframe inside the reponsive div **/
@@ -682,4 +693,18 @@ pre {
 
 .solutionshr {
   width: 100%;
+}
+
+/* newLayout */
+
+.sidebar {
+  padding-top: 50px;
+  margin-right: 40px;
+}
+
+.contentrow {
+  flex: 1;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-left: 30px;
 }
