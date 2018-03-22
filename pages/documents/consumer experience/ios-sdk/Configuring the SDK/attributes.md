@@ -124,6 +124,19 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">8</td>
   </tr>
   <tr>
+    <td align="left">remoteUserAvatarIconBorderWidth</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Define the remote avatar icon border width.</td>
+    <td align="left"><img src="img/remoteUserAvatarIconBorder.png" alt="remoteUserAvatarIconBorder"></td>
+    <td align="left">8</td>
+  </tr><tr>
+    <td align="left">remoteUserAvatarIconBorderColor</td>
+    <td align="left">UIColor?</td>
+    <td align="left">Define the remote avatar icon border color.</td>
+    <td align="left"><img src="img/remoteUserAvatarIconBorder.png" alt="remoteUserAvatarIconBorder"></td>
+    <td align="left">8</td>
+  </tr>
+  <tr>
     <td align="left">userBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the background of the visitor bubble.</td>
