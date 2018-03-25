@@ -1,6 +1,3 @@
-{% include custom/sidebarconfigs.html %}
-
-
 
 
 <ul id="mysidebar" class="nav fixed" >
@@ -14,37 +11,26 @@
     <span class="indicatortooltip">Applies to Messaging</span>
   </div>
   {% endif %}
-  {% assign level4 = null %}
-  <!--loop over all the level3 documents -->
-  {% assign filtered = site.pages | where_exp:"p","p.level1 == page.level1" | where_exp:"p","p.level2 == page.level2" | where_exp:"p","p.level3 == page.level3" %}
-  {% assign visible = filtered | where_exp:"item","item.visible != false" %}
-  {% assign sorted = visible | sort: "order" %}
-  {% for p in sorted %}
-    {% if (level4 != null and level4 != p.level4) %}
-        </ul>
-      </li>
-    {% endif %}
-    {% if (p.level4 != null and level4 != p.level4) %}
+  <li><a href="/index.html">Home</a></li>
+  <li class="folder">
+    <a href="#">Documents</a>
+    <ul>
+      {% for section in site.data.sections %}
       <li class="folder">
-        <a href="#">{{ p.level4 }}</a>
+        <a href="#">{{ section.name }}</a>
         <ul>
-    {% endif %}
-    {% if p.permalink == page.permalink %}
-       <li class="activepage"><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
-    {% else %}
-       <li><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
-    {% endif %}
+          {% for document in section.documents %}
+          <li class="folder">
+              <a class="innerlink" href="#">{{ document.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+    </ul>
+</uL>
+  <!--loop over all the level3 documents -->
 
-    {% assign level4 = p.level4 %}
-  {% endfor %}
-  {% if (level4 != null) %}
-      </ul>
-    </li>
-  {% endif %}
-<a class="report" href="https://github.com/LivePersonInc/developers-community/issues/new" target="_blank">Looking for Support?</a>
-    <!--<br>
-    <button type="button" onclick="window.open('https://github.com/LivePersonInc/developers-community/issues/new', '_blank');" class="contactusBtn">Need assistance?<br>Contact us via our GitHub space</button>=-->
-</ul>
+
 
 <!-- this highlights the active parent class in the navgoco sidebar.
 this is critical so that the parent expands when you're viewing a page.

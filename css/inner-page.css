@@ -271,11 +271,9 @@ ul#mysidebar.nav {
   font-size: 0.73em;
   text-decoration: none;
   margin-top: 0px;
-  margin-left: 10px;
+  margin-left: -30px;
   height: 100%;
   position: initial;
-  width: 100%;
-
 }
 
 ul#mysidebar > li.folder::before{
@@ -308,6 +306,11 @@ ul#mysidebar.nav li a {
   font-family: "Roboto","Open Sans",Arial,Helvetica,sans-serif;
   overflow-wrap:break-word;
 }
+
+.innerlink {
+  width: 100%;
+}
+
 ul#mysidebar.nav > li > a{
   padding: 2px 10px 0 0;
   font-size: 15px;
@@ -700,11 +703,13 @@ pre {
 .sidebar {
   padding-top: 50px;
   margin-right: 40px;
+  position: fixed;
+  left: 300px;
 }
 
 .contentrow {
   flex: 1;
   background-color: #fff;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-left: 30px;
 }

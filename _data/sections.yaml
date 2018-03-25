@@ -1,0 +1,65 @@
+- name: Guides
+  documents:
+      - title: Retrieve API Keys
+      - title: Retrieve API Domains
+      - title: Add Agent Widgets
+      - title: Customized Chat Windows
+      - title: Engagement Attributes
+      - title: Authentication
+      - title: Push Notification Service (iOS and Android)
+      - title: Structured Content
+      - title: Conversation Metadata Guide
+      - title: Retry Policy and KeepAlive Best Practices
+
+- name: Consumer Experience
+  documents:
+      - title: In-App Messaging SDK - iOS
+      - title: In-App Messaging SDK - Android
+      - title: Voice & Video SDK - iOS (BETA)
+      - title: Voice & Video SDK - Android (BETA)
+      - title: Messaging Window API
+      - title: JavaScript Chat SDK
+      - title: Server Chat API
+
+- name: Agent Interactions
+  documents:
+      - title: Messaging Agent SDK
+      - title: Chat Agent API
+      - title: Agent Workspace Widget SDK
+      - title: Login Service API
+
+- name: Data
+  documents:
+      - title: Data Access API (BETA)
+      - title: Agent Metrics API
+      - title: Messaging Interactions API
+      - title: Messaging Operations API
+      - title: Operational Realtime API
+      - title: Engagement History API
+      - title: Consumer Engagement API
+
+- name: Real Time Interactions
+  documents:
+      - title: App Engagement API
+      - title: Visit Information API
+      - title: IVR Engagement API
+      - title: Engagement Window Widget SDK
+      - title: Validate Engagement API
+      - title: Engagement Attributes API
+      - title: Engagement Trigger API
+
+- name: Account Configuration
+  documents:
+      - title: Unified Automatic Messages API
+      - title: Predefined Content API
+      - title: Predefined Categories API
+      - title: LE-Tag
+      - title: Automatic Messages API
+
+- name: Admin
+  documents:
+      - title: Users API
+      - title: LOBs API
+      - title: Skills API
+      - title: Agent Groups API
+      - title: Profiles API
