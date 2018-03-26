@@ -14,96 +14,60 @@ permalink: android-quickstart.html
 
 To use the LivePerson In-App Messaging SDK, the following are required:
 
-* LiveEngage account with messaging enabled
+* LiveEngage account with messaging enabled, mobile app configured.
 
-* **Embeddable library for AAR**: Binary distribution of an Android Library Project
+_Note:
+  * For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-               1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"}_
+  * For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-implementation-guide.html){:target="_blank"}.
 
-*  **Installers**: Gradle
 
-_Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"}_
+###  Step 1: Integrate LivePerson Android SDK within your Project (Gradle)
 
-###  Step 1: Download and unzip the SDK
+1. In your project files in the left sidebar, locate Gradle Scripts > build.gradle (Module: app), then double-click the file to open it in the editor.
 
-Follow the steps below to download and unzip the
+![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)
 
-1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK){:target="_blank"}.
-
-2. Extract the ZIP file to a folder on your computer.
-
-  The downloaded package should contain the following three items:
-
-      * LP_Messaging_SDK/lp_messaging_sdk - Module that should be added to your project. This module contains the following:
-
-      * LivePerson.java - Main entry point for the Messaging SDK
-
-      * Resources (.aars files)
-
-  * SampleApp-Source - demonstrate how to use the Messaging SDK.
-
-  * SampleApp-APK - sample app installation file.
-
-###  Step 2: Configure project settings to connect LiveEngage SDK
-
-Follow the steps below to configure the project settings to connect to the SDK.
-
-1. Import the downloaded lp_messaging_sdk module into your project.
-
-    * In the Android Studio menu bar, select: **File** → **New** → **Import module**.
-
-    * Navigate to the folder where you extracted the SDK project. Navigate to the lp_messaging_sdk module, and click **Finish**.
-
-2. Add the following lines to the build.gradle of your app :
-
-    * `compileSdkVersion` and `buildToolsVersion` (should be at least Version 23).
-
-    * Add the following code under the Android section:
+2. In the dependencies section, insert the following line:
 
 ```javascript
-  repositories {
-         flatDir {
-            dirs project(':lp_messaging_sdk').file('aars')
-         }
-  }
+dependencies {
+    implementation  'com.liveperson.android:lp_messaging_sdk:3.1.1'
+}
 ```
 
-{:start="3"}
-3. Under the Dependencies section, add the following line:
-
-`compile project(':lp_messaging_sdk')`
-
-
-**Example: Build.gradle file**
+**Example: Build.gradle (Module: app) file**
 
 ```javascript
 apply plugin: 'com.android.application'
+
 android {
-  compileSdkVersion 24
-  buildToolsVersion "24.0.3"
-
-  repositories {
-         flatDir {
-             dirs project(':lp_messaging_sdk').file('aars')
-         }
-  }
-
-  defaultConfig {
-      applicationId "xxx"
-      minSdkVersion xx
-      targetSdkVersion xx
-      versionCode 1
-      versionName "1.0"
-  }
-  buildTypes {
-      release {
-          minifyEnabled false
-          proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      }
-  }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.shaym.liveperson.androidsdk"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
-dependencies {   
-  compile project(':lp_messaging_sdk')
-}`
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    // LivePerson SDK
+    implementation  'com.liveperson.android:lp_messaging_sdk:3.1.1'
+}
 ```
 
 
