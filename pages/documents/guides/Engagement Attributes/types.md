@@ -28,6 +28,10 @@ lpTag.sdes.push(
 );
 ```
 
+### Supported Sources
+
+Each engagement attribute can be reported either from Web, Mobile or Both.
+
 ### eCommerce info
 
 eCommerce info Engagement Attributes allow you to track eCommerce-related activities on your website.
@@ -249,7 +253,7 @@ Info object:
 
 **Marketing source SDE JSON example**:
 
-``json
+```json
 {
   "type": "mrktInfo", //MANDATORY
     "info": {
@@ -439,6 +443,8 @@ Error object:
 
 #### Searched content
 
+**Note**: This SDE cannot be reported from Mobile due to internal server limitations.
+
 This Engagement Attribute is used to to report on content that was searched by consumers on the brand’s website such as FAQ and different articles or products.
 
 This information can be used to offer help to visitors based on their searches.
@@ -465,6 +471,7 @@ Data structure:
 This Engagement Attribute is used to determine the appropriate Location for engaging with visitors, or to display where the visitors are browsing.
 
 **Code example**:
+
 ```json
 lpTag.section = [ //SET A LIST OF YOUR SITE SECTIONS
 "electronics", //CAN BE A SECTION OR A SUB-SECTION

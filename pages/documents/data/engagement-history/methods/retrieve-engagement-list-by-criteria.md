@@ -1308,6 +1308,7 @@ Example:
 | ipAddress | The visitor’s IP address. | alphanumeric | |
 | browser | The browser the visitor used to chat. | alphanumeric | |
 | operatingSystem | The operating system the visitor used to chat. | alphanumeric |  Valid values: "NA", "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID" |
+| browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g CHROME or FIREFOX |
 | coBrowseSessions | The CoBrowse data | container | |
 | coBrowseSessionsList | List of CoBrowse sessions | container | |
 | sessionId | CoBrowse session id | alphanumeric | |

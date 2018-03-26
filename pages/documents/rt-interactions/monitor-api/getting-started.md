@@ -64,7 +64,7 @@ HTTP/1.1 201 Created
 }
 ```
 
-You could also report on the **Impression Display SDE** once the engagement was displayed by your application with the visitorId and sessionId provided in the response:
+You could also report on the **Impression Display Engagement Attribute** once the engagement was displayed by your application with the visitorId and sessionId provided in the response:
 
 ```javascript
 curl -i \
