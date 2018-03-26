@@ -1,5 +1,5 @@
 ---
-title: Methods
+title: Messaging API
 Keywords:
 level1: Documents
 level2: Consumer Experience
