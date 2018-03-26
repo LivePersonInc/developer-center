@@ -10,20 +10,26 @@ permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<br>
+<br>
+
+
+### iOS Messaging SDK - Version 3.1
 
 These are the main feature releases available in the **In-App Messaging SDK version 3.1 for iOS**.
 
 **Version 3.1 planned roll-out: March 18th 2018**
 
-[[TOC]]
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
 
-# New functionalities
 
-## Campaign for messaging
+#### New functionalities
+
+##### Campaign for messaging
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 The addition of campaigns for mobile app and web messaging will allow brands to manage their engagements easily and efficiently across these channels, targeting customers based on unauthenticated attributes or locations and routing them to a desired skill.
 
@@ -37,15 +43,18 @@ Using the Monitoring APIs, brands can:
 
 3. Route conversations to a specific skill (based on engagements)
 
-## Monitoring APIs
+##### Monitoring APIs
 
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
 <table>
+<thead>
  <tr>
- <td>New APIs</td>
- <td>Description</td>
+ <th>New APIs</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Added monitoringInitParams to LPMessagingSDK.initialize() →
 func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInitParams? = nil) throws</td>
@@ -70,36 +79,42 @@ Campaign includes Engagement info which allows to control the consumer's routing
 LPMonitoringAPI.instance.xxxx
 func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())</td>
  <td>Use this API to get an engagement for a consumer in an appInstallationId context. When calculating eligibility the decision is based on the SDEs and other parameters. Based on messaging campaign concept
-As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
-- Parameters:
-      - consumerID: an optional brand app consumer ID to get the engagement for
-      - monitoringParams: an instance of includes optional Array of Entry Points and an optional dictionary of Engagement Attributes
-      - completion: completion block with response of type LPGetEngagementResponse. This response includes sessionID and visitorID along with LPEngagementDetails object.
-      - failure: failure block with an error in case the request fails </td>
+ As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
+ Parameters:
+      <ul>
+      <li>consumerID: an optional brand app consumer ID to get the engagement for</li>
+      <li>monitoringParams: an instance of includes optional Array of Entry Points and an optional dictionary of Engagement Attributes</li>
+      <li>completion: completion block with response of type LPGetEngagementResponse. This response includes sessionID and visitorID along with LPEngagementDetails object.</li>
+      <li>failure: failure block with an error in case the request fails</li></ul> </td>
  </tr>
  <tr>
  <td>func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())</td>
  <td>Use this API to report an engagement attributes (SDEs) for a consumer in an appInstallationId context.
-- Parameters:
-     - consumerID: brand app consumer ID to get the engagement for
-      - monitoringParams: an instance of LPMonitoringParams includes optional Array of Entry Points and an optional dictionary of Engagement Attributes. Additional optional parameter is PageID which is used for Page identification for sending events on the current engagement. PageID will be received in LPSendSDEResponse and in LPGetEngagementResponse
-    - completion: completion block with response of type LPSendSDEResponse. This response includes sessionID and visitorID and pageID for future use.
-     - failure: failure block with an error in case the request fails</td>
+ Parameters:
+      <ul>
+      <li>consumerID: an optional brand app consumer ID to get the engagement for</li>
+      <li>monitoringParams: an instance of includes optional Array of Entry Points and an optional dictionary of Engagement Attributes</li>
+      <li>completion: completion block with response of type LPGetEngagementResponse. This response includes sessionID and visitorID along with LPEngagementDetails object.</li>
+      <li>failure: failure block with an error in case the request fails</li></ul> </td>
  </tr>
+ </tbody>
 </table>
 
 **Please note: while the APIs are already available in the SDK, the backend will be available in mid-April. Please consult your account team before using the APIs.**
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Yes</td>
  <td>Yes</td>
@@ -107,14 +122,15 @@ The following additional conditions and configurations are required:*
  <td>Yes</td>
  <td>Yes</td>
  </tr>
+  </tbody>
 </table>
 
 
-## Conversation History Control
+##### Conversation History Control
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 To enhance control of customer data retention, scalability and performance, and support the EU’s General Data Protection Regulation (GDPR), open conversations will be loaded from a real time service while closed conversations will be loaded from a history service.
 
@@ -123,13 +139,16 @@ The change will be **seamless** for brands who upgrade to SDK version 3.1. Brand
 The following additional conditions and configurations are required:*
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Yes</td>
  <td>No</td>
@@ -137,14 +156,15 @@ The following additional conditions and configurations are required:*
  <td>No</td>
  <td>No</td>
  </tr>
+ </tbody>
 </table>
 
 
-## History and Active Conversation View
+##### History and Active Conversation View
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 New APIs will give brands control over the conversations presented in the conversation window. For example, brands can choose to present only the last 180 days of conversation history.
 
@@ -160,13 +180,16 @@ The new APIs allows:
 
  * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
 
-## History and Active Conversation APIs
+##### History and Active Conversation APIs
 
 <table>
+<thead>
  <tr>
- <td>New APIs</td>
- <td>Description</td>
+ <th>New APIs</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>LPConversationViewParams → LPConversationHistoryControlParam → historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay?</td>
  <td>Allows to control which conversation will be presented when opening the conversation screen, by status (open or closed)</td>
@@ -182,102 +205,113 @@ When not providing a value, startConversationDate will be the default.</td>
 historyConversationsMaxDays: UInt?</td>
  <td>Allows to control the amount of conversations history that will be presented when opening the conversation screen by days.</td>
  </tr>
+ </tbody>
 </table>
 
 
 The following additional conditions and configurations are required:*
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
  <td>Yes</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
+ <td>No</td>
  </tr>
+ </tbody>
 </table>
 
 
-# New Strings Localizations
+#### New Strings Localizations
 
 <table>
+<thead>
  <tr>
- <td>New Strings Localization</td>
- <td>Description</td>
+ <th>New Strings Localization</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>conversationEmptyState</td>
  <td>There are currently no conversations at this time</td>
  </tr>
+ </tbody>
 </table>
 
 
-# New parameters
+#### New parameters
 
-## Branding and configuration parameters
+##### Branding and configuration parameters
 
 **Type:** Parameters
 
-**Available to all customers? **Yes
+**Available to all customers?** Yes
 
 The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
-
-
 
 The new parameters may control text, padding of conversation UI elements and more.
 
 <table>
+<thead>
  <tr>
- <td>Parameter name and default value</td>
- <td>Description</td>
- <td>Image</td>
+ <th>Parameter name and default value</th>
+ <th>Description</th>
+ <th>Image</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>LPConfig → csatYesNoButtonsCornerRadius: Double = 25</td>
  <td>Makes CSAT Yes/No buttons corner radiuses customizable (through LPConfig).</td>
- <td><img src="ios_csat_yesno_buttons_radius.png"></td>
+ <td><img src="img/ios_csat_yesno_buttons_radius.png"></td>
  </tr>
  <tr>
  <td>LPConfig → messageStatusNumericTimestampOnly: Bool = false</td>
  <td>When false (default), timestamps will display information relative to when sent/distributed/read (e.g. 'sent 5 minutes ago'. When true, will show as numeric only (e.g. '11:32').</td>
- <td><img src="ios_numeric_timestamp.png"></td>
+ <td><img src="img/ios_numeric_timestamp.png"></td>
  </tr>
  <tr>
  <td>LPConfig → photoSharingMenuCameraImage: UIImage </td>
  <td>Custom Camera image in the photo sharing menu.</td>
- <td><img src="ios_camera_button.png"></td>
+ <td><img src="img/ios_camera_button.png"></td>
  </tr>
  <tr>
  <td>LPConfig → photoSharingMenuLibraryImage: UIImage </td>
  <td>Custom Library image in the photo sharing menu.</td>
- <td><img src="ios_gallery_button.png"></td>
+ <td><img src="img/ios_gallery_button.png"></td>
  </tr>
  <tr>
  <td>LPConfig → photoSharingOpenMenuImageButton: UIImage</td>
  <td>Photo sharing open menu custom button.</td>
- <td><img src="ios_attach_button.png"></td>
+ <td><img src="img/ios_attach_button.png"></td>
  </tr>
  <tr>
  <td>LPConfig → photoSharingCloseMenuImageButton: UIImage</td>
  <td>Photo sharing close menu custom button</td>
- <td><img src="ios_ps_close_button.png"></td>
+ <td><img src="img/ios_ps_close_button.png"></td>
  </tr>
  <tr>
  <td>LPConfig → conversationEmptyStateTextColor: UIColor() = black</td>
  <td>Color code for the empty state label</td>
- <td><img src="ios_empty_state_no_conversations.png"></td>
+ <td><img src="img/ios_empty_state_no_conversations.png"></td>
  </tr>
+ </tbody>
 </table>
 
 
-* *Key for items as follows:*
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 
@@ -289,56 +323,54 @@ The new parameters may control text, padding of conversation UI elements and mor
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-### In-App Messaging SDK version 3.0 for iOS.
-
-**Version 3.0 planned roll-out: January 14th 2018**
+### iOS Messaging SDK - Version 3.0
 
 #### New functionalities
 
 ##### Certificate Pinning
 
-**Type:** Developer Experience Feature
+**Type:** Security Feature
 
 **Available to all customers?** No. Contact support for more details.
 
-Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
-The following additional conditions and configurations are required:*
+The object certPinningPublicKeys was added to the object LPAuthenticationParams.
+**Please note**: using the new object without completing the onborading process will result in failures while trying to communicate with LivePerson’s servers.
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+The following additional conditions and configurations are required:
+
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
+
+
+##### XCode 9.2 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+The In-app Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
 
 #### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td></td>
- <td>Operating system</td>
- <td></td>
- <td></td>
+ <th></th>
+ <th colspan="4">Operating system</th>
  </tr>
  <tr>
- <td>Model</td>
- <td>iOS 9.x</td>
- <td>iOS 10.x</td>
- <td>iOS 11.x</td>
+ <th>Model</th>
+ <th>iOS 9.x</th>
+ <th>iOS 10.x</th>
+ <th>iOS 11.x</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>iPhone 8</td>
  <td>N/A</td>
@@ -357,78 +389,12 @@ The following devices are now also supported and/or certified to host our in-app
  <td>N/A</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
-
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
-#### New APIs
-
-##### Cert-Pinning API
-
-**Available to all customers?** No. Contact support for more details.
-
-**Please note** Using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
-
-In order to use cert pinning public keys, you should pass a new property to the LPAuthenticationParams object init, when calling the API of:
-
-**showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)**
-
-The new property that should be passed is:
-
-**LPAuthenticationParams → certPinningPublicKeys: [String]?**
-
-This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers. If this field is nil, the Cert Pinning is disabled.
-
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
-
-
-#### New Callbacks
-
-##### Cert Pinning callback
-
-func LPMessagingSDKCertPinningFailed(_ error: NSError)
-
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. or The server trust's evaluation failed: the server's certificate chain is not trusted.
-
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
-
-
-* **Key for items as follows:**
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 
@@ -445,11 +411,17 @@ The following additional conditions and configurations are required:*
 
 **Version 2.9.4 planned roll-out: December 21th 2017**
 
+#### Fixed issue
+
 #### Symptom:
 For iOS 11, the app might crash when closing the conversation screen while receiving new messages.
 
 #### Fix:
 Improved memory allocation for conversation screen
+
+#### XCode 9.2 and Swift 4.0.2 Support
+
+**Type:** Developer Experience Feature
 
 ### iOS Messaging SDK - Version 2.9.3
 
@@ -646,7 +618,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 These are the main feature releases available in the **In-App Messaging SDK version 2.8 for iOS**.
 
-### Structured content enablement (GA in SDK)
+#### Structured content enablement (GA in SDK)
 
 **Type:** Feature
 
@@ -694,7 +666,7 @@ The following additional conditions and configurations are required:
 </tbody>
 </table>
 
-### Automatic messages for messaging
+#### Automatic messages for messaging
 
 **Type:** Feature
 
@@ -808,7 +780,7 @@ The following additional conditions and configurations are required:
 </table>
 
 
-### Unread messages badge
+#### Unread messages badge
 
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 
@@ -862,7 +834,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Set icon for "Send" button
+#### Set icon for "Send" button
 
 Brands are now able to choose and configure their own icon for the 'Send’ button for in-app messaging conversations.
 
@@ -902,7 +874,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
+#### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
 
 The In-app Messaging SDK v.28 was built and certified with XCode 9 in Swift 4/ Swift 3.2 for iOS11.
 
@@ -938,7 +910,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Customizable bubble corners
+#### Customizable bubble corners
 
 The radius of the corners of message bubbles can now be configured by the brand. There are 8 different parameters to be configured: the 4 corners of the agent message bubble and the 4 corners of the consumer message bubble.
 
@@ -970,7 +942,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Reconnect attempt termination callback
+#### Reconnect attempt termination callback
 
 The new callback will be invoked when all connection retries have failed:
 
@@ -1000,7 +972,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### Logout - add completion closure/failure
+#### Logout - add completion closure/failure
 
 This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or simply to log the current user out.
 
@@ -1020,7 +992,7 @@ Parameters:
 
 * failure: a failure block with a specified error for logout failure. The failure block will be invoked if at least one of the logout steps has failed.
 
-**Related API: **[Logout API](#heading=h.mr00ktj28srq)
+**Related API:** [Logout API](#heading=h.mr00ktj28srq)
 
 The following additional conditions and configurations are required*:
 
@@ -1046,7 +1018,7 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-### New event - conversation interactions
+#### New event - conversation interactions
 
 The conversation interactions event communicates the Inactive time interval within seconds of the user last touching the screen. This interval applies to the scroll/messaging/action menus and any other general action on the conversation screen.
 
@@ -1120,9 +1092,9 @@ The following additional conditions and configurations are required*:
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-### New properties
+#### New properties
 
-#### Structured content
+##### Structured content
 
 The following properties for structured content can now be configured:
 
@@ -1144,7 +1116,7 @@ The following properties for structured content can now be configured:
 </table>
 
 
-#### Bubble corners
+##### Bubble corners
 
 The following properties for customizable bubble corners can now be configured:
 
@@ -1202,7 +1174,7 @@ The following properties for customizable bubble corners can now be configured:
 </table>
 
 
-### Unread messages badge
+#### Unread messages badge
 
 The following properties for the unread messages badge can be configured:
 
@@ -1224,7 +1196,7 @@ The following properties for the unread messages badge can be configured:
 </table>
 
 
-### Scroll to bottom button
+#### Scroll to bottom button
 
 The following properties for the scroll to bottom button can now be configured:
 
@@ -1251,7 +1223,7 @@ The following properties for the scroll to bottom button can now be configured:
 </table>
 
 
-### Send button
+#### Send button
 
 The following properties for the send button can now be configured:
 
@@ -1273,7 +1245,7 @@ The following properties for the send button can now be configured:
 </table>
 
 
-### Controller bubble
+#### Controller bubble
 
 The following properties for the controller bubble can now be configured:
 
@@ -1295,7 +1267,7 @@ The following properties for the controller bubble can now be configured:
 </table>
 
 
-### New APIs
+#### New APIs
 
 #### Conversation interactions API
 
@@ -1311,7 +1283,7 @@ The following properties for the controller bubble can now be configured:
 
 **func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)→())**
 
-### New Callbacks
+####New Callbacks
 
 ##### Reconnect attempt termination callback
 
@@ -1615,7 +1587,7 @@ Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPara
     "structuredContentAccessibilityMap" = "Map";
 
 
-### In-App Messaging SDK Version 2.5.0
+### iOS Messaging SDK - Version 2.5.0
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
 
@@ -1735,7 +1707,7 @@ For one minute after the consumer had navigated away from the conversation windo
 _Fix_:
 The following capability which was first introduced in v2.3 has been disabled to avoid this bug : “Presence enablement for photo sharing - beta*”.
 
-### In-App Messaging SDK Version 2.3.0
+### iOS Messaging SDK - Version 2.3.0
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
 
@@ -1829,7 +1801,7 @@ The Web Socket remains open for a maximum of 60 seconds (using Background Task) 
 
 *Photo sharing is a beta feature*.
 
-### In-App Messaging SDK Version 2.0
+### iOS Messaging SDK - Version 2.0
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf){:target="_blank"}
 

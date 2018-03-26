@@ -19,7 +19,7 @@ This API queries changes in LoBs data.
 
 | Method | URL |
  |:-------- | :----- |
- |POST  |/api/account/configuration/le-users/lobs/query |
+ |POST  |https://{domain}/api/account/configuration/le-users/lobs/query |
 
 **Request Headers**
 

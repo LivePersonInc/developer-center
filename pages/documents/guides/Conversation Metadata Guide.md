@@ -1,30 +1,30 @@
 ---
-title: Conversation Metadata Guide
+title: Overview
 Keywords:
 level1: Documents
 level2: Guides
 level3: Conversation Metadata Guide
-
-level-order: 9
+level-order: 10
 order: 10
 permalink: guides-conversation-metadata-guide.html
 root-link: true
-indicator: both
+indicator: messaging
 ---
 
 ### Overview
 
-LiveEngage provides a way for developers and partners that are building an agent bot using the Messaging Agent SDK or Chat Agent API to pass metadata or context information on a conversation. For example, consumer identified intents, transfer / escalation reason and an identifier to message content (e.g., structure content or plain text).
+LiveEngage provides a way for developers and partners that are building an agent bot using the Messaging Agent SDK to pass metadata or context information on a conversation. For example, consumer identified intents, transfer / escalation reason and an identifier to message content (e.g., structure content or plain text).
+
+**Note: currently, sending metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat)**.
 
 The information can be used to achieve the following:
 
+* Empower messaging agents with relevant information during messaging conversations with consumers.
 
-* Empower agents with relevant information during conversations with consumers.
-
-* Analyze the conversation, the bot and the content that was presented to the consumer
+* Analyze the messaging conversation, the bot and the content that was presented to the consumer.
 
 
-To get started, refer to the [Messaging Agent SDK](https://developers.liveperson.com/messaging-agent-sdk-overview.html) and [Chat Agent API](https://developers.liveperson.com/chat-agent-getting-started.html) documentation.
+To get started, refer to the [Messaging Agent SDK](https://developers.liveperson.com/messaging-agent-sdk-overview.html) documentation.
 
 ### Available metadata
 
@@ -266,45 +266,6 @@ agent.publishEvent({
 });
 ```
 
-**Add chat line example:**
-
-```json
-{
-   "event": {
-       "@type": "line",
-       "text": "I am looking forward to helping you today.",
-       "textType": "plain",
-       "metadata": [
-           {
-               "type": "ActionReason",
-               "reason": "escalated_by_bot", // The reason for escalation, can be other reason
-               "reasonId": "3"
-           },
-           {
-               "type": "BotResponse", // Bot context information about the last consumer message
-               "externalConversationId": "conversation_id",
-               "businessCases": [
-                   "Help-Greetings" // identified capability
-               ],
-               "intents": [ // Last consumer message identified intents
-                   {
-                       "id": "Help-Greetings",
-                       "confidenceScore": 1,
-                       "confidence": "high"
-                   },
-                   {
-                       "id": "Payment-Bank_Information",
-                       "confidenceScore": 0.0,
-                       "confidence": "low"
-                   }
-               ]
-           }
-       ]
-   }
-}
-```
-
-
 **Bot escalation example:**
 
 ```javascript
@@ -370,13 +331,13 @@ agent.updateConversationField({
 
 ### Structured content
 
-[Structured Content Templates(https://developers.liveperson.com/structured-content-templates.html)
+[Structured Content Templates](https://developers.liveperson.com/structured-content-templates.html)
 
 LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](https://developers.liveperson.com/structured-content-templates.html) for more information on how to build and send such structured content messages.
 
-A card identifier can be sent as metadata on the agent message (publishEvent/[Add line](https://developers.liveperson.com/agent-add-lines.html) method), in order to track the number of times a specific card was sent, delivered, or viewed.
+A card identifier can be sent as metadata on the agent message (publishEvent method), in order to track the number of times a specific card was sent, delivered, or viewed.
 
-An identifier to each action in a card can be embedded within the card json, in order to track the number of times a specific action was clicked / selected.  
+An identifier to each action in a card can be embedded within the card JSON, in order to track the number of times a specific action was clicked / selected.  
 
 **Messaging Structured content example:**
 
@@ -481,6 +442,44 @@ agent.publishEvent({
 	}
 }, null, [{
 	type: 'ExternalId',
-	id: CARD IDENTIFIER '
+	id: 'CARD IDENTIFIER'
 }]); //card identifier
+```
+
+### Sending metadata over Chat
+
+```json
+{
+"event": {
+ "@type": "line",
+ "text": "I am looking forward to helping you today.",
+ "textType": "plain",
+ "metadata": [
+     {
+         "type": "ActionReason",
+         "reason": "escalated_by_bot", // The reason for escalation, can be other reason
+         "reasonId": "3"
+     },
+     {
+         "type": "BotResponse", // Bot context information about the last consumer message
+         "externalConversationId": "conversation_id",
+         "businessCases": [
+             "Help-Greetings" // identified capability
+         ],
+         "intents": [ // Last consumer message identified intents
+             {
+                 "id": "Help-Greetings",
+                 "confidenceScore": 1,
+                 "confidence": "high"
+             },
+             {
+                 "id": "Payment-Bank_Information",
+                 "confidenceScore": 0.0,
+                 "confidence": "low"
+             }
+         ]
+     }
+ ]
+}
+}
 ```

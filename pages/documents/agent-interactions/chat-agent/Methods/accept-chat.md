@@ -14,11 +14,11 @@ indicator: chat
 
 This method accepts the next chat request.
 
-*Note: You should verify the results to see if there are any chat requests before accessing the resource.* 
+*Note: You should verify the results to see if there are any chat requests before accessing the resource.*
 
 ### Request
 
-| Method|  URL| 
+| Method|  URL|
  |:---|  :--- |
  |POST|  https://{domain}/api/account/{accountId}/agentSession/agentSessionId/incomingRequests?v=1&NC=true |
 
@@ -26,7 +26,7 @@ This method accepts the next chat request.
 
  |Header| Description |
  |:---  |:--- |
-| Authorization Bearer| {bearer-from-login}| 
+| Authorization Bearer| {bearer-from-login}|
  |Content-Type  |application/json |
  |Accept|  application/json |
 
@@ -39,7 +39,11 @@ The body media type must have one of the following formats:
 
 **Body**
 
-No body parameters should be posted.
+For backwards compatibility purposes, you must include the following empty request body:
+
+```json
+{}
+```
 
 ### Response
 
@@ -47,15 +51,15 @@ If a chat request exists, the request will return an existing chat session.
 
 **Elements in the response**
 
- |Name|  Description|  Type/Value|  Notes| 
+ |Name|  Description|  Type/Value|  Notes|
  |:----  |:-----  |:----  |:--- |
  |chatId|  The ID of the agent chat|  string|  Found in the @href element|
 
 **Response Codes**
 
-| Code|  Response| 
+| Code|  Response|
  |:---  |:--- |
- |201|  Created| 
+ |201|  Created|
 
 Response example for JSON:
 

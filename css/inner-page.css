@@ -1,3 +1,11 @@
+/* this is so the header won't overlap the links */
+:target::before {
+  content: "";
+  display:block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
 
 /*inner page css */
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], dt[id] {
@@ -7,21 +15,22 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], dt[id] {
 
 h2[id] {
   color: #162036;
-  font-family: Roboto,Arial;
+  font-family: "Roboto",Arial;
   font-size: 1.0666em;
   margin-bottom: 0;
   margin-top: 30px;
 }
 h3[id]{
-  font-family: Roboto, Arial;
+  font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 0.9333em;
+  font-size: 16px;
 }
 h4[id]{
-  font-family: Roboto, Arial;
+  font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 0.86em;
+  font-size: 0.96em;
   font-weight: 600;
+  font-style: inherit;
 }
 
 h4 code.highlighter-rouge {
@@ -29,16 +38,25 @@ h4 code.highlighter-rouge {
     margin-left: 5px;
 }
 
+.h1 {
+  color: #172136;
+  font-family: "Roboto",Arial;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: -8px;
+}
+
 .h2 {
-  color: #162036;
-  font-family: Roboto,Arial;
-  font-size: 1.0666em;
+  color: #172136;
+  font-family: "Roboto",Arial;
+  font-size: 18px;
   margin-bottom: 30px;
 
 }
 .h3 {
   color: #5879da;
-  font-family: Roboto,Arial;
+  font-family: "Roboto",Arial;
   font-size: 0.9333em;
   margin-bottom: 8px;
   margin-top: 14px;
@@ -56,6 +74,7 @@ h4 code.highlighter-rouge {
   width: 125%;
 }
 
+
 .bigtable {
   max-width: initial;
 }
@@ -72,6 +91,7 @@ h4 code.highlighter-rouge {
     word-wrap:break-word;
     max-width: 160px;
     height: 50px;
+    hyphens: none;
 }
 
 .post-content table > thead > tr > th {
@@ -276,8 +296,8 @@ ul#mysiderbar li{
 ul#mysidebar.nav li a {
   display: inline-block;
   color: #5879da;
-  font-family: "Open Sans","Roboto Slab",Arial,Helvetica,sans-serif;
-  font-size: 1em;
+  font-family: "Roboto","Open Sans",Arial,Helvetica,sans-serif;
+  font-size: 12px;
   overflow-wrap:break-word;
 }
 ul#mysidebar.nav > li > a{
@@ -287,13 +307,17 @@ ul#mysidebar li ul li{
   margin-right: 0px;
 }
 ul#mysidebar.nav li a.active{
-  color: #162036;
+  color: #172136;
+  font-size: 14px;
+  font-weight: bold;
 }
 ul#mysidebar.nav li.activepage{
-  background-color: #F2F2F2;
+  background-color: inherit;
 }
 ul#mysidebar.nav li.activepage a{
-  background-color: #F2F2F2;
+  background-color: inherit;
+  font-weight: bold;
+  color: #172136;
 }
 #mysidebar.nav li.folder > a{
  font-size: 1.1em;
@@ -310,20 +334,20 @@ ul#mysidebar.nav li ul li {
 
 div.sidebarTitle {
   color: #162036;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: normal;
   margin-bottom: 9px;
   margin-left: 26px;
-  width: 270px;
+  width: 240px;
   top: 68px;
   font-family:  "Roboto", "Open Sans", Helvetica, sans-serif;
-  white-space:nowrap;
   visibility: hidden;
-  position: relative;
+  position: absolute;
 }
 
 div.sidebarTitle span{
   vertical-align: top;
+  font-family:  "Roboto", "Open Sans", Helvetica, sans-serif;
 }
 div.sidebarTitle-holder {
     font-size: 1.333em;
@@ -332,6 +356,10 @@ div.sidebarTitle-holder {
     margin-top: 50px;
     position: relative;
     font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+}
+
+.side-bar {
+  margin-top: 60px;
 }
 
 /*CSS for general styling of Chat/Messaging Indicator*/
@@ -454,8 +482,7 @@ div.sidebarTitle-holder {
   /*padding-top: 26px;*/
 }
 
-.post-content > p, .post-content ol,.post-content u {
-  color: #666666;
+.post-content > p, .post-content ol,.post-content ul {
   font-family: "Open Sans",Arial;
   font-size: 0.9em;
   overflow-wrap: break-word;
@@ -652,3 +679,7 @@ pre {
      }
    }
 /*visualping ends*/
+
+.solutionshr {
+  width: 100%;
+}

@@ -31,7 +31,7 @@ Content-Type: application/x-www-form-urlencoded
 code=3shshs92jsls/snxbxismNSsgHSVb&
 client_id=8819981768.lp-integration.customer.com&
 client_secret=fafadshdjkf943yehsjhed&
-redirect_uri=https://www.liveperson.com/oauth2/code_redirect&
+redirect_uri=https://liveperson.net/oauth2/code_redirect&
 grant_type=authorization_code
 ```
 

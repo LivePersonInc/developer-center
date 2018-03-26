@@ -9,20 +9,24 @@ permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<br>
+<br>
+
+### Android Messaging SDK -  Version 3.1
 
 These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
 
 **Version 3.1 planned roll-out: March 18h 2018**
 
-[[TOC]]
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
 
-# New functionalities
+#### New functionalities
 
-## Campaigns for Messaging - Monitoring APIs
+##### Campaigns for Messaging - Monitoring APIs
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 The addition of campaigns for mobile app and web messaging will allow brands to manage their engagements easily and efficiently across these channels, targeting customers based on unauthenticated attributes or locations and routing them to a desired skill.
 
@@ -36,15 +40,18 @@ Using the Monitoring APIs, brands can:
 
 3. Route conversations to a specific skill (based on engagements)
 
-## Monitoring APIs
+##### Monitoring APIs
 
 The below APIs enable brands to use Campaigns for Messaging inside the brand’s app
 
 <table>
+<thead>
  <tr>
- <td>New APIs</td>
- <td> Description </td>
- </tr>
+ <th>New APIs</th>
+ <th> Description </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Added to Liveperson.initialize() →
 InitLivePersonProperties contains new MonitoringInitParams object</td>
@@ -87,20 +94,24 @@ As an optional parameter, you can pass MontoringParams which includes PageId, En
    onError() response with the MonitoringErrorType
 </td>
  </tr>
+ </tbody>
 </table>
 
 **Please note: while the APIs are already available in the SDK, the backend will be available in mid-April. Please consult your account team before using the APIs.**
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Yes</td>
  <td>Yes</td>
@@ -108,14 +119,15 @@ The following additional conditions and configurations are required:*
  <td>Yes</td>
  <td>Yes</td>
  </tr>
+ </tbody>
 </table>
 
 
-## Conversation History Control
+##### Conversation History Control
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 To enhance control of customer data retention, scalability and performance, and support the EU’s General Data Protection Regulation (GDPR), open conversations will be loaded from a real time service while closed conversations will be loaded from a history service.
 
@@ -124,28 +136,32 @@ The change will be **seamless** for brands who upgrade to SDK version 3.1. Brand
 The following additional conditions and configurations are required:*
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Yes</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
  </tr>
+ </tbody>
 </table>
 
 
-## History and Active Conversation View
+##### History and Active Conversation View
 
 **Type:** Developer Experience Feature
 
-**Available to all customers? **Yes.
+**Available to all customers?** Yes.
 
 New APIs will give brands control over the conversations presented in the conversation window. For example, brands can choose to present only the last 180 days of conversation history.
 
@@ -161,17 +177,19 @@ The new APIs allows:
 
  * When using historyConversationsMaxDays, LPConversationHistoryMaxDaysDateType will decide if to filter by the conversations' start date or end date. When not providing a value, startConversationDate will be the default.
 
-## History and Active Conversation APIs
+##### History and Active Conversation APIs
 
 <table>
+<thead>
  <tr>
- <td>New APIs</td>
- <td> Description </td>
- </tr>
+ <th>New APIs</th>
+ <th> Description </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>ConversationViewParams -> mHistoryConversationsStateToDisplay</td>
  <td>Allows to control which conversation will be presented when opening the conversation screen, by status (open or closed).
-
 (mHistoryConversationsStateToDisplay is of type LPConversationsHistoryStateToDisplay ENUM which has the following values:
 OPEN, CLOSE , ALL)</td>
  </tr>
@@ -187,162 +205,171 @@ startConversationDate, endConversationDate)</td>
  <td>Allows to control the amount of conversations history that will be presented when opening the conversation screen by days.
 (Default is -1 (no limit))</td>
  </tr>
+ </tbody>
 </table>
 
 
 The following additional conditions and configurations are required:*
 
 <table>
+<thead>
  <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
+ <th>Backend update</th>
+ <th>Backend enablement</th>
+ <th>Backend configuration </th>
+ <th>SDK enablement </th>
+ <th>SDK configuration </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
+ <td>Yes</td>
  <td>Yes</td>
  </tr>
+ </tbody>
 </table>
 
 
-# New Strings Localizations
+#### New Strings Localizations
 
 <table>
+<thead>
  <tr>
- <td>New Strings Localization</td>
- <td> Description </td>
- </tr>
+ <th>New Strings Localization</th>
+ <th> Description </th>
+  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>lp_history_control_api_empty_state</td>
  <td>There are currently no conversations at this time</td>
  </tr>
+ </tbody>
 </table>
 
 
-# New parameters
+#### New parameters
 
-## Branding and configuration parameters
+##### Branding and configuration parameters
 
 **Type:** Parameters
 
-**Available to all customers? **Yes
+**Available to all customers?** Yes
 
 The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
-
-
 
 The new parameters may control text, padding of conversation UI elements and more.
 
 <table>
+<thead>
  <tr>
- <td>Name</td>
- <td>Description</td>
- <td>Default</td>
- <td>Screenshot</td>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Default</th>
+ <th>Screenshot</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td><color name="lp_brand_header_text_color">@android:color/black</color>
+ <td>&lt;color name="lp_brand_header_text_color"&gt;@android:color/black&lt;/color&gt;
 </td>
  <td>The configuration to change the Brand name / Agent name text color in the header
 </td>
  <td>Black</td>
- <td><img src="android_brandname_color.png"></td>
+ <td><img src="img/android_brandname_color.png"></td>
  </tr>
  <tr>
- <td><bool name="show_agent_typing_in_message_bubble">false</bool></td>
+ <td>&lt;bool name="show_agent_typing_in_message_bubble"&gt;false&lt;/bool&gt;</td>
  <td>True - the agent-is-typing-indicator will appear in "temporary" bubble. This style is available in both fragment and activity modes.
 False - the agent-is-typing-indicator will appear in the status bar (under the agent name). This style is available only in activity mode.
-
 This configuration is available as long as the announce_agent_typing configuration is on (set as true).
 </td>
  <td>false
 </td>
-<td><img src="android_agent_typing_bubble.png"></td>
+<td><img src="img/android_agent_typing_bubble.png"></td>
  </tr>
  <tr>
  <td>lp_messaging_ui_typing_animation_frames.xml
 </td>
  <td>In case the brand wants to present a different animation / different image resources. They may create a file named "lp_messaging_ui_typing_animation_frames.xml", this will override the SDK's original animation.</td>
  <td>LivePerson animation</td>
- <td><img src="android_custom_agent_typing_bubble.png.png"></td>
+ <td><img src="img/android_custom_agent_typing_bubble.png.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_send_disabled.xml</td>
  <td>In case the brand wants to display a different drawable to represent sending a message.
 The brand create a drawable file named "lpinfra_ui_ic_send_disabled.xml" which will override the SDK's default drawable.
-
 </td>
  <td>The default image is the one from the screenshot to the to the right.
 Please notice that in order to display an image instead of a text the boolean
 use_send_image_button
 should be set to true</td>
- <td><img src="android_disabled_send_button.png"></td>
+ <td><img src="img/android_disabled_send_button.png"></td>
  </tr>
  <tr>
  <td>lpmessaging_ui_ic_gallery.xml
 </td>
  <td> In order to replace the existing add image from library button (photo sharing). The brand may create a drawable file named "lpmessaging_ui_ic_gallery.xml" which will override the SDK's default drawable.</td>
  <td>LivePerson image</td>
- <td><img src="android_gallery_button.png"></td>
- </tr>
+ <td><img src="img/android_gallery_button.png"></td>
  </tr>
  <tr>
  <td>lpmessaging_ui_ic_camera.xml
 </td>
  <td>In Order to replace the add image from camera button (photo sharing), the brand may create a drawable file named "lpmessaging_ui_ic_camera.xml" which will override the SDK's default drawable.
-
 </td>
  <td>LivePerson image</td>
- <td><img src="android_camera_button.png"></td>
+ <td><img src="img/android_camera_button.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_attach.xml
 </td>
  <td>In case the brand wants to display a different drawable for opening the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_attach.xml" which will override the SDK's default drawable.
-
 </td>
  <td>LivePerson image</td>
- <td><img src="android_attach_button.png"></td>
+ <td><img src="img/android_attach_button.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_close.xml</td>
  <td>In case the brand wants to display a different drawable for closing the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_close.xml" which will override the SDK's default drawable.</td>
  <td>LivePerson image</td>
- <td><img src="android_ps_close_button.png"></td>
+ <td><img src="img/android_ps_close_button.png"></td>
  </tr>
  <tr>
- <td><dimen name="button_corner_radius">30dp</dimen>
+ <td>&lt;dimen name="button_corner_radius"&gt;30dp&lt;/dimen&gt;
 </td>
  <td>Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimens.xml).</td>
  <td>30dp</td>
- <td><img src="android_csat_yesno_radius.png"></td>
+ <td><img src="img/android_csat_yesno_radius.png"></td>
  </tr>
+ </tbody>
 </table>
 
 
-# Additional Features
+#### Additional Features
 
-## Adding Support to Android O
+##### Adding Support for Android O
 
 In-app messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
 
-## Wrapping Text in Edit Text Box
+##### Wrapping Text in Edit Text Box
 
 Parity with iOS in the Edit Text box.  The max lines is declared at 3. meaning when the text suppresses the length fit for 3 lines the first line will be hidden.
 
-## List of certified and supported devices extended
+##### List of certified and supported devices extended
 
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td colspan="5">Operating system</td>
+ <th colspan="5">Operating system</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Device</td>
  <td>v5.X (Lollipop)</td>
@@ -357,12 +384,13 @@ The following devices are now also supported and/or certified to host our in-app
  <td>Supported</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
 
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
-* *Key for items as follows:*
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 
@@ -375,38 +403,27 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 **SDK configuration**: This features requires items to be configured in the SDK.
 
 
-**In-App Messaging SDK version 3.0 for Android**.
-
-**Version 3.0 planned roll-out: January 14th 2018**
+**In-App Messaging SDK version 3.0 **.
 
 #### New functionalities
 
 ##### Certificate Pinning
 
-**Type:** Developer Experience Feature
+**Type:** Security Feature
 
 **Available to all customers?** No. Contact support for more details.
 
-Certificate Pinning allows an increased security on top of the commonly used SSL for mobile apps. It assists to prevent certificate hijacks or compromised certificate authorities implications. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
+Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
-The following additional conditions and configurations are required:*
+The object mCertificatePinningKeys was added to the object LPAuthenticationParams.
 
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>No</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
+**Please note**: using the new object without completing the on-boarding process will result in failures while trying to communicate with LivePerson’s servers.
+
+The following additional conditions and configurations are required:
+
+| Backend update | Backend enablement | Backend configuration | SDK enablement | SDK configuration |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Yes | Yes | Yes | Yes | Yes |
 
 
 #### List of certified and supported devices extended
@@ -414,20 +431,20 @@ The following additional conditions and configurations are required:*
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 <table>
+<thead>
  <tr>
- <td></td>
- <td>Operating system</td>
- <td></td>
- <td></td>
- <td></td>
+ <th></th>
+ <th colspan="4">Operating system</th>
  </tr>
  <tr>
- <td>Device</td>
- <td>v5.X (Lollipop)</td>
- <td>v6.X (Marshmallow)</td>
- <td>v7.X (Nougat)</td>
- <td>v8.X (Oreo)</td>
+ <th>Device</th>
+ <th>v5.X (Lollipop)</th>
+ <th>v6.X (Marshmallow)</th>
+ <th>v7.X (Nougat)</th>
+ <th>v8.X (Oreo)</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>Note 8</td>
  <td>N/A</td>
@@ -449,185 +466,99 @@ The following devices are now also supported and/or certified to host our in-app
  <td>N/A</td>
  <td>Certified</td>
  </tr>
+ </tbody>
 </table>
-
 
 A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
 #### New APIs
 
-##### Cert-Pinning API
+#### New parameters
 
-**Available to all customers?** No. Contact support for more details.
-
-**Please note** Using the described APIs without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
-
-For Fragment window
-
-**public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎) **
-
-For Activity window
-
-**public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎****)**
-
-Please add the following new parameter:
-
-**private List<String> ****mCertificatePinningKeys**
-
-This API allows you to set the certificate public key hash. This API can receive multiple public key hashes so that it has the ability to support more than one key. If the certificate provider changes their public key, we will still be able to validate the keys of the other certificate providers. If this field is left empty, the Cert Pinning is disabled.
-
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
-
-
-#### New Callbacks
-
-##### Cert Pinning callback
-
-onError(TaskType.INVALID_CERTIFICATE)
-
-If the socket is closed due to certificate error, we broadcast an intent with action "BROADCAST_CONNECTING_TO_SERVER_ERROR"
-
-Delegate which is called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins. or The server trusts’ evaluation failed: the server's certificate chain is not trusted.
-
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- <td>Yes</td>
- </tr>
-</table>
-
-
-# New parameters
-
-## Branding and configuration parameters
+##### Branding and configuration parameters
 
 **Type:** Parameters
 
-**Available to all customers? **Yes
+**Available to all customers?** Yes
 
 The In-app Messaging SDK v3.0 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
 <table>
+<thead>
  <tr>
- <td>Parameter name and default value</td>
- <td>Description</td>
- <td>Image</td>
+ <th>Parameter name and default value</th>
+ <th>Description</th>
+ <th>Image</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
- <td><dimen name="sticky_timestamp_text_size">@dimen/small_text_size</dimen></td>
+ <td>&lt;dimen name="sticky_timestamp_text_size"&gt;@dimen/small_text_size</dimen></td>
  <td>Defines the Date Separator font text size.</td>
- <td><img src="android_sticky_timestamp_text_size.png"></td>
+ <td><img src="img/android_sticky_timestamp_text_size.png"></td>
  </tr>
  <tr>
- <td><dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
+ <td>&lt;dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
  <td>Defines the Date Separator top spacing.</td>
- <td><img src="android_sticky_timestamp_margin_top.png"></td>
+ <td><img src="img/android_sticky_timestamp_margin_top.png"></td>
  </tr>
  <tr>
- <td><dimen name="avatar_margin_leading">@dimen/margin_regular</dimen></td>
+ <td>&lt;dimen name="avatar_margin_leading"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
- <td><img src="android_avatar_margin_leading.png"></td>
+ <td><img src="img/android_avatar_margin_leading.png"></td>
  </tr>
  <tr>
- <td><dimen name="avatar_margin_trailing">@dimen/margin_regular</dimen></td>
+ <td>&lt;dimen name="avatar_margin_trailing"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
- <td><img src="android_avatar_margin_trailing.png"></td>
+ <td><img src="img/android_avatar_margin_trailing.png"></td>
  </tr>
  <tr>
- <td><!--enter message Separator color-->
-<color name="enter_message_top_separator_color">@android:color/darker_gray</color></td>
+ <td>
+  &lt;color name="enter_message_top_separator_color"&gt;@android:color/darker_gray&lt;/color&gt;</td>
  <td>Input TextView top border color. The default color is clear.</td>
- <td><img src="android_enter_message_top_separator_color.png"></td>
+ <td><img src="img/android_enter_message_top_separator_color.png"></td>
  </tr>
  <tr>
- <td><bool name="enter_message_divider_visible">false</bool>
+ <td>&lt;bool name="enter_message_divider_visible"&gt;false&lt;/bool&gt;
 </td>
  <td>Determine if the Enter Message edit text divider is visible or not.</td>
- <td><img src="android_enter_message_divider_visible.png"></td>
+ <td><img src="img/android_enter_message_divider_visible.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_text_size">@dimen/small_text_size</dimen>
+ <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size</dimen>
 </td>
  <td>Defines the Resolved system message text size.</td>
- <td><img src="android_bubble_system_resolved_text_size.png"></td>
+ <td><img src="img/android_bubble_system_resolved_text_size.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_padding">@dimen/margin_half</dimen></td>
+ <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half</dimen></td>
  <td>Defines the Resolved system message padding.</td>
- <td><img src="android_bubble_system_resolved_padding.png"></td>
+ <td><img src="img/android_bubble_system_resolved_padding.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
+ <td>&lt;dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
 </td>
  <td>Defines the Resolved system message line spacing.</td>
- <td><img src="android_bubble_system_resolved_line_spacing.png"></td>
+ <td><img src="img/android_bubble_system_resolved_line_spacing.png"></td>
  </tr>
  <tr>
- <td><dimen name="bubble_system_resolved_separator_padding_bottom">@dimen/margin_half</dimen>
+ <td>&lt;dimen name="bubble_system_resolved_separator_padding_bottom"&gt;@dimen/margin_half</dimen>
 </td>
  <td>Defines the Resolved system message Separator padding.</td>
- <td><img src="android_bubble_system_resolved_separator_padding_bottom.png"></td>
+ <td><img src="img/android_bubble_system_resolved_separator_padding_bottom.png"></td>
  </tr>
  <tr>
- <td><dimen>drawable name="lp_progress_bar_image"</drawable></dimen></td>
+ <td>&lt;drawable name="lp_progress_bar_image"&gt;&lt;/drawable&gt;</td>
  <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
- <td><img src="android_lp_progress_bar_image.png"></td>
+ <td><img src="img/android_lp_progress_bar_image.png"></td>
  </tr>
+ </tbody>
 </table>
 
 
-The following additional conditions and configurations are required:*
-
-<table>
- <tr>
- <td>Backend update</td>
- <td>Backend enablement</td>
- <td>Backend configuration </td>
- <td>SDK enablement </td>
- <td>SDK configuration </td>
- </tr>
- <tr>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>No</td>
- <td>Yes</td>
- </tr>
-</table>
-
-
-* **Key for items as follows:**
+**Key for items as follows:**
 
 **Backend update:** This feature requires an update to the backend.
 
@@ -639,7 +570,7 @@ The following additional conditions and configurations are required:*
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-### In-App Messaging SDK Version 2.9 for android
+### Android Messaging SDK -  Version 2.9
 
 These are the main feature releases available in the In-App Messaging SDK version 2.9 for Android.
 
@@ -647,9 +578,9 @@ Version 2.9 planned roll-out: November 12th 2017
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
 
-### New functionalities
+#### New functionalities
 
-#### Oreo Support - Android API Level Support Update
+##### Oreo Support - Android API Level Support Update
 
 **Type:** Developer Experience Feature
 
@@ -663,9 +594,9 @@ The In-app Messaging SDK should remain on Android API level 25, while the host a
 
 The SDK Android API level should remain on level 25. Please do not change SDK Android API level to 26; support for this level 26 will be provided in 2018.
 
-### New parameters
+#### New parameters
 
-#### Branding and Configuration Parameters
+##### Branding and Configuration Parameters
 
 **Type:** Parameters
 
@@ -757,7 +688,7 @@ New parameters may control text, padding of conversation UI elements and more.
  </tbody>
 </table>
 
-### In-App Messaging SDK version 2.8 for Android
+### Android Messaging SDK -  version 2.8
 
 These are the main feature releases available in the In-App Messaging SDK version 2.8 for Android.
 
@@ -765,9 +696,9 @@ Version 2.8 roll-out: October 3rd 2017
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
 
-### New functionalities
+#### New functionalities
 
-#### Structured content enablement (GA in SDK)
+##### Structured content enablement (GA in SDK)
 
 **Type**:​ Feature
 
@@ -795,7 +726,7 @@ The following additional conditions and configurations are required:
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| Yes| Yes| Yes| Yes|
 
-#### Automatic messages for messaging
+##### Automatic messages for messaging
 
 **Type**:​ Feature
 
@@ -873,7 +804,7 @@ The following additional conditions and configurations are required:
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| Yes| Yes| Yes| Yes|
 
-#### Unread messages badge
+##### Unread messages badge
 
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 
@@ -905,7 +836,7 @@ The following additional conditions and configurations are required:
 |---------------|------------------|---------------------|--------------|-----------------|
 |Yes| No| No| No| Yes|
 
-_Key for items as follows_:
+**Key for items as follows**:
 
 **Backend​ ​update**:​ This feature requires an update to the backend.
 **Backend​ ​enablement**​: This feature requires items to be toggled on in the backend.
@@ -913,9 +844,9 @@ _Key for items as follows_:
 **SDK​ ​enablement**:​ This feature requires items to be toggled on in the SDK.
 **SDK​ ​configuration​**: This features requires items to be configured in the SDK.
 
-### New properties
+#### New properties
 
-#### Structured Content
+##### Structured Content
 
 The following properties for structured content can now be configured:
 
@@ -923,9 +854,9 @@ The following properties for structured content can now be configured:
 |----|-----------|-------|
 |&lt;bool name="enable_structured_content"&gt;|Enable or Disable toggle for Structured Content feature in conversations.|True|
 
-### New APIs
+#### New APIs
 
-#### Unread Messages Badge APIs
+##### Unread Messages Badge APIs
 
 ```javascript
 public​ ​static​ ​void​ ​getNumUnreadMessages(String​ ​appId,​ ​final​ ​ICallback<Integer,
@@ -941,7 +872,7 @@ appId,​ ​callback);
 
 To use this API, the SDK must be after initialization.
 
-### In-App Messaging SDK version 2.5 for Android
+### Android Messaging SDK -  version 2.5
 
 These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
 
@@ -950,9 +881,9 @@ Version 2.5 roll-out: July 2nd 2017
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
 
 
-### New functionalities
+#### New functionalities
 
-#### Custom fonts
+##### Custom fonts
 
 In order for consumers to enjoy the full brand experience while messaging in-app, brands are able to configure certified operating system fonts to appear in the messaging window. The fonts can be used across all elements, or only for the font within the message bubble.
 
@@ -972,13 +903,13 @@ Non Conversation Custom Fonts
 
 _Related properties_: Custom fonts
 
-The following additional conditions and configurations are required:*
+**The following additional conditions and configurations are required:**
 
 | Backend update  | Backend enablement  | Backend configuration  | SDK enablement  | SDK configuration  |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | Yes |
 
-#### New way to listen to LP events via local intents
+##### New way to listen to LP events via local intents
 
 A new method of listening to LP events has been added. This method allows the host app to register to receive a specific action or to receive all of them. All of the actions match and correspond to the existing callback method. LivePerson recommends using the SDK’s Broadcast Receiver to receive these intent actions, as this system allows the user to listen to specific actions, and is not reliant on the SDK’s life cycle.
 
@@ -992,7 +923,7 @@ _Related APIs_: LivePersonIntents API
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | N/A | N/A | N/A | N/A | N/A |
 
-#### Tablet supportability
+##### Tablet supportability
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
@@ -1011,7 +942,7 @@ Tablet Portrait Mode
 
 Tablet Landscape Mode
 
-#### List of certified and supported devices extended
+##### List of certified and supported devices extended
 The following devices are now also supported and/or certified to host our in-app messaging SDK:
 
 | Device | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
@@ -1023,7 +954,7 @@ The following devices are now also supported and/or certified to host our in-app
 
 A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
 
-#### Connectivity improvements
+##### Connectivity improvements
 The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
 
 In addition, other aspects such as feature and conversation history will also be more rapid as a result of the improvements.
@@ -1042,10 +973,10 @@ LivePersonIntents API
 
 For more information on this API, please refer to the deployment guide.
 
-### New properties
+#### New properties
 The following properties of the secure form bubble on the agent side can now be configured:
 
-#### Custom Fonts
+##### Custom Fonts
 
 | Name  | Description  | Default  |
 | ------------ | ------------ | ------------ |
@@ -1054,7 +985,7 @@ The following properties of the secure form bubble on the agent side can now be 
 
 
 
-### In-App Messaging SDK version 2.3 for Android
+### Android Messaging SDK -  version 2.3
 These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}

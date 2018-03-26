@@ -1,5 +1,5 @@
 ---
-title: Authenticate
+title: authenticate
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -37,16 +37,16 @@ This resource enables consumer SSO with LiveEngage.
 **Sample code**
 
 
-```json
-{
+```javascript
+chat.authenticate({
     "authChatConnId": 12345,
-    "ssoKey": 'SDFKN33LJjksf843jioer09jjiodfs8sfd89fsd7fds6werhuer9ret8h',
-    "redirectUri": 'https://liveperson.net',
+    "ssoKey": "SDFKN33LJjksf843jioer09jjiodfs8sfd89fsd7fds6werhuer9ret8h",
+    "redirectUri": "https://liveperson.net",
     "engagementId": 3333,
     "contextId": "4",
     "sessionId": "OXdr7ruxRpyY6DtJfpO37v",
     "visitorId": "cxY2E0NjU3MTgxNmI0ZTJl"
-}
+});
 ```
 
 ### Response

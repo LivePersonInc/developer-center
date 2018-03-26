@@ -19,7 +19,7 @@ This API queries changes in skills data.
 
 | Method | URL |
  |:-------- | :----- |
- |POST  |/api/account/configuration/le-users/skills/query |
+ |POST  |https://{domain}/api/account/configuration/le-users/skills/query |
 
 **Request Headers**
 

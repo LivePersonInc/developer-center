@@ -115,3 +115,4 @@ Optional Response Status Codes
 | 200 OK | Successfully retrieved the data |
 | 400 Bad Request | Problem with body or query parameters |
 | 401 Unauthorized | 401 Unauthorized Bad Authentication (invalid site or agent) |
+| 429 | Request blocked due to rate limiting |

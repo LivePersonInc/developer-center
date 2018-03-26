@@ -19,7 +19,7 @@ This API deletes a profile from a specific account.
 
 | Method | URL|
  |:----- | :---- |
- |DELETE | /api/account/{accountId}/configuration/le-users/profile/{profileId} |
+ |DELETE | https://{domain}/api/account/{accountId}/configuration/le-users/profile/{profileId} |
 
 **Request Headers**
 

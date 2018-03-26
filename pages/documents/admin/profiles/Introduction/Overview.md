@@ -29,11 +29,11 @@ A few things you'll need to get started with this API:
 
 	* Read/Write: accountConfigReadWrite
 
-	2. This API requires authorization using _either_ a login or an API key methodology (API key method is currently only available on the UK server).
+2. This API requires authorization using _either_ a login or an API key methodology.
 
-		* **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html){:target="_blank"}. Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+	* **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html){:target="_blank"}. Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-		* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
