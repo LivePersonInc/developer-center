@@ -16,7 +16,7 @@ indicator: messaging
 
 ### sendSDE
 
-Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impression.
+Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 `func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
 
@@ -30,7 +30,7 @@ Use this API to report on engagement attributes (SDEs) for a consumer in an appI
 
 ### getEngagement
 
-Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on messaging campaign concept.
+Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
 
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 
