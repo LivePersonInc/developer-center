@@ -73,7 +73,7 @@ dependencies {
 ```
 
 
-###  Step 3: Code integration for basic deployment
+###  Step 2: Code integration for basic deployment
 
 1. Add the following permission to your app’s AndroidManifest.xml file:
 
