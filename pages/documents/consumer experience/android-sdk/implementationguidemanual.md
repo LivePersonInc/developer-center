@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for Android
 level4: Appendix
 
-order: 341
+order: 342
 permalink: android-integration-guide.html
 
 indicator: messaging
@@ -18,35 +18,75 @@ indicator: messaging
 
 ![initialview](img/initialview.png)
 
-### Step 2 - Integrate LivePerson Android SDK within your Project (Gradle)
+### Step 2 - Downloading and adding the SDK to our project
 
-1. In your project files in the left sidebar, locate Gradle Scripts > build.gradle (Module: app), then double-click the file to open it in the editor.
+1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK)
 
-![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)
+2. Extract the ZIP file to a folder on your computer.
 
-{:start="2"}
-2. In the dependencies section, insert the following line:
+3. The downloaded package should contain the following item:
 
-```javascript
-dependencies {
-    implementation  'com.liveperson.android:lp_messaging_sdk:3.1.1'
-}
+LP_Messaging_SDK/lp_messaging_sdk - this is a Module that should be added to your project. This module contains the following:
+
+1. LivePerson.java - Main entry point for the Messaging SDK
+
+2. Resources (.aars files)
+
+Drag the `lp_messaging_sdk` folder into your project folder OR add it as a module to your project from a different folder.
+
+* File - > New -> Import Module
+
+![Import Module](img/importmodule.png)
+
+And then Select the LivePerson SDK module
+
+![Select Module](img/selectmodule.png)
+
+### Step 3 - Gradle modifications
+
+1. compileSdkVersion and buildToolsVersion (should be at least Version 23)
+
+2. minSDKVersion should be at least 19
+
+3. Add the following code under the Android section:
+
+```java
+repositories {
+            flatDir {
+                dirs project(':lp_messaging_sdk').file('aars')
+              }
+  }
 ```
 
-**Example: Build.gradle (Module: app) file**
+{:start="4"}
+4. Under the Dependencies section, add the following line:
 
-```javascript
+```java
+compile project(':lp_messaging_sdk')
+```
+
+**Build.gradle file example:**
+
+```java
 apply plugin: 'com.android.application'
 
-android {
+    android {
+    repositories {
+        flatDir {
+            dirs project(':lp_messaging_sdk').file('aars')
+        }
+    }
     compileSdkVersion 26
+    buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.shaym.liveperson.androidsdk"
+        applicationId "com.shaym.sdk28"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -57,18 +97,31 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    // LivePerson SDK
-    implementation  'com.liveperson.android:lp_messaging_sdk:3.1.1'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.firebase:firebase-messaging:11.6.0'
+    compile 'com.google.firebase:firebase-core:11.6.0'
+
+
+    testCompile 'junit:junit:4.12'
+    //Liveperson SDK
+    compile project(path: ':lp_messaging_sdk')
 }
+apply plugin: 'com.google.gms.google-services'
 ```
 
-### Step 3 - Manifest modifications
+
+{:start="5"}
+5. Make sure you have the following line written in your settings.gradle file:
+
+```java
+include ':lp_messaging_sdk'
+```
+
+### Step 4 - Manifest modifications
 
 1. Add the following permission to your app’s AndroidManifest.xml file:
 
@@ -89,7 +142,7 @@ For Photo Sharing (required if enabled):
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 4- Liveperson Events
+### Step 5- Liveperson Events
 
 1. Intents Handler - In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
 
@@ -159,7 +212,7 @@ private void onAgentAvatarTapped(AgentData agentData) {
 }
 ```
 
-### Step 5- Messaging activity
+### Step 6- Messaging activity
 
 1. Create a messaging activity that will launch the activity session, in this tutorial we will demonstrate a basic initialization of the LivePerson SDK in *Activity mode*  though you can also initialize it in *Fragment mode* and use different features while doing so.
 
@@ -276,7 +329,7 @@ private void openActivity() {
 }
 ```
 
-### Step 6- Configuring Push Notifications
+### Step 7- Configuring Push Notifications
 
 **Firebase Configuration**
 
