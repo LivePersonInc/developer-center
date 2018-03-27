@@ -1,5 +1,5 @@
 ---
-title: Using LivePerson SDK - Android
+title: Using LivePerson SDK - Android - Manual
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +7,7 @@ level3: In-App Messaging SDK for Android
 level4: Appendix
 
 order: 342
-permalink: android-integration-guide.html
+permalink: android-integration-guide-manual.html
 
 indicator: messaging
 ---
