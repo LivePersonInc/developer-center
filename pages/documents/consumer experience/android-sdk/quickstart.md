@@ -16,9 +16,10 @@ To use the LivePerson In-App Messaging SDK, the following are required:
 
 * LiveEngage account with messaging enabled, mobile app configured.
 
-Note:
-  * For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf).
-  * For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-implementation-guide.html).
+**Note**:
+
+* For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf).
+* For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-implementation-guide.html).
 
 
 ###  Step 1: Integrate LivePerson Android SDK within your Project (Gradle)
@@ -27,6 +28,7 @@ Note:
 
 ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)
 
+{:start="2"}
 2. In the dependencies section, insert the following line:
 
 ```javascript
@@ -89,7 +91,7 @@ dependencies {
 
   * `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>`
 
-
+{:start="2"}
 2. Add the following imports to your class imports section:
 
   * `import com.liveperson.api.LivePersonCallback;`
@@ -104,6 +106,7 @@ dependencies {
 
   * `import com.liveperson.messaging.sdk.api.LivePerson;`
 
+{:start="3"}
 3. Initialize the Messaging SDK
 
   You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class.
