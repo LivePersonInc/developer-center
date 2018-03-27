@@ -21,7 +21,7 @@ To use the LivePerson In-App Messaging SDK, the following are required:
 *  **Installers**: Gradle (included in zip package)
 
 * For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf).
-* For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-implementation-guide.html).
+* For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-integration-guide-manual.html).
 
 ###  Step 1: Download and unzip the SDK
 
