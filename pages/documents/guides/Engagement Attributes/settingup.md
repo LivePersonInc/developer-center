@@ -11,7 +11,7 @@ indicator: both
 
 Engagement Attributes configuration is located in the Data Sources page, accessed from the Campaigns footnote.
 
-![Data Sources](img/datasourceslocation.png)
+![Data Sources](img/campaigns.png)
 
 Data can be sent to LivePerson using one of the following methods:
 * Extracting from the page using LivePerson’s scraping tool
