@@ -14,18 +14,20 @@ permalink: android-quickstart-manual.html
 
 To use the LivePerson In-App Messaging SDK, the following are required:
 
-* LiveEngage account with messaging enabled, mobile app configured.
+* LiveEngage account with messaging enabled and a mobile app configured.
 
 * **Embeddable library for AAR**: Binary distribution of an Android Library Project (included in zip package)
 
 *  **Installers**: Gradle (included in zip package)
+
+**Note**:
 
 * For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf).
 * For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-implementation-guide.html).
 
 ###  Step 1: Download and unzip the SDK
 
-Follow the steps below to download and unzip the
+Follow the steps below to download and unzip the SDK.
 
 1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK){:target="_blank"}.
 
@@ -35,15 +37,15 @@ Follow the steps below to download and unzip the
 
       * LP_Messaging_SDK/lp_messaging_sdk - Module that should be added to your project. This module contains the following:
 
-      * LivePerson.java - Main entry point for the Messaging SDK
+        * LivePerson.java - Main entry point for the Messaging SDK
 
-      * Resources (.aars files)
+        * Resources (.aars files)
 
   * SampleApp-Source - demonstrate how to use the Messaging SDK.
 
   * SampleApp-APK - sample app installation file.
 
-###  Step 2: Configure project settings to connect LiveEngage SDK
+###  Step 2: Configure project settings to connect to the SDK
 
 Follow the steps below to configure the project settings to connect to the SDK.
 
