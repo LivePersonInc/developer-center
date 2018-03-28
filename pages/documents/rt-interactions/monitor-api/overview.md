@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-The Monitoring API is meant to enable consumer monitoring and engagement flows. By combining monitoring capabilities with our Campaigns feature, you can display tailored engagements to the right consumer at the right time. For example, in order to present a "Click to Message" button (an engagement) with an updated state of availability (a certain number of agents online, a skill being available and so on), you can access the specific engagement using this API and display it to the consumer only if it is available, for a certain type of consumer, at a certain time of day and so on. Thus, the Monitoring API allows you to get information about specific consumers and to trigger the right campaign or engagement based on that information.
+The Monitoring API is meant to enable consumer monitoring and engagement flows. By combining monitoring capabilities with our Campaigns feature, you can display tailored engagements to the right consumer at the right time. For example, in order to present a "Click to Message" button (an engagement) with an updated state of availability (a certain number of agents online, a skill being available and so on), you can access the specific engagement using this API and display it to the consumer only if it is available, for a certain type of consumer, at a certain time of day and so on. Thus, the Monitoring API allows you to report data about the consumer and get information back about engagements and campaigns relevant to specific consumers.
 
 ### Getting Started
 
