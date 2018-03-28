@@ -38,7 +38,7 @@ Drag the `lp_messaging_sdk` folder into your project folder OR add it as a modul
 
 ![Import Module](img/importmodule.png)
 
-And then Select the LivePerson SDK module
+And then select the LivePerson SDK module
 
 ![Select Module](img/selectmodule.png)
 
@@ -173,7 +173,7 @@ public void registerToLivePersonEvents(){
 
 * In this example we will listen to all events via the intentfilter shown above, but you can create your own specific intent filter as well.
 
-* Create a function named `createLivePersonReceiver` and handle the events accordingly, this is a wide example of handling most of the events. You can read more about Liveperson events [here](https://developers.liveperson.com/android-callbacks-index.html).
+* Create a function named `createLivePersonReceiver` and handle the events accordingly. This is a general example of handling most of the events. You can read more about LivePerson events [here](https://developers.liveperson.com/android-callbacks-index.html).
 
 Here is an example of a function which handles some LivePerson events:
 
@@ -204,7 +204,7 @@ private void createLivePersonReceiver() {
 }
 ```
 
-Following the function above you will have to add a function that will act according to the specific use-case, for example:
+Following the function above, you will have to add a function that will act according to the specific use-case, for example:
 
 ```java
 private void onAgentAvatarTapped(AgentData agentData) {
@@ -214,7 +214,7 @@ private void onAgentAvatarTapped(AgentData agentData) {
 
 ### Step 6- Messaging activity
 
-1. Create a messaging activity that will launch the activity session, in this tutorial we will demonstrate a basic initialization of the LivePerson SDK in *Activity mode*  though you can also initialize it in *Fragment mode* and use different features while doing so.
+1. Create a messaging activity that will launch the activity session. In this tutorial, we will demonstrate a basic initialization of the LivePerson SDK in *Activity mode*, though you can also initialize it in *Fragment mode* and use different features while doing so.
 
 2. **Basic members:**
 
@@ -278,7 +278,7 @@ A few notes on this step:
 
 * In this step we will initialize the SDK, but only if we're not already in a `valid` state (we checked for that in the previous section).
 
-* We are using the brandID and appID during this which we declared those in the top of this class).
+* We are using the brandID and appID which we declared in the top of this class.
 
 * If the initialization is a success, we will call the `openActivity` method
 
@@ -315,7 +315,7 @@ private void  initActivityConversation() {
 {:start="6"}
 6. **The openActivity function**
 
-Here is where we use LivePerson SDK’s `showConversation` method. In this example we didn’t use an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
+Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren't using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
 
 ```java
 private void openActivity() {
@@ -344,7 +344,7 @@ private void openActivity() {
 ![Register App](img/registerapp2.png)
 
 {:start="3"}
-3. Download the JSON config file and drag it into your project level in android studio.
+3. Download the JSON config file and drag it into your project level in Android studio.
 
 4. Follow the gradle instructions below (make sure there are no duplicates), and click ‘Finish’.
 
@@ -365,7 +365,7 @@ multiDexEnabled true
 
 ### LiveEngage Configuration
 
-1. Connect to your account via LiveEngage, click on the campaigns tab. than choose 'Data Sources'
+1. Connect to your account via LiveEngage, click on the campaigns tab. Then choose 'Data Sources'
 
 ![Data Sources](img/androiddatasources.jpg)
 
@@ -427,7 +427,7 @@ Then click 'Create app'
 ```
 
 
-**Note**: After you've added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, MyFirebaseInstanceIDService,  Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
+**Note**: After you've added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, MyFirebaseInstanceIDService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
 
 **Change the path of the services according to the classes you just created.**
 
@@ -665,7 +665,7 @@ Add the following call into the bottom of your `onCreate` function to achieve th
 handlePush(getIntent());
 ```
 
-Then, add the following function into the messaging activity. This will check if the intent which opened the app came from a push notification. If it does, the function will automatically direct the user to the conversation screen.
+Then, add the following function into the messaging activity. This will check if the intent which opened the app came from a push notification. If it did, the function will automatically direct the user to the conversation screen.
 
 ```java
 private void handlePush(Intent intent) {
