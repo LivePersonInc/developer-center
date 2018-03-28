@@ -45,6 +45,7 @@ public class AgentData {
 public class InitLivePersonProperties{
     private String brandId;
     private String appId;
+    private MonitoringInitParams mMonitoringInitParams;
     private InitLivePersonCallBack initCallBack;
 }
 ```
@@ -109,4 +110,171 @@ public class LPAuthenticationParams{
   private String mHostAppJWT;
   private String mHostAppRedirectUri;
 }
+```
+
+
+### LPConversationsHistoryStateToDisplay
+
+```javascript
+
+public enum LPConversationsHistoryStateToDisplay {
+  OPEN, CLOSE , ALL
+}
+
+```
+
+
+### LPConversationHistoryMaxDaysDateType
+
+```javascript
+
+public enum LPConversationHistoryMaxDaysDateType {
+  startConversationDate, endConversationDate
+}
+
+
+```
+
+
+
+**Monitoring API Related Classes**
+
+
+### MonitoringInitParams
+
+```javascript
+
+public class MonitoringInitParams {
+
+	private String mAppInstallId;
+}
+
+
+```
+
+### MonitoringParams
+
+```javascript
+
+public class MonitoringParams {
+
+	private String pageId;
+
+	private JSONArray entryPoints;
+
+	private JSONArray engagementAttributes;
+}
+
+
+
+```
+
+### EngagementCallback
+
+```javascript
+
+public interface EngagementCallback {
+
+   void onSuccess(LPEngagementResponse engagementResponse);
+
+   void onError(MonitoringErrorType errorType, Exception e);
+}
+
+```
+
+### SdeCallback
+
+```javascript
+
+public interface SdeCallback {
+
+   void onSuccess(LPSdeResponse sdeResponse);
+
+   void onError(MonitoringErrorType errorType, Exception e);
+}
+
+```
+
+### LPEngagementResponse
+
+```javascript
+
+public final class LPEngagementResponse {
+
+	@NotNull
+	private String pageId;
+
+	@Nullable
+	private String sessionId;
+
+	@Nullable
+	private String visitorId;
+
+	@Nullable
+	private List<EngagementDetails> engagementDetailsList;
+}
+
+
+```
+
+### LPSdeResponse
+
+```javascript
+
+public class LPSdeResponse {
+
+	@NotNull
+	private String pageId;
+
+	@Nullable
+	private final String sessionId;
+
+	@Nullable
+	private final String visitorId;
+}
+
+```
+
+### EngagementDetails
+
+```javascript
+
+public final class EngagementDetails {
+
+	@NotNull
+	private  String campaignId;
+
+	@NotNull
+	private  String engagementId;
+
+	@NotNull
+	private  String engagementRevision;
+
+	@NotNull
+	private  String contextId;
+
+	@Nullable
+	private String conversationId;
+
+	@Nullable
+	private String status;
+}
+
+```
+
+### MonitoringErrorType
+
+```javascript
+
+enum class MonitoringErrorType {
+
+    NOT_INITIALIZED,
+    INITIALIZATION_ERROR,
+    LOGOUT_ERROR,
+    PARAMETER_MISSING,
+    NO_NETWORK,
+    REQUEST_ERROR,
+    CSDS_ERROR
+}
+
 ```

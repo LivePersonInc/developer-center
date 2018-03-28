@@ -1,5 +1,5 @@
 ---
-title: Methods
+title: Messaging API
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -11,6 +11,7 @@ permalink: android-methods.html
 
 indicator: messaging
 ---
+**(Liveperson.java class)**
 
 ### initialize (deprecated)
 
@@ -33,6 +34,8 @@ When the conversation screen is displayed, the server connection for messaging w
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePushMessage, assume that the SDK has been initialized.
 
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session. This method gets InitLivePersonProperties, which includes the properties needed for the init phase of the SDK.
+
+InitLivePersonProperties has a new [MonitoringInitParams](android-interface-definitions.html){:target="_blank"} member that initializes the Monitoring API. Passing the MonitoringInitParams is mandatory when using Monitoring API capabilities.
 
 `public static void initialize (Context context, InitLivePersonProperties initProperties)`
 
@@ -69,7 +72,10 @@ if you want to connect in an *unAuthenticated* way, you can pass null or an empt
 **ConversationViewParams:**
 
 boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
-
+History control api- define to filter the shown messages.
+LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay : default value LPConversationsHistoryStateToDisplay.ALL
+LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType : default value LPConversationHistoryMaxDaysDateType.startConversationDate;
+int mHistoryConversationsMaxDays : default value -1; //no limit
 `public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 
 | Parameter | Description |
@@ -146,7 +152,10 @@ if you want to connect in an *unAuthenticated* way, you can pass null or an empt
 **ConversationViewParams:**
 
 boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
-
+History control api- define to filter the shown messages.
+LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay : default value LPConversationsHistoryStateToDisplay.ALL
+LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType : default value LPConversationHistoryMaxDaysDateType.startConversationDate;
+int mHistoryConversationsMaxDays : default value -1; //no limit
 `public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 
 | Parameter | Description |

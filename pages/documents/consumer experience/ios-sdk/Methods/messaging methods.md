@@ -1,5 +1,5 @@
 ---
-title: Methods
+title: Messaging API
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,13 +7,10 @@ level3: In-App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 10
-permalink: consumer-experience-ios-sdk-methods.html
+permalink: consumer-experience-ios-sdk-messaging-methods.html
 
 indicator: messaging
 ---
-
-## LPMessagingSDK - API Methods
-
 ### initialize
 
 The SDK initialization is done only once, inside AppDelegate. This function checks that the SDK has all mandatory preconditions. For example, it is able to find the bundle file, verify that all the pre-defined configurations are valid, and more. If any of the preconditions are not met, an exception is thrown. Once an exception is thrown, you must not do any other call to the SDK.
@@ -369,33 +366,3 @@ Create ConversationParamProtocol of Consumer and Skill query type. ConversationP
 | consumerID | consumerID to request the conversation query for | -- |
 | brandID | brandID to request the conversation query for | -- |
 | agentToken | a unique token for agent aka Agent Bearer |  -- |
-
-## LPMonitoringAPI - API Methods
-
-### getEngagement
-
-Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on messaging campaign concept.
-
-As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
-
-`func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())`
-
-| Parameter | Description | Notes |
-| :--- | :--- | :--- |
-| consumerID | Brand app consumer ID to get the engagement for | Optional Parameter |
-| monitoringParams | An instance of [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) includes optional Array of Entry Points and an optional dictionary of Engagement Attributes | -- |
-| completion | Completion block with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID along with [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html) object |  -- |
-| failure | Failure block with an error in case the request fails |  -- |
-
-### sendSDE
-
-Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impression.
-
-`func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
-
-| Parameter | Description | Notes |
-| :--- | :--- | :--- |
-| consumerID | brand app consumer ID to sendSDE for | Mandatory Parameter |
-| monitoringParams | an instance of [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) includes optional Array of Entry Points and an optional dictionary of Engagement Attributes. Additional optioanl parameter is PageID which is used for Page identification for sending events on the current engagement. PageID will be received in [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html) and in [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html) | -- |
-| completion | completion block with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID and pageID for future use |  -- |
-| failure | failure block with an error in case the request fails |  -- |
