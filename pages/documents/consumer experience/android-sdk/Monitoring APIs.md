@@ -7,7 +7,7 @@ level3: In-App Messaging SDK for Android
 level4: Advanced Features
 
 order: 291
-permalink: consumer-experience-ios-sdk-advanced-campaigns.html
+permalink: consumer-experience-android-sdk-advanced-campaigns.html
 
 indicator: messaging
 ---
