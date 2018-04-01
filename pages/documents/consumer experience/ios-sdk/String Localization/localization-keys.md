@@ -447,6 +447,10 @@ Listed below are all localized keys with the English localization string.
     <td>"Clear"</td>
   </tr>
   <tr>
+    <td>isTyping</td>
+    <td>"typing…"</td>
+  </tr>
+  <tr>
     <td>sharePhotoFromPhotoLibrary</td>
     <td>"Photo Library"</td>
   </tr>

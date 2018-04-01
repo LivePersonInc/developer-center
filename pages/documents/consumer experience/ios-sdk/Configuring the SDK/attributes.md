@@ -901,6 +901,17 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"></td>
     <td align="left">false</td>
   </tr>
+  <tr>
+    <td align="left">agentTypingIndicatorPosition</td>
+    <td align="left">typingIndicatorPosition?</td>
+    <td align="left">Define the agent is typing Indicator position
+      <Br>1- none: no agent is typing Indicator
+      <Br>2- conversation: in conversation table like message bubble
+      <Br>3- navigation: only in the navigation toolbar (window mode or Container mode)
+      </td>
+    <td align="left"></td>
+    <td align="left">.conversation</td>
+  </tr>
 </tbody>
 </table>
 
