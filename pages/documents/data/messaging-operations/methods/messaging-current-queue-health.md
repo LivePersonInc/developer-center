@@ -13,7 +13,9 @@ indicator: messaging
 Retrieves the information about the current messaging queue state (and all its related metrics) in the account and skill level
 
 
-*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+*Note*:
+1. The messaging queue data is currently not available by default, in order to enable the data flow please contact your account manager.
+2. This method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
 ### Request
 
