@@ -1764,6 +1764,34 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">nil</td>
   </tr>
   <tr>
+    <td align="left">structuredContentBubbleTopLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble top left corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleTopRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble top right corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBottomLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble bottom left corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBottomRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble bottom right corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
