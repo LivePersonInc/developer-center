@@ -29,6 +29,13 @@ The four types of data supported and configurable in each account are as follows
 
 The Data Access API retrieves historical data. This API is based on the REST architecture style and supports the HTTPS GET protocol (data retrieval), all retrieved data is returned in JSON format.
 
+**Note** 
+Data Access retention will be reduced to a 30 days retention in order to comply with the GDPR.
+GDPR (general data protection regulation) is a new regulation that is aimed to protect personal data of individuals within the EU that will be enforced by May 25th 2018.
+Part of the regulation is the ability for a consumer to ask for its personal data to be deleted (Right to be Forgottedn) and in order to meet this requirement we will need to reduce the Data Access retention policy to 30 days (instead of 100 days as it is today).
+This means that data access files will be deleted 30 days from the time they were created. This still provides sufficient time for customers to pull their data from LiveEngage and store it in their own data warehouse.
+The new retention will be enforced by May 13th 2018.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
