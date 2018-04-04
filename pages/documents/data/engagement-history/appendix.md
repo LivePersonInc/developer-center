@@ -96,6 +96,7 @@ Example:
               "userName": null,
               "accountName": null,
               "role": null,
+              "companyBranch": "dummyCompanyBranch",
               "storeNumber": "storeNumber13123",
               "storeZipCode": null,
               "lastPaymentDate": {
