@@ -36,7 +36,7 @@ This method is used to open the conversation screen.
 | authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' paramater only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### showConversation (Deprecated)
-*This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} instead*
+*This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} instead*
 
 This method is used to open the conversation screen.
 
@@ -59,7 +59,7 @@ When navigating out of the conversation screen, remove the view controller from 
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 ### reconnect
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -72,9 +72,9 @@ Reconnect open related webSockets and sync the conversation with its latest upda
 | authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' parameter only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### reconnect (Deprecated)
-*This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#reconnect){:target="_blank"} instead*
+*This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#reconnect){:target="_blank"} instead*
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -90,8 +90,8 @@ Reconnect open related webSockets and sync the conversation with its latest upda
 
 This API call is used to open or close the SDK menu.
 
-* If you’re using [window mode](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"}, you won’t need to utilize this method as the SDK will have a dedicated button in the navigation bar to toggle the menu.
-* If you are using [view controller mode](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#showconversation){:target="_blank"}, you may call this API to open the SDK menu, or use other APIs to build your own menu.
+* If you’re using [window mode](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"}, you won’t need to utilize this method as the SDK will have a dedicated button in the navigation bar to toggle the menu.
+* If you are using [view controller mode](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"}, you may call this API to open the SDK menu, or use other APIs to build your own menu.
 
 `func toggleChatActions(_ accountID: String, sender: UIBarButtonItem? = nil)`
 
@@ -140,7 +140,7 @@ Checks if the active conversation (if existing) is marked as urgent. Otherwise r
 
 ### dismissUrgent
 
-This API is used to cancel the [markAsUrgent API](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#markasurgent){:target="_blank"}. It will reset the SLA for the agent response back to default.  This API can be called only for open conversations.
+This API is used to cancel the [markAsUrgent API](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#markasurgent){:target="_blank"}. It will reset the SLA for the agent response back to default.  This API can be called only for open conversations.
 
 `func dismissUrgent(_ conversationQuery: ConversationParamProtocol`)
 
@@ -178,7 +178,7 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct){:target="_blank"}).
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#destruct){:target="_blank"}).
 
 `func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())`
 
@@ -195,10 +195,10 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#destruct)
+* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#destruct))
 
 `func logout() (Deprecated)`
-*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-methods.html#logout) instead*
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
 
 ### destruct
 This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.
