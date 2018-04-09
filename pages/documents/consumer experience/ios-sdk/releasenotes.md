@@ -13,6 +13,10 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.1.1
+
+#### Added support for XCode 9.3 and Swift 4.1
+
 
 ### iOS Messaging SDK - Version 3.1
 
