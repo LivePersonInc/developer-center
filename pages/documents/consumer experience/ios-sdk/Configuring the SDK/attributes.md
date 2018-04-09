@@ -308,6 +308,13 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left"><img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding"></td>
     <td align="left">5</td>
   </tr>
+  <tr>
+    <td align="left">enableEnlargeEmojies</td>
+    <td align="left">Bool</td>
+    <td align="left">When true, user and remote user messages containing one or two emojies will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
+    <td align="left"><img src="img/enableEnlargeEmojies.png" alt="enableEnlargeEmojies"></td>
+    <td align="left">false</td>
+  </tr>
 </tbody>
 </table>
 
