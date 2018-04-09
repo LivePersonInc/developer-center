@@ -309,10 +309,10 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">5</td>
   </tr>
   <tr>
-    <td align="left">enableEnlargeEmojies</td>
+    <td align="left">enableEnlargeEmojis</td>
     <td align="left">Bool</td>
-    <td align="left">When true, user and remote user messages containing one or two emojies will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
-    <td align="left"><img src="img/enableEnlargeEmojies.png" alt="enableEnlargeEmojies"></td>
+    <td align="left">When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
+    <td align="left"><img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis"></td>
     <td align="left">false</td>
   </tr>
 </tbody>
@@ -1118,6 +1118,27 @@ It will affect the following areas:
     <td align="left">custom refresh controller speed animation define the full images loop time. Smaller value will create high speed animation </td>
     <td align="left"></td>
     <td align="left">2</td>
+  </tr>
+  <tr>
+    <td align="left">conversationBackgroundPortraitImage</td>
+    <td align="left">UIImage;</td>
+    <td align="left">When not nil, will be used as the conversation portrait background image. </td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">conversationBackgroundLandscapeImage</td>
+    <td align="left">UIImage;</td>
+    <td align="left"> When not nil, will be used as the conversation landscape background image.</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">conversationBackgroundImageContentMode</td>
+    <td align="left">UIViewContentMode;</td>
+    <td align="left">Defines the content mode of the conversation background image. </td>
+    <td align="left"></td>
+    <td align="left">scaleToFill</td>
   </tr>
 </tbody>
 </table>
