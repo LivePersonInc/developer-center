@@ -1,6 +1,6 @@
 ---
 title: Engagement
-
+level1: 
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -121,6 +121,7 @@ Status code: 201 Created - Engagement is available, created new session:
       "engagementId": 880524123,
       "engagementRevision": 21,
       "contextId": "1",
+      "connectorId": 2642324112,
       "status": "expose"
     }
   ]
@@ -140,6 +141,7 @@ Status code: 200 OK - Resume conversation same session:
       "engagementId": 880524523,
       "engagementRevision": 23,
       "conversationId": "fdasfdas",
+      "connectorId": 2642324112,
       "status": "conversation"
     }
   ]
@@ -175,6 +177,7 @@ Status code: 500 Server Error - Loading account:
 | engagementDetails.engagementId | | number | Required if there is an engagement  |
 | engagementDetails.conversationId | | string | Required if there is an engagement |
 | engagementDetails.windowId | | string | Required if there is an engagement  |
+| engagementDetails.connectorId | | string | Required if there is an engagement  |
 | engagementDetails.language | | string | Required if there is an engagement  |
 | engagementDetails.engagementRevision | | number | Required if there is an engagement  |
 | engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |

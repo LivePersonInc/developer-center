@@ -1,5 +1,6 @@
 ---
 title: Report
+level1: 
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -89,6 +90,8 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ImpressionAcceptEvent:
 
+**Note**: This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf){:target="_blank"}.
+
 ```json
 {
   "type": "impAccept",
@@ -105,6 +108,8 @@ ImpressionAcceptEvent:
 ```
 
 ImpressionDisplayEvent:
+
+**Note**: This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf){:target="_blank"}.
 
 ```json
 {
