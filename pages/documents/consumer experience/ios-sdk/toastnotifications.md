@@ -53,7 +53,7 @@ Note: if you were using the `LPMessagingSDK.instance.registerPushNotifications(t
   func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView {}
 
   /// This method is overridden when using a Custom View for the In-App Notification (LPMessagingSDKNotification(customLocalPushNotificationView)
-  /// Add Custom Behavior to LPMessaging Toast View being Tap
+  /// Add Custom Behavior to LPMessaging Toast View being tapped
   ///
   /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
   func LPMessagingSDKNotification(notificationTapped notification: LPNotification) {}
