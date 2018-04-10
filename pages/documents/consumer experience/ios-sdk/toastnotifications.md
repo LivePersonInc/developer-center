@@ -285,6 +285,6 @@ func LPMessagingSDKNotification(customLocalPushNotificationView notification: LP
 
  - Second, we use self.window?.viewWithTag(tag:int) to get our View,
 
- - Third, if our UIView is different from  `nil` , we will remove it form the main view, so when we move the user to th Messaging View Controler the Toast is not there,
+ - Third, if our UIView is different from  `nil` , we will remove it from the main view, so when we move the user to th Messaging View Controler the Toast is not there,
 
  - Last, use the same code we had on the method `LPMessagingSDKNotification(notificationTapped notification:)` to take the user to the Messaging Screen
