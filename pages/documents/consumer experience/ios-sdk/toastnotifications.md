@@ -40,13 +40,13 @@ Note: if you were using the `LPMessagingSDK.instance.registerPushNotifications(t
 
 ```swift
 
-  /// Will handle custom behavior if LP Push Notification was touch
+  /// Will handle custom behavior if LP Push Notification was touched
   ///
   /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
   func LPMessagingSDKNotification(didReceivePushNotification notification: LPNotification) {}
 
   /// Override SDK - In-App Push Notification
-  /// Behavior for tapping In-App Notification should be handle, when using a custom view no behavior is added, LPMessagingSDKNotification(notificationTapped) can't be use
+  /// Behavior for tapping In-App Notification should be handled, when using a custom view no behavior is added, LPMessagingSDKNotification(notificationTapped) can't be use
   ///
   /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
   /// - Returns: Custom View
