@@ -281,7 +281,7 @@ func LPMessagingSDKNotification(customLocalPushNotificationView notification: LP
 
 **Notes:**
 
- - First, the `@objc` prefix will let this method be use as a `#selector`,
+ - First, the `@objc` prefix will let this method be used as a `#selector`,
 
  - Second, we use self.window?.viewWithTag(tag:int) to get our View,
 
