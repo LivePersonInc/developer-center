@@ -61,7 +61,7 @@ This event is triggered when the flow to display the engagement has started.
     "engagementType": 3,//The engagement type
     "contextId": "1",//The context (instance in memory on the backend)
     "zoneId": 471288710, //The zone this is on
-    "state": 2, //The current state of the agents (online, offline, busy) , to set the display state 
+    "state": 2, //The current state of the agents (online, offline, busy) , to set the display state
     "confKey": "210599710_210600710_18",
     "tglName": "slider" //The taglet that needs to be downloaded
     "done": true, //If the configuration has finished loading
@@ -155,7 +155,7 @@ This event is triggered when an engagement is closed by a user.
 
 | Name | Value |
 | :--- | :--- |
-| eventName | "OFFER_DECLINE" |
+| eventName | "OFFER_DECLINED" |
 | appName | "LP_OFFERS" |
 
 **Event Properties**
