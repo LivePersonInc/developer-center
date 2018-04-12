@@ -18,7 +18,7 @@ This API updates a user for a specific account.
 **Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
 
 ```
-https://{domain}/api/account/{accountId}/configuration/le-users/users?v=4.0
+https://API_REQUEST?v=4.0
 ```
 
 ### Request

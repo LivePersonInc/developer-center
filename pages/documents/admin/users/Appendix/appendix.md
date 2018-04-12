@@ -43,7 +43,7 @@ This section contains API details that are common to every API’s resource and 
 | :------  | :--------           | :----------                      | :---           | :--- |
 | v        | API version number  | Double. |  Required      |  Default Value: 2.0 (Most updated: v=4.0) |
 | select   | Dynamic selection of the response fields  | YOGA 'gdata' dialect.  | Optional | Non-existing field: no error, blank in response supported fields: any in response body <br> yoga GData dialect builder url: https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI |
-| include_deleted | Whether or not deleted items in the response are included | Optional | Default: false |
+| include_deleted | Whether or not deleted items in the response are included | boolean | Optional | Default: false |
 
 ### Path Parameters
 
