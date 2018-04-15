@@ -907,17 +907,20 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">Toggle vibration sound when a new message from a remote user received</td>
     <td align="left"></td>
     <td align="left">false</td>
+  </tr>  
+  <tr>
+    <td align="left">announceAgentTyping</td>
+    <td align="left">Bool</td>
+    <td align="left">If true, show agent is typing indicator in selected position and accessibility will announce when agent is typing a message to the consumer. If false, will not show any indication, and will not announce when agent is typing a message.</td>
+    <td align="left"></td>
+    <td align="left">true</td>
   </tr>
   <tr>
-    <td align="left">agentTypingIndicatorPosition</td>
-    <td align="left">typingIndicatorPosition?</td>
-    <td align="left">Define the agent is typing Indicator position
-      <Br>1- none: no agent is typing Indicator
-      <Br>2- conversation: in conversation table like message bubble
-      <Br>3- navigation: only in the navigation toolbar (window mode or Container mode)
-      </td>
+    <td align="left">showAgentTypingInMessageBubble</td>
+    <td align="left">Bool</td>
+    <td align="left">if true, shows agent is typing indicator in a message bubble. If false, show indicator under Agent label in navigator bar. if announceAgentTyping is false, will not show any "is typing" indicator regardless of current value.</td>
     <td align="left"></td>
-    <td align="left">.conversation</td>
+    <td align="left">true</td>
   </tr>
 </tbody>
 </table>
@@ -1908,29 +1911,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">Color code for the text of the controller bubble.</td>
     <td align="left"><img alt="controller bubble text color"></td>
     <td align="left">#5b5c5e</td>
-  </tr>
-</tbody>
-</table>
-
-### Accessibility
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Example</th>
-    <th>Default</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td align="left">announceAgentTyping</td>
-    <td align="left">Bool</td>
-    <td align="left">If true, accessibility will announce when agent is typing a message to the consumer.</td>
-    <td align="left"></td>
-    <td align="left">true</td>
   </tr>
 </tbody>
 </table>
