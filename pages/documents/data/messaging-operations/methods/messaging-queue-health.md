@@ -18,7 +18,7 @@ Retrieves information about the state of the queue (with all related metrics) fo
 
 2. This method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
-3. Limitation: in order for the queue data to appear, there must be at least one agent logged in to LE. 
+3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE. 
 
 
 ### Request
