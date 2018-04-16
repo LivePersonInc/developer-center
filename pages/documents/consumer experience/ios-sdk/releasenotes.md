@@ -13,6 +13,32 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.1.2 (identical to 3.1.0.22)
+Version 3.1.0.22 - Supports XCode 9.2
+
+Version 3.1.2 - Supports XCode 9.3
+
+In-App Messaging SDK v3.1.2 supports XCode 9.3 and contains the following bug fix :
+
+#### Symptom:
+Consumer is typing indication appears to the agent when the keyboard is opened and not when the consumer actually start typing.
+
+#### Fix:
+Consumer is typing view will be presented to agent on a keystroke.
+
+#### Symptom:
+When a consumer scrolls inside the conversation window, goes back to the app and back to the conversation, the position inside the screen will not be saved.
+
+#### Fix:
+The position inside the screen is saved. When the consumer will go back to the conversation, the position will be the same as it was when leaving the screen.
+
+#### Symptom:
+Agent’s first name appears in the in app notification instead of the nickname.
+
+#### Fix:
+Added the nickname of the agent instead of the first name.
+
+
 ### iOS Messaging SDK - Version 3.1.1
 
 #### Added support for XCode 9.3 and Swift 4.1
