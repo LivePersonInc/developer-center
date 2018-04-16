@@ -254,7 +254,14 @@ The following table describes the information that is available for engagement d
 | isInteractive | Indication whether the conversation is interactive (visitor wrote a line). | boolean |
 | sourceOrigin | Source of conversation. | string |
 | sourceDevice | Source device of the conversation, can be one of the following: NA, DESKTOP, TABLET, MOBILE. | DeviceType |
-| endReasonId | Conversation end reason ID. | int |
+| endReasonId | Conversation end reason ID, can be any of the following:
+101 - Transfer - rep stopped chat (rep transferred chat to another rep)
+106 - Transfer - Reassignment to skill (rep transferred chat to skill)
+201 - Rep stopped chat
+202 - Rep disconnected 
+205 - Visitor disconnected
+208 - Visitor was no longer in chat
+210 - Visitor closed chat | int |
 | campaignData | Contains information about the conversation. | container |
 | agentId | Unique Identifier of the conversation’s last agent. | string |
 | skillID | Unique Identifier of the conversation’s last skill. | long |
