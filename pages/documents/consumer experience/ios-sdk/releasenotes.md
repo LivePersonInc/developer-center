@@ -18,10 +18,10 @@ Version 3.1.0.22 - Supports XCode 9.2
 
 Version 3.1.2 - Supports XCode 9.3
 
-In-App Messaging SDK v3.1.2 supports XCode 9.3 and contains the following bug fix :
+In-App Messaging SDK v3.1.2 supports XCode 9.3 and contains the following bug fixes:
 
 #### Symptom:
-Consumer is typing indication appears to the agent when the keyboard is opened and not when the consumer actually start typing.
+Consumer is typing indication appears to the agent when the keyboard is opened and not when the consumer actually starts typing.
 
 #### Fix:
 Consumer is typing view will be presented to agent on a keystroke.
