@@ -8,15 +8,15 @@
   "basePath" : "/api",
   "tags" : [ {
     "name" : "LP-SendAPI",
-    "description" : "The LP-Send-API service lets you easily send messages to the LivePerson-messaging-system via easy and comprehensive REST-like HTTPS-Requests."
+    "description" : "The LP-Send-API service lets you easily send messages to the LivePerson-messaging-system via lightweight and comprehensive REST-like HTTPS-Requests. Feel free to submit any recommendations to support@liveperson.com."
   } ],
   "schemes" : [ "http", "https" ],
   "paths" : {
-    "/send/account/{brandId}/conversation" : {
+    "/account/{brandId}/conversation" : {
       "post" : {
         "tags" : [ "LP-SendAPI" ],
-        "summary" : "This is our 'batch'-endpoint ",
-        "description" : "This call takes an array of at least two request payloads. The order of the array items is important. First, the setConsumerProfile payload, second the createConversation payload, and optionally last a publishMessage payload. Returns an array of corresponding responses. \n \n Due to race conditions inside the UMS, we cannot 100% reliably assure that the conversation is valid IMMEDIATELY. However, we take measures (i.e. active waiting) to minimize the risk. Since it is an UMS-internal issue, the problem will not be solved until a future version of the UMS",
+        "summary" : "This is our \"batch\"-endpoint. It takes an array of at least two request payloads. The order of the array items is important. Returns an array of corresponding responses.",
+        "description" : "For the JSON payload, please have a look at the <a href=\"https://developers.liveperson.com/consumer-int-overview.html\" target=\"_blank\">Messaging Window API</a> with its integrated <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">Request Builder</a>. The order of events is important. First, the <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">setConsumerProfile</a> payload, second the <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">consumerRequestConversation</a> payload, and optionally last a <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">publishMessage</a> payload. Due to race conditions inside the UMS, we cannot 100% reliably assure that the conversation is valid IMMEDIATELY. However, we take measures (i.e. active waiting) to minimize the risk. Since it is an UMS-internal issue, the problem will not be solved until UMS v4.x",
         "operationId" : "createConversationBatchPOST",
         "parameters" : [ {
           "name" : "brandId",
@@ -59,7 +59,7 @@
             }
           },
           "400" : {
-            "description" : "Something terrible happened",
+            "description" : "The input was invalid, please check.",
             "schema" : {
               "$ref" : "#/definitions/GenericError"
             }
@@ -76,7 +76,7 @@
         }
       }
     },
-    "/send/account/{brandId}/conversation/{convId}/close" : {
+    "/account/{brandId}/conversation/{convId}/close" : {
       "post" : {
         "tags" : [ "LP-SendAPI" ],
         "summary" : "Closes a conversation with given conversation ID",
@@ -113,7 +113,7 @@
             "description" : "Conversation has been closed successfully"
           },
           "400" : {
-            "description" : "Something terrible happened",
+            "description" : "The input was invalid, please check.",
             "schema" : {
               "$ref" : "#/definitions/GenericError"
             }
@@ -130,11 +130,11 @@
         }
       }
     },
-    "/send/account/{brandId}/conversation/{convId}/send" : {
+    "/account/{brandId}/conversation/{convId}/send" : {
       "post" : {
         "tags" : [ "LP-SendAPI" ],
-        "summary" : "Takes a \"raw\" JSON-payload and puts it on the UMS",
-        "description" : "The order of events is important. You call this payload the same order as you would send your messages over the WebSocket connection! For the payload specification, please review the Messaging Window API found elsewhere in the community.",
+        "summary" : "Takes a \"raw\" JSON-payload (as specified in the Messaging-Window-API) and puts it on the UMS.",
+        "description" : "For the JSON payload, please have a look at the <a href=\"https://developers.liveperson.com/consumer-int-overview.html\" target=\"_blank\">Messaging Window API</a> with its integrated <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">Request Builder</a>. The order of events is important. You call this payload the same order as you would send your messages over the WebSocket connection!",
         "operationId" : "sendRawPOST",
         "parameters" : [ {
           "name" : "brandId",
@@ -151,7 +151,7 @@
         }, {
           "in" : "body",
           "name" : "body",
-          "description" : "The raw JSON payload, as specified in the Messaging Window API. Encoded as String",
+          "description" : "The raw JSON payload, as specified in the <a href=\"https://developers.liveperson.com/consumer-int-overview.html\" target=\"_blank\">Messaging Window API</a>. Encoded as String",
           "required" : false,
           "schema" : {
             "type" : "string"
