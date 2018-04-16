@@ -41,6 +41,42 @@
                     "required": ["body"]
                 }]
         }, {
+            "title": "GenerateURLForUploadFile",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.GenerateURLForUploadFile"],
+                            "default": "ms.GenerateURLForUploadFile",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/GenerateURLForUploadFileBody.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
+            "title": "GenerateURLForDownloadFile",
+            "allOf": [{
+                    "$ref": "../infra/req.json"
+                }, {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": ["ms.GenerateURLForDownloadFile"],
+                            "default": "ms.GenerateURLForDownloadFile",
+                            "readonly": "true"
+                        },
+                        "body": {
+                            "$ref": "../ms/GenerateURLForDownloadFileBody.json"
+                        }
+                    },
+                    "required": ["body"]
+                }]
+        }, {
             "title": "ConsumerRequestConversation",
             "description": "This request is used by the consumer to request a new conversation",
             "allOf": [{
