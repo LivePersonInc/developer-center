@@ -17,6 +17,9 @@
                     }
                 }]
         }, {
+            "title": "GenerateURLResponse",
+            "$ref": "../ms/GenerateURLResp.json"
+        }, {
             "title": "StringResp",
             "$ref": "../infra/stringResp.json"
         }, {

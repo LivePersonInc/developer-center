@@ -1,0 +1,18 @@
+{
+    "title": "GenerateURLResponse",
+    "allOf": [{
+            "$ref": "../infra/resp.json"
+        }, {
+            "description": "Upon successful generation of temporary URL for storage access, this reponse will be sent by the server",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "default": "ms.GenerateURLResponse",
+                    "readonly": "true"
+                },
+                "body": {
+                    "$ref": "./GenerateURLRespBody.json"
+                }
+            }
+        }]
+    }

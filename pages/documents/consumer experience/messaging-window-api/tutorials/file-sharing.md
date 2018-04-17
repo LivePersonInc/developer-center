@@ -70,7 +70,7 @@ In response, you will get a conversation ID that will be used in the next steps.
 Use the following request to retrieve an upload url, specifying the type and size of the file.
 > note the supported types and size limitations as listed in the API reference
 
-@See full documentation [here](https://developers.liveperson.com/consumer-int-msg-reqs.html)
+>See full documentation [here](https://developers.liveperson.com/consumer-int-msg-generate-temp-upload-url.html)
 
 
 Request Body Example:
@@ -139,7 +139,7 @@ Upload the file as binary.
 ## Step 5 Publish Message
 Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail.
 
-@See full documentation [here](https://developers.liveperson.com/consumer-int-msg-reqs.html)
+>See full documentation [here](https://developers.liveperson.com/consumer-int-msg-reqs.html). Event type should be ```HostedFile```
 
 Example message:
 
@@ -174,7 +174,7 @@ Example message:
 
 Using the messaging API, request an upload url, specifying the relative path of the file.
 
-@See full documentation [here](https://developers.liveperson.com/consumer-int-msg-reqs.html)
+>See full documentation [here](https://developers.liveperson.com/consumer-int-msg-generate-temp-download-url.html)
 
 
 Request Body Example:
