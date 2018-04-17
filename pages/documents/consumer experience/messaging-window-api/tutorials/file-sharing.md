@@ -1,14 +1,16 @@
 ---
-title: Overview
+title: File Sharing
 level1: Documents
-level2: Data
-level3: Messaging Interactions API
+level2: Consumer Experience
+level3: Messaging Window API
+level4: Tutorials
 
-level-order: 3
-order: 1
-permalink: data-messaging-interactions-overview.html
-root-link: true
+order: 31
+
+
+permalink: data-messaging-interactions-file-sharing.html
 indicator: messaging
+keywords: file sharing, photo sharing
 ---
 ### Introduction
 
@@ -17,12 +19,12 @@ The LiveEngage Messaging Window API have a file sharing capability that enables 
 
 A typical flow of file sharing:
 
-1. Enable file sharing
+1. Enable file sharing capability
 2. Create a conversation
-3. Requests upload URL
+3. Request an upload URL
 4. Upload the file to storage
 5. Publish the file as a message inside the conversation  
-6. Requests download URL
+6. Request a download URL
 7. Download file from storage
 
 
@@ -41,25 +43,24 @@ LP_BEARER=`curl -c cookies -X POST -H "Content-Type: application/json" -H "Accep
 ./set_site_property.sh $LP_BEARER true messaging.file.sharing.enabled
 ```
 
-We will further publish this image to the messaging service.
-
 ## Step 2 - Create a Conversation
 Please follow the [messaging window API](https://developers.liveperson.com/consumer-int-overview.html) and make sure you have an active conversation and a conversationId at hand.
 
-
 ##### Using bash
-
 Open a connection to the messaging service.
 
+
 ```sh
-wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
+	wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
 ```
 
 Then ask to create a new conversation:
 
 ```json
-{"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
+	{"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
 ```
+
+
 In response, you will get a conversation ID that will be used in the next steps.
 
 
@@ -70,7 +71,7 @@ In response, you will get a conversation ID that will be used in the next steps.
 Use the following request to retrieve an upload url, specifying the type and size of the file.
 > note the supported types and size limitations as listed in the API reference
 
->See full documentation [here](https://developers.liveperson.com/consumer-int-msg-generate-temp-upload-url.html)
+> See full documentation [here](consumer-int-msg-generate-temp-upload-url.html)
 
 
 Request Body Example:
@@ -136,6 +137,11 @@ Upload the file as binary.
 | :--- | :--- |
 | 201 | CREATED |
 
+**Download the Chat API resources by a Postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}
+
+Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/){:target="_blank"}
+
+
 ## Step 5 Publish Message
 Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail.
 
@@ -168,13 +174,14 @@ Example message:
 {"kind":"req","id":"22","body":{"dialogId":"__CONVERSATION_ID__","event":{"type":"ContentEvent","message":{"caption":"LivePerson logo","relativePath":"__relative_path__","fileType":"PNG","preview":"data:image/png;base64,<Base64Image>"},"contentType":"hosted/file"}},"type":"ms.PublishEvent"}
 ```
 
+
 ## Step 6 Request Download URL
 
 **Request a download url**:
 
 Using the messaging API, request an upload url, specifying the relative path of the file.
 
->See full documentation [here](https://developers.liveperson.com/consumer-int-msg-generate-temp-download-url.html)
+>See full documentation [here](consumer-int-msg-generate-temp-download-url.html)
 
 
 Request Body Example:
@@ -211,10 +218,3 @@ Extract ```relativePath```, ```temp_url_sig```, ```temp_url_expires``` from the 
 | Method | URL |
 | :--- | :--- |
 | GET | https://{swiftDomain}/{relativePath}?temp_url_sig={temp_url_sig}&temp_url_expires={temp_url_expires} |
-
-
-
--------
-**Download the Chat API resources by a Postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}
-
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/){:target="_blank"}
