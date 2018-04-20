@@ -38,24 +38,28 @@
         }, {
           "name" : "Authorization",
           "in" : "header",
-          "required" : true,
-          "default" : "AppJWT"
+          "description" : "The AppJWT token",
+          "required" : true
         }, {
           "name" : "X-LP-ON-BEHALF",
           "in" : "header",
-          "required" : true,
-          "default" : "{ \"consumerId\": \"123-abc\", \"type\": \"SomeType\"}"
+          "description" : "The ConsumerJWS token",
+          "required" : true
         }, {
           "name" : "v",
           "in" : "query",
+          "description" : "The UMS API version",
           "required" : true,
           "default" : "3"
         } ],
         "responses" : {
-          "201" : {
+          "200" : {
             "description" : "Returns a new conversation ID",
             "schema" : {
-              "$ref" : "#/definitions/CreateConversationResBody"
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/CreateConversationResponse"
+              }
             }
           },
           "400" : {
@@ -159,18 +163,19 @@
         }, {
           "name" : "Authorization",
           "in" : "header",
-          "required" : true,
-          "default" : "AppJWT"
+          "description" : "The AppJWT token",
+          "required" : true
         }, {
           "name" : "v",
           "in" : "query",
+          "description" : "The UMS API version",
           "required" : true,
           "default" : "3"
         }, {
           "name" : "X-LP-ON-BEHALF",
           "in" : "header",
-          "required" : true,
-          "default" : "{ \"consumerId\": \"123-abc\", \"type\": \"SomeType\"}"
+          "description" : "The ConsumerJWS token",
+          "required" : true
         } ],
         "responses" : {
           "202" : {
@@ -186,6 +191,20 @@
       "properties" : {
         "conversationId" : {
           "type" : "string"
+        }
+      }
+    },
+    "CreateConversationResponse" : {
+      "type" : "object",
+      "properties" : {
+        "reqId" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "string"
+        },
+        "body" : {
+          "$ref" : "#/definitions/CreateConversationResBody"
         }
       }
     },
