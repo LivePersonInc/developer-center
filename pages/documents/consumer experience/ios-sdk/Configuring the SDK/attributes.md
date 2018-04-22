@@ -1841,6 +1841,57 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 </tbody>
 </table>
 
+### Quick Reply
+
+<table class="bigtable">
+<thead>
+   <tr>
+  <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default </th>
+  </tr>
+  </thead>
+<tbody>
+<tr>
+  <td align="left">quickReplyButtonVerticalPadding</td>
+  <td align="left">CGFloat</td>
+  <td align="left">Distance between the bottom and top edges of the button to the bottom and top edges of the text</td>
+  <td align="left"></td>
+  <td align="left">10.0</td>
+</tr>
+  <tr>
+    <td align="left">quickReplyButtonHorizontalPadding</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Distance between the right and left edges of the button to the right and left edges of the text</td>
+    <td align="left"></td>
+    <td align="left">15.0</td>
+  </tr>
+  <tr>
+    <td align="left">quickReplyVerticalPadding</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Vertical padding between quick reply buttons</td>
+    <td align="left"></td>
+    <td align="left">10.0</td>
+  </tr>
+  <tr>
+    <td align="left">quickReplyHorizontalPadding</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Horizontal padding between quick reply buttons</td>
+    <td align="left"></td>
+    <td align="left">10.0</td>
+  </tr>
+  <tr>
+    <td align="left">quickReplyButtonBorderWidth</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Border size of Quick Reply buttons</td>
+    <td align="left"></td>
+    <td align="left">1.0</td>
+  </tr>
+</tbody>
+</table>
+
 ### Connection Status Bar
 
 <table class="bigtable">
