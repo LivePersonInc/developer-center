@@ -3,7 +3,7 @@
     "allOf": [{
             "$ref": "../infra/resp.json"
         }, {
-            "description": "Upon successful generation of temporary URL for storage access, this reponse will be sent by the server",
+            "description": "Upon successful generation of the temporary URL for storage access, this response will be sent by the server",
             "type": "object",
             "properties": {
                 "type": {

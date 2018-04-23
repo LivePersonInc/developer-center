@@ -1,5 +1,5 @@
 {
-    "description": "Generate an Download URL with relativePath, Signature and Expiration to access Liveperson storage",
+    "description": "Generate a download URL with relativePath, Signature and Expiration to access Liveperson storage",
     "type": "object",
     "properties": {
         "relativePath": {

@@ -4,17 +4,15 @@ level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
-
 order: 31
-
-
-permalink: data-messaging-interactions-file-sharing.html
+permalink: consumer-int-file-sharing.html
 indicator: messaging
 keywords: file sharing, photo sharing
 ---
+
 ### Introduction
 
-The LiveEngage Messaging Window API have a file sharing capability that enables consumers to share files with agents.
+The LiveEngage Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images,
 
 
 A typical flow of file sharing:
