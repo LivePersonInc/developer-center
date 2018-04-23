@@ -123,7 +123,9 @@ JSON Example:
 
 **System Messages**
 
-Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs:
+Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs. **Note**: while the `systemMessageID` field in the response is numeric, it is a number passed as a string.
+​
+
 
 | ID | Event |
 | :--- | :--- |
@@ -136,18 +138,18 @@ Messages that are initiated by the system. These messages are added with the `<s
 | 15 | Chat is transferred to another skill group. |
 | 6 | Chat is unexpectedly disconnected. |
 | 23 | Chat requeued by system. |
- 
+
 **Event type="state" Parameters**
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
 | time | The time the event occurred. | time | |
 | state | The state of the chat. | string | Valid values: "waiting", "chatting", "ended" |
- 
+
 **Event type="a2a-transfer" Parameters**
 
 | Name | Description | Type/Value | Notes |
-| :--- | :--- | :--- | :--- | 
+| :--- | :--- | :--- | :--- |
 | time | The time the event occurred. | time | |
 | domain | The domain of the target account. | alphanumeric | |
 | chatRequestParameters | The parameters for the chat request. | alphanumeric | Should be taken as is and sent in the body of the chat request to the target account.  |
@@ -157,4 +159,3 @@ Messages that are initiated by the system. These messages are added with the `<s
 | skill | The skill of the target account. | alphanumeric | |
 | remoteSiteId | The id of the target account.  | numeric | |
 | a2a-transfer | URI to initiate a request to chat after the a2a-transfer. | link relationship | |
- 
