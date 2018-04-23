@@ -3,7 +3,7 @@
     "type": "object",
     "properties": {
         "fileSize": {
-            "description": "Note that file size is limited and over-sized request will be rejected",
+            "description": "File size is given in Bytes and is limited and over sized requests will be rejected",
             "type": "string"
         },
         "fileType": {
