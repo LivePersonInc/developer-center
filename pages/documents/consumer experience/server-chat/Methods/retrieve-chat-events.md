@@ -119,7 +119,7 @@ JSON Example:
 | textType | The type of message. | plain/html | |
 | by | Type of message that is sent. | string | Valid values: "info", "agent", "visitor" |
 | source | Indication of who sent the message. | string | Valid values: "system", "agent", "visitor" |
-| systemMessageId | The ID of the message. | numeric | See System Messages below.|
+| systemMessageId | The ID of the message. | string | See System Messages below.|
 
 **System Messages**
 
