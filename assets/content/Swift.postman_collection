@@ -14,10 +14,7 @@
 					"raw": "https://<swiftDomain>/<URL>?temp_url_sig=<SIG>&temp_url_expires=<Expiration>",
 					"protocol": "https",
 					"host": [
-						"objectstorage",
-						"dev",
-						"lprnd",
-						"net"
+						"<swiftDomain>"
 					],
 					"path": [
 						"<URL>"
@@ -57,10 +54,7 @@
 					"raw": "https://<swiftDomain>/<URL>?temp_url_sig=<SIG>&temp_url_expires=<Expiration>",
 					"protocol": "https",
 					"host": [
-						"objectstorage",
-						"dev",
-						"lprnd",
-						"net"
+						"<swiftDomain>"
 					],
 					"path": [
 						"<URL>"

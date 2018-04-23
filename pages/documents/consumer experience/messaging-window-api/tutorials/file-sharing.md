@@ -69,7 +69,8 @@ In response, you will get a conversation ID that will be used in the next steps.
 
 ## Step 3 - Request Upload URL
 Use the following request to retrieve an upload url, specifying the type and size of the file.
-> note the supported types and size limitations as listed in the API reference
+
+>note the supported types and size limitations as listed in the API reference
 
 > See full documentation [here](consumer-int-msg-generate-temp-upload-url.html)
 
@@ -119,7 +120,9 @@ In response you will get the following message:
 
 ## Step 4 - Upload File to Storage
 
-Use the following requests and the parameters obtained in steps 1 & 2 to upload the file to storage:
+Use the following requests and the parameters obtained in steps 1 & 2 (```relativePath```, ```temp_url_sig```, ```temp_url_expires```) to upload the file to storage.
+
+> Note that expiration is set to 1 minute.
 
 ###### Upload request
 
@@ -136,6 +139,7 @@ Upload the file as binary.
 | Code | Description |
 | :--- | :--- |
 | 201 | CREATED |
+| 401 | Temp URL invalid |
 
 **Download the Chat API resources by a Postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}
 
@@ -218,3 +222,5 @@ Extract ```relativePath```, ```temp_url_sig```, ```temp_url_expires``` from the 
 | Method | URL |
 | :--- | :--- |
 | GET | https://{swiftDomain}/{relativePath}?temp_url_sig={temp_url_sig}&temp_url_expires={temp_url_expires} |
+
+> Note that expiration is set to 1 minute.
