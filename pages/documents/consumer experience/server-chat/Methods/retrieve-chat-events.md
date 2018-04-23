@@ -123,7 +123,7 @@ JSON Example:
 
 **System Messages**
 
-Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs. **Note**: while the `systemMessageID` field in the response is numeric, it is a number passed as a string.
+Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs. **Please note**: while the **systemMessageID** field in the response is numeric, it is a number passed as a string.
 ​
 
 
