@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "relativePath": {
+            "description": "The relative path of the hosted file in storage",
+            "type": "string"
+        },
+        "queryParams" : {
+            "type": "object",
+            "properties": {
+                "temp_url_sig": {
+                  "description": "Signature",
+                  "type": "string"
+                }
+            },
+            "required": ["queryParams"]
+          }
+    },
+    "required": ["relativePath"]
+}
