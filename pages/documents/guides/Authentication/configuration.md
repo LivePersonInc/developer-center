@@ -38,7 +38,7 @@ To define the OAuth 2.0 authentication:
 {:start="3"}
 3.	From the dropdown menu, select your preferred authentication method, and then complete the required fields
 
-### Taglet Configuration
+### RFC Compliance
 
 There are actually 2 versions to our Auth service - the "openID" (backwards compatible - default) version, and the "OAuth 2 RFC" (non default) version. If you already have a working authentication configured - chances are you're working with the "openID" version. If you're setting up authentication for the first time - chances are you want the "OAuth 2 RFC" version.
 
@@ -56,20 +56,7 @@ There are some small changes in the flow/implementation. All changes are only re
 
 #### How to use the "OAuth 2 RFC" version for old connectors
 
-Log into Houston for your account. Click the Taglet Manager (bottom left). Search for lpUnifiedWindow taglet - and click the "+". Set the raw configuration to:
-
-```json
-[
-    {
-        "id": "useOAuth2Standard",
-        "value": "true"
-    }
-]
-```
-
-And confirm.
-
-[//]: # (TODO:Cleanup - Maybe add pictures of Houston? Or a link to a taglet configuration guide? We have an example here: https://docs.dev.lprnd.net/display/VXLE/EX%231+Taglet+configuration)
+Please contact your account team at LivePerson support.
 
 ### Brand's Authorization Service Implementation
 
