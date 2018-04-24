@@ -42,6 +42,8 @@ To define the OAuth 2.0 authentication:
 
 There are actually 2 versions to our Auth service - the "openID" (backwards compatible - default) version, and the "OAuth 2 RFC" (non default) version. If you already have a working authentication configured - chances are you're working with the "openID" version. If you're setting up authentication for the first time - chances are you want the "OAuth 2 RFC" version.
 
+Starting with version 9.3.0 of the Unified Window (May 2018) - all newly created authentication connectors will use the "OAuth 2 RFC" version by default.
+
 #### What's the difference
 
 There are some small changes in the flow/implementation. All changes are only relevant to External windows and the way they interact with the Authentication Endpoint and the Token Endpoint:
@@ -52,7 +54,7 @@ There are some small changes in the flow/implementation. All changes are only re
 
 *   In the "openID" version (External implicit flow) we call the Authorization Endpoint with a query parameter "response_type=token" to denote that it's implicit flow and we expect to receive a JWT. In the "OAuth 2 RFC" version we use "response_type=id_token".
 
-#### How to use the "OAuth 2 RFC" version
+#### How to use the "OAuth 2 RFC" version for old connectors
 
 Log into Houston for your account. Click the Taglet Manager (bottom left). Search for lpUnifiedWindow taglet - and click the "+". Set the raw configuration to:
 
