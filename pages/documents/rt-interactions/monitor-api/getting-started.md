@@ -34,6 +34,8 @@ In order to utilize the Monitoring API, you will need, among other parameters, a
 
 **Developing Your Own Private App**
 
+Please contact your Account Team to create a Private App and retrieve your `AppInstallationId`.
+
 You can now create an engagement with the **Mobile App** or **Private App** source.
 
 Before calling the Monitoring API, you will need to fetch the Monitoring API domain. Please refer to [this document](https://developers.liveperson.com/agent-domain-domain-api.html#overview) for instructions on how to do so.
