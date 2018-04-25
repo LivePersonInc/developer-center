@@ -15,17 +15,17 @@ For each account, the following parameters should be defined:
 
 *	Implicit or Code Flow
 
-*	OAuth 2.0 Authentication Endpoint (when web external window is used)
-
-*	JS method name and context (when LiveEngage embedded window is used in Web)
+*	OAuth 2.0 Authentication Endpoint (when separate browser window is used)
 
 *	OAuth 2.0 Token Endpoint (when Code Flow is used)
 
-*	OAuth 2.0 Customer JWT customer public key
+*	OAuth 2.0 JWT Public Key
 
-*	OAuth 2.0 ClientID
+*	OAuth 2.0 Client ID
 
-*	OAuth 2.0 ClientSecret (when Code Flow is used)
+*	OAuth 2.0 Client Secret (when Code Flow is used)
+
+*	JS method name and context (when LiveEngage embedded window is used in Web)
 
 To define the OAuth 2.0 authentication:
 
