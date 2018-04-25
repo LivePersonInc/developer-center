@@ -275,6 +275,7 @@ paths:
       summary: Subscribe Conversations Metadata
       description: |
         Subscribes to any changes in the medata of the conversations of this user.
+        Note: fetch metadata of the first 1000 conv that were viewed or changed (ascending by date). After that, changes for any conversation will be provided on-going. 
       parameters:
         - name: body
           in: body
