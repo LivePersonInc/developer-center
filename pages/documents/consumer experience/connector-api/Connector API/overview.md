@@ -65,17 +65,18 @@ There are two primary reasons to utilize the Connector API:
 
 [comment]: <> (<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>)
 
-**Simplified Solution Outline**
-
-![JavascriptOverview](img/ConnectorAPI2.png)
-
-{:start="2"}
 
 2. **Product solutions** -
 
 	* Develop custom connectors for brands (e.g., SMS gateway) - For our customers that wish not to use the default Twilio SMS Gateway. will be hosted at Live Person.
 
 	* Build...
+
+	**Simplified Solution Outline**
+
+	![JavascriptOverview](img/ConnectorAPI2.png)
+
+	{:start="2"}
 
 	The Connector API allows the Connector to:
 
