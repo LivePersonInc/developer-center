@@ -1,16 +1,13 @@
 ---
-title: Connector Onboarding
+title: App Install for Send-Api object description
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API
 order: 8
 indicator: both
-permalink: ConnectorOnboarding.html
+permalink: AppInstallJSON.html
 ---
-
-
-### Connector Onboarding
 
 #### App Install for Send-Api object description
 
