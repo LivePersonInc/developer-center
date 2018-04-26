@@ -1,6 +1,6 @@
 ---
 title: Example
-level1: Documents
+level1:
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API
@@ -10,4 +10,6 @@ permalink: connectorapiexample.html
 ---
 
 
-### Example 
+### Example
+
+An example of using the Connector API is being built and will be published in this space soon. Stay tuned!

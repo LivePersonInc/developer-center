@@ -1,6 +1,6 @@
 ---
 title: Retry Policy
-level1: Documents
+level1:
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
@@ -11,4 +11,4 @@ permalink: webhooks-retrypolicy.html
 
 ### Retry Policy
 
-Explanation of the retry policy on the webhooks.
+Explanation of the retry policy on the webhooks. More content coming here soon. Stay tuned!

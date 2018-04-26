@@ -1,6 +1,6 @@
 ---
 title: Security
-level1: Documents
+level1:
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
@@ -11,4 +11,4 @@ permalink: webhooks-security.html
 
 ### Security
 
-A description of the signatures used on the webhooks.
+A description of the signatures used on the webhooks. More information coming here soon. Stay tuned!

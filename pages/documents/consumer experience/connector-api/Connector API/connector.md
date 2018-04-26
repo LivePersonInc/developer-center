@@ -1,6 +1,6 @@
 ---
 title: Connector API Reference
-level1: Documents
+level1: 
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API
@@ -9,9 +9,3 @@ permalink: connectorapireference.html
 order: 10
 indicator: both
 ---
-
-### Preface
-
-Anything we want to write above the API refernece, notes, overview, etc.
-
-### API Reference
