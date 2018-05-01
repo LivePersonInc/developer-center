@@ -52,10 +52,7 @@ Request by skillIds=12,13
                 "actionableAndConsumerLastMessage": 3,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 4,
-                "webSource": 31,
-                "facebookSource": 3
-                
+                "unassignedConversationsAndFirstTimeConsumer": 4        
             },
             "13": {
                 "time": 1516277646515,
