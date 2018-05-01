@@ -556,5 +556,13 @@ Listed below are all localized keys with the English localization string.
     <td>conversationEmptyState</td>
     <td>"There are currently no conversations at this time"</td>
   </tr>
+  <tr>
+    <td>quickReplyButton</td>
+    <td>"Quick reply button"</td>
+  </tr>
+  <tr>
+    <td>outOf</td>
+    <td>"out of"</td>
+  </tr>
 
 </table>
