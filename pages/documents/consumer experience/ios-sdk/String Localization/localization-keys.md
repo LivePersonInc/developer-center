@@ -447,6 +447,10 @@ Listed below are all localized keys with the English localization string.
     <td>"Clear"</td>
   </tr>
   <tr>
+    <td>isTyping</td>
+    <td>"typing…"</td>
+  </tr>
+  <tr>
     <td>sharePhotoFromPhotoLibrary</td>
     <td>"Photo Library"</td>
   </tr>
@@ -551,6 +555,14 @@ Listed below are all localized keys with the English localization string.
   <tr>
     <td>conversationEmptyState</td>
     <td>"There are currently no conversations at this time"</td>
+  </tr>
+  <tr>
+    <td>quickReplyButton</td>
+    <td>"Quick reply button"</td>
+  </tr>
+  <tr>
+    <td>outOf</td>
+    <td>"out of"</td>
   </tr>
 
 </table>

@@ -208,3 +208,12 @@ class : NSObject {
     var contextId: String?
 }
 ```
+
+### typingIndicatorPosition
+```javascript
+enum typingIndicatorPosition: Int {
+    case none
+    case conversation
+    case navigation
+}
+```
