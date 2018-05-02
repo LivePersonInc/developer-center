@@ -35,7 +35,7 @@ This API returns the metadata related to the deletion requests that were submitt
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
+ | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED,DONE)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
  | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string - represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
  | toDate| The end of the date range for returning the deletion requests| yyyy-mm-dd string  - represents the end date| Optional | Default is current time. Can't be used only with request_id parameter. |
 
