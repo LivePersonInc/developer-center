@@ -14,6 +14,24 @@ indicator: messaging
 
 Pass and display consumer information to agents, and agent information to consumers.
 
-1. `public func setUserProfile(lpuser: LPUser, brandID: String)`  
-2. `public func getAssignedAgent(conversationQuery: ConversationParamProtocol) -> LPUser?`  
-3. `<LPMessagingSDKdelegate>  optional func LPMessagingSDKAgentDetails(agent: LPUser?)`
+_**Note: for information about the LPUser object, click [here](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser)**_
+
+1. Will set user profile on LiveEngage
+
+```swift
+public func setUserProfile(lpuser: LPUser, brandID: String)
+```
+
+{:start="2"}
+2. Will return Prevously Assigned Agent, if any
+
+```swift
+public func getAssignedAgent(conversationQuery: ConversationParamProtocol) -> LPUser?
+```
+
+{:start="3"}
+3. Will be trigger each time the SDK receives info about the agent from the Server.
+
+```swift
+<LPMessagingSDKdelegate> optional func LPMessagingSDKAgentDetails(agent: LPUser?)
+```

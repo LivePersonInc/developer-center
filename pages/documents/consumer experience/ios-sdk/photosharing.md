@@ -24,10 +24,34 @@ You can find all the related configurations in the [resources ID table](consumer
 - *Device storage includes up to 20 images - this is configurable.*
 - *Supported formats: .png, .jpg, .gif (non-animated).*
 - *Photo size reduction: Thumbnail - 30 KB, Preview -3 MB.*
+- *App Privacy settings are needed:*
+    - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS",
+    - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"
+    - **Important:** Values for this descriptions are up to the brand to define, this are only examples.
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+```swift
+if (self.conversationQuery != nil && self.isMovingToParentViewController){
+    LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+}
+```
+
+**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value `LPConfig.defaultConfiguration.enablePhotoSharing` By default this value is set to false. **Note that you will need to contact your Account Team in order to enable the feature on your account**.
+To enable/disable photo sharing you can change the boolean value:
+
+```swift
+LPConfig.defaultConfiguration.enablePhotoSharing
+```
+
+By default this value is set to false.
+
+**Note that you will need to contact your Account Team in order to enable the feature on your account**.
 
 ### Upload Photo
 
@@ -40,13 +64,27 @@ A menu will open with 2 options: Photo Library and Camera.
 ![uploadphoto2](img/uploadphoto2.png)
 
 Changing the background color of attachment menu is available with configuration:
-`LPConfig.defaultConfiguration.photosharingMenuBackgroundColor`
+
+```swift
+LPConfig.defaultConfiguration.photosharingMenuBackgroundColor
+```
 
 Changing the text of buttons:
-`LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor`
+
+```swift
+LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor
+```
 
 Changing the menu button's background color:
-`LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor`
+
+```swift
+LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor
+```
 
 Changing the menu button's tint color:
-`LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor`
+
+```swift
+LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
+```
+
+**Note: for the list of all configurable attributes, click [here](consumer-experience-ios-sdk-attributes.html#photo-sharing)**
