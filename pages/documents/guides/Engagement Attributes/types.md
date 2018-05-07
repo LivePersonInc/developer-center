@@ -287,7 +287,7 @@ Age object:
 
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
-| age | Visitor’s age.  | integer | 47 | false | yes |
+| age | Visitor’s age  | integer | 47 | false | yes |
 | year | Visitor’s year of birth **Note**: This parameter is mandatory if the visitor’s age needs to be calculated. | integer  | "1969" | false |yes |
 | month | Visitor's month of birth | integer  | 2 | false |yes |
 | day | Visitor's day of birth | integer  | 12 | false |yes |
