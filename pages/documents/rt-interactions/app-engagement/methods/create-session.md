@@ -19,6 +19,11 @@ Use this method to start a new session and to get an engagement according to the
 | :--- | :--- |
 |POST|`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
 
+| Header | Value |
+| --- | --- |
+|Content-Type | application/json |
+| Accept| application/json|
+
 **Body Parameters**
 
 | Parameter | Description | Type | Required | Notes |

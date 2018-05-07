@@ -142,7 +142,7 @@ This information can be used to target visitors. For example, you can offer prod
 |------|--------------|-------|---------------|------------|--------|
 | type | The event name ("prodView")  | string | "prodView" | true | no |
 | currency | Currency of the viewed products | string  | USD | false | no |
-| products | Array of items in cart | array of Products objects  | U[ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | false | no |
+| products | Array of items in cart | array of Products objects  | [ {<br>"product": {...}<br>}<br>, {<br>"product": {...}<br>} ] | false | no |
 
 **Viewed Product SDE JSON example**:
 
@@ -287,7 +287,7 @@ Age object:
 
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
-| age | Visitor’s age. **Note**: If this parameter is not provided, the age is calculated using year, month, day.  | integer | 47 | false | yes |
+| age | Visitor’s age  | integer | 47 | false | yes |
 | year | Visitor’s year of birth **Note**: This parameter is mandatory if the visitor’s age needs to be calculated. | integer  | "1969" | false |yes |
 | month | Visitor's month of birth | integer  | 2 | false |yes |
 | day | Visitor's day of birth | integer  | 12 | false |yes |

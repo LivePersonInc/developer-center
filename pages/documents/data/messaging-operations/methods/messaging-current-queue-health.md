@@ -19,6 +19,8 @@ Retrieves the information about the current messaging queue state (and all its r
 
 2. This method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
+3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE. 
+
 ### Request
 
 | Method | URL |
@@ -50,10 +52,7 @@ Request by skillIds=12,13
                 "actionableAndConsumerLastMessage": 3,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 4,
-                "webSource": 31,
-                "facebookSource": 3
-                
+                "unassignedConversationsAndFirstTimeConsumer": 4        
             },
             "13": {
                 "time": 1516277646515,

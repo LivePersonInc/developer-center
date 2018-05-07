@@ -1,6 +1,6 @@
 ---
 title: Engagement
-level1: 
+level1:
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -148,7 +148,7 @@ Status code: 200 OK - Resume conversation same session:
 }
 
 ```
-Status code: 200 OK - Engagement is unavailable:
+Status code: 200/201 OK - Engagement is unavailable. **Note**: because the engagement is unavailable, the `engagementDetails` object does not return:
 
 ```json
 {
