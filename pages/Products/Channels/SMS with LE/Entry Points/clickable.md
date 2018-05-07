@@ -27,7 +27,13 @@ Within LiveEngage lies the capability to generate an SMS clickable mobile conten
 
 4. Create a new content engagement. You will need to **create a set of two engagements**: one for iOS and another for Android. The best naming practice is <CONTENT_NAME>_ios and <CONTENT_NAME>_android.
 
-5. Choose an engagement format. It can overlay or an embedded format, but it must be an **HTML Engagement**. This is important for setting the SMS link.  
+    a. Source: Web
+    
+    b. Channel: Content
+    
+    c. Format: Overlay or an embedded format, but it must be an **HTML Engagement**. This is important for setting the SMS link.
+    
+    d. On-click action: None
 
 6. Move to the next step: Engagement studio.
 
@@ -39,7 +45,7 @@ Use the following code template for your engagement. The capitalized portions sh
 
 ```html
 <div>
-  <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE&body=TEXT_MESSAGE_URI_ENCODED">
+  <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE&body=TEXT_MESSAGE_URI_ENCODED" data-LP-event="click">
     <CALL_TO_ACTION>
   </a>
   <a style="position:absolute; top:0px; left:0px; z-index:9999;" href="#" data-LP-event="close">
@@ -52,7 +58,7 @@ Use the following code template for your engagement. The capitalized portions sh
 
 ```html
 <div>
-  <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE?body=TEXT_MESSAGE_URI_ENCODED">
+  <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE?body=TEXT_MESSAGE_URI_ENCODED" data-LP-event="click">
     <CALL_TO_ACTION>
   </a>
   <a style="position:absolute; top:0px; left:0px; z-index:9999;" href="#" data-LP-event="close">
@@ -114,17 +120,27 @@ Notice the use of:
 
 ·  	Dash between the final two number groups 000-0000
 
-#### Step 3: Create a location
+#### Step 3: Create an Entry Point
 
-In the Location section, create one location for Android and another for iOS, using the Section engagement attribute.
+In the Entry Point section, create two new Entry Points for BRAND_iOS and BRAND_Android (where BRAND is the name of the website of section of the site you want the button to display).
+
+Assign the correct Entry Point to your engagement
 
 iOS example:
 
 ## ![Edit Location](img/clickable1.png)
 
-#### Step 4: Add code to the consumer web page
+#### Step 4: Add a Behavior
 
-On the your brand’s web page, add the following code to detect the browser version and the set section variable. For a full explanation on section variables please see this [article](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=engagement-attributes-overview){:target="_blank"}.
+A "Time on Entry Point" behavior may utilize the new entry points you've just created. Otherwise "All Behaviors" will be fine.
+
+Save and publish your engagements. They will not display until you've added the necessary Entry Point *Section* attribute on your website.
+
+#### Step 5: Add code to the consumer web page
+
+In order for your Entry Points to work, you need code on your website to tell LiveEngage which Entry Point the visitor is on.
+
+Add the following code to your website to detect which mobile Operating System (OS) the visitor is using. This way the visitor will see the correct engagement with the correct SMS link for their OS. For a full explanation on section variables please see this [article](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=engagement-attributes-overview){:target="_blank"}.
 
 ```javascript
 <script>
@@ -147,7 +163,11 @@ lpTag.section = [
 </script>
 ```
 
-#### Step 5: Opt-in Privacy Notice (optional)
+You can add this code globally if BRAND is simply the name of your website, or to a grouping of pages if BRAND is a certain area of your site.
+
+Once this code is implemented, your new engagements will begin to display.
+
+#### Step 6: Opt-in Privacy Notice (optional)
 
 It is possible to also include an opt in message prior to opening the SMS application, which makes sure the consumer agrees to receiving texts through the LivePerson system.
 
@@ -190,7 +210,7 @@ As well on the consumer end, the following JavaScript onclick trigger needs to b
 
 ![Privacy Notice](img/clickable2.png)
 
-#### Step 6: SMS invitation overlay hard-coded (optional)
+#### Step 7: SMS invitation overlay hard-coded (optional)
 
 This option is for providing the invitation outside of LiveEngage (example size set to size 250 x 200px). You will need to add code which **unhides** the outermost div `sms-modal` when you want the modal to appear. You will also need to use the browser detection code listed earlier to determine the format of the SMS link.
 
