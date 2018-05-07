@@ -4,9 +4,9 @@ level1:
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API
-order: 8
+order: 3
 indicator: both
-permalink: connector-onboarding.html
+permalink: AppInstallJSON.html
 ---
 
 ### Connector Onboarding
