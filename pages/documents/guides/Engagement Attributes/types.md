@@ -142,7 +142,7 @@ This information can be used to target visitors. For example, you can offer prod
 |------|--------------|-------|---------------|------------|--------|
 | type | The event name ("prodView")  | string | "prodView" | true | no |
 | currency | Currency of the viewed products | string  | USD | false | no |
-| products | Array of items in cart | array of Products objects  | U[ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | false | no |
+| products | Array of items in cart | array of Products objects  | [ {<br>"product": {...}<br>}<br>, {<br>"product": {...}<br>} ] | false | no |
 
 **Viewed Product SDE JSON example**:
 
