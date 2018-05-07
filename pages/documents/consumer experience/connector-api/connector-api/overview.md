@@ -12,88 +12,75 @@ permalink: connectorapioverview.html
 ---
 ### Introduction
 
-The Connector API enables you to perform a range of actions on the LivePerson messaging platform (LiveEngage), e.g. the ability to build your own connector application which can, as an example, open/close and send messages to LiveEngage on behalf of your consumers.
+The Connector API enables you to build applications that connect third party messaging platforms with the LivePerson messaging platform (LiveEngage), e.g. the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.
 
-A connector is a broker between the LiveEngage messages and data and the messaging channel messages and data. The connector receives messages and events from a messaging channel, transforms them into the LiveEngage language and passes it to the agent via a Send API. The connector can open and close conversations in addition to enabling the ability to send text messages. The connector also ensures that the consumer will be notified of agent activity using WebHooks notifications.
+A connector, is a broker between the LiveEngage messages and data and the third party messaging platform's (e.g. Facebook, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the Send API. The connector can also open and close conversations and transmit the first message upon creation. The connector also ensures that the consumer will be notified of agent activity using WebHooks notifications (for example, if the agent is typing, etc.).
 
-**Why do we need it?**
+**Why do we need the Connector API?**
 
-LiveEngage already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, SMS via Twilio and LINE with many more in the pipeline. This API is meant for brands who wish to connect with any other messaging platform, such as Viber, Skype and an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
+LiveEngage already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, SMS via Twilio and LINE with many more in the pipeline. This API is meant to be used by brands who wish to connect with any other messaging platform, such as Viber, Skype or an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
 
-**What is  the Connector API?**
-
-The Connector API provides an HTTPS-based transport for asynchronous server-to-server communication with LiveEngage, LivePerson messaging platform. Brands can connect consumers via an external messaging gateway, e.g. SMS gateway to the LiveEngage platform.
+**What is the Connector API?**
 
 The Connector API is split into two main components:
 
-* **The Messaging Send API**: Send requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework.
-
-* **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: Receive responses and notifications based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework via HTTPS-endpoints that are used by the customer's connector.
-
-![JavascriptOverview](img/ConnectorAPI1.png)
-
-Please note: A HTTP-based transport system for asynchronous communication requires that the brand expose their own HTTPS Webhooks endpoints with authentication. For more details on Webhooks and how their authentication works, please refer to the [Webhooks documentation](webhooks-overview.html){:target="_blank"}.
+1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two main calls, create conversation and send message (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
 
 
-**When should I use the Connector API?**
+#### On the **consumer** side, the Send API allows:
 
-The Connector API should be used when planning to develop a server application which connects consumers with the LiveEngage platform. It should be used to build external consumer connectors. For example, you can integrate your own SMS gateway or Messaging application into LiveEngage.
+* Create Conversation and send SDEs in one step.
 
-The HTTPS-based transport in the Connector API is optimized for server-to-server communication. This means that it is optimized for developing a broker application between the messages and data of one platform (such as Facebook, Apple Business Chat, Twitter etc.) and LiveEngage messages and data.
+* Send Text Messages
 
+* Send Images
 
-### Use Cases
+* See SENT, READ and RECEIVED indications
 
-**There are two primary reasons to utilize the Connector API**:
+* Send Chat State Events (COMPOSING, ACTIVE, INACTIVE etc.)
 
-1. **Brands** - To **create** their own custom connectors - To enable their consumers to engage with them via many distribution channels while using more than one device. e.g Connector for **Facebook Messenger, Google my business, Apple Business Chat, LINE** etc. Or connector for SMS Gateway of their choice (not via Twilio). This connector would normally be hosted on the brands servers.
+* Close conversation
 
-2. **Product solutions** - Develop custom connectors for brands (e.g., SMS gateway) - For LivePerson customers who wish to connect with their customers via SMS Gateway of their choice (not via Twilio) and wish that this will be developed by LivePerson. This connector would normally be hosted be hosted at Live Person.
+* Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution)
 
-![JavascriptOverview](img/ConnectorAPI2.png)
+#### On the **agent** side, the Send API allows:
 
-[comment]: <> (<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>)
+* Resume a conversation
 
-### The Connector API allows the **Consumer** to:
+* Transfer a conversation to a different skill
 
-		* Create Conversation and send SDEs in one step.
+* Send a text message
 
-		* Send Text Messages
+* Send structured content
 
-		* Send Images
+* See SENT, READ and RECEIVED indications
 
-		* See SENT, READ and RECIEVED indications
+* See indication that the consumer is typing
 
-		* Send Chat States Events (COMPOSING, ACTIVE, INACTIVE etc.)
+* Close a conversation
 
-		* Close conversation
+{:start="2"}
+2. **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: This component receives responses and notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework via HTTPS-endpoints. These responses and notifications communicate agent events to the Connector, such as agent replied, closed conversation, is typing and so on.
 
-		* Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution)
+Please note: as part of using the Connector API, brands will be required to expose their webhooks' HTTPS-endpoints. For more details on Webhooks and how their authentication works, please refer to the [Webhooks documentation](webhooks-overview.html){:target="_blank"}.
 
-### The connector API allows the **Agent** to:
-
-		* Resume a conversation
-
-		* Transfer a conversation to a different skill
-
-		* Send a text message
-
-		* Send structured content
-
-		* See sent, read and received indications  
-
-		* See indication that the consumer is typing
-
-		* Close a conversation
-
-
-
-### The Webhooks allows the connector to:
+### The Webhooks component allows the connector to:
 
 * Register for notifications on LivePerson (LP) events.
 
 For more information, please refer to the [Webhooks Overview](webhooks-overview.html){:target="_blank"}.
 
+### Use Cases
+
+**There are two primary reasons to utilize the Connector API**:
+
+1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels while using more than one device, e.g a connector for **Facebook Messenger, Google my business, Apple Business Chat, LINE** etc. Another example, would be a connector for an SMS Gateway of their choice (not via Twilio). This connector would normally be hosted on the brands servers.
+
+2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. This connector would normally be hosted on Live Person servers.
+
+![JavascriptOverview](img/ConnectorAPI2.png)
+
+[comment]: <> (<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>)
 
 ### Samples
 

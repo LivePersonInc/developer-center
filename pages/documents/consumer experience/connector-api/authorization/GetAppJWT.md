@@ -18,18 +18,18 @@ search: include
 
 2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
-### Authentication with AppJWT
+### Authorization with AppJWT
 
-Before sending any request with the Send API you must obtain an **AppJWT** authentication token using the brand’s **App Installation id** and **Secret** which you acquired as described on the [Getting Started](connectorapi-getting-started.html){:target="_blank"} chapter.
+Before sending any request with the Send API, you must first obtain an **AppJWT** authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html){:target="_blank"} chapter.
 
-The **AppJWT** is an access token obtained from **Sentinel** which is LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access LiveEngage platform.
+The **AppJWT** is an access token obtained from **Sentinel**, which is a LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access the LiveEngage platform.
 
 An AppJWT can be obtained with the following HTTPS request:
 
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://{domain}/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={**Installation id**}&client_secret={**Secret**} |
+| POST | https://{domain}/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
 
 
 **Path Parameters**
@@ -45,10 +45,8 @@ An AppJWT can be obtained with the following HTTPS request:
 | :--- | :--- | :--- | --- |
 | v | The API version | numeric | 1.0 |
 | grant_type | authorization grant according OAuth 2.0 | string | client_credentials |
-| client_id | **App Installation id** provided after application registration | string | 75588e18-0213-4e33-8174-883acac7e3c4 |
-| client_secret | **Secret** provided after application registration | string | kgvbkk7glku72jgtmpi6l4a872 |
-
-
+| client_id | `Installation id` provided after application registration | string | 75588e18-0213-4e33-8174-883acac7e3c4 |
+| client_secret | `Secret` provided after application registration | string | kgvbkk7glku72jgtmpi6l4a872 |
 
 **Request Headers**
 
@@ -56,14 +54,13 @@ An AppJWT can be obtained with the following HTTPS request:
 | :--- | :--- |
 | Content-Type | application/x-www-form-urlencoded |
 
-
 ### Response
 
 **Response Codes**
 
 | Code | Description |
 | :--- | :--- |
-| 200 | acces_token is recieved |
+| 200 | access_token is received |
 
 
 **Response Example**

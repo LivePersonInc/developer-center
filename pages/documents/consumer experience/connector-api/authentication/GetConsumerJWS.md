@@ -18,11 +18,11 @@ search: include
 
 2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
-### Authentication with AppJWT
+### Authentication with ConsumerJWS
 
-An **AppJWT** is not sufficient to identify a consumer with the Messaging service. With a valid AppJWT you can obtain a consumer token (Java Web Signature, JWS):
+An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT you can obtain a ConsumerJWS (Java Web Signature):
 
-The ConsumerJWS is the unique identifier of the user and used by the the connector in conjunction with the AppJWT to access LiveEngage on Behalf of the consumer.
+The ConsumerJWS is the unique identifier of the user and used by the the connector in conjunction with the AppJWT to access LiveEngage on behalf of the consumer.
 
 A ConsumerJWS can be obtained with the following HTTPS request:
 
