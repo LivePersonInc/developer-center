@@ -10,13 +10,13 @@ permalink: sendapi_send.html
 search: exclude
 ---
 
-The SEND endpoint allows you to send a JSON payload.
+The SEND method allows you to send a JSON payload.
 
 ### Request
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation/send?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
 
 **Path Parameters**
@@ -44,11 +44,11 @@ The SEND endpoint allows you to send a JSON payload.
 | :--- | :--- |
 | The JSON Payload | application/json |
 
-<span style="text-decoration:underline">Notes:</span>
+**Notes**:
 
-For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads. This payload would normally be _PublishEvent_ payload or _UpdateConversationField_ payload.
+For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads. This payload would normally have the _ms.PublishEvent_ type or the _cm.UpdateConversationField_ type.
 
-<span style="text-decoration:underline">JSON Example:</span>
+**JSON Example**:
 
 {% raw %}
 ```json
@@ -68,7 +68,7 @@ For the JSON payload, please have a look at the [Messaging Window API](https://d
 ```
 {% endraw %}
 
-Elements in the payload
+**Elements in the payload**
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |

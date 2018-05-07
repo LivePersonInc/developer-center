@@ -71,7 +71,11 @@ In response, you will get a conversation ID that will be used in the next steps.
 
 Use the following request to retrieve an upload url, specifying the type and size of the file.
 
-**Note**: the supported types and size limitations are listed in the API reference. See full documentation [here](consumer-int-msg-generate-temp-upload-url.html).
+
+**Note**: The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+
+See full documentation for generating temporary upload URL [here](consumer-int-msg-generate-temp-upload-url.html).
+
 
 
 Request Body Example:
@@ -143,7 +147,9 @@ Upload the file as binary.
 | 201 | CREATED |
 | 401 | Temp URL invalid |
 
-**Download the Chat API resources by a Postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}
+
+**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}
+
 
 Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/){:target="_blank"}
 

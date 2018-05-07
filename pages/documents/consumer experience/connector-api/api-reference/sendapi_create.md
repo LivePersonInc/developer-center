@@ -10,13 +10,13 @@ permalink: sendapi_create.html
 search: exclude
 ---
 
-The CREATE is a batch-endpoint. It takes a set of at least two JSON payloads. The order of the array is important. Returns an array of corresponding JSON payloads in the response.
+The CREATE method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows since LiveEngage expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response.
 
 ### Request
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Path Parameters**
 
@@ -43,15 +43,13 @@ The CREATE is a batch-endpoint. It takes a set of at least two JSON payloads. Th
 | :--- | :--- |
 | The JSON Payload | application/json |
 
-<span style="text-decoration:underline">Notes:</span>
+**Notes**:
 
-For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads. The API batch endpoint expects an set of JSON payloads, each represents a different type of request to UMS. The order of payload is important in order to create a new conversation.
+For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads. This method expects a set of JSON payloads, each representing a different type of request to LiveEngage messaging service. The order of the payloads is important in order to create a new conversation.
 
-First, the _SetUserProfile_ payload, second the _ConsumerRequestConversation_ payload, and optionally, last but not least the _PublishEvent_ payload. These payloads are only required once to open a conversation.
+First, the payload with the `type` _userprofile.SetUserProfile_ appears , second the payload with the `type` _cm.ConsumerRequestConversation_ appears , and optionally, last but not least the payload with the `type` _ms.PublishEvent_ appears.
 
-**Note** - In the future we are planning to change it and not to require this in order to create a conversation, i.e. to make the _SetUserProfile_ also optional).
-
-<span style="text-decoration:underline">JSON Example:</span>
+**JSON Example**
 
 {% raw %}
 ```json
@@ -164,7 +162,7 @@ HTTP Status Code 200
 ```
 {% endraw %}
 
-Elements in the Response
+**Elements in the Response**
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
