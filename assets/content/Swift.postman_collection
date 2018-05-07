@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Swift",
+		"_postman_id": "4cb3172e-2f6f-5708-a99d-1fae4f1ede15",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://<swiftDomain>/<URL>?temp_url_sig=<SIG>&temp_url_expires=<Expiration>",
+			"request": {
+				"url": {
+					"raw": "https://<swiftDomain>/<URL>?temp_url_sig=<SIG>&temp_url_expires=<Expiration>",
+					"protocol": "https",
+					"host": [
+						"<swiftDomain>"
+					],
+					"path": [
+						"<URL>"
+					],
+					"query": [
+						{
+							"key": "temp_url_sig",
+							"value": "<SIG>",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "temp_url_expires",
+							"value": "<Expiration>",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": "Upload photo"
+			},
+			"response": []
+		},
+		{
+			"name": "https://<swiftDomain>/<URL>?temp_url_sig=<SIG>&temp_url_expires=<Expiration>",
+			"request": {
+				"url": {
+					"raw": "https://<swiftDomain>/<URL>?temp_url_sig=<SIG>&temp_url_expires=<Expiration>",
+					"protocol": "https",
+					"host": [
+						"<swiftDomain>"
+					],
+					"path": [
+						"<URL>"
+					],
+					"query": [
+						{
+							"key": "temp_url_sig",
+							"value": "<SIG>",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "temp_url_expires",
+							"value": "<Expiration>",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": "Download photo"
+			},
+			"response": []
+		}
+	]
+}

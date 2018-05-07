@@ -1,0 +1,15 @@
+{
+    "description": "Generate an upload URL with relativePath, Signature and Expiration to access Liveperson storage",
+    "type": "object",
+    "properties": {
+        "fileSize": {
+            "description": "File size is given in Bytes and is limited and over sized requests will be rejected",
+            "type": "string"
+        },
+        "fileType": {
+            "type": "string",
+            "enum": ["JPG", "PNG", "GIF", "JPEG"]
+        }
+    },
+    "required": ["fileSize", "fileType"]
+}
