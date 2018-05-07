@@ -12,19 +12,18 @@ permalink: connectorapioverview.html
 ---
 ### Introduction
 
-A connector is a piece of code which "connects" LiveEngage and an external messaging application (e.g. SMS gateway, Facebook, Apple Business Chat, LINE etc.) The Connector API enables server to server communication for any connectors developed by our customers by sending and receiving events via HTTPS (REST methods) to LiveEngage.
+A connector is a piece of code which "connects" LiveEngage and an external messaging application (e.g. SMS gateway, Facebook, Apple Business Chat, LINE etc.) The Connector API enables communication for any connectors by sending and receiving events via HTTPS (REST methods) from an external messaging application and routing it to LiveEngage.
 
-LiveEngage already provides out of the box connectors to Facebook, Google My Business, SMS via Twilio and Line with many more in the pipeline, including the Apple Business Chat connector. This API is meant for customers who want to connect with any other messaging platform of their choice, such as Viber, Skype, and SMS (not via Twilio). The API also allows brands to develop their own [**customized messaging connector**](create-connector.html){:target="_blank"} in collaboration with a third party partner.
+LiveEngage already provides out of the box connectors for Facebook, Google My Business, SMS via Twilio and Line, with many more in the pipeline, including the Apple Business Chat connector. This API is meant for customers who want to connect with any other messaging platform of their choice, such as Viber, Skype, and SMS (not via Twilio) by building their own connector. The API also allows brands to develop their own connector in collaboration with a third party partner.
 
-**What is  the Connector API?**
-
-The Connector API provides a HTTPS-based transport for asynchronous server-to-server communication with LivePerson Messaging. Brands can connect consumers via an external messaging gateway, e.g., a SMS gateway, to the LiveEngage platform.
+**What is the Connector API?**
 
 The Connector API is split into two main components:
 
-* **The Messaging Send API**: Send requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework.
+* **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: This component receives updates and notifications from a third party app and delivers them to the customer's connector via REST calls. The framework of these calls is based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"}.
 
-* **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: Receive responses and notifications based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework via HTTPS-endpoints that are used by the customer's connector.
+* **The Messaging SEND API**: The API allows the customer's connector to then send requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework to LiveEngage.
+
 
 ![JavascriptOverview](img/ConnectorAPI1.png)
 

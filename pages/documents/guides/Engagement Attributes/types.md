@@ -279,7 +279,7 @@ This information can be used to segment visitors and tailor an experience based 
 | lastname | Visitor's surname | string  | "Doe" | false | yes |
 | age | Visitor's age | Age object  | {<br>"age": 34,<br>"year": 1980,<br>"month": 4,<br>"day": 15<br>} | false | yes |
 | contacts | Visitors contact info | array of Contact object  | [{<br>"email":"m@m.com",<br>"phone":<br>"+1 212-788-8877" }] | false | yes |
-| gender | Visitor's gender | integer  | 0-MALE,<br>1-FEMALE,<br>2-OTHER | false | yes |
+| gender | Visitor's gender | string  | MALE,<br>FEMALE,<br>OTHER | false | yes |
 | company | Visitor's company | string  | "Microsoft Ltd." | false | yes |
 | language | Campaign ID | Visitor's language. The value is an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO string “en-US” false 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash or underscore (for compatibility). For example, en-US or fr-CA.  | "en-US" | false | yes |
 
