@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-level1: 
+level1:
 level2: Real Time Interactions
 level3: Monitoring API
 order: 10
@@ -18,17 +18,25 @@ Create an account and save the generated `account_id`. Make sure the Async_Messa
 
 ![Data Source](img/monitor_start1.png)
 
-### Step 3 - Create a Mobile App
+### Step 3 - Create a Mobile App in the LE UI or Develop Your Own Private App
+
+In order to utilize the Monitoring API, you will need, among other parameters, an `AppInstallationId`. In order to do so, you will first need to create an application, either by using the LE UI to create a Mobile App or by developing your own Private App.
+
+**Mobile App in the LE UI**
 
 * Click on Mobile App -> Connect and fill in the details of your application.
 
 ![Mobile App](img/monitor_start2.png)
 
-* Click on **create** and copy the generated app key (AKA app install id).
+* Click on **create** and copy the generated app key (AKA `AppInstallationId`).
 
 ![AppInstallationId](img/monitor_start3.png)
 
-You can now create an engagement with the **Mobile App** source.
+**Developing Your Own Private App**
+
+Please contact your Account Team to create a Private App and retrieve your `AppInstallationId`.
+
+You can now create an engagement with the **Mobile App** or **Private App** source.
 
 Before calling the Monitoring API, you will need to fetch the Monitoring API domain. Please refer to [this document](https://developers.liveperson.com/agent-domain-domain-api.html#overview) for instructions on how to do so.
 
