@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "relativePath": {
+            "description": "The relative path of the hosted file in storage",
+            "type": "string"
+        },
+        "queryParams" : {
+            "type": "object",
+            "properties": {
+                "temp_url_sig": {
+                  "description": "Signature",
+                  "type": "string"
+                },
+                "temp_url_expires": {
+                  "description": "Expiration timestamp of the temporary URL",
+                  "type": "string"
+                }
+            },
+            "required": ["temp_url_sig", "temp_url_expires"]
+          }
+    },
+    "required": ["relativePath", "queryParams"]
+}
