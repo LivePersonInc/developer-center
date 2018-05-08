@@ -25,7 +25,7 @@ Within LiveEngage lies the capability to generate an SMS clickable mobile conten
 
 3. Under Target Audience, change the target **Platform** to **Mobile Smartphone** - the SMS link will not function on desktop.
 
-4. Create a new content engagement. You will need to **create a set of two engagements**: one for iOS and another for Android. The best naming practice is <CONTENT_NAME>_ios and <CONTENT_NAME>_android.
+4. Create a new content engagement. You will need to **create a set of two engagements**: one for iOS and another for Android. The best naming practice is <CONTENT_NAME>_ios and <CONTENT_NAME>_android. Set the following parameters:
 
     a. Source: Web
     
@@ -35,7 +35,7 @@ Within LiveEngage lies the capability to generate an SMS clickable mobile conten
     
     d. On-click action: None
 
-6. Move to the next step: Engagement studio.
+5. Move to the next step: Engagement studio.
 
 #### Step 2: Edit the engagement
 
