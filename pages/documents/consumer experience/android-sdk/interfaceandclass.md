@@ -112,6 +112,19 @@ public class LPAuthenticationParams{
 }
 ```
 
+### ConversationViewParams
+
+```javascript
+
+public class ConversationViewParams{
+  boolean viewOnlyMode = false;
+  CampaignInfo mCampaignInfo;
+  LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay = LPConversationsHistoryStateToDisplay.ALL;
+  LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType = LPConversationHistoryMaxDaysDateType.startConversationDate;
+  int mHistoryConversationsMaxDays = -1; //no limit
+}
+```
+
 
 ### LPConversationsHistoryStateToDisplay
 
