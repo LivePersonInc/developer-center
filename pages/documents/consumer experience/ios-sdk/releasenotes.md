@@ -24,7 +24,7 @@ The version contains the following bug fixes:
 When a consumer scrolls inside the conversation window, returns to the app and then back to the conversation, their position inside the screen is not saved and they need to navigate back to their previous position.
 
 #### Fix:
-The consumer’s position within the conversation window is saved. When the consumer returns to the conversation, they will return to the same place they were in when they navigated away from the screen.
+The consumer’s position within the conversation window is saved. When the consumer returns to the conversation, they will return to the same place they were when they navigated away from the screen.
 
 #### Symptom:
 In some cases, when fetching additional history, the UI of the conversation screen breaks.
