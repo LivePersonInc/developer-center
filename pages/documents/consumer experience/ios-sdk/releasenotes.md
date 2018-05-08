@@ -13,12 +13,44 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.1.3 (identical to 3.1.0.23)
+Version 3.1.0.23 - Supports XCode 9.2
+
+Version 3.1.3 - Supports XCode 9.3
+
+The version contains the following bug fixes:
+
+#### Symptom: 
+When a consumer scrolls inside the conversation window, returns to the app and then back to the conversation, their position inside the screen is not saved and they need to navigate back to their previous position.
+
+#### Fix:
+The consumer’s position within the conversation window is saved. When the consumer returns to the conversation, they will return to the same place they were when they navigated away from the screen.
+
+#### Symptom:
+In some cases, when fetching additional history, the UI of the conversation screen breaks.
+
+#### Fix:
+The UI will maintain its structure after fetching additional history.
+
+#### Symptom:
+When a consumer starts a conversation and leaves the messaging screen while moving the app to background, then returns to the messaging screen after the JWT has expired, they will not be able to continue the conversation and sending messages will be disabled.
+
+#### Fix:
+The JWT expiration is now verified before each socket connection. If it expires, a callback of tokenExpired will be invoked.
+
+#### Symptom:
+When calling the API of removeConversation() from viewWillDisappear() when the conversation has been resolved, the socket will be closed while the CSAT is being presented to the consumer. As a result, the CSAT submit button is disabled.
+
+#### Fix:
+The socket will not be closed while the CSAT is being presented.
+
+
 ### iOS Messaging SDK - Version 3.1.2 (identical to 3.1.0.22)
 Version 3.1.0.22 - Supports XCode 9.2
 
 Version 3.1.2 - Supports XCode 9.3
 
-In-App Messaging SDK v3.1.2 supports XCode 9.3 and contains the following bug fixes:
+The version contains the following bug fixes:
 
 #### Symptom:
 Consumer is typing indication appears to the agent when the keyboard is opened and not when the consumer actually starts typing.
