@@ -7,25 +7,22 @@ level4: Examples
 order: 67
 indicator: both
 permalink: sdes_routing_example.html
-search: include
+
 ---
 
 The Connector API provides the ability to set the user profile and change the user engagement attributes (SDEs). See below a few examples of how to do so.
 
-The following [**JSON**](assets/schema/connectorapi/setUserProfile.json) includes all the supported attributes that can be passed in the body.
+The following [JSON Schema](assets/schema/connectorapi/setUserProfile.json) includes all of the supported attributes that can be passed in the body.
 
-
-The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
+The SDEs which supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 **EXAMPLES**
 
-[**Create & Send SDE Routing - ctype Example**](sdes_routing_example.html#create--send-sde-routing---ctype)
+[Create & Send SDE Routing - ctype Example](sdes_routing_example.html#create--send-sde-routing---ctype)
 
-[**SDE Routing - companyBranch Example**](sdes_routing_example.html#sde-routing---companybranch)
+[SDE Routing - companyBranch Example](sdes_routing_example.html#sde-routing---companybranch)
 
-[**SDE Routing - gender Example**](sdes_routing_example.html#create-send---sde-routing---gender)
-
-
+[SDE Routing - gender Example](sdes_routing_example.html#create-send---sde-routing---gender)
 
 ### SDE Routing - companyBranch
 
@@ -33,7 +30,7 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 {% raw %}
 ```json
@@ -111,7 +108,7 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Json payload**
 
@@ -191,7 +188,7 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Json payload**
 

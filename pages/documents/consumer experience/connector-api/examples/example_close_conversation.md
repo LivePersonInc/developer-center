@@ -6,11 +6,11 @@ level3: Connector API
 level4: Examples
 order: 62
 indicator: both
-permalink: close_conversation_example.html
-search: include
+permalink: close-conversation-example.html
+
 ---
 
-To close the conversation you simply use the same endpoint you use to send a message. But the payload type is different i.e. not _PublishEvent_ type but _UpdateConversationField_ type. Also here the conversation ID is passed in the Payload.
+In order to close a conversation you simply use the same method (endpoint) you use to send a message. However, the payload type is different i.e. not _ms.PublishEvent_ type but _cm.UpdateConversationField_ type. The conversation ID is passed in the Payload in this method as well.
 
 ### Close a conversation
 
@@ -18,7 +18,7 @@ To close the conversation you simply use the same endpoint you use to send a mes
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation/send?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
 **Json payload**
 

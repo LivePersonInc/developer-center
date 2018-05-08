@@ -6,11 +6,11 @@ level3: Connector API
 level4: Examples
 order: 61
 indicator: both
-permalink: send_message_example.html
-search: include
+permalink: send-message-example.html
+
 ---
 
-This is an example of how to send a message to LiveEngage to an open conversation. The conversation ID is required to address the conversation and it is passed in the JSON payload.
+This is an example of how to send a message to LiveEngage to an open conversation. The conversation ID is required to address the specific conversation you're interested in and it is passed in the JSON payload.
 
 ### Send a message
 
@@ -18,7 +18,7 @@ This is an example of how to send a message to LiveEngage to an open conversatio
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation/send?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
 **Json payload**
 
