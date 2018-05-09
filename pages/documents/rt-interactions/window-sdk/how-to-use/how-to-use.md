@@ -8,7 +8,7 @@ level4: Instructions
 
 order: 20
 permalink: rt-interactions-window-sdk-how-to-use.html
-indicator: chat
+indicator: chat and messaging
 ---
 
 All public properties and methods can be found in the namespace lpTag.LPWidgetSDK.
@@ -31,6 +31,7 @@ All public properties and methods can be found in the namespace lpTag.LPWidgetSD
       widgetName: "widgetName",
       events: {
           CONVERSATION_INFO: "conversationInfo",
+          ENGAGEMENT_INFO: "engagementInfo",
           MESSAGES: "messages",
           PARTICIPANTS: "participants",
           UI_WINDOW: "uiWindow",
@@ -45,6 +46,7 @@ All public properties and methods can be found in the namespace lpTag.LPWidgetSD
           PRE_CONVERSATION: "preConversation",
           PENDING: "pending",
           ACCEPTED: "accepted",
+          IN_QUEUE: "inQueue",
           INTERACTIVE: "interactive",
           POST_CONVERSATION: "postConversation",
           CONVERSATION_ENDED: "ended",
