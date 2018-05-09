@@ -6,13 +6,13 @@ level3: Connector API
 level4: Examples
 order: 63
 indicator: both
-permalink: send_chat_states_example.html
-search: include
+permalink: send-chat-states-example.html
+
 ---
 
-This example illustrates how to send LiveEngage the presence/typing events (chat-state), in specific "Consumer is Typing" chat-state (**COMPOSING**).
+This example illustrates how to send LiveEngage the presence/typing events (chat-state), specifically the "Consumer is Typing" chat-state (`COMPOSING`).
 
-In order to send an indication that the consumer is typing we are sending a message of _PublishEvent_ type that its body includes an event of _ChatStateEvent_ and we are passing **COMPOSING** as the **chatState** value.
+In order to send an indication that the consumer is typing, the connector will send a payload of _ms.PublishEvent_ type. The payload body includes an event of _ChatStateEvent_ and we are passing `COMPOSING` as the **chatState** value.
 
 
 ### Send Chat State Events - "Consumer is typing"
@@ -42,6 +42,6 @@ In order to send an indication that the consumer is typing we are sending a mess
 ```
 {% endraw %}
 
-<span style="text-decoration:underline">Notes:</span>
+**Notes**:
 
-In order to show that the consumer has stopped typing it is not sufficient to send another text message but you need to send another _ChatStateEvent_ and pass any other state which is different than **COMPOSING** i.e: **ACTIVE** , **INACTIVE**, **GONE**, **PAUSE**
+In order to show that the consumer has stopped typing it is not sufficient to send another text message. Instead you need to send another payload as above with the _ChatStateEvent_ value in the "type" key. In addition, you will need to pass any other state which is different than `COMPOSING` (it doesn't matter which value you choose, as long as it is not `COMPOSING`) i.e: `ACTIVE` , `INACTIVE`, `GONE`, `PAUSE`.

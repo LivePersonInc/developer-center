@@ -6,19 +6,30 @@ level3: Connector API
 level4: Examples
 order: 64
 indicator: both
-permalink: enable_feature_example.html
-search: include
+permalink: enable-feature-example.html
+
 ---
 
-The following examples illustrates how to enable auto messages feature. Pay attention also to the required request header. Please refer to this [**Client Properties Tutorial**](https://developers.liveperson.com/consumer-int-client-props.html) to learn more on the which client properties you can send and also which features can be enabled. You can also refer directly to this [**JSON Schema**](https://developers.liveperson.com/assets/schema/infra/clientPropertiesHeader.json)
+The following example illustrates how to enable features, while using the auto messages feature as an example. In order to enable other features, simply change the value of the "features" field in this example to the feature you are interested in. The list of possible values as is follows:
 
-### How to enable feature, e.g. AUTO_MESSAGES
+* "CO_BROWSE"
+* "CO_APP"
+* "PHOTO_SHARING"
+* "SECURE_FORMS"
+* "AUTO_MESSAGES"
+* "RICH_CONTENT"
+
+You can also refer directly to this [**JSON Schema**](https://developers.liveperson.com/assets/schema/infra/clientPropertiesHeader.json) to learn more about which client properties you can pass in the JSON payload.
+
+**Note**: Make sure to pass the required "Client-Properties" request header as per the below example.
+
+### How to enable a feature, e.g. AUTO_MESSAGES
 
 **Request**
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Additional Request Header**
 
@@ -74,14 +85,10 @@ The following examples illustrates how to enable auto messages feature. Pay atte
             ]
          },
          "channelType":"MESSAGING",
-         "brandId":"{{accountid}}",
+         "brandId":"{accountid}",
          "skillId":"2736637412"
       }
    }
 ]
 ```
 {% endraw %}
-
-<span style="text-decoration:underline">Notes:</span>
-
-The __conversationContext__ part in the payload makes the difference so AUTO_MESSAGES works.

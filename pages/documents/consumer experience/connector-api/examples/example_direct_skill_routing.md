@@ -7,10 +7,10 @@ level4: Examples
 order: 66
 indicator: both
 permalink: direct_skill_routing_example.html
-search: include
+
 ---
 
-In this example we create a conversation and send message while we also pass the **Skill ID** in the Payload for routing the consumer conversation to the desired skill in LiveEngage. 
+In this example we create a conversation and send a message while also passing the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in LiveEngage.
 
 ### Create & Send with direct skill routing
 
@@ -18,7 +18,7 @@ In this example we create a conversation and send message while we also pass the
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 {% raw %}
 ```json
