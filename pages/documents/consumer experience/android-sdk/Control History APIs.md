@@ -1,12 +1,12 @@
 ---
 title: Control History APIs
 Keywords:
-level1: 
+level1:
 level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: Advanced Features
 order: 236
-permalink: consumer-experience-ios-sdk-advanced-control-history.html
+permalink: consumer-experience-ios-sdk-advanced-control-history-android.html
 indicator: messaging
 ---
 
@@ -102,7 +102,7 @@ LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(bran
 
 ### Important Notes
 
-* In case there are no conversations matching the provided filter, an empty state will be presented with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured - in order to change the text, change the value of `conversationEmptyState` (iOS) or `lp_history_control_api_empty_state` (Android) parameters. In order to change the text color, change `LPConfig → conversationEmptyStateTextColor` (iOS) or
+* In case there are no conversations matching the provided filter, an empty state will be presented with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured - in order to change the text, change the value of `conversationEmptyState` (iOS) or `lp_history_control_api_empty_state` (Android) parameters. In order to change the text color, change `LPConfig → conversationEmptyStateTextColor` (iOS). Text color cannot currently be changed on Android.
 
 * When opening the window with closed conversations only , the window will be opened as a view only mode.
 
