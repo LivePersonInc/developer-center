@@ -50,10 +50,11 @@ This method is used to open the conversation screen.
 
 ### removeConversation
 
-When navigating out of the conversation screen, this API will remove the view controller from its container. This is done by calling remove conversation API. The method will remove the SDK UI and clean the service or network operation that was running.
+When navigating out of the conversation screen, this API will remove the view controller from its container. This is done by calling the remove conversation API. The method will remove the SDK UI and clean the service or network operation that was running.
+
 This API should be used on the container's [deinit function](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html).
 
-** Please note: ** calling this API from [viewWillDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear) or [viewDidDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear) can cause unexpected behavior and brand should avoid such implementation.
+** Please note**: calling this API from [viewWillDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear) or [viewDidDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear) can cause unexpected behavior and brand should avoid such implementation.
 
 
 
