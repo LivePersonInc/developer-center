@@ -62,7 +62,7 @@ The Connector API is split into two main components:
 {:start="2"}
 2. **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: This component receives notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework via HTTPS-endpoints. These notifications communicate agent events to the Connector, such as agent replied, closed conversation, is typing and so on.
 
-Please note: as part of using the Connector API, brands will be required to expose their webhooks' HTTPS-endpoints. For more details on Webhooks and how their authentication works, please refer to the [Webhooks documentation](webhooks-overview.html){:target="_blank"}.
+Please note: as part of using the Connector API, brands will be required to expose their Webhooks' HTTPS-endpoints. For more details on Webhooks and how their authentication works, please refer to the [Webhooks documentation](webhooks-overview.html){:target="_blank"}.
 
 ### The Webhooks component allows the connector to:
 
