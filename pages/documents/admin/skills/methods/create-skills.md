@@ -19,7 +19,7 @@ This API creates a list of skills for a specific account.
 
 | Method |  URL  |
 | :--------  | :----- |
- |POST  |      /api/account/{accountId}/configuration/le-users/skills |
+ |POST  |      https://{domain}/api/account/{accountId}/configuration/le-users/skills |
 
 **Request Headers**
 

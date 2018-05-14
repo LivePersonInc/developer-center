@@ -1,7 +1,7 @@
 ---
 title: Overview
 level1: Documents
-level2:
+level2: Data
 level3: Personal Data Deletion API
 level-order: 8
 order: 1
@@ -19,17 +19,17 @@ Personal Data Deletion API allows brands to comply with the European Union's Rig
 This data can include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 30 days from the time of the request. There will be some approval process on LivePerson's side in the early stages to make sure we are deleting the data as requested.
 Only closed conversations can be deleted.
 
-**Note**: what this document refers to as "deletion" is actually the masking of specific, personal data by replacing it with generic text.
+**Note**: what this document refers to as "deletion" is actually the masking of specific, personal data by replacing it with generic text in the following format: *** LP deleted data ***
 
 ### Getting Started
 
 A few things you'll need to get started with this API:
 
-1. **Currently there's no need to retrieve your domain for this API**. Here are the different domains by geo location:
+1. **Currently there's no need to retrieve your domain for this API**. Below you can find the different domains by geo location. In order to determine the region of your account log into LiveEngage and look at the URL in your address bar. If it begins with z1, your account is hosted in the US. If it begins with z2 it is hosted in the EMEA region. If it begins with z3 it is an APAC account:
 
 * US accounts: va.data-mng.liveperson.net
 
-* UK accounts: lo.data-mng.liveperson.net
+* EMEA accounts: lo.data-mng.liveperson.net
 
 * APAC accounts: sy.data-mng.liveperson.net
 
@@ -51,11 +51,11 @@ This flow is initiated by the consumer requesting for one or all of his chats to
 
 The brand will need to follow the below steps to achieve this:
 
-1. Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
-2. Use the [Engagement History API](https://developers.liveperson.com/data-engagement-history-overview.html) to search for engagements with the identification value. Find all relevant engagements and detect the engagement id to delete
+2. Use the [Engagement History API](https://developers.liveperson.com/data-engagement-history-overview.html) to search for engagements with the identifying value. Find all relevant engagements and make note of the engagement id(s) to delete
 
-3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of engagement to delete.
+3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of engagements to delete.
 
 **Messaging - Flow #1**
 
@@ -63,9 +63,9 @@ This flow is initiated by the consumer requesting for one or all of his conversa
 
 The brand will need to follow the below steps to achieve this:
 
-1. Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
-2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identification value. Find all relevant conversation ids for deletion.
+2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation id(s) for deletion.
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of conversations to delete.
 
@@ -75,9 +75,9 @@ This flow is initiated by the consumer requesting for all of his personal data t
 
 The brand will need to follow the below steps to achieve this:
 
-1. Pass customer identification value via authentication flow (mapped into engagement attribute) or via engagement attributes
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during this consumer's engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
-2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identification value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
+2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method and make two requests: one with the list of conversations to delete and another with the consumerId. This makes sure that both the conversation and the rest of the consumer's data is completely deleted.
 

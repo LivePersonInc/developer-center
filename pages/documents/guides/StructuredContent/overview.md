@@ -12,11 +12,13 @@ root-link: true
 indicator: both
 ---
 
-### **Overview**
+### Overview
 
 Our solution allows to send messages (both Chat messages and "pure" Messaging) in a variety of ways: you can send simple text and images, or use our structured content templates to build your own layout with images, buttons and multiple actions in one message. The following document lists the different types of entries available for use with such a layout and includes templates for how to write them in JSON.
 
 You can use [this tool](https://livepersoninc.github.io/json-pollock/editor/) to render your JSON in advance and get a sense of how your card will look.
+
+Below, you can find specifications for each element of a Structured Content card. To view a complete example of a card, please scroll to the bottom of the document or [click here](https://developers.liveperson.com/structured-content-templates.html#json-examples) to view the examples.
 
 ### Specifications
 
@@ -271,7 +273,7 @@ _Fields_
 
 **Link**
 
-Open a URL in a web view when opened in mobile, or in a new tab for web.This action can be used for deep link purposes.
+Open a URL in a web view when opened in mobile, or in a new tab for web. This action can be used for deep link purposes.
 
 Each environment can override the URI for their specific needs.
 

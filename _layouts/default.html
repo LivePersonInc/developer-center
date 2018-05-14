@@ -20,7 +20,7 @@
     <div class="col-lg-12">
     {% include nav-breadcrumbs.html %}
     </div>
-   <div class="sidebarTitle fixed"><span>{{ page.level3 }}</span></div>
+   <div class="sidebarTitle fixed"><span class="titlespan">{{ page.level3 }}</span></div>
    <div class="sidebarTitle-holder">{{ page.level3 }}</div>
     <!-- Content Row -->
     <div class="row">
@@ -32,9 +32,11 @@
     <!-- Content Column -->
     <div class="col-md-9 inside-page-content">
         {% if page.level4 %}
-        <div class="h2">{{ page.level4 }}</div>
-        {% endif %}
+        <div class="h1">{{ page.level4 }}</div>
         <div class="h2">{{ page.title }}</div>
+        {% else %}
+        <div class="h1">{{ page.title }}</div>
+        {% endif %}
         {{content}}
         <br />
         <br />

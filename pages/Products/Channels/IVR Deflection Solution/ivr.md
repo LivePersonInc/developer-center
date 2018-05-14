@@ -1,5 +1,6 @@
 ---
 title: IVR Deflection for Chat
+keywords: ['IVR', 'IVR Deflection', 'IVR Deflection for Messaging']
 level1: Solutions
 level2: Channels
 level3: IVR Deflection

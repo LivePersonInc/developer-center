@@ -22,6 +22,6 @@ In order to get started and initialize the In-App Messaging SDK, utilize the fol
   6. `<LPMessagingSDKdelegate>   optional func LPMessagingSDKHasConnectionError(error: String?)`
 
 ### Supporting functions:
-  1. `public func getConversationBrandQuery(brandID: String) -> ConversationParamProtocol  `
+  1. `public func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol   `
   2. `public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol  `
   3. `public func isBrandReady(brandID: String) -> Bool  `

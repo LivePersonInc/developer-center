@@ -19,7 +19,7 @@ This API deletes a skill from a specific account.
 
 | Method | URL| 
  |:----- | :---- |
- |DELETE | /api/account/{accountId}/configuration/le-users/skills/{skillId} |
+ |DELETE | https://{domain}/api/account/{accountId}/configuration/le-users/skills/{skillId} |
 
 **Request Headers**
 
