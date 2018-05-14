@@ -57,7 +57,7 @@ A few things you'll need to get started with this API:
 
 4. This is a private beta that is available to a limited number of customers.  Please contact your account manager if you’d like to be considered for inclusion.  You’ll need to sign a beta agreement with LivePerson in order to participate.  
 
-5. This API requires a backend enablement, please contact your account manager to do so. 
+5. This API requires backend enablement, please contact your account manager to do so. 
 
 6. This beta software may be released in production as a final product at LivePerson’s discretion.  While it is in beta, we are making it available to you for use “as is” and for testing purposes only.
 
