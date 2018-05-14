@@ -136,6 +136,12 @@ The goal of the following document is to enumerate the different fields controll
     <td>8dp</td>
     <td><img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding"></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;show_agent_typing_in_message_bubble&quot;&gt;</td>
+    <td>Defines the *agent-is-typing-indicator* location. Whether it will appear on a message bubble (Facebook Messenger style), with animated dots, or it will appear in the **activity**'s toolbar (WhatsApp style).</td>
+    <td>false</td>
+    <td><img src="img/android_show_agent_typing_in_message_bubble.jpeg" alt="secondarycolor"></td>
+  </tr>
 </tbody>
 </table>
 
@@ -666,7 +672,7 @@ The goal of the following document is to enumerate the different fields controll
 <tbody>  
   <tr>
     <td>&lt;integer name=&quot;csatSurveyExpirationInMinutes&quot;&gt;</td>
-    <td>Define the expiration time in minutes for the survey to appear after closing the conversation.</td>
+    <td>Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it will not be presented to the user.</td>
     <td>1440</td>
     <td></td>
   </tr>
@@ -832,6 +838,7 @@ The goal of the following document is to enumerate the different fields controll
     <td>true</td>
     <td></td>
   </tr>
+
 </tbody>
 </table>
 
@@ -1442,6 +1449,18 @@ The goal of the following document is to enumerate the different fields controll
     <td>&lt;string name=&quot;pci_form_font_name&quot;&gt;</td>
     <td>Define the font of the pci secure form, by default - empty, use device's default</td>
     <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;push_notification_channel_id&quot;&gt;</td>
+    <td>Define the notification channel id to use in case of using LP default notification</td>
+    <td>LP_SDK_CHANNEL</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;string name=&quot;push_notification_channel_name&quot;&gt;</td>
+    <td>Define the notification channel name to use in case of using LP default notification</td>
+    <td>LP SDK</td>
     <td></td>
   </tr>
 </tbody>
