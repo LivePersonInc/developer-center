@@ -50,34 +50,6 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
   </tr>
 
   <tr>
-    <td>Default photo sharing gallery button icon vector drawable. Will appear after photo sharing menu popup (if enabled). Redirects to gallery for photo sharing.
-    To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
-   </td>
-    <td>lp_messaging_ui_ic_gallery.xml</td>
-  </tr>
-
-  <tr>
-  <td>Default photo sharing camera button icon vector drawable. Will appear after photo sharing menu popup (if enabled). Redirects to camera to capture picture for photo sharing.
-  To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
-  </td>
-  <td>lp_messaging_ui_ic_camera.xml</td>
-  </tr>
-
-  <tr>
-  <td>Default photo sharing menu button icon vector drawable. Will appear in enter message edit text (if enabled). Inflates menu for photo sharing With 2 options of gallery/camera.
-  To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
-  </td>
-  <td>lpinfra_ui_ic_attach.xml</td>
-  </tr>
-
-  <tr>
-    <td>Default closing the photo sharing menu button icon vector drawable. While photo sharing menu is inflated will appear in enter message edit text.
-    To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
-    </td>
-  <td>lpinfra_ui_ic_close.xml</td>
-  </tr>
-
-  <tr>
     <td>Default send button icon vector drawable. It will appear on the send button.
     The drawable is colored when the send button is enabled. The color configuration used is R.color.lp_send_button_text_enable. When the send button is disabled, we color it by the color configuration R.color.lp_send_button_text_disable. See more here: [Configuring the SDK](https://developers.liveperson.com/android-attributes.html#Message Edit Text){:target="_blank"}
     To Override this resource - create your own vector drawable under the android drawable folder with the same resource name.
