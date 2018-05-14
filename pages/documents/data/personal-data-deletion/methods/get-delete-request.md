@@ -2,7 +2,7 @@
 title: Get Deletion Requests
 keywords:
 level1: Documents
-level2: 
+level2: Data 
 level3: Personal Data Deletion API
 level4: Methods
 order: 30

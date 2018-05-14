@@ -11,7 +11,7 @@ indicator: chat
 ---
 
 
-Engagement retrieves all engagement data in .zip format files. The engagement data consists of information about the different engagements the visitor was involved with. This includes conversation metadata (start/end time, start/end reason etc.), transcript, MCS, transfer information, and more. 
+Engagement retrieves all engagement data in .zip format files. The engagement data consists of information about the different engagements the visitor was involved with. This includes conversation metadata (start/end time, start/end reason etc.), transcript, MCS, transfer information, and more.
 
 ### Request
 
@@ -56,7 +56,7 @@ Request for account 75555851:
                 }
             ]
         }
-    } 
+    }
     {
         "dataAccessFiles": {
             "@id": "75555851",
@@ -79,10 +79,10 @@ Request for account 75555851:
                 }
             ]
         }
-    } 
+    }
 
 **Elements in the Response**
-  
+
 | Parameter | Description | Type / Value |
 | :---------- | :-------- | :------------ |
 | id | LivePerson account number. | string |
@@ -241,11 +241,11 @@ The following table describes the information that is available for engagement d
 | :--------- | :-------------- | :------------ |
 | engagements | List of conversation / content entities. | array container |
 
-###  Conversation 
+###  Conversation
 
 | Parameter | Description | Type / Value |
 | :------ | :---------- | :----------- |
-| type | Type of conversation, can be one of the following: LIVE_CHAT, MESSAGING. | conversation Type | 
+| type | Type of conversation, can be one of the following: LIVE_CHAT, MESSAGING. | conversation Type |
 | conversationId | Unique conversation identifier. | string |
 | conversationStartTime | Start time of the conversation (enter queue time). | long |
 | interactionStartTime | Interaction start time (connection time). | long |
@@ -254,14 +254,7 @@ The following table describes the information that is available for engagement d
 | isInteractive | Indication whether the conversation is interactive (visitor wrote a line). | boolean |
 | sourceOrigin | Source of conversation. | string |
 | sourceDevice | Source device of the conversation, can be one of the following: NA, DESKTOP, TABLET, MOBILE. | DeviceType |
-| endReasonId | Conversation end reason ID, can be any of the following:
-101 - Transfer - rep stopped chat (rep transferred chat to another rep)
-106 - Transfer - Reassignment to skill (rep transferred chat to skill)
-201 - Rep stopped chat
-202 - Rep disconnected 
-205 - Visitor disconnected
-208 - Visitor was no longer in chat
-210 - Visitor closed chat | int |
+| endReasonId | Conversation end reason ID, can be any of the following: <br> 101 - Transfer - rep stopped chat (rep transferred chat to another rep) <br> 106 - Transfer - Reassignment to skill (rep transferred chat to skill)<br>201 - Rep stopped chat<br>202 - Rep disconnected <br>205 - Visitor disconnected<br>208 - Visitor was no longer in chat<br>210 - Visitor closed chat | int |
 | campaignData | Contains information about the conversation. | container |
 | agentId | Unique Identifier of the conversation’s last agent. | string |
 | skillID | Unique Identifier of the conversation’s last skill. | long |
