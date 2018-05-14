@@ -51,7 +51,7 @@ A few things you'll need to get started with this API:
 
 	* APAC accounts: sy.da.liveperson.net
 
-2. This API requires authorization using API key that is available in LiveEngage API Keys tab.
+2. This API requires authorization using API key that is available in the LiveEngage API Keys tab.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
