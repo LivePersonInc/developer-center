@@ -39,6 +39,21 @@ This API creates a list of users for a specific account.
 
 ### Response
 
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 201  | Created               |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+ |Header  |Description |
+| :-------  | :-----  |
+| ac-revision | Account config object type collection revision. | 
+
 **Response Body**
 
 [Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
