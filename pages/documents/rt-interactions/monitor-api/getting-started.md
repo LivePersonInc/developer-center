@@ -53,7 +53,6 @@ https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/enga
 The response will look like this:
 
 ```json
-HTTP/1.1 201 Created
 
 {
   "sessionId":"stM0CzMWRye4MZgRBAL4UQ",
