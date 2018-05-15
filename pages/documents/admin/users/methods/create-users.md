@@ -15,6 +15,12 @@ indicator: both
 
 This API creates a list of users for a specific account.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 ### Request
 
  |Method|      URL|  
@@ -28,7 +34,7 @@ This API creates a list of users for a specific account.
  |Authorization|  Contains token string to allow request authentication and authorization.  |
 
 **Request Body**
- 
+
 [Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
 
 **Path Parameters**

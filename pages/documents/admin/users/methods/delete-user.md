@@ -15,6 +15,12 @@ indicator: both
 
 This API deletes a user from a specific account.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 ### Request
 
 | Method|      URL|  

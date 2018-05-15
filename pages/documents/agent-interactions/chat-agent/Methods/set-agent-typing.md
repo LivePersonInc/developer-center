@@ -18,15 +18,13 @@ This method sets the agent's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| PUT | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true| 
-
-*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.* 
-
+| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true| 
 **Request Headers**
 
 | Header | Description |
 | :--- | :--- |
 | Authorization| Bearer {bearer-from-login} |
+| X-HTTP-Method-Override | PUT |
 | Content-Type | application/json |
 | Accept | application/json |
 

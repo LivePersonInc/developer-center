@@ -1,9 +1,9 @@
 ---
-title: Retry Policy and KeepAlive Best Practices
+title: Retry and KeepAlive Policy
 Keywords:
 level1: Documents
 level2: Guides
-level3: Retry Policy and KeepAlive Best Practices
+level3: Retry and KeepAlive Policy
 
 level-order: 11
 order: 10

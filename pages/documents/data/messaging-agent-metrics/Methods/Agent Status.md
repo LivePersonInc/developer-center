@@ -10,7 +10,7 @@ permalink: data-messaging-interactions-methods-agent-status.html
 indicator: messaging
 ---
 
-Returns the current state of logged in agents that are handling messaging conversations with all its related data, including status, number of open conversations, load, skills etc. 
+Returns the current state of logged in agents that are handling messaging conversations with all its related data, including status, number of open conversations, load, skills etc.
 
 **Request**
 
@@ -22,12 +22,14 @@ _BODY / POST Parameters_
 
 Filter is sent in the POST data (body) with the following JSON structure:
 
-| Name   |      Description      |  Type/Value |
-|----------|-------------|------|
-| Status |  List of Agent’s statuses to be filtered  | Array`<String>` |
-| agentIds |    List of agent ids - when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned.  |   Array`<String>` |
-| skillIds | List of skill ids - when provided, data will be returned for the agents with the specified skills who are in logged in state. |    Array`<String>` |
-| agentGroupIds | List of agent group ids - when provided, data will be returned for the agents that are member of the specified agent groups who are in logged in state.  |    Array`<String>` |
+| Name   |      Description      |  Type/Value | Notes |
+|----------|-------------|------|------|
+| Status |  List of Agent’s statuses to be filtered  | Array`<String>` | |
+| agentIds |    List of agent ids - when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned.  |   Array`<String>` ||
+| skillIds | List of skill ids - when provided, data will be returned for the agents with the specified skills who are in logged in state. |    Array`<String>` ||
+| agentGroupIds | List of agent group ids - when provided, data will be returned for the agents that are members of the specified agent groups who are in logged in state.  |    Array`<String>` ||
+| agentPresence | Indicates whether the agent is present  | Boolean | If the filter is not provided, a default filter with the value true will be used |
+| connectionStates | List of agent connection states  | Array`<String>` | Valid values: CONNECTED or DISCONNECTED |
 
 **Response**
 
@@ -78,7 +80,9 @@ _JSON Example_:
 					"configuredMaxSlots": 20,
 					"busySlots": 0,
 					"openAssignedConversations": 0,
-					"intenseConversations": 0
+					"intenseConversations": 0,
+					"agentPresence": "true",
+          "currentConnectionState": "CONNECTED"
 				},
 				{
 					"agentId": "7",
@@ -107,7 +111,9 @@ _JSON Example_:
 					"configuredMaxSlots": 20,
 					"busySlots": 0,
 					"openAssignedConversations": 0,
-					"intenseConversations": 0
+					"intenseConversations": 0,
+					"agentPresence": "true",
+					"currentConnectionState": "CONNECTED"
 				}
 			]
 		}
@@ -129,7 +135,7 @@ _JSON Example_:
 | agentSkills| List of current agent’s skills  |    Array`<Skill>`  |
 | agentGroupId| The agent’s group id |    alphanumeric  |
 | agentGroupName| The agent’s group name |    alphanumeric  |
-| currentStatus| The agent’s current status (can be ONLINE, AWAY, BACK_SOON) |    alphanumeric  |
+| currentStatus| The agent’s current status (can be ONLINE, AWAY, BACK_SOON, OFFLINE) |    alphanumeric  |
 | currentStatusDuration | The duration of the current status (in Milliseconds) |    Longnumeric  |
 | currentStatusReason| The id of the reason for the agent’s "AWAY" status |    alphanumeric  |
 | currentStatusReasonDuration | The duration of the reason for the "AWAY" status (in Milliseconds) |    Longnumeric  |
@@ -139,6 +145,8 @@ _JSON Example_:
 | busySlots| The agent’s number of busy slots |    alphanumeric  |
 | openAssignedConversations| The agent’s number of open assigned conversations|    alphanumeric  |
 | intenseConversations| The agent’s number of intense conversations |    alphanumeric  |
+| currentConnectionState | The agent's state (CONNECTED or DISCONNECTED) | alphanumeric |
+| agentPresence | Indicator whether the agent is in presence mode ("true" or "false") | alphanumeric |
 
 _Skill_
 

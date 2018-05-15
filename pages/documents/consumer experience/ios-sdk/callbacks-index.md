@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: SDK APIs
 
-order: 12
+order: 13
 permalink: consumer-experience-ios-sdk-callbacks-index.html
 
 indicator: messaging

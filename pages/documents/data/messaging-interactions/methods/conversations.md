@@ -451,7 +451,7 @@ sdeType         | Type of sde.                                | enum
         "visitorBehaviorId": "2379540212",
         "visitorBehaviorName": "someVisitorBehavior",
         "engagementApplicationId": "28879660-84fd-4cd8-a1d7-ba3247bdb252",
-        "engagementApplicationName": "Mobile App",
+        "engagementApplicationName": "Some Mobile App Test",
         "engagementApplicationTypeId": "92274cfd-29e7-4d94-a013-0646212d8075",
         "engagementApplicationTypeName": "Mobile App",
         "visitorProfileId": "2286779312",

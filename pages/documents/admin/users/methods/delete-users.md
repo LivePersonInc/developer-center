@@ -15,6 +15,12 @@ indicator: both
 
 This API deletes users from a specific account.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 ### Request
 
  |Method|      URL|  
@@ -29,7 +35,7 @@ This API deletes users from a specific account.
  |If-Match|  Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization.  |
 
 **Request Body**
- 
+
 `["987654321", "1232455"]`
 
 **Path Parameters**
