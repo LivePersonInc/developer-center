@@ -18,6 +18,8 @@ In order to present a "Click to Chat" button with an updated state of availabili
 
 The App Engagement API exposes an eligibility and availability check for engagements for any specific consumer from an external application. This API enables you to start a session, and update the session with SDEs.
 
+**Note**: This API works for engagements only of the MSDK or EXTERNAL type. If you do not have an engagement of either of these types, this API **will not work**. If you attempt to use this API on other types of engagements (for example, offsite or website engagements), the API calls will fail.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -27,6 +29,8 @@ A few things you'll need to get started with this API:
 	* msdkgw
 
 2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
 
 
 

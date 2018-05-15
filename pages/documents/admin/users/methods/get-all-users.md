@@ -18,8 +18,8 @@ This API retrieves a list of users for a specific account.
 ### Request
 
  |Method|               URL |
- |:------              |:-------- | 
- |GET|                  /api/account/{accountId}/configuration/le-users/users  |
+ |:------              |:-------- |
+ |GET|                  https://{domain}/api/account/{accountId}/configuration/le-users/users  |
 
 **Request Headers**
 
@@ -60,7 +60,6 @@ This API retrieves a list of users for a specific account.
  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
  
-
 
 ### Response
 

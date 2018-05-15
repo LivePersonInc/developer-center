@@ -22,15 +22,14 @@ This method sets the agent's availability to one of the following states:
 
 | Method | URL |
 | :--- | :--- |
-| PUT | https://{domain}.net/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
-
-*Note: PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.*
+| POST | https://{domain}.net/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
 
 **Request Headers**
 
 | Header | Description |
 | :--- | :--- |
-| Authorization| Bearer {bearer-from-login} |
+| Authorization | Bearer {bearer-from-login} |
+| X-HTTP-Method-Override | PUT |
 | Content-Type | application/json |
 | Accept | application/json |
 

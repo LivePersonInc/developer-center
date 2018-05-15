@@ -702,7 +702,7 @@ It's important to make sure your **Certificates** are correct and everything is 
 
 #### Method 2: Adding LivePerson Libraries
 
-1. Download the SDK package from [Github](https://github.com/LP-Messaging/iOS-Messaging-SD)
+1. Download the SDK package from [Github](https://github.com/LP-Messaging/iOS-Messaging-SDK)
 
 2. Once downloaded, extract the ZIP file to a folder on your Mac.
 

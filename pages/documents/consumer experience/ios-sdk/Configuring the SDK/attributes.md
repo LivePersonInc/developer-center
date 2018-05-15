@@ -17,7 +17,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Users Bubble
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -300,7 +300,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Link Preview
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -416,7 +416,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Photo Sharing
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -485,6 +485,34 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">#8B8A8F</td>
   </tr>
   <tr>
+    <td align="left">photoSharingMenuCameraImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Custom Camera image in the photo Sharing Menu.</td>
+    <td align="left"><img src="img/camera_menu.png" alt="camera_menu"></td>
+    <td align="left">SDK bundle camera_menu Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingMenuLibraryImage</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing custom button image.</td>
+    <td align="left"></td>
+    <td align="left">SDK bundle Camera Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingOpenMenuImageButton</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing open menu custom button.</td>
+    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
+    <td align="left">SDK bundle gallery_menu Image</td>
+  </tr>
+  <tr>
+    <td align="left">photoSharingCloseMenuImageButton</td>
+    <td align="left">UIImage?</td>
+    <td align="left">Photo sharing close menu custom button.</td>
+    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
+    <td align="left">SDK bundle menuClose Image</td>
+  </tr>
+  <tr>
     <td align="left">fileCellLoaderFillColor</td>
     <td align="left">UIColor</td>
     <td align="left">Radial loader fill color</td>
@@ -513,7 +541,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Send Button
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -557,7 +585,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### System Messages
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -580,7 +608,7 @@ The goal of the following document is to enumerate the different fields controll
 
 ### Window Mode
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -606,7 +634,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Delivery Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -652,12 +680,19 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"><img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode"></td>
     <td align="left">true</td>
   </tr>
+  <tr>
+    <td align="left">messageStatusNumericTimestampOnly</td>
+    <td align="left">Bool</td>
+    <td align="left">When false (default), time stamps will display information relative to when sent/distributed/read (e.g. 'sent 5 minutes ago'. When true, will show as numeric only (e.g. '11:32').</td>
+    <td align="left"><img src="messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly"></td>
+    <td align="left">true</td>
+  </tr>
 </tbody>
 </table>
 
 ### Surveys Buttons (CSAT and FCR)
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -668,13 +703,19 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
   </tr>
   </thead>
 <tbody>
-  <tr>
-    <td align="left">csatSubmitButtonCornerRadius</td>
-    <td align="left">Double</td>
-    <td align="left">Corner radius of the Submit button.</td>
-    <td align="left"><img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"></td>
-    <td align="left">30</td>
-  </tr>
+<tr>
+  <td align="left">csatSubmitButtonCornerRadius</td>
+  <td align="left">Double</td>
+  <td align="left">Corner radius of the Submit button.</td>
+  <td align="left"><img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"></td>
+  <td align="left">30</td>
+</tr><tr>
+  <td align="left">csatYesNoButtonsCornerRadius</td>
+  <td align="left">Double</td>
+  <td align="left">Corner radius of the resolution Yes/No buttons.</td>
+  <td align="left"><img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius"></td>
+  <td align="left">25</td>
+</tr>
   <tr>
     <td align="left">csatSubmitButtonBackgroundColor</td>
     <td align="left">UIColor</td>
@@ -779,7 +820,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Conversations
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
   <th>Name</th>
@@ -875,12 +916,19 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left"></td>
     <td align="left">false</td>
   </tr>
+  <tr>
+    <td align="left">conversationEmptyStateTextColor</td>
+    <td align="left">UIColor</td>
+    <td align="left">Color code for the empty state label.</td>
+    <td align="left"></td>
+    <td align="left">Black</td>
+  </tr>
 </tbody>
 </table>
 
 ### Unread Messages
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -987,7 +1035,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
 
 ### Localization
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1021,7 +1069,7 @@ It will affect the following areas:
 
 ### Brand
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1080,7 +1128,7 @@ It will affect the following areas:
 
 ### Date Separator
 
-<table>
+<table class="bigtable">
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -1153,7 +1201,7 @@ It will affect the following areas:
 
 ### User input view
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1171,7 +1219,7 @@ It will affect the following areas:
     <td align="left"><img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"></td>
     <td align="left">#F5F5F5</td>
   </tr>
-  <tr>  
+  <tr>
   </tr>
   <tr>
     <td align="left">inputTextViewCornerRadius</td>
@@ -1185,7 +1233,7 @@ It will affect the following areas:
 
 ### Agent Assignment
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1208,7 +1256,7 @@ It will affect the following areas:
 
 ### Duration of Local Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1231,9 +1279,11 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 </tbody>
 </table>
 
-### Time To Response and Off hours
+### Time To Responsd and Off hours
 
-<table>
+Please see [this document](local-message-notifications.html) for more in-depth information on how to configure and work with Time to Responsd (TTR) and Off Hours notifications.
+
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1333,7 +1383,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Date and Time
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1374,7 +1424,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Toast Notifications
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1407,7 +1457,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### User Avatar
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1450,7 +1500,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">remoteUserDefaultAvatarImage</td>
     <td align="left">UIImage?</td>
     <td align="left">Default Avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations.  If remote user has an avatar image in his profile, this attribute will be ignored.</td>
-    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"</td>
+    <td align="left"><img src="img/remoteUserDefaultAvatarImage.png"></td>
     <td align="left">nil</td>
   </tr>
   <tr>
@@ -1483,7 +1533,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Data Masking
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1528,7 +1578,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Navigation
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
     <th>Name</th>
@@ -1565,7 +1615,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Secure Form
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1687,7 +1737,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Structured Content
 
-<table>
+<table class="bigtable">
 <thead>
    <tr>
   <th>Name</th>
@@ -1723,7 +1773,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1731,7 +1781,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLongitudeDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, [click here](https://developer.apple.com/documentation/mapkit/mkcoordinatespan).</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1740,7 +1790,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Connection Status Bar
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1791,7 +1841,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Controller message
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>
@@ -1806,7 +1856,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">controllerBubbleTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Color code for the text of the controller bubble.</td>
-    <td align="left"><img alt="controller bubble text color"></td>
+    <td align="left"><img src="img/controllerbubletextcolor.png" alt="controller bubble text color"></td>
     <td align="left">#5b5c5e</td>
   </tr>
 </tbody>
@@ -1814,7 +1864,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 
 ### Accessibility
 
-<table>
+<table class="bigtable">
 <thead>
   <tr>
     <th>Name</th>

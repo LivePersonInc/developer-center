@@ -16,6 +16,8 @@ Messaging CSAT Distribution is calculated using bucket aggregation techniques wh
 
 **Example**: If the time is now 13:29 and time frame is 7 minutes the API will use 2 buckets: 13:25 and 13:30. In other words in practice the time of the data is not 13:22-13:29 but 13:20-13:29.
 
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+
 ### Retrieving Messaging CSAT Distribution API by Account and Skills
 
 | Method | URL |
@@ -49,10 +51,11 @@ Messaging CSAT Distribution is calculated using bucket aggregation techniques wh
 | positive_answers | The total number of CSAT 4 and 5 answers which were submitted in the current time frame. | long |
 | csat_score | The percentage of the total answers which were positive (scores 4 and 5) which were submitted in the current time frame. | float |
 
-**Optional Response Codes**
+**Potential Response Codes**
 
 | Code | Response |
 | :----- | :--------- |
 | 200 | OK - Successfully retrieved the data. |
 | 400 | Bad request - Problem with body or query parameters. |
 | 401 | Unauthorized - Bad Authentication (invalid site or agent). |
+| 429 | Request blocked due to rate limiting |

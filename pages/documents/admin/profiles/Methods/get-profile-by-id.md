@@ -19,7 +19,7 @@ This API retrieves a single profile (by ID) for a specific account.
 
 |Method   |   URL    |            
 |:--------  | :----------------- |
-| GET     |    /api/account/{accountId}/configuration/le-users/profiles/{profileId}|
+| GET     |    https://{domain}/api/account/{accountId}/configuration/le-users/profiles/{profileId}|
 
 **Request Headers**
 

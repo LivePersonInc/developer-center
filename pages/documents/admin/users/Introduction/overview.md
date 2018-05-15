@@ -16,6 +16,12 @@ indicator: both
 
 Users within LiveEngage can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 
 ![UsersOverview](img/usersoverview.png)
 
@@ -37,6 +43,8 @@ A few things you'll need to get started with this API:
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
 
 
 ### Use Cases for Users API

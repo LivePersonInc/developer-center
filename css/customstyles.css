@@ -127,7 +127,7 @@ th {
     text-align: left;
 }
 table {
-    max-width: 90%;
+    max-width: 100%;
     margin-bottom: 20px;
     border: 1px solid #dedede;
 }
@@ -187,11 +187,6 @@ table td:first-child {
 table.boldFirstColumn td:first-child {
     font-weight: bold;
 }
-
-table tr td {
-    hyphens: auto;
-}
-
 
 p.external a {
     text-align:right;

@@ -19,7 +19,7 @@ This API retrieves a single LoB (by ID) for a specific account.
 
 |Method   |   URL    |            
 |:--------  | :----------------- |
-| GET     |    /api/account/{accountId}/configuration/le-users/lobs/{lobId}|
+| GET     |    https://{domain}/api/account/{accountId}/configuration/le-users/lobs/{lobId}|
 
 **Request Headers**
 

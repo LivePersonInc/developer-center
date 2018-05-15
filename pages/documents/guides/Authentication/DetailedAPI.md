@@ -11,7 +11,11 @@ indicator: both
 
 ### Web Interaction Embedded Window API
 
-In this use case, it is the Customer’s Web App responsibility to generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
+In order to enable targeting for messaging engagements, configure the CustomerId Engagement Attribute in order to identify the visitor utilizing LivePerson’s backend authentication services. The CustomerId variable is part of CustomerInfo Engagement Attribute set. It is not used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor.
+
+By attributing the conversation to the CustomerID, new incoming messages will be delivered and displayed as a window in a minimized state, with new message notifications.
+
+In this use case, it is the Customer’s Web App responsibility to set the customerId and generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
 
 The callback method accepts two parameters:
 
@@ -26,6 +30,14 @@ The Customer web page method name can be either the default LivePerson method na
 **Code Example**
 
 ```javascript
+    log("set customerId");
+    lpTag.sdes.push({
+        "type": "ctmrinfo",
+        "info": {
+            "customerId": customerId
+        }
+    });
+
     var lpMethods = {
         lpGetAuthenticationToken: function(callback) {
             log("LP asked for id_token");
@@ -48,7 +60,7 @@ The Customer web page method name can be either the default LivePerson method na
 
   code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
   grant_type=authorization_code
-  redirect_uri=https://www.liveperson.com
+  redirect_uri=https://liveperson.net
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
 
@@ -62,7 +74,7 @@ POST /token HTTP/1.1
 Host: server.example.com   
 Content-Type: application/x-www-form-urlencoded   
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW    
-grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fwww.liveperson.com%2Fcb
+grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fliveperson.net%2Fcb
 ```
 
 **API Response**

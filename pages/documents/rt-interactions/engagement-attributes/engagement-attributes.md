@@ -19,7 +19,7 @@ indicator: both
 
 **OAuth**
 
-This API supports OAuth 1.0.
+_Note_: This API supports OAuth 1.0 and all URLs must be SSL enabled (https).
 
 **Headers**
 

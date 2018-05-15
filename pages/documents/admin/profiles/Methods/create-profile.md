@@ -19,7 +19,7 @@ This API creates a list of profiles for a specific account.
 
 | Method |  URL  |
 | :--------  | :----- |
-|POST  |      /api/account/{accountId}/configuration/le-users/profiles |
+|POST  |      https://{domain}/api/account/{accountId}/configuration/le-users/profiles |
 
 **Request Headers**
 

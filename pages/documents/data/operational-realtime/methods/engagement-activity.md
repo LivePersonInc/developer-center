@@ -16,9 +16,11 @@ Retrieves engagement activity-related metrics at the account, skill, or agent le
 
 *Example: If the time now is 13:29 and time frame is 7 minutes, the API will use 2 buckets: 13:25 and 13:30. In other words, in practice the time of the data is not 13:22-13:29, but 13:20-13:29.*
 
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+
 ### Request
 
-| Method | URL | 
+| Method | URL |
 | :-------- | :----- |
 | GET | `https://<domain>/operations/api/account/{accountID}/engactivity?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version>` |
 
@@ -359,8 +361,8 @@ Request with no skill/agent, there is some data: timeframe=1200 and interval=600
 | skill id When skill Id value(/s) provided : The skill Id. | long |
 | agent id | When agent Id value(/s) provided : The agent Id. | long |
 | timestamp | When interval size is provided in the request, the response will be aggregated by intervals. The timestamp is the UTC timestamp in milliseconds representing the end time of the interval. Example: Interval size: 30 min. Interval start and end time: 26/03/2014 07:30:00 - 26/03/2014 08:00:00. Timestamp: 1395820800000. Intervals are rounded up to 5 minutes. Consequently:  <br> • The latest interval timestamp will be rounded up. Example: Now: 08:07. Last interval end time: 8:10. <br> • The earliest interval will include only the remainder of the requested timeframe, and will therefore contain only 5 minutes of data. Example: Now: 8:07. Request parameters: timeframe=20&interval=10 (20 minutes in 10 minutes intervals). Response from and to time: 7:45 - 8:07 --> 22 minutes. <br> Note: See [Queue Health](data-operational-realtime-queue-health.html){:target="_blank"} for further information about time frame rounding. Response intervals: 8:00 - 8:10 (10 minutes. actual 7 minutes because now is 8:07). 7:50 - 8:00 (10 minutes). 7:45 - 7:50 (5 minutes). | long |
-| totalInteractiveChats | The number of interactive chats that took place in the current interval/time frame. | long |
-| totalNonInteractiveChats | The number of non-interactive chats that took place in the current interval/time frame. | long |
+| totalInteractiveChats | The number of interactive chats that were closed in the current interval/time frame. | long |
+| totalNonInteractiveChats | The number of non-interactive chats were closed in the current interval/time frame (this also includes chats that were abandoned by the visitor). | long |
 | totalHandlingTime | The total time in seconds that was spent handing the interactive chats in the current interval/time frame. | long |
 | nonInteractiveTotalHandlingTime | The total time in seconds that was spent handing the non-interactive chats in the current interval/time frame. | long |
 | connectedEngagements | The number of chats connected to an agent in the current interval/time frame. | long |

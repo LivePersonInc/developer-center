@@ -15,11 +15,17 @@ indicator: both
 
 This API updates a user for a specific account.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 ### Request
 
  |Method    |  URL  |
- |:-------- | :--- | 
- |PUT|  /api/account/{accountId}/configuration/le-users/users/{userId}  |
+ |:-------- | :--- |
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/users/{userId}  |
 
 **Request Headers**
 
@@ -30,7 +36,7 @@ This API updates a user for a specific account.
  |If-Match  |Contains data revision as known by the client. Allows concurrent modification backend verification.  |
 
 **Request Body**
- 
+
 [Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
 
 **Path Parameters**

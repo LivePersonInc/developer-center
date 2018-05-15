@@ -14,7 +14,7 @@ Retrieves Agent State Distribution data, which includes the following states:
 
 - Logged in (total of all states)
 - Online
-- Away
+- Away (with breakdown of multiple Away state reasons)
 - Back soon
 
 For each state, the following is indicated:
@@ -22,6 +22,10 @@ For each state, the following is indicated:
 - Time spent chatting
 - Time spent not chatting
 - Time spent logged in and chatting concurrently with the maximum allowed chats
+
+If no custom Away state reasons are configured, the 'reasons' field will be returned as an empty array.
+
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
 ### Request
 
@@ -52,389 +56,426 @@ For each state, the following is indicated:
 
 Request by v=1 and timeframe=120 and agentIds=all (including two agentIds: 2 and 3).
 
-    {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "2": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 4714,  
-    "chatting": 0,  
-    "notChatting": 4714,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 2486,  
-    "chatting": 2486,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 7200,  
-    "chatting": 2486,  
-    "notChatting": 4714,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ],  
-    "3": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 2486,  
-    "chatting": 2486,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 4714,  
-    "chatting": 0,  
-    "notChatting": 4714,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 7200,  
-    "chatting": 2486,  
-    "notChatting": 4714,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ]  
-    },  
-    "metricsTotals": []  
-    }  
-    }  
+    {
+      "agentsMetrics": {
+        "metricsPerAgent": {
+          "2": [
+            {
+              "id": 2,
+              "name": "Online",
+              "value": {
+                "total": 4714,
+                "chatting": 0,
+                "notChatting": 4714,
+                "chattingInMaxConcurrency": 0
+              }
+            },
+            {
+              "id": 3,
+              "name": "Back in 5",
+              "value": {
+                "total": 2361,
+                "chatting": 2361,
+                "notChatting": 0,
+                "chattingInMaxConcurrency": 0
+              }
+            },
+            {
+              "reasons": [
+              {
+                  "id": "2642559712",
+                  "value": {
+                      "total": 72,
+                      "chatting": 0,
+                      "notChatting": 72,
+                      "chattingInMaxConcurrency": 0
+                  }
+              },
+              {
+                  "id": "2642559112",
+                  "value": {
+                      "total": 53,
+                      "chatting": 0,
+                      "notChatting": 53,
+                      "chattingInMaxConcurrency": 0
+                  }
+              }
+              ],
+              "id": 4,
+              "name": "Away",
+              "value": {
+                "total": 0,
+                "chatting": 0,
+                "notChatting": 125,
+                "chattingInMaxConcurrency": 0
+              }
+            },
+            {
+              "id": -1,
+              "name": "Logged in",
+              "value": {
+                "total": 7200,
+                "chatting": 2486,
+                "notChatting": 4714,
+                "chattingInMaxConcurrency": 0
+              }
+            }
+          ],
+          "3": [
+            {
+              "id": 2,
+              "name": "Online",
+              "value": {
+                "total": 2486,
+                "chatting": 2486,
+                "notChatting": 0,
+                "chattingInMaxConcurrency": 0
+              }
+            },
+            {
+              "id": 3,
+              "name": "Back in 5",
+              "value": {
+                "total": 4714,
+                "chatting": 0,
+                "notChatting": 4714,
+                "chattingInMaxConcurrency": 0
+              }
+            },
+            {
+              "reasons": [],
+              "id": 4,
+              "name": "Away",
+              "value": {
+                "total": 0,
+                "chatting": 0,
+                "notChatting": 0,
+                "chattingInMaxConcurrency": 0
+              }
+            },
+            {
+              "id": -1,
+              "name": "Logged in",
+              "value": {
+                "total": 7200,
+                "chatting": 2486,
+                "notChatting": 4714,
+                "chattingInMaxConcurrency": 0
+              }
+            }
+          ]
+        },
+        "metricsTotals": []
+      }
+    }
 
 Request by v=1 and timeframe=120 and agentIds=all and interval=60 (including two agentIds: 2 and 3).
 
-    {  
-    "metricsByIntervals": [  
-    {  
-    "timestamp": 1404226200000,  
-    "metricsData": {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "2": [  
-    {  
-    "id": 2,    
-    "name": "Online",  
-    "value": {  
-    "total": 3368,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 3368,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ],  
-    "3": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 3368,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 3368,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ]  
-    },  
-    "metricsTotals": []  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1404222600000,  
-    "metricsData": {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "2": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 1376,  
-    "chatting": 0,  
-    "notChatting": 1376,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 2224,  
-    "chatting": 2224,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 3600,  
-    "chatting": 2224,  
-    "notChatting": 1376,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ],  
-    "3": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 2224,  
-    "chatting": 2224,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 1376,  
-    "chatting": 0,  
-    "notChatting": 1376,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 3600,  
-    "chatting": 2224,  
-    "notChatting": 1376,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ]  
-    },  
-    "metricsTotals": []  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1404219000000,  
-    "metricsData": {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "2": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 232,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 232,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ],  
-    "3": [  
-    {  
-    "id": 2,  
-    "name": "Online",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 3,  
-    "name": "Back in 5",  
-    "value": {  
-    "total": 232,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": 4,  
-    "name": "Away",  
-    "value": {  
-    "total": 0,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    },  
-    {  
-    "id": -1,  
-    "name": "Logged in",  
-    "value": {  
-    "total": 232,  
-    "chatting": 0,  
-    "notChatting": 0,  
-    "chattingInMaxConcurrency": 0  
-    }  
-    }  
-    ]  
-    },  
-    "metricsTotals": []  
-    }  
-    }  
-    }  
-    ],  
-    "agentsMetrics": {  
-    "metricsPerAgent": {},  
-    "metricsTotals": []  
-    }  
+    {
+      "metricsByIntervals": [
+        {
+          "timestamp": 1404226200000,
+          "metricsData": {
+            "agentsMetrics": {
+              "metricsPerAgent": {
+                "2": [
+                  {
+                    "id": 2,
+                    "name": "Online",
+                    "value": {
+                      "total": 3268,
+                      "chatting": 0,
+                      "notChatting": 3268,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": 3,
+                    "name": "Back in 5",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                   "reasons": [
+                   {
+                       "id": "2642559712",
+                       "value": {
+                           "total": 100,
+                           "chatting": 0,
+                           "notChatting": 100,
+                           "chattingInMaxConcurrency": 0
+                       }
+                   }
+                   ],
+                    "id": 4,
+                    "name": "Away",
+                    "value": {
+                      "total": 100,
+                      "chatting": 0,
+                      "notChatting": 100,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": -1,
+                    "name": "Logged in",
+                    "value": {
+                      "total": 3368,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  }
+                ],
+                "3": [
+                  {
+                    "id": 2,
+                    "name": "Online",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": 3,
+                    "name": "Back in 5",
+                    "value": {
+                      "total": 3368,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "reasons": [],
+                    "id": 4,
+                    "name": "Away",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": -1,
+                    "name": "Logged in",
+                    "value": {
+                      "total": 3368,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  }
+                ]
+              },
+              "metricsTotals": []
+            }
+          }
+        },
+        {
+          "timestamp": 1404222600000,
+          "metricsData": {
+            "agentsMetrics": {
+              "metricsPerAgent": {
+                "2": [
+                  {
+                    "id": 2,
+                    "name": "Online",
+                    "value": {
+                      "total": 1376,
+                      "chatting": 0,
+                      "notChatting": 1376,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": 3,
+                    "name": "Back in 5",
+                    "value": {
+                      "total": 2224,
+                      "chatting": 2224,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "reasons": [],
+                    "id": 4,
+                    "name": "Away",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": -1,
+                    "name": "Logged in",
+                    "value": {
+                      "total": 3600,
+                      "chatting": 2224,
+                      "notChatting": 1376,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  }
+                ],
+                "3": [
+                  {
+                    "id": 2,
+                    "name": "Online",
+                    "value": {
+                      "total": 2224,
+                      "chatting": 2224,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": 3,
+                    "name": "Back in 5",
+                    "value": {
+                      "total": 1376,
+                      "chatting": 0,
+                      "notChatting": 1376,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "reasons": [],
+                    "id": 4,
+                    "name": "Away",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": -1,
+                    "name": "Logged in",
+                    "value": {
+                      "total": 3600,
+                      "chatting": 2224,
+                      "notChatting": 1376,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  }
+                ]
+              },
+              "metricsTotals": []
+            }
+          }
+        },
+        {
+          "timestamp": 1404219000000,
+          "metricsData": {
+            "agentsMetrics": {
+              "metricsPerAgent": {
+                "2": [
+                  {
+                    "id": 2,
+                    "name": "Online",
+                    "value": {
+                      "total": 232,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": 3,
+                    "name": "Back in 5",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "reasons": [],
+                    "id": 4,
+                    "name": "Away",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": -1,
+                    "name": "Logged in",
+                    "value": {
+                      "total": 232,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  }
+                ],
+                "3": [
+                  {
+                    "id": 2,
+                    "name": "Online",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": 3,
+                    "name": "Back in 5",
+                    "value": {
+                      "total": 232,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "reasons": [],
+                    "id": 4,
+                    "name": "Away",
+                    "value": {
+                      "total": 0,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  },
+                  {
+                    "id": -1,
+                    "name": "Logged in",
+                    "value": {
+                      "total": 232,
+                      "chatting": 0,
+                      "notChatting": 0,
+                      "chattingInMaxConcurrency": 0
+                    }
+                  }
+                ]
+              },
+              "metricsTotals": []
+            }
+          }
+        }
+      ],
+      "agentsMetrics": {
+        "metricsPerAgent": {},
+        "metricsTotals": []
+      }
     }  
 
 **Elements in the Response**
@@ -451,3 +492,5 @@ Request by v=1 and timeframe=120 and agentIds=all and interval=60 (including two
 | chatting | The total time the agent was chatting in this state (seconds). | long |
 | notChatting | The total time the agent was not chatting in this state (seconds). | long |
 | chattingInMaxConcurrency | The amount of time the agent was chatting concurrently with the maximum allowed chats in this state (seconds). | long |
+| reasons | An array representing the breakdown of the 'Away' state to multiple away state reasons | element |
+| id (reasons) | The ID of the away reason | string |

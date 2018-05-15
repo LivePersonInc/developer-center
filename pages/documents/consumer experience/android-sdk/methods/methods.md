@@ -1,5 +1,5 @@
 ---
-title: Methods
+title: Messaging API
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -11,6 +11,7 @@ permalink: android-methods.html
 
 indicator: messaging
 ---
+**(Liveperson.java class)**
 
 ### initialize (deprecated)
 
@@ -33,6 +34,8 @@ When the conversation screen is displayed, the server connection for messaging w
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePushMessage, assume that the SDK has been initialized.
 
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session. This method gets InitLivePersonProperties, which includes the properties needed for the init phase of the SDK.
+
+InitLivePersonProperties has a new [MonitoringInitParams](android-interface-definitions.html){:target="_blank"} member that initializes the Monitoring API. Passing the MonitoringInitParams is mandatory when using Monitoring API capabilities.
 
 `public static void initialize (Context context, InitLivePersonProperties initProperties)`
 
@@ -69,7 +72,10 @@ if you want to connect in an *unAuthenticated* way, you can pass null or an empt
 **ConversationViewParams:**
 
 boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
-
+History control api- define to filter the shown messages.
+LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay : default value LPConversationsHistoryStateToDisplay.ALL
+LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType : default value LPConversationHistoryMaxDaysDateType.startConversationDate;
+int mHistoryConversationsMaxDays : default value -1; //no limit
 `public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 
 | Parameter | Description |
@@ -121,7 +127,7 @@ The hideConversation API hides the conversation activity. The conversation scree
 - *When using the SDK’s activity, the back button performs the same function.*
 
 
-### getConversationFrgament (with full authentication support)
+### getConversationFragment (with full authentication support)
 
 The getConversationFragment method creates and returns the conversation fragment.
 
@@ -146,7 +152,10 @@ if you want to connect in an *unAuthenticated* way, you can pass null or an empt
 **ConversationViewParams:**
 
 boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
-
+History control api- define to filter the shown messages.
+LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay : default value LPConversationsHistoryStateToDisplay.ALL
+LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType : default value LPConversationHistoryMaxDaysDateType.startConversationDate;
+int mHistoryConversationsMaxDays : default value -1; //no limit
 `public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 
 | Parameter | Description |
@@ -154,7 +163,7 @@ boolean viewOnlyMode : define if to show /hide the enter message area (under the
 | LPAuthenticationParams | authentication params |
 | ConversationViewParams | view params |
 
-### getConversationFrgament (Deprecated)
+### getConversationFragment (Deprecated)
 
 The getConversationFragment method creates and returns the conversation fragment.
 
@@ -175,6 +184,18 @@ Same as [getConversationFragment](android-getconversationfrag.html){:target="_bl
 | authKey | The authentication key  |
 
 ### reconnect
+
+Reconnect with a new LPAuthenticationParams object: that contains String mAuthKey, String mHostAppJWT, String mHostAppRedirectUri .
+When connecting, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
+When creating a new LPAuthenticationParams - you may call empty constructor and then call setAuthKey() or setHostAppJWT() according to the host parameter
+
+`public static void reconnect(LPAuthenticationParams lPAuthenticationParams)`
+
+| Parameter | Description |
+| :--- | :--- |
+| LPAuthenticationParams | authentication key / JWT |
+
+### reconnect (Deprecated)
 
 Reconnect with a new authentication key. When connecting with an authentication key, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 
@@ -288,6 +309,10 @@ To get the number of unread messages out of the intent use the following extra k
 ### getNumUnreadMessages
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
+When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,
+it will be fetched again with new data.
+
 
 **Note:** the SDK needs to be initialized before calling this API.
 

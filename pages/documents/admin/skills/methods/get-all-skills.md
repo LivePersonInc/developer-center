@@ -19,7 +19,7 @@ This API retrieves a list of skills for a specific account.
 
  |Method           |        URL |
  |:-------          |       :------     |
-| GET | /api/account/{accountId}/configuration/le-users/skills |
+| GET | https://{domain}/api/account/{accountId}/configuration/le-users/skills |
 
 **Request Headers**
 

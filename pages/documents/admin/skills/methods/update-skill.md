@@ -19,7 +19,7 @@ This API updates a skill for a specific account.
 
 | Method | URL| 
  |:--------- | :-------- |
- |PUT|  /api/account/{accountId}/configuration/le-users/skills/{skillId}| 
+ |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/skills/{skillId}| 
 
 **Request Headers**
 

@@ -2,17 +2,15 @@
 title: Export Audit Trail to CSV file
 keywords:
 level1: Documents
-level2: Account Configuration
-level3: Meta Data
+
+level3: Meta Data API
 level4: Methods
-
-order: 10
+order: 20
 permalink: account-configuration-meta-data-audit-trail-export.html
-
 indicator: both
 ---
 
-Exports account audit trail to csv file.
+Exports an account's audit trail to CSV file.
 
 ### Request
 
@@ -24,14 +22,14 @@ Exports account audit trail to csv file.
 
 | Header | Description |
 | :------- | :-------------- |
-|Authorization | Contains token string to allow request authentication and authorization. See the introduction doc for more details. |
+|Authorization | Contains token string to allow request authentication and authorization. See the introduction page for more details. |
 
 
 
 **Path Parameters**
 
-|Parameter|  Description|  Type|  Notes| 
-|:----------|  :--------------|  :--------------|  :---| 
+|Parameter|  Description|  Type|  Notes|
+|:----------|  :--------------|  :--------------|  :---|
 |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
 
 **Query Parameters**
@@ -58,7 +56,7 @@ JSON - for error message
 
 **Response Headers**
 
-NA 
+NA
 
 **Response Codes**
 
@@ -72,13 +70,14 @@ NA
 
 **Response Body**
 
-The response is comma divided file with the following structure:
+The response is a comma separated values file (CSV) with the following structure:
 
-1. Search critiria table
+1. Search criteria table
 2. Count of the result rows
 3. Results Table
 
-Example resposne:
+_Example response_:
+
 ```
 Search Criteria
 Account ID,Start(Europe/London),End(Europe/London),Object types,Originators,Include Automatic Updates,Include LPA Users
@@ -90,4 +89,3 @@ Object type,Object ID,Object name,Action type,Element,Old value,New value,Date a
 Users,objectId0,objectName0,Add new,property,oldValue,newValue,2017-12-05T11:47:06,user name,employeeId,"[profile1, profile2]"
 Users,objectId1,objectName0,Edit,property,oldValue,newValue,2017-12-05T11:47:06,user name,employeeId,"[profile1, profile2]"
 ```
-

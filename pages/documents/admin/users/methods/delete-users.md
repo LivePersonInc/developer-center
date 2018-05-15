@@ -15,11 +15,17 @@ indicator: both
 
 This API deletes users from a specific account.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 ### Request
 
  |Method|      URL|  
  |:--------  |:---  |
- |DELETE|  /api/account/{accountId}/configuration/le-users/users |
+ |DELETE|  https://{domain}/api/account/{accountId}/configuration/le-users/users |
 
 **Request Headers**
 
@@ -30,7 +36,7 @@ This API deletes users from a specific account.
  |If-Match|  Contains data revision as known by the client. Allows concurrent modification backend verification.  |
 
 **Request Body**
- 
+
 `["987654321", "1232455"]`
 
 **Path Parameters**

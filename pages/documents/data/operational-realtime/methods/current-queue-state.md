@@ -12,7 +12,9 @@ indicator: chat
 
 Retrieves the current queue state related metrics at the skill level:
 •   Current queue size
-•   Current available slots 
+•   Current available slots
+
+*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
 ### Request
 
@@ -22,14 +24,14 @@ Retrieves the current queue state related metrics at the skill level:
 
 **Query Parameters**
 
-You can request queue state data using the following parameters: 
+You can request queue state data using the following parameters:
 
 | Name | Description | Type / Value | Required |
 | :------ | :------------- | :-------------- | :--- |
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, the default will be 'skillIds=all’, and metrics on the response will be calculated by all skills with queue state data. You can provide one or more skill IDs. <br> Example: skillIds=4,15,3 . To retrieve all skills active for the time period use skillIds=all (same as default if not provided). | numeric, comma separated | optional |
 
-### Response 
+### Response
 
 **JSON Example**
 
@@ -78,7 +80,7 @@ Request by skills=1,2
             "currentQueueSize":19
         }
     }
-    
+
     Request by skills=1,100 (skill 100 has no queue state data)
     {  
         "skills":{  
@@ -113,3 +115,4 @@ Optional Response Status Codes
 | 200 OK | Successfully retrieved the data |
 | 400 Bad Request | Problem with body or query parameters |
 | 401 Unauthorized | 401 Unauthorized Bad Authentication (invalid site or agent) |
+| 429 | Request blocked due to rate limiting |

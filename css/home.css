@@ -8,6 +8,7 @@ body {
   background: linear-gradient(rgba(47, 72, 131, 0.75), rgba(47, 72, 131, 0.75)), url("https://s3-eu-west-1.amazonaws.com/ce-sr/Product+Marketing+images/Header_Image.png");
   background-size: cover;
   background-position: center center;
+  width: 100%;
 }
 
 .banner-container{
@@ -125,7 +126,6 @@ ul > .aa-input-container{
 
 .searchhome .aa-input-icon {
   fill: #B0B5BC;
-  top: 272px;
   left: 202px;
   z-index: 3;
 }
@@ -152,8 +152,17 @@ ul > .aa-input-container{
 
 }
 
+.searchhome .aa-input-container:before {
+  content: none;
+
+}
+
 .searchhome .aa-input-container:focus{
   outline: inherit;
+}
+
+.searchhome .aa-input-icon {
+  display: block;
 }
 
 .section1 {
@@ -388,7 +397,7 @@ a:-webkit-any-link {
 .searchhome .search-cancel {
   display: none;
   right: 200px;
-  top: 77.7%;
+  top: 76.5%;
   stroke: #333333;
 }
 
@@ -458,6 +467,14 @@ a:-webkit-any-link {
 }
 
 @media (max-width: 425px) {
+
+.aa-input-container {
+  display: none;
+}
+
+.metabanner {
+  width: 102%;
+}
 
 .searchhome .algolia-autocomplete{
   float: left;
