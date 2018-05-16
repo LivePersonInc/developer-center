@@ -70,9 +70,9 @@ This section contains API details that are common to every API’s resource and 
 | lobIds | The skill's Lines Of Business IDs | List<Long> | Optional |  |
 | canTransfer | Whether the skill can transfer to other skills | Boolean  | Optional | Default: true. If false can only transfer to itself (requeue) |
 | skillTransferList | The list of Skill ids to which this skill can transfer conversations | List <Long> | Optional | Default: null (i.e. skill can transfer to all skills) |
-| workingHoursId |  | Long | Optional ||
-| specialOccasionId |  | Long | Optional ||
-| postConversationSurveyAppInstallAssociationId | the ID of post conversation survey with app install association | String (number) | Optional ||
+| workingHoursId | working hours ID | Long | Optional ||
+| specialOccasionId | special occasion ID | Long | Optional ||
+| postConversationSurveyAppInstallAssociationId | post conversation survey with app install association ID | String (number) | Optional ||
 
 ### Entity Example
 
