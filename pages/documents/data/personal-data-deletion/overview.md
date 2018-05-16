@@ -90,7 +90,4 @@ The brand will need to follow the below steps to achieve this:
 
  * Secure form data is not deleted.
 
-{:start="2"}
-2. Authentication via login will be available during the beta period.
-
-3. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
+2. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
