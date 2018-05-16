@@ -10,14 +10,12 @@ root-link: true
 indicator: both
 ---
 
-**BETA**
-
 ### Introduction
 
 Personal Data Deletion API allows brands to comply with the European Union's Right to be Forgotten requirement (a part of the GDPR). This API will permanently delete any personal data that the consumer requests to be deleted. Once the data has been deleted there is no way to restore it.
 
-This data can include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 30 days from the time of the request. There will be some approval process on LivePerson's side in the early stages to make sure we are deleting the data as requested.
-Only closed conversations can be deleted.
+This personal data that will be deleted may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request has being approved (explination about the approval process can be found bellow). 
+
 
 **Note**: what this document refers to as "deletion" is actually the masking of specific, personal data by replacing it with generic text in the following format: *** LP deleted data ***
 
@@ -40,6 +38,8 @@ A few things you'll need to get started with this API:
 4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
 ### Main flows
+
+** Note ** : Only closed chats / conversations can be deleted.
 
 **Chat**
 
@@ -77,17 +77,14 @@ The brand will need to follow the below steps to achieve this:
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method and make two requests: one with the list of conversations to delete and another with the consumerId. This makes sure that both the conversation and the rest of the consumer's data is completely deleted.
 
+**Deletion flow**
+Once a deletion request is sent, it is inserted to the sytesm and is waiting to be approved for a pre-defined time of 5 days. During that time period it is possible for the brand to cancel the deletion request and by that allowing the brand to monitor the deletion requests that are sent on his behalf.
+After the deletion request is approved, the deletion process will start and we garuntee a full deletion from all repositories within 20 days from that time.
+There is a limitation of the number of deletion requests that a brand can send within a calendar month (limit of 100 requests per month).
 
 ### Limitations:
 
-1. The following is not supported in the current beta phase:
+1. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
 
- * For messaging:
-    - Messaging conversations are still stored in one of LP's messaging repositories and therefore, if you enter a closed conversation from the “All Connections” tab to view the conversation in its full view, you will be able to see the entire transcript even after the deletion process.
-    - Messaging consumer data is not deleted from all repositories.
+2. Only brands that are on the Denver infrastructure will have access to the full capabilities of the API. Brands still using AppServer will still have their chat transcript data stored in our internal database and will not be able to delete those.
 
- * Photo / file sharing data is not deleted.
-
- * Secure form data is not deleted.
-
-2. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
