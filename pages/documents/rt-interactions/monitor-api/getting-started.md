@@ -10,7 +10,14 @@ indicator: messaging
 
 ### Step 1 - Create an Account
 
-Create an account and save the generated `account_id`. Make sure the Async_Messaging and Messaging_Conversation_Sources features are enabled on your account.
+Create an account and save the generated `account_id`. 
+Make sure that the following features are enabled on your account: 
+1. Async_Messaging
+2. Authenticated_Chat
+
+For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Messaging_Conversation_Sources feature.
+
+In addition, an authentication server should be configured on the LiveEngage account. Refer to the [Authentication Guide - Configuration section](https://developers.liveperson.com/guides-authentication-configuration.html) in the Developer Community for further instructions.
 
 ### Step 2 - Login to your Account
 
