@@ -58,7 +58,7 @@ This API retrieves a list of users for a specific account.
  
  | Name            | Description                                                                  | Type    | Notes                                          |
  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
- | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
+ | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: id,pid,deleted,loginName  |
  
 
 ### Response

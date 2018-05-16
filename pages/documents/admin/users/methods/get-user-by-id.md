@@ -48,7 +48,7 @@ https://API_REQUEST?v=4.0
   
   | Name            | Description                                                                  | Type    | Notes                                          |
   |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
-  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: id,pid,deleted,loginName  |
+  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
   
 
 
