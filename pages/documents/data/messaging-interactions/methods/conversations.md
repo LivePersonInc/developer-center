@@ -700,7 +700,7 @@ sdeType         | Type of sde.                                | enum
             "duration": 79789,
             "type": "inApp",
             "agentId": "37084513",
-            "interactive": false
+            "interactive": true
           },
           {
             "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506326147649",
@@ -717,7 +717,7 @@ sdeType         | Type of sde.                                | enum
               "AGENT_APP_CONTROL"
             ],
             "agentId": "37084513",
-            "interactive": false
+            "interactive": true
           }
         ]
       },
