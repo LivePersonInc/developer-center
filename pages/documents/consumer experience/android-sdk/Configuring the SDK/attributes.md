@@ -666,7 +666,7 @@ The goal of the following document is to enumerate the different fields controll
 <tbody>  
   <tr>
     <td>&lt;integer name=&quot;csatSurveyExpirationInMinutes&quot;&gt;</td>
-    <td>Define the expiration time in minutes for the survey to appear after closing the conversation.</td>
+    <td>Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it will not be presented to the user.</td>
     <td>1440</td>
     <td></td>
   </tr>
@@ -832,6 +832,7 @@ The goal of the following document is to enumerate the different fields controll
     <td>true</td>
     <td></td>
   </tr>
+
 </tbody>
 </table>
 

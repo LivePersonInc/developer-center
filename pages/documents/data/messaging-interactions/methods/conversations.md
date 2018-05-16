@@ -51,7 +51,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
 | coBrowseTypes | The type of CoBrowse session(s) that were held during the conversation | Array `<String>` | Optional | Valid values: "inApp", "web" |
-| isCoBrowseInteractive | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
+| isCoBrowseInteractive | Indication whether an interactive CoBrowse session occurred during the conversation | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
 
 Filters examples:
