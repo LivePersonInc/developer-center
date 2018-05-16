@@ -29,7 +29,7 @@ A few things you'll need to get started with this API:
 
 	* rtbf
 
-2. This API requires authorization using API key.
+2. This API requires authorization using API key or via login.
 
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. The key is availbale under the Data section.
 
