@@ -25,8 +25,9 @@ This API deletes a skill from a specific account.
 
  |Header | Description |
  |:-------  | :------------- |
- |Authorization | Contains token string to allow request authentication and authorization. |
- |If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
+ |Authorization|  Contains token string to allow request authentication and authorization.  |
+ |X-HTTP-Method-Override|  Overrides unsupported HTTP methods.  To be used with the DELETE value. |
+ |If-Match|  Contains data revision as known by the client. Allows concurrent modification backend verification.  |
 
 **Path Parameters**
 
@@ -36,6 +37,22 @@ This API deletes a skill from a specific account.
  |skillId | Skill ID  | Positive long number greater than zero |
 
 ### Response
+
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 200  | OK                    |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |
+| 404  | Data Not Found        |
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+ |Header  |Description |
+| :-------  | :-----  |
+| ac-revision | Account config object type collection revision. | 
 
 **Response Body**
 

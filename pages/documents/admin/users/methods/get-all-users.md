@@ -28,20 +28,6 @@ This API retrieves a list of users for a specific account.
   |Authorization | Contains token string to allow request authentication and authorization. | 
   |If-Match  |Contains data revision, as known by the client. | Allows optimization of backend, networking and client resource utilization. |
 
-**Response Codes** 
-
-| Code | Description           |
-|------|-----------------------|
-| 200  | OK                    |
-| 401  | Not Authenticated     |
-| 403  | Not Authorized        |      |
-| 500  | Internal Server Error |
-
-**Response Headers**
-
- |Header  |Description |
-| :-------  | :-----  |
-| ac-revision | Account config object type collection revision. | 
 
 
 **Request Body**
@@ -62,6 +48,22 @@ This API retrieves a list of users for a specific account.
  
 
 ### Response
+
+
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 200  | OK                    |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |      
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+ |Header  |Description |
+| :-------  | :-----  |
+| ac-revision | Account config object type collection revision. | 
 
 **Response Body**
 
