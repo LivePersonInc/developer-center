@@ -50,9 +50,9 @@ This API retrieves a list of users for a specific account.
 
 **Path Parameters**
 
- |Parameter|            Description|             Type/Value  |
+ |Parameter|  Description|   Type/Value  |
 |:-------  |:-------------- | :--- |
- |AccountId|            LP site ID|              String ^[a-zA-Z0-9_]{1,20}$|
+ |AccountId|            LP site ID|             |
  
  **Query Parameters**
  
