@@ -1,0 +1,41 @@
+{
+  "kind": "req",
+  "id": 1,
+  "type": "userprofile.SetUserProfile",
+  "body": {
+    "firstName": "",
+    "lastName": "",
+    "userId": "",
+    "avatarUrl": "",
+    "role": "",
+    "backgndImgUri": "",
+    "description": "",
+    "authenticatedData": {
+      "lp_sdes": [
+        {
+          "type": "ctmrinfo",
+          "info": {
+            "socialId": "1234567890"
+          }
+        },
+        {
+          "type": "personal",
+          "personal": {
+            "firstname": "John",
+            "lastname": "Doe",
+            "gender": "MALE"
+          }
+        }
+      ]
+    },
+    "privateData": {
+      "mobileNum": "",
+      "mail": "",
+      "pushNotificationData": {
+        "serviceName": "",
+        "certName": "",
+        "token": ""
+      }
+    }
+  }
+}

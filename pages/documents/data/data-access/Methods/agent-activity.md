@@ -11,7 +11,7 @@ permalink: data-data-access-agent-activity.html
 indicator: chat
 ---
 
-Agent Activity retrieves the agent’s session data in .zip format files. The agent’s activity data is a list of sessions which occur from the agent’s login time to the agent’s logout time. This data is used to analyze agent efficiency and availability. Each session includes the agent’s information, such as login name, nickname, status changes, number of concurrent chats, etc. 
+Agent Activity retrieves the agent’s session data in .zip format files. The agent’s activity data is a list of sessions which occur from the agent’s login time to the agent’s logout time. This data is used to analyze agent efficiency and availability. Each session includes the agent’s information, such as login name, nickname, status changes, number of concurrent chats, etc.
 
 ### Request
 
@@ -26,7 +26,7 @@ Required:
 | Parameter | Description | Type / Value |
 | :------ | :---------- | :------- |
 | startTime | Start time in milliseconds, refers to the start time boundary of the range the files were generated. Should be used as an incremental timestamp. | numeric |
-| endTime | End time in milliseconds, refers to the start time boundary of the range the files were generated. Should be used as an incremental timestamp. | numeric |
+| endTime | End time in milliseconds, refers to the end time boundary of the range the files were generated. Should be used as an incremental timestamp. | numeric |
 
 ### Response
 
@@ -38,7 +38,7 @@ Request for account 75555851:
      "dataAccessFiles": {
        "@id": "28045150",
        "link": {
-         "@href": 
+         "@href":
     "https://va-a.da.liveperson.net/data_access_le/account/28045150/le/agentActivity",
          "@rel": "self"
        },
@@ -266,5 +266,5 @@ The following table describes the information that is available in the agent act
 | agentLoginName | Agent’s login name. | string |
 | prevConcurrentEng | How many chats were handled concurrently prior to state change. | long |
 | concurrentEng | How many chats were handled concurrently at the time of state change. | long |
-| maxConcurrentEng | The maximum amount of chats the agent can take at one time.(default value is -9) | long | 
+| maxConcurrentEng | The maximum amount of chats the agent can take at one time. In cases of agent login / logout the value is -9. | long | 
 | agentGroupID | Agent group’s ID. | long |

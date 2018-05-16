@@ -125,7 +125,6 @@ public class ConversationViewParams{
 }
 ```
 
-
 ### LPConversationsHistoryStateToDisplay
 
 ```javascript
@@ -147,8 +146,6 @@ public enum LPConversationHistoryMaxDaysDateType {
 
 
 ```
-
-
 
 **Monitoring API Related Classes**
 
@@ -291,3 +288,4 @@ enum class MonitoringErrorType {
 }
 
 ```
+
