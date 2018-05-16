@@ -26,6 +26,22 @@ This API creates a list of skills for a specific account.
  |Header | Description |
  |:----- | :---------- |
  |Authorization | Contains token string to allow request authentication and authorization. |
+ 
+ **Response Codes** 
+ 
+ | Code | Description           |
+ |------|-----------------------|
+ | 201  | Created               |
+ | 401  | Not Authenticated     |
+ | 403  | Not Authorized        |
+ | 500  | Internal Server Error |
+ 
+ **Response Headers**
+ 
+  |Header  |Description |
+ | :-------  | :-----  |
+ | ac-revision | Account config object type collection revision. | 
+ 
 
 **Request Body**
 
