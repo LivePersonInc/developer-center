@@ -32,7 +32,8 @@ https://API_REQUEST?v=4.0
 | Header      |   Description  |
  |:------ |       :--------|  
  |Authorization | Contains token string to allow request authentication and authorization.  |
- |If-Match  |Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization.  |
+ |X-HTTP-Method-Override|  Overrides unsupported HTTP methods.  To be used with the PUT value. |
+ |If-Match  |Contains data revision as known by the client. Allows concurrent modification backend verification.  |
 
 **Request Body**
 
