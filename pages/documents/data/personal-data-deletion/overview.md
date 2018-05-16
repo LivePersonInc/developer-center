@@ -25,17 +25,13 @@ Only closed conversations can be deleted.
 
 A few things you'll need to get started with this API:
 
-1. **Currently there's no need to retrieve your domain for this API**. Below you can find the different domains by geo location. In order to determine the region of your account log into LiveEngage and look at the URL in your address bar. If it begins with z1, your account is hosted in the US. If it begins with z2 it is hosted in the EMEA region. If it begins with z3 it is an APAC account:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
-* US accounts: va.data-mng.liveperson.net
+	* rtbf
 
-* EMEA accounts: lo.data-mng.liveperson.net
+2. This API requires authorization using API key.
 
-* APAC accounts: sy.data-mng.liveperson.net
-
-{:start="2"}
-2. This API requires authorization using API key or via login.
-*  The Personal Data Deletion API currently has no self-serve through LiveEngage. You will receive the keys from your account manager after the Beta User agreement is approved.
+	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. The key is availbale under the Data section.
 
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
