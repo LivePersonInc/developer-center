@@ -1,4 +1,3 @@
-
 ---
 title: Special occasions list
 Keywords:
