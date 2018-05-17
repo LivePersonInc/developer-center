@@ -49,8 +49,8 @@ This section contains API details that are common to every API’s resource and 
 | deleted            | Whether the item is deleted or not | Boolean                | optional | |
 | is default  | Whether the entity is set as default entity               | boolean                 | Required |  |
 | events             | a list of events defining the working day                        | array                 | required ||
-| start/end date      | define the date for event to start/end.
-Both start and end dates must be with the same format.
+| start/end date      | define the date for event to start/end.<br>
+Both start and end dates must be with the same format.<br>
 Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss)                              | string                 | Required |   format: full date|
 | start/end timezone   | defines the timezone for start/end date. Start/End date must be both on the same timezone. | String             | required |  |
 | recurrence         | define a list of recurrences for each workday.
