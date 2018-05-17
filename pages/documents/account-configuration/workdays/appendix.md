@@ -41,9 +41,6 @@ This section contains API details that are common to every API’s resource and 
  |accountId|  LP site ID | string ^[a-zA-Z0-9_]{1,20}$ | Validation fail error code: 400 
  
 ### Entity Structure
-
-| Attribute          | Description                                                      | Type                   | Required | Notes                                                                                                                                       |
-|--------------------|------------------------------------------------------------------|------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
 Attribute | Description | Notes
 --- | --- | --- 
 name | workday name | <ul><li>Type: string</li> <li>Required</li><li>Unique</li><li>max length: 50</li></ul>
