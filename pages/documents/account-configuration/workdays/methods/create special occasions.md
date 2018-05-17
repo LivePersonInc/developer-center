@@ -12,23 +12,45 @@ permalink: account-configuration-predefined-content-delete-content-items.html
 indicator: both
 ---
 
-Deletes Predefined Content items from a specific account.
+Create new special occasion(s) for an account. It is possible to create several items at a time.
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE  |/api/account/{accountId}/configuration/engagement-window/canned-responses/ |
+| POST  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
 **Request Headers**
 
 | Header | Description |
  |:-------- | :------------ |
-| X-HTTP-Method-Override=DELETE | Overrides unsupported HTTP methods. To be used with the 'DELETE’ value. |
+| Authentication | Contains token string to allow request authentication and authorization |
 
 **Request Body**
 
-`['12345’,’67890’]`
+{
+    "deleted": false,
+    "name": "special occasion 1",
+    "description": "Description for special occasion 1",
+    "isDefault": false,
+    "events": [
+        {
+            "meta": {
+                "working": true,
+                "name": "user1"
+            },
+            "start": {
+                "dateTime": "2017-03-27T06:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T13:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": []
+        }
+    ]
+}
 
 **Path Parameters**
 
