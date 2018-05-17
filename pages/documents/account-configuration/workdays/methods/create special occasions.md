@@ -62,10 +62,8 @@ Create new special occasion(s) for an account. It is possible to create several 
 
  |Header | Description| Notes |
  |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. | 
- |If-Match | Contains data revision, as known by the client. | Allows optimization of backend, networking and client resource utilization. |
-| X-HTTP-Method-Override=DELETE  | Overrides unsupported HTTP methods.|  To be used with the DELETE value. |
-
+ |Authorization | Contains token string to allow request authentication and authorization. 
+ 
 ### Response
 
 **Response Codes**
