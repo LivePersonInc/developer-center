@@ -1,4 +1,3 @@
-
 ---
 title: Create workdays
 Keywords:
@@ -19,7 +18,7 @@ Create new workday(s) for an account. It is possible to create several items at 
 
 | Method | URL |
 | :-------- | :------ |
-| POST  |/api/account/{accountId}/configuration/ac-common/workinghours |
+| POST  |/api/account/{accountId}/configuration/ac-common/workinghours 
 
 **Request Headers**
 
@@ -29,6 +28,7 @@ Create new workday(s) for an account. It is possible to create several items at 
 
 **Request Body**
 
+```javascript
 {
   "id": 11,
   "name": "Workdays 1",
@@ -64,19 +64,12 @@ Create new workday(s) for an account. It is possible to create several items at 
     }
   ]
 }
-
+```
 **Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
-
-### Request Headers
-
- |Header | Description| Notes |
- |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- 
 
 
 ### Response
