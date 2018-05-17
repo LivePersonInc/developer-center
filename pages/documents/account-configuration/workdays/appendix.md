@@ -44,15 +44,21 @@ This section contains API details that are common to every API’s resource and 
 
 | Attribute          | Description                                                      | Type                   | Required | Notes                                                                                                                                       |
 |--------------------|------------------------------------------------------------------|------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| name                 | workday name                           | String            | Required |    unique, max length: 50                                                                                                                                          |
-| description       | Indicates whether or not the item is deleted.                    | Boolean                | Required |                                                                                                                                             |
-| deleted            | Whether the item is active or not                                | Boolean                | Required |                                                                                                                                             |
-| is default  | The type of Predefined Content (text, video, etc.)               | number                 | Required | Valid values: 0 (text)                                                                                                                      |
-| events             | Hotkey value combination for this object.                        | object                 | Optional |                                                                                                                                             |
-| start/end date      | First key of the hotkey combination                              | string                 | Required |                                                                                                                                             |
-| start/end timezone   | Flag to state whether the value of the msg attribute is default. | True/False             | Optional | If a templateId exists, all message entries that were not overridden will have the isDefault flag set to true. Otherwise the flag is false. |
-| recurrence         | An identification of a template used to instantiate the object.  | string                 | Optional |                                                                                                                                             |
-| meta              | Predefined Content title translation.                            | string                 | Required |                                                                                                                                 
+| name                 | workday name                           | String            | Required |    unique, max length: 50  |
+| description       | workday description                    | String                | Required |  max length: 200 |
+| deleted            | Whether the item is deleted or not | Boolean                | optional | |
+| is default  | Whether the entity is set as default entity               | boolean                 | Required |  |
+| events             | a list of events defining the working day                        | array                 | required ||
+| start/end date      | define the date for event to start/end.
+Both start and end dates must be with the same format.
+Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss)                              | string                 | Required |   format: full date|
+| start/end timezone   | defines the timezone for start/end date. Start/End date must be both on the same timezone. | String             | required |  |
+| recurrence         | define a list of recurrences for each workday.
+workdays must contain a single recurrence.
+Special occasion will have an empty list.  | Array                 | required |   pattern: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"           |
+| meta              | contains meta data (???).
+mandatory for special occasions.
+workdays should not contain this node                          | Array                 | Required |                                                                                                                                 
 
 ### Workday object description
 ```javascript
