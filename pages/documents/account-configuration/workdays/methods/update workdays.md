@@ -21,7 +21,7 @@ Update existing workdays.
 | PUT  |/api/account/{accountId}/configuration/ac-common/workinghours 
 
 **Request Body**
-
+```javascript
 [
   {
     "id": 2818213812,
@@ -59,6 +59,7 @@ Update existing workdays.
     ]
   }
 ]
+```
 
 **Path Parameters**
 
