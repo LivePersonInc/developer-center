@@ -7,7 +7,7 @@ level3: AC workdays API
 level4: Methods
 
 order: 80
-permalink: account-configuration-predefined-content-delete-content-items.html
+permalink: 
 
 indicator: both
 ---
