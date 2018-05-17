@@ -1,6 +1,3 @@
-
-
-
 ---
 title: Delete workdays
 Keywords:
@@ -21,7 +18,7 @@ Delete an existing workdays.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayIds} |
+| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayIds} 
 
 **Request Headers**
 
@@ -37,14 +34,6 @@ If-Match	| Contains workday's current revision number
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
  workdayIds| Account Config object’s unique id.| String
-
-### Request Headers
-
- |Header | Description| Notes |
- |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- 
-
 
 ### Response
 
