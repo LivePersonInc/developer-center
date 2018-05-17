@@ -54,7 +54,7 @@ Create new special occasion(s) for an account. It is possible to create several 
     }
   ]
 }
-'''
+```
 
 **Path Parameters**
 
