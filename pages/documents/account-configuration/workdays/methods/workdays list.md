@@ -1,59 +1,56 @@
-
 ---
-title: Update an Unified Automatic Message
+title: Workdays list
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: Unified Automatic Messages API
+level3: AC workdays API
 level4: Methods
 
-order: 30
-permalink: account-configuration-unified-automatic-messages-update-an-automatic-message.html
+order: 80
+permalink: 
 
 indicator: both
 ---
 
-Updates an existing Unified Automatic Message for a specific account.
+Get list of all workdays of an account
 
 ### Request
 
 | Method | URL |
-| :-------- | :----- |
-| DELETE | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
+| :-------- | :------ |
+| GET  |/api/account/{accountId}/configuration/ac-common/workinghours
 
-**Request Headers**
+### Path Parameters
 
-| Header | Description |
-| :------- | :-------------- |
-| X-HTTP-Method-Override=DELETE | Overrides unsupported HTTP methods. To be used with the 'PUT’ value. |
-| Authorization | Contains token string to allow request authentication and authorization. |
-| If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
+ |Parameter  |Description |  Type / Value |
+ |:----------- | :------------ | :--------------- |
+ |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ 
 
 
-**Path Parameters**
+### Request Headers
 
-| Parameter | Description | Type / Value |
-| :----------- | :------------ | :--------------- |
-| unifiedAutoMessageId | Unique account config object ID  | Positive long number greater than zero |
-
-**Query Parameters**
-
-| Name            | Description                                                                  | Type    | Notes                                          |
-|-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
-| v               | API version                                                                  | String  | 2.0 is the current version                     |
-
+ |Header | Description| Notes |
+ |:------- | :-------------- | :--- |
+ |Authorization | Contains token string to allow request authentication and authorization. 
+ 
 ### Response
 
 **Response Codes**
 
-| Code | Description |
-| :----- | :------------- |
-| 200 | OK |
-| 401 | Not Authenticated |
-| 403 | Not Authorized |
-| 404 | Data Not Found |
-| 500 | Internal Server Error |
+| Code | Description           |
+|------|-----------------------|
+| 200  | OK                    |
+| 304  | Not Modified          |
+| 400  | Bad Request           |
+| 401  | Not Authorized        |
+| 403  | Forbidden             |
+| 404  | Data Not Found        |
+| 409  | Conflict              |
+| 500  | Internal Server Error |
 
-**Response Body**
+### Response Headers
 
-Deleted Unified Auto Message’s JSON.
+ |Header|  Description| 
+ |:-------|   :-----  |
+ |ac-revision|  Account config object type collection revision.|  
+
