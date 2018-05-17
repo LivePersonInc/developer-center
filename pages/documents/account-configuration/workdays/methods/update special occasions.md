@@ -27,6 +27,7 @@ Update existing special occasions.
 | Authentication | Contains token string to allow request authentication and authorization |
 
 **Request Body**
+```javascript
 
 [
   {
@@ -57,6 +58,7 @@ Update existing special occasions.
   }
 ]
 
+```
 **Path Parameters**
 
  |Parameter  |Description |  Type / Value |
