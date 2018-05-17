@@ -29,27 +29,29 @@ Create new special occasion(s) for an account. It is possible to create several 
 **Request Body**
 
 {
-    "deleted": false,
-    "name": "special occasion 1",
-    "description": "Description for special occasion 1",
-    "isDefault": false,
-    "events": [
-        {
-            "meta": {
-                "working": true,
-                "name": "user1"
-            },
-            "start": {
-                "dateTime": "2017-03-27T06:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "end": {
-                "dateTime": "2018-03-27T13:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "recurrence": []
-        }
-    ]
+  "deleted": false,
+  "name": "special occasion 1",
+  "description": "Description for special occasion 1",
+  "isDefault": false,
+  "events": [
+    {
+      "meta": {
+        "working": true,
+        "name": "user1"
+      },
+      "start": {
+        "dateTime": "2017-03-27T06:00:00",
+        "timeZone": "Europe/Zurich"
+      },
+      "end": {
+        "dateTime": "2018-03-27T13:00:00",
+        "timeZone": "Europe/Zurich"
+      },
+      "recurrence": [
+        
+      ]
+    }
+  ]
 }
 
 **Path Parameters**
