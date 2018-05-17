@@ -28,6 +28,7 @@ Create new special occasion(s) for an account. It is possible to create several 
 
 **Request Body**
 
+```javascript
 {
   "deleted": false,
   "name": "special occasion 1",
@@ -53,6 +54,7 @@ Create new special occasion(s) for an account. It is possible to create several 
     }
   ]
 }
+'''
 
 **Path Parameters**
 
