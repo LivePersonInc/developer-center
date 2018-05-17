@@ -49,28 +49,30 @@ This section contains API details that are common to every API’s resource and 
 
 | Attribute | Description | Type/Value | Required | Notes |
 | :--------- | :-------------- | :----------- | :--- | :--- |
-| id | Account Config object’s unique ID | long number | Read only |  |
+| id | Account Config object’s unique ID | Long | Read only |  |
 | deleted | Whether the item is deleted or not | Boolean | Read only | |
-| name | Skill’s unique name | string | Required | |
-| description | The skill’s description | string | Optional | |
-| skillOrder | The skill’s order | number | Optional | |
-| maxWaitTime | The skill’s max wait time. | number |  Optional |  Defaults to 120 |
-| defaultPostChatSurveyId | The default post chat survey id | string | Optional | |
-| defaultOnlineSurveyId | The default online chat survey id | string | Optional | |
-| defaultAgentSurveyId | The default agent chat survey id | string | Optional | |
+| name | Skill’s unique name | String | Required | |
+| description | The skill’s description | String | Optional | |
+| skillOrder | The skill’s order | int (number) | Optional | |
+| maxWaitTime | The skill’s max wait time. | int (number) |  Optional |  Defaults to 120 |
+| defaultPostChatSurveyId | The default post chat survey id | String | Optional | |
+| defaultOnlineSurveyId | The default online chat survey id | String | Optional | |
+| defaultAgentSurveyId | The default agent chat survey id | String | Optional | |
 | dateUpdated | The last update user change date.  | Date (numbers) | Optional | The format: year-month-date hrs:min:sec |
-| skillRoutingConfiguration | For each agent group the parameters of the percentage and priority split routing. |array | Optional | If priority is not in use, pass 1 as value. |
-| agentGroupId | Agent group ID for which we are specifying the priority and splitPercentage. | string | Required | AgentGroupId must already exist in account config. <br> Required if skillRoutingConfiguration specified.  |
+| skillRoutingConfiguration | For each agent group the parameters of the percentage and priority split routing. | TreeSet | Optional | If priority is not in use, pass 1 as value. |
+| agentGroupId | Agent group ID for which we are specifying the priority and splitPercentage. | String | Required | AgentGroupId must already exist in account config. <br> Required if skillRoutingConfiguration specified.  |
 | priority | Routing cascading order if agent group is in full capacity, first to priority 1 then to 2 then to 3 then to …. n. | number | Required | Required if skillRoutingConfiguration specified. |
 | splitPercentage | Split of chats to provide for each chat center (agent group). | number | Required | Required if skillRoutingConfiguration specified. 
 | wrapUpTime | The period of time between the end of the chat and until the agent will receive the new chat | Integer | Optional | this feature is within the ACD settings |
 | slaDefaultResponseTime | Default response time for all conversations in messaging per skill | Integer | Optional | |
 | slaUrgentResponseTime | Urgent response time is after consumer marked a conversation as urgent | Integer | Optional | |
 | slaFirstTimeResponseTime | First time response time in first conversation of a new consumer | Integer | Optional | |
-| lobIds | The list of Lines Of Business ids for skill | List<Long> | Optional |  |
+| lobIds | The skill's Lines Of Business IDs | List<Long> | Optional |  |
 | canTransfer | Whether the skill can transfer to other skills | Boolean  | Optional | Default: true. If false can only transfer to itself (requeue) |
 | skillTransferList | The list of Skill ids to which this skill can transfer conversations | List <Long> | Optional | Default: null (i.e. skill can transfer to all skills) |
-| lobIds | The skill’s LOB IDs | array of numbers | Optional ||
+| workingHoursId | working hours ID | Long | Optional ||
+| specialOccasionId | special occasion ID | Long | Optional ||
+| postConversationSurveyAppInstallAssociationId | post conversation survey with app install association ID | String (number) | Optional ||
 
 ### Entity Example
 
