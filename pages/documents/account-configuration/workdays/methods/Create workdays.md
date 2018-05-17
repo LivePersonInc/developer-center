@@ -29,8 +29,7 @@ Create new workday(s) for an account. It is possible to create several items at 
 **Request Body**
 
 ```javascript
-{
-  "id": 11,
+{  
   "name": "Workdays 1",
   "description": "Description for workdays 1",
   "deleted": false,
