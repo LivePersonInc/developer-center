@@ -62,12 +62,7 @@ Create new special occasion(s) for an account. It is possible to create several 
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
 
-### Request Headers
 
- |Header | Description| Notes |
- |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- 
 ### Response
 
 **Response Codes**
