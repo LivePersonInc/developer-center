@@ -37,6 +37,12 @@ A few things you'll need to get started with this API:
 {:start="4"}
 4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
+### Deletion process 
+
+Once a deletion request is sent, it is inserted to the sytesm and is waiting to be approved for a pre-defined time of 5 days (by default). During that time period it is possible for the brand to cancel the deletion request and by that allowing the brand to monitor the deletion requests that are issued on his behalf.
+After the deletion request is approved, the deletion process will start and we garuntee a full deletion from all repositories within 20 days from that time.
+There is a limitation of the number of deletion requests that a brand can issue within a calendar month (limit of 100 requests per month).
+
 ### Main flows
 
 ** Note ** : Only closed chats / conversations can be deleted.
@@ -77,14 +83,8 @@ The brand will need to follow the below steps to achieve this:
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method and make two requests: one with the list of conversations to delete and another with the consumerId. This makes sure that both the conversation and the rest of the consumer's data is completely deleted.
 
-**Deletion flow**
-Once a deletion request is sent, it is inserted to the sytesm and is waiting to be approved for a pre-defined time of 5 days. During that time period it is possible for the brand to cancel the deletion request and by that allowing the brand to monitor the deletion requests that are sent on his behalf.
-After the deletion request is approved, the deletion process will start and we garuntee a full deletion from all repositories within 20 days from that time.
-There is a limitation of the number of deletion requests that a brand can send within a calendar month (limit of 100 requests per month).
-
 ### Limitations:
 
-1. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
+This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
 
-2. Only brands that are on the Denver infrastructure will have access to the full capabilities of the API. Brands still using AppServer will still have their chat transcript data stored in our internal database and will not be able to delete those.
 
