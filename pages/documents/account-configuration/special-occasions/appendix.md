@@ -51,30 +51,30 @@ Attribute | Description | Notes
 |recurrence | <ul><li>define a list of recurrences for each workday. </li><li>workdays must contain a single recurrence. </li><li>Special occasion will have an empty list. </li></ul> | <ul><li>Type: array</li> <li>pattern: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</li></ul>|
 |meta | <ul><li>contains meta data (???).</li> <li>mandatory for special occasions. </li><li>workdays should not contain this node</li></ul> | <ul><li>Type: array</li> </ul>|
 
-
-
-### Workday object description
+### Special Occasion Object Description
 
 ```json
-     {
-  "name": "Workdays 1",
-  "description": "Description for workdays 1",
-  "deleted": false,
-  "isDefault": false,
-  "events": [
-    {
-      "start": {
-        "dateTime": "2018-03-27T06:00:00",
-        "timeZone": "Europe/Zurich"
-      },
-      "end": {
-        "dateTime": "2018-03-27T13:00:00",
-        "timeZone": "Europe/Zurich"
-      },
-      "recurrence": [
-        "RRULE:FREQ=WEEKLY;BYDAY=SU"
-      ]
-    }
-  ]
+{
+    "deleted": false,
+    "name": "special occasion 1",
+    "description": "Description for workdays 1",
+    "isDefault": false,
+    "events": [
+        {
+            "meta": {
+                "working": true,
+                "name": "user1"
+            },
+            "start": {
+                "dateTime": "2017-03-27T06:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T13:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": []
+        }
+    ]
 }
 ```

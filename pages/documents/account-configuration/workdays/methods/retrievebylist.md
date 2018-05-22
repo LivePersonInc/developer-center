@@ -3,36 +3,34 @@ title: Workdays list
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Workdays API
 level4: Methods
-
-order: 80
-permalink: 
-
-indicator: both
+order: 50
+permalink: account-configuration-workdays-get-by-list.html
+indicator: messaging
 ---
 
-Get list of all workdays of an account
+Get a list of all workday objects of an account.
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/workinghours
+| GET  |/api/account/{accountId}/configuration/ac-common/workinghours|
 
 ### Path Parameters
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ 
+ |accountId | LP site ID | String|
 
 
 ### Request Headers
 
- |Header | Description| Notes |
- |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- 
+|Header | Description| Notes |
+|:------- | :-------------- | :--- |
+|Authorization | Contains token string to allow request authentication and authorization.|
+
 ### Response
 
 **Response Codes**
@@ -50,7 +48,6 @@ Get list of all workdays of an account
 
 ### Response Headers
 
- |Header|  Description| 
- |:-------|   :-----  |
- |ac-revision|  Account config object type collection revision.|  
-
+|Header|  Description|
+|:-------|   :-----  |
+|ac-revision|  Account config object type collection revision.|  

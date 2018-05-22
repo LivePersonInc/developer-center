@@ -7,17 +7,24 @@ level3: Workdays API
 
 level-order: 1
 order: 9
-permalink: account-configuration-unified-automatic-messages-overview.html
+permalink: account-configuration-workdays-overview.html
 root-link: true
-indicator: both
+indicator: messaging
 ---
+
 ### Introduction
 
-This is a lorem i[psum of workdays.
+The Workdays API allows you to configure hours of operation for specific days of the week and ask them to specific skills or as the default for the account. During the specified hours of operation, consumers will receive the expected time to response message for the skill as defined in the account. Outside of the specified hours of operation, consumers will receive the expected time to response including the time until the next shift begins.
 
-The API is based on the REST architecture style.
+For example, if a skill has a defined time to response of five minutes and a consumer starts a conversation outside of the defined hours of operation, they will receive an automated message with an expected response time of "five minutes + the remaining time to the next shift". This means that if there are three hours until the next shift, they will receive an expected response time of three hours and five minutes.
 
-![AutomaticMessages](img/automaticmessages.png)
+It is important to understand that this API creates a "workdays" object which is then assigned to specific skills. If a "workdays" object is not assigned to any skills, it will not affect any consumers. So, for example: two different "workdays" objects can be created. **Object A** defines a regular, US hours business week. **Object B** defines a short, six hour work week. You can then assign Object A to example skills *Support* and *Billing* while assigning Object B to example skill *Sales*. Object A will affect only the skills assigned to it (Support and Billing) and Object B will only affect the skill assigned to it (Sales).
+
+### Use Cases
+
+1. Set hours of operation for different teams working on different schedules. For example, your support team might be available 24/7, while your sales are working US business hours. If a consumer starts a conversation with your sales team outside of US business hours, they'll receive an updated and correct expected response time. If they start a conversation with your support team, they'll receive the current time to response for that skill.
+
+2. Set hours of operation for different days of the week, taking into account weekends, weekly team meetings, and other regular offline hours.
 
 ### Getting Started
 
@@ -38,4 +45,3 @@ A few things you'll need to get started with this API:
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
 
 4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
-

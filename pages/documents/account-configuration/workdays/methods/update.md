@@ -3,25 +3,30 @@ title: Update workdays
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Workdays API
 level4: Methods
-
-order: 80
-permalink: 
-
-indicator: both
+order: 20
+permalink: account-configuration-workdays-update.html
+indicator: messaging
 ---
 
-Update existing workdays.
+Update existing workday object(s).
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| PUT  |/api/account/{accountId}/configuration/ac-common/workinghours 
+| PUT  |/api/account/{accountId}/configuration/ac-common/workinghours |
+
+**Path Parameters**
+
+|Parameter  |Description |  Type / Value |
+|:----------- | :------------ | :--------------- |
+|accountId | LP site ID | String |
 
 **Request Body**
-```javascript
+
+```json
 [
   {
     "id": 2818213812,
@@ -61,19 +66,13 @@ Update existing workdays.
 ]
 ```
 
-**Path Parameters**
-
- |Parameter  |Description |  Type / Value |
- |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
-
 ### Request Headers
 
- |Header | Description| Notes |
- |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. |
- if-match|Contains special occasion's current revision number
- 
+|Header | Description| Notes |
+|:------- | :-------------- | :--- |
+|Authorization | Contains token string to allow request authentication and authorization. |
+|if-match|Contains special occasion's current revision number|
+
 ### Response
 
 **Response Codes**
@@ -91,8 +90,6 @@ Update existing workdays.
 
 ### Response Headers
 
- |Header|  Description| 
- |:-------|   :-----  |
- |ac-revision|  Account config object type collection revision.|  
-
-
+|Header|  Description|
+|:-------|   :-----  |
+|ac-revision|  Account config object type collection revision.|  

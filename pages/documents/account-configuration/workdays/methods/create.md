@@ -1,24 +1,29 @@
 ---
-title: Create workdays
+title: Create Workdays Object
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Workdays API
 level4: Methods
-
-order: 80
-permalink: 
-
-indicator: both
+order: 10
+permalink: account-configuration-workdays-create.html
+indicator: messaging
 ---
 
-Create new workday(s) for an account. It is possible to create several items at a time.
+Create new workday object(s) for an account. It is possible to create several items at a time.
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| POST  |/api/account/{accountId}/configuration/ac-common/workinghours 
+| POST  |/api/account/{accountId}/configuration/ac-common/workinghours|
+
+**Path Parameters**
+
+ |Parameter  |Description |  Type/Value|
+ |:----------- | :------------ |
+ |accountId | LP site ID for the account under which you would like to create the workday object(s)| String|
+
 
 **Request Headers**
 
@@ -28,7 +33,7 @@ Create new workday(s) for an account. It is possible to create several items at 
 
 **Request Body**
 
-```javascript
+```json
 {  
   "name": "Workdays 1",
   "description": "Description for workdays 1",
@@ -64,12 +69,6 @@ Create new workday(s) for an account. It is possible to create several items at 
   ]
 }
 ```
-**Path Parameters**
-
- |Parameter  |Description |  Type / Value |
- |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
-
 
 ### Response
 
@@ -88,6 +87,6 @@ Create new workday(s) for an account. It is possible to create several items at 
 
 ### Response Headers
 
- |Header|  Description| 
- |:-------|   :-----  |
- |ac-revision|  Account config object type collection revision.|  
+|Header|  Description|
+|:-------|   :-----  |
+|ac-revision|  Account config object type collection revision.|  
