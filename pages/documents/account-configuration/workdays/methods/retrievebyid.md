@@ -18,7 +18,7 @@ Get a single workday object by ID.
 | :-------- | :------ |
 | GET  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId}
 
-### Path Parameters
+** Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
@@ -26,7 +26,7 @@ Get a single workday object by ID.
  |workdayId|workday object’s unique id.| String|
 
 
-### Request Headers
+** Request Headers**
 
 |Header | Description| Notes |
 |:------- | :-------------- | :--- |
@@ -36,6 +36,7 @@ Get a single workday object by ID.
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
 
+## Response
 
 **Response Codes**
 
@@ -50,13 +51,13 @@ For details on the entity structure, please see the appendix [link](https://lpgi
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+** Response Headers**
 
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
 
-### Response example
+** Response example**
 
 ```json
 {
