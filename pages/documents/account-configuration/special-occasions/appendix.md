@@ -112,21 +112,7 @@ This section contains API details that are common to every API’s resource, met
     <td>Contains meta data important for the special occasions object</td>
     <td>Yes</td>
     <td>Aray</td>
-    <td>Do not include this array in a workdays object</td>
-  </tr>
-  <tr>
-   <td>meta/working</td>
-    <td>Indicated if we actually work in this event</td>
-    <td>Yes</td>
-    <td>Boolean</td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>meta/name</td>
-    <td>The name of the event</td>
-    <td>Yes</td>
-    <td>String</td>    
-    <td></td>
+    <td>This array contains two fields:<ul><li>working. This field indicates whether agents are working during this event (and thus the special occasion is just a change of working hours) or whether agents aren't working (a day off). This field is boolean and required</li><li>name. The name if the special occasion. This field is a string and is required.</li></ul></td>
   </tr>
 </tbody>
 </table>
