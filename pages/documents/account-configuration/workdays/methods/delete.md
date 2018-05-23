@@ -61,8 +61,8 @@ For details on the entity structure, please see the appendix [link](https://lpgi
 
 ## Response example
 
-In case delete success - body is empty.
-In case trying to delete and already deleted workdays:
+In case delete success - body is empty.<br>
+In case trying to delete an already deleted workdays:
 
 ```json
 {
