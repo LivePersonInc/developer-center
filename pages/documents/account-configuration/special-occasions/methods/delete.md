@@ -1,5 +1,5 @@
 ---
-title: Update special occasions
+title: Delete special occasions
 Keywords:
 level1: Documents
 level2: Account Configuration
@@ -12,66 +12,36 @@ permalink:
 indicator: both
 ---
 
-Update existing special occasions.
+Delete an existing special occasions.
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| PUT  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| DELETE  |/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialoccasionId} |
 
 **Request Headers**
 
 | Header | Description |
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
+If-Match	| Contains special occasion's current revision number
 
-**Request Body**
-```javascript
 
-[
-  {
-    "id": 2837048012,
-    "deleted": false,
-    "name": "special occasion 2",
-    "description": "Description for special occasion 1",
-    "isDefault": false,
-    "events": [
-      {
-        "meta": {
-          "working": true,
-          "name": "user1"
-        },
-        "start": {
-          "dateTime": "2017-03-27T06:00:00",
-          "timeZone": "Europe/Zurich"
-        },
-        "end": {
-          "dateTime": "2018-03-27T13:00:00",
-          "timeZone": "Europe/Zurich"
-        },
-        "recurrence": [
-          
-        ]
-      }
-    ]
-  }
-]
-
-```
 **Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
+<<<<<<< HEAD:pages/documents/account-configuration/special-occasions/methods/Delete special occasions.md
  |accountId | LP site ID | String  |
+ specialoccasionId| Account Config object’s unique id.| String
 
-### Request Headers
-
- |Header | Description| Notes |
- |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. |
- if-match|Contains special occasion's current revision number
+=======
+ |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+ specialoccasionId | Account Config object’s unique id. For multiple deletion, use comma seperator between special occasion id's {id1,id2,id3....}| String|
  
+ 
+>>>>>>> ae4c0af8ce9db1c37fd1b73d5d55da8ca625b4b5:pages/documents/account-configuration/special-occasions/methods/delete.md
 ### Response
 
 **Response Codes**
@@ -87,9 +57,23 @@ Update existing special occasions.
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
  |Header|  Description| 
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
+ 
+ **Response example**
 
+In case delete success - body is empty.<br>
+In case trying to delete an already deleted workdays:
+
+```json
+{
+    "type": "workinghours",
+    "internalCode": 12,
+    "message": "No data found"
+}
+```
+ 
+ 

@@ -16,14 +16,14 @@ Delete an existing workday object.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayIds}|
+| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId}|
 
 **Path Parameters**
 
 |Parameter  |Description |  Type / Value |
 |:----------- | :------------ | :--------------- |
 |accountId | LP site ID | String  |
-|workdayIds| Account Config object’s unique id.| String|
+|workdayId| Account Config object’s unique id. For multiple deletion, use comma seperator between workday id's {id1,id2,id3....}| String|
 
 
 **Request Headers**
@@ -32,6 +32,10 @@ Delete an existing workday object.
 |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 |If-Match	| Contains workday object's current revision number|
+
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
 
 ### Response
 
@@ -48,8 +52,21 @@ Delete an existing workday object.
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
+
+**Response example**
+
+In case delete success - body is empty.<br>
+In case trying to delete an already deleted workdays:
+
+```json
+{
+    "type": "workinghours",
+    "internalCode": 12,
+    "message": "No data found"
+}
+```

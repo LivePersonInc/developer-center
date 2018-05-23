@@ -51,3 +51,28 @@ Get a list of all workday objects of an account.
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
+
+### Response example
+
+```json
+[
+    {
+        "id": 2852537612,
+        "name": "Workdays 11112",
+        "deleted": false,
+        "isDefault": false
+    },
+    {
+        "id": 2852545912,
+        "name": "Workdays 111122",
+        "deleted": false,
+        "isDefault": false
+    },
+    {
+        "id": 2852546012,
+        "name": "Workdays 1111222",
+        "deleted": false,
+        "isDefault": false
+    }
+]
+```

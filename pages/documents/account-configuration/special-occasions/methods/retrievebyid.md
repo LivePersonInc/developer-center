@@ -1,5 +1,5 @@
 ---
-title: Special occasions list
+title: Special occasion by id
 Keywords:
 level1: Documents
 level2: Account Configuration
@@ -12,22 +12,23 @@ permalink:
 indicator: both
 ---
 
-Get list of all special occasions of an account
+Get a single special occasion by id
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| GET  |/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialOccasionId} |
 
-### Path Parameters
+**Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String  
+ |accountId | LP site ID | String  |
+ specialOccasionId|special occasion object’s unique id.| String
 
 
-### Request Headers
+**Request Headers**
 
  |Header | Description| Notes |
  |:------- | :-------------- | :--- |
@@ -48,9 +49,38 @@ Get list of all special occasions of an account
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
  |Header|  Description| 
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
+ 
+ **Response example**
+ 
+ ```json
+ {
+    "id": 2852557012,
+    "deleted": false,
+    "name": "so 1",
+    "description": "Description for workdays 1",
+    "isDefault": false,
+    "events": [
+        {
+            "meta": {
+                "working": true,
+                "name": "user1"
+            },
+            "start": {
+                "dateTime": "2017-03-27T06:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T13:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": []
+        }
+    ]
+}
+ ```
 
