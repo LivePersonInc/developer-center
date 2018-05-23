@@ -37,8 +37,6 @@ Delete an existing workday object.
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
 
-add example for single and multiple
-
 ### Response
 
 **Response Codes**
