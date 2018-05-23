@@ -91,3 +91,43 @@ Create new workday object(s) for an account. It is possible to create several it
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
+
+### Response example
+
+```json
+{
+    "id": 2844079112,
+    "deleted": false,
+    "name": "Workdays 11112",
+    "description": "Description for workdays 1",
+    "isDefault": false,
+    "events": [
+        {
+            "start": {
+                "dateTime": "2018-03-27T06:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T13:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": [
+                "RRULE:FREQ=WEEKLY;BYDAY=SU"
+            ]
+        },
+        {
+            "start": {
+                "dateTime": "2018-03-27T15:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T18:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": [
+                "RRULE:FREQ=WEEKLY;BYDAY=SU"
+            ]
+        }
+    ]
+}
+```
