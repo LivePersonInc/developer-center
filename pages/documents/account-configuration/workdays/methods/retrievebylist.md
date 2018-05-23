@@ -31,6 +31,11 @@ Get a list of all workday objects of an account.
 |:------- | :-------------- | :--- |
 |Authorization | Contains token string to allow request authentication and authorization.|
 
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
+
+
 ### Response
 
 **Response Codes**
@@ -51,3 +56,28 @@ Get a list of all workday objects of an account.
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
+
+### Response example
+
+```json
+[
+    {
+        "id": 2852537612,
+        "name": "Workdays 11112",
+        "deleted": false,
+        "isDefault": false
+    },
+    {
+        "id": 2852545912,
+        "name": "Workdays 111122",
+        "deleted": false,
+        "isDefault": false
+    },
+    {
+        "id": 2852546012,
+        "name": "Workdays 1111222",
+        "deleted": false,
+        "isDefault": false
+    }
+]
+```
