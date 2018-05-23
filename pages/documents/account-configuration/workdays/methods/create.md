@@ -19,10 +19,10 @@ Create new workday object(s) for an account. It is possible to create several it
 | POST  |/api/account/{accountId}/configuration/ac-common/workinghours|
 
 **Path Parameters**
+|Parameter  |Description |  Type / Value |
+|:----------- | :------------ | :--------------- |
+|accountId | LP site ID | String  |
 
- |Parameter  |Description |  Type/Value|
- |:----------- | :------------ |
- |accountId | LP site ID for the account under which you would like to create the workday object(s)| String|
 
 
 **Request Headers**
