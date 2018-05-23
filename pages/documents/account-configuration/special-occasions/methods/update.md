@@ -69,7 +69,7 @@ For details on the entity structure, please see the appendix [link](https://lpgi
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
 
-### Request Headers
+**Request Headers**
 
  |Header | Description| Notes |
  |:------- | :-------------- | :--- |
@@ -91,7 +91,7 @@ For details on the entity structure, please see the appendix [link](https://lpgi
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
  |Header|  Description| 
  |:-------|   :-----  |
