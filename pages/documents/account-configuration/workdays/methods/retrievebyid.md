@@ -32,10 +32,6 @@ Get a single workday object by ID.
 |:------- | :-------------- | :--- |
 |Authorization | Contains token string to allow request authentication and authorization.|
 
-**Entity structure**
-
-For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
-
 ## Response
 
 **Response Codes**
