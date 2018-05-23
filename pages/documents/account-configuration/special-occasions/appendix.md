@@ -110,7 +110,7 @@ This section contains API details that are common to every API’s resource, met
   <tr>
     <td>meta</td>
     <td>Contains meta data important for the special occasions object</td>
-    <td>For the special occasions API, yes</td>
+    <td>Yes</td>
     <td>Aray</td>
     <td>Do not include this array in a workdays object</td>
   </tr>
