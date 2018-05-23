@@ -33,13 +33,9 @@ If-Match	| Contains special occasion's current revision number
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
- specialoccasionId| Account Config object’s unique id.| String|
+ specialoccasionId| Account Config object’s unique id. For multiple deletion, use comma seperator between special occasion id's| String|
  
- **Entity structure**
-
-For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
-
-
+ 
 ### Response
 
 **Response Codes**
