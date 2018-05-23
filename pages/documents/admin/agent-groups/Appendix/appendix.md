@@ -46,7 +46,7 @@ Optional:
 
 | Parameter | Description | Type |
 | :----------- | :------------- | :----- |
-| accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID | String  |
 | userId | user ID | Positive long number greater than zero |
 | skillId | skill ID | Positive long number greater than zero |
 | agentGroupId | agent group ID | Positive long number greater than zero |

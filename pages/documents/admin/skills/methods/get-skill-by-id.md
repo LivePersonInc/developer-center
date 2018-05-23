@@ -35,7 +35,7 @@ This API retrieves a single skill (by ID) for a specific account.
 
 | Parameter    |   Description   |   Type / Value      |                                      
 |:------------  | :------------- |  :----------------- |                                       
-|accountId   |    LP site ID   |    string ^[a-zA-Z0-9_]{1,20}$ |
+|accountId   |    LP site ID   |    string  |
 |skillId       |  Skill ID       |  Positive long number greater than zero |
  
  **Query Parameters**

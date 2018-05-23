@@ -34,7 +34,7 @@ By consumerId - deletion of personal data that is related to a specific consumer
 
   |Parameter|  Description|  Type/Value |
   |:------    |:--------    |:--------|
-  |site_id|  LP account id|   String ^[a-zA-Z0-9_]{1,20}$|
+  |site_id|  LP account id|   String |
 
  **Request BODY Parameters**
 

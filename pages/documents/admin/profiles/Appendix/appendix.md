@@ -48,7 +48,7 @@ This section contains API details that are common to every API’s resource and 
 
 | Parameter | Description  | Type/Value |
 | :------   | :--------    | :-------- |
-| accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID | String  |
 | profileId | Profile ID | Positive long number greater than zero |
 
 ### Entity Structure
