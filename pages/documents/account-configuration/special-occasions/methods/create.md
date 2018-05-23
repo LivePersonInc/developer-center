@@ -89,4 +89,31 @@ For details on the entity structure, please see the appendix [link](https://lpgi
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
  
+ **Response example**
+ ```json
+ {
+    "id": 2852557012,
+    "deleted": false,
+    "name": "so 1",
+    "description": "Description for workdays 1",
+    "isDefault": false,
+    "events": [
+        {
+            "meta": {
+                "working": true,
+                "name": "user1"
+            },
+            "start": {
+                "dateTime": "2017-03-27T06:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T13:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": []
+        }
+    ]
+}
+```
  
