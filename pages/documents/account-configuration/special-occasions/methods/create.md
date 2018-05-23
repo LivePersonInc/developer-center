@@ -30,6 +30,10 @@ Create new special occasion(s) for an account. It is possible to create several 
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
 
+**'isDefault' entity state**
+
+API does not allow multiple defaults simultaneously. Once a special occasion is set as default, any other special occasion which was set as default will be set as default=false.
+
 
 **Request Body**
 
