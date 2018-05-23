@@ -12,7 +12,7 @@ indicator: messaging
 
 Get a single workday object by ID.
 
-###Request
+### Request
 
 | Method | URL |
 | :-------- | :------ |
@@ -36,7 +36,7 @@ Get a single workday object by ID.
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
 
-##Response
+## Response
 
 **Response Codes**
 
