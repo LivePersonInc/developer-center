@@ -34,7 +34,7 @@ Create new workday object(s) for an account. It is possible to create several it
 
 ** Entity structure**
 
-For details on the entity structure, please see the appendix [link](agent-domain-domain-api.html){:target="_blank"}
+For details on the entity structure, please see the appendix [link](agent-domain-domain-api.html)
 
 **Request Body**
 
