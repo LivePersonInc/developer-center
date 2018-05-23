@@ -36,7 +36,7 @@ For details on the entity structure, please see the appendix [link](https://lpgi
 
 **'isDefault' entity state**
 
-API does not allow multiple defaults simultaneously. Once a workday is set as default, any other workday which was set as default will turn to default=false.
+API does not allow multiple defaults simultaneously. Once a workday is set as default, any other workday which was set as default will be set as default=false.
 
 **Request Body**
 
