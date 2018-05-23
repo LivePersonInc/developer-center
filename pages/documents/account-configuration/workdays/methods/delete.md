@@ -16,14 +16,14 @@ Delete an existing workday object.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayIds}|
+| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId}|
 
 **Path Parameters**
 
 |Parameter  |Description |  Type / Value |
 |:----------- | :------------ | :--------------- |
 |accountId | LP site ID | String  |
-|workdayIds| Account Config object’s unique id.| String|
+|workdayId| Account Config object’s unique id. For multiple deletion, use comma seperator between workday id's {id1,id2,id3....}| String|
 
 
 **Request Headers**
