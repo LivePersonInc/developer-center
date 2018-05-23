@@ -40,7 +40,7 @@ A few things you'll need to get started with this API:
 ### Deletion process 
 
 Once a deletion request is sent via the API, it is waiting to be approved for a pre-defined time period (5 days by default). During that time period it is possible for the brand to cancel the deletion request so this allows the brand to monitor the deletion requests that are issued on his behalf.
-After the deletion request is approved, the deletion process will start and we garuntee a full deletion from all repositories within 20 days from that time.
+After the deletion request is approved, the deletion process will start and we guarantee a full deletion from all repositories within 20 days from that time.
 There is a limitation of the number of deletion requests that a brand can issue within a calendar month (limit of 100 requests per month by default).
 
 ### Main flows
