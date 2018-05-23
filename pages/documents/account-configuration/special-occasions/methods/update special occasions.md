@@ -63,7 +63,7 @@ Update existing special occasions.
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+ |accountId | LP site ID | String  |
 
 ### Request Headers
 

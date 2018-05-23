@@ -24,7 +24,7 @@ Deletes a Predefined Content item from a specific account.
 
  |Parameter|  Description|  Type / Value| Notes|
  |:-----------|  :-------------|  :-------------|:----------| 
- |accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
+ |accountId|  LP site ID|  string |  Validation fail error code: 400 |
  |predefined-content-id|  Account Config object's unique ID|  Positive long number greater than zero  |
 
 ### Request Headers

@@ -36,7 +36,7 @@ This section contains API details that are common to every API’s resource, met
 
  |Parameter | Description|  Type  |Notes |
  |:----------|  :-------------- | :-------------- | :--- |
- |accountId|  LP site ID | string ^[a-zA-Z0-9_]{1,20}$ | Validation fail error code: 400
+ |accountId|  LP site ID | string | Validation fail error code: 400
 
 ### Entity Structure
 Attribute | Description | Notes

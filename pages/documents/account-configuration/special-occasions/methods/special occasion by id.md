@@ -24,7 +24,7 @@ Get a single special occasion by id
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+ |accountId | LP site ID | String  |
  specialOccasionId|special occasion object’s unique id.| String
 
 

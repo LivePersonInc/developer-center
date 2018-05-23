@@ -43,7 +43,7 @@ This section contains API details that are common to every API’s resource and 
 
  |Parameter | Description|  Type  |Notes |
  |:----------|  :-------------- | :-------------- | :--- |
- |accountId|  LP site ID | string ^[a-zA-Z0-9_]{1,20}$ | Validation fail error code: 400 |
+ |accountId|  LP site ID | string  | Validation fail error code: 400 |
  |predefined-content-id | Account Config object's unique ID | Positive long number greater than zero  |
 
 ### Entity Structure

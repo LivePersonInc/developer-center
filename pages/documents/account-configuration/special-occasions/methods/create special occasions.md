@@ -60,7 +60,7 @@ Create new special occasion(s) for an account. It is possible to create several 
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+ |accountId | LP site ID | String  |
 
 
 ### Response

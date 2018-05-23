@@ -51,7 +51,7 @@ This API creates a list of skills for a specific account.
 
 | Parameter    |  Description |   Type / Value  |
 | :----------   | :------------ | :------------ |
-| accountId  |    LP site ID  |  String ^[a-zA-Z0-9_]{1,20}$ |
+| accountId  |    LP site ID  |  String  |
 
 ### Response
 
