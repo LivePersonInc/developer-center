@@ -32,6 +32,9 @@ Create new workday object(s) for an account. It is possible to create several it
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
+** Entity structure**
+bla bla [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"}
+
 **Request Body**
 
 ```json
