@@ -34,6 +34,11 @@ If-Match	| Contains special occasion's current revision number
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
  specialoccasionId| Account Config object’s unique id.| String
+ 
+ **Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
+
 
 ### Response
 
@@ -55,3 +60,18 @@ If-Match	| Contains special occasion's current revision number
  |Header|  Description| 
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
+ 
+ **Response example**
+
+In case delete success - body is empty.<br>
+In case trying to delete an already deleted workdays:
+
+```json
+{
+    "type": "workinghours",
+    "internalCode": 12,
+    "message": "No data found"
+}
+```
+ 
+ 
