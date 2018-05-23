@@ -28,6 +28,9 @@ Update existing workday object(s).
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
 
+**'isDefault' entity state**
+
+API does not allow multiple defaults simultaneously. Once a workday is set as default, any other workday which was set as default will turn to default=false.
 
 **Request Body**
 
