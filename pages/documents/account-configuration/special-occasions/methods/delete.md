@@ -33,7 +33,7 @@ If-Match	| Contains special occasion's current revision number
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
- specialoccasionId {id1,id2,id3....}| Account Config object’s unique id. For multiple deletion, use comma seperator between special occasion id's| String|
+ specialoccasionId | Account Config object’s unique id. For multiple deletion, use comma seperator between special occasion id's {id1,id2,id3....}| String|
  
  
 ### Response
