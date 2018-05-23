@@ -20,7 +20,7 @@ Get list of all special occasions of an account
 | :-------- | :------ |
 | GET  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
-### Path Parameters
+**Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
@@ -48,9 +48,35 @@ Get list of all special occasions of an account
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
  |Header|  Description| 
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
+ 
+ **response example**
+ ```json
+ [
+    {
+        "id": 2852557012,
+        "name": "so 1",
+        "deleted": false,
+        "isDefault": false
+    },
+    {
+        "id": 2852560712,
+        "name": "so 2",
+        "deleted": false,
+        "isDefault": false
+    },
+    {
+        "id": 2852560912,
+        "name": "so 3",
+        "deleted": false,
+        "isDefault": false
+    }
+]
+```
+ 
+ 
 
