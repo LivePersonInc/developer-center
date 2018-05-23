@@ -114,6 +114,18 @@ This section contains API details that are common to every API’s resource, met
     <td>Aray</td>
     <td>Do not include this array in a workdays object</td>
   </tr>
+  <tr>
+   <td>meta/working</td>
+    <td>Indicated if we actually work in this event</td>
+    <td>Yes</td>
+    <td>Boolean</td>
+    </tr>
+    <tr>
+    <td>meta/name</td>
+    <td>The name of the event</td>
+    <td>Yes</td>
+    <td>String</td>    
+  </tr>
 </tbody>
 </table>
 
