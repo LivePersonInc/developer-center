@@ -102,7 +102,7 @@ This section contains API details that are common to every API’s resource, met
   </tr>
   <tr>
     <td>recurrence</td>
-    <td>This is mandatory for the workdays object but does not currently affect LiveEngage behavior. A special occasion object will have an empty field, since it does not reoccur.</td>
+    <td>This is mandatory for the workdays object but only one value is supported. A special occasion object will have an empty field, since it does not reoccur.</td>
     <td>Yes</td>
     <td>Array</td>
     <td>The pattern for this field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</td>
