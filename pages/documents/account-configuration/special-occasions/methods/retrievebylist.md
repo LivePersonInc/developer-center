@@ -1,15 +1,15 @@
 ---
-title: Special occasions list
+title: Retrieve Special Occasions by List
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Special Occasions API
 level4: Methods
 
-order: 80
-permalink: 
+order: 50
+permalink: account-configuration-special-occasions-retrieve-by-list.html
 
-indicator: both
+indicator: messaging
 ---
 
 Get list of all special occasions of an account
@@ -31,8 +31,8 @@ Get list of all special occasions of an account
 
  |Header | Description| Notes |
  |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- 
+ |Authorization | Contains token string to allow request authentication and authorization.
+
 ### Response
 
 **Response Codes**
@@ -50,33 +50,31 @@ Get list of all special occasions of an account
 
 **Response Headers**
 
- |Header|  Description| 
+ |Header|  Description|
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
- 
- **response example**
- ```json
- [
-    {
-        "id": 2852557012,
-        "name": "so 1",
-        "deleted": false,
-        "isDefault": false
-    },
-    {
-        "id": 2852560712,
-        "name": "so 2",
-        "deleted": false,
-        "isDefault": false
-    },
-    {
-        "id": 2852560912,
-        "name": "so 3",
-        "deleted": false,
-        "isDefault": false
-    }
+
+ **Response example**
+
+```json
+[
+  {
+      "id": 2852557012,
+      "name": "so 1",
+      "deleted": false,
+      "isDefault": false
+  },
+  {
+      "id": 2852560712,
+      "name": "so 2",
+      "deleted": false,
+      "isDefault": false
+  },
+  {
+      "id": 2852560912,
+      "name": "so 3",
+      "deleted": false,
+      "isDefault": false
+  }
 ]
 ```
- 
- 
-

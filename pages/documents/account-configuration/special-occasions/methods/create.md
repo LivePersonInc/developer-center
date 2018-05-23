@@ -1,15 +1,14 @@
 ---
-title: Create special occasions
+title: Create
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Special Occasions API
 level4: Methods
+order: 10
+permalink: account-configuration-special-occasions-create.html
 
-order: 80
-permalink: 
-
-indicator: both
+indicator: messaging
 ---
 
 Create new special occasion(s) for an account. It is possible to create several items at a time.
@@ -26,18 +25,12 @@ Create new special occasion(s) for an account. It is possible to create several 
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
-**Entity structure**
 
-For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
-
-**'isDefault' entity state**
-
-API does not allow multiple defaults simultaneously. Once a special occasion is set as default, any other special occasion which was set as default will be set as default=false.
 
 
 **Request Body**
 
-```javascript
+```json
 {
   "deleted": false,
   "name": "special occasion 1",
@@ -58,12 +51,20 @@ API does not allow multiple defaults simultaneously. Once a special occasion is 
         "timeZone": "Europe/Zurich"
       },
       "recurrence": [
-        
+
       ]
     }
   ]
 }
 ```
+
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
+
+**'isDefault' entity state**
+
+The `isDefault` field determines whether a special occasions object is the default for the entire account. Only one object can be set as the default for each account. **Note**: if you set more than one special occasions object as default, LivePerson validation will set it to false on the server side.
 
 **Path Parameters**
 
@@ -89,35 +90,35 @@ API does not allow multiple defaults simultaneously. Once a special occasion is 
 
 **Response Headers**
 
- |Header|  Description| 
+ |Header|  Description|
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
- 
- **Response example**
- ```json
- {
-    "id": 2852557012,
-    "deleted": false,
-    "name": "so 1",
-    "description": "Description for workdays 1",
-    "isDefault": false,
-    "events": [
-        {
-            "meta": {
-                "working": true,
-                "name": "user1"
-            },
-            "start": {
-                "dateTime": "2017-03-27T06:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "end": {
-                "dateTime": "2018-03-27T13:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "recurrence": []
-        }
-    ]
+
+**Response example**
+
+```json
+{
+  "id": 2852557012,
+  "deleted": false,
+  "name": "so 1",
+  "description": "Description for workdays 1",
+  "isDefault": false,
+  "events": [
+      {
+          "meta": {
+              "working": true,
+              "name": "user1"
+          },
+          "start": {
+              "dateTime": "2017-03-27T06:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "end": {
+              "dateTime": "2018-03-27T13:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "recurrence": []
+      }
+  ]
 }
 ```
- 

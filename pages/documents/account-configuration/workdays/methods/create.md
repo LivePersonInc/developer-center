@@ -30,13 +30,7 @@ Create new workday object(s) for an account. It is possible to create several it
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
-**Entity structure**
 
-For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
-
-**'isDefault' entity state**
-
-API does not allow multiple defaults simultaneously. Once a workday is set as default, any other workday which was set as default will be set as default=false.
 
 **Request Body**
 
@@ -76,6 +70,14 @@ API does not allow multiple defaults simultaneously. Once a workday is set as de
   ]
 }
 ```
+
+**Entity structure**
+
+For details on the entity structure, please see the [appendix](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
+
+**'isDefault' entity state**
+
+The `isDefault` field determines whether a workdays object is the default for the entire account. Only one object can be set as the default for each account. **Note**: if you set more than one workdays object as default, LivePerson validation will set it to false on the server side.
 
 ### Response
 

@@ -1,15 +1,15 @@
 ---
-title: Delete special occasions
+title: Delete
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Special Occasions API
 level4: Methods
 
-order: 80
-permalink: 
+order: 30
+permalink: account-configuration-special-occasions-delete.html
 
-indicator: both
+indicator: messaging
 ---
 
 Delete an existing special occasions.
@@ -23,25 +23,19 @@ Delete an existing special occasions.
 **Request Headers**
 
 | Header | Description |
- |:-------- | :------------ |
+|:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
-If-Match	| Contains special occasion's current revision number
+|If-Match	| Contains special occasion's current revision number|
 
 
 **Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
-<<<<<<< HEAD:pages/documents/account-configuration/special-occasions/methods/Delete special occasions.md
- |accountId | LP site ID | String  |
- specialoccasionId| Account Config object’s unique id.| String
+ |accountId | LP site ID | String|
+ specialoccasionId | Account Config object’s unique id. For multiple deletion, use comma separator between special occasion id's {id1,id2,id3....}| String|
 
-=======
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
- specialoccasionId | Account Config object’s unique id. For multiple deletion, use comma seperator between special occasion id's {id1,id2,id3....}| String|
- 
- 
->>>>>>> ae4c0af8ce9db1c37fd1b73d5d55da8ca625b4b5:pages/documents/account-configuration/special-occasions/methods/delete.md
+
 ### Response
 
 **Response Codes**
@@ -59,10 +53,10 @@ If-Match	| Contains special occasion's current revision number
 
 **Response Headers**
 
- |Header|  Description| 
+ |Header|  Description|
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
- 
+
  **Response example**
 
 In case delete success - body is empty.<br>
@@ -75,5 +69,3 @@ In case trying to delete an already deleted workdays:
     "message": "No data found"
 }
 ```
- 
- 

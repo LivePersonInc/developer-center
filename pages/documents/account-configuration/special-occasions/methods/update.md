@@ -1,15 +1,15 @@
 ---
-title: Update special occasions
+title: Update
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Special Occasions API
 level4: Methods
 
-order: 80
-permalink: 
+order: 20
+permalink: account-configuration-special-occasions-update.html
 
-indicator: both
+indicator: messaging
 ---
 
 Update existing special occasions.
@@ -20,16 +20,11 @@ Update existing special occasions.
 | :-------- | :------ |
 | PUT  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
-**Entity structure**
 
-For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
-
-**'isDefault' entity state**
-
-API does not allow multiple defaults simultaneously. Once a special occasion is set as default, any other special occasion which was set as default will be set as default=false.
 
 **Request Body**
-```javascript
+
+```json
 
 [
   {
@@ -53,14 +48,24 @@ API does not allow multiple defaults simultaneously. Once a special occasion is 
           "timeZone": "Europe/Zurich"
         },
         "recurrence": [
-          
+
         ]
       }
     ]
   }
 ]
-
 ```
+
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
+
+**'isDefault' entity state**
+
+The `isDefault` field determines whether a special occasions object is the default for the entire account. Only one object can be set as the default for each account. **Note**: if you see more than one special occasions object as default, LivePerson validation will set it to false on the server side.
+
+
+
 **Path Parameters**
 
  |Parameter  |Description |  Type / Value |
@@ -73,7 +78,7 @@ API does not allow multiple defaults simultaneously. Once a special occasion is 
  |:------- | :-------------- | :--- |
  |Authorization | Contains token string to allow request authentication and authorization. |
  if-match|Contains special occasion's current revision number
- 
+
 ### Response
 
 **Response Codes**
@@ -91,46 +96,46 @@ API does not allow multiple defaults simultaneously. Once a special occasion is 
 
 **Response Headers**
 
- |Header|  Description| 
+ |Header|  Description|
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
- 
+
  **response example**
- ```json
- {
-    "id": 2852546012,
-    "deleted": false,
-    "name": "Workdays 1111222",
-    "description": "Description for workdays 1",
-    "isDefault": false,
-    "events": [
-        {
-            "start": {
-                "dateTime": "2018-03-27T06:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "end": {
-                "dateTime": "2018-03-27T13:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "recurrence": [
-                "RRULE:FREQ=WEEKLY;BYDAY=SU"
-            ]
-        },
-        {
-            "start": {
-                "dateTime": "2018-03-27T15:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "end": {
-                "dateTime": "2018-03-27T18:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "recurrence": [
-                "RRULE:FREQ=WEEKLY;BYDAY=SU"
-            ]
-        }
-    ]
+
+```json
+{
+  "id": 2852546012,
+  "deleted": false,
+  "name": "Workdays 1111222",
+  "description": "Description for workdays 1",
+  "isDefault": false,
+  "events": [
+      {
+          "start": {
+              "dateTime": "2018-03-27T06:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "end": {
+              "dateTime": "2018-03-27T13:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "recurrence": [
+              "RRULE:FREQ=WEEKLY;BYDAY=SU"
+          ]
+      },
+      {
+          "start": {
+              "dateTime": "2018-03-27T15:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "end": {
+              "dateTime": "2018-03-27T18:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "recurrence": [
+              "RRULE:FREQ=WEEKLY;BYDAY=SU"
+          ]
+      }
+  ]
 }
 ```
-

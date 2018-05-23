@@ -76,3 +76,7 @@ Get a list of all workday objects of an account.
     }
 ]
 ```
+
+**Entity structure**
+
+For details on the entity structure, please see the [appendix](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)

@@ -20,6 +20,8 @@ For example, if a skill has a defined time to response of five minutes and a con
 
 It is important to understand that this API creates a "workdays" object which is then assigned to specific skills. If a "workdays" object is not assigned to any skills, it will not affect any consumers. So, for example: two different "workdays" objects can be created. **Object A** defines a regular, US hours business week. **Object B** defines a short, six hour work week. You can then assign Object A to example skills *Support* and *Billing* while assigning Object B to example skill *Sales*. Object A will affect only the skills assigned to it (Support and Billing) and Object B will only affect the skill assigned to it (Sales).
 
+**Note**: the Workdays feature relies on automatic messages in order to inform the visitor of the expected time to response. If the automatic messages feature is disable for an account, the Workdays feature will not work as expected.
+
 ### Use Cases
 
 1. Set hours of operation for different teams working on different schedules. For example, your support team might be available 24/7, while your sales are working US business hours. If a consumer starts a conversation with your sales team outside of US business hours, they'll receive an updated and correct expected response time. If they start a conversation with your support team, they'll receive the current time to response for that skill.

@@ -1,15 +1,15 @@
 ---
-title: Special occasion by id
+title: Retrieve Special Occasion by ID
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: AC workdays API
+level3: Special Occasions API
 level4: Methods
 
-order: 80
-permalink: 
+order: 40
+permalink: account-configuration-special-occasions-retrieve-by-id.html
 
-indicator: both
+indicator: messaging
 ---
 
 Get a single special occasion by id
@@ -32,8 +32,8 @@ Get a single special occasion by id
 
  |Header | Description| Notes |
  |:------- | :-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- 
+ |Authorization | Contains token string to allow request authentication and authorization.
+
 ### Response
 
 **Response Codes**
@@ -51,36 +51,35 @@ Get a single special occasion by id
 
 **Response Headers**
 
- |Header|  Description| 
+ |Header|  Description|
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
- 
- **Response example**
- 
- ```json
- {
-    "id": 2852557012,
-    "deleted": false,
-    "name": "so 1",
-    "description": "Description for workdays 1",
-    "isDefault": false,
-    "events": [
-        {
-            "meta": {
-                "working": true,
-                "name": "user1"
-            },
-            "start": {
-                "dateTime": "2017-03-27T06:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "end": {
-                "dateTime": "2018-03-27T13:00:00",
-                "timeZone": "Europe/Zurich"
-            },
-            "recurrence": []
-        }
-    ]
-}
- ```
 
+ **Response example**
+
+```json
+{
+  "id": 2852557012,
+  "deleted": false,
+  "name": "so 1",
+  "description": "Description for workdays 1",
+  "isDefault": false,
+  "events": [
+      {
+          "meta": {
+              "working": true,
+              "name": "user1"
+          },
+          "start": {
+              "dateTime": "2017-03-27T06:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "end": {
+              "dateTime": "2018-03-27T13:00:00",
+              "timeZone": "Europe/Zurich"
+          },
+          "recurrence": []
+      }
+  ]
+}
+```

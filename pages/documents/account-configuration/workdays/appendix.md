@@ -3,7 +3,7 @@ title: Appendix
 Keywords:
 level1: Documents
 level2: Account Configuration
-level3: workdays API
+level3: Workdays API
 order: 60
 permalink: account-configuration-workdays-appendix.html
 indicator: messaging
@@ -39,17 +39,85 @@ This section contains API details that are common to every API’s resource, met
  |accountId|  LP site ID | string | Validation fail error code: 400
 
 ### Entity Structure
-Attribute | Description | Notes
---- | --- | ---
-|name | workday name | <ul><li>Type: string</li> <li>Required</li><li>Unique</li><li>max length: 50</li></ul>|
-|description | workday description | <ul><li>Type: string</li><li>max length: 200</li><li>Required</li></ul>|
-|deleted | Whether the item is deleted or not  | <ul><li>Type: boolean</li></ul>|
-|is default | Whether the entity is set as default entity | <ul><li>Type: boolean</li><li> required</li></ul>|
-|events | a list of events defining the working day| <ul><li>Type: Array</li><li>required</li></ul>|
-|start/end date |<ul><li> define the date for event to start/end. </li><li>Both start and end dates must be with the same |format. </li><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss)</li></li> | <ul><li>Type: string</li><li>format: full date</li></ul>|
-|start/end timezone | defines the timezone for start/end date. Start/End date must be both on the same timezone. | <ul><li>Type: string</li><li>possible values: within list of known timezones</li><li>required</li></ul>|
-|recurrence | <ul><li>define a list of recurrences for each workday. </li><li>workdays must contain a single recurrence. </li><li>Special occasion will have an empty list. </li></ul> | <ul><li>Type: array</li> <li>pattern: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</li></ul>|
-|meta | <ul><li>contains meta data (???).</li> <li>mandatory for special occasions. </li><li>workdays should not contain this node</li></ul> | <ul><li>Type: array</li> </ul>|
+
+<table>
+<thead>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+    <th>Required</th>
+    <th>Type</th>
+    <th>Notes</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>name</td>
+    <td>Workday Object's name</td>
+    <td>Yes</td>
+    <td>String</td>
+    <td>This must be a unique nameMax length: 50</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>Workday Object's description</td>
+    <td>Yes</td>
+    <td>String</td>
+    <td>Max length: 200</td>
+  </tr>
+  <tr>
+    <td>deleted</td>
+    <td>whether the items is deleted or not</td>
+    <td>No</td>
+    <td>Boolean</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>isDefault</td>
+    <td>Whether the object is set as the default object for the account</td>
+    <td>Yes</td>
+    <td>Boolean</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>events</td>
+    <td>A list of events listing the object's attributes/options</td>
+    <td>Yes</td>
+    <td>Array</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>start</td>
+    <td>A set of attributes defining the start time and date of the object</td>
+    <td>Yes</td>
+    <td>Array</td>
+    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</td>
+  </tr>
+  <tr>
+    <td>end</td>
+    <td>A set of attributes defining the end time and date of the object</td>
+    <td>Yes</td>
+    <td>Array</td>
+    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</td>
+  </tr>
+  <tr>
+    <td>recurrence</td>
+    <td>This is mandatory for the workdays object but does not currently affect LiveEngage behavior. A special occasion object will have an empty field, since it does not reoccur.</td>
+    <td>Yes</td>
+    <td>Array</td>
+    <td>The pattern for this field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</td>
+  </tr>
+  <tr>
+    <td>meta</td>
+    <td>Contains meta data important for the special occasions object</td>
+    <td>For the special occasions API, yes</td>
+    <td>Aray</td>
+    <td>Do not include this array in a workdays object</td>
+  </tr>
+</tbody>
+</table>
+
+
 
 
 

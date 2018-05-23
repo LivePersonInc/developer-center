@@ -92,3 +92,7 @@ Get a single workday object by ID.
     ]
 }
 ```
+
+**Entity structure**
+
+For details on the entity structure, please see the [appendix](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
