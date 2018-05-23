@@ -33,6 +33,11 @@ Delete an existing workday object.
 | Authentication | Contains token string to allow request authentication and authorization |
 |If-Match	| Contains workday object's current revision number|
 
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
+
+
 ### Response
 
 **Response Codes**
@@ -53,3 +58,16 @@ Delete an existing workday object.
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
+
+## Response example
+
+In case delete success - body is empty.
+In case trying to delete and already deleted workdays:
+
+```json
+{
+    "type": "workinghours",
+    "internalCode": 12,
+    "message": "No data found"
+}
+```
