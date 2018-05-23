@@ -20,12 +20,6 @@ Update existing special occasions.
 | :-------- | :------ |
 | PUT  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
-**Request Headers**
-
-| Header | Description |
- |:-------- | :------------ |
-| Authentication | Contains token string to allow request authentication and authorization |
-
 **Entity structure**
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
