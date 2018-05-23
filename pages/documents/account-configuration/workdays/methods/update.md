@@ -24,6 +24,11 @@ Update existing workday object(s).
 |:----------- | :------------ | :--------------- |
 |accountId | LP site ID | String |
 
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
+
+
 **Request Body**
 
 ```json
@@ -93,3 +98,42 @@ Update existing workday object(s).
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
+
+### Response example
+```json
+{
+    "id": 2852537612,
+    "deleted": false,
+    "name": "Workdays 11112",
+    "description": "Description for workdays 1",
+    "isDefault": false,
+    "events": [
+        {
+            "start": {
+                "dateTime": "2018-03-27T06:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T13:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": [
+                "RRULE:FREQ=WEEKLY;BYDAY=SU"
+            ]
+        },
+        {
+            "start": {
+                "dateTime": "2018-03-27T15:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "end": {
+                "dateTime": "2018-03-27T18:00:00",
+                "timeZone": "Europe/Zurich"
+            },
+            "recurrence": [
+                "RRULE:FREQ=WEEKLY;BYDAY=SU"
+            ]
+        }
+    ]
+}
+```
