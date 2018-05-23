@@ -26,6 +26,11 @@ Create new special occasion(s) for an account. It is possible to create several 
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
+**Entity structure**
+
+For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
+
+
 **Request Body**
 
 ```javascript
@@ -78,8 +83,10 @@ Create new special occasion(s) for an account. It is possible to create several 
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
  |Header|  Description| 
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
+ 
+ 
