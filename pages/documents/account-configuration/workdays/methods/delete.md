@@ -53,13 +53,13 @@ For details on the entity structure, please see the appendix [link](https://lpgi
 | 409  | Conflict              |
 | 500  | Internal Server Error |
 
-### Response Headers
+**Response Headers**
 
 |Header|  Description|
 |:-------|   :-----  |
 |ac-revision|  Account config object type collection revision.|  
 
-## Response example
+**Response example**
 
 In case delete success - body is empty.<br>
 In case trying to delete an already deleted workdays:
