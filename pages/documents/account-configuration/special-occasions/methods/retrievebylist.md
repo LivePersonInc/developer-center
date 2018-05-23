@@ -27,7 +27,7 @@ Get list of all special occasions of an account
  |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ 
 
 
-### Request Headers
+**Request Headers**
 
  |Header | Description| Notes |
  |:------- | :-------------- | :--- |
