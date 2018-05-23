@@ -119,12 +119,14 @@ This section contains API details that are common to every API’s resource, met
     <td>Indicated if we actually work in this event</td>
     <td>Yes</td>
     <td>Boolean</td>
+    <td></td>
     </tr>
     <tr>
     <td>meta/name</td>
     <td>The name of the event</td>
     <td>Yes</td>
     <td>String</td>    
+    <td></td>
   </tr>
 </tbody>
 </table>
