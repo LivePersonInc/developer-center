@@ -34,7 +34,7 @@ Create new workday object(s) for an account. It is possible to create several it
 
 For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
 
-**Default entity state**
+**'isDefault' entity state**
 
 API does not allow multiple defaults simultaneously. Once a workday is set as default, any other workday which was set as default will turn to default=false.
 
