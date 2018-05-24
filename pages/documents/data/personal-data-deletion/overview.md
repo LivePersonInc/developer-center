@@ -10,14 +10,12 @@ root-link: true
 indicator: both
 ---
 
-**BETA**
-
 ### Introduction
 
 Personal Data Deletion API allows brands to comply with the European Union's Right to be Forgotten requirement (a part of the GDPR). This API will permanently delete any personal data that the consumer requests to be deleted. Once the data has been deleted there is no way to restore it.
 
-This data can include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 30 days from the time of the request. There will be some approval process on LivePerson's side in the early stages to make sure we are deleting the data as requested.
-Only closed conversations can be deleted.
+This personal data that will be deleted may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request has being approved (explination about the approval process can be found bellow). 
+
 
 **Note**: what this document refers to as "deletion" is actually the masking of specific, personal data by replacing it with generic text in the following format: *** LP deleted data ***
 
@@ -25,17 +23,13 @@ Only closed conversations can be deleted.
 
 A few things you'll need to get started with this API:
 
-1. **Currently there's no need to retrieve your domain for this API**. Below you can find the different domains by geo location. In order to determine the region of your account log into LiveEngage and look at the URL in your address bar. If it begins with z1, your account is hosted in the US. If it begins with z2 it is hosted in the EMEA region. If it begins with z3 it is an APAC account:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
-* US accounts: va.data-mng.liveperson.net
+	* rtbf
 
-* EMEA accounts: lo.data-mng.liveperson.net
-
-* APAC accounts: sy.data-mng.liveperson.net
-
-{:start="2"}
 2. This API requires authorization using API key or via login.
-*  The Personal Data Deletion API currently has no self-serve through LiveEngage. You will receive the keys from your account manager after the Beta User agreement is approved.
+
+	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. The key is availbale under the Data section.
 
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
@@ -43,7 +37,15 @@ A few things you'll need to get started with this API:
 {:start="4"}
 4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
+### Deletion process 
+
+Once a deletion request is sent via the API, it is waiting to be approved for a pre-defined time period (5 days by default). During that time period it is possible for the brand to cancel the deletion request so this allows the brand to monitor the deletion requests that are issued on his behalf.
+After the deletion request is approved, the deletion process will start and we guarantee a full deletion from all repositories within 20 days from that time.
+There is a limitation of the number of deletion requests that a brand can issue within a calendar month (limit of 100 requests per month by default).
+
 ### Main flows
+
+** Note ** : Only closed chats / conversations can be deleted.
 
 **Chat**
 
@@ -81,20 +83,8 @@ The brand will need to follow the below steps to achieve this:
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method and make two requests: one with the list of conversations to delete and another with the consumerId. This makes sure that both the conversation and the rest of the consumer's data is completely deleted.
 
-
 ### Limitations:
 
-1. The following is not supported in the current beta phase:
+This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
 
- * For messaging:
-    - Messaging conversations are still stored in one of LP's messaging repositories and therefore, if you enter a closed conversation from the “All Connections” tab to view the conversation in its full view, you will be able to see the entire transcript even after the deletion process.
-    - Messaging consumer data is not deleted from all repositories.
 
- * Photo / file sharing data is not deleted.
-
- * Secure form data is not deleted.
-
-{:start="2"}
-2. Authentication via login will be available during the beta period.
-
-3. This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.

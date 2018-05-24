@@ -43,9 +43,9 @@ All fields are sent in a JSON format
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response). Only one of the deletion types can be sent in a single request (either chat or messaging). |
- | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | Only one of the deletion types can be sent in a request (either chat or messaging). |
- | consumer| Consumer ids for deletion | array of strings | Optional | Only one of the deletion types can be sent in a request |
+ | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response). Only one of the deletion types can be sent in a single request. |
+ | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | Only one of the deletion types can be sent in a single request. |
+ | consumer| Consumer ids for deletion | array of strings | Optional | Only one of the deletion types can be sent in a single request |
 
 BODY Examples:
 
@@ -83,6 +83,7 @@ Example 3:
   |400 |  Bad request|  
   |401 |  Unauthorized request|  
   |403 |  Not sufficient priviliges|  
+  |429 |  Requests threshold for current month was reached|
   |500 |  Internal server error|  
 
   **Elements in the Response**
