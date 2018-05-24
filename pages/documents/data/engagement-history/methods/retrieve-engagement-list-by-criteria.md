@@ -1271,6 +1271,7 @@ Example:
 | chatMCS | Meaningful Connection Score of the chat.  | int| Range: 0-100. |
 | chatDataEnriched | Indication whether chat was enriched with final data (including sdes data). | Boolean | If true, the enrichment process occurred. |
 | isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data. |
+| ended | Indicates whether the chat has ended | Boolean | The API returns only ended chats. |
 | chatStartUrl | The page’s URL from which the chat started. | alphanumeric | |
 | chatStartPage | The page’s title from which the chat started. | alphanumeric | |
 | campaign | Campaign data of the chat | container | |
@@ -1290,11 +1291,14 @@ Example:
 | lines | Lines of a specific chat. | container | |
 | lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
 | time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
+| timeL | Time when the chat line took place, in long format | alphanumeric | long |
 | textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content |
 | text | The actual text in the chat line. | alphanumeric | |
 | json | The payload of the rich-content. | container | Relevant for lines of textType `rich-content` |
 | by | Name of the visitor or the agent’s nickname. | alphanumeric | |
 | source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system" |
+| controlType | ??? | alphanumeric | ??? |
+| lineSeq | Sequence of line in that chat | alphanumeric |  |
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
 | cannedAnswerType | Type of canned answer (Predefined Content). | numeric | |
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
