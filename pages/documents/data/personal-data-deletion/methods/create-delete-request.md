@@ -83,7 +83,7 @@ Example 3:
   |400 |  Bad request|  
   |401 |  Unauthorized request|  
   |403 |  Not sufficient priviliges|  
-  |429 |  Requests threshold of current month was reached|
+  |429 |  Requests threshold for current month was reached|
   |500 |  Internal server error|  
 
   **Elements in the Response**
