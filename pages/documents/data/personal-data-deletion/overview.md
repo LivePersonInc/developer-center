@@ -14,7 +14,7 @@ indicator: both
 
 Personal Data Deletion API allows brands to comply with the European Union's Right to be Forgotten requirement (a part of the GDPR). This API will permanently delete any personal data that the consumer requests to be deleted. Once the data has been deleted there is no way to restore it.
 
-This personal data that will be deleted may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request has being approved (explination about the approval process can be found bellow). 
+Personal data may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request was made final (explanation regarding when requests are made final can be found below).
 
 
 **Note**: what this document refers to as "deletion" is actually the masking of specific, personal data by replacing it with generic text in the following format: *** LP deleted data ***
@@ -29,7 +29,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key or via login.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. The key is availbale under the Data section.
+	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. The key is available under the Data section.
 
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
@@ -37,11 +37,12 @@ A few things you'll need to get started with this API:
 {:start="4"}
 4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
-### Deletion process 
+### Deletion Process
 
-Once a deletion request is sent via the API, it is waiting to be approved for a pre-defined time period (5 days by default). During that time period it is possible for the brand to cancel the deletion request so this allows the brand to monitor the deletion requests that are issued on his behalf.
-After the deletion request is approved, the deletion process will start and we guarantee a full deletion from all repositories within 20 days from that time.
-There is a limitation of the number of deletion requests that a brand can issue within a calendar month (limit of 100 requests per month by default).
+Once a deletion request is sent via the API, it will become final and irrevocable after a pre-defined time period (5 days by default). During that time period, it is possible for the brand to cancel the deletion request. this allows the brand to monitor the deletion requests that are issued on their behalf.
+After the deletion request is made final (the default period of time elapses), the deletion process will start and we guarantee full deletion from all repositories within 20 days.
+
+There is a limitation of the number of deletion requests that a brand can issue within a calendar month. By default, the requests threshold is set to 100 requests. If you wish to change this, please contact your LivePerson Account Team.
 
 ### Main flows
 
@@ -86,5 +87,3 @@ The brand will need to follow the below steps to achieve this:
 ### Limitations:
 
 This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
-
-
