@@ -9,7 +9,7 @@ order: 4
 indicator: both
 ---
 
-### Sign-on Flow: Web Code Flow
+### Sign-on Flow: Web Code Flow (Embedded window)
 
 1.	A consumer logs into the authenticated area, and clicks on a chat invitation.
 
@@ -17,12 +17,13 @@ indicator: both
 
 3.	The authorization code is passed to the LivePerson Service by the embedded window while sending the chat request.
 
-4.	The LivePerson Service processes the chat request, and queries the brand’s Visitor Authentication Service with the Authentication Code it just received. In response, the brand's Visitor Authentication Service validates the Authentication Code and sends an OpenID Connect token with all visitor attributes.
+4.	The LivePerson Service processes the chat request, and queries the brand’s Token Endpoint with the Authentication Code it just received. In response, the brand's Token Endpoint Service validates the Authentication Code and sends an OpenID Connect token with all visitor attributes.
 
 5.	When the OpenID Connect token is successfully received by the LivePerson Service, the chat process starts.
 
 _Notes_:
 
+*	_For external window, the consumer clicks the chat invitation and a login screen (the Authentication Endpoint) is opened. After logging in the consumer is redirected to the external window with the Authorization code provided as a query/hash param_.
 *	_Visitor attributes can be added to the OpenID Connect token. Those visitor attributes will be displayed to the agent in the Agent Workspace, next to a "secure" icon_.
 *	_Consumers who are not currently logged in, or whose login effort failed, are unable to start a conversation with the designated agent. Instead, they are redirected to the Offline survey_.
 
@@ -33,6 +34,8 @@ Implicit Flow is very similar to Code Flow, but with the following two differenc
 *	Instead of generating an Authorization Code, the Brand Service generates an OpenID Connect token. This type of token contains the user information and is not just a reference. The user information is signed using the brand keys and can also be encrypted for LivePerson.
 
 *	When the LivePerson Service receives this token, instead of validating it with the Brand Service, it verifies the signature and decrypts its content.
+
+*	For external widnow, when the Authorization Endpoint redirects to the external window it passes the token as a query/hash param "code", "token" or "id_token".
 
 _Note: Consumers who are not currently logged in are unable to start a conversation with the designated agent. Instead, they are redirected to the Offline survey_.
 
