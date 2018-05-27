@@ -98,7 +98,7 @@ This section contains API details that are common to every API’s resource, met
     <td>A set of attributes defining the end time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used. End day must be the same as start day.</td>
+    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used. The specified end day must be the same day of the week as the start day (for example, if your start day is a Monday, the end day must be a Monday as well).</td>
   </tr>
   <tr>
     <td>recurrence</td>
