@@ -12,7 +12,7 @@ indicator: both
 ---
 With Authenticated Customer Information, consumers that have logged into your website or app and initiated a chat show up as being authenticated. The Agent Workspace then displays, in real-time, the correct and verified PII (Personally Identifiable Information) of the authenticated consumer. Agents are able to easily identify which consumer data is authenticated in the CRM, and which has arrived from the page.
 
-[//]: # (TODO:Cleanup - This is the introduction to authentication, but we start off by discussing customer information and PII - we should start by discussing security, identity and logging in. Also, we probably shouldn't call the feature "Authenticated Customer Information", but just "Authentication". Verify with product.)
+<div class="hide">Cleanup - This is the introduction to authentication, but we start off by discussing customer information and PII - we should start by discussing security, identity and logging in. Also, we probably shouldn't call the feature "Authenticated Customer Information", but just "Authentication". Verify with product.)</div>
 
 All authenticated customer information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token. This ensures your customers’ data stays safe and cannot be manipulated.
 
