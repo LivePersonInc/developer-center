@@ -50,6 +50,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
+|responseTime {from, to}    | Response time range. | long - epoch time in milliseconds. | Optional | dfg.
 
 Filters examples:
 
@@ -74,6 +75,7 @@ Filters examples:
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
+|responseTime        | {″responseTime″:{"from":1526994200000,"to":1527080600000}}|
 
 ### Response
 
@@ -105,6 +107,7 @@ messageScore         | Contains information about the message's score, including
 conversationSurveys  | Contains information about the different surveys for the current conversation. | container
 summary              | Contains information about the conversation's summary.                         | container
 sdes                 | List of Engagement Attributes.                                                 | container
+responseTime         | Response time                                                                  | container
 
 _Conversation info_
 
@@ -350,6 +353,18 @@ Name            | Description                                 | Type/Value
 events          | The sdes that were received from the brand. | Container (see [Appendix](data-messaging-interactions-appendix.html))
 serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
 sdeType         | Type of sde.                                | enum
+
+
+*Response Time Info*
+
+Name            | Description                                       | Type/Value
+:-------------- | :------------------------------------------------ | :---------
+latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond. -1 indicates waiting for consumer | long – epoch time in milliseconds
+configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
+
+
+
+
 
 **JSON Example**
 
@@ -656,7 +671,11 @@ sdeType         | Type of sde.                                | enum
           }
         ]
       },
-
+       ,
+      "responseTime": {
+        "latestEffectiveResponseDueTime": 1527174367230,
+        "configuredResponseTime": 3000
+      },
       "summary": {
         "text": "summary",
         "lastUpdatedTime": 1482333795318
