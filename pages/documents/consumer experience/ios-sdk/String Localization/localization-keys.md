@@ -564,5 +564,13 @@ Listed below are all localized keys with the English localization string.
     <td>outOf</td>
     <td>"out of"</td>
   </tr>
+  <tr>
+    <td>unauthenticatedUserExpiredTitle</td>
+    <td>"New Conversation"</td>
+  </tr>
+  <tr>
+    <td>unauthenticatedUserExpiredMessage</td>
+    <td>"Hi there! As we haven't seen you for a while, a new conversation will start."</td>
+  </tr>
 
 </table>
