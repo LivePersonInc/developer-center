@@ -81,6 +81,8 @@ This section contains API details that are common to every API’s resource and 
           "id":326244912,
           "skillOrder":0,
           "description":"skillDescription",
+          "workingHoursId": 2859745012,
+          "specialOccasionId": 2861462812,
           "name":"skillName1448453890425",
           "maxWaitTime":0,
           "deleted":true,
