@@ -56,7 +56,7 @@ Request by skills=2,3 (there is data only for skill=3)
 | :----- | :------------- | :-------------- |
 | ewtResponses | A list that contains elements which represent skills' data. | element |
 | skillId | The skill Id. | long |
-| skillId | The estimated wait time in seconds. | long |
+| ewt | The estimated wait time in seconds. | long |
 | timestamp | The time of the response in UTC time stamp in milliseconds. | long |
 
 **Possible Response Codes**
