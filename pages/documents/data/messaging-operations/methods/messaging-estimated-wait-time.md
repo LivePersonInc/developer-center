@@ -10,9 +10,15 @@ permalink: data-messaging-operations-messaging-estimated-wait-time.html
 indicator: messaging
 ---
 
-Retrieves messaging estimated wait time at the skill level. The estimated wait time is the estimated time that will elapse before a conversation entering the queue will first be answered by an agent.
+This method returns the current average wait time in queue, per requested skill. The estimated wait time is the time from a consumer's first message until agent is assigned to the conversation. This method can help you to better manage your operations and monitor your service level across all skills on an account. Messaging estimated wait time is calculated every 10 seconds, therefore new data will only be available every 10 seconds.
 
-Messaging estimated wait time is calculated every 10 seconds, therefore new data will only be available every 10 seconds.
+**Notes**:
+
+1. This method will only return a result, as long as there is enough throughput to reliably calculate an estimated wait time. The throughput used is the number of assigned conversations to agent. An acceptable throughput starts at 120 conversations per hour, per skill. This will be enough for the API to calculate the estimated wait time and provide an answer to the call found below.
+
+2. This API returns real time data, base on your current capacity. The API will provide accurate estimations as long as there are no major changes with your agents capacity. If major changes occur (for example, several agents log off at the same time), the data might be inaccurate. Major changes can be defined as anything change over 15% in your agents' capacity. After a major capacity changes, it is recommended to wait 10-15 minutes before calling the API again in order to make sure the data is recalculated and accurate.
+
+3. The [Messaging Queue Health API](data-messaging-operations-messaging-queue-health.html){:target="blank"} must be enabled in order to use the Estimated Wait Time API.
 
 ### Retrieving Messaging Estimated Wait Time Data by Account and Skills
 

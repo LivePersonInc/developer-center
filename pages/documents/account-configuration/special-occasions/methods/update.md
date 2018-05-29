@@ -100,7 +100,7 @@ The `isDefault` field determines whether a special occasions object is the defau
  |:-------|   :-----  |
  |ac-revision|  Account config object type collection revision.|  
 
- **response example**
+ **Response example**
 
 ```json
 {
