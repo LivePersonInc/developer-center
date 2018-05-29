@@ -98,7 +98,12 @@ This section contains API details that are common to every API’s resource, met
     <td>A set of attributes defining the end time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used. <br> The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually Wednesday as well, otherwise - this event will not be meaningless.
+    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>
+- Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </br>
+- The maximum length of a workday must be 24v hours. You can define 24 hours shift in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59"  </br>
+- The timezone field for both the start and end array must match. </br>
+- Only LiveEngage supported timezones may be used. <br> 
+- The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually Wednesday as well, otherwise - this event will not be meaningless.
     </td>
   </tr>
   <tr>
