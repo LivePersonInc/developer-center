@@ -1289,7 +1289,6 @@ Example:
 | lobId | ID of the line of business of the campaign. | alphanumeric | |
 | lobName | Name of the line of business of the campaign. | alphanumeric | |
 | lines | Lines of a specific chat. | container | |
-| lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
 | time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
 | timeL | Time when the chat line took place, in long format | alphanumeric | long |
 | textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content |
@@ -1297,11 +1296,15 @@ Example:
 | json | The payload of the rich-content. | container | Relevant for lines of textType `rich-content` |
 | by | Name of the visitor or the agent’s nickname. | alphanumeric | |
 | source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system" |
-| controlType | ??? | alphanumeric | ??? |
 | lineSeq | Sequence of line in that chat | alphanumeric |  |
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
 | cannedAnswerType | Type of canned answer (Predefined Content). | numeric | |
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
+| lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
+| lineSeq | Sequence of line in that chat  | alphanumeric | |
+| lineRawScore | Score of line  | numeric | |
+| mcs | Meaningful Connection Score of the chat up to this line | numeric | |
+| visitorInfo | Conatins inforamtion about the visitor who participated in the chat  | container |  |
 | country | The country indicated by the visitor’s IP address. | alphanumeric | |
 | countryCode | The country code indicated by the visitor’s IP address. | alphanumeric | |
 | state | The state indicated by the visitor’s IP address. | alphanumeric | |
