@@ -91,19 +91,26 @@ This section contains API details that are common to every API’s resource, met
     <td>A set of attributes defining the start time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td><ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul><ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed.</li></ul><ul><li> The timezone field for both the start and end array must match. </li></ul><ul><li>Only LiveEngage supported timezones may be used</li></ul></td>
+    <td>
+<ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
+<ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed.</li></ul>
+<ul><li>Start date must be up to 7 days from today.</li></ul>
+<ul><li>The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well. If this is not followed, you will not receive an error code but this event won't work.</li></ul>
+<ul><li>The timezone field for both the start and end array must match.</li></ul>
+<ul><li>Only LiveEngage supported timezones may be used.</li></ul>
+</td>
   </tr>
   <tr>
     <td>end</td>
     <td>A set of attributes defining the end time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td><ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
-<ul><li> Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </li></ul>
-<ul><li> The maximum length of a workday must be 24 hours. You can define 24 hour shifts in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59" </li></ul>
+    <td>
+<ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
+<ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </li></ul>
+<ul><li>The maximum length of a workday must be 24 hours. You can define 24 hour shifts in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59" </li></ul>
 <ul><li> The timezone field for both the start and end array must match. </li></ul>
 <ul><li> Only LiveEngage supported timezones may be used. </li></ul>
-<ul><li> The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well. If this is not followed, you will not receive an error code but this event won't work. </li></ul>
     </td>
   </tr>
   <tr>
