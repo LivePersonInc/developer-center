@@ -1,7 +1,7 @@
 ---
 title: Retrieve Special Occasions by List
 Keywords:
-level1: Documents
+level1:
 level2: Account Configuration
 level3: Special Occasions API
 level4: Methods
