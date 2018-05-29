@@ -91,7 +91,7 @@ This section contains API details that are common to every API’s resource, met
     <td>A set of attributes defining the start time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</td>
+    <td><ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul><ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used</li></ul></td>
   </tr>
   <tr>
     <td>end</td>
