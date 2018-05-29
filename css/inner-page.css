@@ -687,3 +687,7 @@ pre {
 .solutionshr {
   width: 100%;
 }
+
+.hide {
+  visibility: none;
+}
