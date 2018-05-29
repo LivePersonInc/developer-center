@@ -91,14 +91,14 @@ This section contains API details that are common to every API’s resource, met
     <td>A set of attributes defining the start time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</td>
+    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul><br>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed. The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</td>
   </tr>
   <tr>
     <td>end</td>
     <td>A set of attributes defining the end time and date of the object</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>This array receives two possible fields: <ul><li>dateTime</li><li>timezone</li></ul>. <br><br>
+    <td><ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li> Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </li></ul>
 <ul><li> The maximum length of a workday must be 24v hours. You can define 24 hours shift in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59" </li></ul>
 <ul><li> The timezone field for both the start and end array must match. </li></ul>
