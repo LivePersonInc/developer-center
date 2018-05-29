@@ -103,7 +103,7 @@ This section contains API details that are common to every API’s resource, met
 <ul><li> The maximum length of a workday must be 24 hours. You can define 24 hour shifts in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59" </li></ul>
 <ul><li> The timezone field for both the start and end array must match. </li></ul>
 <ul><li> Only LiveEngage supported timezones may be used. </li></ul>
-<ul><li> The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well, otherwise - this event will be meaningless. </li></ul>
+<ul><li> The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well. If this is not followed, you will not receive an error code but this event won't work. </li></ul>
     </td>
   </tr>
   <tr>
