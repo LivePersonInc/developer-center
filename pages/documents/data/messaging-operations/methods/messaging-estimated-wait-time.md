@@ -18,7 +18,7 @@ Messaging estimated wait time is calculated every 10 seconds, therefore new data
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountID}/ewt?skills=<skillIDs>&v=<version> |
+| GET | https://{domain}/lp-messaging-ewt-app/api/account/{accountID}/ewt?skills=<skillIDs>&v=<version> |
 
  - Note: Data for at most 300 skills will be returned.
 
