@@ -14,13 +14,15 @@ This method returns the current average wait time in queue, per requested skill.
 
 **Notes**:
 
-1. This method will only return a result, as long as there is enough throughput to reliably calculate an estimated wait time. The throughput used is the number of assigned conversations to agent. An acceptable throughput starts at 120 conversations per hour, per skill. This will be enough for the API to calculate the estimated wait time and provide an answer to the call found below.
+1. The Estimated Wait Time API is currently not available by default, in order to enable the data flow for this API please contact your account manager.
 
-2. This API returns real time data, base on your current capacity. The API will provide accurate estimations as long as there are no major changes with your agents capacity. Major changes can be defined as any change over 15% in your agents' capacity. If major changes occur (for example, several agents log off at the same time), previous estimated wait times are no longer valid. In that case, it is recommended to wait 10-15 minutes before calling the API again in order to make sure the data is recalculated and accurate.
+2. This method will only return a result, as long as there is enough throughput to reliably calculate an estimated wait time. The throughput used is the number of assigned conversations to agent. An acceptable throughput starts at 120 conversations per hour, per skill. This will be enough for the API to calculate the estimated wait time and provide an answer to the call found below.
 
-3. This API should not be called more than every 10 seconds per skill.
+3. This API returns real time data, base on your current capacity. The API will provide accurate estimations as long as there are no major changes with your agents capacity. Major changes can be defined as any change over 15% in your agents' capacity. If major changes occur (for example, several agents log off at the same time), previous estimated wait times are no longer valid. In that case, it is recommended to wait 10-15 minutes before calling the API again in order to make sure the data is recalculated and accurate.
 
-4. The [Messaging Queue Health API](data-messaging-operations-messaging-queue-health.html){:target="blank"} must be enabled in order to use the Estimated Wait Time API.
+4. This API should not be called more than every 10 seconds per skill.
+
+5. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE.
 
 ### Retrieving Messaging Estimated Wait Time Data by Account and Skills
 
