@@ -34,7 +34,7 @@ Messaging estimated wait time is calculated every 10 seconds, therefore new data
 Request by skills=2,3 (there is data only for skill=3)
 
     {
-        "estimatedWaitTimeResponse": [
+        "ewtResponses": [
             {
                 "skillId": 2,
                 "ewt": -1,
@@ -47,14 +47,16 @@ Request by skills=2,3 (there is data only for skill=3)
             }
         ]
     }
+    
+ - Note: ewtResponses list will contain at most 300 elements.
 
 **Elements in the Response**
 
 | Name | Description | Type / Value |
 | :----- | :------------- | :-------------- |
-| estimatedWaitTimeResponse | A list that contains elements which represent skills' data. | element |
+| ewtResponses | A list that contains elements which represent skills' data. | element |
 | skillId | The skill Id. | long |
-| estimatedWaitTime | The estimated wait time in seconds. | long |
+| ewt | The estimated wait time in seconds. | long |
 | timestamp | The time of the response in UTC time stamp in milliseconds. | long |
 
 **Possible Response Codes**
@@ -63,6 +65,6 @@ Request by skills=2,3 (there is data only for skill=3)
 | :----- | :--------- |
 | 200 | OK - Successfully retrieved the data. |
 | 400 | Bad request - Problem with body or query parameters. |
-| 401 | Unauthorized - Bad Authentication. |
+| 401 | Unauthorized - Bad Authentication (invalid site or agent). |
 | 403 | Forbidden - Bad Authorization (invalid permissions). |
 | 500 | Internal Server Error - Please try again after the time specified in the response has passed. |
