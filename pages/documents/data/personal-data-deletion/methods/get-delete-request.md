@@ -28,7 +28,7 @@ This API returns the metadata related to the deletion requests that were submitt
 
   |Parameter|  Description|  Type/Value |
   |:------    |:--------    |:--------|
-  |site_id|  LP account ID|   String ^[a-zA-Z0-9_]{1,20}$|
+  |site_id|  LP account ID|   String |
   |requestId  |Optional - specific request id   |String|
 
  **Query Parameters**

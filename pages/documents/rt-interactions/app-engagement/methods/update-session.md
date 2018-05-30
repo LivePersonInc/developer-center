@@ -23,7 +23,7 @@ Use this method to update the session and add SDEs.
 
 | Parameter | Description | Type | Required |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string ^[a-zA-Z0-9_]{1,20}$ | Required |
+| accountId | LP site ID | string  | Required |
 | visitorId | Visitor ID | string | Required |
 
 **Query Parameters**

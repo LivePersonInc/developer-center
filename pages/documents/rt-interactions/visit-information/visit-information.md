@@ -24,7 +24,7 @@ This API supports OAuth 1.0 and OAuth 2.0 authentication patterns and requires S
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | Required | ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID | string | Required |  |
 | visitorId | Visitor ID | string | Required | |
 
 **Query Parameters**
