@@ -1300,7 +1300,7 @@ Example:
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
 | cannedAnswerType | Type of canned answer (Predefined Content). | numeric | |
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
-| lineScores | Contains information about hte line's score, including line raw score and aggregated score up until this line. | container | |
+| lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container | |
 | lineSeq | Sequence of line in that chat  | alphanumeric | |
 | lineRawScore | Score of line  | numeric | |
 | mcs | Meaningful Connection Score of the chat up to this line | numeric | |
