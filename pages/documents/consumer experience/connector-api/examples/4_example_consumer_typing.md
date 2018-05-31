@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 63
 indicator: both
-permalink: send_chat_states_example.html
+permalink: consumer_typing_example.html
 search: include
 ---
 

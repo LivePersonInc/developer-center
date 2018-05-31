@@ -55,7 +55,7 @@ These will be used for the first authorization call to LiveEngage in order to id
 https://{Sentinel_Domain}/sentinel/api/account/{SiteID}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret}
 ```
 
-Refer to [Getting an AppJWT](Create_AppJWT.html) for more information.
+Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
 
 **Consumer Authentication**
 
@@ -67,4 +67,4 @@ An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a v
 https://{domain}/api/account/{accountid}/consumer?v=1.0|
 ```
 
-Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html) for more information.
+Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.

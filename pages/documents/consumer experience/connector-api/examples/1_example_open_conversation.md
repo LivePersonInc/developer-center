@@ -10,11 +10,19 @@ permalink: create_conversation_example.html
 search: include
 ---
 
-This examples illustrates how to create a conversation. For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads. The API batch endpoint expects an set of JSON payloads, each represents a different type of request to UMS. The order of payload is important in order to create a new conversation.
+This examples illustrates how to create/open a conversation using the **CONVERSATION** API endpoint.
 
-First, the _SetUserProfile_ payload, second the _ConsumerRequestConversation_ payload, and optionally, last but not least the _PublishEvent_ payload. These payloads are only required once to open a conversation.
+In general, For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads.
 
-**Note** - In the future we are planning to change it and not to require this in order to create a conversation, i.e. to make the _SetUserProfile_ also optional).
+* The API batch endpoint expects a set of JSON payloads, each represents a different type of command to UMS.
+* The order of payload is important in order to create a new conversation.
+
+First comes the _userprofile.SetUserProfile_ payload, second comes the _cm.ConsumerRequestConversation_ payload.
+These payloads are only required once to open a conversation.
+
+**Note**
+* In the future we are planning to change it and not to require this in order to create a conversation, i.e. to make the _SetUserProfile_ also optional).
+* Once the conversation is already open, you are allowed to use _userprofile.SetUserProfile_ again but not in this batch endpoint. You should use the
 
 
 ### Create a new conversation

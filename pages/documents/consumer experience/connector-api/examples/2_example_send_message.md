@@ -10,7 +10,7 @@ permalink: send_message_example.html
 search: include
 ---
 
-This is an example of how to send a message to LiveEngage to an open conversation. The conversation ID is required to address the conversation and it is passed in the JSON payload.
+This is an example of how to send a message to LiveEngage to an open conversation using the SEND API endpoint. The conversation ID is required to address the conversation and it is passed in the JSON payload.
 
 ### Send a message
 
