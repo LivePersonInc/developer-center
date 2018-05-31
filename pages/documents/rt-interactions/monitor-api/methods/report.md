@@ -1,6 +1,6 @@
 ---
 title: Report
-level1: 
+level1: Documents 
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -49,6 +49,8 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
+
+<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID). 
 
 ### POST Request & body entity example
 

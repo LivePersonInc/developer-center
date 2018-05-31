@@ -23,11 +23,11 @@ permalink: connectorapi-getting-started.html
 
 **In order to get started with the Connector API, please follow the steps below:**
 
-1.Onboard your connector
+1. Onboard your connector
 
-The connector is essentially an application residing on a server that is used to make HTTPS calls on behalf of a consumer to LiveEngage. For that purpose, the application must be registered and known to LiveEngage for authorization and user validation.
+The connector is a server application that is used to make HTTPS calls on behalf of consumers to LiveEngage. For that purpose, the application must be registered and known to LiveEngage for authorization and user validation.
 
-In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](AppInstallJSON.html) and replace/fill in the required information.
+In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](AppInstallJSON.html) and replace or fill in the required information.
 
 The main sections to be filled are (Refer to the [JSON](AppInstallJSON.html) for more information):
 
@@ -41,9 +41,9 @@ After filling in the [JSON Template](AppInstallJSON.html) with the required data
 
 **Authorizing your connector application**
 
-After successfully registering your connector, you will be given two important parameter values which you will serve you to authorize your connector application prior to using the Connector API:
+2. After successfully registering your connector, you will be given two important parameter values which you will serve you to authorize your connector application prior to using the Connector API:
 
-`Installation id`:  e.g 75588e18-0213-4e33-8174-883acac7e3c4
+`Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
 
 `Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
 

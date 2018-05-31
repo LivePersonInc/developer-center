@@ -49,7 +49,7 @@ JSON
   <tr>
     <td>accountId</td>
     <td>LP site id</td>
-    <td>Validation fail error code: 400<br>Type: String ^[a-zA-Z0-9_]{1,20}$</td>
+    <td>Validation fail error code: 400<br>Type: String </td>
   </tr>
 </table>
 

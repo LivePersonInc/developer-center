@@ -36,7 +36,7 @@ permalink: AppInstallJSON.html
       },
       "ms.MessagingEventNotification.AcceptStatusEvent": {
         "endpoint": "https://your/webhooks/endpoint",
-        "max_retries": 1,
+        "max_retries": 1
       },
       "ms.MessagingEventNotification.ChatStateEvent": {
         "endpoint": "https://your/webhooks/endpoint"
@@ -100,7 +100,7 @@ permalink: AppInstallJSON.html
 |Attribute | Description | Type | Required| Notes|
 |--- | --- | ---|
 |client_name | Installation name. In most cases, this is the same as the app name. | string| Yes | Unique. Max length: 100|
-|description | App description | stringmax | No|length: 256|
+|description | App description | stringmax | No| max length: 256|
 |grant_types | Type strings that the client can use at the token endpoint | array | No |Requires the value: "client_credentials"|
 |scope | space-separated list of scope values that the client can use when requesting access tokens| string| No|max length: 128. Requires the value: "msg.consumer"|
 |logo_uri | URL string that references a logo for the client | string| No|max length: 128|
@@ -133,6 +133,6 @@ permalink: AppInstallJSON.html
 |entry_point |  Indicates where to display the engagement which invites consumers to engage with you | Array| Yes |Possible values: section, url|
 |visitor_behavior | The browsing behavior of visitors which is of interest to you.  | Array| Yes |Possible values: visited_location, time_on_location, flow, engaged_in_session, about_to_abandon, cart_value, visitor_error, viewed_products, service_activity |
 |target_audience | The visitors you specifically want to target |  string| Yes |Possible values: external_referral, search_keywords, ip, platform, geo_location, returning_visitors, marketing_source, customer_type, age,balance, customer_id,gender, store_zip_code, store_number, company_size, registration_date |
-|goal |  Indicates what you want to achieve with the engagement | string| Yes |Possible values: url,purchase_total, num_of_pages, lead, service_activity |
-|consumer_identity | If the consumer has to be or not authenticated |  Array| Yes | The value has be set to auth. Possible values: auth, unauth|
+|goal |  Indicates what you want to achieve with the engagement | string| Yes |Possible values: url, purchase_total, num_of_pages, lead, service_activity |
+|consumer_identity | If the consumer does or doesn't have to be an authenticated user |  Array| Yes | The value has to be set to auth. Possible values: auth, unauth|
 |language_selection | Indicates the possibility of language selection  |  string |Yes ||

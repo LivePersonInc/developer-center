@@ -6,24 +6,15 @@ level3: Connector API
 level4: Examples
 order: 60
 indicator: both
-permalink: create_conversation_example.html
-search: include
+permalink: create-conversation-example.html
+
 ---
 
-This examples illustrates how to create/open a conversation using the **CONVERSATION** API endpoint.
+This example illustrates how to create a conversation. To get an example of the accepted payloads used in this API's methods, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html).
 
-In general, For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads.
+This method expects a set of JSON payloads, each representing a different type of request to LiveEngage servers. The order of the payloads is important in order to create a new conversation.
 
-* The API batch endpoint expects a set of JSON payloads, each represents a different type of command to UMS.
-* The order of payload is important in order to create a new conversation.
-
-First comes the _userprofile.SetUserProfile_ payload, second comes the _cm.ConsumerRequestConversation_ payload.
-These payloads are only required once to open a conversation.
-
-**Note**
-* In the future we are planning to change it and not to require this in order to create a conversation, i.e. to make the _SetUserProfile_ also optional).
-* Once the conversation is already open, you are allowed to use _userprofile.SetUserProfile_ again but not in this batch endpoint. You should use the
-
+First, the payload with the `type` _userprofile.SetUserProfile_ appears , second the payload with the `type` _cm.ConsumerRequestConversation_ appears , and optionally, last but not least the payload with the `type` _ms.PublishEvent_ appears.
 
 ### Create a new conversation
 
@@ -31,9 +22,9 @@ These payloads are only required once to open a conversation.
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Json payload**
+**JSON payload**
 
 {% raw %}
 ```json

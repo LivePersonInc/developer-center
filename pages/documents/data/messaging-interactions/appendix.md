@@ -29,6 +29,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | registrationDate| The customer's registration date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
 | companySize     | The company size. | alphanumeric|
 | accountName     | A nickname for the account for B2B like the salesforce account name. | alphanumeric|
+| companyBranch   | The branch of the company. | alphanumeric | |
 | storeZipCode    | The zip code of the store. | alphanumeric|
 | storeNumber     | The number of the store.| alphanumeric|
 | loginStatus     | Login status. | alphanumeric|

@@ -4,7 +4,7 @@ level1: Documents
 level2: Data
 level3: Messaging Operations API
 level4: Methods
-order: 10
+order: 20
 permalink: data-messaging-operations-messaging-queue-health.html
 
 indicator: messaging
@@ -18,7 +18,7 @@ Retrieves information about the state of the queue (with all related metrics) fo
 
 2. This method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
 
-3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE. 
+3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE.
 
 
 ### Request
@@ -138,7 +138,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
                                "unassignedConversationsAndFirstTimeConsumer": 0
-                               
+
                            },
                            "13": {
                                "unassignedConversations": 12,
@@ -179,7 +179,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
                         "unassignedConversationsAndFirstTimeConsumer": 0
-                        
+
                     },
                     "13": {
                         "unassignedConversations": 0,
@@ -207,7 +207,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                 }
             }
         ],
-        "timeframeSummary": 
+        "timeframeSummary":
         {
                "skillsMetrics": {
                    "12": {
@@ -220,7 +220,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
                        "unassignedConversationsAndFirstTimeConsumer": 4
-                       
+
                    },
                    "13": {
                        "unassignedConversations": 2,
@@ -259,16 +259,14 @@ timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity
 | skillsMetrics | When skillIDs are provided: An array of skills with their metrics. <br> When interval size is provided: The response will have the skillsMetrics element in each interval representing the data for the related interval. <br> There will also be a skillsMetrics element at the end of the response, representing the data of the whole requested time frame. <br>If there is no data for a specific skill, it will not be included in the array. <br> If there is no data for any of the skills, this member will have an empty element as value. | element |
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested intervals.<br> If skill/sID/s are requested and there is no data for any of them, this element will still include all of the metrics with value zero. <br> Note: Totals may not add up due to rounding differences. | element |
 | skill id | When skillIDs value(/s) provided: The skill ID. | long |
-| timeframeSummary | When interval is provided in the request, this entity will contain data for the entire timeframe, similar to the response when requesting with no intervals. <br> Note that the averages values for the entire timeframe will NOT be equal to the summation of totals under each interval. | element | 
+| timeframeSummary | When interval is provided in the request, this entity will contain data for the entire timeframe, similar to the response when requesting with no intervals. <br> Note that the averages values for the entire timeframe will NOT be equal to the summation of totals under each interval. | element |
 | timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example : Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
-| unassignedConversations | The number of unassigned conversations. <br> Equal to the number of actionable conversation + not actionable conversation | double | 
+| unassignedConversations | The number of unassigned conversations. <br> Equal to the number of actionable conversation + not actionable conversation | double |
 | actionableConversations | The number of actionable conversations. | double |
 | notActionableConversations | The number of not actionable conversations. | double |
-| actionableAndManualSla | The number of actionable conversations that have a manual SLA on them. | double | 
+| actionableAndManualSla | The number of actionable conversations that have a manual SLA on them. | double |
 | actionableAndDuringTransfer | The number of actionable conversations that were transferred. | double |
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. | double |
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. | double |  
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
-| unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. | double | 
- 
- 
+| unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. | double |

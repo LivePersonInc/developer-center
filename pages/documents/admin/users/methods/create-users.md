@@ -41,9 +41,24 @@ https://API_REQUEST?v=4.0
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
- |accountId|  LP site ID|   String ^[a-zA-Z0-9_]{1,20}$|
+ |accountId|  LP site ID|   String |
 
 ### Response
+
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 201  | Created               |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+ |Header  |Description |
+| :-------  | :-----  |
+| ac-revision | Account config object type collection revision. | 
 
 **Response Body**
 

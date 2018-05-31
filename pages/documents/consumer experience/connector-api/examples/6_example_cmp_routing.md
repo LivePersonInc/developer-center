@@ -6,13 +6,11 @@ level3: Connector API
 level4: Examples
 order: 65
 indicator: both
-permalink: cmp_routing_example.html
-search: include
+permalink: cmp-routing-example.html
+
 ---
 
-In this example we create a conversation and send a message and while we do it we pass the **Engagement ID** and **Campaign ID** to LiveEngage to route the consumer conversation to the desired skill as planned by the Campaign Manager.
-
-
+In this example we create a conversation and send a message. While we do that we pass the **Engagement ID** and **Campaign ID** to LiveEngage in order to route the consumer conversation to the desired skill as planned by the Campaign Manager.
 
 ### Create & Send - Campaign for messaging Routing
 
@@ -20,7 +18,7 @@ In this example we create a conversation and send a message and while we do it w
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation?v=3 |
+| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 {% raw %}
 ```json
@@ -77,6 +75,6 @@ In this example we create a conversation and send a message and while we do it w
 ```
 {% endraw %}
 
-<span style="text-decoration:underline">Notes:</span>
+**Note**:
 
-More information [About Campaigns](https://www.liveperson.com/services/technical-support/about-campaigns){:target="_blank"}
+For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns){:target="_blank"}.

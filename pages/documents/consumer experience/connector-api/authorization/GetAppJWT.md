@@ -16,8 +16,6 @@ search: include
 
 	* sentinel
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
-
 ### Authorization with AppJWT
 
 Before sending any request with the Send API, you must first obtain an **AppJWT** authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html){:target="_blank"} chapter.

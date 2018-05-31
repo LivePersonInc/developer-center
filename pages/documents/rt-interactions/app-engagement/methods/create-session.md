@@ -42,7 +42,7 @@ Use this method to start a new session and to get an engagement according to the
 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID | string |  |
 | visitorId | Visitor ID | string | Optional (Required on second request) |
 
 **Query parameters**

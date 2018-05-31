@@ -23,7 +23,7 @@ A few things you'll need to get started with this API:
 
 	* msgHist
 
-2. This API requires authorization using JWT bearer token passed in the authorization header of the request. Please see our [Authentication document](https://developers.liveperson.com/guides-authentication-introduction.html) for more info.
+2. This API requires authorization using a JWT token passed in the authorization header of the request. Please see our [Authentication document](https://developers.liveperson.com/guides-authentication-introduction.html) and [Token creation document](https://developers.liveperson.com/consumer-int-getting-started.html) for more info.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 

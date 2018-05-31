@@ -32,7 +32,8 @@ https://API_REQUEST?v=4.0
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|  Contains token string to allow request authentication and authorization.  |
- |If-Match|  Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization.  |
+ |X-HTTP-Method-Override|  Overrides unsupported HTTP methods.  To be used with the DELETE value. |
+ |If-Match|  Contains data revision as known by the client. Allows concurrent modification backend verification.  |
 
 **Request Body**
 
@@ -42,10 +43,26 @@ https://API_REQUEST?v=4.0
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
- |accountId|  LP site ID|   String ^[a-zA-Z0-9_]{1,20}$|
+ |accountId|  LP site ID|   String |
  |userId  |User ID   |Positive long number greater than zero|
 
 ### Response
+
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 200  | OK                    |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |
+| 404  | Data Not Found        |
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+ |Header  |Description |
+| :-------  | :-----  |
+| ac-revision | Account config object type collection revision. | 
 
 **Response Body**
 
