@@ -35,7 +35,7 @@ This API retrieves a single LoB (by ID) for a specific account.
 
 | Parameter    |   Description   |   Type / Value      |                                      
 |:------------  | :------------- |  :----------------- |                                       
-|accountId   |    LP site ID   |    string ^[a-zA-Z0-9_]{1,20}$ |
+|accountId   |    LP site ID   |    string  |
 |lobId       |  Lob ID       |  Positive long number greater than zero |
 
 ### Response

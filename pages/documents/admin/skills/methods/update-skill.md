@@ -37,7 +37,7 @@ This API updates a skill for a specific account.
 
 | Parameter   |   Description   |  Type / Value |
  |:----------- |  :------------  | :--------------| 
-| accountId   |   LP site ID    |  String ^[a-zA-Z0-9_]{1,20}$ |
+| accountId   |   LP site ID    |  String  |
 | skillId    |    Skill ID      |  Positive long number greater than zero |
 
 ### Response

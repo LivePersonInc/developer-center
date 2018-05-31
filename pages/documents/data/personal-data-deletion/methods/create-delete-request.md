@@ -2,7 +2,7 @@
 title: Create Deletion Request
 keywords:
 level1: Documents
-level2: Data 
+level2: Data
 level3: Personal Data Deletion API
 level4: Methods
 order: 10
@@ -34,18 +34,20 @@ By consumerId - deletion of personal data that is related to a specific consumer
 
   |Parameter|  Description|  Type/Value |
   |:------    |:--------    |:--------|
-  |site_id|  LP account id|   String ^[a-zA-Z0-9_]{1,20}$|
+  |site_id|  LP account id|   String |
 
  **Request BODY Parameters**
 
 
 All fields are sent in a JSON format
 
+**Note**: Only one of the deletion types which appear below can be sent in a single request.
+
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response). Only one of the deletion types can be sent in a single request (either chat or messaging). |
- | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | Only one of the deletion types can be sent in a request (either chat or messaging). |
- | consumer| Consumer ids for deletion | array of strings | Optional | Only one of the deletion types can be sent in a request |
+ | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response).  |
+ | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | |
+ | consumer| Consumer ids for deletion | array of strings | Optional |  |
 
 BODY Examples:
 
@@ -83,7 +85,11 @@ Example 3:
   |400 |  Bad request|  
   |401 |  Unauthorized request|  
   |403 |  Not sufficient priviliges|  
+  |429 |  Requests threshold for current month was reached|
   |500 |  Internal server error|  
+
+**Note**: by default, the requests threshold is set to 100 requests per calendar month. If you wish to change this, please contact your LivePerson Account Team.
+
 
   **Elements in the Response**
 

@@ -19,29 +19,37 @@ Version 3.1.0.24 - Supports XCode 9.2
 Version 3.1.4 - Supports XCode 9.3
 
 #### Symptom:
-In some cases where 2 consumers uses the same device (one after the other). Push notifications directed to the first consumers will get to the device although a different consumer is using it.
+
+In some cases where two consumers use the same device (one after the other), push notifications directed to the first consumer were routed to the device although a different consumer was using it.
 
 #### Fix:
+
 Before registering a new consumer for push notification, we make sure the previous consumer was unregistered.
 
 #### Symptom:
-In some cases, when using older iOS versions (~iOS 9) and older device, the  fetching additional history, the UI of the conversation screen breaks and from time to time, the app might crash as well.
+
+In some cases, when using older iOS versions (~iOS 9) and older devices, and fetching additional history, the UI of the conversation screen breaks and from time to time, the app might crash as well.
 
 #### Fix:
-The UI will maintain its structure after fetching additional history and preventing a possible crash.
+
+The UI will maintain its structure after fetching additional history and prevent a possible crash.
 
 
 #### Symptom:
-After a brand calls to Clear History, the conversation removes from the UI but when the consumer comes back to the screen the history is presented again.
+
+After a brand calls to Clear History, the conversation is removed from the UI but when the consumer navigates back to the screen the history is presented again.
 
 #### Fix:
+
 History will not be presented after calling Clear History.
 
 
 #### Symptom:
+
 In some cases, when the SDK is trying to connect to LivePerson’s servers, there is no indication for the consumer.
 
 #### Fix:
+
 An indication will be presented while the SDK attempts to connect to the server.
 
 ### iOS Messaging SDK - Version 3.1.3 (identical to 3.1.0.23)

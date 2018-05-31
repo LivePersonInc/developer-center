@@ -5,11 +5,8 @@ level1: Documents
 level2: Admin
 level3: Skills API
 level4: Methods
-
-
 order: 20
 permalink: administration-get-skill-by-id.html
-
 indicator: both
 ---
 
@@ -35,24 +32,24 @@ This API retrieves a single skill (by ID) for a specific account.
 
 | Parameter    |   Description   |   Type / Value      |                                      
 |:------------  | :------------- |  :----------------- |                                       
-|accountId   |    LP site ID   |    string ^[a-zA-Z0-9_]{1,20}$ |
+|accountId   |    LP site ID   |    string  |
 |skillId       |  Skill ID       |  Positive long number greater than zero |
- 
+
  **Query Parameters**
- 
+
  | Name            | Description                                                                  | Type    | Notes                                          |
  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
- 
+
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
 | 401  | Not Authenticated     |
-| 403  | Not Authorized        | 
+| 403  | Not Authorized        |
 | 404  | Data Not Found        |
 | 500  | Internal Server Error |
 
@@ -60,7 +57,7 @@ This API retrieves a single skill (by ID) for a specific account.
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. | 
+| ac-revision | Account config object type collection revision. |
 
 
 **Response Body**
