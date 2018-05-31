@@ -10,9 +10,9 @@ permalink: cmp-routing-example.html
 
 ---
 
-In this example we create a conversation and send a message. While we do that we pass the **Engagement ID** and **Campaign ID** to LiveEngage in order to route the consumer conversation to the desired skill as planned by the Campaign Manager.
+In this example we create a conversation and pass the **Engagement ID** and **Campaign ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.
 
-### Create & Send - Campaign for messaging Routing
+### Create new conversation and send campaign information
 
 **Request**
 
@@ -20,31 +20,34 @@ In this example we create a conversation and send a message. While we do that we
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-{% raw %}
+
 ```json
 [  
-   {  
-      "kind":"req",
-      "id":"2,",
-      "type":"userprofile.SetUserProfile",
-      "body":{  
-         "firstName":"John",
-         "lastName":"Doe",
-         "avatarUrl":"http://avatarurl.com",
-         "role":"X",
-         "backgndImgUri":"http://something.com",
-         "description":"Test Description",
-         "privateData":{  
-            "mobileNum":"1750345346",
-            "mail":"test@gmail.com",
-            "pushNotificationData":{  
-               "serviceName":"Service",
-               "certName":"CertName",
-               "token":"TOKEN"
-            }
+  {
+   "kind": "req",
+   "id": "1,",
+   "type": "userprofile.SetUserProfile",
+   "body": {
+     "authenticatedData": {
+       "lp_sdes": [{
+           "type": "ctmrinfo",
+           "info": {
+             "socialId": "1234567890",
+             "ctype": "vip"
+           }
+         },
+         {
+           "type": "personal",
+           "personal": {
+             "firstname": "John",
+             "lastname": "Doe",
+             "gender": "MALE"
+           }
          }
-      }
-   },
+       ]
+     }
+   }
+ },
    {  
       "kind":"req",
       "id":"1,",
@@ -58,22 +61,9 @@ In this example we create a conversation and send a message. While we do that we
          "channelType":"MESSAGING",
          "brandId":"{accountid}"
       }
-   },
-   {  
-      "kind":"req",
-      "id":"3",
-      "type":"ms.PublishEvent",
-      "body":{  
-         "event":{  
-            "type":"ContentEvent",
-            "contentType":"text/plain",
-            "message":"Hi from LivePerson Example - Create & Send (C4M Routing)"
-         }
-      }
    }
 ]
 ```
-{% endraw %}
 
 **Note**:
 

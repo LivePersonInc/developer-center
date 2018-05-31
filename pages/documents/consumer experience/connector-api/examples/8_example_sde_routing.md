@@ -10,21 +10,26 @@ permalink: sdes_routing_example.html
 
 ---
 
-The Connector API provides the ability to set the user profile and change the user engagement attributes (SDEs). See below a few examples of how to do so.
+The Connector API provides the ability to set the user engagement attributes (SDEs) upon the creation of a new conversation. This can be used to:
 
-The following [JSON Schema](assets/schema/connectorapi/setUserProfile.json) includes all of the supported attributes that can be passed in the body.
+  * Set the consumer profile for the agent
+  * To target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules.
 
-The SDEs which supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
+See below a few examples of how to do so.
+
+
+**Note**
+We advise against using this method for conversation targeting/routing. The best practice is to setup campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html){:target="_blank"}.
+
+The supported SDEs for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 **EXAMPLES**
 
-[Create & Send SDE Routing - ctype Example](sdes_routing_example.html#create--send-sde-routing---ctype)
+[Create & Send ctype/gender Example](sdes_routing_example.html#sdes_routing_example.html#create-new-conversation-and-send-ctypegender)
 
-[SDE Routing - companyBranch Example](sdes_routing_example.html#sde-routing---companybranch)
+[Create & Send companyBranch Example](sdes_routing_example.html#create-new-conversation-and-send-ctypegender)
 
-[SDE Routing - gender Example](sdes_routing_example.html#create-send---sde-routing---gender)
-
-### SDE Routing - companyBranch
+### Create new conversation and send companyBranch
 
 **Request**
 
@@ -39,13 +44,7 @@ The SDEs which supported for sending are the [Customer Info](https://developers.
       "kind":"req",
       "id":"2,",
       "type":"userprofile.SetUserProfile",
-      "body":{  
-         "firstName":"John",
-         "lastName":"Doe",
-         "avatarUrl":"http://avatarurl.com",
-         "role":"X",
-         "backgndImgUri":"http://something.com",
-         "description":"Test Description",
+      "body":{
          "authenticatedData":{  
             "lp_sdes":[  
                {  
@@ -64,15 +63,6 @@ The SDEs which supported for sending are the [Customer Info](https://developers.
                   }
                }
             ]
-         },
-         "privateData":{  
-            "mobileNum":"1750345346",
-            "mail":"test@gmail.com",
-            "pushNotificationData":{  
-               "serviceName":"Service",
-               "certName":"CertName",
-               "token":"TOKEN"
-            }
          }
       }
    },
@@ -85,24 +75,12 @@ The SDEs which supported for sending are the [Customer Info](https://developers.
          "channelType":"MESSAGING",
          "brandId":"{accountid}"
       }
-   },
-   {  
-      "kind":"req",
-      "id":"3",
-      "type":"ms.PublishEvent",
-      "body":{  
-         "event":{  
-            "type":"ContentEvent",
-            "contentType":"text/plain",
-            "message":"Create & Send (SDE Routing: companyBranch)"
-         }
-      }
    }
 ]
 ```
 {% endraw %}
 
-### Create & Send SDE Routing - ctype
+### Create new conversation and send ctype/gender
 
 **Request**
 
@@ -110,22 +88,15 @@ The SDEs which supported for sending are the [Customer Info](https://developers.
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Json payload**
+**Json Payload**
 
-{% raw %}
 ```json
 [  
    {  
       "kind":"req",
       "id":"2,",
       "type":"userprofile.SetUserProfile",
-      "body":{  
-         "firstName":"John",
-         "lastName":"Doe",
-         "avatarUrl":"http://avatarurl.com",
-         "role":"X",
-         "backgndImgUri":"http://something.com",
-         "description":"Test Description",
+      "body":{
          "authenticatedData":{  
             "lp_sdes":[  
                {  
@@ -144,15 +115,6 @@ The SDEs which supported for sending are the [Customer Info](https://developers.
                   }
                }
             ]
-         },
-         "privateData":{  
-            "mobileNum":"1750345346",
-            "mail":"test@gmail.com",
-            "pushNotificationData":{  
-               "serviceName":"Service",
-               "certName":"CertName",
-               "token":"TOKEN"
-            }
          }
       }
    },
@@ -161,103 +123,10 @@ The SDEs which supported for sending are the [Customer Info](https://developers.
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
       "body":{  
-         "ttrDefName":"CUSTOM",
+         "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}"
-      }
-   },
-   {  
-      "kind":"req",
-      "id":"3",
-      "type":"ms.PublishEvent",
-      "body":{  
-         "event":{  
-            "type":"ContentEvent",
-            "contentType":"text/plain",
-            "message":"Create & Send (SDE Routing: ctype)"
-         }
       }
    }
 ]
 ```
-{% endraw %}
-
-### Create & Send - SDE Routing - gender
-
-**Request**
-
-| Method | URL  |
-| :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
-
-**Json payload**
-
-{% raw %}
-```json
-[  
-   {  
-      "kind":"req",
-      "id":"2,",
-      "type":"userprofile.SetUserProfile",
-      "body":{  
-         "firstName":"John",
-         "lastName":"Doe",
-         "avatarUrl":"http://avatarurl.com",
-         "role":"X",
-         "backgndImgUri":"http://something.com",
-         "description":"Test Description",
-         "authenticatedData":{  
-            "lp_sdes":[  
-               {  
-                  "type":"ctmrinfo",
-                  "info":{  
-                     "socialId":"1234567890",
-                     "ctype":"vip"
-                  }
-               },
-               {  
-                  "type":"personal",
-                  "personal":{  
-                     "firstname":"John",
-                     "lastname":"Doe",
-                     "gender":"MALE"
-                  }
-               }
-            ]
-         },
-         "privateData":{  
-            "mobileNum":"1750345346",
-            "mail":"test@gmail.com",
-            "pushNotificationData":{  
-               "serviceName":"Service",
-               "certName":"CertName",
-               "token":"TOKEN"
-            }
-         }
-      }
-   },
-   {  
-      "kind":"req",
-      "id":"1,",
-      "type":"cm.ConsumerRequestConversation",
-      "body":{  
-         "ttrDefName":"CUSTOM",
-         "channelType":"MESSAGING",
-         "brandId":"{accountid}"
-      }
-   },
-   {  
-      "kind":"req",
-      "id":"3",
-      "type":"ms.PublishEvent",
-      "body":{  
-         "event":{  
-            "type":"ContentEvent",
-            "contentType":"text/plain",
-            "message":"Create & Send (SDE Routing: ctype)"
-         }
-      }
-   }
-]
-```
-{% endraw %}

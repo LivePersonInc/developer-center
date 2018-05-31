@@ -51,11 +51,11 @@ This method expects a set of JSON payloads, each representing a different type o
 
 The payload with the `type` _userprofile.SetUserProfile_ is mandatory. Its body can essentially be passed empty or with some (engagement) attributes in order for the Agent to see the Consumer Info on LiveEngage side.
 
-An **authenticated** conversation creation will consist the 'authenticatedData' object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the 'authenticatedData' part is not passed there will be no consumer information on the Agent side. Also this part in the JSON is used to pass 'lp_sdes' which is used to pass [engagement attributes (SDEs)](https://developers.liveperson.com/engagment-attributes-types.html){:target="blank"}.
+An **authenticated** conversation creation will consist the 'authenticatedData' object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the 'authenticatedData' part is not passed there will be no consumer information on the Agent side. This part in the JSON is used to pass 'lp_sdes' which is used to pass [engagement attributes (SDEs)](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"}.
 
-The [SDEs](https://developers.liveperson.com/engagment-attributes-types.html){:target="blank"} are used to populate the consumer information for the Agent in LiveEngage and also for routing users to the right agent according what was defined in [campaign for messaging](https://www.liveperson.com/services/technical-support/about-campaigns){:target="blank"}. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
+The [SDEs](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent in LiveEngage. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
 
-The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="blank"} SDEs.
+The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 
 **Entity Example**
@@ -111,35 +111,41 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 ]
 ```
 
-
-**Elements in the request payload under type `userprofile.SetUserProfile`**
-
-The **authenticatedData** Array
+#### userprofile.SetUserProfile Attributes
 
 | Attribute  | Description | Value/Example | Type | Mandatory | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to LiveEngage | "ctmrinfo" / "personal" | string | true |
-| info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="blank"} |
+| info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} |
 | socialId | Social ID of your choice e.g.: FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
 | ctype | Customer type/tier (case insensitive) | "Gold" | string | false |
-| personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="blank"} |
+| personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} |
 | firstname | Visitor's first name | "John" | string | false |
 | lastname | Visitor's surename | "Doe" | string | false |
 | gender |  Visitor's gender | MALE, FEMALE, OTHER | string | false |
 
-**Elements in the request payload under type `cm.ConsumerRequestConversation`**
+#### cm.ConsumerRequestConversation Attributes
 
 | Attribute  | Description | Value/Example | Type | Mandatory | Notes |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
-| conversationContext | Describes the conversation environment, like where from it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | 'conversationContext' is of type 'SharkContext' in this example the options are
-
-| campaignInfo | Used to pass the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | used in conjunction with [campaign for messaging](https://www.liveperson.com/services/technical-support/about-campaigns){:target="blank"} |
+| conversationContext | Describes the conversation environment, like where from it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | 'conversationContext' is of type 'SharkContext' and all the attributes passed in this example are part of this conversationContext. See the details in the next table below |
+| campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | used in conjunction with [campaign for messaging](https://www.liveperson.com/services/technical-support/about-campaigns){:target="_blank"} |
 | campaignId | The campaign ID you wish to target the conversation | "99999" | false |  
 | channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
-| skillId | Skill ID you would like to route the conversation, use -1 as default for all skills | string |
+| skillId | Skill ID you would like to route the conversation | string | false | use -1 as default to target all skills available |
+
+**conversationContext Attributes**
+
+| Attribute  | Description | Value/Example | Type | Mandatory | **ConversationsContext type** | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| visitorId | Visitor ID set by the Monitoring API | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | SharkContext |
+| sessionId | Session ID set by the Monitoring API | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | SharkContext |
+| interactionContextId" | Interaction Context ID set by the Monitoring API | "2" | string | false | SharkContext |
+| type | Type of conversationContext | "SharkContext" | string | false | SharkContext/SMSContext |
+| lang | The conversation language, according the IETF (ISO-639-1 and ISO-3166) | "en-US" | false | SharkContext/SMSContext | The client using this should check first if the language exists on the engagement |
 
 ### Response
 
