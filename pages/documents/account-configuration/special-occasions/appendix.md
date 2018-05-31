@@ -53,14 +53,14 @@ This section contains API details that are common to every API’s resource, met
 <tbody>
   <tr>
     <td>name</td>
-    <td>Workday Object's name</td>
+    <td>Workday/special occasion Object's name</td>
     <td>Yes</td>
     <td>String</td>
     <td>This must be a unique nameMax length: 50</td>
   </tr>
   <tr>
     <td>description</td>
-    <td>Workday Object's description</td>
+    <td>Workday/special occasion Object's description</td>
     <td>Yes</td>
     <td>String</td>
     <td>Max length: 200</td>
@@ -112,7 +112,7 @@ This section contains API details that are common to every API’s resource, met
     <td>Contains meta data important for the special occasions object</td>
     <td>Yes</td>
     <td>Aray</td>
-    <td>This array contains two fields:<ul><li>working. This field indicates whether agents are working during this event (and thus the special occasion is just a change of working hours) or whether agents aren't working (a day off). This field is boolean and required</li><li>name. The name if the special occasion. This field is a string and is required.</li></ul></td>
+    <td>This array contains two fields:<ul><li>working. This field indicates whether agents are working during this event (and thus the special occasion is just a change of working hours) or whether agents aren't working (a day off). This field is boolean and required</li><li>name. The name of the special occasion's event. This field is a string and is required.</li></ul></td>
   </tr>
 </tbody>
 </table>
