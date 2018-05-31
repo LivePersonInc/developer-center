@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-level1:
+level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 order: 10
