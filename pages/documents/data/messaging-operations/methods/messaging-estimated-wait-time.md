@@ -47,12 +47,12 @@ This is an example request which contains information for two skills, skills=2,3
         "estimatedWaitTimeResponse": [
             {
                 "skillId": 2,
-                "ewt": -1,
+                "estimatedWaitTime": -1,
                 "timestamp": 1526466893703
             },
             {
                 "skillId": 3,
-                "ewt": 10,
+                "estimatedWaitTime": 10,
                 "timestamp": 1526466893703
             }
         ]
