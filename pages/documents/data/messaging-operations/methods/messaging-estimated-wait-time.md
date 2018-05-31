@@ -41,7 +41,7 @@ This method returns the current average wait time in queue, per requested skill.
 
 **Response Body**
 
-This is an example request which contains information for two skills, skills=2,3 where there is data only for skill "3".
+This is an example response which contains information for two skills, skills=2,3 where there is data only for skill "3".
 
     {
         "estimatedWaitTimeResponse": [
