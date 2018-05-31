@@ -18,7 +18,7 @@ This method returns the current average wait time in queue, per requested skill.
 
 2. This method will only return a result, as long as there is enough throughput to reliably calculate an estimated wait time. The throughput used is the number of assigned conversations to agent. An acceptable throughput starts at 120 conversations per hour, per skill. This will be enough for the API to calculate the estimated wait time and provide an answer to the call found below.
 
-3. This API returns real time data, base on your current capacity. The API will provide accurate estimations as long as there are no major changes with your agents capacity. Major changes can be defined as any change over 15% in your agents' capacity. If major changes occur (for example, several agents log off at the same time), previous estimated wait times are no longer valid. In that case, it is recommended to wait 10-15 minutes before calling the API again in order to make sure the data is recalculated and accurate.
+3. This API returns real time data, based on your current capacity. The API will provide accurate estimations as long as there are no major changes with your agents capacity. Major changes can be defined as any change over 15% in your agents' capacity. If major changes occur (for example, several agents log off at the same time), previous estimated wait times are no longer valid. In that case, it is recommended to wait 10-15 minutes before calling the API again in order to make sure the data is recalculated and accurate.
 
 4. This API should not be called more than every 10 seconds per skill.
 
