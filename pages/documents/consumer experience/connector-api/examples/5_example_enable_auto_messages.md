@@ -10,7 +10,7 @@ permalink: enable-feature-example.html
 
 ---
 
-The following example illustrates how to enable the auto messages feature upon conversation opening. The Json payload is the same one used to create a new conversation but pay attention to the additional request header.
+The following example illustrates how to enable the auto messages feature upon conversation opening. The JSON payload is the same one used to create a new conversation but pay attention to the additional request header.
 
 **Note**: Make sure to pass the required "Client-Properties" request header as per the below example.
 
@@ -28,44 +28,46 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
+
 **Example Request Body - JSON Payload - Creating a new conversation**
 
 ```json
-[
-  {
-		"kind": "req",
-		"id": "1,",
-		"type": "userprofile.SetUserProfile",
-		"body": {
-			"authenticatedData": {
-				"lp_sdes": [{
-						"type": "ctmrinfo",
-						"info": {
-							"socialId": "1234567890",
-							"ctype": "vip"
-						}
-					},
-					{
-						"type": "personal",
-						"personal": {
-							"firstname": "John",
-							"lastname": "Doe",
-							"gender": "MALE"
-						}
-					}
-				]
-			}
-		}
-	},
-	{
-		"kind": "req",
-		"id": "2,",
-		"type": "cm.ConsumerRequestConversation",
-		"body": {
-			"ttrDefName": "NORMAL",
-			"channelType": "MESSAGING",
-			"brandId": "{accountid}"
-		}
-	}
+[  
+   {  
+      "kind":"req",
+      "id":"1,",
+      "type":"userprofile.SetUserProfile",
+      "body":{  
+         "authenticatedData":{  
+            "lp_sdes":[  
+               {  
+                  "type":"ctmrinfo",
+                  "info":{  
+                     "socialId":"1234567890",
+                     "ctype":"vip"
+                  }
+               },
+               {  
+                  "type":"personal",
+                  "personal":{  
+                     "firstname":"John",
+                     "lastname":"Doe",
+                     "gender":"MALE"
+                  }
+               }
+            ]
+         }
+      }
+   },
+   {  
+      "kind":"req",
+      "id":"2,",
+      "type":"cm.ConsumerRequestConversation",
+      "body":{  
+         "ttrDefName":"NORMAL",
+         "channelType":"MESSAGING",
+         "brandId":"{accountid}"
+      }
+   }
 ]
 ```
