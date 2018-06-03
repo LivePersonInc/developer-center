@@ -51,7 +51,7 @@ This method expects a set of JSON payloads, each representing a different type o
 
 The payload with the `type` _userprofile.SetUserProfile_ is mandatory. Its body can essentially be passed empty or with some engagement attributes in order for the Agent to see the Consumer Info in the LiveEngage Agent Workspace.
 
-Creating an **authenticated** conversation will require the 'authenticatedData' key in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` key is not passed (left blank or deleted altogether), there will be no consumer information on the Agent side. Under the `authenticatedData` key, you can pass an `lp_sdes` key. This key is used to submit [engagement attributes (SDEs)](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"}.
+Creating an **authenticated** conversation will require the 'authenticatedData' object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` key is not passed (left blank or deleted altogether), there will be no consumer information on the Agent side. Under the `authenticatedData` key, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"}.
 
 The [SDEs](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
 
@@ -113,7 +113,7 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 
 #### userprofile.SetUserProfile Properties
 
-| Proerty | Description | Value/Example | Type | Mandatory | Notes |
+| Property | Description | Value/Example | Type | Mandatory | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to LiveEngage | "ctmrinfo" / "personal" | string | true |
@@ -143,7 +143,7 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | visitorId | Visitor ID set by the [Monitoring API](/rt-interactions-monitoring-overview.html) | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | SharkContext |
 | sessionId | Session ID set by the [Monitoring API](/rt-interactions-monitoring-overview.html) | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | SharkContext |
-| interactionContextId" | Interaction Context ID set by the Monitoring API | "2" | string | false | SharkContext |
+| interactionContextId | Interaction Context ID set by the Monitoring API | "2" | string | false | SharkContext |
 | type | Type of conversationContext | "SharkContext" | string | false | SharkContext/SMSContext |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | false | SharkContext/SMSContext | Check first if the language used here is configured for the engagement in the LE UI |
 

@@ -44,7 +44,7 @@ Here is an example of such configuration:
 
 **Note**: the `enabled` key accepts a boolean value.
 
-The “webhooks” JOSN key is a map, of which each entry is a single notification registration. Each entry consists of the following:
+The “webhooks” JSON key is a map, of which each entry is a single notification registration. Each entry consists of the following:
 
 * key (string) - the event type (for example, "ms.MessagingEventNotification.ContentEvent")
 
