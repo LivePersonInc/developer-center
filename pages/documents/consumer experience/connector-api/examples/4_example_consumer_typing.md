@@ -6,8 +6,13 @@ level3: Connector API
 level4: Examples
 order: 63
 indicator: both
+<<<<<<< HEAD:pages/documents/consumer experience/connector-api/examples/4_example_consumer_typing.md
+permalink: consumer_typing_example.html
+search: include
+=======
 permalink: send-chat-states-example.html
 
+>>>>>>> master:pages/documents/consumer experience/connector-api/examples/example_consumer_typing.md
 ---
 
 This example illustrates how to send LiveEngage the presence/typing events (chat-state), specifically the "Consumer is Typing" chat-state (`COMPOSING`).
