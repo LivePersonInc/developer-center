@@ -69,9 +69,9 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 **There are two primary reasons to utilize the Connector API**:
 
-1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels while using more than one device, e.g a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example would be a connector for an SMS Gateway of their choice (not via Twilio). This type of connector would normally be hosted on the brand's servers.
+1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels while using more than one device, e.g a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example would be a connector for an SMS Gateway of their choice (not via Twilio). A connector developed by a brand would normally be hosted on the brand's servers.
 
-2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. This type of connector would normally be hosted on Live Person servers.
+2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. A connecter developed by LivePerson would normally be hosted on LivePerson servers.
 
 ![JavascriptOverview](img/ConnectorAPI2.png)
 
