@@ -10,9 +10,9 @@ permalink: direct_skill_routing_example.html
 
 ---
 
-In this example we create a conversation and send a message while also passing the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in LiveEngage.
+In this example we create a conversation and pass the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in LiveEngage.
 
-### Create & Send with direct skill routing
+### Create new conversation with skill routing
 
 **Request**
 
@@ -20,31 +20,33 @@ In this example we create a conversation and send a message while also passing t
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-{% raw %}
 ```json
 [  
-   {  
-      "kind":"req",
-      "id":"2,",
-      "type":"userprofile.SetUserProfile",
-      "body":{  
-         "firstName":"John",
-         "lastName":"Doe",
-         "avatarUrl":"http://avatarurl.com",
-         "role":"X",
-         "backgndImgUri":"http://something.com",
-         "description":"Test Description",
-         "privateData":{  
-            "mobileNum":"1750345346",
-            "mail":"test@email.com",
-            "pushNotificationData":{  
-               "serviceName":"Service",
-               "certName":"CertName",
-               "token":"TOKEN"
-            }
+  {
+   "kind": "req",
+   "id": "1,",
+   "type": "userprofile.SetUserProfile",
+   "body": {
+     "authenticatedData": {
+       "lp_sdes": [{
+           "type": "ctmrinfo",
+           "info": {
+             "socialId": "1234567890",
+             "ctype": "vip"
+           }
+         },
+         {
+           "type": "personal",
+           "personal": {
+             "firstname": "John",
+             "lastname": "Doe",
+             "gender": "MALE"
+           }
          }
-      }
-   },
+       ]
+     }
+   }
+ },
    {  
       "kind":"req",
       "id":"1,",
@@ -55,19 +57,13 @@ In this example we create a conversation and send a message while also passing t
          "brandId":"{accountid}",
          "skillId":"2736637412"
       }
-   },
-   {  
-      "kind":"req",
-      "id":"3",
-      "type":"ms.PublishEvent",
-      "body":{  
-         "event":{  
-            "type":"ContentEvent",
-            "contentType":"text/plain",
-            "message":"Hi from LivePerson Example - Create & Send (Direct Skill Routing)"
-         }
-      }
    }
 ]
 ```
-{% endraw %}
+
+| Attribute  | Description | Value/Example | Type | Mandatory | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
+| channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |
+| brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
+| skillId | Skill ID you would like to route the conversation | string | false | use -1 as default to target all skills available |

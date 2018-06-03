@@ -10,7 +10,7 @@ permalink: close-conversation-example.html
 
 ---
 
-In order to close a conversation you simply use the same method (endpoint) you use to send a message. However, the payload type is different i.e. not _ms.PublishEvent_ type but _cm.UpdateConversationField_ type. The conversation ID is passed in the Payload in this method as well.
+In order to close a conversation you simply use the same SEND API endpoint you use to send a message. However, the payload type is different i.e. not _ms.PublishEvent_ type but _cm.UpdateConversationField_ type. The conversation ID is passed in the Payload in this method as well.
 
 ### Close a conversation
 
@@ -22,7 +22,6 @@ In order to close a conversation you simply use the same method (endpoint) you u
 
 **Json payload**
 
-{% raw %}
 ```json
 {  
    "kind":"req",
@@ -37,4 +36,3 @@ In order to close a conversation you simply use the same method (endpoint) you u
    "type":"cm.UpdateConversationField"
 }
 ```
-{% endraw %}

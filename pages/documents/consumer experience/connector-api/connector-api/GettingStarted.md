@@ -23,48 +23,46 @@ permalink: connectorapi-getting-started.html
 
 **In order to get started with the Connector API, please follow the steps below:**
 
-1. Onboard your connector
+1. **Onboard your connector**
 
-The connector is a server application that is used to make HTTPS calls on behalf of consumers to LiveEngage. For that purpose, the application must be registered and known to LiveEngage for authorization and user validation.
+	The connector is a server application that is used to make HTTPS calls on behalf of consumers to LiveEngage. For that purpose, the application must be registered and known to LiveEngage for authorization and user validation. This process can happen before even writing one line of code.
 
-In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](AppInstallJSON.html) and replace or fill in the required information.
+	In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](AppInstallJSON.html) and replace or fill in the required information.
 
-The main sections to be filled are (Refer to the [JSON](AppInstallJSON.html) for more information):
+	The main sections to be filled are (Refer to the [JSON](AppInstallJSON.html) for more information):
 
-* Your connector/application name (`client_name` and `description`).
+	* Your **connector/application name** (`client_name` and `description`).
 
-* **Webhooks URL endpoints** which will be used as endpoints for LiveEngage to send its notification events to your connector.
+	* **Webhooks URL endpoints** which will be used as endpoints for LiveEngage to send its notification events to your connector.
 
-* Engagement related fields - this affects the Engagement design possibilities when designing a campaign for messaging. Without a clear reason to change them, you can use the default values found in the schema.
+	* **Engagement related fields** - this affects the Engagement design possibilities when designing a campaign for messaging. Without a clear reason to change them, you can use the default values found in the schema.
 
-After filling in the [JSON Template](AppInstallJSON.html) with the required data, please contact your Account Management team to register your connector application.
+	After filling in the [JSON Template](AppInstallJSON.html) with the required data, please contact your Account Management team to register your connector application.
 
-**Authorizing your connector application**
+2. **Getting an application JWT** - After successfully registering your connector, you will be given two important parameter values which you will serve you to authorize your connector application prior to using the Connector API:
 
-2. After successfully registering your connector, you will be given two important parameter values which you will serve you to authorize your connector application prior to using the Connector API:
+		`Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
 
-`Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
+		`Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
 
-`Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
+	These will be used for the first authorization call to LiveEngage in order to identify your connector and provide it with an **AppJWT**.
 
-These will be used for the first authorization call to LiveEngage in order to identify your connector and provide it with an **AppJWT**.
+	**Example**
 
-**Example**
+	```
+	https://{Sentinel_Domain}/sentinel/api/account/{SiteID}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret}
+	```
 
-```
-https://{Sentinel_Domain}/sentinel/api/account/{SiteID}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret}
-```
+	Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
 
-Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
+3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer token (Java Web Signature, JWS):
 
-**Consumer Authentication**
+	**Example**
 
-An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer token (Java Web Signature, JWS):
+	```
+	https://{domain}/api/account/{accountid}/consumer?v=1.0|
+	```
 
-**Example**
+	Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.
 
-```
-https://{domain}/api/account/{accountid}/consumer?v=1.0|
-```
-
-Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.
+4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html){:target="_blank"} to get started.

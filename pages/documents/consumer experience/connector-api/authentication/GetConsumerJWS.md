@@ -12,7 +12,7 @@ search: include
 
 ### Retrieve your domain
 
-1. **Retrieve your domain**. Use the[LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
 	* idp
 
@@ -20,11 +20,11 @@ search: include
 
 ### Authentication with ConsumerJWS
 
-An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT you can obtain a ConsumerJWS (Java Web Signature):
+An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature):
 
-The ConsumerJWS is the unique identifier of the user and used by the the connector in conjunction with the AppJWT to access LiveEngage on behalf of the consumer.
+The **ConsumerJWS** is the unique identifier of the user and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer.
 
-A ConsumerJWS can be obtained with the following HTTPS request:
+A **ConsumerJWS** can be obtained with the following HTTPS request:
 
 
 | Method | URL  |
@@ -41,15 +41,11 @@ A ConsumerJWS can be obtained with the following HTTPS request:
 
 **Json payload**
 
-{% raw %}
 ```json
 {
 	"ext_consumer_id":"{ConsumerID, e.g. random_id0.80668702615}"
 }
 ```
-{% endraw %}
-
-
 
 **Query Parameter**
 
@@ -77,10 +73,8 @@ A ConsumerJWS can be obtained with the following HTTPS request:
 
 **Response Example**
 
-{% raw %}
 ```json
 {
     "token": "eyJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhY2NvdW50X2lkIjoibGUzMTQ1Nzc4MCIsImV4dF9jb25zdW1lcl9pZCI6InJhbmRvbV9pZDAuMTczMDc3OTY4NzUiLCJscF9jb25zdW1lcl9pZCI6IjI5Y2FmMGMxMTQ4Njk5NmQ5Mzg3ZTNhNDRlYzM0MjI5ZDEyNzMwNGRiNDk2NmQ3NzUyNzE2YmNlYjUzOGZhMjQifQ.TAJgP31rmpHvGKqb_yLP9yzVi_7tu7YoRfoqQ3RfuXGwR_AOV7DWL5Njy1m2YpC5kd9L_oRmytjFwfckwyuFJewwPGYxeZAY1q1jR5tPdb0nsvRyrMdKzO1_AFWUJtD013H9fjyjxHvxwV_Q2xe6Xp00J0T_-I6d6BkUpUFSPww"
 }
 ```
-{% endraw %}

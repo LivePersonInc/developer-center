@@ -12,7 +12,7 @@ search: include
 
 ### Retrieve your domain
 
-1. **Retrieve your domain**. Use the[LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
 	* sentinel
 
@@ -22,7 +22,7 @@ Before sending any request with the Send API, you must first obtain an **AppJWT*
 
 The **AppJWT** is an access token obtained from **Sentinel**, which is a LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access the LiveEngage platform.
 
-An AppJWT can be obtained with the following HTTPS request:
+An **AppJWT** can be obtained with the following HTTPS request:
 
 
 | Method | URL  |

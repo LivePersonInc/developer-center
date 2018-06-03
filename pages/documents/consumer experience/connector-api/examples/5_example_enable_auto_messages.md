@@ -10,20 +10,11 @@ permalink: enable-feature-example.html
 
 ---
 
-The following example illustrates how to enable features, while using the auto messages feature as an example. In order to enable other features, simply change the value of the "features" field in this example to the feature you are interested in. The list of possible values as is follows:
-
-* "CO_BROWSE"
-* "CO_APP"
-* "PHOTO_SHARING"
-* "SECURE_FORMS"
-* "AUTO_MESSAGES"
-* "RICH_CONTENT"
-
-You can also refer directly to this [**JSON Schema**](https://developers.liveperson.com/assets/schema/infra/clientPropertiesHeader.json) to learn more about which client properties you can pass in the JSON payload.
+The following example illustrates how to enable the auto messages feature upon conversation opening. The Json payload is the same one used to create a new conversation but pay attention to the additional request header.
 
 **Note**: Make sure to pass the required "Client-Properties" request header as per the below example.
 
-### How to enable a feature, e.g. AUTO_MESSAGES
+### How to enable AUTO_MESSAGES
 
 **Request**
 
@@ -37,58 +28,44 @@ You can also refer directly to this [**JSON Schema**](https://developers.liveper
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
-**Json payload**
+**Json payload Example for creating a new conversation**
 
-{% raw %}
 ```json
-[  
-   {  
-      "kind":"req",
-      "id":"2,",
-      "type":"userprofile.SetUserProfile",
-      "body":{  
-         "firstName":"WEB UI USER",
-         "lastName":"Test",
-         "avatarUrl":"http://avatarurl.com",
-         "role":"X",
-         "backgndImgUri":"http://something.com",
-         "description":"Test Description",
-         "privateData":{  
-            "mobileNum":"1750345346",
-            "mail":"test@email.com",
-            "pushNotificationData":{  
-               "serviceName":"Service",
-               "certName":"CertName",
-               "token":"TOKEN"
-            }
-         }
-      }
-   },
-   {  
-      "kind":"req",
-      "id":"1,",
-      "type":"cm.ConsumerRequestConversation",
-      "body":{  
-         "ttrDefName":"CUSTOM",
-         "campaignInfo":{  
-            "campaignId":"99999",
-            "engagementId":"888888"
-         },
-         "conversationContext":{  
-            "visitorId":"A3ZTY3Zjk1MDExZTczYTU4",
-            "sessionId":"ys2wSqaSRSOJGki7VhEDKQ",
-            "interactionContextId":"2",
-            "type":"SharkContext",
-            "lang":"en-US",
-            "features":[  
-               "AUTO_MESSAGES"
-            ]
-         },
-         "channelType":"MESSAGING",
-         "brandId":"{accountid}",
-         "skillId":"2736637412"
-      }
-   }
+[
+  {
+		"kind": "req",
+		"id": "1,",
+		"type": "userprofile.SetUserProfile",
+		"body": {
+			"authenticatedData": {
+				"lp_sdes": [{
+						"type": "ctmrinfo",
+						"info": {
+							"socialId": "1234567890",
+							"ctype": "vip"
+						}
+					},
+					{
+						"type": "personal",
+						"personal": {
+							"firstname": "John",
+							"lastname": "Doe",
+							"gender": "MALE"
+						}
+					}
+				]
+			}
+		}
+	},
+	{
+		"kind": "req",
+		"id": "2,",
+		"type": "cm.ConsumerRequestConversation",
+		"body": {
+			"ttrDefName": "NORMAL",
+			"channelType": "MESSAGING",
+			"brandId": "{accountid}"
+		}
+	}
 ]
 ```
-{% endraw %}
