@@ -1112,14 +1112,14 @@ It will affect the following areas:
   <tr>
     <td align="left">conversationBackgroundPortraitImage</td>
     <td align="left">UIImage;</td>
-    <td align="left">When not nil, will be used as the conversation portrait background image. </td>
+    <td align="left">When not nil, will be used as the conversation portrait background image. When an image is shown it is recommended to set dateSeparatorBackgroundColor config to clear.</td>
     <td align="left"></td>
     <td align="left">nil</td>
   </tr>
   <tr>
     <td align="left">conversationBackgroundLandscapeImage</td>
     <td align="left">UIImage;</td>
-    <td align="left"> When not nil, will be used as the conversation landscape background image.</td>
+    <td align="left"> When not nil, will be used as the conversation landscape background image. When an image is shown it is recommended to set dateSeparatorBackgroundColor config to clear.</td>
     <td align="left"></td>
     <td align="left">nil</td>
   </tr>

@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: In-App Messaging SDK for iOS
 level4: SDK APIs
 
-order: 11
+order: 12
 permalink: consumer-experience-ios-sdk-interfacedefinitions.html
 
 indicator: messaging
@@ -71,7 +71,7 @@ class LPLog: NSObject {
 class LPConversationViewParams: NSObject {
   var conversationQuery: ConversationParamProtocol!
   var containerViewController: UIViewController? // nil = WindowMode
-  var isViewOnly = false1
+  var isViewOnly = false
   var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
 }
 ```
@@ -112,6 +112,8 @@ class LPAuthenticationParams: NSObject {
   var authenticationCode: String? // Code Flow authentication
   var jwt: String? // Implicit Flow authentication
   var redirectURI: String? // Code Flow authentication
+  var certPinningPublicKeys: [String]? //Cert pining validation public keys
+  var type: LPAuthenticationType = .signup // User authentication type with 'signup' as default
 }
 ```
 
@@ -209,11 +211,11 @@ class : NSObject {
 }
 ```
 
-### typingIndicatorPosition
+### LPAuthenticationType
 ```javascript
-enum typingIndicatorPosition: Int {
-    case none
-    case conversation
-    case navigation
+enum LPAuthenticationType: Int {
+    case signup // Old unauthenticated method
+    case unauthenticated // New unauthenticated method for users without identity
+    case authenticated // Authenticated users
 }
 ```
