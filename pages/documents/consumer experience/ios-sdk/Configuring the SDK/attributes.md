@@ -1952,3 +1952,40 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
   </tr>
 </tbody>
 </table>
+
+### Audio support
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="left">recordingDurationLimit</td>
+    <td align="left">TimeInterval (Double)</td>
+    <td align="left">Maximum time frame for recording audio message (in seconds).</td>
+    <td align="left"></td>
+    <td align="left">120</td>
+  </tr>
+  <tr>
+    <td align="left">enableAudioSharing</td>
+    <td align="left">Bool</td>
+    <td align="left">True - Enables Audio Sharing feature, False - Disables Audio Sharing</td>
+    <td align="left"></td>
+    <td align="left">false</td>
+  </tr>
+  <tr>
+    <td align="left">maxNumberOfSavedAudioFilesOnDisk</td>
+    <td align="left">Int</td>
+    <td align="left">This number represents how many audio files will be saved on the disk. Exceeding files are deleted when the app closes.</td>
+    <td align="left"></td>
+    <td align="left">20</td>
+  </tr>
+</tbody>
+</table>
