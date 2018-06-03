@@ -143,7 +143,7 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | visitorId | Visitor ID set by the [Monitoring API](/rt-interactions-monitoring-overview.html) | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | SharkContext |
 | sessionId | Session ID set by the [Monitoring API](/rt-interactions-monitoring-overview.html) | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | SharkContext |
-| interactionContextId" | Interaction Context ID set by the Monitoring API | "2" | string | false | SharkContext |
+| interactionContextId | Interaction Context ID set by the Monitoring API | "2" | string | false | SharkContext |
 | type | Type of conversationContext | "SharkContext" | string | false | SharkContext/SMSContext |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | false | SharkContext/SMSContext | Check first if the language used here is configured for the engagement in the LE UI |
 

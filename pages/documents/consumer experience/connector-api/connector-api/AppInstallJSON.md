@@ -97,14 +97,16 @@ permalink: AppInstallJSON.html
 }
 ```
 
+**Note**: the below configurations are correct only when using this schema in the context of the Connector API. Other LiveEngage applications may use this schema in a different way. Use the below **only** when configuring a Connector application. Where specific values are required, they are required for a Connector application only.
+
 | Property | Description | Type | Required| Notes|
 |--- | --- | ---|
-|client_name | Installation name. In most cases, this is the same as the app name. | string| Yes | Unique. Max length: 100|
-|description | App description | stringmax | No| max length: 256|
-|grant_types | Type strings that the client can use at the token endpoint | array | No |Requires the value: "client_credentials"|
-|scope | space-separated list of scope values that the client can use when requesting access tokens| string| No|max length: 128. Requires the value: "msg.consumer"|
+|client_name | Choose the name for your Connector application. | string| Yes | Unique. Max length: 100|
+|description | App description | string | No| max length: 256|
+|grant_types | Authorization grant according to OAuth 2.0 | array | Yes | Requires the value: "client_credentials". Do not change.|
+|scope | Space-separated list of scope values that the client can use when requesting access tokens| string| Yes |max length: 128. Requires the value: "msg.consumer". Do not change. |
 |logo_uri | URL string that references a logo for the client | string| No|max length: 128|
-|capabilities| LiveEngage capabilities implemented by this app. This field will be used by other apps to discover this app based on the implemented capabilities.| Object. (Contains the properties webhooks and engagement)| No| Ref-Webhooks: Contains the endpoints where UMS will send notifications <br /> Ref-engagement: The app is capable of engaging the consumer based on LiveEngage engagements API|
+|capabilities| LiveEngage capabilities utilized by this app. This array defines the various LiveEngage services or applications that can interface with this application| Object. (Contains the properties webhooks and engagement)| Yes| Required values: webhooks and engagement. webhooks: Contains the endpoints where UMS will send notifications <br /> engagement: This determines how the application interfaces with LiveEngage engagements and their creation|
 
 #### The Webhooks array
 
@@ -128,11 +130,11 @@ permalink: AppInstallJSON.html
 
 | Property | Description | Type | Required| Notes|
 |--- | --- | ---|
-|design_engagement |Toggles the ability to design the engagement window | Boolean. Should be set to false |Yes ||
-|design_window | Toggles the ability to add an engagement window | Boolean. Should be set to false| Yes ||
-|entry_point |  Indicates where to display the engagement which invites consumers to engage with you | Array| Yes |Possible values: section, url|
-|visitor_behavior | The browsing behavior of visitors which is of interest to you.  | Array| Yes |Possible values: visited_location, time_on_location, flow, engaged_in_session, about_to_abandon, cart_value, visitor_error, viewed_products, service_activity |
-|target_audience | The visitors you specifically want to target |  string| Yes |Possible values: external_referral, search_keywords, ip, platform, geo_location, returning_visitors, marketing_source, customer_type, age,balance, customer_id,gender, store_zip_code, store_number, company_size, registration_date |
+|design_engagement |Toggles the ability to design the engagement window | Boolean. Should be set to false |Yes | Do not change.|
+|design_window | Toggles the ability to add an engagement window | Boolean. Should be set to false| Yes |Do not change.|
+|entry_point |  Indicates where to display the engagement which invites consumers to engage with you | Array| Yes |Possible values: section, url. Do not change.|
+|visitor_behavior | The browsing behavior of visitors which is of interest to you.  | Array| Yes |Possible values: visited_location, time_on_location, flow, engaged_in_session, about_to_abandon, cart_value, visitor_error, viewed_products, service_activity. Do not change. |
+|target_audience | The visitors you specifically want to target |  string| Yes |Possible values: external_referral, search_keywords, ip, platform, geo_location, returning_visitors, marketing_source, customer_type, age,balance, customer_id,gender, store_zip_code, store_number, company_size, registration_date. Do not change. |
 |goal |  Indicates what you want to achieve with the engagement | string| Yes |Possible values: url, purchase_total, num_of_pages, lead, service_activity |
 |consumer_identity | If the consumer does or doesn't have to be an authenticated user |  Array| Yes | The value has to be set to auth. Possible values: auth, unauth|
-|language_selection | Indicates the possibility of language selection  |  string |Yes ||
+|language_selection | Indicates the possibility of language selection  |  Boolean |Yes ||
