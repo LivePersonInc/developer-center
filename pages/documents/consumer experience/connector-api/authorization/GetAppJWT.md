@@ -22,6 +22,8 @@ Before sending any request with the Send API, you must first obtain an **AppJWT*
 
 The **AppJWT** is an access token obtained from **Sentinel**, which is a LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access the LiveEngage platform.
 
+**Note:** An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature). Please see [this page](Create_ConsumerJWS.html) in order to retrieve a ConsumerJWS.
+
 An **AppJWT** can be obtained with the following HTTPS request:
 
 
@@ -42,7 +44,7 @@ An **AppJWT** can be obtained with the following HTTPS request:
 | Name  | Description | Type/Value | Example |
 | :--- | :--- | :--- | --- |
 | v | The API version | numeric | 1.0 |
-| grant_type | authorization grant according OAuth 2.0 | string | client_credentials |
+| grant_type | authorization grant according to OAuth 2.0 | string | client_credentials |
 | client_id | `Installation id` provided after application registration | string | 75588e18-0213-4e33-8174-883acac7e3c4 |
 | client_secret | `Secret` provided after application registration | string | kgvbkk7glku72jgtmpi6l4a872 |
 

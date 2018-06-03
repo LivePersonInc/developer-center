@@ -11,7 +11,7 @@ permalink: webhooks-events.html
 
 ### Events
 
-An application registering for WH notifications can be configured to receive notifications on the following messages:
+An application registering for WH notifications can be configured to receive notifications on the following events:
 
   * **cqm.ExConversationChangeNotification**
 

@@ -14,7 +14,7 @@ permalink: connectorapioverview.html
 
 The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, LINE, Skype and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.
 
-A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the Send API. The connector can also open and close conversations and transmit the first message upon creation. The connector also makes sure that the consumer will be notified of agent activity using WebHooks notifications (for example, if the agent is typing, etc.).
+A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](sendapi-send.html). The connector can also open and close conversations and transmit the first message upon creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using WebHooks notifications (for example, if the agent is typing, etc.).
 
 **Why do we need the Connector API?**
 
@@ -30,15 +30,9 @@ The Connector API is split into two main components:
 {:start="2"}
 2. **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: This component sends notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the Connector, such as agent/consumer replied, closed conversation, is typing and so on.
 
-Please note: as part of using the Connector API, brands will be required to expose their Webhooks' HTTPS-endpoints. For more details on Webhooks and how their authentication works, please refer to the [Webhooks documentation](webhooks-overview.html){:target="_blank"}.
+Please note: as part of using the Connector API, brands will be required to expose their Webhooks' HTTPS-endpoints. The Webhooks component allows the connector to register for notifications on LivePerson (LP) events. For more information on using Webhooks, please refer to the [Webhooks Overview](webhooks-overview.html){:target="_blank"}.
 
-The Webhooks component allows the connector to:
-
-* Register for notifications on LivePerson (LP) events.
-
-For more information, please refer to the [Webhooks Overview](webhooks-overview.html){:target="_blank"}.
-
-### Actions enabled by the Connector API
+### Capabilities enabled by the Connector API
 
 #### On the **consumer** side:
 
@@ -76,9 +70,9 @@ For more information, please refer to the [Webhooks Overview](webhooks-overview.
 
 **There are two primary reasons to utilize the Connector API**:
 
-1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels while using more than one device, e.g a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example, would be a connector for an SMS Gateway of their choice (not via Twilio). This connector would normally be hosted on the brands servers.
+1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels while using more than one device, e.g a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example would be a connector for an SMS Gateway of their choice (not via Twilio). This type of connector would normally be hosted on the brand's servers.
 
-2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. This connector would normally be hosted on Live Person servers.
+2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. This type of connector would normally be hosted on Live Person servers.
 
 ![JavascriptOverview](img/ConnectorAPI2.png)
 

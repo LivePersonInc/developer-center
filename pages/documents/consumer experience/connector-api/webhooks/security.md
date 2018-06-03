@@ -11,7 +11,7 @@ permalink: webhooks-security.html
 
 ### Protocol and Security
 
-* The WH notifications are sent as (REST) POST requests in the HTTP protocol over SSL only (HTTPS). Therefore, the application endpoint is required to be setup with a valid web-server SSL certificate.
+* The Webhooks (WH) notifications are sent as (REST) POST requests in the HTTP protocol over SSL only (HTTPS). Therefore, the application endpoint is required to be set up with a valid web-server SSL certificate.
 
 * Each WH notification request includes LivePerson standard headers which have the header name prefix of “**x-liveperson-**”.  
 
@@ -21,9 +21,9 @@ permalink: webhooks-security.html
 
 ### Authentication
 
-* Each webhook call will contain the following authentication headers:
+* Each Webhook call will contain the following authentication headers:
 
-  * **x-liveperson-account-id**: The unique LivePerson account identifier. Can be used to differentiate registration of different account, when the same url is used for multiple accounts.
+  * **x-liveperson-account-id**: The unique LivePerson account identifier. Can be used to differentiate registration of different accounts, when the same url is used for multiple accounts.
 
   * **x-liveperson-client-id**: The unique client application identifier. The client_id that the consumer receives from their account manager after the App Installation process.
 

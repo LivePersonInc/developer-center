@@ -13,15 +13,17 @@ permalink: sdes_routing_example.html
 The Connector API provides the ability to set the user engagement attributes (SDEs) upon the creation of a new conversation. This can be used to:
 
   * Set the consumer profile for the agent
+
   * To target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules.
 
 See below a few examples of how to do so.
 
 
 **Note**
-We advise against using this method for conversation targeting/routing. The best practice is to setup campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html){:target="_blank"}.
 
-The supported SDEs for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
+* We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html){:target="_blank"}.
+
+* The supported SDEs for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 **EXAMPLES**
 

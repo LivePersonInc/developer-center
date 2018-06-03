@@ -26,46 +26,45 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 
 **JSON payload**
 
-{% raw %}
 ```json
 [
-  {
-		"kind": "req",
-		"id": "1,",
-		"type": "userprofile.SetUserProfile",
-		"body": {
-			"authenticatedData": {
-				"lp_sdes": [{
-						"type": "ctmrinfo",
-						"info": {
-							"socialId": "1234567890",
-							"ctype": "vip"
-						}
-					},
-					{
-						"type": "personal",
-						"personal": {
-							"firstname": "John",
-							"lastname": "Doe",
-							"gender": "MALE"
-						}
-					}
-				]
-			}
-		}
-	},
-	{
-		"kind": "req",
-		"id": "2,",
-		"type": "cm.ConsumerRequestConversation",
-		"body": {
-			"ttrDefName": "NORMAL",
-			"channelType": "MESSAGING",
-			"brandId": "{accountid}"
-		}
-	}
+   {
+      "kind":"req",
+      "id":"1,",
+      "type":"userprofile.SetUserProfile",
+      "body":{
+         "authenticatedData":{
+            "lp_sdes":[
+               {
+                  "type":"ctmrinfo",
+                  "info":{
+                     "socialId":"1234567890",
+                     "ctype":"vip"
+                  }
+               },
+               {
+                  "type":"personal",
+                  "personal":{
+                     "firstname":"John",
+                     "lastname":"Doe",
+                     "gender":"MALE"
+                  }
+               }
+            ]
+         }
+      }
+   },
+   {
+      "kind":"req",
+      "id":"2,",
+      "type":"cm.ConsumerRequestConversation",
+      "body":{
+         "ttrDefName":"NORMAL",
+         "channelType":"MESSAGING",
+         "brandId":"{accountid}"
+      }
+   }
 ]
 ```
-{% endraw %}
 
 Please refer [here](sendapi-create.html){:target="_blank"} to get details about the payload and its attributes.
