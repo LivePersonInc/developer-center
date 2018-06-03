@@ -31,13 +31,14 @@ The supported SDEs for sending are the [Customer Info](https://developers.livepe
 
 ### Create new conversation and send companyBranch
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-{% raw %}
+**Example Request Body - JSON Payload**
+
 ```json
 [  
    {  
@@ -78,17 +79,16 @@ The supported SDEs for sending are the [Customer Info](https://developers.livepe
    }
 ]
 ```
-{% endraw %}
 
 ### Create new conversation and send ctype/gender
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Json Payload**
+**Example Request Body - JSON Payload**
 
 ```json
 [  

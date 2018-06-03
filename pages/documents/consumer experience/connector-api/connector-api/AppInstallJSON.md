@@ -97,7 +97,7 @@ permalink: AppInstallJSON.html
 }
 ```
 
-|Attribute | Description | Type | Required| Notes|
+| Property | Description | Type | Required| Notes|
 |--- | --- | ---|
 |client_name | Installation name. In most cases, this is the same as the app name. | string| Yes | Unique. Max length: 100|
 |description | App description | stringmax | No| max length: 256|
@@ -108,7 +108,7 @@ permalink: AppInstallJSON.html
 
 #### The Webhooks array
 
-|Attribute | Description | Type |
+| Property | Description | Type |
 |--- | --- | ---|
 |ms.MessagingEventNotification .ContentEvent | Indicates the HTTPS configuration endpoint of your server to receive notifications of type ContentEvent. | webhook |
 |ms.MessagingEventNotification .RichContentEvent |  Indicates the HTTPS configuration endpoint of your server to receive notifications of type RichContentEvent. | webhook |
@@ -118,7 +118,7 @@ permalink: AppInstallJSON.html
 
 #### A specific Webhook object
 
-|Attribute | Description | Type | Required| Notes|
+| Property | Description | Type | Required| Notes|
 |--- | --- | ---|
 |endpoint | The url to send the notification to, including query parameters | string| Yes |Starts by "https://"|
 |max_retries | The max number of retry attempts to send the notification if it fails | integer| No| minimum value: 0, maximum value: 5|
@@ -126,7 +126,7 @@ permalink: AppInstallJSON.html
 
 #### Engagements
 
-|Attribute | Description | Type | Required| Notes|
+| Property | Description | Type | Required| Notes|
 |--- | --- | ---|
 |design_engagement |Toggles the ability to design the engagement window | Boolean. Should be set to false |Yes ||
 |design_window | Toggles the ability to add an engagement window | Boolean. Should be set to false| Yes ||

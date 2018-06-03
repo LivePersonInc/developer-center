@@ -14,15 +14,14 @@ This is an example of how to send a message to LiveEngage to an open conversatio
 
 ### Send a message
 
-**Request**
+**Request URI**
 
-| Method | URL  |
+| Method | URI  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
-**Json payload**
+**Request Body - JSON Payload**
 
-{% raw %}
 ```json
 {  
    "kind":"req",
@@ -38,4 +37,3 @@ This is an example of how to send a message to LiveEngage to an open conversatio
    }
 }
 ```
-{% endraw %}

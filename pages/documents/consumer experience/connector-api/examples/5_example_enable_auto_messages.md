@@ -16,7 +16,7 @@ The following example illustrates how to enable the auto messages feature upon c
 
 ### How to enable AUTO_MESSAGES
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
@@ -28,7 +28,7 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
-**Json payload Example for creating a new conversation**
+**Example Request Body - JSON Payload - Creating a new conversation**
 
 ```json
 [

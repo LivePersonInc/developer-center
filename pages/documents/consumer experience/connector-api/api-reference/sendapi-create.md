@@ -12,7 +12,7 @@ search: exclude
 
 The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows since LiveEngage expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response.
 
-### Request
+### Request URI
 
 | Method | URL  |
 | :--- | :--- |
@@ -24,7 +24,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 | :--- | :--- | :--- |
 | accountid | LivePerson site ID | string |
 
-**Query Parameter**
+**Query Parameters**
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
@@ -37,7 +37,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 | Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
 
-**Body**
+**Request Body**
 
 | Description | Content-Type |
 | :--- | :--- |
@@ -58,7 +58,7 @@ The [SDEs](https://developers.liveperson.com/engagment-attributes-types.html){:t
 The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 
-**Entity Example**
+**Example Request Body - JSON Payload**
 
 ```json
 [{
@@ -111,9 +111,9 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 ]
 ```
 
-#### userprofile.SetUserProfile Attributes
+#### userprofile.SetUserProfile Properties
 
-| Attribute  | Description | Value/Example | Type | Mandatory | Notes |
+| Proerty | Description | Value/Example | Type | Mandatory | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to LiveEngage | "ctmrinfo" / "personal" | string | true |
@@ -125,21 +125,21 @@ The SDEs supported for sending are the [Customer Info](https://developers.livepe
 | lastname | Visitor's surename | "Doe" | string | false |
 | gender |  Visitor's gender | MALE, FEMALE, OTHER | string | false |
 
-#### cm.ConsumerRequestConversation Attributes
+#### cm.ConsumerRequestConversation Properties
 
-| Attribute  | Description | Value/Example | Type | Mandatory | Notes |
+| Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
-| conversationContext | Describes the conversation environment, like where from it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | 'conversationContext' is of type 'SharkContext' and all the attributes passed in this example are part of this conversationContext. See the details in the next table below |
+| conversationContext | Describes the conversation environment, like where from it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | 'conversationContext' is of type 'SharkContext' and all the properties passed in this example are part of this conversationContext. See the details in the next table below |
 | campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | used in conjunction with [campaign for messaging](https://www.liveperson.com/services/technical-support/about-campaigns){:target="_blank"} |
 | campaignId | The campaign ID you wish to target the conversation | "99999" | false |  
 | channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
 | skillId | Skill ID you would like to route the conversation | string | false | use -1 as default to target all skills available |
 
-**conversationContext Attributes**
+**conversationContext Properties**
 
-| Attribute  | Description | Value/Example | Type | Mandatory | **ConversationsContext type** | Notes |
+| Property | Description | Value/Example | Type | Mandatory | **ConversationsContext type** | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | visitorId | Visitor ID set by the Monitoring API | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | SharkContext |
 | sessionId | Session ID set by the Monitoring API | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | SharkContext |

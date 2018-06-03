@@ -12,7 +12,7 @@ search: exclude
 
 The SEND method allows you to send a JSON payload.
 
-### Request
+### Request URI
 
 | Method | URL  |
 | :--- | :--- |
@@ -48,9 +48,8 @@ The SEND method allows you to send a JSON payload.
 
 For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads. This payload would normally have the _ms.PublishEvent_ type or the _cm.UpdateConversationField_ type.
 
-**JSON Example**:
+**Example Request Body - JSON Payload**
 
-{% raw %}
 ```json
 {  
    "kind":"req",
@@ -66,7 +65,6 @@ For the JSON payload, please have a look at the [Messaging Window API](https://d
    }
 }
 ```
-{% endraw %}
 
 **Elements in the payload**
 
@@ -83,11 +81,10 @@ For the JSON payload, please have a look at the [Messaging Window API](https://d
 | 200 | OK |
 
 
-**JSON Example**
+**Entity Example**
 
 HTTP Status Code 200
 
-{% raw %}
 ```json
 {
     "reqId": "1",
@@ -97,4 +94,3 @@ HTTP Status Code 200
     }
 }
 ```
-{% endraw %}
