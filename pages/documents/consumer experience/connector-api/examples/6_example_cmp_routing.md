@@ -14,12 +14,13 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 
 ### Create new conversation and send campaign information
 
-**Request**
+**Request URI**
 
-| Method | URL  |
+| Method | URI  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
+**Example Request Body - JSON Payload**
 
 ```json
 [  

@@ -14,13 +14,13 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 
 ### Close a conversation
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
-**Json payload**
+**Example Request Body - JSON Payload**
 
 ```json
 {  

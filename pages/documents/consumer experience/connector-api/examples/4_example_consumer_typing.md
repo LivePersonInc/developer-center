@@ -17,13 +17,13 @@ In order to send an indication that the consumer is typing, the connector will s
 
 ### Send Chat State Events - "Consumer is typing"
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://\{\{domain\}\}/api/account/\{\{accountid\}\}/messaging/consumer/conversation/send?v=3 |
 
-**Json payload**
+**Example Request Body - JSON Payload**
 
 ```json
 {  

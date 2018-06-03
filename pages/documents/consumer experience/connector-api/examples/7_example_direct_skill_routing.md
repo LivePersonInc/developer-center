@@ -14,11 +14,13 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 ### Create new conversation with skill routing
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+
+**Example Request Body - JSON Payload**
 
 ```json
 [  
@@ -60,8 +62,9 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
    }
 ]
 ```
+**Properties**
 
-| Attribute  | Description | Value/Example | Type | Mandatory | Notes |
+| Property  | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
 | channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |

@@ -33,13 +33,14 @@ See below a few examples of how to do so.
 
 ### Create new conversation and send companyBranch
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-{% raw %}
+**Example Request Body - JSON Payload**
+
 ```json
 [  
    {  
@@ -80,17 +81,16 @@ See below a few examples of how to do so.
    }
 ]
 ```
-{% endraw %}
 
 ### Create new conversation and send ctype/gender
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Json Payload**
+**Example Request Body - JSON Payload**
 
 ```json
 [  

@@ -22,12 +22,12 @@ search: include
 
 An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature):
 
-The **ConsumerJWS** is the unique identifier of the user and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer.
+The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer.
 
-A **ConsumerJWS** can be obtained with the following HTTPS request:
+A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 
 
-| Method | URL  |
+| Method | URI  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/consumer?v=1.0|
 
@@ -39,11 +39,11 @@ A **ConsumerJWS** can be obtained with the following HTTPS request:
 | accountid | LivePerson site ID | string |
 | domain | IDP Hostname | string |
 
-**Json payload**
+**Request Body Example - JSON Payload**
 
 ```json
 {
-	"ext_consumer_id":"{ConsumerID, e.g. random_id0.80668702615}"
+	"ext_consumer_id":"John_Doe_facebook12345"
 }
 ```
 

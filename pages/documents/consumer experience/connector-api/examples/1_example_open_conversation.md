@@ -10,7 +10,7 @@ permalink: create-conversation-example.html
 
 ---
 
-This example illustrates how to create a conversation using the CONVERSATION API endpoint.
+This example illustrates how to create a new conversation using the CONVERSATION API endpoint.
 
 To get an example of the accepted payloads used in this API's methods, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html){:target="_blank"} with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html){:target="_blank"}.
 
@@ -18,13 +18,13 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 
 ### Create a new conversation
 
-**Request**
+**Request URI**
 
-| Method | URL  |
+| Method | URI  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**JSON payload**
+**Request Body - JSON payload**
 
 ```json
 [
@@ -67,4 +67,4 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 ]
 ```
 
-Please refer [here](sendapi-create.html){:target="_blank"} to get details about the payload and its attributes.
+Please refer [here](sendapi-create.html){:target="_blank"} to get details about the payload and its properties.
