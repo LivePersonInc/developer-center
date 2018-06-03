@@ -10,7 +10,7 @@ permalink: sendapi-send.html
 search: exclude
 ---
 
-The SEND method allows you to send a JSON payload.
+The SEND method allows you to send a JSON payload to LiveEngage. This method is used for to publish a message from the consumer to the agent or to close a conversation. The connector can use this method for one action at a time as it is not a batch endpoint as CONVERSATION. This method would normally be used to send a text message, close a conversation, send metadata, set user profile (send SDEs) and send chat-state events (e.g. consumer is typing).
 
 ### Request URI
 

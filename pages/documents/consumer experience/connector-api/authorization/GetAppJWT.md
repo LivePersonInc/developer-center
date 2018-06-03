@@ -3,7 +3,7 @@ title: Get AppJWT
 level1:
 level2: Consumer Experience
 level3: Connector API
-level4: Authorization
+level4: Authorization and Authentication
 order: 4
 indicator: both
 permalink: Create_AppJWT.html
@@ -22,7 +22,7 @@ Before sending any request with the Send API, you must first obtain an **AppJWT*
 
 The **AppJWT** is an access token obtained from **Sentinel**, which is a LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access the LiveEngage platform.
 
-**Note:** An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature). Please see [this page](Create_ConsumerJWS.html) in order to retrieve a ConsumerJWS.
+**Note:** An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature). Please see [this page](Create_ConsumerJWS.html) in order to retrieve a **ConsumerJWS**.
 
 An **AppJWT** can be obtained with the following HTTPS request:
 
@@ -34,19 +34,19 @@ An **AppJWT** can be obtained with the following HTTPS request:
 
 **Path Parameters**
 
-| Name  | Description | Type/Value |
-| :--- | :--- | :--- |
-| accountid | LivePerson site ID | string |
-| domain | Sentinel Hostname | string |
+| Name  | Description | Type/Value | Mandatory |
+| :--- | :--- | :--- | :--- |
+| accountid | LivePerson site ID | string | true |
+| domain | Sentinel Hostname | string | true |
 
 **Query Parameter**
 
-| Name  | Description | Type/Value | Example |
-| :--- | :--- | :--- | --- |
-| v | The API version | numeric | 1.0 |
-| grant_type | authorization grant according to OAuth 2.0 | string | client_credentials |
-| client_id | `Installation id` provided after application registration | string | 75588e18-0213-4e33-8174-883acac7e3c4 |
-| client_secret | `Secret` provided after application registration | string | kgvbkk7glku72jgtmpi6l4a872 |
+| Name  | Description | Type/Value | Example | Mandatory |
+| :--- | :--- | :--- | :--- | :--- |
+| v | The API version | numeric | 1.0 | true |
+| grant_type | authorization grant according to OAuth 2.0. Use only client_credentials for connector API | string | client_credentials | true |
+| client_id | **Installation id** provided after application registration | string | 75588e18-0213-4e33-8174-883acac7e3c4 |true |
+| client_secret | **Secret** provided after application registration | string | kgvbkk7glku72jgtmpi6l4a872 | true |
 
 **Request Headers**
 
