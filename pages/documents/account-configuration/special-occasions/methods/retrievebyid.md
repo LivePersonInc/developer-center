@@ -61,8 +61,8 @@ Get a single special occasion by id
 {
   "id": 2852557012,
   "deleted": false,
-  "name": "so 1",
-  "description": "Description for workdays 1",
+  "name": "special occasion",
+  "description": "Description for special occasion",
   "isDefault": false,
   "events": [
       {
