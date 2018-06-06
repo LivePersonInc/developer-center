@@ -77,9 +77,6 @@ Filters examples:
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
-|coBrowseTypes              | {"start":{"from":1470037448000,"to":1472543048000}, "coBrowseTypes":["inApp"]}|
-|isCoBrowseInteractive            | {"start":{"from":1470037448000,"to":1472543048000}, "isCoBrowseInteractive":true}|
-|coBrowseDuration            | {"start":{"from":1470037448000,"to":1472543048000}, "coBrowseDuration":{"from":0,"to":60}}|
 
 
 ### Response
