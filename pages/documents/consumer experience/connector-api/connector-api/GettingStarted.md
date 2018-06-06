@@ -21,7 +21,8 @@ permalink: connectorapi-getting-started.html
 
 [comment]: <> (guides-retry-policy.html needs to be updated with Connector API as well)
 
-**In order to get started with the Connector API, please follow the steps below:**
+
+**In order to use the Connector API, please follow the steps below:**
 
 1. **Onboard your connector**
 
@@ -42,26 +43,26 @@ permalink: connectorapi-getting-started.html
 
 2. **Getting an application JWT** - After successfully registering your connector, you will be given two important parameter values which will serve to authorize your connector application prior to using the Connector API:
 
+	`Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
 
-`Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
+	`Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
 
-`Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
+	These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**.
 
-These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**.
+	**Request Example**
 
-**Request Example**
+	|https://{domain}/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
 
-https://{Sentinel_Domain}/sentinel/api/account/{SiteID}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret}
-
-Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
-
+	Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
 
 3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in LiveEngage:
 
-**Request Example**
+	**Request Example**
 
-https://{domain}/api/account/{accountid}/consumer?v=1.0|
+	|https://{domain}/api/account/{accountid}/consumer?v=1.0|
 
-Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.
+	Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.
 
 4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html){:target="_blank"} to get started.
+
+	**Note**: The above **AppJWT** and **ConsumerJWS** will be passed in the request headers of every API call to LiveEngage for authorization of the connector and identification of the consumer.
