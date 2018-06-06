@@ -53,14 +53,14 @@ This section contains API details that are common to every API’s resource, met
 <tbody>
   <tr>
     <td>name</td>
-    <td>Workday Object's name</td>
+    <td>Workday/special occasion Object's name</td>
     <td>Yes</td>
     <td>String</td>
     <td>This must be a unique nameMax length: 50</td>
   </tr>
   <tr>
     <td>description</td>
-    <td>Workday Object's description</td>
+    <td>Workday/special occasion Object's description</td>
     <td>Yes</td>
     <td>String</td>
     <td>Max length: 200</td>
@@ -102,17 +102,19 @@ This section contains API details that are common to every API’s resource, met
   </tr>
   <tr>
     <td>recurrence</td>
-    <td>This is mandatory for the workdays object but only one value is supported. A special occasion object will have an empty field, since it does not reoccur.</td>
+    <td>This is mandatory both for workdays and special occasion. Workdays must include single recurrence. Special occasion can include either a single recurrence or an empty list.</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>The pattern for this field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</td>
+    <td><ul><li>Pattern for workdays field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</li>
+        <li>Pattern for special occasion field is: "^(RRULE:FREQ=DAILY;UNTIL=)[0-9]{4}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1]);INTERVAL=1$"</li></ul>
+    </td>
   </tr>
   <tr>
     <td>meta</td>
     <td>Contains meta data important for the special occasions object</td>
     <td>Yes</td>
     <td>Aray</td>
-    <td>This array contains two fields:<ul><li>working. This field indicates whether agents are working during this event (and thus the special occasion is just a change of working hours) or whether agents aren't working (a day off). This field is boolean and required</li><li>name. The name if the special occasion. This field is a string and is required.</li></ul></td>
+    <td>This array contains two fields:<ul><li>working. This field indicates whether agents are working during this event (and thus the special occasion is just a change of working hours) or whether agents aren't working (a day off). This field is boolean and required</li><li>name. The name of the special occasion's event. This field is a string and is required.</li></ul></td>
   </tr>
 </tbody>
 </table>
