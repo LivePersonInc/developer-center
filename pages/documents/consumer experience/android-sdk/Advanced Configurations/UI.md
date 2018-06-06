@@ -16,7 +16,7 @@ To determine the layout of messaging within the app, you can utilize various act
 
 LivePerson callbacks:
 
-```javascript
+```swift
 void onAgentTyping(boolean isTyping);
 void onAgentDetailsChanged(AgentData agentData);
 void onCsatDismissed();
@@ -26,3 +26,5 @@ void onConversationMarkedAsNormal();
 void onOfflineHoursChanges(boolean isOfflineHoursOn);
 void onAgentAvatarTapped(AgentData agentData);
 ```
+
+*Note: For the full list of Callbacks, click [here](android-callbacks-index.html#livepersoncallback){:target="_blank"} for more information.*

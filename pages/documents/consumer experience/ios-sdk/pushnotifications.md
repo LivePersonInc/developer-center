@@ -60,6 +60,12 @@ _**Note: this method pass the Device Token to the SDK, the actual registration o
 
 _**Note: This method is override when using a Custom View for the In-App Notification (LPMessagingSDKNotification(customLocalPushNotificationView)**_
 
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+
+**The proprietary SDK notification is only for the displaying purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+
 ### Configuring Push Notifications
 
 Follow the instructions below to set up your certificate and key file to enable push notifications.

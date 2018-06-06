@@ -67,6 +67,19 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+```swift
+if (self.conversationQuery != nil && self.isMovingToParentViewController){
+  LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+}
+```
+
+**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+
 ### reconnect
 When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
@@ -256,6 +269,12 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
     LPMessagingSDK.instance.handlePush(userInfo)
 }
 ```
+
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+
+**The proprietary SDK notification is only for the displaying purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
 
 ### registerPushNotifications
 

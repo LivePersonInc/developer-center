@@ -23,8 +23,17 @@ For each feature we added a special resource ID in case customizing the date/tim
 We define 3 configurable formatting resources:
 
 - For date only (separator):
-```<string name="lp_date_format"></string>```
+
+```xml
+<string name="lp_date_format"></string>
+```
 - For time only (bubble’s timestamp & off hours time in case of today/tomorrow):
-```<string name="lp_time_format"></string>```
+
+```xml
+<string name="lp_time_format"></string>
+```
 - For date & time together (resolve message & off hours time in case of other date):
-```<string name="lp_date_time_format"></string>```
+
+```xml
+<string name="lp_date_time_format"></string>
+```

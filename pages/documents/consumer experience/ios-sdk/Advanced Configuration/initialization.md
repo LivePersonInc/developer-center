@@ -34,6 +34,11 @@ public func showConversation(conversationQuery: ConversationParamProtocol, authe
 public func removeConversation(conversationQuery: ConversationParamProtocol)
 ```
 
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, example [here](consumer-experience-ios-sdk-messaging-methods.html#removeconversation)
+
 ### Supporting functions:
 
 1. Will get ’filter’ for the conversation screen, determining which of the conversations will be displayed in the Conversation Window
