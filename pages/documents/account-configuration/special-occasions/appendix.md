@@ -102,7 +102,7 @@ This section contains API details that are common to every API’s resource, met
   </tr>
   <tr>
     <td>recurrence</td>
-    <td>This is mandatory both for workdays and special occasion. Workdays must include single recurrence. Special occasion can have either single value or an empty list.</td>
+    <td>This is mandatory both for workdays and special occasion. Workdays must include single recurrence. Special occasion can include either a single recurrence or an empty list.</td>
     <td>Yes</td>
     <td>Array</td>
     <td><ul><li>Pattern for workdays field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</li>
