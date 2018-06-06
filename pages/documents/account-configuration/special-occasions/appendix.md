@@ -103,7 +103,7 @@ This section contains API details that are common to every API’s resource, met
     <td>Yes</td>
     <td>Array</td>
     <td>
-<ul><li>This array receives two possible fields: <ul><li>-dateTime</li><li>-timezone</li></ul>
+<ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed.</li></ul>
 <ul><li>The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</li></ul>
 </td>
