@@ -1233,7 +1233,7 @@ It will affect the following areas:
     <td align="left">Double</td>
     <td align="left">User Input TextView corner radius.</td>
     <td align="left"><img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius"></td>
-    <td align="left">17.0</td>
+    <td align="left">20.0</td>
   </tr>
 </tbody>
 </table>
