@@ -14,7 +14,7 @@ indicator: messaging
 
 In order to get started and initialize the In-App Messaging SDK, utilize the following functions:
 
-1. Initialize the SDK and all of its components, SDK can be initialize with or without a Brand Id.
+1. Initialize the SDK and all of its components, SDK can be initialized with or without a Brand Id.
 
 ```swift
 public func initialize(brandID: String? = nil) throws
