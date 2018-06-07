@@ -10,7 +10,7 @@ permalink: share-image-example.html
 
 ---
 
-### Retrieve your domain
+### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
@@ -118,7 +118,7 @@ Use the following request and the parameters obtained in step 3 (`relativePath`,
 
 **Note**: file expiration is set to 1 minute by default.
 
-**Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="blank"} to retrieve this information by providing the following service name:
+**Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
 	* swift
 
@@ -146,10 +146,10 @@ Once the file is saved in storage, publish the file URL along with an optional c
 
 **Optional thumbnail**
 
-In order to generate a thumbnail you will need to convert your image to base64. The output will the parameter `imageData` below
+In order to generate a thumbnail you need to convert your image to base64. The output will populate the parameter `imageData`.
 
 
-Example message:
+### Publish the file to the conversation - Example
 
 ```json
 {
@@ -172,11 +172,14 @@ Example message:
 }
 ```
 
-### Properties
+#### ms.PublishEvent Properties
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
-| :-- | :--- | :--- | :--- | :--- | :--- |
-| type | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| dialogId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpint](sendapi-create.html#response){:target="_blank"} |
+| type | The messaging event type | ContentEvent | string | true | ContentEvent will be used for sending a text message or a file |
+| contentType | Which content is sent | "hosted/file" | string | true | file is hosted on swing server |
+| message | Array of properties describing the file | {"caption": "File logo", "relativePath": "{relativePath}", "fileType": "JPEG", "preview": "data:image/png;base64,{imageData}"} | Array of file properties | true | **caption** is an optional string, **relative path** is Mandatory (extracted on step 3), **file type** (JPEG,PNG) is Mandatory and **preview** is the base64 data conversion of the file (optional) |
 
 #### Publish response
 
@@ -186,3 +189,53 @@ Example message:
 | :--- | :--- |
 | 200 | Ok | File was sent to the Agent |
 | 400 | Bad Request | Check your file size and that its is not corrupted |
+
+
+### Step 6 Request Download URL
+
+**Request a download url**:
+
+Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
+
+
+Request Body Example:
+
+```json
+{
+	"kind": "req",
+	"id": "3",
+	"body": {
+		"relativePath": "{{relativePath}}"
+	},
+	"type": "ms.GenerateURLForDownloadFile"
+}
+```
+
+In response, you will get the URL details:
+
+```json
+{
+    "code": "OK",
+    "body": {
+        "relativePath": "/v1/AUTH_async-images/64467156/5f3aab9eb95ff60f159cab500e3a83f1aba98a99749c07143fbda2dece70e601_uuid_5c68d4e8-3bde-40ac-86c2-1e5f43089cd4_07-06-2018_09-47-15-947.JPEG",
+        "queryParams": {
+            "temp_url_sig": "384bcb0b188920909d4a068473824e964ecbffcd",
+            "temp_url_expires": "1528379356"
+        }
+    },
+    "reqId": "3"
+}
+```
+
+Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use it in the next request, to download the file.
+
+
+## Step 7 - Download File From Storage
+
+Use the following request to download the file, using the parameters from the previous step.
+
+| Method | URL |
+| :--- | :--- |
+| GET | https://{swiftDomain}/{relativePath}?temp_url_sig={temp_url_sig}&temp_url_expires={temp_url_expires} |
+
+**Note**: file expiration is set to 1 minute by default.

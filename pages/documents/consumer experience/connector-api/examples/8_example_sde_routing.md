@@ -18,7 +18,7 @@ The Connector API provides the ability to set the user engagement attributes (SD
 
 See below a few examples of how to do so.
 
-### Retrieve your domain
+### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
