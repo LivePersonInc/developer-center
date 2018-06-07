@@ -52,7 +52,7 @@ CSAT screen includes several content containers:
 
 - Contains agent avatar:
   - If conversation has assigned agent and its image was downloaded previously using profileUrl, this image will be presented in the view.
-  - If no image available, default avatar is presented. It’s background and tint color is according to agent bubble with **lp_messaging_ui_ic_agent_avatar** and **agent_avatar_background_color**.
+  - If no image available, default avatar is presented. Its background and tint color is according to the agent bubble with **lp_messaging_ui_ic_agent_avatar** and **agent_avatar_background_color**.
 
 More info in [Configuring the SDK](/android-configuring-sdk.html){:target="_blank"}.
 
