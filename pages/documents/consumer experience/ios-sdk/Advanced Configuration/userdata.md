@@ -23,14 +23,14 @@ public func setUserProfile(lpuser: LPUser, brandID: String)
 ```
 
 {:start="2"}
-2. Will return Prevously Assigned Agent, if any
+2. Will return Previously Assigned Agent, if any
 
 ```swift
 public func getAssignedAgent(conversationQuery: ConversationParamProtocol) -> LPUser?
 ```
 
 {:start="3"}
-3. Will be trigger each time the SDK receives info about the agent from the Server.
+3. Will be triggered each time the SDK receives info about the agent from the Server.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentDetails(agent: LPUser?)
