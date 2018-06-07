@@ -127,7 +127,7 @@ $ pod init
 <div style="color:red;font-weight:bold;">
 Important:
 </div>
-**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing >feature is disabled in the SDK.**
+**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator).
 
@@ -709,7 +709,7 @@ $ pod init
 <div style="color:red;font-weight:bold;">
 Important:
 </div>
-**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to  share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing >feature is disabled in the SDK.**
+**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to  share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**
 
