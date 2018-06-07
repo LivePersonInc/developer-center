@@ -14,7 +14,7 @@ indicator: messaging
 
 Following is an example on how to add a plural string resource:
 
-```javascript
+```xml
 <plurals name="lp_ttr_message_hours">
 	<item quantity="one">" %1$s hour"</item>
 	<item quantity="other">" %1$s hours"</item>
