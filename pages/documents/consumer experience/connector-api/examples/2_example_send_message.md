@@ -12,7 +12,7 @@ permalink: send-message-example.html
 
 This is an example of how to send a message to LiveEngage to an open conversation using the SEND API endpoint. The `conversation ID` is required to address the conversation and it is passed in the JSON payload.
 
-### Retrieve your domain
+### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 

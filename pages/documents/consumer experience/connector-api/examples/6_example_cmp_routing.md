@@ -12,7 +12,7 @@ permalink: cmp-routing-example.html
 
 In this example we create a conversation and pass the **Engagement ID** and **Campaign ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.
 
-### Retrieve your domain
+### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 

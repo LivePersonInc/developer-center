@@ -14,7 +14,7 @@ This example illustrates how to send LiveEngage the presence/typing events (chat
 
 In order to send an indication that the consumer is typing, the connector will send a payload of _ms.PublishEvent_ type. The payload body includes an event of _ChatStateEvent_ and we are passing `COMPOSING` as the **chatState** value.
 
-### Retrieve your domain
+### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
