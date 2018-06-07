@@ -14,7 +14,7 @@ indicator: messaging
 
 Pass and display consumer information to agents, and agent information to consumers. See more information about each method [click here for setUserProfile](android-methods.html#setuserprofile){:target="_blank"} and [click here for checkAgentID](android-methods.html#checkagentid){:target="_blank"}
 
-* To set the User Profile (Not a SDE):
+* To set the User Profile (Not an SDE):
 
 ```swift
 public static void setUserProfile(ConsumerProfile profile)
