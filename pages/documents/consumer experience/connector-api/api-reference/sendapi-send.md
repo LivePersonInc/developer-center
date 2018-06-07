@@ -138,6 +138,7 @@ For the JSON payload, please have a look at the [Messaging Window API](https://d
 | status | Acceptance status of the message sent by the Agent to the Consumer | "ACCEPT" | string | true | Possible values: **"ACCEPT"** (message was accepted by the consumer), **"READ"** (message was read by the consumer), **"ACCESS"** (Consumer has accessed the file), **"NACK"** (message not received), **"ACTION"** (used in conjunction with metadata to reply on structured content sent by the Agent) |
 | sequenceList | List of **sequence** values | [2,3] | Array of integers | true | the accept status is sent in regards to the value of the **sequence** key received from the Webhooks event notification of the message sent by the Agent - see [example](webhooks-examples.html#agent-sent-a-text-messages){:target="_blank"}. You can mention more than one sequence number hence the sequence list |   
 
+**Note**: LiveEngage assigns a number to every message. That number controls where that message appears in the sequence. In order to refer to a specific message or group of messages, you need to pass their sequence IDs. For example, if you want to "ACCEPT" the first and second message, you will pass the sequenceList as above.
 
 
 ### Response
