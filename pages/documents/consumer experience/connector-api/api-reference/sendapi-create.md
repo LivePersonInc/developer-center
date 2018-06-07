@@ -12,6 +12,14 @@ search: exclude
 
 The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows, since LiveEngage expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response.
 
+### Retrieve your domain
+
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+
+	* asyncMessagingEnt
+
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
 ### Request URI
 
 | Method | URL  |
@@ -120,9 +128,7 @@ The next request body example illustrates how to create a conversation and sendi
 ]
 ```
 
-The above request is much better as it includes also the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also  be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes_routing_example.html){:target="blank"}. **Note**: Not best practice please avoid this method if possible.
-
-Another way would be to perform direct skill routing by adding the `skillId` to the payload with `type` _cm.ConsumerRequestConversation_. See further information and example in [here](direct_skill_routing_example.html){:target="blank"}.
+The above request is much better as it includes also the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also  be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
 While campaign for messaging is set up you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.

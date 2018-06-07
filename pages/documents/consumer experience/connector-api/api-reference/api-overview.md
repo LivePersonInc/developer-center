@@ -22,7 +22,7 @@ The API consists of two types of calls:
 
 ####  Authentication & Authorization
 
-Refer to the [Getting Started](connectorapi-getting-started.html){:target="blank"} section to see how you can authorize your connector ([AppJWT](Create_AppJWT.html){:target="blank"}) application and authenticate the consumer ([ConsumerJWS](Create_ConsumerJWS.html){:target="blank"}) before you can use the API.
+Refer to the [Getting Started](connectorapi-getting-started.html){:target="blank"} section to see how you can authorize your connector ([AppJWT](Create_AppJWT.html){:target="blank"}) application and identify the consumer ([ConsumerJWS](Create_ConsumerJWS.html){:target="blank"}) before you can use the API.
 
 
 ####  Authorization Tokens expiration times
