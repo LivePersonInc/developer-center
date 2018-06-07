@@ -24,21 +24,21 @@ public func subscribeLogEvents(logLevel: LogLevel)
 ```
 
 {:start="2"}
-2. Will be trigger when the SDK version you're using is obselete and needs an update.
+2. Will be triggered when the SDK version you're using is obselete and needs an update.
 
 ```swift
 <LPMessagingSDKdelegate> func LPMessagingSDKObseleteVersion(error: NSError)
 ```
 
 {:start="3"}
-3. This method returns the SDK curent version.
+3. This method returns the SDK current version.
 
 ```swift
 public func getSDKVersion() -> String?
 ```
 
 {:start="4"}
-4. This method prints all the keys that can be localize on the SDK.
+4. This method prints all the keys that can be localized on the SDK.
 
 ```swift
 public func printAllLocalizedKeys()
