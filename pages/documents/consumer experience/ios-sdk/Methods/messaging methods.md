@@ -40,7 +40,7 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 | authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' paramater only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### showConversation (Deprecated)
-*This method was deprecated since SDK version 2.7.0.*
+*This method is deprecated since SDK version 2.7.0.**
 *Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} instead*
 
 This method is used to open the conversation screen.
@@ -274,7 +274,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 Important:
 </div>
 
-**The proprietary SDK notification is only for the displaying purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
 
 ### registerPushNotifications
 
