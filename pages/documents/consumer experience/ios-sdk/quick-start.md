@@ -218,7 +218,7 @@ do {
 ```
 
 {:start="3"}
-3. Create **LPMonitoringParams**, the entry points and engagement attributes used here are dummies:
+3. Create **LPMonitoringParams**. The entry points and engagement attributes used here are dummies:
 
 ```swift
   let entryPoints = ["tel://972737004000",
@@ -238,7 +238,7 @@ do {
 ```
 
 {:start="4"}
-4. Using the **LPMonitoringParams**, get the Engagement for the User, this is needed to start a new conversation with an specific campaign.
+4. Using the **LPMonitoringParams**, get the Engagement for the User. This is needed to start a new conversation with a specific campaign.
 
 ```swift
  LPMonitoringAPI.instance.getEngagement(consumerID: self.consumerID, monitoringParams: monitoringParams, completion: {
