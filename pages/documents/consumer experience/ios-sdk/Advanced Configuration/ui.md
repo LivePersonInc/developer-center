@@ -14,7 +14,7 @@ indicator: messaging
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, custom buttons, typing indication, etc.
 
-_**Note: this methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode)**_
+_**Note: these methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode)**_
 
 1. This method changes the state of the action menu of the conversation for brandID.
 
@@ -25,7 +25,7 @@ public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
 ```
 
 {:start="2"}
-2. Will be trigger each time the SDK menu is opened/closed.
+2. Will be triggered each time the SDK menu is opened/closed.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKActionsMenuToggled(toggled: Bool)
@@ -39,7 +39,7 @@ public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
 ```
 
 {:start="4"}
-4. Will be trigger if Off-Hours state changed.
+4. Will be triggered if Off-Hours state changed.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
