@@ -427,7 +427,7 @@ LivepersonMonitoring.getEngagement(context, consumerID, params, new EngagementCa
 ```
 
 {:start="4"}
-4. Set up the ConversationViewParams with the Campaing Information.
+4. Set up the ConversationViewParams with the Campaign Information.
 
 ```swift
 // Create new ConversationViewParams
