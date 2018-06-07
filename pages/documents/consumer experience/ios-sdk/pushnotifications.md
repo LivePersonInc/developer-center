@@ -64,7 +64,7 @@ _**Note: This method is override when using a Custom View for the In-App Notific
 Important:
 </div>
 
-**The proprietary SDK notification is only for the displaying purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
 
 ### Configuring Push Notifications
 
