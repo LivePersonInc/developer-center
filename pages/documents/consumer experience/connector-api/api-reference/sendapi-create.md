@@ -128,7 +128,7 @@ The next request body example illustrates how to create a conversation and sendi
 ]
 ```
 
-The above request is much better as it includes also the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also  be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
 While campaign for messaging is set up you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.
