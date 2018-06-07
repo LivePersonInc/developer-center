@@ -350,7 +350,7 @@ LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, a
 ```
 
 {:start="2"}
-2. Create **MonitoringParams**, the entry points and engagement attributes used here are dummies:
+2. Create **MonitoringParams**. The entry points and engagement attributes used here are dummies:
 
 ```swift
 // Create Entry Points JSON
@@ -382,7 +382,7 @@ MonitoringParams params = new MonitoringParams(null, entryPoints, engagementAttr
 ```
 
 {:start="3"}
-3. Using the **LivepersonMonitoring**, get the Engagement for the User, this is needed to start a new conversation with an specific campaign, this call will use the MonitoringParams created on the previous step.
+3. Using the **LivepersonMonitoring**, get the Engagement for the User. This is needed to start a new conversation with a specific campaign, this call will use the MonitoringParams created on the previous step.
 
 ```swift
 // Get Engagement
