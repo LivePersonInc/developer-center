@@ -28,7 +28,7 @@ public func showConversation(conversationQuery: ConversationParamProtocol, authe
 ```
 
 {:start="3"}
-3. Will remove the Conversation Windown from the ViewController, if using Window mode, this will remove the ConversationViewController from the Screen, when in ViewController mode, the host ViewController needs to be dismissed.
+3. The below will remove the Conversation Windown from the ViewController. If using Window mode, this will remove the ConversationViewController from the Screen. When in ViewController mode, the host ViewController needs to be dismissed.
 
 ```swift
 public func removeConversation(conversationQuery: ConversationParamProtocol)
