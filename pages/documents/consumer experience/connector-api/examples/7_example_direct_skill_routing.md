@@ -1,6 +1,6 @@
 ---
 title: Direct skill routing
-level1:
+level1: Documents
 level2:
 level3:
 level4:
