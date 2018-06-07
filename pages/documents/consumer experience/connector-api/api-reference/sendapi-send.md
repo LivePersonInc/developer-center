@@ -77,7 +77,7 @@ For the JSON payload, please have a look at the [Messaging Window API](https://d
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| dialogId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpint](sendapi-create.html#response){:target="_blank"} |
+| dialogId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response){:target="_blank"} |
 | type | The messaging event type | ContentEvent | string | true | ContentEvent will be used for sending a text message or a file |
 | contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](share-image-example.html){:target="_blank"} for more details. |
 | message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](share-image-example.html){:target="_blank"} for more details. |
