@@ -16,6 +16,14 @@ To get an example of the accepted payloads used in this API's methods, please ha
 
 This API endpoint expects a set of JSON payloads, each representing a different type of request to LiveEngage messaging service. The order of the payloads is important in order to create a new conversation. First, the payload with the `type` _userprofile.SetUserProfile_ appears, second the payload with the `type` _cm.ConsumerRequestConversation_ appears.
 
+### Retrieve your domain
+
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+
+	* asyncMessagingEnt
+
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+
 ### Create a new conversation
 
 **Request URI**
@@ -23,6 +31,13 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 | Method | URI  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+
+**Request Headers**
+
+| Header | Description |
+| :--- | :--- |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
 
 **Request Body - JSON payload**
 
