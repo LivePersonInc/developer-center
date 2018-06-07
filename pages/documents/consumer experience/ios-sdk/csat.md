@@ -59,7 +59,7 @@ LPConfig.defaultConfiguration.csatAgentViewHidden
 
 - Contains agent avatar:
 	- If conversation has assigned agent and its image was downloaded previously using profileUrl, this image will be presented in the view.
-	- If no image available, default avatar is presented. It’s background and tint color can be set accordingly to agent bubble using:
+	- If no image available, default avatar is presented. Its background and tint color can be set accordingly to agent bubble using:
 
 ```swift
 LPConfig.defaultConfiguration.csatAgentAvatarBackgroundColor
