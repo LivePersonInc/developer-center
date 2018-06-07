@@ -40,7 +40,7 @@ public class MyFirebase extends FirebaseMessagingService {
 Important:
 </div>
 
-**The proprietary SDK notification is only for the displaying purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.**
+**The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification, the host app needs to provide the implementation.**
 
 ### Configuring Push Notifications
 
