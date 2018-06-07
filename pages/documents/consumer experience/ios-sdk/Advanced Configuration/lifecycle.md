@@ -68,7 +68,7 @@ public func logout()
 ```
 
 {:start="8"}
-8. This method is typically used stop and clear all the metadata of the SDK
+8. This method is typically used to stop and clear all the metadata of the SDK
 
 ```swift
 public func destruct()
@@ -76,42 +76,42 @@ public func destruct()
 
 ### Delegates
 
-1. Will be trigger when the customer satisfaction survey is dismissed after the user has submitted the survey
+1. Will be triggered when the customer satisfaction survey is dismissed after the user has submitted the survey
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationCSATDismissedOnSubmittion(conversationID: String?)
 ```
 
 {:start="2"}
-2. Will be trigger after the customer satisfaction page is submitted with a score.
+2. Will be triggered after the customer satisfaction page is submitted with a score.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKCSATScoreSubmissionDidFinish(brandID: String, rating: Int)
 ```
 
 {:start="3"}
-3. Will be trigger when a new conversation has started, from the agent or from the consumer side.
+3. Will be triggered when a new conversation has started, from the agent or from the consumer side.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationStarted(conversationID: String?)
 ```
 
 {:start="4"}
-4. Will be trigger when a conversation has ended, from the agent or from the consumer side.
+4. Will be triggered when a conversation has ended, from the agent or from the consumer side.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationEnded(_ conversationID: String?, closeReason: LPConversationCloseReason)
 ```
 
 {:start="5"}
-5. Will be trigger when the conversation view controller removed from its container view controller or window.
+5. Will be triggered when the conversation view controller removed from its container view controller or window.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationViewControllerDidDismiss()
 ```
 
 {:start="6"}
-6. Will be trigger each time the agent typing state changes.
+6. Will be triggered each time the agent typing state changes.
 
 ```swift
 <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentIsTypingStateChanged(isTyping: Bool)
