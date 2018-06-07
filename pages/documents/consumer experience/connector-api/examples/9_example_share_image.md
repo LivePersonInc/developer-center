@@ -45,7 +45,7 @@ Below, we will examine and explain each stage in detail.
 
 ### Step 1 - Enable File Sharing
 
-In order to enable file sharing on your account, you should first enable the feature itself. run the following commands, inserting the account admin username and admin password instead of the placeholders below:
+In order to enable file sharing on your account, you should first enable the feature itself. Run the following commands, inserting the account admin username and admin password instead of the placeholders below:
 
 ```sh
 LP_USER= ADMIN_USERNAME

@@ -12,7 +12,7 @@ search: exclude
 
 The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows, since LiveEngage expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response.
 
-### Getting Started
+### Retrieve your domain
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
@@ -128,14 +128,14 @@ The next request body example illustrates how to create a conversation and sendi
 ]
 ```
 
-The above request is much better as it includes also the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also  be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="_blank"}. **Note**: Not best practice please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
 While campaign for messaging is set up you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.
 
-In order to get the value of those properties first you need to utilize another API which is called [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"}. In short, this API allows you to send LiveEngage the user information (client properties, consumer ID and SDEs) and in return get the sessionId, visitorId, campaignId, engagementId and more. Read further on the [Monitoring API Documentation](rt-interactions-monitoring-overview.html){:target="_blank"}.
+In order to get the value of those properties first you need to utilize another API which is called [Monitoring API](rt-interactions-monitoring-overview.html){:target="blank"}. In short, this API allows you to send LiveEngage the user information (client properties, consumer ID and SDEs) and in return get the sessionId, visitorId, campaignId, engagementId and more. Read further on the [Monitoring API Documentation](rt-interactions-monitoring-overview.html){:target="blank"}.
 
-Now the connector can use the [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"} related properties we got in the Monitoring API endpoint (Engagement) response body in the request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
+Now the connector can use the [Monitoring API](rt-interactions-monitoring-overview.html){:target="blank"} related properties we got in the Monitoring API endpoint (Engagement) response body in the request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
 
 **Example Request Body - JSON Payload**
 
@@ -184,7 +184,7 @@ Now the connector can use the [Monitoring API](rt-interactions-monitoring-overvi
      },
       "channelType": "MESSAGING",
       "brandId": "{accountid}",
-      "skillId": "-1"
+      "skillId": "2736637412"
     }
   }
 ]
@@ -214,15 +214,15 @@ Now the connector can use the [Monitoring API](rt-interactions-monitoring-overvi
 | campaignId | The campaign ID you wish to use when targeting the conversation | "99999" | false |  
 | channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
-| skillId | Skill ID you would like to route the conversation to | string | false | use -1 as default to target all skills available. We don't recommend to route according skills instead we recommend routing using campaigns for messaging by sending the SDEs |
+| skillId | Skill ID you would like to route the conversation to | string | false | use -1 as default to target all skills available |
 
 **conversationContext Properties**
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitorId | Visitor ID set by the [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"} | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device |
-| sessionId | Session ID set by the [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"} | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device |
-| interactionContextId | contextId set by the [Monitoring API](/rt-interactions-monitoring-overview.html){:target="_blank"} | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples){:target="_blank"}
+| visitorId | Visitor ID set by the [Monitoring API](rt-interactions-monitoring-overview.html){:target="blank"} | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device |
+| sessionId | Session ID set by the [Monitoring API](rt-interactions-monitoring-overview.html){:target="blank"} | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device |
+| interactionContextId | contextId set by the [Monitoring API](/rt-interactions-monitoring-overview.html){:target="blank"} | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples){:target="blank"}
 | type | Type of conversationContext | "SharkContext" | string | false | Always use "SharkContext" when using Monitoring API properties |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | string | false | Check first if the language used here is configured for the engagement in the LE UI |
 
