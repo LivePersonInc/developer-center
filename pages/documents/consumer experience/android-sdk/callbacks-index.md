@@ -14,7 +14,7 @@ indicator: messaging
 
 The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. This section details each callback.
 
-_**Note:** There are 2 ways to register to LivePerson events. to read more about it click [here](android-callbacks-interface.html)._
+_**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](android-callbacks-interface.html)._
 
 ### LivePersonIntents
 Definition:  
