@@ -15,7 +15,7 @@ indicator: messaging
 
 
 
-**Note:** Monitoring API is enabled only when the SDK is initialized with [MonitoringInitParams](android-interface-definitions.html){:target="_blank"}, for how initialize the SDK with MonitoringParams, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}.
+**Note:** Monitoring API is enabled only when the SDK is initialized with [MonitoringInitParams](android-interface-definitions.html){:target="_blank"}, for how to initialize the SDK with MonitoringParams, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}.
 
 ### sendSde
 
