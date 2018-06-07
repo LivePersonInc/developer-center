@@ -48,7 +48,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-To register BroadcastReceiver for a specific set of Intents, used this example:
+To register BroadcastReceiver for a specific set of Intents, use this example:
 
 ```swift
 IntentFilter filter = new IntentFilter();
