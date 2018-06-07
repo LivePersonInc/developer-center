@@ -14,7 +14,7 @@ indicator: messaging
 
 The SDK allows you to customize the look and feel of the conversation screen with your branding.xml file. In order to do so, you need to create, under the values folder, a new resource file called branding.xml.
 
-* Create new Values XML file:
+* Create a new Values XML file:
 
 <img src="img/android_create_branding_file.png" alt="Branding the SDK step 1" style="max-width:500px;max-height:700px;margin-left:4em;">
 
