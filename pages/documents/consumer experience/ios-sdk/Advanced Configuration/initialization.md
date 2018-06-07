@@ -21,7 +21,7 @@ public func initialize(brandID: String? = nil) throws
 ```
 
 {:start="2"}
-2. Will show the Conversation Window, if no ContainerViewController is passed, the SDK will provide a ViewController, this is called Window Mode, if one is passed, the SDK will use it to Host the Conversation Window, this is called ViewController Mode.
+2. The ContainerViewController paramater will show the Conversation Window. If no ContainerViewController is passed, the SDK will provide a ViewController. This is called Window Mode. If ContainerViewController is passed, the SDK will use it to Host the Conversation Window. This is called ViewController Mode.
 
 ```swift
 public func showConversation(conversationQuery: ConversationParamProtocol, authenticationCode: String? = nil, containerViewController: UIViewController? = nil)
