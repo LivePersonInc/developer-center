@@ -61,7 +61,7 @@ public func clearHistory(conversationQuery: ConversationParamProtocol) throws
 _**Note: clear history is allowed only if there is no open/active conversation**_
 
 {:start="7"}
-7. This methode will logout Current User from LPMessagingSDK
+7. This method will logout Current User from LPMessagingSDK
 
 ```swift
 public func logout()
