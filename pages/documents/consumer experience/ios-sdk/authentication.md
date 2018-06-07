@@ -23,14 +23,14 @@ public func reconnect(conversationQuery: ConversationParamProtocol, authenticati
 
 ### Delegates
 
-1. Will be trigger when authentication process fails
+1. Will be triggered when authentication process fails
 
 ```swift
 <LPMessagingSDKdelegate> func LPMessagingSDKAuthenticationFailed(error: NSError)
 ```
 
 {:start="2"}
-2. Will be trigger when the token which used for authentication is expired
+2. Will be triggered when the token which used for authentication is expired
 
 ```swift
 <LPMessagingSDKdelegate> func LPMessagingSDKTokenExpired(brandID: String)
