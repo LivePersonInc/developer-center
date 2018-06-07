@@ -22,7 +22,6 @@ During the course of the conversation, consumers can take several actions such a
 
 ```swift
 public func checkActiveConversation(conversationQuery: ConversationParamProtocol) -> Bool
-```
 
 {:start="2"}
 2. This method marks the current conversation as Urgent.
@@ -46,7 +45,7 @@ public func dismissUrgent(conversationQuery: ConversationParamProtocol)
 ```
 
 {:start="5"}
-5. This method resolve the current conversation.
+5. This method resolves the current conversation.
 
 ```swift
 public func resolveConversation(conversationQuery: ConversationParamProtocol)
