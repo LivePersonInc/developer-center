@@ -47,7 +47,7 @@ Once initialization is completed (**onInitSucceed**), you can call LivePerson me
 
 The SDK supports two operation modes:
 
-* Activity,
+* Activity.
 
 * Fragment.
 
