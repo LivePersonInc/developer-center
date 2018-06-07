@@ -27,7 +27,7 @@ You can find all the related configurations in the [resources ID table](consumer
 - *App Privacy settings are needed:*
     - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS",
     - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"
-    - **Important:** Values for this descriptions are up to the brand to define, this are only examples.
+    - **Important:** Values for these descriptions are up to the brand to define, these are only examples.
 <div style="color:red;font-weight:bold;">
 Important:
 </div>
