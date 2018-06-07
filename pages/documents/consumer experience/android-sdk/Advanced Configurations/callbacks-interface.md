@@ -37,7 +37,7 @@ _**Note:  For full list of all possible Intents click [here](android-callbacks-i
 
 To easily register to all the intent Actions, we provide an IntentFilter that already contains them all in **LivePersonIntents.getIntentFilterForAllEvents()**.
 
-_**Note: Those Intent are local only and must by registered via LocalBroadcastManager.**_
+_**Note: These Intents are local only and must by registered via LocalBroadcastManager.**_
 
 To register BroadcastReceiver for all Intents, use this code::
 
