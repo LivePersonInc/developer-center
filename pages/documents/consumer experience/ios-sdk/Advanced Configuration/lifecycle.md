@@ -32,7 +32,7 @@ public func markAsUrgent(conversationQuery: ConversationParamProtocol)
 ```
 
 {:start="3"}
-3. This method checks if the current conversation is mark as Urgent.
+3. This method checks if the current conversation is marked as Urgent.
 
 ```swift
 public func isUrgent(conversationQuery: ConversationParamProtocol) -> Bool
