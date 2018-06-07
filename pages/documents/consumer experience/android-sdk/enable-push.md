@@ -13,7 +13,7 @@ indicator: messaging
 
 Push and local notifications are a key factor that make the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
-*Note: In order to enable push notifications, you must also configure them within the LiveEngage UI. See instructions below.
+_**Note:** In order to enable push notifications, you must also configure them within the LiveEngage UI. See instructions below._
 
 To implement push notifications on the client side:
 
@@ -22,23 +22,27 @@ To implement push notifications on the client side:
 - Upon receiving a push message to your app, [handle](android-handlepush.html){:target="_blank"} it so it is displayed to the customer.
 
 
-```javascript
+```swift
 public class MyFirebase extends FirebaseMessagingService {
   /**
    * Called when message is received.
-   *
    * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
    */
   @Override
   public void onMessageReceived(RemoteMessage remoteMessage) {
-
-     // Sends the message into the SDK
-     LivePerson.handlePushMessage(this, remoteMessage.getData(), lpAccount, true);
+    // Sends the message into the SDK
+    LivePerson.handlePushMessage(this, remoteMessage.getData(), lpAccount, true);
   }
 }
 ```
 
-### Configuring Push Notifcations
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+
+**The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification, the host app needs to provide the implementation.**
+
+### Configuring Push Notifications
 
 Follow the instructions below to set up your app key to enable push notifications.
 

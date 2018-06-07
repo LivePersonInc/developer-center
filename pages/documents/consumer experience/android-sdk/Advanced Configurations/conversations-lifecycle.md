@@ -16,7 +16,7 @@ During the course of the conversation, consumers can take several actions such a
 
 LivePerson API:
 
-```javascript
+```swift
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
 public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Exception> callback)
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
@@ -26,14 +26,14 @@ public static void resolveConversation()
 public static boolean clearHistory()
 ```
 
-*Note: Click here for more information.*
+*Note: Click [here](android-methods.html){:target="_blank"} for more information.*
 
 Also via Callbacks:
 
-```javascript
+```swift
 void onConversationStarted(LPConversationData convData);
 void onConversationResolved(LPConversationData convData);
 void onConnectionChanged(boolean isConnected);
 ```
 
-*Note: Click [here](android-methods.html){:target="_blank"} for more information.*
+*Note: Click [here](android-callbacks-index.html#livepersoncallback){:target="_blank"} for more information.*

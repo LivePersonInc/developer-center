@@ -14,116 +14,106 @@ indicator: messaging
 
 The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. This section details each callback.
 
-_Note: There are 2 ways to register to LivePerson events. to read more about it click [here](android-callbacks-interface.html)._
+_**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](android-callbacks-interface.html)._
 
 ### LivePersonIntents
 Definition:  
 
-```javascript  
-
+```swift
 public interface ILivePersonIntentAction{  
 
-      String LP_ON_ERROR_INTENT_ACTION = "LP_ON_ERROR_INTENT_ACTION";  
+  String LP_ON_ERROR_INTENT_ACTION = "LP_ON_ERROR_INTENT_ACTION";
 
-      String LP_ON_TOKEN_EXPIRED_INTENT_ACTION = "LP_ON_TOKEN_EXPIRED_INTENT_ACTION";  
+  String LP_ON_TOKEN_EXPIRED_INTENT_ACTION = "LP_ON_TOKEN_EXPIRED_INTENT_ACTION";
 
-      String LP_ON_CONVERSATION_STARTED_INTENT_ACTION = "LP_ON_CONVERSATION_STARTED_INTENT_ACTION";  
+  String LP_ON_CONVERSATION_STARTED_INTENT_ACTION = "LP_ON_CONVERSATION_STARTED_INTENT_ACTION";
 
-      String LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION = "LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION";  
+  String LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION = "LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION";
 
-      String LP_ON_CONNECTION_CHANGED_INTENT_ACTION = "LP_ON_CONNECTION_CHANGED_INTENT_ACTION";  
+  String LP_ON_CONNECTION_CHANGED_INTENT_ACTION = "LP_ON_CONNECTION_CHANGED_INTENT_ACTION";
 
-      String LP_ON_AGENT_TYPING_INTENT_ACTION = "LP_ON_AGENT_TYPING_INTENT_ACTION";  
+  String LP_ON_AGENT_TYPING_INTENT_ACTION = "LP_ON_AGENT_TYPING_INTENT_ACTION";
 
-      String LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION = "LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION";  
+  String LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION = "LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION";
 
-      String LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION = "LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION";  
+  String LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION = "LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION";
 
-      String LP_ON_CSAT_LAUNCHED_INTENT_ACTION = "LP_ON_CSAT_LAUNCHED_INTENT_ACTION";  
+  String LP_ON_CSAT_LAUNCHED_INTENT_ACTION = "LP_ON_CSAT_LAUNCHED_INTENT_ACTION";
 
-      String LP_ON_CSAT_DISMISSED_INTENT_ACTION = "LP_ON_CSAT_DISMISSED_INTENT_ACTION";  
+  String LP_ON_CSAT_DISMISSED_INTENT_ACTION = "LP_ON_CSAT_DISMISSED_INTENT_ACTION";
 
-      String LP_ON_CSAT_SUBMITTED_INTENT_ACTION = "LP_ON_CSAT_SUBMITTED_INTENT_ACTION";  
+  String LP_ON_CSAT_SUBMITTED_INTENT_ACTION = "LP_ON_CSAT_SUBMITTED_INTENT_ACTION";
 
-      String LP_ON_CSAT_SKIPPED_INTENT_ACTION = "LP_ON_CSAT_SKIPPED_INTENT_ACTION";  
+  String LP_ON_CSAT_SKIPPED_INTENT_ACTION = "LP_ON_CSAT_SKIPPED_INTENT_ACTION";
 
-      String LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION";  
+  String LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION";
 
-      String LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION";  
+  String LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION";
 
-      String LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION = "LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION";  
+  String LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION = "LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION";
 
-      String LP_ON_USER_DENIED_PERMISSION = "LP_ON_USER_DENIED_PERMISSION";  
+  String LP_ON_USER_DENIED_PERMISSION = "LP_ON_USER_DENIED_PERMISSION";
 
-      String LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION = "LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION";  
+  String LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION = "LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION";
 
-      String LP_ON_STRUCTURED_CONTENT_LINK_CLICKED = "LP_ON_STRUCTURED_CONTENT_LINK_CLICKED";  
-
-  }  
-
+  String LP_ON_STRUCTURED_CONTENT_LINK_CLICKED = "LP_ON_STRUCTURED_CONTENT_LINK_CLICKED";
+}
 ```
 
 Intent parameters:
 
-```javascript  
+```swift
+public interface ILivePersonIntentExtras{
 
+  String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";
 
-  public interface ILivePersonIntentExtras{  
+  String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";
 
-      String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";  
+  String LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA = "LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA";
 
-      String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";  
+  String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";
 
-      String LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA = "LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA";  
+  String LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA = "LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA";
 
-      String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";  
+  String LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA = "LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA";
 
-      String LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA = "LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA";  
+  String LP_CONVERSATION_ID_INTENT_STRING_EXTRA = "LP_CONVERSATION_ID_INTENT_STRING_EXTRA";
 
-      String LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA = "LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA";  
+  String LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA = "LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA";
 
-      String LP_CONVERSATION_ID_INTENT_STRING_EXTRA = "LP_CONVERSATION_ID_INTENT_STRING_EXTRA";  
+  String LP_PERMISSION_TYPE_EXTRA = "LP_PERMISSION_TYPE_EXTRA";
 
-      String LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA = "LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA";  
+  String LP_PERMISSION_DO_NOT_SHOW_AGAIN_EXTRA = "LP_PERMISSION_DO_NOT_SHOW_AGAIN_EXTRA";
 
-      String LP_PERMISSION_TYPE_EXTRA = "LP_PERMISSION_TYPE_EXTRA";  
-
-      String LP_PERMISSION_DO_NOT_SHOW_AGAIN_EXTRA = "LP_PERMISSION_DO_NOT_SHOW_AGAIN_EXTRA";  
-
-      String LP_LINK_URI_EXTRA = "LP_LINK_URI_EXTRA";  
-
-  }  
-
-
+  String LP_LINK_URI_EXTRA = "LP_LINK_URI_EXTRA";
+}
 ```
 
 ### LivePersonCallback
 
 Definition:
 
-```javascript
-{
-    public interface LivePersonCallback{
-
-    void onError(TaskType type, String message);
-    void onTokenExpired();
-    void onConversationStarted(LPConversationData convData);
-    void onConversationResolved(LPConversationData convData);
-    void onConversationResolved();
-    void onConnectionChanged(boolean isConnected);
-    void onAgentTyping(boolean isTyping);
-    void onAgentDetailsChanged(AgentData agentData);
-    void onCsatLaunched();
-    void onCsatDismissed();
-    void onCsatSubmitted(String conversationId);
-    void onCsatSkipped();
-    void onConversationMarkedAsUrgent();
-    void onConversationMarkedAsNormal();
-    void onOfflineHoursChanges(boolean isOfflineHoursOn);
-    void onAgentAvatarTapped(AgentData agentData);  
-    void onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);  
-    void onUserActionOnPreventedPermission(PermissionType permissionType);
-    void onStructuredContentLinkClicked(String uri);
+```swift
+public interface LivePersonCallback{
+  void onError(TaskType type, String message);
+  void onTokenExpired();
+  void onConversationStarted(LPConversationData convData);
+  void onConversationResolved(LPConversationData convData);
+  void onConversationResolved();
+  void onConnectionChanged(boolean isConnected);
+  void onAgentTyping(boolean isTyping);
+  void onAgentDetailsChanged(AgentData agentData);
+  void onCsatLaunched();
+  void onCsatDismissed();
+  void onCsatSubmitted(String conversationId);
+  void onCsatSkipped();
+  void onConversationMarkedAsUrgent();
+  void onConversationMarkedAsNormal();
+  void onOfflineHoursChanges(boolean isOfflineHoursOn);
+  void onAgentAvatarTapped(AgentData agentData);
+  void onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);
+  void onUserActionOnPreventedPermission(PermissionType permissionType);
+  void onStructuredContentLinkClicked(String uri);
 }
 ```
 
@@ -145,12 +135,12 @@ __Callback:__ onError(TaskType type, String message) method.
 
 ###  TaskType enum:
 
-```javascript
+```swift
 enum TaskType {
-   CSDS,
-   IDP,
-   VERSION,
-   OPEN_SOCKET
+  CSDS,
+  IDP,
+  VERSION,
+  OPEN_SOCKET
 }
 ```
 
@@ -163,7 +153,7 @@ enum TaskType {
 
 ###  Token Expired
 
-Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-reconnect.html){:target="_blank"} with a new authentication key.
+Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-methods.html#reconnect){:target="_blank"} with a new authentication key.
 
 __Intent Action:__ ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION.
 
@@ -207,7 +197,7 @@ Called when the user taps on the agent avatar.
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode)
 
 Parameters:      
-agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html){:target="_blank"}
+agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html#agentdata){:target="_blank"}
 
 __Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION.  
 
@@ -311,7 +301,7 @@ __Callback:__ onOfflineHoursChanges(boolean isOfflineHoursOn) method.
 
 Called when a structured content control with Link action is clicked.  
 
-Note: this callback is called only if the [structured_content_link_as_callback](android-attributes.html){:target="_blank"} parameter in the branding.xml is set to true.
+Note: this callback is called only if the [structured_content_link_as_callback](android-attributes.html#structured-content){:target="_blank"} parameter in the branding.xml is set to true.
 
 Parameters:  
 uri - The URI of the link  
@@ -324,11 +314,12 @@ __Callback:__ onStructuredContentLinkClicked(String uri) method.
 
 ###  User Denied Permission
 
-Called if the required system permission was denied by the user. For example, when the user clicks on the camera/gallery button to add an image, the permission system dialog was displayed and the user denied the permission. If the user denied the permission and in addition marked the "Never ask again" checkbox, the _doNotShowAgainMarked_ parameter is _true_.
+Called if the required system permission was denied by the user. For example, when the user clicks on the camera/gallery button to add an image, the permission system dialog was displayed and the user denied the permission. **If the user denied the permission and in addition marked the "Never ask again" checkbox, the _doNotShowAgainMarked_ parameter is _true_.**
 
 Parameters:  
-permissionType - The permission type from the [PermissionType](android-interface-definitions.html){:target="_blank"} enum.  
-doNotShowAgainMarked - _true_ if the user checked the "Never ask again" checkbox, _false_ if not.  
+permissionType - The permission type from the [PermissionType](android-interface-definitions.html#permissiontype){:target="_blank"} enum.
+
+**Note: doNotShowAgainMarked - _true_ if the user checked the "Never ask again" checkbox, _false_ if not.**
 
 Note: this callback is relevant to Android 6.0 and above
 
@@ -346,7 +337,7 @@ the user clicks on the camera/gallery buttons to add an image, this callback wil
 If the user already allowed the permission, this callback will not be called.
 
 Parameters:  
-permissionType - The permission type from the [PermissionType](android-interface-definitions.html){:target="_blank"} enum.
+permissionType - The permission type from the [PermissionType](android-interface-definitions.html#permissiontype){:target="_blank"} enum.
 
 Note: this callback is relevant to Android 6.0 and above
 
