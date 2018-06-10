@@ -28,9 +28,8 @@ v   | version of the API (1 or 2)                    | string     | Optional | d
 
 **BODY/POST Parameters**
 
-## Note
-
-New capability: The API now allows you to retrive some of content, per your need. This is done by calling the API with contentToretrive parameter and specifiy the types of content you would like to get in the response.
+#### Note: New capability - partial retrieval of data
+The API now allows you to retrive some of content, per your need. This is done by calling the API with contentToretrive parameter and specifiy the types of content you would like to get in the response.
 The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes
 
 Filter is sent in the POST data (body) with the following JSON structure.
