@@ -15,7 +15,7 @@ permalink: connectorapioverview.html
 The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, LINE, Skype and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.
 
 
-A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](sendapi-send.html). The connector can also open and close conversations and transmit the first message upon creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using WebHooks notifications (for example, if the agent is typing, etc.).
+A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-overview.html). The connector can also open and close conversations and transmit the first message upon creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using WebHooks notifications (for example, if the agent is typing, etc.).
 
 **Why do we need the Connector API?**
 
@@ -35,15 +35,17 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 #### On the **consumer** side:
 
-* Create Conversation and send SDEs in one step.
+* Create a new conversation and send SDEs in one step.
 
-* Send Text Messages
+* Send text messages
 
-* Send Images
+* Send images
 
 * See SENT, READ and RECEIVED indications
 
-* Send Chat State Events (COMPOSING, ACTIVE, INACTIVE etc.)
+* Send chat state events (COMPOSING(i.e. Consumer is typing), ACTIVE, INACTIVE etc.)
+
+* Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid){:target="_blank"}
 
 * Close conversation
 
@@ -57,7 +59,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 * Send a text message
 
-* Send structured content
+* Send [structured content](structured-content-templates.html){:target="_blank"}
 
 * See SENT, READ and RECEIVED indications
 
