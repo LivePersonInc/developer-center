@@ -3,7 +3,7 @@ title: Quick Start
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 
 order: 1
 permalink: consumer-experience-ios-sdk-quick-start.html
@@ -11,13 +11,13 @@ permalink: consumer-experience-ios-sdk-quick-start.html
 indicator: messaging
 ---
 
-The LivePerson SDK provides brands with a simple, yet enterprise-grade and secure in-app messaging solution. Through in-app messaging, brands will foster connections with their customers and increase app engagement and retention.
+The LivePerson SDK provides brands with a simple, yet enterprise-grade and secure Mobile App Messaging solution. Through Mobile App Messaging, brands will foster connections with their customers and increase app engagement and retention.
 
 This Quick Start will quickly get you up and running with a project powered by LivePerson. When you're done, you'll be able to send messages between an iOS device and LiveEngage. To complete this Quick Start, you will need a LiveEngage account. You can get the number and login information from the LivePerson account team.
 
 ### Prerequisites
 
-To use the LivePerson In-App Messaging SDK, the following are required:
+To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 #### Version 3.1.1 and above
 * XCode 9.3 or later
@@ -31,7 +31,7 @@ To use the LivePerson In-App Messaging SDK, the following are required:
 _Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"}._
 
 ### Step 1: Installing the SDK into your project
-LiveEngage In-App Messaging SDK for iOS supports multiple methods of installations.
+LiveEngage Mobile App Messaging SDK for iOS supports multiple methods of installations.
 
 **_Option 1: Using CocoaPods_**
 
@@ -125,8 +125,8 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/framewor
 4. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project
 settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html)
 In Xcode info.plist of the project, add two new privacy keys and values:
- * Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS",
- * Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"
+ * Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+ * Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
 
 <div style="color:red;font-weight:bold;">
 Important:

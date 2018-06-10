@@ -3,7 +3,7 @@ title: Photo Sharing
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 234
@@ -18,15 +18,15 @@ You can find all the related configurations in the [resources ID table](consumer
 
 *Notes*:
 
-- *This feature is available only for the In-App Messaging SDK*.
+- *This feature is available only for the Mobile App Messaging SDK*.
 - *This features enables photo sharing only (not video/files).*
 - *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
 - *Device storage includes up to 20 images - this is configurable.*
 - *Supported formats: .png, .jpg, .gif (non-animated).*
 - *Photo size reduction: Thumbnail - 30 KB, Preview -3 MB.*
 - *App Privacy settings are needed:*
-    - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS",
-    - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"
+    - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+    - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
     - **Important:** Values for these descriptions are up to the brand to define, these are only examples.
 <div style="color:red;font-weight:bold;">
 Important:

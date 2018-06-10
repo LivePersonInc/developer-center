@@ -1,9 +1,9 @@
 ---
-title: Campaigns for In-App Messaging
+title: Campaigns for Mobile App Messaging
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 235
@@ -26,7 +26,7 @@ Using the Monitoring APIs, brands can:
 
 * Route conversations to a specific skill (based on engagements)
 
-While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs as will be explained in this guide.
+While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for Mobile App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs as will be explained in this guide.
 
 ### Engagement Attributes (aka SDEs)
 

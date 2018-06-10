@@ -3,7 +3,7 @@ title: Interface and Class Definitions
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: SDK APIs
 
 order: 110

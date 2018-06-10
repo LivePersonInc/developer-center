@@ -3,7 +3,7 @@ title: Initialization
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 3
@@ -12,7 +12,7 @@ permalink: consumer-experience-ios-sdk-initialization.html
 indicator: messaging
 ---
 
-In order to get started and initialize the In-App Messaging SDK, utilize the following functions:
+In order to get started and initialize the Mobile App Messaging SDK, utilize the following functions:
 
 1. Initialize the SDK and all of its components, SDK can be initialized with or without a Brand Id.
 

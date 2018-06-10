@@ -3,7 +3,7 @@ title: Customizing Toast Notifications
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 
 order: 16
 permalink: consumer-experience-ios-sdk-toastnotifications.html
