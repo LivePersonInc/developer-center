@@ -48,7 +48,7 @@ Please contact your Account Team to create a Private App and retrieve your `AppI
 
 You can now create an engagement with the **Mobile App** or **Private App** source.
 
-Before calling the Monitoring API, you will need to fetch the Monitoring API domain, which is the domain of the "smt" service. Please refer to [this document](https://developers.liveperson.com/agent-domain-domain-api.html#overview) for instructions on how to retrieve the "smt" service domain (aka 'baseURI').
+Before calling the Monitoring API, you will need to fetch the Monitoring API domain, which is the domain for the "smt" service. Please refer to [this document](https://developers.liveperson.com/agent-domain-domain-api.html#overview) for instructions on how to retrieve the "smt" service domain (aka 'baseURI').
 
 You can now try and get an engagement using the Monitoring API **engagement resource**
 
