@@ -24,8 +24,14 @@ Name   | Description                                                  | Type/Val
 offset | The offset specifies from which record to retrieve the chat. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
 limit  | Max amount of conversations to be received in the response.  | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                      | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
+v   | version of the API (1 or 2)                    | string     | Optional | default value is 1, only in v=2 unauthenticated engagement attributes (SDEs) can be returned and their values will be "typedef", and not String. This will be applicable for both authentictaed & unauthenticated SDEs.
 
 **BODY/POST Parameters**
+
+## Note
+
+New capability: The API now allows you to retrive some of content, per your need. This is done by calling the API with contentToretrive parameter and specifiy the types of content you would like to get in the response.
+The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
@@ -49,7 +55,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
-|sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
+|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. The different SDE types are: personalInfo, customerInfo, userUpdate,marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example bellow how to execute such request.|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
 
 Filters examples:
 
@@ -73,7 +80,8 @@ Filters examples:
 |device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}|
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
-|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
+|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
 
 
 ### Response
