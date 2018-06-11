@@ -486,6 +486,14 @@ div.sidebarTitle-holder {
   /*padding-top: 26px;*/
 }
 
+.post-content .zoomimg {
+  transition: transform .2s;
+}
+
+.post-content .zoomimg:hover {
+  transform: scale(1.5);
+}
+
 .post-content > p, .post-content ol,.post-content ul {
   font-family: "Open Sans",Arial;
   font-size: 0.9em;

@@ -75,7 +75,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. A connecter developed by LivePerson would normally be hosted on LivePerson servers.
 
-![JavascriptOverview](img/ConnectorAPI2.png)
+<img class="zoomimg" src="img/ConnectorAPI2.png" alt="ConnectorOverviewDiagram">
 
 [comment]: <> (<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>)
 
