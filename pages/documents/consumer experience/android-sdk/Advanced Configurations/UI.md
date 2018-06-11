@@ -3,7 +3,7 @@ title: UI
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 50
@@ -16,7 +16,7 @@ To determine the layout of messaging within the app, you can utilize various act
 
 LivePerson callbacks:
 
-```javascript
+```swift
 void onAgentTyping(boolean isTyping);
 void onAgentDetailsChanged(AgentData agentData);
 void onCsatDismissed();
@@ -26,3 +26,5 @@ void onConversationMarkedAsNormal();
 void onOfflineHoursChanges(boolean isOfflineHoursOn);
 void onAgentAvatarTapped(AgentData agentData);
 ```
+
+*Note: For the full list of Callbacks, click [here](android-callbacks-index.html#livepersoncallback){:target="_blank"} for more information.*

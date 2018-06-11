@@ -3,7 +3,7 @@ title: Release Notes
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 order: 310
 permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
@@ -14,7 +14,7 @@ indicator: messaging
 
 ### Android Messaging SDK -  Version 3.1
 
-These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 3.1 for Android**.
 
 **Version 3.1 planned roll-out: March 18h 2018**
 
@@ -259,7 +259,7 @@ The following additional conditions and configurations are required:*
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v3.1 exposes additional branding configuration parameters.
 
 The new parameters may control text, padding of conversation UI elements and more.
 
@@ -353,7 +353,7 @@ should be set to true</td>
 
 ##### Adding Support for Android O
 
-In-app messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
+Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
 
 ##### Wrapping Text in Edit Text Box
 
@@ -361,7 +361,7 @@ Parity with iOS in the Edit Text box.  The max lines is declared at 3. meaning w
 
 ##### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 <table>
 <thead>
@@ -403,7 +403,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 **SDK configuration**: This features requires items to be configured in the SDK.
 
 
-**In-App Messaging SDK version 3.0 **.
+**Mobile App Messaging SDK version 3.0 **.
 
 #### New functionalities
 
@@ -428,7 +428,7 @@ The following additional conditions and configurations are required:
 
 #### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 <table>
 <thead>
@@ -481,7 +481,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v3.0 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v3.0 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
@@ -572,7 +572,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 ### Android Messaging SDK -  Version 2.9
 
-These are the main feature releases available in the In-App Messaging SDK version 2.9 for Android.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.9 for Android.
 
 Version 2.9 planned roll-out: November 12th 2017
 
@@ -586,9 +586,9 @@ Version 2.9 planned roll-out: November 12th 2017
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 was built and certified within the host app on Android API level 26.
+The Mobile App Messaging SDK v2.9 was built and certified within the host app on Android API level 26.
 
-The In-app Messaging SDK should remain on Android API level 25, while the host app may use Android API level 26.
+The Mobile App Messaging SDK should remain on Android API level 25, while the host app may use Android API level 26.
 
 **Important:**
 
@@ -602,7 +602,7 @@ The SDK Android API level should remain on level 25. Please do not change SDK An
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v2.9 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
@@ -690,7 +690,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 ### Android Messaging SDK -  version 2.8
 
-These are the main feature releases available in the In-App Messaging SDK version 2.8 for Android.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.8 for Android.
 
 Version 2.8 roll-out: October 3rd 2017
 
@@ -874,7 +874,7 @@ To use this API, the SDK must be after initialization.
 
 ### Android Messaging SDK -  version 2.5
 
-These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.5 for Android.
 
 Version 2.5 roll-out: July 2nd 2017
 
@@ -924,7 +924,7 @@ _Related APIs_: LivePersonIntents API
 | N/A | N/A | N/A | N/A | N/A |
 
 ##### Tablet supportability
-To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
+To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, Mobile App Messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
 
@@ -943,7 +943,7 @@ Tablet Portrait Mode
 Tablet Landscape Mode
 
 ##### List of certified and supported devices extended
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 | Device | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
 | ------------ | ------------ | ------------ | ------------ |
@@ -986,7 +986,7 @@ The following properties of the secure form bubble on the agent side can now be 
 
 
 ### Android Messaging SDK -  version 2.3
-These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 2.3 for Android**.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
 
@@ -1013,9 +1013,9 @@ When there are unread messages waiting for the consumer within the brand app, th
 Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
 
-#### Secure form for in-app messaging
+#### Secure form for Mobile App Messaging
 
-The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the in-app messaging experience and has a time-out expiry, for added security.
+The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
 _This feature requires consulting services support. For more information, please refer to the LiveEngage ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf){:target="_blank"}_.
 
@@ -1027,7 +1027,7 @@ Related strings: PCI
 
 #### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 **Mobile**
 

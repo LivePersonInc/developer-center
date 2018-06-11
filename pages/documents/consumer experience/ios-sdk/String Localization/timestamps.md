@@ -3,7 +3,7 @@ title: Timestamps Formatting
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: String Localization
 
 order: 229
@@ -30,11 +30,11 @@ The iOS platform provides four different default types of date and time styles:
 
 The LPMessagingSDK uses default styles. Each feature has its own style. The style is flexible and adapts the 'locale’ configuration of the device.
 
-*Example: US locale SHORT date is displayed as "9/25/16", whereas Japanese locale SHORT date is displayed as "2016/9/25".*
+_**Example**: US locale SHORT date is displayed as "9/25/16", whereas Japanese locale SHORT date is displayed as "2016/9/25"._
 
 A specific 'locale’ which is different from the device locale can be set through the language and country configurations.
 
-*Example: country: String?,  language: String?*
+_**Example**: country: String?,  language: String?_
 
 **Time/Date formats**
 
@@ -61,7 +61,7 @@ If the device is set to 12 hour format: "Thanks for your message. We will be bac
 If the device is set to 24 hour format:	"Thanks for your message. We will be back online today/tomorrow at 15:30"
 
 To use a different time format, you can use lpTimeFormat: String? with any time format.
-*Example: "hh:mm a", "HH:mm", etc.*
+_**Example**: "hh:mm a", "HH:mm", etc._
 
 - The Date off hours message (not today/tomorrow) uses default LONG date and SHORT time according to the locale (default or custom).
 
@@ -70,7 +70,7 @@ If the device is set to 24 hour format: "Thanks for your message. We will be bac
 
 To use a different date/hour format, you can use lpDateFormat: String? with any date & time format.
 
-*Example: "MMM d, yyyy hh:mm a", "EEEE dd/mm/yy HH:mm" etc.*
+_**Example**: "MMM d, yyyy hh:mm a", "EEEE dd/mm/yy HH:mm" etc._
 
 **Timezone**
 
@@ -80,7 +80,7 @@ Off hours can appear in different time zones with this resource ID :
 
 A list of timezone IDs can be found [here](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/){:target="_blank"}.
 
-*Example: "US/Pacific", "Europe/Berlin".*
+_**Example**: "US/Pacific", "Europe/Berlin"._
 
 ### Bubble timestamp
 
@@ -91,7 +91,7 @@ If the device is set to 24 hours format : "15:30"
 
 If you wish to configure this time format, override the resource ID lpTimeFormat: String? with any time format.
 
-*Example: "hh:mm a", "HH:mm" etc.*
+_**Example**: "hh:mm a", "HH:mm" etc._
 
 *Note: This applies to all bubble timestamps.*
 
@@ -101,9 +101,9 @@ The Separator timestamp contains the date only in the [SHORT](https://developer.
 
 "9/25/16" for US locale / "2016/9/25" for JP locale
 
-If you wish to configure this time format, override the resource ID `lpDateFormat: String?` with any date format.
+If you wish to configure this time format, override the resource ID **lpDateFormat: String?** with any date format.
 
-*Example: "MMM d, yyyy", "EEEE dd/mm/yy" etc.*
+_**Example**: "MMM d, yyyy", "EEEE dd/mm/yy" etc._
 
 ### Resolve message
 
@@ -114,6 +114,6 @@ If the device is set to 24 hour format (US locale): "Conversation resolved by [a
 
 To use a different date/hour format, you can use lpDateTimeFormat: String? with any date & time format.
 
-*Example: "MMM d, yyyy hh:mm a", "EEEE dd/mm/yy HH:mm" etc.*
+_**Example**: "MMM d, yyyy hh:mm a", "EEEE dd/mm/yy HH:mm" etc._
 
 *Limitation: If the formatting is changed after the Resolve messages already appears, this change will take no effect. This will be fixed in future versions.*

@@ -3,7 +3,7 @@ title: Upgrade Guide - iOS
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 order: 247
 permalink: consumer-experience-ios-sdk-upgrade-guide.html
@@ -14,7 +14,10 @@ indicator: messaging
 
 This document contains guides on how to upgrade from various previous versions of the SDK to 3.0. Please review [this repository](https://github.com/LivePersonInc/Upgrade_examples_to_SDK3.0) for in depth sample app examples of these upgrades.
 
-**IMPORTANT**: Upgrading to LPMessagingSDK 3.0, requiresswift 4.0.2 and Xcode 9.2
+<div style="color:red;font-weight:bold;">
+Important:
+</div>
+Upgrading to LPMessagingSDK 3.0, requires Swift 4.0.2 and Xcode 9.2
 
 ### Updating from 2.3 to 3.0
 
@@ -24,10 +27,10 @@ This document contains guides on how to upgrade from various previous versions o
 
 ```ruby
 target '<YourApplicatioName>' do
-# Update change LPMessagingSDK Pod from:
-	pod 'LPMessagingSDK','~> 2.3.0'
-# To:
-	  	pod 'LPMessagingSDK','~> 3.0.0'
+  # Update change LPMessagingSDK Pod from:
+  pod 'LPMessagingSDK','~> 2.3.0'
+  # To:
+  pod 'LPMessagingSDK','~> 3.0.0'
 end
 ```
 
@@ -36,17 +39,17 @@ end
 * Update Podfile
 
 ```sh
-    $ pod update
+$ pod update
 ```
 
 #### Step 3: Clean Xcode Project
 
-* Clean the app with `cmd + shift + k` and build the app with `cmd + b` .
+* Clean the app with **cmd + shift + k** and build the app with **cmd + b**.
 
 
 #### Step 4: Replace Deprecated Methods
 
-* **showConversation** method needs to be replaced:
+**showConversation** method needs to be replaced:
 
 Previous implementation:
 
@@ -78,7 +81,7 @@ let authenticationParams = LPAuthenticationParams()
 LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
 ```
 
-* **reconnect** method needs to be replaced:
+**reconnect** method needs to be replaced:
 
 Previous implementation:
 
@@ -95,7 +98,7 @@ let authParams = LPAuthenticationParams()
 LPMessagingSDK.instance.reconnect(self.conversationQuery!, authenticationParams: authParams
 ```  	
 
-* **logout** method needs to be replaced:
+**logout** method needs to be replaced:
 
 Previous implementation:
 
@@ -107,11 +110,11 @@ New implementation:
 
 ```swift
 LPMessagingSDK.instance.logout(completion: {
-	// Log - Success
-	print("User:: logged out")
-  	}) { (error) in
-	// Log - Error
-	print("User:: \(error.localizedDescription)")
+  // Log - Success
+  print("User:: logged out")
+  }) { (error) in
+  // Log - Error
+  print("User:: \(error.localizedDescription)")
 }
 ```
 
@@ -132,7 +135,10 @@ config.structuredContentBubbleBorderWidth = 1.5
 
 When implementing a Custom ViewController there are a few things to consider:
 
- * Remove Conversation from View if viewWillDisappear()
+ <div style="color:red;font-weight:bold;">
+ Important:
+ </div>
+ - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 /// Event - View will disappear
@@ -140,16 +146,14 @@ override func viewWillDisappear(_ animated: Bool) {
     // Super Init
     super.viewWillDisappear(animated)
     // INFO: When using Custom View Controller Mode, Conversation must be remove when leaving the App, if the Conversation View is the current screen
-    // Check if ConversationQuery has been set
-    if self.conversationQuery != nil {
-        // Remove Conversation
-        LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+    if (self.conversationQuery != nil && self.isMovingToParentViewController){
+      // Remove Conversation
+      LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
     }
 }
 ```
 
-**Note**: if implementing a custom Back Button on the Navigation Bar, this needs to be considered too.
-
+**Note**: if implementing a Back Button on the Navigation Bar, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
 
 ### Updating from 2.7 to 3.0
@@ -160,10 +164,10 @@ override func viewWillDisappear(_ animated: Bool) {
 
 ```ruby
 target '<YourApplicatioName>' do
-	# Update change LPMessagingSDK Pod from:
-	   	pod 'LPMessagingSDK','~> 2.7.0'
- 	  	# To:
- 	  	pod 'LPMessagingSDK','~> 3.0.0'
+  # Update change LPMessagingSDK Pod from:
+  pod 'LPMessagingSDK','~> 2.7.0'
+  # To:
+  pod 'LPMessagingSDK','~> 3.0.0'
 end
 ```
 
@@ -177,12 +181,12 @@ $ pod update
 
 #### Step 3: Clean Xcode Project
 
-* Clean the app with `cmd + shift + k` and build the app with `cmd + b` .
+* Clean the app with **cmd + shift + k** and build the app with **cmd + b**.
 
 
 #### Step 4: Replace Deprecated Methods
 
-* **logout** method needs to be replaced:
+**logout** method needs to be replaced:
 
 Previous implementation:
 
@@ -194,11 +198,11 @@ New implementation:
 
 ```swift
 LPMessagingSDK.instance.logout(completion: {
-	// Log - Success
-	print("User:: logged out")
-  	}) { (error) in
-	// Log - Error
-	print("User:: \(error.localizedDescription)")
+  // Log - Success
+  print("User:: logged out")
+  }) { (error) in
+  // Log - Error
+  print("User:: \(error.localizedDescription)")
 }
 ```
 
@@ -206,7 +210,10 @@ LPMessagingSDK.instance.logout(completion: {
 
 When implementing a Custom ViewController there are a few things to consider:
 
- * Remove Conversation from View if viewWillDisappear()
+ <div style="color:red;font-weight:bold;">
+ Important:
+ </div>
+ - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 /// Event - View will disappear
@@ -214,15 +221,14 @@ override func viewWillDisappear(_ animated: Bool) {
     // Super Init
     super.viewWillDisappear(animated)
     // INFO: When using Custom View Controller Mode, Conversation must be remove when leaving the App, if the Conversation View is the current screen
-    // Check if ConversationQuery has been set
-    if self.conversationQuery != nil {
-        // Remove Conversation
-        LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+    if (self.conversationQuery != nil && self.isMovingToParentViewController){
+      // Remove Conversation
+      LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
     }
 }
 ```
 
-**Note**: if implementing a custom Back Button on the Navigation Bar, this needs to be considered too.
+**Note**: if implementing a custom Back Button on the Navigation Bar, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
 
 
@@ -234,10 +240,10 @@ override func viewWillDisappear(_ animated: Bool) {
 
 ```ruby
 target '<YourApplicatioName>' do
-	# Update change LPMessagingSDK Pod from:
-	pod 'LPMessagingSDK','~> 2.8.0'
-	# To:
-	pod 'LPMessagingSDK','~> 3.0.0'
+  # Update change LPMessagingSDK Pod from:
+  pod 'LPMessagingSDK','~> 2.8.0'
+  # To:
+  pod 'LPMessagingSDK','~> 3.0.0'
 end
 ```
 
@@ -246,9 +252,9 @@ end
 * Update Podfile
 
 ```sh
-    $ pod update
+$ pod update
 ```
 
 #### Step 3: Clean Xcode Project
 
-* Clean the app with `cmd + shift + k` and build the app with `cmd + b` .
+* Clean the app with **cmd + shift + k** and build the app with **cmd + b**.

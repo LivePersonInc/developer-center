@@ -1,6 +1,6 @@
 ---
 title: App Install Manifest for Connectors
-level1:
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API

@@ -73,7 +73,7 @@ You can also watch the demo video which will guide you through this example bot:
 
 ### Step 4 - Assign your bot to engagements and manage bot escalations
 
-With LiveEngage your can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your In-app messaging conversations. 
+With LiveEngage your can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your Mobile App Messaging conversations. 
 
 Furthermore, you can decide within each entrypoint on different routing rules, for example you can route messages from your Facebook service page to your service bot skill, and messages from your Facebook store page to your sales bot (or decide on a mix routing between the human skill and the bot skill).
 
