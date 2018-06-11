@@ -17,8 +17,6 @@ The Connector API enables you to build applications that connect common messagin
 
 A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [WebHooks](webhooks-overview.html){:target="_blank"} notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
 
-<img class="zoomimg" src="img/ConnectorAPI2.png" alt="connectoroverview">
-
 **Why do we need the Connector API?**
 
 LiveEngage already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, WhatsApp, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
@@ -76,6 +74,8 @@ Please note: as part of using the Connector API, brands will be required to expo
 1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels while using more than one device, e.g a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example would be a connector for an SMS Gateway of their choice (not via Twilio). A connector developed by a brand would normally be hosted on the brand's servers.
 
 2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. A connecter developed by LivePerson would normally be hosted on LivePerson servers.
+
+![JavascriptOverview](img/ConnectorAPI2.png)
 
 [comment]: <> (<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>)
 
