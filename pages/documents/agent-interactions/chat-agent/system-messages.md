@@ -5,7 +5,7 @@ level1: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 
-order: 8
+order: 240
 permalink: agent-system-messages.html
 
 indicator: chat
@@ -34,6 +34,6 @@ Messages that are initiated by the system. These messages are added with the `<s
 
 **Response Codes**
 
- |Code | Response| 
- |:--- | :---| 
+ |Code | Response|
+ |:--- | :---|
  |200 | OK |
