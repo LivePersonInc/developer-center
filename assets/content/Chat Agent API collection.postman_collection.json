@@ -1,0 +1,906 @@
+{
+	"info": {
+		"name": "Chat Agent API collection",
+		"_postman_id": "85464aab-91a3-402b-139d-d0de4f31ffc5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CSDS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48f9e9f4-591f-490e-af5a-23ee27bbf6e2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"baseURI\", jsonData.token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.liveperson.net/api/account/{{account}}/service/agentVep/baseURI.json?version=1.0",
+					"protocol": "http",
+					"host": [
+						"api",
+						"liveperson",
+						"net"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"service",
+						"agentVep",
+						"baseURI.json"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "1.0",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0d4afc4d-938b-426e-89e0-c8f91ae5d85e",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"Bearer\", jsonData.bearer);",
+							"postman.setEnvironmentVariable(\"csrfToken\", jsonData.csrf);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Botik2\",\n    \"appKey\": \"2eb301708aa140d4822c67b45b7a035f\",\n\t\"secret\": \"76d861d806870360\",\n\t\"accessToken\": \"e6f422d9b707421d83cef92465482a98\",\n\t\"accessTokenSecret\": \"1bcb03dced29f8ef\"\n}"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/login??v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"login"
+					],
+					"query": [
+						{
+							"key": "?v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"csrf\":\"{{csrfToken}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/logout",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"csrf\":\"{{csrfToken}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/refresh",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create agent session",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ad24511e-3825-4c36-8903-f5c6ca5de1df",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "86163d79-41b5-4401-a4df-5cd3da92e43d",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"AgentSession\", Object.values(jsonData.agentSessionLocation.link)[0].match(/[0-9]*$/));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"loginData\": {\n            \n        }\n }"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agent session status including ongoing chat sessions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}?v=1&NC=true&cs=1",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "cs",
+							"value": "1",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ring count",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/incomingRequests?v=1&NC=true&__d=67376",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"incomingRequests"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "__d",
+							"value": "67376",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take chat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bdcd9054-9c86-4a46-a79d-29039ef2e737",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"chatId\", Object.values(jsonData.chatLocation.link)[0].match(/[A-Za-z-0-9]*$/));",
+							"",
+							"",
+							"var visit = postman.setEnvironmentVariable(\"visitId\", Object.values(jsonData.chatLocation.link)[0].match(/[H][0-9]*/) + Object.values(jsonData.chatLocation.link)[0].match(/[K][0-9]*/))",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/incomingRequests?v=1&NC=true&__d=67576",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"incomingRequests"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "__d",
+							"value": "67576",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get chat conversation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chatSessions?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"chatSessions"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post plain line",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": {\n\t\t\"@type\": \"line\",\n\t\t\"text\": \"this is a plain line\",\n\t\t\"textType\": \"plain\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chat/{{chatId}}/events?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"chat",
+						"{{chatId}}",
+						"events"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve survey",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chat/{{chatId}}/survey?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"chat",
+						"{{chatId}}",
+						"survey"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Availability",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/availability?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"availability"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Set Availability",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					},
+					{
+						"key": "X-HTTP-Method-Override",
+						"value": "PUT"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"availability\": {\n    \"chat\" : \"Online\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/availability?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"availability"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getChat resources",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": {\n\t\t\"@type\": \"line\",\n\t\t\"text\": \"this is a plain line\",\n\t\t\"textType\": \"plain\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://va-a.agentvep.liveperson.net/api/account/60035520/agentSession/{{AgentSession}}/chat/{{chatId}}?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"va-a",
+						"agentvep",
+						"liveperson",
+						"net"
+					],
+					"path": [
+						"api",
+						"account",
+						"60035520",
+						"agentSession",
+						"{{AgentSession}}",
+						"chat",
+						"{{chatId}}"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "visit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/visits/visit/{{visitId}}?v=1&NC=tru",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"visits",
+						"visit",
+						"{{visitId}}"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "tru",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "(Visits/visit) get survey",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/visits/visit/{{visitId}}/customVariables?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}",
+						"visits",
+						"visit",
+						"{{visitId}}",
+						"customVariables"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "NC",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Visit Information (by the Visit Information API)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/monitoring/visitors/H4680275734113466588/visits/current/state?v=1&filter=agent&sid={{AgentSession}}",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"monitoring",
+						"visitors",
+						"H4680275734113466588",
+						"visits",
+						"current",
+						"state"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "filter",
+							"value": "agent",
+							"equals": true
+						},
+						{
+							"key": "sid",
+							"value": "{{AgentSession}}",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
