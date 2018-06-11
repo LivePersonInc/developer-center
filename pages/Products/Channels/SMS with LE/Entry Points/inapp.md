@@ -1,5 +1,5 @@
 ---
-title: SMS via In-App Messaging
+title: SMS via Mobile App Messaging
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
@@ -10,15 +10,15 @@ indicator:
 ---
 ### Overview
 
-The transition to messaging for brands is a big moment. There are various ways for brands to start their messaging operations, some quicker than others. In-app messaging is an incredibly successful messaging channel that keeps consumers in a brand’s app. There are times, though, that a brand may want to start messaging right away, before the In-App Messaging SDK has been implemented. For those cases, we suggest SMS via in-app messaging.
+The transition to messaging for brands is a big moment. There are various ways for brands to start their messaging operations, some quicker than others. Mobile App Messaging is an incredibly successful messaging channel that keeps consumers in a brand’s app. There are times, though, that a brand may want to start messaging right away, before the Mobile App Messaging SDK has been implemented. For those cases, we suggest SMS via Mobile App Messaging.
 
-This document will review the benefits of SMS via in-app messaging in addition to providing a walk-through of the configuration for a brand’s mobile app developers.
+This document will review the benefits of SMS via Mobile App Messaging in addition to providing a walk-through of the configuration for a brand’s mobile app developers.
 
 ### Benefits
 
 * Enjoy quick and easy messaging deployment
 
-* No authentication needed means that brands can get on messaging quicker while they are waiting for their In-App Messaging SDK deployment.
+* No authentication needed means that brands can get on messaging quicker while they are waiting for their Mobile App Messaging SDK deployment.
 
 * Handle large volumes of consumer messages and agent profiles
 
@@ -28,7 +28,7 @@ This document will review the benefits of SMS via in-app messaging in addition t
 
 ### How the capability works
 
-When a consumer visits a brand’s app, they will see the option to message within the app. Upon clicking the 'message’ button, they will be immediately sent to their native SMS messaging app and can seamlessly start messaging with the brand. This is in contrast to the In-App Messaging SDK, which would keep the consumer within the app for an in-app messaging experience.
+When a consumer visits a brand’s app, they will see the option to message within the app. Upon clicking the 'message’ button, they will be immediately sent to their native SMS messaging app and can seamlessly start messaging with the brand. This is in contrast to the Mobile App Messaging SDK, which would keep the consumer within the app for an Mobile App Messaging experience.
 
 ### Prerequisites for using the solution
 

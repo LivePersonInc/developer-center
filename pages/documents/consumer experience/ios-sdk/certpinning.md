@@ -3,7 +3,7 @@ title: Certificate Pinning - iOS
 Keywords:
 level1: Documents
 level2:
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Certificate Pinning
 
 order:

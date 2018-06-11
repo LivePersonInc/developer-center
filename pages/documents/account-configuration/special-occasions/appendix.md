@@ -114,7 +114,7 @@ This section contains API details that are common to every API’s resource, met
     <td>Yes</td>
     <td>Array</td>
     <td><ul><li>Pattern for workdays field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</li>
-        <li>Pattern for special occasion field is: "^(RRULE:FREQ=DAILY;UNTIL=)[0-9]{4}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1]);INTERVAL=1$"</li></ul>
+        <li>Pattern for special occasion field is: "^RRULE:FREQ=DAILY;COUNT=[1-9][0-9]*;INTERVAL=1$"</li></ul>
     </td>
   </tr>
   <tr>

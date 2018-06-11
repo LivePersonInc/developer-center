@@ -3,7 +3,7 @@ title: Quick Start
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 
 order: 10
 permalink: android-quickstart.html
@@ -12,7 +12,7 @@ permalink: android-quickstart.html
 
 ###  Prerequisites
 
-To use the LivePerson In-App Messaging SDK, the following are required:
+To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 * LiveEngage account with messaging enabled, mobile app configured.
 

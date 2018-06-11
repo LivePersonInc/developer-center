@@ -3,7 +3,7 @@ title: Photo Sharing
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: Advanced Features
 
 order: 285
@@ -18,7 +18,7 @@ This section describes the photo sharing behavior and configurations in the Mess
 
 **Notes:**
 
-- *This feature is available only for the In-App Messaging SDK.*
+- *This feature is available only for the Mobile App Messaging SDK.*
 - *This feature enables photo sharing only (not video/files).*
 - *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
 - *Device storage includes up to 20 images - this is configurable.*

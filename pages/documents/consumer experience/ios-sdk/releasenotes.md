@@ -3,7 +3,7 @@ title: Release Notes
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 
 order: 243
 permalink: consumer-experience-ios-sdk-release-notes.html
@@ -117,7 +117,7 @@ Added the nickname of the agent instead of the first name.
 
 ### iOS Messaging SDK - Version 3.1
 
-These are the main feature releases available in the **In-App Messaging SDK version 3.1 for iOS**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 3.1 for iOS**.
 
 **Version 3.1 planned roll-out: March 18th 2018**
 
@@ -360,7 +360,7 @@ The following additional conditions and configurations are required:*
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v3.1 exposes additional branding configuration parameters.
 
 The new parameters may control text, padding of conversation UI elements and more.
 
@@ -452,11 +452,11 @@ The following additional conditions and configurations are required:
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
+The Mobile App Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
 
 #### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 <table>
 <thead>
@@ -530,7 +530,7 @@ Improved memory allocation for conversation screen
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
 
-These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 2.9 for iOS**.
 
 #### Accessibility Updates
 
@@ -565,7 +565,7 @@ Overlap will no longer occur due to backend fixes.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
 
-These are the main feature releases available in the **In-App Messaging SDK version 2.9 for iOS**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 2.9 for iOS**.
 
 #### New functionalities
 
@@ -575,9 +575,9 @@ These are the main feature releases available in the **In-App Messaging SDK vers
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 was built and certified with XCode 9.1 in Swift 4.0.2.
+The Mobile App Messaging SDK v2.9 was built and certified with XCode 9.1 in Swift 4.0.2.
 
-Customers wishing to use the In-app Messaging SDK v2.9 must upgrade their XCode to 9.1 and their Swift version to 4.0.2.
+Customers wishing to use the Mobile App Messaging SDK v2.9 must upgrade their XCode to 9.1 and their Swift version to 4.0.2.
 
 ##### iPhone X Device Support
 
@@ -585,7 +585,7 @@ Customers wishing to use the In-app Messaging SDK v2.9 must upgrade their XCode 
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 is now supported on the iPhone X.
+The Mobile App Messaging SDK v2.9 is now supported on the iPhone X.
 
 #### New parameters
 
@@ -595,7 +595,7 @@ The In-app Messaging SDK v2.9 is now supported on the iPhone X.
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v2.9 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
@@ -717,7 +717,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
 
-These are the main feature releases available in the **In-App Messaging SDK version 2.8 for iOS**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 2.8 for iOS**.
 
 #### Structured content enablement (GA in SDK)
 
@@ -937,7 +937,7 @@ The following additional conditions and configurations are required*:
 
 #### Set icon for "Send" button
 
-Brands are now able to choose and configure their own icon for the 'Send’ button for in-app messaging conversations.
+Brands are now able to choose and configure their own icon for the 'Send’ button for Mobile App Messaging conversations.
 
 **How to configure the send button icon:**
 
@@ -977,7 +977,7 @@ The following additional conditions and configurations are required*:
 
 #### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
 
-The In-app Messaging SDK v.28 was built and certified with XCode 9 in Swift 4/ Swift 3.2 for iOS11.
+The Mobile App Messaging SDK v.28 was built and certified with XCode 9 in Swift 4/ Swift 3.2 for iOS11.
 
 The following devices were certified with iOS11:
 
@@ -1392,7 +1392,7 @@ The following properties for the controller bubble can now be configured:
 
 ### iOS Messaging SDK - Version 2.7.0
 
-These are the main feature releases available in the In-App Messaging SDK version 2.7 for iOS.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.7 for iOS.
 Version 2.7 roll-out: September 3rd 2017
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.9.pdf){:target="_blank"}
@@ -1421,7 +1421,7 @@ Structured message templates and elements, such as cards, images and deep linkin
 Structured content capabilities are being gradually rolled out during September-October 2017.
 Dedicated documentation for structured content will be published as part of the gradual rollout.
 
-In-app messaging SDK v2.7 has a structured content renderer for the following elements:
+Mobile App Messaging SDK v2.7 has a structured content renderer for the following elements:
 
  - Image
  - Text
@@ -1690,7 +1690,7 @@ Use reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPara
 
 ### iOS Messaging SDK - Version 2.5.0
 
-These are the main feature releases available in the In-App Messaging SDK version 2.5 for iOS.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.5 for iOS.
 
 Version 2.5 roll-out: July 2nd 2017
 
@@ -1722,7 +1722,7 @@ Custom fonts are not supported for Native iOS properties such as:
 | N/A | N/A | N/A | N/A | Yes |
 
 ##### Tablet supportability
-To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
+To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, Mobile App Messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
 
@@ -1797,9 +1797,9 @@ Configuring Camera's button colors
 | remoteUserDefaultAvatarImage | The default avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations. If the remote user has an avatar image in his profile, this attribute will be ignored. | nil |
 
 
-## In-App Messaging SDK Version 2.3.1
+## Mobile App Messaging SDK Version 2.3.1
 
-In-App Messaging SDK v2.3.1 for iOS contains the following bug fix:
+Mobile App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
 _Symptom_:
 
@@ -1813,7 +1813,7 @@ The following capability which was first introduced in v2.3 has been disabled to
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
 
 
-These are the main feature releases available in the **In-App Messaging SDK version 2.3 for iOS**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 2.3 for iOS**.
 
 
 ##### iOS Developer Enhancements
@@ -1857,12 +1857,12 @@ bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks
 ```
 
 
-##### Secure form for in-app messaging
+##### Secure form for Mobile App Messaging
 
 
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations.
 
-The form can be tailored to match the in-app messaging experience and has a time-out expiry, for added security.
+The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
 _This feature requires consulting services support. For more information, please refer to the LiveEngage [secure form for messaging documentation](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf){:target="_blank"}_.
 
@@ -1874,7 +1874,7 @@ _This feature requires consulting services support. For more information, please
 
 ##### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 **iPhone**
 
@@ -1907,12 +1907,12 @@ The Web Socket remains open for a maximum of 60 seconds (using Background Task) 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf){:target="_blank"}
 
 
-These are the main feature releases available in the In-App Messaging SDK version 2.0.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.0.
 
 
 ##### Photo sharing for iOS and Android (Beta)
 
-Consumers can now add photos directly into a messaging conversation, enabling them to describe an item and share it with their agent. Photo sharing supports multiple image sizes, and all shared images are logged in All Connections. This feature is available for Facebook messenger, web messaging, and in-app messaging, on both Android and iOS.
+Consumers can now add photos directly into a messaging conversation, enabling them to describe an item and share it with their agent. Photo sharing supports multiple image sizes, and all shared images are logged in All Connections. This feature is available for Facebook messenger, web messaging, and Mobile App Messaging, on both Android and iOS.
 
 ![Release Notes Photo Sharing](img/releasenotessharing.png)
 
@@ -1920,7 +1920,7 @@ Consumers can now add photos directly into a messaging conversation, enabling th
 ##### Accessibility for messaging
 
 
-The In-App Messaging SDK now supports accessibility WCAG Level A and Level AA and CATO.
+The Mobile App Messaging SDK now supports accessibility WCAG Level A and Level AA and CATO.
 
 ![Release Note Accessibility](img/releasenotesaccessibility.png)
 
@@ -1958,7 +1958,7 @@ Brands now have the ability to replace the Send button in a messaging conversati
 ##### Link preview within conversation
 
 
-When sending a link within an in-app messaging conversation, a preview of the link page will display within the thread, giving the consumer a useful overview of the link content.
+When sending a link within an Mobile App Messaging conversation, a preview of the link page will display within the thread, giving the consumer a useful overview of the link content.
 
 ![Release Notes Link Preview](img/releasenoteslinkpreview.png)
 

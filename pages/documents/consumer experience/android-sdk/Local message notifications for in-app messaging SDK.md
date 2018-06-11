@@ -1,4 +1,4 @@
-Local message notifications for in-app messaging SDK
+Local message notifications for Mobile App Messaging SDK
 
 Time to respond and off hours
 
@@ -11,7 +11,7 @@ Prepared by: Alon Levin
 
 #### Overview
 
-This document describes the behavior and design of the local notifications view within the in-app messaging SDK. In this document you will find two different types of notifications:
+This document describes the behavior and design of the local notifications view within the Mobile App Messaging SDK. In this document you will find two different types of notifications:
 
 1. Time to respond notifications
 
@@ -81,13 +81,13 @@ Time To Respond (TTR) has two configurable modes:
 
 ##### Where does the time to respond message appear?
 
-In iOS these messages appear within the in-app messaging conversation window just under the navigationBar Window mode and ViewController Mode.
+In iOS these messages appear within the Mobile App Messaging conversation window just under the navigationBar Window mode and ViewController Mode.
 
 <img src="ios_ttr.png">
 
 *Image: iOS time to respond notification*
 
-In Android these messages appear within the in-app messaging conversation window above the "Write a message" section in both Fragment and Activity modes.
+In Android these messages appear within the Mobile App Messaging conversation window above the "Write a message" section in both Fragment and Activity modes.
 
 See the image below for examples of how the local messages will appear:
 
