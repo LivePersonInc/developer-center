@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Chat Agent API
 
 level-order: 4
-order: 7
+order: 4
 permalink: chat-agent-getting-started.html
 root-link: true
 indicator: chat
