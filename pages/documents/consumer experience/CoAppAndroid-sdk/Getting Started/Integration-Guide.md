@@ -62,7 +62,7 @@ This is all that is needed to enable our SDK in your app. You can now proceed by
 
 #### Listen to FCM/GCM Push Notifications
 
-If you want to initiate calls via [Push Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) you need to add the LPCoApp-Notification-Handler to your FCM/GCM Messaging Receiver (**Note:** if you haven't set up Messaging SDK with Push-Notifications please see [In-App Messaging SDK Push Notifications](https://developers.liveperson.com/android-push-notifications.html) and [Register your App](consumer-experience-voice-video-android-register-app.html) for further instructions).
+If you want to initiate calls via [Push Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) you need to add the LPCoApp-Notification-Handler to your FCM/GCM Messaging Receiver (**Note:** if you haven't set up Messaging SDK with Push-Notifications please see [Mobile App Messaging SDK Push Notifications](https://developers.liveperson.com/android-push-notifications.html) and [Register your App](consumer-experience-voice-video-android-register-app.html) for further instructions).
 
 Add the following lines to your Messaging Receiver Service:
 

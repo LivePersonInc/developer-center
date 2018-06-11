@@ -3,7 +3,7 @@ title: Control History APIs
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 order: 236
 permalink: consumer-experience-ios-sdk-advanced-control-history-ios.html

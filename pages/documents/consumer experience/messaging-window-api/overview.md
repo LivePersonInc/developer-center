@@ -25,13 +25,13 @@ A few things you'll need to get started with this API:
 ### Introduction
 
 
-LiveEngage offers messaging windows both for in-app messaging as well as web messaging out of the box.  Brands can customize the window behavior and look and feel completely.
+LiveEngage offers messaging windows both for Mobile App Messaging as well as web messaging out of the box.  Brands can customize the window behavior and look and feel completely.
 
 For complete control over the messaging window look, behavior and implementation source, utilized the Messaging Window API to create your window from scratch.
 
 ### Use Cases
 
-* Offer in-app mobile messaging on an OS not supported by the LivePerson In-App messaging SDKs (IOS/Android)
+* Offer in-app mobile messaging on an OS not supported by the LivePerson Mobile App Messaging SDKs (IOS/Android)
 
 * Create a messaging window experience that is completely different than the out of the box window LIveEngage offers - for example - a window that takes up the entire screen.
 
