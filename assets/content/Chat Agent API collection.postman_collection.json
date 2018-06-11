@@ -723,18 +723,15 @@
 					"raw": "{\n\t\"event\": {\n\t\t\"@type\": \"line\",\n\t\t\"text\": \"this is a plain line\",\n\t\t\"textType\": \"plain\"\n\t}\n}"
 				},
 				"url": {
-					"raw": "https://va-a.agentvep.liveperson.net/api/account/60035520/agentSession/{{AgentSession}}/chat/{{chatId}}?v=1&NC=true",
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chat/{{chatId}}?v=1&NC=true",
 					"protocol": "https",
 					"host": [
-						"va-a",
-						"agentvep",
-						"liveperson",
-						"net"
+						"{{agentVepDomain}}"
 					],
 					"path": [
 						"api",
 						"account",
-						"60035520",
+						"{{account}}",
 						"agentSession",
 						"{{AgentSession}}",
 						"chat",
