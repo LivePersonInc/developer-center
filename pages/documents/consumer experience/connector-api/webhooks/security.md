@@ -1,6 +1,6 @@
 ---
 title: Notification Protocol
-level1:
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
@@ -33,8 +33,8 @@ permalink: webhooks-security.html
     {
     Mac mac = Mac.getInstance("HmacSHAl"); 
     mac.init(**new** SecretKeySpec(
-          "THE_CLIENT_SECRET".getBytes(MUTF-8"),
+          "THE_CLIENT_SECRET".getBytes("MUTF-8"),
           "HmacSHAl"));
-          System.out.println(Base64.getEncoder().encode(mac.doFinal("message payload".getBytes(“UTF-8“))))
+          System.out.println(Base64.getEncoder().encode(mac.doFinal("message payload".getBytes("UTF-8"))))
           }
   ```

@@ -36,27 +36,7 @@ To manually generate a Certificate, you need a Certificate Signing Request (CSR)
 	- The CA Email Address field should be left empty.
 	- In the Request is group, select the Saved to disk option.
 
-**Step 3**
-
-In Keychain Access, click **Continue** to complete the CSR generating process.
-
-**Step 4**
-
-Download and run the certificate. The certificate is now added to your Keychain, paired with a private key:
-
-![certificate ](img/download-certificate.png)
-
-### Creating a key .p12 file
-
-![create-key ](img/createkey.png)
-
-- Right-click on your new push certificate and choose **Export**.
-
-![create-key2 ](img/createkey2.png)
-
-- Save the certificate as pushNotification.p12 as a .p12 file.
-
-- You will be prompted to enter a password for the p12. You can either leave this blank or enter a password of your choosing.
+In Keychain Access, click **Continue** to complete the CSR generating process, you'll need this file to create the APN Certificate on the Apple Developer Portal.
 
 ### Creating a push notification certificate. (der format .crt file)
 
@@ -74,6 +54,22 @@ Download and run the certificate. The certificate is now added to your Keychain,
 
 - Download the file. This file will be used to create the .pem format certificate.
 
+Download and run the certificate. The certificate is now added to your Keychain, paired with a private key:
+
+![certificate ](img/download-certificate.png)
+
+### Creating a key .p12 file
+
+![create-key ](img/createkey.png)
+
+- Right-click on your new push certificate and choose **Export**.
+
+![create-key2 ](img/createkey2.png)
+
+- Save the certificate as pushNotification.p12 as a .p12 file.
+
+- You will be prompted to enter a password for the p12. You can either leave this blank or enter a password of your choosing.
+
 ### Creating both key.pem file and cert.pem file
 
 *Note: This is used when configuring LiveEngage Push Notification.*
@@ -81,20 +77,32 @@ Download and run the certificate. The certificate is now added to your Keychain,
 - Open the terminal and locate the folder in which you would like to save the file.
 
 - Create cert pem:
-**openssl x509 -in aps_development.cer -inform der -out dev-cert.pem**
 
+```bash
+openssl x509 -in aps_development.cer -inform der -out dev-cert.pem
+```
 
 - Convert the private keys .p12 file into a .pem file:
 Using the Certificates.p12 file
-**cp Certificates.p12 key.p12**
-and then the following command **openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12**
-You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step.
 
-- RSA .pem key (enter a passphrase for the next step - I used “lpsn” as an example)
-	**openssl rsa -in keyWithPassword.pem -out hostkey.pem**
+```bash
+cp Certificates.p12 key.p12
+```
+
+- and then the following command
+
+```bash
+openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
+```
+
+- You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step. RSA .pem key (enter a passphrase for the next step - I used “lpsn” as an example)
+
+```bash
+openssl rsa -in keyWithPassword.pem -out hostkey.pem
+```
 
 ### Upload into LiveEngage
-- Certificate file should be : dev-cert.pem
-- Key file should be : hostkey.pem
+- Certificate file should be : **dev-cert.pem**
+- Key file should be : **hostkey.pem**
 
 ![uploadCertToLE](img/uploadCertToLE.png)

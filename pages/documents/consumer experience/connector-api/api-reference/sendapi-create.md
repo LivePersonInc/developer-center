@@ -1,6 +1,6 @@
 ---
 title: CONVERSATION
-level1:
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: API Reference
@@ -214,7 +214,7 @@ Now the connector can use the [Monitoring API](rt-interactions-monitoring-overvi
 | campaignId | The campaign ID you wish to use when targeting the conversation | "99999" | false |  
 | channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
-| skillId | Skill ID you would like to route the conversation to | string | false | use -1 as default to target all skills available. We don't recommend to route according skills instead we recommend routing using campaigns for messaging by sending the SDEs |
+| skillId | Skill ID you would like to route the conversation to | string | false | use -1 as default to target all skills available. We don't recommend to route according to skills. Instead, we recommend routing using campaigns for messaging by sending the SDEs. See above for more info. |
 
 **conversationContext Properties**
 

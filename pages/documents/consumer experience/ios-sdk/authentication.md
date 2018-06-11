@@ -12,6 +12,26 @@ indicator: messaging
 ---
 For users of OAuth 2.0 for customer authentication, the following functions apply:
 
-1. `public func reconnect(conversationQuery: ConversationParamProtocol, authenticationCode: String) `  
-2. `<LPMessagingSDKdelegate> func LPMessagingSDKAuthenticationFailed(error: NSError)`
-3. `<LPMessagingSDKdelegate> func LPMessagingSDKTokenExpired(brandID: String)`
+
+### Methods
+
+1. This method reconnects the conversation’s connection for conversation query.
+
+```swift
+public func reconnect(conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams)
+```
+
+### Delegates
+
+1. Will be triggered when authentication process fails
+
+```swift
+<LPMessagingSDKdelegate> func LPMessagingSDKAuthenticationFailed(error: NSError)
+```
+
+{:start="2"}
+2. Will be triggered when the token which used for authentication is expired
+
+```swift
+<LPMessagingSDKdelegate> func LPMessagingSDKTokenExpired(brandID: String)
+```

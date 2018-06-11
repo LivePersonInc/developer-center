@@ -12,10 +12,11 @@ permalink: consumer-experience-ios-sdk-app-extensions.html
 indicator: messaging
 ---
 In order to make sure the SDK uses the iOS keyboard only, and not third party ones, disable app extensions for keyboard as follows:
-In your AppDelegate, add the method application(_:shouldAllowExtensionPointIdentifier:)
+
+In your **AppDelegate**, add the method application(_:shouldAllowExtensionPointIdentifier:)
  with the implementation of:
 
-```javascript 
+```swift
 func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplicationExtensionPointIdentifier) -> Bool {
     return extensionPointIdentifier != UIApplicationExtensionPointIdentifier.keyboard
  }
