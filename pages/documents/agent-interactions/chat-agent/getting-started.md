@@ -44,7 +44,6 @@ There are two primary reasons to utilize the Chat Agent API:
 
 	* Bot as a listener to a conversation to provide tips for human agents
 
-{:start="2"}
 2. Build your own custom agent workspace
 
 	* Add the ability for agents to take chats from within your CRM
