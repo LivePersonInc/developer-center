@@ -1,16 +1,16 @@
 ---
 title: Get ConsumerJWS
-level1:
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
-level4: Authentication
+level4: Authorization and Authentication
 order: 5
 indicator: both
 permalink: Create_ConsumerJWS.html
 search: include
 ---
 
-### Retrieve your domain
+### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
@@ -22,12 +22,12 @@ search: include
 
 An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature):
 
-The **ConsumerJWS** is the unique identifier of the user and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer.
+The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html){:target="_blank"} and [SEND](sendapi-send.html){:target="_blank"} requests to LiveEngage in order to authenticate the request.
 
-A **ConsumerJWS** can be obtained with the following HTTPS request:
+A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 
 
-| Method | URL  |
+| Method | URI  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/consumer?v=1.0|
 
@@ -39,11 +39,11 @@ A **ConsumerJWS** can be obtained with the following HTTPS request:
 | accountid | LivePerson site ID | string |
 | domain | IDP Hostname | string |
 
-**Json payload**
+**Request Body Example - JSON Payload**
 
 ```json
 {
-	"ext_consumer_id":"{ConsumerID, e.g. random_id0.80668702615}"
+	"ext_consumer_id":"John_Doe_facebook12345"
 }
 ```
 
@@ -56,10 +56,10 @@ A **ConsumerJWS** can be obtained with the following HTTPS request:
 
 **Request Headers**
 
-| Header | Description |
-| :--- | :--- |
-| Content-Type | application/x-www-form-urlencoded |
-| Authorization | {AppJWT} |
+| Header | Description | Value/Example |
+| :--- | :--- | :--- |
+| Content-Type | Used to indicate the media type of the resource | application/json |
+| Authorization | {AppJWT} | "access_token": "ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM", "token_type": "Bearer" |
 
 
 ### Response

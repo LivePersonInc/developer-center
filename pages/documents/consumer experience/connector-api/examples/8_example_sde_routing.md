@@ -1,12 +1,12 @@
 ---
-title: Set User Profile and SDEs
-level1:
+title: Create Conversation and Set User Profile
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 67
 indicator: both
-permalink: sdes_routing_example.html
+permalink: sdes-routing-example.html
 
 ---
 
@@ -18,6 +18,13 @@ The Connector API provides the ability to set the user engagement attributes (SD
 
 See below a few examples of how to do so.
 
+### Getting Started
+
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+
+	* asyncMessagingEnt
+
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 **Note**
 
@@ -33,13 +40,21 @@ See below a few examples of how to do so.
 
 ### Create new conversation and send companyBranch
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-{% raw %}
+**Request Headers**
+
+| Header | Description |
+| :--- | :--- |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+
+**Example Request Body - JSON Payload**
+
 ```json
 [  
    {  
@@ -80,17 +95,16 @@ See below a few examples of how to do so.
    }
 ]
 ```
-{% endraw %}
 
 ### Create new conversation and send ctype/gender
 
-**Request**
+**Request URI**
 
 | Method | URL  |
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Json Payload**
+**Example Request Body - JSON Payload**
 
 ```json
 [  

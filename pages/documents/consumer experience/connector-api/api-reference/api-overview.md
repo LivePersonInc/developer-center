@@ -1,6 +1,6 @@
 ---
 title: Overview
-level1:
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: API Reference
@@ -10,7 +10,7 @@ permalink: connector-api-overview.html
 search: exclude
 ---
 
-### API Endpoints
+### API Endpoints test change
 
 The API consists of two types of calls:
 
@@ -19,9 +19,11 @@ The API consists of two types of calls:
 
 ### Connector API connection
 
+
 ####  Authentication & Authorization
 
-Refer to the [Getting Started](connectorapi-getting-started.html){:target="blank"} section to see how you can authorize your connector ([AppJWT](Create_AppJWT.html){:target="blank"}) application and authenticate the consumer ([ConsumerJWS](Create_ConsumerJWS.html){:target="blank"}) before you can use the API.
+Refer to the [Getting Started](connectorapi-getting-started.html){:target="_blank"} section to see how you can authorize your connector ([AppJWT](Create_AppJWT.html){:target="_blank"}) application and identify the consumer ([ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"}) before you can use the API.
+
 
 ####  Authorization Tokens expiration times
 
@@ -46,7 +48,7 @@ Each API message can be one of the following kinds:
 
 * **Response** - A message sent by the server in response to a client/connector request message.
 
-* **Notification** - A message sent from the server to the client/connector. A registration of an application to receive Webhooks notifications is achieved by enabling the “webhooks” capability of that application. Please refer to the [webhooks overview](webhooks-overview.html){:target="blank"} for more information.  
+* **Notification** - A message sent from the server to the client/connector. A registration of an application to receive Webhooks notifications is achieved by enabling the “webhooks” capability of that application. Please refer to the [webhooks overview](webhooks-overview.html){:target="_blank"} for more information.  
 
 The kind of message is denoted by the `kind` property in the top level of the JSON object, and can be any of the following: `req`, `resp`, `notification`. Below is an example of a request message:
 

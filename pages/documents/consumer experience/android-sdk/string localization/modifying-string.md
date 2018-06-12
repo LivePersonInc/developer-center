@@ -3,7 +3,7 @@ title: Modifying Strings
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 210
@@ -13,6 +13,8 @@ indicator: messaging
 ---
 
 You may change every string appearing on the SDK interface by overriding the respective string key.
+
+_**Note:** for how to create a new locale file, click [here](android-localization-strings.html#create-new-localization-file){:target="_blank"}_
 
 **General**
 

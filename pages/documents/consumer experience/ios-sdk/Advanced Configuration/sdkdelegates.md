@@ -3,7 +3,7 @@ title: SDK Delegates
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 4
@@ -13,8 +13,16 @@ indicator: messaging
 ---
 The SDK uses 2 delegates:
 
-1. `LPMessagingSDKDelegate - for lifecycle and connectivity events.`
+1. **LPMessagingSDKDelegate** - for lifecycle and connectivity events.
 
-2. `LPMessagingSDKNotificationDelegate - for handling push and in app notifications.`
+```swift
+LPMessagingSDK.instance.delegate = self
+```
 
-You should implement and set the delegate for the above in order to receive notification from the SDK.
+2. **LPMessagingSDKNotificationDelegate** - for handling Push and In-App Notifications.
+
+```swift
+LPMessagingSDK.instance.registerPushNotifications(token: deviceToken, notificationDelegate: self)
+```
+
+You should implement and set the **LPMessagingSDKNotificationDelegate**, in order to receive Push Notifications from the SDK.

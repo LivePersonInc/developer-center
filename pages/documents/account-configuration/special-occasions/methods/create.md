@@ -117,7 +117,9 @@ The `isDefault` field determines whether a special occasions object is the defau
               "dateTime": "2018-03-27T13:00:00",
               "timeZone": "Europe/Zurich"
           },
-          "recurrence": []
+          "recurrence": [
+            
+          ]
       }
   ]
 }
