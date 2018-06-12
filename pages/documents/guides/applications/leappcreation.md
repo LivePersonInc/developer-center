@@ -72,9 +72,9 @@ Once the application has been installed, the LivePerson resource will send you y
   "client_name": "My First LE-App",
   "description": "This is my first LE-App",
   "grant_types": [
-    "client_credentials","implicit"
+    "client_credentials","authorization_code"
   ],
-  "response_types": "implicit",
+  "response_types": "code",
   "redirect_uris": ["https://www.myredirecturi.com"],
   "scope": "msg.consumer",
   "logo_uri": "/src/modules/campaigns/assets/img/software/Mobile-App.png",
