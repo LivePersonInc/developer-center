@@ -1,10 +1,10 @@
 ---
-title: Create Conversation and Set User Profile
+title: Create a new conversation and report SDEs
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
-order: 67
+order: 60
 indicator: both
 permalink: sdes-routing-example.html
 
@@ -32,13 +32,10 @@ See below a few examples of how to do so.
 
 * The supported SDEs for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
-**EXAMPLES**
 
-[Create & Send ctype/gender Example](sdes_routing_example.html#sdes_routing_example.html#create-new-conversation-and-send-ctypegender)
+### Examples
 
-[Create & Send companyBranch Example](sdes_routing_example.html#create-new-conversation-and-send-ctypegender)
-
-### Create new conversation and send companyBranch
+#### Create new conversation and send companyBranch
 
 **Request URI**
 
@@ -96,7 +93,7 @@ See below a few examples of how to do so.
 ]
 ```
 
-### Create new conversation and send ctype/gender
+#### Create new conversation and send ctype/gender
 
 **Request URI**
 
