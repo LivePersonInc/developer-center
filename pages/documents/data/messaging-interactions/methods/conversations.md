@@ -24,7 +24,7 @@ Name   | Description                                                  | Type/Val
 offset | The offset specifies from which record to retrieve the chat. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
 limit  | Max amount of conversations to be received in the response.  | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                      | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
-v   | version of the API (1 or 2)                    | string     | Optional | default value is 1, only in v=2 unauthenticated engagement attributes (SDEs) can be returned and their values will be "typedef", and not String. This will be applicable for both authentictaed & unauthenticated SDEs.
+v   | version of the API (1 or 2)                    | string     | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs)be returned. When using v=2, both unauthenticated and authenticated SDEs will have a vlue of "typedef" and not String.|
 
 **BODY/POST Parameters**
 
