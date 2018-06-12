@@ -1,7 +1,7 @@
 ---
 title: Guidelines
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: Messaging Connectors Alignment
 order: 70

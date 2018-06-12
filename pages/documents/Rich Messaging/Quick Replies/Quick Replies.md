@@ -1,7 +1,7 @@
 ---
 title: Structured Content
 Keywords:
-level1:
+level1: Documents
 level2: Guides
 level3: Rich Messaging
 

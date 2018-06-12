@@ -1,11 +1,11 @@
 ---
 title: Button Template
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: Messaging Connectors Alignment
 level4: Facebook
-order: 50
+order: 30
 permalink: rich-messaging-connectors-fb-button.html
 indicator: both
 ---
@@ -14,7 +14,7 @@ The button template is a simple structured card message that includes a text tit
 
 This is button template example image with all type of button actions, including publish text button tap view:
 
-![image alt text](image_4.jpg)
+![](fb-list.PNG)
 
 ### Example
 
