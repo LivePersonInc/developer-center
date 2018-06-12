@@ -19,8 +19,6 @@ Below, you will find an example of an Application Install Manifest. This JSON fo
 
 * `max_retries` - optional key. Use this field to configure the maximum number of retries which our Webhooks service will attempt in case of a failed request. For more information, please see the [Retry Policy](webhooks-retrypolicy.html) page.
 
-* `headers` - optional key. In case your request to the Webhooks requires headers, you can add them using this key.
-
 After filling in the JSON Template with the required data, please contact your Account Management team to register your connector application. If you're interested in more in-depth information on how this schema is built and why, please refer to the [general Application Install Manifest document](guides-le-applications-installing.html).
 
 ### LiveEngage Application Manifest Schema - Example Using the Connector API
@@ -38,13 +36,11 @@ After filling in the JSON Template with the required data, please contact your A
     "webhooks": {
       "ms.MessagingEventNotification.ContentEvent": {
         "endpoint": "https://your/webhooks/endpoint",
-        "max_retries": 3,
-        "headers": [{"header_name": "NAME", "header_value": "VALUE"}]
+        "max_retries": 3
       },
       "ms.MessagingEventNotification.RichContentEvent": {
         "endpoint": "https://your/webhooks/endpoint",
-        "max_retries": 5,
-        "headers": [{"header_name": "NAME", "header_value": "VALUE"}]
+        "max_retries": 5
       },
       "ms.MessagingEventNotification.AcceptStatusEvent": {
         "endpoint": "https://your/webhooks/endpoint",
