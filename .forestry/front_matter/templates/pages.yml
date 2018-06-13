@@ -17,7 +17,7 @@ fields:
 - name: layout
   label: Layout
   type: text
-  hidden: false
+  hidden: true
   default: page
 - name: permalink
   label: 'Permalink '
@@ -80,16 +80,6 @@ fields:
     are "chat", "messaging" or "both"
   config:
     required: false
-- name: keywords
-  label: Keywords
-  type: list
-  hidden: false
-  default: ''
-- name: Keywords
-  label: Keywords
-  type: text
-  hidden: false
-  default: ''
 - name: level-order
   label: Level order
   type: text
