@@ -23,7 +23,7 @@ Once the application has been installed, the LivePerson resource will send you y
 |--- | --- | ---|
 |client_name | Choose the name for your Connector application | string| Yes | Can be internationalized by adding 5646 language tag after hash chararcter. <br /> Max length: 128|
 |description | App description | string | No| max length: 256|
-|grant_types | Authorization grant according to OAuth 2.0 | array | No | supported values: "authorization_code", "client_credentials", "refresh_token"|
+|grant_types | Authorization grant according to OAuth 2.0 | array | No | supported values: "client_credentials"|
 |redirect_uris | For web/native apps, the URIs to which the JWT/code will be sent after redirect | array of strings | No | max length: 128|
 |response_types | OAuth 2.0 response type strings that the client can use at the authorization endpoint | array | No |supported values: "code"|
 |scope | Space-separated list of scope values that the client can use when requesting access tokens| string| No |supported values: "msg.consumer" <br /> max length: 128|
@@ -72,7 +72,7 @@ Once the application has been installed, the LivePerson resource will send you y
   "client_name": "My First LE-App",
   "description": "This is my first LE-App",
   "grant_types": [
-    "client_credentials","authorization_code"
+    "client_credentials"
   ],
   "response_types": "code",
   "redirect_uris": ["https://www.myredirecturi.com"],
