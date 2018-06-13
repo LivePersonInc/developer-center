@@ -14,11 +14,6 @@ fields:
   type: boolean
   hidden: false
   default: true
-- name: layout
-  label: Layout
-  type: text
-  hidden: true
-  default: page
 - name: permalink
   label: 'Permalink '
   type: text
