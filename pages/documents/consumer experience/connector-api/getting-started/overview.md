@@ -32,23 +32,25 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 ### Capabilities enabled by the Connector API
 
-#### On the **consumer** side:
+#### On the **consumer** side - achieved by the **Messaging SEND API** and **Webhooks** components
 
-* Create a new conversation and send SDEs in one step.
+* Create a new conversation and send SDEs in one step. (Messaging SEND API)
 
-* Send text messages
+* Send text messages (Messaging SEND API)
 
-* Send images
+* Send images (Messaging SEND API)
 
-* See SENT, READ and RECEIVED indications
+* See SENT, READ and RECEIVED indications (Webhooks)
 
-* Send chat state events (COMPOSING (i.e. Consumer is typing), ACTIVE, INACTIVE etc.)
+* Send chat state events (COMPOSING (i.e. Consumer is typing), ACTIVE, INACTIVE etc.) (Messaging SEND API)
+
+* See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) (Webhooks)
 
 * Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid){:target="_blank"}
 
-* Close conversation
+* Close conversation (Messaging SEND API)
 
-* Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings
+* Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings (Messaging SEND API)
 
 #### On the **agent** side:
 
@@ -65,6 +67,10 @@ Please note: as part of using the Connector API, brands will be required to expo
 * See indication that the consumer is typing
 
 * Close a conversation
+
+<br>
+
+**Note** - The Connector API was developed for applications/connectors on the **Consumer** side only. Hence, the consumer side capabilities described above are enabled via the **Messaging SEND API** and **Webhooks** components (which are the building blocks of the Connector API). On the Agent side, the capabilities described above are the ones already provided out of the box by LiveEngage and the **Agent Workspace** and that are currently supported by the Connector API. In other words, the Connector API brings new functionality (via the Messaging SEND API and Webhooks) only to the consumer side. On the agent side, it simply supports some of the already existing LiveEngage capabilities and allows them to be used in connector applications.
 
 ### Use Cases
 
