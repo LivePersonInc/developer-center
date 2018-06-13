@@ -14,7 +14,7 @@ indicator: messaging
 
 ### Introduction
 
-The Workdays API  allows you to configure hours of operation for specific days of the week and assign specific skills or as the default setting to an account. During the specified hours of operation, consumers will receive the expected time to response message for the skill as defined in the account. Outside of the specified hours of operation, consumers will receive the expected time to response including the time until the next shift begins.
+The Workdays API allows you to configure hours of operation for specific days of the week and assign specific skills or as the default setting to an account. During the specified hours of operation, consumers will receive the expected time to response message for the skill as defined in the account. Outside of the specified hours of operation, consumers will receive the expected time to response including the time until the next shift begins.
 
 For example, if a skill has a defined time to response of five minutes and a consumer starts a conversation outside of the defined hours of operation, they will receive an automated message with an expected response time of "five minutes + the remaining time to the next shift". This means that if there are three hours until the next shift, they will receive an expected response time of three hours and five minutes.
 
