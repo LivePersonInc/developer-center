@@ -1,7 +1,7 @@
 ---
 title: What Is a LiveEngage Application?
 Keywords:
-level1: 
+level1:
 level2: Guides
 level3: LiveEngage Applications
 level-order: 12
@@ -21,6 +21,7 @@ These type of Applications can be published in a Marketplace by a Developer and 
 
 It is also possible to build a Global application but define that it will not be visible in the App Management Screen. This means that it won't be visible in a Marketplace-type environment but it will be possible to use it on all accounts.
 
+**Note: Creation of Global LiveEngage Applications depends on a partnership program and a certification process. For more details, please approach Dev Support**
 
 ### Private LiveEngage Application
 
