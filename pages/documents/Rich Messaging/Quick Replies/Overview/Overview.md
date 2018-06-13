@@ -21,3 +21,5 @@ It gives consumers brief answers that they can tap in the conversation to easily
 When a Quick Reply chip is tapped, the items are dismissed.
 
 The agent can see the Quick Replies group at all times, even if it is no longer visible to the consumer.
+
+![Quick Replies](images/quick-replies.jpg)

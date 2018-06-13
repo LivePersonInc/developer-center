@@ -13,43 +13,13 @@ Each basic element can have style elements.
 
 ### Fields
 
-<table>
-<thead>
-  <tr>
-    <td>Property Name</td>
-    <td>Description</td>
-    <td>Type</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>bold</td>
-    <td>Whether the text is bold or not</td>
-    <td>Boolean</td>
-  </tr>
-  <tr>
-    <td>italic</td>
-    <td>Whether the text is in italics or not</td>
-    <td>Boolean</td>
-  </tr>
-  <tr>
-    <td>color</td>
-    <td>Defines the element's color</td>
-    <td>String - hex color</td>
-  </tr>
-  <tr>
-    <td>background-color</td>
-    <td>Defines the element's background color</td>
-    <td>String - hex color</td>
-  </tr>
-  <tr>
-    <td>size</td>
-    <td>Defines the element's size</td>
-    <td>Enum - small/medium/large</td>
-  </tr>
-  </tbody>
-</table>
-
+| Property Name | Description | Type |
+| :--- | :--- | :--- |
+| bold | Whether the text is bold or not | Boolean |
+| italic | Whether the text is in italics or not | Boolean |
+| color | Defines the element's color | String - hex color |
+| background-color | Defines the element's background color | String - hex color |
+| size | Defines the element's size | Enum - small/medium/large |
 
 ### Example
 

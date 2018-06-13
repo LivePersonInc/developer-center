@@ -15,6 +15,7 @@ Basic elements are the core components of the structured content messaging templ
 Please refer to the limitation section for basic elements limitations.
 
 Types of basic elements supported by the platform:
+
 * Text
 * Button
 * Image

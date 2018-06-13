@@ -39,35 +39,10 @@ Layout that allows you to present a set of items (elements/layouts) vertically.
 
 ##### **Fields**
 
-<table>
-<thead>  
-<tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Size limit</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th>type</th>
-    <th>Type of element. Must be vertical</th>
-    <th>Enum</th>
-    <th>Y</th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>elements</th>
-    <th>Array of Elements/Layouts</th>
-    <th>Elements/Layouts</th>
-    <th>Y
-</th>
-    <th>256 elements</th>
-  </tr>
-  </tbody>
-</table>
-
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| type | Type of element. Must be vertical | Enum | Y |  |
+| elements | Array of Elements/Layouts | Elements/Layouts | Y | 256 elements |
 
 ### Horizontal
 
@@ -86,31 +61,7 @@ Layout that allows you to present a set of items (elements/layouts) horizontally
 
 ##### **Fields**
 
-<table>
-<thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Size Limit</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th>type</th>
-    <th>Type of element. Must be horizontal</th>
-    <th>Enum</th>
-    <th>Y</th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>elements</th>
-    <th>Array of Elements/Layouts</th>
-    <th>Elements/Layouts</th>
-    <th>Y
-</th>
-    <th>256 elements</th>
-  </tr>
-  </tbody>
-</table>
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| type | Type of element. Must be horizontal | Enum | Y |  |
+| elements | Array of Elements/Layouts | Elements/Layouts | Y | 256 elements |
