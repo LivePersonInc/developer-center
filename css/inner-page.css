@@ -78,6 +78,9 @@ h4 code.highlighter-rouge {
   margin-left: -40px;
 }
 
+pre code {
+  font-size: 12px !important;
+}
 
 .bigtable {
   max-width: initial;
@@ -491,7 +494,7 @@ div.sidebarTitle-holder {
 }
 
 .post-content .zoomimg:hover {
-  transform: scale(1.5);
+  transform: scale(1.75);
 }
 
 .post-content > p, .post-content ol,.post-content ul {
