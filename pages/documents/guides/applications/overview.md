@@ -1,14 +1,14 @@
 ---
 title: What Is a LiveEngage Application?
 Keywords:
-level1:
+level1: Documents
 level2: Guides
 level3: LiveEngage Applications
-level-order: 12
+level-order: 13
 order: 10
 permalink: guides-le-applications-what-is.html
 root-link: true
-indicator:
+indicator: both
 ---
 
 LiveEngage Applications are a code layer developed on top of LiveEngage APIs which include an `App_Install_Id` parameter. This parameter is received when registering a dedicated configuration manifest that defines its scope and components.
@@ -21,7 +21,7 @@ This type of Applications can be published in a Marketplace by a Developer and w
 
 It is also possible to build a Global application but define that it will not be visible in the App Management Screen. This means that it won't be visible in a Marketplace-type environment but it will be possible to use it on all accounts.
 
-**Note: Creation of Global LiveEngage Applications depends on a partnership program and a certification process. For more details, please contact (DevSupport)[mailto:devsupport-lp@liveperson.com]**
+**Note: Creation of Global LiveEngage Applications depends on a partnership program and a certification process. For more details, please contact [DevSupport](mailto:devsupport-lp@liveperson.com).**
 
 ### Private LiveEngage Applications
 
