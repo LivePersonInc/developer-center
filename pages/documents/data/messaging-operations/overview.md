@@ -22,9 +22,9 @@ A few things you'll need to get started with this API:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing either of the following service names:
 
-	* leDataReporting
+	* leDataReporting (this domain is used for all methods **except** Estimated Wait Time)
 
-	* msgEwtAPI (this domain is used for the Estimated Wait Time method only)
+	* msgEwtAPI (this domain is used for the **Estimated Wait Time method only**)
 
 2. This API requires authorization using API key.
 
