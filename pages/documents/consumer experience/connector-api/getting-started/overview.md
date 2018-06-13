@@ -24,7 +24,7 @@ LiveEngage already provides out of the box connectors to Facebook, Google My Bus
 
 The Connector API consists of two main components:
 
-1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html){:target="_blank"}) and send message ([SEND])(sendapi-send.html){:target="_blank"} (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
+1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html){:target="_blank"}) and send message ([SEND](sendapi-send.html){:target="_blank"}) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
 
 2. **[WebHooks](webhooks-overview.html){:target="_blank"} Notification Service**: This component sends notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the connector, such as agent/consumer replied, closed conversation, is typing and so on.
 
