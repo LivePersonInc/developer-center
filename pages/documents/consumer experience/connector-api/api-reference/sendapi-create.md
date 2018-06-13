@@ -88,7 +88,7 @@ The [SDEs](https://developers.liveperson.com/engagment-attributes-types.html){:t
 
 The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
-The next request body example illustrates how to create a conversation and sending SDEs in one request:
+The next request body example illustrates how to create a conversation and send SDEs in one request:
 
 ```json
 [{
@@ -128,16 +128,16 @@ The next request body example illustrates how to create a conversation and sendi
 ]
 ```
 
-The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
 If you have set up Campaigns for Messaging on your account, you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
 
 <img class="zoomimg" src="img/ConnectorAPI3.png" alt="connectoroverview">
 
-In order to retrieve the campaign properties you need to use another API which is called [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"}. The API method [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"} allows you to send LiveEngage the user information (`consumerId` OR the `visitorId` & `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples){:target="_blank"}.
+In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"}. This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"}, allows you to send LiveEngage the user information (`consumerId` OR the `visitorId` & `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples){:target="_blank"}.
 
-The connector can use the above properties in the CONVERSATION request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
+The connector can then use the above properties in the CONVERSATION request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
 
 **Example Request Body - JSON Payload**
 
