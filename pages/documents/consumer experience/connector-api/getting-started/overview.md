@@ -34,7 +34,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 #### On the **consumer** side
 
-| Capability | Achieved by | Messaging Send API endpoint |
+| Capability | Achieved by | Endpoint |
 | :-- | :--- | :--- |
 | Create a new conversation and send SDEs in one step | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [CONVERSATION](sendapi-create.html){:target="_blank"} |
 | Send text messages | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
