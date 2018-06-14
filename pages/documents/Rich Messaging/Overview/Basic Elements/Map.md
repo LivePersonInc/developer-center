@@ -12,6 +12,21 @@ indicator: both
 
 Map that points to a specific location.
 
+### Fields
+
+| Property Name | Description | Type | Required |
+| :--- | :--- | :--- | :--- |
+| type | Type of element. Must be map | Enum | Y |
+| lo | Longitude | Float | Y |
+| la | Latitude | Float | Y |
+| click | On-click operation (included metadata and/or actions clauses) |  |  |
+| tooltip | Map tooltip, used also as aria | String | N |
+| style | Styling elements  | Container | N | |
+
+For the 'click' field, please see the [Click Operations](rich-messaging-click-ops.html) section.
+
+For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
+
 ### Example
 
 ```json
@@ -31,15 +46,3 @@ Map that points to a specific location.
 	"tooltip": "map tooltip"
 }
 ```
-
-### Fields
-
-| Property Name | Description | Type | Required |
-| :--- | :--- | :--- | :--- |
-| type | Type of element. Must be map | Enum | Y |
-| lo | Longitude | Float | Y |
-| la | Latitude | Float | Y |
-| click | On-click operation (included metadata and/or actions clauses) |  |  |
-| tooltip | Map tooltip, used also as aria | String | N |
-
-For the Metadata field, please see the Metadata section in the [Click Operations](https://developers.liveperson.com/rich-messaging-click-ops.html) section.

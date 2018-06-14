@@ -14,10 +14,6 @@ The very basic structured content elements that can contain either or elements, 
 
 ![card](images/card.jpg)
 
-### Limitations
-
-### Best Practices
-
 ### Examples
 
 #### Simple Card (Image + Text)

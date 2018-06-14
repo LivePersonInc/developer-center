@@ -12,6 +12,18 @@ indicator: both
 
 Simple plain text message.
 
+### Fields
+
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| type | Type of element. Must be text. | Enum | Y | |
+| text | The message | String | Y | 5000 chars |
+| tooltip | Text tooltip, used also as aria | String | N | 256 chars |
+| style | Styling elements  | Container | N | |
+| rtl | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false. | Boolean | N | |
+
+For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
+
 ### Example
 
 ```json
@@ -22,12 +34,3 @@ Simple plain text message.
 	"rtl" : true
 }
 ```
-
-### Fields
-
-| Property Name | Description | Type | Required | Size Limit |
-| :--- | :--- | :--- | :--- | :--- |
-| type | Type of element. Must be text. | Enum | Y | |
-| text | The message | String | Y | 5000 chars |
-| tooltip | Text tooltip, used also as aria | String | N | 256 chars |
-| rtl | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false. | Boolean | N | |

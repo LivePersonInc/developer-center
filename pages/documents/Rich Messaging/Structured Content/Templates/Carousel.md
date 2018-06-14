@@ -15,8 +15,6 @@ The carousel format can support a variety of businesses and needs to showcase se
 
 ![carousel](images/carousel.jpg)
 
-### Limitations
-
 ### Best Practices
 
 * Use a carousel when there's a priority order to your content, i.e., the first item is probably the most interesting.
@@ -26,7 +24,7 @@ The carousel format can support a variety of businesses and needs to showcase se
 * Don't mix types of content. If you include an article next to a list of products, your experience could cause confusion.
 
 * Don't use a carousel when it's important that people see everything in the list. They may not scroll to the end.
-Consider creating a List instead (a [Structured Content card](rich-messaging-structured-content-card.html) with vertical elements and click operations).
+Consider creating a **List** instead (a [Structured Content card](rich-messaging-structured-content-card.html) with vertical elements and click operations).
 
 ### Example
 
