@@ -9,7 +9,7 @@ permalink: rt-interactions-monitoring-methods-engagement.html
 indicator: messaging
 ---
 
-**Note**: Please make sure the read the [overview](rt-interactions-monitor-api-overview.html) before getting started with this method.
+**Note**: Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
 
 ### Description
 
