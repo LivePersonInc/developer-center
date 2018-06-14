@@ -1,7 +1,7 @@
 ---
 title: Create Status Reason
 level1: Documents
-level2:
+level2: Account Configuration
 level3: Agent Status Reason API
 level4: Methods
 permalink: account-configuration-agent-status-reason-createstatusreason.html
@@ -76,7 +76,7 @@ The request body is able to accept a single JSON object as shown below, or a JSO
 
 |Attribute | Description | Notes|
 |--- | --- | ---|
-|id | Account Config object’s unique id. | <ul><il>Not used when creating items, the id will be auto generated and returned as part of the response items </il><il>Type: long number </il>|
+|id | Account Config object’s unique id. | <ul><li>Not used when creating items, the id will be auto generated and returned as part of the response items </li><li>Type: long number </li>|
 
 ### Response
 

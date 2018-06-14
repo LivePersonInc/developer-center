@@ -18,7 +18,7 @@ This API retrieves a single user (by ID) for a specific account.
 **Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
 
 ```
-https://{domain}/api/account/{accountId}/configuration/le-users/users?v=4.0
+https://API_REQUEST?v=4.0
 ```
 
 ### Request
@@ -41,10 +41,34 @@ https://{domain}/api/account/{accountId}/configuration/le-users/users?v=4.0
 
  |Parameter|  Description  |Type/Value |
  |:------|    :--------|    :--------|
- |accountId|  LP site ID|   String ^[a-zA-Z0-9_]{1,20}$|
+ |accountId|  LP site ID|   String |
  |userId|     User Id|      Positive long number greater than zero |
+ 
+ **Query Parameters**
+  
+  | Name            | Description                                                                  | Type    | Notes                                          |
+  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
+  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
+  
+
 
 ### Response
+
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 200  | OK                    |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |
+| 404  | Data Not Found        |
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+ |Header  |Description |
+| :-------  | :-----  |
+| ac-revision | Account config object type collection revision. | 
 
 **Response Body**
 

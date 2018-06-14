@@ -112,6 +112,18 @@ public class LPAuthenticationParams{
 }
 ```
 
+### ConversationViewParams
+
+```javascript
+
+public class ConversationViewParams{
+  boolean viewOnlyMode = false;
+  CampaignInfo mCampaignInfo;
+  LPConversationsHistoryStateToDisplay mHistoryConversationsStateToDisplay = LPConversationsHistoryStateToDisplay.ALL;
+  LPConversationHistoryMaxDaysDateType mHistoryConversationMaxDaysType = LPConversationHistoryMaxDaysDateType.startConversationDate;
+  int mHistoryConversationsMaxDays = -1; //no limit
+}
+```
 
 ### LPConversationsHistoryStateToDisplay
 
@@ -134,8 +146,6 @@ public enum LPConversationHistoryMaxDaysDateType {
 
 
 ```
-
-
 
 **Monitoring API Related Classes**
 
@@ -278,3 +288,4 @@ enum class MonitoringErrorType {
 }
 
 ```
+

@@ -1,5 +1,6 @@
 ---
 title: Report
+level1: 
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -49,6 +50,8 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
+<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID). 
+
 ### POST Request & body entity example
 
 **Example call URL**
@@ -89,6 +92,8 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ImpressionAcceptEvent:
 
+**Note**: This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf){:target="_blank"}.
+
 ```json
 {
   "type": "impAccept",
@@ -105,6 +110,8 @@ ImpressionAcceptEvent:
 ```
 
 ImpressionDisplayEvent:
+
+**Note**: This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf){:target="_blank"}.
 
 ```json
 {

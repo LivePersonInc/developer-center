@@ -2,7 +2,7 @@
 title: Cancel Deletion Request
 keywords:
 level1: Documents
-level2: 
+level2: Data 
 level3: Personal Data Deletion API
 level4: Methods
 order: 20
@@ -28,7 +28,7 @@ This API allows cancellation of an existing deletion request in the time period 
 
   |Parameter|  Description|  Type/Value |
   |:------    |:--------    |:--------|
-  |site_id|  LP account id|   String ^[a-zA-Z0-9_]{1,20}$|
+  |site_id|  LP account id|   String |
   |request_id  |Specific request id   |String|
 
 ### Response

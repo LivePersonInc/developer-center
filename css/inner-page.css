@@ -74,6 +74,10 @@ h4 code.highlighter-rouge {
   width: 125%;
 }
 
+.post-content table tbody tr td ul {
+  margin-left: -40px;
+}
+
 
 .bigtable {
   max-width: initial;
@@ -165,7 +169,7 @@ code {
   border-radius: 4px;
   color: #fff;
   padding: 2px 10px;
-  /*white-space: initial;*/
+  white-space: initial
 }
 
 td code {
@@ -682,4 +686,8 @@ pre {
 
 .solutionshr {
   width: 100%;
+}
+
+.hide {
+  visibility: none;
 }
