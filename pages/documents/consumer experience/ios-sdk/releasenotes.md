@@ -13,6 +13,21 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.1.5
+The following release notes reflect an update to the LiveEngage Mobile App SDK.
+
+Version 3.1.5 supports XCode 9.3 & XCode 9.4
+#### Symptom:
+Control History APIs are not exposed to Objective C.
+#### Fix:
+The Control History APIs are now exposed
+
+#### Symptom:
+LPMessagingSDKCSATScoreSubmissionDidFinish delegate was called when getting history, even if the CSAT was already submitted.
+#### Fix:
+LPMessagingSDKCSATScoreSubmissionDidFinish is now called only after the CSAT is submitted.
+
+
 ### iOS Messaging SDK - Version 3.1.4 (identical to 3.1.0.24)
 Version 3.1.0.24 - Supports XCode 9.2
 
