@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Messaging Connectors Alignment
 order: 70
 permalink: rich-messaging-connectors-guidelines.html
-indicator: both
+indicator: messaging
 ---
 
 * **Navigation action** will render a link to a Google map to the consumer on messenger conversation (with exact location rendered by Structured Content coordinates).

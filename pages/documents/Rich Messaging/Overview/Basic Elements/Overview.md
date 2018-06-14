@@ -10,9 +10,9 @@ permalink: rich-messaging-basic-elements.html
 indicator: both
 ---
 
-Basic elements are the core components of the structured content messaging template. By using this element in your template, you can send basic messages, such as simple text, images or buttons. You can also send a card which includes multiple basic elements with attached actions.
-
-Please refer to the limitation section for basic elements limitations.
+Basic elements are the core components of the structured content messaging template.
+By using this element in your template, you can send basic messages, such as simple text, images or buttons.
+You can also send a Structured Content template which includes multiple basic elements with attached actions.
 
 Types of basic elements supported by the platform:
 

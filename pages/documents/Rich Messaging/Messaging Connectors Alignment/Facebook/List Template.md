@@ -7,11 +7,12 @@ level3: Messaging Connectors Alignment
 level4: Facebook
 order: 40
 permalink: rich-messaging-connectors-fb-list.html
-indicator: both
+indicator: messaging
 ---
 
 Facebook Messenger has full support for list template messages.
 [List template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/list) messages are a vertically structured contentrollable set of up to four items (Facebook limitation) that may each contain:
+
 * Text title
 * Text subtitle
 * Image

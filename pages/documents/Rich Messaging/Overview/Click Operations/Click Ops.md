@@ -4,7 +4,7 @@ Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Getting Started
-order: 20
+order: 80
 permalink: rich-messaging-click-ops.html
 indicator: both
 ---

@@ -7,7 +7,7 @@ level3: Messaging Connectors Alignment
 level4: Facebook
 order: 20
 permalink: rich-messaging-connectors-fb-generic.html
-indicator: both
+indicator: messaging
 ---
 
 The [generic template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/generic) is a simple structured card message that includes:

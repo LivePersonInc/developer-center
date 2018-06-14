@@ -7,7 +7,7 @@ level3: Messaging Connectors Alignment
 level4: Facebook
 order: 30
 permalink: rich-messaging-connectors-fb-button.html
-indicator: both
+indicator: messaging
 ---
 
 The [button template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/button) is a simple structured card message that includes:

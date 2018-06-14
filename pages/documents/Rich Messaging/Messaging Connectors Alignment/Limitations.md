@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Messaging Connectors Alignment
 order: 80
 permalink: rich-messaging-connectors-limitations.html
-indicator: both
+indicator: messaging
 ---
 
 * List template - Top_element_style in the List FB template will not be supported (will always be set to "Compact")

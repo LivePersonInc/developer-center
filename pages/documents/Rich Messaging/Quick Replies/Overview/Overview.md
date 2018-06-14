@@ -9,7 +9,7 @@ level-order: 3
 order: 10
 permalink: rich-messaging-quick-replies-overview.html
 root-link: true
-indicator: both
+indicator: messaging
 ---
 
 Quick Replies are a group of actionable items (chips) that appear as part of the conversation, making it easier to have an automated conversation with consumers.
