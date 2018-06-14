@@ -88,687 +88,690 @@ fields:
   hidden: false
   default: ''
 pages:
-- pages/documents/consumer experience/push-service/whitelisting.md
-- pages/documents/data/data-access/Methods/web-session.md
-- pages/documents/le-tag/events/visitor-flow.md
-- pages/documents/rt-interactions/visit-information/visit-information.md
-- pages/documents/rt-interactions/validate-engagement/validate-engagement.md
-- pages/Products/Data/MCS/usingapis.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/userdata.md
-- pages/documents/consumer experience/android-sdk/Advanced Configurations/user-data.md
-- pages/documents/account-configuration/agent-status-reason/updatestatusreason.md
-- pages/documents/account-configuration/LE Categories/Methods/updatecategory.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/updateConversationTTR.md
-- pages/documents/account-configuration/workdays/methods/update.md
-- pages/documents/account-configuration/special-occasions/methods/update.md
-- pages/documents/admin/users/methods/update-users.md
-- pages/documents/admin/users/methods/update-user.md
-- pages/documents/admin/skills/methods/update-skills.md
-- pages/documents/admin/skills/methods/update-skill.md
-- pages/documents/rt-interactions/app-engagement/methods/update-session.md
-- pages/documents/admin/profiles/Methods/update-profiles.md
-- pages/documents/admin/profiles/Methods/update-profile.md
-- pages/documents/admin/LOB/methods/update-lobs.md
-- pages/documents/admin/LOB/methods/update-lob.md
-- pages/documents/account-configuration/predefined-content/methods/update-content.md
-- pages/documents/account-configuration/predefined-content/methods/update-content-items.md
-- pages/documents/account-configuration/unified-messages/methods/update-an-unified-automatic-message.md
-- pages/documents/account-configuration/automatic-messages/methods/update-an-automatic-message.md
-- pages/documents/admin/agent-groups/methods/update-agent-groups.md
-- pages/documents/admin/agent-groups/methods/update-agent-group.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/unsubscribeExConversations.md
-- pages/documents/consumer experience/android-sdk/methods/unregisterlppusher.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/ui.md
-- pages/documents/guides/Engagement Attributes/types.md
-- pages/documents/consumer experience/connector-api/webhooks/troubleshooting.md
-- pages/documents/agent-interactions/chat-agent/Methods/transfer-chat.md
-- tooltips.html
-- pages/documents/consumer experience/ios-sdk/Methods/togglechatactions.md
-- pdfconfigs/tocpage.html
-- pages/documents/consumer experience/ios-sdk/toastnotifications.md
-- pages/documents/consumer experience/push-service/tls.md
-- pdfconfigs/titlepage.html
-- pages/documents/consumer experience/ios-sdk/String Localization/timestamps.md
-- pages/documents/consumer experience/android-sdk/string localization/timestamps.md
-- pages/Products/Channels/MMS/technical.md
-- pages/documents/tags/tag_troubleshooting.md
-- pages/documents/tags/tag_special_layouts.md
-- pages/documents/tags/tag_single_sourcing.md
-- pages/documents/tags/tag_publishing.md
-- pages/documents/tags/tag_news.md
-- pages/documents/tags/tag_navigation.md
-- pages/documents/tags/tag_mobile.md
-- pages/documents/tags/tag_getting_started.md
-- pages/documents/tags/tag_formatting.md
-- pages/documents/tags/tag_content_types.md
-- pages/documents/tags/tag_collaboration.md
-- pages/documents/agent-interactions/chat-agent/system-messages.md
-- pages/documents/consumer experience/javascript-chat/surveys.md
-- pages/documents/data/data-access/Methods/survey.md
-- pages/summit.md
-- pages/summit-preview.html
-- pages/documents/consumer experience/ios-sdk/Methods/subscribelogevents.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/subscribeExConversations.md
-- pages/documents/consumer experience/javascript-chat/Methods/submitofflinesurvey.md
-- pages/documents/consumer experience/javascript-chat/Methods/submitexitsurvey.md
-- pages/documents/agent-interactions/chat-agent/Methods/submit-survey.md
-- pages/documents/consumer experience/server-chat/Methods/submit-survey-data.md
-- pages/documents/consumer experience/ios-sdk/String Localization/string-localization.md
-- pages/Products/SalesForce Integration/Implementation/step5.md
-- pages/Products/SalesForce Integration/Implementation/step4.md
-- pages/Products/SalesForce Integration/Implementation/step3.md
-- pages/Products/SalesForce Integration/Implementation/step2.md
-- pages/Products/SalesForce Integration/Implementation/step1.md
-- pages/documents/account-configuration/agent-status-reason/statusreasonlist.md
-- pages/documents/account-configuration/agent-status-reason/statusreasonbyid.md
-- pages/documents/consumer experience/javascript-chat/Methods/startchatrequestchat.md
-- pages/documents/consumer experience/server-chat/Methods/start-chat.md
-- pages/documents/agent-interactions/chat-agent/Methods/start-agent-session.md
-- pages/documents/agent-interactions/agent-workspace-sdk/spotify.md
-- pages/solutions-preview.html
-- pages/documents/data/operational-realtime/methods/sla-histogram.md
-- pages/documents/consumer experience/android-sdk/methods/shutdowndeprecated.md
-- pages/documents/consumer experience/android-sdk/methods/shutdown.md
-- pages/documents/consumer experience/android-sdk/methods/showconversationfull.md
-- pages/documents/consumer experience/android-sdk/methods/showconversationdeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/showconversationdeprecated.md
-- pages/documents/consumer experience/android-sdk/methods/showconversationauthdeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/showconversation.md
-- pages/documents/consumer experience/javascript-chat/Methods/setvisitortyping.md
-- pages/documents/consumer experience/javascript-chat/Methods/setvisitorname.md
-- pages/documents/consumer experience/android-sdk/methods/setuserprofiledeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/setuserprofile.md
-- pages/documents/consumer experience/android-sdk/methods/setuserprofile.md
-- pages/Products/Channels/IVR Deflection Solution/settinguptheivr.md
-- pages/documents/guides/Engagement Attributes/settingup.md
-- pages/documents/consumer experience/android-sdk/methods/setcallback.md
-- pages/documents/consumer experience/server-chat/Methods/set-visitor-typing-status.md
-- pages/documents/consumer experience/server-chat/Methods/set-visitor-name.md
-- pages/documents/agent-interactions/chat-agent/Methods/set-agent-typing.md
-- pages/documents/agent-interactions/chat-agent/Methods/set-agent-availability.md
-- pages/documents/consumer experience/android-sdk/string localization/separator.md
-- pages/documents/consumer experience/connector-api/api-reference/sendapi-send.md
-- pages/documents/consumer experience/connector-api/api-reference/sendapi-create.md
-- pages/documents/consumer experience/server-chat/Methods/send-transcript.md
-- pages/documents/consumer experience/connector-api/webhooks/security.md
-- pages/documents/consumer experience/ios-sdk/Appendix/security.md
-- pages/documents/consumer experience/android-sdk/security.md
-- pages/search-result.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/sdkdelegates.md
-- pages/documents/consumer experience/android-sdk/Advanced Configurations/sdk-initialization.md
-- pages/documents/data/data-access/Methods/schema.md
-- pages/documents/consumer experience/ios-sdk/Appendix/sampleapp.md
-- pages/documents/agent-interactions/chat-agent/sampleapp.md
-- pages/documents/consumer experience/server-chat/sample.md
-- pages/documents/consumer experience/connector-api/sample-connector/sample-connector.md
-- pages/documents/data/engagement-history/sample-code.md
-- pages/documents/data/messaging-interactions/sample-code.md
-- pages/documents/data/operational-realtime/sample-code.md
-- pages/documents/consumer experience/connector-api/webhooks/retrypolicy.md
-- pages/documents/account-configuration/workdays/methods/retrievebylist.md
-- pages/documents/account-configuration/special-occasions/methods/retrievebylist.md
-- pages/documents/account-configuration/workdays/methods/retrievebyid.md
-- pages/documents/account-configuration/special-occasions/methods/retrievebyid.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-visitor-typing.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-visitor-typing-status.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-visitor-name.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-visitor-name.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-survey-structure.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-skills.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-pre-chat-survey.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-offline-survey.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-exit-survey-structure.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-estimated-wait-time.md
-- pages/documents/data/engagement-history/methods/retrieve-engagement-list-by-criteria.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-data.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-current-availability.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-sessions.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-chat-resources.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-resources.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-chat-information.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-info.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-events.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-chat-events.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-available-slots.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-available-slots.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-available-agents.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-availability.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-agent-typing.md
-- pages/documents/consumer experience/server-chat/Methods/retrieve-agent-typing-status.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-agent-survey-structure.md
-- pages/documents/agent-interactions/chat-agent/Methods/retrieve-agent-information.md
-- pages/documents/consumer experience/push-service/response.md
-- pages/documents/consumer experience/ios-sdk/Methods/resolveconversation.md
-- pages/documents/consumer experience/android-sdk/methods/resolveconversation.md
-- pages/documents/consumer experience/android-sdk/string localization/resolve.md
-- pages/documents/admin/users/methods/reset-users-password.md
-- pages/documents/consumer experience/javascript-chat/Methods/requesttranscript.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/requestConversation.md
-- pages/Products/Watson with LE/reporting.md
-- pages/documents/rt-interactions/monitor-api/methods/report.md
-- pages/documents/consumer experience/ios-sdk/Methods/removeconversation.md
-- pages/documents/consumer experience/android-sdk/methods/removecallback.md
-- pages/documents/agent-interactions/agent-workspace-sdk/releasenotes.md
-- pages/documents/consumer experience/android-sdk/releasenotes.md
-- pages/documents/consumer experience/ios-sdk/releasenotes.md
-- pages/documents/consumer experience/javascript-chat/releasenotes.md
-- pages/documents/agent-interactions/messaging-agent-sdk/releasenotes.md
-- pages/documents/rt-interactions/window-sdk/releasenotes.md
-- pages/documents/guides/StructuredContent/pollock.md
-- pages/documents/consumer experience/android-sdk/string localization/plural-string.md
-- pages/Products/Rich Media/video-chat/planyourservice.md
-- pages/Products/Rich Media/video-chat/plantheservices.md
-- pages/Products/Watson with LE/planning.md
-- pages/documents/consumer experience/ios-sdk/photosharing.md
-- pages/documents/consumer experience/android-sdk/photo-sharing.md
-- pages/documents/data/data-access/pgpencryption.md
-- pages/documents/account-configuration/agent-status-reason/overview.md
-- pages/documents/rt-interactions/window-sdk/overview.md
-- pages/Products/In-App Messaging/overview.md
-- pages/Products/Knowledge Base Integration/overview.md
-- pages/Products/Data/MCS/overview.md
-- pages/Products/Channels/SMS with LE/overview.md
-- pages/Products/Channels/MMS/overview.md
-- pages/documents/data/personal-data-deletion/overview.md
-- pages/documents/rt-interactions/visit-information/overview.md
-- pages/documents/agent-interactions/agent-workspace-sdk/overview.md
-- pages/documents/guides/applications/overview.md
-- pages/Products/CRM Widgets/Zendesk/overview.md
-- pages/documents/admin/users/Introduction/overview.md
-- pages/documents/le-tag/overview.md
-- pages/documents/consumer experience/android-sdk/overview.md
-- pages/documents/rt-interactions/validate-engagement/overview.md
-- pages/documents/rt-interactions/monitor-api/overview.md
-- pages/documents/guides/Engagement Attributes/overview.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/overview.md
-- pages/Products/Data/custom-dashboard/overview.md
-- pages/documents/account-configuration/automatic-messages/overview.md
-- pages/documents/account-configuration/predefined-content/overview.md
-- pages/documents/data/data-access/overview.md
-- pages/documents/rt-interactions/app-engagement/overview.md
-- pages/documents/data/engagement-history/overview.md
-- pages/documents/consumer experience/push-service/overview.md
-- pages/documents/account-configuration/unified-messages/overview.md
-- pages/Products/Bots/Customer Facing Bots/overview.md
-- pages/documents/data/messaging-consumer-history/overview.md
-- pages/documents/account-configuration/special-occasions/overview.md
-- pages/documents/consumer experience/messaging-window-api/overview.md
-- pages/documents/account-configuration/workdays/overview.md
-- pages/documents/data/operational-realtime/overview.md
-- pages/Products/CRM Widgets/Microsoft Dynamics/overview.md
-- pages/Products/CRM Widgets/NetSuite/overview.md
-- pages/Products/CRM Widgets/Salesforce/overview.md
-- pages/Products/CRM Widgets/SugarCRM/overview.md
-- pages/documents/rt-interactions/ivr-engagement/overview.md
-- pages/documents/rt-interactions/engagement-trigger/overview.md
-- pages/Products/SalesForce Integration/overview.md
-- pages/documents/agent-interactions/messaging-agent-sdk/overview.md
-- pages/documents/admin/agent-groups/Introduction/overview.md
-- pages/documents/data/messaging-operations/overview.md
-- pages/Products/Watson with LE/overview.md
-- pages/documents/guides/StructuredContent/overview.md
-- pages/documents/consumer experience/connector-api/getting-started/overview.md
-- pages/documents/admin/skills/Introduction/overview.md
-- pages/documents/consumer experience/connector-api/webhooks/overview.md
-- pages/documents/rt-interactions/engagement-attributes/overview.md
-- pages/documents/data/messaging-interactions/overview.md
-- pages/documents/consumer experience/ios-sdk/opensource.md
-- pages/documents/consumer experience/android-sdk/opensource.md
-- pages/documents/consumer experience/javascript-chat/Events/onvisitordisposed.md
-- pages/documents/consumer experience/javascript-chat/Events/ontranscript.md
-- pages/documents/consumer experience/javascript-chat/Events/onstop.md
-- pages/documents/consumer experience/javascript-chat/Events/onstate.md
-- pages/documents/consumer experience/javascript-chat/Events/onstart.md
-- pages/documents/consumer experience/javascript-chat/Events/onrequestchat.md
-- pages/documents/consumer experience/javascript-chat/Events/onprechatsurvey.md
-- pages/documents/consumer experience/javascript-chat/Events/onofflinesurvey.md
-- pages/documents/consumer experience/javascript-chat/Events/onload.md
-- pages/documents/consumer experience/javascript-chat/Events/online.md
-- pages/documents/consumer experience/javascript-chat/Events/oninit.md
-- pages/documents/consumer experience/javascript-chat/Events/oninfo.md
-- pages/documents/consumer experience/javascript-chat/Events/onexitsurvey.md
-- pages/documents/consumer experience/javascript-chat/Events/onengagement.md
-- pages/documents/consumer experience/javascript-chat/Events/onagenttyping.md
-- pages/documents/consumer experience/javascript-chat/Events/onaccounttoaccounttransfer.md
-- pages/documents/consumer experience/android-sdk/string localization/off-hours.md
-- js/mydoc_scroll.html
-- pages/documents/consumer experience/android-sdk/methods/monitoring_api.md
-- pages/documents/consumer experience/ios-sdk/Methods/monitoring methods.md
-- pages/documents/consumer experience/android-sdk/string localization/modifying-string.md
-- pages/documents/consumer experience/android-sdk/string localization/modifying-resources.md
-- pages/documents/consumer experience/android-sdk/methods/methods.md
-- pages/documents/agent-interactions/agent-workspace-sdk/methods.md
-- pages/Products/Data/custom-dashboard/messagingmetrics.md
-- pages/Products/Messaging Failover/messagingfailover.md
-- pages/messagingapisdk.md
-- pages/documents/data/messaging-operations/methods/messaging-queue-health.md
-- pages/documents/data/messaging-operations/methods/messaging-estimated-wait-time.md
-- pages/documents/data/messaging-operations/methods/messaging-current-queue-health.md
-- pages/documents/data/messaging-operations/methods/messaging-csat-distribution.md
-- pages/documents/data/messaging-operations/methods/messaging-conversation.md
-- pages/messaging-api-sdk-preview.html
-- pages/documents/consumer experience/ios-sdk/Methods/messaging methods.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/masterConsumerResponses.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/masterConsumerRequests.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/masterConsumerNotifications.md
-- pages/documents/consumer experience/android-sdk/methods/markurgent.md
-- pages/documents/consumer experience/android-sdk/methods/marknormal.md
-- pages/documents/consumer experience/ios-sdk/Methods/markasurgent.md
-- pages/documents/guides/Authentication/majorcomponents.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/logsandinfo.md
-- pages/documents/consumer experience/android-sdk/Advanced Configurations/logs.md
-- pages/documents/consumer experience/ios-sdk/Methods/logout.md
-- pages/documents/agent-interactions/login/methods/logout.md
-- pages/documents/consumer experience/android-sdk/methods/logout.md
-- pages/documents/agent-interactions/login/methods/login.md
-- pages/documents/consumer experience/android-sdk/localizationstrings.md
-- pages/documents/consumer experience/ios-sdk/String Localization/localization-keys.md
-- pages/documents/rt-interactions/window-sdk/limitations.md
-- pages/documents/agent-interactions/agent-workspace-sdk/limitations.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/lifecycle.md
-- pages/documents/guides/applications/leappcreation.md
-- pages/Products/SalesForce Integration/knownissues.md
-- pages/documents/consumer experience/messaging-window-api/samples/js-sample.md
-- pages/Products/Channels/IVR Deflection Solution/ivrdeflectionmessaging.md
-- pages/Products/Channels/SMS with LE/Entry Points/ivrdeflection.md
-- pages/Products/Channels/IVR Deflection Solution/ivr.md
-- pages/documents/consumer experience/ios-sdk/Methods/isurgent.md
-- pages/documents/guides/Authentication/introduction.md
-- pages/documents/consumer experience/android-sdk/interfaceandclass.md
-- pages/documents/consumer experience/ios-sdk/interface-and-class-definitions.md
-- pages/documents/consumer experience/android-sdk/methods/initializeproperties.md
-- pages/documents/consumer experience/android-sdk/methods/initializedeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/initialize.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/initialization.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/initConnection.md
-- pages/index.md
-- pages/Products/Channels/In App Messaging/inappmessaging.md
-- pages/Products/Channels/SMS with LE/Entry Points/inapp.md
-- pages/documents/account-configuration/LE Categories/Methods/importaccountcategories.md
-- pages/documents/consumer experience/android-sdk/implementationguidemanual.md
-- pages/documents/consumer experience/android-sdk/implementationguide.md
-- pages/Products/Watson with LE/howitworks.md
-- pages/documents/guides/Authentication/howitworks.md
-- pages/documents/rt-interactions/window-sdk/how-to-use/how-to-use.md
-- pages/documents/le-tag/how-to-use.md
-- pages/documents/agent-interactions/agent-workspace-sdk/how-to-use.md
-- pages/documents/consumer experience/android-sdk/methods/hideconversation.md
-- pages/documents/consumer experience/ios-sdk/Methods/handlepush.md
-- pages/documents/consumer experience/android-sdk/methods/handlepush.md
-- pages/documents/consumer experience/android-sdk/googlemapskey.md
-- pages/documents/consumer experience/javascript-chat/Methods/getvisitorname.md
-- pages/Products/Data/MCS/gettingstarted.md
-- pages/documents/guides/getting-started.md
-- pages/documents/consumer experience/javascript-chat/getting-started.md
-- pages/documents/consumer experience/server-chat/getting-started.md
-- pages/documents/agent-interactions/chat-agent/getting-started.md
-- pages/documents/agent-interactions/login/getting-started.md
-- pages/documents/rt-interactions/monitor-api/getting-started.md
-- pages/documents/consumer experience/messaging-window-api/getting-started.md
-- pages/documents/consumer experience/javascript-chat/Methods/getstate.md
-- pages/Products/In-App Messaging/getstartedios.md
-- pages/Products/In-App Messaging/getstartedandroid.md
-- pages/Products/Bots/Customer Facing Bots/getstarted.md
-- pages/documents/consumer experience/javascript-chat/Methods/getsessionkey.md
-- pages/documents/consumer experience/ios-sdk/Methods/getsdkversion.md
-- pages/documents/consumer experience/android-sdk/methods/getsdkversion.md
-- pages/documents/consumer experience/javascript-chat/Methods/getrtsessionid.md
-- pages/documents/consumer experience/javascript-chat/Methods/getprechatsurvey.md
-- pages/documents/consumer experience/javascript-chat/Methods/getofflinesurvey.md
-- pages/documents/consumer experience/javascript-chat/Methods/getexitsurvey.md
-- pages/documents/consumer experience/javascript-chat/Methods/getestimatedwaittime.md
-- pages/documents/consumer experience/javascript-chat/Methods/getengagement.md
-- pages/documents/consumer experience/android-sdk/methods/getconversationfragfull.md
-- pages/documents/consumer experience/android-sdk/methods/getconversationfragdeprecated.md
-- pages/documents/consumer experience/android-sdk/methods/getconversationfragauthdeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/getassignedagent.md
-- pages/documents/consumer experience/ios-sdk/Methods/getallsupportedlanguages.md
-- pages/documents/account-configuration/LE Categories/Methods/getallchangesquery.md
-- pages/documents/consumer experience/javascript-chat/Methods/getagenttyping.md
-- pages/documents/consumer experience/javascript-chat/Methods/getagentloginname.md
-- pages/documents/consumer experience/javascript-chat/Methods/getagentid.md
-- pages/documents/admin/users/methods/get-user-by-id.md
-- pages/documents/account-configuration/unified-messages/methods/get-unified-automatic-messages.md
-- pages/documents/account-configuration/unified-messages/methods/get-unified-automatic-message-by-id.md
-- pages/documents/rt-interactions/engagement-trigger/methods/get-state.md
-- pages/documents/admin/skills/methods/get-skill-by-id.md
-- pages/documents/admin/profiles/Methods/get-profile-by-id.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/get-messages.md
-- pages/documents/admin/LOB/methods/get-lob-by-id.md
-- pages/documents/account-configuration/predefined-content/methods/get-items.md
-- pages/documents/rt-interactions/engagement-trigger/methods/get-info.md
-- pages/documents/data/personal-data-deletion/methods/get-delete-request.md
-- pages/documents/account-configuration/predefined-content/methods/get-default-items.md
-- pages/documents/account-configuration/predefined-content/methods/get-default-items-by-id.md
-- pages/documents/data/messaging-interactions/methods/get-conversations-by-consumer-id.md
-- pages/documents/data/messaging-interactions/methods/get-conversation-by-conversation-id.md
-- pages/documents/account-configuration/predefined-content/methods/get-by-id.md
-- pages/documents/account-configuration/automatic-messages/methods/get-automatic-messages.md
-- pages/documents/account-configuration/automatic-messages/methods/get-automatic-message-by-id.md
-- pages/documents/admin/users/methods/get-all-users.md
-- pages/events-preview.html
-- pages/documents/rt-interactions/window-sdk/how-to-use/event-structure.md
-- pages/documents/le-tag/events/engagement.md
-- pages/documents/data/data-access/Methods/engagement.md
-- pages/documents/rt-interactions/monitor-api/methods/engagement.md
-- pages/documents/le-tag/events/engagement-window.md
-- pages/documents/rt-interactions/engagement-attributes/engagement-attributes.md
-- pages/documents/data/operational-realtime/methods/engagement-activity.md
-- pages/documents/consumer experience/javascript-chat/Methods/endchat.md
-- pages/documents/agent-interactions/chat-agent/Methods/end-chat.md
-- pages/Products/In-App Messaging/enablepushios.md
-- pages/documents/consumer experience/android-sdk/enable-push.md
-- pages/documents/guides/domain-api.md
-- pages/documents.md
-- pages/documents-preview.html
-- pages/documents/consumer experience/javascript-chat/Methods/disposeVisitor.md
-- pages/documents/consumer experience/ios-sdk/Methods/dismissurgent.md
-- pages/documents/consumer experience/connector-api/webhooks/disclaimers.md
-- pages/Products/Knowledge Base Integration/Implementation/developyourwidget.md
-- pages/developchat.md
-- pages/develop-chat-preview.html
-- pages/documents/agent-interactions/chat-agent/Methods/determine-incoming.md
-- pages/documents/consumer experience/ios-sdk/Methods/destruct.md
-- pages/Products/Channels/SMS with LE/Entry Points/desktop.md
-- pages/documents/consumer experience/ios-sdk/Configuring the SDK/designsheet.md
-- pages/documents/consumer experience/android-sdk/Configuring the SDK/designsheet.md
-- pages/Products/Data/custom-dashboard/designintegrationservice.md
-- pages/documents/consumer experience/ios-sdk/Configuring the SDK/deprecated-attributes.md
-- pages/Products/Channels/MMS/deploymentsteps.md
-- pages/Products/Bots/Customer Facing Bots/deployingbotsmessaging.md
-- pages/Products/Bots/Customer Facing Bots/deployingbotschat.md
-- pages/documents/consumer experience/android-sdk/demoapp.md
-- pages/documents/consumer experience/javascript-chat/demo-app.md
-- pages/documents/account-configuration/agent-status-reason/deletestatusreason.md
-- pages/documents/account-configuration/LE Categories/Methods/deletemultiplecategories.md
-- pages/documents/account-configuration/LE Categories/Methods/deletecategory.md
-- pages/documents/account-configuration/special-occasions/methods/delete.md
-- pages/documents/account-configuration/workdays/methods/delete.md
-- pages/documents/admin/users/methods/delete-users.md
-- pages/documents/admin/users/methods/delete-user.md
-- pages/documents/admin/skills/methods/delete-skills.md
-- pages/documents/admin/skills/methods/delete-skill.md
-- pages/documents/admin/profiles/Methods/delete-profiles.md
-- pages/documents/admin/profiles/Methods/delete-profile.md
-- pages/documents/admin/LOB/methods/delete-lobs.md
-- pages/documents/admin/LOB/methods/delete-lob.md
-- pages/documents/account-configuration/predefined-content/methods/delete-content.md
-- pages/documents/account-configuration/predefined-content/methods/delete-content-items.md
-- pages/documents/account-configuration/unified-messages/methods/delete-an-unified-automatic-message.md
-- pages/documents/admin/agent-groups/methods/delete-agent-groups.md
-- pages/documents/admin/agent-groups/methods/delete-agent-group.md
-- pages/documents/guides/Customized Chat Windows/customized-chat-windows.md
-- pages/documents/data/operational-realtime/methods/current-queue-state.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/csatConversation.md
-- pages/documents/consumer experience/android-sdk/csat.md
-- pages/documents/consumer experience/ios-sdk/csat.md
-- pages/documents/consumer experience/javascript-chat/creating-an-instance.md
-- pages/documents/account-configuration/agent-status-reason/createstatus.md
-- pages/documents/consumer experience/ios-sdk/OS Certificate/createcertificate.md
-- pages/documents/account-configuration/LE Categories/Methods/createcategory.md
-- pages/documents/guides/Customized Chat Windows/createanexternalengagement.md
-- pages/documents/guides/Customized Chat Windows/createanapibasedwindow.md
-- pages/documents/account-configuration/workdays/methods/create.md
-- pages/documents/account-configuration/special-occasions/methods/create.md
-- pages/documents/admin/users/methods/create-users.md
-- pages/documents/admin/skills/methods/create-skills.md
-- pages/documents/rt-interactions/app-engagement/methods/create-session.md
-- pages/documents/admin/profiles/Methods/create-profile.md
-- pages/documents/admin/LOB/methods/create-lob.md
-- pages/documents/data/personal-data-deletion/methods/create-delete-request.md
-- pages/documents/account-configuration/predefined-content/methods/create-content.md
-- pages/documents/admin/agent-groups/methods/create-agent-groups.md
-- pages/documents/guides/cookies.md
-- pages/documents/data/messaging-interactions/methods/conversations.md
-- pages/documents/data/messaging-consumer-history/methods/conversations-metadata.md
-- pages/documents/consumer experience/android-sdk/Advanced Configurations/conversations-lifecycle.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/conversation-metadata.md
-- pages/documents/data/messaging-consumer-history/methods/conversation-content.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/consumertokencreation.md
-- pages/documents/consumer experience/ios-sdk/Configuring the SDK/configuring-the-sdk.md
-- pages/documents/consumer experience/android-sdk/Configuring the SDK/configuring-sdk.md
-- pages/documents/consumer experience/android-sdk/Configuring the SDK/configuring-edittext.md
-- pages/Products/In-App Messaging/configurepushandroid.md
-- pages/Products/In-App Messaging/configureiospush.md
-- pages/documents/consumer experience/connector-api/webhooks/configuration.md
-- pages/Products/Watson with LE/configuration.md
-- pages/documents/guides/Authentication/configuration.md
-- pages/documents/consumer experience/push-service/configuration.md
-- pages/documents/rt-interactions/window-sdk/configuration.md
-- pages/documents/rt-interactions/window-sdk/how-to-use/code-examples.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/cobrowse.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/closeConversation.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/client-props.md
-- pages/Products/Channels/SMS with LE/Entry Points/clickable.md
-- pages/documents/rt-interactions/engagement-trigger/methods/click.md
-- pages/documents/consumer experience/ios-sdk/Methods/clearhistory.md
-- pages/documents/consumer experience/android-sdk/methods/clearHistory.md
-- pages/documents/consumer experience/ios-sdk/Methods/registerpushnotifications.md
-- pages/documents/consumer experience/android-sdk/methods/registerlppusher.md
-- pages/documents/agent-interactions/login/methods/refresh.md
-- pages/documents/agent-interactions/redoc.html
-- pages/documents/consumer experience/android-sdk/methods/reconnectfull.md
-- pages/documents/consumer experience/android-sdk/methods/reconnectdeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/reconnectdeprecated.md
-- pages/documents/consumer experience/ios-sdk/Methods/reconnect.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/readaccept-events.md
-- pages/documents/consumer experience/android-sdk/quickstart.md
-- pages/documents/consumer experience/android-sdk/quickstart-manual.md
-- pages/documents/consumer experience/ios-sdk/quick-start.md
-- pages/documents/data/operational-realtime/methods/queue-health.md
-- pages/documents/account-configuration/predefined-content/methods/query-delta.md
-- pages/documents/consumer experience/ios-sdk/pushnotifications.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/publishing-images.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/publishTextContent.md
-- pages/documents/agent-interactions/agent-workspace-sdk/public-properties.md
-- pages/documents/agent-interactions/agent-workspace-sdk/public-model.md
-- pages/documents/consumer experience/messaging-window-api/protocol-overview.md
-- pages/documents/consumer experience/android-sdk/proguard-configuration.md
-- pages/products.md
-- pages/documents/consumer experience/ios-sdk/Methods/printsupportedlanguages.md
-- pages/documents/consumer experience/ios-sdk/Methods/printalllocalizedkeys.md
-- pages/documents/account-configuration/LE Categories/Methods/prevalidation.md
-- pages/Products/Watson with LE/prerequisites.md
-- pages/Products/In-App Messaging/prerequisites.md
-- pages/Products/Bots/Customer Facing Bots/prerequisites.md
-- pages/Products/In-App Messaging/preparefilesios.md
-- pages/Products/Admin/predefined-content.md
-- pages/documents/agent-interactions/chat-agent/postman-resources.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/post-survey.md
-- pages/documents/consumer experience/server-chat/Methods/post-offline-survey.md
-- pages/documents/consumer experience/android-sdk/methods/checkurgent.md
-- pages/documents/consumer experience/android-sdk/methods/checkagentid.md
-- pages/documents/consumer experience/android-sdk/methods/checkactiveconversation.md
-- pages/documents/consumer experience/ios-sdk/Methods/checkactiveconversation.md
-- pages/Products/Data/custom-dashboard/chatmetrics.md
-- pages/documents/consumer experience/javascript-chat/chat-states.md
-- pages/documents/consumer experience/android-sdk/Configuring the SDK/changing-fonts.md
-- pages/documents/rt-interactions/ivr-engagement/changelog.md
-- pages/documents/rt-interactions/validate-engagement/changelog.md
-- pages/documents/le-tag/changelog.md
-- pages/documents/data/data-access/changelog.md
-- pages/documents/rt-interactions/visit-information/changelog.md
-- pages/documents/rt-interactions/engagement-attributes/changelog.md
-- pages/documents/rt-interactions/engagement-trigger/changelog.md
-- pages/documents/rt-interactions/app-engagement/changelog.md
-- pages/documents/consumer experience/android-sdk/certpinning.md
-- pages/documents/consumer experience/ios-sdk/certpinning.md
-- pages/documents/account-configuration/LE Categories/Methods/category-by-id.md
-- pages/documents/account-configuration/LE Categories/Methods/categoriesquerydelta.md
-- pages/documents/account-configuration/LE Categories/Methods/categorieslistbyrevision.md
-- pages/documents/account-configuration/LE Categories/Methods/categorieslist.md
-- pages/documents/consumer experience/javascript-chat/Methods/cancelsurvey.md
-- pages/documents/data/personal-data-deletion/methods/cancel-delete-request.md
-- pages/documents/consumer experience/android-sdk/Advanced Configurations/callbacks-interface.md
-- pages/documents/consumer experience/ios-sdk/callbacks-index.md
-- pages/documents/consumer experience/android-sdk/callbacks-index.md
-- pages/Products/Rich Media/video-chat/buildyourwidgets.md
-- pages/documents/consumer experience/android-sdk/string localization/bubble.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/browser-limit.md
-- pages/botintgration.md
-- pages/bot-platform-preview.html
-- pages/bot-integration-preview.html
-- pages/Products/Watson with LE/bestpractices.md
-- pages/documents/guides/Engagement Attributes/bestpractices.md
-- pages/documents/guides/Engagement Attributes/bestpractices-messaging.md
-- pages/documents/data/data-access/Methods/base-resource.md
-- pages/documents/consumer experience/android-sdk/autorestore.md
-- pages/documents/consumer experience/ios-sdk/authentication.md
-- pages/documents/consumer experience/messaging-window-api/tutorials/authentication.md
-- pages/documents/consumer experience/javascript-chat/Methods/authenticate.md
-- pages/documents/account-configuration/meta-data/Methods/audittrailexport.md
-- pages/documents/account-configuration/audit-trail/Methods/audittrailexport.md
-- pages/documents/account-configuration/audit-trail/Methods/audittrail.md
-- pages/documents/account-configuration/meta-data/Methods/audittrail.md
-- pages/documents/consumer experience/ios-sdk/Configuring the SDK/attributes.md
-- pages/documents/consumer experience/android-sdk/Configuring the SDK/attributes.md
-- pages/documents/data/data-access/architecture.md
-- pages/Products/Channels/SMS with LE/Entry Points/adwords.md
-- pages/Products/Knowledge Base Integration/Implementation/addwidgettole.md
-- pages/documents/consumer experience/javascript-chat/Methods/addline.md
-- pages/Products/Channels/MMS/additionaloptions.md
-- pages/documents/agent-interactions/chat-agent/Methods/add-lines.md
-- pages/documents/consumer experience/server-chat/Methods/add-lines.md
-- pages/documents/consumer experience/messaging-window-api/account-provision.md
-- pages/documents/agent-interactions/chat-agent/Methods/accept-chat.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Customizing/Wording.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Customizing/Wording.md
-- pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/VoIP-Configuration.md
-- pages/documents/consumer experience/android-sdk/Upgrade Guide.md
-- pages/documents/consumer experience/ios-sdk/Appendix/Upgrade Guide.md
-- pages/documents/consumer experience/android-sdk/Advanced Configurations/UI.md
-- pages/documents/Rich Messaging/Overview/Basic Elements/Text.md
-- pages/documents/data/messaging-agent-metrics/Methods/Summary.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/SubscribeMessagingEvents.md
-- pages/documents/Rich Messaging/Structured Content/Styling/Styling.md
-- pages/documents/Rich Messaging/Quick Replies/Styling/Styling.md
-- pages/documents/Rich Messaging/File Sharing/Step 7 - Download File From Storage.md
-- pages/documents/Rich Messaging/File Sharing/Step 6 - Request Download URL.md
-- pages/documents/Rich Messaging/File Sharing/Step 5 - Publish Message.md
-- pages/documents/Rich Messaging/File Sharing/Step 4 - Upload File to Storage.md
-- pages/documents/Rich Messaging/File Sharing/Step 3 - Request Upload URL.md
-- pages/documents/Rich Messaging/File Sharing/Step 2 - Create a Conversation.md
-- pages/documents/Rich Messaging/File Sharing/Step 1 - Enable File Sharing.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Sample-Apps.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Sample-Apps.md
-- pages/documents/guides/Retry Policy Recommendation.md
-- pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/Requirements.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/LiveEngage Configuration/Register-Your-App.md
-- pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/Register-Your-App.md
-- pages/documents/Rich Messaging/Quick Replies/Quick Replies.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Project-Settings.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Getting Started/Prerequisites.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Prerequisites.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Overview.md
-- pages/documents/Rich Messaging/Overview/Basic Elements/Overview.md
-- pages/Products/Rich Media/video-chat/Overview.md
-- pages/documents/admin/profiles/Introduction/Overview.md
-- pages/documents/consumer experience/ios-sdk/Overview.md
-- pages/documents/admin/LOB/Introduction/Overview.md
-- pages/documents/Rich Messaging/Quick Replies/Overview/Overview.md
-- pages/documents/consumer experience/ios-sdk/Monitoring APIs.md
-- pages/documents/consumer experience/android-sdk/Monitoring APIs.md
-- pages/documents/Rich Messaging/Overview/Basic Elements/Map.md
-- pages/documents/guides/Local message notifications for in-app messaging SDK.md
-- pages/documents/Rich Messaging/Structured Content/Templates/List.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Facebook/List Template.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Apple Business Chat/List
-  Picker.md
-- pages/Products/Bots/Customer Facing Bots/Limitations.md
-- pages/documents/Rich Messaging/Structured Content/Limitations/Limitations.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Limitations.md
-- pages/documents/Rich Messaging/Quick Replies/Limitations/Limitations.md
-- pages/documents/account-configuration/LE Categories/Introduction.md
-- pages/documents/Rich Messaging/Overview/Introduction.md
-- pages/documents/Rich Messaging/File Sharing/Introduction.md
-- pages/documents/account-configuration/audit-trail/Introduction.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Introduction.md
-- pages/documents/data/messaging-agent-metrics/Introduction.md
-- pages/documents/account-configuration/meta-data/Introduction.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Introduction.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Integration-Guide.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Getting Started/Integration-Guide.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Getting Started/Integrate-SDK.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Integrate-SDK-using-CocoaPods.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Integrate-SDK-Manually.md
-- pages/Products/Knowledge Base Integration/Implementation/Implementation.md
-- pages/documents/Rich Messaging/Overview/Basic Elements/Image.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Guidelines.md
-- pages/documents/consumer experience/connector-api/getting-started/GettingStarted.md
-- pages/documents/consumer experience/connector-api/Authorization/GetConsumerJWS.md
-- pages/documents/consumer experience/connector-api/authorization/GetAppJWT.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Facebook/Generic Template.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/GenerateUploadURL.md
-- pages/documents/consumer experience/messaging-window-api/API Reference/GenerateDownloadURL.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/FAQ.md
-- pages/documents/guides/Authentication/DetailedAPI.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Apple Business Chat/Date
-  Picker.md
-- pages/Products/Data/data-integration/Data Integration & Analysis.md
-- pages/documents/guides/Conversation Metadata Guide.md
-- pages/documents/consumer experience/ios-sdk/Control History APIs.md
-- pages/documents/consumer experience/android-sdk/Control History APIs.md
-- pages/Products/Bots/Customer Facing Bots/Considerations.md
-- pages/documents/Rich Messaging/Structured Content/Layout/Complex Layout.md
-- pages/documents/Rich Messaging/Overview/Click Operations/Click Ops.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Changelog.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Changelog.md
-- pages/documents/Rich Messaging/Structured Content/Templates/Carousel.md
-- pages/documents/Rich Messaging/Structured Content/Templates/Card.md
-- pages/documents/Rich Messaging/Overview/Basic Elements/Button.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Facebook/Button Template.md
-- pages/documents/Rich Messaging/Messaging Connectors Alignment/Best Practices.md
-- pages/documents/admin/skills/methods/get-all-skills.md
-- pages/documents/admin/profiles/Methods/get-all-profiles.md
-- pages/documents/admin/LOB/methods/get-all-lobs.md
-- pages/documents/admin/agent-groups/methods/get-all-agent-groups.md
-- pages/documents/admin/agent-groups/methods/get-agent-group-by-id.md
-- pages/documents/account-configuration/LE Categories/Methods/general.md
-- pages/documents/rt-interactions/ivr-engagement/Methods/external-engagement.md
-- pages/documents/consumer experience/connector-api/webhooks/examples.md
-- pages/documents/agent-interactions/messaging-agent-sdk/examples.md
-- pages/documents/rt-interactions/app-engagement/examples.md
-- pages/documents/consumer experience/connector-api/webhooks/events.md
-- pages/events.md
-- pages/documents/consumer experience/ios-sdk/Advanced Configuration/appsextension.md
-- pages/documents/agent-interactions/login/methods/applicationlogin.md
-- pages/Products/In-App Messaging/appkeyios.md
-- pages/documents/account-configuration/workdays/appendix.md
-- pages/documents/data/messaging-operations/appendix.md
-- pages/documents/admin/agent-groups/Appendix/appendix.md
-- pages/documents/data/messaging-interactions/appendix.md
-- pages/Products/SalesForce Integration/appendix.md
-- pages/documents/account-configuration/predefined-content/appendix.md
-- pages/documents/admin/profiles/Appendix/appendix.md
-- pages/documents/consumer experience/CoAppiOS-sdk/appendix.md
-- pages/documents/admin/skills/Appendix/appendix.md
-- pages/documents/admin/users/Appendix/appendix.md
-- pages/documents/data/data-access/appendix.md
-- pages/Products/Channels/SMS with LE/appendix.md
-- pages/documents/account-configuration/special-occasions/appendix.md
-- pages/documents/data/engagement-history/appendix.md
-- pages/documents/guides/Customized Chat Windows/appendix.md
-- pages/documents/consumer experience/connector-api/api-reference/api-overview.md
-- pages/documents/guides/agentworkspacewidget.md
-- pages/documents/data/operational-realtime/methods/agent-activity.md
-- pages/documents/data/data-access/Methods/agent-activity.md
-- pages/documents/Rich Messaging/Quick Replies/Best Practices/Best Practices.md
-- pages/documents/consumer experience/android-sdk/Authentication.md
-- pages/documents/admin/LOB/Appendix/Appendix.md
-- pages/documents/consumer experience/CoAppiOS-sdk/Customizing/Appearance-&-Behavior.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/Customizing/Appearance-&-Behavior.md
-- pages/documents/consumer experience/connector-api/getting-started/AppInstallJSON.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/LiveEngage Configuration/Agent-Workspace-Requirements.md
-- pages/documents/data/messaging-agent-metrics/Methods/Agent Status.md
-- pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/Account-Settings.md
-- pages/documents/consumer experience/CoAppAndroid-sdk/LiveEngage Configuration/Account-Settings.md
-- pages/documents/consumer experience/connector-api/examples/9_example_share_image.md
-- pages/documents/consumer experience/connector-api/examples/7_example_direct_skill_routing.md
-- pages/documents/consumer experience/connector-api/examples/6_example_cmp_routing.md
-- pages/documents/consumer experience/connector-api/examples/5_example_enable_auto_messages.md
-- pages/documents/consumer experience/connector-api/examples/4_example_consumer_typing.md
-- 404.md
-- pages/documents/consumer experience/connector-api/examples/3_example_close_conversation.md
-- pages/documents/consumer experience/connector-api/examples/2_example_send_message.md
-- pages/documents/consumer experience/connector-api/examples/1_example_sde_routing.md
-- pages/documents/consumer experience/connector-api/examples/1_example_open_conversation.md
+- _pages/pages/documents/guides/applications/overview.md
+- _pages/pages/documents/guides/cookies.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/public-model.md
+- _pages/pages/documents/consumer experience/connector-api/sample-connector/sample-connector.md
+- _pages/pages/documents/consumer experience/connector-api/getting-started/AppInstallJSON.md
+- _pages/pages/documents/consumer experience/connector-api/examples/1_example_sde_routing.md
+- _pages/pages/documents/consumer experience/connector-api/examples/1_example_open_conversation.md
+- _pages/pages/documents/data/messaging-operations/overview.md
+- _pages/pages/documents/agent-interactions/chat-agent/postman-resources.md
+- _pages/pages/documents/consumer experience/connector-api/getting-started/overview.md
+- _pages/pages/documents/guides/applications/leappcreation.md
+- _pages/pages/documents/Rich Messaging/Overview/Basic Elements/Text.md
+- _pages/pages/documents/Rich Messaging/Structured Content/Styling/Styling.md
+- _pages/pages/documents/Rich Messaging/Quick Replies/Styling/Styling.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 7 - Download File From Storage.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 6 - Request Download URL.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 5 - Publish Message.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 4 - Upload File to Storage.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 3 - Request Upload URL.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 2 - Create a Conversation.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Step 1 - Enable File Sharing.md
+- _pages/pages/documents/Rich Messaging/Quick Replies/Quick Replies.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Overview.md
+- _pages/pages/documents/Rich Messaging/Overview/Basic Elements/Overview.md
+- _pages/pages/documents/Rich Messaging/Quick Replies/Overview/Overview.md
+- _pages/pages/documents/Rich Messaging/Overview/Basic Elements/Map.md
+- _pages/pages/documents/Rich Messaging/Structured Content/Templates/List.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Apple Business
+  Chat/Date Picker.md
+- _pages/pages/documents/Rich Messaging/Structured Content/Layout/Complex Layout.md
+- _pages/pages/documents/Rich Messaging/Overview/Click Operations/Click Ops.md
+- _pages/pages/documents/Rich Messaging/Structured Content/Templates/Carousel.md
+- _pages/pages/documents/Rich Messaging/Structured Content/Templates/Card.md
+- _pages/pages/documents/Rich Messaging/Overview/Basic Elements/Button.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Facebook/Button
+  Template.md
+- _pages/pages/documents/Rich Messaging/Quick Replies/Best Practices/Best Practices.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Best Practices.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/userdata.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/togglechatactions.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/subscribelogevents.md
+- _pages/pages/documents/consumer experience/ios-sdk/String Localization/string-localization.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/shutdowndeprecated.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/shutdown.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/showconversationdeprecated.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/showconversation.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/setuserprofile.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/setcallback.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/separator.md
+- _pages/pages/documents/consumer experience/android-sdk/security.md
+- _pages/pages/documents/consumer experience/ios-sdk/Appendix/security.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/resolveconversation.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/removeconversation.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/removecallback.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/registerpushnotifications.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/registerlppusher.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/reconnectfull.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/reconnectdeprecated.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/reconnect.md
+- _pages/pages/documents/consumer experience/android-sdk/proguard-configuration.md
+- _pages/pages/Products/Watson with LE/prerequisites.md
+- _pages/pages/documents/consumer experience/android-sdk/overview.md
+- _pages/pages/documents/consumer experience/messaging-window-api/overview.md
+- _pages/pages/documents/consumer experience/push-service/overview.md
+- _pages/pages/documents/consumer experience/ios-sdk/opensource.md
+- _pages/pages/documents/consumer experience/android-sdk/opensource.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/off-hours.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/modifying-resources.md
+- _pages/pages/Products/Data/custom-dashboard/messagingmetrics.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/markasurgent.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/logout.md
+- _pages/pages/documents/consumer experience/android-sdk/localizationstrings.md
+- _pages/pages/documents/consumer experience/ios-sdk/String Localization/localization-keys.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/lifecycle.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/isurgent.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/initializedeprecated.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/initialize.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/initialization.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/handlepush.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/handlepush.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/getsdkversion.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/getconversationfragfull.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/getconversationfragdeprecated.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/getconversationfragauthdeprecated.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/dismissurgent.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/destruct.md
+- _pages/pages/documents/consumer experience/ios-sdk/Configuring the SDK/designsheet.md
+- _pages/pages/documents/consumer experience/android-sdk/demoapp.md
+- _pages/pages/documents/consumer experience/android-sdk/csat.md
+- _pages/pages/documents/consumer experience/android-sdk/Advanced Configurations/conversations-lifecycle.md
+- _pages/pages/documents/consumer experience/ios-sdk/Configuring the SDK/configuring-the-sdk.md
+- _pages/pages/documents/consumer experience/android-sdk/Configuring the SDK/configuring-sdk.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/checkurgent.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/checkactiveconversation.md
+- _pages/pages/documents/consumer experience/android-sdk/Configuring the SDK/changing-fonts.md
+- _pages/pages/documents/consumer experience/android-sdk/certpinning.md
+- _pages/pages/documents/consumer experience/ios-sdk/certpinning.md
+- _pages/pages/documents/consumer experience/android-sdk/Advanced Configurations/callbacks-interface.md
+- _pages/pages/documents/consumer experience/android-sdk/autorestore.md
+- _pages/pages/documents/consumer experience/android-sdk/Upgrade Guide.md
+- _pages/pages/documents/consumer experience/ios-sdk/Overview.md
+- _pages/pages/documents/consumer experience/ios-sdk/Monitoring APIs.md
+- _pages/pages/documents/guides/Local message notifications for in-app messaging SDK.md
+- _pages/pages/Products/Bots/Customer Facing Bots/Limitations.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Getting Started/Integration-Guide.md
+- _pages/pages/documents/consumer experience/android-sdk/Authentication.md
+- _pages/pages/documents/rt-interactions/monitor-api/getting-started.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/security.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-agent-survey-structure.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/overview.md
+- _pages/pages/documents/consumer experience/connector-api/examples/5_example_enable_auto_messages.md
+- _pages/pages/documents/consumer experience/connector-api/examples/2_example_send_message.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/examples.md
+- _pages/pages/documents/consumer experience/connector-api/examples/9_example_share_image.md
+- _pages/pages/documents/consumer experience/connector-api/examples/3_example_close_conversation.md
+- _pages/pages/documents/consumer experience/connector-api/examples/7_example_direct_skill_routing.md
+- _pages/pages/documents/consumer experience/connector-api/examples/6_example_cmp_routing.md
+- _pages/pages/documents/consumer experience/android-sdk/Advanced Configurations/user-data.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/ui.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/timestamps.md
+- _pages/pages/documents/consumer experience/ios-sdk/String Localization/timestamps.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/resolve.md
+- _pages/pages/documents/consumer experience/ios-sdk/photosharing.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/monitoring_api.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/monitoring methods.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/modifying-string.md
+- _pages/pages/documents/consumer experience/android-sdk/interfaceandclass.md
+- _pages/pages/documents/consumer experience/ios-sdk/interface-and-class-definitions.md
+- _pages/pages/documents/consumer experience/android-sdk/googlemapskey.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/bubble.md
+- _pages/pages/documents/consumer experience/ios-sdk/authentication.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/appsextension.md
+- _pages/pages/documents/consumer experience/android-sdk/Advanced Configurations/UI.md
+- _pages/pages/documents/account-configuration/special-occasions/overview.md
+- _pages/pages/documents/account-configuration/special-occasions/methods/retrievebyid.md
+- _pages/pages/documents/consumer experience/connector-api/api-reference/sendapi-send.md
+- _pages/pages/documents/consumer experience/connector-api/Authorization/GetConsumerJWS.md
+- _pages/pages/documents/consumer experience/connector-api/api-reference/sendapi-create.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/configuration.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/events.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/disclaimers.md
+- _pages/pages/documents/consumer experience/connector-api/api-reference/api-overview.md
+- _pages/pages/documents/consumer experience/connector-api/examples/4_example_consumer_typing.md
+- _pages/pages/documents/data/messaging-operations/methods/messaging-conversation.md
+- _pages/pages/documents/data/messaging-interactions/appendix.md
+- _pages/pages/documents/account-configuration/special-occasions/methods/create.md
+- _pages/pages/documents/data/engagement-history/methods/retrieve-engagement-list-by-criteria.md
+- _pages/pages/documents/data/messaging-consumer-history/overview.md
+- _pages/pages/documents/guides/Engagement Attributes/bestpractices-messaging.md
+- _pages/pages/documents/guides/Engagement Attributes/bestpractices.md
+- _pages/pages/documents/account-configuration/workdays/methods/update.md
+- _pages/pages/documents/account-configuration/special-occasions/methods/update.md
+- _pages/pages/documents/account-configuration/special-occasions/methods/retrievebylist.md
+- _pages/pages/documents/account-configuration/workdays/methods/retrievebylist.md
+- _pages/pages/documents/account-configuration/workdays/methods/retrievebyid.md
+- _pages/pages/documents/account-configuration/workdays/overview.md
+- _pages/pages/documents/account-configuration/special-occasions/methods/delete.md
+- _pages/pages/documents/account-configuration/workdays/methods/delete.md
+- _pages/pages/documents/account-configuration/workdays/methods/create.md
+- _pages/pages/documents/account-configuration/special-occasions/appendix.md
+- _pages/pages/documents/data/messaging-operations/methods/messaging-estimated-wait-time.md
+- _pages/pages/documents/account-configuration/workdays/appendix.md
+- _pages/pages/documents/guides/Authentication/introduction.md
+- _pages/pages/documents/guides/Authentication/howitworks.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/updatecategory.md
+- _pages/pages/documents/admin/users/methods/update-user.md
+- _pages/pages/documents/admin/skills/methods/update-skills.md
+- _pages/pages/documents/admin/skills/methods/update-skill.md
+- _pages/pages/documents/rt-interactions/app-engagement/methods/update-session.md
+- _pages/pages/documents/admin/profiles/Methods/update-profiles.md
+- _pages/pages/documents/admin/profiles/Methods/update-profile.md
+- _pages/pages/documents/admin/LOB/methods/update-lobs.md
+- _pages/pages/documents/admin/LOB/methods/update-lob.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/update-content.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/update-content-items.md
+- _pages/pages/documents/admin/agent-groups/methods/update-agent-groups.md
+- _pages/pages/documents/admin/agent-groups/methods/update-agent-group.md
+- _pages/pages/documents/admin/users/methods/reset-users-password.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/prevalidation.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/importaccountcategories.md
+- _pages/pages/documents/account-configuration/unified-messages/methods/get-unified-automatic-message-by-id.md
+- _pages/pages/documents/admin/skills/methods/get-skill-by-id.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/get-by-id.md
+- _pages/pages/documents/admin/LOB/methods/get-all-lobs.md
+- _pages/pages/documents/admin/agent-groups/methods/get-agent-group-by-id.md
+- _pages/pages/documents/admin/users/methods/delete-users.md
+- _pages/pages/documents/admin/skills/methods/delete-skills.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/delete-content.md
+- _pages/pages/documents/admin/agent-groups/methods/delete-agent-groups.md
+- _pages/pages/documents/admin/agent-groups/methods/delete-agent-group.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/categorieslistbyrevision.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/categorieslist.md
+- _pages/pages/documents/account-configuration/meta-data/Methods/audittrailexport.md
+- _pages/pages/documents/account-configuration/audit-trail/Methods/audittrailexport.md
+- _pages/pages/documents/account-configuration/meta-data/Methods/audittrail.md
+- _pages/pages/documents/data/data-access/appendix.md
+- _pages/pages/documents/admin/agent-groups/Appendix/appendix.md
+- _pages/pages/documents/admin/LOB/Appendix/Appendix.md
+- _pages/pages/documents/consumer experience/ios-sdk/releasenotes.md
+- _pages/pages/documents/data/messaging-interactions/overview.md
+- _pages/pages/documents/admin/skills/Appendix/appendix.md
+- _pages/pages/documents/admin/users/methods/get-all-users.md
+- _pages/pages/documents/data/messaging-interactions/methods/conversations.md
+- _pages/pages/documents/consumer experience/ios-sdk/Control History APIs.md
+- _pages/pages/documents/consumer experience/android-sdk/Control History APIs.md
+- _pages/pages/documents/consumer experience/connector-api/authorization/GetAppJWT.md
+- _pages/pages/documents/agent-interactions/login/methods/applicationlogin.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/GenerateUploadURL.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/GenerateDownloadURL.md
+- _pages/pages/documents/data/personal-data-deletion/methods/cancel-delete-request.md
+- _pages/pages/documents/data/messaging-operations/methods/messaging-current-queue-health.md
+- _pages/pages/documents/data/personal-data-deletion/methods/get-delete-request.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/troubleshooting.md
+- _pages/pages/documents/consumer experience/connector-api/webhooks/retrypolicy.md
+- _pages/pages/documents/admin/users/Introduction/overview.md
+- _pages/pages/documents/data/data-access/Methods/engagement.md
+- _pages/pages/documents/admin/users/methods/update-users.md
+- _pages/pages/documents/le-tag/events/engagement.md
+- _pages/pages/documents/consumer experience/android-sdk/photo-sharing.md
+- _pages/pages/Products/Channels/MMS/deploymentsteps.md
+- _pages/pages/documents/data/data-access/overview.md
+- _pages/pages/documents/account-configuration/agent-status-reason/statusreasonlist.md
+- _pages/pages/documents/account-configuration/agent-status-reason/statusreasonbyid.md
+- _pages/pages/documents/account-configuration/agent-status-reason/deletestatusreason.md
+- _pages/pages/documents/account-configuration/agent-status-reason/createstatus.md
+- _pages/pages/documents/consumer experience/android-sdk/Monitoring APIs.md
+- _pages/pages/documents/consumer experience/android-sdk/implementationguidemanual.md
+- _pages/pages/documents/consumer experience/android-sdk/quickstart-manual.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/methods.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/messaging methods.md
+- _pages/pages/documents/consumer experience/android-sdk/quickstart.md
+- _pages/pages/documents/rt-interactions/monitor-api/methods/engagement.md
+- _pages/pages/documents/rt-interactions/monitor-api/methods/report.md
+- _pages/pages/documents/rt-interactions/monitor-api/overview.md
+- _pages/pages/documents/data/operational-realtime/methods/agent-activity.md
+- _pages/pages/documents/account-configuration/agent-status-reason/updatestatusreason.md
+- _pages/pages/documents/consumer experience/push-service/whitelisting.md
+- _pages/pages/documents/data/data-access/Methods/web-session.md
+- _pages/pages/documents/le-tag/events/visitor-flow.md
+- _pages/pages/documents/rt-interactions/visit-information/visit-information.md
+- _pages/pages/documents/rt-interactions/validate-engagement/validate-engagement.md
+- _pages/pages/Products/Data/MCS/usingapis.md
+- _pages/pages/documents/consumer experience/push-service/tls.md
+- _pages/pdfconfigs/titlepage.html
+- _pages/pages/Products/Channels/MMS/technical.md
+- _pages/pages/documents/tags/tag_troubleshooting.md
+- _pages/pages/documents/tags/tag_special_layouts.md
+- _pages/pages/documents/tags/tag_single_sourcing.md
+- _pages/pages/documents/tags/tag_publishing.md
+- _pages/pages/documents/tags/tag_news.md
+- _pages/pages/documents/tags/tag_navigation.md
+- _pages/pages/documents/tags/tag_mobile.md
+- _pages/pages/documents/tags/tag_getting_started.md
+- _pages/pages/documents/tags/tag_formatting.md
+- _pages/pages/documents/tags/tag_content_types.md
+- _pages/pages/documents/tags/tag_collaboration.md
+- _pages/pages/documents/agent-interactions/chat-agent/system-messages.md
+- _pages/pages/documents/consumer experience/javascript-chat/surveys.md
+- _pages/pages/documents/data/data-access/Methods/survey.md
+- _pages/pages/summit.md
+- _pages/pages/summit-preview.html
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/subscribeExConversations.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/submitofflinesurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/submitexitsurvey.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/submit-survey.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/submit-survey-data.md
+- _pages/pages/Products/SalesForce Integration/Implementation/step5.md
+- _pages/pages/Products/SalesForce Integration/Implementation/step4.md
+- _pages/pages/Products/SalesForce Integration/Implementation/step3.md
+- _pages/pages/Products/SalesForce Integration/Implementation/step2.md
+- _pages/pages/Products/SalesForce Integration/Implementation/step1.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/startchatrequestchat.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/start-chat.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/start-agent-session.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/spotify.md
+- _pages/pages/solutions-preview.html
+- _pages/pages/documents/data/operational-realtime/methods/sla-histogram.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/showconversationfull.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/showconversationdeprecated.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/showconversationauthdeprecated.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/setvisitortyping.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/setvisitorname.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/setuserprofiledeprecated.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/setuserprofile.md
+- _pages/pages/Products/Channels/IVR Deflection Solution/settinguptheivr.md
+- _pages/pages/documents/guides/Engagement Attributes/settingup.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/set-visitor-typing-status.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/set-visitor-name.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/set-agent-typing.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/set-agent-availability.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/send-transcript.md
+- _pages/pages/search-result.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/sdkdelegates.md
+- _pages/pages/documents/consumer experience/android-sdk/Advanced Configurations/sdk-initialization.md
+- _pages/pages/documents/data/data-access/Methods/schema.md
+- _pages/pages/documents/agent-interactions/chat-agent/sampleapp.md
+- _pages/pages/documents/consumer experience/ios-sdk/Appendix/sampleapp.md
+- _pages/pages/documents/consumer experience/server-chat/sample.md
+- _pages/pages/documents/data/operational-realtime/sample-code.md
+- _pages/pages/documents/data/messaging-interactions/sample-code.md
+- _pages/pages/documents/data/engagement-history/sample-code.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-visitor-typing.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-visitor-typing-status.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-visitor-name.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-visitor-name.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-survey-structure.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-skills.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-pre-chat-survey.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-offline-survey.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-exit-survey-structure.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-estimated-wait-time.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-data.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-current-availability.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-sessions.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-resources.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-chat-resources.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-chat-information.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-info.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-chat-events.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-chat-events.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-available-slots.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-available-slots.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-available-agents.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-availability.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-agent-typing.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/retrieve-agent-typing-status.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/retrieve-agent-information.md
+- _pages/pages/documents/consumer experience/push-service/response.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/resolveconversation.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/requesttranscript.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/requestConversation.md
+- _pages/pages/Products/Watson with LE/reporting.md
+- _pages/pages/documents/rt-interactions/window-sdk/releasenotes.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/releasenotes.md
+- _pages/pages/documents/agent-interactions/messaging-agent-sdk/releasenotes.md
+- _pages/pages/documents/consumer experience/javascript-chat/releasenotes.md
+- _pages/pages/documents/consumer experience/android-sdk/releasenotes.md
+- _pages/pages/documents/agent-interactions/login/methods/refresh.md
+- _pages/pages/documents/agent-interactions/redoc.html
+- _pages/pages/documents/consumer experience/android-sdk/methods/reconnectdeprecated.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/readaccept-events.md
+- _pages/pages/documents/consumer experience/ios-sdk/quick-start.md
+- _pages/pages/documents/data/operational-realtime/methods/queue-health.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/query-delta.md
+- _pages/pages/documents/consumer experience/ios-sdk/pushnotifications.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/publishing-images.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/publishTextContent.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/public-properties.md
+- _pages/pages/documents/consumer experience/messaging-window-api/protocol-overview.md
+- _pages/pages/products.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/printsupportedlanguages.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/printalllocalizedkeys.md
+- _pages/pages/Products/In-App Messaging/prerequisites.md
+- _pages/pages/Products/Bots/Customer Facing Bots/prerequisites.md
+- _pages/pages/Products/In-App Messaging/preparefilesios.md
+- _pages/pages/Products/Admin/predefined-content.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/post-survey.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/post-offline-survey.md
+- _pages/pages/documents/guides/StructuredContent/pollock.md
+- _pages/pages/documents/consumer experience/android-sdk/string localization/plural-string.md
+- _pages/pages/Products/Rich Media/video-chat/planyourservice.md
+- _pages/pages/Products/Rich Media/video-chat/plantheservices.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Facebook/List
+  Template.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Apple Business
+  Chat/List Picker.md
+- _pages/pages/documents/Rich Messaging/Structured Content/Limitations/Limitations.md
+- _pages/pages/documents/Rich Messaging/Quick Replies/Limitations/Limitations.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Limitations.md
+- _pages/pages/documents/Rich Messaging/File Sharing/Introduction.md
+- _pages/pages/documents/Rich Messaging/Overview/Introduction.md
+- _pages/pages/documents/Rich Messaging/Overview/Basic Elements/Image.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Guidelines.md
+- _pages/pages/documents/consumer experience/connector-api/getting-started/GettingStarted.md
+- _pages/pages/documents/Rich Messaging/Messaging Connectors Alignment/Facebook/Generic
+  Template.md
+- _pages/pages/Products/Watson with LE/planning.md
+- _pages/pages/documents/data/data-access/pgpencryption.md
+- _pages/pages/documents/account-configuration/unified-messages/overview.md
+- _pages/pages/documents/rt-interactions/engagement-trigger/overview.md
+- _pages/pages/documents/rt-interactions/ivr-engagement/overview.md
+- _pages/pages/documents/rt-interactions/validate-engagement/overview.md
+- _pages/pages/Products/SalesForce Integration/overview.md
+- _pages/pages/documents/rt-interactions/visit-information/overview.md
+- _pages/pages/Products/Knowledge Base Integration/overview.md
+- _pages/pages/documents/rt-interactions/engagement-attributes/overview.md
+- _pages/pages/Products/Watson with LE/overview.md
+- _pages/pages/Products/In-App Messaging/overview.md
+- _pages/pages/documents/account-configuration/predefined-content/overview.md
+- _pages/pages/Products/Data/custom-dashboard/overview.md
+- _pages/pages/documents/rt-interactions/window-sdk/overview.md
+- _pages/pages/documents/guides/Engagement Attributes/overview.md
+- _pages/pages/documents/rt-interactions/app-engagement/overview.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/overview.md
+- _pages/pages/documents/data/engagement-history/overview.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/overview.md
+- _pages/pages/documents/agent-interactions/messaging-agent-sdk/overview.md
+- _pages/pages/Products/Bots/Customer Facing Bots/overview.md
+- _pages/pages/documents/le-tag/overview.md
+- _pages/pages/documents/account-configuration/agent-status-reason/overview.md
+- _pages/pages/Products/CRM Widgets/Microsoft Dynamics/overview.md
+- _pages/pages/Products/CRM Widgets/NetSuite/overview.md
+- _pages/pages/Products/CRM Widgets/Salesforce/overview.md
+- _pages/pages/Products/CRM Widgets/SugarCRM/overview.md
+- _pages/pages/Products/CRM Widgets/Zendesk/overview.md
+- _pages/pages/Products/Channels/MMS/overview.md
+- _pages/pages/Products/Channels/SMS with LE/overview.md
+- _pages/pages/documents/data/personal-data-deletion/overview.md
+- _pages/pages/documents/guides/StructuredContent/overview.md
+- _pages/pages/documents/data/operational-realtime/overview.md
+- _pages/pages/documents/admin/skills/Introduction/overview.md
+- _pages/pages/documents/consumer experience/messaging-window-api/samples/js-sample.md
+- _pages/pages/Products/Channels/IVR Deflection Solution/ivrdeflectionmessaging.md
+- _pages/pages/Products/Channels/SMS with LE/Entry Points/ivrdeflection.md
+- _pages/pages/Products/Channels/IVR Deflection Solution/ivr.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/initializeproperties.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/initConnection.md
+- _pages/pages/index.md
+- _pages/pages/Products/Channels/In App Messaging/inappmessaging.md
+- _pages/pages/Products/Channels/SMS with LE/Entry Points/inapp.md
+- _pages/pages/documents/consumer experience/android-sdk/implementationguide.md
+- _pages/pages/Products/Watson with LE/howitworks.md
+- _pages/pages/documents/le-tag/how-to-use.md
+- _pages/pages/documents/rt-interactions/window-sdk/how-to-use/how-to-use.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/how-to-use.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/hideconversation.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getvisitorname.md
+- _pages/pages/Products/Data/MCS/gettingstarted.md
+- _pages/pages/documents/agent-interactions/chat-agent/getting-started.md
+- _pages/pages/documents/consumer experience/server-chat/getting-started.md
+- _pages/pages/documents/agent-interactions/login/getting-started.md
+- _pages/pages/documents/consumer experience/javascript-chat/getting-started.md
+- _pages/pages/documents/guides/getting-started.md
+- _pages/pages/documents/consumer experience/messaging-window-api/getting-started.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getstate.md
+- _pages/pages/Products/In-App Messaging/getstartedios.md
+- _pages/pages/Products/In-App Messaging/getstartedandroid.md
+- _pages/pages/Products/Bots/Customer Facing Bots/getstarted.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getsessionkey.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/getsdkversion.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getrtsessionid.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getprechatsurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getofflinesurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getexitsurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getestimatedwaittime.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getengagement.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/getassignedagent.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/getallsupportedlanguages.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/getallchangesquery.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getagenttyping.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getagentloginname.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/getagentid.md
+- _pages/pages/documents/admin/users/methods/get-user-by-id.md
+- _pages/pages/documents/account-configuration/unified-messages/methods/get-unified-automatic-messages.md
+- _pages/pages/documents/rt-interactions/engagement-trigger/methods/get-state.md
+- _pages/pages/documents/admin/profiles/Methods/get-profile-by-id.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/get-messages.md
+- _pages/pages/documents/admin/LOB/methods/get-lob-by-id.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/get-items.md
+- _pages/pages/documents/rt-interactions/engagement-trigger/methods/get-info.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/get-default-items.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/get-default-items-by-id.md
+- _pages/pages/documents/data/messaging-interactions/methods/get-conversations-by-consumer-id.md
+- _pages/pages/documents/data/messaging-interactions/methods/get-conversation-by-conversation-id.md
+- _pages/pages/documents/account-configuration/automatic-messages/methods/get-automatic-messages.md
+- _pages/pages/documents/account-configuration/automatic-messages/methods/get-automatic-message-by-id.md
+- _pages/pages/documents/admin/skills/methods/get-all-skills.md
+- _pages/pages/documents/admin/profiles/Methods/get-all-profiles.md
+- _pages/pages/documents/admin/agent-groups/methods/get-all-agent-groups.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/general.md
+- _pages/pages/documents/rt-interactions/ivr-engagement/Methods/external-engagement.md
+- _pages/pages/documents/rt-interactions/app-engagement/examples.md
+- _pages/pages/documents/agent-interactions/messaging-agent-sdk/examples.md
+- _pages/pages/events.md
+- _pages/pages/events-preview.html
+- _pages/pages/documents/rt-interactions/window-sdk/how-to-use/event-structure.md
+- _pages/pages/documents/le-tag/events/engagement-window.md
+- _pages/pages/documents/rt-interactions/engagement-attributes/engagement-attributes.md
+- _pages/pages/documents/data/operational-realtime/methods/engagement-activity.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/endchat.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/end-chat.md
+- _pages/pages/Products/In-App Messaging/enablepushios.md
+- _pages/pages/documents/consumer experience/android-sdk/enable-push.md
+- _pages/pages/documents/guides/domain-api.md
+- _pages/pages/documents.md
+- _pages/pages/documents-preview.html
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/disposeVisitor.md
+- _pages/pages/Products/Knowledge Base Integration/Implementation/developyourwidget.md
+- _pages/pages/developchat.md
+- _pages/pages/develop-chat-preview.html
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/determine-incoming.md
+- _pages/pages/Products/Channels/SMS with LE/Entry Points/desktop.md
+- _pages/pages/documents/consumer experience/android-sdk/Configuring the SDK/designsheet.md
+- _pages/pages/Products/Data/custom-dashboard/designintegrationservice.md
+- _pages/pages/documents/consumer experience/ios-sdk/Configuring the SDK/deprecated-attributes.md
+- _pages/pages/Products/Bots/Customer Facing Bots/deployingbotsmessaging.md
+- _pages/pages/Products/Bots/Customer Facing Bots/deployingbotschat.md
+- _pages/pages/documents/consumer experience/javascript-chat/demo-app.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/deletemultiplecategories.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/deletecategory.md
+- _pages/pages/documents/admin/users/methods/delete-user.md
+- _pages/pages/documents/admin/skills/methods/delete-skill.md
+- _pages/pages/documents/admin/profiles/Methods/delete-profiles.md
+- _pages/pages/documents/admin/profiles/Methods/delete-profile.md
+- _pages/pages/documents/admin/LOB/methods/delete-lobs.md
+- _pages/pages/documents/admin/LOB/methods/delete-lob.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/delete-content-items.md
+- _pages/pages/documents/account-configuration/unified-messages/methods/delete-an-unified-automatic-message.md
+- _pages/pages/documents/guides/Customized Chat Windows/customized-chat-windows.md
+- _pages/pages/documents/data/operational-realtime/methods/current-queue-state.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/csatConversation.md
+- _pages/pages/documents/consumer experience/ios-sdk/csat.md
+- _pages/pages/documents/consumer experience/javascript-chat/creating-an-instance.md
+- _pages/pages/documents/consumer experience/ios-sdk/OS Certificate/createcertificate.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/createcategory.md
+- _pages/pages/documents/guides/Customized Chat Windows/createanexternalengagement.md
+- _pages/pages/documents/guides/Customized Chat Windows/createanapibasedwindow.md
+- _pages/pages/documents/admin/users/methods/create-users.md
+- _pages/pages/documents/admin/skills/methods/create-skills.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/updateConversationTTR.md
+- _pages/pages/documents/account-configuration/unified-messages/methods/update-an-unified-automatic-message.md
+- _pages/pages/documents/account-configuration/automatic-messages/methods/update-an-automatic-message.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/unsubscribeExConversations.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/unregisterlppusher.md
+- _pages/pages/documents/guides/Engagement Attributes/types.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/transfer-chat.md
+- _pages/tooltips.html
+- _pages/pdfconfigs/tocpage.html
+- _pages/pages/documents/consumer experience/ios-sdk/toastnotifications.md
+- _pages/pages/documents/rt-interactions/app-engagement/methods/create-session.md
+- _pages/pages/documents/admin/profiles/Methods/create-profile.md
+- _pages/pages/documents/admin/LOB/methods/create-lob.md
+- _pages/pages/documents/data/personal-data-deletion/methods/create-delete-request.md
+- _pages/pages/documents/account-configuration/predefined-content/methods/create-content.md
+- _pages/pages/documents/admin/agent-groups/methods/create-agent-groups.md
+- _pages/pages/documents/data/messaging-consumer-history/methods/conversations-metadata.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/conversation-metadata.md
+- _pages/pages/documents/data/messaging-consumer-history/methods/conversation-content.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/consumertokencreation.md
+- _pages/pages/documents/consumer experience/android-sdk/Configuring the SDK/configuring-edittext.md
+- _pages/pages/Products/In-App Messaging/configurepushandroid.md
+- _pages/pages/Products/In-App Messaging/configureiospush.md
+- _pages/pages/documents/guides/Authentication/configuration.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/cobrowse.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/closeConversation.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/client-props.md
+- _pages/pages/Products/Channels/SMS with LE/Entry Points/clickable.md
+- _pages/pages/documents/rt-interactions/engagement-trigger/methods/click.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/clearhistory.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/clearHistory.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/checkagentid.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/checkactiveconversation.md
+- _pages/pages/Products/Data/custom-dashboard/chatmetrics.md
+- _pages/pages/documents/consumer experience/javascript-chat/chat-states.md
+- _pages/pages/documents/le-tag/changelog.md
+- _pages/pages/documents/rt-interactions/visit-information/changelog.md
+- _pages/pages/documents/rt-interactions/validate-engagement/changelog.md
+- _pages/pages/documents/rt-interactions/engagement-attributes/changelog.md
+- _pages/pages/documents/rt-interactions/app-engagement/changelog.md
+- _pages/pages/documents/rt-interactions/ivr-engagement/changelog.md
+- _pages/pages/documents/data/data-access/changelog.md
+- _pages/pages/documents/rt-interactions/engagement-trigger/changelog.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/category-by-id.md
+- _pages/pages/documents/account-configuration/LE Categories/Methods/categoriesquerydelta.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/cancelsurvey.md
+- _pages/pages/documents/consumer experience/android-sdk/callbacks-index.md
+- _pages/pages/documents/consumer experience/ios-sdk/callbacks-index.md
+- _pages/pages/Products/Rich Media/video-chat/buildyourwidgets.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/browser-limit.md
+- _pages/pages/botintgration.md
+- _pages/pages/bot-platform-preview.html
+- _pages/pages/bot-integration-preview.html
+- _pages/pages/Products/Watson with LE/bestpractices.md
+- _pages/pages/documents/data/data-access/Methods/base-resource.md
+- _pages/pages/documents/consumer experience/messaging-window-api/tutorials/authentication.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/authenticate.md
+- _pages/pages/documents/account-configuration/audit-trail/Methods/audittrail.md
+- _pages/pages/documents/consumer experience/ios-sdk/Configuring the SDK/attributes.md
+- _pages/pages/documents/consumer experience/android-sdk/Configuring the SDK/attributes.md
+- _pages/pages/documents/data/data-access/architecture.md
+- _pages/pages/Products/In-App Messaging/appkeyios.md
+- _pages/pages/documents/guides/Customized Chat Windows/appendix.md
+- _pages/pages/Products/Channels/SMS with LE/appendix.md
+- _pages/pages/documents/admin/profiles/Appendix/appendix.md
+- _pages/pages/documents/account-configuration/predefined-content/appendix.md
+- _pages/pages/documents/admin/users/Appendix/appendix.md
+- _pages/pages/documents/data/messaging-operations/appendix.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/appendix.md
+- _pages/pages/Products/SalesForce Integration/appendix.md
+- _pages/pages/documents/data/engagement-history/appendix.md
+- _pages/pages/documents/guides/agentworkspacewidget.md
+- _pages/pages/documents/data/data-access/Methods/agent-activity.md
+- _pages/pages/Products/Channels/SMS with LE/Entry Points/adwords.md
+- _pages/pages/Products/Knowledge Base Integration/Implementation/addwidgettole.md
+- _pages/pages/documents/consumer experience/javascript-chat/Methods/addline.md
+- _pages/pages/Products/Channels/MMS/additionaloptions.md
+- _pages/pages/documents/consumer experience/server-chat/Methods/add-lines.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/add-lines.md
+- _pages/pages/documents/consumer experience/messaging-window-api/account-provision.md
+- _pages/pages/documents/agent-interactions/chat-agent/Methods/accept-chat.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Customizing/Wording.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Customizing/Wording.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/VoIP-Configuration.md
+- _pages/pages/documents/consumer experience/ios-sdk/Appendix/Upgrade Guide.md
+- _pages/pages/documents/data/messaging-agent-metrics/Methods/Summary.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/SubscribeMessagingEvents.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Sample-Apps.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Sample-Apps.md
+- _pages/pages/documents/guides/Retry Policy Recommendation.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/Requirements.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/Register-Your-App.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/LiveEngage Configuration/Register-Your-App.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Project-Settings.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Prerequisites.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Getting Started/Prerequisites.md
+- _pages/pages/Products/Rich Media/video-chat/Overview.md
+- _pages/pages/documents/admin/LOB/Introduction/Overview.md
+- _pages/pages/documents/admin/profiles/Introduction/Overview.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Introduction.md
+- _pages/pages/documents/account-configuration/meta-data/Introduction.md
+- _pages/pages/documents/data/messaging-agent-metrics/Introduction.md
+- _pages/pages/documents/account-configuration/audit-trail/Introduction.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Introduction.md
+- _pages/pages/documents/account-configuration/LE Categories/Introduction.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Integration-Guide.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Getting Started/Integrate-SDK.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Integrate-SDK-using-CocoaPods.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Getting Started/Integrate-SDK-Manually.md
+- _pages/pages/documents/account-configuration/automatic-messages/overview.md
+- _pages/pages/Products/Data/MCS/overview.md
+- _pages/pages/documents/admin/agent-groups/Introduction/overview.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onvisitordisposed.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/ontranscript.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onstop.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onstate.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onstart.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onrequestchat.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onprechatsurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onofflinesurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onload.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/online.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/oninit.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/oninfo.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onexitsurvey.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onengagement.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onagenttyping.md
+- _pages/pages/documents/consumer experience/javascript-chat/Events/onaccounttoaccounttransfer.md
+- _pages/js/mydoc_scroll.html
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/methods.md
+- _pages/pages/Products/Messaging Failover/messagingfailover.md
+- _pages/pages/messagingapisdk.md
+- _pages/pages/documents/data/messaging-operations/methods/messaging-queue-health.md
+- _pages/pages/documents/data/messaging-operations/methods/messaging-csat-distribution.md
+- _pages/pages/messaging-api-sdk-preview.html
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/masterConsumerResponses.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/masterConsumerRequests.md
+- _pages/pages/documents/consumer experience/messaging-window-api/API Reference/masterConsumerNotifications.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/markurgent.md
+- _pages/pages/documents/consumer experience/android-sdk/methods/marknormal.md
+- _pages/pages/documents/guides/Authentication/majorcomponents.md
+- _pages/pages/documents/consumer experience/ios-sdk/Advanced Configuration/logsandinfo.md
+- _pages/pages/documents/consumer experience/android-sdk/Advanced Configurations/logs.md
+- _pages/pages/documents/consumer experience/ios-sdk/Methods/logout.md
+- _pages/pages/documents/agent-interactions/login/methods/logout.md
+- _pages/pages/documents/agent-interactions/login/methods/login.md
+- _pages/pages/documents/rt-interactions/window-sdk/limitations.md
+- _pages/pages/documents/agent-interactions/agent-workspace-sdk/limitations.md
+- _pages/pages/Products/SalesForce Integration/knownissues.md
+- _pages/pages/documents/rt-interactions/window-sdk/configuration.md
+- _pages/pages/Products/Watson with LE/configuration.md
+- _pages/pages/documents/consumer experience/push-service/configuration.md
+- _pages/pages/documents/rt-interactions/window-sdk/how-to-use/code-examples.md
+- _pages/pages/Products/Knowledge Base Integration/Implementation/Implementation.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/FAQ.md
+- _pages/pages/documents/guides/Authentication/DetailedAPI.md
+- _pages/pages/Products/Data/data-integration/Data Integration & Analysis.md
+- _pages/pages/documents/guides/Conversation Metadata Guide.md
+- _pages/pages/Products/Bots/Customer Facing Bots/Considerations.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Changelog.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Changelog.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/Customizing/Appearance-&-Behavior.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/Customizing/Appearance-&-Behavior.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/LiveEngage Configuration/Agent-Workspace-Requirements.md
+- _pages/pages/documents/data/messaging-agent-metrics/Methods/Agent Status.md
+- _pages/pages/documents/consumer experience/CoAppAndroid-sdk/LiveEngage Configuration/Account-Settings.md
+- _pages/pages/documents/consumer experience/CoAppiOS-sdk/LiveEngage/Account-Settings.md
+- _pages/404.md
