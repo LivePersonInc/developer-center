@@ -227,7 +227,7 @@ Duration 1 day</td>
 <table>
   <thead>
   <tr>
-    <td>Name</td>
+    <th>Name</th>
     <th>Description</th>
     <th>Storage</th>
   </tr>
