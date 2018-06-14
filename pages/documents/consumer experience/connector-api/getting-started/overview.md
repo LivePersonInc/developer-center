@@ -32,27 +32,21 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 ### Capabilities enabled by the Connector API
 
-#### On the **consumer** side - achieved by the **Messaging SEND API** and **Webhooks** components
+#### On the **consumer** side
 
-* Create a new conversation and send SDEs in one step. (Messaging SEND API)
+| Capability | Achieved by | Endpoint |
+| :-- | :--- | :--- |
+| Create a new conversation and send SDEs in one step | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [CONVERSATION](sendapi-create.html){:target="_blank"} |
+| Send text messages | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
+| Send images | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
+| See SENT, READ and RECEIVED indications | [Webhooks](webhooks-overview.html){:target="_blank"} | N/A |
+| Send chat state events (COMPOSING (i.e. Consumer is typing), ACTIVE, INACTIVE etc.) | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
+| See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) | [Webhooks](webhooks-overview.html){:target="_blank"} | N/A |
+| Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid){:target="_blank"} | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
+| Close conversation | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
+| Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
 
-* Send text messages (Messaging SEND API)
-
-* Send images (Messaging SEND API)
-
-* See SENT, READ and RECEIVED indications (Webhooks)
-
-* Send chat state events (COMPOSING (i.e. Consumer is typing), ACTIVE, INACTIVE etc.) (Messaging SEND API)
-
-* See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) (Webhooks)
-
-* Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid){:target="_blank"}
-
-* Close conversation (Messaging SEND API)
-
-* Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings (Messaging SEND API)
-
-#### On the **agent** side:
+#### On the **agent** side
 
 * Resume a conversation
 
