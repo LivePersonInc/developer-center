@@ -14,8 +14,7 @@ indicator: both
 
 LiveEngage provides out-of-the-box basic information about your visitors, for example, the visitor’s geolocation, the amount of time they spent on a page, and which pages they viewed.
 
-In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information
-to LiveEngage by using Engagement Attributes.
+In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information to LiveEngage by using Engagement Attributes.
 
 Information collected using Engagement Attributes can be used to achieve the following:
 

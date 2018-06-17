@@ -1,5 +1,5 @@
 ---
-title: Get conversation by conversation ID
+title: Get Conversation by Conversation ID
 level1: Documents
 level2: Data
 level3: Messaging Interactions API

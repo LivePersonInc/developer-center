@@ -79,3 +79,7 @@ While there is some variety across LivePerson's documents, we try to stick to an
   * Elements in the response. This will break down the response example and explain each key and its values.
 
   * Response codes. What are the different codes sent back with this response and what do they represent?
+
+4) Any additional information about the API. This field changes between each API. Some of our APIs require understanding of different LiveEngage services (like the Connector API) or even third party software. In those cases, you'll find additional folders. Sometimes, these will appear before Methods, if they're required for the methods to work, but they will usually appear afterwards.
+
+5) Appendix. The appendix will include any special requirements or notes necessary to working with the API like security certificates, advanced features and more.
