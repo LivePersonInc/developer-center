@@ -63,6 +63,7 @@ If a chat request exists, the request will return an existing chat session.
 
 Response example for JSON:
 
+```json
     {
      "chatLocation": {
        "link": {
@@ -71,3 +72,4 @@ Response example for JSON:
        }
      }
     }
+```

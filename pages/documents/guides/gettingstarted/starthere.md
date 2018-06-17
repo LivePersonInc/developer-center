@@ -57,3 +57,25 @@ Because this Community includes a host of diverse documents, encompassing the co
 * Authentication - some of our APIs require authentication before using them. This is done via either of two methods: authentication via login (using your regular account credentials) or authentication via an API key (created and retrieved via the LiveEngage UI). Before you start work with our APIs, it's best to make sure you have valid credentials for your account (note that the permission levels for the user you'll use to login are the same permissions your user has in LiveEngage) and a relevant API key. To learn more about the login method, please [see this guide](https://developers.liveperson.com/login-getting-started.html). To learn more about retrieving API keys, [use this guide](https://developers.liveperson.com/guides-gettingstarted.html). For more in-depth information and additional authentication methods, please see the full Authentication Getting Started segment.
 
 ### How to Read LivePerson Documents
+
+While there is some variety across LivePerson's documents, we try to stick to an overall standardized format. Therefore, it should be relatively easy to find the information you need inside each document. Let's break down how each structure is constructed:
+
+1) Overview. Every document starts with an overview of the API it documents. This overview contains either a textual description of what the API does or the authentication methods supported by the API (see above for more details). The overview will then contain use cases for the API, more information on working with the API if necessary (like extra installation steps, other APIs which support it and so forth).
+
+2) Getting Started. This is only included in some APIs, where further configuration or installation steps are required (for example, the Connector API and the Monitor API which require an app installation process). Where this section doesn't exist, it means there is no further installation needed and you can start working with the API once you've authenticated.
+
+3) Methods. These are the actual API calls from which the API is comprised. Each method is broken down in the following way:
+
+  * A textual description of the method and what it does along with any special considerations to using it.
+
+  * **The request**. This will include the HTTP method and the URL to which it should be sent.
+
+  * The request headers. Various HTTP headers that have to be passed along with the request.
+
+  * Request body. What is the payload (usually JSON) that needs to be passed with this request? Includes an example of such a body.
+
+  * **The response**. What should you expect to get back from the request?
+
+  * Elements in the response. This will break down the response example and explain each key and its values.
+
+  * Response codes. What are the different codes sent back with this response and what do they represent?
