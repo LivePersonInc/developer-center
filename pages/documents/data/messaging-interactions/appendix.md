@@ -19,6 +19,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.| alphanumeric|
 | customerType    | Customer type - will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | alphanumeric|
+| currency        | Currency code | alphanumeric|
 | customerId      | The customer ID. | alphanumeric|
 | socialId        | The social ID of your choice: Facebook, Twitter etc. | alphanumeric|
 | imei            | Unique phone identifier.   | alphanumeric|
