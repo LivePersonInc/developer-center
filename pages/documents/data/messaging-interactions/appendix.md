@@ -11,6 +11,10 @@ indicator: messaging
 ---
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 
+There is ability to pull the engagement attributes based in two versions: 
+v1 - will allow to retrieve authenticated engagement attributes and their attributes type will be alphanumeric.
+v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrributes and their types will be "type def".
+
 ###  customerInfo
 
 | Name            | Description                        | Type/Value |
@@ -19,7 +23,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.| alphanumeric|
 | customerType    | Customer type - will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | alphanumeric|
-| currency        | Currency code | alphanumeric|
+| currency        | Currency code. | alphanumeric|
 | customerId      | The customer ID. | alphanumeric|
 | socialId        | The social ID of your choice: Facebook, Twitter etc. | alphanumeric|
 | imei            | Unique phone identifier.   | alphanumeric|
@@ -50,4 +54,20 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | phone           | Visitor phone number.  | alphanumeric|
 | language        | Visitor language.      | alphanumeric|
 
+### cartStatus (Cart update)
+
+| Name            | Description            | Type/Value |
+| :---------      | :---------------       | :----------|
+| serverTimeStamp | Event time stamp.      | long – epoch time in milliseconds|
+| total           | Total cart value.      | double |
+| currency        | Currency code.         | alphanumeric|
+| numItems        | Number of items in cart. | int|
+| products        | List of products       | Container|
+| quantity     | Number of products. | int|
+| product        | Contains information about the product| container|
+| name           | Product name.     | alphanumeric|
+| category           | Product category.  | alphanumeric|
+| sku        | Unique product ID identifier in consumer database.    | alphanumeric|
+| price        | Product price.    | double|
+  
 
