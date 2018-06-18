@@ -65,7 +65,8 @@ _Notes_:
 
 Example for data that is sent when a visitor views “Asics Women's GT 2000 4”:
 
-```JavaScript
+```javascript
+window.lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes||[];
 lpTag.sdes.push(
   {

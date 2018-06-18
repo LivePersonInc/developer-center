@@ -126,11 +126,7 @@ table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table
 table > thead > tr > th {
  border-bottom: none;
 }
-.post-content > ul {
-    color: #666666;
-    font-family: "Open Sans",Arial;
-    font-size: 1em;
-}
+
 
 .designsheet table tr td {
   font-size: 0.9em;
@@ -499,8 +495,8 @@ div.sidebarTitle-holder {
 
 .post-content > p, .post-content ol,.post-content ul {
   font-family: "Open Sans",Arial;
-  font-size: 0.9em;
   overflow-wrap: break-word;
+  font-size: 1em;
 }
 
 .post-content p strong {
