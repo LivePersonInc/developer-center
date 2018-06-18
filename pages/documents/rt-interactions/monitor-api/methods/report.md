@@ -1,6 +1,6 @@
 ---
 title: Report
-level1: Documents 
+level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -31,7 +31,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
 | account-id | LP site ID | string |  |
-| app-installation-id | App installation id | string | String, Required |
+| app-installation-id | App installation id | string | String, Required. This is received after installing the application, [as explained here](rt-interactions-monitoring-app-install.html) |
 
 ### Query parameters
 
@@ -50,17 +50,25 @@ As engagement attributes are considered unauthenticated, it should not be used f
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
-<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID). 
+<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID).
 
 ### Security considerations
-* To avoid security problems and increase reliability, the consumerId must meet the following requirements: 
-   - **Unguessable** - using consumerID which based on any of the consumer public information, such as name, email adress, phone number or any additional information related to the consumer can be guessed easily and is not reccomended. 
-   - **Innumerable** - the consumerID cannot be serial numbers and must be a set of characters that have no structure, form, or scheme.
-   - **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than 1 user, even if this user is not active anymore.
+
+* To avoid security problems and increase reliability, the `consumerId` described in the table above must meet the following requirements:
+
+   * **Unguessable** - using consumerID which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+
+   * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
+
+   * **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than one user, even if this user is not active anymore.
+
 * A good consumerID would be:
-   - UUID assigned specifically and uniquely for consumer  
-   - a hashed/salted email address
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside  the JWT. See [Authentication -> Detailed API](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) for additional information on authentication.
+
+   * UUID assigned specifically and uniquely for consumer  
+
+   * a hashed/salted email address
+
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request & body entity example
 

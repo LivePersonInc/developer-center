@@ -35,7 +35,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
 | account-id | LP site ID | string | |
-| app-installation-id | App installation id | string | String, Required |
+| app-installation-id | App installation id | string | String, Required. This is received after installing the application, [as explained here](rt-interactions-monitoring-app-install.html) |
 
 ### Query parameters
 
@@ -60,14 +60,22 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | engagementAttributes | Array of engagement attributes | string | Optional | Supported Values: all engagement-attributes excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
 
 ### Security considerations
-* To avoid security problems and increase reliability, the consumerId must meet the following requirements: 
-   - **Unguessable** - using consumerID which based on any of the consumer public information, such as name, email adress, phone number or any additional information related to the consumer can be guessed easily and is not reccomended. 
-   - **Innumerable** - the consumerID cannot be serial numbers and must be a set of characters that have no structure, form, or scheme.
-   - **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than 1 user, even if this user is not active anymore.
+
+* To avoid security problems and increase reliability, the `consumerId` described in the table above must meet the following requirements:
+
+   * **Unguessable** - using consumerID which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+
+   * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
+
+   * **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than one user, even if this user is not active anymore.
+
 * A good consumerID would be:
-   - UUID assigned specifically and uniquely for consumer  
-   - a hashed/salted email address
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside  the JWT. See [Authentication -> Detailed API](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) for additional information on authentication.
+
+   * UUID assigned specifically and uniquely for consumer  
+
+   * a hashed/salted email address
+
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request & body entity example
 
