@@ -83,3 +83,5 @@ While there is some variety across LivePerson's documents, we try to stick to an
 4) Any additional information about the API. This field changes between each API. Some of our APIs require understanding of different LiveEngage services (like the Connector API) or even third party software. In those cases, you'll find additional folders. Sometimes, these will appear before Methods, if they're required for the methods to work, but they will usually appear afterwards.
 
 5) Appendix. The appendix will include any special requirements or notes necessary to working with the API like security certificates, advanced features and more.
+
+**Note**: our recommendation is to start reading each document from its overview in order to first familiarize yourself with what it does and how it works. Then, moving on to the Methods section is the next logical step. The methods comprise the important parts of the API and cover all its functionality. Even if you're not a developer, reviewing this section will give you a more comprehensive and in depth idea of what can be achieved with the API.
