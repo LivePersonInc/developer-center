@@ -16,6 +16,6 @@ This field indicates the application name to will be displayed on your LiveEngag
 Installation of a new application can be done via your account team.
 Once the installations is done, a new app-installation-id will be generated and you may use it in order to access the monitoring API methods.
 
-*While creating a new applications on your account and using their app-installation-id, please consider the following:*
+## While creating a new applications on your account and using their app-installation-id, please consider the following:
 * Applications are used within LiveEngage to distinguish between engagement types.</br>Each engagement has to be assigned to an application type.
 * Applications are used on LiveEngage reporting system for better filtering capabilities.</br>Creating meaningful applications on your LiveEngage account will assist with better measurement of different digital sources byfiltering the data for desired sources only. reports and see data for desired sources only, and measure your different sources effectively.ave better filtering of your reports and see data for desired sources only, and measure your different sources effectively.
