@@ -55,7 +55,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
-|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. The different SDE types are: personalInfo, customerInfo, userUpdate,marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
+|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 |contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
 
 Filters examples:
@@ -393,6 +393,8 @@ Name            | Description                                 | Type/Value
 events          | The sdes that were received from the brand. | Container (see [Appendix](data-messaging-interactions-appendix.html))
 serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
 sdeType         | Type of sde.                                | enum
+
+[Here](messaging-interactions/appendix.md){:target="_blank"} you can find detailed information on the the different attributes that are exposed for the engagement attributes via the API. 
 
 **JSON Example**
 
