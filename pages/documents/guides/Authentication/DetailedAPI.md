@@ -19,7 +19,7 @@ In this use case, it is the Customer’s Web App responsibility to set the custo
 
 The callback method accepts two parameters:
 
-*	token - a string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only). 
+*	token - a string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only).
 
 *	error - any value except null or undefined to describe the error that has occurred
 
@@ -90,7 +90,7 @@ grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%
 
 If the transaction is successful, then the response will be an HTTP 200, and the following payload:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Cache-Control: no-store   
@@ -116,7 +116,7 @@ The following table describes the response fields:
 
 |    Field    |    Description                                                                                                                             |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-|    sub      |    The customer ID of the   authenticated subscriber.                                                                                      |
+|    sub      |    The consumer ID of the authenticated subscriber.                                                                                      |
 |    iss      |    The name of the Authorization   Service as configured in LivePerson.                                                                    |
 |    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. see [RFC3339]     |
 |    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]                                                                       |
