@@ -64,9 +64,9 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
    - Unguessable - using consumerID which based on any of the consumer public information, such as name, email adress, phone number or any additional information related to the consumer can be guessed easily and is not reccomended. 
    - Innumerable - the consumerID cannot be serial numbers and must be a set of characters that have no structure, form, or scheme.
    - Unique per user - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than 1 user, even if this user is not active anymore.
-   -- A good consumerID for example would be:
-   -- UUID assigned specifically and uniquely for consumer  
-   -- a hashed/salted email address
+   - A good consumerID for example would be:
+   - UUID assigned specifically and uniquely for consumer  
+   - a hashed/salted email address
 * For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside  the JWT. See [Authentication -> Detailed API](guides-authentication-detailedapi.html)for additional information on authentication.
 
 ### POST Request & body entity example
