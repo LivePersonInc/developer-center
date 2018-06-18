@@ -82,11 +82,11 @@ For the sake of simplicity, the next request body example illustrates the minima
 
 Nevertheless, we strongly recommend not to create conversations as such, as there is no user information passed in the body of the payload with `type` _userprofile.SetUserProfile_ nor there is any information passed in the body of the payload with `type` _cm.ConsumerRequestConversation_ that will enable targeting the conversation to the right skill or engagement in LiveEngage.
 
-Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"} to LiveEngage.
+Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](https://developers.liveperson.com/engagement-attributes-types.html){:target="_blank"} to LiveEngage.
 
-The [SDEs](https://developers.liveperson.com/engagment-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
+The [SDEs](https://developers.liveperson.com/engagement-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
 
-The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
+The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagement-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagement-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 The next request body example illustrates how to create a conversation and send SDEs in one request:
 
@@ -198,10 +198,10 @@ The connector can then use the above properties in the CONVERSATION request body
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to LiveEngage | "ctmrinfo" / "personal" | string | true |
-| info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagment-attributes-types.html#customer-info){:target="_blank"} |
+| info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagement-attributes-types.html#customer-info){:target="_blank"} |
 | socialId | Social Media ID of your choice e.g.: FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
 | ctype | Customer type/tier (case insensitive) | "Gold" | string | false |
-| personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](engagment-attributes-types.html#personal-info){:target="_blank"} |
+| personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](engagement-attributes-types.html#personal-info){:target="_blank"} |
 | firstname | Visitor's first name | "John" | string | false |
 | lastname | Visitor's surename | "Doe" | string | false |
 | gender |  Visitor's gender | MALE, FEMALE, OTHER | string | false |

@@ -30,7 +30,7 @@ See below a few examples of how to do so.
 
 * We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html){:target="_blank"}.
 
-* The supported SDEs for sending are the [Customer Info](https://developers.liveperson.com/engagment-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagment-attributes-types.html#personal-info){:target="_blank"} SDEs.
+* The supported SDEs for sending are the [Customer Info](https://developers.liveperson.com/engagement-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagement-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 
 ### Examples
