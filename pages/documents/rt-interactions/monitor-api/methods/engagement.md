@@ -13,7 +13,7 @@ indicator: messaging
 
 ### Description
 
-Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.  
+Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.
 
 ### Use cases
 
@@ -58,6 +58,16 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | clientProperties.osVersion | OS version | string | Optional | Example: For Android it could be 2.4 |
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
 | engagementAttributes | Array of engagement attributes | string | Optional | Supported Values: all engagement-attributes excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
+
+### Security considerations
+* To avoid security problems and increase reliability, the consumerId must meet the following requirements: 
+** Unguessable - using consumerID which based on any of the consumer public information, such as name, email adress, phone number or any additional information related to the consumer can be guessed easily and is not reccomended. 
+** Innumerable - the consumerID cannot be serial numbers and must be a set of characters that have no structure, form, or scheme.
+** Unique per user - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than 1 user, even if this user is not active anymore.
+A good consumerID for example would be:
+   - UUID assigned specifically and uniquely for consumer  
+   - a hashed/salted email address
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside  the JWT. See [Authentication -> Detailed API](guides-authentication-detailedapi.html)for additional information on authentication.
 
 ### POST Request & body entity example
 
