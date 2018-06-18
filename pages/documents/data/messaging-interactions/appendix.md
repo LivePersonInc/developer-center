@@ -45,6 +45,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | gender          | Visitor's gender.      | alphanumeric|
 | company         | Visitor's company.     | alphanumeric|
 | customerAge     | Year of birth. For calculating age. | alphanumeric|
+| contacts        | Container of personalContact| alphanumeric|
 | email           | Visitor email.         | alphanumeric|
 | phone           | Visitor phone number.  | alphanumeric|
 | language        | Visitor language.      | alphanumeric|
