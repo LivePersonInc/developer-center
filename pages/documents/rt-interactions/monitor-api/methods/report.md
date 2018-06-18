@@ -13,8 +13,8 @@ indicator: messaging
 
 ### Description
 
-Use this API to access the LivePerson monitoring system in order to report information regarding consumer activity within the brand's account. Such information can include engagement attributes, entry points.
-
+Use this API to access the LivePerson monitoring system in order to report information regarding consumer activity within the brand's account. Such information can include engagement attributes or entry points.
+As engagement attributes are considered unauthenticated, it should not be used for business transactions that requires stronger authentication or information reliability.
 
 ### Use cases
 
