@@ -79,7 +79,7 @@ _event - RichContentEvent_
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
 type                 | The type of the message.   | string              | Valid values: "RichContentEvent"
-content              | The content of the message.| string              | A json representation of the message's rich content
+content              | The content of the message.| string              | A JSON representation of the message's rich content
 
 
 _event - AcceptStatusEvent_
