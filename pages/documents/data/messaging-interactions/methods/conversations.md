@@ -330,8 +330,10 @@ _Consumer Participant info_
 Name          | Description                                                      | Type/Value
 :------------ | :--------------------------------------------------------------- | :---------
 participantId | ID of consumer (in the LP database).                             | string
-time          | Time the consumer joined the conversation.                       | string
-timeL         | Time the consumer joined the conversation (in long format).      | long
+time          | Time in which the data was last updated.                         | string
+timeL         | Time in which the data was last updated (in long format).        | long
+joinTime      | Time the consumer joined the conversation.                       | string
+joinTimeL     | Time the consumer joined the conversation (in long format).      | long
 firstName     | Consumer's first name (provided by consumer in their profile).   | string
 lastName      | Consumer's last name (provided by consumer in their profile).    | string
 phone         | Consumer's phone number (provided by consumer in their profile). | string
