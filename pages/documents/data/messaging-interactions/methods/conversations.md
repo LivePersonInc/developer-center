@@ -359,7 +359,7 @@ sdeType         | Type of sde.                                | enum
 
 Name            | Description                                       | Type/Value
 :-------------- | :------------------------------------------------ | :---------
-latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond. -1 indicates waiting for consumer | long – epoch time in milliseconds
+latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
 configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
 
 
