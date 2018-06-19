@@ -50,9 +50,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
-| coBrowseTypes | The type of CoBrowse session(s) that were held during the conversation | Array `<String>` | Optional | Valid values: "inApp", "web" |
-| isCoBrowseInteractive | Indication whether an interactive CoBrowse session occurred during the conversation | Boolean | Optional |  |
-| coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
+|responseTime {from, to}    | Response time range. | long - epoch time in milliseconds. | Optional | dfg.
 
 Filters examples:
 
@@ -77,9 +75,7 @@ Filters examples:
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
-|coBrowseTypes              | {"start":{"from":1470037448000,"to":1472543048000}, "coBrowseTypes":["inApp"]}|
-|isCoBrowseInteractive            | {"start":{"from":1470037448000,"to":1472543048000}, "isCoBrowseInteractive":true}|
-|coBrowseDuration            | {"start":{"from":1470037448000,"to":1472543048000}, "coBrowseDuration":{"from":0,"to":60}}|
+|responseTime        | {″responseTime″:{"from":1526994200000,"to":1527080600000}}|
 
 
 ### Response
@@ -113,6 +109,7 @@ conversationSurveys  | Contains information about the different surveys for the 
 coBrowseSessions     | Contains information about CoBrowse sessions for the current conversation.     | container
 summary              | Contains information about the conversation's summary.                         | container
 sdes                 | List of Engagement Attributes.                                                 | container
+responseTime         | Response time                                                                  | container
 
 _Conversation info_
 
@@ -397,6 +394,18 @@ Name            | Description                                 | Type/Value
 events          | The sdes that were received from the brand. | Container (see [Appendix](data-messaging-interactions-appendix.html))
 serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
 sdeType         | Type of sde.                                | enum
+
+
+*Response Time Info*
+
+Name            | Description                                       | Type/Value
+:-------------- | :------------------------------------------------ | :---------
+latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
+configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
+
+
+
+
 
 **JSON Example**
 
@@ -766,6 +775,10 @@ sdeType         | Type of sde.                                | enum
             "serverTimeStamp": "1497871291351"
           }
         ]
+      },
+      "responseTime": {
+        "latestEffectiveResponseDueTime": 1527174367230,
+        "configuredResponseTime": 3000
       },
       "summary": {
         "text": "summary",
