@@ -17,13 +17,13 @@ Use this method to update the session and add SDEs.
 
 | Method | URL |
 | :--- | :--- |
-| PUT |`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}?sid={session-id}` |
+| PUT |`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
 
 **Path Parameters**
 
 | Parameter | Description | Type | Required |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string ^[a-zA-Z0-9_]{1,20}$ | Required |
+| accountId | LP site ID | string  | Required |
 | visitorId | Visitor ID | string | Required |
 
 **Query Parameters**
@@ -43,7 +43,6 @@ Use this method to update the session and add SDEs.
 
 **Body entity example**
 
-https://domainToLiveperson/api/account/{accountId}/app/engagement/visitor/{visitorId}?v=1.0&sid={sessionId}
 
     {  
        "pageId":"4743822558",

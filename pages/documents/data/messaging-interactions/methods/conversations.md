@@ -77,6 +77,7 @@ Filters examples:
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
 |responseTime        | {″responseTime″:{"from":1526994200000,"to":1527080600000}}|
 
+
 ### Response
 
 **Elements in the Response**
@@ -85,7 +86,7 @@ _Metadata info_
 
 Name      | Description                                        | Type/Value
 :-------- | :------------------------------------------------- | :-----------------
-_metadata | All response-related Metadata.                     | container
+\_metadata | All response-related Metadata.                     | container
 rel       | Name of a link to be used in the next request.     | alphanumeric (256)
 href      | A specific link to be used in the next request.    | alphanumeric (256)
 count     | Number of sessions using the current query/filter. | numeric
@@ -105,6 +106,7 @@ transfers            | Contains information about transfers in the conversation.
 interactions         | Contains information about the interactions in the conversation.               | container
 messageScore         | Contains information about the message's score, including raw and MCS.         | container
 conversationSurveys  | Contains information about the different surveys for the current conversation. | container
+coBrowseSessions     | Contains information about CoBrowse sessions for the current conversation.     | container
 summary              | Contains information about the conversation's summary.                         | container
 sdes                 | List of Engagement Attributes.                                                 | container
 responseTime         | Response time                                                                  | container
@@ -132,8 +134,11 @@ latestAgentId        | Most recent agent ID the conversation was assigned to.   
 latestAgentLoginName | The agent's login name.                                                    | string     |
 latestAgentNickname  | The agent's nickname.                                                      | string     |
 latestAgentFullName  | The agent's full name.                                                     | string     |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
 latestAgentGroupId   | Group ID of the agent most recently assigned to the conversation.          | long       |
 latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
+browser | The browser or hosted application of the engagement.                 | string     |
+operatingSystem |  Operating system of the device | string     | Possible values:WINDOWS, MAC_OSX, LINUX, IOS, ANDROID.
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
 
@@ -151,6 +156,10 @@ Name                 | Description                                              
 | engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
 | visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
 | visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
+| engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | |
+| engagementApplicationName | Engagement's application name. | alphanumeric | |
+| engagementApplicationTypeId | Engagement's application type id | alphanumeric | |
+| engagementApplicationTypeName | Engagement's application type name | alphanumeric | |
 | visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
 | visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) | |
 | lobId | ID of the line of business of the campaign. | numeric(long) | |
@@ -241,6 +250,12 @@ Name     | Description                    | Type/Value
 :------- | :----------------------------- | :---------
 content  | The json of rich content.      | string
 
+_Message Quick Replies_
+
+Name     | Description                    | Type/Value
+:------- | :----------------------------- | :---------
+content  | The json of the quick replies. | string
+
 _Message Status info_
 
 Name                  | Description                                                 | Type/Value
@@ -260,6 +275,31 @@ timeL           | Time the MCS was calculated, in long format.                  
 mcs             | Meaningful Connection Score of the conversation up to this message | int        | Range: 0 - 100.
 messageRawScore | Score of message.                                                  | int
 
+*Conversation CoBrowse Sessions DTO*
+
+| Name| Description| Type / Value| Notes| 
+| ---| ---| ---| ---| 
+|coBrowseSessionsList|Co browse sessions list|Array `<ConversationCoBrowseSessionDTO>`||
+
+*Conversation CoBrowse Session DTO*
+
+| Name| Description| Type / Value| Notes| 
+| ---| ---| ---| ---| 
+| sessionId| Session id| alphanumeric| | 
+| startTime| Start time| alphanumeric| | 
+| startTimeL| Start time | long – epoch time in milliseconds| | 
+| endTime| End time| alphanumeric| | 
+| endTimeL| End time | long – epoch time in milliseconds| | 
+| interactiveTime| The time the session became interactive| alphanumeric| | 
+| interactiveTimeL| The time the session became interactive | long – epoch time in milliseconds| | 
+| isInteractive| Is the session interactive| boolean| | 
+| endReason| CoBrowse end reason| alphanumeric| | 
+| duration| Duration of the CoBrowse session| numeric| | 
+| type| Type| alphanumeric| Valid values: "inApp", "web"| 
+|capabilities|Capabilities|Array `<alphanumeric>`||
+| agentId| Agent id| alphanumeric| | 
+
+
 _Participating Agent info_
 
 Name           | Description                                                        | Type/Value | Notes
@@ -268,6 +308,7 @@ agentId        | ID of agent.                                                   
 agentLoginName | Login name of the agent assigned to the conversation.              | string     |
 agentNickname  | Nickname of the agent assigned to the conversation.                | string     |
 agentFullName  | Full name of the agent assigned to the conversation.               | string     |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
 time           | The time the agent was added to the conversation.                  | string     |
 timeL          | The time the agent was added to the conversation (in long format). | long       |
 role           | The agent's role in the conversation- assigned agent, manager etc. | string     |
@@ -394,6 +435,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
         "latestAgentNickname": "michal@lp.com",
         "latestAgentFullName": "michal@lp.com",
         "latestAgentLoginName": "michal@lp.com",
+        "agentDeleted": false,
         "latestSkillId": -1,
         "latestSkillName": "Unassigned",
         "source": "APP",
@@ -405,10 +447,36 @@ configuredResponseTime | Conversation's configured response time. | long – epo
         "firstConversation": false,
         "csatRate": 5,
         "device": "undefined",
+        "browser": "chrome",
+        "operatingSystem": "NA",
         "latestAgentGroupId": -1,
         "latestAgentGroupName": "Unassigned",
         "latestQueueState": "ACTIVE",
         "isPartial": false
+      },
+      "campaign": {
+        "campaignEngagementId": "2330596212",
+        "campaignEngagementName": "Engagement-123",
+        "campaignId": "2266771712",
+        "campaignName": "Live_Chat_on_your_site",
+        "goalId": "2266719412",
+        "goalName": "Interact with visitors",
+        "engagementAgentNote": "agent-note-test-messaging",
+        "engagementSource": "WEB_SITE",
+        "visitorBehaviorId": "2379540212",
+        "visitorBehaviorName": "someVisitorBehavior",
+        "engagementApplicationId": "28879660-84fd-4cd8-a1d7-ba3247bdb252",
+        "engagementApplicationName": "Some Mobile App Test",
+        "engagementApplicationTypeId": "92274cfd-29e7-4d94-a013-0646212d8075",
+        "engagementApplicationTypeName": "Mobile App",
+        "visitorProfileId": "2286779312",
+        "visitorProfileName": "All visitors",
+        "lobId": 2389848512,
+        "lobName": "lob_123",
+        "locationId": "2266779612",
+        "locationName": "Entire site",
+        "profileSystemDefault": true,
+        "behaviorSystemDefault": false
       },
       "messageRecords": [
         {
@@ -433,6 +501,9 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "messageData": {
             "msg": {
               "text": "Hi there, dear consumer!"
+            },
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Hello\",\"title\":\"Hello\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Hello\"}]}},{\"type\":\"button\",\"tooltip\":\"Howdy\",\"title\":\"Howdy\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Howdy\"}]}}]}"
             }
           },
           "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",
@@ -490,6 +561,9 @@ configuredResponseTime | Conversation's configured response time. | long – epo
         {
           "type": "RICH_CONTENT",
           "messageData": {
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Yes\",\"title\":\"Yes\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Yes\"}]}},{\"type\":\"button\",\"tooltip\":\"No\",\"title\":\"No\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"No\"}]}}]}"
+            },
             "richContent": {
               "content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/3oKGzayyPJGE7xuytO/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}},{\"type\":\"text\",\"text\":\"Now on sale!\"},{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/xT9IgsjDkpectclUI0/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}}]}"
             }
@@ -507,7 +581,6 @@ configuredResponseTime | Conversation's configured response time. | long – epo
       ],
       "agentParticipants": [
         {
-
           "agentFullName": "michal@lp.com",
           "agentNickname": "michal@lp.com",
           "agentLoginName": "michal@lp.com",
@@ -524,19 +597,18 @@ configuredResponseTime | Conversation's configured response time. | long – epo
       ],
       "consumerParticipant": [
         {
-            "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
-            "firstName": "Visitor",
-            "lastName": "Test",
-            "token": "undefined",
-            "email": "undefined",
-            "phone": "0",
-            "avatarURL": "undefined",
-            "time": "2016-08-29 14:30:24.573+0000",
-            "timeL": 1472481024573,
-            "consumerName": "Visitor"
+          "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
+          "firstName": "Visitor",
+          "lastName": "Test",
+          "token": "undefined",
+          "email": "undefined",
+          "phone": "0",
+          "avatarURL": "undefined",
+          "time": "2016-08-29 14:30:24.573+0000",
+          "timeL": 1472481024573,
+          "consumerName": "Visitor"
         }
       ],
-
       "transfers": [
         {
           "timeL": 1498127364726,
@@ -625,18 +697,51 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "messageDeliveryStatus": "READ"
         }
       ],
-    "conversationSurveys": [
-                {
-                    "surveyType": "Satisfaction",
-                    "surveyStatus": "FILLED",
-                    "surveyData": [
-                        {
-                            "question": "Confirm Resolution",
-                            "answer": "Yes"
-                        }
-                    ]
-                }
+      "conversationSurveys": [
+        {
+          "surveyType": "Satisfaction",
+          "surveyStatus": "FILLED",
+          "surveyData": [
+            {
+              "question": "Confirm Resolution",
+              "answer": "Yes"
+            }
+          ]
+        }
+      ],
+      "coBrowseSessions": {
+        "coBrowseSessionsList": [
+          {
+            "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506325721990",
+            "startTime": "2017-09-25 07:48:42.000+0000",
+            "startTimeL": 1506325722000,
+            "endTime": "2017-09-25 07:50:01.789+0000",
+            "endTimeL": 1506325801789,
+            "endReason": "AGENT",
+            "duration": 79789,
+            "type": "inApp",
+            "agentId": "37084513",
+            "interactive": true
+          },
+          {
+            "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506326147649",
+            "startTime": "2017-09-25 07:55:58.000+0000",
+            "startTimeL": 1506326158000,
+            "endTime": "2017-09-25 07:56:53.422+0000",
+            "endTimeL": 1506326213422,
+            "endReason": "VISITOR",
+            "duration": 55422,
+            "type": "inApp",
+            "capabilities": [
+              "CONSUMER_VIDEO_CONNECTION",
+              "CONSUMER_VOICE_CONNECTION",
+              "AGENT_APP_CONTROL"
             ],
+            "agentId": "37084513",
+            "interactive": true
+          }
+        ]
+      },
       "sdes": {
         "events": [
           {
@@ -671,7 +776,6 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           }
         ]
       },
-       ,
       "responseTime": {
         "latestEffectiveResponseDueTime": 1527174367230,
         "configuredResponseTime": 3000

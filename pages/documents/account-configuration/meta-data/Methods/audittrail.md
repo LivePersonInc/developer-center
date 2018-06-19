@@ -1,84 +1,62 @@
 ---
 title: Audit Trail
 level1: Documents
-level2: Account Configuration
-level3: Meta Data
-level4: Methods
 
+level3: Meta Data API
+level4: Methods
 permalink: account-configuration-meta-data-audit-trail.html
-order: 50
+order: 10
 indicator: both
 ---
 
-### Description
+Get an account's audit trail records.
 
-Get account's audit trail records
+### Request
 
-### URI
+| Method | URL |
+| :-------- | :------ |
+| POST | /api/account/{accountId}/configuration/metadata/audit |
 
-/api/account/{accountId}/configuration/metadata/audit
+**Request Headers**
 
-### HTTP Methods
+| Header | Description |
+| :------- | :-------------- |
+|Authorization | Contains token string to allow request authentication and authorization. See the introduction page for more details. |
 
-POST
+**Path Parameters**
 
-### Response Codes
+|Parameter|  Description|  Type|  Notes|
+|:----------|  :--------------|  :--------------|  :---|
+|accountId|  LP site ID|  string |  Validation fail error code: 400 |
 
-200 OK
-
-400 Bad Request
-
-401 Not Authorized
-
-403 Forbidden
-
-500 Internal server error
-
-### Formats
-
-JSON
-
-### Path Parameters
-
-|Parameter|Description|Notes|
-| :--- | :--- | :--- |
-|accountId|LP site id|Validation fail error code: 400<br>Type: String ^[a-zA-Z0-9_]{1,20}$|
-
-
-### Query Parameters
+**Query Parameters**
 
 N/A
 
-### Request Headers
+**Request Body**
 
-|Header|Description|
-| :--- | :--- |
-|Authorization|Contains token string to allow request authentication and authorization. See the introduction doc for more details.|
-
-###Request Body
-
-Contains a json object with single "query" field which define the requested graphql query for api auditData
-and the fields subselect. For details see [graphql website](http://graphql.org/)
+Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/){:target="_blank"}.
 
 ```json
 {"query" : "{auditData  
-              {accountId 
-              objectType 
-              objectName 
-              actionType 
-              element 
-              oldValue 
-              newValue 
-              changeDate 
-              originator 
-              originatorLoginName 
-              originatorUserId 
-              originatorUserAgent 
-              originatorAuthType 
+              {accountId
+              objectType
+              objectName
+              actionType
+              element
+              oldValue
+              newValue
+              changeDate
+              originator
+              originatorLoginName
+              originatorUserId
+              originatorUserAgent
+              originatorAuthType
               originatorIsLpa}}"}
 ```
 
-### Optional graphql parameters
+**Optional graphql parameters**
+
 |name|Description|Notes|
 | :--- | :--- | :--- |
 |fromDate|Start date for filtering|Format: yyyy-MM-dd|
@@ -91,16 +69,34 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
 |componentTypes|List of component types for filtering||
 |language|Language to return the results in|Default: en-US|
 |timezone|Time zone to use in results|Default: US/Eastern|
-|lpa|Boolean, Include changes done by LPAs in the results|Default: false|
-|automaticUpdates|Boolean, Include automatic updates in the results|Default: false|
+|lpa|Boolean, include changes done by LPAs in the results|Default: false|
+|automaticUpdates|Boolean, include automatic updates in the results|Default: false|
 
-### Response Headers
+### Response
+
+**Response type**
+
+JSON
+
+**Response Headers**
+
 |Header|Description|
 | :--- | :--- |
 |X-Total-Count|Contains the count of returned audit items|
 
+**Response Codes**
 
-### Response Body
+| Code | Description |
+| :----- | :------------ |
+| 200 | OK |
+| 400 | Bad Request |
+| 401 | Not Authenticated |
+| 403 | Not Authorized |
+| 500 | Internal Server Error |
+
+
+**Response Body**
+
 ```json
 {
   "data": {
@@ -124,4 +120,3 @@ and the fields subselect. For details see [graphql website](http://graphql.org/)
     ]
 }
 ```
-

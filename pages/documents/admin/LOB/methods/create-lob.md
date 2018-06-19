@@ -19,7 +19,7 @@ This API creates a list of LoBs for a specific account.
 
 | Method |  URL  |
 | :--------  | :----- |
- |POST  |      /api/account/{accountId}/configuration/le-users/lobs |
+ |POST  |      https://{domain}/api/account/{accountId}/configuration/le-users/lobs |
 
 **Request Headers**
 
@@ -35,7 +35,7 @@ This API creates a list of LoBs for a specific account.
 
 | Parameter    |  Description |   Type / Value  |
 | :----------   | :------------ | :------------ |
-| accountId  |    LP site ID  |  String ^[a-zA-Z0-9_]{1,20}$ |
+| accountId  |    LP site ID  |  String  |
 
 ### Response
 

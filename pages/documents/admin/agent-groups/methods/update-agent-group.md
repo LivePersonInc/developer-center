@@ -19,7 +19,7 @@ This API updates an agent group for a specific account.
 
 | Method | URL| 
 | :-------- | :------- |
- |PUT | /api/account/{accountId}/configuration/le-users/agentGroups/agentGroupId| 
+ |PUT | https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups/agentGroupId| 
 
 **Request Headers**
 
@@ -43,7 +43,7 @@ This API updates an agent group for a specific account.
 
 | Parameter | Description | Type / Value |
 | :---------- | :------------- | :-------------- |
- |accountId | LP site ID | String ^[a-zA-Z0-9_]{1,20}$ |
+ |accountId | LP site ID | String  |
 
 ### Response
 

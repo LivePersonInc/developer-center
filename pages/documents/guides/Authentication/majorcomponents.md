@@ -31,7 +31,7 @@ Content-Type: application/x-www-form-urlencoded
 code=3shshs92jsls/snxbxismNSsgHSVb&
 client_id=8819981768.lp-integration.customer.com&
 client_secret=fafadshdjkf943yehsjhed&
-redirect_uri=https://www.liveperson.com/oauth2/code_redirect&
+redirect_uri=https://liveperson.net/oauth2/code_redirect&
 grant_type=authorization_code
 ```
 
@@ -73,6 +73,8 @@ The id_token in the response is standard JWT and can be translated to the unpack
    "picture": "http://www.customer.com/pics/fdskjfd-user-id-3773hshshs"
 }
 ```
+
+<div class="hide">Cleanup - Should add another component - Customer Authorization Endpoint, which is mandatory for external windows. This is the endpoint where users will log in and then be redirected to the external widnow page with the code/JWT as a query/hash param. Auth0 is an example for such a service, but the customer may want to implement their own landing page to manipulate query parameters and redirects rather than rely on a provided Auth service as is.)</div>
 
 ### LivePerson SDK
 

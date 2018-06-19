@@ -28,6 +28,10 @@ lpTag.sdes.push(
 );
 ```
 
+### Supported Sources
+
+Each engagement attribute can be reported either from Web, Mobile or Both.
+
 ### eCommerce info
 
 eCommerce info Engagement Attributes allow you to track eCommerce-related activities on your website.
@@ -101,7 +105,7 @@ This Engagement Attribute is used to track any money transaction, purchase of it
 
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
-| Products | Array of Items in cart | array of Products objects  | [ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | true | no |
+| products | Array of Items in cart | array of Products objects  | [ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | true | no |
 | numItems | Number of items in cart | integer  | 6 | false | no |
 
 **Transaction SDE JSON example**:
@@ -138,7 +142,7 @@ This information can be used to target visitors. For example, you can offer prod
 |------|--------------|-------|---------------|------------|--------|
 | type | The event name ("prodView")  | string | "prodView" | true | no |
 | currency | Currency of the viewed products | string  | USD | false | no |
-| products | Array of items in cart | array of Products objects  | U[ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | false | no |
+| products | Array of items in cart | array of Products objects  | [ {<br>"product": {...}<br>}<br>, {<br>"product": {...}<br>} ] | false | no |
 
 **Viewed Product SDE JSON example**:
 
@@ -249,7 +253,7 @@ Info object:
 
 **Marketing source SDE JSON example**:
 
-``json
+```json
 {
   "type": "mrktInfo", //MANDATORY
     "info": {
@@ -275,7 +279,7 @@ This information can be used to segment visitors and tailor an experience based 
 | lastname | Visitor's surname | string  | "Doe" | false | yes |
 | age | Visitor's age | Age object  | {<br>"age": 34,<br>"year": 1980,<br>"month": 4,<br>"day": 15<br>} | false | yes |
 | contacts | Visitors contact info | array of Contact object  | [{<br>"email":"m@m.com",<br>"phone":<br>"+1 212-788-8877" }] | false | yes |
-| gender | Visitor's gender | integer  | 0-MALE,<br>1-FEMALE,<br>2-OTHER | false | yes |
+| gender | Visitor's gender | string  | MALE,<br>FEMALE,<br>OTHER | false | yes |
 | company | Visitor's company | string  | "Microsoft Ltd." | false | yes |
 | language | Campaign ID | Visitor's language. The value is an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO string “en-US” false 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash or underscore (for compatibility). For example, en-US or fr-CA.  | "en-US" | false | yes |
 
@@ -283,7 +287,7 @@ Age object:
 
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
-| age | Visitor’s age. **Note**: If this parameter is not provided, the age is calculated using year, month, day.  | integer | 47 | false | yes |
+| age | Visitor’s age  | integer | 47 | false | yes |
 | year | Visitor’s year of birth **Note**: This parameter is mandatory if the visitor’s age needs to be calculated. | integer  | "1969" | false |yes |
 | month | Visitor's month of birth | integer  | 2 | false |yes |
 | day | Visitor's day of birth | integer  | 12 | false |yes |
@@ -439,6 +443,8 @@ Error object:
 
 #### Searched content
 
+**Note**: This SDE cannot be reported from Mobile due to internal server limitations.
+
 This Engagement Attribute is used to to report on content that was searched by consumers on the brand’s website such as FAQ and different articles or products.
 
 This information can be used to offer help to visitors based on their searches.
@@ -465,6 +471,7 @@ Data structure:
 This Engagement Attribute is used to determine the appropriate Location for engaging with visitors, or to display where the visitors are browsing.
 
 **Code example**:
+
 ```json
 lpTag.section = [ //SET A LIST OF YOUR SITE SECTIONS
 "electronics", //CAN BE A SECTION OR A SUB-SECTION

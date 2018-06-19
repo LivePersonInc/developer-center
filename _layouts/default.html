@@ -20,7 +20,7 @@
     <div class="col-lg-12">
     {% include nav-breadcrumbs.html %}
     </div>
-   <div class="sidebarTitle fixed"><span>{{ page.level3 }}</span></div>
+   <div class="sidebarTitle fixed"><span class="titlespan">{{ page.level3 }}</span></div>
    <div class="sidebarTitle-holder">{{ page.level3 }}</div>
     <!-- Content Row -->
     <div class="row">
@@ -32,9 +32,11 @@
     <!-- Content Column -->
     <div class="col-md-9 inside-page-content">
         {% if page.level4 %}
-        <div class="h2">{{ page.level4 }}</div>
-        {% endif %}
+        <div class="h1">{{ page.level4 }}</div>
         <div class="h2">{{ page.title }}</div>
+        {% else %}
+        <div class="h1">{{ page.title }}</div>
+        {% endif %}
         {{content}}
         <br />
         <br />
@@ -69,19 +71,21 @@ autocompleteOptions: {
 });
 </script>
 
+<!-- this does not currently work because the search icon is in :before and JS cannot edit pseudo-classes.
 <script type="text/javascript">
 var inputElement = document.getElementById("aa-search-input");
+var $el = $(".aa-search-input");
 inputElement.setAttribute("oninput", "onInput(this)");
 function onInput(el) {
     setTimeout(function () {
         if (el && el.value) {
             $("body").addClass("search-opened");
             $(".search-cancel").css("display","block");
-            $(".aa-input-icon").css("display", "none");
+            $el.pseudo("before", "content", "'hey'");
         } else {
             $("body").removeClass("search-opened");
             $(".search-cancel").css("display", "none");
-            $(".aa-input-icon").css("display","block");
+            $el.pseudo("before", "content", "\f002");
         }
     }, 0);
 
@@ -94,9 +98,12 @@ function onInput(el) {
       }, 10);
       $("body").removeClass("search-opened");
       $(".search-cancel").css("display","none");
-      $(".aa-input-icon").css("display","block");
+      $el.pseudo("before", "content", "\f002");
     });
 </script>
+-->
+
+
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}

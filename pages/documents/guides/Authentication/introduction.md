@@ -12,6 +12,8 @@ indicator: both
 ---
 With Authenticated Customer Information, consumers that have logged into your website or app and initiated a chat show up as being authenticated. The Agent Workspace then displays, in real-time, the correct and verified PII (Personally Identifiable Information) of the authenticated consumer. Agents are able to easily identify which consumer data is authenticated in the CRM, and which has arrived from the page.
 
+<div class="hide">Cleanup - This is the introduction to authentication, but we start off by discussing customer information and PII - we should start by discussing security, identity and logging in. Also, we probably shouldn't call the feature "Authenticated Customer Information", but just "Authentication". Verify with product.)</div>
+
 All authenticated customer information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token. This ensures your customers’ data stays safe and cannot be manipulated.
 
 Authenticated Customer Information gives brands the confidence that each consumer is who they say they are, and that the relevant data for a personal conversation is at the disposal of the agent.
@@ -56,13 +58,13 @@ _For mobile app implementation_:
 
 *	Your mobile app users should be able to log into your backend in a secure manner.
 
-*	Your backend must be able to supply, upon request during the session, an OAuth 2.0 code (for Implicit Flow) or a JWT token (for Code Flow).
+*	Your backend must be able to supply, upon request during the session, an OAuth 2.0 code (for Code Flow) or a JWT token (for Implicit Flow).
 
 _For web implementation_:
 
 *	All authentication requests are sent over https. Your web server should listen on port 443 (https).
 
-*	For embedded chat window: Your webpage must contain a JavaScript method that will be called by the LivePerson SDK to get the OAuth 2.0 code or JWT.
+*	For embedded chat window: Your webpage must contain a JavaScript method that will be called by the LivePerson SDK to get the OAuth 2.0 code or JWT, and optionally a redirect URI.
 
 *	For popup chat window: Your Authentication Service must expose an OpenID Connect Authorization Endpoint URL.
 

@@ -17,7 +17,12 @@ Use this method to start a new session and to get an engagement according to the
 
 | Method | URL |
 | :--- | :--- |
-|POST|`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}?sid={session-id}` |
+|POST|`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
+
+| Header | Value |
+| --- | --- |
+|Content-Type | application/json |
+| Accept| application/json|
 
 **Body Parameters**
 
@@ -37,7 +42,7 @@ Use this method to start a new session and to get an engagement according to the
 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID | string |  |
 | visitorId | Visitor ID | string | Optional (Required on second request) |
 
 **Query parameters**
@@ -109,17 +114,18 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 
 | Attribute | Description | Type | Required|
 | :--- | :--- | :--- | :--- |
-| status | Availability status | enum ('Available’, 'NotAvailable’) | Required |
-| engagementDetails | The details of an engagement when it is available | object | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.campaignId | | number | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.engagementId | | number | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.contextId | | string | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.windowId | | string | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.language | | string | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.engagementRevision | | number | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is 'Available’, otherwise is not returned |
-| engagementDetails.skillId | | number | Optional when the status is 'Available’ |
-| engagementDetails.skillName | | string | Optional when the status is 'Available’ |
+| status | Availability status | enum (‘Available’, ‘NotAvailable’) | Required |
+| engagementDetails | The details of an engagement when it is available | object | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.campaignId | | number | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.engagementId | | number | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.contextId | | string | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.windowId | | string | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.language | | string | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.engagementRevision | | number | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.validForSeconds | The period in seconds that the engagement will be valid | number | Required when the status is ‘Available’, otherwise is not returned |
+| engagementDetails.skillId | | number | Optional when the status is ‘Available’ |
+| engagementDetails.skillName | | string | Optional when the status is ‘Available’ |
+| engagementDetails.connectorId | | number | Optional when the status is ‘Available’ and engagement is being flagged as 'authenticated'|
 | pageId | Page identification ID for sending event on the current engagement | string | Required  |
 | sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
 | visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
@@ -142,7 +148,8 @@ Status code: 200 OK (engagement is available)
         "engagementRevision": 44,
         "validForSeconds": 900,
         "skillId": 23,
-        "skillName":"TestSkill"
+        "skillName":"TestSkill",
+        "connectorId":"568046210"
        }
     }
 

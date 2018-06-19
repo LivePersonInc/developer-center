@@ -19,7 +19,7 @@ This API deletes a LoB from a specific account.
 
 | Method | URL|
  |:----- | :---- |
- |DELETE | /api/account/{accountId}/configuration/le-users/lobs/{lobId} |
+ |DELETE | https://{domain}/api/account/{accountId}/configuration/le-users/lobs/{lobId} |
 
 **Request Headers**
 
@@ -32,7 +32,7 @@ This API deletes a LoB from a specific account.
 
  |Parameter|  Description | Type / Value |
  |:----------- | :-------------  |:------------- |
- |accountId | LP site ID  |String ^[a-zA-Z0-9_]{1,20}$ |
+ |accountId | LP site ID  |String  |
  |lobId | Lob ID  | Positive long number greater than zero |
 
 ### Response

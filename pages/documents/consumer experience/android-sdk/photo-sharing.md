@@ -1,5 +1,5 @@
 ---
-title: Photo Sharing (Beta)
+title: Photo Sharing
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -28,7 +28,11 @@ This section describes the photo sharing behavior and configurations in the Mess
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account**.
+To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that you will need to contact your Account Team in order to enable the feature on your account**.
+
+**Note:**
+
+- *if using SDK 3.0 on an Oreo Device (8.0 & 8.1) support for Notification Channel needs to be added.*
 
 ###  Upload Photo
 
@@ -41,10 +45,17 @@ A menu will open with 2 options: Gallery and Camera. If the user had set a defau
 ![Photosharing2](img/photosharing2.png)
 
 Changing the background color of the attachment menu is available with configuration :
-```<color name="attachment_menu_item_background_color">```
+
+```
+<color name="attachment_menu_item_background_color">
+```
+
 Changing the text of Gallery/Camera:
-```<string name="lp_accessibility_gallery">```
-```<string name="lp_accessibility_camera">```
+
+```
+<string name="lp_accessibility_gallery">
+<string name="lp_accessibility_camera">
+```
 
 ### Advanced features
 

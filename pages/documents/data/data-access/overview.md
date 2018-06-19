@@ -29,6 +29,16 @@ The four types of data supported and configurable in each account are as follows
 
 The Data Access API retrieves historical data. This API is based on the REST architecture style and supports the HTTPS GET protocol (data retrieval), all retrieved data is returned in JSON format.
 
+**Note** 
+
+Data Access retention will soon be reduced to a 30 days period in order to comply with the GDPR. The GDPR (General Data Protection Regulation) is a new European Union regulation that is aimed to protect personal data of individuals within the EU that will be enforced by May 25th 2018.
+
+Part of the regulation requires the ability for a consumer to ask for their personal data to be deleted ("Right to be Forgotten") and in order to meet this requirement we will need to reduce the Data Access retention policy to 30 days (instead of 100 days as it was prior to this change).
+
+This means that data access files will be deleted 30 days from the time they were created. This still provides sufficient time for customers to pull their data from LiveEngage and store it in their own data warehouse.
+
+The new retention policy will be enforced by May 13th 2018.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -41,15 +51,15 @@ A few things you'll need to get started with this API:
 
 	* APAC accounts: sy.da.liveperson.net
 
-2. This API requires authorization using API key.
-
-	* The Data Access API has no self-serve through LiveEngage. You will receive the keys from your account manager after the Beta User agreement is approved.
+2. This API requires authorization using API key that is available in the LiveEngage API Keys tab.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
 
 4. This is a private beta that is available to a limited number of customers.  Please contact your account manager if you’d like to be considered for inclusion.  You’ll need to sign a beta agreement with LivePerson in order to participate.  
 
-5. This beta software may be released in production as a final product at LivePerson’s discretion.  While it is in beta, we are making it available to you for use “as is” and for testing purposes only.
+5. This API requires backend enablement, please contact your account manager to do so. 
+
+6. This beta software may be released in production as a final product at LivePerson’s discretion.  While it is in beta, we are making it available to you for use “as is” and for testing purposes only.
 
 
 
