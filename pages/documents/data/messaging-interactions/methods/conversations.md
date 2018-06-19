@@ -84,6 +84,7 @@ Filters examples:
 |contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
 
 
+
 ### Response
 
 **Elements in the Response**
@@ -115,6 +116,7 @@ conversationSurveys  | Contains information about the different surveys for the 
 coBrowseSessions     | Contains information about CoBrowse sessions for the current conversation.     | container
 summary              | Contains information about the conversation's summary.                         | container
 sdes                 | List of Engagement Attributes.                                                 | container
+responseTime         | Response time                                                                  | container
 
 _Conversation info_
 
@@ -401,6 +403,18 @@ serverTimeStamp | Event time stamp.                           | long – epoch t
 sdeType         | Type of SDE.                                | enum
 
 [Here](/data-messaging-interactions-appendix.html){:target="_blank"} you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
+
+
+*Response Time Info*
+
+Name            | Description                                       | Type/Value
+:-------------- | :------------------------------------------------ | :---------
+latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
+configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
+
+
+
+
 
 **JSON Example**
 
@@ -770,6 +784,10 @@ sdeType         | Type of SDE.                                | enum
             "serverTimeStamp": "1497871291351"
           }
         ]
+      },
+      "responseTime": {
+        "latestEffectiveResponseDueTime": 1527174367230,
+        "configuredResponseTime": 3000
       },
       "summary": {
         "text": "summary",
