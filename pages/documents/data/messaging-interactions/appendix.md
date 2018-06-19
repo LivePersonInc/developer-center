@@ -11,8 +11,10 @@ indicator: messaging
 ---
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 
-There is ability to pull the engagement attributes based in two versions: 
+The two versions of this API support Engagement Attributes in different ways:
+
 v1 - will allow to retrieve authenticated engagement attributes only and their attributes type will be alphanumeric.
+
 v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrributes and their types will be "type def".
 
 ###  customerInfo
