@@ -255,6 +255,12 @@ Name     | Description                    | Type/Value
 :------- | :----------------------------- | :---------
 content  | The json of rich content.      | string
 
+_Message Quick Replies_
+
+Name     | Description                    | Type/Value
+:------- | :----------------------------- | :---------
+content  | The json of the quick replies. | string
+
 _Message Status info_
 
 Name                  | Description                                                 | Type/Value
@@ -490,6 +496,9 @@ sdeType         | Type of sde.                                | enum
           "messageData": {
             "msg": {
               "text": "Hi there, dear consumer!"
+            },
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Hello\",\"title\":\"Hello\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Hello\"}]}},{\"type\":\"button\",\"tooltip\":\"Howdy\",\"title\":\"Howdy\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Howdy\"}]}}]}"
             }
           },
           "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",
@@ -547,6 +556,9 @@ sdeType         | Type of sde.                                | enum
         {
           "type": "RICH_CONTENT",
           "messageData": {
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Yes\",\"title\":\"Yes\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Yes\"}]}},{\"type\":\"button\",\"tooltip\":\"No\",\"title\":\"No\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"No\"}]}}]}"
+            },
             "richContent": {
               "content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/3oKGzayyPJGE7xuytO/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}},{\"type\":\"text\",\"text\":\"Now on sale!\"},{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/xT9IgsjDkpectclUI0/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}}]}"
             }
