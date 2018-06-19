@@ -2,7 +2,7 @@
 title: Add Messaging to your app
 level1: Solutions
 level2: Channels
-level3: In-App Messaging
+level3: Mobile App Messaging
 
 order: 1
 level-order: 1
@@ -17,9 +17,9 @@ Add messaging to your app in order to enable consumers to communicate with your 
 
 **Benefits:**
 
-* In-app messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
+* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
 
-* Increase the stickiness of your app through the added value of in-app messaging.
+* Increase the stickiness of your app through the added value of Mobile App Messaging.
 
 * Push notifications ensure your consumers never miss a new message.
 
@@ -52,7 +52,7 @@ The following prerequisites are required:
 
 In order to have a successful deployment of messaging within your iOS or Android app, there are three main components you must
 
-* Follow the guide for the In-App messaging SDK and deploy all the customization you require. Using the deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html){:target="_blank"} or [Android](android-quickstart.html){:target="_blank"}.
+* Follow the guide for the Mobile App Messaging SDK and deploy all the customization you require. Using the deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html){:target="_blank"} or [Android](android-quickstart.html){:target="_blank"}.
 
 * Configure Push Notifications
 
@@ -60,11 +60,11 @@ In order to have a successful deployment of messaging within your iOS or Android
 
 ### Considerations
 
-Deployment of the in-app messaging SDK can have several functions and tasks.  In order to make the process easier for you, we recommend you make decisions on the following topics before beginning your deployment:
+Deployment of the Mobile App Messaging SDK can have several functions and tasks.  In order to make the process easier for you, we recommend you make decisions on the following topics before beginning your deployment:
 
 * **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"} to view the LiveEngage System Requirements document. Under "LiveEngage Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
 
-* **Authentication**: The most important and potentially most complex portion of your in-app messaging deployment can be the the authentication.  
+* **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the the authentication.  
 
     * Determine if you will place messaging in authenticated areas of your app?
 
@@ -88,7 +88,7 @@ Deployment of the in-app messaging SDK can have several functions and tasks.  In
 
 * **Customization of messaging behavior:** You can utilize our callbacks ([iOS](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"} / [Android](/android-callbacks-index.html){:target="_blank"}) and APIs ([iOS](consumer-experience-ios-sdk-initialize.html){:target="_blank"} / [Android](/android-initializeproperties.html){:target="_blank"}) in order to control or change the default behaviors and actions of the messaging app.  Review the default list and determine if there are actions or flows you’d like to change
 
-* **Languages**: determine if you will offer messaging in multiple languages.  The in-app messaging SDK allows you flexibility in selecting the language to display:
+* **Languages**: determine if you will offer messaging in multiple languages.  The Mobile App Messaging SDK allows you flexibility in selecting the language to display:
 
     * Based on user’s phone language setting
 
@@ -106,7 +106,7 @@ Deployment of the in-app messaging SDK can have several functions and tasks.  In
 
     * Configuration of such masking is conducted via LivePerson.  Please contact your representative for configuration.
 
-* **Accessibility**: Is your app accessible to people with disabilities? Do you want to extend accessibility to your in-app messaging?
+* **Accessibility**: Is your app accessible to people with disabilities? Do you want to extend accessibility to your Mobile App Messaging?
 
     * Not all features available in the SDK support accessibility - you may need to turn off various features in order to be fully compliant.  
 

@@ -24,8 +24,14 @@ Name   | Description                                                  | Type/Val
 offset | The offset specifies from which record to retrieve the chat. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
 limit  | Max amount of conversations to be received in the response.  | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                      | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
+v   | version of the API (1 or 2)                    | string     | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
 
 **BODY/POST Parameters**
+
+#### Note: New capability - partial retrieval of data
+
+The API now allows you to retrive some of the content, per your need, instead of every possible key. This is done by calling the API with the contentToRetrive parameter and specifying the types of content you would like to get in the response.
+The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
@@ -45,12 +51,12 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
 |alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
 |csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
-|source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK
+|source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK,Apple Business Chat
 |device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
-|sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
-|responseTime {from, to}    | Response time range. | long - epoch time in milliseconds. | Optional | dfg.
+|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
 
 Filters examples:
 
@@ -74,8 +80,9 @@ Filters examples:
 |device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}|
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
-|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
-|responseTime        | {″responseTime″:{"from":1526994200000,"to":1527080600000}}|
+|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
+
 
 
 ### Response
@@ -277,27 +284,27 @@ messageRawScore | Score of message.                                             
 
 *Conversation CoBrowse Sessions DTO*
 
-| Name| Description| Type / Value| Notes| 
-| ---| ---| ---| ---| 
+| Name| Description| Type / Value| Notes|
+| ---| ---| ---| ---|
 |coBrowseSessionsList|Co browse sessions list|Array `<ConversationCoBrowseSessionDTO>`||
 
 *Conversation CoBrowse Session DTO*
 
-| Name| Description| Type / Value| Notes| 
-| ---| ---| ---| ---| 
-| sessionId| Session id| alphanumeric| | 
-| startTime| Start time| alphanumeric| | 
-| startTimeL| Start time | long – epoch time in milliseconds| | 
-| endTime| End time| alphanumeric| | 
-| endTimeL| End time | long – epoch time in milliseconds| | 
-| interactiveTime| The time the session became interactive| alphanumeric| | 
-| interactiveTimeL| The time the session became interactive | long – epoch time in milliseconds| | 
-| isInteractive| Is the session interactive| boolean| | 
-| endReason| CoBrowse end reason| alphanumeric| | 
-| duration| Duration of the CoBrowse session| numeric| | 
-| type| Type| alphanumeric| Valid values: "inApp", "web"| 
+| Name| Description| Type / Value| Notes|
+| ---| ---| ---| ---|
+| sessionId| Session id| alphanumeric| |
+| startTime| Start time| alphanumeric| |
+| startTimeL| Start time | long – epoch time in milliseconds| |
+| endTime| End time| alphanumeric| |
+| endTimeL| End time | long – epoch time in milliseconds| |
+| interactiveTime| The time the session became interactive| alphanumeric| |
+| interactiveTimeL| The time the session became interactive | long – epoch time in milliseconds| |
+| isInteractive| Is the session interactive| boolean| |
+| endReason| CoBrowse end reason| alphanumeric| |
+| duration| Duration of the CoBrowse session| numeric| |
+| type| Type| alphanumeric| Valid values: "inApp", "web"|
 |capabilities|Capabilities|Array `<alphanumeric>`||
-| agentId| Agent id| alphanumeric| | 
+| agentId| Agent id| alphanumeric| |
 
 
 _Participating Agent info_
@@ -391,9 +398,11 @@ _Sdes info_
 
 Name            | Description                                 | Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-events          | The sdes that were received from the brand. | Container (see [Appendix](data-messaging-interactions-appendix.html))
+events          | The SDEs that were received from the brand. | Container (see [Appendix](/data-messaging-interactions-appendix.html))
 serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
-sdeType         | Type of sde.                                | enum
+sdeType         | Type of SDE.                                | enum
+
+[Here](/data-messaging-interactions-appendix.html){:target="_blank"} you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
 
 
 *Response Time Info*

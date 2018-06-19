@@ -10,7 +10,7 @@ permalink: products-data-custom-dashboard-messaging-metrics.html
 indicator:
 ---
 
-In order to create dashboard based on messaging data (in-app messaging, web messaging, facebook or sms), there are three APIs available to you.
+In order to create dashboard based on messaging data (Mobile App Messaging, web messaging, facebook or sms), there are three APIs available to you.
 
 ### Messaging Operational API
 

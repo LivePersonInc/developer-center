@@ -22,12 +22,18 @@ port: 4000
 google_analytics: UA-96175782-1
 #baseurl: /liveperson
 
+# This tells the onclick module which attribute to add to links
+extlinks:
+  attributes: {target: _blank}
+
 gems:
   - algoliasearch-jekyll
 
 algolia:
   application_id: "1ITT6KY19C"
   index_name: "dev_BASE"
+
+github: [metadata]
 
 exclude:
   - .idea/
@@ -76,8 +82,6 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 
 # needed for sitemap.xml file only
 url: https://developers.liveperson.com
-
-repository: "github.com/EdenKupe/liveperson/"
 
 #footer links
 Copyright: "https://www.liveperson.com/policies/copyright"

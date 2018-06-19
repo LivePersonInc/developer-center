@@ -3,7 +3,7 @@ title: Interface and class definitions
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 12
@@ -14,7 +14,7 @@ indicator: messaging
 
 ### ConversationParamProtocol
 
-```javascript
+```swift
 protocol ConversationParamProtocol {
     func getConversations() -> [Conversation]?
     func getConversations(_ predicate: NSPredicate?) -> [Conversation]?
@@ -33,7 +33,7 @@ protocol ConversationParamProtocol {
 
 ### ConversationQueryType
 
-```javascript
+```swift
 enum ConversationQueryType: String {
     case Brand = "Brand"
     case Consumer = "Consumer"
@@ -42,7 +42,7 @@ enum ConversationQueryType: String {
 
 ### LPUser
 
-```javascript
+```swift
 class LPUser: NSObject {
     var firstName: String?
     var lastName: String?
@@ -55,7 +55,7 @@ class LPUser: NSObject {
 
 ### LPLog
 
-```javascript
+```swift
 class LPLog: NSObject {
     var timestamp: String?
     var className: String?
@@ -67,7 +67,7 @@ class LPLog: NSObject {
 
 ### LPConversationViewParams
 
-```javascript
+```swift
 class LPConversationViewParams: NSObject {
   var conversationQuery: ConversationParamProtocol!
   var containerViewController: UIViewController? // nil = WindowMode
@@ -78,7 +78,7 @@ class LPConversationViewParams: NSObject {
 
 ### LPConversationHistoryControlParam
 
-```javascript
+```swift
 class LPConversationHistoryControlParam: NSObject {
   var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay? // control what kind of conversation to show (Open/Close)
   var historyConversationsMaxDays: UInt? //get conversation that Closed/Opens in the last X days
@@ -89,7 +89,7 @@ class LPConversationHistoryControlParam: NSObject {
 
 ### LPConversationsHistoryStateToDisplay
 
-```javascript
+```swift
 enum LPConversationsHistoryStateToDisplay: Int {
     case open
     case close
@@ -98,7 +98,7 @@ enum LPConversationsHistoryStateToDisplay: Int {
 
 ### LPConversationHistoryMaxDaysDateType
 
-```javascript
+```swift
 enum LPConversationHistoryMaxDaysDateType: Int {
     case startConversationDate    // Default
     case endConversationDate
@@ -107,7 +107,7 @@ enum LPConversationHistoryMaxDaysDateType: Int {
 
 ### LPAuthenticationParams
 
-```javascript
+```swift
 class LPAuthenticationParams: NSObject {
   var authenticationCode: String? // Code Flow authentication
   var jwt: String? // Implicit Flow authentication
@@ -117,7 +117,7 @@ class LPAuthenticationParams: NSObject {
 
 ### LPNotification
 
-```javascript
+```swift
 class LPNotification: NSObject {
     var text: String
     var user: LPUser
@@ -129,7 +129,7 @@ class LPNotification: NSObject {
 
 ### LogLevel
 
-```javascript
+```swift
 enum LogLevel: Int {
     case TRACE
     case DEBUG
@@ -142,7 +142,7 @@ enum LogLevel: Int {
 
 ### LPConversationCloseReason
 
-```javascript
+```swift
 enum LPConversationCloseReason: Int {
     case agent = 0
     case consumer
@@ -152,7 +152,7 @@ enum LPConversationCloseReason: Int {
 
 ### LPCampaignInfo
 
-```javascript
+```swift
 class LPCampaignInfo: NSObject {
     var campaignId: Int
     var engagementId: Int
@@ -163,7 +163,7 @@ class LPCampaignInfo: NSObject {
 ```
 
 ### LPMonitoringInitParams
-```javascript
+```swift
 class : NSObject {
     var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
 }
@@ -171,7 +171,7 @@ class : NSObject {
 
 
 ### LPMonitoringParams
-```javascript
+```swift
 class : NSObject {
     var entryPoints: [String]? // Entry points array of the Mobile App
     var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes
@@ -180,7 +180,7 @@ class : NSObject {
 ```
 
 ### LPGetEngagementResponse
-```javascript
+```swift
 class : NSObject {
     var engagementDetails: [LPEngagementDetails]? // Optional Engagement Details response in case received from the server, per the Engagement's request
     var sessionId: String?
@@ -190,7 +190,7 @@ class : NSObject {
 ```
 
 ### LPSendSDEResponse
-```javascript
+```swift
 class : NSObject {
     var sessionId: String?
     var visitorId: String?
@@ -199,7 +199,7 @@ class : NSObject {
 ```
 
 ### LPEngagementDetails
-```javascript
+```swift
 class : NSObject {
     var campaignId: Int // CampaignID
     var engagementId: Int // EngagementID

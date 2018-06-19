@@ -3,7 +3,7 @@ title: Interface and Class Definitions
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: SDK APIs
 
 order: 110
@@ -14,25 +14,22 @@ indicator: messaging
 
 ### ICallback
 
-```javascript
-
+```swift
 public interface ICallback<T, E extends Throwable> {
-   void onSuccess(T value);
-   void onError(E exception);
+  void onSuccess(T value);
+  void onError(E exception);
 }
 ```
 
 ### AgentData
 
-```javascript
-
+```swift
 public class AgentData {
-
-    public String mFirstName;
-    public String mLastName;
-    public String mAvatarURL;
-    public String mEmployeeId;
-    public String mNickName;
+  public String mFirstName;
+  public String mLastName;
+  public String mAvatarURL;
+  public String mEmployeeId;
+  public String mNickName;
 }
 ```
 
@@ -40,71 +37,65 @@ public class AgentData {
 
 ### InitLivePersonProperties
 
-```javascript
-
+```swift
 public class InitLivePersonProperties{
-    private String brandId;
-    private String appId;
-    private MonitoringInitParams mMonitoringInitParams;
-    private InitLivePersonCallBack initCallBack;
+  private String brandId;
+  private String appId;
+  private MonitoringInitParams mMonitoringInitParams;
+  private InitLivePersonCallBack initCallBack;
 }
 ```
 
 
 ### ConsumerProfile
 
-```javascript
-
+```swift
 public class ConsumerProfile {
-    private String mFirstName;
-    private String mLastName;
-    private String mPhoneNumber;
-    private String mNickName;
-    private String mAvatarUrl;
+  private String mFirstName;
+  private String mLastName;
+  private String mPhoneNumber;
+  private String mNickName;
+  private String mAvatarUrl;
 }
 ```
 
 ### PushMessage
 
-```javascript
-
+```swift
 public class PushMessage {
-    private String mBrandId;
-    private String mMessage;
-    private String mFrom;
-    private String mConversationId;
-    private String mBackendService;
-    private String mCollapseKey;
-    private int mCurrentUnreadMessagesCounter = -1;
-//if we get unread messages counter from push message this value will contain it.
+  private String mBrandId;
+  private String mMessage;
+  private String mFrom;
+  private String mConversationId;
+  private String mBackendService;
+  private String mCollapseKey;
+  private int mCurrentUnreadMessagesCounter = -1;
+  //if we get unread messages counter from push message this value will contain it.
 }
 ```
 
 ### LPConversationData
 
 
-```javascript
-
+```swift
 public class LPConversationData{
-    private CloseReason closeReason;
-    private String conversationId;
+  private CloseReason closeReason;
+  private String conversationId;
 }
 ```  
 
 ### PermissionType
 
 
-```javascript
-
+```swift
 public enum PermissionType {
-  	PHOTO_SHARING
+  PHOTO_SHARING
 }  
 ```
 
 ### LPAuthenticationParams
 
-```javascript
-
+```swift
 public class LPAuthenticationParams{
   private String mAuthKey;
   private String mHostAppJWT;
@@ -127,8 +118,7 @@ public class ConversationViewParams{
 
 ### LPConversationsHistoryStateToDisplay
 
-```javascript
-
+```swift
 public enum LPConversationsHistoryStateToDisplay {
   OPEN, CLOSE , ALL
 }
@@ -138,13 +128,10 @@ public enum LPConversationsHistoryStateToDisplay {
 
 ### LPConversationHistoryMaxDaysDateType
 
-```javascript
-
+```swift
 public enum LPConversationHistoryMaxDaysDateType {
   startConversationDate, endConversationDate
 }
-
-
 ```
 
 **Monitoring API Related Classes**
@@ -152,140 +139,99 @@ public enum LPConversationHistoryMaxDaysDateType {
 
 ### MonitoringInitParams
 
-```javascript
-
+```swift
 public class MonitoringInitParams {
-
-	private String mAppInstallId;
+  private String mAppInstallId;
 }
-
-
 ```
 
 ### MonitoringParams
 
-```javascript
-
+```swift
 public class MonitoringParams {
-
-	private String pageId;
-
-	private JSONArray entryPoints;
-
-	private JSONArray engagementAttributes;
+  private String pageId;
+  private JSONArray entryPoints;
+  private JSONArray engagementAttributes;
 }
-
-
-
 ```
 
 ### EngagementCallback
 
-```javascript
-
+```swift
 public interface EngagementCallback {
-
-   void onSuccess(LPEngagementResponse engagementResponse);
-
-   void onError(MonitoringErrorType errorType, Exception e);
+  void onSuccess(LPEngagementResponse engagementResponse);
+  void onError(MonitoringErrorType errorType, Exception e);
 }
-
 ```
 
 ### SdeCallback
 
-```javascript
-
+```swift
 public interface SdeCallback {
-
-   void onSuccess(LPSdeResponse sdeResponse);
-
-   void onError(MonitoringErrorType errorType, Exception e);
+  void onSuccess(LPSdeResponse sdeResponse);
+  void onError(MonitoringErrorType errorType, Exception e);
 }
-
 ```
 
 ### LPEngagementResponse
 
-```javascript
+```swift
 
 public final class LPEngagementResponse {
-
-	@NotNull
-	private String pageId;
-
-	@Nullable
-	private String sessionId;
-
-	@Nullable
-	private String visitorId;
-
-	@Nullable
-	private List<EngagementDetails> engagementDetailsList;
+  @NotNull
+  private String pageId;
+  @Nullable
+  private String sessionId;
+  @Nullable
+  private String visitorId;
+  @Nullable
+  private List<EngagementDetails> engagementDetailsList;
 }
-
-
 ```
 
 ### LPSdeResponse
 
-```javascript
-
+```swift
 public class LPSdeResponse {
-
-	@NotNull
-	private String pageId;
-
-	@Nullable
-	private final String sessionId;
-
-	@Nullable
-	private final String visitorId;
+  @NotNull
+  private String pageId;
+  @Nullable
+  private final String sessionId;
+  @Nullable
+  private final String visitorId;
 }
-
 ```
 
 ### EngagementDetails
 
-```javascript
-
+```swift
 public final class EngagementDetails {
-
-	@NotNull
-	private  String campaignId;
-
-	@NotNull
-	private  String engagementId;
-
-	@NotNull
-	private  String engagementRevision;
-
-	@NotNull
-	private  String contextId;
-
-	@Nullable
-	private String conversationId;
-
-	@Nullable
-	private String status;
+  @NotNull
+  private  String campaignId;
+  @NotNull
+  private  String engagementId;
+  @NotNull
+  private  String engagementRevision;
+  @NotNull
+  private  String contextId;
+  @Nullable
+  private String conversationId;
+  @Nullable
+  private String status;
 }
-
 ```
 
 ### MonitoringErrorType
 
-```javascript
-
+```swift
 enum class MonitoringErrorType {
-
-    NOT_INITIALIZED,
-    INITIALIZATION_ERROR,
-    LOGOUT_ERROR,
-    PARAMETER_MISSING,
-    NO_NETWORK,
-    REQUEST_ERROR,
-    CSDS_ERROR
+  NOT_INITIALIZED,
+  INITIALIZATION_ERROR,
+  LOGOUT_ERROR,
+  PARAMETER_MISSING,
+  NO_NETWORK,
+  REQUEST_ERROR,
+  CSDS_ERROR
 }
-
 ```
 
