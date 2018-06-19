@@ -9,13 +9,13 @@ permalink: data-messaging-interactions-appendix.html
 
 indicator: messaging
 ---
-Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
+Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart abandonment etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 
 The two versions of this API support Engagement Attributes in different ways:
 
-v1 - will allow to retrieve authenticated engagement attributes only and their attributes type will be alphanumeric.
+v1 - will allow to retrieve authenticated engagement attributes only and their attribute type will be alphanumeric.
 
-v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrributes and their types will be "type def".
+v2 - will allow to retrieve both authenticated & unauthenticated engagement attributes and their type will be the defined type for the engagement attribute in question.
 
 ###  customerInfo
 
@@ -80,9 +80,9 @@ v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrr
 | total           | Total amount of purchase..      | double |
 | currency        | Currency code.         | alphanumeric|
 | orderId         | Purchase order ID.| alphanumeric|
-| cart            | Information about the cart status (detailed foramt - link to cart status)      | container|
+| cart            | Information about the cart status (detailed format - link to cart status)      | container|
 
-          
+
 ### marketingCampaignInfo (Marketing Source)
 
 | Name            | Description            | Type/Value |
@@ -93,7 +93,7 @@ v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrr
 | campaignId        |Unique identifier of the campaign.| alphanumeric|
 
 ### searchContent (Searched Content)
- 
+
  | Name            | Description            | Type/Value |
 | :---------      | :---------------       | :----------|
 | serverTimeStamp | Event time stamp.      | long – epoch time in milliseconds|
@@ -113,7 +113,7 @@ v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrr
 | sku        | Unique product ID identifier in consumer database.    | alphanumeric|
 | price        | Product price.    | double|
 
-### visitorError 
+### visitorError
 
 | Name            | Description            | Type/Value |
 | :---------      | :---------------       | :----------|
@@ -124,7 +124,7 @@ v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrr
 | level        | Error severity level.| long|
 | resolved           | Indication whether the error was resolved.    | boolean|
 
-### lead 
+### lead
 
 | Name            | Description            | Type/Value |
 | :---------      | :---------------       | :----------|
@@ -134,7 +134,7 @@ v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrr
 | currency        | Currency code.    | alphanumeric|
 | leadId        | Unique identifier of the lead in your system.| alphanumeric|
 
-### serviceActivity 
+### serviceActivity
 
 | Name            | Description            | Type/Value |
 | :---------      | :---------------       | :----------|
@@ -143,7 +143,7 @@ v2 - will allow to retrieve both authenticated & unauthentictaed engagement atrr
 | status     | Status of service activity. | int|
 | category        | Category of service activity.   | alphanumeric|
 | serviceId        | Unique service identifier.| alphanumeric|
-  
+
 
 **JSON Example (including engagement attributes)**
 
