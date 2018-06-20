@@ -8,7 +8,7 @@ level4: Instructions
 order: 10
 permalink: rt-interactions-window-sdk-configuration.html
 
-indicator: chat and messaging
+indicator: both
 ---
 
 Widget is configured by the LivePerson account team based on the following properties:
