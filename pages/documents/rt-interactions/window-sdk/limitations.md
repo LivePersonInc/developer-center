@@ -33,4 +33,4 @@ iframe.
 - The application must be hosted over SSL, meaning that the URL must start with https.
 - Custom widgets should not include LiveEngage chat buttons or any other LiveEngage
 objects such as the lpTag.
-- The SDK works on LiveChat and Messaging.
+- The SDK works on Chat and Messaging.
