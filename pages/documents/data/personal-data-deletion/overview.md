@@ -34,8 +34,6 @@ A few things you'll need to get started with this API:
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
-{:start="4"}
-4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
 ### Deletion Process
 
