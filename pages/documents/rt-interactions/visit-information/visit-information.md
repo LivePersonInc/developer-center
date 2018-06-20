@@ -27,6 +27,10 @@ This API supports OAuth 1.0 authentication patterns and requires SSL protocol. P
 | accountId | LP site ID | string | Required |  |
 | visitorId | Visitor ID | string | Required | |
 
+**Note**: the `visitorId` parameter referenced above is retrieved from the LiveEngage Tag. Each visitor receives from the Tag their own `visitorId` which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation [here](/lp-tag-engagement-window.html).
+
+This method is relevant to monitored sessions only. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default LiveEngage window), you'll need to use the [App Engagement API](rt-interactions-app-engagement-overview.html) instead.
+
 **Query Parameters**
 
 | Name     | Description | Type | Required |
