@@ -51,7 +51,7 @@ _Note_: This API supports OAuth 1.0 and all URLs must be SSL enabled (https).
 
 | Parameter    | Description |
 | :------ | :------- |
-| Engagement Attributes Array | Array of Engagement Attribute. For more information about the available Engagement Attributes, refer to [Engagement Attributes Overview document](https://developers.liveperson.com/engagment-attributes-overview.html){:target="_blank"}. |
+| Engagement Attributes Array | Array of Engagement Attribute. For more information about the available Engagement Attributes, refer to [Engagement Attributes Overview document](https://developers.liveperson.com/engagement-attributes-overview.html){:target="_blank"}. |
 
 **Request URL Example**
 

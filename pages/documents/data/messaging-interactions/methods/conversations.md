@@ -24,8 +24,14 @@ Name   | Description                                                  | Type/Val
 offset | The offset specifies from which record to retrieve the chat. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
 limit  | Max amount of conversations to be received in the response.  | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                      | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
+v   | version of the API (1 or 2)                    | string     | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
 
 **BODY/POST Parameters**
+
+#### Note: New capability - partial retrieval of data
+
+The API now allows you to retrive some of the content, per your need, instead of every possible key. This is done by calling the API with the contentToRetrive parameter and specifying the types of content you would like to get in the response.
+The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
@@ -49,7 +55,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
-|sdeSearch {personalInfo,customerInfo,userUpdate} | Search for values passed via engagement attributes(SDEs) | alphanumeric,alphanumeric,alphanumeric | Optional | Valid values: all parameters are optional , with logical OR operator between them. userUpdate - relates to the userProfile content. |
+|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
 
 Filters examples:
 
@@ -73,7 +80,9 @@ Filters examples:
 |device              | {"start":{"from":1470037448000,"to":1472543048000},"device":["DESKTOP"]}|
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
-|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com"}}|
+|sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
+
 
 
 ### Response
@@ -107,6 +116,7 @@ conversationSurveys  | Contains information about the different surveys for the 
 coBrowseSessions     | Contains information about CoBrowse sessions for the current conversation.     | container
 summary              | Contains information about the conversation's summary.                         | container
 sdes                 | List of Engagement Attributes.                                                 | container
+responseTime         | Response time                                                                  | container
 
 _Conversation info_
 
@@ -247,6 +257,12 @@ Name     | Description                    | Type/Value
 :------- | :----------------------------- | :---------
 content  | The json of rich content.      | string
 
+_Message Quick Replies_
+
+Name     | Description                    | Type/Value
+:------- | :----------------------------- | :---------
+content  | The json of the quick replies. | string
+
 _Message Status info_
 
 Name                  | Description                                                 | Type/Value
@@ -268,27 +284,27 @@ messageRawScore | Score of message.                                             
 
 *Conversation CoBrowse Sessions DTO*
 
-| Name| Description| Type / Value| Notes| 
-| ---| ---| ---| ---| 
+| Name| Description| Type / Value| Notes|
+| ---| ---| ---| ---|
 |coBrowseSessionsList|Co browse sessions list|Array `<ConversationCoBrowseSessionDTO>`||
 
 *Conversation CoBrowse Session DTO*
 
-| Name| Description| Type / Value| Notes| 
-| ---| ---| ---| ---| 
-| sessionId| Session id| alphanumeric| | 
-| startTime| Start time| alphanumeric| | 
-| startTimeL| Start time | long – epoch time in milliseconds| | 
-| endTime| End time| alphanumeric| | 
-| endTimeL| End time | long – epoch time in milliseconds| | 
-| interactiveTime| The time the session became interactive| alphanumeric| | 
-| interactiveTimeL| The time the session became interactive | long – epoch time in milliseconds| | 
-| isInteractive| Is the session interactive| boolean| | 
-| endReason| CoBrowse end reason| alphanumeric| | 
-| duration| Duration of the CoBrowse session| numeric| | 
-| type| Type| alphanumeric| Valid values: "inApp", "web"| 
+| Name| Description| Type / Value| Notes|
+| ---| ---| ---| ---|
+| sessionId| Session id| alphanumeric| |
+| startTime| Start time| alphanumeric| |
+| startTimeL| Start time | long – epoch time in milliseconds| |
+| endTime| End time| alphanumeric| |
+| endTimeL| End time | long – epoch time in milliseconds| |
+| interactiveTime| The time the session became interactive| alphanumeric| |
+| interactiveTimeL| The time the session became interactive | long – epoch time in milliseconds| |
+| isInteractive| Is the session interactive| boolean| |
+| endReason| CoBrowse end reason| alphanumeric| |
+| duration| Duration of the CoBrowse session| numeric| |
+| type| Type| alphanumeric| Valid values: "inApp", "web"|
 |capabilities|Capabilities|Array `<alphanumeric>`||
-| agentId| Agent id| alphanumeric| | 
+| agentId| Agent id| alphanumeric| |
 
 
 _Participating Agent info_
@@ -314,8 +330,10 @@ _Consumer Participant info_
 Name          | Description                                                      | Type/Value
 :------------ | :--------------------------------------------------------------- | :---------
 participantId | ID of consumer (in the LP database).                             | string
-time          | Time the consumer joined the conversation.                       | string
-timeL         | Time the consumer joined the conversation (in long format).      | long
+time          | Time in which the data was last updated.                         | string
+timeL         | Time in which the data was last updated (in long format).        | long
+joinTime      | Time the consumer joined the conversation.                       | string
+joinTimeL     | Time the consumer joined the conversation (in long format).      | long
 firstName     | Consumer's first name (provided by consumer in their profile).   | string
 lastName      | Consumer's last name (provided by consumer in their profile).    | string
 phone         | Consumer's phone number (provided by consumer in their profile). | string
@@ -382,9 +400,23 @@ _Sdes info_
 
 Name            | Description                                 | Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-events          | The sdes that were received from the brand. | Container (see [Appendix](data-messaging-interactions-appendix.html))
+events          | The SDEs that were received from the brand. | Container (see [Appendix](/data-messaging-interactions-appendix.html))
 serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
-sdeType         | Type of sde.                                | enum
+sdeType         | Type of SDE.                                | enum
+
+[Here](/data-messaging-interactions-appendix.html){:target="_blank"} you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
+
+
+*Response Time Info*
+
+Name            | Description                                       | Type/Value
+:-------------- | :------------------------------------------------ | :---------
+latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
+configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
+
+
+
+
 
 **JSON Example**
 
@@ -480,6 +512,9 @@ sdeType         | Type of sde.                                | enum
           "messageData": {
             "msg": {
               "text": "Hi there, dear consumer!"
+            },
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Hello\",\"title\":\"Hello\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Hello\"}]}},{\"type\":\"button\",\"tooltip\":\"Howdy\",\"title\":\"Howdy\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Howdy\"}]}}]}"
             }
           },
           "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",
@@ -537,6 +572,9 @@ sdeType         | Type of sde.                                | enum
         {
           "type": "RICH_CONTENT",
           "messageData": {
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Yes\",\"title\":\"Yes\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Yes\"}]}},{\"type\":\"button\",\"tooltip\":\"No\",\"title\":\"No\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"No\"}]}}]}"
+            },
             "richContent": {
               "content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/3oKGzayyPJGE7xuytO/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}},{\"type\":\"text\",\"text\":\"Now on sale!\"},{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/xT9IgsjDkpectclUI0/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}}]}"
             }
@@ -748,6 +786,10 @@ sdeType         | Type of sde.                                | enum
             "serverTimeStamp": "1497871291351"
           }
         ]
+      },
+      "responseTime": {
+        "latestEffectiveResponseDueTime": 1527174367230,
+        "configuredResponseTime": 3000
       },
       "summary": {
         "text": "summary",
