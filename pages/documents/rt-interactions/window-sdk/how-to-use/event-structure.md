@@ -8,7 +8,7 @@ level4: Instructions
 order: 30
 permalink: rt-interactions-window-sdk-event-structure.html
 
-indicator: chat and messaging
+indicator: both
 ---
 
 Each event contains three parameters: id, type and data. They appear as follows:
