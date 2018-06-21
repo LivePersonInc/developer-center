@@ -363,3 +363,34 @@ lpTag.agentSDK.init({notificationCallback: notificationHandler});
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
+
+### setConsumerProfile
+
+|Method|  Description|  Notes
+|:---  |:---  |:---  |:--- |
+|setConsumerProfile | Sets the consumer profile (unauthenticated data only) by an assigned agent/agent manager with privilege | The JSON structure for the request is {avatarUrl:"", backgndImgUri:"", description: "", email: "", firstName: "", lastName: "", phone: ""}
+
+Example:
+
+```javascript
+var onSuccess = function() {
+    // Do something with the success
+};
+
+var onError = function(err) {
+    // Do something with the error
+};
+
+var consumerData = {
+    avatarUrl:"",
+    backgndImgUri:"",
+    description: "",
+    email: "",
+    firstName: "",
+    lastName: "",
+    phone: ""
+};
+
+lpTag.agentSDK.setConsumerProfile(consumerData, onSuccess, onError);
+```
+*Note: the callbacks are optional.*
