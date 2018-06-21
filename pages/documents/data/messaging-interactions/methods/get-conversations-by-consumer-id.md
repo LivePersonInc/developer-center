@@ -24,11 +24,11 @@ Filter is sent in the POST data (body) with the following JSON structure.
 
 Required:
 
-| Name            | Description                        | Type/Value | Notes |
-| :---------      | :---------------                   | :----------| :--- |
-| consumer | ID of the consumer to search.| string |  the consumerId is the same as the participantId in the consumerParticipants section (it is an LP unique identification of the consumer)| 
-| status | Latest status of the conversation. | `Array<status>` |  Valid values: "OPEN", " or "CLOSE" |
-
+| Name            | Description                        | Type/Value | Required | Notes |
+| :---------      | :---------------                   | :----------| :------- |:--- |
+| consumer | ID of the consumer to search.| string | Required |the consumerId is the same as the participantId in the consumerParticipants section (it is an LP unique identification of the consumer)| 
+| status | Latest status of the conversation. | `Array<status>` | Required | Valid values: "OPEN", " or "CLOSE" |
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
 ### Response
 
 See Response in the [Conversations](data-messaging-interactions-conversations.html){:target="_blank"} method.
