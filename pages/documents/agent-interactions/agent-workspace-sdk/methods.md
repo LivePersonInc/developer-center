@@ -366,9 +366,11 @@ lpTag.agentSDK.get('city', onSuccess, onError);
 
 ### setConsumerProfile
 
+**Note**: before using this method, you need to make sure that the "AgentSetConsumerProfile" feature is enabled for your account. Once it is, you will be able to grant the necessary permission to one of your agent/agent manager users (the necessary permission is "update consumer profile via API").
+
 |Method|  Description|  Notes
 |:---  |:---  |:---  |:--- |
-|setConsumerProfile | Sets the consumer profile (unauthenticated data only) by an assigned agent/agent manager with privilege | The JSON structure for the request is {avatarUrl:"", backgndImgUri:"", description: "", email: "", firstName: "", lastName: "", phone: ""}
+|setConsumerProfile | Sets the consumer profile (unauthenticated data only). This action can only be performed by an assigned agent/agent manager with the necessary permissions | See the JSON structure for the request in the example below |
 
 Example:
 
