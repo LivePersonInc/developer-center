@@ -11,50 +11,21 @@
 
 </head>
 <body>
-{% include topnav.html %}
-{% if page.public == false %}
-{% include not-available.html %}
-{% else %}
-<!-- Page Content -->
-<div class="container">
-    <div class="col-lg-12">
-    {% include nav-breadcrumbs.html %}
-    </div>
-   <div class="sidebarTitle fixed"><span class="titlespan">{{ page.level3 }}</span></div>
-   <div class="sidebarTitle-holder">{{ page.level3 }}</div>
-    <!-- Content Row -->
-    <div class="row">
-        <!-- Sidebar Column -->
-        <div class="col-md-3 side-bar">
-
-          {% include sidebar.html  %}
-        </div>
-    <!-- Content Column -->
-    <div class="col-md-9 inside-page-content">
-        {% if page.level4 %}
-        <div class="h1">{{ page.level4 }}</div>
-        <div class="h2">{{ page.title }}</div>
-        {% else %}
-        <div class="h1">{{ page.title }}</div>
-        {% endif %}
-        {{content}}
-        <br />
-        <br />
-         <br />
-        <br />
-        <div class="visible-xs visible-sm">
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
-    <!-- /.row -->
+<div class="defaultwrapper">
+  <div class="defaultheader">
+    <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for knowledge" name="search" autocomplete="on" />
+  </div>
+  <div class="defaultsidebar">
+  </div>
+  <div class="defaultcontent">
+    {{ content }}
+  </div>
+  <div class="defaultfooter">
+    <span>footer content</span>
 </div>
-{% endif %}
 <!-- /.container -->
     </div>
- {% include footer.html %}
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 <script type="text/javascript">
 const search = docsearch({

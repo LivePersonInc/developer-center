@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  height: 100%;
+}
+
+.defaultwrapper {
+  height: 100vh;
+}
+
+/* CSS-Grid Begins */
+
+@supports (display: grid) {
+
+  .defaultwrapper {
+    display: grid;
+    grid-template-columns: 2fr 0.37fr 8fr;
+    grid-template-rows: auto 1fr 1fr auto;
+  }
+
+  .defaultheader {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    background-color: #fff;
+    border-bottom: solid 1px #dedddd;
+    padding: 42px 0 42px 0;
+  }
+
+  .defaultsidebar {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 11;
+    background-color: rgba(222, 221, 221, 0.5);
+  }
+
+  .defaultcontent {
+    grid-column: 3 / span 1;
+    display: flex;
+  }
+
+  .defaultfooter {
+    grid-row: 11 / span 1;
+    grid-column: 1 / span 3;
+    background-color: #4a4a4a;
+  }
+}
+
+/* CSS-Grid Ends */
