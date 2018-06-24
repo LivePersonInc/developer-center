@@ -12,9 +12,7 @@ indicator: both
 
 The very basic structured content elements that can contain either or elements, layout, styling and actions.
 
-### Limitations
-
-### Best Practices
+![card](images/card.jpg)
 
 ### Examples
 

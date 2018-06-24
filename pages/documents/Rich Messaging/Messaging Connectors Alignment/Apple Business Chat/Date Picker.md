@@ -7,7 +7,7 @@ level3: Messaging Connectors Alignment
 level4: Apple Business Chat
 order: 60
 permalink: rich-messaging-connectors-abc-datepicker.html
-indicator: both
+indicator: messaging
 ---
 
 A dedicated date picker template

@@ -7,18 +7,22 @@ level3: Messaging Connectors Alignment
 level4: Facebook
 order: 30
 permalink: rich-messaging-connectors-fb-button.html
-indicator: both
+indicator: messaging
 ---
 
-The button template is a simple structured card message that includes a text title, text subtitle, and up to three buttons with URL, publish text or navigation actions.
+The [button template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/button) is a simple structured card message that includes:
 
-This is button template example image with all type of button actions, including publish text button tap view:
+* Text title
+* Text subtitle
+* Up to three buttons with URL, publish text or navigation button actions.
 
-![](fb-list.PNG)
+Below is a button template example image with all type of button actions, including publish text button tap view:
+
+![](images/fb-btn.PNG)
 
 ### Example
 
-```JSON
+```json
 {
   "type": "vertical",
   "tag": "button",

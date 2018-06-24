@@ -4,45 +4,17 @@ Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Getting Started
-order: 20
+order: 80
 permalink: rich-messaging-click-ops.html
 indicator: both
 ---
 
-An element which has an "actions" field, an on-click operation (executed when the consumer clicks on the element) and a metadata field.
-
-### Objects
-
 On-click operations can result from two object types:
 
-<table>
-<thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Size Limit</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th>Actions</th>
-    <th>List of actions to execute (Navigate/Link/publish text)</th>
-    <th>action</th>
-    <th>N</th>
-    <th>4 actions per element</th>
-  </tr>
-  <tr>
-    <th>Metadata</th>
-    <th>list of UMS predefined objects to send back to the agent</th>
-    <th>???</th>
-    <th>N</th>
-    <th></th>
-  </tr>
-  </tbody>
-</table>
-
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| Actions | List of actions to execute (Navigate/Link/publish text) | action | N | 4 actions per element |
+| Metadata | list of UMS predefined objects to send back to the agent |  | N |  |
 
 ### Actions
 
@@ -66,6 +38,14 @@ This actions has two use cases:
 
 * Mobile: navigate to the location with one of the navigation apps.
 
+##### **Fields**
+
+| Property Name | Description | Type | Required |
+| :--- | :--- | :--- | :--- |
+| type | Type of action. Must be navigate | Enum | Y |
+| lo | Longitude | Float | Y |
+| la | Latitude | Float | Y |
+
 **Example**
 
 ```json
@@ -76,46 +56,18 @@ This actions has two use cases:
 }
 ```
 
-##### **Fields**
-
-<table>
-<thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th>type</th>
-    <th>Type of action. Must be navigate</th>
-    <th>Enum</th>
-    <th>Y</th>
-  </tr>
-  <tr>
-    <th>lo</th>
-    <th>Longitude</th>
-    <th>Float</th>
-    <th>Y</th>
-  </tr>
-  <tr>
-    <th>la</th>
-    <th>Latitude</th>
-    <th>Float</th>
-    <th>Y
-</th>
-  </tr>
-  </tbody>
-</table>
-
-
 #### Link
 
 Open a URL in a web view when opened in mobile, or in a new tab for web. This action can be used for deep link purposes.
 
 Each environment can override the URI for their specific needs.
+
+##### **Fields**
+
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| type | Type of action. Must be link | Enum | Y |  |
+| uri | The url to open | String | Y | 2048 chars |
 
 **Example**
 
@@ -135,38 +87,6 @@ Each environment can override the URI for their specific needs.
 }
 ```
 
-##### **Fields**
-
-<table>
-<thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Size Limit</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th>type</th>
-    <th>Type of action. Must be link</th>
-    <th>Enum</th>
-    <th>Y</th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>uri</th>
-    <th>The url to open</th>
-    <th>String</th>
-    <th>Y
-</th>
-    <th>2048 chars</th>
-  </tr>
-  </tbody>
-</table>
-
-
 #### Publish Text
 
 In order to support sending a message as a response for a button click, we introduced a new action called "Publish Text".
@@ -174,9 +94,17 @@ This action allows the brand to send a message on behalf of the consumer that wi
 
 This action will be used also by the clients (Mobile, VX) to send a response when a button was clicked.
 
+##### **Fields**
+
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| type | Type of action. Must be 'publishText' | Enum | Y |  |
+| text | The text to display in the transcript once the action was clicked | String | Y | 5000 chars |
+
+
 **Example**
 
- ```json
+```json
  {
    "type": "publishText",
    "text": "text to send on behalf of the consumer"
@@ -186,3 +114,23 @@ This action will be used also by the clients (Mobile, VX) to send a response whe
 ### Metadata
 
 Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](https://developers.liveperson.com/guides-conversation-metadata-guide.html).
+
+
+### Example
+
+```json
+"click": {
+	"metadata": [
+		{
+			"type": "ExternalId",
+			"id": "someID"
+		}
+	],
+	"actions": [
+		{
+			"type": "publishText",
+			"text": "Show Plan"
+		}
+	]
+}
+```

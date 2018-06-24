@@ -7,7 +7,7 @@ level3: Messaging Connectors Alignment
 level4: Apple Business Chat
 order: 50
 permalink: rich-messaging-connectors-abc-listpicker.html
-indicator: both
+indicator: messaging
 ---
 
 A representation of a List on Apple Business Chat

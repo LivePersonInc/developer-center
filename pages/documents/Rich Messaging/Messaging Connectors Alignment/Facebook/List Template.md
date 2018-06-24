@@ -7,19 +7,24 @@ level3: Messaging Connectors Alignment
 level4: Facebook
 order: 40
 permalink: rich-messaging-connectors-fb-list.html
-indicator: both
+indicator: messaging
 ---
 
 Facebook Messenger has full support for list template messages.
-List template messages are a vertically scrollable set of items that may each contain text (title and subtitle), an image, and a message button with URL, navigation and publish text actions.
+[List template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/list) messages are a vertically structured contentrollable set of up to four items (Facebook limitation) that may each contain:
 
-This is a list template example image:
+* Text title
+* Text subtitle
+* Image
+* Each item can contain a button with link, navigation or publish text actions.
 
-![image alt text](image_5.jpg)
+Below is a list template example image:
+
+![Facebook List](images/fb-list.PNG)
 
 ### Example
 
-```JSON
+```json
 {
   "type": "vertical",
   "tag": "list",

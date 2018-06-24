@@ -6,10 +6,11 @@ level2: Rich Messaging
 level3: Messaging Connectors Alignment
 order: 70
 permalink: rich-messaging-connectors-guidelines.html
-indicator: both
+indicator: messaging
 ---
 
-* **Navigation action** will render a link to a Google map to the consumer on messenger conversation (with exact location rendered by Structured Content coordinates). To allow for the Google map rendering, **this URL must be added to the Facebook page whitelisted domains**: https://www.google.com/.
+* **Navigation action** will render a link to a Google map to the consumer on messenger conversation (with exact location rendered by Structured Content coordinates).
+To allow for the Google map rendering, **this URL must be added to the Facebook page whitelisted domains**: https://www.google.com/.
 To whitelist URLs go to your page >> Settings >> Messenger Platform >> Whitelisted Domains.
 
 * Brand applying URL button is Structured Content JSON:

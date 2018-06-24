@@ -7,16 +7,25 @@ level3: Messaging Connectors Alignment
 level4: Facebook
 order: 20
 permalink: rich-messaging-connectors-fb-generic.html
-indicator: both
+indicator: messaging
 ---
 
-The generic template is a simple structured card message that includes a text title, text subtitle, image, and up to three buttons with either URL, publish text or navigation actions.
+The [generic template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/generic) is a simple structured card message that includes:
 
-Here are images of an example generic template with all type of button actions, including a URL button and navigation button tap view:
-![Facebook Generic Template 1](fb-generic-1.PNG)![Facebook Generic Template 2](fb-generic-2.jpg)![Facebook Generic Template 3](fb-generic-3.PNG)
+* Text title
+* Text subtitle
+* Image
+* Up to three buttons with either URL, publish text or navigation button actions.
 
-Agent side experience:
-![image alt text](image_3.png)
+Brands will be able to share the generic template through structured content basic elements, while using the structured content JSON properties.
+
+Below is an example of a generic template with all type of button actions, including a link button and navigation button tap view:
+
+![Facebook Generic Template 1](images/fb-generic-1.PNG)   ![Facebook Generic Template 2](images/fb-generic-2.jpg)   ![Facebook Generic Template 3](images/fb-generic-3.PNG)
+
+
+Agent view on LiveEngage:
+![Agent view on LiveEngage](images/fb-generic-agentview.png)
 
 ### Example
 

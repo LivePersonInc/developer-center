@@ -8,5 +8,5 @@ level-order: 4
 order: 10
 permalink: rich-messaging-connectors-overview.html
 root-link: true
-indicator: both
+indicator: messaging
 ---
