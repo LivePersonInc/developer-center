@@ -10,7 +10,7 @@ indicator: both
 
 LivePerson offers a variety of Data APIs that are available for our customers to use in order to retrieve their contact center’s information. Each API has its own specific attributes and can be used for different use cases. The purpose of this document is to give an overview of the different APIs and when they should both be used; for more detailed information on how to use them, please see each API's documentation.
 
-**Note**: not all APIs work with both Messaging and Chat; the type of interactions that a certain API works with is listed next to its title.
+**Note**: not all APIs work with both Messaging and Chat; the type of interactions that a certain API works with is listed next to its title. In addition, the **Personal Data Deletion API** is not covered in this document since it functions differently than the rest of the Data APIs. Please see [its documentation](/personal-data-deletion-overview.html) for more info.
 
 ### Messaging Interactions API (Messaging only)
 
