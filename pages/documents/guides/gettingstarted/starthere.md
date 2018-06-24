@@ -70,15 +70,15 @@ While there is some variety across LivePerson's documents, we try to stick to an
 
   * **The request**. This will include the HTTP method and the URL to which it should be sent.
 
-  * The request headers. Various HTTP headers that have to be passed along with the request.
+    * The request headers. Various HTTP headers that have to be passed along with the request.
 
-  * Request body. What is the payload (usually JSON) that needs to be passed with this request? Includes an example of such a body.
+    * Request body. What is the payload (usually JSON) that needs to be passed with this request? Includes an example of such a body.
 
   * **The response**. What should you expect to get back from the request?
 
-  * Elements in the response. This will break down the response example and explain each key and its values.
+    * Elements in the response. This will break down the response example and explain each key and its values.
 
-  * Response codes. What are the different codes sent back with this response and what do they represent?
+    * Response codes. What are the different codes sent back with this response and what do they represent?
 
 4) Any additional information about the API. This field changes between each API. Some of our APIs require understanding of different LiveEngage services (like the Connector API) or even third party software. In those cases, you'll find additional folders. Sometimes, these will appear before Methods, if they're required for the methods to work, but they will usually appear afterwards.
 
