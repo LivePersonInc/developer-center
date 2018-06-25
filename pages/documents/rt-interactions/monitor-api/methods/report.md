@@ -45,12 +45,17 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional <sup>[1]</sup> | |
+| consumerId | Consumer Id (deprecated) | string | Optional for authenticated, deprecated - should use identities auth identity instead <sup>[1]</sup>|  |
+| identities | List of identities representing the API call capabilities (1-2) | string (JSON) | Optional |  |
+| identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
+| identities.acr | ACR - account config read | string | Required for each identity | 0 for unauth, loa1 for auth |
+| identities.sub | The subject for identification | string | Required for auth identity, otherwise options | For auth it will be same or instead of consumerId |
+
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
-<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID).
+<sup>[1]</sup> At least one form of identification is required (ConsumerId, any identity with subject or VisitorID).
 
 ### Security considerations
 
@@ -80,7 +85,19 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ```json
 {
- "consumerId":"myConsumerId",
+ *"consumerId":"myConsumerId",*
+ "identities": [
+   {
+        "iss": "LivePerson",
+        "acr": "0",    
+        "sub": "123"
+    },
+    {
+        "issuer": "TMO",
+        "acr": "loa1",
+        "sub": "456"
+    }
+ ],
  "pageId" : "4743822558",
  "entryPoints":[
    "tel://972737004000",
