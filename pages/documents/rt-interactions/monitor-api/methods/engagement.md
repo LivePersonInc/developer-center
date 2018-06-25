@@ -49,7 +49,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id (deprecated) | String | Optional for authenticated, deprecated - should use identities auth identity instead |  |
+| consumerId | Consumer Id (deprecated) | string | Optional for authenticated, deprecated - should use identities auth identity instead |  |
 | identities | List of identities representing the API call capabilities (1-2) | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
 | identities.acr | ACR - account config read | string | Required for each identity | 0 for unauth, loa1 for auth |
