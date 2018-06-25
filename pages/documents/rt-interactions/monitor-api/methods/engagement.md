@@ -49,7 +49,11 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional | |
+| consumerId | Consumer Id (deprecated) | String | Optional for authenticated, deprecated - should use identities auth identity instead |  |
+| identities | List of identities representing the API call capabilities (1-2) | string (JSON) | Optional |  |
+| identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
+| identities.acr | ACR - account config read | string | Required for each identity | 0 for unauth, loa1 for auth |
+| identities.sub | The subject for identification | string | Required for auth identity, otherwise options | For auth it will be same or instead of consumerId |
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
@@ -94,7 +98,19 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
    "deviceFamily": "MOBILE",
    "ipAddress": "192.168.5.2"
  },
- "consumerId":"uniqueIdInBrand",
+ *"consumerId":"uniqueIdInBrand",*
+ "identities": [
+   {
+        "iss": "LivePerson",
+        "acr": "0",    
+        "sub": "123"
+    },
+    {
+        "issuer": "TMO",
+        "acr": "loa1",
+        "sub": "456"
+    }
+ ],
  "entryPoints":[
    "tel://972737004000",
    "http://www.liveperson.com",
