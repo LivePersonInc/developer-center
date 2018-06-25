@@ -175,7 +175,7 @@ Example 1 - 'Write ChatLine':
 }
 ```
 
-Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](TODO-add-link-here.html) for the Quick Replies JSON schema:
+Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {
@@ -273,7 +273,7 @@ Example 3 - 'Write StructuredContent'. Please see [this link](structured-content
 }
 ```
 
-Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema, and [this link](TODO-add-link-here.html) for the Quick Replies JSON schema:
+Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {
