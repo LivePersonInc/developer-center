@@ -78,7 +78,7 @@ More info in [Configuring the SDK](/android-configuring-sdk.html){:target="_blan
 <bool name="show_yes_no_question">
 ```
 
-<div style="color:red;font-weight:bold;">Important:</div>
+<div class="important">Important:</div>
 If both agentView(**show_agent_details_csat**) and resolutionConfirmationView(**show_yes_no_question**) are shown, resolutionConfirmationView will be always hidden (even if set to true).
 
 - The question text color is defined with:

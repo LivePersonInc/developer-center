@@ -67,7 +67,7 @@ There are 2 authenticated connection methods:
 
 _**Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail._
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Optional:
 </div>
 When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
@@ -195,7 +195,7 @@ There are 2 authenticated connection methods:
 
 _**Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail._
 
-<div style="color:red;font-weight:bold;"> Optional: </div>
+<div class="important"> Optional: </div>
 When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
 
 {:start="2"}
@@ -380,7 +380,7 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 | brandId | The account Id. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
@@ -601,7 +601,7 @@ In order to unregister from push, it must be called when there is network availa
 
 *Note: This does not end the current messaging conversation.*
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 

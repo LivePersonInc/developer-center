@@ -1,10 +1,13 @@
 * {
   margin: 0;
-  padding: 0;
 }
 
 html body {
   height: 100%;
+}
+
+body {
+  padding-top: 0 !important;
 }
 
 .defaultwrapper {
@@ -26,7 +29,7 @@ html body {
     grid-row: 1 / span 1;
     background-color: #fff;
     border-bottom: solid 1px #dedddd;
-    padding: 42px 0 42px 0;
+    padding: 42px 0 42px 70px;
   }
 
   .defaultsidebar {
@@ -48,3 +51,65 @@ html body {
 }
 
 /* CSS-Grid Ends */
+
+/* Algolia Styling Begins */
+
+#aa-search-input {
+  background-color: none !important;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+#aa-search-input:focus {
+  outline: none;
+}
+
+#aa-search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #b5b5b5 !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px
+}
+.homesearch #aa-search-input::-moz-placeholder { /* Firefox 19+ */
+  color: #b5b5b5 !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px
+}
+
+.homesearch #aa-search-input:-ms-input-placeholder { /* IE 10+ */
+  color: #b5b5b5 !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px
+}
+
+.homesearch #aa-search-input:-moz-placeholder { /* Firefox 18- */
+  color: #b5b5b5 !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px
+}
+
+.algolia-autocomplete {
+  width: 12%;
+}
+
+.aa-input-search {
+  width: 100%;
+}
+
+/* Algolia Styling Ends */
+
+table {
+  table-layout: fixed;
+  margin-bottom: 15px;
+}
+
+.important {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

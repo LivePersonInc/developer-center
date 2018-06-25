@@ -1,3 +1,12 @@
+
+.footer {
+  display: none;
+}
+
+.navbar-inverse {
+  display: none;
+}
+
 /* this is so the header won't overlap the links */
 :target::before {
   content: "";
@@ -22,8 +31,9 @@ h2[id] {
 }
 h3[id]{
   font-family: "Roboto", Arial;
-  color:#5879da;
+  color:#4a4a4a;
   font-size: 16px;
+  font-weight: 500;
 }
 h4[id]{
   font-family: "Roboto", Arial;
@@ -39,12 +49,13 @@ h4 code.highlighter-rouge {
 }
 
 .h1 {
-  color: #172136;
+  color: #5879da;
   font-family: "Roboto",Arial;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 50px;
-  margin-top: -8px;
+  padding-bottom: 35px;
+  margin-top: 39px;
+  border-bottom: solid 1px #dedddd;
 }
 
 .h2 {
@@ -70,7 +81,6 @@ h4 code.highlighter-rouge {
   margin-top: 7px;
 }
 .post-content table{
-  border: 1px solid #d6d6d6;
   width: 125%;
 }
 
@@ -95,17 +105,23 @@ pre code {
    font-size: 0.8em;
    font-family: "Open Sans";
     color: #666666;
-    word-wrap:break-word;
     max-width: 160px;
     height: 50px;
     hyphens: none;
+    background-color: rgba(222, 221, 221, 0.2);
+    border-right: solid 1px #fff;
+    padding: 21px 25.5px 21px 23px;
+    vertical-align: initial;
 }
 
 .post-content table > thead > tr > th {
-  background-color: #162036;
-  font-family: "Open Sans";
-  font-size: 0.8888em;
-  font-weight: bold;
+  background-color: #5879da;
+  font-family: "Roboto";
+  font-weight: 200;
+  color: #fff;
+  font-size: 14px;
+  padding: 14px 22px;
+  border-right: solid 1px #ffffff;
 }
 
 @media screen and (max-width:768px){
@@ -119,10 +135,12 @@ pre code {
     max-width: 90%;
   }
 }
+/*
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
   border-top: 1px solid #d6d6d6;
 
 }
+*/
 table > thead > tr > th {
  border-bottom: none;
 }
@@ -265,10 +283,10 @@ ul#mysidebar.nav {
   font-size: 0.73em;
   text-decoration: none;
   margin-top: 0px;
-  border-right: 1px solid lightgray;
   margin-left: 10px;
   height: 100%;
   position: initial;
+  width: 100%;
 
 }
 
@@ -300,18 +318,17 @@ ul#mysidebar.nav li a {
   display: inline-block;
   color: #5879da;
   font-family: "Roboto","Open Sans",Arial,Helvetica,sans-serif;
-  font-size: 12px;
   overflow-wrap:break-word;
 }
 ul#mysidebar.nav > li > a{
   padding: 2px 10px 0 0;
+  font-size: 15px;
 }
 ul#mysidebar li ul li{
   margin-right: 0px;
 }
 ul#mysidebar.nav li a.active{
   color: #172136;
-  font-size: 14px;
   font-weight: bold;
 }
 ul#mysidebar.nav li.activepage{
@@ -323,7 +340,7 @@ ul#mysidebar.nav li.activepage a{
   color: #172136;
 }
 #mysidebar.nav li.folder > a{
- font-size: 1.1em;
+ font-size: 15px;
 }
 
 ul#mysidebar.nav li ul li {
@@ -336,6 +353,7 @@ ul#mysidebar.nav li ul li {
 }
 
 div.sidebarTitle {
+  display: none;
   color: #162036;
   font-size: 22px;
   font-weight: normal;
@@ -378,6 +396,7 @@ div.sidebarTitle-holder {
   position: relative;
   font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
   cursor: default;
+  display: none;
 }
 
 /*CSS for tooltip of Indicator*/
@@ -432,6 +451,7 @@ div.sidebarTitle-holder {
 }
 
 .breadcrumbs {
+  display: none;
   background-color: white;
   border-bottom: 1px solid lightgray;
   border-radius: 0;
@@ -494,9 +514,12 @@ div.sidebarTitle-holder {
 }
 
 .post-content > p, .post-content ol,.post-content ul {
-  font-family: "Open Sans",Arial;
+  font-family: "Roboto",Arial;
   overflow-wrap: break-word;
-  font-size: 1em;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.71;
+  color: #4a4a4a !important;
 }
 
 .post-content p strong {
@@ -512,10 +535,9 @@ div.sidebarTitle-holder {
 
 pre {
   margin: 20px 0;
-  max-width: 640px;
   border: none;
   border-radius: 0px;
-  padding: 15px 36.5px;
+  padding: 16px 97px 16px 10px;
 }
 /*change the defaults colors to match yeal design*/
 
@@ -561,7 +583,6 @@ pre {
 @media (min-width: 1114px)
 {
   ul#mysidebar {
-  border-right: 1px solid lightgray;
   margin-left: 9px;
   top: 160px;
   width: 230px;
@@ -662,6 +683,7 @@ pre {
      margin: 0 auto;
      margin-left: 2px;
      margin-top: -33px;
+     display: none;
    }
 
    /**Position of the iframe inside the reponsive div **/

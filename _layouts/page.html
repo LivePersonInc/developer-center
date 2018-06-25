@@ -30,6 +30,9 @@ layout: default
 
 <div class="post-content">
 
+{% if page.title %}
+  <div class='h1'>{{ page.title}}</div>
+{% endif %}
    {% if page.summary %}
     <div class="summary">{{page.summary}}</div>
    {% endif %}

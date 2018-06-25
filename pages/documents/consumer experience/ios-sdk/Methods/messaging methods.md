@@ -21,10 +21,10 @@ Passing monitoringInitParams is mandatory when using MonitoringAPI capabilities
 func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInitParams? = nil)
 ```
 
-| Parameter | Description | Notes
+| Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| brandId | An account ID of the Brand| Optional Parameter
-| monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter
+| brandId | An account ID of the Brand| Optional Parameter |
+| monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter |
 
 ### showConversation
 
@@ -53,7 +53,7 @@ func showConversation(_ conversationQuery: ConversationParamProtocol, authentica
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
-| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
+| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  |  
 
 ### removeConversation
 
@@ -74,7 +74,7 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
@@ -277,7 +277,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
@@ -305,7 +305,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 IMPORTANT NOTES :
 </div>
 

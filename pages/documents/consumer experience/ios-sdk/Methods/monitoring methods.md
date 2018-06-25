@@ -12,7 +12,7 @@ permalink: consumer-experience-ios-sdk-monitoring-methods.html
 indicator: messaging
 ---
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the following [steps](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params)

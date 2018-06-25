@@ -37,7 +37,7 @@ _**Note:** In order to avoid collisions, each SDK resource starts with a prefix 
 <string name="brand_name">This new and fancy Brand name</string>
 ```
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
