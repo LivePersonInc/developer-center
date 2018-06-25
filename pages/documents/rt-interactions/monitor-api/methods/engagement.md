@@ -106,7 +106,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
         "sub": "123"
     },
     {
-        "issuer": "TMO",
+        "iss": "TMO",
         "acr": "loa1",
         "sub": "456"
     }
