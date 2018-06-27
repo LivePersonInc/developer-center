@@ -22,8 +22,6 @@ POST       | https://{domain}/messaging_history/api/account/{accountID}/conversa
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
-Required:
-
 | Name            | Description                        | Type/Value | Required | Notes |
 | :---------      | :---------------                   | :----------| :------- |:--- |
 | consumer | ID of the consumer to search.| string | Required |the consumerId is the same as the participantId in the consumerParticipants section (it is an LP unique identification of the consumer)|

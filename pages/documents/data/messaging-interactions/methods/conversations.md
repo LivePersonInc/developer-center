@@ -31,6 +31,7 @@ v   | version of the API (1 or 2)                    | string     | Optional | d
 #### Note: New capability - partial retrieval of data
 
 The API now allows you to retrive some of the content, per your need, instead of every possible key. This is done by calling the API with the contentToRetrive parameter and specifying the types of content you would like to get in the response.
+
 The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
 
 Filter is sent in the POST data (body) with the following JSON structure.
@@ -176,6 +177,24 @@ Name                 | Description                                              
 | behaviorSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 | profileSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 
+_Monitoring_
+
+Name                 | Description                                                                | Type/Value | Notes
+:------------------- | :------------------------------------------------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------
+| country |  Name of country. | alphanumeric | |
+| countryCode | Country's code. | alphanumeric | |
+| state | Name of state. | alphanumeric  |  |
+| city | Name of the city. | alphanumeric | |
+| isp | Internet service provider's name. | alphanumeric | |
+| org | Name of organization. | alphanumeric  | |
+| device | Type of device. | alphanumeric  |Valid values: "DESKTOP", "TABLET", "MOBILE", "NA" |
+| ipAddress | IP address of the consumer's device | alphanumeric  | |
+| browser | Browser of the consumer who engaged in the conversation | alphanumeric  | |
+| operatingSystem | Operating System of the consumer who engageed in the conversation. | alphanumeric | |
+| conversationStartPage | The page's URL from which the conversation started. | alphanumeric| |
+| conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |
+
+         
 _Message Info_
 
 Name          | Description                                 | Type/Value | Notes
@@ -488,6 +507,20 @@ configuredResponseTime | Conversation's configured response time. | long – epo
         "locationName": "Entire site",
         "profileSystemDefault": true,
         "behaviorSystemDefault": false
+      },
+      "monitoring": {
+         "country": "United States",
+         "countryCode": "US",
+         "state": "Michigan",
+         "city": "Michigan",
+         "isp": "AT&T U-verse",
+         "org": "AT&T U-verse",
+         "device": "DESKTOP",
+         "ipAddress": "192.000.12.240",
+         "browser": "Chrome 66.0.3359.181",
+         "operatingSystem": "WINDOWS",
+         "conversationStartPage": "https://testPage",
+         "conversationStartPageTitle": "LivePerson Page"
       },
       "messageRecords": [
         {
