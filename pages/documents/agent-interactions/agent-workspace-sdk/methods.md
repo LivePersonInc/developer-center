@@ -363,3 +363,39 @@ lpTag.agentSDK.init({notificationCallback: notificationHandler});
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
+{% comment %}
+
+### setConsumerProfile
+
+**Note**: before using this method, you need to make sure that the "AgentSetConsumerProfile" feature is enabled for your account. Once it is, you will be able to grant the necessary permission to one of your agent/agent manager users (the necessary permission is "update consumer profile via API").
+
+|Method|  Description|  Notes
+|:---  |:---  |:---  |:--- |
+|setConsumerProfile | Sets the consumer profile (unauthenticated data only). This action can only be performed by an assigned agent/agent manager with the necessary permissions | See the JSON structure for the request in the example below |
+
+Example:
+
+```javascript
+var onSuccess = function() {
+    // Do something with the success
+};
+
+var onError = function(err) {
+    // Do something with the error
+};
+
+var consumerData = {
+    avatarUrl:"",
+    backgndImgUri:"",
+    description: "",
+    email: "",
+    firstName: "",
+    lastName: "",
+    phone: ""
+};
+
+lpTag.agentSDK.setConsumerProfile(consumerData, onSuccess, onError);
+```
+*Note: the callbacks are optional.*
+
+{% endcomment %}

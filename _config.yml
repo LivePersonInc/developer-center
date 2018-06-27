@@ -22,6 +22,10 @@ port: 4000
 google_analytics: UA-96175782-1
 #baseurl: /liveperson
 
+# This tells the onclick module which attribute to add to links
+extlinks:
+  attributes: {target: _blank}
+
 gems:
   - algoliasearch-jekyll
 

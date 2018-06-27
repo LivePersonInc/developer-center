@@ -3,7 +3,7 @@ title: Using LivePerson SDK - iOS
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 
 order: 246
@@ -120,9 +120,9 @@ $ pod init
 
 - Due to a new Apple policy for iOS 10 (or later), apps must declare in their project settings which privacy settings may be used. For more information, refer to Apple’s website. In Xcode info.plist of the project, add two new privacy keys and values:
 
-    * Key: **NSPhotoLibraryUsageDescription**, Value: **"Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS"**
+    * Key: **NSPhotoLibraryUsageDescription**, Value: **"Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"**
 
-    * Key: **NSCameraUsageDescription**, Value: **"Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"**
+    * Key: **NSCameraUsageDescription**, Value: **"Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"**
 
 <div style="color:red;font-weight:bold;">
 Important:
@@ -294,7 +294,7 @@ LPConfig.printAllConfigurations()
 **Notes**:
 
 
-* This feature is available only for the In-App Messaging SDK.
+* This feature is available only for the Mobile App Messaging SDK.
 
 * This features enables photo sharing only (not video/files).
 
@@ -702,9 +702,9 @@ $ pod init
 
 * Due to a new Apple policy for iOS 10 (or later), apps must declare in their project settings which privacy settings may be used. For more information, refer to Apple’s website. In Xcode info.plist of the project, add two new privacy keys and values:
 
-  *  Key: **NSPhotoLibraryUsageDescription**, Value: **"Photo Library Privacy Setting for LiveEngage In-App Messaging SDK for iOS"**
+  *  Key: **NSPhotoLibraryUsageDescription**, Value: **"Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"**
 
-  *  Key: **NSCameraUsageDescription**, Value: **"Camera Privacy Setting for LiveEngage In-App Messaging SDK for iOS"**
+  *  Key: **NSCameraUsageDescription**, Value: **"Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"**
 
 <div style="color:red;font-weight:bold;">
 Important:
@@ -869,7 +869,7 @@ Note: this object gives you access to all the different attributes you are able 
 **Notes**:
 
 
-  * This feature is available only for the In-App Messaging SDK.
+  * This feature is available only for the Mobile App Messaging SDK.
 
   * This features enables photo sharing only (not video/files).
 

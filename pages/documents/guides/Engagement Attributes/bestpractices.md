@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Engagement Attributes
 order: 40
-permalink: engagment-attributes-bestpractices.html
+permalink: engagement-attributes-bestpractices.html
 indicator: chat
 ---
 

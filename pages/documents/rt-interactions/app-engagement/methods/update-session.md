@@ -39,7 +39,7 @@ Use this method to update the session and add SDEs.
 | :--- | :--- | :--- | :--- | :--- |
 | pageId | Page identification ID for sending event on the current engagement | string | Required  ||
 | impAttributes | Array of impression events attributes | string | Optional | Can be used in order to update funnel. See [here](rt-interactions-example.html) for supported values examples |
-| engagementAttributes | Array of engagement attributes (SDEs) | string | Optional | Supported Values: all SDEs excluding the type of ImpressionEvent. See [here](engagment-attributes-types.html) for examples.  |
+| engagementAttributes | Array of engagement attributes (SDEs) | string | Optional | Supported Values: all SDEs excluding the type of ImpressionEvent. See [here](engagement-attributes-types.html) for examples.  |
 
 **Body entity example**
 
