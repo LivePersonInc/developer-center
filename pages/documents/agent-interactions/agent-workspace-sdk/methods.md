@@ -363,7 +363,7 @@ lpTag.agentSDK.init({notificationCallback: notificationHandler});
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
-{% comment %}
+
 
 ### setConsumerProfile
 
@@ -397,5 +397,3 @@ var consumerData = {
 lpTag.agentSDK.setConsumerProfile(consumerData, onSuccess, onError);
 ```
 *Note: the callbacks are optional.*
-
-{% endcomment %}
