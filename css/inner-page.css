@@ -278,29 +278,24 @@ div#toc ul li ul li ul{
 /*end toc nav bar */
 /*left nav bar */
 ul#mysidebar.nav {
-  color: #5879da;
-  font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
-  font-size: 0.73em;
   text-decoration: none;
   margin-top: 0px;
-  margin-left: 10px;
+  margin-left: 34px;
   height: 100%;
-  position: initial;
+  position: fixed;
   width: 100%;
+  top: 202px;
 
 }
 
-ul#mysidebar > li.folder::before{
-  content: '|';
-  padding-right: 0px;
-  color:#ff720b;
-}
+
 ul#mysidebar > li.folder > a{
   margin-left: 5px;
 }
 
 ul#mysidebar > li.folder ul {
   display: none;
+  list-style: none;
 }
 ul#mysidebar > li.folder ul.folderactive{
    display: block;
@@ -316,8 +311,9 @@ ul#mysiderbar li{
 }
 ul#mysidebar.nav li a {
   display: inline-block;
-  color: #5879da;
-  font-family: "Roboto","Open Sans",Arial,Helvetica,sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #8c909c;
   overflow-wrap:break-word;
 }
 ul#mysidebar.nav > li > a{

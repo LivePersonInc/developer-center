@@ -36,6 +36,8 @@ body {
     grid-column: 1 / span 1;
     grid-row: 1 / span 11;
     background-color: rgba(222, 221, 221, 0.5);
+    display:flex;
+    flex-direction: column;
   }
 
   .defaultcontent {
@@ -113,3 +115,115 @@ table {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+/* Sidebar Styling Begins */
+
+.solutionslist {
+  display: none;
+}
+
+.sidebarbuttons {
+  display: flex;
+  align-self: center;
+  position: fixed;
+  top: 125px;
+}
+
+.documentsbutton {
+  flex: 1;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 50px;
+}
+
+.documentsbutton a {
+  color: #4a4a4a;
+}
+
+.solutionsbutton {
+  flex: 1;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.solutionsbutton a {
+  color: #4a4a4a;
+}
+
+.topfolder {
+  margin-bottom: 21px;
+}
+
+.topfolder > ul {
+  padding-left: 0px;
+}
+
+.topfolder > ul > li {
+  margin-bottom: 24px;
+}
+
+.innerfolder > ul {
+  padding-left: 0px;
+
+}
+
+.innerfolder > li {
+  padding-left: 0px;
+}
+
+.subfolder > ul {
+  padding-left: 0px;
+
+}
+
+.subfolder > li {
+  padding-left: 0px;
+}
+
+.innerfolder > a {
+  color: #4a4a4a !important;
+  font-size: 14px !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+}
+
+.topfolder > ul > li:first-child{
+  margin-top: 23px;
+}
+
+.innerfolder > ul > li:first-child {
+  margin-top: 23px;
+}
+
+.subfolder > ul > li:first-child {
+  margin-top: 23px;
+}
+
+.innerfolder > ul > li:last-child .innerlink {
+  margin-bottom: 0px;
+}
+
+.subfolder > ul > li:last-child .innerlink {
+  margin-bottom: 0px;
+}
+
+.innerlink {
+  color: #4a4a4a !important;
+  font-size: 14px !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  padding-left: 19px;
+  margin-bottom: 24px;
+}
+
+.subfolder {
+  margin-bottom: 24px;
+}
+
+.subfolder > a {
+  color: #4a4a4a !important;
+  font-size: 14px !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+}
+
+/* Sidebar Styling Ends */

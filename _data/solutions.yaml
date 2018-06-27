@@ -1,0 +1,68 @@
+- solutionname: IVR Deflection
+  documents:
+    - documentname: IVR Deflection
+    - documentname: IVR Deflection for Chat
+    - documentname: Setting up the IVR Deflection Solution for Chat
+
+- solutionname: Mobile App Messaging
+  documents:
+    - documentname: Add Messaging to Your App
+
+- solutionname: Customer Facing Bots
+  documents:
+    - documentname: Overview
+    - documentname: Prerequisites
+    - documentname: Getting Started
+    - documentname: Considerations
+    - documentname: Limitations
+    - documentname: Deploying Bots on Live Chat
+    - documentname: Deploying Bots on Messaging
+
+- solutionname: MCS Toolkit
+  documents:
+    - documentname: Overview
+    - documentname: Getting Started
+    - documentname: Using API to Build the Toolkit
+
+- solutionname: CRM Integrations
+  documents:
+    - documentname: SalesForce
+    - documentname: Microsoft Dynamics
+    - documentname: NetSuite
+    - documentname: SugarCRM
+    - documentname: Zendesk
+
+- solutionname: SMS with LiveEngage
+  documents:
+    - documentname: Overview
+    - documentname: IVR Deflection
+    - documentname: Clickable Mobile Content to SMS
+    - documentname: Desktop Content Campaign
+    - documentname: Google AdWords - Click-to-Message
+    - documentname: SMS via Mobile App Messaging
+    - documentname: Appendix
+
+- solutionname: Data Integration and Analysis
+  documents:
+    - documentname: Integrate Your LivePerson Data
+
+- solutionname: LiveEngage MMS Viewer
+  documents:
+    - documentname: Overview
+    - documentname: Technical Description
+    - documentname: Deployment Steps
+    - documentname: Additional Options
+
+- solutionname: Custom Dashboard
+  documents:
+    - documentname: Create a Custom Real Time Dashboard
+    - documentname: Chat Metrics
+    - documentname: Messaging Metrics
+    - documentname: Design Integration & Service
+
+- solutionname: Video Chat
+  documents:
+    - documentname: Add Video to Chat Conversations
+    - documentname: Plan Your Service
+    - documentname: Develop the Service
+    - documentname: Build Your Widgets
