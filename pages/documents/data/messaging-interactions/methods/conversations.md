@@ -180,11 +180,11 @@ Name                 | Description                                              
 :------------------- | :------------------------------------------------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------
 | country |  Name of country. | alphanumeric | |
 | countryCode | Country's code. | alphanumeric | |
-| state | Name of state. | numeric  | alphanumeric |
+| state | Name of state. | alphanumeric  |  |
 | city | Name of the city. | alphanumeric | |
 | isp | Internet service provider's name. | alphanumeric | |
 | org | Name of organization. | alphanumeric  | |
-| device | Type of device. | alphanumeric  | |
+| device | Type of device. | alphanumeric  |Valid values: "DESKTOP", "TABLET", "MOBILE", "NA" |
 | ipAddress | IP address of the consumer's device | alphanumeric  | |
 | browser | Browser of the consumer who engaged in the conversation | alphanumeric  | |
 | operatingSystem | Operating System of the consumer who engageed in the conversation. | alphanumeric | |
