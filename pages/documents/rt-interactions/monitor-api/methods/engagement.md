@@ -52,8 +52,8 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | consumerId | Consumer Id (deprecated) | string | Optional for authenticated, deprecated - should use identities auth identity instead |  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
-| identities.acr | ACR - account config read | string | Required for each identity | supported value: 0 for no auth, loa1 for auth |
-| identities.sub | The subject for identification | string | Required for auth identity, otherwise optional | For auth it will be same or instead of consumerId |
+| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1  |
+| identities.sub | The subject for identification | string | Required | |
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
@@ -65,9 +65,9 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 ### Security considerations
 
-* To avoid security problems and increase reliability, the `consumerId` described in the table above must meet the following requirements:
+* To avoid security problems and increase reliability, the `consumerId` or the `sub` key of the `identities` array (depending on which one you use) described in the table above must meet the following requirements:
 
-   * **Unguessable** - using consumerID or identity with ACR loa1, which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+   * **Unguessable** - using consumerID or a `sub` value which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
 
    * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
 
