@@ -45,18 +45,23 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional <sup>[1]</sup> | |
+| consumerId | Consumer Id (deprecated) | string | Optional for authenticated, deprecated - should use identities auth identity instead <sup>[1]</sup>|  |
+| identities | List of identities | string (JSON) | Optional |  |
+| identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
+| identities.acr | ACR - account config read | string | Required for each identity | supported value: 0 for no auth, loa1 for auth |
+| identities.sub | The subject for identification | string | Required for auth identity, otherwise optional | For auth it will be same or instead of consumerId |
+
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
-<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID).
+<sup>[1]</sup> At least one form of identification is required (ConsumerId, any identity with subject or VisitorID).
 
 ### Security considerations
 
 * To avoid security problems and increase reliability, the `consumerId` described in the table above must meet the following requirements:
 
-   * **Unguessable** - using consumerID which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+   * **Unguessable** - using consumerID or identity with ACR loa1 which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
 
    * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
 
@@ -80,7 +85,19 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ```json
 {
- "consumerId":"myConsumerId",
+ *"consumerId":"myConsumerId",*
+ "identities": [
+   {
+        "iss": "LivePerson",
+        "acr": "0",    
+        "sub": "identifierForNoAuth"
+    },
+    {
+        "iss": "TMO",
+        "acr": "loa1",
+        "sub": "identifierForAuth"
+    }
+ ],
  "pageId" : "4743822558",
  "entryPoints":[
    "tel://972737004000",
