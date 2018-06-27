@@ -572,5 +572,17 @@ Listed below are all localized keys with the English localization string.
     <td>unauthenticatedUserExpiredMessage</td>
     <td>"Hi there! As we haven't seen you for a while, a new conversation will start."</td>
   </tr>
+  <tr>
+    <td>toolTipLongTapToRecord</td>
+    <td>"Long tap to record"</td>
+  </tr>
+  <tr>
+    <td>toolTipReleaseButtonForRecording</td>
+    <td>"Release for recording"</td>
+  </tr>
+  <tr>
+    <td>toolTipRecordLimitReached</td>
+    <td>"Recording limit has been reached, click to send"</td>
+  </tr>
 
 </table>
