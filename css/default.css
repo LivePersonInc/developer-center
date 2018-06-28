@@ -153,7 +153,7 @@ table {
 }
 
 .topfolder {
-  margin-bottom: 21px;
+  line-height: 2.3;
 }
 
 .topfolder > ul {
@@ -161,7 +161,7 @@ table {
 }
 
 .topfolder > ul > li {
-  margin-bottom: 24px;
+  margin-bottom: 3px;
 }
 
 .innerfolder > ul {
@@ -189,35 +189,35 @@ table {
 }
 
 .topfolder > ul > li:first-child{
-  margin-top: 23px;
+  margin-top: 2px;
 }
 
 .innerfolder > ul > li:first-child {
-  margin-top: 23px;
+  margin-top: 2px;
 }
 
 .subfolder > ul > li:first-child {
-  margin-top: 23px;
+  margin-top: 2px;
 }
 
 .innerfolder > ul > li:last-child .innerlink {
-  margin-bottom: 0px;
+  margin-bottom: 2px;
 }
 
 .subfolder > ul > li:last-child .innerlink {
-  margin-bottom: 0px;
+  margin-bottom: 2px;
 }
 
-.innerlink {
+.documentslist .innerlink {
   color: #4a4a4a !important;
   font-size: 14px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   padding-left: 19px;
-  margin-bottom: 24px;
+  margin-bottom: 2px;
 }
 
 .subfolder {
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 .subfolder > a {
@@ -225,5 +225,12 @@ table {
   font-size: 14px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
+
+.nav > li > a:focus {
+  background-color: none !important;
+}
+
+
+
 
 /* Sidebar Styling Ends */

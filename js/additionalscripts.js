@@ -34,6 +34,12 @@ function solutionsbuttonclick() {
   })
 }
 
+$("#solutionsbutton").linkUnderlineAnim({
+  "speed": 300,
+  "color": "#162036",
+  "thickness": 2
+});
+
 function sidebarbuttonclick() {
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
@@ -41,3 +47,12 @@ function sidebarbuttonclick() {
     documentsSideBar.fadeIn(200);
   })
 }
+
+
+//$(document).ready(function () {
+  //  $(".documentsbutton a").click(function () {
+    //    $(this).animate({
+      //      borderBottom: '2px solid #3399FF',
+      //  }, 500);
+    //});
+//});

@@ -12,8 +12,8 @@
   - documentname: Customized Chat Windows
     pages:
     - pagename: Overview
-    - pagename: Create an API-based Window Using the Chat API
-    - pagename: create an API Engagement
+    - pagename: Create an API-based Window
+    - pagename: Create an API Engagement
     - pagename: Appendix
   - documentname: Engagement Attributes
     pages:
@@ -46,6 +46,13 @@
   - documentname: Retry Policy and KeepAlive Best Practices
     pages:
     - pagename: Retry and KeepAlive Policy
+  - documentname: Cookies and LiveEngage
+    pages:
+      - pagename: Overview
+  - documentname: LiveEngage Applications
+    pages:
+      - pagename: What Is a LiveEngage Application?
+      - pagename: Installing LiveEngage Applications
 
 - categoryname: Consumer Experience
   documents:
@@ -347,33 +354,210 @@
 - categoryname: Agent Interactions
   documents:
   - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Release Notes
   - documentname: Chat Agent API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Start Agent Session
+          - subpagename: Retrieve Current Availability
+          - subpagename: Set Agent Availability
+          - subpagename: Retrieve Available Agents
+          - subpagename: Retrieve Available Slots
+          - subpagename: Retrieve Agent Information
+          - subpagename: Determine Incoming Chat Request
+          - subpagename: Accept a Chat
+          - subpagename: Retrieve Chat Sessions
+          - subpagename: Retrieve Chat Resources, Events and Information
+          - subpagename: Retrieve Data for Multiple Chats
+          - subpagename: Retrieve Chat Events
+          - subpagename: Send Lines and Structured Content
+          - subpagename: End Chat
+          - subpagename: Retrieve Chat Information
+          - subpagename: Retrieve Visitor's Name
+          - subpagename: Retrieve Agent's Typing Status
+          - subpagename: Set Agent's Typing Status
+          - subpagename: Retrieve Visitor's Typing Status
+          - subpagename: Retrieve Available Skills
+          - subpagename: Transfer a Chat
+          - subpagename: Retrieve Agent Survey Structure
+          - subpagename: Submit Survey Data
+      - pagename: System Messages
+      - pagename: Sample App
+      - pagename: Postman Resources
   - documentname: Agent Workspace Widget SDK
+    pages:
+      - pagename: Overview
+      - pagename: Limitations
+      - pagename: How to Use the SDK
+      - pagename: Methods
+      - pagename: Public Model Structure
+      - pagename: Public Properties
+      - pagename: Release Notes
   - documentname: Login Service API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: User Login
+          - subpagename: Application Login
+          - subpagename: Refresh
+          - subpagename: Logout
 
 - categoryname: Data
   documents:
   - documentname: Data Access API (BETA)
-  - documentname: Agent Metrics API
+    pages:
+      - pagename: Overview
+      - pagename: Architecture
+      - pagename: Methods
+        subpages:
+          - subpagename: Base Resource
+          - subpagename: Agent Activity
+          - subpagename: Web Session
+          - subpagename: Engagement
+          - subpagename: Survey
+          - subpagename: Schema
+      - pagename: PGP Encryption
+      - pagename: Changelog
+      - pagename: Appendix
+  - documentname: Agent Metrics
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Agent Status
+          - subpagename: Summary
   - documentname: Messaging Interactions API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Conversations
+          - subpagename: Get Conversation by Conversation ID
+          - subpagename: Get Conversations by Consumer ID
+      - pagename: Engagement Attributes
   - documentname: Messaging Operations API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Messaging Conversation
+          - subpagename: Messaging Queue Health
+          - subpagename: Messaging Current Queue Health
+          - subpagename: Messaging Estimated Wait Time
+          - subpagename: Messaging CSAT Distribution
+      - pagename: Appendix
   - documentname: Operational Realtime API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Queue Health
+          - subpagename: Engagement Activity
+          - subpagename: Agent Activity
+          - subpagename: Current Queue State
+          - subpagename: SLA Histogram
   - documentname: Engagement History API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+      - pagename: Sample Code
+      - pagename: Engagement Attributes
   - documentname: Consumer Engagement History API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Conversations - Content
+          - subpagename: Conversations - Metadata
+  - documentname: Personal Data Deletion API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Create Deletion Request
+          - subpagename: Cancel Deletion Request
+          - subpagename: Get Deletion Requests
 
 - categoryname: Real Time Interactions
   documents:
   - documentname: App Engagement API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Create Session
+          - subpagename: Update Session
+      - pagename: Impression Events Body Example
+      - pagename: Changelog
   - documentname: Visit Information API
+    pages:
+      - pagename: Overview
+      - pagename: Visit Information
+      - pagename: Changelog
   - documentname: IVR Engagement API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: External Engagement
+      - pagename: Changelog
   - documentname: Engagement Window Widget SDK
+    pages:
+      - pagename: Overview
+      - pagename: Limitations
+      - pagename: Instructions
+        subpages:
+          - subpagename: Configuration
+          - subpagename: How to Use the SDK
+          - subpagename: Event Structure
+          - subpagename: Code Examples
+      - pagename: Release Notes
   - documentname: Validate Engagement API
+    pages:
+      - pagename: Overview
+      - pagename: Validate Engagement
+      - pagename: Changelog
   - documentname: Engagement Attributes API
+    pages:
+      - pagename: Overview
+      - pagename: Engagement Attributes
+      - pagename: Changelog
   - documentname: Engagement Trigger API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Click
+          - subpagename: getEngagementInfo
+          - subpagename: getEngagementState
+      - pagename: Changelog
+  - documentname: Monitoring API
+    pages:
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Installing a Monitoring API Application
+      - pagename: Methods
+        subpages:
+          - subpagename: Engagement
+          - subpagename: Report
 
 - categoryname: Account Configuration
   documents:
   - documentname: Unified Automatic Messages API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get Unified Automatic Messages
+          - subpagename: Get Unified Automatic Messages by ID
+          - subpagename: Update an Unified Automatic Message
+          - subpagename: U
   - documentname: Predefined Content API
   - documentname: Predefined Categories API
   - documentname: LE-Tag

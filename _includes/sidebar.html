@@ -1,9 +1,9 @@
 <div class="sidebarbuttons">
-  <div class="documentsbutton"><a onclick='sidebarbuttonclick()' href="#">Documents</a></div>
-  <div class="solutionsbutton"><a onclick='solutionsbuttonclick()' href="#">Solutions</a></div>
+  <div class="documentsbutton underline"><a onclick='sidebarbuttonclick()' href="#">Documents</a></div>
+  <div id="solutionsbutton" class="solutionsbutton underline"><a onclick='solutionsbuttonclick()' href="#">Solutions</a></div>
 </div>
 
-<ul id="mysidebar" class="nav fixed sidebarmobileclosed documentslist" >
+<ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   {% for category in site.data.documents %}
   <li class="folder topfolder">
     <a href="#">{{ category.categoryname }}</a>
@@ -39,10 +39,10 @@
     {% endfor %}
 </ul>
 
-<ul id="mysidebarsolutions" class="nav fixed sidebarmobileclosed solutionslist">
+<ul id="mysidebarsolutions" class="mysidebar nav fixed sidebarmobileclosed solutionslist">
 {% for solution in site.data.solutions %}
 <li class="folder topfolder">
-  <a href="#">{{ solution.solutioname }}</a>
+  <a href="#">{{ solution.solutionname }}</a>
   <ul>
     {% for document in solution.documents %}
     <li class="pageitem">
