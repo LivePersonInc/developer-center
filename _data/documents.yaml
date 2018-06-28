@@ -557,17 +557,104 @@
           - subpagename: Get Unified Automatic Messages
           - subpagename: Get Unified Automatic Messages by ID
           - subpagename: Update an Unified Automatic Message
-          - subpagename: U
+          - subpagename: Delete an Unified Automatic Message
   - documentname: Predefined Content API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get Default Predefined Content by ID
+          - subpagename: Predefined Content Query Delta
+          - subpagename: Create Predefined Content
+          - subpagename: Update Predefined Content
+          - subpagename: Get Predefined Content Items
+          - subpagename: Update Predefined Content
+          - subpagename: Delete Predefined Content
+          - subpagename: Get Predefined Content by ID
+          - subpagename: Delete Predefined Content Items
+          - subpagename: Get Default Predefined Content Items
+      - pagename: Appendix
   - documentname: Predefined Categories API
+    pages:
+      - pagename: Introduction
+      - pagename: Methods
+        subpages:
+          - subpagename: General
+          - subpagename: Categories List
+          - subpagename: Categories List by Revision
+          - subpagename: Category by ID
+          - subpagename: Categories Query Delta
+          - subpagename: Get All Changes Query
+          - subpagename: Create Category
+          - subpagename: Update Category
+          - subpagename: Delete a Category
+          - subpagename: Delete Multiple Categories
+          - subpagename: Import Account Categories
+          - subpagename: Import Categories Pre Validation
   - documentname: LE-Tag
+    pages:
+      - pagename: Overview
+      - pagename: How to Use LiveEngage Tag Events
+      - pagename: Events
+        subpages:
+          - subpagename: Visitor Flow Events
+          - subpagename: Engagement Events
+          - subpagename: Engagement Window Events
+      - pagename: Changelog
   - documentname: Automatic Messages API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        - subpagename: Get Automatic Messages
+        - subpagename: Get Automatic Messages by ID
+        - subpagename: Update an Automatic Message
+  - documentname: Audit Trail API
+    pages:
+      - pagename: Introduction
+      - pagename: Methods
+        subpages:
+          - subpagename: Retrieve Audit Trail Records
+          - subpagename: Export Audit Trail to CSV File
   - documentname: Agent Status Reason API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Agent Status List
+          - subpagename: Agent Status Reason by ID
+          - subpagename: Create Status Reason
+          - subpagename: Update Status Reason
+          - subpagename: Delete Status Reason
 
 - categoryname: Administration
   documents:
   - documentname: Users API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get All Users
+          - subpagename: Get User by ID
+          - subpagename: Create Users
+          - subpagename: Update Users
+          - subpagename: Update User
+          - subpagename: Delete Users
+          - subpagename: Delete User
+          - subpagename: Reset User's Password
+      - pagename: Appendix
   - documentname: LOBs API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get all LOBs
+          - subpagename: Get LOB by ID
+          - subpagename: Create LOB
+          - subpagename: Update LOBs
+          - subpagename: Update LOB
+          - subpagename: Delete LOBs
+          - subpagename: Delete LOB
+      - pagenme: Appendix
   - documentname: Skills API
   - documentname: Agent Groups API
   - documentname: Profiles API
