@@ -97,9 +97,13 @@ public enum PermissionType {
 
 ```swift
 public class LPAuthenticationParams{
-  private String mAuthKey;
-  private String mHostAppJWT;
-  private String mHostAppRedirectUri;
+  private LPAuthenticationType mType;
+    private String mAuthKey;
+    private String mHostAppJWT;
+    private String mHostAppRedirectUri;
+    private List<String> mCertificatePinningKeys;
+
+    public enum LPAuthenticationType {SIGN_UP, UN_AUTH, AUTH }
 }
 ```
 
@@ -235,3 +239,9 @@ enum class MonitoringErrorType {
 }
 ```
 
+### LPMonitoringIdentity (Kotlin syntax)
+
+```swift
+class LPMonitoringIdentity(val consumerId: String? = "", val issuer: String? = ""){
+}
+```

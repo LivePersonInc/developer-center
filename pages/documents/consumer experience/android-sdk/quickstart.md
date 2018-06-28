@@ -94,6 +94,12 @@ dependencies {
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
+* For Audio Messaging (required if enabled) :
+
+```xml
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+```
+
 {:start="2"}
 2. Add the following imports to your class imports section:
 
