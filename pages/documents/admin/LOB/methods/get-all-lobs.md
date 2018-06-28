@@ -1,5 +1,5 @@
 ---
-title: Get all lobs
+title: Get all LOBs
 keywords:
 level1: Documents
 level2: Admin
