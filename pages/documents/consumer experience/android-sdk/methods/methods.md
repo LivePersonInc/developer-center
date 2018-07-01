@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: SDK APIs
 
 order: 100
-permalink: android-methods.html
+permalink:
 
 indicator: messaging
 ---
