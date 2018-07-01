@@ -13,10 +13,6 @@ company_name: LivePerson
 disqus_shortname: idrbwjekyll
 # if you're using disqus for comments, add the shortname here. if not, leave this value blank.
 
-permalink: /:level3/:level4/:title:output_ext
-
-permalink_custom_vars: ['level1', 'level2', 'level3', 'level4', 'title']
-
 host: 127.0.0.1
 # the preview server used. Leave as is.
 
