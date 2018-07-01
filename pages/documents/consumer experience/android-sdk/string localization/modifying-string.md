@@ -544,6 +544,80 @@ Example</td>
 </tr>
 </table>
 
+**Audio Messaging**
+
+<table>
+<tr>
+  <th>String name</th>
+  <th>Used in</th>
+  <th>Default value</th>
+</tr>
+<tr>
+  <td>lp_accessibility_voice</td>
+  <td>Accessibility on the mic button</td>
+  <td>Voice</td>
+</tr>
+<tr>
+  <td>lp_mic_tooltip_long_press</td>
+  <td>Tooltip shown when short tapping the mic button.</td>
+  <td>Long tap to record</td>
+</tr>
+<tr>
+  <td>lp_mic_tooltip_release</td>
+  <td>Tooltip shown when keeping mic tapped.</td>
+  <td>Release for recording</td>
+</tr>
+<tr>
+  <td>lp_mic_tooltip_max_recording</td>
+  <td>Tooltip shown when the maximum recording time reached.</td>
+  <td>Long tap to record</td>
+</tr>
+</table>
+
+**Unauthenticated In-App Messaging**
+
+<table>
+<tr>
+  <th>String name</th>
+  <th>Used in</th>
+  <th>Default value</th>
+</tr>
+<tr>
+  <td>lp_new_unauth_user_dialog_title</td>
+  <td>The title of the presented dialog when the identity is expired.</td>
+  <td>New Conversation</td>
+</tr>
+<tr>
+  <td>lp_new_unauth_user_dialog_message</td>
+  <td>The body of the presented dialog when the identity is expired.</td>
+  <td>"Hi there! As we haven't seen you for a while, we're opening a new conversation for you"</td>
+</tr>
+<tr>
+  <td>lp_new_unauth_user_dialog_positive_button</td>
+  <td>The button of the presented dialog when the identity is expired.</td>
+  <td>OK</td>
+</tr>
+</table>
+
+**Quick Replies**
+
+<table>
+<tr>
+  <th>String name</th>
+  <th>Used in</th>
+  <th>Default value</th>
+</tr>
+<tr>
+  <td>lpmessaging_ui_quick_replies_section</td>
+  <td>Accessibility string when hovering on the Quick Replies control</td>
+  <td></td>
+</tr>
+<tr>
+  <td>lpmessaging_ui_quick_replies_button_content_description</td>
+  <td>Accessibility string when hovering on the Quick Replies button</td>
+  <td></td>
+</tr>
+</table>
 
 **Accessibility strings (used by the Accessibility TalkBack)**
 
