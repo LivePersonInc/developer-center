@@ -349,7 +349,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | brandId | The account ID (e.g. 652838922). |
 | appId | The host app ID (e.g. com.liveperson.myApp). |
 | gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. |
-| authenticationParams | An optional parameter that enables registering without first open conversation. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
 
 _**Note: If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server.**_
@@ -358,7 +358,7 @@ _**Note: If you use the gcmToken as a custom value, you need to handle the mappi
 
 Register to LPMessagingSDK push notifications
 
-*Deprecated. Please use the [registerLPPusher](android-methods.html#registerlppusher) method above (String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback) method ).*
+*Deprecated. Please use the [registerLPPusher](android-methods.html#registerlppusher)(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback) method ).*
 
 ```swift
 public static void registerLPPusher(String brandId, String appId, String gcmToken)
