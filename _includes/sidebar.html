@@ -1,32 +1,35 @@
+
+permalink structure: level2 (categoryname) + level3 (documentname) + if exists, level4(pagename) + title (subpagename/pagename)
+
 <div class="sidebarbuttons">
-  <div class="documentsbutton underline"><a onclick='sidebarbuttonclick()' href="#">Documents</a></div>
-  <div id="solutionsbutton" class="solutionsbutton underline"><a onclick='solutionsbuttonclick()' href="#">Solutions</a></div>
+  <div class="documentsbutton underline"><a onclick='sidebarbuttonclick()' href="">Documents</a></div>
+  <div id="solutionsbutton" class="solutionsbutton underline"><a onclick='solutionsbuttonclick()' href="">Solutions</a></div>
 </div>
 
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   {% for category in site.data.documents %}
   <li class="folder topfolder">
-    <a href="#">{{ category.categoryname }}</a>
+    <a href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
       <li class="folder innerfolder sidebarcategory">
-        <a href="#">{{ document.documentname }}</a>
+        <a href="">{{ document.documentname }}</a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder subfolder">
-            <a href="#">{{ page.pagename }}</a>
+            <a href="">{{ page.pagename }}</a>
             <ul>
               {% for subpage in page.subpages %}
               <li class="pageitem">
-                <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ page.pagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ document.documentname | append: '-' | append: page.pagename |append: subpage.subpagename slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else%}
           <li class="pageitem">
-            <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ document.documentname | append: '-' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -42,7 +45,7 @@
 <ul id="mysidebarsolutions" class="mysidebar nav fixed sidebarmobileclosed solutionslist">
 {% for solution in site.data.solutions %}
 <li class="folder topfolder">
-  <a href="#">{{ solution.solutionname }}</a>
+  <a href="">{{ solution.solutionname }}</a>
   <ul>
     {% for document in solution.documents %}
     <li class="pageitem">

@@ -605,6 +605,7 @@
     pages:
       - pagename: Overview
       - pagename: Methods
+        subpages:
         - subpagename: Get Automatic Messages
         - subpagename: Get Automatic Messages by ID
         - subpagename: Update an Automatic Message
@@ -656,5 +657,41 @@
           - subpagename: Delete LOB
       - pagenme: Appendix
   - documentname: Skills API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get All Skills
+          - subpagename: Get Skill by ID
+          - subpagename: Create Skills
+          - subpagename: Update Skills
+          - subpagename: Update Skill
+          - subpagename: Delete Skills
+          - subpagename: Delete Skill
+      - pagename: Appendix
   - documentname: Agent Groups API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get All Agents Groups
+          - subpagename: Get Agent Groups by ID
+          - subpagename: Create Agent Groups
+          - subpagename: Update Agent Groups
+          - subpagename: Update Agent Group
+          - subpagename: Delete Agent Groups
+          - subpagename: Delete Agent Group
+      - pagename: Appendix
   - documentname: Profiles API
+    pages:
+    - pagename: Overview
+    - pagename: Methods
+      subpages:
+        - subpagename: Get All Profiles
+        - subpagename: Get Profile by ID
+        - subpagename: Create Proflie
+        - subpagename: Update Profiles
+        - subpagename: Update Profile
+        - subpagename: Delete Profiles
+        - subpagename: Delete Profile
+    - pagename: Appendix
