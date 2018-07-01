@@ -336,7 +336,8 @@ public static void setUserProfile(String appId, String firstName, String lastNam
 
 ### registerLPPusher
 
-Register to LPMessagingSDK push notifications. Providing authenticationParams parameter enable registering to LPPusher without opening conversation first. If registrationCompletedCallback callback is provided it will be called when registering finished successfully or if failed.
+Register to LPMessagingSDK push notifications. Providing the authenticationParams parameter enables registering to the LPPusher without opening a conversation first. If the registrationCompletedCallback callback is provided, it will be called when registeration is finished successfully or if it failed and indicate which one happened.
+
 If the registration fails due to an expired token, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback is called.
 
 ```swift
@@ -357,7 +358,7 @@ _**Note: If you use the gcmToken as a custom value, you need to handle the mappi
 
 Register to LPMessagingSDK push notifications
 
-*Deprecated. Please use the [registerLPPusher](android-methods.html#registerlppusher) (String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback) method ).*
+*Deprecated. Please use the [registerLPPusher](android-methods.html#registerlppusher) method above (String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback) method ).*
 
 ```swift
 public static void registerLPPusher(String brandId, String appId, String gcmToken)
