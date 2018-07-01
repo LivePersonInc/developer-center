@@ -324,6 +324,9 @@ _Example_
 
 Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata must be used inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
 
+Note: Metadata can be added to an action. The metadata should be sent to the messaging platform when clicking on an element with an action as `AcceptStatusEvent` with status `ACTION`.
+If the the type of action is `publishText` the metadata should be attached to the `ContentEvent` as well.
+
 **Style**
 
 Each basic element can have a style.
