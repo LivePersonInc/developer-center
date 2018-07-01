@@ -37,7 +37,7 @@ Use this API to report on engagement attributes (SDEs) for a consumer in an appI
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
 | consumerId | Mandatory consumer ID from the host app | Yes |
-| monitoringParams | An mandatory [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
+| monitoringParams | A mandatory [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
 | completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
 | failure | A Failure callback with an error in case the request fails |  Yes |
 
