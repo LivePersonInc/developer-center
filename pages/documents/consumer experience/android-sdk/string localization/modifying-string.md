@@ -590,7 +590,7 @@ Example</td>
 <tr>
   <td>lp_new_unauth_user_dialog_message</td>
   <td>The body of the presented dialog when the identity is expired.</td>
-  <td>Hi there! As we haven't seen you for a while, we're opening a new conversation for you</td>
+  <td>"Hi there! As we haven't seen you for a while, we're opening a new conversation for you"</td>
 </tr>
 <tr>
   <td>lp_new_unauth_user_dialog_positive_button</td>
