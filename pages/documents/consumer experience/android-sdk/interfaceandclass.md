@@ -241,6 +241,12 @@ enum class MonitoringErrorType {
 
 ### LPMonitoringIdentity (Kotlin syntax)
 
+A class that contains data on the consumer identity.
+
+consumerId - unique and non-guessable identifier of the consumer (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and move between consumers).
+
+issuer - Issuer, who identified the consumer - usually the brand.
+
 ```swift
 class LPMonitoringIdentity(val consumerId: String? = "", val issuer: String? = ""){
 }

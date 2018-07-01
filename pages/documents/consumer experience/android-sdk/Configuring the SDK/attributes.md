@@ -1120,7 +1120,7 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
   <tr>
     <td>&lt;integer name=&quot;lp_record_max_time_seconds&quot;&gt;</td>
     <td>Maximum voice recording time in seconds.</td>
-    <td>120 (120 seconds is the maximum value. If Setting this to a value larger than 120, SDK will internally set it to 120)</td>
+    <td>120</td>
     <td></td>
   </tr>
   <tr>
