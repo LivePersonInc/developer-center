@@ -1302,7 +1302,7 @@ Example:
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
 | lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container | |
 | lineSeq | Sequence of line in that chat  | alphanumeric | |
-| lineRawScore | Score of line  | numeric | |
+| lineRawScore | Score of line (for internal use only) | numeric | |
 | mcs | Meaningful Connection Score of the chat up to this line | numeric | |
 | visitorInfo | Conatins inforamtion about the visitor who participated in the chat  | container |  |
 | country | The country indicated by the visitor’s IP address. | alphanumeric | |

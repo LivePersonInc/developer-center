@@ -11,7 +11,7 @@ permalink: agent-workspace-sdk-public-model.html
 indicator: both
 ---
 
-**Notes**: 
+**Notes**:
 
 - *The structure of the Public Model is subject to change, and may vary in future versions. In addition, data you are attempting to get/bind to may not be present, and so it is not guaranteed that you will receive data.*
 - *This overall structure was originally designed for real-time chat. However, the same structure has also been used in order to support existing widgets for messaging conversations.*
@@ -93,19 +93,19 @@ indicator: both
 | visitorJourney.searchEngine                 | Information regarding the search that led the visitor to the chat                                    | N/A                                                                                      | object  |                                                            |
 | visitorJourney.searchEngine.searchProvider  | The search provider                                                                                  | N/A                                                                                      | string  |                                                            |
 | visitorJourney.searchEngine.searchKeywords  | The search keywords                                                                                  | N/A                                                                                      | string  |                                                            |
-| **SDE**                                     | Object containing SDEs (Engagement attributes) of the visitor                                        | N/A                                                                                      | object  | Messaging: Currently only authenticated SDEs are supported |
-| SDE.customerDetails                         | Array of customer details                                                                            | N/A                                                                                      | array   |                                                            |
-| SDE.personalInfo                            | Array of personal information                                                                        | N/A                                                                                      | array   |                                                            |
-| SDE.marketingSource                         | Array of marketing information                                                                       | N/A                                                                                      | array   |                                                            |
-| SDE.leadGeneration                          | Array of lead generation information                                                                 | N/A                                                                                      | array   |                                                            |
-| SDE.transaction                             | Array of transactions                                                                                | N/A                                                                                      | array   |                                                            |
-| SDE.viewedProducts                          | Array of viewed products                                                                             | N/A                                                                                      | array   |                                                            |
-| SDE.shoppingCart                            | Array of shopping cart updates                                                                       | N/A                                                                                      | array   |                                                            |
-| SDE.serviceActivity                         | Array of service activity information                                                                | N/A                                                                                      | array   |                                                            |
-| SDE.error                                   | Array of visitor errors                                                                              | N/A                                                                                      | array   |                                                            |
+| **SDE**                                     | Object containing SDEs (Engagement attributes) of the visitor                                        | N/A                                                                                      | object  |                                                            |
+| SDE.customerDetails                         | Array of customer details                                                                            | Array of customer details                                                                | array   |                                                            |
+| SDE.personalInfo                            | Array of personal information                                                                        | Array of personal information                                                            | array   |                                                            |
+| SDE.marketingSource                         | Array of marketing information                                                                       | Array of marketing information                                                           | array   |                                                            |
+| SDE.leadGeneration                          | Array of lead generation information                                                                 | Array of lead generation information                                                     | array   |                                                            |
+| SDE.transaction                             | Array of transactions                                                                                | Array of transactions                                                                    | array   |                                                            |
+| SDE.viewedProducts                          | Array of viewed products                                                                             | Array of viewed products                                                                 | array   |                                                            |
+| SDE.shoppingCart                            | Array of shopping cart updates                                                                       | Array of shopping cart updates                                                           | array   |                                                            |
+| SDE.serviceActivity                         | Array of service activity information                                                                | Array of service activity information                                                    | array   |                                                            |
+| SDE.error                                   | Array of visitor errors                                                                              | Array of visitor errors                                                                  | array   |                                                            |
 | **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  |                                                            |
-| authenticatedData.customerDetails           | Array of customer details                                                                            | Array of customer details                                                                | array   |                                                            |
-| authenticatedData.personalInfo              | Array of personal information Array of personal information array                                    |                                                                                          |         |                                                            |
+| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  |                                                            |
+| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  |                                                            |
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
@@ -299,7 +299,7 @@ Structure example:
 | time        | String representation of the time the survey question or custom variable was added | string |                                                                                                                             |
 | value       | The answer to the survey question or the value of the custom variable              | string |                                                                                                                             |
 
-Structure example: 
+Structure example:
 
 ```javascript
 {
@@ -320,7 +320,7 @@ Structure example:
 | name        | The name of the target audience (visitor profile)        | string |
 | description | The description of the target audience (visitor profile) | string |
 
-Structure example: 
+Structure example:
 
 ```javascript
 {
@@ -414,7 +414,7 @@ Structure example:
 | type             | Customer type                                         | string |
 | userName         | Nickname or username of the consumer                  | string |
 
-Structure example: 
+Structure example:
 
 ```javascript
 {
@@ -468,7 +468,7 @@ Structure example:
 | Property | Description                      | Type   |
 |----------|----------------------------------|--------|
 | email    | The email of the customer        | string |
-| phone    | The phone number of the customer | string | 
+| phone    | The phone number of the customer | string |
 
 Structure example:
 
@@ -487,7 +487,7 @@ Structure example:
 |--------------------|-----------------------------------|--------|
 | originatingChannel | The channel of the marketing data | string |
 | affiliate          | The affiliate                     | string |
-| campaignId         | The campaign ID                   | string | 
+| campaignId         | The campaign ID                   | string |
 
 Structure example:
 
@@ -499,7 +499,7 @@ Structure example:
 }
 ```
 
-### SDE.leadGeneration 
+### SDE.leadGeneration
 
 | Property | Description           | Required | Type   |
 |----------|-----------------------|----------|--------|
