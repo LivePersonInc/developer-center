@@ -1,7 +1,7 @@
 ---
 title: Step 1 - Enable File Sharing
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 20

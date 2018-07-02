@@ -152,11 +152,11 @@ _Note: The updateCallback must be the same callback provided for the bind._
 
 |Command |Description |Const |Payload |
 |:--- |:--- |:--- |:--- |
-| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write"} |
-| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, metadata: [...]} <br><br> matadata is optional |
+| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write", quickReplies: {...}} <br><br> quickReplies is optional. |
+| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, quickReplies: {...}, metadata: [...]} <br><br> quickReplies and matadata are optional |
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
 
- Example 1 - 'Write ChatLine':
+Example 1 - 'Write ChatLine':
 
 ```javascript
 {
@@ -175,7 +175,72 @@ _Note: The updateCallback must be the same callback provided for the bind._
 }
 ```
 
-Example 2 - 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
+Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+
+```javascript
+{
+    var notifyWhenDone = function(err) {
+        if (err) {
+            // Do something with the error
+        }
+        // called when the command is completed successfully,
+        // or when the action terminated with an error.
+    };
+
+    var cmdName = lpTag.agentSDK.cmdNames.write; // = "Write ChatLine"
+    var data = {
+      text: "Some text",
+      quickReplies: {
+        "type": "quickReplies",
+        "itemsPerRow": 8,
+        "replies": [
+          {
+            "type": "button",
+            "tooltip": "yes i do",
+            "title": "yes",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "yep"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "Yes-1234"
+                }
+              ]
+            }
+          },
+          {
+            "type": "button",
+            "tooltip": "No!",
+            "title": "No!",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "No!"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "No-4321"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    };
+
+    lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
+}
+```
+
+Example 3 - 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
 
 ```javascript
 {
@@ -208,7 +273,84 @@ Example 2 - 'Write StructuredContent'. Please see [this link](structured-content
 }
 ```
 
-Example 3 - 'Send Notification':
+Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-complex-layout.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+
+```javascript
+{
+    var notifyWhenDone = function(err) {
+        if (err) {
+            // Do something with the error
+        }
+        // called when the command is completed successfully,
+        // or when the action terminated with an error.
+    };
+
+    var cmdName = lpTag.agentSDK.cmdNames.writeSC; // = "Write StructuredContent"
+    var data = {
+      json: {
+        "type": "text",
+        "text": "product name",
+        "tooltip": "text tooltip",
+        "style": {
+          "bold": true,
+          "size": "large"
+        }
+      },
+      quickReplies: {
+        "type": "quickReplies",
+        "itemsPerRow": 8,
+        "replies": [
+          {
+            "type": "button",
+            "tooltip": "yes i do",
+            "title": "yes",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "yep"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "Yes-1234"
+                }
+              ]
+            }
+          },
+          {
+            "type": "button",
+            "tooltip": "No!",
+            "title": "No!",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "No!"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "No-4321"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      metadata: [	//metadata is optional
+        {"type": "ExternalId", "id": "running364"},
+        {"type": "ExternalId", "id": "soccer486"}
+      ]
+    };
+
+    lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
+}
+```
+
+Example 5 - 'Send Notification':
 
 ```javascript
 {
