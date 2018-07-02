@@ -71,7 +71,7 @@ class LPLog: NSObject {
 class LPConversationViewParams: NSObject {
   var conversationQuery: ConversationParamProtocol!
   var containerViewController: UIViewController? // nil = WindowMode
-  var isViewOnly = false1
+  var isViewOnly = false
   var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
 }
 ```
@@ -112,6 +112,8 @@ class LPAuthenticationParams: NSObject {
   var authenticationCode: String? // Code Flow authentication
   var jwt: String? // Implicit Flow authentication
   var redirectURI: String? // Code Flow authentication
+  var certPinningPublicKeys: [String]? //Cert pining validation public keys
+  var type: LPAuthenticationType = .signup // User authentication type with 'signup' as default
 }
 ```
 
@@ -206,5 +208,14 @@ class : NSObject {
     var conversationId: String? // Returned when there's an open conversation
     var status: String?
     var contextId: String?
+}
+```
+
+### LPAuthenticationType
+```javascript
+enum LPAuthenticationType: Int {
+    case signup // Old unauthenticated method
+    case unauthenticated // New unauthenticated method for users without identity
+    case authenticated // Authenticated users
 }
 ```
