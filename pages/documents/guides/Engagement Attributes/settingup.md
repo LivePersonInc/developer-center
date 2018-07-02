@@ -1,11 +1,11 @@
 ---
-title: Setting up Engagment Attributes
+title: Setting up Engagement Attributes
 Keywords:
 level1: Documents
 level2: Guides
 level3: Engagement Attributes
 order: 30
-permalink: engagment-attributes-setting-up.html
+permalink: engagement-attributes-setting-up.html
 indicator: both
 ---
 
@@ -65,7 +65,8 @@ _Notes_:
 
 Example for data that is sent when a visitor views “Asics Women's GT 2000 4”:
 
-```JavaScript
+```javascript
+window.lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes||[];
 lpTag.sdes.push(
   {

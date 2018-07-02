@@ -1,5 +1,6 @@
 ---
 title: Report
+level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -12,8 +13,8 @@ indicator: messaging
 
 ### Description
 
-Use this API to access the LivePerson monitoring system in order to report information regarding consumer activity within the brand's account. Such information can include engagement attributes, entry points.
-
+Use this method to access the LivePerson monitoring system in order to report information regarding consumer activity within the brand's account. Such information can include engagement attributes or entry points.
+As engagement attributes are considered unauthenticated, it should not be used for business transactions that requires stronger authentication or information reliability.
 
 ### Use cases
 
@@ -30,7 +31,7 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
 | account-id | LP site ID | string |  |
-| app-installation-id | App installation id | string | String, Required |
+| app-installation-id | App installation id | string | String, Required. This is received after installing the application, [as explained here](rt-interactions-monitoring-app-install.html) |
 
 ### Query parameters
 
@@ -48,6 +49,26 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
+
+<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID).
+
+### Security considerations
+
+* To avoid security problems and increase reliability, the `consumerId` described in the table above must meet the following requirements:
+
+   * **Unguessable** - using consumerID which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+
+   * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
+
+   * **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than one user, even if this user is not active anymore.
+
+* A good consumerID would be:
+
+   * UUID assigned specifically and uniquely for consumer  
+
+   * a hashed/salted email address
+
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request & body entity example
 
@@ -89,6 +110,8 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ImpressionAcceptEvent:
 
+**Note**: This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf){:target="_blank"}.
+
 ```json
 {
   "type": "impAccept",
@@ -105,6 +128,8 @@ ImpressionAcceptEvent:
 ```
 
 ImpressionDisplayEvent:
+
+**Note**: This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf){:target="_blank"}.
 
 ```json
 {

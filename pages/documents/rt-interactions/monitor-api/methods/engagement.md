@@ -1,6 +1,6 @@
 ---
 title: Engagement
-
+level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -9,11 +9,11 @@ permalink: rt-interactions-monitoring-methods-engagement.html
 indicator: messaging
 ---
 
-**Note**: Please make sure the read the [overview](rt-interactions-monitor-api-overview.html) before getting started with this method.
+**Note**: Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
 
 ### Description
 
-Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.  
+Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.
 
 ### Use cases
 
@@ -35,7 +35,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
 | account-id | LP site ID | string | |
-| app-installation-id | App installation id | string | String, Required |
+| app-installation-id | App installation id | string | String, Required. This is received after installing the application, [as explained here](rt-interactions-monitoring-app-install.html) |
 
 ### Query parameters
 
@@ -58,6 +58,24 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | clientProperties.osVersion | OS version | string | Optional | Example: For Android it could be 2.4 |
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
 | engagementAttributes | Array of engagement attributes | string | Optional | Supported Values: all engagement-attributes excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
+
+### Security considerations
+
+* To avoid security problems and increase reliability, the `consumerId` described in the table above must meet the following requirements:
+
+   * **Unguessable** - using consumerID which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+
+   * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
+
+   * **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than one user, even if this user is not active anymore.
+
+* A good consumerID would be:
+
+   * UUID assigned specifically and uniquely for consumer  
+
+   * a hashed/salted email address
+
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request & body entity example
 
@@ -121,6 +139,7 @@ Status code: 201 Created - Engagement is available, created new session:
       "engagementId": 880524123,
       "engagementRevision": 21,
       "contextId": "1",
+      "connectorId": 2642324112,
       "status": "expose"
     }
   ]
@@ -140,13 +159,14 @@ Status code: 200 OK - Resume conversation same session:
       "engagementId": 880524523,
       "engagementRevision": 23,
       "conversationId": "fdasfdas",
+      "connectorId": 2642324112,
       "status": "conversation"
     }
   ]
 }
 
 ```
-Status code: 200 OK - Engagement is unavailable:
+Status code: 200/201 OK - Engagement is unavailable. **Note**: because the engagement is unavailable, the `engagementDetails` object does not return:
 
 ```json
 {
@@ -175,6 +195,7 @@ Status code: 500 Server Error - Loading account:
 | engagementDetails.engagementId | | number | Required if there is an engagement  |
 | engagementDetails.conversationId | | string | Required if there is an engagement |
 | engagementDetails.windowId | | string | Required if there is an engagement  |
+| engagementDetails.connectorId | | string | Required if there is an engagement  |
 | engagementDetails.language | | string | Required if there is an engagement  |
 | engagementDetails.engagementRevision | | number | Required if there is an engagement  |
 | engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |

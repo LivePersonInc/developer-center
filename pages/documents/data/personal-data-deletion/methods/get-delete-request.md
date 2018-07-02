@@ -2,7 +2,7 @@
 title: Get Deletion Requests
 keywords:
 level1: Documents
-level2: 
+level2: Data 
 level3: Personal Data Deletion API
 level4: Methods
 order: 30
@@ -28,14 +28,14 @@ This API returns the metadata related to the deletion requests that were submitt
 
   |Parameter|  Description|  Type/Value |
   |:------    |:--------    |:--------|
-  |site_id|  LP account ID|   String ^[a-zA-Z0-9_]{1,20}$|
+  |site_id|  LP account ID|   String |
   |requestId  |Optional - specific request id   |String|
 
  **Query Parameters**
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
+ | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED,DONE)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
  | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string - represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
  | toDate| The end of the date range for returning the deletion requests| yyyy-mm-dd string  - represents the end date| Optional | Default is current time. Can't be used only with request_id parameter. |
 

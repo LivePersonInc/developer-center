@@ -30,7 +30,7 @@ This event triggers when the chat state is changed.
 
 | Name | Description | Type | Notes |
 | :-- | :--- | :--- | :--- |
-| state | The chat state. | string | Available states: "resume", "initialised", "uninitialised", "preChat", "postChat", "offline", "waiting", "chatting", "interactive", "ended", "Notfound" |
+| state | The chat state. | string | Available states: "resume", "initialised", "uninitialised", "preChat", "postChat", "offline", "waiting", "chatting", "interactive", "ended", "Notfound". Out of these, **only** "chatting" and "ended" are relevant for Messaging. |
 
 *Example:*
 
@@ -41,7 +41,7 @@ This event triggers when the chat state is changed.
 This event triggers when the conversation data was changed, for example the conversation state.
 
 **Event Information**
- 
+
 | Name | Value |
 | :--- | :--- |
 | eventName | "conversationInfo" |
@@ -73,11 +73,11 @@ This event triggers when the conversation data was changed, for example the conv
    "state": "chatting",
    "monitoringSessionId":       
 "WIoWBRC_RL6pkcK5fL-3-g.5bb46ddd7ae63b731b5eeb10189b15bc97226af0",
-"visitorId": "UYxShcOtSEWq0oSsuMCrOQ", 
-   "skill": "MySkill", 
-   "engagementId": 1346152510, 
-   "campaignId": 1346152410, 
-   "language": "en-US", 
+"visitorId": "UYxShcOtSEWq0oSsuMCrOQ",
+   "skill": "MySkill",
+   "engagementId": 1346152510,
+   "campaignId": 1346152410,
+   "language": "en-US",
    "engagementName": "Sticky chat button"
 }
 ```
@@ -111,7 +111,7 @@ This event triggers when the state changes to "chatting" to show the engagement 
 
 ### maximized
 
-This event triggers when the chat window is in maximized view. 
+This event triggers when the chat window is in maximized view.
 
 **Event Information**
 
@@ -120,9 +120,9 @@ This event triggers when the chat window is in maximized view.
 | eventName | "maximized" |
 | appName | "lpUnifiedWindow" |
 
-### minimized 
+### minimized
 
-This event triggers when the chat window is in minimized view. 
+This event triggers when the chat window is in minimized view.
 
 **Event Information**
 
@@ -131,9 +131,9 @@ This event triggers when the chat window is in minimized view.
 | eventName | "minimized" |
 | appName | "lpUnifiedWindow" |
 
-### windowClosed 
+### windowClosed
 
-This event triggers when the chat window is closed (disposed and removed from the DOM). 
+This event triggers when the chat window is closed (disposed and removed from the DOM).
 
 **Event Information**
 
@@ -141,4 +141,3 @@ This event triggers when the chat window is closed (disposed and removed from th
 | :--- | :--- |
 | eventName | "windowClosed" |
 | appName | "lpUnifiedWindow" |
-

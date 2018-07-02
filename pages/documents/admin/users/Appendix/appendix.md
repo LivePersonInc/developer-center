@@ -43,13 +43,13 @@ This section contains API details that are common to every API’s resource and 
 | :------  | :--------           | :----------                      | :---           | :--- |
 | v        | API version number  | Double. |  Required      |  Default Value: 2.0 (Most updated: v=4.0) |
 | select   | Dynamic selection of the response fields  | YOGA 'gdata' dialect.  | Optional | Non-existing field: no error, blank in response supported fields: any in response body <br> yoga GData dialect builder url: https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI |
-| include_deleted | Whether or not deleted items in the response are included | Optional | Default: false |
+| include_deleted | Whether or not deleted items in the response are included | boolean | Optional | Default: false |
 
 ### Path Parameters
 
 | Parameter | Description  | Type/Value |
 | :------   | :--------    | :-------- |
-| accountId | LP site ID   | string ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID   | string  |
 | userId    | User ID      | Positive long number greater than zero |
 | skillId   | Skill ID     | Positive long number greater than zero |
 | agentGroupId  | Agent group ID  | Positive long number greater than zero |

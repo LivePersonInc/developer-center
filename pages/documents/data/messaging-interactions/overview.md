@@ -26,7 +26,7 @@ A few things you'll need to get started with this API:
 
 	* msgHist
 
-2. This API requires authorization using API key.
+2. This API requires authorization using API key or via login.
 
 	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Temporarily, please utilize the same key as the Engagement History API.
 

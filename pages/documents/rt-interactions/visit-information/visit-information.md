@@ -7,24 +7,24 @@ level3: Visit Information API
 order: 2
 permalink: rt-interactions-visit-information-visit-information.html
 
-indicator: both
+indicator: chat
 ---
 
 ### Request
 
-| Method    | URL | 
-| :------ | :------- | 
+| Method    | URL |
+| :------ | :------- |
 | GET | https://{LivePerson domain}/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
 
-**OAuth** 
+**OAuth**
 
-This API supports OAuth 1.0 and OAuth 2.0 authentication patterns and requires SSL protocol.
+This API supports OAuth 1.0 authentication patterns and requires SSL protocol. Please see [this document's overview](rt-interactions-visit-information-overview.html) for more information on how to retrieve your API keys.
 
 **Path Parameters**
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | Required | ^[a-zA-Z0-9_]{1,20}$ |
+| accountId | LP site ID | string | Required |  |
 | visitorId | Visitor ID | string | Required | |
 
 **Query Parameters**
@@ -48,30 +48,30 @@ See [JSON Example](#json-example).
 **Elements in the Response**
 
 | Name     | Description | Type/Value |
-| :------ | :------- | :-------- | 
-| id | Monitoring session ID |  string    | 
-| engagements | Array of engagements displayed to the consumer |  array | 
-| pages | Array of the pages visited by the consumer |  array    | 
-| userAgent | Consumer browser's user agent |  string | 
-| deviceOS | Consumer's operating system |  string | 
-| deviceFamily | Consumer's device |  string | 
-| lpv4 | Consumer's IP|  string | 
-| geo | Consumer’s Geo information (country, state, city etc.) |  object    | 
-| externalReferrer | Referrer page |  string | 
-| events | Engagement Attributes events reported during the session | array  | 
+| :------ | :------- | :-------- |
+| id | Monitoring session ID |  string    |
+| engagements | Array of engagements displayed to the consumer |  array |
+| pages | Array of the pages visited by the consumer |  array    |
+| userAgent | Consumer browser's user agent |  string |
+| deviceOS | Consumer's operating system |  string |
+| deviceFamily | Consumer's device |  string |
+| lpv4 | Consumer's IP|  string |
+| geo | Consumer’s Geo information (country, state, city etc.) |  object    |
+| externalReferrer | Referrer page |  string |
+| events | Engagement Attributes events reported during the session | array  |
 
 **Response Codes**
 
 | Code     | Internal Code | Description |
-| :------ | :------- | :-------- | 
-| 200 | -- |  OK; Operation performed successfully  | 
-| 400 | 33 |  Bad Request; Problem with body or query parameters | 
-| 401 | 10 |  Unauthorized (no permissions) | 
-| 404 | 6 |  Invalid Account ID | 
-| 404 | 37 |  Invalid Visitor ID  | 
-| 404 | 39 |  Invalid Session ID | 
-| 404 | 12 |  Not Found | 
-| 500 | -- |  Internal Server Error | 
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 400 | 33 |  Bad Request; Problem with body or query parameters |
+| 401 | 10 |  Unauthorized (no permissions) |
+| 404 | 6 |  Invalid Account ID |
+| 404 | 37 |  Invalid Visitor ID  |
+| 404 | 39 |  Invalid Session ID |
+| 404 | 12 |  Not Found |
+| 500 | -- |  Internal Server Error |
 
 <a name="json-example">**JSON Example:**</a>
 
@@ -119,7 +119,7 @@ See [JSON Example](#json-example).
                     "skillId": -1
                   },
                   "surveySkills": [
-                    
+
                   ],
                   "availabilityPolicy": 0,
                   "renderingType": 0,
@@ -173,7 +173,7 @@ See [JSON Example](#json-example).
                     "skillId": -1
                   },
                   "surveySkills": [
-                    
+
                   ],
                   "availabilityPolicy": 0,
                   "renderingType": 0,
@@ -484,7 +484,7 @@ See [JSON Example](#json-example).
                   "serverTimeStamp": 0,
                   "total": null,
                   "contexts": {
-                    
+
                   },
                   "numItems": null,
                   "products": [

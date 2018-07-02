@@ -71,6 +71,7 @@ Example:
 | lastPaymentDate | The customer's last payment date. | JSON : {  <br> "year": 2011, <br> "month": 3, <br> "day": 21} | This consists of 3 integer fields: Year, month, and day. |
 | registrationDate | The customer's registration date. | JSON : { <br> "year": 2011, <br> "month": 3, <br> "day": 21} | This consists of 3 integer fields: Year, month, and day. |
 | companySize | The company size. | alphanumeric | |
+| companyBranch | The branch of the company | alphanumeric | |
 | storeNumber | Customer's specific store number. | alphanumeric | |
 | storeZipCode | Customer's store zip code. | alphanumeric | |
 | currency | Currency code. | alphanumeric | |
@@ -95,6 +96,7 @@ Example:
               "userName": null,
               "accountName": null,
               "role": null,
+              "companyBranch": "dummyCompanyBranch",
               "storeNumber": "storeNumber13123",
               "storeZipCode": null,
               "lastPaymentDate": {

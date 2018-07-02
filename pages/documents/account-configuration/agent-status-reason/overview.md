@@ -1,7 +1,7 @@
 ---
 title: Overview
 level1: Documents
-level2:
+level2: Account Configuration
 level3: Agent Status Reason API
 permalink: account-configuration-agent-status-reason-overview.html
 root-link: true
@@ -50,9 +50,22 @@ JSON
 
 #### Query Parameters
 
-|Parameter | Description | Notes|
-|--- | --- | ---|
-|v | api version number|<ul><li> Required </li><li>Type: Double </li><li>Default Value: 1.0</li><li> Validation fail error code: 400</li></ul>|
+<table>
+  <thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Notes</th>
+  <tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v</td>
+      <td>api version number</td>
+      <td><ul><li> Required </li><li>Type: Double </li><li>Default Value: 1.0</li><li> Validation fail error code: 400</li></ul></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Status reason object description
 
@@ -68,9 +81,34 @@ This is the expected and general format for an Agent Status object, appearing in
 }
 ```
 
-|Attribute | Description | Notes|
-|--- | --- | ---|
-|id | Account Config object’s unique id. | <ul><li>Type: long number (automatically generated)</li></ul>|
-|name | Status reason text | <ul><li>Type: string</li><li>Required</li><li>Unique</li><li>Esapi validation: safeMediumString length 100</li></ul>|
-|state | agent state | <ul><li>type: string</li><li>possible values: "Online", "Occupied", "Away"</li></ul></li></ul>|
-|deleted | Whether the item is deleted or not  | <ul><li>Type: boolean</li></ul>|
+<table>
+  <thead>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+    <th>Notes</th>
+  <tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>Account Config object’s unique id.</td>
+      <td><ul><li> <ul><li>Type: long number (automatically generated)</li></ul></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Status reason text </td>
+      <td><ul><li>Type: string</li><li>Required</li><li>Unique</li><li>Esapi validation: safeMedium String length:100</li></ul></td>
+    </tr>
+    <tr>
+      <td>state</td>
+      <td>agent state</td>
+      <td><ul><li>type: string</li><li>possible values: "Online", "Occupied", "Away"</li></ul></li></ul></td>
+    </tr>
+    <tr>
+      <td>deleted</td>
+      <td>Whether the item is deleted or not </td>
+      <td>Type: boolean</td>
+    </tr>
+  </tbody>
+</table>

@@ -3,7 +3,7 @@ title: Attributes
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 160
@@ -13,7 +13,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-
+_**Note:** for things like Brand name, which is a string, refer to the [string Localization](android-modifying-string.html){:target="_blank"}._
 ### Brand
 
 <table class="bigtable">
@@ -302,6 +302,18 @@ The goal of the following document is to enumerate the different fields controll
     <td>8dp</td>
     <td><img src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding"></td>
   </tr>
+  <tr>
+    <td>&lt;color name=&quot;agent_bubble_link_preview_background_stroke_color&quot;&gt;</td>
+    <td>The border color of the link preview bubble sent by the agent.</td>
+    <td>#EDEDED</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;agent_bubble_link_preview_background_stroke_width&quot;&gt;</td>
+    <td>The border width of the link preview bubble sent by the agent.</td>
+    <td>1dp</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
@@ -439,6 +451,18 @@ The goal of the following document is to enumerate the different fields controll
     <td>Chat message (agent/consumer) bubble bottom padding.</td>
     <td>8dp</td>
     <td><img src="img/android_consumer_bubble_bottom_padding.png" alt="consumer_bubble_bottom_padding"></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;consumer_bubble_link_preview_background_stroke_color&quot;&gt;</td>
+    <td>The border color of the link preview bubble sent by the consumer.</td>
+    <td>#EDEDED</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;consumer_bubble_link_preview_background_stroke_width&quot;&gt;</td>
+    <td>The border width of the link preview bubble sent by the consumer.</td>
+    <td>1dp</td>
+    <td></td>
   </tr>
   </tbody>
 </table>
@@ -666,7 +690,7 @@ The goal of the following document is to enumerate the different fields controll
 <tbody>  
   <tr>
     <td>&lt;integer name=&quot;csatSurveyExpirationInMinutes&quot;&gt;</td>
-    <td>Define the expiration time in minutes for the survey to appear after closing the conversation.</td>
+    <td>Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it will not be presented to the user.</td>
     <td>1440</td>
     <td></td>
   </tr>
@@ -832,6 +856,7 @@ The goal of the following document is to enumerate the different fields controll
     <td>true</td>
     <td></td>
   </tr>
+
 </tbody>
 </table>
 
@@ -1074,6 +1099,85 @@ The goal of the following document is to enumerate the different fields controll
 </table>
 
 
+### Audio Messaging
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;bool name=&quot;enable_voice_sharing&quot;&gt;</td>
+    <td>Enable/disable the audio messaging feature. </td>
+    <td>false</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;lp_record_max_time_seconds&quot;&gt;</td>
+    <td>Maximum voice recording time in seconds.</td>
+    <td>120</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;integer name=&quot;max_number_stored_voice_files&quot;&gt;</td>
+    <td>Maximum number of voice files stored on the device</td>
+    <td>20</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+### Quick Replies
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>  
+  <tr>
+    <td>&lt;dimen name=&quot;lpui_quick_reply_button_vertical_padding&quot;&gt;</td>
+    <td>Quick Replies button padding above and below the button text</td>
+    <td>12dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;lpui_quick_reply_button_horizontal_padding&quot;&gt;</td>
+    <td>Quick Replies button padding on right and left of button text</td>
+    <td>12dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;lpui_quick_reply_button_vertical_margin&quot;&gt;</td>
+    <td>Quick Replies button margin below</td>
+    <td>12dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;lpui_quick_reply_button_horizontal_margin&quot;&gt;</td>
+    <td>Quick Replies button margin to the right</td>
+    <td>8dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;lpui_quick_reply_button_border_width&quot;&gt;</td>
+    <td>Quick Replies button border width</td>
+    <td>1dp</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
 ### General Style
 
 <table class="bigtable">
@@ -1110,6 +1214,13 @@ The goal of the following document is to enumerate the different fields controll
     <td>&lt;bool name=&quot;link_preview_to_use_more_than_og_tags&quot;&gt;</td>
     <td>parse only &lt;og:> tags or others as well</td>
     <td>false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title&gt; tags</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;drawable name=&quot;conversation_background&quot;&gt;
+</td>
+    <td>Sets the conversation background image (applicable on Activity mode only)</td>
+    <td></td>
     <td></td>
   </tr>
 </tbody>
@@ -1258,6 +1369,36 @@ The goal of the following document is to enumerate the different fields controll
     <td>&lt;string name=&quot;lp_google_maps_key&quot;&gt;</td>
     <td>Set the host app's Google Map key to enable map views in Structured Content</td>
     <td>no value</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;color name=&quot;structured_content_background_color&quot;&gt;</td>
+    <td>The color of the background of structured content elements. Default color is set to White</td>
+    <td>#FFFFFF</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_bottom_right_radius&quot;&gt;</td>
+    <td>Configuration for bottom right corner radius of structured content card.</td>
+    <td>0dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_bottom_right_radius&quot;&gt;</td>
+    <td>Configuration for top left corner radius of structured content card.</td>
+    <td>0dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_top_right_radius&quot;&gt;</td>
+    <td>Configuration for top right corner radius of structured content card. </td>
+    <td>0dp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;structured_content_bottom_left_radius&quot;&gt;</td>
+    <td>Configuration for bottom left corner radius of structured content card.</td>
+    <td>0dp</td>
     <td></td>
   </tr>
   </tbody>
@@ -1444,6 +1585,12 @@ The goal of the following document is to enumerate the different fields controll
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td>&lt;bool name=&quot;is_enable_enlarge_emojis&quot;&gt;</td>
+    <td>When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
+    <td>false</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
@@ -1470,6 +1617,10 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td>&lt;string name=&quot;notification_large_icon_name&quot;&gt;</td>
     <td>The name of a resource to use as the large icon of the push notification</td>
+  </tr>
+  <tr>
+    <td>&lt;bool name=&quot;enter_message_divider_visible&quot;&gt;</td>
+    <td>Determine if the Enter Message edit text divider is visible or not.</td>
   </tr>
 </tbody>
 </table>

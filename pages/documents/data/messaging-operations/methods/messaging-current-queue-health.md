@@ -4,7 +4,7 @@ level1: Documents
 level2: Data
 level3: Messaging Operations API
 level4: Methods
-order: 10
+order: 30
 permalink: data-messaging-operations-messaging-current-queue-health.html
 
 indicator: messaging
@@ -13,7 +13,13 @@ indicator: messaging
 Retrieves the information about the current messaging queue state (and all its related metrics) in the account and skill level
 
 
-*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+**Note**:
+
+1. The messaging queue data is currently not available by default, in order to enable the data flow please contact your account manager.
+
+2. This method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+
+3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE.
 
 ### Request
 
@@ -46,10 +52,7 @@ Request by skillIds=12,13
                 "actionableAndConsumerLastMessage": 3,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 4,
-                "webSource": 31,
-                "facebookSource": 3
-                
+                "unassignedConversationsAndFirstTimeConsumer": 4        
             },
             "13": {
                 "time": 1516277646515,
@@ -88,17 +91,14 @@ Metrics under the 'metricsTotal' entity will contain the summation of all skills
 | :------ | :------------- | :------------- |
 | skillsMetrics | An array of skills with their metrics. | element |
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested skills per each interval. | element |
-| skill id | When skillIDs value(/s) provided: The skill ID. | long | 
+| skill id | When skillIDs value(/s) provided: The skill ID. | long |
 | time | The timestamp representing the 'freshness' of the returned data. <br> Will return the timestamp associated with the most recent data. |long|
-| unassignedConversations | The number of unassigned conversations. <br> Equal to the number of actionable conversation + not actionable conversation. |long| 
+| unassignedConversations | The number of unassigned conversations. <br> Equal to the number of actionable conversation + not actionable conversation. |long|
 | actionableConversations | The number of actionable conversations. |long|
 | notActionableConversations | The number of not actionable conversations. |long|
-| actionableAndManualSla | The number of actionable conversations that have a manual SLA on them. |long| 
+| actionableAndManualSla | The number of actionable conversations that have a manual SLA on them. |long|
 | actionableAndDuringTransfer | The number of actionable conversations that were transferred. |long|
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. |long|
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. |long|
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. |long|
-| unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. |long| 
-
- 
- 
+| unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. |long|

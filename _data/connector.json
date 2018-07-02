@@ -8,16 +8,16 @@
   "basePath" : "/api",
   "tags" : [ {
     "name" : "LP-SendAPI",
-    "description" : "The LP-Send-API service lets you easily send messages to the LivePerson-messaging-system via easy and comprehensive REST-like HTTPS-Requests. Feel free to submit any recommendations to support@liveperson.com."
+    "description" : "The LP-Send-API service lets you easily send messages to the LivePerson-messaging-system via lightweight and comprehensive REST-like HTTPS-Requests. Feel free to submit any recommendations to support@liveperson.com."
   } ],
   "schemes" : [ "http", "https" ],
   "paths" : {
-    "/send/account/{brandId}/conversation" : {
+    "/account/{brandId}/conversation" : {
       "post" : {
         "tags" : [ "LP-SendAPI" ],
-        "summary" : "Creates a new conversation for the given brand and returns the conversation ID",
-        "description" : "Due to race conditions inside the UMS, we cannot 100% reliably assure that the conversation is valid IMMEDIATELY. However, we take measures (i.e. active waiting) to minimize the risk. Since it is an UMS-internal issue, the problem will not be solved until UMS v4.x",
-        "operationId" : "createConversationPOST",
+        "summary" : "This is our \"batch\"-endpoint. It takes an array of at least two request payloads. The order of the array items is important. Returns an array of corresponding responses.",
+        "description" : "For the JSON payload, please have a look at the <a href=\"https://developers.liveperson.com/consumer-int-overview.html\" target=\"_blank\">Messaging Window API</a> with its integrated <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">Request Builder</a>. The order of events is important. First, the <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">setConsumerProfile</a> payload, second the <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">consumerRequestConversation</a> payload, and optionally last a <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">publishMessage</a> payload. Due to race conditions inside the UMS, we cannot 100% reliably assure that the conversation is valid IMMEDIATELY. However, we take measures (i.e. active waiting) to minimize the risk. Since it is an UMS-internal issue, the problem will not be solved until UMS v4.x",
+        "operationId" : "createConversationBatchPOST",
         "parameters" : [ {
           "name" : "brandId",
           "in" : "path",
@@ -29,9 +29,9 @@
           "name" : "body",
           "required" : false,
           "schema" : {
-            "type" : "string" },
+            "type" : "string",
             "default" : "[\n  {\n    \"kind\": \"req\",\n    \"id\": 1,\n    \"type\": \"cm.ConsumerRequestConversation\",\n    \"body\": {\n      \"ttrDefName\": \"CUSTOM\",\n      \"campaignInfo\": {\n        \"campaignId\": 84700,\n        \"engagementId\": 1233058\n      },\n      \"channelType\": \"MESSAGING\",\n      \"brandId\": \"le31423365\",\n      \"skillId\": -1\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 2,\n    \"type\": \"userprofile.SetUserProfile\",\n    \"body\": {\n      \"firstName\": \"Christian\",\n      \"lastName\": \"B\",\n      \"avatarUrl\": \"\",\n      \"role\": \"\",\n      \"backgndImgUri\": \"\",\n      \"description\": \"test Desc\",\n      \"privateData\": {\n        \"mobileNum\": \"1750345346\",\n        \"mail\": \"test@gmail.com\",\n        \"pushNotificationData\": {\n          \"serviceName\": \"serviceName\",\n          \"certName\": \"cert Name\",\n          \"token\": \"token\"\n        }\n      }\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 3,\n    \"type\": \"ms.PublishEvent\",\n    \"body\": {\n      \"dialogId\": \"\",\n      \"event\": {\n        \"type\": \"ContentEvent\",\n        \"contentType\": \"text\\/plain\",\n        \"message\": \"Hi there!!!\"\n      }\n    }\n  }\n]"
-          ,
+          },
           "x-examples" : {
             "application/json" : "[\n  {\n    \"kind\": \"req\",\n    \"id\": 1,\n    \"type\": \"cm.ConsumerRequestConversation\",\n    \"body\": {\n      \"ttrDefName\": \"CUSTOM\",\n      \"campaignInfo\": {\n        \"campaignId\": 84700,\n        \"engagementId\": 1233058\n      },\n      \"channelType\": \"MESSAGING\",\n      \"brandId\": \"le31423365\",\n      \"skillId\": -1\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 2,\n    \"type\": \"userprofile.SetUserProfile\",\n    \"body\": {\n      \"firstName\": \"Christian\",\n      \"lastName\": \"B\",\n      \"avatarUrl\": \"\",\n      \"role\": \"\",\n      \"backgndImgUri\": \"\",\n      \"description\": \"test Desc\",\n      \"privateData\": {\n        \"mobileNum\": \"1750345346\",\n        \"mail\": \"test@gmail.com\",\n        \"pushNotificationData\": {\n          \"serviceName\": \"serviceName\",\n          \"certName\": \"cert Name\",\n          \"token\": \"token\"\n        }\n      }\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 3,\n    \"type\": \"ms.PublishEvent\",\n    \"body\": {\n      \"dialogId\": \"\",\n      \"event\": {\n        \"type\": \"ContentEvent\",\n        \"contentType\": \"text\\/plain\",\n        \"message\": \"Hi there!!!\"\n      }\n    }\n  }\n]"
           }
@@ -49,7 +49,7 @@
           "name" : "v",
           "in" : "query",
           "required" : true,
-          "default" : "2"
+          "default" : "3"
         } ],
         "responses" : {
           "201" : {
@@ -59,7 +59,7 @@
             }
           },
           "400" : {
-            "description" : "Something terrible happened",
+            "description" : "The input was invalid, please check.",
             "schema" : {
               "$ref" : "#/definitions/GenericError"
             }
@@ -76,11 +76,65 @@
         }
       }
     },
-    "/send/account/{brandId}/conversation/{convId}/send" : {
+    "/account/{brandId}/conversation/{convId}/close" : {
+      "post" : {
+        "tags" : [ "LP-SendAPI" ],
+        "summary" : "Closes a conversation with given conversation ID",
+        "description" : "",
+        "operationId" : "closeConversationPOST",
+        "parameters" : [ {
+          "name" : "brandId",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "convId",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "default" : "AppJWT"
+        }, {
+          "name" : "v",
+          "in" : "query",
+          "required" : true,
+          "default" : "3"
+        }, {
+          "name" : "X-LP-ON-BEHALF",
+          "in" : "header",
+          "required" : true,
+          "default" : "{ \"consumerId\": \"123-abc\", \"type\": \"SomeType\"}"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Conversation has been closed successfully"
+          },
+          "400" : {
+            "description" : "The input was invalid, please check.",
+            "schema" : {
+              "$ref" : "#/definitions/GenericError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized. Are the headers correct?"
+          },
+          "429" : {
+            "description" : "Too many requests, please try again later",
+            "schema" : {
+              "$ref" : "#/definitions/CreateConversationResBody"
+            }
+          }
+        }
+      }
+    },
+    "/account/{brandId}/conversation/{convId}/send" : {
       "post" : {
         "tags" : [ "LP-SendAPI" ],
         "summary" : "Takes a \"raw\" JSON-payload (as specified in the Messaging-Window-API) and puts it on the UMS.",
-        "description" : "",
+        "description" : "For the JSON payload, please have a look at the <a href=\"https://developers.liveperson.com/consumer-int-overview.html\" target=\"_blank\">Messaging Window API</a> with its integrated <a href=\"https://developers.liveperson.com/consumer-int-msg-reqs.html\" target=\"_blank\">Request Builder</a>. The order of events is important. You call this payload the same order as you would send your messages over the WebSocket connection!",
         "operationId" : "sendRawPOST",
         "parameters" : [ {
           "name" : "brandId",
@@ -97,7 +151,7 @@
         }, {
           "in" : "body",
           "name" : "body",
-          "description" : "The raw JSON payload, as specified in the Messaging Window API. Encoded as String",
+          "description" : "The raw JSON payload, as specified in the <a href=\"https://developers.liveperson.com/consumer-int-overview.html\" target=\"_blank\">Messaging Window API</a>. Encoded as String",
           "required" : false,
           "schema" : {
             "type" : "string"
@@ -111,7 +165,7 @@
           "name" : "v",
           "in" : "query",
           "required" : true,
-          "default" : "2"
+          "default" : "3"
         }, {
           "name" : "X-LP-ON-BEHALF",
           "in" : "header",

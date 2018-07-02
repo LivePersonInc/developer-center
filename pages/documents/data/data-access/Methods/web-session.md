@@ -971,7 +971,7 @@ The following table describes the information available in the goal achieved dat
 
 ###  Engagement Attributes
 
-Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via LiveEngage.
+Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via LiveEngage. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](https://developers.liveperson.com/engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
 
 **Header**
 
@@ -983,7 +983,7 @@ Engagement attributes are standardized attributes defined by LivePerson that ena
 
 Here is a description of the data structure of the existing engagement attributes in the system:
 
-### Purchase
+### Engagement Attribute Type - Purchase (Transaction)
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :--------- |
@@ -991,7 +991,7 @@ Here is a description of the data structure of the existing engagement attribute
 | orderId | Purchase order ID. | string |
 | cart | Contains cart information. | container |
 
-### cart
+#### cart
 
 | Parameter | Description | Type / Value |
 | :------- | :--------- | :----------- |
@@ -999,14 +999,14 @@ Here is a description of the data structure of the existing engagement attribute
 | numItems | Number of items in cart. | int |
 | products | List of products (productContainer). | container |
 
-### productContainer
+#### productContainer
 
 | Parameter | Description | Type / Value |
 | :------ | :----- | :--------- |
 | quantity | Number of products. | int |
 | product | Contains product information. | container |
 
-### product
+#### product
 
 | Parameter | Description | Type / Value |
 | :-------- | :---------- | :---------- |
@@ -1015,7 +1015,7 @@ Here is a description of the data structure of the existing engagement attribute
 | sku | Unique product ID identifier in consumer database. | string |
 | price | Product price. | double |
 
-### Lead
+### Engagement Attribute Type - Lead (Lead)
 
 | Parameter | Description | Type / Value |
 | :------- | :--------- | :---------- |
@@ -1023,7 +1023,7 @@ Here is a description of the data structure of the existing engagement attribute
 | leadId | Unique system lead identifier. | string |
 | value | Lead value. | double |
 
-### Customer Info
+### Engagement Attribute Type - Customer Info
 
 | Parameter | Description | Type / Value |
 | :--------- | :---------- | :---------- |
@@ -1042,7 +1042,7 @@ Here is a description of the data structure of the existing engagement attribute
 | lastPaymentDate | User’s last payment date (in YMDDate format). | Date |
 | registrationDate | User’s registration date (in YMDDate format). | Date |
 
-### YMDDate
+#### YMDDate
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :---------- |
@@ -1050,7 +1050,7 @@ Here is a description of the data structure of the existing engagement attribute
 | month | Month representation. | int |
 | day | Day representation. | int |
 
-### Personal Info
+### Engagement Attribute Type - Personal Info
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :------------ |
@@ -1063,7 +1063,7 @@ Here is a description of the data structure of the existing engagement attribute
 | customerAge | Customer age. | container |
 | contacts | List of contacts. | container |
 
-### customerAge
+#### customerAge
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :------------ |
@@ -1072,14 +1072,14 @@ Here is a description of the data structure of the existing engagement attribute
 | customerMonthOfBirth | Customer month of birth. | int |
 | CustomerDateOfBirth | Customer date of birth. | int |
 
-### Contact
+#### Contact
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :------------ |
 | email | Contact email. | string |
 | phone | Contact phone number. | string |
 
-### CartStatus
+### Engagement Attribute Type - CartStatus (Cart update)
 
 | Parameter | Description | Type / Value |
 | :-------- | :----------- | :----------- |
@@ -1087,28 +1087,28 @@ Here is a description of the data structure of the existing engagement attribute
 | numItems | Number of items in cart. | int |
 | products | List of products. | container |
 
-### ProductContainer
+#### ProductContainer
 
 | Parameter | Description | Type / Value |
 | :------- | :---------- | :----------- |
 | quantity | Number of products. | int |
 | product| Contains product information. | container |
 
-### product
+#### product
 
 See above for [Product](#product) parameters.
 
-### ViewedProduct
+### Engagement Attribute Type - ViewedProduct (ViewedProduct)
 
 | Parameter | Description | Type / Value |
 | :------- | :---------- | :----------- |
 | products | List of viewed products. | Product container |
 
-### Product
+#### Product
 
 See above for [Product](#product) parameters.
 
-### ServiceActivity
+### Engagement Attribute Type - ServiceActivity (Service Activity)
 
 | Parameter | Description | Type / Value |
 | :------- | :----------- | :----------- |
@@ -1117,7 +1117,7 @@ See above for [Product](#product) parameters.
 | category | Category of service activity. | string |
 | serviceId | Service unique identifier. | string |
 
-### VisitorError
+### Engagement Attribute Type - VisitorError (Visitor Error)
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :----------- |
@@ -1127,7 +1127,7 @@ See above for [Product](#product) parameters.
 | level | Error severity level. | long |
 | resolved | Indication whether the error was resolved. | boolean |
 
-### MarketingCampaignInfo
+### Engagement Attribute Type - MarketingCampaignInfo (Marketing Source)
 
 | Parameter | Description | Type / Value |
 | :------ | :---------- | :---------- |

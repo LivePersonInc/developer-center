@@ -74,6 +74,13 @@ h4 code.highlighter-rouge {
   width: 125%;
 }
 
+.post-content table tbody tr td ul {
+  margin-left: -40px;
+}
+
+pre code {
+  font-size: 12px !important;
+}
 
 .bigtable {
   max-width: initial;
@@ -119,11 +126,7 @@ table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table
 table > thead > tr > th {
  border-bottom: none;
 }
-.post-content > ul {
-    color: #666666;
-    font-family: "Open Sans",Arial;
-    font-size: 1em;
-}
+
 
 .designsheet table tr td {
   font-size: 0.9em;
@@ -165,7 +168,7 @@ code {
   border-radius: 4px;
   color: #fff;
   padding: 2px 10px;
-  /*white-space: initial;*/
+  white-space: initial
 }
 
 td code {
@@ -482,10 +485,18 @@ div.sidebarTitle-holder {
   /*padding-top: 26px;*/
 }
 
+.post-content .zoomimg {
+  transition: transform .2s;
+}
+
+.post-content .zoomimg:hover {
+  transform: scale(1.75);
+}
+
 .post-content > p, .post-content ol,.post-content ul {
   font-family: "Open Sans",Arial;
-  font-size: 0.9em;
   overflow-wrap: break-word;
+  font-size: 1em;
 }
 
 .post-content p strong {
@@ -682,4 +693,8 @@ pre {
 
 .solutionshr {
   width: 100%;
+}
+
+.hide {
+  visibility: none;
 }

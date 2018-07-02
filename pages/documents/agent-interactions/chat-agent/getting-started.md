@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Chat Agent API
 
 level-order: 4
-order: 7
+order: 4
 permalink: chat-agent-getting-started.html
 root-link: true
 indicator: chat
@@ -44,9 +44,6 @@ There are two primary reasons to utilize the Chat Agent API:
 
 	* Bot as a listener to a conversation to provide tips for human agents
 
-<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
-
-{:start="2"}
 2. Build your own custom agent workspace
 
 	* Add the ability for agents to take chats from within your CRM

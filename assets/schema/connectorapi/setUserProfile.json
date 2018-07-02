@@ -1,0 +1,34 @@
+{
+  "kind": "req",
+  "id": 1,
+  "type": "userprofile.SetUserProfile",
+  "body": {
+    "authenticatedData": {
+      "lp_sdes": [
+        {
+          "type": "ctmrinfo",
+          "info": {
+            "socialId": "1234567890"
+          }
+        },
+        {
+          "type": "personal",
+          "personal": {
+            "firstname": "John",
+            "lastname": "Doe",
+            "gender": "MALE"
+          }
+        }
+      ]
+    },
+    "privateData": {
+      "mobileNum": "",
+      "mail": "",
+      "pushNotificationData": {
+        "serviceName": "",
+        "certName": "",
+        "token": ""
+      }
+    }
+  }
+}
