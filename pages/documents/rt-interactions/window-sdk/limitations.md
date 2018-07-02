@@ -7,7 +7,7 @@ level3: Engagement Window Widget SDK
 order: 3
 permalink: rt-interactions-window-sdk-limitations.html
 
-indicator: chat
+indicator: chat and messaging
 ---
 
 - The SDK will only communicate with the Engagement Window if the account has
@@ -33,4 +33,4 @@ iframe.
 - The application must be hosted over SSL, meaning that the URL must start with https.
 - Custom widgets should not include LiveEngage chat buttons or any other LiveEngage
 objects such as the lpTag.
-- Currently, the SDK works on LiveChat only.
+- The SDK works on Chat and Messaging.
