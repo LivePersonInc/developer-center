@@ -34,7 +34,7 @@ In-App Messaging SDK v3.2 for iOS includes the following:
 
 * New UI configurations
 
-* Full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/Mobile+App+SDK+v3.2+Release+Notes+-+iOS.pdf)
+Full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/Mobile+App+SDK+v3.2+Release+Notes+-+iOS.pdf)
 
 
 ### iOS Messaging SDK - Version 3.1.5
