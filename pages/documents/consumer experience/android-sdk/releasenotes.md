@@ -12,6 +12,22 @@ indicator: messaging
 <br>
 <br>
 
+### Android Messaging SDK -  Version 3.2
+
+**Version 3.2 planned roll-out: July 1st 2018**
+
+In-App Messaging SDK v3.2 for Android includes the following:
+* Audio Messaging
+* Unauthenticated In-App Messaging
+* Quick Replies
+* Structured Content Carousel
+* New Devices Certification
+* Experience and Branding Enhancements
+* New APIs
+* Deprecated APIs
+* New UI configurations
+* Full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/Mobile+App+SDK+v3.2+Release+Notes+-+Android.pdf)
+
 ### Android Messaging SDK -  Version 3.1
 
 These are the main feature releases available in the **Mobile App Messaging SDK version 3.1 for Android**.

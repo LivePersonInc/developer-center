@@ -13,6 +13,22 @@ indicator: messaging
 <br>
 <br>
 
+
+### iOS Messaging SDK - Version 3.2
+
+**Version 3.2 planned roll-out: July 1st 2018**
+
+In-App Messaging SDK v3.2 for iOS includes the following:
+* Audio Messaging
+* Unauthenticated In-App Messaging
+* Quick Replies
+* Structured Content Carousel
+* Experience and Branding Enhancements
+* New APIs
+* New UI configurations
+* Full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/Mobile+App+SDK+v3.2+Release+Notes+-+iOS.pdf)
+
+
 ### iOS Messaging SDK - Version 3.1.5
 
 Version 3.1.5 supports XCode 9.3 & XCode 9.4
@@ -134,6 +150,7 @@ Added the nickname of the agent instead of the first name.
 ### iOS Messaging SDK - Version 3.1.1
 
 #### Added support for XCode 9.3 and Swift 4.1
+
 
 
 ### iOS Messaging SDK - Version 3.1
