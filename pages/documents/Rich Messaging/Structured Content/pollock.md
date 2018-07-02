@@ -2,16 +2,22 @@
 title: Structured Content Rendering Tool
 Keywords:
 level1: Documents
-level2: Guides
+level2: Rich Messaging
 level3: Structured Content
-order: 11
-permalink: structured-content-pollock.html
+order: 80
+permalink: rich-messaging-structured-content-pollock.html
 indicator: both
 ---
 
-The **Json-Pollock** package renders live DOM elements out of JSON according to the [Structured Messaging Templates specification](https://developers.liveperson.com/structured-content-templates.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
+The **Json-Pollock** package renders live DOM elements out of JSON according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html).
+You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
 
 **A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
+
+###### Important Note
+The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors.
+There is no SLA or an official support process provided for that web tool.
+The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.
 
 ### Installation
 
@@ -97,7 +103,7 @@ document.getElementById('container').appendChild(rooEl);
 
 **registerAction**
 
-The *registerAction* function allows to register a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+The *registerAction* function allows to register a callback to a certain action type, as defined in the [spec](rich-messaging-structured-content-card.html).
 
 ```js
 const linkCallback = (data) => {
@@ -109,7 +115,7 @@ JsonPollock.registerAction('link', linkCallback);
 
 **unregisterAction**
 
-The *unregisterAction* function allow to unregister a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+The *unregisterAction* function allow to unregister a callback to a certain action type, as defined in the [spec](rich-messaging-structured-content-card.html).
 
 ```js
 JsonPollock.unregisterAction('link');
