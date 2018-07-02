@@ -18,18 +18,25 @@ It creates an easy way to enrich the consumer’s experience and provide a direc
 
 It gives consumers brief answers that they can tap in the conversation to easily respond to messages.
 
+LiveEngage enables sending 1-24 Quick Replies chips per message.
+Each chip can have:
+
+* **Title:** up to 25 characters (use ellipsis)
+* **Click operation:** with actions and metadata
+* **Styling elements:** for full branding and styling needs
+
 When a Quick Reply chip is tapped, the items are dismissed.
 
 The agent can see the Quick Replies group at all times, even if it is no longer visible to the consumer.
 
-![Quick Replies](images/quick-replies.jpg)
+![Quick Replies](images/quick-replies.gif)
 
 ### Fields
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Must be `quickReplies`| String | Y | |
-| itemsPerRow | Number of items per row. | Number| Y | 8 items |
+| itemsPerRow | Number of items per row | Number| Y | 8 items |
 | replies | A list of chips | Array<Chip> | Y | 24 items |
 
 
@@ -40,7 +47,7 @@ A Quick Reply chip has the same specification as a [button](rich-messaging-basic
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of element. Must be 'button' | Enum | Y |  |
-| title  | chip title | String | Y  | 128 chars  |
+| title  | chip title | String | Y  | 25 chars  |
 | click | On-click operation (included metadata and/or actions clauses) |  | Y | |
 | tooltip | Chip tooltip, used also as aria | String | N | 256 chars |
 | style | Styling elements for the chip.  | Container | N | |

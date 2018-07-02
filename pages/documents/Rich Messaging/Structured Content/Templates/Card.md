@@ -10,7 +10,7 @@ permalink: rich-messaging-structured-content-card.html
 indicator: both
 ---
 
-The very basic structured content elements that can contain either or elements, layout, styling and actions.
+The very basic structured content elements that can contain either/or elements, layout, styling and actions.
 
 ![card](images/card.jpg)
 

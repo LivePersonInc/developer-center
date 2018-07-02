@@ -13,10 +13,9 @@ Use the following request to retrieve an upload url, specifying the type and siz
 
 
 **Note**: The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+Although file sharing supports uploading file of sizes up to 3MB, we recommend resizing and/or compressing the file to shorten the file processing time (sanitation services, post-processing services, etc.).
 
 See full documentation for generating temporary upload URL [here](consumer-int-msg-generate-temp-upload-url.html).
-
-
 
 Request Body Example:
 

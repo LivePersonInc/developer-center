@@ -4,7 +4,7 @@ Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Structured Content
-order: 60
+order: 70
 permalink: rich-messaging-structured-content-limitations.html
 indicator: both
 ---
