@@ -11,7 +11,6 @@ indicator: chat
 ---
 
 This section contains API details that are common to every API’s resource and action. 
-new line
 
 ### Request Headers
 
