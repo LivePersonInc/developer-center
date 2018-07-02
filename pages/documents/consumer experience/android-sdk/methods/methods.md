@@ -319,7 +319,7 @@ public static void setUserProfile(ConsumerProfile profile)
 
 ### setUserProfile (deprecated)
 
-*Deprecated. Please use the [setUserProfile](android-setuserprofile.html){:target="_blank"} (String firstName, String lastName, String phone) method ).*
+*Deprecated. Please use the [setUserProfile](android-methods.html#setUserProfile) (String firstName, String lastName, String phone) method ).*
 
 The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the messaging Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
 
@@ -335,6 +335,30 @@ public static void setUserProfile(String appId, String firstName, String lastNam
 | phone | User’s phone |
 
 ### registerLPPusher
+
+Register to LPMessagingSDK push notifications. Providing the authenticationParams parameter enables registering to the LPPusher without opening a conversation first. If the registrationCompletedCallback callback is provided, it will be called when registeration is finished successfully or if it failed and indicate which one happened.
+
+If the registration fails due to an expired token, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback is called.
+
+```swift
+public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID (e.g. 652838922). |
+| appId | The host app ID (e.g. com.liveperson.myApp). |
+| gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
+_**Note: If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server.**_
+
+### registerLPPusher (deprecated)
+
+Register to LPMessagingSDK push notifications
+
+*Deprecated. Please use the [registerLPPusher](android-methods.html#registerlppusher)(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback) method ).*
 
 ```swift
 public static void registerLPPusher(String brandId, String appId, String gcmToken)

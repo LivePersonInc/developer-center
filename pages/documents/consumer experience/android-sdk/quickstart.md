@@ -33,7 +33,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 ```javascript
 dependencies {
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.1.1'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.0'
 }
 ```
 
@@ -68,7 +68,7 @@ dependencies {
   androidTestImplementation 'com.android.support.test:runner:1.0.1'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
   // LivePerson SDK
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.1.1'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.0'
 }
 ```
 
@@ -90,6 +90,14 @@ dependencies {
 * For Photo Sharing (required if enabled) :
 
 ```xml
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+
+* For Audio Messaging (required if enabled) :
+
+```xml
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
