@@ -22,7 +22,7 @@ You can also send a Structured Content template which includes multiple basic el
 
 Types of basic elements supported by the platform:
 
-* [Text](rich-messaging-basic-elements-text.html)]
+* [Text](rich-messaging-basic-elements-text.html)
 
 * [Button](rich-messaging-basic-elements-button.html)
 
@@ -38,4 +38,4 @@ An element which has an "actions" field, an [on-click operation](rich-messaging-
 
 Each basic element can have style elements which are used to configure various aspects of how it will be rendered, such as background color, text color and more. [Click here for more information](rich-messaging-styling.html).
 
-The following documentation lists the different types of templates and structures used to create complex Strucutred Content layouts and basic elements. It also includes templates for how to write them in JSON. You can use [this tool](https://livepersoninc.github.io/json-pollock/editor/) to render your JSON in advance and get a sense of how your Structured Content object will look once you send it to a consumer.
+The following documentation lists the different types of templates and structures used to create complex Strucutred Content layouts and basic elements. It also includes templates for how to write them in JSON. You can use [this tool](https://livepersoninc.github.io/json-pollock/editor/) to render your JSON in advance and get a sense of how your Structured Content object will look once you send it to a consumer. For more information on how this tool works, please see [this document](rich-messaging-structured-content-pollock.html).
