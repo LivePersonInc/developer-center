@@ -9,7 +9,7 @@ permalink: rich-messaging-file-sharing-1.html
 indicator: both
 ---
 
-In order to enable file sharing on your account, you should first enable the feature itself. run the following commands, inserting the account admin username and admin password instead of the placeholders below:
+In order to enable file sharing on your account, you should first enable the feature itself. Run the following commands, inserting the account admin username and admin password instead of the placeholders below in order to do so:
 
 ```sh
 LP_USER= ADMIN_USERNAME

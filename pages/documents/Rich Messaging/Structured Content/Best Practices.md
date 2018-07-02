@@ -15,7 +15,7 @@ indicator: both
 
 * Use high resolution images in your cards, verify them and their quality before you use the card for the first time and make sure your cards are interesting and aesthetically pleasing.
 
-* Don’t assign a navigate and a deep-link actions together, as they are mutually exclusive.
+* Don’t assign a navigate and a deep-link action together, as they are mutually exclusive.
 
 * Use a carousel when there's a priority order to your content, i.e., the first item is probably the most interesting.
 
