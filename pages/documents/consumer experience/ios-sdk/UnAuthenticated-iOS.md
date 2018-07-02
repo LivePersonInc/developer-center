@@ -11,16 +11,18 @@ indicator: messaging
 ---
 
 ### Introduction
-Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner.
-Unauthenticated In-App Messaging allows brands:
+
+Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:
+
 * Easier & quicker on-boarding to LiveEngage
+
 * Having pre authentication messaging use cases, for example, assistance with password recovery
+
 * The ability to use Campaigns for Messaging    
 
 ### Related Classes, Parameters & APIs
 
-LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```).
-When not passing an authentication type in init() the default value is LPAuthenticationType.signup (will deprecated on July 2019)
+LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```). When not passing an authentication type in init() the default value is LPAuthenticationType.signup (will deprecated on July 2019)
 
 _Note: if you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated_
 
@@ -35,10 +37,13 @@ class LPAuthenticationParams: NSObject {
 ```
 
 #### Server side configurations (In case needed, should be modified by LivePerson)
-* Identity idle time - setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device, id there's an open conversation - it will be closed and a dialog explaining what happened will be presented to the consumer.
+
+* Identity idle time - setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. iF there's an open conversation - it will be closed and a dialog explaining what happened will be presented to the consumer.
+
 * Unauthenticated token expiration - sets the time for the app to validate the token. When the token is expired, it will be refreshed.
 
 #### SDK configurations
+
 When an unauthenticated user session expire - the SDK will notify by presenting an alertView to the user. The alertView content can be modified by overriding the following string params:
 
 * ```"unauthenticatedUserExpiredTitle"``` = "New Conversation";
@@ -69,6 +74,9 @@ LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationP
 ```
 
 ### Notes & Best Practices
-* Brands who wish to use Unauthenticated In-App Messaging must activate Campaigns for Messaging and create a default engagement. For additional information, please follow the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf). In addition, the SDK should be initialized with the ```LPMonitoringInitParams```
-* In order to change SDK modes, Logout must be called first
-* LPAuthenticationType signup will be deprecated at the end June 2019
+
+* Brands who wish to use Unauthenticated In-App Messaging must activate Campaigns for Messaging and create a default engagement. For additional information, please follow the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf). In addition, the SDK should be initialized with the ```LPMonitoringInitParams``` object.
+
+* In order to change SDK modes, Logout must be called first.
+
+* LPAuthenticationType signup will be deprecated at the end June 2019.
