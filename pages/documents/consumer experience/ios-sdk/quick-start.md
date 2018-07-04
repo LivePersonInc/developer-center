@@ -54,7 +54,7 @@ $ pod init
  3. Podfile should be created under your project’s folder.
  To integrate Liveperson Messaging SDK into your Xcode project using CocoaPods, specify it in your Podfile:
 
-```ruby
+```swift
 source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
 platform :ios, '9.0'
 use_frameworks!

@@ -27,7 +27,7 @@ Upgrading to LPMessagingSDK 3.0, requires Swift 4.0.2 and Xcode 9.2
 
 * Update LPMessagingSDK Pod
 
-```ruby
+```swift
 target '<YourApplicatioName>' do
   # Update change LPMessagingSDK Pod from:
   pod 'LPMessagingSDK','~> 2.3.0'
@@ -166,7 +166,7 @@ override func viewWillDisappear(_ animated: Bool) {
 
   * Update LPMessagingSDK Pod
 
-```ruby
+```swift
 target '<YourApplicatioName>' do
   # Update change LPMessagingSDK Pod from:
   pod 'LPMessagingSDK','~> 2.7.0'
@@ -244,7 +244,7 @@ override func viewWillDisappear(_ animated: Bool) {
 
   * Update LPMessagingSDK Pod
 
-```ruby
+```swift
 target '<YourApplicatioName>' do
   # Update change LPMessagingSDK Pod from:
   pod 'LPMessagingSDK','~> 2.8.0'
