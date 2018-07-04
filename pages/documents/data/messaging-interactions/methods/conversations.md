@@ -209,8 +209,8 @@ messageId     | ID of message.                              | string     |
 seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, etc.
 dialogId      | ID of dialog bulk.                          | long       |
 participantId | ID of participant.                          | string     |
-source        | Message's origin.                           | string     |
-device        | Device the message was sent from.           | string     |
+source        | Message's origin.                           | string     | deprecated (not supported)
+device        | Device the message was sent from.           | string     | deprecated (not supported)
 sentBy        | Who sent the message                        | string     | Valid values: "agent", "consumer"
 contextData   | Contains context information about the consumer's message, including raw and structured metadata.            | container| |
 
