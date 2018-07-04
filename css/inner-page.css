@@ -108,20 +108,18 @@ pre code {
     max-width: 160px;
     height: 50px;
     hyphens: none;
-    background-color: rgba(222, 221, 221, 0.2);
     border-right: solid 1px #fff;
     padding: 21px 25.5px 21px 23px;
     vertical-align: initial;
 }
 
 .post-content table > thead > tr > th {
-  background-color: #5879da;
-  font-family: "Roboto";
-  font-weight: 200;
-  color: #fff;
+  font-family: "Open Sans";
+  font-weight: bold;
+  color: #4a4a4a;
   font-size: 14px;
   padding: 14px 22px;
-  border-right: solid 1px #ffffff;
+  border-bottom: 2.5px solid #5879DA;
 }
 
 @media screen and (max-width:768px){
@@ -143,6 +141,10 @@ table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table
 */
 table > thead > tr > th {
  border-bottom: none;
+}
+
+table > tbody > tr:nth-of-type(even) {
+    background-color: #f7f7f7;
 }
 
 
@@ -283,7 +285,6 @@ ul.mysidebar.nav {
   margin-left: 34px;
   height: 100%;
   position: fixed;
-  width: 100%;
   top: 202px;
 
 }

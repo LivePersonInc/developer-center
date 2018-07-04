@@ -74,10 +74,12 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-<div class="important">
+<div markdown="1" class="important">
 Important:
+
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
 </div>
-- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -277,11 +279,13 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-<div class="important">
+<div markdown="1" class="important">
 Important:
-</div>
 
-**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+
+The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
+
+</div>
 
 ### registerPushNotifications
 
@@ -305,11 +309,12 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-<div class="important">
-IMPORTANT NOTES :
-</div>
+<div markdown="1" class="important">
+Important:
 
 A push is sent to the last device which was registered to the LP push service, meaning that the unread messages indication can be fetched by only one device.
+
+</div>
 
 * If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once a message has been sent from that device and the push arrives to it.
 

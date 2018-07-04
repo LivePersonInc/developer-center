@@ -25,17 +25,19 @@ Show if:
 
 ### Dismiss CSAT
 
-The CSAT view is dismissed in one of four cases: 
+The CSAT view is dismissed in one of four cases:
 
 - User pressed the submit button (answers are sent to the survey).
 - User choose to skip the CSAT (skipped button is pressed).
 - The CSAT is automatically dismissed if it was filled in any other device.
 - If agent resumed the conversation while csat is visible - it will automatically dismissed.
 
-<div class="important">
+<div markdown="1" class="important">
 Important:
+
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
 </div>
-- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -72,7 +74,7 @@ LPConfig.defaultConfiguration.csatAgentAvatarIconColor
 
 **Rating Question View (stars)**
 
-- Always visible - can’t configure its visibility. 
+- Always visible - can’t configure its visibility.
 - Stars color is defined by:
 
 ```swift

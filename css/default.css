@@ -20,16 +20,19 @@ body {
 
   .defaultwrapper {
     display: grid;
-    grid-template-columns: 2fr 0.37fr 8fr;
+    grid-template-columns: 2fr 0.37fr 8fr 1fr;
     grid-template-rows: auto 1fr 1fr auto;
   }
 
   .defaultheader {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 3;
     grid-row: 1 / span 1;
     background-color: #fff;
     border-bottom: solid 1px #dedddd;
     padding: 42px 0 42px 70px;
+    height: 82px;
+    display: flex;
+    align-items: center;
   }
 
   .defaultsidebar {
@@ -43,6 +46,22 @@ body {
   .defaultcontent {
     grid-column: 3 / span 1;
     display: flex;
+  }
+
+  .defaultbutton {
+    grid-column: 4 / span 1;
+    height: 44px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 12px 23px;
+    margin-right: 29px;
+    margin-top: 29px;
+  }
+
+  .defaultbutton a {
+    color: #5879DA;
   }
 
   .defaultfooter {
@@ -111,9 +130,36 @@ table {
 }
 
 .important {
-  color: red;
+  border-left-color: #f66;
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 45px;
+}
+
+.important:before {
+  content: "!";
+  background-color: #f88181;
+  position: absolute;
+  left: 444px;
+  color: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  margin-top: 3px;
+  margin-left: -25px;
 }
 
 /* Sidebar Styling Begins */

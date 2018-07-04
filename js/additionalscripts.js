@@ -27,6 +27,7 @@ $(window).on('popstate', (e) => {
 });
 
 function solutionsbuttonclick() {
+  event.preventDefault();
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
   documentsSideBar.fadeOut(200, function () {
@@ -41,6 +42,7 @@ $("#solutionsbutton").linkUnderlineAnim({
 });
 
 function sidebarbuttonclick() {
+  event.preventDefault();
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
   solutionsSideBar.fadeOut(200, function () {

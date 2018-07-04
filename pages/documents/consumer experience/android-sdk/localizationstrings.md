@@ -37,11 +37,12 @@ _**Note:** In order to avoid collisions, each SDK resource starts with a prefix 
 <string name="brand_name">This new and fancy Brand name</string>
 ```
 
-<div class="important">
+<div markdown="1" class="important">
 Important:
-</div>
 
-if you want to change the Brand name, when using the SDK on Activity Mode, you'll need to create an English Locale and override the name.
+
+If you want to change the Brand name, when using the SDK on Activity Mode, you'll need to create an English Locale and override the name.
+</div>
 
 ### Create new Localization File
 
@@ -66,4 +67,3 @@ _**Note:** Now that you have a new **Resource Directory**, you'll have to create
 * **Step 5:** On the pop up window, type: **strings.xml**, this file will define all the strings for that Locale:
 
 <img src="img/android_string_locale_step6.png" alt="Branding the SDK" style="max-width:500px;max-height:700px;margin-left:4em;">
-
