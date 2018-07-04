@@ -10,6 +10,8 @@ indicator: messaging
 ---
 
 Each Quick Reply chip can have its own style elements.
+<br/>
+Additional styling configuration is available for Mobile SDK: [Android](android-attributes.html#quick-replies) | [iOS](consumer-experience-ios-sdk-attributes.html#quick-reply)
 
 ### Fields
 
