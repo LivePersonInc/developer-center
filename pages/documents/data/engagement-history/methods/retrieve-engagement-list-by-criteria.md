@@ -1298,7 +1298,7 @@ Example:
 | source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system" |
 | lineSeq | Sequence of line in that chat | alphanumeric |  |
 | subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
-| cannedAnswerType | Type of canned answer (Predefined Content). | numeric | |
+| cannedAnswerType | Type of canned answer (Predefined Content). | numeric | 0: is not canned answer, positive: canned answer's id, negative: canned answer's id that was changed. |
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
 | lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container | |
 | lineSeq | Sequence of line in that chat  | alphanumeric | |
