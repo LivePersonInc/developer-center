@@ -37,7 +37,7 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
 | onInitSuccess | Callback that indicates the init process has finished successfully. |
 | onInitFailed | Callback that indicates the init process has failed. <br> *Note: You can call initialize before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK in your app's Application class.* |
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 

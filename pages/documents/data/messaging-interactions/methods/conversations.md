@@ -57,8 +57,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
-responseTime | Response time of the conversation (the time agent should respond the conversation). | Optional | Either "from" or "to" fields are mandatory.
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |Response time range - epoch time in milliseconds | Optional |It is possible to pass with one of the boundries only (from or to)
+responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring|
 
 Filters examples:
 
@@ -196,7 +196,7 @@ Name                 | Description                                              
 | conversationStartPage | The page's URL from which the conversation started. | alphanumeric| |
 | conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |
 
-         
+
 _Message Info_
 
 Name          | Description                                 | Type/Value | Notes

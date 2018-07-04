@@ -74,7 +74,7 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
@@ -277,7 +277,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
@@ -290,14 +290,16 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 *Note: Push notifications must be pre-configured, and an APN certificate has to be uploaded to the LiveEngage platform. See more info on [how to configure push notifications](push-service-overview.html).*
 
 ```swift
-func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil)
+`func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)`
 ```
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | token | A token that identifies the device to APNs. The token is an opaque data type because that is the form that the provider needs to submit to the APNs servers when it sends a notification to a device. | The APNs servers require a binary format for performance reasons. <br> This is the exact same dictionary as received in application:didRegisterForRemoteNotificationsWithDeviceToken: method |
 | notificationDelegate | An implementer of LPMessagingSDKNotificationDelegate. | |
-| alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-Dev" string to the bundle ID.  |
+| alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-dev" string to the bundle ID.  |
+| authenticationParams | An optional authentication ([LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html)) param to be used for immediate Pusher registration | If passing authentication params, this method will register immediately to Pusher, the registration will be performed when calling showConversation |
+
 
 ### getUnreadMessagesCount
 
@@ -305,7 +307,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 IMPORTANT NOTES :
 </div>
 

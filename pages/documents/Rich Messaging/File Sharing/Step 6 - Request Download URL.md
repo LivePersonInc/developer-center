@@ -1,7 +1,7 @@
 ---
 title: Step 6 - Request Download URL
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 70
@@ -9,7 +9,7 @@ permalink: rich-messaging-file-sharing-6.html
 indicator: both
 ---
 
-**Request a download url**:
+**Request a download URL**:
 
 Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
 
