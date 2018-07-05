@@ -61,6 +61,7 @@ body {
   .defaultcontent {
     grid-column: 3 / span 1;
     display: flex;
+    margin-bottom: 50px;
   }
 
   .defaultbutton {
@@ -130,7 +131,7 @@ body {
 }
 
 .algolia-autocomplete {
-  width: 12%;
+  width: 100%;
 }
 
 .aa-input-search {
@@ -295,7 +296,7 @@ table {
 
 /* Sidebar Styling Ends */
 
-.language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before {
   position: absolute;
   color: #ccc;
   text-align: right;
@@ -339,4 +340,11 @@ table {
 
 .language-ruby:before {
   content: "RUBY";
+}
+
+.pagehr {
+  margin-top: 0px;
+  margin-bottom: 35px;
+  border: 0;
+  border-top: 1px solid #dedddd;;
 }
