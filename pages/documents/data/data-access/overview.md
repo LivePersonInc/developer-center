@@ -11,8 +11,6 @@ root-link: true
 indicator: chat
 ---
 
-**BETA**
-
 ### Introduction
 
 The LiveEngage Data Access API provides brands with the ability to address specific Goals and KPIs while also extending the reporting capabilities of their account by accessing their entire raw data. The data includes full information about their agents’ activities and visitors’ journeys.
@@ -53,14 +51,9 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key that is available in the LiveEngage API Keys tab.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.  
 
-4. This is a private beta that is available to a limited number of customers.  Please contact your account manager if you’d like to be considered for inclusion.  You’ll need to sign a beta agreement with LivePerson in order to participate.  
-
-5. This API requires backend enablement, please contact your account manager to do so. 
-
-6. This beta software may be released in production as a final product at LivePerson’s discretion.  While it is in beta, we are making it available to you for use “as is” and for testing purposes only.
-
+4. This API requires backend enablement, please contact your account manager to do so. 
 
 
 ### Architecture
