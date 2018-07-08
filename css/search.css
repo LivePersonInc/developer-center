@@ -5,6 +5,14 @@
 .algolia-autocomplete .ds-dropdown-menu {
   max-width: unset !important;
   min-width: unset !important;
-  width: 100%;
-  top: 185% !important;
+  width: 105%;
+  top: 186% !important;
+  margin-right: -5px !important;
+}
+
+
+.overlayvisible {
+  opacity: 0.5;
+  -webkit-transition: opacity .10s ease-in-out;
+  transition: opacity .10s ease-in-out;
 }

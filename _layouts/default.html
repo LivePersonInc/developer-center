@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     {% include head.html %}
-
+    <link rel="stylesheet" href="{{ "css/search.css" }}">
      <link rel="stylesheet" type="text/css" href="css/inner-page.css">
      <meta name="description" content="LivePerson for Developers. Build on LiveEngage with our powerful digital toolbox">
      <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
@@ -15,10 +15,10 @@
   <div class="defaultheader">
     <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for knowledge" name="search" autocomplete="on" />
   </div>
-  <div class="defaultsidebar">
+  <div id="defaultsidebar" class="defaultsidebar">
     {% include sidebar.html %}
   </div>
-  <div class="defaultcontent">
+  <div id="defaultcontent" class="defaultcontent">
     {{ content }}
   </div>
   <div class="defaultbutton">
@@ -45,6 +45,33 @@ autocompleteOptions: {
   openOnFocus: true
 }
 });
+
+search.autocomplete.on({
+  'autocomplete:shown': function() {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+},
+  'autocomplete:closed': function () {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+},
+  'autocomplete:empty': function () {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+},
+  'autocomplete:updated': function () {
+    if (this.value === '') {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+}}});
 </script>
 
 <!-- this does not currently work because the search icon is in :before and JS cannot edit pseudo-classes.
