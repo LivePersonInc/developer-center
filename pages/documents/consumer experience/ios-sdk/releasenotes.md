@@ -1631,7 +1631,9 @@ The following properties for the user avatar can now be configured:
 | userBubbleLongPressOverlayAlpha: Float | Color code for the outline color.| 0.3 |
 
 #### New classes
+
 ##### LPConversationViewParams
+
 This class represents an object to determine the conversation mode, filter and container, for example, Container, Window or ViewOnly.
 
     class LPConversationViewParams: NSObject {

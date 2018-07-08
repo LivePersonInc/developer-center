@@ -47,3 +47,8 @@
 .algolia-autocomplete .algolia-docsearch-suggestion--content:before {
   background-color: #fff !important;
 }
+
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  border-bottom: unset;
+  margin-top: none;
+}
