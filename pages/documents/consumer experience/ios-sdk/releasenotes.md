@@ -13,6 +13,17 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.2.1
+
+iOS Messaging SDK v3.2.1 contains the following bug fixes:
+
+#### Symptom:
+
+When trying to get the number of unread messages and the token expired, the SDK doesn’t provide a relevant indication.
+
+#### Fix:
+
+When trying to get the number of unread messages and the token expired, a token expired callback will now be returned.
 
 ### iOS Messaging SDK - Version 3.2
 
