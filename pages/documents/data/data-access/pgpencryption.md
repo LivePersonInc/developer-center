@@ -2,7 +2,7 @@
 title: PGP Encryption
 level1: Documents
 level2: Data
-level3: Data Access API (BETA)
+level3: Data Access API
 
 order: 61
 permalink: data-data-access-pgp-encryption.html
