@@ -6,7 +6,7 @@ level3: Connector API
 level4: Webhooks
 order: 30
 indicator: both
-permalink: webhooks-security.html
+permalink: connector-api-webhooks-notification-protocol.html
 ---
 
 ### Protocol and Security

@@ -6,7 +6,7 @@ level3: Connector API
 level4: Webhooks
 order: 19
 indicator: both
-permalink: webhooks-overview.html
+permalink: connector-api-webhooks-overview.html
 ---
 
 ### Introduction

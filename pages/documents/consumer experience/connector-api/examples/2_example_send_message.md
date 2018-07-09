@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 61
 indicator: both
-permalink: send-message-example.html
+permalink: connector-api-examples-send-a-message.html
 
 ---
 

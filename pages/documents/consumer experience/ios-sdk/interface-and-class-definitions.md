@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 12
-permalink: consumer-experience-ios-sdk-interfacedefinitions.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-interface-and-class-definitions.html
 
 indicator: messaging
 ---

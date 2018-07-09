@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 63
 indicator: both
-permalink: send-chat-state-example.html
+permalink: connector-api-examples-send-chat-state-events.html
 
 ---
 

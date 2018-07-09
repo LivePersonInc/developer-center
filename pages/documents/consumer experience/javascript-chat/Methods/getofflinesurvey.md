@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 110
-permalink: consumer-experience-javascript-chat-getofflinesurvey.html
+permalink: javascript-chat-sdk-methods-getofflinesurvey.html
 
 indicator: chat
 ---

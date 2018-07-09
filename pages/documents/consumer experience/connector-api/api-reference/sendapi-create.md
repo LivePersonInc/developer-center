@@ -6,7 +6,7 @@ level3: Connector API
 level4: API Reference
 order: 11
 indicator: both
-permalink: sendapi-create.html
+permalink: connector-api-api-reference-conversation.html
 search: exclude
 ---
 

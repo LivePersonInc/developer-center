@@ -8,7 +8,7 @@ order: 1
 level-order: 8
 root-link: true
 indicator: both
-permalink: connectorapioverview.html
+permalink: connector-api-connector-api-overview.html
 ---
 ### Introduction
 

@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/agent-interactions/',
+    root: './pages/documents/consumer experience/',
     entryType: 'files',
     depth: 3
 };
@@ -58,7 +58,11 @@ readdirp(settings)
           };
           //console.log(lines.find(line => line.startsWith('title')))
           const lineOfLink = lines.findIndex(line => line.startsWith('perma'))
+          if(level4){
           lines[lineOfLink] = `permalink: ${level3}-${level4}-${title}` + '.html';
+          }else {
+            lines[lineOfLink] = `permalink: ${level3}-${title}` + '.html';
+          };
           console.log(lines.join('\n'));
           fs.writeFile(entry.fullPath, lines.join('\n'));
         },

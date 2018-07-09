@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 170
-permalink: consumer-experience-server-chat-send-transcript.html
+permalink: server-chat-api-methods-send-a-transcript.html
 
 indicator: chat
 ---

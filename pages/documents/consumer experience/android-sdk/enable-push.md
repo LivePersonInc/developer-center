@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 140
-permalink: mobile-app-messaging-sdk-for-android-undefined-notifications.html
+permalink: mobile-app-messaging-sdk-for-android-notifications.html
 
 indicator: messaging
 ---

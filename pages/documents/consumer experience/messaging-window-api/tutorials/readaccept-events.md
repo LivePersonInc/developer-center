@@ -6,7 +6,7 @@ level3: Messaging Window API
 level4: Tutorials
 
 order: 30
-permalink: consumer-int-readaccept-events.html
+permalink: messaging-window-api-tutorials-read-and-accept-events.html
 
 indicator: messaging
 ---

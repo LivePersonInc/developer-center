@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: LiveEngage Configuration
 order: 100
-permalink: consumer-experience-voice-video-ios-voip-configuration.html
+permalink: voice-&-video-for-ios-sdk-(beta)-liveengage-configuration-voip-configuration.html
 indicator: messaging
 ---
 

@@ -8,7 +8,7 @@ level4: API Reference
 order: 200
 layout: page
 
-permalink: consumer-int-msg-sub-events.html
+permalink: messaging-window-api-api-reference-subscribe-to-messaging-events.html
 indicator: messaging
 ---
 {% include msgtype.html title='Request' type='req' %}

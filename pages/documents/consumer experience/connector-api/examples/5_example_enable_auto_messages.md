@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 64
 indicator: both
-permalink: enable-feature-example.html
+permalink: connector-api-examples-how-to-enable-a-feature.html
 
 ---
 

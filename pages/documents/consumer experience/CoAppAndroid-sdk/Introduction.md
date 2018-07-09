@@ -6,7 +6,7 @@ level3: Voice & Video for Android SDK (BETA)
 
 level-order: 4
 order: 2
-permalink: consumer-experience-voice-video-android.html
+permalink: voice-&-video-for-android-sdk-(beta)-overview.html
 root-link: true
 indicator: messaging
 ---

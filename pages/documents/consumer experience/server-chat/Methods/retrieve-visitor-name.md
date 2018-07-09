@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 120
-permalink: consumer-experience-server-chat-retrieve-visitor-name.html
+permalink: server-chat-api-methods-retrieve-visitor's-name.html
 
 indicator: chat
 ---

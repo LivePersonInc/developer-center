@@ -6,7 +6,7 @@ level3:
 level4:
 order:
 indicator: 
-permalink: direct-skill-routing-example.html
+permalink: level3:-level4:-direct-skill-routing.html
 
 ---
 

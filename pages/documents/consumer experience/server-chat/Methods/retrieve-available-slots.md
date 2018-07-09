@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 20
-permalink: consumer-experience-server-chat-retrieve-available-slots.html
+permalink: server-chat-api-methods-retrieve-available-slots.html
 
 indicator: chat
 ---

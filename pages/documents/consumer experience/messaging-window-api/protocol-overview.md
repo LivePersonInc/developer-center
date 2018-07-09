@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Messaging Window API
 
 order: 1
-permalink: consumer-int-protocol-overview.html
+permalink: messaging-window-api-protocol-overview.html
 
 indicator: messaging
 ---

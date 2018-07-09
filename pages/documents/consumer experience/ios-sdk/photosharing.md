@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 234
-permalink: consumer-experience-ios-sdk-photosharing.html
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
 
 indicator: messaging
 ---

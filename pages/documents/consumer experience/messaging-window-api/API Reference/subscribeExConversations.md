@@ -8,7 +8,7 @@ level4: API Reference
 order: 170
 layout: page
 
-permalink: consumer-int-msg-sub-conv.html
+permalink: messaging-window-api-api-reference-subscribe-to-conversation-metadata.html
 indicator: messaging
 ---
 

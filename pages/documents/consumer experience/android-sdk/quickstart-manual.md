@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 11
-permalink: mobile-app-messaging-sdk-for-android-undefined-quick-start-manual.html
+permalink: mobile-app-messaging-sdk-for-android-quick-start-manual.html
 
 ---
 

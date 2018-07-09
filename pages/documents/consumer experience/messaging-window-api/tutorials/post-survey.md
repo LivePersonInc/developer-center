@@ -6,7 +6,7 @@ level3: Messaging Window API
 level4: Tutorials
 
 order: 60
-permalink: consumer-int-post-survey.html
+permalink: messaging-window-api-tutorials-post-conversation-survey.html
 
 indicator: messaging
 ---

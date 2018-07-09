@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 160
-permalink: consumer-experience-javascript-chat-getagentid.html
+permalink: javascript-chat-sdk-methods-getagentid.html
 
 indicator: chat
 ---

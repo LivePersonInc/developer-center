@@ -6,7 +6,7 @@ level3: Voice & Video for iOS SDK (BETA)
 
 level-order: 3
 order: 1
-permalink: consumer-experience-voice-video-ios.html
+permalink: voice-&-video-for-ios-sdk-(beta)-overview.html
 root-link: true
 indicator: messaging
 ---

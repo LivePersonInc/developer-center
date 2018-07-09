@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 50
-permalink: consumer-experience-javascript-chat-setvisitortyping.html
+permalink: javascript-chat-sdk-methods-setvisitortyping.html
 
 indicator: chat
 ---

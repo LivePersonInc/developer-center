@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 
 level-order: 1
 order: 0
-permalink: consumer-experience-ios-sdk-overview.html
+permalink: mobile-app-messaging-sdk-for-ios-overview.html
 root-link: true
 indicator: messaging
 ---

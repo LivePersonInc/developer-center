@@ -8,7 +8,7 @@ level4: Tutorials
 order: 40
 
 
-permalink: consumer-int-authentication.html
+permalink: messaging-window-api-tutorials-authentication.html
 keywords: oauth2.0 jwt token
 indicator: messaging
 ---

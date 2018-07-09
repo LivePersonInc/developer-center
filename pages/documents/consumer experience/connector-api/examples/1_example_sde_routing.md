@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 60
 indicator: both
-permalink: sdes-routing-example.html
+permalink: connector-api-examples-create-a-new-conversation-and-report-sdes.html
 
 ---
 

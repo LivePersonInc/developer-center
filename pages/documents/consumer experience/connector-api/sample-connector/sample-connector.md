@@ -6,7 +6,7 @@ level3: Connector API
 level4: Sample Code
 order: 70
 indicator: both
-permalink: connector-sample-app.html
+permalink: connector-api-sample-code-connector-sample-app.html
 ---
 
 ### Overview

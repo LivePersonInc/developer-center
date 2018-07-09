@@ -6,7 +6,7 @@ level3: Connector API
 level4: Authorization and Authentication
 order: 4
 indicator: both
-permalink: Create_AppJWT.html
+permalink: connector-api-authorization-and-authentication-get-appjwt.html
 search: include
 ---
 

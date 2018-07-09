@@ -6,7 +6,7 @@ level3: Connector API
 level4: API Reference
 order: 10
 indicator: both
-permalink: connector-api-overview.html
+permalink: connector-api-api-reference-overview.html
 search: exclude
 ---
 

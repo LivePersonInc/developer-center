@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 30
-permalink: consumer-experience-ios-sdk-removeconversation.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-removeconversation.html
 
 indicator: messaging
 ---

@@ -6,7 +6,7 @@ level3: Connector API
 level4: Webhooks
 order: 40
 indicator: both
-permalink: webhooks-retrypolicy.html
+permalink: connector-api-webhooks-retry-policy.html
 ---
 
 * Upon its registration to the WH service, an application can be configured to require a “retry send” of failed notification requests.

@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 
 order: 15
-permalink: consumer-experience-ios-sdk-pushnotifications.html
+permalink: mobile-app-messaging-sdk-for-ios-notifications.html
 
 indicator: messaging
 ---

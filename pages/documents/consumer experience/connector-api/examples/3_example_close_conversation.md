@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 62
 indicator: both
-permalink: close-conversation-example.html
+permalink: connector-api-examples-close-a-conversation.html
 
 ---
 

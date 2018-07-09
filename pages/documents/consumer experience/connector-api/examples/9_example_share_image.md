@@ -6,7 +6,7 @@ level3: Connector API
 level4: Examples
 order: 68
 indicator: both
-permalink: share-image-example.html
+permalink: connector-api-examples-share-image-file.html
 
 ---
 

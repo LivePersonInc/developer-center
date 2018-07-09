@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Customization and Branding
 order: 225
-permalink: consumer-experience-ios-sdk-attributes-design-sheet.html
+permalink: mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes-design-sheet.html
 indicator: messaging
 ---
 

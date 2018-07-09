@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 235
-permalink: consumer-experience-ios-sdk-advanced-campaigns.html
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns-for-mobile-app-messaging.html
 
 indicator: messaging
 ---

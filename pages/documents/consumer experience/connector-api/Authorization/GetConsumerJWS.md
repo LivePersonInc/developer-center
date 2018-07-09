@@ -6,7 +6,7 @@ level3: Connector API
 level4: Authorization and Authentication
 order: 5
 indicator: both
-permalink: Create_ConsumerJWS.html
+permalink: connector-api-authorization-and-authentication-get-consumerjws.html
 search: include
 ---
 

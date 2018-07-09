@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 170
-permalink: consumer-experience-javascript-chat-getrtsessionid.html
+permalink: javascript-chat-sdk-methods-getrtsessionid.html
 
 indicator: chat
 ---

@@ -8,7 +8,7 @@ level4: API Reference
 order: 180
 layout: page
 
-permalink: consumer-int-msg-unsub-conv.html
+permalink: messaging-window-api-api-reference-unsubscribe-conversation-metadata.html
 indicator: messaging
 ---
 

@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 80
-permalink: consumer-experience-javascript-chat-requesttranscript.html
+permalink: javascript-chat-sdk-methods-requesttranscript.html
 
 indicator: chat
 ---

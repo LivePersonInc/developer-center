@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 320
-permalink: consumer-experience-javascript-chat-onaccounttoaccounttransfer.html
+permalink: javascript-chat-sdk-events-onaccounttoaccounttransfer.html
 
 indicator: chat
 ---

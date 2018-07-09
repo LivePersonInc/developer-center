@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 
 order: 1
-permalink: consumer-experience-ios-sdk-quick-start.html
+permalink: mobile-app-messaging-sdk-for-ios-quick-start.html
 
 indicator: messaging
 ---
