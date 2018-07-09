@@ -3,7 +3,7 @@ title: Introduction
 level1: Documents
 
 level3: Meta Data API
-permalink: meta-data-api-undefined-introduction.html
+permalink: meta-data-api-introduction.html
 root-link: true
 level-order: 6
 order: 1

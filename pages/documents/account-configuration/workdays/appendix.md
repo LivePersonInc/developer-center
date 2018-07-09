@@ -5,7 +5,7 @@ level1:
 level2: Account Configuration
 level3: Workdays API
 order: 60
-permalink: workdays-api-undefined-appendix.html
+permalink: workdays-api-appendix.html
 indicator: messaging
 ---
 

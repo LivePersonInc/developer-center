@@ -6,7 +6,7 @@ level2: Account Configuration
 level3: Predefined Content API
 
 order: 101
-permalink: predefined-content-api-undefined-appendix.html
+permalink: predefined-content-api-appendix.html
 
 indicator: both
 ---

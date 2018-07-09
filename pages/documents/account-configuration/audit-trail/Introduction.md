@@ -3,7 +3,7 @@ title: Introduction
 level1: Documents
 level2: Account Configuration
 level3: Audit Trail API
-permalink: audit-trail-api-undefined-introduction.html
+permalink: audit-trail-api-introduction.html
 root-link: true
 level-order: 6
 order: 1
