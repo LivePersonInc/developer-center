@@ -7,7 +7,7 @@ level3: LOBs API
 
 
 order: 100
-permalink: lobs-api-undefined-appendix.html
+permalink: lobs-api-appendix.html
 
 indicator: both
 ---

@@ -8,7 +8,7 @@ level3: Skills API
 
 level-order: 2
 order: 9
-permalink: skills-api-undefined-overview.html
+permalink: skills-api-overview.html
 root-link: true
 indicator: both
 ---

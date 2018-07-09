@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/account-configuration',
+    root: './pages/documents/admin',
     entryType: 'files',
     depth: 3
 };

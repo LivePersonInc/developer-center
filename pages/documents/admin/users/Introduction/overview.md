@@ -8,7 +8,7 @@ level3: Users API
 
 level-order: 1
 order: 9
-permalink: users-api-undefined-overview.html
+permalink: users-api-overview.html
 root-link: true
 indicator: both
 ---

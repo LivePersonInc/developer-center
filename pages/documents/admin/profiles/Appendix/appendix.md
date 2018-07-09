@@ -7,7 +7,7 @@ level3: Profiles API
 
 
 order: 101
-permalink: profiles-api-undefined-appendix.html
+permalink: profiles-api-appendix.html
 
 indicator: both
 ---

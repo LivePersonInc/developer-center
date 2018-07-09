@@ -6,7 +6,7 @@ level2: Admin
 level3: Agent Groups API
 
 order: 110
-permalink: agent-groups-api-undefined-appendix.html
+permalink: agent-groups-api-appendix.html
 
 indicator: both
 ---
