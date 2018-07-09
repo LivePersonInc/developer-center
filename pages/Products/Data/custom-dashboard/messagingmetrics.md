@@ -6,7 +6,7 @@ level3: Custom Dashboard
 
 order: 3
 
-permalink: products-data-custom-dashboard-messaging-metrics.html
+permalink: custom-dashboard-messaging-metrics.html
 indicator:
 ---
 

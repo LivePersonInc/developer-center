@@ -5,7 +5,7 @@ level1: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 26
-permalink: watson-planning.html
+permalink: watson-with-liveengage-planning.html
 indicator: messaging
 ---
 ### Define a vision for your Watson implementation strategy

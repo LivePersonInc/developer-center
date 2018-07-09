@@ -7,7 +7,7 @@ level3: Custom Dashboard
 order: 1
 level-order: 2
 root-link: true
-permalink: products-data-custom-dashboard-overview.html
+permalink: custom-dashboard-create-a-custom-real-time-dashboard-for-your-contact-center.html
 indicator:
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Configure Push Notifications (iOS)
-permalink: /products-inapp-configurepushios.html
+permalink: undefined-configure-push-notifications-(ios).html
 toc: false
 indicator:
 ---

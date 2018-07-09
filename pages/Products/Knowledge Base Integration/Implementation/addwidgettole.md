@@ -6,7 +6,7 @@ level3: KnowledgeBase Integration
 level4: Implementation
 
 order: 30
-permalink: products-agent-efficiency-kbintegration-addwidgettole.html
+permalink: knowledgebase-integration-implementation-add-widget-to-liveengage.html
 
 indicator:
 ---

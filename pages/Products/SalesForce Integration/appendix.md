@@ -5,7 +5,7 @@ level2:
 level3: SalesForce Integration
 
 order: 52
-permalink: products-agent-efficiency-salesforce-integration-appendix.html
+permalink: salesforce-integration-appendix.html
 
 indicator:
 ---

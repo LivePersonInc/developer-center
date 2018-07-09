@@ -1,6 +1,6 @@
 ---
 title: Prepare files for upload
-permalink: /products-inapp-preparefilesios.html
+permalink: undefined-prepare-files-for-upload.html
 toc: false
 indicator:
 ---

@@ -7,7 +7,7 @@ level3: Predefined Content
 order: 1
 level-order: 1
 root-link: true
-permalink: products-admin-predefined-content.html
+permalink: predefined-content-automatically-update-predefined-content.html
 indicator:
 ---
 

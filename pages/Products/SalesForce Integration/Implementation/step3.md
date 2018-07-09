@@ -6,7 +6,7 @@ level3: SalesForce Integration
 level4: Implementation
 
 order: 30
-permalink: products-agent-efficiency-salesforce-integration-step3.html
+permalink: salesforce-integration-implementation-step-3---configuring-the-app’s-sync-process-settings.html
 
 indicator:
 ---

@@ -7,7 +7,7 @@ level3: Video Chat
 order: 1
 level-order: 1
 root-link: true
-permalink: products-video-chat-overview.html
+permalink: video-chat-add-video-to-chat-conversations.html
 indicator:
 ---
 

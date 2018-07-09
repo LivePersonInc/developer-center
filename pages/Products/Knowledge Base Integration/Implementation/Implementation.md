@@ -6,7 +6,7 @@ level3: KnowledgeBase Integration
 level4: Implementation
 
 order: 10
-permalink: products-agent-efficiency-kbintegration-implementation.html
+permalink: knowledgebase-integration-implementation-implementation.html
 
 indicator:
 ---

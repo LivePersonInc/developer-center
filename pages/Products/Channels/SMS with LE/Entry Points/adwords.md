@@ -4,7 +4,7 @@ level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
-permalink: products-channels-sms-adwords.html
+permalink: sms-with-liveengage-google-adwords---click-to-message.html
 order: 31
 indicator:
 ---

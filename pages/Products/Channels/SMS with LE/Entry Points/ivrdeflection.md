@@ -4,7 +4,7 @@ level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
-permalink: products-channels-sms-ivr.html
+permalink: sms-with-liveengage-ivr-deflection.html
 order: 10
 indicator:
 ---

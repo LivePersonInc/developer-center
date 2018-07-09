@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-permalink: /products-inapp-prerequisites.html
+permalink: undefined-prerequisites.html
 toc: false
 indicator:
 ---

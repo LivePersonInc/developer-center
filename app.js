@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/rt-interactions',
+    root: './pages/Products/',
     entryType: 'files',
     depth: 3
 };

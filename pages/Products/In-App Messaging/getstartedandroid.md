@@ -1,6 +1,6 @@
 ---
 title: Getting Started for Android
-permalink: /products-inapp-getstartedandroid.html
+permalink: undefined-getting-started-for-android.html
 toc: false
 indicator:
 ---

@@ -5,7 +5,7 @@ level2: Data
 level3: MCS Toolkit
 
 order: 20
-permalink: products-mcs-usingtheapis.html
+permalink: mcs-toolkit-using-apis-to-build-the-toolkit.html
 indicator:
 ---
 

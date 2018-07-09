@@ -8,7 +8,7 @@ level3: KnowledgeBase Integration
 order: 1
 level-order: 1
 root-link: true
-permalink: products-agent-efficiency-kbintegration-overview.html
+permalink: knowledgebase-integration-overview.html
 
 indicator:
 ---

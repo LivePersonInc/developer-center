@@ -5,7 +5,7 @@ level1: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 40
-permalink: watson-best-practices.html
+permalink: watson-with-liveengage-best-practices-and-known-issues.html
 indicator: messaging
 ---
 

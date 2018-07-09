@@ -6,7 +6,7 @@ level3: Custom Dashboard
 
 order: 4
 
-permalink: products-data-custom-dashboard-design-integration-service.html
+permalink: custom-dashboard-design-integration-&-service.html
 indicator:
 ---
 
