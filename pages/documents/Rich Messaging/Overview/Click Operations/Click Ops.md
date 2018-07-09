@@ -5,7 +5,7 @@ level1:
 level2: Rich Messaging
 level3: Getting Started
 order: 20
-permalink: rich-messaging-click-ops.html
+permalink: getting-started-click-operations.html
 indicator: both
 ---
 

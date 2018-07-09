@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Messaging Connectors Alignment
 level4: Facebook
 order: 40
-permalink: rich-messaging-connectors-fb-generic.html
+permalink: messaging-connectors-alignment-facebook-generic-template.html
 indicator: both
 ---
 

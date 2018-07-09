@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/le-tag',
+    root: './pages/documents/Rich Messaging',
     entryType: 'files',
     depth: 3
 };

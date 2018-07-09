@@ -5,7 +5,7 @@ level1:
 level2: Rich Messaging
 level3: Structured Content
 order: 60
-permalink: rich-messaging-structured-content-limitations.html
+permalink: structured-content-limitations.html
 indicator: both
 ---
 

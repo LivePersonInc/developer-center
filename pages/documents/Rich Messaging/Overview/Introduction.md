@@ -7,7 +7,7 @@ level3: Getting Started
 
 level-order: 1
 order: 10
-permalink: rich-messaging-getting-started.html
+permalink: getting-started-introduction.html
 root-link: true
 indicator: both
 ---

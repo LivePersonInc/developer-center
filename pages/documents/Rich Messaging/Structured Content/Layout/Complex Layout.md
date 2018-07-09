@@ -7,7 +7,7 @@ level3: Structured Content
 
 level-order: 2
 order: 10
-permalink: rich-messaging-structured-content-complex-layout.html
+permalink: structured-content-complex-layout.html
 root-link: true
 indicator: both
 ---

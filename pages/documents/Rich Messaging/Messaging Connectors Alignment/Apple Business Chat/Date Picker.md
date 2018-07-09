@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Messaging Connectors Alignment
 level4: Apple Business Chat
 order: 30
-permalink: rich-messaging-connectors-abc-datepicker.html
+permalink: messaging-connectors-alignment-apple-business-chat-date-picker.html
 indicator: both
 ---
 

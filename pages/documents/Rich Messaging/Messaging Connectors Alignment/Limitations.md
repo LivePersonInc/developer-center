@@ -5,7 +5,7 @@ level1:
 level2: Rich Messaging
 level3: Messaging Connectors Alignment
 order: 80
-permalink: rich-messaging-connectors-limitations.html
+permalink: messaging-connectors-alignment-limitations.html
 indicator: both
 ---
 

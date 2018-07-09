@@ -5,7 +5,7 @@ level1:
 level2: Rich Messaging
 level3: File Sharing
 order: 40
-permalink: rich-messaging-file-sharing-3.html
+permalink: file-sharing-step-3---request-upload-url.html
 indicator: both
 ---
 

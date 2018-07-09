@@ -7,7 +7,7 @@ level3: Quick Replies
 
 level-order: 3
 order: 10
-permalink: rich-messaging-quick-replies-overview.html
+permalink: quick-replies-overview.html
 root-link: true
 indicator: messaging
 ---
