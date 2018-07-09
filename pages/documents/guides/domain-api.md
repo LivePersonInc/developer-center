@@ -7,7 +7,7 @@ level3: Retrieve API Domains
 
 level-order: 2
 order: 10
-permalink: agent-domain-domain-api.html
+permalink: retrieve-api-domains-domain-api.html
 root-link: true
 indicator:
 ---

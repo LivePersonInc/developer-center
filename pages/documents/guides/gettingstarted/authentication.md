@@ -3,7 +3,7 @@ title: Getting Started with Authentication
 level1: Documents
 level2: Guides
 level3: Getting Started with LiveEngage APIs
-permalink: getting-started-authentication.html
+permalink: getting-started-with-liveengage-apis-getting-started-with-authentication.html
 order: 10
 indicator: both
 ---

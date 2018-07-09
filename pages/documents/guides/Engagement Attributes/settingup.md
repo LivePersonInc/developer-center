@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Engagement Attributes
 order: 30
-permalink: engagement-attributes-setting-up.html
+permalink: engagement-attributes-setting-up-engagement-attributes.html
 indicator: both
 ---
 

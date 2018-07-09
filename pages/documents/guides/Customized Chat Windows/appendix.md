@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Customized Chat Windows
 
-permalink: guides-customizedchat-appendix.html
+permalink: customized-chat-windows-appendix.html
 order: 4
 indicator: chat
 ---

@@ -5,7 +5,7 @@ level1:
 level2: Guides
 level3: Engagement Attributes
 order: 50
-permalink: engagement-attributes-best-practices-messaging.html
+permalink: engagement-attributes-best-practices-for-messaging.html
 indicator: messaging
 ---
 

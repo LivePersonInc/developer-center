@@ -7,7 +7,7 @@ level3: Local Message Notifications
 order: 10
 level-order: 10
 root-link: true
-permalink: local-message-notifications.html
+permalink: local-message-notifications-local-message-notifications.html
 indicator: messaging
 ---
 

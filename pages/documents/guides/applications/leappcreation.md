@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: LiveEngage Applications
 order: 20
-permalink: guides-le-applications-installing.html
+permalink: liveengage-applications-installing-liveengage-applications.html
 indicator: both
 ---
 

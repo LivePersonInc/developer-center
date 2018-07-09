@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Authentication
 
-permalink: guides-authentication-majorcomponents.html
+permalink: authentication-major-components.html
 order: 2
 indicator: both
 ---

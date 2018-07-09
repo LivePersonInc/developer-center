@@ -7,7 +7,7 @@ level3: Retry and KeepAlive Policy
 
 level-order: 11
 order: 10
-permalink: guides-retry-policy.html
+permalink: retry-and-keepalive-policy-retry-and-keepalive-policy.html
 root-link: true
 indicator: both
 ---

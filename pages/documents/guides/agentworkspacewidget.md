@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Add Agent Widgets
 
-permalink: guides-agent-workspace-widget.html
+permalink: add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html
 root-link: true
 level-order: 3
 order: 1

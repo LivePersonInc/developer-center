@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Customized Chat Windows
 
-permalink: guides-customizedchat-create-an-external-engagement.html
+permalink: customized-chat-windows-create-an-api-engagement.html
 order: 3
 indicator: chat
 ---

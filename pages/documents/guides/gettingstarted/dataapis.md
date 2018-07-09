@@ -3,7 +3,7 @@ title: Getting Started with Data APIs
 level1: Documents
 level2: Guides
 level3: Getting Started with LiveEngage APIs
-permalink: getting-started-data.html
+permalink: getting-started-with-liveengage-apis-getting-started-with-data-apis.html
 order: 30
 indicator: both
 ---

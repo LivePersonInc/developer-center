@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Customized Chat Windows
 
-permalink: guides-customizedchat.html
+permalink: customized-chat-windows-overview.html
 root-link: true
 level-order: 3
 order: 1

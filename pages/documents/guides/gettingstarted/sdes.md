@@ -3,7 +3,7 @@ title: Getting Started with Engagement Attributes
 level1: Documents
 level2: Guides
 level3: Getting Started with LiveEngage APIs
-permalink: getting-started-sdes.html
+permalink: getting-started-with-liveengage-apis-getting-started-with-engagement-attributes.html
 order: 20
 indicator: both
 ---

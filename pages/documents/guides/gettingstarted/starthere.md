@@ -3,7 +3,7 @@ title: Start Here
 level1: Documents
 level2: Guides
 level3: Getting Started with LiveEngage APIs
-permalink: start-here.html
+permalink: getting-started-with-liveengage-apis-start-here.html
 root-link: true
 level-order: 1
 order: 1

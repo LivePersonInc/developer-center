@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Authentication
 
-permalink: guides-authentication-detailedapi.html
+permalink: authentication-detailed-api.html
 order: 5
 indicator: both
 ---

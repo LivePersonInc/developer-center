@@ -4,7 +4,7 @@ level1: Documents
 level2: Guides
 level3: Customized Chat Windows
 
-permalink: guides-customizedchat-create-an-api-based-window.html
+permalink: customized-chat-windows-create-an-api-based-window-using-the-chat-api.html
 order: 2
 indicator: chat
 ---

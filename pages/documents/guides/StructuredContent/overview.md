@@ -7,7 +7,7 @@ level3: Structured Content
 
 level-order: 9
 order: 10
-permalink: structured-content-templates.html
+permalink: structured-content-structured-content-templates.html
 root-link: true
 indicator: both
 ---

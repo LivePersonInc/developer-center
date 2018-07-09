@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Structured Content
 order: 11
-permalink: structured-content-pollock.html
+permalink: structured-content-structured-content-rendering-tool.html
 indicator: both
 ---
 
