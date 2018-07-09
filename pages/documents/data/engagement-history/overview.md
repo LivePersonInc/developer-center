@@ -6,7 +6,7 @@ level3: Engagement History API
 
 level-order: 6
 order: 1
-permalink: data-engagement-history-overview.html
+permalink: engagement-history-api-overview.html
 root-link: true
 indicator: chat
 ---

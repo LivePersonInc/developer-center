@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/agent-interactions',
+    root: './pages/documents/data',
     entryType: 'files',
     depth: 3
 };

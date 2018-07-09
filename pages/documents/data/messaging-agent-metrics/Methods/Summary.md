@@ -6,7 +6,7 @@ level3: Agent Metrics API
 level4: Methods
 
 order: 20
-permalink: data-messaging-interactions-methods-summary.html
+permalink: agent-metrics-api-methods-summary.html
 
 indicator: messaging
 ---

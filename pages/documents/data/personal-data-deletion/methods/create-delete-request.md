@@ -6,7 +6,7 @@ level2: Data
 level3: Personal Data Deletion API
 level4: Methods
 order: 10
-permalink: personal-data-deletion-delete-request.html
+permalink: personal-data-deletion-api-methods-create-deletion-request.html
 indicator: both
 ---
 

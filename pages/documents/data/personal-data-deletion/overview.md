@@ -5,7 +5,7 @@ level2: Data
 level3: Personal Data Deletion API
 level-order: 8
 order: 1
-permalink: personal-data-deletion-overview.html
+permalink: personal-data-deletion-api-overview.html
 root-link: true
 indicator: both
 ---

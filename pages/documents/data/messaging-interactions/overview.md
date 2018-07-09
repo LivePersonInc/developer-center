@@ -6,7 +6,7 @@ level3: Messaging Interactions API
 
 level-order: 3
 order: 1
-permalink: data-messaging-interactions-overview.html
+permalink: messaging-interactions-api-overview.html
 root-link: true
 indicator: messaging
 ---

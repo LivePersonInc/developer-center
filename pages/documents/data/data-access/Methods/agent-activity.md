@@ -6,7 +6,7 @@ level3: Data Access API (BETA)
 level4: Methods
 order: 20
 
-permalink: data-data-access-agent-activity.html
+permalink: data-access-api-(beta)-methods-agent-activity.html
 
 indicator: chat
 ---

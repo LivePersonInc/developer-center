@@ -5,7 +5,7 @@ level2: Data
 level3: Messaging Operations API
 
 order: 100
-permalink: data-messaging-operations-appendix.html
+permalink: messaging-operations-api-appendix.html
 
 indicator: messaging
 ---

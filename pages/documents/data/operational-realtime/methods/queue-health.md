@@ -5,7 +5,7 @@ level2: Data
 level3: Operational Realtime API
 level4: Methods
 order: 10
-permalink: data-operational-realtime-queue-health.html
+permalink: operational-realtime-api-methods-queue-health.html
 
 indicator: chat
 ---

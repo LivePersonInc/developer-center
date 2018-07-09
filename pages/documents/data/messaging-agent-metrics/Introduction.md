@@ -6,7 +6,7 @@ level3: Agent Metrics API
 
 level-order: 2
 order: 1
-permalink: data-messaging-agent-metrics-overview.html
+permalink: agent-metrics-api-overview.html
 root-link: true
 indicator: messaging
 ---

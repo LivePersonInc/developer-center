@@ -5,7 +5,7 @@ level2: Data
 level3: Operational Realtime API
 level4: Methods
 order: 50
-permalink: data-operational-realtime-sla-histogram.html
+permalink: operational-realtime-api-methods-sla-histogram.html
 
 indicator: chat
 ---

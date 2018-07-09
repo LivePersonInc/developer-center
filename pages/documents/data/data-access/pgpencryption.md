@@ -5,7 +5,7 @@ level2: Data
 level3: Data Access API (BETA)
 
 order: 61
-permalink: data-data-access-pgp-encryption.html
+permalink: data-access-api-(beta)-pgp-encryption.html
 
 indicator: chat
 ---

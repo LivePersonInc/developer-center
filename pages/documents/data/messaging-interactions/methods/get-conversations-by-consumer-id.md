@@ -5,7 +5,7 @@ level2: Data
 level3: Messaging Interactions API
 level4: Methods
 order: 30  
-permalink: data-messaging-interactions-get-conversations-by-consumer-id.html
+permalink: messaging-interactions-api-methods-get-conversations-by-consumer-id.html
 
 indicator: messaging
 ---

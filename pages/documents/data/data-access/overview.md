@@ -6,7 +6,7 @@ level3: Data Access API (BETA)
 
 level-order: 1
 order: 1
-permalink: data-data-access-overview.html
+permalink: data-access-api-(beta)-overview.html
 root-link: true
 indicator: chat
 ---

@@ -6,7 +6,7 @@ level3: Operational Realtime API
 
 level-order: 5
 order: 1
-permalink: data-operational-realtime-overview.html
+permalink: operational-realtime-api-overview.html
 root-link: true
 indicator: chat
 ---
