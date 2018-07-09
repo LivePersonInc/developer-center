@@ -7,7 +7,7 @@ level3: Messaging Agent SDK
 
 level-order: 3
 order: 1
-permalink: messaging-agent-sdk-undefined-overview.html
+permalink: messaging-agent-sdk-overview.html
 
 root-link: true
 indicator: messaging

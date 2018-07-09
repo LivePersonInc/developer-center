@@ -7,7 +7,7 @@ level3: Agent Workspace Widget SDK
 
 level-order: 5
 order: 10
-permalink: agent-workspace-widget-sdk-undefined-overview.html
+permalink: agent-workspace-widget-sdk-overview.html
 root-link: true
 indicator: both
 ---

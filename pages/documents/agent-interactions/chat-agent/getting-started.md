@@ -7,7 +7,7 @@ level3: Chat Agent API
 
 level-order: 4
 order: 4
-permalink: chat-agent-api-undefined-overview.html
+permalink: chat-agent-api-overview.html
 root-link: true
 indicator: chat
 ---

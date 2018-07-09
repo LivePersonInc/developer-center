@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 50
-permalink: agent-workspace-widget-sdk-undefined-methods.html
+permalink: agent-workspace-widget-sdk-methods.html
 
 indicator: both
 ---

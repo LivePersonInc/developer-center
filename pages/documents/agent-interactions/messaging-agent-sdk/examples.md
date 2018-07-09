@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Messaging Agent SDK
 
 order: 2
-permalink: messaging-agent-sdk-undefined-examples.html
+permalink: messaging-agent-sdk-examples.html
 indicator: messaging
 ---
 
