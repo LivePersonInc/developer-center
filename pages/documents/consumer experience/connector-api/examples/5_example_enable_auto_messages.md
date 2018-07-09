@@ -15,8 +15,10 @@ The following example illustrates how to enable the auto messages feature upon c
 **Notes**:
 
 1. Contact your account team to enable this feature on your account.
-2. Upon creating a new conversation (CONVERSATION endpoint), make sure you also pass the additional **Client-Properties** request header. See [Example](enable-feature-example.html#create-a-new-conversation--enable-the-auto-messages-feature) below.
-3. Every following request (SEND endpoint) must also include the additional **Client-Properties** request header. See [Example](enable-feature-example.html#send-a-message--enable-the-auto-messages-feature) below.
+
+2. Upon creating a new conversation (via the CONVERSATION endpoint), make sure you also pass the additional **Client-Properties** request header. See [Example](enable-feature-example.html#create-a-new-conversation--enable-the-auto-messages-feature) below.
+
+3. Every following request (via the SEND endpoint) must also include the additional **Client-Properties** request header. See [Example](enable-feature-example.html#send-a-message--enable-the-auto-messages-feature) below.
 
 
 ### Getting Started
