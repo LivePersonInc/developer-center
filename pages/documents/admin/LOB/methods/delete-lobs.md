@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 70
-permalink: administration-delete-lobs.html
+permalink: lobs-api-methods-delete-lobs.html
 
 indicator: both
 ---

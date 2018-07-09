@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 30
-permalink: agent-workspace-sdk-limitations.html
+permalink: agent-workspace-widget-sdk-undefined-limitations.html
 
 indicator: both
 ---

@@ -6,7 +6,7 @@ level2: Account Configuration
 level3: Special Occasions API
 level-order: 9
 order: 1
-permalink: account-configuration-special-occasions-overview.html
+permalink: special-occasions-api-undefined-overview.html
 root-link: true
 indicator: messaging
 ---

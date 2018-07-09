@@ -7,7 +7,7 @@ level3: Automatic Messages API
 level4: Methods
 
 order: 20
-permalink: account-configuration-automatic-messages-get-automatic-message-by-id.html
+permalink: automatic-messages-api-methods-get-automatic-message-by-id.html
 
 indicator: both
 ---

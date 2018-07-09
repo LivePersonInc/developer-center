@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 
 level-order: 2
 order: 0
-permalink: android-overview.html
+permalink: mobile-app-messaging-sdk-for-android-undefined-overview.html
 root-link: true
 indicator: messaging
 ---

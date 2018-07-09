@@ -6,7 +6,7 @@ level2: Account Configuration
 level3: Audit Trail API
 level4: Methods
 order: 20
-permalink: account-configuration-meta-data-audit-trail-export.html
+permalink: audit-trail-api-methods-export-audit-trail-to-csv-file.html
 indicator: both
 ---
 

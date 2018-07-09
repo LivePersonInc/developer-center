@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Appendix
 
 order: 320
-permalink: android-security.html
+permalink: mobile-app-messaging-sdk-for-android-appendix-security.html
 
 indicator: messaging
 ---

@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 30
-permalink: administration-create-profile.html
+permalink: profiles-api-methods-create-profile.html
 
 indicator: both
 ---

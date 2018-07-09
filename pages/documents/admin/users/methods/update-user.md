@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 50
-permalink: administration-update-user.html
+permalink: users-api-methods-update-user.html
 
 indicator: both
 ---

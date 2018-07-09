@@ -5,7 +5,7 @@ level2: Account Configuration
 level3: Predefined Categories API
 level4: Methods
 
-permalink: account-configuration-categories-delta.html
+permalink: predefined-categories-api-methods-categories-query-delta.html
 order: 40
 indicator: both
 ---

@@ -5,7 +5,7 @@ level1:
 level2: Account Configuration
 level3: Special Occasions API
 order: 60
-permalink: account-configuration-special-occasions-appendix.html
+permalink: special-occasions-api-undefined-appendix.html
 indicator: messaging
 ---
 

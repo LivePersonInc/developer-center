@@ -7,7 +7,7 @@ level3: Predefined Content API
 level4: Methods
 
 order: 70
-permalink: account-configuration-predefined-content-delete-content.html
+permalink: predefined-content-api-methods-delete-predefined-content.html
 
 indicator: both
 ---

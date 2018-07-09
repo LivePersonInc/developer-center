@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 50
-permalink: administration.update-profiles.html
+permalink: profiles-api-methods-update-profiles.html
 
 indicator: both
 ---

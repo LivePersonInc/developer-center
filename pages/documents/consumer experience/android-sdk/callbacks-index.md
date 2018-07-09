@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: SDK APIs
 
 order: 120
-permalink: android-callbacks-index.html
+permalink: mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html
 
 indicator: messaging
 ---

@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 20
-permalink: administration-get-lob-by-id.html
+permalink: lobs-api-methods-get-lob-by-id.html
 
 indicator: both
 ---

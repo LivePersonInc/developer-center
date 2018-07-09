@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 80
-permalink: administration-delete-agent-group.html
+permalink: agent-groups-api-methods-delete-agent-group.html
 
 indicator: both
 ---

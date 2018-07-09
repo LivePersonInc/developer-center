@@ -9,7 +9,7 @@ level4: Methods
 
 order: 50
 
-permalink: administration-update-agent-groups.html
+permalink: agent-groups-api-methods-update-agent-groups.html
 
 indicator: both
 ---

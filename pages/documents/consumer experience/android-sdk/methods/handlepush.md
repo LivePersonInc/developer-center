@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 130
-permalink: android-handlepush.html
+permalink: mobile-app-messaging-sdk-for-android-methods-handlepush-(deprecated).html
 
 indicator: messaging
 ---

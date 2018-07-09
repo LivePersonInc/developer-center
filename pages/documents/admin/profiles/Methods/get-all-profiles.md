@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 10
-permalink: administration-get-all-profiles.html
+permalink: profiles-api-methods-get-all-profiles.html
 
 indicator: both
 ---

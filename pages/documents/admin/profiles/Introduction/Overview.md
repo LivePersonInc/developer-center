@@ -8,7 +8,7 @@ level3: Profiles API
 
 level-order: 4
 order: 9
-permalink: administration-profiles-overview.html
+permalink: profiles-api-undefined-overview.html
 root-link: true
 indicator: both
 ---

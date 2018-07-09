@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 190
-permalink: android-markurgent.html
+permalink: mobile-app-messaging-sdk-for-android-methods-markconversationasurgent.html
 
 indicator: messaging
 ---

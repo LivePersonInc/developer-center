@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 80
-permalink: administration-delete-profile.html
+permalink: profiles-api-methods-delete-profile.html
 
 indicator: both
 ---

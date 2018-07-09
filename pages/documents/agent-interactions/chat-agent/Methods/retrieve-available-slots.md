@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 50
-permalink: agent-retrieve-available-slots.html
+permalink: chat-agent-api-methods-retrieve-available-slots.html
 
 indicator: chat
 ---

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 30
-permalink: android-showconversationdeprecated.html
+permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(deprecated).html
 
 indicator: messaging
 ---

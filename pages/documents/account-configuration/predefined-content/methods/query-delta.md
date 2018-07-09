@@ -7,7 +7,7 @@ level3: Predefined Content API
 level4: Methods
 
 order: 30
-permalink: account-configuration-predefined-content-query-delta.html
+permalink: predefined-content-api-methods-predefined-content-query-delta.html
 
 indicator: both
 ---

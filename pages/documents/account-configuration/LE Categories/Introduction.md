@@ -4,7 +4,7 @@ level1: Documents
 level2: Account Configuration
 level3: Predefined Categories API
 
-permalink: account-configuration-categories-introduction.html
+permalink: predefined-categories-api-undefined-introduction.html
 root-link: true
 level-order: 3
 order: 1

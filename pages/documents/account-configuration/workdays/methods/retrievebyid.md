@@ -6,7 +6,7 @@ level2: Account Configuration
 level3: Workdays API
 level4: Methods
 order: 40
-permalink: account-configuration-workdays-get-by-id.html
+permalink: workdays-api-methods-retrieve-workdays-object-by-id.html
 indicator: messaging
 ---
 

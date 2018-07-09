@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 210
-permalink: android-checkurgent.html
+permalink: mobile-app-messaging-sdk-for-android-methods-checkconversationismarkedasurgent.html
 
 indicator: messaging
 ---

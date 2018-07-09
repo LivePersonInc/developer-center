@@ -7,7 +7,7 @@ level3: Login Service API
 level4: Methods
 
 order: 10
-permalink: agent-user-login.html
+permalink: login-service-api-methods-user-login.html
 
 indicator: both
 ---

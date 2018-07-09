@@ -8,7 +8,7 @@ level3: Agent Groups API
 
 level-order: 3
 order: 9
-permalink: administration-agent-groups-overview.html
+permalink: agent-groups-api-undefined-overview.html
 root-link: true
 indicator: both
 ---

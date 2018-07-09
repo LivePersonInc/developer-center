@@ -6,7 +6,7 @@ level2: Agent Interactions
 
 
 order: 80
-permalink: agent-workspace-sdk-spotify-use-case.html
+permalink: undefined-undefined-spotify-use-case---file-transfer-widget.html
 
 indicator: both
 ---

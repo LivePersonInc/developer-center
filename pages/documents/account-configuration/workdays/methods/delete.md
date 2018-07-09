@@ -6,7 +6,7 @@ level2: Account Configuration
 level3: Workdays API
 level4: Methods
 order: 30
-permalink: account-configuration-workdays-delete.html
+permalink: workdays-api-methods-delete-workdays-object.html
 indicator: messaging
 ---
 

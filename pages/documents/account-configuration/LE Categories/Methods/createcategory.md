@@ -5,7 +5,7 @@ level2: Account Configuration
 level3: Predefined Categories API
 level4: Methods
 
-permalink: account-configuration-categories-create.html
+permalink: predefined-categories-api-methods-create-category.html
 order: 60
 indicator: both
 ---

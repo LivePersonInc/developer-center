@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 30
-permalink: administration-create-users.html
+permalink: users-api-methods-create-users.html
 
 indicator: both
 ---

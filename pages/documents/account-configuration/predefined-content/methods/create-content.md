@@ -7,7 +7,7 @@ level3: Predefined Content API
 level4: Methods
 
 order: 40
-permalink: account-configuration-predefined-content-create-content.html
+permalink: predefined-content-api-methods-create-predefined-content.html
 
 indicator: both
 ---

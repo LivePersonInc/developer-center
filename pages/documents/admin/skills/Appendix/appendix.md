@@ -7,7 +7,7 @@ level3: Skills API
 
 
 order: 100
-permalink: administration-skills-appendix.html
+permalink: skills-api-undefined-appendix.html
 
 indicator: both
 ---

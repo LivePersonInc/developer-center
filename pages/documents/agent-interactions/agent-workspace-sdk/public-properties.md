@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 70
-permalink: agent-workspace-sdk-public-properties.html
+permalink: agent-workspace-widget-sdk-undefined-public-properties.html
 
 indicator: both
 ---

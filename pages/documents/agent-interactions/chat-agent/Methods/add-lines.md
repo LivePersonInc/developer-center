@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 130
-permalink: agent-add-lines.html
+permalink: chat-agent-api-methods-send-lines-&-structured-content.html
 
 indicator: chat
 ---

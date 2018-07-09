@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Advanced Features
 
 order: 290
-permalink: android-csat.html
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-csat-behavior.html
 
 indicator: messaging
 ---

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 50
-permalink: android-hideconversation.html
+permalink: mobile-app-messaging-sdk-for-android-methods-hideconversation.html
 
 indicator: messaging
 ---

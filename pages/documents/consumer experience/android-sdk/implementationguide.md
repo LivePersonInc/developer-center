@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Appendix
 
 order: 341
-permalink: android-integration-guide.html
+permalink: mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk---android.html
 
 indicator: messaging
 ---

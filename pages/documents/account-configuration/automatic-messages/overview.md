@@ -7,7 +7,7 @@ level3: Automatic Messages API
 
 level-order: 5
 order: 9
-permalink: account-configuration-automatic-messages-overview.html
+permalink: automatic-messages-api-undefined-overview.html
 root-link: true
 indicator: both
 ---

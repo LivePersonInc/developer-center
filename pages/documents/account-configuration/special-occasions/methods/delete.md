@@ -7,7 +7,7 @@ level3: Special Occasions API
 level4: Methods
 
 order: 30
-permalink: account-configuration-special-occasions-delete.html
+permalink: special-occasions-api-methods-delete.html
 
 indicator: messaging
 ---

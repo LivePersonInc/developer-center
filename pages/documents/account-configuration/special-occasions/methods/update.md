@@ -7,7 +7,7 @@ level3: Special Occasions API
 level4: Methods
 
 order: 20
-permalink: account-configuration-special-occasions-update.html
+permalink: special-occasions-api-methods-update.html
 
 indicator: messaging
 ---

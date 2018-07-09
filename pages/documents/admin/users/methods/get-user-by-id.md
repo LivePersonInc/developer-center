@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 20
-permalink: administration-get-user-by-id.html
+permalink: users-api-methods-get-user-by-id.html
 
 indicator: both
 ---

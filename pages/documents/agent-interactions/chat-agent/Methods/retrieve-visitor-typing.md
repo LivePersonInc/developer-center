@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 190
-permalink: agent-retrieve-visitor-typing.html
+permalink: chat-agent-api-methods-retrieve-visitor's-typing-status.html
 
 indicator: chat
 ---

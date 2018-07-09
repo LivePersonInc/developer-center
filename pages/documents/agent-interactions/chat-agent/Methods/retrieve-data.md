@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 110
-permalink: agent-retrieve-data.html
+permalink: chat-agent-api-methods-retrieve-data-for-multiple-chats.html
 
 indicator: chat
 ---

@@ -5,7 +5,7 @@ level2: Account Configuration
 level3: Predefined Categories API
 level4: Methods
 
-permalink: account-configuration-categories-prevalidation.html
+permalink: predefined-categories-api-methods-import-categories-pre-validation.html
 order: 110
 indicator: both
 ---

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 270
-permalink: android-localization-strings.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html
 
 indicator: messaging
 ---

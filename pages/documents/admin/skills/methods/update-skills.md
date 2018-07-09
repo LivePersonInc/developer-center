@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 50
-permalink: administration.update-skills.html
+permalink: skills-api-methods-update-skills.html
 
 indicator: both
 ---

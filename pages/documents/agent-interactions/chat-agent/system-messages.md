@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Chat Agent API
 
 order: 240
-permalink: agent-system-messages.html
+permalink: chat-agent-api-undefined-system-messages.html
 
 indicator: chat
 ---

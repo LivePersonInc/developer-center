@@ -4,7 +4,7 @@ level1: Documents
 level2: Account Configuration
 level3: Audit Trail API
 level4: Methods
-permalink: account-configuration-meta-data-audit-trail.html
+permalink: audit-trail-api-methods-retrieve-audit-trail-records.html
 order: 10
 indicator: both
 ---

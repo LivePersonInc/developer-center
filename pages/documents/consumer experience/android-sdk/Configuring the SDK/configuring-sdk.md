@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 150
-permalink: android-configuring-sdk.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
 
 indicator: messaging
 ---

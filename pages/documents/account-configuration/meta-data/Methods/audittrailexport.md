@@ -6,7 +6,7 @@ level1: Documents
 level3: Meta Data API
 level4: Methods
 order: 20
-permalink: account-configuration-meta-data-audit-trail-export.html
+permalink: meta-data-api-methods-export-audit-trail-to-csv-file.html
 indicator: both
 ---
 

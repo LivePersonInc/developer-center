@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 230
-permalink: android-timestamps.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-timestamps-formatting.html
 
 indicator: messaging
 ---

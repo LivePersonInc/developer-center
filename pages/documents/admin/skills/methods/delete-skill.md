@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 80
-permalink: administration-delete-skill.html
+permalink: skills-api-methods-delete-skill.html
 
 indicator: both
 ---

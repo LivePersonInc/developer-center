@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 60
-permalink: administration-delete-users.html
+permalink: users-api-methods-delete-users.html
 
 indicator: both
 ---

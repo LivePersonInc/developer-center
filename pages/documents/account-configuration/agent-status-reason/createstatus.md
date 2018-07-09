@@ -4,7 +4,7 @@ level1: Documents
 level2: Account Configuration
 level3: Agent Status Reason API
 level4: Methods
-permalink: account-configuration-agent-status-reason-createstatusreason.html
+permalink: agent-status-reason-api-methods-create-status-reason.html
 order: 30
 indicator: both
 ---

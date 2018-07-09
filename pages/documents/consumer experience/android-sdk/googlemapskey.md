@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 94
-permalink: google-maps-key.html
+permalink: mobile-app-messaging-sdk-for-android-configuration-google-maps-key.html
 
 indicator: messaging
 ---

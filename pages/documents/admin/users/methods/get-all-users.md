@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 10
-permalink: administration-get-all-users.html
+permalink: users-api-methods-get-all-users.html
 
 indicator: both
 ---

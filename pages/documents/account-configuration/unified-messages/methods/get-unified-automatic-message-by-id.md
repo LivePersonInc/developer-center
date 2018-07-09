@@ -7,7 +7,7 @@ level3: Unified Automatic Messages API
 level4: Methods
 
 order: 20
-permalink: account-configuration-unified-automatic-messages-get-automatic-message-by-id.html
+permalink: unified-automatic-messages-api-methods-get-unified-automatic-message-by-id.html
  
 indicator: both
 ---

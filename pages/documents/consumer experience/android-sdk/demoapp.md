@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Appendix
 
 order: 330
-permalink: android-demo-app.html
+permalink: mobile-app-messaging-sdk-for-android-appendix-sample-app.html
 
 indicator: messaging
 ---

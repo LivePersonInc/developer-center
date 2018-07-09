@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 230
-permalink: agent-submit-survey.html
+permalink: chat-agent-api-methods-submit-survey-data.html
 
 indicator: chat
 ---

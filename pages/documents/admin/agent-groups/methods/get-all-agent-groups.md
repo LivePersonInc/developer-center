@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 10
-permalink: administration-get-all-agent-groups.html
+permalink: agent-groups-api-methods-get-all-agent-groups.html
 
 indicator: both
 ---

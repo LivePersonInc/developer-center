@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 30
-permalink: administration-create-skills.html
+permalink: skills-api-methods-create-skills.html
 
 indicator: both
 ---

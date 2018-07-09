@@ -7,7 +7,7 @@ level3: Predefined Content API
 
 level-order: 2
 order: 9
-permalink: account-configuration-predefined-content-overview.html
+permalink: predefined-content-api-undefined-overview.html
 root-link: true
 indicator: both
 ---

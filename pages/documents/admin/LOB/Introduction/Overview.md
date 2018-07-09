@@ -8,7 +8,7 @@ level3: LOBs API
 
 level-order: 2
 order: 9
-permalink: administration-lobs-overview.html
+permalink: lobs-api-undefined-overview.html
 root-link: true
 indicator: both
 ---

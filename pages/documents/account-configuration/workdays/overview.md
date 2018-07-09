@@ -6,7 +6,7 @@ level2: Account Configuration
 level3: Workdays API
 level-order: 8
 order: 9
-permalink: account-configuration-workdays-overview.html
+permalink: workdays-api-undefined-overview.html
 root-link: true
 indicator: messaging
 ---

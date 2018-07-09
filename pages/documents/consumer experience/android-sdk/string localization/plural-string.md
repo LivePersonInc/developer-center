@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 220
-permalink: android-plural-string.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-plural-string-resource-example.html
 
 indicator: messaging
 ---

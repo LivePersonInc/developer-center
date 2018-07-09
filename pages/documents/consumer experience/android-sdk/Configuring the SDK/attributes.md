@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 160
-permalink: android-attributes.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-attributes.html
 
 indicator: messaging
 ---

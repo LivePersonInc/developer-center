@@ -5,7 +5,7 @@ level2: Account Configuration
 level3: Predefined Categories API
 level4: Methods
 
-permalink: account-configuration-categories-revision.html
+permalink: predefined-categories-api-methods-categories-list-by-revision.html
 order: 20
 indicator: both
 ---

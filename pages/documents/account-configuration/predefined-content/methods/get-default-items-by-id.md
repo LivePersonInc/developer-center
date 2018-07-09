@@ -7,7 +7,7 @@ level3: Predefined Content API
 level4: Methods
 
 order: 10
-permalink: account-configuration-predefined-content-get-default-items-by-id.html
+permalink: predefined-content-api-methods-get-default-predefined-content-by-id.html
 
 indicator: both
 ---

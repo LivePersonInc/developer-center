@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 30
-permalink: administration-create-agent-groups.html
+permalink: agent-groups-api-methods-create-agent-groups.html
 
 indicator: both
 ---

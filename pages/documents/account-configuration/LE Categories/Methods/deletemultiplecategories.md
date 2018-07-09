@@ -5,7 +5,7 @@ level2: Account Configuration
 level3: Predefined Categories API
 level4: Methods
 
-permalink: account-configuration-categories-delete-multiple.html
+permalink: predefined-categories-api-methods-delete-multiple-categories.html
 order: 90
 indicator: both
 ---

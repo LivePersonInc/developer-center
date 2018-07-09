@@ -6,7 +6,7 @@ level2: Admin
 level3: Skills API
 level4: Methods
 order: 20
-permalink: administration-get-skill-by-id.html
+permalink: skills-api-methods-get-skill-by-id.html
 indicator: both
 ---
 
