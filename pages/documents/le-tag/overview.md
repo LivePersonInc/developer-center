@@ -6,7 +6,7 @@ level3: LE-Tag
 
 level-order: 3
 order: 1
-permalink: lp-tag-tag-events-overview.html
+permalink: le-tag-overview.html
 root-link: true
 indicator: both
 ---

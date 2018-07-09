@@ -6,7 +6,7 @@ level3: LE-Tag
 level4: Events
 
 order: 10
-permalink: lp-tag-visitor-flow.html
+permalink: le-tag-events-visitor-flow-events.html
 
 indicator: both
 ---

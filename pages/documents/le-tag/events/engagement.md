@@ -6,7 +6,7 @@ level3: LE-Tag
 level4: Events
 
 order: 20
-permalink: lp-tag-engagement.html
+permalink: le-tag-events-engagement-events.html
 
 indicator: both
 ---
