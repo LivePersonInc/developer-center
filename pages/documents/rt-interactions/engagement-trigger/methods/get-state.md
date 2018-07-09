@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Engagement Trigger API
 level4: Methods
 order: 30
-permalink: trigger-getstate.html
+permalink: engagement-trigger-api-methods-getengagementstate.html
 
 indicator: both
 ---

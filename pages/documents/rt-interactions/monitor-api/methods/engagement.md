@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
 order: 20
-permalink: rt-interactions-monitoring-methods-engagement.html
+permalink: monitoring-api-methods-engagement.html
 indicator: messaging
 ---
 

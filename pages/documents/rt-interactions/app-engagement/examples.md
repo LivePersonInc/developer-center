@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: App Engagement API
 
 order: 22
-permalink: rt-interactions-example.html
+permalink: app-engagement-api-impression-events-body-example.html
 
 indicator: both
 ---

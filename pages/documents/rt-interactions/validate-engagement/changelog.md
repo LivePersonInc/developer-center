@@ -5,7 +5,7 @@ level1: Documents
 level2: Real Time Interactions
 level3: Validate Engagement API
 order: 231
-permalink: rt-interactions-validate-engagement-changelog.html
+permalink: validate-engagement-api-changelog.html
 indicator: both
 ---
 

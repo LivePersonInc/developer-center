@@ -6,7 +6,7 @@ level3: App Engagement API
 level4: Methods
 
 order: 10
-permalink: rt-interactions-create-session.html
+permalink: app-engagement-api-methods-create-session.html
 
 indicator: both
 ---

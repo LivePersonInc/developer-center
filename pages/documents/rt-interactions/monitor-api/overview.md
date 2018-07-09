@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Monitoring API
 level-order: 8
 order: 1
-permalink: rt-interactions-monitoring-overview.html
+permalink: monitoring-api-overview.html
 root-link: true
 indicator: messaging
 ---

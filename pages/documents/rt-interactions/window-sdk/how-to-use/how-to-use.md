@@ -7,7 +7,7 @@ level4: Instructions
 
 
 order: 20
-permalink: rt-interactions-window-sdk-how-to-use.html
+permalink: engagement-window-widget-sdk-instructions-how-to-use-the-sdk.html
 indicator: chat
 ---
 

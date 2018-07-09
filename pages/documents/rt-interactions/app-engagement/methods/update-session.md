@@ -6,7 +6,7 @@ level3: App Engagement API
 level4: Methods
 
 order: 20
-permalink: rt-interactions-update-session.html
+permalink: app-engagement-api-methods-update-session.html
 
 indicator: both
 ---

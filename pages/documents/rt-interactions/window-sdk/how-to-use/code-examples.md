@@ -6,7 +6,7 @@ level3: Engagement Window Widget SDK
 level4: Instructions
 
 order: 40
-permalink: rt-interactions-window-sdk-code-examples.html
+permalink: engagement-window-widget-sdk-instructions-code-examples.html
 
 indicator: chat
 ---

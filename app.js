@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/Rich Messaging',
+    root: './pages/documents/rt-interactions',
     entryType: 'files',
     depth: 3
 };

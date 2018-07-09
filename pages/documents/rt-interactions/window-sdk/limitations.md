@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Engagement Window Widget SDK
 
 order: 3
-permalink: rt-interactions-window-sdk-limitations.html
+permalink: engagement-window-widget-sdk-limitations.html
 
 indicator: chat
 ---
