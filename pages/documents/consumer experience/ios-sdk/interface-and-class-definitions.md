@@ -205,6 +205,8 @@ class : NSObject {
 class : NSObject {
     var campaignId: Int // CampaignID
     var engagementId: Int // EngagementID
+    var connectorId: Int
+    var engagementRevision: Int
     var conversationId: String? // Returned when there's an open conversation
     var status: String?
     var contextId: String?
