@@ -38,6 +38,10 @@
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
   font-size: 20px !important;
+  border-bottom: unset;
+  margin-top: none;
+  width: 9%;
+  border-bottom: 1px solid #4a4a4a !important;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column:before {
@@ -48,7 +52,12 @@
   background-color: #fff !important;
 }
 
-.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  border-bottom: unset;
-  margin-top: none;
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  background: rgba(0, 119, 255, 0.1) !important;
+  font-weight: bold;
+  color: inherit;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  color: #6f6f6f;
 }

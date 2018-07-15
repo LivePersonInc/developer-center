@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/Products/',
+    root: './pages/documents/consumer experience/connector-api/examples',
     entryType: 'files',
     depth: 3
 };

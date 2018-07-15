@@ -5,7 +5,7 @@
     - pagename: Overview
   - documentname: Retrieve API Domains
     pages:
-    - pagename: Overview
+    - pagename: Domain API
   - documentname: Add Agent Widgets
     pages:
     - pagename: Add Your Own Widgets to the Agent Workspace
@@ -103,7 +103,7 @@
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
-  - documentname: Mobile App Messaging SDK - Android
+  - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
     - pagename: Quick Start
