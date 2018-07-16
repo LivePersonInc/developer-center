@@ -35,12 +35,12 @@ body {
 
   .defaultwrapper {
     display: grid;
-    grid-template-columns: 2fr 0.37fr 8fr 1fr;
+    grid-template-columns: 2fr 0.37fr 8fr 1fr 1fr;
     grid-template-rows: auto 1fr 1fr auto;
   }
 
   .defaultheader {
-    grid-column: 2 / span 3;
+    grid-column: 3 / span 3;
     grid-row: 1 / span 1;
     background-color: #fff;
     border-bottom: solid 1px #dedddd;
@@ -51,7 +51,7 @@ body {
   }
 
   .defaultsidebar {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
     grid-row: 1 / span 11;
     background-color: rgba(222, 221, 221, 0.5);
     display:flex;
@@ -62,17 +62,19 @@ body {
     grid-column: 3 / span 1;
     display: flex;
     margin-bottom: 50px;
+    margin-left: 70px;
+    flex-direction: column;
   }
 
   .defaultbutton {
-    grid-column: 4 / span 1;
+    grid-column: 5 / span 1;
     height: 44px;
     border-radius: 5px;
     background-color: #f2f2f2;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding: 12px 23px;
-    margin-right: 29px;
+    margin-right: 15px;
     margin-top: 29px;
   }
 
@@ -82,7 +84,7 @@ body {
 
   .defaultfooter {
     grid-row: 11 / span 1;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 5;
     background-color: #4a4a4a;
   }
 }
@@ -163,7 +165,7 @@ table {
   content: "!";
   background-color: #f88181;
   position: absolute;
-  left: 444px;
+  left: 480px;
   color: #fff;
   width: 16px;
   height: 16px;
@@ -178,6 +180,10 @@ table {
   margin-left: -25px;
 }
 
+.important p:not(:first-child) {
+  margin-left: -25px;
+}
+
 /* Sidebar Styling Begins */
 
 .solutionslist {
@@ -189,6 +195,7 @@ table {
   align-self: center;
   position: fixed;
   top: 125px;
+  left: 38px;
 }
 
 .documentsbutton {
@@ -197,10 +204,16 @@ table {
   font-size: 16px;
   font-weight: 500;
   margin-right: 50px;
+  display: flex;
 }
 
 .documentsbutton a {
   color: #4a4a4a;
+}
+
+.documentsbuttonimage {
+  margin-right: 16px;
+  height: 20px;
 }
 
 .solutionsbutton {
@@ -208,10 +221,52 @@ table {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
+  display: flex;
 }
 
 .solutionsbutton a {
   color: #4a4a4a;
+}
+
+.solutionsbuttonimage {
+  margin-right: 16px;
+  height: 20px;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #4a4a4a;
+  -webkit-transition: width 250ms ease-in-out;
+  -moz-transition: width 250ms ease-in-out;
+  -o-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
+}
+
+.underline.lined:after {
+  width: 50%;
+}
+
+.solutionsunderline:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 168px;
+  width: 0;
+  height: 1px;
+  background: #4a4a4a;
+  -webkit-transition: width 250ms ease-in-out;
+  -moz-transition: width 250ms ease-in-out;
+  -o-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
+}
+
+.solutionsunderline.lined:after {
+  width: 50%;
 }
 
 .topfolder {
@@ -291,6 +346,29 @@ table {
 .nav > li > a:focus {
   background-color: inherit !important;
   outline: inherit;
+}
+
+.homeitem {
+  margin-left: 5px;
+}
+
+.homeitem a {
+  font-family: "LucidaGrande";
+  font-size: 16px;
+  color: #8c909c;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #5879da;
+}
+
+.homeitem a:hover {
+  color: #8c909c !important;
+}
+
+.sitelogo {
+  width: 188px;
+  margin-top: 21px;
+  margin-left: 32px;
 }
 
 

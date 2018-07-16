@@ -1,9 +1,12 @@
 <div class="sidebarbuttons">
-  <div class="documentsbutton underline"><a onclick='sidebarbuttonclick()' href="">Documents</a></div>
-  <div id="solutionsbutton" class="solutionsbutton underline"><a onclick='solutionsbuttonclick()' href="">Solutions</a></div>
+  <div class="documentsbutton"><img class="documentsbuttonimage" src="img/documents-selected.png" /><a class="underline lined" onclick='sidebarbuttonclick()' href="">Documents</a></div>
+  <div id="solutionsbutton" class="solutionsbutton"><img class="solutionsbuttonimage" src="img/solutions-unselected.png" /><a class="solutionsunderline" onclick='solutionsbuttonclick()' href="">Solutions</a></div>
 </div>
 
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
+  <li class="homeitem">
+    <a href="/index.html">Getting Started</a>
+  </li>
   {% for category in site.data.documents %}
   <li class="folder topfolder">
     <a href="">{{ category.categoryname }}</a>

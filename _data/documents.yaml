@@ -56,10 +56,10 @@
 
 - categoryname: Consumer Experience
   documents:
-  - documentname: Mobile App Messaging SDK - iOS
+  - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
-    - pagename: Quickstart
+    - pagename: Quick Start
     - pagename: Configuration
       subpages:
       - subpagename: Initialization
@@ -76,7 +76,7 @@
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
     - pagename: Authentication
-    - pagename: Notification
+    - pagename: Notifications
     - pagename: Customizing Toast Notifications
     - pagename: Customization and Branding
       subpages:

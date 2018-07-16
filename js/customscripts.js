@@ -94,37 +94,47 @@ $('.sidebarTitle').ready(function(){
 
 //level4 collapsing
 $(function() {
+  var originalURL = window.location.href;
+  var modifiedURL = '/' + originalURL.split('/').reverse()[0];
+  var currentPage = $('a[href="'+modifiedURL+'"]');
+  currentPage = currentPage.addClass("activepage");
+  var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder")
+  if (toOpen) {
+      $(".activepage").parent().parent().show();
+      $(".activepage").parent().parent().parent().parent().show();
+      $(".activepage").parent().parent().parent().parent().parent().parent().show();
+      $(".activepage").parent().show();
+      $(".activepage").parent().parent().prev().data("expanded","true");
+      $(".activepage").parent().parent().parent().parent().prev().data("expanded","true");
+      $(".activepage").parent().parent().parent().parent().parent().parent().prev().data("expanded","true");
+      $(".activepage").parent().parent().prev().addClass("active");
+      $(".activepage").parent().parent().parent().parent().prev().addClass("active");
+      $(".activepage").parent().parent().parent().parent().parent().parent().prev().addClass("active");
+      $(".activepage").parent().prev().data("expanded","true");
+      onSlideComplete();
+      $("ul#mysidebar").css("visibility","visible");
+  }
+  else
+      $("ul#mysidebar").css("visibility","visible");
 
+  $(".folder > a").click(function(){
+      var hasExpanded = $(this).data("expanded") == "true";
+      if (hasExpanded) {
+          $(this).next().slideUp(400,onSlideComplete);
+          $(this).data("expanded","false");
+          $(this).removeClass("active");
+      } else {
+          //$(".folder ul").slideUp(400,null);
+          //$(".folder > a").data("expanded","false");
+          //$(".folder > a").removeClass("active");
 
-    var toOpen = $(".activepage").parent().parent().hasClass("folder")
-    if (toOpen) {
-        $(".activepage").parent().show();
-        $(".activepage").parent().prev().data("expanded","true");
-        $(".activepage").parent().prev().addClass("active");
-        onSlideComplete();
-        $("ul#mysidebar").css("visibility","visible");
-    }
-    else
-        $("ul#mysidebar").css("visibility","visible");
+          $(this).next().slideDown(400,onSlideComplete);
+          $(this).data("expanded","true");
+          $(this).addClass("active");
+      }
 
-    $(".folder > a").click(function(){
-        var hasExpanded = $(this).data("expanded") == "true";
-        if (hasExpanded) {
-            $(this).next().slideUp(400,onSlideComplete);
-            $(this).data("expanded","false");
-            $(this).removeClass("active");
-        } else {
-            //$(".folder ul").slideUp(400,null);
-            //$(".folder > a").data("expanded","false");
-            //$(".folder > a").removeClass("active");
-
-            $(this).next().slideDown(400,onSlideComplete);
-            $(this).data("expanded","true");
-            $(this).addClass("active");
-        }
-
-        return false;
-    });
+      return false;
+  });
 
 });
 

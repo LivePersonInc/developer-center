@@ -1,6 +1,6 @@
 ---
 title: Zendesk
-permalink: crm-integrations-zendesk.html
+permalink: crm-integrations-zendesk.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations
