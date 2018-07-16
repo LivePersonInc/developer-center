@@ -1,0 +1,13 @@
+.notfoundmain {
+  display: flex;
+  flex-direction: column;
+}
+
+.notfoundimage {
+  width: 75px;
+}
+
+.notfoundmain span {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

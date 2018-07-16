@@ -353,7 +353,7 @@ table {
 }
 
 .homeitem a {
-  font-family: "LucidaGrande";
+  font-family: "Roboto";
   font-size: 16px;
   color: #8c909c;
   margin-bottom: 20px;
@@ -369,6 +369,7 @@ table {
   width: 188px;
   margin-top: 21px;
   margin-left: 32px;
+  position: fixed;
 }
 
 

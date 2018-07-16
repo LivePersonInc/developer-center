@@ -332,7 +332,7 @@ ul.mysidebar.nav .topfolder >  a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #8c909c;
+  color: #8c909c !important;
   overflow-wrap:break-word;
 }
 
@@ -344,6 +344,7 @@ ul.mysidebar.nav > li > a{
 ul.mysidebar li ul li{
   margin-right: 0px;
 }
+
 ul.mysidebar.nav li a.active{
   color: #172136;
   font-weight: bold;

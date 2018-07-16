@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+  anchors.add('h3');
+});
+
 
 $('#mysidebar').height($(".nav").height());
 
@@ -23,8 +27,6 @@ $( document ).ready(function() {
     /**
      * AnchorJS
      */
-    anchors.add('h2,h3,h4,h5');
-
 
     //solve problem with width tables in mobile
     if (mobileAndTabletcheck()) {
@@ -123,6 +125,7 @@ $(function() {
           $(this).next().slideUp(400,onSlideComplete);
           $(this).data("expanded","false");
           $(this).removeClass("active");
+          $(this).parent().removeClass("active");
       } else {
           //$(".folder ul").slideUp(400,null);
           //$(".folder > a").data("expanded","false");
