@@ -86,6 +86,9 @@ Filters examples:
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
 |contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
 
+**Note: search by keywords, summary or engagement attributes**
+
+In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
 
 ### Response
@@ -164,8 +167,8 @@ Name                 | Description                                              
 | goalName | Name of the campaign's goal. | alphanumeric (50) | |
 | engagementAgentNote | Note to the Agent defined for the campaign's engagement. | alphanumeric  | |
 | engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
-| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
-| visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
+| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available). | numeric  | |
+| visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50) | |
 | engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | |
 | engagementApplicationName | Engagement's application name. | alphanumeric | |
 | engagementApplicationTypeId | Engagement's application type id | alphanumeric | |
