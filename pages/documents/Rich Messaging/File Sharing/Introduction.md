@@ -13,7 +13,7 @@ indicator: both
 
 ### Introduction
 
-The LiveEngage Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images.
+The LiveEngage Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images. File Sharing can also be enabled by using the Connector API, for cases when images are sent through third party applications. Please refer to the [Connector API documentation](https://developers.liveperson.com/share-image-example.html) for more information on how to do this.
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
