@@ -87,25 +87,7 @@ body {
     background-color: #4a4a4a;
   }
 
-  @media screen and (max-width:1444px){
-    .defaultheader {
-      grid-column: 4 / span 4;
-    }
 
-    .defaultsidebar {
-      grid-column: 1 / span 3;
-    }
-
-    .defaultcontent {
-      margin-left: 70px;
-    }
-
-    .defaultbutton {
-      width: 120px;
-      padding: 12px 13px;
-    }
-  }
-}
 
 /* CSS-Grid Ends */
 
@@ -266,7 +248,7 @@ table {
 }
 
 .underline.lined:after {
-  width: 50%;
+  width: 45%;
 }
 
 .solutionsunderline:after {
@@ -284,17 +266,7 @@ table {
 }
 
 .solutionsunderline.lined:after {
-  width: 50%;
-}
-
-@media screen and (max-width: 1444) {
-  .solutionsunderline.lined:after {
-    width: 42%;
-  }
-
-  .underline.lined:after {
-    width: 42%;
-  }
+  width: 42%;
 }
 
 .topfolder {
@@ -454,4 +426,27 @@ table {
   margin-bottom: 35px;
   border: 0;
   border-top: 1px solid #dedddd;;
+}
+
+@media screen and (max-width:1440px){
+  .defaultheader {
+    grid-column: 4 / span 4;
+  }
+
+  .defaultsidebar {
+    grid-column: 1 / span 3;
+  }
+
+  .defaultcontent {
+    margin-left: 70px;
+  }
+
+  .defaultbutton {
+    width: 120px;
+    padding: 12px 13px;
+  }
+}
+
+@media screen and (max-width:1440px){
+  
 }
