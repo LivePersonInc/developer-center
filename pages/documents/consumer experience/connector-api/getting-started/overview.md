@@ -54,7 +54,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 * Send a text message
 
-* Send [structured content](structured-content-templates.html){:target="_blank"}
+* Send [structured content](/rich-messaging-structured-content-card.html){:target="_blank"}
 
 * See SENT, READ and RECEIVED indications
 
