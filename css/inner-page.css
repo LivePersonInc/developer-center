@@ -104,6 +104,11 @@ pre code {
   /*max-width: 150px;*/
   font-weight: bold;
 }
+
+.post-content table tbody tr:only-child {
+  background-color: #f8f8f8;
+}
+
 .post-content table  tr  td {
    font-size: 0.8em;
    font-family: "Open Sans";

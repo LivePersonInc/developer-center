@@ -91,6 +91,10 @@ body {
 
 /* CSS-Grid Ends */
 
+.post-content img {
+  width: 100%;
+}
+
 /* Algolia Styling Begins */
 
 #aa-search-input {
@@ -448,5 +452,5 @@ table {
 }
 
 @media screen and (max-width:1440px){
-  
+
 }

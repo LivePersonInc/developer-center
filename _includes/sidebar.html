@@ -49,7 +49,7 @@
   <ul>
     {% for document in solution.documents %}
     <li class="pageitem">
-      <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ page.pagename | slugify }}.html">{{ document.documentname }}</a>
+      <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ solution.solutionname | append: '/' | append: document.documentname | slugify }}.html">{{ document.documentname }}</a>
     </li>
     {% endfor %}
   </ul>
