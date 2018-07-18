@@ -8,7 +8,7 @@ level4: Instructions
 order: 40
 permalink: engagement-window-widget-sdk-instructions-code-examples.html
 
-indicator: chat
+indicator: both
 ---
 
 **'Init’ and 'bind’ (Single event)**

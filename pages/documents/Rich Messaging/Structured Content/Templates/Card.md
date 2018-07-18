@@ -1,7 +1,7 @@
 ---
 title: Card
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: Structured Content
 level4: Templates
@@ -10,11 +10,9 @@ permalink: structured-content-templates-card.html
 indicator: both
 ---
 
-The very basic structured content elements that can contain either or elements, layout, styling and actions.
+The very basic structured content elements that can contain either/or elements, layout, styling and actions.
 
-### Limitations
-
-### Best Practices
+![Card](img/card.png)
 
 ### Examples
 

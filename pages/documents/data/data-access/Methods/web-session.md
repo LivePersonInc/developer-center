@@ -2,7 +2,7 @@
 title: Web Session
 level1: Documents
 level2: Data
-level3: Data Access API (BETA)
+level3: Data Access API
 level4: Methods
 order: 30
 permalink: data-access-api-(beta)-methods-web-session.html
@@ -129,6 +129,8 @@ JSON Example
                                            "companySize": null,
                                            "accountName": null,
                                            "role": null,
+                                           "storeZipCode":null,
+                                           "storeNumber":null,
                                            "lastPaymentDate": null,
                                            "registrationDate": null
                                        }
@@ -1041,6 +1043,9 @@ Here is a description of the data structure of the existing engagement attribute
 | role | User role in the organization. | string |
 | lastPaymentDate | User’s last payment date (in YMDDate format). | Date |
 | registrationDate | User’s registration date (in YMDDate format). | Date |
+| storeNumber | The store's number | String |
+| storeZipCode |The store's zip code | String |
+
 
 #### YMDDate
 

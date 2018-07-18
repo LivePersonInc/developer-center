@@ -2,7 +2,7 @@
 title: Changelog
 level1: Documents
 level2: Data
-level3: Data Access API (BETA)
+level3: Data Access API
 
 order: 62
 permalink: data-access-api-(beta)-changelog.html

@@ -8,7 +8,7 @@ level4: Instructions
 order: 30
 permalink: engagement-window-widget-sdk-instructions-event-structure.html
 
-indicator: chat
+indicator: both
 ---
 
 Each event contains three parameters: id, type and data. They appear as follows:
@@ -47,7 +47,32 @@ Each event contains three parameters: id, type and data. They appear as follows:
 }
 ```
 
-*Note: This data will be relevant for messaging in future versions.*
+**"engagementInfo"**
+
+```javascript
+{
+  allowUnauthMsg: <boolean>,
+  async: <boolean>,
+  availabilityPolicy: 0,
+  cid: 1231231312,
+  connector: <object>,
+  eid: 1231231312,
+  env: <string>,
+  ename: <string>,
+  eventName: <string>,
+  isPopOut: <boolean>,
+  lang: <string>,
+  lewid: 1231231312,
+  params: <string>,
+  scid: <string>,
+  sessionKey: <string>,
+  site: <string>,
+  ssid: <string>,
+  ssuid: <string>,
+  svid: <string>,
+  target: <string>
+}
+```
 
 **"messages"**
 

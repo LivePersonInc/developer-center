@@ -21,6 +21,8 @@ It is important to understand that this API creates a "workdays" object which is
 
 **Note**: the Workdays feature relies on automatic messages in order to inform the visitor of the expected time to response. If the automatic messages feature is disable for an account, the Workdays feature will not work as expected.
 
+**Note**: Use the [Skills API](/administration-skills-appendix.html) to set the workingHoursId for the skill.
+
 ### Use Cases
 
 1. Set hours of operation for different teams working on different schedules. For example, your support team might be available 24/7, while your sales are working US business hours. If a consumer starts a conversation with your sales team outside of US business hours, they'll receive an updated and correct expected response time. If they start a conversation with your support team, they'll receive the current time to response for that skill.

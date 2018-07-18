@@ -13,6 +13,604 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.2.1
+
+iOS Messaging SDK v3.2.1 contains the following bug fixes:
+
+#### Symptom:
+
+When trying to get the number of unread messages and the token expired, the SDK doesn’t provide a relevant indication.
+
+#### Fix:
+
+When trying to get the number of unread messages and the token expired, a token expired callback will now be returned.
+
+### iOS Messaging SDK - Version 3.2
+
+**Version 3.2 roll-out: July 1st 2018**
+
+### Main Features
+
+#### Audio Messaging
+
+**Type**: Consumer Experience Feature
+**Available to all customers?** No. Please contact your account team.
+
+Consumers are now able to send Audio messages to brands which makes the communication even better.
+
+In Audio messages, the Brands can configure:
+
+1. The maximum length of the message (15 seconds - 2 minutes long by default)
+2. Enable/Disable the feature
+3. Max stored audio messages on device
+4. Tooltips text
+
+#### Unauthenticated In-App Messaging
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes.
+
+Brands can communicate with their consumers in an unauthenticated manner while being able to leverage additional LiveEngage capabilities such as Campaigns for Messaging.
+
+Unauthenticated messaging allows brands to:
+
+1. Easier & quicker on-boarding to LiveEngage
+
+2. Having pre authentication messaging use cases, for example, assistance with password recovery
+
+3. The ability to use Campaigns for Messaging while having unauthenticated conversations
+
+#### Quick Replies
+
+**Type:** Consumer Experience Feature
+
+**Available to all customers?** Yes.
+
+Quick Replies enrich the consumer experience by using rich text interactions that guide the consumer throughout the conversation. The consumer is presented with a number of brief answers that can be selected in order to navigate the conversation in the right path.
+
+The Quick Replies can contain the same actions as Structured Content buttons:
+
+1. Publish text
+
+2. Link
+
+3. Navigation
+
+As Quick Replies contain predefined values, the feature can dramatically improvie communication with Bots and improve both consumer experience and operational efficiency.
+
+#### Structured Content Carousel
+
+**Type:** Consumer Experience Feature
+
+**Available to all customers?** Yes.
+
+Structured Content experience is enriched with the Carousel allowing more capabilities, more use cases and moving agents one step forward in being able to provide end to end assistance.
+
+The Carousel consists of more than one card at a time, side by side and the consumer can swipe between cards.
+
+#### Experience and Branding Enhancements
+
+**Type:** Consumer Experience Feature
+
+**Available to all customers?** Yes.
+
+The SDK allows Brands to customize the SDK even more, giving a personal touch to their cusomers.
+
+**Large Emojis**
+
+When using Emojis in a conversation:
+
+1. One Emoji - the Emoji will be enlarged to an extra large size.
+
+2. Two Emojis - the Emojis will be enlarged to a Large size.
+
+3. More than two Emojis or Emojis with text - the Emojis' size will be small.
+
+**Conversation Window Background Image**
+
+A new way for Brands to set their own background in conversations to add a more personal touch.
+
+### APIs
+
+#### New APIs
+
+<table>
+  <thead>
+    <tr>
+      <th>API</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>LPMonitoringIdentity - added new object to be used as a param in the LPMonitoringAPI.</td>
+      <td>The object replaced consumerId which is now deprecated.</td>
+    </tr>
+    <tr>
+      <td>func getEngagement(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_error: NSError)->())</td>
+      <td>Use this API to get an engagement for a consumer in an appInstallationId context. The returned value is based on the provided Engagement Attributes. As an optional parameter, you can pass SDE Data which includes Entry Points or any other Engagement Attributes for routing the Parameters:
+      <br>
+        - identities: an array of identity
+        objects of type LPMonitoringIdentity
+        which includes the details on the
+        consumer and issuer
+        <br>
+        - monitoringParams: an instance of
+        includes optional Array of Entry
+        Points and an optional dictionary of
+        Engagement Attributes
+        <br>
+        - completion: completion block with
+        response of type
+        LPGetEngagementResponse. This
+        response includes sessionID and
+        visitorID along with
+        LPEngagementDetails object.
+        <br>
+        - failure: failure block with an error in
+        case the request fails
+        </td>
+      </tr>
+      <tr>
+        <td>func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(),failure: @escaping (_ error: NSError)->())</td>
+        <td>Use this API to report Engagement Attributes for a consumer in an appInstallationId context including show and accept impression. Parameters:
+        <br>
+          - identities: an array of identity
+          objects of type LPMonitoringIdentity
+          which includes the details on the
+          consumer and issuer
+          <br>
+          - monitoringParams: an instance of
+          LPMonitoringParams includes
+          optional Array of Entry Points and an
+          optional dictionary of Engagement
+          Attributes. Additional optional
+          parameter is PageID which is used
+          for Page identification for sending
+          events on the current engagement.
+          PageID will be received in
+          LPSendSDEResponse and in
+          LPGetEngagementResponse
+          <br>
+          - completion: completion block with
+          response of type
+          LPSendSDEResponse. This
+          response includes sessionID and
+          visitorID and pageID for future use.
+          <br>
+          - failure: failure block with an error in
+          case the request fails
+          </td>
+        </tr>
+        <tr>
+          <td>LPAuthenticationType - a new enum. Was added to LPAuthenticationParams</td>
+          <td>This enum is used for determine the authentication type with the following options:
+          <br>
+            - signup (default) // old
+            unauthenticated method. <strong>Will
+            be deprecated on Jun 2019</strong>
+          <br>
+            - unauthenticated
+          <br>
+            - authenticated
+            </td>
+          </tr>
+          <tr>
+            <td>registerPushNotifications → Added new optional parameter authenticationParams:
+                func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)
+            </td>
+            <td>If passing authentication params, this method will register immediately to LPPusher, the registration will be performed when calling showConversation</td>
+          </tr>
+        </tbody>
+      </table>
+
+#### Deprecated APIs
+
+<table>
+  <thead>
+    <tr>
+      <th>API</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>func addContentToMessage(text: String) from LPMessagingSDK</td>
+    </tr>
+    <tr>
+      <td>func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())</td>
+    </tr>
+    <tr>
+      <td>func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())</td>
+    </tr>
+  </tbody>
+  </table>
+
+#### Callbacks
+
+**New Callbacks**
+
+<table>
+  <thead>
+    <tr>
+      <th>API</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>LPMessagingSDKUnauthenticatedUserExpired()</td>
+      <td>Called when an unauthenticated user expired and can no longer be in use. When this callback is invoked, the previous open conversation will be closed locally.</td>
+    </tr>
+    <tr>
+      <td>LPMessagingSDKPushRegistrationDidFinish()</td>
+      <td>Called when the SDK registration for LP Pusher service has been succeeded. Pusher is the service that responsible for Remote Push Notifications routing and delivering from and to APNS.</td>
+    </tr>
+    <tr>
+      <td>LPMessagingSDKPushRegistrationDidFail(_ error: NSError)</td>
+      <td>Called when the SDK registration for LP Pusher service has failed with error. Pusher is the service that responsible for Remote Push Notifications routing and delivering from and to APNS.</td>
+    </tr>
+  </tbody>
+  </table>
+
+#### Configurations
+
+**General Configurations**
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>ttrShouldShow</td>
+      <td>Toggling this on will show TTR notifications. When the auto messages feature is enabled, TTR notifications will not be displayed regardless of this parameter.</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>announceAgentTyping</td>
+      <td>This configuration already existed. If true, show agent is typing indicator in selected position and accessibility will announce when agent is typing a message to the consumer. If false, will not show any indication, and will not announce when agent is typing a message.</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>showAgentTypingInMessageBubble</td>
+      <td>If true, shows agent is typing indicator in a message bubble. If false, show indicator under Agent label in navigator bar. If announceAgentTyping is false, will not show any "is typing" indicator regardless of current value</td>
+      <td>true</td>
+    </tr>
+  </tbody>
+  </table>
+
+#### Experience and Branding Enhancements
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>enableEnlargeEmojis</td>
+      <td>When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>conversationBackgroundPortraitImage</td>
+      <td>When not nil, will be used as the conversation portrait background image.</td>
+      <td>nil</td>
+    </tr>
+    <tr>
+      <td>conversationBackgroundLandscapeImage</td>
+      <td>When not nil, will be used as the conversation landscape background image</td>
+      <td>nil</td>
+    </tr>
+    <tr>
+      <td>conversationBackgroundImageContentMode</td>
+      <td>Defines the content mode of the conversation background image.</td>
+      <td>.scaleToFill</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Structured Content
+
+  <table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>structuredContentBubbleTopLeftCornerRadius</td>
+      <td>Sets the corner radius of the top left corner of a Structured Content card</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>structuredContentBubbleTopRightCornerRadius</td>
+      <td>Sets the corner radius of the top right corner of a Structured Content card</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>structuredContentBubbleBottomLeftCornerRadius</td>
+      <td>Sets the corner radius of the bottom left corner of a Structured Content card</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>structuredContentBubbleBottomRightCornerRadius</td>
+      <td>Sets the corner radius of the bottom right corner of a Structured Content card</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Audio Messaging
+
+  <table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>recordingDurationLimit: TimeInterval</td>
+      <td>Maximum time frame for recording audio message (in seconds).</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <td>enableAudioSharing</td>
+      <td>True - Enables Audio Sharing feature, False - Disables Audio Sharing</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>maxNumberOfSavedAudioFilesOnDisk</td>
+      <td>This number represents how many audio files will be saved on the disk. Exceeding files are deleted when the app closes.</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Quick Replies
+
+  <table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>quickReplyButtonVerticalPadding</td>
+      <td>Distance between the bottom and top edges of the button to the bottom and top edges of the text</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>quickReplyButtonHorizontalPadding</td>
+      <td>Distance between the right and left edges of the button to the right and left edges of the text</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td>quickReplyVerticalMargin</td>
+      <td>Vertical margin between quick reply buttons</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>quickReplyHorizontalMargin</td>
+      <td>Horizontal padding between quick reply buttons</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>quickReplyButtonBorderWidth</td>
+      <td>Border size of Quick Reply buttons</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Updated Configurations
+
+  <table>
+  <thead>
+    <tr>
+      <th>Configuration</th>
+      <th>Description</th>
+      <th>Old Value</th>
+      <th>New Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>inputTextViewCornerRadius</td>
+      <td>User Input TextView corner radius</td>
+      <td>17.0</td>
+      <td>20.0</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+### Strings Localization
+
+#### General Strings
+
+  <table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>isTyping
+  </td>
+      <td>Indication that appears while Agent is typing a new message.
+  </td>
+      <td>"typing…"</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Quick Replies
+
+  <table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>quickReplyButton</td>
+      <td>Accessibility string when hovering on the Quick Replies control. </td>
+      <td>"Quick reply button"
+  </td>
+    </tr>
+    <tr>
+      <td>outOf</td>
+      <td>Accessibility string when hovering on the Quick Replies button</td>
+      <td>"out of"</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Unauthenticated Messaging
+
+  <table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>unauthenticatedUserExpiredTitle</td>
+      <td>The title of the presented dialog when the identity is expired.</td>
+      <td>New Conversation</td>
+    </tr>
+    <tr>
+      <td>unauthenticatedUserExpiredMessage
+  </td>
+      <td>The body of the presented dialog when the identity is expired.
+  </td>
+      <td>"Hi there! As we haven't seen you for a while, we're opening a new conversation for you"</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+#### Audio Messaging
+
+  <table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>toolTipLongTapToRecord</td>
+      <td>Tooltip shown when short tapping the mic button. </td>
+      <td>"Long tap to record"</td>
+    </tr>
+    <tr>
+      <td>toolTipReleaseButtonForRecording</td>
+      <td>Tooltip shown when keeping mic tapped.</td>
+      <td>"Release for recording"</td>
+    </tr>
+    <tr>
+      <td>toolTipRecordLimitReached</td>
+      <td>Tooltip shown when the maximum recording time reached.</td>
+      <td>“Recording limit has been reached, click to send”</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+### Features Enablement Chart
+
+  <table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Backend update</th>
+      <th>Backend enablement</th>
+      <th>Backend configuration </th>
+      <th>SDK enablement </th>
+      <th>SDK configuration </th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+      <td>Audio Messaging</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Unauthenticated Messaging</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Quick Replies</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Structured Content Carousel</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Branding Enhancements</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+  </table>
+
+
 ### iOS Messaging SDK - Version 3.1.5
 
 Version 3.1.5 supports XCode 9.3 & XCode 9.4
@@ -134,6 +732,7 @@ Added the nickname of the agent instead of the first name.
 ### iOS Messaging SDK - Version 3.1.1
 
 #### Added support for XCode 9.3 and Swift 4.1
+
 
 
 ### iOS Messaging SDK - Version 3.1
@@ -1975,15 +2574,11 @@ A shortcut can now be configured to appear within the conversation when there ar
 
 Brands now have the ability to replace the Send button in a messaging conversation with a paper plane (Android) or arrow (iOS). This icon can be customized to match the brand’s colors.
 
-![Release Notes Set Icon](img/releasenotesseticon.png)
-
 
 ##### Link preview within conversation
 
 
 When sending a link within an Mobile App Messaging conversation, a preview of the link page will display within the thread, giving the consumer a useful overview of the link content.
-
-![Release Notes Link Preview](img/releasenoteslinkpreview.png)
 
 
 ##### Ability to remove resolved divider in thread

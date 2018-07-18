@@ -761,3 +761,8 @@ pre {
 .hide {
   visibility: none;
 }
+
+.important {
+  color: red;
+  font-weight: bold;
+}

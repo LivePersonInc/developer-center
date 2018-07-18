@@ -8,7 +8,7 @@ order: 1
 level-order: 4
 permalink: engagement-window-widget-sdk-overview.html
 root-link: true
-indicator: chat
+indicator: chat and messaging
 ---
 ### Introduction
 

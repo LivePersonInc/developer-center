@@ -26,10 +26,10 @@ indicator: messaging
     <td rowspan="3"><img src="img/User_bubbles (1,2,3).png"/></td>
   </tr>
   <tr>
-    <td><div class="designsheetnumber">2</div> remoteUserTypingTintColor</td>
+    <td><div class="designsheetnumber">2</div>userBubbleBackgroundColor, userBubbleBorderColor, userBubbleLinkColor, userBubbleTextColor, userBubbleBorderWidth, userBubbleTimestampColor, userBubbleSendStatusTextColor, userBubbleErrorTextColor, userBubbleErrorBorderColor </td>
   </tr>
   <tr>
-  <td><div class="designsheetnumber">3</div> userBubbleBackgroundColor, userBubbleBorderColor, userBubbleLinkColor, userBubbleTextColor, userBubbleBorderWidth, userBubbleTimestampColor, userBubbleSendStatusTextColor, userBubbleErrorTextColor, userBubbleErrorBorderColor</td>
+  <td><div class="designsheetnumber">3</div> remoteUserTypingTintColor</td>
   </tr>
   <tr>
     <td><div class="designsheetnumber">4</div> enableLinkPreview, linkPreviewBackgroundColor, linkPreviewTitleTextColor, linkPreviewDescriptionTextColor, linkPreviewSiteNameTextColor, linkPreviewBorderWidth, linkPreviewStyle, linkPreviewSiteNameTextColor </td>

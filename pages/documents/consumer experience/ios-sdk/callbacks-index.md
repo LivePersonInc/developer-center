@@ -20,32 +20,35 @@ The SDK uses 2 delegates:
 ### LPMessagingSDKDelegate
 
 ```swift
-protocol LPMessagingSDKdelegate {
-  optional func LPMessagingSDKCustomButtonTapped()
-  optional func LPMessagingSDKAgentDetails(_ agent: LPUser?)
-  optional func LPMessagingSDKAgentAvatarTapped(_ agent: LPUser?)
-  optional func LPMessagingSDKActionsMenuToggled(_ toggled: Bool)
-  optional func LPMessagingSDKHasConnectionError(_ error: String?)
-  optional func LPMessagingSDKCSATScoreSubmissionDidFinish(_ brandID: String, rating: Int)
-  optional func LPMessagingSDKCSATCustomTitleView(_ brandID: String) -> UIView>
-  optional func LPMessagingSDKConversationCSATSkipped(_ conversationID: String?)
-  optional func LPMessagingSDKUserDeniedPermission(_ permissionType: LPPermissionTypes)
-
-  func LPMessagingSDKObseleteVersion(_ error: NSError)
-  func LPMessagingSDKAuthenticationFailed(_ error: NSError)
-  func LPMessagingSDKTokenExpired(_ brandID: String)
-  func LPMessagingSDKError(_ error: NSError)
-  optional func LPMessagingSDKConnectionRetriesFailed(_ error: NSError)
-
-  optional func LPMessagingSDKAgentIsTypingStateChanged(_ isTyping: Bool)
-  optional func LPMessagingSDKConversationStarted(_ conversationID: String?)
-  optional func LPMessagingSDKConversationEnded(_ conversationID: String?)
-  optional func LPMessagingSDKConversationEnded(_ conversationID: String?, closeReason: LPConversationCloseReason)
-  optional func LPMessagingSDKConversationCSATDismissedOnSubmittion(_ conversationID: String?)
-  optional func LPMessagingSDKConversationCSATDidLoad(_ conversationID: String?)
-  optional func LPMessagingSDKConnectionStateChanged(_ isReady: Bool, brandID: String)
-  optional func LPMessagingSDKOffHoursStateChanged(_ isOffHours: Bool, brandID: String)
-  optional func LPMessagingSDKConversationViewControllerDidDismiss()
+  {
+  protocol LPMessagingSDKdelegate {
+    func LPMessagingSDKObseleteVersion(_ error: NSError)
+    func LPMessagingSDKAuthenticationFailed(_ error: NSError)
+    func LPMessagingSDKTokenExpired(_ brandID: String)
+    func LPMessagingSDKError(_ error: NSError)
+    optional func LPMessagingSDKCustomButtonTapped()
+    optional func LPMessagingSDKAgentDetails(_ agent: LPUser?)
+    optional func LPMessagingSDKAgentAvatarTapped(_ agent: LPUser?)
+    optional func LPMessagingSDKActionsMenuToggled(_ toggled: Bool)
+    optional func LPMessagingSDKHasConnectionError(_ error: String?)
+    optional func LPMessagingSDKCSATScoreSubmissionDidFinish(_ brandID: String, rating: Int)
+    optional func LPMessagingSDKCSATCustomTitleView(_ brandID: String) -> UIView>
+    optional func LPMessagingSDKConversationCSATSkipped(_ conversationID: String?)
+    optional func LPMessagingSDKUserDeniedPermission(_ permissionType: LPPermissionTypes)
+    optional func LPMessagingSDKConnectionRetriesFailed(_ error: NSError)
+    optional func LPMessagingSDKAgentIsTypingStateChanged(_ isTyping: Bool)
+    optional func LPMessagingSDKConversationStarted(_ conversationID: String?)
+    optional func LPMessagingSDKConversationEnded(_ conversationID: String?)
+    optional func LPMessagingSDKConversationEnded(_ conversationID: String?, closeReason: LPConversationCloseReason)
+    optional func LPMessagingSDKConversationCSATDismissedOnSubmittion(_ conversationID: String?)
+    optional func LPMessagingSDKConversationCSATDidLoad(_ conversationID: String?)
+    optional func LPMessagingSDKConnectionStateChanged(_ isReady: Bool, brandID: String)
+    optional func LPMessagingSDKOffHoursStateChanged(_ isOffHours: Bool, brandID: String)
+    optional func LPMessagingSDKConversationViewControllerDidDismiss()
+    optional func LPMessagingSDKCertPinningFailed(_ error: NSError)
+    optional func LPMessagingSDKPushRegistrationDidFinish()
+    optional func LPMessagingSDKPushRegistrationDidFail(_ error: NSError)
+    optional func LPMessagingSDKUnauthenticatedUserExpired()
 }
 ```
 
@@ -163,10 +166,30 @@ Invoked when the connection state is changed.
 
 ###  LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
 
-Delegate which is called when an off hours state changes.
+Called when an off hours state changes.
 
 ###  LPMessagingSDKConversationViewControllerDidDismiss()
-Delegate which is called when the conversation viewcontroller is dismissed (both for window mode and viewController mode).
+Called when the conversation ViewController is dismissed (both for window mode and viewController mode).
+
+
+###  LPMessagingSDKCertPinningFailed(_ error: NSError)
+Called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins or the server trust's evaluation failed because the server's certificate chain is not trusted.
+
+### LPMessagingSDKPushRegistrationDidFinish()
+Called when the SDK registration for the LP Pusher service has succeeded.
+
+Pusher is the service that is responsible for Remote Push Notifications routing and delivering from and to APNS.
+
+###  LPMessagingSDKPushRegistrationDidFail(_ error: NSError)
+Called when the SDK registration for LP Pusher service has failed with an error.
+
+Pusher is the service that is responsible for Remote Push Notifications routing and delivering from and to APNS.
+
+###  LPMessagingSDKUnauthenticatedUserExpired()
+Called when an Unauthenticated user expired and can no longer be in used.
+
+When this callback is invoked, the previous open conversation will be closed locally.
+
 
 ### LPMessagingSDKNotificationDelegate
 

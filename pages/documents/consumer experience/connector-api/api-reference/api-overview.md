@@ -14,8 +14,8 @@ search: exclude
 
 The API consists of two types of calls:
 
-* CONVERSATION  - Batch Payload. This API call creates/opens a new conversation and set the consumer profile.
-* SEND - One Payload. This API call can be used to send a message and close a conversation or set the consumer profile.
+* [CONVERSATION](sendapi-create.html){:target="_blank"} - Batch Payload. This API call creates/opens a new conversation and set the consumer profile.
+* [SEND](sendapi-send.html){:target="_blank"} - One Payload. This API call can be used to send a message and close a conversation or set the consumer profile.
 
 ### Connector API connection
 

@@ -22,13 +22,13 @@ indicator: messaging
 Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 ```swift
-public static void sendSde(Context context, @NonNull String consumerId, @NonNull MonitoringParams monitoringParams, SdeCallback callback)
+public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> identities, @NonNull MonitoringParams monitoringParams, SdeCallback callback)
 ```
 
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
 | context | A context from the host app | Yes |
-| consumerId | Mandatory consumer ID from the host app | Yes |
+| identities | A list of LPMonitoringIdentity objects with the consumer identities | Yes |
 | monitoringParams | An mandatory MonitoringParams with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
 | callback | A callback of type [SdeCallback](android-interface-definitions.html#sdecallback){:target="_blank"}. This response includes SessionId, VisitorId and PageId for future use | Yes |
 
@@ -40,13 +40,13 @@ Use this method to get an engagement for a consumer in an appInstallationId cont
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 
 ```swift
-public static void getEngagement(Context context, @Nullable String consumerId, MonitoringParams monitoringParams, EngagementCallback callback)
+public static void getEngagement(Context context, @Nullable List<LPMonitoringIdentity> identities, MonitoringParams monitoringParams, EngagementCallback callback)
 ```
 
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
 | context | A context from the host app | Yes |
-| consumerId | The consumer ID from the host app | No |
+| identities | A list of LPMonitoringIdentity objects with the consumer identities | No |
 | monitoringParams | An optional object with optional pageId, Entry Points array and Engagement Attributes | No |
 | callback | A callback of type [EngagementCallback](android-interface-definitions.html#engagementcallback){:target="_blank"}. This response include SessionId, VisitorId and a list of [EngagementDetails](android-interface-definitions.html#engagementdetails){:target="_blank"} objects | Yes |
 

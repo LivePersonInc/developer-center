@@ -2,16 +2,21 @@
 title: Structured Content Rendering Tool
 Keywords:
 level1: Documents
-level2: Guides
+level2: Rich Messaging
 level3: Structured Content
-order: 11
-permalink: structured-content-structured-content-rendering-tool.html
+order: 80
+permalink: rich-messaging-structured-content-pollock.html
 indicator: both
 ---
 
-The **Json-Pollock** package renders live DOM elements out of JSON according to the [Structured Messaging Templates specification](https://developers.liveperson.com/structured-content-templates.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
+The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html).
+
+You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
 
 **A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
+
+<div class="important">Important Note</div>
+The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors. There is no SLA or an official support process provided for this web tool. The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.
 
 ### Installation
 
@@ -19,9 +24,9 @@ The **Json-Pollock** package renders live DOM elements out of JSON according to 
 npm i json-pollock --save
 ```
 
-In the `dist` folder you'll find a the following files:
+In the `dist` folder you'll find the following files:
 
-`json-pollock.bundle.min.js`  - this script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header - no additional actions are needed from your side. It also supports umd - meaning you can consume it using AMD, CommonJS and as simple script (see examples below)
+`json-pollock.bundle.min.js`  - this script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header - no additional actions are needed from your side. It also supports umd - meaning you can consume it using AMD, CommonJS and as simple script (see examples below).
 
 `json-pollock.min.js` - use this script if you want to handle the import of the styles by yourself. If you use this option. you should also take care to link `json-pollock.min.css` to your web page. Also supports umd.
 
@@ -32,7 +37,7 @@ In the `dist` folder you'll find a the following files:
 A `script` tag:
 
 ```html
-<!-- for bundle this import if enough -->
+<!-- for bundle this import is enough -->
 <script src="path-to-node-modules/dist/json-pollock.bundle.min.js"></script>
 
 <!-- for others you should also link the styles -->
@@ -97,7 +102,7 @@ document.getElementById('container').appendChild(rooEl);
 
 **registerAction**
 
-The *registerAction* function allows to register a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+The *registerAction* function allows to register a callback to a certain action type, as defined in the [spec](rich-messaging-structured-content-card.html).
 
 ```js
 const linkCallback = (data) => {
@@ -109,7 +114,7 @@ JsonPollock.registerAction('link', linkCallback);
 
 **unregisterAction**
 
-The *unregisterAction* function allow to unregister a callback to a certain action type, as defined in the [spec](https://developers.liveperson.com/structured-content-templates.html).
+The *unregisterAction* function allow to unregister a callback to a certain action type, as defined in the [spec](rich-messaging-structured-content-card.html).
 
 ```js
 JsonPollock.unregisterAction('link');
@@ -127,7 +132,7 @@ JsonPollock.unregisterAllActions();
 
 *JsonPollock.render()* will throw an Error if it fails for any reason. The error object will have a *message* property that will supply the error description.
 
-Prior to the rendering, the JSON object is validated against the JSON schema. If it fails to validate the error object will also include an *errors* property that will hold the validation errors.
+Prior to the rendering, the JSON object is validated against the JSON schema. If it fails to validate, the error object will also include an *errors* property that will hold the validation errors.
 
 ```js
 ...

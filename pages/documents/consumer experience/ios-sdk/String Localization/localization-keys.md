@@ -447,6 +447,10 @@ Listed below are all localized keys with the English localization string.
     <td>"Clear"</td>
   </tr>
   <tr>
+    <td>isTyping</td>
+    <td>"typing…"</td>
+  </tr>
+  <tr>
     <td>sharePhotoFromPhotoLibrary</td>
     <td>"Photo Library"</td>
   </tr>
@@ -551,6 +555,34 @@ Listed below are all localized keys with the English localization string.
   <tr>
     <td>conversationEmptyState</td>
     <td>"There are currently no conversations at this time"</td>
+  </tr>
+  <tr>
+    <td>quickReplyButton</td>
+    <td>"Quick reply button"</td>
+  </tr>
+  <tr>
+    <td>outOf</td>
+    <td>"out of"</td>
+  </tr>
+  <tr>
+    <td>unauthenticatedUserExpiredTitle</td>
+    <td>"New Conversation"</td>
+  </tr>
+  <tr>
+    <td>unauthenticatedUserExpiredMessage</td>
+    <td>"Hi there! As we haven't seen you for a while, a new conversation will start."</td>
+  </tr>
+  <tr>
+    <td>toolTipLongTapToRecord</td>
+    <td>"Long tap to record"</td>
+  </tr>
+  <tr>
+    <td>toolTipReleaseButtonForRecording</td>
+    <td>"Release for recording"</td>
+  </tr>
+  <tr>
+    <td>toolTipRecordLimitReached</td>
+    <td>"Recording limit has been reached, click to send"</td>
   </tr>
 
 </table>

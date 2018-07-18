@@ -31,6 +31,7 @@ v   | version of the API (1 or 2)                    | string     | Optional | d
 #### Note: New capability - partial retrieval of data
 
 The API now allows you to retrive some of the content, per your need, instead of every possible key. This is done by calling the API with the contentToRetrive parameter and specifying the types of content you would like to get in the response.
+
 The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
 
 Filter is sent in the POST data (body) with the following JSON structure.
@@ -56,7 +57,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
+responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring|
 
 Filters examples:
 
@@ -81,8 +83,12 @@ Filters examples:
 |messageContentTypes | {"start": {"from": "1484830093231", "to": "1485447764498"}, "messageContentTypes": ["TEXT_PLAIN"]}|
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
+|responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
 |contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
 
+**Note: search by keywords, summary or engagement attributes**
+
+In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
 
 ### Response
@@ -161,8 +167,8 @@ Name                 | Description                                              
 | goalName | Name of the campaign's goal. | alphanumeric (50) | |
 | engagementAgentNote | Note to the Agent defined for the campaign's engagement. | alphanumeric  | |
 | engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
-| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric  | |
-| visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) | |
+| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available). | numeric  | |
+| visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50) | |
 | engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | |
 | engagementApplicationName | Engagement's application name. | alphanumeric | |
 | engagementApplicationTypeId | Engagement's application type id | alphanumeric | |
@@ -176,6 +182,24 @@ Name                 | Description                                              
 | behaviorSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 | profileSystemDefault | Indicates whether visitor behavior is the default one. | Boolean | |
 
+_Monitoring_
+
+Name                 | Description                                                                | Type/Value | Notes
+:------------------- | :------------------------------------------------------------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------
+| country |  Name of country. | alphanumeric | |
+| countryCode | Country's code. | alphanumeric | |
+| state | Name of state. | alphanumeric  |  |
+| city | Name of the city. | alphanumeric | |
+| isp | Internet service provider's name. | alphanumeric | |
+| org | Name of organization. | alphanumeric  | |
+| device | Type of device. | alphanumeric  |Valid values: "DESKTOP", "TABLET", "MOBILE", "NA" |
+| ipAddress | IP address of the consumer's device | alphanumeric  | |
+| browser | Browser of the consumer who engaged in the conversation | alphanumeric  | |
+| operatingSystem | Operating System of the consumer who engageed in the conversation. | alphanumeric | |
+| conversationStartPage | The page's URL from which the conversation started. | alphanumeric| |
+| conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |
+
+
 _Message Info_
 
 Name          | Description                                 | Type/Value | Notes
@@ -188,8 +212,8 @@ messageId     | ID of message.                              | string     |
 seq           | Message's sequence in the conversation.     | string     | Does not have to be continuous, i.e. 0, 2, 5, etc.
 dialogId      | ID of dialog bulk.                          | long       |
 participantId | ID of participant.                          | string     |
-source        | Message's origin.                           | string     |
-device        | Device the message was sent from.           | string     |
+source        | Message's origin.                           | string     | deprecated (not supported)
+device        | Device the message was sent from.           | string     | deprecated (not supported)
 sentBy        | Who sent the message                        | string     | Valid values: "agent", "consumer"
 contextData   | Contains context information about the consumer's message, including raw and structured metadata.            | container| |
 
@@ -488,6 +512,20 @@ configuredResponseTime | Conversation's configured response time. | long – epo
         "locationName": "Entire site",
         "profileSystemDefault": true,
         "behaviorSystemDefault": false
+      },
+      "monitoring": {
+         "country": "United States",
+         "countryCode": "US",
+         "state": "Michigan",
+         "city": "Michigan",
+         "isp": "AT&T U-verse",
+         "org": "AT&T U-verse",
+         "device": "DESKTOP",
+         "ipAddress": "192.000.12.240",
+         "browser": "Chrome 66.0.3359.181",
+         "operatingSystem": "WINDOWS",
+         "conversationStartPage": "https://testPage",
+         "conversationStartPageTitle": "LivePerson Page"
       },
       "messageRecords": [
         {
