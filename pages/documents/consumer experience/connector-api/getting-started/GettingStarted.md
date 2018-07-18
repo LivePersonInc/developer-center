@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Connector API
 level4: Connector API
 order: 2
-indicator: both
+indicator: messaging
 permalink: connectorapi-getting-started.html
 ---
 
