@@ -12,6 +12,8 @@ indicator: both
 
 The very basic structured content elements that can contain either/or elements, layout, styling and actions.
 
+![Card](img/card.png)
+
 ### Examples
 
 #### Simple Card (Image + Text)
