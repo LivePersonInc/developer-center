@@ -2572,15 +2572,11 @@ A shortcut can now be configured to appear within the conversation when there ar
 
 Brands now have the ability to replace the Send button in a messaging conversation with a paper plane (Android) or arrow (iOS). This icon can be customized to match the brand’s colors.
 
-![Release Notes Set Icon](img/releasenotesseticon.png)
-
 
 ##### Link preview within conversation
 
 
 When sending a link within an Mobile App Messaging conversation, a preview of the link page will display within the thread, giving the consumer a useful overview of the link content.
-
-![Release Notes Link Preview](img/releasenoteslinkpreview.png)
 
 
 ##### Ability to remove resolved divider in thread
