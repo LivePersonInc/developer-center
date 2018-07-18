@@ -366,7 +366,7 @@ table {
 }
 
 .homeitem a:hover {
-  color: #5879da;
+  color: #5879da !important;
 }
 
 .sitelogo {

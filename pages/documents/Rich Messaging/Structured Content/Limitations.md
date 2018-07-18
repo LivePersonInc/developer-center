@@ -4,13 +4,8 @@ Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Structured Content
-<<<<<<< HEAD:pages/documents/Rich Messaging/Structured Content/Limitations/Limitations.md
 order: 60
 permalink: structured-content-limitations.html
-=======
-order: 70
-permalink: rich-messaging-structured-content-limitations.html
->>>>>>> master:pages/documents/Rich Messaging/Structured Content/Limitations.md
 indicator: both
 ---
 

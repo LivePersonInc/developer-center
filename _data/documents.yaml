@@ -695,3 +695,47 @@
         - subpagename: Delete Profiles
         - subpagename: Delete Profile
     - pagename: Appendix
+
+- categoryname: Rich Messaging
+  documents:
+    - documentname: Getting Started
+      pages:
+        - pagename: Introduction
+        - pagename: Basic Elements
+          subpages:
+            - subpagename: Text
+            - subpagename: Button
+            - subpagename: Image
+            - subpagename: Map
+        - pagename: Click Operations
+          subpages:
+            - subpagename: Overview
+            - subpagename: Actions
+            - subpagename: Metadata
+        - pagename: Styling
+    - documentname: Structured Content
+      pages:
+        - pagename: Complex Layout
+        - pagename: Templates
+          subpagespages:
+            - pagename: Card
+            - pagename: Carousel
+        - pagename: Best Practices
+        - pagename: Limitations
+        - pagename: Structured Content Rendering Tool
+    - documentname: Quick Replies
+      pages:
+        - pagename: Overview
+        - pagename: Styling
+        - pagename: Limitations
+        - pagename: Best Practices
+    - documentname: File Sharing
+      pages:
+        - pagename: Introduction
+        - pagename: Enable File Sharing
+        - pagename: Create a Conversation
+        - pagename: Request Upload URL
+        - pagename: Upload File to Storage
+        - pagename: Publish Messages
+        - pagename: Request Download URL
+        - pagename: Download File From Storage

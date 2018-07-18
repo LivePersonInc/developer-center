@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Getting Started
 level4: Click Operations
 order: 90
-permalink: rich-messaging-click-ops-actions.html
+permalink: getting-started-click-operations-actions.html
 indicator: both
 ---
 
