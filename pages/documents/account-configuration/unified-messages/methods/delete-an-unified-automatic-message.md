@@ -7,12 +7,12 @@ level3: Unified Automatic Messages API
 level4: Methods
 
 order: 40
-permalink: account-configuration-unified-automatic-messages-update-an-automatic-message.html
+permalink: account-configuration-unified-automatic-messages-delete-an-automatic-message.html
 
 indicator: both
 ---
 
-Delets an existing Unified Automatic Message for a specific account.
+Deletes an existing Unified Automatic Message for a specific account.
 
 ### Request
 
