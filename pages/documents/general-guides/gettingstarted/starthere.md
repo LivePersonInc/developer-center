@@ -12,7 +12,7 @@ indicator: both
 
 ### What is the Developer's Community?
 
-Welcome to LivePerson's Developer's Community! This site's purpose is to provide you with in-depth documentation on LivePerson APIs and SDKs. This documentation will cover basic information about  every API (like its calls, methods, data structures and more), as well as more complex flows and applications. If you find any issue with the documentation, please don't hesitate to [visit the site's GitHub repository](hub.com/LivePersonInc/developers-community) and let us know!
+Welcome to LivePerson's Developer's Community! This site's purpose is to provide you with in-depth documentation on LivePerson APIs and SDKs. This documentation will cover basic information about every API (like its calls, methods, data structures and more), as well as more complex flows and applications. If you find any issue with the documentation, please don't hesitate to [visit the site's GitHub repository](hub.com/LivePersonInc/developers-community) and let us know!
 
 If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly. They are well versed in the documentation published on this site and will be happy to assist you with any issues you might encounter.
 

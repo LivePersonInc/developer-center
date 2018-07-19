@@ -2,10 +2,10 @@
   documents:
   - documentname: Retrieve API Keys
     pages:
-    - pagename: Overview
+    - pagename: Create a New API Key
   - documentname: Retrieve API Domains
     pages:
-    - pagename: Domain API
+    - pagename: Using the Domain API
   - documentname: Add Agent Widgets
     pages:
     - pagename: Add Your Own Widgets to the Agent Workspace

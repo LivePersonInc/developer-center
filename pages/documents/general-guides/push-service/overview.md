@@ -7,7 +7,7 @@ level3: Push Notification Service (iOS and Android)
 
 level-order: 7
 order: 10
-permalink: push-notification-service-(ios-and-android)-overview.html
+permalink: push-notification-service-ios-and-android-overview.html
 root-link: true
 indicator: messaging
 ---

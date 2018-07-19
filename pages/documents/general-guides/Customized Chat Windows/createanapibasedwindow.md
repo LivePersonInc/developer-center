@@ -1,10 +1,10 @@
 ---
-title: Create an API-based Window Using the Chat API
+title: Create an API-based Window
 level1: Documents
 level2: Guides
 level3: Customized Chat Windows
 
-permalink: customized-chat-windows-create-an-api-based-window-using-the-chat-api.html
+permalink: customized-chat-windows-create-an-api-based-window.html
 order: 2
 indicator: chat
 ---
