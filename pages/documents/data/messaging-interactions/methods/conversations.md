@@ -21,9 +21,9 @@ POST   | https://{domain}/messaging_history/api/account/{accountID}/conversation
 
 Name   | Description                                                  | Type/Value | Required | Notes
 :----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-offset | The offset specifies from which record to retrieve the chat. | numeric    | Required | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
-limit  | Max amount of conversations to be received in the response.  | numeric    | Required | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
-sort   | Sort the results in a predefined order.                      | string     | Required | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
+offset | The offset specifies from which record to retrieve the chat. | numeric    | Optional | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
+limit  | Max amount of conversations to be received in the response.  | numeric    | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
+sort   | Sort the results in a predefined order.                      | string     | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v   | version of the API (1 or 2)                    | string     | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
 
 **BODY/POST Parameters**
