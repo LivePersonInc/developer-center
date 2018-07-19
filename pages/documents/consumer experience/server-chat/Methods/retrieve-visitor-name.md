@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 120
-permalink: server-chat-api-methods-retrieve-visitor's-name.html
+permalink: server-chat-api-methods-retrieve-visitor-s-name.html
 
 indicator: chat
 ---
@@ -43,5 +43,3 @@ Response JSON Example:
     {
       "visitorName": "You"
     }
-
-

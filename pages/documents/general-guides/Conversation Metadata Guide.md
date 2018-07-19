@@ -333,7 +333,7 @@ agent.updateConversationField({
 
 [Structured Content Templates](https://developers.liveperson.com/structured-content-templates.html)
 
-LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](https://developers.liveperson.com/structured-content-templates.html) for more information on how to build and send such structured content messages.
+LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](structured-content-templates-card.html) for more information on how to build and send such structured content messages.
 
 A card identifier can be sent as metadata on the agent message (publishEvent method), in order to track the number of times a specific card was sent, delivered, or viewed.
 

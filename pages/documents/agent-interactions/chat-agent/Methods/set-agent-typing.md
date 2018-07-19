@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 180
-permalink: chat-agent-api-methods-set-agent’s-typing-status.html
+permalink: chat-agent-api-methods-set-agent-s-typing-status.html
 
 indicator: chat
 ---
@@ -18,7 +18,7 @@ This method sets the agent's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true| 
+| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true|
 **Request Headers**
 
 | Header | Description |
@@ -45,7 +45,7 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
-| Code | Response | 
+| Code | Response |
 | :--- | :--- |
 | 201 | Created |
 

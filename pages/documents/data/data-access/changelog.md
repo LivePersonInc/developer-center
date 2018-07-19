@@ -5,7 +5,7 @@ level2: Data
 level3: Data Access API
 
 order: 62
-permalink: data-access-api-(beta)-changelog.html
+permalink: data-access-api-changelog.html
 indicator: both
 
 ---

@@ -5,7 +5,7 @@ level2: Data
 level3: Data Access API
 level4: Methods
 order: 60
-permalink: data-access-api-(beta)-methods-schema.html
+permalink: data-access-api-methods-schema.html
 
 indicator: chat
 ---

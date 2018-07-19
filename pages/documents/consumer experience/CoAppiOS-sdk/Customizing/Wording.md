@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Customizing
 order: 70
-permalink: voice-&-video-for-ios-sdk-(beta)-customizing-wording.html
+permalink: voice-and-video-for-ios-sdk-beta-customizing-wording.html
 indicator: messaging
 ---
 These settings should only be used to customize the wording according to you app's needs. If you plan to offer a new language not yet available in the SDK, please to speak to your LivePerson account manager.

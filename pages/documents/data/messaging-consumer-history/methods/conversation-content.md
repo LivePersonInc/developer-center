@@ -2,10 +2,10 @@
 title: Conversations - Content
 level1: Documents
 level2: Data
-level3: Consumer Messaging History API
+level3: Consumer Engagement History API
 level4: Methods
 order: 10
-permalink: consumer-messaging-history-api-methods-conversations---content.html
+permalink: consumer-engagement-history-api-methods-conversations-content.html
 indicator: messaging
 ---
 
@@ -42,7 +42,7 @@ Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
 type                 | The type of the message.   | string              | Valid values: "ContentEvent"
 contentType          | The type of the contnet.   | string              | Valid values: "text/plain", "hosted/file", "forms/secure-submission", "forms/secure-invitation"
-message              | The message content.       | MessageContent      | The content structure is different per type 
+message              | The message content.       | MessageContent      | The content structure is different per type
 
 
 _message - text/plain_
@@ -55,8 +55,8 @@ _message - hosted/file_
 
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
-caption              | The caption of the file.   | string              | 
-relativePath         | Relative path of the file. | string              | 
+caption              | The caption of the file.   | string              |
+relativePath         | Relative path of the file. | string              |
 fileType             | Type of the file.          | string              | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
 preview              | A preview of the file.     | string              | File thumbnail in base64
 
@@ -64,14 +64,14 @@ _message - forms/secure-submission_
 
 Name                 | Description                    | Type/Value          | Notes
 :------------------- | :------------------------------| :-------------------|---------------------------------------------
-invitationId         | The invitationId of the form   | string              | 
+invitationId         | The invitationId of the form   | string              |
 
 _message - forms/secure-invitation_
 
 Name                 | Description                    | Type/Value          | Notes
 :------------------- | :------------------------------| :-------------------|---------------------------------------------
-invitationId         | The invitationId of the form   | string              | 
-title                | The title of the form          | string              | 
+invitationId         | The invitationId of the form   | string              |
+title                | The title of the form          | string              |
 
 
 _event - RichContentEvent_

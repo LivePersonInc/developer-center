@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Getting Started
 order: 30
-permalink: voice-&-video-for-ios-sdk-(beta)-getting-started-installing-the-sdk-manually.html
+permalink: voice-and-video-for-ios-sdk-beta-getting-started-installing-the-sdk-manually.html
 indicator: messaging
 ---
 We highly recommend integrating our SDK using CocoaPods as [described here](consumer-experience-voice-video-ios-cocoa-pods.html). If this does not fit your needs and you prefer to add the SDK manually follow these steps for your app's __XCode Project__:

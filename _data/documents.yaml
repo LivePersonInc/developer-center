@@ -36,16 +36,12 @@
     - pagename: HTTP Response Codes
     - pagename: Configuration of Push Proxy
     - pagename: IP Whitelisting
-  - documentname: Structured Content
-    pages:
-    - pagename: Structured Content Templates
-    - pagename: Structured Content Rendering Tool
   - documentname: Conversation Metadata Guide
     pages:
     - pagename: Overview
-  - documentname: Retry Policy and KeepAlive Best Practices
+  - documentname: Retry and KeepAlive Best Practices
     pages:
-    - pagename: Retry and KeepAlive Policy
+    - pagename: Overview
   - documentname: Cookies and LiveEngage
     pages:
       - pagename: Overview
@@ -87,7 +83,7 @@
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys
-      - subpagename: String Localiztion
+      - subpagename: String Localization
       - subpagename: Timestamps Formatting
     - pagename: Advanced Features
       subpages:
@@ -159,7 +155,7 @@
       - subpagename: Using LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
       - subpagename: Using LivePerson SDK - Android - Manual
-  - documentname: Voice and Video SDK - iOS (BETA)
+  - documentname: Voice and Video for iOS SDK (BETA)
     pages:
     - pagename: Overview
     - pagename: Getting Started
@@ -182,7 +178,7 @@
     - pagename: Sample App
     - pagename: Changelog
     - pagename: Appendix
-  - documentname: Voice and Video SDK - Android (BETA)
+  - documentname: Voice and Video for Android SDK (BETA)
     pages:
     - pagename: Overview
     - pagename: Getting Started
@@ -410,7 +406,7 @@
 
 - categoryname: Data
   documents:
-  - documentname: Data Access API (BETA)
+  - documentname: Data Access API
     pages:
       - pagename: Overview
       - pagename: Architecture
@@ -425,7 +421,7 @@
       - pagename: PGP Encryption
       - pagename: Changelog
       - pagename: Appendix
-  - documentname: Agent Metrics
+  - documentname: Agent Metrics API
     pages:
       - pagename: Overview
       - pagename: Methods

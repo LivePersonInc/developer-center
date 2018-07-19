@@ -48,22 +48,16 @@ If you want to change the Brand name, when using the SDK on Activity Mode, you'l
 
 * **Step 1:** Using **Android View**, right-click over the **res** folder, select **new**, then **Android Resource Directory**
 
-<img src="img/android_string_locale_step1.png" alt="Branding the SDK" style="max-width:500px;max-height:700px;margin-left:4em;">
 
 * **Step 2:** On the **New Resouce Directory**Screen, select **Locale** ,and click on the **>>**:
 
-<img src="img/android_string_locale_step2.png" alt="Branding the SDK" style="max-width:500px;max-height:700px;margin-left:4em;">
 
 * **Step 3:** Now select the Language or Region you're trying to create:
 
-<img src="img/android_string_locale_step3.png" alt="Branding the SDK" style="max-width:500px;max-height:700px;margin-left:4em;">
 
 _**Note:** Now that you have a new **Resource Directory**, you'll have to create a new **strings.xml** file to define the new strings_
 
 * **Step 4:** Using **Project View**, right-click over the values folder you just created, select **new**, then **Values Resource File**
 
-<img src="img/android_string_locale_step5.png" alt="Branding the SDK" style="max-width:500px;max-height:700px;margin-left:4em;">
 
 * **Step 5:** On the pop up window, type: **strings.xml**, this file will define all the strings for that Locale:
-
-<img src="img/android_string_locale_step6.png" alt="Branding the SDK" style="max-width:500px;max-height:700px;margin-left:4em;">
