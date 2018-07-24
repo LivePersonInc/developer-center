@@ -9,7 +9,14 @@ permalink: rich-messaging-structured-content-limitations.html
 indicator: both
 ---
 
-### Mobile
+
+### Maps
+
+Both the web window (visitor side) and the workspace (agent side) do not show map by user-specific location but instead shows a static snapshot, the default map view defined.
+
+### Styling
+
+#### Mobile
 
 1. Only the following parameters can be configured in Bubble branding when using the In-App SDK. All other attributes are inherited from the SDK configuration:
 
@@ -28,6 +35,6 @@ indicator: both
 
 * Background color
 
-### Web (Chat/Messaging)
+#### Web (Chat/Messaging)
 
 You cannot customize the branding of the structured content bubble in the web window view. Cards may be branded using the JSON schema only.
