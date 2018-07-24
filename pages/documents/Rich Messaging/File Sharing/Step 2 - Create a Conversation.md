@@ -1,11 +1,11 @@
 ---
-title: Step 2 - Create a Conversation
+title: Create a Conversation
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 30
-permalink: file-sharing-step-2---create-a-conversation.html
+permalink: file-sharing-create-a-conversation.html
 indicator: both
 ---
 

@@ -12,7 +12,7 @@ permalink: account-configuration-unified-automatic-messages-delete-an-unified-au
 indicator: both
 ---
 
-Delets an existing Unified Automatic Message for a specific account.
+Deletes an existing Unified Automatic Message for a specific account.
 
 ### Request
 

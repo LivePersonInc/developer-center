@@ -1,11 +1,11 @@
 ---
-title: Step 4 - Upload File to Storage
+title: Upload File to Storage
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 50
-permalink: file-sharing-step-4---upload-file-to-storage.html
+permalink: file-sharing-upload-file-to-storage.html
 indicator: both
 ---
 

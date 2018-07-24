@@ -8,7 +8,7 @@ level4: Methods
 
 
 order: 90
-permalink: users-api-methods-reset-user's-password.html
+permalink: users-api-methods-reset-user-s-password.html
 
 indicator: both
 ---

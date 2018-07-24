@@ -1,11 +1,11 @@
 ---
-title: Step 3 - Request Upload URL
+title: Request Upload URL
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 40
-permalink: file-sharing-step-3---request-upload-url.html
+permalink: file-sharing-request-upload-url.html
 indicator: both
 ---
 

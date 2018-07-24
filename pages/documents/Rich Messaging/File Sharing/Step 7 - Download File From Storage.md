@@ -1,11 +1,11 @@
 ---
-title: Step 7 - Download File From Storage
+title: Download File From Storage
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 80
-permalink: file-sharing-step-7---download-file-from-storage.html
+permalink: file-sharing-download-file-from-storage.html
 indicator: both
 ---
 

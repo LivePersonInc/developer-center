@@ -1,5 +1,5 @@
 ---
-title: Get Automatic Message by ID
+title: Get Automatic Messages by ID
 keywords:
 level1: Documents
 level2: Account Configuration
@@ -7,7 +7,7 @@ level3: Automatic Messages API
 level4: Methods
 
 order: 20
-permalink: automatic-messages-api-methods-get-automatic-message-by-id.html
+permalink: automatic-messages-api-methods-get-automatic-messages-by-id.html
 
 indicator: both
 ---

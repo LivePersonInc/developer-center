@@ -10,6 +10,10 @@ body {
   padding-top: 0 !important;
 }
 
+pre {
+  word-break: normal !important;
+}
+
 .defaultwrapper {
   height: 100vh;
 }
@@ -378,10 +382,6 @@ table {
 
 
 /* Sidebar Styling Ends */
-
-.highlighter-rouge {
-  width: 150%;
-}
 
 .language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before {
   position: absolute;

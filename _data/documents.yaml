@@ -564,7 +564,6 @@
           - subpagename: Create Predefined Content
           - subpagename: Update Predefined Content
           - subpagename: Get Predefined Content Items
-          - subpagename: Update Predefined Content
           - subpagename: Delete Predefined Content
           - subpagename: Get Predefined Content by ID
           - subpagename: Delete Predefined Content Items
@@ -670,7 +669,7 @@
       - pagename: Overview
       - pagename: Methods
         subpages:
-          - subpagename: Get All Agents Groups
+          - subpagename: Get All Agent Groups
           - subpagename: Get Agent Groups by ID
           - subpagename: Create Agent Groups
           - subpagename: Update Agent Groups
@@ -713,7 +712,7 @@
       pages:
         - pagename: Complex Layout
         - pagename: Templates
-          subpagespages:
+          subpages:
             - pagename: Card
             - pagename: Carousel
         - pagename: Best Practices
