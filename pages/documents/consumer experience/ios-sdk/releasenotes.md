@@ -17,26 +17,35 @@ indicator: messaging
 iOS Messaging SDK v3.2.2 contains the following bug fixes:
 
 #### Symptom:
+
 When calling getEngagement while there is an active conversation which is not related to a campaign, the response returns an error.
+
 #### Fix:
+
 When calling getEngagement while there is an active conversation which is not related to a campaign, a response will be returned with the available information.
 
 #### Symptom:
-In some cases, the badge counter was returned with an incorrect value, which represents a previous value. For example, when agent sends messages while the conversation screen is in background.
+
+In some cases, the badge counter was returned with an incorrect value, which represents a previous value. For example, when an agent sent messages while the conversation screen was in the background.
 
 #### Fix:
+
 Badge counter is now showing the actual value.
 
 #### Symptom:
-In case of a failure in ‘logout’, the user’s data might be displayed with empty message bubbles on the next time that the consumer will go into the conversation screen.
+
+In case of a failure in ‘logout’, the user’s data might be displayed with empty message bubbles the next time that the consumer opens the conversation screen.
 
 #### Fix:
+
 The user’s data is now cleared as expected only if the ‘logout’ succeeded.
 
 #### Symptom:
+
 In some cases, the badge counter was returned with an incorrect value, which represents a previous value.
 
 #### Fix:
+
 Badge counter is now showing the actual value regardless the state of the conversation.
 
 ### iOS Messaging SDK - Version 3.2.1
