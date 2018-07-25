@@ -5,6 +5,9 @@
 
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   <li class="homeitem folder topfolder">
+    <div class="sidebarimage">
+      <img src="img/getting-started.png" />
+    </div>
     <a href="/index.html">Getting Started</a>
     <ul>
       {% for category in site.data.gettingstarted %}
@@ -23,6 +26,9 @@
   </li>
   {% for category in site.data.documents %}
   <li class="folder topfolder">
+    <div class="sidebarimage">
+      <img src="img/{{ category.image }}.png" />
+    </div>
     <a href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}

@@ -337,7 +337,7 @@ ul.mysidebar.nav .topfolder >  a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #8c909c !important;
+  color: #8c909c;
   overflow-wrap:break-word;
 }
 

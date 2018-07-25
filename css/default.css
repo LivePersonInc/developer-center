@@ -360,18 +360,12 @@ table {
 .homeitem > a {
   font-family: "Roboto";
   font-size: 16px;
-  color: #8c909c;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #5879da;
+  font-weight: bold !important;
+  color: #5879da !important;
 }
 
 .homeitem > a:hover {
   color: #5879da !important;
-}
-
-.homeitem > ul {
-  margin-top: -20px;
 }
 
 .sitelogo {

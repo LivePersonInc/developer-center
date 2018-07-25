@@ -49,6 +49,7 @@
     pages:
       - pagename: What Is a LiveEngage Application?
       - pagename: Installing LiveEngage Applications
+  image: guides
 
 - categoryname: Consumer Experience
   documents:
@@ -346,6 +347,7 @@
     - pagename: Sample Code
       subpages:
       - subpagename: Connector Sample App
+  image: consumer-experience
 
 - categoryname: Agent Interactions
   documents:
@@ -403,6 +405,7 @@
           - subpagename: Application Login
           - subpagename: Refresh
           - subpagename: Logout
+  image: agent-interactions
 
 - categoryname: Data
   documents:
@@ -479,6 +482,7 @@
           - subpagename: Create Deletion Request
           - subpagename: Cancel Deletion Request
           - subpagename: Get Deletion Requests
+  image: data
 
 - categoryname: Real Time Interactions
   documents:
@@ -542,6 +546,7 @@
         subpages:
           - subpagename: Engagement
           - subpagename: Report
+  image: real-time-interactions
 
 - categoryname: Account Configuration
   documents:
@@ -621,6 +626,7 @@
           - subpagename: Create Status Reason
           - subpagename: Update Status Reason
           - subpagename: Delete Status Reason
+  image: account-configuration
 
 - categoryname: Administration
   documents:
@@ -690,6 +696,7 @@
         - subpagename: Delete Profiles
         - subpagename: Delete Profile
     - pagename: Appendix
+  image: admin
 
 - categoryname: Rich Messaging
   documents:
@@ -734,3 +741,4 @@
         - pagename: Publish Messages
         - pagename: Request Download URL
         - pagename: Download File From Storage
+  image: rich-messaging

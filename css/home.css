@@ -19,8 +19,8 @@
   margin-right: 35px;
   padding: 15px 25px 15px 25px;
   flex: 1;
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.03), 0 7px 17px 0 rgba(0,0,0,.07);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.03), 0 7px 17px 0 rgba(0,0,0,.07);
   text-decoration: none;
   background-color: #fff;
   background-repeat: no-repeat;
