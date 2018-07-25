@@ -356,11 +356,8 @@ table {
   outline: inherit;
 }
 
-.homeitem {
-  margin-left: 5px;
-}
 
-.homeitem a {
+.homeitem > a {
   font-family: "Roboto";
   font-size: 16px;
   color: #8c909c;
@@ -369,8 +366,12 @@ table {
   color: #5879da;
 }
 
-.homeitem a:hover {
+.homeitem > a:hover {
   color: #5879da !important;
+}
+
+.homeitem > ul {
+  margin-top: -20px;
 }
 
 .sitelogo {

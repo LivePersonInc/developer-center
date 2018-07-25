@@ -4,8 +4,22 @@
 </div>
 
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
-  <li class="homeitem">
+  <li class="homeitem folder topfolder">
     <a href="/index.html">Getting Started</a>
+    <ul>
+      {% for category in site.data.gettingstarted %}
+        <li class="folder innerfolder sidebarcategory">
+          <a href="">{{ category.categoryname }}</a>
+        <ul>
+          {% for document in category.documents %}
+          <li class="pageitem">
+            <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/getting-started-with-liveengage-apis-{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
   </li>
   {% for category in site.data.documents %}
   <li class="folder topfolder">
@@ -27,7 +41,7 @@
               {% endfor %}
             </ul>
           </li>
-            {% else%}
+            {% else %}
           <li class="pageitem">
             <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>

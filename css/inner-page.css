@@ -377,6 +377,14 @@ ul.mysidebar.nav li.activepage a{
  font-weight: 300;
 }
 
+.mysidebar.nav li.folder > a:hover {
+  background-color: initial !important;
+}
+
+.mysidebar.nav li.folder > a:focus {
+  background-color: initial !important;
+}
+
 ul.mysidebar.nav li ul li {
   padding-left: 17px;
 }
