@@ -4,8 +4,6 @@ Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Structured Content
-
-level-order: 2
 order: 10
 permalink: rich-messaging-structured-content-complex-layout.html
 root-link: true
