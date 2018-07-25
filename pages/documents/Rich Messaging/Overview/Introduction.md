@@ -36,9 +36,9 @@ An element which has an "actions" field, an on-click operation (executed when th
 Each basic element can have style elements.
 
 ### Metadata
-Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting.
-Metadata can be defined in the header section of the request or inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
+Metadata is a list of UMS predefined objects that can be sent back to the agent and be used in reporting. Metadata can be defined in the header section of the request or inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
 When creating the JSON structure, the metadata ExternalID that will be returned to LiveEngage when an element in the card is clicked, also needs to be defined.
-This is important for reporting on consumer interaction with the card, as well as for bot activity.
-A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
+
+This is important for reporting on consumer interaction with the card, as well as for bot activity. A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
+
 You can see an example in the [Messaging Agent SDK](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content) by searching for “ExternalID”.
