@@ -100,6 +100,44 @@
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
+  - documentname: Connector API
+    pages:
+    - pagename: Connector API
+      subpages:
+      - subpagename: Overview
+      - subpagename: App Install Manifest for Connectors
+    - pagename: Authorization and Authentication
+      subpages:
+      - subpagename: Get AppJWT
+      - subpagename: Get ConsumerJWS
+    - pagename: API Reference
+      subpages:
+      - subpagename: Overview
+      - subpagename: CONVERSATION
+      - subpagename: SEND
+    - pagename: Webhooks
+      subpages:
+      - subpagename: Overview
+      - subpagename: Events
+      - subpagename: Configuration
+      - subpagename: Notification Protocol
+      - subpagename: Retry Policy
+      - subpagename: Disclaimers
+      - subpagename: Troubleshooting
+      - subpagename: Webhooks Examples
+    - pagename: Examples
+      subpages:
+      - subpagename: Create a New Conversation
+      - subpagename: Create a New Conversation and Report SDEs
+      - subpagename: Send a Message
+      - subpagename: Close a Conversation
+      - subpagename: Send Chat State Events
+      - subpagename: How to Enable a Feature
+      - subpagename: Campaign for Messaging Routing
+      - subpagename: Share Image File
+    - pagename: Sample Code
+      subpages:
+      - subpagename: Connector Sample App
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
@@ -309,44 +347,6 @@
       - subpagename: Submit Survey Data
       - subpagename: Send a Transcript
     - pagename: Sample Postman Collection
-  - documentname: Connector API
-    pages:
-    - pagename: Connector API
-      subpages:
-      - subpagename: Overview
-      - subpagename: App Install Manifest for Connectors
-    - pagename: Authorization and Authentication
-      subpages:
-      - subpagename: Get AppJWT
-      - subpagename: Get ConsumerJWS
-    - pagename: API Reference
-      subpages:
-      - subpagename: Overview
-      - subpagename: CONVERSATION
-      - subpagename: SEND
-    - pagename: Webhooks
-      subpages:
-      - subpagename: Overview
-      - subpagename: Events
-      - subpagename: Configuration
-      - subpagename: Notification Protocol
-      - subpagename: Retry Policy
-      - subpagename: Disclaimers
-      - subpagename: Troubleshooting
-      - subpagename: Webhooks Examples
-    - pagename: Examples
-      subpages:
-      - subpagename: Create a New Conversation
-      - subpagename: Create a New Conversation and Report SDEs
-      - subpagename: Send a Message
-      - subpagename: Close a Conversation
-      - subpagename: Send Chat State Events
-      - subpagename: How to Enable a Feature
-      - subpagename: Campaign for Messaging Routing
-      - subpagename: Share Image File
-    - pagename: Sample Code
-      subpages:
-      - subpagename: Connector Sample App
   image: consumer-experience
 
 - categoryname: Agent Interactions
@@ -424,6 +424,29 @@
       - pagename: PGP Encryption
       - pagename: Changelog
       - pagename: Appendix
+  - documentname: Engagement History API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+      - pagename: Sample Code
+      - pagename: Engagement Attributes
+  - documentname: Operational Realtime API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Queue Health
+          - subpagename: Engagement Activity
+          - subpagename: Agent Activity
+          - subpagename: Current Queue State
+          - subpagename: SLA Histogram
+  - documentname: Consumer Engagement History API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Conversations - Content
+          - subpagename: Conversations - Metadata
   - documentname: Agent Metrics API
     pages:
       - pagename: Overview
@@ -451,29 +474,6 @@
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
       - pagename: Appendix
-  - documentname: Operational Realtime API
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Queue Health
-          - subpagename: Engagement Activity
-          - subpagename: Agent Activity
-          - subpagename: Current Queue State
-          - subpagename: SLA Histogram
-  - documentname: Engagement History API
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-      - pagename: Sample Code
-      - pagename: Engagement Attributes
-  - documentname: Consumer Engagement History API
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Conversations - Content
-          - subpagename: Conversations - Metadata
   - documentname: Personal Data Deletion API
     pages:
       - pagename: Overview
