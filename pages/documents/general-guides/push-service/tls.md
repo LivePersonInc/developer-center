@@ -3,10 +3,10 @@ title: TLS Authentication
 Keywords:
 level1: Documents
 level2: Guides
-level3: Push Notification Service (iOS and Android)
+level3: Push Notification Service
 
 order: 20
-permalink: push-notification-service-ios-and-android-tls-authentication.html
+permalink: push-notification-service-tls-authentication.html
 
 indicator: messaging
 ---

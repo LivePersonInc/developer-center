@@ -3,11 +3,11 @@ title: Overview
 Keywords:
 level1: Documents
 level2: Guides
-level3: Push Notification Service (iOS and Android)
+level3: Push Notification Service
 
 level-order: 7
 order: 10
-permalink: push-notification-service-ios-and-android-overview.html
+permalink: push-notification-service-overview.html
 root-link: true
 indicator: messaging
 ---

@@ -278,7 +278,7 @@ table {
 }
 
 .topfolder {
-  line-height: 2.3;
+  line-height: 3.3;
 }
 
 .topfolder > ul {
@@ -341,8 +341,14 @@ table {
   margin-bottom: 2px;
 }
 
+.sidebarimage {
+  float: left;
+  margin-right: 10px;
+}
+
 .subfolder {
   margin-bottom: 0;
+  padding-left: 30px !important;
 }
 
 .subfolder > a {

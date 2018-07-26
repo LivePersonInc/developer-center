@@ -307,6 +307,7 @@ ul.mysidebar > li.folder > a{
 ul.mysidebar > li.folder ul {
   display: none;
   list-style: none;
+  line-height: 2.3;
 }
 ul.mysidebar > li.folder ul.folderactive{
    display: block;
@@ -331,6 +332,10 @@ ul#mysiderbar li{
 
 .pageitem > a {
   color: #4a4a4a;
+}
+
+.pageitem {
+  padding-left: 30px !important;
 }
 
 ul.mysidebar.nav .topfolder >  a {
@@ -375,6 +380,7 @@ ul.mysidebar.nav li.activepage a{
 .mysidebar.nav li.folder > a{
  font-size: 15px;
  font-weight: 300;
+ margin-top: -2px;
 }
 
 .mysidebar.nav li.folder > a:hover {
@@ -386,7 +392,7 @@ ul.mysidebar.nav li.activepage a{
 }
 
 ul.mysidebar.nav li ul li {
-  padding-left: 17px;
+  padding-left: 50px;
 }
  ul.mysidebar.nav ul li a {
   border-top: none;

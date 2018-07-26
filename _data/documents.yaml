@@ -29,7 +29,7 @@
     - pagename: Configuration
     - pagename: How It Works
     - pagename: Detailed API
-  - documentname: Push Notification Service (iOS and Android)
+  - documentname: Push Notification Service
     pages:
     - pagename: Overview
     - pagename: TLS Authentication
@@ -405,7 +405,7 @@
           - subpagename: Application Login
           - subpagename: Refresh
           - subpagename: Logout
-  image: agent-interactions
+  image: agent-interaction
 
 - categoryname: Data
   documents:
