@@ -1,5 +1,7 @@
 ---
 title: Retrieve Chat Sessions
+redirect_from:
+  - agent-retrieve-chat-sessions.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 90
-permalink: agent-retrieve-chat-sessions.html
+permalink: chat-agent-api-methods-retrieve-chat-sessions.html
 
 indicator: chat
 ---

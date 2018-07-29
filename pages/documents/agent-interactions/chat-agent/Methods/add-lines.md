@@ -1,5 +1,7 @@
 ---
 title: Send Lines & Structured Content
+redirect_from:
+  - agent-add-lines.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 130
-permalink: agent-add-lines.html
+permalink: chat-agent-api-methods-send-lines-&-structured-content.html
 
 indicator: chat
 ---

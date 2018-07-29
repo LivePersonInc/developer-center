@@ -1,5 +1,7 @@
 ---
 title: Set Agent’s Typing Status
+redirect_from:
+  - agent-set-agent-typing.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 180
-permalink: agent-set-agent-typing.html
+permalink: chat-agent-api-methods-set-agent’s-typing-status.html
 
 indicator: chat
 ---

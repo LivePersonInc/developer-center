@@ -1,5 +1,7 @@
 ---
 title: Set Agent Availability
+redirect_from:
+  - agent-set-agent-availability.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 30
-permalink: agent-set-agent-availability.html
+permalink: chat-agent-api-methods-set-agent-availability.html
 
 indicator: chat
 ---

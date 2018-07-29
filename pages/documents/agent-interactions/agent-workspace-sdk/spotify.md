@@ -1,12 +1,14 @@
 ---
 title: Spotify Use Case - File Transfer Widget
+redirect_from:
+  - agent-workspace-sdk-spotify-use-case.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 
 
 order: 80
-permalink: agent-workspace-sdk-spotify-use-case.html
+permalink: undefined-spotify-use-case---file-transfer-widget.html
 
 indicator: both
 ---

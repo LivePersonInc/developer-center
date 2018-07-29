@@ -1,5 +1,7 @@
 ---
 title: Examples
+redirect_from:
+  - messaging-agent-sdk-examples.html
 Keywords:
 level1: Documents
 level2: Agent Interactions

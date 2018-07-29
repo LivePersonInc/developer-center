@@ -1,12 +1,14 @@
 ---
 title: Release Notes
+redirect_from:
+  - agent-workspace-sdk-releasenotes.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 120
-permalink: agent-workspace-sdk-releasenotes.html
+permalink: agent-workspace-widget-sdk-release-notes.html
 
 indicator: both
 ---

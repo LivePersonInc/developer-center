@@ -1,5 +1,7 @@
 ---
 title: Retrieve Visitor's Typing Status
+redirect_from:
+  - agent-retrieve-visitor-typing.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 190
-permalink: agent-retrieve-visitor-typing.html
+permalink: chat-agent-api-methods-retrieve-visitor's-typing-status.html
 
 indicator: chat
 ---

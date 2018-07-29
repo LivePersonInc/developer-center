@@ -1,5 +1,7 @@
 ---
 title: Retrieve Available Skills
+redirect_from:
+  - agent-chat-agent-retrieve-skills.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 200
-permalink: agent-chat-agent-retrieve-skills.html
+permalink: chat-agent-api-methods-retrieve-available-skills.html
 
 indicator: chat
 ---

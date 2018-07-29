@@ -1,12 +1,14 @@
 ---
 title: Postman Resources
+redirect_from:
+  - chat-agent-postman-resources.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Chat Agent API  
 
 order: 242
-permalink: chat-agent-postman-resources.html
+permalink: chat-agent-api---postman-resources.html
 indicator: chat
 ---
 

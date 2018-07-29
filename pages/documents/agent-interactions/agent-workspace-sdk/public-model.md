@@ -1,12 +1,14 @@
 ---
 title: Public Model Structure
+redirect_from:
+  - agent-workspace-sdk-public-model.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 60
-permalink: agent-workspace-sdk-public-model.html
+permalink: agent-workspace-widget-sdk-public-model-structure.html
 
 indicator: both
 ---

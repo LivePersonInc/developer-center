@@ -1,5 +1,7 @@
 ---
 title: Start Agent Session
+redirect_from:
+  - agent-start-agent-session.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 10
-permalink: agent-start-agent-session.html
+permalink: chat-agent-api-methods-start-agent-session.html
 
 indicator: chat
 ---

@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - login-getting-started.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Login Service API
 
 order: 9
-permalink: login-getting-started.html
+permalink: login-service-api-overview.html
 root-link: true
 level-order: 6
 

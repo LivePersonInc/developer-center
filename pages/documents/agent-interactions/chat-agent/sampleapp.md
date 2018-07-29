@@ -1,12 +1,14 @@
 ---
 title: Sample App
+redirect_from:
+  - chat-agent-sample-app.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 
 order: 241
-permalink: chat-agent-sample-app.html
+permalink: chat-agent-api-sample-app.html
 indicator: chat
 ---
 

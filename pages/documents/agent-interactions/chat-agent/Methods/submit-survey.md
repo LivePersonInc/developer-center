@@ -1,5 +1,7 @@
 ---
 title: Submit Survey Data
+redirect_from:
+  - agent-submit-survey.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 230
-permalink: agent-submit-survey.html
+permalink: chat-agent-api-methods-submit-survey-data.html
 
 indicator: chat
 ---

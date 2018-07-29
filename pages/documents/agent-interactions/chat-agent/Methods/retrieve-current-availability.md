@@ -1,5 +1,7 @@
 ---
 title: Retrieve Current Availability
+redirect_from:
+  - agent-retrieve-current-availability.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 20
-permalink: agent-retrieve-current-availability.html
+permalink: chat-agent-api-methods-retrieve-current-availability.html
 
 indicator: chat
 ---

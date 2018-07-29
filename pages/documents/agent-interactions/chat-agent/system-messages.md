@@ -1,12 +1,14 @@
 ---
 title: System Messages
+redirect_from:
+  - agent-system-messages.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 
 order: 240
-permalink: agent-system-messages.html
+permalink: chat-agent-api-system-messages.html
 
 indicator: chat
 ---

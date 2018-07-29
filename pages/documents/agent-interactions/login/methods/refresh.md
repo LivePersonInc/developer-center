@@ -1,6 +1,8 @@
 ---
 title: Refresh
-permalink: agent-refresh.html
+redirect_from:
+  - agent-refresh.html
+permalink: login-service-api-methods-refresh.html
 Keywords:
 level1: Documents
 level2: Agent Interactions

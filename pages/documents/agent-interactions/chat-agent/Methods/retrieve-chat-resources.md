@@ -1,5 +1,7 @@
 ---
 title: Retrieve Chat Resources, Events and Information
+redirect_from:
+  - agent-retrieve-chat-resources.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 100
-permalink: agent-retrieve-chat-resources.html
+permalink: chat-agent-api-methods-retrieve-chat-resources,-events-and-information.html
 
 indicator: chat
 ---

@@ -1,5 +1,7 @@
 ---
 title: Retrieve Available Agents
+redirect_from:
+  - agent-retrieve-available-agents.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 40
-permalink: agent-retrieve-available-agents.html
+permalink: chat-agent-api-methods-retrieve-available-agents.html
 
 indicator: chat
 ---

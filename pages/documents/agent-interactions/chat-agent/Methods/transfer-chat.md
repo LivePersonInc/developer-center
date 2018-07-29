@@ -1,5 +1,7 @@
 ---
 title: Transfer a Chat
+redirect_from:
+  - agent-transfer-chat.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 210
-permalink: agent-transfer-chat.html
+permalink: chat-agent-api-methods-transfer-a-chat.html
 
 indicator: chat
 ---

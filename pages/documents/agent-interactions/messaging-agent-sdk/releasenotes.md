@@ -1,12 +1,14 @@
 ---
 title: Release Notes
+redirect_from:
+  - messaging-agent-sdk-releasenotes.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Messaging Agent SDK
 
 order: 120
-permalink: messaging-agent-sdk-releasenotes.html
+permalink: messaging-agent-sdk-release-notes.html
 
 indicator: messaging
 ---

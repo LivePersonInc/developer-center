@@ -1,5 +1,7 @@
 ---
 title: Retrieve Data for Multiple Chats
+redirect_from:
+  - agent-retrieve-data.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 110
-permalink: agent-retrieve-data.html
+permalink: chat-agent-api-methods-retrieve-data-for-multiple-chats.html
 
 indicator: chat
 ---

@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - chat-agent-getting-started.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 
 level-order: 4
 order: 4
-permalink: chat-agent-getting-started.html
+permalink: chat-agent-api-overview.html
 root-link: true
 indicator: chat
 ---

@@ -1,12 +1,14 @@
 ---
 title: Retrieve Agent Survey Structure
+redirect_from:
+  - agent-retrieve-survey-structure.html
 Keywords:
 level1: 
 level2: Agent Interactions
 level3: Chat Agent API
 level4: Methods
 order: 220
-permalink: agent-retrieve-survey-structure.html
+permalink: chat-agent-api-methods-retrieve-agent-survey-structure.html
 indicator: chat
 ---
 

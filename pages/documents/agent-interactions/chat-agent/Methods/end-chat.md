@@ -1,5 +1,7 @@
 ---
 title: End Chat
+redirect_from:
+  - agent-end-chat.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 140
-permalink: agent-end-chat.html
+permalink: chat-agent-api-methods-end-chat.html
 
 indicator: chat
 ---

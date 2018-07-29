@@ -1,12 +1,14 @@
 ---
 title: How to use the SDK
+redirect_from:
+  - agent-workspace-sdk-how-to-use.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 40
-permalink: agent-workspace-sdk-how-to-use.html
+permalink: agent-workspace-widget-sdk-how-to-use-the-sdk.html
 
 indicator: both
 ---

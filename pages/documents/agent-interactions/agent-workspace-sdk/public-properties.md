@@ -1,12 +1,14 @@
 ---
 title: Public Properties
+redirect_from:
+  - agent-workspace-sdk-public-properties.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 70
-permalink: agent-workspace-sdk-public-properties.html
+permalink: agent-workspace-widget-sdk-public-properties.html
 
 indicator: both
 ---

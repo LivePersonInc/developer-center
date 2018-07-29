@@ -1,5 +1,7 @@
 ---
 title: Retrieve Chat Events
+redirect_from:
+  - agent-retrieve-chat-events.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 120
-permalink: agent-retrieve-chat-events.html
+permalink: chat-agent-api-methods-retrieve-chat-events.html
 
 indicator: chat
 ---
