@@ -450,6 +450,7 @@ table {
 
 .anchorlist ul {
   list-style: none;
+  display: none;
 }
 
 @media screen and (max-width:1440px){
