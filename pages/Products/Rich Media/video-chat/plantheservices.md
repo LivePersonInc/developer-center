@@ -1,12 +1,14 @@
 ---
 title: Develop the Services
+redirect_from:
+  - products-video-chat-develop-the-services.html
 level1: Solutions
 level2: Rich Media
 level3: Video Chat
 
 order: 3
 
-permalink: products-video-chat-develop-the-services.html
+permalink: video-chat-develop-the-services.html
 indicator:
 ---
 

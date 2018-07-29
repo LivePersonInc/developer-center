@@ -1,12 +1,14 @@
 ---
 title: Plan Your Service
+redirect_from:
+  - products-video-chat-plan-your-service.html
 level1: Solutions
 level2: Rich Media
 level3: Video Chat
 
 order: 2
 
-permalink: products-video-chat-plan-your-service.html
+permalink: video-chat-plan-your-service.html
 indicator:
 ---
 

@@ -1,12 +1,14 @@
 ---
 title: Build Your Widgets
+redirect_from:
+  - products-video-chat-build-your-widgets.html
 level1: Solutions
 level2: Rich Media
 level3: Video Chat
 
 order: 4
 
-permalink: products-video-chat-build-your-widgets.html
+permalink: video-chat-build-your-widgets.html
 indicator:
 ---
 

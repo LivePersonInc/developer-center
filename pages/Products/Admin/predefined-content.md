@@ -1,5 +1,7 @@
 ---
 title: Automatically Update Predefined Content
+redirect_from:
+  - products-admin-predefined-content.html
 level1: Solutions
 level2:
 level3: Predefined Content
@@ -7,7 +9,7 @@ level3: Predefined Content
 order: 1
 level-order: 1
 root-link: true
-permalink: products-admin-predefined-content.html
+permalink: predefined-content-automatically-update-predefined-content.html
 indicator:
 ---
 

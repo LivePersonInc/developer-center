@@ -1,5 +1,7 @@
 ---
 title: Deploying Bots on Live Chat
+redirect_from:
+  - products-bots-chat.html
 
 level1: Solutions
 level2: Bots
@@ -7,7 +9,7 @@ level3: Customer Facing Bots
 
 order: 6
 
-permalink: products-bots-chat.html
+permalink: customer-facing-bots-deploying-bots-on-live-chat.html
 
 indicator:
 ---

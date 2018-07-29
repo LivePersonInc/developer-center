@@ -1,10 +1,12 @@
 ---
 title: Clickable Mobile Content to SMS
+redirect_from:
+  - products-channels-sms-clickable.html
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
-permalink: products-channels-sms-clickable.html
+permalink: sms-with-liveengage-clickable-mobile-content-to-sms.html
 order: 20
 indicator:
 ---

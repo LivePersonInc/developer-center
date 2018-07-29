@@ -1,5 +1,7 @@
 ---
 title: Add Messaging to your app
+redirect_from:
+  - products-channels-inapp-messaging.html
 level1: Solutions
 level2: Channels
 level3: Mobile App Messaging
@@ -7,7 +9,7 @@ level3: Mobile App Messaging
 order: 1
 level-order: 1
 root-link: true
-permalink: products-channels-inapp-messaging.html
+permalink: mobile-app-messaging-add-messaging-to-your-app.html
 indicator:
 ---
 

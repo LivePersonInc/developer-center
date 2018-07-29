@@ -1,10 +1,12 @@
 ---
 title: SMS via Mobile App Messaging
+redirect_from:
+  - products-channels-sms-inapp.html
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
-permalink: products-channels-sms-inapp.html
+permalink: sms-with-liveengage-sms-via-mobile-app-messaging.html
 order: 40
 indicator:
 ---

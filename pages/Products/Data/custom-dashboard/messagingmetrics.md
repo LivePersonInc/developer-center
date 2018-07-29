@@ -1,12 +1,14 @@
 ---
 title: Messaging Metrics
+redirect_from:
+  - products-data-custom-dashboard-messaging-metrics.html
 level1: Solutions
 level2: Data
 level3: Custom Dashboard
 
 order: 3
 
-permalink: products-data-custom-dashboard-messaging-metrics.html
+permalink: custom-dashboard-messaging-metrics.html
 indicator:
 ---
 

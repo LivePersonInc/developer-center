@@ -1,12 +1,14 @@
 ---
 title: Design Integration & Service
+redirect_from:
+  - products-data-custom-dashboard-design-integration-service.html
 level1: Solutions
 level2: Data
 level3: Custom Dashboard
 
 order: 4
 
-permalink: products-data-custom-dashboard-design-integration-service.html
+permalink: custom-dashboard-design-integration-&-service.html
 indicator:
 ---
 

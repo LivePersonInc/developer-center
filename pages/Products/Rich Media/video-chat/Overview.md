@@ -1,5 +1,7 @@
 ---
 title: Add video to chat conversations
+redirect_from:
+  - products-video-chat-overview.html
 level1: Solutions
 level2: Rich Media
 level3: Video Chat
@@ -7,7 +9,7 @@ level3: Video Chat
 order: 1
 level-order: 1
 root-link: true
-permalink: products-video-chat-overview.html
+permalink: video-chat-add-video-to-chat-conversations.html
 indicator:
 ---
 

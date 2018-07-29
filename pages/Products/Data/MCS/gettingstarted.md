@@ -1,11 +1,13 @@
 ---
 title: Getting Started
+redirect_from:
+  - products-mcs-gettingstarted.html
 level1: Solutions
 level2: Data
 level3: MCS Toolkit
 
 order: 10
-permalink: products-mcs-gettingstarted.html
+permalink: mcs-toolkit-getting-started.html
 indicator:
 ---
 

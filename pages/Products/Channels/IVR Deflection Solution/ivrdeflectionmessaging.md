@@ -1,10 +1,12 @@
 ---
 title: IVR Deflection
+redirect_from:
+  - products-channels-ivrmessaging.html
 level1: Solutions
 level2: Channels
 level3: IVR Deflection
 root-link: true
-permalink: products-channels-ivrmessaging.html
+permalink: ivr-deflection-ivr-deflection.html
 order: 10
 indicator: messaging
 ---

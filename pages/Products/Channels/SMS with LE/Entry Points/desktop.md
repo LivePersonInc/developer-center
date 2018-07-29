@@ -1,10 +1,12 @@
 ---
 title: Desktop content campaign
+redirect_from:
+  - products-channels-sms-desktop.html
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
-permalink: products-channels-sms-desktop.html
+permalink: sms-with-liveengage-desktop-content-campaign.html
 order: 30
 indicator:
 ---

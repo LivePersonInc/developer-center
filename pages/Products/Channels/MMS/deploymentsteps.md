@@ -1,9 +1,11 @@
 ---
 title: Deployment Steps
+redirect_from:
+  - products-channels-mms-deployment.html
 level1: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
-permalink: products-channels-mms-deployment.html
+permalink: liveengage-mms-viewer-deployment-steps.html
 order: 30
 indicator:
 ---

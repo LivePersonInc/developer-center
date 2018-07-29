@@ -1,5 +1,7 @@
 ---
 title: Getting Started
+redirect_from:
+  - products-bots-gettingstarted.html
 
 level1: Solutions
 level2: Bots
@@ -7,7 +9,7 @@ level3: Customer Facing Bots
 
 order: 3
 
-permalink: products-bots-gettingstarted.html
+permalink: customer-facing-bots-getting-started.html
 
 indicator:
 ---

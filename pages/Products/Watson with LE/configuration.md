@@ -1,11 +1,13 @@
 ---
 title: Configuration
+redirect_from:
+  - watson-configuration.html
 keywords:
 level1: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 27
-permalink: watson-configuration.html
+permalink: watson-with-liveengage-configuration.html
 indicator: messaging
 ---
 ### Bot as an agent setup

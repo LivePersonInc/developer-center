@@ -1,5 +1,7 @@
 ---
 title: Limitations
+redirect_from:
+  - products-bots-limitations.html
 level1: Solutions
 level2: Bots
 level3: Customer Facing Bots
@@ -8,7 +10,7 @@ level3: Customer Facing Bots
 
 order: 5
 
-permalink: products-bots-limitations.html
+permalink: customer-facing-bots-limitations.html
 
 indicator:
 ---

@@ -1,5 +1,7 @@
 ---
 title: Integrate your LivePerson data into any system for analytics
+redirect_from:
+  - products-data-integration-and-analysis-overview.html
 level1: Solutions
 level2: Data
 level3: Data Integration & Analysis
@@ -7,7 +9,7 @@ level3: Data Integration & Analysis
 order: 1
 level-order: 1
 root-link: true
-permalink: products-data-integration-and-analysis-overview.html
+permalink: data-integration-&-analysis-integrate-your-liveperson-data-into-any-system-for-analytics.html
 indicator:
 ---
 

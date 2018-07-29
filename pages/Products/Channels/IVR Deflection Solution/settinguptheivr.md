@@ -1,10 +1,12 @@
 ---
 title: Setting up the IVR Deflection Solution for Chat
+redirect_from:
+  - products-channels-ivr-deflection-solution-setting-up-ivr.html
 level1: Solutions
 level2: Channels
 level3: IVR Deflection
 order: 30
-permalink: products-channels-ivr-deflection-solution-setting-up-ivr.html
+permalink: ivr-deflection-setting-up-the-ivr-deflection-solution-for-chat.html
 indicator: chat
 ---
 

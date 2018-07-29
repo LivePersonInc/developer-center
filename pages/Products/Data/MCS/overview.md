@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - products-mcs-overview.html
 level1: Solutions
 level2: Data
 level3: MCS Toolkit
@@ -7,7 +9,7 @@ level3: MCS Toolkit
 order: 1
 level-order: 3
 root-link: true
-permalink: products-mcs-overview.html
+permalink: mcs-toolkit-overview.html
 indicator:
 ---
 

@@ -1,9 +1,11 @@
 ---
 title: Appendix
+redirect_from:
+  - products-channels-sms-appendix.html
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
-permalink: products-channels-sms-appendix.html
+permalink: sms-with-liveengage-appendix.html
 order: 41
 indicator:
 ---

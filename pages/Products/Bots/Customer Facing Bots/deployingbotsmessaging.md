@@ -1,5 +1,7 @@
 ---
 title: Deploying Bots on Messaging
+redirect_from:
+  - products-bots-messaging.html
 
 level1: Solutions
 level2: Bots
@@ -7,7 +9,7 @@ level3: Customer Facing Bots
 
 order: 7
 
-permalink: products-bots-messaging.html
+permalink: customer-facing-bots-deploying-bots-on-messaging.html
 
 indicator:
 ---

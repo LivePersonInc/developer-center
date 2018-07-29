@@ -1,6 +1,8 @@
 ---
 title: SugarCRM
-permalink: sugarcrm.html
+redirect_from:
+  - sugarcrm.html
+permalink: crm-integrations-sugarcrm.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations

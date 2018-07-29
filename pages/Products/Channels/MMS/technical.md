@@ -1,9 +1,11 @@
 ---
 title: Technical Description
+redirect_from:
+  - products-channels-mms-technical.html
 level1: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
-permalink: products-channels-mms-technical.html
+permalink: liveengage-mms-viewer-technical-description.html
 order: 10
 indicator:
 ---

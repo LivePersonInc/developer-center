@@ -1,5 +1,7 @@
 ---
 title: Prerequisites
+redirect_from:
+  - products-bots-prerequisites.html
 level1: Solutions
 level2: Bots
 level3: Customer Facing Bots
@@ -8,7 +10,7 @@ level3: Customer Facing Bots
 
 order: 2
 
-permalink: products-bots-prerequisites.html
+permalink: customer-facing-bots-prerequisites.html
 
 indicator:
 ---
