@@ -24,13 +24,13 @@ Please view the separate [Getting Started](rt-interactions-monitoring-getting-st
 
 * monitor session - the server-side state of the current consumer device session.
 
-* `consumerId` - (deprecated) the brand's identifier for the consumer (e.g, email, phone number or a generated unique id).
+* `consumerId` - (deprecated - use identities instead) the brand's identifier for the consumer (e.g, email, phone number or a generated unique id).
 
 * `identities` - In order to target a specific consumer and their engagement, the identity of the consumer must be passed to the API using the `identities` array. The information in this array should match the values assigned to the user when they authenticate on your site. That, upon authentication on your site (and according with the [OpenID RFC](http://openid.net/specs/openid-connect-core-1_0.html#IDToken)), each visitor should be assigned values to the following keys, values which are later passed to the API. Each array consists of 3 keys:
 
   * `iss` - Issuer, who identified the consumer - usually the brand.
 
-  * `acr` - Authentication Context Class Reference, the level of the authentication. Currenmtly, we support the level `loa1` only and thus only it should be used here.
+  * `acr` - Authentication Context Class Reference, the level of the authentication. Currently, we support the level `loa1` only and thus only it should be used here, based on [NIST-2 (2013)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf).
 
   * `sub` - unique and non-guessable identifier of the consumer (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and move between consumers).
 

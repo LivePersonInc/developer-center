@@ -45,7 +45,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id (deprecated) | string | Optional for authenticated, deprecated - should use identities auth identity instead <sup>[1]</sup>|  |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead <sup>[1]</sup>|  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
 | identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1 |
@@ -55,7 +55,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
-<sup>[1]</sup> At least one form of identification is required (ConsumerId, any identity with subject or VisitorID).
+<sup>[1]</sup> At least one form of identification is required (`consumerId` / an `identities.sub` or `vid`).
 
 ### Security considerations
 
