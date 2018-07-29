@@ -1,10 +1,12 @@
 ---
 title: Installing a Monitoring API Application
+redirect_from:
+  - rt-interactions-monitoring-app-install.html
 level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 order: 11
-permalink: rt-interactions-monitoring-app-install.html
+permalink: monitoring-api-installing-a-monitoring-api-application.html
 indicator: messaging
 ---
 

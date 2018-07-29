@@ -1,11 +1,13 @@
 ---
 title: Styling
+redirect_from:
+  - rich-messaging-quick-replies-styling.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Quick Replies
 order: 20
-permalink: rich-messaging-quick-replies-styling.html
+permalink: quick-replies-styling.html
 indicator: messaging
 ---
 

@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - rt-interactions-window-sdk-overview.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Window Widget SDK
 
 order: 1
 level-order: 4
-permalink: rt-interactions-window-sdk-overview.html
+permalink: engagement-window-widget-sdk-overview.html
 root-link: true
 indicator: both
 ---

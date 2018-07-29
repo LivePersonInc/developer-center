@@ -1,11 +1,13 @@
 ---
 title: External Engagement
+redirect_from:
+  - rt-interactions-ivr-engagement-external engagement.html
 level1: Documents
 level2: Real Time Interactions
 level3: IVR Engagement API
 level4: Methods
 order: 10
-permalink: rt-interactions-ivr-engagement-external engagement.html
+permalink: ivr-engagement-api-methods-external-engagement.html
 
 indicator: chat
 ---

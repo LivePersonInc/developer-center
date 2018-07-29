@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - lp-tag-tag-events-overview.html
 level1: Documents
 level2: Account Configuration
 level3: LE-Tag
 
 level-order: 3
 order: 1
-permalink: lp-tag-tag-events-overview.html
+permalink: le-tag-overview.html
 root-link: true
 indicator: both
 ---

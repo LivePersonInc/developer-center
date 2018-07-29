@@ -1,10 +1,12 @@
 ---
 title: Introduction
+redirect_from:
+  - guides-authentication-introduction.html
 level1: Documents
 level2: Guides
 level3: Authentication
 
-permalink: guides-authentication-introduction.html
+permalink: authentication-introduction.html
 root-link: true
 level-order: 6
 order: 1

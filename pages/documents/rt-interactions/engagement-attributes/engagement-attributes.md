@@ -1,11 +1,13 @@
 ---
 title: Engagement Attributes
+redirect_from:
+  - rt-interactions-engagement-attributes-engagement-attributes.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Attributes API
 
 order: 2
-permalink: rt-interactions-engagement-attributes-engagement-attributes.html
+permalink: engagement-attributes-api-engagement-attributes.html
 
 indicator: both
 ---

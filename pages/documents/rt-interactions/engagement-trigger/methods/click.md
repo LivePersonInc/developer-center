@@ -1,11 +1,13 @@
 ---
 title: Click
+redirect_from:
+  - trigger-click.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Trigger API
 level4: Methods
 order: 10
-permalink: trigger-click.html
+permalink: engagement-trigger-api-methods-click.html
 
 indicator: both
 ---

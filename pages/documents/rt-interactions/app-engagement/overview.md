@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - rt-interactions-app-engagement-overview.html
 level1: Documents
 level2: Real Time Interactions
 level3: App Engagement API
 
 level-order: 1
 order: 1
-permalink: rt-interactions-app-engagement-overview.html
+permalink: app-engagement-api-overview.html
 root-link: true
 indicator: both
 ---

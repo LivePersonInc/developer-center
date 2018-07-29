@@ -1,12 +1,14 @@
 ---
 title: Event Structure
+redirect_from:
+  - rt-interactions-window-sdk-event-structure.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Window Widget SDK
 level4: Instructions
 
 order: 30
-permalink: rt-interactions-window-sdk-event-structure.html
+permalink: engagement-window-widget-sdk-instructions-event-structure.html
 
 indicator: both
 ---

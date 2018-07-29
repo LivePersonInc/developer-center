@@ -1,10 +1,12 @@
 ---
 title: Create a new Application Key
+redirect_from:
+  - guides-gettingstarted.html
 level1: Documents
 level2: Guides
 level3: Retrieve API Keys
 
-permalink: guides-gettingstarted.html
+permalink: retrieve-api-keys-create-a-new-application-key.html
 root-link: true
 level-order: 1
 order: 1

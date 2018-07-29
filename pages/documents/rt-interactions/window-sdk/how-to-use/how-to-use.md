@@ -1,5 +1,7 @@
 ---
 title: How to use the SDK
+redirect_from:
+  - rt-interactions-window-sdk-how-to-use.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Window Widget SDK
@@ -7,7 +9,7 @@ level4: Instructions
 
 
 order: 20
-permalink: rt-interactions-window-sdk-how-to-use.html
+permalink: engagement-window-widget-sdk-instructions-how-to-use-the-sdk.html
 indicator: both
 ---
 

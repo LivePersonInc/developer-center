@@ -1,11 +1,13 @@
 ---
 title: Changelog
+redirect_from:
+  - rt-interactions-changelog.html
 Keywords:
 level1: Documents
 level2: Real Time Interactions
 level3: App Engagement API
 order: 231
-permalink: rt-interactions-changelog.html
+permalink: app-engagement-api-changelog.html
 indicator: both
 ---
 

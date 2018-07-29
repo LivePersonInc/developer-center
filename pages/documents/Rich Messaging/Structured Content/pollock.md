@@ -1,11 +1,13 @@
 ---
 title: Structured Content Rendering Tool
+redirect_from:
+  - rich-messaging-structured-content-pollock.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Structured Content
 order: 80
-permalink: rich-messaging-structured-content-pollock.html
+permalink: structured-content-structured-content-rendering-tool.html
 indicator: both
 ---
 

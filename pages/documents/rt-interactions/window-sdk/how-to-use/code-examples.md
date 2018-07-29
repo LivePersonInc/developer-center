@@ -1,12 +1,14 @@
 ---
 title: Code Examples
+redirect_from:
+  - rt-interactions-window-sdk-code-examples.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Window Widget SDK
 level4: Instructions
 
 order: 40
-permalink: rt-interactions-window-sdk-code-examples.html
+permalink: engagement-window-widget-sdk-instructions-code-examples.html
 
 indicator: both
 ---

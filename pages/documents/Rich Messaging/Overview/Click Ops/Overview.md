@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - rich-messaging-click-ops.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Getting Started
 level4: Click Operations
 order: 80
-permalink: rich-messaging-click-ops.html
+permalink: getting-started-click-operations-overview.html
 indicator: both
 ---
 

@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - rt-interactions-visit-information-overview.html
 level1: Documents
 level2: Real Time Interactions
 level3: Visit Information API
 
 level-order: 2
 order: 1
-permalink: rt-interactions-visit-information-overview.html
+permalink: visit-information-api-overview.html
 root-link: true
 indicator: chat
 ---

@@ -1,11 +1,13 @@
 ---
 title: Changelog
+redirect_from:
+  - rt-interactions-ivr-engagement-changelog.html
 Keywords:
 level1: Documents
 level2: Real Time Interactions
 level3: IVR Engagement API
 order: 231
-permalink: rt-interactions-ivr-engagement-changelog.html
+permalink: ivr-engagement-api-changelog.html
 indicator: chat
 ---
 

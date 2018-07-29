@@ -1,5 +1,7 @@
 ---
 title: Retry and KeepAlive Policy
+redirect_from:
+  - guides-retry-policy.html
 Keywords:
 level1: Documents
 level2: Guides
@@ -7,7 +9,7 @@ level3: Retry and KeepAlive Policy
 
 level-order: 11
 order: 10
-permalink: guides-retry-policy.html
+permalink: retry-and-keepalive-policy-retry-and-keepalive-policy.html
 root-link: true
 indicator: both
 ---

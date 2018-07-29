@@ -1,12 +1,14 @@
 ---
 title: Text
+redirect_from:
+  - rich-messaging-basic-elements-text.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Getting Started
 level4: Basic Elements
 order: 40
-permalink: rich-messaging-basic-elements-text.html
+permalink: getting-started-basic-elements-text.html
 indicator: both
 ---
 

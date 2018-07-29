@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - rich-messaging-structured-content-overview.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
@@ -7,7 +9,7 @@ level3: Structured Content
 
 level-order: 2
 order: 5
-permalink: rich-messaging-structured-content-overview.html
+permalink: structured-content-overview.html
 root-link: true
 indicator: both
 ---

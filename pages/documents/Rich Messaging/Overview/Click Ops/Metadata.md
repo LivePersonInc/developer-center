@@ -1,12 +1,14 @@
 ---
 title: Metadata
+redirect_from:
+  - rich-messaging-click-ops-metadata.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Getting Started
 level4: Click Operations
 order: 100
-permalink: rich-messaging-click-ops-metadata.html
+permalink: getting-started-click-operations-metadata.html
 indicator: both
 ---
 

@@ -1,11 +1,13 @@
 ---
 title: Changelog
+redirect_from:
+  - rt-interactions-visit-information-changelog.html
 Keywords:
 level1: Documents
 level2: Real Time Interactions
 level3: Visit Information API
 order: 231
-permalink: rt-interactions-visit-information-changelog.html
+permalink: visit-information-api-changelog.html
 indicator: chat
 ---
 

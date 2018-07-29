@@ -1,11 +1,13 @@
 ---
 title: Best Practices
+redirect_from:
+  - rich-messaging-structured-content-best-practices.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Structured Content
 order: 60
-permalink: rich-messaging-structured-content-best-practices.html
+permalink: structured-content-best-practices.html
 indicator: both
 ---
 

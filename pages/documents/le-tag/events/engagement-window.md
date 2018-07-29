@@ -1,12 +1,14 @@
 ---
 title: Engagement Window Events
+redirect_from:
+  - lp-tag-engagement-window.html
 level1: Documents
 level2: Account Configuration
 level3: LE-Tag
 level4: Events
 
 order: 30
-permalink: lp-tag-engagement-window.html
+permalink: le-tag-events-engagement-window-events.html
 
 indicator: both
 ---

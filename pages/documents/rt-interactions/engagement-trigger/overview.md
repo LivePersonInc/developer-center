@@ -1,11 +1,13 @@
 ---
 title: Overview
+redirect_from:
+  - trigger-overview.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Trigger API
 
 order: 1
-permalink: trigger-overview.html
+permalink: engagement-trigger-api-overview.html
 root-link: true
 level-order: 7
 

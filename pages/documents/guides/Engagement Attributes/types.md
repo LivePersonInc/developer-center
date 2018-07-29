@@ -1,11 +1,13 @@
 ---
 title: Types of Engagement Attributes
+redirect_from:
+  - engagement-attributes-types.html
 Keywords:
 level1: Documents
 level2: Guides
 level3: Engagement Attributes
 order: 20
-permalink: engagement-attributes-types.html
+permalink: engagement-attributes-types-of-engagement-attributes.html
 indicator: both
 ---
 

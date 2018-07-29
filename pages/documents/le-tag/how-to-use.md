@@ -1,11 +1,13 @@
 ---
 title: How to use LiveEngage Tag Events
+redirect_from:
+  - lp-tag-tag-events-how.html
 level1: Documents
 level2: Account Configuration
 level3: LE-Tag
 
 order: 2
-permalink: lp-tag-tag-events-how.html
+permalink: le-tag-how-to-use-liveengage-tag-events.html
 
 indicator: both
 ---

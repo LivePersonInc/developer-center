@@ -1,10 +1,12 @@
 ---
 title: How It Works
+redirect_from:
+  - guides-authentication-howitworks.html
 level1: Documents
 level2: Guides
 level3: Authentication
 
-permalink: guides-authentication-howitworks.html
+permalink: authentication-how-it-works.html
 order: 4
 indicator: both
 ---

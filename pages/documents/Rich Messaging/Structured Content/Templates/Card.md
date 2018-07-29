@@ -1,12 +1,14 @@
 ---
 title: Card
+redirect_from:
+  - rich-messaging-structured-content-card.html
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: Structured Content
 level4: Templates
 order: 30
-permalink: rich-messaging-structured-content-card.html
+permalink: structured-content-templates-card.html
 indicator: both
 ---
 

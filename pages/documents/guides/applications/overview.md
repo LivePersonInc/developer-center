@@ -1,12 +1,14 @@
 ---
 title: What Is a LiveEngage Application?
+redirect_from:
+  - guides-le-applications-what-is.html
 Keywords:
 level1: Documents
 level2: Guides
 level3: LiveEngage Applications
 level-order: 13
 order: 10
-permalink: guides-le-applications-what-is.html
+permalink: liveengage-applications-what-is-a-liveengage-application?.html
 root-link: true
 indicator: both
 ---

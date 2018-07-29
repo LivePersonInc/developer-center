@@ -1,10 +1,12 @@
 ---
 title: Configuration
+redirect_from:
+  - guides-authentication-configuration.html
 level1: Documents
 level2: Guides
 level3: Authentication
 
-permalink: guides-authentication-configuration.html
+permalink: authentication-configuration.html
 order: 3
 indicator: both
 ---

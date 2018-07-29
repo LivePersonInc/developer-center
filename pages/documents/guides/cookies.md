@@ -1,11 +1,13 @@
 ---
 title: Overview
+redirect_from:
+  - guides-cookies.html
 level1: Documents
 level2: Guides
 level3: Cookies and LiveEngage
 level-order: 12
 order: 10
-permalink: guides-cookies.html
+permalink: cookies-and-liveengage-overview.html
 root-link: true
 indicator: both
 ---

@@ -1,11 +1,13 @@
 ---
 title: Overview
+redirect_from:
+  - rt-interactions-engagement-attributes-overview.html
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Attributes API
 
 order: 1
-permalink: rt-interactions-engagement-attributes-overview.html
+permalink: engagement-attributes-api-overview.html
 root-link: true
 level-order: 6
 

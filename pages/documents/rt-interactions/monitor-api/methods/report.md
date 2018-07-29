@@ -1,11 +1,13 @@
 ---
 title: Report
+redirect_from:
+  - rt-interactions-monitoring-methods-report.html
 level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
 order: 30
-permalink: rt-interactions-monitoring-methods-report.html
+permalink: monitoring-api-methods-report.html
 indicator: messaging
 ---
 

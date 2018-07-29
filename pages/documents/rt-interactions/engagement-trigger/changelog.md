@@ -1,11 +1,13 @@
 ---
 title: Changelog
+redirect_from:
+  - trigger-changelog.html
 Keywords:
 level1: Documents
 level2: Real Time Interactions
 level3: Engagement Trigger API
 order: 231
-permalink: trigger-changelog.html
+permalink: engagement-trigger-api-changelog.html
 indicator: chat
 ---
 

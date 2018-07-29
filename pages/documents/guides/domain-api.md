@@ -1,5 +1,7 @@
 ---
 title: Domain API
+redirect_from:
+  - agent-domain-domain-api.html
 Keywords:
 level1: Documents
 level2: Guides
@@ -7,7 +9,7 @@ level3: Retrieve API Domains
 
 level-order: 2
 order: 10
-permalink: agent-domain-domain-api.html
+permalink: retrieve-api-domains-domain-api.html
 root-link: true
 indicator:
 ---
