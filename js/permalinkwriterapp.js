@@ -44,6 +44,10 @@ readdirp(settings)
         (error, content) => {
           const lines = content.split('\n');
           //console.log(lines);
+          let permalink = lines.find(line => line.startsWith('permalink'));
+          lines.splice(2, 0, 'redirect_from:')
+          lines.splice(3, 0, `  - ${permalink.replace('permalink: ', '')}`);
+
           let title = lines.find(line => line.startsWith('title'));
           if(title) {
             title = title.replace('title: ', '').toLowerCase().replace(/ /g, '-');
@@ -64,7 +68,7 @@ readdirp(settings)
             lines[lineOfLink] = `permalink: ${level3}-${title}` + '.html';
           };
           console.log(lines.join('\n'));
-          fs.writeFile(entry.fullPath.replace('-old', ''), lines.join('\n'));
+          fs.writeFile(entry.fullPath, lines.join('\n'));
         },
         (error) => {
           console.log(error);
