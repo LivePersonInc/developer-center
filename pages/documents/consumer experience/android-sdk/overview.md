@@ -8,6 +8,8 @@ level3: Mobile App Messaging SDK for Android
 level-order: 2
 order: 0
 permalink: mobile-app-messaging-sdk-for-android-overview.html
+redirect_from:
+  - android-overview.html
 root-link: true
 indicator: messaging
 ---
@@ -22,7 +24,7 @@ indicator: messaging
 
 **Add messaging directly within your app to enjoy the following benefits:**
 
-* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation. 
+* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
 
 * Increase the stickiness of your app through the added value of Mobile App Messaging.
 
