@@ -1,5 +1,7 @@
 ---
 title: Close Conversation
+redirect_from:
+  - consumer-int-msg-close-conv.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 150
 layout: page
 
-permalink: consumer-int-msg-close-conv.html
+permalink: messaging-window-api-api-reference-close-conversation.html
 indicator: messaging
 ---
 

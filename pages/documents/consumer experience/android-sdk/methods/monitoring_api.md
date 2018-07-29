@@ -1,5 +1,7 @@
 ---
 title: Monitoring API
+redirect_from:
+  - android-monitoring_api.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: SDK APIs
 
 order: 104
-permalink: android-monitoring_api.html
+permalink: mobile-app-messaging-sdk-for-android-sdk-apis-monitoring-api.html
 
 indicator: messaging
 ---

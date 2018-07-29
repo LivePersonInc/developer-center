@@ -1,12 +1,14 @@
 ---
 title: Send a message
+redirect_from:
+  - send-message-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 61
 indicator: messaging
-permalink: send-message-example.html
+permalink: connector-api-examples-send-a-message.html
 
 ---
 

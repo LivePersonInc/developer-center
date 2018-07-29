@@ -1,5 +1,7 @@
 ---
 title: Campaigns for Mobile App Messaging
+redirect_from:
+  - consumer-experience-ios-sdk-advanced-campaigns.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 235
-permalink: consumer-experience-ios-sdk-advanced-campaigns.html
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns-for-mobile-app-messaging.html
 
 indicator: messaging
 ---

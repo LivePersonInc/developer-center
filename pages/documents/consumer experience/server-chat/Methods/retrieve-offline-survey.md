@@ -1,12 +1,14 @@
 ---
 title: Retrieve Offline Survey
+redirect_from:
+  - consumer-experience-server-chat-retrieve-offline-survey.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 50
-permalink: consumer-experience-server-chat-retrieve-offline-survey.html
+permalink: server-chat-api-methods-retrieve-offline-survey.html
 
 indicator: chat
 ---

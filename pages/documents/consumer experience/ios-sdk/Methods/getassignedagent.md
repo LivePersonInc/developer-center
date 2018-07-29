@@ -1,5 +1,7 @@
 ---
 title: getAssignedAgent
+redirect_from:
+  - consumer-experience-ios-sdk-getassignedagent.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 170
-permalink: consumer-experience-ios-sdk-getassignedagent.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-getassignedagent.html
 
 indicator: messaging
 ---

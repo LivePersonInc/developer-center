@@ -1,5 +1,7 @@
 ---
 title: clearHistory
+redirect_from:
+  - consumer-experience-ios-sdk-clearhistory.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 110
-permalink: consumer-experience-ios-sdk-clearhistory.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-clearhistory.html
 
 indicator: messaging
 ---

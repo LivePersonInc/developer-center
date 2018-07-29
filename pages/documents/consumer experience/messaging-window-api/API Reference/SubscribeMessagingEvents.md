@@ -1,5 +1,7 @@
 ---
 title: Subscribe to Messaging Events
+redirect_from:
+  - consumer-int-msg-sub-events.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 200
 layout: page
 
-permalink: consumer-int-msg-sub-events.html
+permalink: messaging-window-api-api-reference-subscribe-to-messaging-events.html
 indicator: messaging
 ---
 {% include msgtype.html title='Request' type='req' %}

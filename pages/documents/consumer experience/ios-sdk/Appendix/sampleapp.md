@@ -1,5 +1,7 @@
 ---
 title: Using LivePerson SDK - iOS
+redirect_from:
+  - consumer-experience-ios-sdk-sampleapp.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 
 order: 246
-permalink: consumer-experience-ios-sdk-sampleapp.html
+permalink: mobile-app-messaging-sdk-for-ios-appendix-using-liveperson-sdk---ios.html
 
 indicator: messaging
 ---

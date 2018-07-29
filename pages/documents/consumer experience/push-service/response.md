@@ -1,12 +1,14 @@
 ---
 title: HTTP Response Codes
+redirect_from:
+  - push-service-codes.html
 Keywords:
 level1: Documents
 level2: Guides
 level3: Push Notification Service (iOS and Android)
 
 order: 30
-permalink: push-service-codes.html
+permalink: push-notification-service-(ios-and-android)-http-response-codes.html
 
 indicator: messaging
 ---

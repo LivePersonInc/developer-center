@@ -1,5 +1,7 @@
 ---
 title: Conversation Metadata
+redirect_from:
+  - consumer-int-conversation-md.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -7,7 +9,7 @@ level4: Tutorials
 
 order: 20
 
-permalink: consumer-int-conversation-md.html
+permalink: messaging-window-api-tutorials-conversation-metadata.html
 indicator: messaging
 ---
 

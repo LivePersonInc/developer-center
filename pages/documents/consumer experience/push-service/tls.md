@@ -1,12 +1,14 @@
 ---
 title: TLS Authentication
+redirect_from:
+  - push-service-tls.html
 Keywords:
 level1: Documents
 level2: Guides
 level3: Push Notification Service (iOS and Android)
 
 order: 20
-permalink: push-service-tls.html
+permalink: push-notification-service-(ios-and-android)-tls-authentication.html
 
 indicator: messaging
 ---

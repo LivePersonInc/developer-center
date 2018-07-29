@@ -1,11 +1,13 @@
 ---
 title: Sample Code
+redirect_from:
+  - data-engagement-history-sample-code.html
 level1: Documents
 level2: Data
 level3: Engagement History API
 
 order: 11
-permalink: data-engagement-history-sample-code.html
+permalink: engagement-history-api-sample-code.html
 
 indicator: chat
 ---

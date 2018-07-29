@@ -1,5 +1,7 @@
 ---
 title: getVisitorName
+redirect_from:
+  - consumer-experience-javascript-chat-getvisitorname.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 150
-permalink: consumer-experience-javascript-chat-getvisitorname.html
+permalink: javascript-chat-sdk-methods-getvisitorname.html
 
 indicator: chat
 ---

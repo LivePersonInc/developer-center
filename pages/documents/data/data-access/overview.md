@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - data-data-access-overview.html
 level1: Documents
 level2: Data
 level3: Data Access API
 
 level-order: 1
 order: 1
-permalink: data-data-access-overview.html
+permalink: data-access-api-overview.html
 root-link: true
 indicator: chat
 ---

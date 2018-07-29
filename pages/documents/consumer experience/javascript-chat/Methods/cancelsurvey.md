@@ -1,5 +1,7 @@
 ---
 title: cancelSurvey
+redirect_from:
+  - consumer-experience-javascript-chat-cancelsurvey.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 101
-permalink: consumer-experience-javascript-chat-cancelsurvey.html
+permalink: javascript-chat-sdk-methods-cancelsurvey.html
 
 indicator: chat
 ---

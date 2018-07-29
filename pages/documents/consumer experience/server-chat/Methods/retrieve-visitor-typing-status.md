@@ -1,12 +1,14 @@
 ---
 title: Retrieve the Visitor's Typing Status
+redirect_from:
+  - consumer-experience-server-chat-retrieve-visitor-typing-status.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 130
-permalink: consumer-experience-server-chat-retrieve-visitor-typing-status.html
+permalink: server-chat-api-methods-retrieve-the-visitor's-typing-status.html
 
 indicator: chat
 ---

@@ -1,11 +1,13 @@
 ---
 title: Release Notes
+redirect_from:
+  - consumer-experience-voice-video-android-changelog.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 
 order: 110
-permalink: consumer-experience-voice-video-android-changelog.html
+permalink: voice-&-video-for-android-sdk-(beta)-release-notes.html
 indicator: messaging
 ---
 

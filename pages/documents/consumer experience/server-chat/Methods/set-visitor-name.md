@@ -1,6 +1,8 @@
 ---
 title: Set the Visitor's Name
-permalink: consumer-experience-server-chat-set-visitor-name.html
+redirect_from:
+  - consumer-experience-server-chat-set-visitor-name.html
+permalink: undefined-set-the-visitor's-name.html
 
 indicator: chat
 ---

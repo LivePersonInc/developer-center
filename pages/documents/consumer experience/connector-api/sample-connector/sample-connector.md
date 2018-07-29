@@ -1,12 +1,14 @@
 ---
 title: Connector Sample App
+redirect_from:
+  - connector-sample-app.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Sample Code
 order: 70
 indicator: messaging
-permalink: connector-sample-app.html
+permalink: connector-api-sample-code-connector-sample-app.html
 ---
 
 ### Overview

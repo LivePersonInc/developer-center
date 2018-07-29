@@ -1,11 +1,13 @@
 ---
 title: Overview
+redirect_from:
+  - personal-data-deletion-overview.html
 level1: Documents
 level2: Data
 level3: Personal Data Deletion API
 level-order: 8
 order: 1
-permalink: personal-data-deletion-overview.html
+permalink: personal-data-deletion-api-overview.html
 root-link: true
 indicator: both
 ---

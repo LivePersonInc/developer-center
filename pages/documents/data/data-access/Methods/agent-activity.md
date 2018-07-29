@@ -1,12 +1,14 @@
 ---
 title: Agent Activity
+redirect_from:
+  - data-data-access-agent-activity.html
 level1: Documents
 level2: Data
 level3: Data Access API
 level4: Methods
 order: 20
 
-permalink: data-data-access-agent-activity.html
+permalink: data-access-api-methods-agent-activity.html
 
 indicator: chat
 ---

@@ -1,5 +1,7 @@
 ---
 title: Logs and Info
+redirect_from:
+  - consumer-experience-ios-sdk-logs-info.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 8
-permalink: consumer-experience-ios-sdk-logs-info.html
+permalink: mobile-app-messaging-sdk-for-ios-configuration-logs-and-info.html
 
 indicator: messaging
 ---

@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - webhooks-overview.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 19
 indicator: messaging
-permalink: webhooks-overview.html
+permalink: connector-api-webhooks-overview.html
 ---
 
 ### Introduction

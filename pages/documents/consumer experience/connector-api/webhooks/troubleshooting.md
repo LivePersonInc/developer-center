@@ -1,12 +1,14 @@
 ---
 title: Troubleshooting
+redirect_from:
+  - webhooks-troubleshooting.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 51
 indicator: messaging
-permalink: webhooks-troubleshooting.html
+permalink: connector-api-webhooks-troubleshooting.html
 ---
 
 ### Overview

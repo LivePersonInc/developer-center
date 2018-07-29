@@ -1,5 +1,7 @@
 ---
 title: JavaScript Sample
+redirect_from:
+  - consumer-int-js-sample.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -7,7 +9,7 @@ level4: Samples
 
 order: 90
 
-permalink: consumer-int-js-sample.html
+permalink: messaging-window-api-samples-javascript-sample.html
 indicator: messaging
 ---
 **Note**: This document is subject to change without notice.

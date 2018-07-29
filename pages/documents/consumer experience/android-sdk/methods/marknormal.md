@@ -1,5 +1,7 @@
 ---
 title: markConversationAsNormal
+redirect_from:
+  - android-marknormal.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 200
-permalink: android-marknormal.html
+permalink: mobile-app-messaging-sdk-for-android-methods-markconversationasnormal.html
 
 indicator: messaging
 ---

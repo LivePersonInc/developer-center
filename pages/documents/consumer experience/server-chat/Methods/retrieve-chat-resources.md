@@ -1,12 +1,14 @@
 ---
 title: Retrieve Chat Resources, Events and Information
+redirect_from:
+  - consumer-experience-server-chat-retrieve-chat-resources.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 80
-permalink: consumer-experience-server-chat-retrieve-chat-resources.html
+permalink: server-chat-api-methods-retrieve-chat-resources,-events-and-information.html
 
 indicator: chat
 ---

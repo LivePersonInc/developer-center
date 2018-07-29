@@ -1,11 +1,13 @@
 ---
 title: Current Queue State
+redirect_from:
+  - data-operational-realtime-current-queue-state.html
 level1: Documents
 level2: Data
 level3: Operational Realtime API
 level4: Methods
 order: 40
-permalink: data-operational-realtime-current-queue-state.html
+permalink: operational-realtime-api-methods-current-queue-state.html
 
 indicator: chat
 ---

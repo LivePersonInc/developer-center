@@ -1,12 +1,14 @@
 ---
 title: Share Image File
+redirect_from:
+  - share-image-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 68
 indicator: messaging
-permalink: share-image-example.html
+permalink: connector-api-examples-share-image-file.html
 
 ---
 

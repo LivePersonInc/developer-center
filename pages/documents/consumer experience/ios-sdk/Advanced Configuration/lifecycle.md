@@ -1,5 +1,7 @@
 ---
 title: Conversations Lifecycle
+redirect_from:
+  - consumer-experience-ios-sdk-lifecycle.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 5
-permalink: consumer-experience-ios-sdk-lifecycle.html
+permalink: mobile-app-messaging-sdk-for-ios-configuration-conversations-lifecycle.html
 
 indicator: messaging
 ---

@@ -1,5 +1,7 @@
 ---
 title: unregisterLPPusher
+redirect_from:
+  - android-unregisterlppusher.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 120
-permalink: android-unregisterlppusher.html
+permalink: mobile-app-messaging-sdk-for-android-methods-unregisterlppusher.html
 
 indicator: messaging
 ---

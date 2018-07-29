@@ -1,5 +1,7 @@
 ---
 title: requestChat
+redirect_from:
+  - consumer-experience-javascript-chat-requestchat.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 30
-permalink: consumer-experience-javascript-chat-requestchat.html
+permalink: javascript-chat-sdk-methods-requestchat.html
 
 indicator: chat
 ---

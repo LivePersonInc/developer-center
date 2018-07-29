@@ -1,5 +1,7 @@
 ---
 title: Generate Upload URL
+redirect_from:
+  - consumer-int-msg-generate-temp-upload-url.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 300
 layout: page
 
-permalink: consumer-int-msg-generate-temp-upload-url.html
+permalink: messaging-window-api-api-reference-generate-upload-url.html
 indicator: messaging
 ---
 

@@ -1,12 +1,14 @@
 ---
 title: Set the Visitor's Typing Status
+redirect_from:
+  - consumer-experience-server-chat-set-visitor-typing-status.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 140
-permalink: consumer-experience-server-chat-set-visitor-typing-status.html
+permalink: server-chat-api-methods-set-the-visitor's-typing-status.html
 
 indicator: chat
 ---

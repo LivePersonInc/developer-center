@@ -1,11 +1,13 @@
 ---
 title: Web Session
+redirect_from:
+  - data-data-access-web-session.html
 level1: Documents
 level2: Data
 level3: Data Access API
 level4: Methods
 order: 30
-permalink: data-data-access-web-session.html
+permalink: data-access-api-methods-web-session.html
 
 indicator: chat
 ---

@@ -1,5 +1,7 @@
 ---
 title: onVisitorDisposed
+redirect_from:
+  - consumer-experience-javascript-chat-onvisitordisposed.html
 
 Keywords:
 level1: Documents
@@ -8,7 +10,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 216
-permalink: consumer-experience-javascript-chat-onvisitordisposed.html
+permalink: javascript-chat-sdk-events-onvisitordisposed.html
 
 indicator: chat
 ---

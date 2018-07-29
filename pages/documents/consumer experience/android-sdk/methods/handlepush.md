@@ -1,5 +1,7 @@
 ---
 title: handlePush (Deprecated)
+redirect_from:
+  - android-handlepush.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 130
-permalink: android-handlepush.html
+permalink: mobile-app-messaging-sdk-for-android-methods-handlepush-(deprecated).html
 
 indicator: messaging
 ---

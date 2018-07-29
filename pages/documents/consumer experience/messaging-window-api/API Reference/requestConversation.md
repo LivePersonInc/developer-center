@@ -1,5 +1,7 @@
 ---
 title: New Conversation
+redirect_from:
+  - consumer-int-msg-req-conv.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 140
 layout: page
 
-permalink: consumer-int-msg-req-conv.html
+permalink: messaging-window-api-api-reference-new-conversation.html
 indicator: messaging
 ---
 

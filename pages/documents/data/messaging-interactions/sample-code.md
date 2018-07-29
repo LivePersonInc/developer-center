@@ -1,11 +1,13 @@
 ---
 title: Sample Code
+redirect_from:
+  - data-messaging-interactions-sample-code.html
 level1: Documents
 
 level3: Messaging Interactions API
 
 order: 31
-permalink: data-messaging-interactions-sample-code.html
+permalink: messaging-interactions-api-sample-code.html
 
 indicator: messaging
 ---

@@ -1,5 +1,7 @@
 ---
 title: Messaging API
+redirect_from:
+  - android-methods.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: SDK APIs
 
 order: 100
-permalink: android-methods.html
+permalink: mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html
 
 indicator: messaging
 ---

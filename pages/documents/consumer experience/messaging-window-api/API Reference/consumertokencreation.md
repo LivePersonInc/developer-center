@@ -1,10 +1,12 @@
 ---
 title: Consumer Token Creation
+redirect_from:
+  - common-consumer-token-creation.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference
-permalink: common-consumer-token-creation.html
+permalink: messaging-window-api-api-reference-consumer-token-creation.html
 order: 210
 indicator: messaging
 ---

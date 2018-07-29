@@ -1,12 +1,14 @@
 ---
 title: Surveys
+redirect_from:
+  - consumer-experience-javascript-chat-surveys.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 
 order: 3
-permalink: consumer-experience-javascript-chat-surveys.html
+permalink: javascript-chat-sdk-surveys.html
 
 indicator: chat
 ---

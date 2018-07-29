@@ -1,12 +1,14 @@
 ---
 title: Publish Images
+redirect_from:
+  - consumer-int-publishing-images.html
 
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
 
 order: 89
-permalink: consumer-int-publishing-images.html
+permalink: messaging-window-api-tutorials-publish-images.html
 
 indicator: messaging
 ---

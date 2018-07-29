@@ -1,5 +1,7 @@
 ---
 title: Audio Messages
+redirect_from:
+  - consumer-experience-android-sdk-advanced-audio.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Advanced Features
 
 order: 293
-permalink: consumer-experience-android-sdk-advanced-audio.html
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html
 
 indicator: messaging
 ---

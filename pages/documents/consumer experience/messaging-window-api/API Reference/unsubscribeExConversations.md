@@ -1,5 +1,7 @@
 ---
 title: Unsubscribe Conversation Metadata
+redirect_from:
+  - consumer-int-msg-unsub-conv.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 180
 layout: page
 
-permalink: consumer-int-msg-unsub-conv.html
+permalink: messaging-window-api-api-reference-unsubscribe-conversation-metadata.html
 indicator: messaging
 ---
 

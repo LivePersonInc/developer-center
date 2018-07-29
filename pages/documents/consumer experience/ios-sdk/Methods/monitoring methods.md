@@ -1,5 +1,7 @@
 ---
 title: Monitoring API
+redirect_from:
+  - consumer-experience-ios-sdk-monitoring-methods.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 11
-permalink: consumer-experience-ios-sdk-monitoring-methods.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
 
 indicator: messaging
 ---

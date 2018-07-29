@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - data-messaging-agent-metrics-overview.html
 level1: Documents
 level2: Data
 level3: Agent Metrics API
 
 level-order: 2
 order: 1
-permalink: data-messaging-agent-metrics-overview.html
+permalink: agent-metrics-api-overview.html
 root-link: true
 indicator: messaging
 ---

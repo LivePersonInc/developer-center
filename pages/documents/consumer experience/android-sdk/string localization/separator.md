@@ -1,5 +1,7 @@
 ---
 title: Separator timestamp
+redirect_from:
+  - android-separator.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 260
-permalink: android-separator.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-separator-timestamp.html
 
 indicator: messaging
 ---

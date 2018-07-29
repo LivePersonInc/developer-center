@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - data-engagement-history-overview.html
 level1: Documents
 level2: Data
 level3: Engagement History API
 
 level-order: 6
 order: 1
-permalink: data-engagement-history-overview.html
+permalink: engagement-history-api-overview.html
 root-link: true
 indicator: chat
 ---

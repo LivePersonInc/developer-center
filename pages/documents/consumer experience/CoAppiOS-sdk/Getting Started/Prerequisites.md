@@ -1,12 +1,14 @@
 ---
 title: Prerequisites
+redirect_from:
+  - consumer-experience-voice-video-ios-prerequisites.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Getting Started
 
 order: 10
-permalink: consumer-experience-voice-video-ios-prerequisites.html
+permalink: voice-&-video-for-ios-sdk-(beta)-getting-started-prerequisites.html
 indicator: messaging
 ---
 

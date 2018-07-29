@@ -1,5 +1,7 @@
 ---
 title: Security
+redirect_from:
+  - consumer-experience-ios-sdk-security.html
 
 Keywords:
 level1: Documents
@@ -9,7 +11,7 @@ level4: Appendix
 
 order: 244
 
-permalink: consumer-experience-ios-sdk-security.html
+permalink: mobile-app-messaging-sdk-for-ios-appendix-security.html
 
 indicator: messaging
 ---

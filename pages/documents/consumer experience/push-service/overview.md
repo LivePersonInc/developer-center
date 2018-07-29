@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - push-service-overview.html
 Keywords:
 level1: Documents
 level2: Guides
@@ -7,7 +9,7 @@ level3: Push Notification Service (iOS and Android)
 
 level-order: 7
 order: 10
-permalink: push-service-overview.html
+permalink: push-notification-service-(ios-and-android)-overview.html
 root-link: true
 indicator: messaging
 ---

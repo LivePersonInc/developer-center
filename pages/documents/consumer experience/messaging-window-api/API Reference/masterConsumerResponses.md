@@ -1,5 +1,7 @@
 ---
 title: Response Builder
+redirect_from:
+  - consumer-int-msg-resps.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 120
 layout: page
 
-permalink: consumer-int-msg-resps.html
+permalink: messaging-window-api-api-reference-response-builder.html
 indicator: messaging
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: getConversationFragment (Deprecated)
+redirect_from:
+  - android-getconversationfragdeprecated.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 60
-permalink: android-getconversationfragdeprecated.html
+permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-(deprecated).html
 
 indicator: messaging
 ---

@@ -1,11 +1,13 @@
 ---
 title: Enable Messaging Features
+redirect_from:
+  - consumer-int-account-provision.html
 
 level2: Consumer Experience
 level3: Messaging Window API
 
 order: 3
-permalink: consumer-int-account-provision.html
+permalink: messaging-window-api-enable-messaging-features.html
 
 folder: Introduction
 indicator: messaging

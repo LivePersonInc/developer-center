@@ -1,12 +1,14 @@
 ---
 title: Retrieve Visitor's Name
+redirect_from:
+  - consumer-experience-server-chat-retrieve-visitor-name.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 120
-permalink: consumer-experience-server-chat-retrieve-visitor-name.html
+permalink: server-chat-api-methods-retrieve-visitor's-name.html
 
 indicator: chat
 ---

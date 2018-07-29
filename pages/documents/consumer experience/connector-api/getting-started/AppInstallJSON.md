@@ -1,12 +1,14 @@
 ---
 title: App Install Manifest for Connectors
+redirect_from:
+  - app-install-manifest-connectors.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API
 order: 3
 indicator: messaging
-permalink: app-install-manifest-connectors.html
+permalink: connector-api-connector-api-app-install-manifest-for-connectors.html
 ---
 
 Below, you will find an example of an Application Install Manifest. This JSON format instructs LiveEngage in how to install your application and make sure it can communicate with LiveEngage services. You can simply copy and paste the below Connector app manifest template, making sure to populate the following keys:

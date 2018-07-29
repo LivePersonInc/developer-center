@@ -1,12 +1,14 @@
 ---
 title: Send Chat State Events
+redirect_from:
+  - send-chat-state-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 63
 indicator: messaging
-permalink: send-chat-state-example.html
+permalink: connector-api-examples-send-chat-state-events.html
 
 ---
 

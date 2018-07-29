@@ -1,5 +1,7 @@
 ---
 title: Reconnect
+redirect_from:
+  - consumer-experience-ios-sdk-reconnectdeprecated.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 45
-permalink: consumer-experience-ios-sdk-reconnectdeprecated.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-reconnect.html
 
 indicator: messaging
 ---

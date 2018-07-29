@@ -1,5 +1,7 @@
 ---
 title: registerPushNotifications
+redirect_from:
+  - consumer-experience-ios-sdk-registerpushnotifications.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 150
-permalink: consumer-experience-ios-sdk-registerpushnotifications.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html
 
 indicator: messaging
 ---

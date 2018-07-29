@@ -1,5 +1,7 @@
 ---
 title: setCallback
+redirect_from:
+  - android-setcallback.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 150
-permalink: android-setcallback.html
+permalink: mobile-app-messaging-sdk-for-android-methods-setcallback.html
 
 indicator: messaging
 ---

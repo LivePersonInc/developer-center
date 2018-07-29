@@ -1,5 +1,7 @@
 ---
 title: setUserProfile (Deprecated)
+redirect_from:
+  - android-setuserprofiledeprecated.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 100
-permalink: android-setuserprofiledeprecated.html
+permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile-(deprecated).html
 
 indicator: messaging
 ---

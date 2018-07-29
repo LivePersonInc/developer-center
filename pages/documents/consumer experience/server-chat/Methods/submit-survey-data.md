@@ -1,12 +1,14 @@
 ---
 title: Submit Survey Data
+redirect_from:
+  - consumer-experience-server-chat-submit-survey-data.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 160
-permalink: consumer-experience-server-chat-submit-survey-data.html
+permalink: server-chat-api-methods-submit-survey-data.html
 
 indicator: chat
 ---

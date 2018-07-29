@@ -1,12 +1,14 @@
 ---
 title: Avoid Websocket Headers
+redirect_from:
+  - consumer-int-no-headers.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
 
 order: 80
-permalink: consumer-int-no-headers.html
+permalink: messaging-window-api-tutorials-avoid-websocket-headers.html
 
 indicator: messaging
 ---

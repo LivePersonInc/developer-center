@@ -1,11 +1,13 @@
 ---
 title: Appendix
+redirect_from:
+  - consumer-experience-voice-video-ios-appendix.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 
 order: 130
-permalink: consumer-experience-voice-video-ios-appendix.html
+permalink: voice-&-video-for-ios-sdk-(beta)-appendix.html
 indicator: messaging
 ---
 

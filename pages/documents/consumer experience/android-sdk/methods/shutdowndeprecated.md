@@ -1,5 +1,7 @@
 ---
 title: shutDown (Deprecated)
+redirect_from:
+  - android-shutdowndeprecated.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 240
-permalink: android-shutdowndeprecated.html
+permalink: mobile-app-messaging-sdk-for-android-methods-shutdown-(deprecated).html
 
 indicator: messaging
 ---

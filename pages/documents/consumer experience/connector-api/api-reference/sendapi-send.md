@@ -1,12 +1,14 @@
 ---
 title: SEND
+redirect_from:
+  - sendapi-send.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: API Reference
 order: 12
 indicator: messaging
-permalink: sendapi-send.html
+permalink: connector-api-api-reference-send.html
 search: exclude
 ---
 

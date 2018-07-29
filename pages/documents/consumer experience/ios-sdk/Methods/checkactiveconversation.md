@@ -1,5 +1,7 @@
 ---
 title: checkActiveConversation
+redirect_from:
+  - consumer-experience-ios-sdk-checkactiveconversation.html
 
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 60
-permalink: consumer-experience-ios-sdk-checkactiveconversation.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-checkactiveconversation.html
 
 indicator: messaging
 ---

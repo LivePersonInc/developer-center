@@ -1,11 +1,13 @@
 ---
 title: Account Settings
+redirect_from:
+  - consumer-experience-voice-video-android-account-settings.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 level4: LiveEngage Configuration
 order: 50
-permalink: consumer-experience-voice-video-android-account-settings.html
+permalink: voice-&-video-for-android-sdk-(beta)-liveengage-configuration-account-settings.html
 indicator: messaging
 ---
 

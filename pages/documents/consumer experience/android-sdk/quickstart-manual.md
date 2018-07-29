@@ -1,12 +1,14 @@
 ---
 title: Quick Start-Manual
+redirect_from:
+  - android-quickstart-manual.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 11
-permalink: android-quickstart-manual.html
+permalink: mobile-app-messaging-sdk-for-android-quick-start-manual.html
 
 ---
 

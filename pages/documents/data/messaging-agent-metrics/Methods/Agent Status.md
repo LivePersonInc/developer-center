@@ -1,11 +1,13 @@
 ---
 title: Agent Status
+redirect_from:
+  - data-messaging-interactions-methods-agent-status.html
 level1: Documents
 level2: Data
 level3: Agent Metrics API
 level4: Methods
 order: 10
-permalink: data-messaging-interactions-methods-agent-status.html
+permalink: agent-metrics-api-methods-agent-status.html
 
 indicator: messaging
 ---

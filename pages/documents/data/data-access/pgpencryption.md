@@ -1,11 +1,13 @@
 ---
 title: PGP Encryption
+redirect_from:
+  - data-data-access-pgp-encryption.html
 level1: Documents
 level2: Data
 level3: Data Access API
 
 order: 61
-permalink: data-data-access-pgp-encryption.html
+permalink: data-access-api-pgp-encryption.html
 
 indicator: chat
 ---

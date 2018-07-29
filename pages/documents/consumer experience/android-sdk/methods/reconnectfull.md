@@ -1,5 +1,7 @@
 ---
 title: reconnect
+redirect_from:
+  - android-reconnectfull.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 75
-permalink: android-reconnectfull.html
+permalink: mobile-app-messaging-sdk-for-android-methods-reconnect.html
 
 indicator: messaging
 ---

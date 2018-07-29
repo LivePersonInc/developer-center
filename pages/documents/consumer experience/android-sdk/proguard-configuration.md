@@ -1,5 +1,7 @@
 ---
 title: Proguard Configuration
+redirect_from:
+  - android-proguard.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 80
-permalink: android-proguard.html
+permalink: mobile-app-messaging-sdk-for-android-configuration-proguard-configuration.html
 
 indicator: messaging
 ---

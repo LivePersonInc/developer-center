@@ -1,5 +1,7 @@
 ---
 title: User Data
+redirect_from:
+  - consumer-experience-ios-sdk-user-data.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 7
-permalink: consumer-experience-ios-sdk-user-data.html
+permalink: mobile-app-messaging-sdk-for-ios-configuration-user-data.html
 
 indicator: messaging
 ---

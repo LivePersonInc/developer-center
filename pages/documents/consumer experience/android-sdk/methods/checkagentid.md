@@ -1,5 +1,7 @@
 ---
 title: checkAgentID
+redirect_from:
+  - android-checkagentid.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 180
-permalink: android-checkagentid.html
+permalink: mobile-app-messaging-sdk-for-android-methods-checkagentid.html
 
 indicator: messaging
 ---

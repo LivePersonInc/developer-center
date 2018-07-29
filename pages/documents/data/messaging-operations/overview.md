@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - data-messaging-operations-overview.html
 level1: Documents
 level2: Data
 level3: Messaging Operations API
 
 level-order: 4
 order: 1
-permalink: data-messaging-operations-overview.html
+permalink: messaging-operations-api-overview.html
 root-link: true
 indicator: messaging
 ---

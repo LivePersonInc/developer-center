@@ -1,5 +1,7 @@
 ---
 title: File Sharing
+redirect_from:
+  - messaging-window-api-tutorials-file-sharing
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -7,7 +9,7 @@ level4: Tutorials
 
 order: 88
 
-permalink: messaging-window-api-tutorials-file-sharing
+permalink: messaging-window-api-tutorials-file-sharing.html
 indicator: messaging
 ---
 

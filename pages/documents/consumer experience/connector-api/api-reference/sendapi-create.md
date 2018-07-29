@@ -1,12 +1,14 @@
 ---
 title: CONVERSATION
+redirect_from:
+  - sendapi-create.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: API Reference
 order: 11
 indicator: messaging
-permalink: sendapi-create.html
+permalink: connector-api-api-reference-conversation.html
 search: exclude
 ---
 

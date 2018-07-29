@@ -1,12 +1,14 @@
 ---
 title: Sample App
+redirect_from:
+  - consumer-experience-javascript-chat-sample.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 
 order: 5
-permalink: consumer-experience-javascript-chat-sample.html
+permalink: javascript-chat-sdk-sample-app.html
 
 indicator: chat
 ---

@@ -1,11 +1,13 @@
 ---
 title: Getting Started
+redirect_from:
+  - consumer-int-getting-started.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 
 order: 2
-permalink: consumer-int-getting-started.html
+permalink: messaging-window-api-getting-started.html
 
 indicator: messaging
 ---

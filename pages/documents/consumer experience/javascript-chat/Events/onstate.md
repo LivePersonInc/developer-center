@@ -1,5 +1,7 @@
 ---
 title: onState
+redirect_from:
+  - consumer-experience-javascript-chat-onstate.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 270
-permalink: consumer-experience-javascript-chat-onstate.html
+permalink: javascript-chat-sdk-events-onstate.html
 
 indicator: chat
 ---

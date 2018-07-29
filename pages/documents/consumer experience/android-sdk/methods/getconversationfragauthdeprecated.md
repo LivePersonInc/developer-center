@@ -1,5 +1,7 @@
 ---
 title: getConversationFragment with authentication support (Deprecated)
+redirect_from:
+  - android-getconversationfragauthdeprecated.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 70
-permalink: android-getconversationfragauthdeprecated.html
+permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-with-authentication-support-(deprecated).html
 
 indicator: messaging
 ---

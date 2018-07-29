@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - consumer-int-api-reference.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference
 
 order: 100
-permalink: consumer-int-api-reference.html
+permalink: messaging-window-api-api-reference-overview.html
 
 folder: messaging-apis
 docs: https://lpgithub.dev.lprnd.net/pages/Architecture/api-ums/2.0.0.10-SNAPSHOT

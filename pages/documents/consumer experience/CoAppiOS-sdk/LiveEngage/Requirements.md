@@ -1,11 +1,13 @@
 ---
 title: Agent Workspace Requirements
+redirect_from:
+  - consumer-experience-voice-video-ios-requirements.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: LiveEngage Configuration
 order: 80
-permalink: consumer-experience-voice-video-ios-requirements.html
+permalink: voice-&-video-for-ios-sdk-(beta)-liveengage-configuration-agent-workspace-requirements.html
 indicator: messaging
 ---
 Your agents will be using LiveEngage from a regular web browser to make calls to your consumers. The following sections explain how to setup your LiveEngage account for voice & video support.

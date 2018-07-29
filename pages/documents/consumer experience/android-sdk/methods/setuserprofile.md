@@ -1,5 +1,7 @@
 ---
 title: setUserProfile
+redirect_from:
+  - android-setuserprofile.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 90
-permalink: android-setuserprofile.html
+permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile.html
 
 indicator: messaging
 ---

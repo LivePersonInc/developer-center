@@ -1,10 +1,12 @@
 ---
 title: Sample Apps
+redirect_from:
+  - consumer-experience-voice-video-android-sample-app.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 order: 90
-permalink: consumer-experience-voice-video-android-sample-app.html
+permalink: voice-&-video-for-android-sdk-(beta)-sample-apps.html
 indicator: messaging
 ---
 

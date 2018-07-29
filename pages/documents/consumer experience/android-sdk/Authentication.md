@@ -1,12 +1,14 @@
 ---
 title: Authentication
+redirect_from:
+  - android-authentication.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 130
-permalink: android-authentication.html
+permalink: mobile-app-messaging-sdk-for-android-authentication.html
 
 indicator: messaging
 ---

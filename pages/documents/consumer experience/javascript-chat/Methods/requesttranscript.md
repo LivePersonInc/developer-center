@@ -1,5 +1,7 @@
 ---
 title: requestTranscript
+redirect_from:
+  - consumer-experience-javascript-chat-requesttranscript.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 80
-permalink: consumer-experience-javascript-chat-requesttranscript.html
+permalink: javascript-chat-sdk-methods-requesttranscript.html
 
 indicator: chat
 ---

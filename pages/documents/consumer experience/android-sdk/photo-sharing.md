@@ -1,5 +1,7 @@
 ---
 title: Photo Sharing
+redirect_from:
+  - android-photo-sharing.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Advanced Features
 
 order: 285
-permalink: android-photo-sharing.html
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html
 
 indicator: messaging
 ---

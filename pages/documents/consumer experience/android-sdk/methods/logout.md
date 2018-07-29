@@ -1,5 +1,7 @@
 ---
 title: logOut
+redirect_from:
+  - android-logout.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 260
-permalink: android-logout.html
+permalink: mobile-app-messaging-sdk-for-android-methods-logout.html
 
 indicator: messaging
 ---

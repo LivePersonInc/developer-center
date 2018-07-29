@@ -1,11 +1,13 @@
 ---
 title: Sample Postman Collection
+redirect_from:
+  - consumer-experience-server-chat-sample.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 
 order: 171
-permalink: consumer-experience-server-chat-sample.html
+permalink: server-chat-api-sample-postman-collection.html
 
 indicator: chat
 ---

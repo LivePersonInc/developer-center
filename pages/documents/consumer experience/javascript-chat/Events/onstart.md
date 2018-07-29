@@ -1,5 +1,7 @@
 ---
 title: onStart
+redirect_from:
+  - consumer-experience-javascript-chat-onstart.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 220
-permalink: consumer-experience-javascript-chat-onstart.html
+permalink: javascript-chat-sdk-events-onstart.html
 
 indicator: chat
 ---

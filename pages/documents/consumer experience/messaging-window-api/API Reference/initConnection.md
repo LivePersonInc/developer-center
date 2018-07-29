@@ -1,5 +1,7 @@
 ---
 title: Init Connection
+redirect_from:
+  - consumer-int-msg-init-con.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 210
 layout: page
 
-permalink: consumer-int-msg-init-con.html
+permalink: messaging-window-api-api-reference-init-connection.html
 indicator: messaging
 ---
 

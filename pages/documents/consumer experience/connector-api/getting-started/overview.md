@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - connectorapioverview.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
@@ -8,7 +10,7 @@ order: 1
 level-order: 8
 root-link: true
 indicator: messaging
-permalink: connectorapioverview.html
+permalink: connector-api-connector-api-overview.html
 ---
 ### Introduction
 

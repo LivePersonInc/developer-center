@@ -1,5 +1,7 @@
 ---
 title: Logs and Info
+redirect_from:
+  - android-logs.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 70
-permalink: android-logs.html
+permalink: mobile-app-messaging-sdk-for-android-configuration-logs-and-info.html
 
 indicator: messaging
 ---

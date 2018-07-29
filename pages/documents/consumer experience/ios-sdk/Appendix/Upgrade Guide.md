@@ -1,12 +1,14 @@
 ---
 title: Upgrade Guide - iOS
+redirect_from:
+  - consumer-experience-ios-sdk-upgrade-guide.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 order: 247
-permalink: consumer-experience-ios-sdk-upgrade-guide.html
+permalink: mobile-app-messaging-sdk-for-ios-appendix-upgrade-guide---ios.html
 indicator: messaging
 ---
 

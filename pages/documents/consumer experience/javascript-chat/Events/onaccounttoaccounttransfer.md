@@ -1,5 +1,7 @@
 ---
 title: onAccountToAccountTransfer
+redirect_from:
+  - consumer-experience-javascript-chat-onaccounttoaccounttransfer.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 320
-permalink: consumer-experience-javascript-chat-onaccounttoaccounttransfer.html
+permalink: javascript-chat-sdk-events-onaccounttoaccounttransfer.html
 
 indicator: chat
 ---

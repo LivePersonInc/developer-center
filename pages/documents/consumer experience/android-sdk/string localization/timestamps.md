@@ -1,5 +1,7 @@
 ---
 title: Timestamps Formatting
+redirect_from:
+  - android-timestamps.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 230
-permalink: android-timestamps.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-timestamps-formatting.html
 
 indicator: messaging
 ---

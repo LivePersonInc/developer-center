@@ -1,11 +1,13 @@
 ---
 title: Sample Code
+redirect_from:
+  - data-operational-realtime-sample-code.html
 level1: Documents
 
 level3: Operational Realtime API
 
 order: 51
-permalink: data-operational-realtime-sample-code.html
+permalink: operational-realtime-api-sample-code.html
 
 indicator: chat
 ---

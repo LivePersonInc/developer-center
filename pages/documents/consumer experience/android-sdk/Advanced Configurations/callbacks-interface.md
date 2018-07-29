@@ -1,5 +1,7 @@
 ---
 title: LivePerson Callbacks Interface
+redirect_from:
+  - android-callbacks-interface.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 30
-permalink: android-callbacks-interface.html
+permalink: mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
 
 indicator: messaging
 ---

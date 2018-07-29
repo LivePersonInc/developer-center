@@ -1,12 +1,14 @@
 ---
 title: Close a conversation
+redirect_from:
+  - close-conversation-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 62
 indicator: messaging
-permalink: close-conversation-example.html
+permalink: connector-api-examples-close-a-conversation.html
 
 ---
 

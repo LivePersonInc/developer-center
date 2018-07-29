@@ -1,5 +1,7 @@
 ---
 title: getState
+redirect_from:
+  - consumer-experience-javascript-chat-getstate.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 130
-permalink: consumer-experience-javascript-chat-getstate.html
+permalink: javascript-chat-sdk-methods-getstate.html
 
 indicator: chat
 ---

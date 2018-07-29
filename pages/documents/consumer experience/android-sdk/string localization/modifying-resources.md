@@ -1,5 +1,7 @@
 ---
 title: Modifying Resources
+redirect_from:
+  - android-modifying-resources.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 180
-permalink: android-modifying-resources.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-modifying-resources.html
 
 indicator: messaging
 ---

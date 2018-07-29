@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - connector-api-overview.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: API Reference
 order: 10
 indicator: messaging
-permalink: connector-api-overview.html
+permalink: connector-api-api-reference-overview.html
 search: exclude
 ---
 

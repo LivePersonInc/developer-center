@@ -1,5 +1,7 @@
 ---
 title: onLine
+redirect_from:
+  - consumer-experience-javascript-chat-online.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 260
-permalink: consumer-experience-javascript-chat-online.html
+permalink: javascript-chat-sdk-events-online.html
 
 indicator: chat
 ---

@@ -1,12 +1,14 @@
 ---
 title: Create a new conversation and report SDEs
+redirect_from:
+  - sdes-routing-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 60
 indicator: messaging
-permalink: sdes-routing-example.html
+permalink: connector-api-examples-create-a-new-conversation-and-report-sdes.html
 
 ---
 

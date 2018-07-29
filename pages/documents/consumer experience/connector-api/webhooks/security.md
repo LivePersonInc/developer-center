@@ -1,12 +1,14 @@
 ---
 title: Notification Protocol
+redirect_from:
+  - webhooks-security.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 30
 indicator: messaging
-permalink: webhooks-security.html
+permalink: connector-api-webhooks-notification-protocol.html
 ---
 
 ### Protocol and Security

@@ -1,5 +1,7 @@
 ---
 title: Subscribe to Conversation Metadata
+redirect_from:
+  - consumer-int-msg-sub-conv.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 170
 layout: page
 
-permalink: consumer-int-msg-sub-conv.html
+permalink: messaging-window-api-api-reference-subscribe-to-conversation-metadata.html
 indicator: messaging
 ---
 

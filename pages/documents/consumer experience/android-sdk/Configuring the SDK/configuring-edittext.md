@@ -1,5 +1,7 @@
 ---
 title: Configuring the message’s EditText
+redirect_from:
+  - android-configuring-edittext.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 190
-permalink: android-configuring-edittext.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message’s-edittext.html
 
 indicator: messaging
 ---

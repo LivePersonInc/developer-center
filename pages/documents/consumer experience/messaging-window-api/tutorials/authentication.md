@@ -1,5 +1,7 @@
 ---
 title: Authentication
+redirect_from:
+  - consumer-int-authentication.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: Tutorials
 order: 40
 
 
-permalink: consumer-int-authentication.html
+permalink: messaging-window-api-tutorials-authentication.html
 keywords: oauth2.0 jwt token
 indicator: messaging
 ---

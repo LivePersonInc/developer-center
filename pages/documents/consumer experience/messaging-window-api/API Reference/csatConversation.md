@@ -1,5 +1,7 @@
 ---
 title: Send Consumer Satisfaction (CSAT)
+redirect_from:
+  - consumer-int-msg-csat-conv.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 160
 layout: page
 
-permalink: consumer-int-msg-csat-conv.html
+permalink: messaging-window-api-api-reference-send-consumer-satisfaction-(csat).html
 indicator: messaging
 ---
 

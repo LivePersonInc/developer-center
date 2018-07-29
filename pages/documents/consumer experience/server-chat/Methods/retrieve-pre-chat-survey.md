@@ -1,12 +1,14 @@
 ---
 title: Retrieve Pre-Chat Survey
+redirect_from:
+  - consumer-experience-server-chat-retrieve-pre-chat-survey.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 40
-permalink: consumer-experience-server-chat-retrieve-pre-chat-survey.html
+permalink: server-chat-api-methods-retrieve-pre-chat-survey.html
 
 indicator: chat
 ---

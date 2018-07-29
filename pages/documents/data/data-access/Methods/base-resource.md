@@ -1,11 +1,13 @@
 ---
 title: Base Resource
+redirect_from:
+  - data-data-access-base-resource.html
 level1: Documents
 level2: Data
 level3: Data Access API
 level4: Methods
 order: 10
-permalink: data-data-access-base-resource.html
+permalink: data-access-api-methods-base-resource.html
 
 indicator: chat
 ---

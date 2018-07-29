@@ -1,12 +1,14 @@
 ---
 title: Configuration
+redirect_from:
+  - webhooks-configuration.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 21
 indicator: messaging
-permalink: webhooks-configuration.html
+permalink: connector-api-webhooks-configuration.html
 ---
 
 ### WebHooks Capabilities Configuration

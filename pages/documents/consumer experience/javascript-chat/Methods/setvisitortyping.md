@@ -1,5 +1,7 @@
 ---
 title: setVisitorTyping
+redirect_from:
+  - consumer-experience-javascript-chat-setvisitortyping.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 50
-permalink: consumer-experience-javascript-chat-setvisitortyping.html
+permalink: javascript-chat-sdk-methods-setvisitortyping.html
 
 indicator: chat
 ---

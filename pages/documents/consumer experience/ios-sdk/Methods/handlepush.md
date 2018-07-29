@@ -1,5 +1,7 @@
 ---
 title: handlePush
+redirect_from:
+  - consumer-experience-ios-sdk-handlepush.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 140
-permalink: consumer-experience-ios-sdk-handlepush.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-handlepush.html
 
 indicator: messaging
 ---

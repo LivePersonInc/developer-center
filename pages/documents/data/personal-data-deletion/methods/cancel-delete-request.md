@@ -1,12 +1,14 @@
 ---
 title: Cancel Deletion Request
+redirect_from:
+  - personal-data-deletion-cancel-delete-request.html
 keywords:
 level1: Documents
 level2: Data 
 level3: Personal Data Deletion API
 level4: Methods
 order: 20
-permalink: personal-data-deletion-cancel-delete-request.html
+permalink: personal-data-deletion-api-methods-cancel-deletion-request.html
 indicator: both
 ---
 

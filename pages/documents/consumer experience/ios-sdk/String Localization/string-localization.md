@@ -1,5 +1,7 @@
 ---
 title: String Localization
+redirect_from:
+  - consumer-experience-ios-sdk-stringlocalization.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: String Localization
 
 order: 227
-permalink: consumer-experience-ios-sdk-stringlocalization.html
+permalink: mobile-app-messaging-sdk-for-ios-string-localization-string-localization.html
 
 indicator: messaging
 ---

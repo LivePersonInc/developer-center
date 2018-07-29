@@ -1,11 +1,13 @@
 ---
 title: Appendix
+redirect_from:
+  - data-data-access-appendix.html
 level1: Documents
 level2: Data
 level3: Data Access API
 
 order: 63
-permalink: data-data-access-appendix.html
+permalink: data-access-api-appendix.html
 
 indicator: chat
 ---

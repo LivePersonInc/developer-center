@@ -1,12 +1,14 @@
 ---
 title: How to enable a feature
+redirect_from:
+  - enable-feature-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 64
 indicator: messaging
-permalink: enable-feature-example.html
+permalink: connector-api-examples-how-to-enable-a-feature.html
 
 ---
 

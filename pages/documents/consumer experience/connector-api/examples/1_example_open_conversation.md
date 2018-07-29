@@ -1,12 +1,14 @@
 ---
 title: Create a new conversation
+redirect_from:
+  - create-conversation-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 59
 indicator: messaging
-permalink: create-conversation-example.html
+permalink: connector-api-examples-create-a-new-conversation.html
 
 ---
 

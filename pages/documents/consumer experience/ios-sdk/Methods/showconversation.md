@@ -1,5 +1,7 @@
 ---
 title: showConversation
+redirect_from:
+  - consumer-experience-ios-sdk-showconversation.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 20
-permalink: consumer-experience-ios-sdk-showconversation.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-showconversation.html
 
 indicator: messaging
 ---

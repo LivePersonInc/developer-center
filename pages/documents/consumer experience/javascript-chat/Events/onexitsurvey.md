@@ -1,5 +1,7 @@
 ---
 title: onExitSurvey
+redirect_from:
+  - consumer-experience-javascript-chat-onexitsurvey.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 300
-permalink: consumer-experience-javascript-chat-onexitsurvey.html
+permalink: javascript-chat-sdk-events-onexitsurvey.html
 
 indicator: chat
 ---

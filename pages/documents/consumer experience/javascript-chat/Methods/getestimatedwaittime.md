@@ -1,5 +1,7 @@
 ---
 title: getEstimatedWaitTime
+redirect_from:
+  - consumer-experience-javascript-chat-getestimatedwaittime.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -8,7 +10,7 @@ level4: Methods
 
 order: 191
 
-permalink: consumer-experience-javascript-chat-getestimatedwaittime.html
+permalink: javascript-chat-sdk-methods-getestimatedwaittime.html
 indicator: chat
 ---
 

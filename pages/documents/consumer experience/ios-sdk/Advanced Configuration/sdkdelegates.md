@@ -1,5 +1,7 @@
 ---
 title: SDK Delegates
+redirect_from:
+  - consumer-experience-ios-sdk-delegates.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 4
-permalink: consumer-experience-ios-sdk-delegates.html
+permalink: mobile-app-messaging-sdk-for-ios-configuration-sdk-delegates.html
 
 indicator: messaging
 ---

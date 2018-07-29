@@ -1,12 +1,14 @@
 ---
 title: Events
+redirect_from:
+  - webhooks-events.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 20
 indicator: messaging
-permalink: webhooks-events.html
+permalink: connector-api-webhooks-events.html
 ---
 
 ### Events

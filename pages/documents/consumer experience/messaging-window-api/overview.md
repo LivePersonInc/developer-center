@@ -1,12 +1,14 @@
 ---
 title: Overview
+redirect_from:
+  - consumer-int-overview.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 
 level-order: 5
 order: 0
-permalink: consumer-int-overview.html
+permalink: messaging-window-api-overview.html
 root-link: true
 indicator: messaging
 ---

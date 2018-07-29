@@ -1,5 +1,7 @@
 ---
 title: Changing Fonts
+redirect_from:
+  - android-configuring-changing-fonts.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 
 order: 200
-permalink: android-configuring-changing-fonts.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-changing-fonts.html
 
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: resolveConversation
+redirect_from:
+  - android-resolveconversation.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 220
-permalink: android-resolveconversation.html
+permalink: mobile-app-messaging-sdk-for-android-methods-resolveconversation.html
 
 indicator: messaging
 ---

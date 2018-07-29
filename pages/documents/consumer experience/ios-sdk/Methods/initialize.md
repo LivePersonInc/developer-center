@@ -1,5 +1,7 @@
 ---
 title: initialize
+redirect_from:
+  - consumer-experience-ios-sdk-initialize.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 5
-permalink: consumer-experience-ios-sdk-initialize.html
+permalink: mobile-app-messaging-sdk-for-ios-methods-initialize.html
 
 indicator: messaging
 ---

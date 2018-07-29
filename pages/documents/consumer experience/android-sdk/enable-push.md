@@ -1,12 +1,14 @@
 ---
 title: Notifications
+redirect_from:
+  - android-push-notifications.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 140
-permalink: android-push-notifications.html
+permalink: mobile-app-messaging-sdk-for-android-notifications.html
 
 indicator: messaging
 ---

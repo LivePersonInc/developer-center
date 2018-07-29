@@ -1,12 +1,14 @@
 ---
 title: Attributes Design Sheet
+redirect_from:
+  - android-attributes-designsheet.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 order: 170
-permalink: android-attributes-designsheet.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
 indicator: messaging
 ---
 

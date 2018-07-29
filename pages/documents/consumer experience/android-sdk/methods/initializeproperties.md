@@ -1,5 +1,7 @@
 ---
 title: initialize (with SDK properties object)
+redirect_from:
+  - android-initializeproperties.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 20
-permalink: android-initializeproperties.html
+permalink: mobile-app-messaging-sdk-for-android-methods-initialize-(with-sdk-properties-object).html
 
 indicator: messaging
 ---

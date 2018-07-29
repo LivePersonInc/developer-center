@@ -1,11 +1,13 @@
 ---
 title: Engagement Attributes
+redirect_from:
+  - data-messaging-interactions-appendix.html
 level1: Documents
 level2: Data
 level3: Messaging Interactions API
 
 order: 32
-permalink: data-messaging-interactions-appendix.html
+permalink: messaging-interactions-api-engagement-attributes.html
 
 indicator: messaging
 ---

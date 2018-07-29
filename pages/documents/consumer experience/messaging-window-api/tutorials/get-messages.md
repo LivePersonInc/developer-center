@@ -1,12 +1,14 @@
 ---
 title: Get Messages 
+redirect_from:
+  - consumer-int-get-msg.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
 
 order: 10
-permalink: consumer-int-get-msg.html
+permalink: messaging-window-api-tutorials-get-messages-.html
 
 indicator: messaging
 ---

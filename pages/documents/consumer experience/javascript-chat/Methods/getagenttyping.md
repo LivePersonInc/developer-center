@@ -1,5 +1,7 @@
 ---
 title: getAgentTyping
+redirect_from:
+  - consumer-experience-javascript-chat-getagenttyping.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 190
-permalink: consumer-experience-javascript-chat-getagenttyping.html
+permalink: javascript-chat-sdk-methods-getagenttyping.html
 
 indicator: chat
 ---

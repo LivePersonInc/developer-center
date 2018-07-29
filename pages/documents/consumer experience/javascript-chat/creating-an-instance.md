@@ -1,12 +1,14 @@
 ---
 title: Creating an Instance
+redirect_from:
+  - consumer-experience-javascript-chat-creating-an-instance.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 
 order: 4
-permalink: consumer-experience-javascript-chat-creating-an-instance.html
+permalink: javascript-chat-sdk-creating-an-instance.html
 
 indicator: chat
 ---

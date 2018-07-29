@@ -1,5 +1,7 @@
 ---
 title: getSDKVersion
+redirect_from:
+  - android-getsdkversion.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 140
-permalink: android-getsdkversion.html
+permalink: mobile-app-messaging-sdk-for-android-methods-getsdkversion.html
 
 indicator: messaging
 ---

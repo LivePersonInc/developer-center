@@ -1,5 +1,7 @@
 ---
 title: Android Automatic Restore
+redirect_from:
+  - android-automatic-restore.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 90
-permalink: android-automatic-restore.html
+permalink: mobile-app-messaging-sdk-for-android-configuration-android-automatic-restore.html
 
 indicator: messaging
 ---

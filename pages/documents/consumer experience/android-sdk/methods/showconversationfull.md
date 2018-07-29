@@ -1,5 +1,7 @@
 ---
 title: showConversation (full authentication support + view modes)
+redirect_from:
+  - android-showconversationfull.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 25
-permalink: android-showconversationfull.html
+permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(full-authentication-support-+-view-modes).html
 
 indicator: messaging
 ---

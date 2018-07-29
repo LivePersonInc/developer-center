@@ -1,12 +1,14 @@
 ---
 title: IP Whitelisting
+redirect_from:
+  - push-service-whitelist.html
 Keywords:
 level1: Documents
 level2: Guides
 level3: Push Notification Service (iOS and Android)
 
 order: 50
-permalink: push-service-whitelist.html
+permalink: push-notification-service-(ios-and-android)-ip-whitelisting.html
 
 indicator: messaging
 ---

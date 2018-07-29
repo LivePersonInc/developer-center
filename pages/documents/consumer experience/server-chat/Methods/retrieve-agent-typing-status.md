@@ -1,5 +1,7 @@
 ---
 title: Retrieve the Agent's Typing Status
+redirect_from:
+  - consumer-experience-server-chat-retrieve-agent-typing-status.html
 
 level1: Documents
 level2: Consumer Experience
@@ -8,7 +10,7 @@ level4: Methods
 
 order: 131
 
-permalink: consumer-experience-server-chat-retrieve-agent-typing-status.html
+permalink: server-chat-api-methods-retrieve-the-agent's-typing-status.html
 
 indicator: chat
 ---

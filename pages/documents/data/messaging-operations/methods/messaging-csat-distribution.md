@@ -1,11 +1,13 @@
 ---
 title: Messaging CSAT Distribution
+redirect_from:
+  - data-messaging-operations-messaging-csat-distribution.html
 level1: Documents
 level2: Data
 level3: Messaging Operations API
 level4: Methods
 order: 50
-permalink: data-messaging-operations-messaging-csat-distribution.html
+permalink: messaging-operations-api-methods-messaging-csat-distribution.html
 
 indicator: messaging
 ---

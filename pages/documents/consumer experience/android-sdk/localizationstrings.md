@@ -1,5 +1,7 @@
 ---
 title: Override SDK Strings
+redirect_from:
+  - android-localization-strings.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 270
-permalink: android-localization-strings.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html
 
 indicator: messaging
 ---

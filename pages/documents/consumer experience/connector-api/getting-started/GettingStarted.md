@@ -1,12 +1,14 @@
 ---
 title: Getting Started
+redirect_from:
+  - connectorapi-getting-started.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API
 order: 2
 indicator: messaging
-permalink: connectorapi-getting-started.html
+permalink: connector-api-connector-api-getting-started.html
 ---
 
 ### Getting Started with the Connector API

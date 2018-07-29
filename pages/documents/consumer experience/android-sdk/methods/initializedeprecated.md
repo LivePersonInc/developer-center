@@ -1,5 +1,7 @@
 ---
 title: initialize (Deprecated)
+redirect_from:
+  - android-initializedeprecated.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 12
-permalink: android-initializedeprecated.html
+permalink: mobile-app-messaging-sdk-for-android-methods-initialize-(deprecated).html
 
 indicator: messaging
 ---

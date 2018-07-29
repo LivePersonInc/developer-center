@@ -1,5 +1,7 @@
 ---
 title: addLine
+redirect_from:
+  - consumer-experience-javascript-chat-addline.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 40
-permalink: consumer-experience-javascript-chat-addline.html
+permalink: javascript-chat-sdk-methods-addline.html
 
 indicator: chat
 ---

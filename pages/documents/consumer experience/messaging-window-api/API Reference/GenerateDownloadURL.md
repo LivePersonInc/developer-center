@@ -1,5 +1,7 @@
 ---
 title: Generate Download URL
+redirect_from:
+  - consumer-int-msg-generate-temp-download-url.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 310
 layout: page
 
-permalink: consumer-int-msg-generate-temp-download-url.html
+permalink: messaging-window-api-api-reference-generate-download-url.html
 indicator: messaging
 ---
 

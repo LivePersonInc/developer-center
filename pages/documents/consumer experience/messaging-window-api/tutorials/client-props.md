@@ -1,12 +1,14 @@
 ---
 title: Client Properties
+redirect_from:
+  - consumer-int-client-props.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
 
 order: 70
-permalink: consumer-int-client-props.html
+permalink: messaging-window-api-tutorials-client-properties.html
 
 indicator: messaging
 ---

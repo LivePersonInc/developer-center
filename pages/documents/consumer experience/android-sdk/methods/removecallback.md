@@ -1,5 +1,7 @@
 ---
 title: removeCallBack
+redirect_from:
+  - android-removecallback.html
 Keywords:
 
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 160
-permalink: android-removecallback.html
+permalink: mobile-app-messaging-sdk-for-android-methods-removecallback.html
 
 indicator: messaging
 ---

@@ -1,11 +1,13 @@
 ---
 title: Changelog
+redirect_from:
+  - data-data-access-changelog.html
 level1: Documents
 level2: Data
 level3: Data Access API
 
 order: 62
-permalink: data-data-access-changelog.html
+permalink: data-access-api-changelog.html
 indicator: both
 
 ---

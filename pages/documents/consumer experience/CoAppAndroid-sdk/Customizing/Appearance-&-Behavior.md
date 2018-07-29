@@ -1,11 +1,13 @@
 ---
 title: Appearance and Behavior
+redirect_from:
+  - consumer-experience-voice-video-android-appearance-behavior.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 level4: Customizing
 order: 70
-permalink: consumer-experience-voice-video-android-appearance-behavior.html
+permalink: voice-&-video-for-android-sdk-(beta)-customizing-appearance-and-behavior.html
 indicator: messaging
 ---
 

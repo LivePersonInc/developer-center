@@ -1,11 +1,13 @@
 ---
 title: Overview
+redirect_from:
+  - consumer-experience-server-chat-getting-started.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level-order: 7
 order: 1
-permalink: consumer-experience-server-chat-getting-started.html
+permalink: server-chat-api-overview.html
 root-link: true
 indicator: chat
 ---

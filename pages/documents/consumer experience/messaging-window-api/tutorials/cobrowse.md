@@ -1,12 +1,14 @@
 ---
 title: CoBrowse
+redirect_from:
+  - consumer-int-cobrowse.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
 
 order: 89
-permalink: consumer-int-cobrowse.html
+permalink: messaging-window-api-tutorials-cobrowse.html
 
 indicator: messaging
 ---

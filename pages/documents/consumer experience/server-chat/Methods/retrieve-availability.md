@@ -1,5 +1,7 @@
 ---
 title: Retrieve Availability
+redirect_from:
+  - consumer-experience-server-chat-retrieve-availability.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 10
-permalink: consumer-experience-server-chat-retrieve-availability.html
+permalink: server-chat-api-methods-retrieve-availability.html
 
 indicator: chat
 ---

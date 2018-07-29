@@ -1,11 +1,13 @@
 ---
 title: Installing the SDK with CocoaPods
+redirect_from:
+  - consumer-experience-voice-video-ios-cocoa-pods.html
 level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Getting Started
 order: 20
-permalink: consumer-experience-voice-video-ios-cocoa-pods.html
+permalink: voice-&-video-for-ios-sdk-(beta)-getting-started-installing-the-sdk-with-cocoapods.html
 indicator: messaging
 ---
 

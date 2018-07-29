@@ -1,5 +1,7 @@
 ---
 title: Bubble timestamp
+redirect_from:
+  - android-bubble.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 250
-permalink: android-bubble.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-bubble-timestamp.html
 
 indicator: messaging
 ---

@@ -1,5 +1,7 @@
 ---
 title: Publishing Text Content
+redirect_from:
+  - consumer-int-msg-text-cont.html
 level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
@@ -8,7 +10,7 @@ level4: API Reference
 order: 190
 layout: page
 
-permalink: consumer-int-msg-text-cont.html
+permalink: messaging-window-api-api-reference-publishing-text-content.html
 indicator: messaging
 ---
 

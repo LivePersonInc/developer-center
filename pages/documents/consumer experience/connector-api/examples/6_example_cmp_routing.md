@@ -1,12 +1,14 @@
 ---
 title: Campaign for messaging Routing
+redirect_from:
+  - cmp-routing-example.html
 level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 65
 indicator: messaging
-permalink: cmp-routing-example.html
+permalink: connector-api-examples-campaign-for-messaging-routing.html
 
 ---
 

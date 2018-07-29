@@ -1,5 +1,7 @@
 ---
 title: Callbacks Index
+redirect_from:
+  - consumer-experience-ios-sdk-callbacks-index.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 13
-permalink: consumer-experience-ios-sdk-callbacks-index.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html
 
 indicator: messaging
 ---

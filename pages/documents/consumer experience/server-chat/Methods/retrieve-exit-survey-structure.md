@@ -1,12 +1,14 @@
 ---
 title: Retrieve Exit Survey Structure
+redirect_from:
+  - consumer-experience-server-chat-retrieve-exit-survey-structure.html
 level1: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods
 
 order: 150
-permalink: consumer-experience-server-chat-retrieve-exit-survey-structure.html
+permalink: server-chat-api-methods-retrieve-exit-survey-structure.html
 
 indicator: chat
 ---

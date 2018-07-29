@@ -1,11 +1,13 @@
 ---
 title: Schema
+redirect_from:
+  - data-data-access-schema.html
 level1: Documents
 level2: Data
 level3: Data Access API
 level4: Methods
 order: 60
-permalink: data-data-access-schema.html
+permalink: data-access-api-methods-schema.html
 
 indicator: chat
 ---

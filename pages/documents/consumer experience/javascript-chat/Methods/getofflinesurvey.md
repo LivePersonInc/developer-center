@@ -1,5 +1,7 @@
 ---
 title: getOfflineSurvey
+redirect_from:
+  - consumer-experience-javascript-chat-getofflinesurvey.html
 Keywords:
 level1: Documents
 level2: Consumer Experience
@@ -7,7 +9,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 110
-permalink: consumer-experience-javascript-chat-getofflinesurvey.html
+permalink: javascript-chat-sdk-methods-getofflinesurvey.html
 
 indicator: chat
 ---
