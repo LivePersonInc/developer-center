@@ -25,7 +25,7 @@
   <div class="defaultbutton">
     <a href="http://register.liveperson.com/developer/signup">Register now</a>
   </div>
-  <div class="defaultfooter">
+  <div id="defaultfooter" class="defaultfooter">
     <span>LivePerson Inc 2018 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
     </span>
 </div>
@@ -51,27 +51,35 @@ search.autocomplete.on({
   'autocomplete:shown': function() {
     var content = document.getElementById('defaultcontent');
     var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
     content.classList.add('overlayvisible');
     sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
 },
   'autocomplete:closed': function () {
     var content = document.getElementById('defaultcontent');
     var sidebar = document.getElementById('defaultsidebar');
-    content.classList.remove('overlayvisible');
-    sidebar.classList.remove('overlayvisible');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
 },
   'autocomplete:empty': function () {
     var content = document.getElementById('defaultcontent');
     var sidebar = document.getElementById('defaultsidebar');
-    content.classList.remove('overlayvisible');
-    sidebar.classList.remove('overlayvisible');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
 },
   'autocomplete:updated': function () {
     if (this.value === '') {
-    var content = document.getElementById('defaultcontent');
-    var sidebar = document.getElementById('defaultsidebar');
-    content.classList.remove('overlayvisible');
-    sidebar.classList.remove('overlayvisible');
+      var content = document.getElementById('defaultcontent');
+      var sidebar = document.getElementById('defaultsidebar');
+      var footer = document.getElementById('defaultfooter');
+      content.classList.remove('overlayvisible');
+      sidebar.classList.remove('overlayvisible');
+      footer.classList.remove('overlayvisible');
 }}});
 </script>
 

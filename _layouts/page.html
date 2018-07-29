@@ -31,7 +31,13 @@ layout: default
 <div class="post-content">
 
 {% if page.title %}
+  <div class="documenttitle">
   <div class='h1'>{{ page.title}}</div>
+  <div class="anchorlist folder">
+    <a href="">Jump To</a>
+    <ul></ul>
+  </div>
+</div>
   <hr class="pagehr" />
 {% endif %}
    {% if page.summary %}

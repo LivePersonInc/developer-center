@@ -486,6 +486,15 @@
 
 - categoryname: Real Time Interactions
   documents:
+  - documentname: Monitoring API
+    pages:
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Installing a Monitoring API Application
+      - pagename: Methods
+        subpages:
+          - subpagename: Engagement
+          - subpagename: Report
   - documentname: App Engagement API
     pages:
       - pagename: Overview
@@ -494,18 +503,6 @@
           - subpagename: Create Session
           - subpagename: Update Session
       - pagename: Impression Events Body Example
-      - pagename: Changelog
-  - documentname: Visit Information API
-    pages:
-      - pagename: Overview
-      - pagename: Visit Information
-      - pagename: Changelog
-  - documentname: IVR Engagement API
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: External Engagement
       - pagename: Changelog
   - documentname: Engagement Window Widget SDK
     pages:
@@ -537,15 +534,18 @@
           - subpagename: getEngagementInfo
           - subpagename: getEngagementState
       - pagename: Changelog
-  - documentname: Monitoring API
+  - documentname: Visit Information API
     pages:
       - pagename: Overview
-      - pagename: Getting Started
-      - pagename: Installing a Monitoring API Application
+      - pagename: Visit Information
+      - pagename: Changelog
+  - documentname: IVR Engagement API
+    pages:
+      - pagename: Overview
       - pagename: Methods
         subpages:
-          - subpagename: Engagement
-          - subpagename: Report
+          - subpagename: External Engagement
+      - pagename: Changelog
   image: real-time-interactions
 
 - categoryname: Account Configuration

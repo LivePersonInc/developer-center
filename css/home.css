@@ -15,7 +15,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   margin-right: 35px;
   padding: 15px 25px 15px 25px;
   flex: 1;
@@ -53,5 +52,4 @@
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #4a4a4a;
-  text-align: center;
 }

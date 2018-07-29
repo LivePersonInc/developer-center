@@ -67,3 +67,11 @@ $('.underline').on('click', function() {
       //  }, 500);
     //});
 //});
+
+$(document).ready(function () {
+  var anchorlinks = document.getElementsByTagName("h3");
+  var anchorlist = $('.anchorlist ul');
+  $.each(anchorlinks, function() {
+    $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
+  });
+});

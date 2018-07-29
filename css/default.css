@@ -430,11 +430,26 @@ table {
   content: "RUBY";
 }
 
+.documenttitle {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+
 .pagehr {
   margin-top: 0px;
   margin-bottom: 35px;
   border: 0;
   border-top: 1px solid #dedddd;;
+}
+
+.anchorlist {
+  margin-top: 4px;
+}
+
+.anchorlist ul {
+  list-style: none;
 }
 
 @media screen and (max-width:1440px){
