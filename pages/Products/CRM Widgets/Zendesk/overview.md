@@ -2,12 +2,13 @@
 title: Zendesk
 redirect_from:
   - zendesk.html
-permalink: crm-integrations-zendesk.html
+permalink: crm-integrations-zendesk.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations
 order: 50
 ---
+
 This integration will allow you to see and create your Zendesk Contact tickets right from within LiveEngage. It will also record all LiveEngage transcripts in Zendesk so all your customer interactions are in one place.
 
 <div class="inntertext configlink"><a href="https://s3-eu-west-1.amazonaws.com/ce-sr/CA/CRM+Integration+Guides/Zendesk+Integration+Guide.pdf" target="_blank">Click here</a> for the Zendesk Widget Integration Guide!</div>

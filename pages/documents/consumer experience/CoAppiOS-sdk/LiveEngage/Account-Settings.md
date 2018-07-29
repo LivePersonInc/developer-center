@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: LiveEngage Configuration
 order: 90
-permalink: voice-&-video-for-ios-sdk-(beta)-liveengage-configuration-account-settings.html
+permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-account-settings.html
 indicator: messaging
 ---
 

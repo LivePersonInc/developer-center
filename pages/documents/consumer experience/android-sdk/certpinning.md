@@ -9,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Certificate Pinning
 
 order:
-permalink: mobile-app-messaging-sdk-for-ios-certificate-pinning-certificate-pinning---android.html
+permalink: mobile-app-messaging-sdk-for-ios-certificate-pinning-certificate-pinning-android.html
 
 indicator: messaging
 ---

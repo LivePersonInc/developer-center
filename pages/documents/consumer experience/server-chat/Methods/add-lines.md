@@ -8,7 +8,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 100
-permalink: server-chat-api-methods-add-lines-/-end-chat.html
+permalink: server-chat-api-methods-add-lines-end-chat.html
 
 indicator: chat
 ---
@@ -16,7 +16,7 @@ indicator: chat
 
 The URI of the event that was added is returned in the Location header.
 
-### Request 
+### Request
 
 | Method | URL |
 | :--- | :--- |

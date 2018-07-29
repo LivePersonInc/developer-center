@@ -9,7 +9,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 
 order: 246
-permalink: mobile-app-messaging-sdk-for-ios-appendix-using-liveperson-sdk---ios.html
+permalink: mobile-app-messaging-sdk-for-ios-appendix-using-liveperson-sdk-ios.html
 
 indicator: messaging
 ---

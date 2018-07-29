@@ -9,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 170
-permalink: chat-agent-api-methods-retrieve-agent’s-typing-status.html
+permalink: chat-agent-api-methods-retrieve-agents-typing-status.html
 
 indicator: chat
 ---
@@ -47,6 +47,6 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
- |Code|  Response| 
- |:---  |:---| 
+ |Code|  Response|
+ |:---  |:---|
  |201  |Created |

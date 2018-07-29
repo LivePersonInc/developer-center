@@ -5,10 +5,10 @@ redirect_from:
 Keywords:
 level1: Documents
 level2: Guides
-level3: Push Notification Service (iOS and Android)
+
 
 order: 40
-permalink: push-notification-service-(ios-and-android)-configuration-of-push-proxy.html
+permalink: push-notification-service-configuration-of-push-proxy.html
 
 indicator: messaging
 ---

@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 level4: Getting Started
 order: 10
-permalink: voice-&-video-for-android-sdk-(beta)-getting-started-prerequisites.html
+permalink: voice-&-video-for-android-sdk-beta-getting-started-prerequisites.html
 indicator: messaging
 ---
 

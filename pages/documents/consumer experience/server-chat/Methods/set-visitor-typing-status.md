@@ -8,7 +8,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 140
-permalink: server-chat-api-methods-set-the-visitor's-typing-status.html
+permalink: server-chat-api-methods-set-the-visitors-typing-status.html
 
 indicator: chat
 ---

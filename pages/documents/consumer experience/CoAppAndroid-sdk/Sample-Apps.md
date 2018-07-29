@@ -6,7 +6,7 @@ level1: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 order: 90
-permalink: voice-&-video-for-android-sdk-(beta)-sample-apps.html
+permalink: voice-&-video-for-android-sdk-beta-sample-apps.html
 indicator: messaging
 ---
 

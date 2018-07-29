@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 level4: LiveEngage Configuration
 order: 50
-permalink: voice-&-video-for-android-sdk-(beta)-liveengage-configuration-account-settings.html
+permalink: voice-&-video-for-android-sdk-beta-liveengage-configuration-account-settings.html
 indicator: messaging
 ---
 

@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Getting Started
 order: 20
-permalink: voice-&-video-for-ios-sdk-(beta)-getting-started-installing-the-sdk-with-cocoapods.html
+permalink: voice-&-video-for-ios-sdk-beta-getting-started-installing-the-sdk-with-cocoapods.html
 indicator: messaging
 ---
 

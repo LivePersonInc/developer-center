@@ -8,7 +8,7 @@ level2: Guides
 level3: LiveEngage Applications
 level-order: 13
 order: 10
-permalink: liveengage-applications-what-is-a-liveengage-application?.html
+permalink: liveengage-applications-what-is-a-liveengage-application.html
 root-link: true
 indicator: both
 ---

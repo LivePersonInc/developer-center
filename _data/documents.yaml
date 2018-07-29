@@ -53,6 +53,44 @@
 
 - categoryname: Consumer Experience
   documents:
+  - documentname: Connector API
+    pages:
+    - pagename: Connector API
+      subpages:
+      - subpagename: Overview
+      - subpagename: App Install Manifest for Connectors
+    - pagename: Authorization and Authentication
+      subpages:
+      - subpagename: Get AppJWT
+      - subpagename: Get ConsumerJWS
+    - pagename: API Reference
+      subpages:
+      - subpagename: Overview
+      - subpagename: CONVERSATION
+      - subpagename: SEND
+    - pagename: Webhooks
+      subpages:
+      - subpagename: Overview
+      - subpagename: Events
+      - subpagename: Configuration
+      - subpagename: Notification Protocol
+      - subpagename: Retry Policy
+      - subpagename: Disclaimers
+      - subpagename: Troubleshooting
+      - subpagename: Webhooks Examples
+    - pagename: Examples
+      subpages:
+      - subpagename: Create a New Conversation
+      - subpagename: Create a New Conversation and Report SDEs
+      - subpagename: Send a Message
+      - subpagename: Close a Conversation
+      - subpagename: Send Chat State Events
+      - subpagename: How to Enable a Feature
+      - subpagename: Campaign for Messaging Routing
+      - subpagename: Share Image File
+    - pagename: Sample Code
+      subpages:
+      - subpagename: Connector Sample App
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
@@ -100,44 +138,6 @@
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
-  - documentname: Connector API
-    pages:
-    - pagename: Connector API
-      subpages:
-      - subpagename: Overview
-      - subpagename: App Install Manifest for Connectors
-    - pagename: Authorization and Authentication
-      subpages:
-      - subpagename: Get AppJWT
-      - subpagename: Get ConsumerJWS
-    - pagename: API Reference
-      subpages:
-      - subpagename: Overview
-      - subpagename: CONVERSATION
-      - subpagename: SEND
-    - pagename: Webhooks
-      subpages:
-      - subpagename: Overview
-      - subpagename: Events
-      - subpagename: Configuration
-      - subpagename: Notification Protocol
-      - subpagename: Retry Policy
-      - subpagename: Disclaimers
-      - subpagename: Troubleshooting
-      - subpagename: Webhooks Examples
-    - pagename: Examples
-      subpages:
-      - subpagename: Create a New Conversation
-      - subpagename: Create a New Conversation and Report SDEs
-      - subpagename: Send a Message
-      - subpagename: Close a Conversation
-      - subpagename: Send Chat State Events
-      - subpagename: How to Enable a Feature
-      - subpagename: Campaign for Messaging Routing
-      - subpagename: Share Image File
-    - pagename: Sample Code
-      subpages:
-      - subpagename: Connector Sample App
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
@@ -244,7 +244,7 @@
     - pagename: Getting Started
     - pagename: Tutorials
       subpages:
-      - subpagename: Get Messaging
+      - subpagename: Get Messages
       - subpagename: Conversation Metadata
       - subpagename: Read and Accept Events
       - subpagename: Authentication
@@ -265,7 +265,7 @@
       - subpagename: Close Conversation
       - subpagename: Send Consumer Satisfaction (CSAT)
       - subpagename: Subscribe to Conversation Metadata
-      - subpagename: Unsubscribe to Conversation Metadata
+      - subpagename: Unsubscribe from Conversation Metadata
       - subpagename: Publishing Text Content
       - subpagename: Subscribe to Messaging Events
       - subpagename: Consumer Token Creation
@@ -330,7 +330,7 @@
       subpages:
       - subpagename: Retrieve Availability
       - subpagename: Retrieve Available Slots
-      - subpagename: Retrieve Estimated Wait
+      - subpagename: Retrieve Estimated Wait Time
       - subpagename: Retrieve Pre-Chat Survey
       - subpagename: Retrieve Offline Survey
       - subpagename: Post Offline Survey
@@ -440,7 +440,7 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
-  - documentname: Consumer Engagement History API
+  - documentname: Consumer Messaging History API
     pages:
       - pagename: Overview
       - pagename: Methods

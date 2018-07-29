@@ -2,7 +2,7 @@
 title: SalesForce
 redirect_from:
   - salesforce.html
-permalink: crm-integrations-salesforce.html
+permalink: crm-integrations-salesforce.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations

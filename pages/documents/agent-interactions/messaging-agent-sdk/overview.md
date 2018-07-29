@@ -1,7 +1,5 @@
 ---
 title: Overview
-redirect_from:
-  - messaging-agent-sdk-overview.html
 Keywords:
 level1: Documents
 level2: Agent Interactions

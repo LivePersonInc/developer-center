@@ -9,7 +9,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 160
-permalink: chat-agent-api-methods-retrieve-visitor’s-name.html
+permalink: chat-agent-api-methods-retrieve-visitors-name.html
 
 indicator: chat
 ---

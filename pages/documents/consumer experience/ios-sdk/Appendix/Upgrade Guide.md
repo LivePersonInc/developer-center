@@ -8,7 +8,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 order: 247
-permalink: mobile-app-messaging-sdk-for-ios-appendix-upgrade-guide---ios.html
+permalink: mobile-app-messaging-sdk-for-ios-appendix-upgrade-guide-ios.html
 indicator: messaging
 ---
 

@@ -5,10 +5,10 @@ redirect_from:
 Keywords:
 level1: Documents
 level2: Guides
-level3: Push Notification Service (iOS and Android)
+
 
 order: 30
-permalink: push-notification-service-(ios-and-android)-http-response-codes.html
+permalink: push-notification-service-http-response-codes.html
 
 indicator: messaging
 ---

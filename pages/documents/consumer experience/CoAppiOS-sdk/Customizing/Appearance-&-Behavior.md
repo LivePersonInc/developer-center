@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Customizing
 order: 60
-permalink: voice-&-video-for-ios-sdk-(beta)-customizing-appearance-and-behavior.html
+permalink: voice-&-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
 indicator: messaging
 ---
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, don't hesitate to contact you LivePerson account manager for help.

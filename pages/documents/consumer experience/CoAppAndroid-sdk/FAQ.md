@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 
 order: 100
-permalink: voice-&-video-for-android-sdk-(beta)-faq.html
+permalink: voice-&-video-for-android-sdk-beta-faq.html
 indicator: messaging
 ---
 

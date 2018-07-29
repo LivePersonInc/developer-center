@@ -7,7 +7,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 
 order: 120
-permalink: voice-&-video-for-ios-sdk-(beta)-sample-app.html
+permalink: voice-&-video-for-ios-sdk-beta-sample-app.html
 indicator: messaging
 ---
 

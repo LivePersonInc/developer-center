@@ -8,7 +8,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 80
-permalink: server-chat-api-methods-retrieve-chat-resources,-events-and-information.html
+permalink: server-chat-api-methods-retrieve-chat-resources-events-and-information.html
 
 indicator: chat
 ---

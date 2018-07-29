@@ -8,9 +8,11 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 order: 237
-permalink: mobile-app-messaging-sdk-for-ios-advanced-features-unauthenticatd-in-app-messaging.html
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-unauthenticatd-in-app-messaging.html
 indicator: messaging
 ---
+
+
 
 ### Introduction
 

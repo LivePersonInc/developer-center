@@ -1,7 +1,5 @@
 ---
 title: Overview
-redirect_from:
-  - engagement-attributes-overview.html
 Keywords:
 level1: Documents
 level2: Guides
