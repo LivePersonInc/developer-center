@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/Rich Messaging',
+    root: './pages/documents-old/Rich Messaging',
     entryType: 'files',
     depth: 3
 };
@@ -64,7 +64,7 @@ readdirp(settings)
             lines[lineOfLink] = `permalink: ${level3}-${title}` + '.html';
           };
           console.log(lines.join('\n'));
-          fs.writeFile(entry.fullPath, lines.join('\n'));
+          fs.writeFile(entry.fullPath.replace('-old', ''), lines.join('\n'));
         },
         (error) => {
           console.log(error);
