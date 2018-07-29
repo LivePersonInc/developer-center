@@ -26,8 +26,9 @@ google_analytics: UA-96175782-1
 extlinks:
   attributes: {target: _blank}
 
-gems:
+plugins:
   - algoliasearch-jekyll
+  - jekyll-redirect-from
 
 algolia:
   application_id: "1ITT6KY19C"

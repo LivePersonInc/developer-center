@@ -22,7 +22,7 @@ indicator: messaging
 
 **Add messaging directly within your app to enjoy the following benefits:**
 
-* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation. 
+* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
 
 * Increase the stickiness of your app through the added value of Mobile App Messaging.
 

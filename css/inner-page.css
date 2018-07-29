@@ -294,6 +294,7 @@ ul.mysidebar.nav {
   top: 202px;
   height: 60vh;
   overflow-y: auto;
+  list-style: none;
 
 }
 
