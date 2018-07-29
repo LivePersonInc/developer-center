@@ -1,5 +1,7 @@
 ---
 title: Update workdays
+redirect_from:
+  - account-configuration-workdays-update.html
 Keywords:
 level1:
 level2: Account Configuration

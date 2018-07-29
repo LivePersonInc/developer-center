@@ -1,5 +1,7 @@
 ---
 title: Get profile by ID
+redirect_from:
+  - administration-get-profile-by-id.html
 keywords:
 level1: Documents
 level2: Admin

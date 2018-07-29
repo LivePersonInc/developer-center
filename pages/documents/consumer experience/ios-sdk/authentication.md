@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 
 order: 14
-permalink: mobile-app-messaging-sdk-for-ios-authentication.html
+permalink: consumer-experience-ios-sdk-authentication.html
 
 indicator: messaging
 ---

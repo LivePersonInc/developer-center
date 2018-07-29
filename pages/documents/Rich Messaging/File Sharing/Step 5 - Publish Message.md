@@ -1,11 +1,11 @@
 ---
-title: Publish Message
+title: Step 5 - Publish Message
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 60
-permalink: file-sharing-publish-message.html
+permalink: rich-messaging-file-sharing-5.html
 indicator: both
 ---
 

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 160
-permalink: mobile-app-messaging-sdk-for-ios-methods-setuserprofile.html
+permalink: consumer-experience-ios-sdk-setuserprofile.html
 
 indicator: messaging
 ---

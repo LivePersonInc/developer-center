@@ -5,7 +5,7 @@ level2: Data
 level3: Messaging Operations API
 level4: Methods
 order: 10
-permalink: messaging-operations-api-methods-messaging-conversation.html
+permalink: data-messaging-operations-messaging-conversation.html
 
 indicator: messaging
 ---

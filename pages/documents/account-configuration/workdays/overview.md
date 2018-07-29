@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - account-configuration-workdays-overview.html
 keywords:
 level1:
 level2: Account Configuration

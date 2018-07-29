@@ -1,6 +1,6 @@
 ---
 title: Microsoft Dynamics
-permalink: crm-integrations-microsoft-dynamics.html
+permalink: microsoftdynamics.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations

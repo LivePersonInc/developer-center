@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 12
-permalink: mobile-app-messaging-sdk-for-android-methods-initialize-(deprecated).html
+permalink: android-initializedeprecated.html
 
 indicator: messaging
 ---

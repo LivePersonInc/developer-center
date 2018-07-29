@@ -6,9 +6,9 @@ level3: Engagement Window Widget SDK
 
 order: 1
 level-order: 4
-permalink: engagement-window-widget-sdk-overview.html
+permalink: rt-interactions-window-sdk-overview.html
 root-link: true
-indicator: chat and messaging
+indicator: both
 ---
 ### Introduction
 

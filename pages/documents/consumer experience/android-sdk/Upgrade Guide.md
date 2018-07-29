@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 level4: Appendix
 order: 342
-permalink: mobile-app-messaging-sdk-for-android-appendix-upgrade-guide-android.html
+permalink: consumer-experience-android-sdk-upgrade-guide.html
 indicator: messaging
 ---
 

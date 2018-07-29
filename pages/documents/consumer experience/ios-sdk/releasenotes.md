@@ -6,12 +6,47 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 
 order: 243
-permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
+permalink: consumer-experience-ios-sdk-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+
+### iOS Messaging SDK - Version 3.2.2
+iOS Messaging SDK v3.2.2 contains the following bug fixes:
+
+#### Symptom:
+
+When calling getEngagement while there is an active conversation which is not related to a campaign, the response returns an error.
+
+#### Fix:
+
+When calling getEngagement while there is an active conversation which is not related to a campaign, a response will be returned with the available information.
+
+#### Symptom:
+
+In some cases, the badge counter was returned with an incorrect value, which represents a previous value. For example, when an agent sent messages while the conversation screen was in the background.
+
+#### Fix:
+
+Badge counter is now showing the actual value.
+
+#### Symptom:
+
+In case of a failure in ‘logout’, the user’s data might be displayed with empty message bubbles the next time that the consumer opens the conversation screen.
+
+#### Fix:
+
+The user’s data is now cleared as expected only if the ‘logout’ succeeded.
+
+#### Symptom:
+
+In some cases, the badge counter was returned with an incorrect value, which represents a previous value.
+
+#### Fix:
+
+Badge counter is now showing the actual value regardless the state of the conversation.
 
 ### iOS Messaging SDK - Version 3.2.1
 
@@ -2230,9 +2265,7 @@ The following properties for the user avatar can now be configured:
 | userBubbleLongPressOverlayAlpha: Float | Color code for the outline color.| 0.3 |
 
 #### New classes
-
 ##### LPConversationViewParams
-
 This class represents an object to determine the conversation mode, filter and container, for example, Container, Window or ViewOnly.
 
     class LPConversationViewParams: NSObject {

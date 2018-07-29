@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 30
-permalink: mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
+permalink: android-callbacks-interface.html
 
 indicator: messaging
 ---

@@ -1,5 +1,7 @@
 ---
 title: Create Workdays Object
+redirect_from:
+  - account-configuration-workdays-create.html
 Keywords:
 level1:
 level2: Account Configuration

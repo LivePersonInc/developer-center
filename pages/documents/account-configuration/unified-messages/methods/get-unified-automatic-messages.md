@@ -1,5 +1,7 @@
 ---
 title: Get Unified Automatic Messages
+redirect_from:
+  - account-configuration-unified-automatic-messages-get-automatic-messages.html
 keywords:
 level1: Documents
 level2: Account Configuration

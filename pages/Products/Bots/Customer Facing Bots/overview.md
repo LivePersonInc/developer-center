@@ -7,7 +7,7 @@ level3: Customer Facing Bots
 order: 1
 level-order: 1
 root-link: true
-permalink: customer-facing-bots-overview.html
+permalink: products-customer-facing-bots-overview.html
 indicator:
 ---
 

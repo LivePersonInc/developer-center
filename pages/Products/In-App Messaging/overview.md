@@ -1,6 +1,6 @@
 ---
 title: Overview
-permalink: undefined-overview.html
+permalink: /products-inapp-overview.html
 toc: false
 indicator:
 ---

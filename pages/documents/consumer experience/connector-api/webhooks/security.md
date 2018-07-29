@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 30
-indicator: both
-permalink: connector-api-webhooks-notification-protocol.html
+indicator: messaging
+permalink: webhooks-security.html
 ---
 
 ### Protocol and Security

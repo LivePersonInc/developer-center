@@ -1,11 +1,11 @@
 ---
-title: Get Conversation by Conversation ID
+title: Get conversation by conversation ID
 level1: Documents
 level2: Data
 level3: Messaging Interactions API
 level4: Methods
 order: 20
-permalink: messaging-interactions-api-methods-get-conversation-by-conversation-id.html
+permalink: data-messaging-interactions-get-conversation-by-conversation-id.html
 
 indicator: messaging
 ---

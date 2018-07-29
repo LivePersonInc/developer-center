@@ -4,7 +4,7 @@ level1: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference
-permalink: messaging-window-api-api-reference-consumer-token-creation.html
+permalink: common-consumer-token-creation.html
 order: 210
 indicator: messaging
 ---

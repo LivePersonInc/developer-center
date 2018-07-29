@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 240
-permalink: mobile-app-messaging-sdk-for-android-methods-shutdown-(deprecated).html
+permalink: android-shutdowndeprecated.html
 
 indicator: messaging
 ---

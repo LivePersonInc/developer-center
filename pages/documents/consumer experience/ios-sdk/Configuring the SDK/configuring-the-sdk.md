@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Customization and Branding
 
 order: 223
-permalink: mobile-app-messaging-sdk-for-ios-customization-and-branding-customizing-the-sdk.html
+permalink: consumer-experience-ios-sdk-configuring-the-sdk.html
 
 indicator: messaging
 ---

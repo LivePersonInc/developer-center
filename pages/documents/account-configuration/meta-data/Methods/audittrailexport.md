@@ -1,5 +1,7 @@
 ---
 title: Export Audit Trail to CSV file
+redirect_from:
+  - account-configuration-meta-data-audit-trail-export.html
 keywords:
 level1: Documents
 

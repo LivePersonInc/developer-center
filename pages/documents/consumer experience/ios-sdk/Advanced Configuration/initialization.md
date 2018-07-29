@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 3
-permalink: mobile-app-messaging-sdk-for-ios-configuration-initialization.html
+permalink: consumer-experience-ios-sdk-initialization.html
 
 indicator: messaging
 ---
@@ -34,12 +34,10 @@ public func showConversation(conversationQuery: ConversationParamProtocol, authe
 public func removeConversation(conversationQuery: ConversationParamProtocol)
 ```
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, example [here](consumer-experience-ios-sdk-messaging-methods.html#removeconversation)
-
 </div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, example [here](consumer-experience-ios-sdk-messaging-methods.html#removeconversation)
 
 ### Supporting functions:
 

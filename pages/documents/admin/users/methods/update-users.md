@@ -1,5 +1,7 @@
 ---
 title: Update Users
+redirect_from:
+  - administration-update-users.html
 keywords:
 level1: Documents
 level2: Admin

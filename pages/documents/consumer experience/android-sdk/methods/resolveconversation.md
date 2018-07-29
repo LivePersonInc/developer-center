@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 220
-permalink: mobile-app-messaging-sdk-for-android-methods-resolveconversation.html
+permalink: android-resolveconversation.html
 
 indicator: messaging
 ---

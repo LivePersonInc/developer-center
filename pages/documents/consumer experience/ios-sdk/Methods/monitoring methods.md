@@ -7,17 +7,15 @@ level3: Mobile App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 11
-permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
+permalink: consumer-experience-ios-sdk-monitoring-methods.html
 
 indicator: messaging
 ---
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the following [steps](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params)
-
 </div>
+Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the following [steps](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params)
 
 ### sendSDE
 

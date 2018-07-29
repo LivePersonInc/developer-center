@@ -7,7 +7,7 @@ level4: Tutorials
 
 order: 20
 
-permalink: messaging-window-api-tutorials-conversation-metadata.html
+permalink: consumer-int-conversation-md.html
 indicator: messaging
 ---
 

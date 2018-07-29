@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 234
-permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
+permalink: consumer-experience-ios-sdk-photosharing.html
 
 indicator: messaging
 ---
@@ -28,13 +28,10 @@ You can find all the related configurations in the [resources ID table](consumer
     - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
     - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
     - **Important:** Values for these descriptions are up to the brand to define, these are only examples.
-
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
 </div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){

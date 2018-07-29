@@ -1,6 +1,6 @@
 ---
 title: SalesForce
-permalink: crm-integrations-salesforce.html
+permalink: salesforce.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 
 order: 245
-permalink: mobile-app-messaging-sdk-for-ios-appendix-os-certificate-creation.html
+permalink: consumer-experience-ios-sdk-createcertificate.html
 
 indicator: messaging
 ---

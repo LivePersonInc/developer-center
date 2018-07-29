@@ -6,7 +6,7 @@ level3: Messaging Window API
 level4: Tutorials
 
 order: 10
-permalink: messaging-window-api-tutorials-get-messages-.html
+permalink: consumer-int-get-msg.html
 
 indicator: messaging
 ---

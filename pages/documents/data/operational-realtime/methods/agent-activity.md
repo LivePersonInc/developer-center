@@ -5,7 +5,7 @@ level2: Data
 level3: Operational Realtime API
 level4: Methods
 order: 30
-permalink: operational-realtime-api-methods-agent-activity.html
+permalink: data-operational-realtime-agent-activity.html
 
 indicator: chat
 ---

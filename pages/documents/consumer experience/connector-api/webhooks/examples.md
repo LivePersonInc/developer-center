@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 52
-indicator: both
-permalink: connector-api-webhooks-webhooks-examples.html
+indicator: messaging
+permalink: webhooks-examples.html
 ---
 
 In this page you can refer to some examples of the events notifications received from the Webhooks service in regards to the conversation.

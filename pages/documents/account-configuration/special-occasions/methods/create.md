@@ -1,5 +1,7 @@
 ---
 title: Create
+redirect_from:
+  - account-configuration-special-occasions-create.html
 Keywords:
 level1:
 level2: Account Configuration

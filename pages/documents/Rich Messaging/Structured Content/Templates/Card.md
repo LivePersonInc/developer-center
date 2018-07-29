@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Structured Content
 level4: Templates
 order: 30
-permalink: structured-content-templates-card.html
+permalink: rich-messaging-structured-content-card.html
 indicator: both
 ---
 

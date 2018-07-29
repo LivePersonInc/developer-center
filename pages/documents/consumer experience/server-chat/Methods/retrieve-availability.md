@@ -7,7 +7,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 10
-permalink: server-chat-api-methods-retrieve-availability.html
+permalink: consumer-experience-server-chat-retrieve-availability.html
 
 indicator: chat
 ---

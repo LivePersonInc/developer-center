@@ -1,5 +1,7 @@
 ---
 title: Delete Predefined Content
+redirect_from:
+  - account-configuration-predefined-content-delete-content.html
 Keywords:
 level1: Documents
 level2: Account Configuration

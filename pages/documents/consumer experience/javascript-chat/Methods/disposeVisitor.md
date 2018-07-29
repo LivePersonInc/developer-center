@@ -9,7 +9,7 @@ level4: Methods
 
 order: 192
 
-permalink: javascript-chat-sdk-methods-disposevisitor.html
+permalink: consumer-experience-javascript-chat-disposevisitor.html
 indicator: chat
 ---
 

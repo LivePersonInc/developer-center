@@ -1,5 +1,7 @@
 ---
 title: Retrieve Workdays Object by ID
+redirect_from:
+  - account-configuration-workdays-get-by-id.html
 Keywords:
 level1:
 level2: Account Configuration

@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 10
-permalink: chat-agent-api-methods-start-agent-session.html
+permalink: agent-start-agent-session.html
 
 indicator: chat
 ---

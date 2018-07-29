@@ -8,7 +8,7 @@ level4: API Reference
 order: 121
 layout: page
 
-permalink: messaging-window-api-api-reference-close-conversationttr.html
+permalink: consumer-int-msg-conv-ttr.html
 indicator: messaging
 ---
 

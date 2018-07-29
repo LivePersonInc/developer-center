@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Events
 
 order: 193
-permalink: javascript-chat-sdk-events-oninit.html
+permalink: consumer-experience-javascript-chat-oninit.html
 
 indicator: chat
 ---

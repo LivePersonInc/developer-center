@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 250
-permalink: mobile-app-messaging-sdk-for-android-methods-clearhistory.html
+permalink: android-clearhistory.html
 
 indicator: messaging
 ---

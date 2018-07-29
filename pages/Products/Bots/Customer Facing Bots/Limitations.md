@@ -8,7 +8,7 @@ level3: Customer Facing Bots
 
 order: 5
 
-permalink: customer-facing-bots-limitations.html
+permalink: products-bots-limitations.html
 
 indicator:
 ---

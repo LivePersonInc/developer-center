@@ -1,5 +1,7 @@
 ---
 title: Get All Changes Query
+redirect_from:
+  - account-configuration-categories-get-all.html
 level1: Documents
 level2: Account Configuration
 level3: Predefined Categories API

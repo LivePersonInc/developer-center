@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Appendix
 
 order: 340
-permalink: mobile-app-messaging-sdk-for-android-appendix-open-source-list-and-dependencies.html
+permalink: android-opensource.html
 
 indicator: messaging
 ---

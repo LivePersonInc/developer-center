@@ -6,7 +6,7 @@ level3: Video Chat
 
 order: 2
 
-permalink: video-chat-plan-your-service.html
+permalink: products-video-chat-plan-your-service.html
 indicator:
 ---
 

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 250
-permalink: mobile-app-messaging-sdk-for-android-string-localization-bubble-timestamp.html
+permalink: android-bubble.html
 
 indicator: messaging
 ---

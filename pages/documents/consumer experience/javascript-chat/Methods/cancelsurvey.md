@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 101
-permalink: javascript-chat-sdk-methods-cancelsurvey.html
+permalink: consumer-experience-javascript-chat-cancelsurvey.html
 
 indicator: chat
 ---

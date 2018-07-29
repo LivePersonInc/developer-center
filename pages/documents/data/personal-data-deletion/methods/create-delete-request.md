@@ -6,7 +6,7 @@ level2: Data
 level3: Personal Data Deletion API
 level4: Methods
 order: 10
-permalink: personal-data-deletion-api-methods-create-deletion-request.html
+permalink: personal-data-deletion-delete-request.html
 indicator: both
 ---
 
@@ -41,7 +41,7 @@ By consumerId - deletion of personal data that is related to a specific consumer
 
 All fields are sent in a JSON format
 
-**Note**: Only one of the deletion types which appear below can be sent in a single request.
+**Note**: Only one of the deletion types which appear below can be sent in a single request with a list of up to 100 unique ids.
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |

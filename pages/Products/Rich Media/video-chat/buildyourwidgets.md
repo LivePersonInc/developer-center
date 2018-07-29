@@ -6,7 +6,7 @@ level3: Video Chat
 
 order: 4
 
-permalink: video-chat-build-your-widgets.html
+permalink: products-video-chat-build-your-widgets.html
 indicator:
 ---
 
@@ -21,7 +21,7 @@ Once you have the video service and accompanying html elements in place, you are
 
 * [Add widget to the agent workspace](/guides-agent-workspace-widget.html){:target="_blank"}
 
-The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the LiveEngage Workspace.
+The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the LiveEngage Workspace. 
 
 It is comprised of the following:
 
@@ -47,7 +47,7 @@ Recommendations:
 
 * Status of the request needs to be accepted
 
-* The widget (slider to the right of the window) opens when you trigger the widget 'start state’.  This should trigger based on the acceptance of the request the agent sends.
+* The widget (slider to the right of the window) opens when you trigger the widget 'start state’.  This should trigger based on the acceptance of the request the agent sends. 
 
 **Implement the window application**
 

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 150
-permalink: mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html
+permalink: consumer-experience-ios-sdk-registerpushnotifications.html
 
 indicator: messaging
 ---

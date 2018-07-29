@@ -3,7 +3,7 @@ title: Additional Options
 level1: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
-permalink: liveengage-mms-viewer-additional-options.html
+permalink: products-channels-mms-additional.html
 order: 40
 indicator:
 ---

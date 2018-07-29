@@ -5,7 +5,7 @@ level2: Data
 level3: Messaging Interactions API
 
 order: 32
-permalink: messaging-interactions-api-engagement-attributes.html
+permalink: data-messaging-interactions-appendix.html
 
 indicator: messaging
 ---

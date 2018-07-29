@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 60
-permalink: agent-workspace-widget-sdk-public-model-structure.html
+permalink: agent-workspace-sdk-public-model.html
 
 indicator: both
 ---

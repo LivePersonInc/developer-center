@@ -1,5 +1,7 @@
 ---
 title: Update
+redirect_from:
+  - account-configuration-special-occasions-update.html
 Keywords:
 level1:
 level2: Account Configuration

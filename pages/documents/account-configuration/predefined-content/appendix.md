@@ -1,5 +1,7 @@
 ---
 title: Appendix
+redirect_from:
+  - account-configuration-predefined-content-appendix.html
 Keywords:
 level1: Documents
 level2: Account Configuration

@@ -1,5 +1,7 @@
 ---
 title: Get all Agent Groups
+redirect_from:
+  - administration-get-all-agent-groups.html
 keywords:
 level1: Documents
 level2: Admin

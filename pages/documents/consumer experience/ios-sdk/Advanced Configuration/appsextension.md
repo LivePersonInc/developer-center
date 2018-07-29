@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Configuration
 
 order: 9
-permalink: mobile-app-messaging-sdk-for-ios-configuration-app-extensions.html
+permalink: consumer-experience-ios-sdk-app-extensions.html
 
 indicator: messaging
 ---

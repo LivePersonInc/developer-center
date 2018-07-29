@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 210
-permalink: chat-agent-api-methods-transfer-a-chat.html
+permalink: agent-transfer-chat.html
 
 indicator: chat
 ---

@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Visit Information API
 
 order: 2
-permalink: visit-information-api-visit-information.html
+permalink: rt-interactions-visit-information-visit-information.html
 
 indicator: chat
 ---

@@ -1,5 +1,7 @@
 ---
 title: Delete
+redirect_from:
+  - account-configuration-special-occasions-delete.html
 Keywords:
 level1:
 level2: Account Configuration

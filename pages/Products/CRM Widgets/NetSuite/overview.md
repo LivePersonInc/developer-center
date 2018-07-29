@@ -1,6 +1,6 @@
 ---
 title: NetSuite
-permalink: crm-integrations-netsuite.html
+permalink: netsuite.html
 level1: Solutions
 level2: Integrations
 level3: CRM Integrations

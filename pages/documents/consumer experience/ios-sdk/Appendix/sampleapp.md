@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 
 order: 246
-permalink: mobile-app-messaging-sdk-for-ios-appendix-using-liveperson-sdk-ios.html
+permalink: consumer-experience-ios-sdk-sampleapp.html
 
 indicator: messaging
 ---
@@ -56,35 +56,35 @@ $ pod init
 
 1. On top of your Podfile, on the source section add:
 
-```swift
-source "https://github.com/LivePersonInc/iOSPodSpecs.git"
+```ruby
+source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
 ```
 
 2. Under your Application Target add:
 
 
-```swift
-target "<YourApplicatioName>" do
+```ruby
+target '<YourApplicatioName>' do
 
   # Pods for <YourApplicatioName>
-  pod "LPMessagingSDK","~>2.8.0.9"
+  pod 'LPMessagingSDK','~>2.8.0.9'
 ```
 
 3. Your Podfile should look like this:
 
-```swift
+```ruby
 # Uncomment the next line to define a global platform for your project
-# platform :ios, "9.0"
+# platform :ios, '9.0'
 
-source "https://github.com/CocoaPods/Specs.git"
-source "https://github.com/LivePersonInc/iOSPodSpecs.git"
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
 
-target "<YourApplicatioName>" do
-  # Comment the next line if you"re not using Swift and don"t want to use dynamic frameworks
+target '<YourApplicatioName>' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for <YourApplicatioName>
-  pod "LPMessagingSDK","~>2.8.0.9"
+  pod 'LPMessagingSDK','~>2.8.0.9'
 end
 ```
 * If you already had a Podfile, on your terminal run the following command:
@@ -124,21 +124,17 @@ $ pod init
 
     * Key: **NSCameraUsageDescription**, Value: **"Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"**
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.
-
 </div>
+**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator).
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.
-
 </div>
+**_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**
 
 * If sdk installed using CocoaPods, use the following script:
 
@@ -186,7 +182,7 @@ LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationP
 
 **Note**: In this case, the containerViewController reference is self, given that we have a dedicated ViewController for the LPMessagingSDK, if you want to target a different ViewController you can sent that one as a reference too.
 
-*  To end a conversation, there are two ways, for both you"ll need to set up an **@IBAction**:
+*  To end a conversation, there are two ways, for both you'll need to set up an **@IBAction**:
 
 1.  Manually ending a conversation, on your **@IBAction** call the following code:
 
@@ -317,7 +313,7 @@ LPConfig.printAllConfigurations()
 LPConfig.defaultConfiguration.enablePhotoSharing = true
 ```
 
-**Note**: Since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account, if not, even if you enable this property, you won"t be able to see the Photo Sharing Button
+**Note**: Since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account, if not, even if you enable this property, you won't be able to see the Photo Sharing Button
 
 
 {:start="2"}
@@ -331,7 +327,7 @@ LPConfig.defaultConfiguration.enablePhotoSharing = true
 configuration.photosharingMenuBackgroundColor = UIColor.lightGray
 // Set the text of buttons on Photo Sharing Menu
 configuration.photosharingMenuButtonsTextColor = UIColor.white
-// Set Photo Share Menu Button"s Background Color
+// Set Photo Share Menu Button's Background Color
 configuration.photosharingMenuButtonsBackgroundColor = UIColor.white
 // Set Photo Sharing Menu Buttons Outline Color
 configuration.photosharingMenuButtonsTintColor = UIColor.lightGray
@@ -354,7 +350,7 @@ LPConfig.printAllConfigurations()
 
 * **Second**, a **Key file** stored using a **pem format without a password**.
 
-**_We"ll create those later_**.
+**_We'll create those later_**.
 
 #### Adding Push Notifications to your Xcode Project
 
@@ -366,7 +362,7 @@ LPConfig.printAllConfigurations()
 
 2. Turn on the **Push Notificiations** switch,
 
-    **Note**: the steps shown under the **Push Notificiations** should have a check mark, if not, your App isn"t fully configure to receive Push Notifications on the **Apple Developer"s Portal**
+    **Note**: the steps shown under the **Push Notificiations** should have a check mark, if not, your App isn't fully configure to receive Push Notifications on the **Apple Developer's Portal**
 
 3. Turn on the **Background Modes** switch, and check **Remote notifications**
 
@@ -431,16 +427,16 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 }
 ```
 
-#### Enabling Push Notifications on Apple Developer"s Portal
+#### Enabling Push Notifications on Apple Developer's Portal
 
 1. Login into your Developer Account,
 2. On the **Overview** section, click on **Certificates, Identifiers & Profiles**,
 3. Under the **Identifiers** section, locate & click on the **App IDs** item,
 4. Look for your Application Name or Id (Bundle name), and click on it,
-5. The **Push Notification** item should be **checked**, if that"s not the case, enable it
+5. The **Push Notification** item should be **checked**, if that's not the case, enable it
 6. Make sure the **Push Notification** services are **Enabled** or **Configurable**
 
-**Note**: if the services appear as **Configurable**, that means you"ll need to create the corresponden **Certificate** depending on your needs **Development** or **Production**.
+**Note**: if the services appear as **Configurable**, that means you'll need to create the corresponden **Certificate** depending on your needs **Development** or **Production**.
 
 #### Creating Push Certificates
 
@@ -467,7 +463,7 @@ Creating a **Certificate Signing Request (CSR)**
     * Click **Continue**, then select a name & location to save your file.
     * Click **Save**.
 
-**Note**: You"ll need this **.certSigningRequest** file to create the Certificate on the Apple Developer"s Portal
+**Note**: You'll need this **.certSigningRequest** file to create the Certificate on the Apple Developer's Portal
 
 #### Step 3
 
@@ -526,7 +522,7 @@ $ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 **Note**: You will be prompted to enter a **passphrase** for this file. Enter any password and **remember it** for the next step.
 
 {:start="11"}
-11. Create a RSA **.pem** key, you"ll be prompt for the **passphrase** you used on the previous step:
+11. Create a RSA **.pem** key, you'll be prompt for the **passphrase** you used on the previous step:
 
 ```sh
  $ openssl rsa -in keyWithPassword.pem -out hostkey.pem
@@ -542,15 +538,14 @@ Create Application on LiveEngage & Upload **PEM** files
 4. On the **Platform** dropdown select **iOS**,
 5. Under **Mobile App name**, type the **Bundle Identifier** of your app,
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
 </div>
+If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
 
 {:start="6"}
 6. Click on Create App
-7. The **Production** switch is **On** by default, if you"re using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**,
+7. The **Production** switch is **On** by default, if you're using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**,
 8. Under the **Enable push notification by uploading your certificate files** section, upload the **.pem** files as follows:
 
     * Certificate file should be : dev-cert.pem
@@ -564,15 +559,13 @@ Upload **PEM** files into LiveEngage
 2. Under the **Conectors** section, on **Mobile App Management**, click the **Manage** button on the right,
 3. On the **Application key management** screen, select your app,
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
+</div>
 If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
 
-</div>
-
 {:start="4"}
-4. The **Production** switch is **On** by default, if you"re using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**
+4. The **Production** switch is **On** by default, if you're using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**
 5. Under the **Enable push notification by uploading your certificate files** section, upload the **.pem** files as follows:
 
     * Certificate file should be : dev-cert.pem
@@ -583,7 +576,7 @@ If your App uses an **Apple Development IOS Push Service Certificate**, you need
 
 Testing Push Notifications
 
-It"s important to make sure your **Certificates** are correct and everything is ready to **Push Notifications** from **LiveEngage**, to test add your device is ready, just follow this part.
+It's important to make sure your **Certificates** are correct and everything is ready to **Push Notifications** from **LiveEngage**, to test add your device is ready, just follow this part.
 
 1. From the App Store on your Mac, download the following App [Easy APNs Provider](https://itunes.apple.com/us/app/easy-apns-provider-push-notification-service-testing-tool/id989622350?mt=12)
 2. To get your Device Token, on your Xcode project, on the **AppDelegate.swift** file, locate the method **didRegisterForRemoteNotificationsWithDeviceToken**, and add the following:
@@ -601,7 +594,7 @@ print("Token:: \(token)")
 3. Lauch **Easy APNs Provider** app:
     1. Click on **Add tokens**, and add your Device Token,
     2. Click on **Choose Certificate File**, and add your **aps_development.cert** file,
-    3. On **Connect to:** select **gateway.sandbox.push.apple.com** if you"re using a Development Certificate,
+    3. On **Connect to:** select **gateway.sandbox.push.apple.com** if you're using a Development Certificate,
 
         **Note**: On the Feedback status screen you should be able to see the **Status Log**, errors will be shown here.
 
@@ -609,7 +602,7 @@ print("Token:: \(token)")
     4. Click in **Send APN**
     5. You should receive a Push Notification.
 
-**Note**: this only ensure that the **Apple Development IOS Push Service Certificate** is able to push Notifications, this process it"s not related to **LiveEngage**
+**Note**: this only ensure that the **Apple Development IOS Push Service Certificate** is able to push Notifications, this process it's not related to **LiveEngage**
 
 
 <a name="2.5step1"/>
@@ -640,36 +633,36 @@ $ pod init
 
 1. On top of your Podfile, on the source section add:
 
-```swift
-source "https://github.com/LivePersonInc/iOSPodSpecs.git"
+```ruby
+source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
 ```
 
 {:start="2"}
 2. Under your Application Target add:
 
-```swift
-target "<YourApplicatioName>" do
+```ruby
+target '<YourApplicatioName>' do
 
   # Pods for <YourApplicatioName>
-  pod "LPMessagingSDK","~>2.5.3.0"
+  pod 'LPMessagingSDK','~>2.5.3.0'
 ```
 
 {:start="3"}
 3. Your Podfile should look like this:
 
-```swift
+```ruby
 # Uncomment the next line to define a global platform for your project
-# platform :ios, "9.0"
+# platform :ios, '9.0'
 
-source "https://github.com/CocoaPods/Specs.git"
-source "https://github.com/LivePersonInc/iOSPodSpecs.git"
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
 
-target "<YourApplicatioName>" do
-  # Comment the next line if you"re not using Swift and don"t want to use dynamic frameworks
+target '<YourApplicatioName>' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for <YourApplicatioName>
-  pod "LPMessagingSDK"
+  pod 'LPMessagingSDK'
 
 end
 ```
@@ -713,12 +706,10 @@ $ pod init
 
   *  Key: **NSCameraUsageDescription**, Value: **"Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"**
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to  share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.
-
 </div>
+**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to  share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**
 
@@ -767,7 +758,7 @@ _ = LPMessagingSDK.instance.showAgentConversation(conversationParamProtocol, con
 
 **Note**: In this case, the containerViewController reference is self, given that we have a dedicated ViewController for the LPMessagingSDK, if you want to target a different ViewController you can sent that one as a reference too.
 
-*  To end a conversation, there are two ways, for both you"ll need to set up an **@IBAction**:
+*  To end a conversation, there are two ways, for both you'll need to set up an **@IBAction**:
 
 1.  Manually ending a conversation, on your **@IBAction** call the following code:
 
@@ -897,7 +888,7 @@ Note: this object gives you access to all the different attributes you are able 
 LPConfig.defaultConfiguration.enablePhotoSharing = true
 ```
 
-**Note**: Since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account, if not, even if you enable this property, you won"t be able to see the Photo Sharing Button
+**Note**: Since this feature is in BETA, you will also need to contact your Account Team in order to enable the feature on your account, if not, even if you enable this property, you won't be able to see the Photo Sharing Button
 
 {:start="2"}
 2. Customizing the Photo Sharing
@@ -909,7 +900,7 @@ LPConfig.defaultConfiguration.enablePhotoSharing = true
 configuration.photosharingMenuBackgroundColor = UIColor.lightGray
 // Set the text of buttons on Photo Sharing Menu
 configuration.photosharingMenuButtonsTextColor = UIColor.white
-// Set Photo Share Menu Button"s Background Color
+// Set Photo Share Menu Button's Background Color
 configuration.photosharingMenuButtonsBackgroundColor = UIColor.white
 // Set Photo Sharing Menu Buttons Outline Color
 configuration.photosharingMenuButtonsTintColor = UIColor.lightGray
@@ -932,7 +923,7 @@ LPConfig.printAllConfigurations()
 
 * **Second**, a **Key file** stored using a **pem format without a password**.
 
-* **_We"ll create those later_**.
+* **_We'll create those later_**.
 
 #### Adding Push Notifications to your Xcode Project
 
@@ -944,7 +935,7 @@ LPConfig.printAllConfigurations()
 
 2. Turn on the **Push Notificiations** switch,
 
-    **Note**: the steps shown under the **Push Notificiations** should have a check mark, if not, your App isn"t fully configure to receive Push Notifications on the **Apple Developer"s Portal**
+    **Note**: the steps shown under the **Push Notificiations** should have a check mark, if not, your App isn't fully configure to receive Push Notifications on the **Apple Developer's Portal**
 
 3. Turn on the **Background Modes** switch, and check **Remote notifications**
 
@@ -1006,7 +997,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 }
 ```
 
-#### Enabling Push Notifications on Apple Developer"s Portal
+#### Enabling Push Notifications on Apple Developer's Portal
 
 1. Login into your Developer Account,
 
@@ -1016,11 +1007,11 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 
 4. Look for your Application Name or Id (Bundle name), and click on it,
 
-5. The **Push Notification** item should be **checked**, if that"s not the case, enable it
+5. The **Push Notification** item should be **checked**, if that's not the case, enable it
 
 6. Make sure the **Push Notification** services are **Enabled** or **Configurable**
 
-**Note**: if the services appear as **Configurable**, that means you"ll need to create the corresponden **Certificate** depending on your needs **Development** or **Production**.
+**Note**: if the services appear as **Configurable**, that means you'll need to create the corresponden **Certificate** depending on your needs **Development** or **Production**.
 
 #### Creating Push Certificates
 
@@ -1052,7 +1043,7 @@ Creating a **Certificate Signing Request (CSR)**
 
     * Click **Save**.
 
-**Note**: You"ll need this **.certSigningRequest** file to create the Certificate on the Apple Developer"s Portal
+**Note**: You'll need this **.certSigningRequest** file to create the Certificate on the Apple Developer's Portal
 
 #### Step 3
 
@@ -1119,7 +1110,7 @@ $ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 
 **Note**: You will be prompted to enter a **passphrase** for this file. Enter any password and **remember it** for the next step.
 
-11. Create a RSA **.pem** key, you"ll be prompt for the **passphrase** you used on the previous step:
+11. Create a RSA **.pem** key, you'll be prompt for the **passphrase** you used on the previous step:
 
 ```sh
  $ openssl rsa -in keyWithPassword.pem -out hostkey.pem
@@ -1139,16 +1130,14 @@ Create Application on LiveEngage & Upload **PEM** files
 
 5. Under **Mobile App name**, type the **Bundle Identifier** of your app,
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
-
 </div>
+If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
 
 6. Click on Create App
 
-7. The **Production** switch is **On** by default, if you"re using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**,
+7. The **Production** switch is **On** by default, if you're using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**,
 
 8. Under the **Enable push notification by uploading your certificate files** section, upload the **.pem** files as follows:
 
@@ -1164,14 +1153,12 @@ Upload **PEM** files into LiveEngage
 2. Under the **Conectors** section, on **Mobile App Management**, click the **Manage** button on the right,
 3. On the **Application key management** screen, select your app,
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
-
 </div>
+if your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
 
-4. The **Production** switch is **On** by default, if you"re using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**
+4. The **Production** switch is **On** by default, if you're using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**
 
 5. Under the **Enable push notification by uploading your certificate files** section, upload the **.pem** files as follows:
 
@@ -1183,7 +1170,7 @@ If your App uses an **Apple Development IOS Push Service Certificate**, you need
 
 Testing Push Notifications
 
-It"s important to make sure your **Certificates** are correct and everything is ready to **Push Notifications** from **LiveEngage**, to test add your device is ready, just follow this part:
+It's important to make sure your **Certificates** are correct and everything is ready to **Push Notifications** from **LiveEngage**, to test add your device is ready, just follow this part:
 
 1. From the App Store on your Mac, download the following App [Easy APNs Provider](https://itunes.apple.com/us/app/easy-apns-provider-push-notification-service-testing-tool/id989622350?mt=12)
 
@@ -1204,10 +1191,10 @@ print("Token:: \(token)")
 
     2. Click on **Choose Certificate File**, and add your **aps_development.cert** file,
 
-    3. On **Connect to:** select **gateway.sandbox.push.apple.com** if you"re using a Development Certificate. **Note**: On the Feedback status screen you should be able to see the **Status Log**, errors will be shown here,
+    3. On **Connect to:** select **gateway.sandbox.push.apple.com** if you're using a Development Certificate. **Note**: On the Feedback status screen you should be able to see the **Status Log**, errors will be shown here,
 
     4. Click in **Send APN**
 
     5. You should receive a Push Notification.
 
-**Note**: this only ensure that the **Apple Development IOS Push Service Certificate** is able to push Notifications, this process it"s not related to **LiveEngage**
+**Note**: this only ensure that the **Apple Development IOS Push Service Certificate** is able to push Notifications, this process it's not related to **LiveEngage**

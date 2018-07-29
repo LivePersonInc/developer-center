@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 100
-permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile-(deprecated).html
+permalink: android-setuserprofiledeprecated.html
 
 indicator: messaging
 ---

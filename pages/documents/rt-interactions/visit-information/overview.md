@@ -6,7 +6,7 @@ level3: Visit Information API
 
 level-order: 2
 order: 1
-permalink: visit-information-api-overview.html
+permalink: rt-interactions-visit-information-overview.html
 root-link: true
 indicator: chat
 ---

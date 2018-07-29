@@ -1,6 +1,6 @@
 ---
 title: Enable Push Notifications
-permalink: undefined-enable-push-notifications.html
+permalink: /products-inapp-enablepushios.html
 toc: false
 indicator:
 ---

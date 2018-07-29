@@ -1,5 +1,7 @@
 ---
 title: Get all skills
+redirect_from:
+  - administration-get-all-skills.html
 keywords:
 level1: Documents
 level2: Admin

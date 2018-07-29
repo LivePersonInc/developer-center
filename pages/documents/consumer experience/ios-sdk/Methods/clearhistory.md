@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 110
-permalink: mobile-app-messaging-sdk-for-ios-methods-clearhistory.html
+permalink: consumer-experience-ios-sdk-clearhistory.html
 
 indicator: messaging
 ---

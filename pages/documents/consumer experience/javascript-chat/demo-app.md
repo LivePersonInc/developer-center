@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Javascript Chat SDK
 
 order: 5
-permalink: javascript-chat-sdk-sample-app.html
+permalink: consumer-experience-javascript-chat-sample.html
 
 indicator: chat
 ---

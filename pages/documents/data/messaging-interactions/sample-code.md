@@ -5,7 +5,7 @@ level1: Documents
 level3: Messaging Interactions API
 
 order: 31
-permalink: messaging-interactions-api-sample-code.html
+permalink: data-messaging-interactions-sample-code.html
 
 indicator: messaging
 ---

@@ -1,5 +1,7 @@
 ---
 title: Reset User's Password
+redirect_from:
+  - administration-reset-users-password.html
 keywords:
 level1: Documents
 level2: Admin
@@ -8,7 +10,7 @@ level4: Methods
 
 
 order: 90
-permalink: users-api-methods-reset-user-s-password.html
+permalink: users-api-methods-reset-user's-password.html
 
 indicator: both
 ---

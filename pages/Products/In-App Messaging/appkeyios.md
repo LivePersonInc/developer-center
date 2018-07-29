@@ -1,6 +1,6 @@
 ---
 title: Set up your app key
-permalink: undefined-set-up-your-app-key.html
+permalink: /products-inapp-appkeyios.html
 toc: false
 indicator:
 ---

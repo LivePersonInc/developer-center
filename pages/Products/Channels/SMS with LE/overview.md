@@ -3,7 +3,7 @@ title: Overview
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
-permalink: sms-with-liveengage-overview.html
+permalink: products-channels-sms-overview.html
 level-order:
 order: 1
 root-link: true

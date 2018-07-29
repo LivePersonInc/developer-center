@@ -1,5 +1,7 @@
 ---
 title: Appendix
+redirect_from:
+  - administration-profiles-appendix.html
 keywords:
 level1: Documents
 level2: Admin

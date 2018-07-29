@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 65
-indicator: both
-permalink: connector-api-examples-campaign-for-messaging-routing.html
+indicator: messaging
+permalink: cmp-routing-example.html
 
 ---
 

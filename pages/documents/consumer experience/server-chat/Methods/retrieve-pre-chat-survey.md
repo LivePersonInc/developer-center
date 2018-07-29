@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 40
-permalink: server-chat-api-methods-retrieve-pre-chat-survey.html
+permalink: consumer-experience-server-chat-retrieve-pre-chat-survey.html
 
 indicator: chat
 ---

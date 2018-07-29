@@ -1,5 +1,7 @@
 ---
 title: Get Agent Groups by ID
+redirect_from:
+  - administration-get-agent-groups-by-id.html
 keywords:
 level1: Documents
 level2: Admin

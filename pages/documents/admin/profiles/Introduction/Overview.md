@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - administration-profiles-overview.html
 keywords:
 level1: Documents
 level2: Admin

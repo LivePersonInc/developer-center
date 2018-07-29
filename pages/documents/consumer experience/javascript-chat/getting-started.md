@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 
 level-order: 6
 order: 1
-permalink: javascript-chat-sdk-overview.html
+permalink: consumer-experience-javascript-chat-getting-started.html
 root-link: true
 indicator: chat
 ---

@@ -7,7 +7,7 @@ level3: Javascript Chat SDK
 level4: Methods
 
 order: 150
-permalink: javascript-chat-sdk-methods-getvisitorname.html
+permalink: consumer-experience-javascript-chat-getvisitorname.html
 
 indicator: chat
 ---

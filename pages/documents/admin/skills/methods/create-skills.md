@@ -1,5 +1,7 @@
 ---
 title: Create skills
+redirect_from:
+  - administration-create-skills.html
 keywords:
 level1: Documents
 level2: Admin

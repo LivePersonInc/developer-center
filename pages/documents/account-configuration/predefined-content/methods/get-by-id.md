@@ -1,5 +1,7 @@
 ---
 title: Get Predefined Content by ID
+redirect_from:
+  - account-configuration-predefined-content-get-by-id.html
 Keywords:
 level1: Documents
 level2: Account Configuration

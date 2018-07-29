@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Login Service API
 
 order: 9
-permalink: login-service-api-overview.html
+permalink: login-getting-started.html
 root-link: true
 level-order: 6
 

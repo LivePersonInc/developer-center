@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 150
-permalink: server-chat-api-methods-retrieve-exit-survey-structure.html
+permalink: consumer-experience-server-chat-retrieve-exit-survey-structure.html
 
 indicator: chat
 ---

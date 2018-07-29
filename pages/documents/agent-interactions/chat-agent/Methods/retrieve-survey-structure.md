@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 220
-permalink: chat-agent-api-methods-retrieve-agent-survey-structure.html
+permalink: agent-retrieve-survey-structure.html
 
 indicator: chat
 ---

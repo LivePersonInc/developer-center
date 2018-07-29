@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 order: 247
-permalink: mobile-app-messaging-sdk-for-ios-appendix-upgrade-guide-ios.html
+permalink: consumer-experience-ios-sdk-upgrade-guide.html
 indicator: messaging
 ---
 
@@ -14,12 +14,10 @@ indicator: messaging
 
 This document contains guides on how to upgrade from various previous versions of the SDK to 3.0. Please review [this repository](https://github.com/LivePersonInc/Upgrade_examples_to_SDK3.0) for in depth sample app examples of these upgrades.
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-Upgrading to LPMessagingSDK 3.0, requires Swift 4.0.2 and Xcode 9.2
-
 </div>
+Upgrading to LPMessagingSDK 3.0, requires Swift 4.0.2 and Xcode 9.2
 
 ### Updating from 2.3 to 3.0
 
@@ -27,7 +25,7 @@ Upgrading to LPMessagingSDK 3.0, requires Swift 4.0.2 and Xcode 9.2
 
 * Update LPMessagingSDK Pod
 
-```swift
+```ruby
 target '<YourApplicatioName>' do
   # Update change LPMessagingSDK Pod from:
   pod 'LPMessagingSDK','~> 2.3.0'
@@ -137,12 +135,10 @@ config.structuredContentBubbleBorderWidth = 1.5
 
 When implementing a Custom ViewController there are a few things to consider:
 
- <div markdown="1" class="important">
+ <div class="important">
  Important:
-
- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
-  </div>
+ </div>
+ - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 /// Event - View will disappear
@@ -166,7 +162,7 @@ override func viewWillDisappear(_ animated: Bool) {
 
   * Update LPMessagingSDK Pod
 
-```swift
+```ruby
 target '<YourApplicatioName>' do
   # Update change LPMessagingSDK Pod from:
   pod 'LPMessagingSDK','~> 2.7.0'
@@ -214,12 +210,10 @@ LPMessagingSDK.instance.logout(completion: {
 
 When implementing a Custom ViewController there are a few things to consider:
 
- <div markdown="1" class="important">
+ <div class="important">
  Important:
-
- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
-  </div>
+ </div>
+ - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 /// Event - View will disappear
@@ -244,7 +238,7 @@ override func viewWillDisappear(_ animated: Bool) {
 
   * Update LPMessagingSDK Pod
 
-```swift
+```ruby
 target '<YourApplicatioName>' do
   # Update change LPMessagingSDK Pod from:
   pod 'LPMessagingSDK','~> 2.8.0'

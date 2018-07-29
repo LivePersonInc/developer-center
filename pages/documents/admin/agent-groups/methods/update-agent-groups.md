@@ -1,5 +1,7 @@
 ---
 title: Update Agent Groups
+redirect_from:
+  - administration-update-agent-groups.html
 keywords:
 level1: Documents
 level2: Admin

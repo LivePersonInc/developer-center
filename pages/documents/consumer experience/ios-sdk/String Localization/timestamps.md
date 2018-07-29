@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: String Localization
 
 order: 229
-permalink: mobile-app-messaging-sdk-for-ios-string-localization-timestamps-formatting.html
+permalink: consumer-experience-ios-sdk-timestamps.html
 
 indicator: messaging
 ---

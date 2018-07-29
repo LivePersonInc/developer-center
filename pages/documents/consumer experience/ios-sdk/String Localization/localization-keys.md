@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: String Localization
 
 order: 227
-permalink: mobile-app-messaging-sdk-for-ios-string-localization-localization-keys.html
+permalink: consumer-experience-ios-sdk-localizationkeys.html
 
 indicator: messaging
 ---

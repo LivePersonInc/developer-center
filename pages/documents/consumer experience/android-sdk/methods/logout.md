@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 260
-permalink: mobile-app-messaging-sdk-for-android-methods-logout.html
+permalink: android-logout.html
 
 indicator: messaging
 ---

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 55
-permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-(full-authentication-support-+-view-modes).html
+permalink: android-getconversationfragfull.html
 
 indicator: messaging
 ---

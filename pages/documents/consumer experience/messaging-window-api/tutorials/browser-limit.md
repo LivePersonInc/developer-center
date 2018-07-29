@@ -6,7 +6,7 @@ level3: Messaging Window API
 level4: Tutorials
 
 order: 80
-permalink: messaging-window-api-tutorials-avoid-websocket-headers.html
+permalink: consumer-int-no-headers.html
 
 indicator: messaging
 ---

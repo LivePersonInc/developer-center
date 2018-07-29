@@ -3,7 +3,7 @@ title: Overview
 level1: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
-permalink: liveengage-mms-viewer-overview.html
+permalink: products-channels-mms-overview.html
 level-order: 4
 order: 1
 root-link: true

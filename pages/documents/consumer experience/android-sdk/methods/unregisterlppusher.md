@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 120
-permalink: mobile-app-messaging-sdk-for-android-methods-unregisterlppusher.html
+permalink: android-unregisterlppusher.html
 
 indicator: messaging
 ---

@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 150
-permalink: mobile-app-messaging-sdk-for-android-methods-setcallback.html
+permalink: android-setcallback.html
 
 indicator: messaging
 ---

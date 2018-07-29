@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Messaging Window API
 
 order: 2
-permalink: messaging-window-api-getting-started.html
+permalink: consumer-int-getting-started.html
 
 indicator: messaging
 ---
@@ -29,6 +29,9 @@ docker run --env LP_ACCOUNT=__YOUR_ACCOUNT_ID__ -it lpinc/shell
 You should receive a shell line.
 
 ### Step 2 - Create a Token
+
+**Note**: the below is only a demonstration of how to create an unauthenticated token. Please do not use the below method in your production environments. For production environments, only use the authenticated method as described [here](/consumer-int-authentication.html).
+
 In this demonstration we will create a new unauthenticated consumer identity. Run the following command:
 
 ```sh

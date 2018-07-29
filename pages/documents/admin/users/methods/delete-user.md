@@ -1,5 +1,7 @@
 ---
 title: Delete User
+redirect_from:
+  - administration-delete-user.html
 keywords:
 level1: Documents
 level2: Admin

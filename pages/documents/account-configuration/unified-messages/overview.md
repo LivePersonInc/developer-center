@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - account-configuration-unified-automatic-messages-overview.html
 keywords:
 level1: Documents
 level2: Account Configuration

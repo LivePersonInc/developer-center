@@ -1,5 +1,7 @@
 ---
 title: Workdays list
+redirect_from:
+  - account-configuration-workdays-get-by-list.html
 Keywords:
 level1:
 level2: Account Configuration

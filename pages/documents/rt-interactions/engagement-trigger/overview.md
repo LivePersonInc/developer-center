@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Engagement Trigger API
 
 order: 1
-permalink: engagement-trigger-api-overview.html
+permalink: trigger-overview.html
 root-link: true
 level-order: 7
 

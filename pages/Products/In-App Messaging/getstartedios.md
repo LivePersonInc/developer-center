@@ -1,6 +1,6 @@
 ---
 title: Getting Started for iOS
-permalink: undefined-getting-started-for-ios.html
+permalink: /products-inapp-getstartedios.html
 toc: false
 indicator:
 ---

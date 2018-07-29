@@ -1,5 +1,7 @@
 ---
 title: Update an Unified Automatic Message
+redirect_from:
+  - account-configuration-unified-automatic-messages-update-an-automatic-message.html
 Keywords:
 level1: Documents
 level2: Account Configuration

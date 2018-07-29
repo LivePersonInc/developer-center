@@ -1,6 +1,6 @@
 ---
 title: Configure Push Notifications (Android)
-permalink: undefined-configure-push-notifications-(android).html
+permalink: /products-inapp-configurepushandroid.html
 toc: false
 indicator:
 ---

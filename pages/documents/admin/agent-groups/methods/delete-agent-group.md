@@ -1,5 +1,7 @@
 ---
 title: Delete Agent Group
+redirect_from:
+  - administration-delete-agent-group.html
 keywords:
 level1: Documents
 level2: Admin

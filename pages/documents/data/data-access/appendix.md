@@ -5,7 +5,7 @@ level2: Data
 level3: Data Access API
 
 order: 63
-permalink: data-access-api-appendix.html
+permalink: data-data-access-appendix.html
 
 indicator: chat
 ---

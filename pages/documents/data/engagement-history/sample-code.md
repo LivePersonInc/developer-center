@@ -5,7 +5,7 @@ level2: Data
 level3: Engagement History API
 
 order: 11
-permalink: engagement-history-api-sample-code.html
+permalink: data-engagement-history-sample-code.html
 
 indicator: chat
 ---

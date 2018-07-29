@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 order: 236
-permalink: mobile-app-messaging-sdk-for-ios-advanced-features-control-history-apis.html
+permalink: consumer-experience-ios-sdk-advanced-control-history-ios.html
 indicator: messaging
 ---
 

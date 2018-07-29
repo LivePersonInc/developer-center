@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Customization and Branding
 
 order: 226
-permalink: mobile-app-messaging-sdk-for-ios-customization-and-branding-deprecated-attributes.html
+permalink: consumer-experience-ios-sdk-deprecated-attributes.html
 
 indicator: messaging
 ---

@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Structured Content
 level4: Templates
 order: 40
-permalink: structured-content-templates-carousel.html
+permalink: rich-messaging-structured-content-carousel.html
 indicator: messaging
 ---
 

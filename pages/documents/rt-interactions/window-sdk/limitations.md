@@ -5,9 +5,9 @@ level2: Real Time Interactions
 level3: Engagement Window Widget SDK
 
 order: 3
-permalink: engagement-window-widget-sdk-limitations.html
+permalink: rt-interactions-window-sdk-limitations.html
 
-indicator: chat and messaging
+indicator: both
 ---
 
 - The SDK will only communicate with the Engagement Window if the account has

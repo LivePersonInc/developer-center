@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 140
-permalink: mobile-app-messaging-sdk-for-android-notifications.html
+permalink: android-push-notifications.html
 
 indicator: messaging
 ---
@@ -36,12 +36,11 @@ public class MyFirebase extends FirebaseMessagingService {
 }
 ```
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification, the host app needs to provide the implementation.
-
 </div>
+
+**The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification, the host app needs to provide the implementation.**
 
 ### Configuring Push Notifications
 

@@ -5,7 +5,7 @@ level2:
 level3: SalesForce Integration
 
 order: 51
-permalink: salesforce-integration-known-issues-and-limitations.html
+permalink: products-agent-efficiency-salesforce-known-issues.html
 
 indicator:
 ---

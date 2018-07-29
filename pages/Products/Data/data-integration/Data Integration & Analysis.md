@@ -7,7 +7,7 @@ level3: Data Integration & Analysis
 order: 1
 level-order: 1
 root-link: true
-permalink: data-integration-&-analysis-integrate-your-liveperson-data-into-any-system-for-analytics.html
+permalink: products-data-integration-and-analysis-overview.html
 indicator:
 ---
 

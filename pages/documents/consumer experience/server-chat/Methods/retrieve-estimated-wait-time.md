@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 30
-permalink: server-chat-api-methods-retrieve-estimated-wait-time.html
+permalink: consumer-experience-server-chat-retrieve-estimated-wait-time.html
 
 indicator: chat
 ---

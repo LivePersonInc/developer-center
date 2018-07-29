@@ -8,7 +8,7 @@ level4: API Reference
 order: 160
 layout: page
 
-permalink: messaging-window-api-api-reference-send-consumer-satisfaction-(csat).html
+permalink: consumer-int-msg-csat-conv.html
 indicator: messaging
 ---
 

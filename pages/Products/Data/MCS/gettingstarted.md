@@ -5,7 +5,7 @@ level2: Data
 level3: MCS Toolkit
 
 order: 10
-permalink: mcs-toolkit-getting-started.html
+permalink: products-mcs-gettingstarted.html
 indicator:
 ---
 

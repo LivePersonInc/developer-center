@@ -6,7 +6,7 @@ level3: SalesForce Integration
 level4: Implementation
 
 order: 40
-permalink: salesforce-integration-implementation-step-4---setting-up-the-widget-in-liveengage.html
+permalink: products-agent-efficiency-salesforce-integration-step4.html
 
 indicator:
 ---

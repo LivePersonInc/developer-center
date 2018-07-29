@@ -1,12 +1,12 @@
 ---
 title: Direct skill routing
 level1: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
-order: 66
-indicator: both
-permalink: connector-api-examples-direct-skill-routing.html
+level2:
+level3:
+level4:
+order:
+indicator: 
+permalink: direct-skill-routing-example.html
 
 ---
 

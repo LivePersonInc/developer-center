@@ -1,5 +1,7 @@
 ---
 title: Get Predefined Content Items
+redirect_from:
+  - account-configuration-predefined-content-get-items.html
 Keywords:
 level1: Documents
 level2: Account Configuration

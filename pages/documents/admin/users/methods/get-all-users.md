@@ -1,5 +1,7 @@
 ---
 title: Get all Users
+redirect_from:
+  - administration-get-all-users.html
 keywords:
 level1: Documents
 level2: Admin

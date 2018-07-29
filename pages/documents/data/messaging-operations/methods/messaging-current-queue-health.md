@@ -5,7 +5,7 @@ level2: Data
 level3: Messaging Operations API
 level4: Methods
 order: 30
-permalink: messaging-operations-api-methods-messaging-current-queue-health.html
+permalink: data-messaging-operations-messaging-current-queue-health.html
 
 indicator: messaging
 ---

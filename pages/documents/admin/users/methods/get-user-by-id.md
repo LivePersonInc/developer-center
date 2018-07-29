@@ -1,5 +1,7 @@
 ---
 title: Get User by ID
+redirect_from:
+  - administration-get-user-by-id.html
 keywords:
 level1: Documents
 level2: Admin

@@ -7,7 +7,7 @@ level3: Mobile App Messaging
 order: 1
 level-order: 1
 root-link: true
-permalink: mobile-app-messaging-add-messaging-to-your-app.html
+permalink: products-channels-inapp-messaging.html
 indicator:
 ---
 

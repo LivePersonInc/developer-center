@@ -4,7 +4,7 @@ level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 order: 10
-permalink: monitoring-api-getting-started.html
+permalink: rt-interactions-monitoring-getting-started.html
 indicator: messaging
 ---
 

@@ -7,7 +7,7 @@ level4: Instructions
 
 
 order: 20
-permalink: engagement-window-widget-sdk-instructions-how-to-use-the-sdk.html
+permalink: rt-interactions-window-sdk-how-to-use.html
 indicator: both
 ---
 
@@ -59,10 +59,10 @@ All public properties and methods can be found in the namespace lpTag.LPWidgetSD
 
 | Method | Description |
 | :--- | :--- |
-| `init (opts <optional>)` | The method used to initialize events binding with  object.
+| `init (opts <optional>)` | The method used to initialize events binding with  object. 
 | `notify(data <optional> ), callback <optional>)` | This function used to send a notification to the engagement window. It can contain data and callback for error handling. <br> Note: Future versions will support data enrichment in notifications. |
 | **`bind(event, callback, context <optional>)`** | Bind event data to callback function with optional context. In the case that no context is configured, default context would be the window context. <br> Event: lpTag.LPWidgetSDK.API.events |
-| `unbind(event, callback,context<optional>)` | Unbind event handling. <br> Note: Whichever specifications were configured for’ bind’ must be identical in 'unbind’.
+| `unbind(event, callback,context<optional>)` | Unbind event handling. <br> Note: Whichever specifications were configured for’ bind’ must be identical in 'unbind’. 
 | dispose (callback) | This function is used to dispose\remove the widget from the visitor window. |
 | `getQuery(key <optional>)` | Utility function for getting query parameter values. In case of empty input (ie: key is undefined), object results are returned without filtering parameters. * "widgetName" and  "accountId" Query parameters are passed for every iframe url.
 

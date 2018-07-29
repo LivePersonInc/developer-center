@@ -1,5 +1,7 @@
 ---
 title: Import Categories Pre Validation
+redirect_from:
+  - account-configuration-categories-prevalidation.html
 level1: Documents
 level2: Account Configuration
 level3: Predefined Categories API

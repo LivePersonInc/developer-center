@@ -1,5 +1,7 @@
 ---
 title: Update profile
+redirect_from:
+  - administration-update-profile.html
 keywords:
 level1: Documents
 level2: Admin

@@ -4,7 +4,7 @@ level1: Solutions
 level2: Channels
 level3: IVR Deflection
 root-link: true
-permalink: ivr-deflection-ivr-deflection.html
+permalink: products-channels-ivrmessaging.html
 order: 10
 indicator: messaging
 ---

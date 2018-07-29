@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 20
-permalink: chat-agent-api-methods-retrieve-current-availability.html
+permalink: agent-retrieve-current-availability.html
 
 indicator: chat
 ---

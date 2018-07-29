@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 level4: Customization and Branding
 order: 170
-permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
+permalink: android-attributes-designsheet.html
 indicator: messaging
 ---
 

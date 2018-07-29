@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 60
-permalink: mobile-app-messaging-sdk-for-ios-methods-checkactiveconversation.html
+permalink: consumer-experience-ios-sdk-checkactiveconversation.html
 
 indicator: messaging
 ---

@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 130
-permalink: mobile-app-messaging-sdk-for-android-authentication.html
+permalink: android-authentication.html
 
 indicator: messaging
 ---

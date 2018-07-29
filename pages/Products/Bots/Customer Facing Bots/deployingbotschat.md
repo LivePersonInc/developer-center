@@ -7,7 +7,7 @@ level3: Customer Facing Bots
 
 order: 6
 
-permalink: customer-facing-bots-deploying-bots-on-live-chat.html
+permalink: products-bots-chat.html
 
 indicator:
 ---

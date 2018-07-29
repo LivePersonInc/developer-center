@@ -8,7 +8,7 @@ level4: Methods
 
 order: 191
 
-permalink: javascript-chat-sdk-methods-getestimatedwaittime.html
+permalink: consumer-experience-javascript-chat-getestimatedwaittime.html
 indicator: chat
 ---
 

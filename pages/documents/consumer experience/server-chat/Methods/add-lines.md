@@ -6,7 +6,7 @@ level3: Server Chat API
 level4: Methods
 
 order: 100
-permalink: server-chat-api-methods-add-lines-/-end-chat.html
+permalink: consumer-experience-server-chat-add-lines.html
 
 indicator: chat
 ---

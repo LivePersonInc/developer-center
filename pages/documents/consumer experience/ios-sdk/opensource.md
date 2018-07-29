@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Appendix
 
 order: 246
-permalink: mobile-app-messaging-sdk-for-ios-appendix-open-source-list.html
+permalink: consumer-experience-ios-sdk-opensource.html
 
 indicator: messaging
 ---

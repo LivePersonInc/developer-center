@@ -1,11 +1,11 @@
 ---
-title: Enable File Sharing
+title: Step 1 - Enable File Sharing
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 20
-permalink: file-sharing-enable-file-sharing.html
+permalink: rich-messaging-file-sharing-1.html
 indicator: both
 ---
 

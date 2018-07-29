@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 80
-permalink: chat-agent-api-methods-accept-a-chat.html
+permalink: agent-accept-chat.html
 
 indicator: chat
 ---
@@ -63,7 +63,6 @@ If a chat request exists, the request will return an existing chat session.
 
 Response example for JSON:
 
-```json
     {
      "chatLocation": {
        "link": {
@@ -72,4 +71,3 @@ Response example for JSON:
        }
      }
     }
-```

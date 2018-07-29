@@ -1,5 +1,7 @@
 ---
 title: Create profile
+redirect_from:
+  - administration-create-profile.html
 keywords:
 level1: Documents
 level2: Admin

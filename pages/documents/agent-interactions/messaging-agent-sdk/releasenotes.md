@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Messaging Agent SDK
 
 order: 120
-permalink: messaging-agent-sdk-release-notes.html
+permalink: messaging-agent-sdk-releasenotes.html
 
 indicator: messaging
 ---

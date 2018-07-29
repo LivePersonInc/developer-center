@@ -2,10 +2,10 @@
 title: Conversations - Metadata
 level1: Documents
 level2: Data
-level3: Consumer Engagement History API
+level3: Consumer Messaging History API
 level4: Methods
 order: 10
-permalink: consumer-engagement-history-api-methods-conversations-metadata.html
+permalink: consumer-experience-messaging-history-conversations-metadata.html
 indicator: messaging
 ---
 

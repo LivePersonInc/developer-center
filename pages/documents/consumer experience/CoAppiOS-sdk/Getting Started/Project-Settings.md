@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Voice & Video for iOS SDK (BETA)
 level4: Getting Started
 order: 40
-permalink: voice-and-video-for-ios-sdk-beta-getting-started-project-settings.html
+permalink: consumer-experience-voice-video-ios-project-settings.html
 indicator: messaging
 ---
 

@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: API Reference
 order: 10
-indicator: both
-permalink: connector-api-api-reference-overview.html
+indicator: messaging
+permalink: connector-api-overview.html
 search: exclude
 ---
 

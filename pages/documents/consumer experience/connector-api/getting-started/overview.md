@@ -7,8 +7,8 @@ level4: Connector API
 order: 1
 level-order: 8
 root-link: true
-indicator: both
-permalink: connector-api-connector-api-overview.html
+indicator: messaging
+permalink: connectorapioverview.html
 ---
 ### Introduction
 

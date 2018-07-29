@@ -1,5 +1,7 @@
 ---
 title: Retrieve Special Occasions by List
+redirect_from:
+  - account-configuration-special-occasions-retrieve-by-list.html
 Keywords:
 level1:
 level2: Account Configuration

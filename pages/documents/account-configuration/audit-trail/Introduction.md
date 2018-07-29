@@ -1,5 +1,7 @@
 ---
 title: Introduction
+redirect_from:
+  - account-configuration-meta-data-introduction.html
 level1: Documents
 level2: Account Configuration
 level3: Audit Trail API

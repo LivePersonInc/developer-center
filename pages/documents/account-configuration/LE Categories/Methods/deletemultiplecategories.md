@@ -1,5 +1,7 @@
 ---
 title: Delete Multiple Categories
+redirect_from:
+  - account-configuration-categories-delete-multiple.html
 level1: Documents
 level2: Account Configuration
 level3: Predefined Categories API

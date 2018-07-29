@@ -3,7 +3,7 @@ title: Technical Description
 level1: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
-permalink: liveengage-mms-viewer-technical-description.html
+permalink: products-channels-mms-technical.html
 order: 10
 indicator:
 ---

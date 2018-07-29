@@ -6,7 +6,7 @@ level3: Messaging Window API
 level4: Tutorials
 
 order: 89
-permalink: messaging-window-api-tutorials-publish-images.html
+permalink: consumer-int-publishing-images.html
 
 indicator: messaging
 ---

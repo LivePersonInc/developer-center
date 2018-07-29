@@ -8,7 +8,7 @@ level4: Methods
 
 order: 131
 
-permalink: server-chat-api-methods-retrieve-the-agent-s-typing-status.html
+permalink: consumer-experience-server-chat-retrieve-agent-typing-status.html
 
 indicator: chat
 ---

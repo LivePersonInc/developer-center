@@ -8,7 +8,7 @@ level4: API Reference
 order: 310
 layout: page
 
-permalink: messaging-window-api-api-reference-generate-download-url.html
+permalink: consumer-int-msg-generate-temp-download-url.html
 indicator: messaging
 ---
 

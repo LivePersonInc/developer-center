@@ -1,5 +1,7 @@
 ---
 title: Get LOB by ID
+redirect_from:
+  - administration-get-lob-by-id.html
 keywords:
 level1: Documents
 level2: Admin

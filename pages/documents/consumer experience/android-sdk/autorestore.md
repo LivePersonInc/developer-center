@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 90
-permalink: mobile-app-messaging-sdk-for-android-configuration-android-automatic-restore.html
+permalink: android-automatic-restore.html
 
 indicator: messaging
 ---

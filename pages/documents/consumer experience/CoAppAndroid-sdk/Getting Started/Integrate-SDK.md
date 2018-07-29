@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 level4: Getting Started
 order: 20
-permalink: voice-and-video-for-android-sdk-beta-getting-started-installing-the-sdk.html
+permalink: consumer-experience-voice-video-android-installing-the-sdk.html
 indicator: messaging
 ---
 

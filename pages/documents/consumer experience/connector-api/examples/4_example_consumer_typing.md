@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 63
-indicator: both
-permalink: connector-api-examples-send-chat-state-events.html
+indicator: messaging
+permalink: send-chat-state-example.html
 
 ---
 

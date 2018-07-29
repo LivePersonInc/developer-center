@@ -1,5 +1,7 @@
 ---
 title: Update LOBs
+redirect_from:
+  - administration.update-lobs.html
 keywords:
 level1: Documents
 level2: Admin

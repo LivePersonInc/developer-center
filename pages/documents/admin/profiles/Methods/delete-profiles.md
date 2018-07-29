@@ -1,5 +1,7 @@
 ---
 title: Delete Profiles
+redirect_from:
+  - administration-delete-profiles.html
 keywords:
 level1: Documents
 level2: Admin

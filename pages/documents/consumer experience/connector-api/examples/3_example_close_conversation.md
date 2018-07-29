@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 62
-indicator: both
-permalink: connector-api-examples-close-a-conversation.html
+indicator: messaging
+permalink: close-conversation-example.html
 
 ---
 

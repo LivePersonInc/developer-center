@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 190
-permalink: chat-agent-api-methods-retrieve-visitor-s-typing-status.html
+permalink: agent-retrieve-visitor-typing.html
 
 indicator: chat
 ---
@@ -20,7 +20,7 @@ This method retrieves the visitor's typing status.
 | :--- | :--- |
 | GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/visitorTyping?v=1&NC=true |
 
-*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.*
+*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override:PUT" header.* 
 
 **Request Headers**
 

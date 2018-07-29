@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Messaging Window API
 
 order: 3
-permalink: messaging-window-api-enable-messaging-features.html
+permalink: consumer-int-account-provision.html
 
 folder: Introduction
 indicator: messaging

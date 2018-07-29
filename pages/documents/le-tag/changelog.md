@@ -5,7 +5,7 @@ level1: Documents
 level2: Account Configuration
 level3: LE-Tag
 order: 231
-permalink: le-tag-changelog.html
+permalink: lp-tag-tag-events-changelog.html
 indicator: chat
 ---
 

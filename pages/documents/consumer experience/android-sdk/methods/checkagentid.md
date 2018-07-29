@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 180
-permalink: mobile-app-messaging-sdk-for-android-methods-checkagentid.html
+permalink: android-checkagentid.html
 
 indicator: messaging
 ---

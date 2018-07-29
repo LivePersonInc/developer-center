@@ -5,7 +5,7 @@ level1: Documents
 level2: Real Time Interactions
 level3: Engagement Trigger API
 order: 231
-permalink: engagement-trigger-api-changelog.html
+permalink: trigger-changelog.html
 indicator: chat
 ---
 

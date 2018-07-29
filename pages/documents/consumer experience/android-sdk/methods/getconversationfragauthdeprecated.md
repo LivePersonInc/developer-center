@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 70
-permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-with-authentication-support-(deprecated).html
+permalink: android-getconversationfragauthdeprecated.html
 
 indicator: messaging
 ---

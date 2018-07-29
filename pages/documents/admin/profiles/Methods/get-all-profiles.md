@@ -1,5 +1,7 @@
 ---
 title: Get all profiles
+redirect_from:
+  - administration-get-all-profiles.html
 keywords:
 level1: Documents
 level2: Admin

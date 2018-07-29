@@ -6,7 +6,7 @@ level3: Messaging Window API
 level4: Tutorials
 
 order: 70
-permalink: messaging-window-api-tutorials-client-properties.html
+permalink: consumer-int-client-props.html
 
 indicator: messaging
 ---

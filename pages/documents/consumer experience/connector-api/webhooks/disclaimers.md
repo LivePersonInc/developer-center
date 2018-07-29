@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 50
-indicator: both
-permalink: connector-api-webhooks-disclaimers.html
+indicator: messaging
+permalink: webhooks-disclaimers.html
 ---
 
 * Applications should consider that **data (event) loss is possible**. For example, when a failed notification request is retried, once the retry policy is exhausted (e.g. all the retry attempts fail) the event will be dropped.    

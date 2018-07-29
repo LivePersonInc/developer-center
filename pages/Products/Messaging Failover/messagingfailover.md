@@ -7,7 +7,7 @@ level3: Alternate Messaging Notifications
 order: 1
 level-order: 10
 root-link: true
-permalink: alternate-messaging-notifications-overview.html
+permalink: usecases-alternate-messaging-notifications.html
 indicator: messaging
 ---
 

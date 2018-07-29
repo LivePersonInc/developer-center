@@ -5,7 +5,7 @@ level1: Documents
 level2: Real Time Interactions
 level3: App Engagement API
 order: 231
-permalink: app-engagement-api-changelog.html
+permalink: rt-interactions-changelog.html
 indicator: both
 ---
 

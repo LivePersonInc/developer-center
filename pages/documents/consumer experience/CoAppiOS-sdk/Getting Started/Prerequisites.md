@@ -6,7 +6,7 @@ level3: Voice & Video for iOS SDK (BETA)
 level4: Getting Started
 
 order: 10
-permalink: voice-and-video-for-ios-sdk-beta-getting-started-prerequisites.html
+permalink: consumer-experience-voice-video-ios-prerequisites.html
 indicator: messaging
 ---
 

@@ -7,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 70
-permalink: chat-agent-api-methods-determine-incoming-chat-request.html
+permalink: agent-determine-incoming.html
 
 indicator: chat
 ---

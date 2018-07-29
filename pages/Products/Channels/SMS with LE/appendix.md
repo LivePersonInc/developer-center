@@ -3,7 +3,7 @@ title: Appendix
 level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
-permalink: sms-with-liveengage-appendix.html
+permalink: products-channels-sms-appendix.html
 order: 41
 indicator:
 ---

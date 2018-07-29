@@ -6,7 +6,7 @@ level3: IVR Engagement API
 
 level-order: 3
 order: 1
-permalink: ivr-engagement-api-overview.html
+permalink: rt-interactions-ivr-engagement-overview.html
 root-link: true
 indicator: chat
 ---

@@ -5,7 +5,7 @@ level1: Documents
 level2: Real Time Interactions
 level3: Engagement Attributes API
 order: 231
-permalink: engagement-attributes-api-changelog.html
+permalink: rt-interactions-engagement-attributes-changelog.html
 indicator: both
 ---
 

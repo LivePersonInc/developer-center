@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Authorization and Authentication
 order: 5
-indicator: both
-permalink: connector-api-authorization-and-authentication-get-consumerjws.html
+indicator: messaging
+permalink: Create_ConsumerJWS.html
 search: include
 ---
 

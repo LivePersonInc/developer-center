@@ -5,7 +5,7 @@ level1: Documents
 level2: Rich Messaging
 level3: Getting Started
 order: 110
-permalink: getting-started-styling.html
+permalink: rich-messaging-styling.html
 indicator: both
 ---
 

@@ -5,7 +5,7 @@ level1: Solutions
 level2: Channels
 level3: IVR Deflection
 order: 20
-permalink: ivr-deflection-ivr-deflection-for-chat.html
+permalink: products-channels-ivr-deflection-solution-introduction.html
 indicator: chat
 ---
 ### How the IVR Deflection Solution Works

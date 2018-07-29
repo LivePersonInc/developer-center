@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 68
-indicator: both
-permalink: connector-api-examples-share-image-file.html
+indicator: messaging
+permalink: share-image-example.html
 
 ---
 

@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 20
-indicator: both
-permalink: connector-api-webhooks-events.html
+indicator: messaging
+permalink: webhooks-events.html
 ---
 
 ### Events

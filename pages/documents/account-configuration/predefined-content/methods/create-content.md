@@ -1,5 +1,7 @@
 ---
 title: Create Predefined Content
+redirect_from:
+  - account-configuration-predefined-content-create-content.html
 Keywords:
 level1: Documents
 level2: Account Configuration

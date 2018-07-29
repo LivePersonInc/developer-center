@@ -6,7 +6,7 @@ level3: Custom Dashboard
 
 order: 2
 
-permalink: custom-dashboard-chat-metrics.html
+permalink: products-data-custom-dashboard-chat-metrics.html
 indicator:
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: Delete LOBs
+redirect_from:
+  - administration-delete-lobs.html
 keywords:
 level1: Documents
 level2: Admin

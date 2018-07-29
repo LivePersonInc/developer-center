@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - account-configuration-predefined-content-overview.html
 Keywords:
 level1: Documents
 level2: Account Configuration

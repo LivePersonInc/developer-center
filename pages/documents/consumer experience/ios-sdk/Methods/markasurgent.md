@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 70
-permalink: mobile-app-messaging-sdk-for-ios-methods-markasurgent.html
+permalink: consumer-experience-ios-sdk-markasurgent.html
 
 indicator: messaging
 ---

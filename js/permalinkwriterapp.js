@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/Rich Messaging',
+    root: './pages/documents/admin',
     entryType: 'files',
     depth: 3
 };
@@ -45,9 +45,10 @@ readdirp(settings)
           const lines = content.split('\n');
           //console.log(lines);
           let permalink = lines.find(line => line.startsWith('permalink'));
+          if (permalink) {
           lines.splice(2, 0, 'redirect_from:')
           lines.splice(3, 0, `  - ${permalink.replace('permalink: ', '')}`);
-
+          }
           let title = lines.find(line => line.startsWith('title'));
           if(title) {
             title = title.replace('title: ', '').toLowerCase().replace(/ /g, '-');

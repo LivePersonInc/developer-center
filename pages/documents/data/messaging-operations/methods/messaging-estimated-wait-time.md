@@ -5,7 +5,7 @@ level2: Data
 level3: Messaging Operations API
 level4: Methods
 order: 40
-permalink: messaging-operations-api-methods-messaging-estimated-wait-time.html
+permalink: data-messaging-operations-messaging-estimated-wait-time.html
 
 indicator: messaging
 ---

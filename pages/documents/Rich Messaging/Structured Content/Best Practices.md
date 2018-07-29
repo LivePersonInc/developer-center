@@ -5,9 +5,11 @@ level1: Documents
 level2: Rich Messaging
 level3: Structured Content
 order: 60
-permalink: structured-content-best-practices.html
+permalink: rich-messaging-structured-content-best-practices.html
 indicator: both
 ---
+
+* We recommend that brands use our JSON script validator [JSON Pollock](/rich-messaging-structured-content-pollock.html) in order to format the strings correctly before use. This validator, hosted on Github, can be shared with brands for this use.  
 
 * When building your cards and actions, it is recommended to ensure that every click will also have a publishText action. This ensures that the click is “recorded” in the transcript and makes it easier for bots and agents to respond to consumer interactions with the card.
 

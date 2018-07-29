@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Validate Engagement API
 
 order: 2
-permalink: validate-engagement-api-validate-engagement.html
+permalink: rt-interactions-validate-engagement-validate-engagement.html
 
 indicator: both
 ---

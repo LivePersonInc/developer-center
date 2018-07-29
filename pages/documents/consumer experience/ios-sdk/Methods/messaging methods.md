@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: SDK APIs
 
 order: 10
-permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html
+permalink: consumer-experience-ios-sdk-messaging-methods.html
 
 indicator: messaging
 ---
@@ -21,10 +21,10 @@ Passing monitoringInitParams is mandatory when using MonitoringAPI capabilities
 func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInitParams? = nil)
 ```
 
-| Parameter | Description | Notes |
+| Parameter | Description | Notes
 | :--- | :--- | :--- |
-| brandId | An account ID of the Brand| Optional Parameter |
-| monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter |
+| brandId | An account ID of the Brand| Optional Parameter
+| monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter
 
 ### showConversation
 
@@ -40,9 +40,8 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 | authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' paramater only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### showConversation (Deprecated)
-**This method is deprecated since SDK version 2.7.0.**
-
-Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} instead
+*This method is deprecated since SDK version 2.7.0.**
+*Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} instead*
 
 This method is used to open the conversation screen.
 
@@ -54,7 +53,7 @@ func showConversation(_ conversationQuery: ConversationParamProtocol, authentica
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
-| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  |  
+| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
 
 ### removeConversation
 
@@ -75,12 +74,10 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
 </div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -280,13 +277,11 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-
-The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
-
 </div>
+
+**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
 
 ### registerPushNotifications
 
@@ -312,12 +307,11 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-<div markdown="1" class="important">
-Important:
+<div class="important">
+IMPORTANT NOTES :
+</div>
 
 A push is sent to the last device which was registered to the LP push service, meaning that the unread messages indication can be fetched by only one device.
-
-</div>
 
 * If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once a message has been sent from that device and the push arrives to it.
 

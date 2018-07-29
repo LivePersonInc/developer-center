@@ -5,7 +5,7 @@ level1: Documents
 level2: Real Time Interactions
 level3: IVR Engagement API
 order: 231
-permalink: ivr-engagement-api-changelog.html
+permalink: rt-interactions-ivr-engagement-changelog.html
 indicator: chat
 ---
 

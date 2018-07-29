@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Connector API
 order: 2
-indicator: both
-permalink: connector-api-connector-api-getting-started.html
+indicator: messaging
+permalink: connectorapi-getting-started.html
 ---
 
 ### Getting Started with the Connector API

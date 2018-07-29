@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 75
-permalink: mobile-app-messaging-sdk-for-android-methods-reconnect.html
+permalink: android-reconnectfull.html
 
 indicator: messaging
 ---

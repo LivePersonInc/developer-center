@@ -9,7 +9,7 @@ level4: Appendix
 
 order: 244
 
-permalink: mobile-app-messaging-sdk-for-ios-appendix-security.html
+permalink: consumer-experience-ios-sdk-security.html
 
 indicator: messaging
 ---

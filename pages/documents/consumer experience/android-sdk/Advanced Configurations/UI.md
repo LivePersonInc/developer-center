@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 50
-permalink: mobile-app-messaging-sdk-for-android-configuration-ui.html
+permalink: android-UI.html
 
 indicator: messaging
 ---

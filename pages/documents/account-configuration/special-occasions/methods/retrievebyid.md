@@ -1,5 +1,7 @@
 ---
 title: Retrieve Special Occasion by ID
+redirect_from:
+  - account-configuration-special-occasions-retrieve-by-id.html
 Keywords:
 level1:
 level2: Account Configuration

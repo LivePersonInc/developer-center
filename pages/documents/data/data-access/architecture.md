@@ -4,7 +4,7 @@ level1: Documents
 level2: Data
 level3: Data Access API
 order: 2
-permalink: data-access-api-architecture.html
+permalink: data-data-access-architecture.html
 indicator: chat
 ---
 

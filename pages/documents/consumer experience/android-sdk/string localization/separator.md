@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 260
-permalink: mobile-app-messaging-sdk-for-android-string-localization-separator-timestamp.html
+permalink: android-separator.html
 
 indicator: messaging
 ---

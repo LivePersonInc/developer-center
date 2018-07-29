@@ -1,5 +1,7 @@
 ---
 title: Delete Workdays Object
+redirect_from:
+  - account-configuration-workdays-delete.html
 Keywords:
 level1:
 level2: Account Configuration

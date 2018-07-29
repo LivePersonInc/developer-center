@@ -4,7 +4,7 @@ level1: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 
-permalink: sms-with-liveengage-clickable-mobile-content-to-sms.html
+permalink: products-channels-sms-clickable.html
 order: 20
 indicator:
 ---

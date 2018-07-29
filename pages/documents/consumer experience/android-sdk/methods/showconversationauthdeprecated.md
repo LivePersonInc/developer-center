@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 40
-permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(with-authentication-support)-(deprecated).html
+permalink: android-showconversationauthdeprecated.html
 
 indicator: messaging
 ---

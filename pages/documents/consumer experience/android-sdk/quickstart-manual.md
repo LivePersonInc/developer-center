@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 
 order: 11
-permalink: mobile-app-messaging-sdk-for-android-quick-start-manual.html
+permalink: android-quickstart-manual.html
 
 ---
 
@@ -324,12 +324,10 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
 
 ### Step 4 (Optional): Initialization with Monitoring Params
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team.
-
 </div>
+_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._
 
 1. Initialize the Messaging SDK with Monitoring Params
 

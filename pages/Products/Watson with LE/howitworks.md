@@ -5,7 +5,7 @@ level1: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 20
-permalink: watson-with-liveengage-how-it-works---operational-flow.html
+permalink: watson-how-it-works.html
 indicator: messaging
 ---
 

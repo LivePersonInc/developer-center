@@ -1,5 +1,7 @@
 ---
 title: Get all LOBs
+redirect_from:
+  - administration-get-all-lobs.html
 keywords:
 level1: Documents
 level2: Admin

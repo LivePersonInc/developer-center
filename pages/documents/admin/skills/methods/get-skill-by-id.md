@@ -1,5 +1,7 @@
 ---
 title: Get skill by ID
+redirect_from:
+  - administration-get-skill-by-id.html
 keywords:
 level1: Documents
 level2: Admin

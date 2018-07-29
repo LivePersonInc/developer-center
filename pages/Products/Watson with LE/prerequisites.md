@@ -5,7 +5,7 @@ level1: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 25
-permalink: watson-with-liveengage-prerequisites.html
+permalink: watson-prerequisites.html
 indicator: messaging
 ---
 

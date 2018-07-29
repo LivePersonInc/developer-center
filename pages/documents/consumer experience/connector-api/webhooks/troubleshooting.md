@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 51
-indicator: both
-permalink: connector-api-webhooks-troubleshooting.html
+indicator: messaging
+permalink: webhooks-troubleshooting.html
 ---
 
 ### Overview

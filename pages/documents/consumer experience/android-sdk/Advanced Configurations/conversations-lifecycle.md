@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 40
-permalink: mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
+permalink: android-conversations-lifecycle.html
 
 indicator: messaging
 ---

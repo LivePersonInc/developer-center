@@ -1,6 +1,6 @@
 ---
 title: Set the Visitor's Name
-permalink: undefined-set-the-visitor-s-name.html
+permalink: consumer-experience-server-chat-set-visitor-name.html
 
 indicator: chat
 ---
@@ -40,3 +40,7 @@ JSON Request body example:
 | Response Code | Description |
 | :--- | :--- |
 | 201 | Successful |
+
+
+
+

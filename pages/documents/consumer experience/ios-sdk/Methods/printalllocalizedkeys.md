@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 200
-permalink: mobile-app-messaging-sdk-for-ios-methods-printalllocalizedkeys.html
+permalink: consumer-experience-ios-sdk-printalllocalizedkeys.html
 
 indicator: messaging
 ---

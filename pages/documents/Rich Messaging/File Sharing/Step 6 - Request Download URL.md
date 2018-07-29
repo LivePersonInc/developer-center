@@ -1,11 +1,11 @@
 ---
-title: Request Download URL
+title: Step 6 - Request Download URL
 Keywords:
 level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 70
-permalink: file-sharing-request-download-url.html
+permalink: rich-messaging-file-sharing-6.html
 indicator: both
 ---
 

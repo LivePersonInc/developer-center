@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 
 order: 50
-permalink: agent-workspace-widget-sdk-methods.html
+permalink: agent-workspace-sdk-methods.html
 
 indicator: both
 ---
@@ -273,7 +273,7 @@ Example 3 - 'Write StructuredContent'. Please see [this link](structured-content
 }
 ```
 
-Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-complex-layout.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-overview.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {

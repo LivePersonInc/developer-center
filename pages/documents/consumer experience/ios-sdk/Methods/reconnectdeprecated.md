@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for iOS
 level4: Methods
 
 order: 45
-permalink: mobile-app-messaging-sdk-for-ios-methods-reconnect.html
+permalink: consumer-experience-ios-sdk-reconnectdeprecated.html
 
 indicator: messaging
 ---

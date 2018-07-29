@@ -5,7 +5,7 @@ level2: Real Time Interactions
 level3: Engagement Attributes API
 
 order: 1
-permalink: engagement-attributes-api-overview.html
+permalink: rt-interactions-engagement-attributes-overview.html
 root-link: true
 level-order: 6
 

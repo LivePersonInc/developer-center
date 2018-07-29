@@ -1,5 +1,7 @@
 ---
 title: Update an Automatic Message
+redirect_from:
+  - account-configuration-automatic-messages-update-an-automatic-message.html
 Keywords:
 level1: Documents
 level2: Account Configuration

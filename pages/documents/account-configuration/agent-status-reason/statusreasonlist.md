@@ -1,5 +1,7 @@
 ---
 title: Agent Status List
+redirect_from:
+  - account-configuration-agent-status-reason-agentstatuslist.html
 level1: Documents
 level2: Account Configuration
 level3: Agent Status Reason API

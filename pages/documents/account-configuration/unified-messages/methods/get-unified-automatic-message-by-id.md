@@ -1,5 +1,7 @@
 ---
-title: Get Unified Automatic Messages by ID
+title: Get Unified Automatic Message by ID
+redirect_from:
+  - account-configuration-unified-automatic-messages-get-automatic-message-by-id.html
 keywords:
 level1: Documents
 level2: Account Configuration
@@ -7,8 +9,8 @@ level3: Unified Automatic Messages API
 level4: Methods
 
 order: 20
-permalink: unified-automatic-messages-api-methods-get-unified-automatic-messages-by-id.html
-
+permalink: unified-automatic-messages-api-methods-get-unified-automatic-message-by-id.html
+ 
 indicator: both
 ---
 
@@ -30,8 +32,8 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes|
- |:----------|  :--------------|  :--------------|  :---|
+ |Parameter|  Description|  Type|  Notes| 
+ |:----------|  :--------------|  :--------------|  :---| 
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
  | unifiedAutoMessageId | Unique account config object ID | Positive long number greater than zero |
 
@@ -69,8 +71,8 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 **Response Headers**
 
 | Header|  Description |
- |:-------  | :----- |
- |ac-revision | Account config object type collection revision. |
+ |:-------  | :----- | 
+ |ac-revision | Account config object type collection revision. | 
 
 **Response Body**
 
@@ -118,3 +120,5 @@ Contexted Response:
 	    }
 	  }
 	}
+
+

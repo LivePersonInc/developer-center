@@ -1,5 +1,7 @@
 ---
 title: Create LOB
+redirect_from:
+  - administration-create-lob.html
 keywords:
 level1: Documents
 level2: Admin

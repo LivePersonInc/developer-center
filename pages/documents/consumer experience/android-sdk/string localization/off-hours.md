@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: String Localization
 
 order: 240
-permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-time.html
+permalink: android-off-hours.html
 
 indicator: messaging
 ---

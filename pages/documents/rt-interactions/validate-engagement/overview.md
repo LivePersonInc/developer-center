@@ -6,7 +6,7 @@ level3: Validate Engagement API
 
 level-order: 5
 order: 1
-permalink: validate-engagement-api-overview.html
+permalink: rt-interactions-validate-engagement-overview.html
 root-link: true
 indicator: both
 ---

@@ -7,7 +7,7 @@ level4: Samples
 
 order: 90
 
-permalink: messaging-window-api-samples-javascript-sample.html
+permalink: consumer-int-js-sample.html
 indicator: messaging
 ---
 **Note**: This document is subject to change without notice.

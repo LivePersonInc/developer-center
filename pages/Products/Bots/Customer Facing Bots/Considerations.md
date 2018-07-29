@@ -6,7 +6,7 @@ level3: Customer Facing Bots
 
 order: 4
 
-permalink: customer-facing-bots-considerations.html
+permalink: products-bots-considerations.html
 
 indicator:
 ---

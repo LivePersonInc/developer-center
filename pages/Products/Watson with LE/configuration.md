@@ -5,7 +5,7 @@ level1: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 27
-permalink: watson-with-liveengage-configuration.html
+permalink: watson-configuration.html
 indicator: messaging
 ---
 ### Bot as an agent setup

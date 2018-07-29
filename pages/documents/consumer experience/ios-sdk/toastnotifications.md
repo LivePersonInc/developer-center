@@ -6,7 +6,7 @@ level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 
 order: 16
-permalink: mobile-app-messaging-sdk-for-ios-customizing-toast-notifications.html
+permalink: consumer-experience-ios-sdk-toastnotifications.html
 
 indicator: messaging
 ---

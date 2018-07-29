@@ -6,7 +6,7 @@ level3: SalesForce Integration
 level4: Implementation
 
 order: 20
-permalink: salesforce-integration-implementation-step-2---configuring-the-liveengage-app-in-salesforce.html
+permalink: products-agent-efficiency-salesforce-integration-step2.html
 
 indicator:
 ---

@@ -1,5 +1,7 @@
 ---
 title: Overview
+redirect_from:
+  - administration-agent-groups-overview.html
 keywords:
 level1: Documents
 level2: Admin

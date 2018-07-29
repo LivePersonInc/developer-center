@@ -1,5 +1,7 @@
 ---
 title: Create Users
+redirect_from:
+  - administration-create-users.html
 keywords:
 level1: Documents
 level2: Admin

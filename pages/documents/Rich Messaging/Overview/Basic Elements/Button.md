@@ -6,7 +6,7 @@ level2: Rich Messaging
 level3: Getting Started
 level4: Basic Elements
 order: 50
-permalink: getting-started-basic-elements-button.html
+permalink: rich-messaging-basic-elements-button.html
 indicator: both
 ---
 

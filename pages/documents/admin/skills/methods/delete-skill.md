@@ -1,5 +1,7 @@
 ---
 title: Delete Skill
+redirect_from:
+  - administration-delete-skill.html
 keywords:
 level1: Documents
 level2: Admin

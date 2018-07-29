@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Methods
 
 order: 20
-permalink: mobile-app-messaging-sdk-for-android-methods-initialize-(with-sdk-properties-object).html
+permalink: android-initializeproperties.html
 
 indicator: messaging
 ---

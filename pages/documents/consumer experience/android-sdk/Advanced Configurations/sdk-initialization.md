@@ -7,7 +7,7 @@ level3: Mobile App Messaging SDK for Android
 level4: Configuration
 
 order: 20
-permalink: mobile-app-messaging-sdk-for-android-configuration-initialization.html
+permalink: android-initialization.html
 
 indicator: messaging
 ---
@@ -37,12 +37,11 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
 | onInitSuccess | Callback that indicates the init process has finished successfully. |
 | onInitFailed | Callback that indicates the init process has failed. <br> *Note: You can call initialize before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK in your app's Application class.* |
 
-<div markdown="1" class="important">
+<div class="important">
 Important:
-
-To use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}
-
 </div>
+
+**To use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}**
 
 Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
 

@@ -5,8 +5,8 @@ level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 64
-indicator: both
-permalink: connector-api-examples-how-to-enable-a-feature.html
+indicator: messaging
+permalink: enable-feature-example.html
 
 ---
 

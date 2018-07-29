@@ -6,7 +6,7 @@ level3: Messaging Window API
 
 level-order: 5
 order: 0
-permalink: messaging-window-api-overview.html
+permalink: consumer-int-overview.html
 root-link: true
 indicator: messaging
 ---

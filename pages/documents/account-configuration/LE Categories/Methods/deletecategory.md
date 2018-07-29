@@ -1,5 +1,7 @@
 ---
 title: Delete a Category
+redirect_from:
+  - account-configuration-categories-delete.html
 level1: Documents
 level2: Account Configuration
 level3: Predefined Categories API

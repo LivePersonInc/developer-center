@@ -1,5 +1,7 @@
 ---
 title: Appendix
+redirect_from:
+  - account-configuration-workdays-appendix.html
 Keywords:
 level1:
 level2: Account Configuration

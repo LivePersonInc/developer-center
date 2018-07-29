@@ -1,5 +1,7 @@
 ---
 title: Update skill
+redirect_from:
+  - administration-update-skill.html
 keywords:
 level1: Documents
 level2: Admin
