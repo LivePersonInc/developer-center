@@ -6,7 +6,6 @@ level2: Rich Messaging
 level3: Structured Content
 order: 10
 permalink: rich-messaging-structured-content-complex-layout.html
-root-link: true
 indicator: both
 ---
 
