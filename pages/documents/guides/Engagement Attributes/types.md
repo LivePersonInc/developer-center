@@ -5,7 +5,7 @@ level1: Documents
 level2: Guides
 level3: Engagement Attributes
 order: 20
-permalink: engagment-attributes-types.html
+permalink: engagement-attributes-types.html
 indicator: both
 ---
 

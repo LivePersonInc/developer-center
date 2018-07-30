@@ -9,11 +9,11 @@ permalink: rt-interactions-monitoring-methods-engagement.html
 indicator: messaging
 ---
 
-**Note**: Please make sure the read the [overview](rt-interactions-monitor-api-overview.html) before getting started with this method.
+**Note**: Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
 
 ### Description
 
-Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.  
+Use this method to access the LivePerson monitoring system in order to retrieve an engagement with an updated state of availability for a consumer. The eligibility of an engagement is based on campaign definitions and possibly also on information regarding consumer activity within the brand's account, such as engagement attributes.
 
 ### Use cases
 
@@ -35,7 +35,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
 | account-id | LP site ID | string | |
-| app-installation-id | App installation id | string | String, Required |
+| app-installation-id | App installation id | string | String, Required. This is received after installing the application, [as explained here](rt-interactions-monitoring-app-install.html) |
 
 ### Query parameters
 
@@ -49,7 +49,11 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional | |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead |  |
+| identities | List of identities | string (JSON) | Optional |  |
+| identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
+| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1  |
+| identities.sub | The subject for identification | string | Required | |
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
@@ -58,6 +62,24 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | clientProperties.osVersion | OS version | string | Optional | Example: For Android it could be 2.4 |
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] |
 | engagementAttributes | Array of engagement attributes | string | Optional | Supported Values: all engagement-attributes excluding the type of ImpressionEvent (Java version inherited from ImpressionEventBase).  |
+
+### Security considerations
+
+* To avoid security problems and increase reliability, the `consumerId` or the `sub` key of the `identities` array (depending on which one you use) described in the table above must meet the following requirements:
+
+   * **Unguessable** - using consumerID or a `sub` value which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+
+   * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
+
+   * **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than one user, even if this user is not active anymore.
+
+* A good consumerID would be:
+
+   * UUID assigned specifically and uniquely for consumer  
+
+   * a hashed/salted email address
+
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request & body entity example
 
@@ -76,7 +98,19 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
    "deviceFamily": "MOBILE",
    "ipAddress": "192.168.5.2"
  },
- "consumerId":"uniqueIdInBrand",
+ *"consumerId":"uniqueIdInBrand",*
+ "identities": [
+   {
+        "iss": "LivePerson",
+        "acr": "0",    
+        "sub": "identifierForNoAuth"
+    },
+    {
+        "iss": "TMO",
+        "acr": "loa1",
+        "sub": "identifierForAuth"
+    }
+ ],
  "entryPoints":[
    "tel://972737004000",
    "http://www.liveperson.com",

@@ -7,18 +7,18 @@ level3: Visit Information API
 order: 2
 permalink: rt-interactions-visit-information-visit-information.html
 
-indicator: both
+indicator: chat
 ---
 
 ### Request
 
-| Method    | URL | 
-| :------ | :------- | 
+| Method    | URL |
+| :------ | :------- |
 | GET | https://{LivePerson domain}/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
 
-**OAuth** 
+**OAuth**
 
-This API supports OAuth 1.0 and OAuth 2.0 authentication patterns and requires SSL protocol.
+This API supports OAuth 1.0 authentication patterns and requires SSL protocol. Please see [this document's overview](rt-interactions-visit-information-overview.html) for more information on how to retrieve your API keys.
 
 **Path Parameters**
 
@@ -26,6 +26,10 @@ This API supports OAuth 1.0 and OAuth 2.0 authentication patterns and requires S
 | :--- | :--- | :--- | :--- |
 | accountId | LP site ID | string | Required |  |
 | visitorId | Visitor ID | string | Required | |
+
+**Note**: the `visitorId` parameter referenced above is retrieved from the LiveEngage Tag. Each visitor receives from the Tag their own `visitorId` which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation [here](/lp-tag-engagement-window.html).
+
+This method is relevant to monitored sessions only. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default LiveEngage window), you'll need to use the [App Engagement API](rt-interactions-app-engagement-overview.html) instead.
 
 **Query Parameters**
 
@@ -48,30 +52,30 @@ See [JSON Example](#json-example).
 **Elements in the Response**
 
 | Name     | Description | Type/Value |
-| :------ | :------- | :-------- | 
-| id | Monitoring session ID |  string    | 
-| engagements | Array of engagements displayed to the consumer |  array | 
-| pages | Array of the pages visited by the consumer |  array    | 
-| userAgent | Consumer browser's user agent |  string | 
-| deviceOS | Consumer's operating system |  string | 
-| deviceFamily | Consumer's device |  string | 
-| lpv4 | Consumer's IP|  string | 
-| geo | Consumer’s Geo information (country, state, city etc.) |  object    | 
-| externalReferrer | Referrer page |  string | 
-| events | Engagement Attributes events reported during the session | array  | 
+| :------ | :------- | :-------- |
+| id | Monitoring session ID |  string    |
+| engagements | Array of engagements displayed to the consumer |  array |
+| pages | Array of the pages visited by the consumer |  array    |
+| userAgent | Consumer browser's user agent |  string |
+| deviceOS | Consumer's operating system |  string |
+| deviceFamily | Consumer's device |  string |
+| lpv4 | Consumer's IP|  string |
+| geo | Consumer’s Geo information (country, state, city etc.) |  object    |
+| externalReferrer | Referrer page |  string |
+| events | Engagement Attributes events reported during the session | array  |
 
 **Response Codes**
 
 | Code     | Internal Code | Description |
-| :------ | :------- | :-------- | 
-| 200 | -- |  OK; Operation performed successfully  | 
-| 400 | 33 |  Bad Request; Problem with body or query parameters | 
-| 401 | 10 |  Unauthorized (no permissions) | 
-| 404 | 6 |  Invalid Account ID | 
-| 404 | 37 |  Invalid Visitor ID  | 
-| 404 | 39 |  Invalid Session ID | 
-| 404 | 12 |  Not Found | 
-| 500 | -- |  Internal Server Error | 
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 400 | 33 |  Bad Request; Problem with body or query parameters |
+| 401 | 10 |  Unauthorized (no permissions) |
+| 404 | 6 |  Invalid Account ID |
+| 404 | 37 |  Invalid Visitor ID  |
+| 404 | 39 |  Invalid Session ID |
+| 404 | 12 |  Not Found |
+| 500 | -- |  Internal Server Error |
 
 <a name="json-example">**JSON Example:**</a>
 
@@ -119,7 +123,7 @@ See [JSON Example](#json-example).
                     "skillId": -1
                   },
                   "surveySkills": [
-                    
+
                   ],
                   "availabilityPolicy": 0,
                   "renderingType": 0,
@@ -173,7 +177,7 @@ See [JSON Example](#json-example).
                     "skillId": -1
                   },
                   "surveySkills": [
-                    
+
                   ],
                   "availabilityPolicy": 0,
                   "renderingType": 0,
@@ -484,7 +488,7 @@ See [JSON Example](#json-example).
                   "serverTimeStamp": 0,
                   "total": null,
                   "contexts": {
-                    
+
                   },
                   "numItems": null,
                   "products": [

@@ -10,7 +10,7 @@ permalink: rich-messaging-click-ops-actions.html
 indicator: both
 ---
 
-Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of an operation. For instance: navigate with one of the navigation apps to a predefined place.
+Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of an operation. For instance: navigate with a third party navigation app to a predefined place.
 
 **Note**: Only button, image and map objects can receive the actions field.
 
@@ -26,9 +26,9 @@ Types of actions supported by the platform:
 
 This actions has two use cases:
 
-* Web: open google maps with the location.
+* Web: open Google Maps with the location preselected.
 
-* Mobile: navigate to the location with one of the navigation apps.
+* Mobile: navigate to the location with a third party navigation app.
 
 #### Fields
 
@@ -84,7 +84,7 @@ Each environment can override the URI for their specific needs.
 In order to support sending a message as a response for a button click, we introduced a new action called "Publish Text".
 This action allows the brand to send a message on behalf of the consumer that will appear in the transcript.
 
-This action will be used also by the clients (Mobile, VX) to send a response when a button was clicked.
+This action will be used also by the clients (the Mobile Messaging App for example or LiveEngage's window) to send a response when a button was clicked.
 
 #### Fields
 

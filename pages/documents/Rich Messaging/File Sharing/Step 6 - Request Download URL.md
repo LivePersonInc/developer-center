@@ -9,7 +9,7 @@ permalink: rich-messaging-file-sharing-6.html
 indicator: both
 ---
 
-**Request a download url**:
+**Request a download URL**:
 
 Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
 

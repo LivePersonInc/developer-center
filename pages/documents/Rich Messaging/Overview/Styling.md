@@ -9,7 +9,7 @@ permalink: rich-messaging-styling.html
 indicator: both
 ---
 
-Each basic element can have style elements.
+Each basic element can have specific style rules defined for it, controlling how it looks like when rendered.
 
 ### Fields
 

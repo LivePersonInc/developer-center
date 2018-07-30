@@ -9,10 +9,9 @@ permalink: rich-messaging-file-sharing-3.html
 indicator: both
 ---
 
-Use the following request to retrieve an upload url, specifying the type and size of the file.
+Use the following request to retrieve an upload URL, specifying the type and size of the file.
 
-
-**Note**: The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+**Note**: The supported file types are `JPG`, `JPEG`, `PNG`, and `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
 Although file sharing supports uploading file of sizes up to 3MB, we recommend resizing and/or compressing the file to shorten the file processing time (sanitation services, post-processing services, etc.).
 
 See full documentation for generating temporary upload URL [here](consumer-int-msg-generate-temp-upload-url.html).

@@ -1,5 +1,5 @@
 ---
-title: Delete Lob
+title: Delete LOB
 keywords:
 level1: Documents
 level2: Admin

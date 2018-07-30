@@ -34,8 +34,6 @@ A few things you'll need to get started with this API:
 {:start="3"}
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
-{:start="4"}
-4. This is a private beta that is available to a limited number of customers. Please contact your account manager if you’d like to be considered for inclusion. You’ll need to sign a beta agreement with LivePerson in order to participate.
 
 ### Deletion Process
 
@@ -54,7 +52,7 @@ This flow is initiated by the consumer requesting for one or all of his chats to
 
 The brand will need to follow the below steps to achieve this:
 
-1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagement-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
 2. Use the [Engagement History API](https://developers.liveperson.com/data-engagement-history-overview.html) to search for engagements with the identifying value. Find all relevant engagements and make note of the engagement id(s) to delete
 
@@ -66,7 +64,7 @@ This flow is initiated by the consumer requesting for one or all of his conversa
 
 The brand will need to follow the below steps to achieve this:
 
-1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagement-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
 2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation id(s) for deletion.
 
@@ -78,7 +76,7 @@ This flow is initiated by the consumer requesting for all of his personal data t
 
 The brand will need to follow the below steps to achieve this:
 
-1. The brand will need to have passed some sort of identifying attribute to LiveEngage during this consumer's engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagment-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
+1. The brand will need to have passed some sort of identifying attribute to LiveEngage during this consumer's engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](https://developers.liveperson.com/engagement-attributes-overview.html), or through the [authentication flow](https://developers.liveperson.com/guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
 2. Use the [Messaging Interactions API](https://developers.liveperson.com/data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
 

@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
 order: 52
-indicator: both
+indicator: messaging
 permalink: webhooks-examples.html
 ---
 
@@ -264,4 +264,4 @@ In this page you can refer to some examples of the events notifications received
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| dialogId/convId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpint](sendapi-create.html#response){:target="_blank"} |
+| dialogId/convId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response){:target="_blank"} |

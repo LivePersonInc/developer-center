@@ -4,8 +4,8 @@ level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples
-order: 60
-indicator: both
+order: 59
+indicator: messaging
 permalink: create-conversation-example.html
 
 ---

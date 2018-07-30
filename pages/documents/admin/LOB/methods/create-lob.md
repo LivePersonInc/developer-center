@@ -1,5 +1,5 @@
 ---
-title: Create lob
+title: Create LOB
 keywords:
 level1: Documents
 level2: Admin

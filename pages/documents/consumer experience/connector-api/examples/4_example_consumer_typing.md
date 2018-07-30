@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Connector API
 level4: Examples
 order: 63
-indicator: both
+indicator: messaging
 permalink: send-chat-state-example.html
 
 ---

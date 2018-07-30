@@ -10,7 +10,7 @@ permalink: rich-messaging-basic-elements-button.html
 indicator: both
 ---
 
-Simple Button which triggers an Action when clicked.
+A simple Button which triggers an Action when clicked.
 
 ### Fields
 

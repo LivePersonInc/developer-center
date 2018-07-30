@@ -1,6 +1,6 @@
 ---
 title: Report
-level1: Documents 
+level1: Documents
 level2: Real Time Interactions
 level3: Monitoring API
 level4: Methods
@@ -13,8 +13,8 @@ indicator: messaging
 
 ### Description
 
-Use this API to access the LivePerson monitoring system in order to report information regarding consumer activity within the brand's account. Such information can include engagement attributes, entry points.
-
+Use this method to access the LivePerson monitoring system in order to report information regarding consumer activity within the brand's account. Such information can include engagement attributes or entry points.
+As engagement attributes are considered unauthenticated, it should not be used for business transactions that requires stronger authentication or information reliability.
 
 ### Use cases
 
@@ -31,7 +31,7 @@ Use this API to access the LivePerson monitoring system in order to report infor
 | Parameter | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
 | account-id | LP site ID | string |  |
-| app-installation-id | App installation id | string | String, Required |
+| app-installation-id | App installation id | string | String, Required. This is received after installing the application, [as explained here](rt-interactions-monitoring-app-install.html) |
 
 ### Query parameters
 
@@ -45,12 +45,35 @@ Use this API to access the LivePerson monitoring system in order to report infor
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id | String | Optional <sup>[1]</sup> | |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead <sup>[1]</sup>|  |
+| identities | List of identities | string (JSON) | Optional |  |
+| identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
+| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1 |
+| identities.sub | The subject for identification | string | Required | |
+
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
 | entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
 
-<sup>[1]</sup> At least one form of identification is required for reporting (ConsumerID or VisitorID). 
+<sup>[1]</sup> At least one form of identification is required (`consumerId` / an `identities.sub` or `vid`).
+
+### Security considerations
+
+* To avoid security problems and increase reliability, the `consumerId` or the `sub` key of the `identities` array (depending on which one you use) described in the table above must meet the following requirements:
+
+   * **Unguessable** - using consumerID or a `sub` value which is based on any of the consumer's public information, such as name, email address, phone number, etc. can be guessed easily and is not recommended.
+
+   * **Innumerable** - the consumerID cannot be comprised of serial numbers and must be a set of characters that have no structure, form, or scheme.
+
+   * **Unique per user** - the consumerID cannot be recycled from one user to another. Do not reuse the same consumerID for more than one user, even if this user is not active anymore.
+
+* A good consumerID would be:
+
+   * UUID assigned specifically and uniquely for consumer  
+
+   * a hashed/salted email address
+
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request & body entity example
 
@@ -62,7 +85,19 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ```json
 {
- "consumerId":"myConsumerId",
+ *"consumerId":"myConsumerId",*
+ "identities": [
+   {
+        "iss": "LivePerson",
+        "acr": "0",    
+        "sub": "identifierForNoAuth"
+    },
+    {
+        "iss": "TMO",
+        "acr": "loa1",
+        "sub": "identifierForAuth"
+    }
+ ],
  "pageId" : "4743822558",
  "entryPoints":[
    "tel://972737004000",

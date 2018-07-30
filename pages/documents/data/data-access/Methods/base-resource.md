@@ -2,7 +2,7 @@
 title: Base Resource
 level1: Documents
 level2: Data
-level3: Data Access API (BETA)
+level3: Data Access API
 level4: Methods
 order: 10
 permalink: data-data-access-base-resource.html
