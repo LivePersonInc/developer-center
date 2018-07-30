@@ -95,15 +95,18 @@ $('.sidebarTitle').ready(function(){
 );
 
 //level4 collapsing
-$(function() {
+$(document).ready(function () {
   var originalURL = window.location.href;
   var modifiedURL = '/' + originalURL.split('/').reverse()[0];
   var currentPage = $('a[href="'+modifiedURL+'"]');
   currentPage = currentPage.addClass("activepage");
-  var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder")
-  if (toOpen) {
+  var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
+  var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
+  if (toOpen || toOpenHigher) {
       $(".activepage").parent().parent().show();
+      $(".activepage").parent().parent().parent().show();
       $(".activepage").parent().parent().parent().parent().show();
+      $(".activepage").parent().parent().parent().parent().parent().show();
       $(".activepage").parent().parent().parent().parent().parent().parent().show();
       $(".activepage").parent().show();
       $(".activepage").parent().parent().prev().data("expanded","true");
