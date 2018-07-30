@@ -90,7 +90,7 @@ This section contains API details that are common to every API’s resource, met
     <td>start</td>
     <td>A set of attributes defining the start time and date of the object</td>
     <td>Yes</td>
-    <td>Array</td>
+    <td>Object</td>
     <td>
 <ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed.</li></ul>
@@ -104,7 +104,7 @@ This section contains API details that are common to every API’s resource, met
     <td>end</td>
     <td>A set of attributes defining the end time and date of the object</td>
     <td>Yes</td>
-    <td>Array</td>
+    <td>Object</td>
     <td>
 <ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </li></ul>
@@ -118,7 +118,7 @@ This section contains API details that are common to every API’s resource, met
     <td>This is mandatory for the workdays object but only one value is supported. A special occasion object will have an empty field, since it does not reoccur.</td>
     <td>Yes</td>
     <td>Array</td>
-    <td>The pattern for this field is: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</td>
+    <td>The recurrence must comply with the following pattern: "^(RRULE:FREQ=WEEKLY;BYDAY=)(SU|MO|TU|WE|TH|FR|SA)$"</td>
   </tr>
 </tbody>
 </table>
