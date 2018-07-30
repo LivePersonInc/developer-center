@@ -39,7 +39,7 @@ By treating the bot as any other human agent, the connector enables brands enjoy
 
 What are the key benefits for brands of integrating Watson with LiveEngage?
 
-* **A presence on all messaging channels:** Watson with LiveEngage is available on all messaging channels, from in-app messaging to web messaging to SMS.
+* **A presence on all messaging channels:** Watson with LiveEngage is available on all messaging channels, from Mobile App Messaging to web messaging to SMS.
 
 * **Top of the line security and enterprise scale:** LiveEngage provides a secure platform for enterprise business, including PCI security standards that provide real-time, customizable masking of sensitive data.
 

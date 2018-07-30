@@ -3,7 +3,7 @@ title: Attributes
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Customization and Branding
 
 order: 224
@@ -295,6 +295,13 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left"><img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding"></td>
     <td align="left">5</td>
   </tr>
+  <tr>
+    <td align="left">enableEnlargeEmojis</td>
+    <td align="left">Bool</td>
+    <td align="left">When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
+    <td align="left"><img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis"></td>
+    <td align="left">false</td>
+  </tr>
 </tbody>
 </table>
 
@@ -483,34 +490,6 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled</td>
     <td align="left"><img src="img/cameraButtonColor.png" alt="cameraButtonColor"></td>
     <td align="left">#8B8A8F</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingMenuCameraImage</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Custom Camera image in the photo Sharing Menu.</td>
-    <td align="left"><img src="img/camera_menu.png" alt="camera_menu"></td>
-    <td align="left">SDK bundle camera_menu Image</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingMenuLibraryImage</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Photo sharing custom button image.</td>
-    <td align="left"></td>
-    <td align="left">SDK bundle Camera Image</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingOpenMenuImageButton</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Photo sharing open menu custom button.</td>
-    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
-    <td align="left">SDK bundle gallery_menu Image</td>
-  </tr>
-  <tr>
-    <td align="left">photoSharingCloseMenuImageButton</td>
-    <td align="left">UIImage?</td>
-    <td align="left">Photo sharing close menu custom button.</td>
-    <td align="left"><img src="img/gallery_menu.png" alt="gallery_menu"></td>
-    <td align="left">SDK bundle menuClose Image</td>
   </tr>
   <tr>
     <td align="left">fileCellLoaderFillColor</td>
@@ -915,13 +894,20 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">Toggle vibration sound when a new message from a remote user received</td>
     <td align="left"></td>
     <td align="left">false</td>
+  </tr>  
+  <tr>
+    <td align="left">announceAgentTyping</td>
+    <td align="left">Bool</td>
+    <td align="left">If true, show agent is typing indicator in selected position and accessibility will announce when agent is typing a message to the consumer. If false, will not show any indication, and will not announce when agent is typing a message.</td>
+    <td align="left"></td>
+    <td align="left">true</td>
   </tr>
   <tr>
-    <td align="left">conversationEmptyStateTextColor</td>
-    <td align="left">UIColor</td>
-    <td align="left">Color code for the empty state label.</td>
+    <td align="left">showAgentTypingInMessageBubble</td>
+    <td align="left">Bool</td>
+    <td align="left">if true, shows agent is typing indicator in a message bubble. If false, show indicator under Agent label in navigator bar. if announceAgentTyping is false, will not show any "is typing" indicator regardless of current value.</td>
     <td align="left"></td>
-    <td align="left">Black</td>
+    <td align="left">true</td>
   </tr>
 </tbody>
 </table>
@@ -1123,6 +1109,27 @@ It will affect the following areas:
     <td align="left"></td>
     <td align="left">2</td>
   </tr>
+  <tr>
+    <td align="left">conversationBackgroundPortraitImage</td>
+    <td align="left">UIImage;</td>
+    <td align="left">When not nil, will be used as the conversation portrait background image. When an image is shown it is recommended to set dateSeparatorBackgroundColor config to clear.</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">conversationBackgroundLandscapeImage</td>
+    <td align="left">UIImage;</td>
+    <td align="left"> When not nil, will be used as the conversation landscape background image. When an image is shown it is recommended to set dateSeparatorBackgroundColor config to clear.</td>
+    <td align="left"></td>
+    <td align="left">nil</td>
+  </tr>
+  <tr>
+    <td align="left">conversationBackgroundImageContentMode</td>
+    <td align="left">UIViewContentMode;</td>
+    <td align="left">Defines the content mode of the conversation background image. </td>
+    <td align="left"></td>
+    <td align="left">scaleToFill</td>
+  </tr>
 </tbody>
 </table>
 
@@ -1219,14 +1226,14 @@ It will affect the following areas:
     <td align="left"><img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"></td>
     <td align="left">#F5F5F5</td>
   </tr>
-  <tr>
+  <tr>  
   </tr>
   <tr>
     <td align="left">inputTextViewCornerRadius</td>
     <td align="left">Double</td>
     <td align="left">User Input TextView corner radius.</td>
     <td align="left"><img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius"></td>
-    <td align="left">17.0</td>
+    <td align="left">20.0</td>
   </tr>
 </tbody>
 </table>
@@ -1279,9 +1286,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
 </tbody>
 </table>
 
-### Time To Responsd and Off hours
-
-Please see [this document](local-message-notifications.html) for more in-depth information on how to configure and work with Time to Responsd (TTR) and Off Hours notifications.
+### Time To Response and Off hours
 
 <table class="bigtable">
 <thead>
@@ -1294,6 +1299,13 @@ Please see [this document](local-message-notifications.html) for more in-depth i
   </tr>
   </thead>
 <tbody>
+ <tr>
+   <td align="left">ttrShouldShow</td>
+   <td align="left">Bool</td>
+   <td align="left">Toggling this on will show TTR notifications including off hours. When the auto messages feature is enabled, TTR notifications will not be displayed regardless of this parameter.’)</td>
+   <td align="left"></td>
+   <td align="left">true</td>
+ </tr>
   <tr>
     <td align="left">ttrShowShiftBanner</td>
     <td align="left">Bool</td>
@@ -1770,6 +1782,34 @@ Please see [this document](local-message-notifications.html) for more in-depth i
     <td align="left">nil</td>
   </tr>
   <tr>
+    <td align="left">structuredContentBubbleTopLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble top left corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleTopRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble top right corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBottomLeftCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble bottom left corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
+    <td align="left">structuredContentBubbleBottomRightCornerRadius</td>
+    <td align="left">Float</td>
+    <td align="left">Structured Content bubble bottom right corner radius in pixels.</td>
+    <td align="left"></td>
+    <td align="left">0.0</td>
+  </tr>
+  <tr>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
@@ -1784,6 +1824,57 @@ Please see [this document](local-message-notifications.html) for more in-depth i
     For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
+  </tr>
+</tbody>
+</table>
+
+### Quick Reply
+
+<table class="bigtable">
+<thead>
+   <tr>
+  <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Default </th>
+  </tr>
+  </thead>
+<tbody>
+<tr>
+  <td align="left">quickReplyButtonVerticalPadding</td>
+  <td align="left">CGFloat</td>
+  <td align="left">Distance between the bottom and top edges of the button to the bottom and top edges of the text</td>
+  <td align="left"></td>
+  <td align="left">10.0</td>
+</tr>
+  <tr>
+    <td align="left">quickReplyButtonHorizontalPadding</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Distance between the right and left edges of the button to the right and left edges of the text</td>
+    <td align="left"></td>
+    <td align="left">15.0</td>
+  </tr>
+  <tr>
+    <td align="left">quickReplyVerticalPadding</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Vertical padding between quick reply buttons</td>
+    <td align="left"></td>
+    <td align="left">10.0</td>
+  </tr>
+  <tr>
+    <td align="left">quickReplyHorizontalPadding</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Horizontal padding between quick reply buttons</td>
+    <td align="left"></td>
+    <td align="left">10.0</td>
+  </tr>
+  <tr>
+    <td align="left">quickReplyButtonBorderWidth</td>
+    <td align="left">CGFloat</td>
+    <td align="left">Border size of Quick Reply buttons</td>
+    <td align="left"></td>
+    <td align="left">1.0</td>
   </tr>
 </tbody>
 </table>
@@ -1862,7 +1953,7 @@ Please see [this document](local-message-notifications.html) for more in-depth i
 </tbody>
 </table>
 
-### Accessibility
+### Audio support
 
 <table class="bigtable">
 <thead>
@@ -1876,11 +1967,25 @@ Please see [this document](local-message-notifications.html) for more in-depth i
 </thead>
 <tbody>
   <tr>
-    <td align="left">announceAgentTyping</td>
-    <td align="left">Bool</td>
-    <td align="left">If true, accessibility will announce when agent is typing a message to the consumer.</td>
+    <td align="left">recordingDurationLimit</td>
+    <td align="left">TimeInterval (Double)</td>
+    <td align="left">Maximum time frame for recording audio message (in seconds).</td>
     <td align="left"></td>
-    <td align="left">true</td>
+    <td align="left">120</td>
+  </tr>
+  <tr>
+    <td align="left">enableAudioSharing</td>
+    <td align="left">Bool</td>
+    <td align="left">True - Enables Audio Sharing feature, False - Disables Audio Sharing</td>
+    <td align="left"></td>
+    <td align="left">false</td>
+  </tr>
+  <tr>
+    <td align="left">maxNumberOfSavedAudioFilesOnDisk</td>
+    <td align="left">Int</td>
+    <td align="left">This number represents how many audio files will be saved on the disk. Exceeding files are deleted when the app closes.</td>
+    <td align="left"></td>
+    <td align="left">20</td>
   </tr>
 </tbody>
 </table>

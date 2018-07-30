@@ -3,7 +3,7 @@ title: Attributes Design Sheet
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Customization and Branding
 order: 225
 permalink: consumer-experience-ios-sdk-attributes-design-sheet.html
@@ -26,10 +26,10 @@ indicator: messaging
     <td rowspan="3"><img src="img/User_bubbles (1,2,3).png"/></td>
   </tr>
   <tr>
-    <td><div class="designsheetnumber">2</div> remoteUserTypingTintColor</td>
+    <td><div class="designsheetnumber">2</div>userBubbleBackgroundColor, userBubbleBorderColor, userBubbleLinkColor, userBubbleTextColor, userBubbleBorderWidth, userBubbleTimestampColor, userBubbleSendStatusTextColor, userBubbleErrorTextColor, userBubbleErrorBorderColor </td>
   </tr>
   <tr>
-  <td><div class="designsheetnumber">3</div> userBubbleBackgroundColor, userBubbleBorderColor, userBubbleLinkColor, userBubbleTextColor, userBubbleBorderWidth, userBubbleTimestampColor, userBubbleSendStatusTextColor, userBubbleErrorTextColor, userBubbleErrorBorderColor</td>
+  <td><div class="designsheetnumber">3</div> remoteUserTypingTintColor</td>
   </tr>
   <tr>
     <td><div class="designsheetnumber">4</div> enableLinkPreview, linkPreviewBackgroundColor, linkPreviewTitleTextColor, linkPreviewDescriptionTextColor, linkPreviewSiteNameTextColor, linkPreviewBorderWidth, linkPreviewStyle, linkPreviewSiteNameTextColor </td>

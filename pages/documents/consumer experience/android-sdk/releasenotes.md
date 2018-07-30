@@ -3,7 +3,7 @@ title: Release Notes
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 order: 310
 permalink: consumer-experience-android-sdk-release-notes.html
 indicator: messaging
@@ -12,9 +12,582 @@ indicator: messaging
 <br>
 <br>
 
+### Android Messaging SDK -  Version 3.2
+
+**Version 3.2 release: July 1st 2018**
+
+### Main Features
+
+#### Audio Messaging
+
+**Type:** Consumer Experience Feature  
+
+**Available to all customers?** No. Please contact your account team.
+
+Consumers are now able to send Audio messages to brands which makes the communication even easier.
+
+In Audio messages the Brands can configure:
+
+1. The maximum length of the message (15 seconds - 2 minutes long by default)
+
+2. Enable/Disable the feature
+
+3. Max stored audio messages on device
+
+4. Tooltips text
+
+#### Unauthenticated In-App Messaging
+
+**Type:** Developer Experience Feature
+
+**Available to all customers?** Yes
+
+Brands can communicate with their consumers in an unauthenticated manner while being able to leverage additional LiveEngage capabilities such as Campaigns for Messaging.
+
+Unauthenticated messaging allows brands to:
+
+1. Easier & quicker on-boarding to LiveEngage
+
+2. Having pre authentication messaging use cases, for example, assistance with password recovery
+
+3. The ability to use Campaigns for Messaging while having unauthenticated conversations
+
+#### Quick Replies
+
+**Type:** Consumer Experience Feature
+
+**Available to all customers?** Yes
+
+Quick Replies enrich the consumer experience by using rich text interactions that guide the consumer throughout the conversation. The consumer is presented with number of brief answers that can be selected in order to navigate the conversation in the right path.
+
+The quick replies can contain the same actions as Structured Content buttons:
+
+1. Publish Text
+
+2. Link
+
+3. Navigation
+
+As Quick Replies contain predefined values, it can dramatically improve communication with Bots and improve both consumer experience and operational efficiency.
+
+#### Structured Content Carousel
+
+**Type:** Consumer Experience Feature
+
+**Available to all customers?** Yes
+
+Structured Contend experience is enriched with the Carousel allowing more capabilities, more use cases and moving agents one step forward in being able to provide end to end assistance.
+
+The Carousel consists of more than one card at a time, side by side and the consumer can swipe between cards.
+
+#### New Devices Certification
+
+The following devices are now also supported and/or certified to host our In-App Messaging SDK:
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Operating system</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>Device</td>
+    <td>v5.X (Lollipop)</td>
+    <td>v6.X (Marshmallow)</td>
+    <td>v7.X (Nougat)</td>
+    <td>v8.X (Oreo)</td>
+  </tr>
+  <tr>
+    <td>Xiaomi Mi 6</td>
+    <td>---------</td>
+    <td>---------</td>
+    <td>---------</td>
+    <td>Certified</td>
+  </tr>
+  <tr>
+    <td>Galaxy S9*</td>
+    <td>---------</td>
+    <td>---------</td>
+    <td>---------</td>
+    <td>Certified</td>
+  </tr>
+</tbody>
+</table>
+
+
+* **Photo Sharing functionality is limited on the device. Only photos which were <strong>not</strong> taken by the device can be shared**
+
+#### Experience and Branding Enhancements
+
+**Type:** Consumer Experience Feature
+
+**Available to all customers?** Yes
+
+The SDK allows Brands to customize the SDK even more, giving a personal touch to their customers.
+
+**Large Emojis**
+
+When using Emojis in a conversation:
+
+1. One Emoji - The Emoji will be enlarged to a Extra Large size
+
+2. Two Emojis - The Emojis will be enlarged to a Large size
+
+3. More than two Emojis or Emojis with text - The Emojis size will be small
+
+**Conversation Window Background Image**
+
+A new way for Brands to set their own background to conversation to add a more personal touch. As in fragment mode, LivePerson does not have control over the Activity which contains the conversation window fragment, this feature works only in Activity mode. In Fragment mode, brands can add the background picture on the Activity window.
+
+### APIs
+
+#### New APIs
+
+<table>
+<thead>
+  <tr>
+    <th>API</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>public static void registerLPPusher(String brandId, String appId, String gcmToken,
+LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback)</td>
+    <td>added authenticationParams parameter. If passed, this method will register immediately to LPPusher without needing to open the conversation view first (showConversation).
+New registrationCompletedCallback callback parameter will be called back when registration to LPPusher is succeed or failed</td>
+  </tr>
+  <tr>
+    <td>public static void getEngagement(Context context, @Nullable ArrayList&lt;LPMonitoringIdentity&gt; identities,                            MonitoringParams monitoringParams, EngagementCallback callback)</td>
+    <td>List&lt;LPMonitoringIdentity&gt; replaced previous consumerId parameter - an array of identity objects of type LpMonitoringIdentity which includes the details of the consumer</td>
+  </tr>
+  <tr>
+    <td>public static void sendSde(Context context, @NonNull ArrayList&lt;LPMonitoringIdentity&gt; identities,
+@NonNull MonitoringParams monitoringParams, SdeCallback callback)</td>
+    <td>List&lt;LPMonitoringIdentity&gt; replaced previous consumerId parameter - an array of identity objects of type LpMonitoringIdentity which includes the details of the consumer</td>
+  </tr>
+  <tr>
+    <td>Class LPMonitoringIdentity</td>
+    <td>A new class that contains String consumerId, String issuer to provide identities to the new getEngagement() and sendSde() methods (Monitoring API)</td>
+  </tr>
+  <tr>
+    <td>LPAuthenticationType → Added new enum instance to LPAuthenticationParams</td>
+    <td>This enum is used for determine the authentication type with the following options:
+SIGN_UP (default) // old unauthenticated method. Will be deprecated on Jun 2019
+UN_AUTH
+AUTH</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Deprecated APIs
+
+<table>
+<thead>
+  <tr>
+    <th>API</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>@Deprecated
+public static void registerLPPusher(String brandId, String appId, String gcmToken)</td>
+    <td>See new APIs for the new API</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Removed APIs
+
+<table>
+<thead>
+  <tr>
+    <th>API</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>public static void getEngagement(Context context, @Nullable String consumerId
+MonitoringParams monitoringParams, EngagementCallback callback)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>public static void sendSde(Context context, @NonNull String consumerId,
+@NonNull MonitoringParams monitoringParams, SdeCallback callback)</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Configurations
+
+#### Experience and Branding Enhancements
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Default Value</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>is_enable_enlarge_emojis</td>
+    <td>When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>conversation_background</td>
+    <td>Sets the conversation background image</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Link Preview
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Default Value</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>agent_bubble_link_preview_background_stroke_color</td>
+    <td>The border color of the link preview bubble sent by the agent.</td>
+    <td>#EDEDED
+</td>
+  </tr>
+  <tr>
+    <td>agent_bubble_link_preview_background_stroke_width</td>
+    <td>The border width of the link preview bubble sent by the agent.</td>
+    <td>1dp
+</td>
+  </tr>
+  <tr>
+    <td>consumer_bubble_link_preview_background_stroke_color</td>
+    <td>The border color of the link preview bubble sent by the consumer.</td>
+    <td>#EDEDED</td>
+  </tr>
+  <tr>
+    <td>consumer_bubble_link_preview_background_stroke_width</td>
+    <td>The border width of the link preview bubble sent by the consumer.
+</td>
+    <td>1dp</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Structured Content
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Default Value</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>structured_content_bottom_right_radius</td>
+    <td>Sets the radius of the bottom right corner radius of structured content card. </td>
+    <td>0dp </td>
+  </tr>
+  <tr>
+    <td>structured_content_top_left_radius</td>
+    <td>Configuration for top left corner radius of structured content card. </td>
+    <td>0dp </td>
+  </tr>
+  <tr>
+    <td>structured_content_top_right_radius</td>
+    <td>Configuration for top right corner radius of structured content card. </td>
+    <td>0dp </td>
+  </tr>
+  <tr>
+    <td>structured_content_bottom_left_radius</td>
+    <td>Configuration for bottom left corner radius of structured content card. </td>
+    <td>0dp </td>
+  </tr>
+  <tr>
+    <td>structured_content_background_color
+</td>
+    <td>The background color of structured content card</td>
+    <td>#FFFFFF</td>
+  </tr>
+  <tr>
+    <td>conversation_background
+</td>
+    <td>The background image of conversation screen</td>
+    <td>No value</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Audio Messaging
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Default Value</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>lp_record_max_time_seconds</td>
+    <td>Maximum voice recording time in seconds</td>
+    <td>120 seconds</td>
+  </tr>
+  <tr>
+    <td>max_number_stored_voice_files</td>
+    <td>Maximum number of voice files stored on the device</td>
+    <td>20 messages</td>
+  </tr>
+  <tr>
+    <td>enable_voice_sharing</td>
+    <td>Enable/disable voice sharing</td>
+    <td>false</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Quick Replies
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Default Value</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>lpui_quick_reply_button_vertical_padding</td>
+    <td>Quick Replies button padding above and below the button text</td>
+    <td>12dp</td>
+  </tr>
+  <tr>
+    <td>lpui_quick_reply_button_horizontal_padding</td>
+    <td>Quick Replies button padding on right and left of button text</td>
+    <td>12dp</td>
+  </tr>
+  <tr>
+    <td>lpui_quick_reply_button_vertical_margin</td>
+    <td>Quick Replies button margin below</td>
+    <td>12dp</td>
+  </tr>
+  <tr>
+    <td>lpui_quick_reply_button_horizontal_margin</td>
+    <td>Quick Replies button margin to the right</td>
+    <td>8dp</td>
+  </tr>
+  <tr>
+    <td>lpui_quick_reply_button_border_width</td>
+    <td>Quick Replies button border width</td>
+    <td>1dp</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Deprecated Configurations
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Default Value</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>enter_message_divider_visible</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Strings Localization
+
+#### Audio Messaging
+
+<table>
+<thead>
+  <tr>
+    <th>Key</th>
+    <th>Description</th>
+    <th>Default text</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>lp_accessibility_voice</td>
+    <td>Accessibility on the mic button</td>
+    <td>"Voice"</td>
+  </tr>
+  <tr>
+    <td>lp_mic_tooltip_long_press</td>
+    <td>Tooltip shown when short tapping the mic button. </td>
+    <td>“Long tap to record”</td>
+  </tr>
+  <tr>
+    <td>lp_mic_tooltip_release</td>
+    <td>Tooltip shown when keeping mic tapped.</td>
+    <td>“Release for recording”</td>
+  </tr>
+  <tr>
+    <td>lp_mic_tooltip_max_recording</td>
+    <td>Tooltip shown when the maximum recording time reached.</td>
+    <td>“Recording limit has been reached, click to send”</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Unauthenticated In-App Messaging
+
+<table>
+<thead>
+  <tr>
+    <th>Key</th>
+    <th>Description</th>
+    <th>Default text</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>lp_new_unauth_user_dialog_title
+</td>
+    <td>The title of the presented dialog when the identity is expired.</td>
+    <td>"New Conversation"</td>
+  </tr>
+  <tr>
+    <td>lp_new_unauth_user_dialog_message
+</td>
+    <td>The body of the presented dialog when the identity is expired.</td>
+    <td>“Hi there! As we haven't seen you for a while, we're opening a new conversation for you”</td>
+  </tr>
+  <tr>
+    <td>lp_new_unauth_user_dialog_positive_button
+</td>
+    <td>The button of the presented dialog when the identity is expired.</td>
+    <td>“Ok”</td>
+  </tr>
+</tbody>
+</table>
+
+
+#### Quick Replies
+
+<table>
+<thead>
+  <tr>
+    <th>Key</th>
+    <th>Description</th>
+    <th>Default text</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>lpmessaging_ui_quick_replies_section</td>
+    <td>Accessibility string when hovering on the Quick Replies control</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>lpmessaging_ui_quick_replies_button_content_description
+</td>
+    <td>Accessibility string when hovering on the Quick Replies button
+</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+
+### Features Enablement Chart
+
+<table>
+<thead>
+  <tr>
+    <th>Feature</th>
+    <th>Backend update</th>
+    <th>Backend enablement</th>
+    <th>Backend configuration </th>
+    <th>SDK enablement </th>
+    <th>SDK configuration </th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>Audio Messaging</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Unauthenticated Messaging</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Quick Replies</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Structured Content Carousel</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Branding Enhancements</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody>
+</table>
+
 ### Android Messaging SDK -  Version 3.1
 
-These are the main feature releases available in the **In-App Messaging SDK version 3.1 for Android**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 3.1 for Android**.
 
 **Version 3.1 planned roll-out: March 18h 2018**
 
@@ -165,7 +738,7 @@ The following additional conditions and configurations are required:*
 
 New APIs will give brands control over the conversations presented in the conversation window. For example, brands can choose to present only the last 180 days of conversation history.
 
-These APIs can be used together with getEngagment (Monitoring APIs) to decide how to present  conversations history according to whether there is an open conversation or not. For example, if there is no open conversation, brands can present a ‘View conversation history’ button which will present only the closed conversations from the last 180 days.
+These APIs can be used together with getengagement (Monitoring APIs) to decide how to present  conversations history according to whether there is an open conversation or not. For example, if there is no open conversation, brands can present a ‘View conversation history’ button which will present only the closed conversations from the last 180 days.
 
 The new APIs allows:
 
@@ -259,7 +832,7 @@ The following additional conditions and configurations are required:*
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v3.1 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v3.1 exposes additional branding configuration parameters.
 
 The new parameters may control text, padding of conversation UI elements and more.
 
@@ -353,7 +926,7 @@ should be set to true</td>
 
 ##### Adding Support for Android O
 
-In-app messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
+Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
 
 ##### Wrapping Text in Edit Text Box
 
@@ -361,7 +934,7 @@ Parity with iOS in the Edit Text box.  The max lines is declared at 3. meaning w
 
 ##### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 <table>
 <thead>
@@ -403,7 +976,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 **SDK configuration**: This features requires items to be configured in the SDK.
 
 
-**In-App Messaging SDK version 3.0 **.
+**Mobile App Messaging SDK version 3.0 **.
 
 #### New functionalities
 
@@ -428,7 +1001,7 @@ The following additional conditions and configurations are required:
 
 #### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 <table>
 <thead>
@@ -481,7 +1054,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v3.0 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v3.0 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
@@ -572,7 +1145,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 ### Android Messaging SDK -  Version 2.9
 
-These are the main feature releases available in the In-App Messaging SDK version 2.9 for Android.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.9 for Android.
 
 Version 2.9 planned roll-out: November 12th 2017
 
@@ -586,9 +1159,9 @@ Version 2.9 planned roll-out: November 12th 2017
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 was built and certified within the host app on Android API level 26.
+The Mobile App Messaging SDK v2.9 was built and certified within the host app on Android API level 26.
 
-The In-app Messaging SDK should remain on Android API level 25, while the host app may use Android API level 26.
+The Mobile App Messaging SDK should remain on Android API level 25, while the host app may use Android API level 26.
 
 **Important:**
 
@@ -602,7 +1175,7 @@ The SDK Android API level should remain on level 25. Please do not change SDK An
 
 **Available to all customers?** Yes
 
-The In-app Messaging SDK v2.9 exposes additional branding configuration parameters.
+The Mobile App Messaging SDK v2.9 exposes additional branding configuration parameters.
 
 New parameters may control text, padding of conversation UI elements and more.
 
@@ -690,7 +1263,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 ### Android Messaging SDK -  version 2.8
 
-These are the main feature releases available in the In-App Messaging SDK version 2.8 for Android.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.8 for Android.
 
 Version 2.8 roll-out: October 3rd 2017
 
@@ -874,7 +1447,7 @@ To use this API, the SDK must be after initialization.
 
 ### Android Messaging SDK -  version 2.5
 
-These are the main feature releases available in the In-App Messaging SDK version 2.5 for Android.
+These are the main feature releases available in the Mobile App Messaging SDK version 2.5 for Android.
 
 Version 2.5 roll-out: July 2nd 2017
 
@@ -924,7 +1497,7 @@ _Related APIs_: LivePersonIntents API
 | N/A | N/A | N/A | N/A | N/A |
 
 ##### Tablet supportability
-To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, in-app messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
+To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, Mobile App Messaging is now supported on these devices, in window mode and activity mode, and in both portrait and landscape layouts.
 
 All supported devices have gone through automation tests and all certified devices have gone through both automation and manual testing.
 
@@ -943,7 +1516,7 @@ Tablet Portrait Mode
 Tablet Landscape Mode
 
 ##### List of certified and supported devices extended
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 | Device | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
 | ------------ | ------------ | ------------ | ------------ |
@@ -986,7 +1559,7 @@ The following properties of the secure form bubble on the agent side can now be 
 
 
 ### Android Messaging SDK -  version 2.3
-These are the main feature releases available in the **In-App Messaging SDK version 2.3 for Android**.
+These are the main feature releases available in the **Mobile App Messaging SDK version 2.3 for Android**.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
 
@@ -1013,9 +1586,9 @@ When there are unread messages waiting for the consumer within the brand app, th
 Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
 
-#### Secure form for in-app messaging
+#### Secure form for Mobile App Messaging
 
-The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the in-app messaging experience and has a time-out expiry, for added security.
+The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
 _This feature requires consulting services support. For more information, please refer to the LiveEngage ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf){:target="_blank"}_.
 
@@ -1027,7 +1600,7 @@ Related strings: PCI
 
 #### List of certified and supported devices extended
 
-The following devices are now also supported and/or certified to host our in-app messaging SDK:
+The following devices are now also supported and/or certified to host our Mobile App Messaging SDK:
 
 **Mobile**
 

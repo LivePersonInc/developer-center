@@ -1,14 +1,14 @@
 ---
 title: Troubleshooting
-level1:
+level1: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Webhooks
-order: 50
-indicator: both
+order: 51
+indicator: messaging
 permalink: webhooks-troubleshooting.html
 ---
 
 ### Overview
 
-Disclaimers, general guidelines, other notes. More information coming here soon. Stay tuned!
+General guidelines and more information coming here soon. Stay tuned!

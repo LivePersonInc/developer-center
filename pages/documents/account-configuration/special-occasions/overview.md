@@ -1,11 +1,10 @@
 ---
 title: Overview
 keywords:
-level1: Documents
+level1:
 level2: Account Configuration
 level3: Special Occasions API
-
-level-order: 1
+level-order: 9
 order: 1
 permalink: account-configuration-special-occasions-overview.html
 root-link: true
@@ -16,6 +15,8 @@ indicator: messaging
 The Special occasions API allows you to configure specific dates in which there is an exception to the hours of operation defined by the [Workdays API](account-configuration-workdays-overview.html) or through the LiveEngage UI. The expected behavior on the visitor side as far as automated messages and time to response is exactly the same as Workdays. Therefore, it is advised to read the Workdays documentation before working with this API.
 
 **Note**: Special occasions **do not** modify hours of operation defined by Workdays but instead, overwrite them. This means that if you set a 09:00-12:00 for Monday, May 15th (for example) workdays object and a special occasion for 16:00-22:00 Monday, May 15th, the hours of operation will be 16:00-22:00 for this date.
+
+**Note**: Use the [Skills API](/administration-skills-appendix.html) to set the specialOccasionId for the skill.
 
 ### Getting Started
 

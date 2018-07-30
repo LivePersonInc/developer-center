@@ -2,7 +2,7 @@
 title: Web Session
 level1: Documents
 level2: Data
-level3: Data Access API (BETA)
+level3: Data Access API
 level4: Methods
 order: 30
 permalink: data-data-access-web-session.html
@@ -129,6 +129,8 @@ JSON Example
                                            "companySize": null,
                                            "accountName": null,
                                            "role": null,
+                                           "storeZipCode":null,
+                                           "storeNumber":null,
                                            "lastPaymentDate": null,
                                            "registrationDate": null
                                        }
@@ -971,7 +973,7 @@ The following table describes the information available in the goal achieved dat
 
 ###  Engagement Attributes
 
-Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via LiveEngage. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](https://developers.liveperson.com/engagment-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
+Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via LiveEngage. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](https://developers.liveperson.com/engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
 
 **Header**
 
@@ -1041,6 +1043,9 @@ Here is a description of the data structure of the existing engagement attribute
 | role | User role in the organization. | string |
 | lastPaymentDate | User’s last payment date (in YMDDate format). | Date |
 | registrationDate | User’s registration date (in YMDDate format). | Date |
+| storeNumber | The store's number | String |
+| storeZipCode |The store's zip code | String |
+
 
 #### YMDDate
 

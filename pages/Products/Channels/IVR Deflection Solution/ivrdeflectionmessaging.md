@@ -37,7 +37,7 @@ Prior to implementation, there are a few things which need to be analyzed and pr
 
 ### Implementation options
 
-IVR deflection scenarios can be implemented in many different ways, and with different solutions such as SMS, Facebook Messenger or even in-app messaging. The right solution can be chosen based on the use-case, target market and available technologies.
+IVR deflection scenarios can be implemented in many different ways, and with different solutions such as SMS, Facebook Messenger or even Mobile App Messaging. The right solution can be chosen based on the use-case, target market and available technologies.
 
 The in-app based solution means that the consumer will be offered to continue the conversation in your mobile app. The app is the ideal channel for communication as it drives the highest engagement and allows for a more personal and dedicated experience.
 
@@ -98,11 +98,11 @@ For the complete Twilio Rest API documentation please refer to:
 
 [https://www.twilio.com/docs/api/rest](https://www.twilio.com/docs/api/rest){:target="_blank"}
 
-### Implementing IVR Deflection with In-app Messaging
+### Implementing IVR Deflection with Mobile App Messaging
 
 The best approach for implementing deflection is to do so within the brand’s app.  It drives traffic to the app where additional self-service tools can be offered and, in most cases, it also leads to highest consumer engagement.
 
-Implementing the flow with in-app messaging means the consumer will receive a push notification if he accepts the deflection offer in the IVR. In order to achieve this, the IVR should connect to your brand’s push notification service and trigger the push message with the relevant deflection message. This integration should be relatively straightforward and based on the technology used within the company.
+Implementing the flow with Mobile App Messaging means the consumer will receive a push notification if he accepts the deflection offer in the IVR. In order to achieve this, the IVR should connect to your brand’s push notification service and trigger the push message with the relevant deflection message. This integration should be relatively straightforward and based on the technology used within the company.
 
 Since not all consumers have the app, the best practice would be to send push notifications only to active users (or consumers that have already enrolled for your mobile app, even if they are not actively using it), and use SMS and Facebook Messenger for all the others. This requires a development effort for querying a database that includes this information on the consumer’s base.
 

@@ -3,7 +3,7 @@ title: Overview
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 
 level-order: 2
 order: 0
@@ -22,9 +22,9 @@ indicator: messaging
 
 **Add messaging directly within your app to enjoy the following benefits:**
 
-* In-app messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation. 
+* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation. 
 
-* Increase the stickiness of your app through the added value of in-app messaging.
+* Increase the stickiness of your app through the added value of Mobile App Messaging.
 
 * Push notifications ensure your consumers never miss a new message.
 
@@ -34,4 +34,4 @@ indicator: messaging
 
 <img src="img/inappoverviewandroid1.png" alt="InAppOverviewAndroid1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverviewandroid2.png" alt="InAppOverviewAndroid2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverviewandroid3.png" alt="InAppOverviewAndroid3" style="max-width:230px;max-height:700px;">
 
-For guidance on considerations and how to get started with in-app messaging, [click here](products-channels-inapp-messaging.html){:target="_blank"}.
+For guidance on considerations and how to get started with Mobile App Messaging, [click here](products-channels-inapp-messaging.html){:target="_blank"}.

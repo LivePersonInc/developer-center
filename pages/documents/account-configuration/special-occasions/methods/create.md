@@ -1,7 +1,7 @@
 ---
 title: Create
 Keywords:
-level1: Documents
+level1:
 level2: Account Configuration
 level3: Special Occasions API
 level4: Methods
@@ -64,7 +64,7 @@ For details on the entity structure, please see the appendix [link](https://lpgi
 
 **'isDefault' entity state**
 
-The `isDefault` field determines whether a special occasions object is the default for the entire account. Only one object can be set as the default for each account. **Note**: if you set more than one special occasions object as default, LivePerson validation will set the previous default value to false on the server side.
+The `isDefault` field determines whether a special occasions object is the default for the entire account. Only one object can be set as the default for each account. **Note**: if you create a new special occasions object with an `isDefault` key set to true when there's already a special occasions object set as a default for the account, LivePerson validation will set the new object created as the default.
 
 **Path Parameters**
 
@@ -117,7 +117,9 @@ The `isDefault` field determines whether a special occasions object is the defau
               "dateTime": "2018-03-27T13:00:00",
               "timeZone": "Europe/Zurich"
           },
-          "recurrence": []
+          "recurrence": [
+            
+          ]
       }
   ]
 }

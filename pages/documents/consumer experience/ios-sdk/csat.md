@@ -3,7 +3,7 @@ title: CSAT Behavior
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for iOS
+level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features
 
 order: 233
@@ -32,16 +32,40 @@ The CSAT view is dismissed in one of four cases:
 - The CSAT is automatically dismissed if it was filled in any other device.
 - If agent resumed the conversation while csat is visible - it will automatically dismissed.
 
+<div class="important">
+Important:
+</div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+```swift
+if (self.conversationQuery != nil && self.isMovingToParentViewController){
+    LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+}
+```
+
+**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+
 ### CSAT UI content
 
 CSAT screen includes several content containers:
 
 **Agent View (avatar and agent name)**
 
-- Could be hidden or not according to `LPConfig.defaultConfiguration.csatAgentViewHidden`
+- Could be hidden or not using:
+
+```swift
+LPConfig.defaultConfiguration.csatAgentViewHidden
+```
+
 - Contains agent avatar:
 	- If conversation has assigned agent and its image was downloaded previously using profileUrl, this image will be presented in the view.
-	- If no image available, default avatar is presented. It’s background and tint color is according to agent bubble with `LPConfig.defaultConfiguration.csatAgentAvatarBackgroundColor`  and `LPConfig.defaultConfiguration.csatAgentAvatarIconColor`
+	- If no image available, default avatar is presented. Its background and tint color can be set accordingly to agent bubble using:
+
+```swift
+LPConfig.defaultConfiguration.csatAgentAvatarBackgroundColor
+LPConfig.defaultConfiguration.csatAgentAvatarIconColor
+```
+
 - Contains agent name:
 	- By default it’s an empty label.
 	- If conversation has assigned agent, the agent’s nickName will be used.
@@ -49,11 +73,25 @@ CSAT screen includes several content containers:
 **Rating Question View (stars)**
 
 - Always visible - can’t configure its visibility. 
-- Stars color is defined by `LPConfig.defaultConfiguration.csatRatingButtonSelectedColor`
+- Stars color is defined by:
+
+```swift
+LPConfig.defaultConfiguration.csatRatingButtonSelectedColor
+```
+
 - Rating question includes 'Agent’ by default in the text. If conversation has assigned agent and the agent’s nickName is not empty, this nickName will be used instead.
 
 **Resolution Confirmation View (yes/no)**
 
-- Could be hidden or not according to `LPConfig.defaultConfiguration.csatResolutionHidden`
-- If agentView is shown ("`csatAgentViewHidden`"), this view will be always hidden (even if "`csatResolutionHidden`" is set to true)
-- All titles colors defined with `LPConfig.defaultConfiguration.csatAllTitlesTextColor`
+- Could be hidden or not using:
+
+```swift
+LPConfig.defaultConfiguration.csatResolutionHidden
+```
+
+- If agentView is shown ("**csatAgentViewHidden**"), this view will be always hidden (even if "**csatResolutionHidden**" is set to true)
+- All titles colors defined with:
+
+```swift
+LPConfig.defaultConfiguration.csatAllTitlesTextColor
+```

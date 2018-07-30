@@ -1,18 +1,18 @@
 ---
-title: Update an Unified Automatic Message
+title: Delete an Unified Automatic Message
 Keywords:
 level1: Documents
 level2: Account Configuration
 level3: Unified Automatic Messages API
 level4: Methods
 
-order: 30
-permalink: account-configuration-unified-automatic-messages-update-an-automatic-message.html
+order: 40
+permalink: account-configuration-unified-automatic-messages-delete-an-automatic-message.html
 
 indicator: both
 ---
 
-Updates an existing Unified Automatic Message for a specific account.
+Deletes an existing Unified Automatic Message for a specific account.
 
 ### Request
 
