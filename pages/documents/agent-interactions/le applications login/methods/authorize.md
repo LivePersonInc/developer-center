@@ -31,7 +31,7 @@ indicator: both
 | response_type | The grant type desired by the client  | String| Required | value must be set to "code" |
 | client_id | Installation id provided after application registration (see the Overview for more info)  | String| Required |  |
 | redirect_uri | The client's redirection endpoint. The redirection's end point is provided by the application during the application registration (see the Overview for more info)| String| Required |Note that according to OAUTH 2.0 rfc, if only one redirection endpoint is provided in the application registration, this parameter is optional. However if more than one redirection endpoint is provided in the registration, then this parameter is required|
-| state | An opaque value used by the client to maintain state between the request and callback | String| Optional |  |
+| state | An arbitrary value used by the client to maintain state between the request and callback. You can use this parameter to help your application identify the authorize | String| Optional |  |
 
 ### Response
 
