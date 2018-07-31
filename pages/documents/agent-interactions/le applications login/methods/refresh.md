@@ -1,14 +1,12 @@
 ---
-title: refresh endpoint
+title: Refresh Endpoint
 Keywords:
 level1: Documents
 level2: Agent Interactions
 level3: LE Applications Login
 level4: Methods
-
 order: 10
-permalink: login-getting-started.html
-
+permalink: le-applications-login-methods-refresh-endpoint.html
 indicator: both
 ---
 
@@ -40,6 +38,7 @@ indicator: both
 | client_secret | secret provided after application registration| String| Required |  |
 
 Example:
+
 client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZQQYbYS6WxSbIA
 
 
@@ -58,10 +57,12 @@ client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZ
 
 Example:
 
+```json
     {
       "access_token": "9cf6ee24b6a1031e202f292a0ad20c8f52bfd9f01abc8b9489365995052c6603",
       "token_type": "Bearer",
       "refresh_token": "a3e5c67af5d8f75034cf23aed24bcfb0d397d6896fe25d5043cce0bd5972639e3ad2d198730ab80959ecf7dcc3c54d07cfd4fc22cb4e1f406e673dc814da84133b7f4ff2bfb800128c"
     }
+```
 
 *Note: Response contains refresh token to be used when making a refresh request.*

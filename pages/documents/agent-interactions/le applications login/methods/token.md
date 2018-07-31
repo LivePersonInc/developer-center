@@ -1,5 +1,5 @@
 ---
-title: token endpoint
+title: Token Endpoint
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -7,7 +7,7 @@ level3: LE Applications Login
 level4: Methods
 
 order: 10
-permalink: agent-user-login.html
+permalink: le-applications-login-methods-token-endpoint.html
 
 indicator: both
 ---
