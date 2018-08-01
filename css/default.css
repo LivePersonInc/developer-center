@@ -58,6 +58,11 @@ pre {
     align-items: center;
   }
 
+  .defaultheader img {
+      width: 27px;
+  }
+
+
   .defaultsidebar {
     grid-column: 1 / span 2;
     grid-row: 1 / span 11;
