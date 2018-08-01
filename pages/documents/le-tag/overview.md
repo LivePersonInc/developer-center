@@ -3,7 +3,7 @@ title: Overview
 redirect_from:
   - lp-tag-tag-events-overview.html
 level1: Documents
-level2: Account Configuration
+level2: Consumer Information
 level3: LE-Tag
 
 level-order: 3

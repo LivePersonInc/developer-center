@@ -3,7 +3,7 @@ title: How to use LiveEngage Tag Events
 redirect_from:
   - lp-tag-tag-events-how.html
 level1: Documents
-level2: Account Configuration
+level2: Consumer Information
 level3: LE-Tag
 
 order: 2

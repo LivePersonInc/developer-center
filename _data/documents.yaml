@@ -36,9 +36,6 @@
     - pagename: HTTP Response Codes
     - pagename: Configuration of Push Proxy
     - pagename: IP Whitelisting
-  - documentname: Conversation Metadata Guide
-    pages:
-    - pagename: Overview
   - documentname: Retry and KeepAlive Best Practices
     pages:
     - pagename: Overview
@@ -194,6 +191,17 @@
       - subpagename: Using LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
       - subpagename: Using LivePerson SDK - Android - Manual
+  - documentname: Engagement Window Widget SDK
+    pages:
+      - pagename: Overview
+      - pagename: Limitations
+      - pagename: Instructions
+        subpages:
+          - subpagename: Configuration
+          - subpagename: How to Use the SDK
+          - subpagename: Event Structure
+          - subpagename: Code Examples
+      - pagename: Release Notes
   - documentname: Voice and Video for iOS SDK (BETA)
     pages:
     - pagename: Overview
@@ -356,6 +364,7 @@
       - pagename: Overview
       - pagename: Examples
       - pagename: Release Notes
+      - pagename: Conversation Metadata Guide
   - documentname: Chat Agent API
     pages:
       - pagename: Overview
@@ -407,7 +416,7 @@
           - subpagename: Logout
   image: agent-interaction
 
-- categoryname: Data
+- categoryname: Data and Reporting
   documents:
   - documentname: Data Access API
     pages:
@@ -482,9 +491,16 @@
           - subpagename: Create Deletion Request
           - subpagename: Cancel Deletion Request
           - subpagename: Get Deletion Requests
+  - documentname: Audit Trail API
+    pages:
+      - pagename: Introduction
+      - pagename: Methods
+        subpages:
+          - subpagename: Retrieve Audit Trail Records
+          - subpagename: Export Audit Trail to CSV File
   image: data
 
-- categoryname: Real Time Interactions
+- categoryname: Consumer Information
   documents:
   - documentname: Monitoring API
     pages:
@@ -504,17 +520,16 @@
           - subpagename: Update Session
       - pagename: Impression Events Body Example
       - pagename: Changelog
-  - documentname: Engagement Window Widget SDK
+  - documentname: LE-Tag
     pages:
       - pagename: Overview
-      - pagename: Limitations
-      - pagename: Instructions
+      - pagename: How to Use LiveEngage Tag Events
+      - pagename: Events
         subpages:
-          - subpagename: Configuration
-          - subpagename: How to Use the SDK
-          - subpagename: Event Structure
-          - subpagename: Code Examples
-      - pagename: Release Notes
+          - subpagename: Visitor Flow Events
+          - subpagename: Engagement Events
+          - subpagename: Engagement Window Events
+      - pagename: Changelog
   - documentname: Validate Engagement API
     pages:
       - pagename: Overview
@@ -591,16 +606,6 @@
           - subpagename: Delete Multiple Categories
           - subpagename: Import Account Categories
           - subpagename: Import Categories Pre Validation
-  - documentname: LE-Tag
-    pages:
-      - pagename: Overview
-      - pagename: How to Use LiveEngage Tag Events
-      - pagename: Events
-        subpages:
-          - subpagename: Visitor Flow Events
-          - subpagename: Engagement Events
-          - subpagename: Engagement Window Events
-      - pagename: Changelog
   - documentname: Automatic Messages API
     pages:
       - pagename: Overview
@@ -609,13 +614,6 @@
         - subpagename: Get Automatic Messages
         - subpagename: Get Automatic Messages by ID
         - subpagename: Update an Automatic Message
-  - documentname: Audit Trail API
-    pages:
-      - pagename: Introduction
-      - pagename: Methods
-        subpages:
-          - subpagename: Retrieve Audit Trail Records
-          - subpagename: Export Audit Trail to CSV File
   - documentname: Agent Status Reason API
     pages:
       - pagename: Overview
@@ -628,7 +626,7 @@
           - subpagename: Delete Status Reason
   image: account-configuration
 
-- categoryname: Administration
+- categoryname: Agent Management
   documents:
   - documentname: Users API
     pages:

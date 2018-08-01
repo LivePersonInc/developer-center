@@ -4,7 +4,7 @@ redirect_from:
   - lp-tag-tag-events-changelog.html
 Keywords:
 level1: Documents
-level2: Account Configuration
+level2: Consumer Information
 level3: LE-Tag
 order: 231
 permalink: le-tag-changelog.html

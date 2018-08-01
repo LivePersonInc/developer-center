@@ -13,13 +13,11 @@ order: 1
 indicator: both
 ---
 
-Agents often need to access external systems while they are working in the agent workspace, and to do so, they need to open additional tabs or browsers. Now, you can
-integrate external systems right into the agent workspace, allotting them their own widget next to the standard widgets.
+Agents often need to access external systems while they are working in the agent workspace, and to do so, they need to open additional tabs or browsers. Now, you can integrate external systems right into the agent workspace, allotting them their own widget next to the standard widgets.
 
 The integration allows you to transfer information directly from the Visit Info to external web pages and applications, and to open relevant records in your system. For example, add a SalesForce widget to view your visitor’s Salesforce records.
 
-In addition, external web page fields can be pre-populated with visitor information, for example, you can pass the Visitor’s name and email parameters from the pre-chat survey
-into the application to pre-populate specific fields.
+In addition, external web page fields can be pre-populated with visitor information, for example, you can pass the Visitor’s name and email parameters from the pre-chat survey into the application to pre-populate specific fields.
 
 The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Engagement History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
 
@@ -71,8 +69,9 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 <img src="img/visit_info_parameters.png" alt="VisitInfoParameters" width="596" height="790">
 
-### using the data in the widget
-In order to use the data sent to the widget, you can query the page **URL QueryString** using the [URLSearchParams API](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) or analaysing the window **location** property manually.
+### Using the data in the widget
+
+In order to use the data sent to the widget, you can query the page **URL QueryString** using the [URLSearchParams API](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) or analyze the window **location** property manually.
 
 ### Edit an Existing Widget
 
