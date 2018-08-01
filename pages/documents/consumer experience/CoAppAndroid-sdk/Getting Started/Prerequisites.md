@@ -15,7 +15,7 @@ LivePerson Voice & Video is an SDK (_Source Development Kit_) for the **Google A
 
 ### Dependencies
 
-The SDK requires our LivePerson [**Messaging SDK**](https://developers.liveperson.com/android-overview.html){:target="_blank"} integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
+The SDK requires our LivePerson [**Messaging SDK**](android-overview.html){:target="_blank"} integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
 
 Please make sure your app meets the following minimal requirements:
 

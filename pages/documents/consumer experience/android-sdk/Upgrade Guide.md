@@ -64,12 +64,12 @@ dependencies {
 
 LP Messaging SDK 2.7 introduced new versions of the `LivePerson.showConversation()` and `LivePerson.getConversationFragment()` methods.
 
-As such if you are upgrading from any version older than 2.7.0, or if you are still using the deprecated methods in a 2.7.x+ application, you will need to adjust how you show the conversation activity or fragment by passing in a [`LPAuthenticationParams`](https://developers.liveperson.com/android-interface-definitions.html#lpauthenticationparams)  object and a `ConversationViewParams` object:
+As such if you are upgrading from any version older than 2.7.0, or if you are still using the deprecated methods in a 2.7.x+ application, you will need to adjust how you show the conversation activity or fragment by passing in a [`LPAuthenticationParams`](android-interface-definitions.html#lpauthenticationparams)  object and a `ConversationViewParams` object:
 
 `new ConversationViewParams(boolean readOnlyMode)`
 
 
-- `LivePerson.showConversation()` - [documentation](https://developers.liveperson.com/android-methods.html#showconversation-with-full-authentication-support)
+- `LivePerson.showConversation()` - [documentation](android-methods.html#showconversation-with-full-authentication-support)
 
 ```java
 	if (cbAuth.isChecked()) {
@@ -81,7 +81,7 @@ As such if you are upgrading from any version older than 2.7.0, or if you are st
 	}
 ```
 
-- `LivePerson.getConversationFragment()` - [documentation](https://developers.liveperson.com/android-methods.html#getconversationfragment-with-full-authentication-support)
+- `LivePerson.getConversationFragment()` - [documentation](android-methods.html#getconversationfragment-with-full-authentication-support)
 
 ```java
 	if (cbAuth.isChecked()) {

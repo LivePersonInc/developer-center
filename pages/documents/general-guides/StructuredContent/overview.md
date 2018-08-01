@@ -20,7 +20,7 @@ Our solution allows to send messages (both Chat messages and "pure" Messaging) i
 
 You can use [this tool](https://livepersoninc.github.io/json-pollock/editor/) to render your JSON in advance and get a sense of how your card will look. For more information on how this tool works, please see [this document](rich-messaging-structured-content-pollock.html).
 
-Below, you can find specifications for each element of a Structured Content card. To view a complete example of a card, please scroll to the bottom of the document or [click here](https://developers.liveperson.com/structured-content-templates.html#json-examples) to view the examples.
+Below, you can find specifications for each element of a Structured Content card. To view a complete example of a card, please scroll to the bottom of the document or [click here](structured-content-templates.html#json-examples) to view the examples.
 
 ### Specifications
 

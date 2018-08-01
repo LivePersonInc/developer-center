@@ -110,6 +110,6 @@ In the payload, put something similar to the below:
 }
 ```
 
-For a full list of values that can be passed here, please refer to the [Authentication](https://developers.liveperson.com/guides-authentication-detailedapi.html) document.
+For a full list of values that can be passed here, please refer to the [Authentication](guides-authentication-detailedapi.html) document.
 
 {% include links.html %}

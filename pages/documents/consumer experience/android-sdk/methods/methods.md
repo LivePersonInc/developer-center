@@ -71,8 +71,8 @@ _**Note:** Usually this means that the LivePerson backend will verify the authen
 
 <div class="important">
 Optional:
-</div>
-When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+
+When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)</div>
 
 {:start="2"}
  2. with jwt - new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
@@ -197,8 +197,8 @@ There are 2 authenticated connection methods:
 
 _**Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail._
 
-<div class="important"> Optional: </div>
-When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+<div class="important"> Optional:
+When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)</div>
 
 {:start="2"}
  2. with jwt - new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
@@ -408,9 +408,9 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 
 <div class="important">
 Important:
-</div>
 
-**The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.**
+
+**The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.**</div>
 
 
 ### handlePush (Deprecated)
@@ -629,9 +629,9 @@ In order to unregister from push, it must be called when there is network availa
 
 <div class="important">
 Important:
-</div>
 
-**This method must not be called when the conversation screen is displayed.**
+
+**This method must not be called when the conversation screen is displayed.**</div>
 
 ```swift
 public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback){

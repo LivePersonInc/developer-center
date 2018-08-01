@@ -44,7 +44,15 @@ algoliaOptions: {
   hitsPerPage: 50
 },
 autocompleteOptions: {
-  openOnFocus: true
+  openOnFocus: true,
+  templates: {
+     //'suggestion' templating function used to render a single suggestion
+     suggestion: function(suggestion) {
+       if (suggestion._highlightResult.content && suggestion._highlightResult.title) {
+         return '<span>' + '<a  class="searchlink" href="' + suggestion.permalink +'">' + suggestion._highlightResult.title.value + '</a> </span>' + '<br />' + '<span>' + '<a  class="searchlinktext" href="' + suggestion.permalink +'">' +  suggestion._highlightResult.content.value + '</a> </span>';
+       };
+     }
+ }
 }
 });
 

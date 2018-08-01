@@ -975,7 +975,7 @@ The following table describes the information available in the goal achieved dat
 
 ###  Engagement Attributes
 
-Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via LiveEngage. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](https://developers.liveperson.com/engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
+Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via LiveEngage. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
 
 **Header**
 

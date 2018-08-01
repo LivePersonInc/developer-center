@@ -1,14 +1,14 @@
 ---
-title: Overview
+title: Conversation Metadata Guide
 redirect_from:
   - guides-conversation-metadata-guide.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
-level3: Conversation Metadata Guide
+level3: Messaging Agent SDK
 level-order: 10
 order: 10
-permalink: conversation-metadata-guide-overview.html
+permalink: messaging-agent-sdk-conversation-metadata-guide.html
 root-link: true
 indicator: messaging
 ---
@@ -26,7 +26,7 @@ The information can be used to achieve the following:
 * Analyze the messaging conversation, the bot and the content that was presented to the consumer.
 
 
-To get started, refer to the [Messaging Agent SDK](https://developers.liveperson.com/messaging-agent-sdk-overview.html) documentation.
+To get started, refer to the [Messaging Agent SDK](messaging-agent-sdk-overview.html) documentation.
 
 ### Available metadata
 
@@ -221,7 +221,7 @@ Structured content identifier metadata is used to both identify a specific "Card
 
 A bot as an agent manages conversations with consumers, analyzes their intent based on their input, assists them or transfers them to a human agent.
 
-The bot consumer input analysis information can be passed as metadata on the bot response (publishEvent/[Add line](https://developers.liveperson.com/agent-add-lines.html) method). This be used as a useful to analyze the bot performance and help Agent Managers to monitor the conversation flow.
+The bot consumer input analysis information can be passed as metadata on the bot response (publishEvent/[Add line](agent-add-lines.html) method). This be used as a useful to analyze the bot performance and help Agent Managers to monitor the conversation flow.
 
 The reason for escalation as well as the last identified intent can be sent as metadata on the transfer action (updateConversationField method), currently supported only in messaging; this information can be useful to analyze the bot performance, help Agent Managers to monitor the conversation flow and provide context to human agents once a conversation was handed off.
 
@@ -333,9 +333,9 @@ agent.updateConversationField({
 
 ### Structured content
 
-[Structured Content Templates](https://developers.liveperson.com/structured-content-templates.html)
+[Structured Content Templates](structured-content-templates.html)
 
-LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](https://developers.liveperson.com/structured-content-templates.html) for more information on how to build and send such structured content messages.
+LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](structured-content-templates.html) for more information on how to build and send such structured content messages.
 
 A card identifier can be sent as metadata on the agent message (publishEvent method), in order to track the number of times a specific card was sent, delivered, or viewed.
 

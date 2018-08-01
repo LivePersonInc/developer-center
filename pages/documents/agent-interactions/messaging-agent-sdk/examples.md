@@ -32,7 +32,7 @@ There are two parts to making this example work:
 
 1. In order to setup the agent-side code which achieves the Greeting Bot, [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the greeting bot example on Github.
 
-2. In order to generate a conversation with the account (and the Greeting Bot by extension), [follow the steps included in this guide inside the Messaging Window API](https://developers.liveperson.com/consumer-int-js-sample.html).
+2. In order to generate a conversation with the account (and the Greeting Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
 
 ### Agent Bot Example
 
@@ -42,7 +42,7 @@ There are two parts to making this example work:
 
 1. In order to setup the agent-side code which achieves the Agent Bot example (echo bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the Agent Bot (echo bot) example on Github.
 
-2. In order to generate a conversation with the account (and the Echo Bot by extension), [follow the steps included in this guide inside the Messaging Window API](https://developers.liveperson.com/consumer-int-js-sample.html).
+2. In order to generate a conversation with the account (and the Echo Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
 
 Use the Agent Bot example when you are looking to review and develop with the various available API calls, such as:
 

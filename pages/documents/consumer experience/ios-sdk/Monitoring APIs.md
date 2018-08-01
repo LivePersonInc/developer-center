@@ -34,9 +34,9 @@ The Monitoring APIs provide brands access to the LivePerson monitoring system. T
 
 Monitoring APIs include two APIs:
 
-* [sendSDE](https://developers.liveperson.com/consumer-experience-ios-sdk-monitoring-methods.html) - Sends engagement attributes to LivePerson. Should be used whenever the app would like to report on an engagement attribute.
+* [sendSDE](consumer-experience-ios-sdk-monitoring-methods.html) - Sends engagement attributes to LivePerson. Should be used whenever the app would like to report on an engagement attribute.
 
-* [getEngagement](https://developers.liveperson.com/consumer-experience-ios-sdk-monitoring-methods.html) - In case that there is a matching campaign and engagement, getEngagement will return an engagement. The method can be used to send engagement attributes (as part of the request body) as well.
+* [getEngagement](consumer-experience-ios-sdk-monitoring-methods.html) - In case that there is a matching campaign and engagement, getEngagement will return an engagement. The method can be used to send engagement attributes (as part of the request body) as well.
 
 #### Code Samples
 

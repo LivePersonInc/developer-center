@@ -22,7 +22,7 @@ This document will highlight the features of the MMS Viewer as well as the steps
 
 The below solution assumes the following prerequisites are met:
 
-* Your brand is live with [SMS messaging](https://developers.liveperson.com/products-channels-sms-overview.html){:target="_blank"} via our Twilio gateway
+* Your brand is live with [SMS messaging](products-channels-sms-overview.html){:target="_blank"} via our Twilio gateway
 
   * Your brand is capable of hosting and maintaining a custom LiveEngage solution
 

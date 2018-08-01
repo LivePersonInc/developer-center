@@ -1281,7 +1281,7 @@ Version 2.8 roll-out: October 3rd 2017
 
 _The beta version was released in v2.7 (for a full description, refer to the v2.7 release notes). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
 
-The dictionary of template elements can be found [here](https://developers.liveperson.com/structured-content-templates.html).
+The dictionary of template elements can be found [here](structured-content-templates.html).
 
 **What​ ​does​ ​enablement​ ​mean**?
 

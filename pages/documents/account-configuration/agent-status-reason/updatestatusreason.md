@@ -36,7 +36,7 @@ Update an existing status reason.
 
 | Header | Description |
 | --- | --- |
-|Authorization |Contains token string to allow request authentication and authorization. See the [Authentication document](https://developers.liveperson.com/guides-authentication-introduction.html) for more details. |
+|Authorization |Contains token string to allow request authentication and authorization. See the [Authentication document](guides-authentication-introduction.html) for more details. |
 |X-HTTP-Method-Override=PUT | Tells to the backend this POST request is actually PUT |
 | If-Match | Contains widgets’ current revision number |
 

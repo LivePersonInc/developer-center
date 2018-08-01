@@ -43,7 +43,7 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 
 ### showConversation (Deprecated)
 *This method is deprecated since SDK version 2.7.0.**
-*Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} instead*
+*Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} instead*
 
 This method is used to open the conversation screen.
 
@@ -78,8 +78,8 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 
 <div class="important">
 Important:
-</div>
-- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.</div>
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -90,7 +90,7 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 **Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
 ### reconnect
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -105,9 +105,9 @@ func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPar
 | authenticationParams | Object type: LPAuthenticationParams? . Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. For **Implicit Flow**: pass 'jwt' parameter only. For **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
 
 ### reconnect (Deprecated)
-*This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#reconnect){:target="_blank"} instead*
+*This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](consumer-experience-ios-sdk-messaging-methods.html#reconnect){:target="_blank"} instead*
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"} API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"}). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -125,8 +125,8 @@ func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationCod
 
 This API call is used to open or close the SDK menu.
 
-* If you’re using [window mode](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"}, you won’t need to utilize this method as the SDK will have a dedicated button in the navigation bar to toggle the menu.
-* If you are using [view controller mode](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"}, you may call this API to open the SDK menu, or use other APIs to build your own menu.
+* If you’re using [window mode](consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"}, you won’t need to utilize this method as the SDK will have a dedicated button in the navigation bar to toggle the menu.
+* If you are using [view controller mode](consumer-experience-ios-sdk-messaging-methods.html#showconversation){:target="_blank"}, you may call this API to open the SDK menu, or use other APIs to build your own menu.
 
 ```swift
 func toggleChatActions(_ accountID: String, sender: UIBarButtonItem? = nil)
@@ -183,7 +183,7 @@ func isUrgent(_ conversationQuery: ConversationParamProtocol) -> Bool
 
 ### dismissUrgent
 
-This API is used to cancel the [markAsUrgent API](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#markasurgent){:target="_blank"}. It will reset the SLA for the agent response back to default.  This API can be called only for open conversations.
+This API is used to cancel the [markAsUrgent API](consumer-experience-ios-sdk-messaging-methods.html#markasurgent){:target="_blank"}. It will reset the SLA for the agent response back to default.  This API can be called only for open conversations.
 
 ```swift
 func dismissUrgent(_ conversationQuery: ConversationParamProtocol)
@@ -227,7 +227,7 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#destruct){:target="_blank"}).
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct){:target="_blank"}).
 
 ```swift
 func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())
@@ -246,13 +246,13 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#destruct))
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
 
 ```swift
 func logout() (Deprecated)
 ```
 
-*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
 
 ### destruct
 This method is a destructive method that is typically used to stop and clear all the metadata of the SDK.
@@ -281,9 +281,9 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 <div class="important">
 Important:
-</div>
 
-**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+
+**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**</div>
 
 ### registerPushNotifications
 
@@ -311,13 +311,13 @@ The unread messages number is passed to the SDK through LP Push service with eve
 
 <div class="important">
 IMPORTANT NOTES :
-</div>
+
 
 A push is sent to the last device which was registered to the LP push service, meaning that the unread messages indication can be fetched by only one device.
 
 * If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once a message has been sent from that device and the push arrives to it.
 
-* In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
+* In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.</div>
 
 **Getting the unread message badge counter**
 

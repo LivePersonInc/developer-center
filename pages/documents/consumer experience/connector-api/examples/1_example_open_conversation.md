@@ -14,7 +14,7 @@ permalink: connector-api-examples-create-a-new-conversation.html
 
 This example illustrates how to create a new conversation using the CONVERSATION API endpoint.
 
-To get an example of the accepted payloads used in this API's methods, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html){:target="_blank"} with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html){:target="_blank"}.
+To get an example of the accepted payloads used in this API's methods, please have a look at the [Messaging Window API](consumer-int-overview.html){:target="_blank"} with its integrated [Request Builder](consumer-int-msg-reqs.html){:target="_blank"}.
 
 This API endpoint expects a set of JSON payloads, each representing a different type of request to LiveEngage messaging service. The order of the payloads is important in order to create a new conversation. First, the payload with the `type` _userprofile.SetUserProfile_ appears, second the payload with the `type` _cm.ConsumerRequestConversation_ appears.
 

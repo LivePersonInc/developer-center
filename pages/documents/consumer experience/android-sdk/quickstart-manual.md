@@ -25,7 +25,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 **Note**:
 
 * For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf).
-* For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](https://developers.liveperson.com/android-integration-guide-manual.html).
+* For extra guidance regarding app configuration and SDK step by step usage, refer to the full [Using Live Person SDK Guide](android-integration-guide-manual.html).
 
 ### Step 1: Download and unzip the SDK
 
@@ -328,8 +328,8 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
 
 <div class="important">
 Important:
-</div>
-_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._
+
+_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._</div>
 
 1. Initialize the Messaging SDK with Monitoring Params
 

@@ -11,7 +11,7 @@ permalink: file-sharing-step-5---publish-message.html
 indicator: both
 ---
 
-Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](https://developers.liveperson.com/consumer-int-msg-reqs.html). Event type should be `HostedFile`.
+Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](consumer-int-msg-reqs.html). Event type should be `HostedFile`.
 
 Example message:
 

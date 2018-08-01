@@ -156,7 +156,7 @@ Both unauthenticated EAs and monitored data will be available to view in the Age
 ### Submitting EAs
 
 In Messaging, the EAs are cross-device and linked to a specific conversation. There is no need to report the EAs separately on each page anew but only once per conversation. It is highly recommended to report the EAs at the beginning of the engagement with the consumer (as soon as the info exists, report on it).
-EAs can be submitted from multiple sources such as the Monitoring API, or through more [Traditional Channels](https://developers.liveperson.com/engagement-attributes-types.html).
+EAs can be submitted from multiple sources such as the Monitoring API, or through more [Traditional Channels](engagement-attributes-types.html).
 
 In case there is any additional information about the user during the interaction, you may send the same EAs again in order to update the existing data with the new information.
 

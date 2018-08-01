@@ -69,9 +69,9 @@ Access to a LivePerson Account representative (to set up client widget).
 
 ### Useful links and Further Reading
 
-* [Agent Workspace Widget SDK](https://developers.liveperson.com/agent-workspace-sdkoverview.html)
+* [Agent Workspace Widget SDK](agent-workspace-sdkoverview.html)
 
-* [Engagement Window Widget SDK](https://developers.liveperson.com/rt-interactions-window-sdkoverview.html)
+* [Engagement Window Widget SDK](rt-interactions-window-sdkoverview.html)
 
 * [S3 Documentation](https://aws.amazon.com/documentation/s3/)
 

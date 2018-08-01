@@ -13,7 +13,7 @@ indicator: messaging
 
 ### Setting up Android Studio
 
-In order to use the Voice & Video SDK within your project, you need to have the LP-Messaging-SDK for Android preconfigured and set up in your project (minimum required version is [**v2.0**](https://github.com/LP-Messaging/Android-Messaging-SDK/tree/v2.0.0)). Please take a look at the [Official Documentation](https://developers.liveperson.com/android-overview.html) for further information.
+In order to use the Voice & Video SDK within your project, you need to have the LP-Messaging-SDK for Android preconfigured and set up in your project (minimum required version is [**v2.0**](https://github.com/LP-Messaging/Android-Messaging-SDK/tree/v2.0.0)). Please take a look at the [Official Documentation](android-overview.html) for further information.
 
 ### Setting up with Gradle (recommended)
 

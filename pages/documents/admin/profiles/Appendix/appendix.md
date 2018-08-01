@@ -64,7 +64,7 @@ This section contains API details that are common to every API’s resource and 
 | roleTypeId | The profile role type ID | Integer | Required | 1-Admin, 2-Agent, 3-Agent Manager, 4-Campaign Manager, 5-LPA |
 | dateUpdated | The last update profile change date  | Date (numbers) | Read only | The format: year-month-date hrs:min:sec |
 | numOfAssignedUsers | How many users assigned to the specific profile | Long | Read only | |
-| permissionPackages | List of permission packages | List of type PermissionsPackageDto | Required | Please see below the [table](https://developers.liveperson.com/administration-profiles-appendix.html#packages-id) that lists all packages, their description and their ID |
+| permissionPackages | List of permission packages | List of type PermissionsPackageDto | Required | Please see below the [table](administration-profiles-appendix.html#packages-id) that lists all packages, their description and their ID |
 | permissions | Set of all permissions of specific profile | Set of Integers | Required | |
 | isAssignedToLPA | Whether the profile assigned to LPA user or not | Boolean | Required | |
 

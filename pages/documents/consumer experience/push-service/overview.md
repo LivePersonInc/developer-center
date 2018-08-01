@@ -14,7 +14,7 @@ root-link: true
 indicator: messaging
 ---
 
-*Note* - the push service is available only for customers using the Mobile App Messaging SDK, for [iOS](https://developers.liveperson.com/consumer-experience-ios-sdk-overview.html) or [Android](https://developers.liveperson.com/android-overview.html).
+*Note* - the push service is available only for customers using the Mobile App Messaging SDK, for [iOS](consumer-experience-ios-sdk-overview.html) or [Android](android-overview.html).
 
 ### Introduction
 

@@ -14,7 +14,7 @@ LivePerson offers a variety of Data APIs that are available for our customers to
 
 ### Messaging Interactions API (Messaging only)
 
-[Documentation](https://developers.liveperson.com/data-messaging-interactions-overview.html)
+[Documentation](data-messaging-interactions-overview.html)
 
 This API exposes open and closed conversations, including their transcript and related data. This enables searching, filtering and the ability to keep copies of the data. It is possible to retrieve only partial data of conversations (by passing specific SDEs to the API).
 
@@ -40,7 +40,7 @@ This API exposes open and closed conversations, including their transcript and r
 
 ### Agent Metrics API (Messaging only)
 
-[Documentation](https://developers.liveperson.com/data-messaging-agent-metrics-overview.html)
+[Documentation](data-messaging-agent-metrics-overview.html)
 
 This API exposes the current state of the messaging agents who are online, including their status, number of open conversations, load etc. This allows you to get the snapshot of the agent's current state.
 
@@ -62,7 +62,7 @@ This API exposes the current state of the messaging agents who are online, inclu
 
 ### Messaging Operations API
 
-[Documentation](https://developers.liveperson.com/data-messaging-agent-metrics-overview.html)
+[Documentation](data-messaging-agent-metrics-overview.html)
 
 This API exposes information about the contact center at the account, skill, and agent level. This data includes closed conversations and their associated attributes, such as customer satisfaction, average conversation length, resolved status and the current queue state.
 
@@ -81,7 +81,7 @@ This API exposes information about the contact center at the account, skill, and
 
 ### Engagement History API (Chat)
 
-[Documentation](https://developers.liveperson.com/data-engagement-history-overview.html)
+[Documentation](data-engagement-history-overview.html)
 
 This API exposes closed chats with all their related data (including transcripts). This enables searching, filtering and the ability to keep copies of the data.
 
@@ -105,7 +105,7 @@ This API exposes closed chats with all their related data (including transcripts
 
 ### Data Access API (Chat)
 
-[Documentation](https://developers.liveperson.com/data-data-access-overview.html)
+[Documentation](data-data-access-overview.html)
 
 Expose raw data about the agent activity & visitor journey (including engagements and surveys).
 
@@ -125,11 +125,11 @@ Expose raw data about the agent activity & visitor journey (including engagement
 
 * Need to consume large amount of data.
 
-* In case the account is encrypted, need to provide a PGP key in order to retrieve the encrypted data ([click here](https://developers.liveperson.com/data-data-access-pgp-encryption.html) for more information).
+* In case the account is encrypted, need to provide a PGP key in order to retrieve the encrypted data ([click here](data-data-access-pgp-encryption.html) for more information).
 
 ### Operational Real-time API (Chat)
 
-[Documentation](https://developers.liveperson.com/data-operational-realtime-overview.html)
+[Documentation](data-operational-realtime-overview.html)
 
 Expose aggregated real-time information about contact center performance.
 

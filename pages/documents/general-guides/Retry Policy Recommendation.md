@@ -47,10 +47,10 @@ Below you will find the recommended intervals for KeepAlive per product:
 
 | Product   |      Method Name      |  KeepAlive interval |
 |:----------|:-------------|:------|
-| Chat Agent API | [refresh](https://developers.liveperson.com/agent-refresh.html) | Every 5 minutes |
+| Chat Agent API | [refresh](agent-refresh.html) | Every 5 minutes |
 | Messaging Agent SDK |   getClock   | Every 30 seconds |
 |  Messaging Window API |    GetClock  | Every 30 seconds  |
-| Server Chat API |   [Retrieve Chat Information](https://developers.liveperson.com/consumer-experience-server-chat-retrieve-chat-information.html)   |  Every 30 seconds |
+| Server Chat API |   [Retrieve Chat Information](consumer-experience-server-chat-retrieve-chat-information.html)   |  Every 30 seconds |
 
 ### Testing and logs
 

@@ -1384,7 +1384,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 _The beta version was released in v2.7 (for a full description, refer to the [v2.7 release notes](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/In-appSDKv2.7_ReleaseNotes-iOS.pdf)). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
 
-The dictionary of template elements can be found [here](https://developers.liveperson.com/structured-content-templates.html).
+The dictionary of template elements can be found [here](structured-content-templates.html).
 
 **What does enablement mean?**
 

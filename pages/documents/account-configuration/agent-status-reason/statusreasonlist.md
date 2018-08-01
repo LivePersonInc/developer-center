@@ -39,7 +39,7 @@ Get list of all status reasons of an account, for all statuses.
 
 | Header | Description |
 | --- | --- |
-|Authorization |Contains token string to allow request authentication and authorization. See the [Authentication document](https://developers.liveperson.com/guides-authentication-introduction.html) for more details. |
+|Authorization |Contains token string to allow request authentication and authorization. See the [Authentication document](guides-authentication-introduction.html) for more details. |
 
 **Request Body**
 

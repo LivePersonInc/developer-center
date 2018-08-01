@@ -22,7 +22,7 @@ Make sure that the following features are enabled on your account:
 
 For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Messaging_Conversation_Sources feature.
 
-In addition, an authentication server should be configured on the LiveEngage account. Refer to the [Authentication Guide - Configuration section](https://developers.liveperson.com/guides-authentication-configuration.html) in the Developer Community for further instructions.
+In addition, an authentication server should be configured on the LiveEngage account. Refer to the [Authentication Guide - Configuration section](guides-authentication-configuration.html) in the Developer Community for further instructions.
 
 ### Step 2 - Login to your Account
 
@@ -50,7 +50,7 @@ Please contact your Account Team to create a Private App and retrieve your `AppI
 
 You can now create an engagement with the **Mobile App** or **Private App** source.
 
-Before calling the Monitoring API, you will need to fetch the Monitoring API domain, which is the domain for the "smt" service. Please refer to [this document](https://developers.liveperson.com/agent-domain-domain-api.html#overview) for instructions on how to retrieve the "smt" service domain (aka 'baseURI').
+Before calling the Monitoring API, you will need to fetch the Monitoring API domain, which is the domain for the "smt" service. Please refer to [this document](agent-domain-domain-api.html#overview) for instructions on how to retrieve the "smt" service domain (aka 'baseURI').
 
 You can now try and get an engagement using the Monitoring API **engagement resource**
 

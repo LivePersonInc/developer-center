@@ -122,7 +122,7 @@ public void registerToLivePersonEvents(){
 
 * In this example we will listen to all events via the intentfilter shown above, but you can create your own specific intent filter as well.
 
-* Create a function named `createLivePersonReceiver` and handle the events accordingly, this is a wide example of handling most of the events. You can read more about Liveperson events [here](https://developers.liveperson.com/android-callbacks-index.html).
+* Create a function named `createLivePersonReceiver` and handle the events accordingly, this is a wide example of handling most of the events. You can read more about Liveperson events [here](android-callbacks-index.html).
 
 Here is an example of a function which handles some LivePerson events:
 

@@ -11,7 +11,7 @@ body {
 }
 
 a:hover, a:focus {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 pre {

@@ -36,4 +36,4 @@ A few things you'll need to get started with this API:
 
 ### Authentication
 
-This API supports both LP OAuth1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](https://developers.liveperson.com/guides-gettingstarted.html){:target="_blank"}.
+This API supports both LP OAuth1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](guides-gettingstarted.html){:target="_blank"}.

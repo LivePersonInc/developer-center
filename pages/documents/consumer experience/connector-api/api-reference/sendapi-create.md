@@ -55,7 +55,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 **Notes**:
 
-For the JSON payload, please have a look at the [Messaging Window API](https://developers.liveperson.com/consumer-int-overview.html) with its integrated [Request Builder](https://developers.liveperson.com/consumer-int-msg-reqs.html) to get an example of the accepted payloads.
+For the JSON payload, please have a look at the [Messaging Window API](consumer-int-overview.html) with its integrated [Request Builder](consumer-int-msg-reqs.html) to get an example of the accepted payloads.
 
 This method expects a set of JSON payloads, each representing a different type of request to the LiveEngage messaging service. The order of the payloads is important in order to create a new conversation. First, the payload with the `type` _userprofile.SetUserProfile_ appears, second the payload with the `type` _cm.ConsumerRequestConversation_ appears.
 
@@ -84,11 +84,11 @@ For the sake of simplicity, the next request body example illustrates the minima
 
 Nevertheless, we strongly recommend not to create conversations as such, as there is no user information passed in the body of the payload with `type` _userprofile.SetUserProfile_ nor there is any information passed in the body of the payload with `type` _cm.ConsumerRequestConversation_ that will enable targeting the conversation to the right skill or engagement in LiveEngage.
 
-Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](https://developers.liveperson.com/engagement-attributes-types.html){:target="_blank"} to LiveEngage.
+Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](engagement-attributes-types.html){:target="_blank"} to LiveEngage.
 
-The [SDEs](https://developers.liveperson.com/engagement-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
+The [SDEs](engagement-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
 
-The SDEs supported for sending are the [Customer Info](https://developers.liveperson.com/engagement-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](https://developers.liveperson.com/engagement-attributes-types.html#personal-info){:target="_blank"} SDEs.
+The SDEs supported for sending are the [Customer Info](engagement-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](engagement-attributes-types.html#personal-info){:target="_blank"} SDEs.
 
 The next request body example illustrates how to create a conversation and send SDEs in one request:
 
