@@ -136,6 +136,7 @@ $(document).ready(function () {
 
           $(this).next().slideDown(400,onSlideComplete);
           $(this).data("expanded","true");
+          $(".folder > a").removeClass("active")
           $(this).addClass("active");
       }
 

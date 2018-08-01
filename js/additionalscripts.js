@@ -11,8 +11,6 @@ function navigateContent(url) {
   $('.folder > a').removeClass("active");
   selected = selected.addClass("activepage");
   $(".activepage").parent().parent().parent().addClass("active");
-  $(".activepage").parent().parent().parent().parent().parent().addClass("active");
-  $(".activepage").parent().parent().parent().parent().parent().parent().parent().addClass("active");
 }
 
 function linkclick(that) {
