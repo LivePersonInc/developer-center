@@ -498,7 +498,7 @@
         subpages:
           - subpagename: Retrieve Audit Trail Records
           - subpagename: Export Audit Trail to CSV File
-  image: data
+  image: consumer-experience
 
 - categoryname: Consumer Information
   documents:
@@ -739,4 +739,4 @@
         - pagename: Publish Messages
         - pagename: Request Download URL
         - pagename: Download File From Storage
-  image: rich-messaging
+  image: consumer-experience
