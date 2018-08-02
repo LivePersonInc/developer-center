@@ -33,7 +33,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 ```javascript
 dependencies {
-    implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
 }
 ```
 
@@ -61,14 +61,14 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    // LivePerson SDK
-    implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'com.android.support:appcompat-v7:26.1.0'
+  implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'com.android.support.test:runner:1.0.1'
+  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+  // LivePerson SDK
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
 }
 ```
 
