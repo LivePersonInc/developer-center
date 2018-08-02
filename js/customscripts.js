@@ -137,7 +137,9 @@ $(document).ready(function () {
           $(".folder > a").removeClass("active");
           $(this).addClass("active");
       }
-    }
+
+      return false;
+  });
 
   $(".innerfolder > a").click(function(){
       var hasExpanded = $(this).data("expanded") == "true";
@@ -152,7 +154,6 @@ $(document).ready(function () {
           $(".folder > a").removeClass("active");
           $(this).addClass("active");
       }
-
 
       return false;
   });
