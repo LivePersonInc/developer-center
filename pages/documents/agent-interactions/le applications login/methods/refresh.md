@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-This is a request to receive a new access token and to extend the current LE session of the user, so that he/she will not have to enter login credentials again.
+This is a request to receive a new access token and to extend the current LE session of the user, so that they will not have to enter login credentials again.
 
 ### Request
 

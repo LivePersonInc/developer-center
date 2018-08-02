@@ -14,9 +14,9 @@ indicator: both
 
 ### Overview
 
-This is a request to receive an access token that the application can use in order to interact with LE services. . The requests uses a code that is obtained by [authorize request] (authorize.html){:target="_blank"}.
+This is a request to receive an access token that the application can use in order to interact with LE services. The requests uses a code that is obtained by an [authorize request] (authorize.html){:target="_blank"}.
 
-This request should be made after obtaining code in the authorize request.
+This request should be made after obtaining code from the authorize request.
 
 ### Request
 
