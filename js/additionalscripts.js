@@ -31,7 +31,7 @@ $(window).on('popstate', (e) => {
   }
 });
 
-function solutionsbuttonclick() {
+function solutionsbuttonclick(event) {
   event.preventDefault();
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
@@ -42,13 +42,13 @@ function solutionsbuttonclick() {
   $('.solutionsbutton > .solutionsunderline').addClass('lined');
 };
 
-function sidebarbuttonclick() {
+function sidebarbuttonclick(event) {
   event.preventDefault();
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
   solutionsSideBar.fadeOut(200, function () {
     documentsSideBar.fadeIn(200);
-  })
+  });
   $('.solutionsbutton > .solutionsunderline').removeClass('lined');
   $('.documentsbutton > .underline').addClass('lined');
 };
