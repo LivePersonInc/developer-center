@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-This is a request to receive a new access token and to extend the current LE session of the user, so that they will not have to enter login credentials again.
+In order to get a fresh access token, the app should use a refresh request in the following sturcture.
 
 ### Request
 
@@ -70,3 +70,6 @@ Example:
 ```
 
 *Note: Response contains refresh token to be used when making a refresh request.*
+
+
+*The current LP Identity service implementation will extend the SSO session as long as the app keeps calling the refresh endpoint. every configured period of time*
