@@ -130,13 +130,11 @@ $(document).ready(function () {
           $(this).removeClass("active");
           $(this).parent().removeClass("active");
       } else {
-          //$(".folder ul").slideUp(400,null);
-          //$(".folder > a").data("expanded","false");
-          //$(".folder > a").removeClass("active");
-
+          $(".folder ul").slideUp(400,null);
+          $(".folder > a").data("expanded","false");
           $(this).next().slideDown(400,onSlideComplete);
           $(this).data("expanded","true");
-          $(".folder > a").removeClass("active")
+          $(".folder > a").removeClass("active");
           $(this).addClass("active");
       }
 
