@@ -11,11 +11,9 @@ permalink: le-applications-login-methods-token-endpoint.html
 
 indicator: both
 ---
-
 ### Overview
-
-This is a request to receive an access token that the application can use in order to interact with LE services. The requests uses a code that is obtained by an [authorize request] (authorize.html){:target="_blank"}.
-
+** Users are redirected back to the app site. **
+This is a request to receive an access token that the application can use in order to interact with LE services.
 This request should be made after obtaining code from the authorize request.
 
 ### Request
@@ -64,7 +62,6 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 *Note: The Bearer is the access_token attribute*
 
 Example:
-
     {
       "access_token": "9cf6ee24b6a1031e202f292a0ad20c8f52bfd9f01abc8b9489365995052c6603",
       "token_type": "Bearer",
