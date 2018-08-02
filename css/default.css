@@ -39,17 +39,22 @@ pre {
 
 /* CSS-Grid Begins */
 
-@supports (display: grid) {
+
 
   .defaultwrapper {
     display: grid;
+    -ms-display: grid;
     grid-template-columns: 2fr 0.5fr 0.5fr 8fr 1fr 1fr;
+    -ms-grid-template-columns: 2fr 0.5fr 0.5fr 8fr 1fr 1fr;
     grid-template-rows: auto 1fr 1fr auto;
+    -ms-grid-template-rows: auto 1fr 1fr auto;
   }
 
   .defaultheader {
     grid-column: 3 / span 4;
     grid-row: 1 / span 1;
+    -ms-grid-column: 3 / span 4;
+    -ms-grid-row: 1 / span 1;
     background-color: #fff;
     border-bottom: solid 1px #dedddd;
     padding: 42px 0 42px 70px;
@@ -66,6 +71,8 @@ pre {
   .defaultsidebar {
     grid-column: 1 / span 2;
     grid-row: 1 / span 11;
+    -ms-grid-column: 1 / span 2;
+    -ms-grid-row: 1 / span 11;
     background-color: rgba(222, 221, 221, 0.5);
     display:flex;
     flex-direction: column;
@@ -73,6 +80,7 @@ pre {
 
   .defaultcontent {
     grid-column: 4 / span 1;
+    -ms-grid-column: 4 / span 1;
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
@@ -80,6 +88,7 @@ pre {
 
   .defaultbutton {
     grid-column: 6 / span 1;
+    -ms-grid-column: 6 / span 1;
     height: 44px;
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -97,6 +106,8 @@ pre {
   .defaultfooter {
     grid-row: 11 / span 1;
     grid-column: 1 / span 6;
+    -ms-grid-row: 11 / span 1;
+    -ms-grid-column: 1 / span 6;
     background-color: #4a4a4a;
   }
 
