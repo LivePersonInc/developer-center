@@ -1,0 +1,207 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "v3",
+    "title" : "Send API"
+  },
+  "host" : "",
+  "basePath" : "/api",
+  "tags" : [ {
+    "name" : "LP-SendAPI",
+    "description" : "The LP-Send-API service lets you easily send messages to the LivePerson-messaging-system via easy and comprehensive REST-like HTTPS-Requests."
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/send/account/{brandId}/conversation" : {
+      "post" : {
+        "tags" : [ "LP-SendAPI" ],
+        "summary" : "This is our 'batch'-endpoint ",
+        "description" : "This call takes an array of at least two request payloads. The order of the array items is important. First, the setConsumerProfile payload, second the createConversation payload, and optionally last a publishMessage payload. Returns an array of corresponding responses. \n \n Due to race conditions inside the UMS, we cannot 100% reliably assure that the conversation is valid IMMEDIATELY. However, we take measures (i.e. active waiting) to minimize the risk. Since it is an UMS-internal issue, the problem will not be solved until a future version of the UMS",
+        "operationId" : "createConversationBatchPOST",
+        "parameters" : [ {
+          "name" : "brandId",
+          "in" : "path",
+          "description" : "Brand/Account ID the action should apply to",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "type" : "string",
+            "default" : "[\n  {\n    \"kind\": \"req\",\n    \"id\": 1,\n    \"type\": \"cm.ConsumerRequestConversation\",\n    \"body\": {\n      \"ttrDefName\": \"CUSTOM\",\n      \"campaignInfo\": {\n        \"campaignId\": 84700,\n        \"engagementId\": 1233058\n      },\n      \"channelType\": \"MESSAGING\",\n      \"brandId\": \"le31423365\",\n      \"skillId\": -1\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 2,\n    \"type\": \"userprofile.SetUserProfile\",\n    \"body\": {\n      \"firstName\": \"Christian\",\n      \"lastName\": \"B\",\n      \"avatarUrl\": \"\",\n      \"role\": \"\",\n      \"backgndImgUri\": \"\",\n      \"description\": \"test Desc\",\n      \"privateData\": {\n        \"mobileNum\": \"1750345346\",\n        \"mail\": \"test@gmail.com\",\n        \"pushNotificationData\": {\n          \"serviceName\": \"serviceName\",\n          \"certName\": \"cert Name\",\n          \"token\": \"token\"\n        }\n      }\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 3,\n    \"type\": \"ms.PublishEvent\",\n    \"body\": {\n      \"dialogId\": \"\",\n      \"event\": {\n        \"type\": \"ContentEvent\",\n        \"contentType\": \"text\\/plain\",\n        \"message\": \"Hi there!!!\"\n      }\n    }\n  }\n]"
+          },
+          "x-examples" : {
+            "application/json" : "[\n  {\n    \"kind\": \"req\",\n    \"id\": 1,\n    \"type\": \"cm.ConsumerRequestConversation\",\n    \"body\": {\n      \"ttrDefName\": \"CUSTOM\",\n      \"campaignInfo\": {\n        \"campaignId\": 84700,\n        \"engagementId\": 1233058\n      },\n      \"channelType\": \"MESSAGING\",\n      \"brandId\": \"le31423365\",\n      \"skillId\": -1\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 2,\n    \"type\": \"userprofile.SetUserProfile\",\n    \"body\": {\n      \"firstName\": \"Christian\",\n      \"lastName\": \"B\",\n      \"avatarUrl\": \"\",\n      \"role\": \"\",\n      \"backgndImgUri\": \"\",\n      \"description\": \"test Desc\",\n      \"privateData\": {\n        \"mobileNum\": \"1750345346\",\n        \"mail\": \"test@gmail.com\",\n        \"pushNotificationData\": {\n          \"serviceName\": \"serviceName\",\n          \"certName\": \"cert Name\",\n          \"token\": \"token\"\n        }\n      }\n    }\n  },\n  {\n    \"kind\": \"req\",\n    \"id\": 3,\n    \"type\": \"ms.PublishEvent\",\n    \"body\": {\n      \"dialogId\": \"\",\n      \"event\": {\n        \"type\": \"ContentEvent\",\n        \"contentType\": \"text\\/plain\",\n        \"message\": \"Hi there!!!\"\n      }\n    }\n  }\n]"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "default" : "AppJWT"
+        }, {
+          "name" : "X-LP-ON-BEHALF",
+          "in" : "header",
+          "required" : true,
+          "default" : "{ \"consumerId\": \"123-abc\", \"type\": \"SomeType\"}"
+        }, {
+          "name" : "v",
+          "in" : "query",
+          "required" : true,
+          "default" : "3"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Returns a new conversation ID",
+            "schema" : {
+              "$ref" : "#/definitions/CreateConversationResBody"
+            }
+          },
+          "400" : {
+            "description" : "Something terrible happened",
+            "schema" : {
+              "$ref" : "#/definitions/GenericError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized. Are the headers correct?"
+          },
+          "429" : {
+            "description" : "Too many requests, please try again later",
+            "schema" : {
+              "$ref" : "#/definitions/CreateConversationResBody"
+            }
+          }
+        }
+      }
+    },
+    "/send/account/{brandId}/conversation/{convId}/close" : {
+      "post" : {
+        "tags" : [ "LP-SendAPI" ],
+        "summary" : "Closes a conversation with given conversation ID",
+        "description" : "",
+        "operationId" : "closeConversationPOST",
+        "parameters" : [ {
+          "name" : "brandId",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "convId",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "default" : "AppJWT"
+        }, {
+          "name" : "v",
+          "in" : "query",
+          "required" : true,
+          "default" : "3"
+        }, {
+          "name" : "X-LP-ON-BEHALF",
+          "in" : "header",
+          "required" : true,
+          "default" : "{ \"consumerId\": \"123-abc\", \"type\": \"SomeType\"}"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Conversation has been closed successfully"
+          },
+          "400" : {
+            "description" : "Something terrible happened",
+            "schema" : {
+              "$ref" : "#/definitions/GenericError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized. Are the headers correct?"
+          },
+          "429" : {
+            "description" : "Too many requests, please try again later",
+            "schema" : {
+              "$ref" : "#/definitions/CreateConversationResBody"
+            }
+          }
+        }
+      }
+    },
+    "/send/account/{brandId}/conversation/{convId}/send" : {
+      "post" : {
+        "tags" : [ "LP-SendAPI" ],
+        "summary" : "Takes a \"raw\" JSON-payload and puts it on the UMS",
+        "description" : "The order of events is important. You call this payload the same order as you would send your messages over the WebSocket connection! For the payload specification, please review the Messaging Window API found elsewhere in the community.",
+        "operationId" : "sendRawPOST",
+        "parameters" : [ {
+          "name" : "brandId",
+          "in" : "path",
+          "description" : "Brand/Account ID the action should apply to",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "convId",
+          "in" : "path",
+          "description" : "Conversation ID the action should apply to",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "The raw JSON payload, as specified in the Messaging Window API. Encoded as String",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "default" : "AppJWT"
+        }, {
+          "name" : "v",
+          "in" : "query",
+          "required" : true,
+          "default" : "3"
+        }, {
+          "name" : "X-LP-ON-BEHALF",
+          "in" : "header",
+          "required" : true,
+          "default" : "{ \"consumerId\": \"123-abc\", \"type\": \"SomeType\"}"
+        } ],
+        "responses" : {
+          "202" : {
+            "description" : "We received and accepted your payload"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CreateConversationResBody" : {
+      "type" : "object",
+      "properties" : {
+        "conversationId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GenericError" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Some description here"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Verbose error message"
+        }
+      }
+    }
+  }
+}

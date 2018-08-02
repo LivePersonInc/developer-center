@@ -4,15 +4,15 @@
 <button id='{{include.name}}copy' onClick=" document.getElementById('{{include.name}}output').select(); document.execCommand('copy');">Copy to Clipboard</button>
 <span id='{{include.name}}valid_indicator'></span>
 <textarea id='{{include.name}}output' style='width: 100%; height: 100px; font-family: monospace;' class='form-control'></textarea>
-<h4>Json Schema</h4>
+<h4>JSON Schema</h4>
 You can find the json schema definition of this message here: <a href="{{ include.schemaFile }}">{{ include.schemaFile }}</a>
 
 <script src="assets/js/jsoneditor.js"></script>
 <script>
   var {{include.name}};
-  
+
   $.getJSON( "{{ include.schemaFile }}" , function( data ) {
-    const fullpath = "{{ include.schemaFile }}";          
+    const fullpath = "{{ include.schemaFile }}";
     data.baseUrl = fullpath.substring(0, fullpath.lastIndexOf("/"));
     // JSONEditor.defaults.editors.object.options.collapsed = true;
     {{include.name}} = new JSONEditor(document.getElementById('{{include.name}}'),{
@@ -20,7 +20,7 @@ You can find the json schema definition of this message here: <a href="{{ includ
       schema: data,
       {% if include.startval  %}
       startval: {{ include.startval }},
-      {% endif %}          
+      {% endif %}
       no_additional_properties: false,
       disable_edit_json: true,
       display_required_only: true,
@@ -40,7 +40,7 @@ You can find the json schema definition of this message here: <a href="{{ includ
       if ('{{ include.readonly }}') {
         '{{ include.readonly }}'.split(" ").forEach(function(ro){
               {{include.name}}.getEditor(ro).disable()
-        });          
+        });
       }
       if ('{{ include.readonly_oneOf }}') {
         '{{ include.readonly_oneOf }}'.split(" ").forEach(function(ro){
@@ -48,9 +48,9 @@ You can find the json schema definition of this message here: <a href="{{ includ
         });
       }
       // Get an array of errors from the validator
-      var errors = {{include.name}}.validate();      
+      var errors = {{include.name}}.validate();
       var indicator = document.getElementById('{{include.name}}valid_indicator');
-      
+
       // Not valid
       if(errors.length) {
         indicator.style.color = 'red';
@@ -67,5 +67,5 @@ You can find the json schema definition of this message here: <a href="{{ includ
       }
     });
   });
-  
+
 </script>

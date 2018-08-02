@@ -27,7 +27,7 @@ Get an account's audit trail records.
 
 |Parameter|  Description|  Type|  Notes|
 |:----------|  :--------------|  :--------------|  :---|
-|accountId|  LP site ID|  string ^[a-zA-Z0-9_]{1,20}$|  Validation fail error code: 400 |
+|accountId|  LP site ID|  string |  Validation fail error code: 400 |
 
 **Query Parameters**
 

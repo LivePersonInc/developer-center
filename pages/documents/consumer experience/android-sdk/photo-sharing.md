@@ -3,7 +3,7 @@ title: Photo Sharing
 Keywords:
 level1: Documents
 level2: Consumer Experience
-level3: In-App Messaging SDK for Android
+level3: Mobile App Messaging SDK for Android
 level4: Advanced Features
 
 order: 285
@@ -18,7 +18,7 @@ This section describes the photo sharing behavior and configurations in the Mess
 
 **Notes:**
 
-- *This feature is available only for the In-App Messaging SDK.*
+- *This feature is available only for the Mobile App Messaging SDK.*
 - *This feature enables photo sharing only (not video/files).*
 - *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
 - *Device storage includes up to 20 images - this is configurable.*
@@ -28,7 +28,19 @@ This section describes the photo sharing behavior and configurations in the Mess
 
 ### Enable Photo Sharing
 
-To enable/disable photo sharing you can change the boolean value ```<bool name="enable_photo_sharing">```. By default this value is set to false.  **Note that you will need to contact your Account Team in order to enable the feature on your account**.
+To enable/disable photo sharing you can change the boolean value:
+
+```xml
+<bool name="enable_photo_sharing">
+```
+
+By default this value is set to false.
+
+**Note that you will need to contact your Account Team in order to enable the feature on your account**.
+
+**Note:**
+
+- *if using SDK 3.0 on an Oreo Device (8.0 & 8.1) support for Notification Channel needs to be added.*
 
 ###  Upload Photo
 
@@ -41,10 +53,17 @@ A menu will open with 2 options: Gallery and Camera. If the user had set a defau
 ![Photosharing2](img/photosharing2.png)
 
 Changing the background color of the attachment menu is available with configuration :
-```<color name="attachment_menu_item_background_color">```
+
+```xml
+<color name="attachment_menu_item_background_color">
+```
+
 Changing the text of Gallery/Camera:
-```<string name="lp_accessibility_gallery">```
-```<string name="lp_accessibility_camera">```
+
+```xml
+<string name="lp_accessibility_gallery">
+<string name="lp_accessibility_camera">
+```
 
 ### Advanced features
 

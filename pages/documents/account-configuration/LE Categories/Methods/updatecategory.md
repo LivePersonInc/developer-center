@@ -88,7 +88,7 @@ all - return all categories with the response body, including the deleted catego
     <td>accountId</td>
     <td>LP site id</td>
     <td>Validation fail error code: 400
-Type: String ^[a-zA-Z0-9_]{1,20}$</td>
+Type: String </td>
   </tr>
 </table>
 

@@ -5,8 +5,8 @@ level1: Documents
 level2: Guides
 level3: Engagement Attributes
 order: 40
-permalink: engagment-attributes-bestpractices.html
-indicator: both
+permalink: engagement-attributes-bestpractices.html
+indicator: chat
 ---
 
 The SDEs are session based, hence, there is no need to report the SDEs on each page anew but only once per session. It is highly recommended to report the SDEs at the beginning of the session (as soon as the info exists, report on it).
