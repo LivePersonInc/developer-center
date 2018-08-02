@@ -56,6 +56,14 @@ client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZ
 | 400 | Bad request - Problem with body or query parameters. |
 | 500 | Internal server error. |
 
+**Response Body**
+
+| Attribute name | Description |
+| :--- | :--- |
+| access_token | token to use as authorization when interacting with LE services  |
+| token_type | Always Bearer |
+| refresh_token | token to use when requesting access token refresh  |
+
 
 *Note: The Bearer is the access_token attribute*
 
