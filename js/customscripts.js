@@ -122,7 +122,7 @@ $(document).ready(function () {
   else
       $("ul#mysidebar").css("visibility","visible");
 
-  $(".folder > a").click(function(){
+  $(".topfolder > a").click(function(){
       var hasExpanded = $(this).data("expanded") == "true";
       if (hasExpanded) {
           $(this).next().slideUp(400,onSlideComplete);
@@ -137,6 +137,22 @@ $(document).ready(function () {
           $(".folder > a").removeClass("active");
           $(this).addClass("active");
       }
+    }
+
+  $(".innerfolder > a").click(function(){
+      var hasExpanded = $(this).data("expanded") == "true";
+      if (hasExpanded) {
+          $(this).next().slideUp(400,onSlideComplete);
+          $(this).data("expanded","false");
+          $(this).removeClass("active");
+          $(this).parent().removeClass("active");
+      } else {
+          $(this).next().slideDown(400,onSlideComplete);
+          $(this).data("expanded","true");
+          $(".folder > a").removeClass("active");
+          $(this).addClass("active");
+      }
+
 
       return false;
   });
