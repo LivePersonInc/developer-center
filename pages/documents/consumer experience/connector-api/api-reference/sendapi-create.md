@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Connector API
 level4: API Reference
 order: 11
-indicator: both
+indicator: messaging
 permalink: sendapi-create.html
 search: exclude
 ---

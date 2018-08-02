@@ -60,7 +60,7 @@ _**Note: this method pass the Device Token to the SDK, the actual registration o
 
 _**Note: This method is override when using a Custom View for the In-App Notification (LPMessagingSDKNotification(customLocalPushNotificationView)**_
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
@@ -99,7 +99,7 @@ _**Note: Before you begin the setup, you must ensure your LiveEngage account is 
 {:start="5"}
 5. Select your platform as iOS, enter your app’s name, and then click **Create app**. Then, upload your app certificate and key file in the appropriate locations. For more information on your app certificate, please **[click here](consumer-experience-ios-sdk-createcertificate.html){:target="_blank"}**.
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 *If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name.For example, if your app Bundle ID is AppId, your mobile app name should be **"AppId-Dev"**. If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.*

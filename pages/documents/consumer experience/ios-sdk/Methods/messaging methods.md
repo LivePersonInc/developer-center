@@ -74,7 +74,7 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
@@ -277,7 +277,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
@@ -307,7 +307,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 IMPORTANT NOTES :
 </div>
 

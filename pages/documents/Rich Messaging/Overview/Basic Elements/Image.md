@@ -1,7 +1,7 @@
 ---
 title: Image
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: Getting Started
 level4: Basic Elements
@@ -11,6 +11,24 @@ indicator: both
 ---
 
 You can send images by sharing a URL. Supported formats are JPG and PNG.
+
+### Fields
+
+| Property Name | Description | Type | Required | Size Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| type | Type of element. Must be image | Enum | Y |  |
+| url | Image URL | String | Y | 2048 chars |
+| caption | Image caption | String | N | 128 chars |
+| rtl | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false | Boolean | N |  |
+| click | On-click operation (included metadata and/or actions clauses) |  |  |  |
+| tooltip | Image tooltip, used also as aria | String | N |  |
+| style | Styling elements | Container | N | |
+
+For the 'click' field, please see the [Click Operations](rich-messaging-click-ops.html) section.
+
+For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
+
+**Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
 
 ### Example
 
@@ -32,66 +50,3 @@ You can send images by sharing a URL. Supported formats are JPG and PNG.
 	"rtl" : true
 }
 ```
-
-#### Fields
-
-<table>
-<thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Size Limit</th>
-  </tr>
-	</thead>
-	<tbody>
-  <tr>
-    <th>type</th>
-    <th>Type of element. Must be image</th>
-    <th>Enum</th>
-    <th>Y</th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>url</th>
-    <th>Image URL</th>
-    <th>String</th>
-    <th>Y</th>
-    <th>2048 chars</th>
-  </tr>
-  <tr>
-    <th>caption</th>
-    <th>Image caption</th>
-    <th>String</th>
-    <th>N</th>
-    <th>128 chars</th>
-  </tr>
-  <tr>
-    <th>rtl</th>
-    <th>This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false</th>
-    <th>Boolean</th>
-    <th>N</th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>click</th>
-    <th>On-click operation (included metadata and/or actions clauses)</th>
-    <th>???</th>
-    <th>???</th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>tooltip</th>
-    <th>Image tooltip, used also as aria</th>
-    <th>String</th>
-    <th>N</th>
-    <th></th>
-  </tr>
-	</tbody>
-</table>
-
-
-For the Metadata field, please see the Metadata section in the [Click Operations](https://developers.liveperson.com/rich-messaging-click-ops.html) section.
-
-**Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.

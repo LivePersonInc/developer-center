@@ -1,5 +1,5 @@
 ---
-title: Get lob by ID
+title: Get LOB by ID
 keywords:
 level1: Documents
 level2: Admin

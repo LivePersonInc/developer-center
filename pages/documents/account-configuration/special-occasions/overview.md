@@ -16,6 +16,8 @@ The Special occasions API allows you to configure specific dates in which there 
 
 **Note**: Special occasions **do not** modify hours of operation defined by Workdays but instead, overwrite them. This means that if you set a 09:00-12:00 for Monday, May 15th (for example) workdays object and a special occasion for 16:00-22:00 Monday, May 15th, the hours of operation will be 16:00-22:00 for this date.
 
+**Note**: Use the [Skills API](/administration-skills-appendix.html) to set the specialOccasionId for the skill.
+
 ### Getting Started
 
 A few things you'll need to get started with this API:

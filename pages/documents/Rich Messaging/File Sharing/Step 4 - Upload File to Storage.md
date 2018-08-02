@@ -1,7 +1,7 @@
 ---
 title: Step 4 - Upload File to Storage
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 50

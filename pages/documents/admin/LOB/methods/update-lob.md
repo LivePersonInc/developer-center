@@ -1,5 +1,5 @@
 ---
-title: Update lob
+title: Update LOB
 keywords:
 level1: Documents
 level2: Admin

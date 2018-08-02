@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Connector API
 level4: Authorization and Authentication
 order: 4
-indicator: both
+indicator: messaging
 permalink: Create_AppJWT.html
 search: include
 ---

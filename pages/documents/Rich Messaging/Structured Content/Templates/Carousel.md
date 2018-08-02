@@ -1,29 +1,18 @@
 ---
 title: Carousel
 Keywords:
-level1:
+level1: Documents
 level2: Rich Messaging
 level3: Structured Content
 level4: Templates
 order: 40
 permalink: rich-messaging-structured-content-carousel.html
-indicator: both
+indicator: messaging
 ---
 
-A horizontal representation of 2-10 Structured Content cards of the same business logic and structure.
-The carousel format can support a variety of businesses and needs to showcase service offerings, events and more.
+A horizontal representation of 2-10 Structured Content cards of the same business logic and structure. The carousel format can support a variety of businesses and needs to showcase service offerings, events and more.
 
-### Limitations
-
-### Best Practices
-
-Use a carousel when there's a priority order to your content, i.e., the first item is probably the most interesting.
-
-Strive for consistency. If one card has an image, include an image in all of them.
-
-Don't mix types of content. If you include an article next to a list of products, your experience could cause confusion.
-
-Don't use a carousel when it's important that people see everything in the list. They may not scroll to the end. Consider a List Template instead.
+![Carousel](img/carousel.gif)
 
 ### Example
 

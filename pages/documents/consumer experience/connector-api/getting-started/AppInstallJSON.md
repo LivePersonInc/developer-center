@@ -5,7 +5,7 @@ level2: Consumer Experience
 level3: Connector API
 level4: Connector API
 order: 3
-indicator: both
+indicator: messaging
 permalink: app-install-manifest-connectors.html
 ---
 

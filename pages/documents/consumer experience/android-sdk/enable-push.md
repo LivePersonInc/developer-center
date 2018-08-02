@@ -36,7 +36,7 @@ public class MyFirebase extends FirebaseMessagingService {
 }
 ```
 
-<div style="color:red;font-weight:bold;">
+<div class="important">
 Important:
 </div>
 
