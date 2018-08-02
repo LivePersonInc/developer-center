@@ -14,12 +14,9 @@ indicator: both
 
 This API allows a user to login to LiveEngage through an application. Once a user logs in, a session token (Bearer) will be provided and can be used for relevant API calls. This API allows a user to login to multiple applications on the same device, and to supply the user credentials only once.
 
-This API provides standard oauth 2.0 endpoints to receive and refresh session token. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749){:target="_blank"} for more information on how these work and their parameters.
+This API provides standard oauth 2.0 endpoints to receive and refresh a session token. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749){:target="_blank"} for more information on how these work and their parameters.
 
 When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
-
-**Use Cases**
-
 
 ### Getting Started
 

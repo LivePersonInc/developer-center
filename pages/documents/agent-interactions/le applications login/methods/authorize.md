@@ -9,7 +9,9 @@ order: 10
 permalink: loging-service-api-methods-user-login.html
 indicator: both
 ---
+
 ### Overview
+
 This is a request to recieve an authorization grant in the form of code from our Identity Broker Service (sentinel).
 This code is later used in the [token request] (token.html){:target="_blank"} in order to recieve an access token that the application can use in order to interact with LE services.
 

@@ -11,8 +11,10 @@ permalink: le-applications-login-methods-token-endpoint.html
 
 indicator: both
 ---
+
 ### Overview
-This is a request to recieve an access token that the application can use in order to interact with LE services. . The requests uses a code that is obtained by [authorize request] (authorize.html){:target="_blank"}.
+
+This is a request to receive an access token that the application can use in order to interact with LE services. . The requests uses a code that is obtained by [authorize request] (authorize.html){:target="_blank"}.
 
 This request should be made after obtaining code in the authorize request.
 
