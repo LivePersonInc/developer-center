@@ -2,10 +2,10 @@
 title: Application Login Sample App
 level1: Documents
 level2: Agent Interactions
-level3: LE Applications Login
+level3: LE Applications Authorization
 level4: Sample App
 order: 70
-permalink: le-applications-login-sample-code-application-login-sample-app.html
+permalink: le-applications-authorization-sample-code-application-login-sample-app.html
 ---
 
 ### Overview

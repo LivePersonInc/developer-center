@@ -3,25 +3,26 @@ title: Overview
 Keywords:
 level1: Documents
 level2: Agent Interactions
-level3: LE Applications Login
+level3: LE Applications Authorization
 order: 9
-permalink: application-user-login-api-overview.html
+permalink: le-applications-authorization-overview.html
 root-link: true
 level-order: 6
 indicator: both
 ---
+
 ### Introduction
 
+This API authorizes users for your application. This is needed so that your application can interact with LiveEngage on behalf of your users in a secure and authorized way. The application should be installed in the context of your account.
 
-This API authorizes users for your application. The application should be installed in the context of your account. 
+This API provides standard oauth 2.0 endpoints to receive and refresh access tokens. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749){:target="_blank"} for more information.
 
-This API provides standard oauth 2.0 endpoints to receive and refresh access token. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749){:target="_blank"} for more information.
+The flow goes like this:
 
-The flow goes like this: 
-
-1. Users are redirected to LivePerson Identity Service. 
-2. Users are redirected back to the app site.
-3. Your app accesses the API with the user's access token
+1. Users are redirected to LivePerson Identity Service. If they have an existing LiveEngage session, a code will be provided directly. If they don't have an existing LiveEngage session, they will be redirected to a login page. Once they login, they'll receive a code from the Identity Service.
+2. Users are redirected back to the application site with the code provided in Step 1.
+3. Your application accesses the API to request a token with the user's code provided in Step 1.
+4. Your application receives an access token with which it can access LiveEngage services.
 
 ### Getting Started
 
@@ -30,7 +31,3 @@ The flow goes like this:
 2. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
 	* sentinel
-
-**Full request example**:
-
-[http://api.liveperson.net/api/account/12345678/service/sentinel/baseURI.json?version=1.0](http://api.liveperson.net/api/account/12345678/service/sentinel/baseURI.json?version=1.0){:target="_blank"}

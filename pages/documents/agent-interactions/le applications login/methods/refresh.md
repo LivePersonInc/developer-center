@@ -1,18 +1,18 @@
 ---
-title: Refresh Endpoint
+title: Refresh Request
 Keywords:
 level1: Documents
 level2: Agent Interactions
-level3: LE Applications Login
+level3: LE Applications Authorization
 level4: Methods
 order: 10
-permalink: le-applications-login-methods-refresh-endpoint.html
+permalink: le-applications-login-methods-refresh-request.html
 indicator: both
 ---
 
 ### Overview
 
-In order to get a fresh access token, the app should use a refresh request in the following sturcture.
+In order to get a fresh access token, the application should use a refresh request in the following structure.
 
 ### Request
 
