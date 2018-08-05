@@ -19,16 +19,16 @@ This API provides standard oauth 2.0 endpoints to receive and refresh access tok
 
 ### Getting Started
 
-1. Install a LiveEngage application. Here is a [guide to installing LiveEngage applications](guides-le-applications-installing.html){:target="_blank"}. There are two specific fields that need to be configured, `grant_types` and `redirect_uris`. Here is an example showing how to configure them:
+1. Install a LiveEngage application. Here is a [guide to installing LiveEngage applications](guides-le-applications-installing.html){:target="_blank"}. The following two fields are mandatory for this flow, `grant_types` and `redirect_uris`. In addition, all normally mandatory fields, as detailed in the guide above, should be populated as well. Here is an example showing how to configure them:
 
 ```json
-{
+{"client_name": "<YOURAPPNAME>",
 "grant_types": [
    "authorization_code",
    "refresh_token"
  ],
  "redirect_uris": [
-   "http://{yourapplicationdomain}/{callback_path}"
+   "http://{YOURAPPLICATIONDOMAIN}/{CALLBACK_PATH}"
  ]
 }
 
