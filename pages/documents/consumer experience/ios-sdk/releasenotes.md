@@ -14,14 +14,16 @@ indicator: messaging
 <br>
 
 ### iOS Messaging SDK - Version 3.2.3
+
 iOS Messaging SDK v3.2.3 contains the following bug fix:
 
 #### Symptom:
-When consumer trying to enter into an existing conversation after the agent mark as closed, loading history failed and the consumer can't see the conversation window
+
+When a consumer tried to enter into an existing conversation after the agent marked it as closed, loading the history failed and the consumer couldn't see the conversation window.
+
 #### Fix:
-clear the notification and history manager when logging out 
-it will cause removal of empty conversations from previous session 
-and loading history will fetch only relevant conversations.
+
+The SDK will now clear the notification and history manager when logging out. This will cause removal of empty conversations from previous sessions and loading the history will fetch only relevant conversations.
 
 ### iOS Messaging SDK - Version 3.2.2
 iOS Messaging SDK v3.2.2 contains the following bug fixes:
