@@ -62,7 +62,8 @@ $(document).ready(function () {
       return false;
   });
 
-  $(".innerfolder > a").click(function(){
+  $(".innerfolder > a").click(function(event){
+      event.preventDefault();
       var hasExpanded = $(this).data("expanded") == "true";
       if (hasExpanded) {
           $(this).next().slideUp(400,onSlideComplete);

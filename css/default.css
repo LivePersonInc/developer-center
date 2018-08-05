@@ -410,6 +410,10 @@ table {
   margin-top: 2px;
 }
 
+li .language-json:before, li .language-swift:before, li .language-html:before, li .language-java:before, li .language-javascript:before, li .language-sh:before, li .language-ruby:before {
+  margin-left: 654px;
+}
+
 .language-swift:before{
   content: "SWIFT";
 }

@@ -22,6 +22,8 @@ function linkclick(that) {
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
   window.history.pushState({url}, '', url);
+  var myEvent = new CustomEvent("myEvent", {"detail": "event for anchors"});
+  document.dispatchEvent(myEvent);
 };
 //handle back/forward and refresh events
 $(window).on('popstate', (e) => {
@@ -66,10 +68,15 @@ $('.underline').on('click', function() {
     //});
 //});
 
-$(document).ready(function () {
+document.addEventListener ("myEvent", function () {
+  console.log("popran");
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
-  $.each(anchorlinks, function() {
-    $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
-  });
+  if (anchorlinks.length == 0){
+    $(anchorlist).append('<span>No links found boss</span>');
+  }else {
+    $.each(anchorlinks, function() {
+      $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
+    });
+  };
 });
