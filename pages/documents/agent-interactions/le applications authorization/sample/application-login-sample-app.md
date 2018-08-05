@@ -1,6 +1,6 @@
 ---
 title: Application Login Sample App
-level1: Documents
+level1:
 level2: Agent Interactions
 level3: LE Applications Authorization
 level4: Sample App
@@ -20,11 +20,15 @@ This sample application allows you to use the API in a few simple steps:
 
 3. Configure in a properties file the following:
 
-OAUTH2_CLIENT_ID=[installation id provided after application registration]
-OAUTH2_CLIENT_SECRET=[secret provided after application registration]
-OAUTH2_CALLBACK_URL=http://localhost:3000/callback
-OAUTH2_AUTHORIZATION_URL=https://[sentinel domain]/sentinel/api/account/[accountid]/authorize?v=1.0
-OAUTH2_TOKEN_URL=https://[sentinel domain]/sentinel/api/account/[accountid]/token?v=2.0
+	* OAUTH2_CLIENT_ID=[installation id provided after application registration]
+
+	* OAUTH2_CLIENT_SECRET=[secret provided after application registration]
+
+	* OAUTH2_CALLBACK_URL=http://localhost:3000/callback
+
+	* OAUTH2_AUTHORIZATION_URL=https://[sentinel domain]/sentinel/api/account/[accountid]/authorize?v=1.0
+
+	* OAUTH2_TOKEN_URL=https://[sentinel domain]/sentinel/api/account/[accountid]/token?v=2.0
 
 4. Run the following [mock application](https://github.com/eitan101/oauth2-app-mock){:target="_blank"} with the configuration file you created. See the Github readme of the repository for more information on how to use it.
 

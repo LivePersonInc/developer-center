@@ -1,11 +1,11 @@
 ---
 title: Refresh Request
 Keywords:
-level1: Documents
+level1:
 level2: Agent Interactions
 level3: LE Applications Authorization
 level4: Methods
-order: 10
+order: 11
 permalink: le-applications-login-methods-refresh-request.html
 indicator: both
 ---
@@ -43,8 +43,9 @@ In order to refresh an existing access token, the application should use a refre
 
 Example:
 
+```
 client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZQQYbYS6WxSbIA
-
+```
 
 ### Response
 

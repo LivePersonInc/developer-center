@@ -1,18 +1,18 @@
 ---
 title: Authorization Request
 Keywords:
-level1: Documents
+level1:
 level2: Agent Interactions
 level3: LE Applications Authorization
 level4: Methods
-order: 10
+order: 9
 permalink: le-applications-authorization-methods-authorization-request.html
 indicator: both
 ---
 
 ### Overview
 
-Users that use your application are first redirected to the LivePerson Identity Service in order to receive an authorization grant in the form of code from our Identity Service. The code is appended to the redirect URL as a parameter (see example below). This code is later used in the [token request] (token.html){:target="_blank"} in order to receive an access token that the application can use in order to interact with LE services.
+Users that use your application are first redirected to the LivePerson Identity Service in order to receive an authorization grant in the form of code from our Identity Service. The code is appended to the redirect URL as a parameter (see example below). This code is later used in the [token request](/le-applications-authorization-methods-token-request.html){:target="_blank"} in order to receive an access token that the application can use in order to interact with LE services.
 
 This call should be made when the application does not posses a valid access token or refresh token.
 
@@ -52,7 +52,7 @@ This call should be made when the application does not posses a valid access tok
 
 **Note**:
 
-In case the user does not have an active session, they will be redirected to the login page in order to authenticate. After they login successfully, they will then be redirected back to the application's redirect_uri with the code from the LivePerson Identity Service and with the `state` parameter (optional). In case the user is already authenticated, they will be redirected directly back to the application credirect_uri, without passing through the login page.
+In case the user does not have an active session, they will be redirected to the login page in order to authenticate. After they login successfully, they will then be redirected back to the application's redirect_uri with the code from the LivePerson Identity Service and with the `state` parameter (optional). In case the user is already authenticated, they will be redirected directly back to the application redirect_uri, without passing through the login page.
 
 In case the request encountered an error, if account id, client id and redirection URL are valid, the user will be redirected back to
 the application with error and error description parameters.
