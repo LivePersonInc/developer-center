@@ -19,10 +19,11 @@ This API provides standard oauth 2.0 endpoints to receive and refresh access tok
 
 The flow goes like this:
 
-1. Users are redirected to the LivePerson Identity Service. If they have an existing LiveEngage session, a code will be provided immediately. If they don't have an existing LiveEngage session, they will be redirected to a login page. Once they login, they'll receive the code from the Identity Service.
-2. Users are redirected back to the application site with the code provided in Step 1.
-3. Your application accesses the API to request a token with the user's code provided in Step 1.
-4. Your application receives an access token with which it can access LiveEngage services.
+1. User launches your application. We expect this flow to be the first thing the application does.
+2. User is redirected to the LivePerson Identity Service. If they have an existing LiveEngage session, a code will be provided immediately. If they don't have an existing LiveEngage session, they will be redirected to a login page. Once they login, they'll receive the code from the Identity Service.
+3. Users are redirected back to the application site with the code provided in Step 1.
+4. Your application accesses the API to request a token with the user's code provided in Step 1.
+5. Your application receives an access token with which it can access LiveEngage services.
 
 ### Getting Started
 

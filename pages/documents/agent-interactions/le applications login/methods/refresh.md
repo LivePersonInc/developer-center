@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-In order to get a fresh access token, the application should use a refresh request in the following structure.
+In order to refresh an existing access token, the application should use a refresh request in the following structure. We recommend the refresh request be made every 30 minutes to make sure that the access token doesn't expire.
 
 ### Request
 
