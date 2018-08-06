@@ -43,7 +43,7 @@ permalink: connectorapi-getting-started.html
 
 2. **Getting an application JWT** - After successfully registering your connector, you will be given two important parameter values which will serve to authorize your connector application prior to using the Connector API:
 
-	`Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
+	`App Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
 
 	`Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
 

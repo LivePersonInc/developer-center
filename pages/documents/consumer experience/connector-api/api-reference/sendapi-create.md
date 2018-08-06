@@ -36,7 +36,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
-| v | The API version | numeric |  
+| v | The API version | numeric/3 | 
 
 **Request Headers**
 

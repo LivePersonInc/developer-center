@@ -20,7 +20,7 @@ search: include
 
 ### Authentication with ConsumerJWS
 
-An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature):
+An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (JSON Web Signature):
 
 The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html){:target="_blank"} and [SEND](sendapi-send.html){:target="_blank"} requests to LiveEngage in order to authenticate the request.
 
