@@ -66,7 +66,9 @@ _**Note: This method is override when using a Custom View for the In-App Notific
 Important:
 
 
-**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**</div>
+**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+
+</div>
 
 ### Configuring Push Notifications
 
@@ -104,7 +106,9 @@ _**Note: Before you begin the setup, you must ensure your LiveEngage account is 
 <div class="important">
 Important:
 
-*If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name.For example, if your app Bundle ID is AppId, your mobile app name should be **"AppId-Dev"**. If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.*</div>
+*If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name.For example, if your app Bundle ID is AppId, your mobile app name should be **"AppId-Dev"**. If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.*
+
+</div>
 
 **Note: there is a 50 character limit for your Bundle ID**
 

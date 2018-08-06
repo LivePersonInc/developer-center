@@ -329,7 +329,9 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
 <div class="important">
 Important:
 
-_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._</div>
+_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._
+
+</div>
 
 1. Initialize the Messaging SDK with Monitoring Params
 

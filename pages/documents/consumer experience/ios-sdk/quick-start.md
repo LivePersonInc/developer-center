@@ -86,7 +86,9 @@ $ pod update
 <div class="important">
 Important:
 
-**This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.**</div>
+**This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.**
+
+</div>
 
 ```sh
 bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
@@ -107,7 +109,9 @@ bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks
 <div class="important">
 Important:
 
-**This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216) and is necessary for archiving your app before publishing it to the App Store.**</div>
+**This step is a workaround for [known iOS issue](http://www.openradar.me/radar?id=6409498411401216) and is necessary for archiving your app before publishing it to the App Store.**
+
+</div>
 
 ```sh
 bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
@@ -133,7 +137,9 @@ In Xcode info.plist of the project, add two new privacy keys and values:
 <div class="important">
 Important:
 
-**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.**</div>
+**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.**
+
+</div>
 
 _**Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**_
 
@@ -183,7 +189,10 @@ do {
 <div class="important">
 Important:
 
-- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.</div>
+- When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+
+</div>
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -198,7 +207,9 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 <div class="important">
 Important:
 
-_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._</div>
+_To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team._
+
+</div>
 
 1. Inside **viewController** add the following imports:
 
@@ -278,7 +289,9 @@ LPMessagingSDK.instance.removeConversation(conversationQuery)
 <div class="important">
 Important:
 
-When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.</div>
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+</div>
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){

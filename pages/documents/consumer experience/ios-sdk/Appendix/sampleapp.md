@@ -128,15 +128,19 @@ $ pod init
 
 <div class="important">
 Important:
-</div>
+
 **This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**
+
+</div>
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator).
 
 <div class="important">
 Important:
 
-**_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**</div>
+**_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**
+
+</div>
 
 * If sdk installed using CocoaPods, use the following script:
 
@@ -543,7 +547,9 @@ Create Application on LiveEngage & Upload **PEM** files
 <div class="important">
 Important:
 
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.</div>
+If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
+
+</div>
 
 {:start="6"}
 6. Click on Create App
@@ -564,7 +570,9 @@ Upload **PEM** files into LiveEngage
 <div class="important">
 Important:
 
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.</div>
+If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
+
+</div>
 
 {:start="4"}
 4. The **Production** switch is **On** by default, if you're using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**
@@ -711,7 +719,9 @@ $ pod init
 <div class="important">
 Important:
 
-**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to  share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**</div>
+**This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to  share photos from the camera and/or photo library. Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**
+
+</div>
 
 1. In **project settings**, navigate to the **Build Phases** tab, and click the + button to add a **New Run Script Phase**. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator). **_This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store._**
 
@@ -1135,7 +1145,9 @@ Create Application on LiveEngage & Upload **PEM** files
 <div class="important">
 Important:
 
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.</div>
+If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
+
+</div>
 
 6. Click on Create App
 
@@ -1158,7 +1170,9 @@ Upload **PEM** files into LiveEngage
 <div class="important">
 Important:
 
-If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.</div>
+If your App uses an **Apple Development IOS Push Service Certificate**, you need to add **-Dev** at the end of the **Bundle Identifier**.
+
+</div>
 
 4. The **Production** switch is **On** by default, if you're using an **Apple Development IOS Push Service Certificate**, turn **Production** switch is **Off**
 

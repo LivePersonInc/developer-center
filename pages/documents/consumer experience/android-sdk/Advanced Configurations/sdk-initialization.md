@@ -45,7 +45,9 @@ Important:
 
 **To use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}**
 
-Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.</div>
+Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
+
+</div>
 
 The SDK supports two operation modes:
 

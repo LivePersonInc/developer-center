@@ -79,7 +79,9 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 <div class="important">
 Important:
 
-When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.</div>
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+
+</div>
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -283,7 +285,9 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 Important:
 
 
-**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**</div>
+**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
+
+</div>
 
 ### registerPushNotifications
 
@@ -317,7 +321,9 @@ A push is sent to the last device which was registered to the LP push service, m
 
 * If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once a message has been sent from that device and the push arrives to it.
 
-* In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.</div>
+* In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
+
+</div>
 
 **Getting the unread message badge counter**
 
