@@ -41,7 +41,7 @@ Based on the [Rich Messaging Image](rich-messaging-basic-elements-image.html) el
 
 #### Title Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
@@ -51,7 +51,7 @@ Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) ele
 
 #### Subtitle Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
@@ -62,7 +62,7 @@ Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) ele
 
 #### Button Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-button.html) element with the following restrictions:
+Based on the [Rich Messaging Button](rich-messaging-basic-elements-button.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
