@@ -1,7 +1,7 @@
 
   <nav class="breadcrumbs hidden-sm-down">
 
-    <a class="breadcrumb-item" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}{{ page.level1 | downcase }}.html">{{ page.level1 }}</a>
+    <a class="breadcrumb-item" >{{ page.level1 }}</a>
     <a class="breadcrumb-item" >{{ page.level2 }}</a>
     {% if page.level3 %}
      <a class="breadcrumb-item" >{{ page.level3 }}</a>
@@ -9,28 +9,7 @@
     {% if page.level4 %}
      <a class="breadcrumb-item" >{{ page.level4 }}</a>
     {% endif %}
-    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
-    
-    <!-- Iteration breadcrumb item -->
-    {% assign position = 0 %}
- 
+    <a class="breadcrumb-item no-after" >{{ page.title }}</a>
 
-      <!-- SEO data -->
-      {% assign position = position  | plus: 1 %}
-
-      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
-     
-        <span property="name">{{ page.title }}</span>
-        <span class="down-arrow fa fa-chevron-down"></span>
-      
-        <meta property="position" content="{{ position }}" />
-        <div id="toc" ></div>
-      </li>
-
-  
-      
-    </ol>
-   
 
   </nav>
-  

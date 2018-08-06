@@ -6,11 +6,12 @@ layout: default
 
 {% if page.title %}
   <div class="documenttitle">
-  <div class='h1'>{{ page.title}}</div>
-  <div class="anchorlist folder">
-    <a href="">Jump To</a>
-    <ul></ul>
-  </div>
+    {% include nav-breadcrumbs.html %}
+    <div class='h1'>{{ page.title}}</div>
+    <div class="anchorlist folder">
+      <a href="">Jump To</a>
+      <ul></ul>
+    </div>
 </div>
   <hr class="pagehr" />
 {% endif %}
