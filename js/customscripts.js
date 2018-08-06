@@ -1,8 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-  anchors.add('h3');
-});
-
-
 $('#mysidebar').height($(".nav").height());
 
 

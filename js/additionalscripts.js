@@ -1,7 +1,11 @@
 function navigateContent(url) {
   var $content = $('#defaultcontent');
   //go to the indicated url passed from the linkclick function and find the content div and load it
-  $content.load(url + ' #defaultcontent > *');
+  $content.load(url + ' #defaultcontent > *', function () {
+    anchors.add('h3');
+    populateAnchors ();
+    menuDrop ();
+  });
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');
   //make sure no other links are set to active
@@ -13,6 +17,15 @@ function navigateContent(url) {
   $(".activepage").parent().parent().parent().addClass("active");
 }
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  anchors.add('h3');
+});
+
+$(document).ready(function () {
+  menuDrop ();
+  populateAnchors ();
+})
+
 function linkclick(that) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
@@ -22,8 +35,6 @@ function linkclick(that) {
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
   window.history.pushState({url}, '', url);
-  var myEvent = new CustomEvent("myEvent", {"detail": "event for anchors"});
-  document.dispatchEvent(myEvent);
 };
 //handle back/forward and refresh events
 $(window).on('popstate', (e) => {
@@ -55,28 +66,30 @@ function sidebarbuttonclick(event) {
   $('.documentsbutton > .underline').addClass('lined');
 };
 
-$('.underline').on('click', function() {
 
-});
+function menuDrop () {
+  $(".anchorlist > a").click(function(event){
+      event.preventDefault();
+      var hasExpanded = $(this).data("expanded") == "true";
+      if (hasExpanded) {
+          $(this).next().slideUp(400,onSlideComplete);
+          $(this).data("expanded","false");
+      } else {
+          $(this).next().slideDown(400,onSlideComplete);
+          $(this).data("expanded","true");
+      }
+      return false;
+  });
+};
 
-
-//$(document).ready(function () {
-  //  $(".documentsbutton a").click(function () {
-    //    $(this).animate({
-      //      borderBottom: '2px solid #3399FF',
-      //  }, 500);
-    //});
-//});
-
-document.addEventListener ("myEvent", function () {
-  console.log("popran");
+function populateAnchors () {
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
   if (anchorlinks.length == 0){
-    $(anchorlist).append('<span>No links found boss</span>');
+    $(anchorlist).append('<li>No links found boss</li>');
   }else {
     $.each(anchorlinks, function() {
       $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
     });
   };
-});
+};
