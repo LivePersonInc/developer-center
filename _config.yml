@@ -52,7 +52,6 @@ kramdown:
  hard_wrap: false
  syntax_highlighter: rouge
  smart_quotes: ["apos", "apos", "quot", "quot"]
- parse_block_html: true
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
