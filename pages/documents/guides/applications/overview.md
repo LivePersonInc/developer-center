@@ -21,8 +21,6 @@ This type of Applications can be published in a Marketplace by a Developer and w
 
 It is also possible to build a Global application but define that it will not be visible in the App Management Screen. This means that it won't be visible in a Marketplace-type environment but it will be possible to use it on all accounts.
 
-**Note: Creation of Global LiveEngage Applications depends on a partnership program and a certification process. For more details, please contact [DevSupport](mailto:devsupport-lp@liveperson.com).**
-
 ### Private LiveEngage Applications
 
 A customer will be able to develop and use their own private LiveEngage Applications. These Apps won’t be published in any Marketplace-type environments. In addition, the application can be used only on a specific list of accounts defined in its Manifest.
