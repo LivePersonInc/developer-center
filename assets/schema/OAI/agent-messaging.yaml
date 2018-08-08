@@ -275,7 +275,9 @@ paths:
       summary: Subscribe Conversations Metadata
       description: |
         Subscribes to any changes in the medata of the conversations of this user.
-        Note: metadata is fetched for the first 1000 conversations that were viewed or changed (ascending by date). After that, changes for any conversation will be provided on an on-going basis. 
+        Note: 
+        1. metadata is fetched for the first 1000 conversations that were viewed or changed (ascending by date). After that, changes for any conversation will be provided on an on-going basis. 
+        2. Notification order is not guaranteed. If in your app order is needed use the timestamp and ignore notifications with an older timestamp.
       parameters:
         - name: body
           in: body
