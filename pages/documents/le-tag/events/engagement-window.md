@@ -30,7 +30,7 @@ This event triggers when the chat state is changed.
 
 | Name | Description | Type | Notes |
 | :-- | :--- | :--- | :--- |
-| state | The chat state. | string | Available states: "resume", "initialised", "uninitialised", "preChat", "postChat", "offline", "waiting", "chatting", "interactive", "ended", "Notfound". Out of these, **only** "chatting" and "ended" are relevant for Messaging. |
+| state | The chat state. | string | Available states: "resume", "initialised", "uninitialised", "preChat", "postChat", "offline", "waiting", "chatting", "interactive", "ended", "Notfound". Out of these, **only** "initiliased", "chatting" and "ended" are relevant for Messaging. |
 
 *Example:*
 
