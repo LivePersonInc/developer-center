@@ -12,8 +12,11 @@ function navigateContent(url) {
   $('a').removeClass("activepage");
   //make the string we found previously active
   $('.folder').removeClass("active");
-  $('.folder > a').removeClass("active");
   selected = selected.addClass("activepage");
+  if (selected.parent().hasClass('innerpageitem')) {
+    $('.innerpageitem').removeClass("activeitem");
+    $(".activepage").parent().addClass("activeitem");
+  }
   $(".activepage").parent().parent().parent().addClass("active");
 }
 
@@ -86,7 +89,7 @@ function populateAnchors () {
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
   if (anchorlinks.length == 0){
-    $(anchorlist).append('<li>No links found boss</li>');
+    $(anchorlist).append('<li>No here. Happy scrolling.</li>');
   }else {
     $.each(anchorlinks, function() {
       $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');

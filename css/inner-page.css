@@ -298,11 +298,6 @@ ul.mysidebar.nav {
 
 }
 
-
-ul.mysidebar > li.folder > a{
-  margin-left: 5px;
-}
-
 ul.mysidebar > li.folder ul {
   display: none;
   list-style: none;
@@ -330,18 +325,33 @@ ul#mysiderbar li{
 }
 
 .pageitem > a {
-  color: #4a4a4a;
+  color: #f2f1f2;
+}
+
+.innerpageitem > a {
+  color: #f2f1f2;
+
 }
 
 .pageitem {
   padding-left: 30px !important;
 }
 
+.innerpageitem {
+  padding-left: 17px !important;
+  border-left: 4px solid #646a79;
+  margin-left: 3px;
+}
+
+.activeitem {
+  border-left: 4px solid #b1b5bc !important;
+}
+
 ul.mysidebar.nav .topfolder >  a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #8c909c;
+  color: #f2f1f2;
   overflow-wrap:break-word;
 }
 
@@ -355,7 +365,7 @@ ul.mysidebar li ul li{
 }
 
 ul.mysidebar.nav li a.active{
-  color: #172136;
+  color: #f2f1f2;
   font-weight: bold;
 }
 
@@ -391,7 +401,7 @@ ul.mysidebar.nav li.activepage a{
 }
 
 ul.mysidebar.nav li ul li {
-  padding-left: 50px;
+  padding-left: 6px;
 }
  ul.mysidebar.nav ul li a {
   border-top: none;
@@ -400,7 +410,7 @@ ul.mysidebar.nav li ul li {
 }
 
 .activepage {
-  color: #5879da !important;
+  color: #90a6e6 !important;
   font-weight: bold;
 }
 

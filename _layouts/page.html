@@ -5,13 +5,15 @@ layout: default
 <div class="post-content">
 
 {% if page.title %}
-  <div class="documenttitle">
+<div class="documenttitlecontainer">
     {% include nav-breadcrumbs.html %}
+  <div class="documenttitle">
     <div class='h1'>{{ page.title}}</div>
     <div class="anchorlist folder">
-      <a href="">Jump To</a>
+      <a href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
       <ul></ul>
     </div>
+  </div>
 </div>
   <hr class="pagehr" />
 {% endif %}

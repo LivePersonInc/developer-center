@@ -28,6 +28,9 @@ $(document).ready(function () {
       $(".activepage").parent().parent().prev().data("expanded","true");
       $(".activepage").parent().parent().parent().parent().prev().data("expanded","true");
       $(".activepage").parent().parent().parent().parent().parent().parent().prev().data("expanded","true");
+      if ($(".activepage").parent().hasClass("innerpageitem")) {
+        $(".activepage").parent().addClass("activeitem");
+      }
       $(".activepage").parent().parent().prev().addClass("active");
       $(".activepage").parent().parent().parent().parent().prev().addClass("active");
       $(".activepage").parent().parent().parent().parent().parent().parent().prev().addClass("active");
@@ -68,7 +71,6 @@ $(document).ready(function () {
       } else {
           $(this).next().slideDown(400,onSlideComplete);
           $(this).data("expanded","true");
-          $(".folder > a").removeClass("active");
           $(this).addClass("active");
       }
 
