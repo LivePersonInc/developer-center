@@ -43,7 +43,7 @@ Now you can continue the regular flow as documented in the [Getting Started](con
 
 
 ### Step 4 - Refresh an External Token
-Once the external token is expired (10 minutes by default), you can still refresh it for a certain period of time (24 hours by default) using the following call:
+Once the external token is expired (10 minutes by default), you can still refresh it for a certain period of time (730 hours by default) using the following call:
 
 ```sh
 LP_EXT_JWT=`curl -X POST -H "Content-Type: application/json" -d '{ "id_token":"'$LP_EXT_JWT'" }' https://$LP_IDP/api/account/$LP_ACCOUNT/anonymous/authorize | jq -r .token`
