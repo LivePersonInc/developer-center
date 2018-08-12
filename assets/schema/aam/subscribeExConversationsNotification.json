@@ -40,7 +40,7 @@
                                     },
                                     "metaDataLastUpdateTs": {
                                         "type": "Long",
-                                        "description": "Time stamp of last update on this conversation. Can be used for handling out of order notification"
+                                        "description": "Time stamp of last update on this conversation. Can be used for handling out of order notifications"
                                     },
                                     "state": {
                                         "type": "string",
