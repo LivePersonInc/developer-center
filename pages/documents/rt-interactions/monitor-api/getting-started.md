@@ -8,27 +8,26 @@ permalink: rt-interactions-monitoring-getting-started.html
 indicator: messaging
 ---
 
-### Step 1 - Create an Account
+### Step 1 - Configure your LiveEngage account
 
-Create an account and save the generated `account_id`.
+On your LiveEngage account, make sure the following features are enabled:
 
-Make sure that the following features are enabled on your account:
+1. Messaging
+2. Authenticated chat
 
-1. Async_Messaging
+* For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Conversation Sources feature.
 
-2. Authenticated_Chat
-
-For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Messaging_Conversation_Sources feature.
+Contact your LivePerson representative in order to enable the features. 
 
 In addition, an authentication server should be configured on the LiveEngage account. Refer to the [Authentication Guide - Configuration section](https://developers.liveperson.com/guides-authentication-configuration.html) in the Developer Community for further instructions.
 
 ### Step 2 - Login to your Account
 
-* Login to your account and go to campaigns → data sources -> conversation sources tab.
+* Login to your account and go to campaigns → data sources → conversation sources tab.
 
 ![Data Source](img/monitor_start1.png)
 
-### Step 3 - Create a Mobile App in the LE UI or Develop Your Own Private App
+### Step 3 - Create a Mobile App in the LiveEngage UI or Develop Your Own Private App
 
 In order to utilize the Monitoring API, you will need, among other parameters, an `AppInstallationId`. In order to do so, you will first need to create an application, either by using the LE UI to create a Mobile App or by developing your own Private App.
 
