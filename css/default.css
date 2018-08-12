@@ -482,7 +482,6 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
   margin-top: 0px;
   border: 0;
   border-top: 1px solid #dedddd;;
-  width: 140%;
 }
 
 .anchorlist {
@@ -517,7 +516,7 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
   text-align: right;
 }
 
-anchorlist li a {
+anchorlist ul li a {
   color: #248ec2 !important;
 }
 
