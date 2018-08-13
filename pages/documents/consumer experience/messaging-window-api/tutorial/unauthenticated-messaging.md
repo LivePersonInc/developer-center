@@ -1,22 +1,19 @@
 ---
 title: Unauthenticated Messaging
-level1: Documents
+level1:
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials
-
 order: 40
-
-
 permalink: consumer-int-unauth-authentication.html
-keywords: oauth2.0 jwt token
 indicator: messaging
 ---
 
-In this tutorial you will learn how to create a token for unathenticated consumers.
+LiveEngag expects to receive a token for every messaging conversation. If you would like to have unauthenticated messaging conversations (where the consumer remains "anonymous"), you will need to provide an "unauthenticated" (not containing any details on the consumer) ID Token to LiveEngage. In this tutorial you will learn how to create a token for unauthenticated consumers.
 
 ### Prerequisites
-In order to work with unauthenticated conversation, your account must be provisioned by an LPA (LivePerson Administrator) to enable the ``Messaging.Un_Auth_Messaging`` feature and create a unauthenticated connector (ACR0 Connector). The LPA should supply to you the ``CONNECTOR_ID`` that is required in beginning of the flow.
+
+In order to work with unauthenticated conversation, your account must be provisioned by an LPA (LivePerson Administrator) to enable the ``Messaging.Un_Auth_Messaging`` feature and create aa unauthenticated connector (ACR0 Connector). The LPA should supply to you the ``CONNECTOR_ID`` that is required in beginning of the flow.
 
 First, lanuch a shell for your account with the ``CONNECTOR_ID`` supplied by your LPA:
 
