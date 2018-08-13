@@ -63,6 +63,7 @@ $(document).ready(function () {
   $(".innerfolder > a").click(function(event){
       event.preventDefault();
       var hasExpanded = $(this).data("expanded") == "true";
+      var button = $(this).find("button");
       if (hasExpanded) {
           $(this).next().slideUp(400,onSlideComplete);
           $(this).data("expanded","false");
@@ -73,7 +74,9 @@ $(document).ready(function () {
           $(this).data("expanded","true");
           $(this).addClass("active");
       }
-
+      if (button) {
+        $(button).toggleClass("clicked");
+      };
       return false;
   });
 

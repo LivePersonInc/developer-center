@@ -5,6 +5,7 @@ function navigateContent(url) {
     anchors.add('h3');
     populateAnchors ();
     menuDrop ();
+    $('#anchorlist').scrollToFixed({ marginTop: 10, limit: $('.defaultfooter') });
   });
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');
@@ -20,14 +21,12 @@ function navigateContent(url) {
   $(".activepage").parent().parent().parent().addClass("active");
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  anchors.add('h3');
-});
-
 $(document).ready(function () {
   menuDrop ();
   populateAnchors ();
-})
+  $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: true });
+});
+
 
 function linkclick(that) {
   //prevent the link from actually navigating to the url

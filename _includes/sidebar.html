@@ -33,12 +33,12 @@
     <ul>
       {% for document in category.documents %}
       <li class="folder innerfolder sidebarcategory">
-        <a href=""><img class="expand" src="img/expand.png" /><span> {{ document.documentname }}</span></a>
+        <a href=""><button><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
-            <a href=""><img class="expand" src="img/expand.png" /><span>{{ page.pagename }}</span></a>
+            <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
