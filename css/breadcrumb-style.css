@@ -64,7 +64,7 @@
 
 .breadcrumbs .breadcrumb-item {
   font-size: 0.9em;
-  color:#77777a;
+  color:#a2a2a2;
   font-family: "Open Sans";
   font-weight: 300;
 }
@@ -73,9 +73,8 @@
   display: inline-block;
   padding-right: 1em;
   padding-left: 1em;
-  color: #77777a;
-  content: "\f054";
-  font-size:0.7em;
+  color: #979797;
+  content: "\f105";
   text-decoration: none;
   font-family:"FontAwesome";
 }

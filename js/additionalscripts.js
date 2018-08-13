@@ -5,7 +5,7 @@ function navigateContent(url) {
     anchors.add('h3');
     populateAnchors ();
     menuDrop ();
-    $('#anchorlist').scrollToFixed({ marginTop: 10, limit: $('.defaultfooter') });
+    $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: true });
   });
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');

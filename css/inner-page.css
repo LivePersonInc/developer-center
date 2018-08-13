@@ -522,7 +522,7 @@ div.sidebarTitle-holder {
   min-height: 42px;
   padding-bottom: 5px;
   padding-left: 0;
-  padding-top: 15px;
+  padding-top: 30px;
   z-index: 10;
 }
 .breadcrumb-item + .breadcrumb-item::before{
@@ -561,7 +561,7 @@ div.sidebarTitle-holder {
 
 .post-content {
   max-width: 743px;
-  /*padding-top: 26px;*/
+  padding-top: 35px;
 }
 
 .post-content .zoomimg {

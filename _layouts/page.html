@@ -4,23 +4,6 @@ layout: default
 
 <div class="post-content">
 
-{% if page.title %}
-<div class="documenttitlecontainer">
-  {% if page.title != "Getting Started" %}
-    {% include nav-breadcrumbs.html %}
-  {% endif %}
-  <div class="documenttitle">
-    <div class='h1'>{{ page.title}}</div>
-  </div>
-  <hr class="pagehr" />
-  <div id="anchorlist" class="anchorlist folder">
-    <a href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-    <ul></ul>
-  </div>
-  </div>
-
-  {% endif %}
-
   {{content}}
 
     <div class="tags">
