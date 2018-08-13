@@ -334,13 +334,13 @@ ul#mysiderbar li{
 }
 
 .pageitem {
-  padding-left: 39px !important;
+  padding-left: 48px !important;
 }
 
 .innerpageitem {
-  padding-left: 17px !important;
+  padding-left: 15px !important;
   border-left: 4px solid #646a79;
-  margin-left: 3px;
+  margin-left: 32px;
 }
 
 .activeitem {

@@ -14,6 +14,10 @@ a:hover, a:focus {
   text-decoration: none !important;
 }
 
+code pre {
+  font-family: "Roboto Mono", Monaco, courier, monospace !important;
+}
+
 pre {
   word-break: normal !important;
 }
@@ -337,6 +341,11 @@ table {
   font-size: 14px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   display: flex;
+  margin-left: -4px;
+}
+
+.innerfolder > a > span {
+  margin-left: 14px;
 }
 
 .innerfolder > a > .expand {
@@ -543,8 +552,7 @@ button:focus {
 button span {
   position: absolute;
   transition: .3s;
-  background: white;
-  border-radius: 2px;
+  background: #b1b5bc;
 }
 
 button span:first-of-type {
@@ -561,11 +569,11 @@ button span:last-of-type {
   top: 45%;
 }
 
-button .clicked span:first-of-type, button:hover .clicked span:last-of-type {
+.clicked span:first-of-type, .clicked span:last-of-type {
   transform: rotate(90deg);
 }
 
-button .clicked span:last-of-type {
+.clicked span:last-of-type {
   left: 50%;
   right: 50%;
 }

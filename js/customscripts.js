@@ -37,6 +37,7 @@ $(document).ready(function () {
       $(".activepage").parent().prev().data("expanded","true");
       onSlideComplete();
       $("ul#mysidebar").css("visibility","visible");
+      $(".innerfolder > .active > button").addClass("clicked");
   }
   else
       $("ul#mysidebar").css("visibility","visible");
@@ -69,14 +70,13 @@ $(document).ready(function () {
           $(this).data("expanded","false");
           $(this).removeClass("active");
           $(this).parent().removeClass("active");
+          $(button).removeClass("clicked", );
       } else {
           $(this).next().slideDown(400,onSlideComplete);
           $(this).data("expanded","true");
           $(this).addClass("active");
+          $(button).addClass("clicked");
       }
-      if (button) {
-        $(button).toggleClass("clicked");
-      };
       return false;
   });
 
