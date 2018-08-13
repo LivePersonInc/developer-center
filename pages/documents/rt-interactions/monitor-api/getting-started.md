@@ -17,7 +17,7 @@ On your LiveEngage account, make sure the following features are enabled:
 
 * For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Conversation Sources feature.
 
-Contact your LivePerson representative in order to enable the features. 
+**Contact your LivePerson representative in order to enable the features.**
 
 In addition, an authentication server should be configured on the LiveEngage account. Refer to the [Authentication Guide - Configuration section](https://developers.liveperson.com/guides-authentication-configuration.html) in the Developer Community for further instructions.
 
