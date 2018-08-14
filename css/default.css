@@ -31,14 +31,14 @@ pre {
 }
 
 .defaultfooter span {
-  color: #fff;
+  color: #8b8b8b;
   font-size: 14px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   margin: 19px 0px 19px 88px;
 }
 
 .defaultfooter span a {
-  color: #fff;
+  color: #8b8b8b;
 }
 
 /* CSS-Grid Begins */
@@ -89,8 +89,9 @@ pre {
   .sidebartop {
     display: flex;
     height: 184px;
-    width: 100%;
+    width: 19.2%;
     background-color: #162036;
+    position: fixed;
   }
 
   .defaultsidebar {
@@ -126,8 +127,8 @@ pre {
 
   .defaultfooter {
     grid-row: 11 / span 1;
-    grid-column: 1 / span 6;
-    background-color: #4a4a4a;
+    grid-column: 3 / span 6;
+    background-color: #e9e9e9;
   }
 }
 
@@ -312,6 +313,7 @@ table {
 
 .topfolder {
   line-height: 3.3;
+  margin-left: 34px;
 }
 
 .topfolder > ul {
@@ -499,7 +501,24 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 }
 
 .sidebarhr {
-  
+  margin-left: 20.5px;
+  margin-right: 20.5px;
+  height: 2px;
+  background-color: #616d8a;
+  border-top: none;
+}
+
+.supportbutton {
+  padding: 10px 60px;
+  border: solid 1px #f2f1f2;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.supportbutton span {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #f2f1f2;
 }
 
 .anchorlist {

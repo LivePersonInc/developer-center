@@ -1,5 +1,6 @@
 function navigateContent(url) {
   var $content = $('#defaultcontent');
+  var $title = $('.documenttitle');
   //go to the indicated url passed from the linkclick function and find the content div and load it
   $content.load(url + ' #defaultcontent > *', function () {
     anchors.add('h3');
@@ -7,6 +8,7 @@ function navigateContent(url) {
     menuDrop ();
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: true });
   });
+  $title.load(url + ' .documenttitle > *');
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');
   //make sure no other links are set to active
@@ -74,10 +76,10 @@ function menuDrop () {
       event.preventDefault();
       var hasExpanded = $(this).data("expanded") == "true";
       if (hasExpanded) {
-          $(this).next().slideUp(400,onSlideComplete);
+          $(this).next().slideUp(400);
           $(this).data("expanded","false");
       } else {
-          $(this).next().slideDown(400,onSlideComplete);
+          $(this).next().slideDown(400);
           $(this).data("expanded","true");
       }
       return false;
@@ -88,8 +90,9 @@ function populateAnchors () {
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
   if (anchorlinks.length == 0){
-    $(anchorlist).append('<li>No here. Happy scrolling.</li>');
+    $('.anchorlist').css('display', 'none');
   }else {
+    $('.anchorlist').css('display', 'block');
     $.each(anchorlinks, function() {
       $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
     });

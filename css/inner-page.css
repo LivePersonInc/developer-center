@@ -39,6 +39,11 @@ h3[id]{
   font-size: 16px;
   font-weight: 500;
 }
+
+h3[id]:first-of-type {
+  margin-top: 24px;
+}
+
 h4[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
@@ -110,13 +115,13 @@ pre code {
 .post-content table  tr  td {
    font-size: 0.8em;
    font-family: "Open Sans";
-    color: #666666;
-    max-width: 160px;
-    height: 50px;
-    hyphens: none;
-    border-right: solid 1px #fff;
-    padding: 21px 25.5px 21px 23px;
-    vertical-align: initial;
+   color: #666666;
+   max-width: 160px;
+   height: 50px;
+   hyphens: none;
+   border-right: solid 1px #fff;
+   padding: 21px 25.5px 21px 23px;
+   vertical-align: initial;
 }
 
 .post-content table > thead > tr > th {
@@ -288,7 +293,6 @@ div#toc ul li ul li ul{
 ul.mysidebar.nav {
   text-decoration: none;
   margin-top: 0px;
-  margin-left: 34px;
   height: 100%;
   position: fixed;
   top: 202px;
@@ -561,7 +565,6 @@ div.sidebarTitle-holder {
 
 .post-content {
   max-width: 743px;
-  padding-top: 35px;
 }
 
 .post-content .zoomimg {
@@ -644,7 +647,7 @@ pre {
   ul.mysidebar {
   margin-left: 9px;
   top: 160px;
-  width: 331px;
+  width: 19.2%;
   height: 100%;
   margin-left: 0px;
 }
