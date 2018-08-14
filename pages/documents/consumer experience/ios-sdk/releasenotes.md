@@ -13,6 +13,20 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.2.4
+
+iOS Messaging SDK v3.2.4 contains the following bug fix:
+
+#### Symptom:
+
+The SDK would crash after the user sent messages in iOS 12.
+
+#### Fix:
+
+The user can now send messages without an SDK crash when running on iOS 12.
+
+
+
 ### iOS Messaging SDK - Version 3.2.3
 
 iOS Messaging SDK v3.2.3 contains the following bug fix:
