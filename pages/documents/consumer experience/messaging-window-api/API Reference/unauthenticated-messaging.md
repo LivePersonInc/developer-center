@@ -11,6 +11,7 @@ indicator: messaging
 
 LiveEngage expects to receive a token for every messaging conversation. These tokens identify unique consumers for LiveEngage and make sure that all consumers appear with their unique details displayed to the agent once they start a conversation. If you would like to have unauthenticated messaging conversations (where the consumer remains "anonymous"), you will need to provide an "unauthenticated" (not containing any details on the consumer) ID Token to LiveEngage. In this tutorial you will learn how to create and use such a token.
 
+
 ### Prerequisites
 
 In order to use unauthenticated tokens, your account must be provisioned by an LPA (LivePerson Administrator) to enable the `Messaging.Un_Auth_Messaging` feature and create an unauthenticated connector (ACR0 Connector). The LPA should supply you with the `CONNECTOR_ID` parameter that is required in the beginning of the flow below.
