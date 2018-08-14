@@ -28,6 +28,12 @@
   {% endif %}
   <div class="documenttitle">
     <div class='h1'>{{ page.title}}</div>
+    {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
+    <div class="indicator chat">Chat</div>
+    {% endif %}
+    {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
+    <div class="indicator messaging">Messaging</div>
+    {% endif %}
   </div>
   <hr class="pagehr" />
   <div id="anchorlist" class="anchorlist folder">
