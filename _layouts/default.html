@@ -23,7 +23,7 @@
   </div>
   {% if page.title %}
   <div class="documenttitlecontainer">
-  {% if page.title != "Getting Started" %}
+  {% if page.title != ("Getting Started" or "Page Not Found") %}
     {% include nav-breadcrumbs.html %}
   {% endif %}
   <div class="documenttitle">
