@@ -18,7 +18,7 @@ In order to refresh an existing access token, the application should use a refre
 
 | Method | URL |
 | :--- | :--- |
-| POST |  https://{domain}/api/account/{accountId}/token?v=2.0 |
+| POST |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/token?v=2.0 |
 
 **Query Parameters**
 

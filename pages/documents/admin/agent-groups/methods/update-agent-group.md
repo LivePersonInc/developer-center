@@ -19,7 +19,7 @@ This API updates an agent group for a specific account.
 
 | Method | URL| 
 | :-------- | :------- |
- |PUT | https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups/agentGroupId| 
+ |PUT | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups/agentGroupId| 
 
 **Request Headers**
 

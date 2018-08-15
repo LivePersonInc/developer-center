@@ -29,7 +29,7 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/consumer?v=1.0|
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/consumer?v=1.0|
 
 
 **Path Parameters**

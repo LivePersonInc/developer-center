@@ -16,7 +16,7 @@ indicator: both
 
 | Method | URL |
 | :--- | :--- | 
-| POST |  https://{domain}/api/account/{accountId}/logout |
+| POST |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/logout |
 
 **Headers**
 

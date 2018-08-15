@@ -24,7 +24,7 @@ Available states are:
 
  |Method|  URL |
  |:---|  :---| 
- |GET|  https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
+ |GET|  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
 
 **Request Headers**
 

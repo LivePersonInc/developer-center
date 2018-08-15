@@ -51,7 +51,7 @@ permalink: connectorapi-getting-started.html
 
 	**Request Example**
 
-	|https://{domain}/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
+	 https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
 
 	Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
 
@@ -59,7 +59,7 @@ permalink: connectorapi-getting-started.html
 
 	**Request Example**
 
-	|https://{domain}/api/account/{accountid}/consumer?v=1.0|
+	 https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/consumer?v=1.0|
 
 	Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.
 

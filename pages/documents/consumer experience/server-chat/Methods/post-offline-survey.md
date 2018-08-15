@@ -19,7 +19,7 @@ Posts an offline survey.
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/chat/offlineSurvey?v=1&NC=true |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/offlineSurvey?v=1&NC=true |
 
 **Formats**
 

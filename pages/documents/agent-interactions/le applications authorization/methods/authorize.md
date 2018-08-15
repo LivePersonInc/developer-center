@@ -20,7 +20,7 @@ This call should be made when the application does not posses a valid access tok
 
 | Method | URL |
 | :--- | :--- |
-| GET |  https://{domain}/sentinel/api/account/{accountid}/authorize?v=1.0&response_type=code&redirect_uri={application callback URL}&client_id={app install id}&state={application state} |
+| GET |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/sentinel/api/account/{accountid}/authorize?v=1.0&response_type=code&redirect_uri={application callback URL}&client_id={app install id}&state={application state} |
 
 **Path Parameters**
 

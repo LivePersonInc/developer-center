@@ -16,7 +16,7 @@ This API allows cancellation of an existing deletion request in the time period 
 
  |Method|      URL|
  |:--------  |:---  |
- |POST|  https://{domain}/api/account/{site_id}/personal-data-deletion/{request_id}/cancel |
+ |POST|  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{site_id}/personal-data-deletion/{request_id}/cancel |
 
 **Request Headers**
 
