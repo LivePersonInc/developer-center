@@ -8,15 +8,7 @@
   documents:
     - documentname: Add Messaging to Your App
 
-- solutionname: Customer Facing Bots
-  documents:
-    - documentname: Overview
-    - documentname: Prerequisites
-    - documentname: Getting Started
-    - documentname: Considerations
-    - documentname: Limitations
-    - documentname: Deploying Bots on Live Chat
-    - documentname: Deploying Bots on Messaging
+
 
 - solutionname: MCS Toolkit
   documents:

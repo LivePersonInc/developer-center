@@ -494,6 +494,7 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 
 .documenttitle .h1{
   align-self: center;
+  flex: 40;
 }
 
 .pagehr {
@@ -607,19 +608,56 @@ button span:last-of-type {
 @media screen and (max-width:1440px){
   .defaultheader {
     grid-column: 4 / span 4;
+    margin-left: 70px;
   }
 
   .defaultsidebar {
     grid-column: 1 / span 3;
   }
 
+  ul.mysidebar {
+    width: 22.4% !important;
+  }
+
   .defaultcontent {
+    margin-left: 70px;
+  }
+
+  .documenttitlecontainer {
     margin-left: 70px;
   }
 
   .defaultbutton {
     width: 120px;
     padding: 12px 13px;
+  }
+
+  .sidebartop {
+    width: 22.3%;
+  }
+
+  .sidebarbuttons {
+    left: 20px;
+  }
+
+  .documentsbutton {
+    margin-right: 20px;
+  }
+
+  .underline.lined:after {
+    width: 51%;
+  }
+
+  .solutionsunderline.lined:after {
+    width: 38%;
+  }
+
+  .topfolder {
+    margin-right: 17px;
+  }
+
+  .supportbutton {
+    padding: 10px 36px;
   }
 }
 
