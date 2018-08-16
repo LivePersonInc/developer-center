@@ -95,7 +95,7 @@ This section contains API details that are common to every API’s resource, met
 <ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed.</li></ul>
 <ul><li>Start date must be up to 7 days from today.</li></ul>
-<ul><li>The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well. If this is not followed, you will not receive an error code but this event won't work.</li></ul>
+<ul><li>The start date must be on the same day as the return value, for example, if the start date is May 1 and the recurrence is on Wednesday, make sure May 1 is Wednesday. If it does not follow, the return day will be set to the start day (the value of the recording will be ignored).</li></ul>
 <ul><li>The timezone field for both the start and end array must match.</li></ul>
 <ul><li>Only LiveEngage supported timezones may be used.</li></ul>
 </td>
