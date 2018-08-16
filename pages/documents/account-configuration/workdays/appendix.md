@@ -96,7 +96,7 @@ This section contains API details that are common to every API’s resource, met
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specific, 24/7 is assumed.</li></ul>
 <ul><li>Start date must be up to 7 days from today.</li></ul>
 <ul><li>The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well.
-If this is not followed, the reccurence day will be set according to the day of the start date (the reccurence value will be ignored).</li></ul>
+If this is not followed, the reccurence day will be set according to the day of the start date (the reccurence value will be ignored), e.g if you set the start date to May 1st which is a Wendesady but set the recurrence value to Thursday, Wednesday will be used instead.</li></ul>
 <ul><li>The timezone field for both the start and end array must match.</li></ul>
 <ul><li>Only LiveEngage supported timezones may be used.</li></ul>
 </td>
