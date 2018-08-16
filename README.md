@@ -26,7 +26,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `root-link`: this key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it.
 
-* `level-order`: this key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Admin) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appears before the Skills API (which is also under Admin) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`.
+* `level-order`: this key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Admin) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appear before the Skills API (which is also under Admin) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`.
 
 * `order`: this value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents.
 
