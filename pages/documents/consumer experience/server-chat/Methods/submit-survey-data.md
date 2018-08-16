@@ -19,7 +19,7 @@ Used to submit the survey data.
 
 | Method | URL |
 | :--- | :--- |
-| PUT |  https://{domain}/api/account/{accountId}/chat/{chatId}/exitSurvey?v=1&NC=true |
+| PUT |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/exitSurvey?v=1&NC=true |
 
 *Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.*
 

@@ -35,7 +35,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 ```javascript
 dependencies {
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.0'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
 }
 ```
 
@@ -70,7 +70,7 @@ dependencies {
   androidTestImplementation 'com.android.support.test:runner:1.0.1'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
   // LivePerson SDK
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.0'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
 }
 ```
 

@@ -21,7 +21,7 @@ This API retrieves a list of LoBs for a specific account.
 
  |Method           |        URL |
  |:-------          |       :------     |
-| GET | https://{domain}/api/account/{accountId}/configuration/le-users/lobs |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/lobs |
 
 **Request Headers**
 

@@ -20,7 +20,7 @@ _Note_: as a Best Practice recommendation, it is best to call this method every 
 
 | Method | URL |
 | :--- | :--- |
-| POST |   https://{domain}/api/account/{accountId}/refresh |
+| POST |   https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/refresh |
 
 **Headers**
 

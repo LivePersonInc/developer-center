@@ -21,7 +21,7 @@ Returns an XML or JSON response with the Pre-Chat survey.
 
 | Method | URL  |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/chat//preSurvey?v=1&NC=true |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat//preSurvey?v=1&NC=true |
 
 **Formats**
 

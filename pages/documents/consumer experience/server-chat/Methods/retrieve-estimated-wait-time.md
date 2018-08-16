@@ -29,7 +29,7 @@ The following wait times are explained below:
 
 | Method | URL  |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/chat/estimatedWaitTime?v=1&NC=true |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/estimatedWaitTime?v=1&NC=true |
 
 **Formats**
 

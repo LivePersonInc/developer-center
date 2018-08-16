@@ -21,7 +21,7 @@ This API creates an agent group for a specific account.
 
 | Method  |URL |
 | :-------- | :-----| 
-| POST | https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups |
 
 **Request Headers**
 

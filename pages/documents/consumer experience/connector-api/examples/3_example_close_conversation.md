@@ -28,7 +28,7 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
 **Request Headers**
 

@@ -24,6 +24,8 @@ Get an account's audit trail records.
 | Header | Description |
 | :------- | :-------------- |
 |Authorization | Contains token string to allow request authentication and authorization. See the introduction page for more details. |
+|Content-Type | application/json |
+|Accept | application/json |
 
 **Path Parameters**
 

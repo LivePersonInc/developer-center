@@ -24,7 +24,7 @@ Messaging CSAT Distribution is calculated using bucket aggregation techniques wh
 
 | Method | URL |
 | :-------- | :----- |
-| GET | `https://{domain}/operations/api/account/{accountID}/msgcsatdistribution?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&v=<version>`
+| GET |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgcsatdistribution?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&v=<version>`
 
 **URL Parameters**
 

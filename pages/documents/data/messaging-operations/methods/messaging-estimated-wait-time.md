@@ -30,7 +30,7 @@ This method returns the current average wait time in queue, per requested skill.
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/lp-messaging-ewt-app/api/account/{accountID}/ewt?skills=<skillIDs>&v=<version> |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/lp-messaging-ewt-app/api/account/{accountID}/ewt?skills=<skillIDs>&v=<version> |
 
  - Note: Data for at most 300 skills will be returned.
 

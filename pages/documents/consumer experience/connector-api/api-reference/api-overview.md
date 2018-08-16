@@ -93,7 +93,7 @@ Every message has a type. The structure of the body of the message can be change
 
 ####  Responses
 
-Responses should be sent with some kind of correlation to the request that they are answering. For this purpose, every request message must state the `id` string for the request. The server will reply with the same `id` in the response message as the value of the `reqId` field in the top level JSON object of the response message. The `sequence` field is counter i.e. tracking the times that the same request has been sent to LiveEngage and doubles its value, starting with zero value for the first request, two for the second request, four for the third request, etc. Below is an example of a response message to the request from the above section:
+Responses should be sent with some kind of correlation to the request that they are answering. For this purpose, every request message must state the `id` string for the request. The server will reply with the same `id` in the response message as the value of the `reqId` field in the top level JSON object of the response message. The `sequence` field is an optional counter i.e. tracking the times that the same request has been sent to LiveEngage and doubles its value, starting with zero value for the first request, two for the second request, four for the third request, etc. Below is an example of a response message to the request from the above section:
 
 ```json
 {

@@ -21,7 +21,7 @@ This API retrieves a list of agent groups for a specific account.
 
 | Method | URL |
 | :------- | :----- |
-| GET  |https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups |
+| GET   https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups |
 
 **Request Headers**
 

@@ -21,7 +21,7 @@ This API creates a list of profiles for a specific account.
 
 | Method |  URL  |
 | :--------  | :----- |
-|POST  |      https://{domain}/api/account/{accountId}/configuration/le-users/profiles |
+|POST  |      https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles |
 
 **Request Headers**
 

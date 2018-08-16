@@ -19,7 +19,7 @@ Used to retrieve the Exit survey structure.
 
 | Method | URL  |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/chat/{chatId}/exitSurvey?v=1&NC=true |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/exitSurvey?v=1&NC=true |
 
 **Retrieving the Exit Survey Structure**
 

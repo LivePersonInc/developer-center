@@ -21,7 +21,7 @@ This API retrieves a list of profiles for a specific account.
 
  |Method           |        URL |
  |:-------          |       :------     |
-| GET | https://{domain}/api/account/{accountId}/configuration/le-users/profiles |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles |
 
 **Request Headers**
 

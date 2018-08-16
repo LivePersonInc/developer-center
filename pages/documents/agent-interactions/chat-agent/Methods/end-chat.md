@@ -20,7 +20,7 @@ Use this request to end a chat.
 
 | Method | URL                                                                                               |
 |--------|---------------------------------------------------------------------------------------------------|
-| POST   | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events?v=1&NC=true |
+| POST   | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events?v=1&NC=true |
 
 **Request Headers**
 

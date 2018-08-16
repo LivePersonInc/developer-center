@@ -20,7 +20,7 @@ This method returns the available skills to transfer a chat. The list includes a
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer?v=1&NC=true |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer?v=1&NC=true |
 
 **Request Headers**
 

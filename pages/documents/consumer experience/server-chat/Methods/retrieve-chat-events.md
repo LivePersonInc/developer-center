@@ -20,7 +20,7 @@ This method retrieves the chat events. The possible event types include: state, 
 
 | Method | URL  |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/chat/{chatId}/events?v=1&NC=true |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/events?v=1&NC=true |
 
 **Formats**
 

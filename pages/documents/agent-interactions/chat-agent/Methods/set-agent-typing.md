@@ -1,7 +1,5 @@
 ---
 title: Set Agent’s Typing Status
-redirect_from:
-  - agent-set-agent-typing.html
 Keywords:
 level1: Documents
 level2: Agent Interactions
@@ -9,7 +7,7 @@ level3: Chat Agent API
 level4: Methods
 
 order: 180
-permalink: chat-agent-api-methods-set-agents-typing-status.html
+permalink: agent-set-agent-typing.html
 
 indicator: chat
 ---
@@ -20,7 +18,7 @@ This method sets the agent's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true|
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true| 
 **Request Headers**
 
 | Header | Description |
@@ -47,7 +45,7 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
-| Code | Response |
+| Code | Response | 
 | :--- | :--- |
 | 201 | Created |
 

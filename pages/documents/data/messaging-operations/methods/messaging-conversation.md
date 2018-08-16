@@ -24,7 +24,7 @@ Messaging Conversation is calculated using bucket aggregation techniques where e
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/operations/api/account/{accountID}/msgconversation?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version> |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgconversation?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version> |
 
  - Use POST request to pass a long list of agentIds
 
