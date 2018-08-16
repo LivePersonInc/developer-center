@@ -21,7 +21,7 @@ This API retrieves a single profile (by ID) for a specific account.
 
 |Method   |   URL    |            
 |:--------  | :----------------- |
-| GET     |    https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles/{profileId}|
+| GET     |    https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles/{profileId}|
 
 **Request Headers**
 

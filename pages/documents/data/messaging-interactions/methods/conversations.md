@@ -17,7 +17,7 @@ This method retrieves a list of conversations with all their metadata and relate
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
+POST   | https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
 
 **URL Parameters**
 

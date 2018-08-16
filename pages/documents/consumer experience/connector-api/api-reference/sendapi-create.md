@@ -26,7 +26,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Path Parameters**
 

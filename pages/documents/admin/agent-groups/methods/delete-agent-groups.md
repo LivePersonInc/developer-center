@@ -22,7 +22,7 @@ This API deletes agent groups from a specific account.
 
 | Method | URL |
 | :--------- | :---------- |
- |DELETE | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups |
+ |DELETE | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups |
 
 **Request Headers**
 

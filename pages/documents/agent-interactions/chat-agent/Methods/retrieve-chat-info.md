@@ -20,7 +20,7 @@ This method retrieves information regarding the current status of the chat. The 
 
 | Method | URL                                                                                       |
 |--------|-------------------------------------------------------------------------------------------|
-| GET    | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info?v=1&NC=true |
+| GET    | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info?v=1&NC=true |
 
 **Request Headers**
 

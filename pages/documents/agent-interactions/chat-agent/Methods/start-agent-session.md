@@ -18,7 +18,7 @@ indicator: chat
 
 | Method | URL |
 | :---- | :----- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/agentSession?v=1&NC=true |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/agentSession?v=1&NC=true |
 
 **Request Headers**
 

@@ -21,7 +21,7 @@ This API retrieves a list of users for a specific account.
 
  |Method|               URL |
  |:------              |:-------- |
- |GET|                  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users  |
+ |GET|                  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users  |
 
 **Request Headers**
 

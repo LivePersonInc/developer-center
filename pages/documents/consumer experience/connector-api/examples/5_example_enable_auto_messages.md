@@ -39,7 +39,7 @@ The following example illustrates how to enable the auto messages feature upon c
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 
 **Request Headers**
@@ -105,7 +105,7 @@ The following example illustrates how to enable the auto messages feature upon c
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
 **Request Headers**
 

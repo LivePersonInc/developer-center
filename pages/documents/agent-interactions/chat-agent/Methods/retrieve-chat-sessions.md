@@ -20,7 +20,7 @@ This method returns a list of the chat-session URIs that this agent managed in t
 
  |Method|  URL |
  |:---  |:--- |
- |GET|  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chatSessions?v=1&NC=true |
+ |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chatSessions?v=1&NC=true |
 
 **Request Headers**
 

@@ -22,7 +22,7 @@ This method returns the agent's information such as name, maximum number of chat
 
 | Method | URL                                                                                                           |
 |--------|---------------------------------------------------------------------------------------------------------------|
-| GET    | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/api/account/{accountId}/agentSession/{agentSession}/info?v=1&NC=true |
+| GET    | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/api/account/{accountId}/agentSession/{agentSession}/info?v=1&NC=true |
 
 **Request Headers**
 

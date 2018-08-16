@@ -659,6 +659,10 @@ button span:last-of-type {
   .supportbutton {
     padding: 10px 36px;
   }
+
+  .anchorlist {
+    margin-right: -227px;
+  }
 }
 
 @media screen and (max-width:1440px){

@@ -19,7 +19,7 @@ Returns an XML or JSON response with an Offline survey, or posts an Offline surv
 
 | Method | URL  |
 | :--- | :--- |
-| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/offlineSurvey?v=1&NC=true |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/chat/offlineSurvey?v=1&NC=true |
 
 **Formats**
 

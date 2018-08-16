@@ -20,7 +20,7 @@ This method checks whether there are agents on this account that are available f
 
 | Method | URL  |
 | :--- | :--- |
-| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/availability?v=1&NC=true |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/chat/availability?v=1&NC=true |
 
 **Formats**
 

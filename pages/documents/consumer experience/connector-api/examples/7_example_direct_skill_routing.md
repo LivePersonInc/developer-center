@@ -28,7 +28,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Request Headers**
 

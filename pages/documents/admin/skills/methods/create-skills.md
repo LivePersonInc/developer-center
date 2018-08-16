@@ -21,7 +21,7 @@ This API creates a list of skills for a specific account.
 
 | Method |  URL  |
 | :--------  | :----- |
- |POST  |      https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/skills |
+ |POST  |      https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/skills |
 
 **Request Headers**
 

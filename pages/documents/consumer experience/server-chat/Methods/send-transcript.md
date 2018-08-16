@@ -19,7 +19,7 @@ Sends a transcript of the chat to the visitor's email address.
 
 | Method | URL |
 | :--- | :--- |
-| PUT | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/transcriptRequest?v=1&NC=true |
+| PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/transcriptRequest?v=1&NC=true |
 
 *Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.*
 

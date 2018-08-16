@@ -22,7 +22,7 @@ This method transfers a chat from an agent to a specific skill or agent.
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer?v=1&NC=true  |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/transfer?v=1&NC=true  |
 
 **Request Headers**
 

@@ -19,7 +19,7 @@ Returns the visitor's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/info/visitorTyping?v=1&NC=true |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/info/visitorTyping?v=1&NC=true |
 
 **Formats**
 

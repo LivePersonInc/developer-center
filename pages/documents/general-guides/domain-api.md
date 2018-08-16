@@ -24,7 +24,7 @@ This is a read-only API that returns the base domain of LivePerson that should b
 
 | Method | URL |
 | :--- | :--- |
-| GET | ```http://api.liveperson.net/api/account/{accountId}/service/{serviceName}/baseURI.json?version=1.0``` |
+| GET | http://api.liveperson.net/api/account/{accountId}/service/{serviceName}/baseURI.json?version=1.0 |
 
 **URL Parameters**
 

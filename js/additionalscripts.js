@@ -6,7 +6,7 @@ function navigateContent(url) {
     anchors.add('h3');
     populateAnchors ();
     menuDrop ();
-    $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: true });
+    $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   });
   $title.load(url + ' .documenttitle > *');
   //from here, the rest of the code has to do with link highlighting for the sidebar
@@ -26,7 +26,7 @@ function navigateContent(url) {
 $(document).ready(function () {
   menuDrop ();
   populateAnchors ();
-  $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: true });
+  $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
 });
 
 

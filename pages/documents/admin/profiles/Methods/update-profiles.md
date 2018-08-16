@@ -21,7 +21,7 @@ This API updates a list of profiles for a specific account.
 
  |Method | URL |
  |:--- | :--- |
- |PUT | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles |
+ |PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles |
 
 **Request Headers**
 

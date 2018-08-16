@@ -24,7 +24,7 @@ This method sets the agent's availability to one of the following states:
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html).net/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
+| POST | https://[{domain}](/agent-domain-domain-api.html).net/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
 
 **Request Headers**
 

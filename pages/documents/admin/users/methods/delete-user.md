@@ -27,7 +27,7 @@ https://API_REQUEST?v=4.0
 
 | Method|      URL|  
  |:--------  |:---  |
- |DELETE|  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users |
+ |DELETE|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users |
 
 **Request Headers**
 
