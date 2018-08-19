@@ -2,7 +2,7 @@
 title: Delete Status Reason
 redirect_from:
   - account-configuration-agent-status-reason-deletestatusreason.html
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Agent Status Reason API
 level4: Methods

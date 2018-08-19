@@ -2,7 +2,7 @@
 title: Generate Download URL
 redirect_from:
   - consumer-int-msg-generate-temp-download-url.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference

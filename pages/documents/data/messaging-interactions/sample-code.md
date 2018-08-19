@@ -2,7 +2,7 @@
 title: Sample Code
 redirect_from:
   - data-messaging-interactions-sample-code.html
-level1: Documents
+sitesection: Documents
 
 level3: Messaging Interactions API
 

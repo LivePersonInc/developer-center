@@ -2,7 +2,7 @@
 title: Click
 redirect_from:
   - trigger-click.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: Engagement Trigger API
 level4: Methods

@@ -3,7 +3,7 @@ title: Zendesk
 redirect_from:
   - zendesk.html
 permalink: crm-integrations-zendesk.html
-level1: Solutions
+sitesection: Solutions
 level2: Integrations
 level3: CRM Integrations
 order: 50

@@ -1,6 +1,6 @@
 ---
 title: Unauthenticated Messaging
-level1:
+sitesection:
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials

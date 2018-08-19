@@ -3,7 +3,7 @@ title: Deploying Bots on Messaging
 redirect_from:
   - products-bots-messaging.html
 
-level1: Solutions
+sitesection: Solutions
 level2: Bots
 level3: Customer Facing Bots
 

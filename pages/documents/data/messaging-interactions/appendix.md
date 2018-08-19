@@ -2,7 +2,7 @@
 title: Engagement Attributes
 redirect_from:
   - data-messaging-interactions-appendix.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Messaging Interactions API
 

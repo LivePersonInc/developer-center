@@ -3,7 +3,7 @@ title: Step 5 - Publish Message
 redirect_from:
   - rich-messaging-file-sharing-5.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 60

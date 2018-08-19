@@ -3,7 +3,7 @@ title: Structured Content Templates
 redirect_from:
   - structured-content-templates.html
 Keywords:
-level1: 
+sitesection: 
 level2: Guides
 level3: Structured Content
 

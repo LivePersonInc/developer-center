@@ -3,7 +3,7 @@ title: Overview
 redirect_from:
   - rich-messaging-structured-content-overview.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Structured Content
 

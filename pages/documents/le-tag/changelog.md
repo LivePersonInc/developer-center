@@ -3,7 +3,7 @@ title: Changelog
 redirect_from:
   - lp-tag-tag-events-changelog.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: LE-Tag
 order: 231

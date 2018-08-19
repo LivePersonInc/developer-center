@@ -3,7 +3,7 @@ title: IVR Deflection for Chat
 redirect_from:
   - products-channels-ivr-deflection-solution-introduction.html
 keywords: ['IVR', 'IVR Deflection', 'IVR Deflection for Messaging']
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: IVR Deflection
 order: 20

@@ -2,7 +2,7 @@
 title: Considerations
 redirect_from:
   - products-bots-considerations.html
-level1: Solutions
+sitesection: Solutions
 level2: Bots
 level3: Customer Facing Bots
 

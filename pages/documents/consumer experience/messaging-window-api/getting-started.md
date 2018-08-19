@@ -2,7 +2,7 @@
 title: Getting Started
 redirect_from:
   - consumer-int-getting-started.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 

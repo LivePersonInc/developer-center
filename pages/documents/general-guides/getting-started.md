@@ -2,7 +2,7 @@
 title: Create a new API Key
 redirect_from:
   - guides-gettingstarted.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Retrieve API Keys
 

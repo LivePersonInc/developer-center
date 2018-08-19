@@ -2,7 +2,7 @@
 title: Sample Code
 redirect_from:
   - data-operational-realtime-sample-code.html
-level1: Documents
+sitesection: Documents
 
 level3: Operational Realtime API
 

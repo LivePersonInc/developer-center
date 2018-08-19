@@ -2,7 +2,7 @@
 title: Send a Transcript
 redirect_from:
   - consumer-experience-server-chat-send-transcript.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

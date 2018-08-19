@@ -2,7 +2,7 @@
 title: Update Session
 redirect_from:
   - rt-interactions-update-session.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: App Engagement API
 level4: Methods

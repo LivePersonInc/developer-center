@@ -2,7 +2,7 @@
 title: Sample Postman Collection
 redirect_from:
   - consumer-experience-server-chat-sample.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 

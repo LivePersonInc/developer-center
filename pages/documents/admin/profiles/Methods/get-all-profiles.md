@@ -3,7 +3,7 @@ title: Get all profiles
 redirect_from:
   - administration-get-all-profiles.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Profiles API
 level4: Methods

@@ -2,7 +2,7 @@
 title: Submit Survey Data
 redirect_from:
   - consumer-experience-server-chat-submit-survey-data.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

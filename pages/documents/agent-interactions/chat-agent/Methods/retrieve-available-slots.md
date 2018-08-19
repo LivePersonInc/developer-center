@@ -3,7 +3,7 @@ title: Retrieve Available Slots
 redirect_from:
   - agent-retrieve-available-slots.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 level4: Methods

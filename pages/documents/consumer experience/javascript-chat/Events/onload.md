@@ -3,7 +3,7 @@ title: onLoad
 redirect_from:
   - consumer-experience-javascript-chat-onload.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 level4: Events

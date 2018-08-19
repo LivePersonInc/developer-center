@@ -2,7 +2,7 @@
 title: Build Your Widgets
 redirect_from:
   - products-video-chat-build-your-widgets.html
-level1: Solutions
+sitesection: Solutions
 level2: Rich Media
 level3: Video Chat
 

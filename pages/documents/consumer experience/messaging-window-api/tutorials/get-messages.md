@@ -2,7 +2,7 @@
 title: Get Messages 
 redirect_from:
   - consumer-int-get-msg.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials

@@ -3,7 +3,7 @@ title: Reset User's Password
 redirect_from:
   - administration-reset-users-password.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Users API
 level4: Methods

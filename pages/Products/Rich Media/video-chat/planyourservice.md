@@ -2,7 +2,7 @@
 title: Plan Your Service
 redirect_from:
   - products-video-chat-plan-your-service.html
-level1: Solutions
+sitesection: Solutions
 level2: Rich Media
 level3: Video Chat
 

@@ -3,7 +3,7 @@ title: Local Message Notifications
 redirect_from:
   - local-message-notifications.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Local Message Notifications
 order: 10

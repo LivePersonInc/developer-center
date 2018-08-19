@@ -2,7 +2,7 @@
 title: Direct skill routing
 redirect_from:
   - direct-skill-routing-example.html
-level1: Documents
+sitesection: Documents
 level2:
 level3:
 level4:

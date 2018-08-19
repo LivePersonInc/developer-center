@@ -3,7 +3,7 @@ title: Configuration of Push Proxy
 redirect_from:
   - push-service-configuration.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Guides
 
 

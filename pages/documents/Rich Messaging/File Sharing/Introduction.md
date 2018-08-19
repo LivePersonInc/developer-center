@@ -3,7 +3,7 @@ title: Introduction
 redirect_from:
   - rich-messaging-file-sharing.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: File Sharing
 level-order: 5

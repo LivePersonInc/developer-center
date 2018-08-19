@@ -2,7 +2,7 @@
 title: Appendix
 redirect_from:
   - guides-customizedchat-appendix.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Customized Chat Windows
 

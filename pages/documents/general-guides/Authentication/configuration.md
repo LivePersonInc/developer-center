@@ -2,7 +2,7 @@
 title: Configuration
 redirect_from:
   - guides-authentication-configuration.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Authentication
 

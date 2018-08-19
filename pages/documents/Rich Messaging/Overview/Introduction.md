@@ -3,7 +3,7 @@ title: Introduction
 redirect_from:
   - rich-messaging-getting-started.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Getting Started
 

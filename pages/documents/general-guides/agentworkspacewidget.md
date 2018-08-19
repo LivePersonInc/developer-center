@@ -2,7 +2,7 @@
 title: Add Your Own Widgets to the Agent Workspace
 redirect_from:
   - guides-agent-workspace-widget.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Add Agent Widgets
 

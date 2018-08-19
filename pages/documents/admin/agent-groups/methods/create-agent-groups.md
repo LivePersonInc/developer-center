@@ -3,7 +3,7 @@ title: Create Agent Groups
 redirect_from:
   - administration-create-agent-groups.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Agent Groups API
 level4: Methods

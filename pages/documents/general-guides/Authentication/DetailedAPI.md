@@ -2,7 +2,7 @@
 title: Detailed API
 redirect_from:
   - guides-authentication-detailedapi.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Authentication
 

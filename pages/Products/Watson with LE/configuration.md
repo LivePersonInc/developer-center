@@ -3,7 +3,7 @@ title: Configuration
 redirect_from:
   - watson-configuration.html
 keywords:
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 27

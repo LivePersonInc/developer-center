@@ -3,7 +3,7 @@ title: Card
 redirect_from:
   - rich-messaging-structured-content-card.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Structured Content
 level4: Templates

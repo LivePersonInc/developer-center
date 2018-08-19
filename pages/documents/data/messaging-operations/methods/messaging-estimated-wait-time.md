@@ -2,7 +2,7 @@
 title: Messaging Estimated Wait Time
 redirect_from:
   - data-messaging-operations-messaging-estimated-wait-time.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Messaging Operations API
 level4: Methods

@@ -3,7 +3,7 @@ title: Microsoft Dynamics
 redirect_from:
   - microsoftdynamics.html
 permalink: crm-integrations-microsoft-dynamics.html
-level1: Solutions
+sitesection: Solutions
 level2: Integrations
 level3: CRM Integrations
 order: 20

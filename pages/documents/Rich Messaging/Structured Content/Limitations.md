@@ -3,7 +3,7 @@ title: Limitations
 redirect_from:
   - rich-messaging-structured-content-limitations.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Structured Content
 order: 70

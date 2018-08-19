@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - consumer-experience-messaging-history-overview.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Consumer Messaging History API
 level-order: 7

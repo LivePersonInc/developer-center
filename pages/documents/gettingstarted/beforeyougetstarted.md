@@ -1,6 +1,6 @@
 ---
 title: Before You Get Started
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-before-you-get-started.html

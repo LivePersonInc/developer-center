@@ -1,6 +1,6 @@
 ---
 title: How to Read Our Documents
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-how-to-read-our-documents.html

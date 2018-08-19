@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - usecases-alternate-messaging-notifications.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: Alternate Messaging Notifications
 

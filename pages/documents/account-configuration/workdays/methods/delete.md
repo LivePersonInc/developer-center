@@ -3,7 +3,7 @@ title: Delete Workdays Object
 redirect_from:
   - account-configuration-workdays-delete.html
 Keywords:
-level1:
+sitesection:
 level2: Account Configuration
 level3: Workdays API
 level4: Methods

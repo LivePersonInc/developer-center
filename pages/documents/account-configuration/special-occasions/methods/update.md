@@ -3,7 +3,7 @@ title: Update
 redirect_from:
   - account-configuration-special-occasions-update.html
 Keywords:
-level1:
+sitesection:
 level2: Account Configuration
 level3: Special Occasions API
 level4: Methods

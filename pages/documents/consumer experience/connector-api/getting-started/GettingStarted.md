@@ -2,7 +2,7 @@
 title: Getting Started
 redirect_from:
   - connectorapi-getting-started.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API

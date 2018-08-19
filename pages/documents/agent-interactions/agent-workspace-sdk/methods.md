@@ -3,7 +3,7 @@ title: Methods
 redirect_from:
   - agent-workspace-sdk-methods.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 

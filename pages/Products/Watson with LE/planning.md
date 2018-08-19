@@ -3,7 +3,7 @@ title: Planning
 redirect_from:
   - watson-planning.html
 keywords:
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 26

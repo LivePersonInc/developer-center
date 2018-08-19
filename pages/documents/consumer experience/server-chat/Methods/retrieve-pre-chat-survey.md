@@ -2,7 +2,7 @@
 title: Retrieve Pre-Chat Survey
 redirect_from:
   - consumer-experience-server-chat-retrieve-pre-chat-survey.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

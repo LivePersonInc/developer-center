@@ -3,7 +3,7 @@ title: Create Deletion Request
 redirect_from:
   - personal-data-deletion-delete-request.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Personal Data Deletion API
 level4: Methods

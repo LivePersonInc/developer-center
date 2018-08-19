@@ -3,7 +3,7 @@ title: Retrieve Availability
 redirect_from:
   - consumer-experience-server-chat-retrieve-availability.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

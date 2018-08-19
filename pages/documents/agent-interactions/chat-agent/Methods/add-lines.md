@@ -3,7 +3,7 @@ title: Send Lines and Structured Content
 redirect_from:
   - agent-add-lines.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 level4: Methods

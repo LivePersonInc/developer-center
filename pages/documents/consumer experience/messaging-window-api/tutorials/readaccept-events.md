@@ -2,7 +2,7 @@
 title: Read and Accept Events
 redirect_from:
   - consumer-int-readaccept-events.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials

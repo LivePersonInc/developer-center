@@ -2,7 +2,7 @@
 title: Consumer Token Creation
 redirect_from:
   - common-consumer-token-creation.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference

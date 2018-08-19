@@ -3,7 +3,7 @@ title: Actions
 redirect_from:
   - rich-messaging-click-ops-actions.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Getting Started
 level4: Click Operations

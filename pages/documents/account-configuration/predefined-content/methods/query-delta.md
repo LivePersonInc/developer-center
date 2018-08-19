@@ -3,7 +3,7 @@ title: Predefined Content Query Delta
 redirect_from:
   - account-configuration-predefined-content-query-delta.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Predefined Content API
 level4: Methods

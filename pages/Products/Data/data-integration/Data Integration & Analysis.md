@@ -2,7 +2,7 @@
 title: Integrate your LivePerson data into any system for analytics
 redirect_from:
   - products-data-integration-and-analysis-overview.html
-level1: Solutions
+sitesection: Solutions
 level2: Data
 level3: Data Integration & Analysis
 

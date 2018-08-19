@@ -3,7 +3,7 @@ title: Retrieve the Agent's Typing Status
 redirect_from:
   - consumer-experience-server-chat-retrieve-agent-typing-status.html
 
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

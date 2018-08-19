@@ -3,7 +3,7 @@ title: Changelog
 redirect_from:
   - rt-interactions-visit-information-changelog.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: Visit Information API
 order: 231

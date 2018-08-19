@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - products-channels-mms-overview.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-overview.html

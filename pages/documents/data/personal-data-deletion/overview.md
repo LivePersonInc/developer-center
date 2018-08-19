@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - personal-data-deletion-overview.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Personal Data Deletion API
 level-order: 8

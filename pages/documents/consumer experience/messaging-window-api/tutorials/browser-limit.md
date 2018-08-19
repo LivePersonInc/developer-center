@@ -2,7 +2,7 @@
 title: Avoid Websocket Headers
 redirect_from:
   - consumer-int-no-headers.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials

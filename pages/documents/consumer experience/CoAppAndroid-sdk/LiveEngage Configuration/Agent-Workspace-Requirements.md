@@ -2,7 +2,7 @@
 title: Agent Workspace Requirements
 redirect_from:
   - consumer-experience-voice-video-android-workspace-requirements.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 level4: LiveEngage Configuration

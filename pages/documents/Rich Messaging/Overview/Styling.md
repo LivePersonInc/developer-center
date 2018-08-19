@@ -3,7 +3,7 @@ title: Styling
 redirect_from:
   - rich-messaging-styling.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Getting Started
 order: 110

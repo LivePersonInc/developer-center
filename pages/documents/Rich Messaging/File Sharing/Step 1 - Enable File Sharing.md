@@ -3,7 +3,7 @@ title: Step 1 - Enable File Sharing
 redirect_from:
   - rich-messaging-file-sharing-1.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 20

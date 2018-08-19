@@ -3,7 +3,7 @@ title: Update LOBs
 redirect_from:
   - administration.update-lobs.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: LOBs API
 level4: Methods

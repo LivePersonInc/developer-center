@@ -2,7 +2,7 @@
 title: Code Examples
 redirect_from:
   - rt-interactions-window-sdk-code-examples.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Engagement Window Widget SDK
 level4: Instructions

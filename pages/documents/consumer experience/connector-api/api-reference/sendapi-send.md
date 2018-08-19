@@ -2,7 +2,7 @@
 title: SEND
 redirect_from:
   - sendapi-send.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: API Reference

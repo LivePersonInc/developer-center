@@ -3,7 +3,7 @@ title: Release Notes
 redirect_from:
   - rt-interactions-window-sdk-releasenotes.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Engagement Window Widget SDK
 

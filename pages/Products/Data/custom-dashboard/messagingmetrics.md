@@ -2,7 +2,7 @@
 title: Messaging Metrics
 redirect_from:
   - products-data-custom-dashboard-messaging-metrics.html
-level1: Solutions
+sitesection: Solutions
 level2: Data
 level3: Custom Dashboard
 

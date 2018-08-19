@@ -2,7 +2,7 @@
 title: How to enable a feature
 redirect_from:
   - enable-feature-example.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples

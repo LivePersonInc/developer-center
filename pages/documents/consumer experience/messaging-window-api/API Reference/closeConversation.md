@@ -2,7 +2,7 @@
 title: Close Conversation
 redirect_from:
   - consumer-int-msg-close-conv.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference

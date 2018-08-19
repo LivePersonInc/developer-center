@@ -3,7 +3,7 @@ title: How it works - Operational Flow
 redirect_from:
   - watson-how-it-works.html
 keywords:
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: Watson with LiveEngage
 order: 20

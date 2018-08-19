@@ -2,7 +2,7 @@
 title: Get AppJWT
 redirect_from:
   - Create_AppJWT.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Authorization and Authentication

@@ -2,7 +2,7 @@
 title: Request Builder
 redirect_from:
   - consumer-int-msg-reqs.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: API Reference

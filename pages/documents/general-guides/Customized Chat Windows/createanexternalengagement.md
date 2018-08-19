@@ -2,7 +2,7 @@
 title: Create an API Engagement
 redirect_from:
   - guides-customizedchat-create-an-external-engagement.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Customized Chat Windows
 

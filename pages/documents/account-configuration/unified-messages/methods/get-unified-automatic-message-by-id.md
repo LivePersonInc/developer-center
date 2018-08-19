@@ -3,7 +3,7 @@ title: Get Unified Automatic Message by ID
 redirect_from:
   - account-configuration-unified-automatic-messages-get-automatic-message-by-id.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Unified Automatic Messages API
 level4: Methods

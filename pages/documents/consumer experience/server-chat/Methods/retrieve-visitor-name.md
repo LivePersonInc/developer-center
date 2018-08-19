@@ -2,7 +2,7 @@
 title: Retrieve Visitor's Name
 redirect_from:
   - consumer-experience-server-chat-retrieve-visitor-name.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

@@ -3,7 +3,7 @@ title: Conversation Metadata Guide
 redirect_from:
   - guides-conversation-metadata-guide.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Messaging Agent SDK
 level-order: 10

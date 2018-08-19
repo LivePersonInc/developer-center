@@ -3,7 +3,7 @@ title: Update skill
 redirect_from:
   - administration-update-skill.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Skills API
 level4: Methods

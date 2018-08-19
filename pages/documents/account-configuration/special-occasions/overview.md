@@ -3,7 +3,7 @@ title: Overview
 redirect_from:
   - account-configuration-special-occasions-overview.html
 keywords:
-level1:
+sitesection:
 level2: Account Configuration
 level3: Special Occasions API
 level-order: 9

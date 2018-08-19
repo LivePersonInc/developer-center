@@ -2,7 +2,7 @@
 title: App Install Manifest for Connectors
 redirect_from:
   - app-install-manifest-connectors.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Connector API

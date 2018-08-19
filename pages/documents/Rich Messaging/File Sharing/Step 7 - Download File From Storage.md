@@ -3,7 +3,7 @@ title: Step 7 - Download File From Storage
 redirect_from:
   - rich-messaging-file-sharing-7.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 80

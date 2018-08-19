@@ -2,7 +2,7 @@
 title: Chat Metrics
 redirect_from:
   - products-data-custom-dashboard-chat-metrics.html
-level1: Solutions
+sitesection: Solutions
 level2: Data
 level3: Custom Dashboard
 

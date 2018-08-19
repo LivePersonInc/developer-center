@@ -2,7 +2,7 @@
 title: Retrieve Available Slots
 redirect_from:
   - consumer-experience-server-chat-retrieve-available-slots.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

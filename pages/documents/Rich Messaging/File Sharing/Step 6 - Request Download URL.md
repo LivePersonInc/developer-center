@@ -3,7 +3,7 @@ title: Step 6 - Request Download URL
 redirect_from:
   - rich-messaging-file-sharing-6.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 70

@@ -3,7 +3,7 @@ title: Certificate Pinning - Android
 redirect_from:
   - consumer-experience-android-sdk-certpinning.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2:
 level3: Mobile App Messaging SDK for iOS
 level4: Certificate Pinning

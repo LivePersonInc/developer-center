@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - consumer-experience-server-chat-getting-started.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level-order: 7

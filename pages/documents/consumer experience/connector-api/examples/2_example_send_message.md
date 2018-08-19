@@ -2,7 +2,7 @@
 title: Send a message
 redirect_from:
   - send-message-example.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples

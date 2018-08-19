@@ -3,7 +3,7 @@ title: Delete Agent Groups
 redirect_from:
   - administration-delete-agent-groups.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Agent Groups API
 level4: Methods

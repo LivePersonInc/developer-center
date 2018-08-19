@@ -30,7 +30,9 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `order`: this value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents.
 
-* `permalink`: this key defines the link at which the document can be found.
+* `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
+
+  * 
 
 * `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts "chat", "messaging" or "both".
 

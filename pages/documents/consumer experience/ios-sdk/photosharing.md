@@ -3,7 +3,7 @@ title: Photo Sharing
 redirect_from:
   - consumer-experience-ios-sdk-photosharing.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: Advanced Features

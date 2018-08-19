@@ -2,7 +2,7 @@
 title: Create an API-based Window
 redirect_from:
   - guides-customizedchat-create-an-api-based-window.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Customized Chat Windows
 

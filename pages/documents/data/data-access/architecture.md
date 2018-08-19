@@ -2,7 +2,7 @@
 title: Architecture
 redirect_from:
   - data-data-access-architecture.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Data Access API
 order: 2

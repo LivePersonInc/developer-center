@@ -2,7 +2,7 @@
 title: PGP Encryption
 redirect_from:
   - data-data-access-pgp-encryption.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Data Access API
 

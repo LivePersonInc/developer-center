@@ -3,7 +3,7 @@ title: Public Properties
 redirect_from:
   - agent-workspace-sdk-public-properties.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 

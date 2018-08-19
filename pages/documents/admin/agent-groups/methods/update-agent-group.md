@@ -3,7 +3,7 @@ title: Update Agent Group
 redirect_from:
   - administration-update-agent-group.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Agent Groups API
 level4: Methods

@@ -3,7 +3,7 @@ title: Release Notes
 redirect_from:
   - messaging-agent-sdk-releasenotes.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Messaging Agent SDK
 

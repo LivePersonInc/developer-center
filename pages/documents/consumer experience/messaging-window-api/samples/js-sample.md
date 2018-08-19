@@ -2,7 +2,7 @@
 title: JavaScript Sample
 redirect_from:
   - consumer-int-js-sample.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Samples

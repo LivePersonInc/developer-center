@@ -3,7 +3,7 @@ title: Get User by ID
 redirect_from:
   - administration-get-user-by-id.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Users API
 level4: Methods

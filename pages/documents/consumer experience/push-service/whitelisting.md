@@ -3,7 +3,7 @@ title: IP Whitelisting
 redirect_from:
   - push-service-whitelist.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Guides
 
 

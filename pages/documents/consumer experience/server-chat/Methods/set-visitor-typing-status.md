@@ -2,7 +2,7 @@
 title: Set the Visitor's Typing Status
 redirect_from:
   - consumer-experience-server-chat-set-visitor-typing-status.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

@@ -3,7 +3,7 @@ title: Getting Started
 redirect_from:
   - products-bots-gettingstarted.html
 
-level1: Solutions
+sitesection: Solutions
 level2: Bots
 level3: Customer Facing Bots
 

@@ -2,7 +2,7 @@
 title: Campaign for messaging Routing
 redirect_from:
   - cmp-routing-example.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples

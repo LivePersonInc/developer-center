@@ -2,7 +2,7 @@
 title: IVR Deflection
 redirect_from:
   - products-channels-sms-ivr.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 

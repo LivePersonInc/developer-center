@@ -2,7 +2,7 @@
 title: Retrieve Chat Events
 redirect_from:
   - consumer-experience-server-chat-retrieve-chat-events.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

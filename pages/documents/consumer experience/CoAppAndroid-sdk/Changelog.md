@@ -2,7 +2,7 @@
 title: Release Notes
 redirect_from:
   - consumer-experience-voice-video-android-changelog.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Voice & Video for Android SDK (BETA)
 

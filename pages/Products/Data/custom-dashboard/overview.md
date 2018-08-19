@@ -2,7 +2,7 @@
 title: Create a custom real time dashboard for your contact center
 redirect_from:
   - products-data-custom-dashboard-overview.html
-level1: Solutions
+sitesection: Solutions
 level2: Data
 level3: Custom Dashboard
 

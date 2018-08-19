@@ -2,7 +2,7 @@
 title: Audit Trail
 redirect_from:
   - account-configuration-meta-data-audit-trail.html
-level1: Documents
+sitesection: Documents
 
 level3: Meta Data API
 level4: Methods

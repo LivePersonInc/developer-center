@@ -3,7 +3,7 @@ title: Messaging API
 redirect_from:
   - android-methods.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 level4: SDK APIs

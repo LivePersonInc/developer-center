@@ -3,7 +3,7 @@ title: Appendix
 redirect_from:
   - administration-skills-appendix.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Skills API
 

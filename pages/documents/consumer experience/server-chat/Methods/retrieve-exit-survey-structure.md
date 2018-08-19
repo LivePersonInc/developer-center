@@ -2,7 +2,7 @@
 title: Retrieve Exit Survey Structure
 redirect_from:
   - consumer-experience-server-chat-retrieve-exit-survey-structure.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

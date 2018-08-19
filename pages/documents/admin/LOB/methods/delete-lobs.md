@@ -3,7 +3,7 @@ title: Delete LOBs
 redirect_from:
   - administration-delete-lobs.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: LOBs API
 level4: Methods

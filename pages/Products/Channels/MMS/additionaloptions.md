@@ -2,7 +2,7 @@
 title: Additional Options
 redirect_from:
   - products-channels-mms-additional.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-additional-options.html

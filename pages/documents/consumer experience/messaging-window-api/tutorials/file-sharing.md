@@ -2,7 +2,7 @@
 title: File Sharing
 redirect_from:
   - messaging-window-api-tutorials-file-sharing
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Messaging Window API
 level4: Tutorials

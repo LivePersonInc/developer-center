@@ -3,7 +3,7 @@ title: Changelog
 redirect_from:
   - trigger-changelog.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: Engagement Trigger API
 order: 231

@@ -3,7 +3,7 @@ title: cancelSurvey
 redirect_from:
   - consumer-experience-javascript-chat-cancelsurvey.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Javascript Chat SDK
 level4: Methods

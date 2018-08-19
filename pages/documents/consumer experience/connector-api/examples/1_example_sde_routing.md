@@ -2,7 +2,7 @@
 title: Create a new conversation and report SDEs
 redirect_from:
   - sdes-routing-example.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples

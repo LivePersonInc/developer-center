@@ -2,7 +2,7 @@
 title: Google AdWords - Click-to-Message
 redirect_from:
   - products-channels-sms-adwords.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 

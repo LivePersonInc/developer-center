@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - data-messaging-interactions-overview.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Messaging Interactions API
 

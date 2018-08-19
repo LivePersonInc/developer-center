@@ -2,7 +2,7 @@
 title: Impression Events Body Example
 redirect_from:
   - rt-interactions-example.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: App Engagement API
 

@@ -2,7 +2,7 @@
 title: Add Messaging to your app
 redirect_from:
   - products-channels-inapp-messaging.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: Mobile App Messaging
 

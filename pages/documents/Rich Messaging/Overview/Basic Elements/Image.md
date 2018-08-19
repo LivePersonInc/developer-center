@@ -3,7 +3,7 @@ title: Image
 redirect_from:
   - rich-messaging-basic-elements-image.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Getting Started
 level4: Basic Elements

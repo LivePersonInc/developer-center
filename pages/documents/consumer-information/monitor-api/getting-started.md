@@ -2,7 +2,7 @@
 title: Getting Started
 redirect_from:
   - rt-interactions-monitoring-getting-started.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: Monitoring API
 order: 10

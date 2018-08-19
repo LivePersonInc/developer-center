@@ -3,7 +3,7 @@ title: Get LOB by ID
 redirect_from:
   - administration-get-lob-by-id.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: LOBs API
 level4: Methods

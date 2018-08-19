@@ -3,7 +3,7 @@ title: Delete an Unified Automatic Message
 redirect_from:
   - account-configuration-unified-automatic-messages-delete-an-automatic-message.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Unified Automatic Messages API
 level4: Methods

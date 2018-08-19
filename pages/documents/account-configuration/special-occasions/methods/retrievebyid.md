@@ -3,7 +3,7 @@ title: Retrieve Special Occasion by ID
 redirect_from:
   - account-configuration-special-occasions-retrieve-by-id.html
 Keywords:
-level1:
+sitesection:
 level2: Account Configuration
 level3: Special Occasions API
 level4: Methods

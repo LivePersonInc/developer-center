@@ -1,7 +1,7 @@
 ---
 title: Business Chat Message Section
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Apple Business Chat Templates
 level4: Time Picker

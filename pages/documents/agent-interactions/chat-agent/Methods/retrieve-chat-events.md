@@ -3,7 +3,7 @@ title: Retrieve Chat Events
 redirect_from:
   - agent-retrieve-chat-events.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 level4: Methods

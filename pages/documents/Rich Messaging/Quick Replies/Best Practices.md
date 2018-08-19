@@ -3,7 +3,7 @@ title: Best Practices
 redirect_from:
   - rich-messaging-quick-replies-best-practices.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Quick Replies
 order: 40

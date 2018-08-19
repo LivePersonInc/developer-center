@@ -2,7 +2,7 @@
 title: Send Chat State Events
 redirect_from:
   - send-chat-state-example.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Connector API
 level4: Examples

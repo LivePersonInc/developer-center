@@ -2,7 +2,7 @@
 title: Visit Information
 redirect_from:
   - rt-interactions-visit-information-visit-information.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Information
 level3: Visit Information API
 

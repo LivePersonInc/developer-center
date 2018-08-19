@@ -3,7 +3,7 @@ title: Set Agent’s Typing Status
 redirect_from:
   - agent-set-agent-typing.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 level4: Methods

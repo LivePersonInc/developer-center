@@ -2,7 +2,7 @@
 title: Retrieve Audit Trail Records
 redirect_from:
   - account-configuration-meta-data-audit-trail.html
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Audit Trail API
 level4: Methods

@@ -3,7 +3,7 @@ title: Delete Skills
 redirect_from:
   - administration-delete-skills.html
 keywords:
-level1: Documents
+sitesection: Documents
 level2: Admin
 level3: Skills API
 level4: Methods

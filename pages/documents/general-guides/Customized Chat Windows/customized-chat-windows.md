@@ -2,7 +2,7 @@
 title: Overview
 redirect_from:
   - guides-customizedchat.html
-level1: Documents
+sitesection: Documents
 level2: Guides
 level3: Customized Chat Windows
 

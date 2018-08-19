@@ -2,7 +2,7 @@
 title: Getting Started
 redirect_from:
   - products-mcs-gettingstarted.html
-level1: Solutions
+sitesection: Solutions
 level2: Data
 level3: MCS Toolkit
 

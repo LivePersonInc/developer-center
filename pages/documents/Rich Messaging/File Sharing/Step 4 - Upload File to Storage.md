@@ -3,7 +3,7 @@ title: Step 4 - Upload File to Storage
 redirect_from:
   - rich-messaging-file-sharing-4.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: File Sharing
 order: 50

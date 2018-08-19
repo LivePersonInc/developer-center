@@ -2,7 +2,7 @@
 title: Desktop content campaign
 redirect_from:
   - products-channels-sms-desktop.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 

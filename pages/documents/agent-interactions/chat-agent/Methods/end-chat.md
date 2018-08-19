@@ -3,7 +3,7 @@ title: End Chat
 redirect_from:
   - agent-end-chat.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Chat Agent API
 level4: Methods

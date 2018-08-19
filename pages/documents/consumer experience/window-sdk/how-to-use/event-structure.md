@@ -2,7 +2,7 @@
 title: Event Structure
 redirect_from:
   - rt-interactions-window-sdk-event-structure.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Engagement Window Widget SDK
 level4: Instructions

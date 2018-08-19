@@ -3,7 +3,7 @@ title: Update an Automatic Message
 redirect_from:
   - account-configuration-automatic-messages-update-an-automatic-message.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Automatic Messages API
 level4: Methods

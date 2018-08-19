@@ -3,7 +3,7 @@ title: Timestamps Formatting
 redirect_from:
   - consumer-experience-ios-sdk-timestamps.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for iOS
 level4: String Localization

@@ -2,7 +2,7 @@
 title: Automatically Update Predefined Content
 redirect_from:
   - products-admin-predefined-content.html
-level1: Solutions
+sitesection: Solutions
 level2:
 level3: Predefined Content
 

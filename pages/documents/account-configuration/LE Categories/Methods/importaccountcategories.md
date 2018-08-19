@@ -2,7 +2,7 @@
 title: Import Account Categories
 redirect_from:
   - account-configuration-categories-import.html
-level1: Documents
+sitesection: Documents
 level2: Account Configuration
 level3: Predefined Categories API
 level4: Methods

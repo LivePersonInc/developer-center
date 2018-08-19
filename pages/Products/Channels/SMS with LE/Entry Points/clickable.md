@@ -2,7 +2,7 @@
 title: Clickable Mobile Content to SMS
 redirect_from:
   - products-channels-sms-clickable.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 

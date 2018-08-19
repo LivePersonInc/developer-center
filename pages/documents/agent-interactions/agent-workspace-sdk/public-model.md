@@ -3,7 +3,7 @@ title: Public Model Structure
 redirect_from:
   - agent-workspace-sdk-public-model.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Agent Interactions
 level3: Agent Workspace Widget SDK
 

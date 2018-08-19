@@ -2,7 +2,7 @@
 title: Retrieve Estimated Wait Time
 redirect_from:
   - consumer-experience-server-chat-retrieve-estimated-wait-time.html
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Server Chat API
 level4: Methods

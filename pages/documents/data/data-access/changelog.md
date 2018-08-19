@@ -2,7 +2,7 @@
 title: Changelog
 redirect_from:
   - data-data-access-changelog.html
-level1: Documents
+sitesection: Documents
 level2: Data
 level3: Data Access API
 

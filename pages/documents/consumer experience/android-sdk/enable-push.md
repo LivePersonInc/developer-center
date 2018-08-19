@@ -3,7 +3,7 @@ title: Notifications
 redirect_from:
   - android-push-notifications.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Consumer Experience
 level3: Mobile App Messaging SDK for Android
 

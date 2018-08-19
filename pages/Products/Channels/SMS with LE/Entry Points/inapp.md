@@ -2,7 +2,7 @@
 title: SMS via Mobile App Messaging
 redirect_from:
   - products-channels-sms-inapp.html
-level1: Solutions
+sitesection: Solutions
 level2: Channels
 level3: SMS with LiveEngage
 

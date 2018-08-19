@@ -3,7 +3,7 @@ title: Complex Layout
 redirect_from:
   - rich-messaging-structured-content-complex-layout.html
 Keywords:
-level1: Documents
+sitesection: Documents
 level2: Rich Messaging
 level3: Structured Content
 order: 10
