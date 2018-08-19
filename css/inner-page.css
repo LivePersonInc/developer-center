@@ -198,7 +198,7 @@ code {
   background-color: #f8f8f8;
   border-radius: 4px;
   color: #77777a;
-  padding: 2px 10px;
+  padding: 2px 4px;
   white-space: initial
 }
 
@@ -562,7 +562,12 @@ pre {
   margin: 20px 0;
   border: none;
   border-radius: 0px;
-  padding: 16px 97px 16px 10px;
+  padding: 0px 97px 16px 10px;
+  order: 10;
+}
+
+pre code {
+  margin-top: 16px;
 }
 /*change the defaults colors to match yeal design*/
 

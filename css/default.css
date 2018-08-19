@@ -141,6 +141,20 @@ pre {
   width: 100%;
 }
 
+.codebtn {
+  user-select: none;
+  order: 1;
+  align-self: flex-end;
+  width: 15px;
+  margin-top: 1px;
+  order: 1;
+  margin-right: 7%;
+}
+
+.codebtn img {
+  width: inherit;
+}
+
 /* Algolia Styling Begins */
 
 #aa-search-input {
@@ -437,6 +451,11 @@ table {
 
 /* Sidebar Styling Ends */
 
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby {
+  display: flex;
+  flex-direction: column;
+}
+
 .language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before {
   position: absolute;
   color: #ccc;
@@ -449,8 +468,8 @@ table {
   line-height: 15px;
   height: 15px;
   font-weight: 300;
-  margin-left: 695px;
   margin-top: 2px;
+  align-self: flex-end;
 }
 
 li .language-json:before, li .language-swift:before, li .language-html:before, li .language-java:before, li .language-javascript:before, li .language-sh:before, li .language-ruby:before {
@@ -603,6 +622,10 @@ button span:last-of-type {
 .clicked span:last-of-type {
   left: 50%;
   right: 50%;
+}
+
+.highlighter-rouge {
+  background-color: #f5f5f5;
 }
 
 @media screen and (max-width:1440px){

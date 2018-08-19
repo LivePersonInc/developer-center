@@ -7,6 +7,7 @@ function navigateContent(url) {
     populateAnchors ();
     menuDrop ();
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+    codeButtons();
   });
   $title.load(url + ' .documenttitle > *');
   //from here, the rest of the code has to do with link highlighting for the sidebar
@@ -27,8 +28,26 @@ $(document).ready(function () {
   menuDrop ();
   populateAnchors ();
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+  codeButtons();
 });
 
+function codeButtons () {
+  // get all <code> elements
+  var allCodeBlocksElements = $('div[class^="language-"]');
+  allCodeBlocksElements.each(function(i) {
+   	// add different id for each code block
+
+	// target
+  var currentId = "codeblock" + (i + 1);
+  $(this).attr('id', currentId);
+
+  //trigger
+  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+     $(this).append(clipButton);
+  });
+
+  new ClipboardJS('.codebtn');
+};
 
 function linkclick(that) {
   //prevent the link from actually navigating to the url

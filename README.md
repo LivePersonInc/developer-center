@@ -36,7 +36,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
   * If the page does not have a `subfoldername` value: documentname - pagename. For example: users-api-overview.html
 
-* `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts "chat", "messaging" or "both".
+* `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts `chat`, `messaging` or `both` as its value.
 
 
 #### Adding New Documents to the Sidebar
