@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - products-channels-mms-overview.html
 sitesection: Solutions
-level2: Channels
-level3: LiveEngage MMS Viewer
+categoryname: Channels
+documentname: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-overview.html
 level-order: 4
 order: 1

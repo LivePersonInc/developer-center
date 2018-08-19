@@ -1,11 +1,11 @@
 ---
-title: Post Conversation Survey
+pagename: Post Conversation Survey
 redirect_from:
   - consumer-int-post-survey.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 60
 permalink: messaging-window-api-tutorials-post-conversation-survey.html

@@ -1,10 +1,10 @@
 ---
-title: How to use LiveEngage Tag Events
+pagename: How to use LiveEngage Tag Events
 redirect_from:
   - lp-tag-tag-events-how.html
 sitesection: Documents
-level2: Consumer Information
-level3: LE-Tag
+categoryname: Consumer Information
+documentname: LE-Tag
 
 order: 2
 permalink: le-tag-how-to-use-liveengage-tag-events.html

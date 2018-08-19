@@ -1,11 +1,11 @@
 ---
-title: How to use the SDK
+pagename: How to use the SDK
 redirect_from:
   - agent-workspace-sdk-how-to-use.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Agent Workspace Widget SDK
+categoryname: Agent Interactions
+documentname: Agent Workspace Widget SDK
 
 order: 40
 permalink: agent-workspace-widget-sdk-how-to-use-the-sdk.html

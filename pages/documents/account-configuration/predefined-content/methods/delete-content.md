@@ -1,12 +1,12 @@
 ---
-title: Delete Predefined Content
+pagename: Delete Predefined Content
 redirect_from:
   - account-configuration-predefined-content-delete-content.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Content API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Content API
+subfoldername: Methods
 
 order: 70
 permalink: predefined-content-api-methods-delete-predefined-content.html

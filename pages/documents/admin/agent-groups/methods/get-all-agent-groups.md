@@ -1,12 +1,12 @@
 ---
-title: Get all Agent Groups
+pagename: Get all Agent Groups
 redirect_from:
   - administration-get-all-agent-groups.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Agent Groups API
-level4: Methods
+categoryname: Admin
+documentname: Agent Groups API
+subfoldername: Methods
 
 
 order: 10

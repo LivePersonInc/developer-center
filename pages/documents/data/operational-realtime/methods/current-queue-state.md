@@ -1,11 +1,11 @@
 ---
-title: Current Queue State
+pagename: Current Queue State
 redirect_from:
   - data-operational-realtime-current-queue-state.html
 sitesection: Documents
-level2: Data
-level3: Operational Realtime API
-level4: Methods
+categoryname: Data
+documentname: Operational Realtime API
+subfoldername: Methods
 order: 40
 permalink: operational-realtime-api-methods-current-queue-state.html
 

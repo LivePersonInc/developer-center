@@ -1,12 +1,12 @@
 ---
-title: Delete Workdays Object
+pagename: Delete Workdays Object
 redirect_from:
   - account-configuration-workdays-delete.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Workdays API
-level4: Methods
+categoryname: Account Configuration
+documentname: Workdays API
+subfoldername: Methods
 order: 30
 permalink: workdays-api-methods-delete-workdays-object.html
 indicator: messaging

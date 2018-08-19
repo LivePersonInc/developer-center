@@ -1,12 +1,12 @@
 ---
-title: Delete Agent Groups
+pagename: Delete Agent Groups
 redirect_from:
   - administration-delete-agent-groups.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Agent Groups API
-level4: Methods
+categoryname: Admin
+documentname: Agent Groups API
+subfoldername: Methods
 
 
 order: 70

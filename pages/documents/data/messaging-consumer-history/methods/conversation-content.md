@@ -1,11 +1,11 @@
 ---
-title: Conversations - Content
+pagename: Conversations - Content
 redirect_from:
   - consumer-experience-messaging-history-conversation-content.html
 sitesection: Documents
-level2: Data
-level3: Consumer Messaging History API
-level4: Methods
+categoryname: Data
+documentname: Consumer Messaging History API
+subfoldername: Methods
 order: 10
 permalink: consumer-messaging-history-api-methods-conversations---content.html
 indicator: messaging

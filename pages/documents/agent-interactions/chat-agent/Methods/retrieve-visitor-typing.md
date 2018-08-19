@@ -1,12 +1,12 @@
 ---
-title: Retrieve Visitor's Typing Status
+pagename: Retrieve Visitor's Typing Status
 redirect_from:
   - agent-retrieve-visitor-typing.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 190
 permalink: chat-agent-api-methods-retrieve-visitors-typing-status.html

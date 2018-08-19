@@ -1,12 +1,12 @@
 ---
-title: showConversation (with authentication support) (Deprecated)
+pagename: showConversation (with authentication support) (Deprecated)
 redirect_from:
   - android-showconversationauthdeprecated.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 40
 permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(with-authentication-support)-(deprecated).html

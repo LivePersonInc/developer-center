@@ -1,12 +1,12 @@
 ---
-title: Get LOB by ID
+pagename: Get LOB by ID
 redirect_from:
   - administration-get-lob-by-id.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: LOBs API
-level4: Methods
+categoryname: Admin
+documentname: LOBs API
+subfoldername: Methods
 
 
 order: 20

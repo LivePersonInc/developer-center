@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - android-overview.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
 
 level-order: 2
 order: 0

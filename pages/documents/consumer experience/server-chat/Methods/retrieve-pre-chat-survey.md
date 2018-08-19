@@ -1,11 +1,11 @@
 ---
-title: Retrieve Pre-Chat Survey
+pagename: Retrieve Pre-Chat Survey
 redirect_from:
   - consumer-experience-server-chat-retrieve-pre-chat-survey.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 40
 permalink: server-chat-api-methods-retrieve-pre-chat-survey.html

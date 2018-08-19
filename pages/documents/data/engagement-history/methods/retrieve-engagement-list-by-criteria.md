@@ -1,10 +1,10 @@
 ---
-title: Methods
+pagename: Methods
 redirect_from:
   - data-engagement-history-methods.html
 sitesection: Documents
-level2: Data
-level3: Engagement History API
+categoryname: Data
+documentname: Engagement History API
 
 order: 2
 permalink: engagement-history-api-methods.html

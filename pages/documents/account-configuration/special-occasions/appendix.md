@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - account-configuration-special-occasions-appendix.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Special Occasions API
+categoryname: Account Configuration
+documentname: Special Occasions API
 order: 60
 permalink: special-occasions-api-appendix.html
 indicator: messaging

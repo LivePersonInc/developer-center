@@ -1,11 +1,11 @@
 ---
-title: Sample App
+pagename: Sample App
 redirect_from:
   - chat-agent-sample-app.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
+categoryname: Agent Interactions
+documentname: Chat Agent API
 
 order: 241
 permalink: chat-agent-api-sample-app.html

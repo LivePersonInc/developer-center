@@ -1,11 +1,11 @@
 ---
-title: Send a message
+pagename: Send a message
 redirect_from:
   - send-message-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 61
 indicator: messaging
 permalink: connector-api-examples-send-a-message.html

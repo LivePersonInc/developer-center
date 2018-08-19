@@ -1,11 +1,11 @@
 ---
-title: Structured Content Rendering Tool
+pagename: Structured Content Rendering Tool
 redirect_from:
   - rich-messaging-structured-content-pollock.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Structured Content
+categoryname: Rich Messaging
+documentname: Structured Content
 order: 80
 permalink: structured-content-structured-content-rendering-tool.html
 indicator: both

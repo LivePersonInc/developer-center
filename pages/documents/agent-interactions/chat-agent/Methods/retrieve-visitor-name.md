@@ -1,12 +1,12 @@
 ---
-title: Retrieve Visitor’s Name
+pagename: Retrieve Visitor’s Name
 redirect_from:
   - agent-retrieve-visitor-name.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 160
 permalink: chat-agent-api-methods-retrieve-visitors-name.html

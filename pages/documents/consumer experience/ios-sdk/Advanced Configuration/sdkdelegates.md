@@ -1,12 +1,12 @@
 ---
-title: SDK Delegates
+pagename: SDK Delegates
 redirect_from:
   - consumer-experience-ios-sdk-delegates.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Configuration
 
 order: 4
 permalink: mobile-app-messaging-sdk-for-ios-configuration-sdk-delegates.html

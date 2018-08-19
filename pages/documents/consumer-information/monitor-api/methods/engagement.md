@@ -1,11 +1,11 @@
 ---
-title: Engagement
+pagename: Engagement
 redirect_from:
   - rt-interactions-monitoring-methods-engagement.html
 sitesection: Documents
-level2: Consumer Information
-level3: Monitoring API
-level4: Methods
+categoryname: Consumer Information
+documentname: Monitoring API
+subfoldername: Methods
 order: 20
 permalink: monitoring-api-methods-engagement.html
 indicator: messaging

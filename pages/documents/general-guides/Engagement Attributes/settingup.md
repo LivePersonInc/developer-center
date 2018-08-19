@@ -1,11 +1,11 @@
 ---
-title: Setting up Engagement Attributes
+pagename: Setting up Engagement Attributes
 redirect_from:
   - engagement-attributes-setting-up.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: Engagement Attributes
+categoryname: Guides
+documentname: Engagement Attributes
 order: 30
 permalink: engagement-attributes-setting-up-engagement-attributes.html
 indicator: both

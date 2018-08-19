@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Apple Business Chat Templates
-level4: List Picker
+categoryname: Rich Messaging
+documentname: Apple Business Chat Templates
+subfoldername: List Picker
 order: 20
 permalink: rich-messaging-connectors-abc-listpicker.html
 indicator: messaging

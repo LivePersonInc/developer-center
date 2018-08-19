@@ -1,12 +1,12 @@
 ---
-title: Image
+pagename: Image
 redirect_from:
   - rich-messaging-basic-elements-image.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
-level4: Basic Elements
+categoryname: Rich Messaging
+documentname: Getting Started
+subfoldername: Basic Elements
 order: 60
 permalink: getting-started-basic-elements-image.html
 indicator: both

@@ -1,10 +1,10 @@
 ---
-title: Build Your Widgets
+pagename: Build Your Widgets
 redirect_from:
   - products-video-chat-build-your-widgets.html
 sitesection: Solutions
-level2: Rich Media
-level3: Video Chat
+categoryname: Rich Media
+documentname: Video Chat
 
 order: 4
 

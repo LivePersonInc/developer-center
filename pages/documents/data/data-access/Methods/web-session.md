@@ -1,11 +1,11 @@
 ---
-title: Web Session
+pagename: Web Session
 redirect_from:
   - data-data-access-web-session.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
-level4: Methods
+categoryname: Data
+documentname: Data Access API
+subfoldername: Methods
 order: 30
 permalink: data-access-api-methods-web-session.html
 

@@ -1,11 +1,11 @@
 ---
-title: Zendesk
+pagename: Zendesk
 redirect_from:
   - zendesk.html
 permalink: crm-integrations-zendesk.html
 sitesection: Solutions
-level2: Integrations
-level3: CRM Integrations
+categoryname: Integrations
+documentname: CRM Integrations
 order: 50
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: Additional Options
+pagename: Additional Options
 redirect_from:
   - products-channels-mms-additional.html
 sitesection: Solutions
-level2: Channels
-level3: LiveEngage MMS Viewer
+categoryname: Channels
+documentname: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-additional-options.html
 order: 40
 indicator:

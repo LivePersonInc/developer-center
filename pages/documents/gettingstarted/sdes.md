@@ -1,8 +1,8 @@
 ---
-title: Getting Started with Engagement Attributes
+pagename: Getting Started with Engagement Attributes
 sitesection: Documents
-level2: Guides
-level3: Getting Started with LiveEngage APIs
+categoryname: Guides
+documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-getting-started-with-engagement-attributes.html
 order: 20
 indicator: both

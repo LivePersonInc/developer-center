@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - administration-lobs-overview.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: LOBs API
+categoryname: Admin
+documentname: LOBs API
 
 
 level-order: 2

@@ -1,11 +1,11 @@
 ---
-title: Publishing Text Content
+pagename: Publishing Text Content
 redirect_from:
   - consumer-int-msg-text-cont.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 190
 layout: page

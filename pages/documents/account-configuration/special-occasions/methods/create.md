@@ -1,12 +1,12 @@
 ---
-title: Create
+pagename: Create
 redirect_from:
   - account-configuration-special-occasions-create.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Special Occasions API
-level4: Methods
+categoryname: Account Configuration
+documentname: Special Occasions API
+subfoldername: Methods
 order: 10
 permalink: special-occasions-api-methods-create.html
 

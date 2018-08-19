@@ -1,11 +1,11 @@
 ---
-title: Notification Protocol
+pagename: Notification Protocol
 redirect_from:
   - webhooks-security.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Webhooks
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Webhooks
 order: 30
 indicator: messaging
 permalink: connector-api-webhooks-notification-protocol.html

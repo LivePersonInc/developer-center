@@ -1,11 +1,11 @@
 ---
-title: Consumer Token Creation
+pagename: Consumer Token Creation
 redirect_from:
   - common-consumer-token-creation.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 permalink: messaging-window-api-api-reference-consumer-token-creation.html
 order: 210
 indicator: messaging

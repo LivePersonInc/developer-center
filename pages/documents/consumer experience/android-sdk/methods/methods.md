@@ -1,12 +1,12 @@
 ---
-title: Messaging API
+pagename: Messaging API
 redirect_from:
   - android-methods.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: SDK APIs
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: SDK APIs
 
 order: 100
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html

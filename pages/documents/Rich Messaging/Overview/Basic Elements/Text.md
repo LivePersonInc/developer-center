@@ -1,12 +1,12 @@
 ---
-title: Text
+pagename: Text
 redirect_from:
   - rich-messaging-basic-elements-text.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
-level4: Basic Elements
+categoryname: Rich Messaging
+documentname: Getting Started
+subfoldername: Basic Elements
 order: 40
 permalink: getting-started-basic-elements-text.html
 indicator: both

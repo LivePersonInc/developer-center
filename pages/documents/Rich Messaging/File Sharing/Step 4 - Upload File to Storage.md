@@ -1,11 +1,11 @@
 ---
-title: Step 4 - Upload File to Storage
+pagename: Step 4 - Upload File to Storage
 redirect_from:
   - rich-messaging-file-sharing-4.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: File Sharing
+categoryname: Rich Messaging
+documentname: File Sharing
 order: 50
 permalink: file-sharing-step-4---upload-file-to-storage.html
 indicator: both

@@ -1,11 +1,11 @@
 ---
-title: Audit Trail
+pagename: Audit Trail
 redirect_from:
   - account-configuration-meta-data-audit-trail.html
 sitesection: Documents
 
-level3: Meta Data API
-level4: Methods
+documentname: Meta Data API
+subfoldername: Methods
 permalink: meta-data-api-methods-audit-trail.html
 order: 10
 indicator: both

@@ -1,11 +1,11 @@
 ---
-title: Appearance and Behavior
+pagename: Appearance and Behavior
 redirect_from:
   - consumer-experience-voice-video-ios-appearance-behavior.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: Customizing
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: Customizing
 order: 60
 permalink: voice-&-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
 indicator: messaging

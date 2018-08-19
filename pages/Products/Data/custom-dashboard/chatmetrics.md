@@ -1,10 +1,10 @@
 ---
-title: Chat Metrics
+pagename: Chat Metrics
 redirect_from:
   - products-data-custom-dashboard-chat-metrics.html
 sitesection: Solutions
-level2: Data
-level3: Custom Dashboard
+categoryname: Data
+documentname: Custom Dashboard
 
 order: 2
 

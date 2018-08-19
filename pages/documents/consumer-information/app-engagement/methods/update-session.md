@@ -1,11 +1,11 @@
 ---
-title: Update Session
+pagename: Update Session
 redirect_from:
   - rt-interactions-update-session.html
 sitesection: Documents
-level2: Consumer Information
-level3: App Engagement API
-level4: Methods
+categoryname: Consumer Information
+documentname: App Engagement API
+subfoldername: Methods
 
 order: 20
 permalink: app-engagement-api-methods-update-session.html

@@ -1,11 +1,11 @@
 ---
-title: Create Session
+pagename: Create Session
 redirect_from:
   - rt-interactions-create-session.html
 sitesection: Documents
-level2: Consumer Information
-level3: App Engagement API
-level4: Methods
+categoryname: Consumer Information
+documentname: App Engagement API
+subfoldername: Methods
 
 order: 10
 permalink: app-engagement-api-methods-create-session.html

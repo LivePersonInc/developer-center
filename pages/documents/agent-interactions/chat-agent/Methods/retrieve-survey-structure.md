@@ -1,12 +1,12 @@
 ---
-title: Retrieve Agent Survey Structure
+pagename: Retrieve Agent Survey Structure
 redirect_from:
   - agent-retrieve-survey-structure.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 220
 permalink: chat-agent-api-methods-retrieve-agent-survey-structure.html

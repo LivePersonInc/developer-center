@@ -1,11 +1,11 @@
 ---
-title: Set the Visitor's Typing Status
+pagename: Set the Visitor's Typing Status
 redirect_from:
   - consumer-experience-server-chat-set-visitor-typing-status.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 140
 permalink: server-chat-api-methods-set-the-visitors-typing-status.html

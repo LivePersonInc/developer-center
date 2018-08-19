@@ -1,10 +1,10 @@
 ---
-title: Limitations
+pagename: Limitations
 redirect_from:
   - products-bots-limitations.html
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - data-messaging-agent-metrics-overview.html
 sitesection: Documents
-level2: Data
-level3: Agent Metrics API
+categoryname: Data
+documentname: Agent Metrics API
 
 level-order: 2
 order: 1

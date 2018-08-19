@@ -1,11 +1,11 @@
 ---
-title: Introduction
+pagename: Introduction
 redirect_from:
   - rich-messaging-getting-started.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
+categoryname: Rich Messaging
+documentname: Getting Started
 
 level-order: 1
 order: 10

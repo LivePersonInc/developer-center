@@ -1,11 +1,11 @@
 ---
-title: Report
+pagename: Report
 redirect_from:
   - rt-interactions-monitoring-methods-report.html
 sitesection: Documents
-level2: Consumer Information
-level3: Monitoring API
-level4: Methods
+categoryname: Consumer Information
+documentname: Monitoring API
+subfoldername: Methods
 order: 30
 permalink: monitoring-api-methods-report.html
 indicator: messaging

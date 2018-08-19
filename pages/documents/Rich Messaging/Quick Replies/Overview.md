@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - rich-messaging-quick-replies-overview.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Quick Replies
+categoryname: Rich Messaging
+documentname: Quick Replies
 
 level-order: 3
 order: 10

@@ -1,12 +1,12 @@
 ---
-title: Set Agent Availability
+pagename: Set Agent Availability
 redirect_from:
   - agent-set-agent-availability.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 30
 permalink: chat-agent-api-methods-set-agent-availability.html

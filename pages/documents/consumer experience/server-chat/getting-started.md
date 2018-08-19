@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - consumer-experience-server-chat-getting-started.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
+categoryname: Consumer Experience
+documentname: Server Chat API
 level-order: 7
 order: 1
 permalink: server-chat-api-overview.html

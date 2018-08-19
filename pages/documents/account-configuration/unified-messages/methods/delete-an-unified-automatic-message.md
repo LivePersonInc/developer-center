@@ -1,12 +1,12 @@
 ---
-title: Delete an Unified Automatic Message
+pagename: Delete an Unified Automatic Message
 redirect_from:
   - account-configuration-unified-automatic-messages-delete-an-automatic-message.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Unified Automatic Messages API
-level4: Methods
+categoryname: Account Configuration
+documentname: Unified Automatic Messages API
+subfoldername: Methods
 
 order: 40
 permalink: unified-automatic-messages-api-methods-delete-an-unified-automatic-message.html

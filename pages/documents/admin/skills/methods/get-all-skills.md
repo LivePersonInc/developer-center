@@ -1,12 +1,12 @@
 ---
-title: Get all skills
+pagename: Get all skills
 redirect_from:
   - administration-get-all-skills.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Skills API
-level4: Methods
+categoryname: Admin
+documentname: Skills API
+subfoldername: Methods
 
 
 order: 10

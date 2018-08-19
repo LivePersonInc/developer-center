@@ -1,11 +1,11 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - rt-interactions-visit-information-changelog.html
 Keywords:
 sitesection: Documents
-level2: Consumer Information
-level3: Visit Information API
+categoryname: Consumer Information
+documentname: Visit Information API
 order: 231
 permalink: visit-information-api-changelog.html
 indicator: chat

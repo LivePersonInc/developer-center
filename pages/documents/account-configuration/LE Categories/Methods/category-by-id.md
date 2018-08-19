@@ -1,11 +1,11 @@
 ---
-title: Category By ID
+pagename: Category By ID
 redirect_from:
   - account-configuration-categories-id.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-category-by-id.html
 order: 30

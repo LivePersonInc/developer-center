@@ -1,10 +1,10 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - products-channels-sms-appendix.html
 sitesection: Solutions
-level2: Channels
-level3: SMS with LiveEngage
+categoryname: Channels
+documentname: SMS with LiveEngage
 permalink: sms-with-liveengage-appendix.html
 order: 41
 indicator:

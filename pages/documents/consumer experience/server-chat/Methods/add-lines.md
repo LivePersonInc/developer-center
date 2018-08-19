@@ -1,11 +1,11 @@
 ---
-title: Add Lines / End Chat
+pagename: Add Lines / End Chat
 redirect_from:
   - consumer-experience-server-chat-add-lines.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 100
 permalink: server-chat-api-methods-add-lines-end-chat.html

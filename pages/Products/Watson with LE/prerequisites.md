@@ -1,11 +1,11 @@
 ---
-title: Prerequisites
+pagename: Prerequisites
 redirect_from:
   - watson-prerequisites.html
 keywords:
 sitesection: Solutions
-level2: Channels
-level3: Watson with LiveEngage
+categoryname: Channels
+documentname: Watson with LiveEngage
 order: 25
 permalink: watson-with-liveengage-prerequisites.html
 indicator: messaging

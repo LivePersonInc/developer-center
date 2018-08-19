@@ -1,11 +1,11 @@
 ---
-title: Agent Activity
+pagename: Agent Activity
 redirect_from:
   - data-operational-realtime-agent-activity.html
 sitesection: Documents
-level2: Data
-level3: Operational Realtime API
-level4: Methods
+categoryname: Data
+documentname: Operational Realtime API
+subfoldername: Methods
 order: 30
 permalink: operational-realtime-api-methods-agent-activity.html
 

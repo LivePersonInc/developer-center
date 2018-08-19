@@ -1,11 +1,11 @@
 ---
-title: Submit Survey Data
+pagename: Submit Survey Data
 redirect_from:
   - consumer-experience-server-chat-submit-survey-data.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 160
 permalink: server-chat-api-methods-submit-survey-data.html

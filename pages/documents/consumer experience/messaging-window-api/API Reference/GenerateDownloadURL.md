@@ -1,11 +1,11 @@
 ---
-title: Generate Download URL
+pagename: Generate Download URL
 redirect_from:
   - consumer-int-msg-generate-temp-download-url.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 310
 layout: page

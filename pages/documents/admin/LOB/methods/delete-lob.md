@@ -1,12 +1,12 @@
 ---
-title: Delete LOB
+pagename: Delete LOB
 redirect_from:
   - administration-delete-lob.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: LOBs API
-level4: Methods
+categoryname: Admin
+documentname: LOBs API
+subfoldername: Methods
 
 
 order: 80

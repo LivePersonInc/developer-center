@@ -1,11 +1,11 @@
 ---
-title: Retrieve Available Slots
+pagename: Retrieve Available Slots
 redirect_from:
   - consumer-experience-server-chat-retrieve-available-slots.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 20
 permalink: server-chat-api-methods-retrieve-available-slots.html

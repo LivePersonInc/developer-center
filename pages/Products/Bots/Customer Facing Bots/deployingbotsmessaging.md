@@ -1,11 +1,11 @@
 ---
-title: Deploying Bots on Messaging
+pagename: Deploying Bots on Messaging
 redirect_from:
   - products-bots-messaging.html
 
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 order: 7
 

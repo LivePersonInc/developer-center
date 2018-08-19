@@ -1,11 +1,11 @@
 ---
-title: Base Resource
+pagename: Base Resource
 redirect_from:
   - data-data-access-base-resource.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
-level4: Methods
+categoryname: Data
+documentname: Data Access API
+subfoldername: Methods
 order: 10
 permalink: data-access-api-methods-base-resource.html
 

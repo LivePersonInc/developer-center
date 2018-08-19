@@ -1,11 +1,11 @@
 ---
-title: SugarCRM
+pagename: SugarCRM
 redirect_from:
   - sugarcrm.html
 permalink: crm-integrations-sugarcrm.html
 sitesection: Solutions
-level2: Integrations
-level3: CRM Integrations
+categoryname: Integrations
+documentname: CRM Integrations
 order: 40
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: Retrieve Chat Information
+pagename: Retrieve Chat Information
 redirect_from:
   - consumer-experience-server-chat-retrieve-chat-information.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 110
 permalink: server-chat-api-methods-retrieve-chat-information.html

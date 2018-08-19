@@ -1,12 +1,12 @@
 ---
-title: Retrieve Available Agents
+pagename: Retrieve Available Agents
 redirect_from:
   - agent-retrieve-available-agents.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 40
 permalink: chat-agent-api-methods-retrieve-available-agents.html

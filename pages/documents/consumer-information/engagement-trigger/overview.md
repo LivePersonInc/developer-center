@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - trigger-overview.html
 sitesection: Documents
-level2: Consumer Information
-level3: Engagement Trigger API
+categoryname: Consumer Information
+documentname: Engagement Trigger API
 
 order: 1
 permalink: engagement-trigger-api-overview.html

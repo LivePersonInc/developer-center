@@ -1,10 +1,10 @@
 ---
-title: PGP Encryption
+pagename: PGP Encryption
 redirect_from:
   - data-data-access-pgp-encryption.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
+categoryname: Data
+documentname: Data Access API
 
 order: 61
 permalink: data-access-api-pgp-encryption.html

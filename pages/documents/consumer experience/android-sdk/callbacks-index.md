@@ -1,12 +1,12 @@
 ---
-title: Callbacks Index
+pagename: Callbacks Index
 redirect_from:
   - android-callbacks-index.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: SDK APIs
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: SDK APIs
 
 order: 120
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html

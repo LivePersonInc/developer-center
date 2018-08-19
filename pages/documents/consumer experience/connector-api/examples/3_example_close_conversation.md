@@ -1,11 +1,11 @@
 ---
-title: Close a conversation
+pagename: Close a conversation
 redirect_from:
   - close-conversation-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 62
 indicator: messaging
 permalink: connector-api-examples-close-a-conversation.html

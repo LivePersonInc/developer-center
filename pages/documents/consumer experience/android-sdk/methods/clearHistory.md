@@ -1,12 +1,12 @@
 ---
-title: clearHistory
+pagename: clearHistory
 redirect_from:
   - android-clearhistory.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 250
 permalink: mobile-app-messaging-sdk-for-android-methods-clearhistory.html

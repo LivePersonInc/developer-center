@@ -1,10 +1,10 @@
 ---
-title: Getting Started
+pagename: Getting Started
 redirect_from:
   - rt-interactions-monitoring-getting-started.html
 sitesection: Documents
-level2: Consumer Information
-level3: Monitoring API
+categoryname: Consumer Information
+documentname: Monitoring API
 order: 10
 permalink: monitoring-api-getting-started.html
 indicator: messaging

@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - overview.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Skills API
+categoryname: Admin
+documentname: Skills API
 
 
 level-order: 2

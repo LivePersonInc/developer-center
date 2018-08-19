@@ -1,11 +1,11 @@
 ---
-title: Retrieve Visitor's Name
+pagename: Retrieve Visitor's Name
 redirect_from:
   - consumer-experience-server-chat-retrieve-visitor-name.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 120
 permalink: server-chat-api-methods-retrieve-visitor's-name.html

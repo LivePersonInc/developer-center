@@ -1,11 +1,11 @@
 ---
-title: Planning
+pagename: Planning
 redirect_from:
   - watson-planning.html
 keywords:
 sitesection: Solutions
-level2: Channels
-level3: Watson with LiveEngage
+categoryname: Channels
+documentname: Watson with LiveEngage
 order: 26
 permalink: watson-with-liveengage-planning.html
 indicator: messaging

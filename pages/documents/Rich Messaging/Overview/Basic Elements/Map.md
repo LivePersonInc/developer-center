@@ -1,12 +1,12 @@
 ---
-title: Map
+pagename: Map
 redirect_from:
   - rich-messaging-basic-elements-map.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
-level4: Basic Elements
+categoryname: Rich Messaging
+documentname: Getting Started
+subfoldername: Basic Elements
 order: 70
 permalink: getting-started-basic-elements-map.html
 indicator: both

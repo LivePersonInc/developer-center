@@ -1,12 +1,12 @@
 ---
-title: Get Unified Automatic Message by ID
+pagename: Get Unified Automatic Message by ID
 redirect_from:
   - account-configuration-unified-automatic-messages-get-automatic-message-by-id.html
 keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Unified Automatic Messages API
-level4: Methods
+categoryname: Account Configuration
+documentname: Unified Automatic Messages API
+subfoldername: Methods
 
 order: 20
 permalink: unified-automatic-messages-api-methods-get-unified-automatic-message-by-id.html

@@ -1,11 +1,11 @@
 ---
-title: Step 5 - Publish Message
+pagename: Step 5 - Publish Message
 redirect_from:
   - rich-messaging-file-sharing-5.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: File Sharing
+categoryname: Rich Messaging
+documentname: File Sharing
 order: 60
 permalink: file-sharing-step-5---publish-message.html
 indicator: both

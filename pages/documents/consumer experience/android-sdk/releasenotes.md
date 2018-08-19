@@ -1,11 +1,11 @@
 ---
-title: Release Notes
+pagename: Release Notes
 redirect_from:
   - consumer-experience-android-sdk-release-notes.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
 order: 310
 permalink: mobile-app-messaging-sdk-for-android-release-notes.html
 indicator: messaging

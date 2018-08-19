@@ -1,11 +1,11 @@
 ---
-title: Surveys
+pagename: Surveys
 redirect_from:
   - consumer-experience-javascript-chat-surveys.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
 
 order: 3
 permalink: javascript-chat-sdk-surveys.html

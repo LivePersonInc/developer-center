@@ -1,12 +1,12 @@
 ---
-title: Export Audit Trail to CSV file
+pagename: Export Audit Trail to CSV file
 redirect_from:
   - account-configuration-meta-data-audit-trail-export.html
 keywords:
 sitesection: Documents
 
-level3: Meta Data API
-level4: Methods
+documentname: Meta Data API
+subfoldername: Methods
 order: 20
 permalink: meta-data-api-methods-export-audit-trail-to-csv-file.html
 indicator: both

@@ -1,12 +1,12 @@
 ---
-title: Plural String Resource Example
+pagename: Plural String Resource Example
 redirect_from:
   - android-plural-string.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: String Localization
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: String Localization
 
 order: 220
 permalink: mobile-app-messaging-sdk-for-android-string-localization-plural-string-resource-example.html

@@ -1,10 +1,10 @@
 ---
-title: Sample Code
+pagename: Sample Code
 redirect_from:
   - data-operational-realtime-sample-code.html
 sitesection: Documents
 
-level3: Operational Realtime API
+documentname: Operational Realtime API
 
 order: 51
 permalink: operational-realtime-api-sample-code.html

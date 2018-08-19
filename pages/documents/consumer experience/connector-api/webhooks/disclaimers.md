@@ -1,11 +1,11 @@
 ---
-title: Disclaimers
+pagename: Disclaimers
 redirect_from:
   - webhooks-disclaimers.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Webhooks
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Webhooks
 order: 50
 indicator: messaging
 permalink: connector-api-webhooks-disclaimers.html

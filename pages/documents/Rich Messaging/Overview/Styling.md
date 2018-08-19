@@ -1,11 +1,11 @@
 ---
-title: Styling
+pagename: Styling
 redirect_from:
   - rich-messaging-styling.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
+categoryname: Rich Messaging
+documentname: Getting Started
 order: 110
 permalink: getting-started-styling.html
 indicator: both

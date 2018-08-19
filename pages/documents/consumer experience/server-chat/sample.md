@@ -1,10 +1,10 @@
 ---
-title: Sample Postman Collection
+pagename: Sample Postman Collection
 redirect_from:
   - consumer-experience-server-chat-sample.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
+categoryname: Consumer Experience
+documentname: Server Chat API
 
 order: 171
 permalink: server-chat-api-sample-postman-collection.html

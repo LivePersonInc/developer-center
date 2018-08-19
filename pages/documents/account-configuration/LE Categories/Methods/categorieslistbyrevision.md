@@ -1,11 +1,11 @@
 ---
-title: Categories List By Revision
+pagename: Categories List By Revision
 redirect_from:
   - account-configuration-categories-revision.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-categories-list-by-revision.html
 order: 20

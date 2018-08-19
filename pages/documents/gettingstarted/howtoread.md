@@ -1,8 +1,8 @@
 ---
-title: How to Read Our Documents
+pagename: How to Read Our Documents
 sitesection: Documents
-level2: Guides
-level3: Getting Started with LiveEngage APIs
+categoryname: Guides
+documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-how-to-read-our-documents.html
 indicator: both
 ---

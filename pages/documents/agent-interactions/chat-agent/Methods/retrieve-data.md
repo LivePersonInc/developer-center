@@ -1,12 +1,12 @@
 ---
-title: Retrieve Data for Multiple Chats
+pagename: Retrieve Data for Multiple Chats
 redirect_from:
   - agent-retrieve-data.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 110
 permalink: chat-agent-api-methods-retrieve-data-for-multiple-chats.html

@@ -1,12 +1,12 @@
 ---
-title: Start Agent Session
+pagename: Start Agent Session
 redirect_from:
   - agent-start-agent-session.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 10
 permalink: chat-agent-api-methods-start-agent-session.html

@@ -1,11 +1,11 @@
 ---
-title: Retrieve Audit Trail Records
+pagename: Retrieve Audit Trail Records
 redirect_from:
   - account-configuration-meta-data-audit-trail.html
 sitesection: Documents
-level2: Account Configuration
-level3: Audit Trail API
-level4: Methods
+categoryname: Account Configuration
+documentname: Audit Trail API
+subfoldername: Methods
 permalink: audit-trail-api-methods-retrieve-audit-trail-records.html
 order: 10
 indicator: both

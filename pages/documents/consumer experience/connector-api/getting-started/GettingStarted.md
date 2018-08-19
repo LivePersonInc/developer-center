@@ -1,11 +1,11 @@
 ---
-title: Getting Started
+pagename: Getting Started
 redirect_from:
   - connectorapi-getting-started.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Connector API
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Connector API
 order: 2
 indicator: messaging
 permalink: connector-api-connector-api-getting-started.html

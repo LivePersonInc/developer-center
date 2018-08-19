@@ -1,10 +1,10 @@
 ---
-title: Engagement Attributes
+pagename: Engagement Attributes
 redirect_from:
   - data-engagement-history-appendix.html
 sitesection: Documents
-level2: Data
-level3: Engagement History API
+categoryname: Data
+documentname: Engagement History API
 
 order: 12
 permalink: engagement-history-api-engagement-attributes.html

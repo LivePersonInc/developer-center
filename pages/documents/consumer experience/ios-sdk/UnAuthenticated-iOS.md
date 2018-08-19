@@ -1,12 +1,12 @@
 ---
-title: UnAuthenticatd In-App Messaging
+pagename: UnAuthenticatd In-App Messaging
 redirect_from:
   - consumer-experience-ios-sdk-advanced-unauth-ios.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Advanced Features
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Advanced Features
 order: 237
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-unauthenticatd-in-app-messaging.html
 indicator: messaging

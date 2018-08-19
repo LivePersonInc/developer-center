@@ -1,11 +1,11 @@
 ---
-title: Get Conversations by Consumer ID
+pagename: Get Conversations by Consumer ID
 redirect_from:
   - data-messaging-interactions-get-conversations-by-consumer-id.html
 sitesection: Documents
-level2: Data
-level3: Messaging Interactions API
-level4: Methods
+categoryname: Data
+documentname: Messaging Interactions API
+subfoldername: Methods
 order: 30  
 permalink: messaging-interactions-api-methods-get-conversations-by-consumer-id.html
 

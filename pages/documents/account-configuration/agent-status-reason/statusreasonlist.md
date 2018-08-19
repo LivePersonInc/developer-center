@@ -1,11 +1,11 @@
 ---
-title: Agent Status List
+pagename: Agent Status List
 redirect_from:
   - account-configuration-agent-status-reason-agentstatuslist.html
 sitesection: Documents
-level2: Account Configuration
-level3: Agent Status Reason API
-level4: Methods
+categoryname: Account Configuration
+documentname: Agent Status Reason API
+subfoldername: Methods
 permalink: agent-status-reason-api-methods-agent-status-list.html
 order: 10
 indicator: both

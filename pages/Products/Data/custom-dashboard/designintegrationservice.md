@@ -1,10 +1,10 @@
 ---
-title: Design Integration & Service
+pagename: Design Integration & Service
 redirect_from:
   - products-data-custom-dashboard-design-integration-service.html
 sitesection: Solutions
-level2: Data
-level3: Custom Dashboard
+categoryname: Data
+documentname: Custom Dashboard
 
 order: 4
 

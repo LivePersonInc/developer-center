@@ -1,11 +1,11 @@
 ---
-title: Messaging Queue Health
+pagename: Messaging Queue Health
 redirect_from:
   - data-messaging-operations-messaging-queue-health.html
 sitesection: Documents
-level2: Data
-level3: Messaging Operations API
-level4: Methods
+categoryname: Data
+documentname: Messaging Operations API
+subfoldername: Methods
 order: 20
 permalink: messaging-operations-api-methods-messaging-queue-health.html
 

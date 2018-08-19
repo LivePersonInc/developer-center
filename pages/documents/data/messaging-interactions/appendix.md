@@ -1,10 +1,10 @@
 ---
-title: Engagement Attributes
+pagename: Engagement Attributes
 redirect_from:
   - data-messaging-interactions-appendix.html
 sitesection: Documents
-level2: Data
-level3: Messaging Interactions API
+categoryname: Data
+documentname: Messaging Interactions API
 
 order: 32
 permalink: messaging-interactions-api-engagement-attributes.html

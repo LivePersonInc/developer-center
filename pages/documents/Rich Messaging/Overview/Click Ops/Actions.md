@@ -1,12 +1,12 @@
 ---
-title: Actions
+pagename: Actions
 redirect_from:
   - rich-messaging-click-ops-actions.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
-level4: Click Operations
+categoryname: Rich Messaging
+documentname: Getting Started
+subfoldername: Click Operations
 order: 90
 permalink: getting-started-click-operations-actions.html
 indicator: both

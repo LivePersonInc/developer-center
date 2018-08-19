@@ -1,12 +1,12 @@
 ---
-title: Conversations Lifecycle
+pagename: Conversations Lifecycle
 redirect_from:
   - android-conversations-lifecycle.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Configuration
 
 order: 40
 permalink: mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html

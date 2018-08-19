@@ -1,12 +1,12 @@
 ---
-title: Create Workdays Object
+pagename: Create Workdays Object
 redirect_from:
   - account-configuration-workdays-create.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Workdays API
-level4: Methods
+categoryname: Account Configuration
+documentname: Workdays API
+subfoldername: Methods
 order: 10
 permalink: workdays-api-methods-create-workdays-object.html
 indicator: messaging

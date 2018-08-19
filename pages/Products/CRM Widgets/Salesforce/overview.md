@@ -1,11 +1,11 @@
 ---
-title: SalesForce
+pagename: SalesForce
 redirect_from:
   - salesforce.html
 permalink: crm-integrations-salesforce.html
 sitesection: Solutions
-level2: Integrations
-level3: CRM Integrations
+categoryname: Integrations
+documentname: CRM Integrations
 order: 10
 ---
 

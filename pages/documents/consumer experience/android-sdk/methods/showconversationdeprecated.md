@@ -1,12 +1,12 @@
 ---
-title: showConversation (Deprecated)
+pagename: showConversation (Deprecated)
 redirect_from:
   - android-showconversationdeprecated.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 30
 permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(deprecated).html

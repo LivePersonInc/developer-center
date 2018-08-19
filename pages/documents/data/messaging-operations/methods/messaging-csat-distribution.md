@@ -1,11 +1,11 @@
 ---
-title: Messaging CSAT Distribution
+pagename: Messaging CSAT Distribution
 redirect_from:
   - data-messaging-operations-messaging-csat-distribution.html
 sitesection: Documents
-level2: Data
-level3: Messaging Operations API
-level4: Methods
+categoryname: Data
+documentname: Messaging Operations API
+subfoldername: Methods
 order: 50
 permalink: messaging-operations-api-methods-messaging-csat-distribution.html
 

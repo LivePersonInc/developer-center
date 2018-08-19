@@ -1,11 +1,11 @@
 ---
-title: Register Your App
+pagename: Register Your App
 redirect_from:
   - consumer-experience-voice-video-ios-register-app.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: LiveEngage Configuration
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: LiveEngage Configuration
 order: 110
 permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-register-your-app.html
 indicator: messaging

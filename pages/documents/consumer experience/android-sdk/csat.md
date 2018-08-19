@@ -1,12 +1,12 @@
 ---
-title: CSAT Behavior
+pagename: CSAT Behavior
 redirect_from:
   - android-csat.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Advanced Features
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Advanced Features
 
 order: 290
 permalink: mobile-app-messaging-sdk-for-android-advanced-features-csat-behavior.html

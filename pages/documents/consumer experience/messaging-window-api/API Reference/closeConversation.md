@@ -1,11 +1,11 @@
 ---
-title: Close Conversation
+pagename: Close Conversation
 redirect_from:
   - consumer-int-msg-close-conv.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 150
 layout: page

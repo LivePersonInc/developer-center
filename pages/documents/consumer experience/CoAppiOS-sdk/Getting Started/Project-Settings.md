@@ -1,11 +1,11 @@
 ---
-title: Project Settings
+pagename: Project Settings
 redirect_from:
   - consumer-experience-voice-video-ios-project-settings.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: Getting Started
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: Getting Started
 order: 40
 permalink: voice-&-video-for-ios-sdk-beta-getting-started-project-settings.html
 indicator: messaging

@@ -1,12 +1,12 @@
 ---
-title: User Data
+pagename: User Data
 redirect_from:
   - android-user-data.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Configuration
 
 order: 60
 permalink: mobile-app-messaging-sdk-for-android-configuration-user-data.html

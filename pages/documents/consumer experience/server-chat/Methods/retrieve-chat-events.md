@@ -1,11 +1,11 @@
 ---
-title: Retrieve Chat Events
+pagename: Retrieve Chat Events
 redirect_from:
   - consumer-experience-server-chat-retrieve-chat-events.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 90
 permalink: server-chat-api-methods-retrieve-chat-events.html

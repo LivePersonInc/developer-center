@@ -1,12 +1,12 @@
 ---
-title: Attributes
+pagename: Attributes
 redirect_from:
   - consumer-experience-ios-sdk-attributes.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Customization and Branding
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Customization and Branding
 
 order: 224
 permalink: mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html

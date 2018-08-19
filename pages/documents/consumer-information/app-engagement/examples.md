@@ -1,10 +1,10 @@
 ---
-title: Impression Events Body Example
+pagename: Impression Events Body Example
 redirect_from:
   - rt-interactions-example.html
 sitesection: Documents
-level2: Consumer Information
-level3: App Engagement API
+categoryname: Consumer Information
+documentname: App Engagement API
 
 order: 22
 permalink: app-engagement-api-impression-events-body-example.html

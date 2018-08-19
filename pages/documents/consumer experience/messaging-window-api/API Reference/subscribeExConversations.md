@@ -1,11 +1,11 @@
 ---
-title: Subscribe to Conversation Metadata
+pagename: Subscribe to Conversation Metadata
 redirect_from:
   - consumer-int-msg-sub-conv.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 170
 layout: page

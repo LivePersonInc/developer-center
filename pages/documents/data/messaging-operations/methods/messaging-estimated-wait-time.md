@@ -1,11 +1,11 @@
 ---
-title: Messaging Estimated Wait Time
+pagename: Messaging Estimated Wait Time
 redirect_from:
   - data-messaging-operations-messaging-estimated-wait-time.html
 sitesection: Documents
-level2: Data
-level3: Messaging Operations API
-level4: Methods
+categoryname: Data
+documentname: Messaging Operations API
+subfoldername: Methods
 order: 40
 permalink: messaging-operations-api-methods-messaging-estimated-wait-time.html
 

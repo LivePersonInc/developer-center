@@ -1,12 +1,12 @@
 ---
-title: resolveConversation
+pagename: resolveConversation
 redirect_from:
   - android-resolveconversation.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 220
 permalink: mobile-app-messaging-sdk-for-android-methods-resolveconversation.html

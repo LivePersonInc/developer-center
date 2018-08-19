@@ -1,11 +1,11 @@
 ---
-title: Local Message Notifications
+pagename: Local Message Notifications
 redirect_from:
   - local-message-notifications.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: Local Message Notifications
+categoryname: Guides
+documentname: Local Message Notifications
 order: 10
 level-order: 10
 root-link: true

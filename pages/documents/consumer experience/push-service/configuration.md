@@ -1,10 +1,10 @@
 ---
-title: Configuration of Push Proxy
+pagename: Configuration of Push Proxy
 redirect_from:
   - push-service-configuration.html
 Keywords:
 sitesection: Documents
-level2: Guides
+categoryname: Guides
 
 
 order: 40

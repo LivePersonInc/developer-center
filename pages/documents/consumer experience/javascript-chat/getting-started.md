@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - consumer-experience-javascript-chat-getting-started.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
 
 level-order: 6
 order: 1

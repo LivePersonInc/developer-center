@@ -1,10 +1,10 @@
 ---
-title: Limitations
+pagename: Limitations
 redirect_from:
   - rt-interactions-window-sdk-limitations.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Engagement Window Widget SDK
+categoryname: Consumer Experience
+documentname: Engagement Window Widget SDK
 
 order: 3
 permalink: engagement-window-widget-sdk-limitations.html

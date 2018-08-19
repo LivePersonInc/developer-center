@@ -1,10 +1,10 @@
 ---
-title: Introduction
+pagename: Introduction
 redirect_from:
   - guides-authentication-introduction.html
 sitesection: Documents
-level2: Guides
-level3: Authentication
+categoryname: Guides
+documentname: Authentication
 
 permalink: authentication-introduction.html
 root-link: true

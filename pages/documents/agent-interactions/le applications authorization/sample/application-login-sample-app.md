@@ -1,9 +1,9 @@
 ---
-title: Application Login Sample App
+pagename: Application Login Sample App
 sitesection:
-level2: Agent Interactions
-level3: LE Applications Authorization
-level4: Sample App
+categoryname: Agent Interactions
+documentname: LE Applications Authorization
+subfoldername: Sample App
 order: 70
 permalink: le-applications-authorization-sample-code-application-login-sample-app.html
 ---

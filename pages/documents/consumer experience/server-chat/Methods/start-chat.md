@@ -1,11 +1,11 @@
 ---
-title: Start Chat
+pagename: Start Chat
 redirect_from:
   - consumer-experience-server-chat-start-chat.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 70
 permalink: server-chat-api-methods-start-chat.html

@@ -1,10 +1,10 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - data-data-access-appendix.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
+categoryname: Data
+documentname: Data Access API
 
 order: 63
 permalink: data-access-api-appendix.html

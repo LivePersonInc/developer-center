@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - products-customer-facing-bots-overview.html
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 order: 1
 level-order: 1

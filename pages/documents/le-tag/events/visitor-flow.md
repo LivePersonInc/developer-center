@@ -1,11 +1,11 @@
 ---
-title: Visitor Flow Events
+pagename: Visitor Flow Events
 redirect_from:
   - lp-tag-visitor-flow.html
 sitesection: Documents
-level2: Consumer Information
-level3: LE-Tag
-level4: Events
+categoryname: Consumer Information
+documentname: LE-Tag
+subfoldername: Events
 
 order: 10
 permalink: le-tag-events-visitor-flow-events.html

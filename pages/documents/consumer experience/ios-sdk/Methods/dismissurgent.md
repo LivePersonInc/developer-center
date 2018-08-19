@@ -1,12 +1,12 @@
 ---
-title: dismissUrgent
+pagename: dismissUrgent
 redirect_from:
   - consumer-experience-ios-sdk-dismissurgent.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Methods
 
 order: 90
 permalink: mobile-app-messaging-sdk-for-ios-methods-dismissurgent.html

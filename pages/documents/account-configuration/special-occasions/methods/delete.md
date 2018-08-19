@@ -1,12 +1,12 @@
 ---
-title: Delete
+pagename: Delete
 redirect_from:
   - account-configuration-special-occasions-delete.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Special Occasions API
-level4: Methods
+categoryname: Account Configuration
+documentname: Special Occasions API
+subfoldername: Methods
 
 order: 30
 permalink: special-occasions-api-methods-delete.html

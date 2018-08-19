@@ -1,12 +1,12 @@
 ---
-title: Workdays list
+pagename: Workdays list
 redirect_from:
   - account-configuration-workdays-get-by-list.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Workdays API
-level4: Methods
+categoryname: Account Configuration
+documentname: Workdays API
+subfoldername: Methods
 order: 50
 permalink: workdays-api-methods-workdays-list.html
 indicator: messaging

@@ -1,11 +1,11 @@
 ---
-title: Conversation Metadata
+pagename: Conversation Metadata
 redirect_from:
   - consumer-int-conversation-md.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 20
 

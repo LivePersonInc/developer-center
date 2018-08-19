@@ -1,10 +1,10 @@
 ---
-title: Add Messaging to your app
+pagename: Add Messaging to your app
 redirect_from:
   - products-channels-inapp-messaging.html
 sitesection: Solutions
-level2: Channels
-level3: Mobile App Messaging
+categoryname: Channels
+documentname: Mobile App Messaging
 
 order: 1
 level-order: 1

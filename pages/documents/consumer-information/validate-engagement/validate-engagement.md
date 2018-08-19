@@ -1,10 +1,10 @@
 ---
-title: Validate Engagement
+pagename: Validate Engagement
 redirect_from:
   - rt-interactions-validate-engagement-validate-engagement.html
 sitesection: Documents
-level2: Consumer Information
-level3: Validate Engagement API
+categoryname: Consumer Information
+documentname: Validate Engagement API
 
 order: 2
 permalink: validate-engagement-api-validate-engagement.html

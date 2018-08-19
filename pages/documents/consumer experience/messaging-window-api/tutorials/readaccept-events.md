@@ -1,11 +1,11 @@
 ---
-title: Read and Accept Events
+pagename: Read and Accept Events
 redirect_from:
   - consumer-int-readaccept-events.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 30
 permalink: messaging-window-api-tutorials-read-and-accept-events.html

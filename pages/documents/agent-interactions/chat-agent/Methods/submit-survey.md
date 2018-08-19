@@ -1,12 +1,12 @@
 ---
-title: Submit Survey Data
+pagename: Submit Survey Data
 redirect_from:
   - agent-submit-survey.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 230
 permalink: chat-agent-api-methods-submit-survey-data.html

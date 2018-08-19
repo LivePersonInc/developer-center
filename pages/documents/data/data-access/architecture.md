@@ -1,10 +1,10 @@
 ---
-title: Architecture
+pagename: Architecture
 redirect_from:
   - data-data-access-architecture.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
+categoryname: Data
+documentname: Data Access API
 order: 2
 permalink: data-access-api-architecture.html
 indicator: chat

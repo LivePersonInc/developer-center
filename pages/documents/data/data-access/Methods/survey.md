@@ -1,11 +1,11 @@
 ---
-title: Survey
+pagename: Survey
 redirect_from:
   - data-data-access-survey.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
-level4: Methods
+categoryname: Data
+documentname: Data Access API
+subfoldername: Methods
 order: 50
 permalink: data-access-api-methods-survey.html
 

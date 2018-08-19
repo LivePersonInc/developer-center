@@ -1,11 +1,11 @@
 ---
-title: Introduction
+pagename: Introduction
 redirect_from:
   - rich-messaging-file-sharing.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: File Sharing
+categoryname: Rich Messaging
+documentname: File Sharing
 level-order: 5
 order: 10
 permalink: file-sharing-introduction.html

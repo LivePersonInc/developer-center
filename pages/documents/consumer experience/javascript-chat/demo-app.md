@@ -1,11 +1,11 @@
 ---
-title: Sample App
+pagename: Sample App
 redirect_from:
   - consumer-experience-javascript-chat-sample.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
 
 order: 5
 permalink: javascript-chat-sdk-sample-app.html

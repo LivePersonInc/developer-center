@@ -1,13 +1,13 @@
 ---
-title: onVisitorDisposed
+pagename: onVisitorDisposed
 redirect_from:
   - consumer-experience-javascript-chat-onvisitordisposed.html
 
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
-level4: Events
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
+subfoldername: Events
 
 order: 216
 permalink: javascript-chat-sdk-events-onvisitordisposed.html

@@ -1,12 +1,12 @@
 ---
-title: Transfer a Chat
+pagename: Transfer a Chat
 redirect_from:
   - agent-transfer-chat.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 210
 permalink: chat-agent-api-methods-transfer-a-chat.html

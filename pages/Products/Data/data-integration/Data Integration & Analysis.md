@@ -1,10 +1,10 @@
 ---
-title: Integrate your LivePerson data into any system for analytics
+pagename: Integrate your LivePerson data into any system for analytics
 redirect_from:
   - products-data-integration-and-analysis-overview.html
 sitesection: Solutions
-level2: Data
-level3: Data Integration & Analysis
+categoryname: Data
+documentname: Data Integration & Analysis
 
 order: 1
 level-order: 1

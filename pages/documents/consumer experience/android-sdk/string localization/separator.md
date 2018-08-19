@@ -1,12 +1,12 @@
 ---
-title: Separator timestamp
+pagename: Separator timestamp
 redirect_from:
   - android-separator.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: String Localization
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: String Localization
 
 order: 260
 permalink: mobile-app-messaging-sdk-for-android-string-localization-separator-timestamp.html

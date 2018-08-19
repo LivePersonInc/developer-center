@@ -1,11 +1,11 @@
 ---
-title: Best Practices
+pagename: Best Practices
 redirect_from:
   - rich-messaging-structured-content-best-practices.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Structured Content
+categoryname: Rich Messaging
+documentname: Structured Content
 order: 60
 permalink: structured-content-best-practices.html
 indicator: both

@@ -1,11 +1,11 @@
 ---
-title: Summary
+pagename: Summary
 redirect_from:
   - data-messaging-interactions-methods-summary.html
 sitesection: Documents
-level2: Data
-level3: Agent Metrics API
-level4: Methods
+categoryname: Data
+documentname: Agent Metrics API
+subfoldername: Methods
 
 order: 20
 permalink: agent-metrics-api-methods-summary.html

@@ -1,11 +1,11 @@
 ---
-title: Chat States
+pagename: Chat States
 redirect_from:
   - consumer-experience-javascript-chat-chat-states.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
 
 order: 2
 permalink: javascript-chat-sdk-chat-states.html

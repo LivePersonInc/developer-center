@@ -1,11 +1,11 @@
 ---
-title: Best Practices
+pagename: Best Practices
 redirect_from:
   - engagement-attributes-bestpractices.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: Engagement Attributes
+categoryname: Guides
+documentname: Engagement Attributes
 order: 40
 permalink: engagement-attributes-best-practices.html
 indicator: chat

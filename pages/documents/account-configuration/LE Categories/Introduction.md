@@ -1,10 +1,10 @@
 ---
-title: Introduction
+pagename: Introduction
 redirect_from:
   - account-configuration-categories-introduction.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
+categoryname: Account Configuration
+documentname: Predefined Categories API
 
 permalink: predefined-categories-api-introduction.html
 root-link: true

@@ -1,11 +1,11 @@
 ---
-title: Create Category
+pagename: Create Category
 redirect_from:
   - account-configuration-categories-create.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-create-category.html
 order: 60

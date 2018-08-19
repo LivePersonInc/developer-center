@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - consumer-int-overview.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
+categoryname: Consumer Experience
+documentname: Messaging Window API
 
 level-order: 5
 order: 0

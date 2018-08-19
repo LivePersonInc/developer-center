@@ -1,12 +1,12 @@
 ---
-title: hideConversation
+pagename: hideConversation
 redirect_from:
   - android-hideconversation.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 50
 permalink: mobile-app-messaging-sdk-for-android-methods-hideconversation.html

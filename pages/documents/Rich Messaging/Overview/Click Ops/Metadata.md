@@ -1,12 +1,12 @@
 ---
-title: Metadata
+pagename: Metadata
 redirect_from:
   - rich-messaging-click-ops-metadata.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Getting Started
-level4: Click Operations
+categoryname: Rich Messaging
+documentname: Getting Started
+subfoldername: Click Operations
 order: 100
 permalink: getting-started-click-operations-metadata.html
 indicator: both

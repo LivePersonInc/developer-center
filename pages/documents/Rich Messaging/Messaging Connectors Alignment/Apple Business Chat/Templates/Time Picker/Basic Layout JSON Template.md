@@ -1,10 +1,10 @@
 ---
-title: Basic Layout JSON Template
+pagename: Basic Layout JSON Template
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Apple Business Chat Templates
-level4: Time Picker
+categoryname: Rich Messaging
+documentname: Apple Business Chat Templates
+subfoldername: Time Picker
 order: 90
 permalink: rich-messaging-connectors-abc-timepicker-layout.html
 indicator: messaging

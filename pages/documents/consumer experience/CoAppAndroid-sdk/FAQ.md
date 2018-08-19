@@ -1,10 +1,10 @@
 ---
-title: FAQ
+pagename: FAQ
 redirect_from:
   - consumer-experience-voice-video-android-FAQ.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for Android SDK (BETA)
+categoryname: Consumer Experience
+documentname: Voice & Video for Android SDK (BETA)
 
 order: 100
 permalink: voice-&-video-for-android-sdk-beta-faq.html

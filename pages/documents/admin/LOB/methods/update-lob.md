@@ -1,12 +1,12 @@
 ---
-title: Update LOB
+pagename: Update LOB
 redirect_from:
   - administration-update-lob.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: LOBs API
-level4: Methods
+categoryname: Admin
+documentname: LOBs API
+subfoldername: Methods
 
 
 order: 60

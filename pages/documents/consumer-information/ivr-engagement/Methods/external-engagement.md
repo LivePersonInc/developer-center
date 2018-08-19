@@ -1,11 +1,11 @@
 ---
-title: External Engagement
+pagename: External Engagement
 redirect_from:
   - rt-interactions-ivr-engagement-external engagement.html
 sitesection: Documents
-level2: Consumer Information
-level3: IVR Engagement API
-level4: Methods
+categoryname: Consumer Information
+documentname: IVR Engagement API
+subfoldername: Methods
 order: 10
 permalink: ivr-engagement-api-methods-external-engagement.html
 

@@ -1,11 +1,11 @@
 ---
-title: Step 2 - Create a Conversation
+pagename: Step 2 - Create a Conversation
 redirect_from:
   - rich-messaging-file-sharing-2.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: File Sharing
+categoryname: Rich Messaging
+documentname: File Sharing
 order: 30
 permalink: file-sharing-step-2---create-a-conversation.html
 indicator: both

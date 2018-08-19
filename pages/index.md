@@ -1,5 +1,5 @@
 ---
-title: Welcome!
+pagename: Welcome!
 permalink: index.html
 ---
 

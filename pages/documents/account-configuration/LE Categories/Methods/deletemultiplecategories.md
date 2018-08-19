@@ -1,11 +1,11 @@
 ---
-title: Delete Multiple Categories
+pagename: Delete Multiple Categories
 redirect_from:
   - account-configuration-categories-delete-multiple.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-delete-multiple-categories.html
 order: 90

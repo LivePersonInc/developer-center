@@ -1,10 +1,10 @@
 ---
-title: Release Notes
+pagename: Release Notes
 redirect_from:
   - consumer-experience-javascript-chat-changelog.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
 
 order: 500
 permalink: javascript-chat-sdk-release-notes.html

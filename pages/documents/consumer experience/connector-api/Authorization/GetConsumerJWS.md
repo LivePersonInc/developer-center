@@ -1,11 +1,11 @@
 ---
-title: Get ConsumerJWS
+pagename: Get ConsumerJWS
 redirect_from:
   - Create_ConsumerJWS.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Authorization and Authentication
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Authorization and Authentication
 order: 5
 indicator: messaging
 permalink: connector-api-authorization-and-authentication-get-consumerjws.html

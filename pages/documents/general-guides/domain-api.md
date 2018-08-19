@@ -1,11 +1,11 @@
 ---
-title: Using the Domain API
+pagename: Using the Domain API
 redirect_from:
   - agent-domain-domain-api.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: Retrieve API Domains
+categoryname: Guides
+documentname: Retrieve API Domains
 
 level-order: 2
 order: 10

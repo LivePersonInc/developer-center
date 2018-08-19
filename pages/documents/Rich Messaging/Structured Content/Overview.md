@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - rich-messaging-structured-content-overview.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Structured Content
+categoryname: Rich Messaging
+documentname: Structured Content
 
 level-order: 2
 order: 5

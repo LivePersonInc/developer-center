@@ -1,11 +1,11 @@
 ---
-title: Engagement Activity
+pagename: Engagement Activity
 redirect_from:
   - data-operational-realtime-engagement-activity.html
 sitesection: Documents
-level2: Data
-level3: Operational Realtime API
-level4: Methods
+categoryname: Data
+documentname: Operational Realtime API
+subfoldername: Methods
 order: 20
 permalink: operational-realtime-api-methods-engagement-activity.html
 

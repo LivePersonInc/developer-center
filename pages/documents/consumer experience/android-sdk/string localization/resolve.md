@@ -1,12 +1,12 @@
 ---
-title: Resolve Message
+pagename: Resolve Message
 redirect_from:
   - android-resolve.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: String Localization
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: String Localization
 
 order: 280
 permalink: mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html

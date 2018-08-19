@@ -1,12 +1,12 @@
 ---
-title: Accept a Chat
+pagename: Accept a Chat
 redirect_from:
   - agent-accept-chat.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 80
 permalink: chat-agent-api-methods-accept-a-chat.html

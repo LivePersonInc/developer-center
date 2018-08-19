@@ -1,11 +1,11 @@
 ---
-title: Campaign for messaging Routing
+pagename: Campaign for messaging Routing
 redirect_from:
   - cmp-routing-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 65
 indicator: messaging
 permalink: connector-api-examples-campaign-for-messaging-routing.html

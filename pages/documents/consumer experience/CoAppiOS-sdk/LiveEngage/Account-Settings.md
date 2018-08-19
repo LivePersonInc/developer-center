@@ -1,11 +1,11 @@
 ---
-title: Account Settings
+pagename: Account Settings
 redirect_from:
   - consumer-experience-voice-video-ios-account-settings.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: LiveEngage Configuration
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: LiveEngage Configuration
 order: 90
 permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-account-settings.html
 indicator: messaging

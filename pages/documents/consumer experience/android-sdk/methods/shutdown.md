@@ -1,12 +1,12 @@
 ---
-title: shutDown
+pagename: shutDown
 redirect_from:
   - android-shutdown.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 230
 permalink: mobile-app-messaging-sdk-for-android-methods-shutdown.html

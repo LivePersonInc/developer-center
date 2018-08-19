@@ -1,12 +1,12 @@
 ---
-title: Update Predefined Content
+pagename: Update Predefined Content
 redirect_from:
   - account-configuration-predefined-content-update-content-items.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Content API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Content API
+subfoldername: Methods
 
 order: 50
 permalink: predefined-content-api-methods-update-predefined-content.html

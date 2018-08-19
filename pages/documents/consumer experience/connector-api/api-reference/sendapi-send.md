@@ -1,11 +1,11 @@
 ---
-title: SEND
+pagename: SEND
 redirect_from:
   - sendapi-send.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: API Reference
 order: 12
 indicator: messaging
 permalink: connector-api-api-reference-send.html

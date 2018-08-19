@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - data-messaging-interactions-overview.html
 sitesection: Documents
-level2: Data
-level3: Messaging Interactions API
+categoryname: Data
+documentname: Messaging Interactions API
 
 level-order: 3
 order: 1

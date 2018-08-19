@@ -1,12 +1,12 @@
 ---
-title: Get all profiles
+pagename: Get all profiles
 redirect_from:
   - administration-get-all-profiles.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Profiles API
-level4: Methods
+categoryname: Admin
+documentname: Profiles API
+subfoldername: Methods
 
 
 order: 10

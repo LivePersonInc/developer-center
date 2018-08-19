@@ -1,12 +1,12 @@
 ---
-title: Initialization
+pagename: Initialization
 redirect_from:
   - android-initialization.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Configuration
 
 order: 20
 permalink: mobile-app-messaging-sdk-for-android-configuration-initialization.html

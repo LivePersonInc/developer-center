@@ -1,8 +1,8 @@
 ---
-title: Getting Started with Authentication
+pagename: Getting Started with Authentication
 sitesection: Documents
-level2: Guides
-level3: Getting Started with LiveEngage APIs
+categoryname: Guides
+documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-getting-started-with-authentication.html
 order: 10
 indicator: both

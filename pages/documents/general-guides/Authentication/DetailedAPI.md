@@ -1,10 +1,10 @@
 ---
-title: Detailed API
+pagename: Detailed API
 redirect_from:
   - guides-authentication-detailedapi.html
 sitesection: Documents
-level2: Guides
-level3: Authentication
+categoryname: Guides
+documentname: Authentication
 
 permalink: authentication-detailed-api.html
 order: 5

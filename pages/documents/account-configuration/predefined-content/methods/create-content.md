@@ -1,12 +1,12 @@
 ---
-title: Create Predefined Content
+pagename: Create Predefined Content
 redirect_from:
   - account-configuration-predefined-content-create-content.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Content API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Content API
+subfoldername: Methods
 
 order: 40
 permalink: predefined-content-api-methods-create-predefined-content.html

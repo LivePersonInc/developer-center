@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - agent-workspace-sdk-overview.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Agent Workspace Widget SDK
+categoryname: Agent Interactions
+documentname: Agent Workspace Widget SDK
 
 level-order: 5
 order: 10

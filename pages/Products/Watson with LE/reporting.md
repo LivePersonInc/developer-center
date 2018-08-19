@@ -1,11 +1,11 @@
 ---
-title: Reporting
+pagename: Reporting
 redirect_from:
   - watson-reporting.html
 keywords:
 sitesection: Solutions
-level2: Channels
-level3: Watson with LiveEngage
+categoryname: Channels
+documentname: Watson with LiveEngage
 order: 30
 permalink: watson-with-liveengage-reporting.html
 indicator: messaging

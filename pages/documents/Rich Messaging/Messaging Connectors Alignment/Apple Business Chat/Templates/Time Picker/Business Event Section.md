@@ -1,10 +1,10 @@
 ---
-title: Business Event Section
+pagename: Business Event Section
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Apple Business Chat Templates
-level4: Time Picker
+categoryname: Rich Messaging
+documentname: Apple Business Chat Templates
+subfoldername: Time Picker
 order: 100
 permalink: rich-messaging-connectors-abc-timepicker-businessevent.html
 indicator: messaging

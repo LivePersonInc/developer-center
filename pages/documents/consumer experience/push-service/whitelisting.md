@@ -1,10 +1,10 @@
 ---
-title: IP Whitelisting
+pagename: IP Whitelisting
 redirect_from:
   - push-service-whitelist.html
 Keywords:
 sitesection: Documents
-level2: Guides
+categoryname: Guides
 
 
 order: 50

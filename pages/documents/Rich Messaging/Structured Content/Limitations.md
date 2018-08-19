@@ -1,11 +1,11 @@
 ---
-title: Limitations
+pagename: Limitations
 redirect_from:
   - rich-messaging-structured-content-limitations.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Structured Content
+categoryname: Rich Messaging
+documentname: Structured Content
 order: 70
 permalink: structured-content-limitations.html
 indicator: both

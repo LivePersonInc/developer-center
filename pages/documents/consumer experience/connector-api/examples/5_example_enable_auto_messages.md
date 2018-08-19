@@ -1,11 +1,11 @@
 ---
-title: How to enable a feature
+pagename: How to enable a feature
 redirect_from:
   - enable-feature-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 64
 indicator: messaging
 permalink: connector-api-examples-how-to-enable-a-feature.html

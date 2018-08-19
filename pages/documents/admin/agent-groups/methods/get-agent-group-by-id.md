@@ -1,12 +1,12 @@
 ---
-title: Get Agent Groups by ID
+pagename: Get Agent Groups by ID
 redirect_from:
   - administration-get-agent-groups-by-id.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Agent Groups API
-level4: Methods
+categoryname: Admin
+documentname: Agent Groups API
+subfoldername: Methods
 
 
 order: 20

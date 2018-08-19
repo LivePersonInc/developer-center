@@ -1,11 +1,11 @@
 ---
-title: getEngagementState
+pagename: getEngagementState
 redirect_from:
   - trigger-getstate.html
 sitesection: Documents
-level2: Consumer Information
-level3: Engagement Trigger API
-level4: Methods
+categoryname: Consumer Information
+documentname: Engagement Trigger API
+subfoldername: Methods
 order: 30
 permalink: engagement-trigger-api-methods-getengagementstate.html
 

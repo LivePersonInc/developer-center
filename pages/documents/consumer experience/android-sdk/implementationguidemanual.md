@@ -1,12 +1,12 @@
 ---
-title: Using LivePerson SDK - Android - Manual
+pagename: Using LivePerson SDK - Android - Manual
 redirect_from:
   - android-integration-guide-manual.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Appendix
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Appendix
 
 order: 342
 permalink: mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android---manual.html

@@ -1,12 +1,12 @@
 ---
-title: LivePerson Callbacks Interface
+pagename: LivePerson Callbacks Interface
 redirect_from:
   - android-callbacks-interface.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Configuration
 
 order: 30
 permalink: mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html

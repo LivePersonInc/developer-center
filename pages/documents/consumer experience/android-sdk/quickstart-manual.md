@@ -1,11 +1,11 @@
 ---
-title: Quick Start-Manual
+pagename: Quick Start-Manual
 redirect_from:
   - android-quickstart-manual.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
 
 order: 11
 permalink: mobile-app-messaging-sdk-for-android-quick-start-manual.html

@@ -1,12 +1,12 @@
 ---
-title: onRequestChat
+pagename: onRequestChat
 redirect_from:
   - consumer-experience-javascript-chat-onrequestchat.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
-level4: Events
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
+subfoldername: Events
 
 order: 240
 permalink: javascript-chat-sdk-events-onrequestchat.html

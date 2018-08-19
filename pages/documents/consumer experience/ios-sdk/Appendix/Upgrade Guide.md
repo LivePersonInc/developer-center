@@ -1,12 +1,12 @@
 ---
-title: Upgrade Guide - iOS
+pagename: Upgrade Guide - iOS
 redirect_from:
   - consumer-experience-ios-sdk-upgrade-guide.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Appendix
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Appendix
 order: 247
 permalink: mobile-app-messaging-sdk-for-ios-appendix-upgrade-guide-ios.html
 indicator: messaging

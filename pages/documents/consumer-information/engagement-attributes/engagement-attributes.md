@@ -1,10 +1,10 @@
 ---
-title: Engagement Attributes
+pagename: Engagement Attributes
 redirect_from:
   - rt-interactions-engagement-attributes-engagement-attributes.html
 sitesection: Documents
-level2: Consumer Information
-level3: Engagement Attributes API
+categoryname: Consumer Information
+documentname: Engagement Attributes API
 
 order: 2
 permalink: engagement-attributes-api-engagement-attributes.html

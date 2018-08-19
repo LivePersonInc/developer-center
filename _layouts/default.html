@@ -21,13 +21,13 @@
   <div id="defaultsidebar" class="defaultsidebar">
     {% include sidebar.html %}
   </div>
-  {% if page.title %}
+  {% if page.pagename %}
   <div class="documenttitlecontainer">
-  {% if page.title != "Welcome!" %}
+  {% if page.pagename != "Welcome!" %}
     {% include nav-breadcrumbs.html %}
   {% endif %}
   <div class="documenttitle">
-    <div class='h1'>{{ page.title}}</div>
+    <div class='h1'>{{ page.pagename}}</div>
     {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
     <div class="indicator chat">Chat</div>
     {% endif %}

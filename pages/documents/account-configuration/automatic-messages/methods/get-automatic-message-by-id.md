@@ -1,12 +1,12 @@
 ---
-title: Get Automatic Message by ID
+pagename: Get Automatic Message by ID
 redirect_from:
   - account-configuration-automatic-messages-get-automatic-message-by-id.html
 keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Automatic Messages API
-level4: Methods
+categoryname: Account Configuration
+documentname: Automatic Messages API
+subfoldername: Methods
 
 order: 20
 permalink: automatic-messages-api-methods-get-automatic-message-by-id.html

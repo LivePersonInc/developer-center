@@ -1,11 +1,11 @@
 ---
-title: Response Builder
+pagename: Response Builder
 redirect_from:
   - consumer-int-msg-resps.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 120
 layout: page

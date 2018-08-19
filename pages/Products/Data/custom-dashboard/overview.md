@@ -1,10 +1,10 @@
 ---
-title: Create a custom real time dashboard for your contact center
+pagename: Create a custom real time dashboard for your contact center
 redirect_from:
   - products-data-custom-dashboard-overview.html
 sitesection: Solutions
-level2: Data
-level3: Custom Dashboard
+categoryname: Data
+documentname: Custom Dashboard
 
 order: 1
 level-order: 2

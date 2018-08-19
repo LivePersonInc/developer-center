@@ -1,11 +1,11 @@
 ---
-title: Release Notes
+pagename: Release Notes
 redirect_from:
   - rt-interactions-window-sdk-releasenotes.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Engagement Window Widget SDK
+categoryname: Consumer Experience
+documentname: Engagement Window Widget SDK
 
 order: 120
 permalink: engagement-window-widget-sdk-release-notes.html

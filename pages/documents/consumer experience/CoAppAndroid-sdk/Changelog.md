@@ -1,10 +1,10 @@
 ---
-title: Release Notes
+pagename: Release Notes
 redirect_from:
   - consumer-experience-voice-video-android-changelog.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for Android SDK (BETA)
+categoryname: Consumer Experience
+documentname: Voice & Video for Android SDK (BETA)
 
 order: 110
 permalink: voice-&-video-for-android-sdk-beta-release-notes.html

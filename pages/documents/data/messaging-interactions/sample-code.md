@@ -1,10 +1,10 @@
 ---
-title: Sample Code
+pagename: Sample Code
 redirect_from:
   - data-messaging-interactions-sample-code.html
 sitesection: Documents
 
-level3: Messaging Interactions API
+documentname: Messaging Interactions API
 
 order: 31
 permalink: messaging-interactions-api-sample-code.html

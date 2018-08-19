@@ -1,12 +1,12 @@
 ---
-title: Retrieve Workdays Object by ID
+pagename: Retrieve Workdays Object by ID
 redirect_from:
   - account-configuration-workdays-get-by-id.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Workdays API
-level4: Methods
+categoryname: Account Configuration
+documentname: Workdays API
+subfoldername: Methods
 order: 40
 permalink: workdays-api-methods-retrieve-workdays-object-by-id.html
 indicator: messaging

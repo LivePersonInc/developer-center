@@ -1,11 +1,11 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - trigger-changelog.html
 Keywords:
 sitesection: Documents
-level2: Consumer Information
-level3: Engagement Trigger API
+categoryname: Consumer Information
+documentname: Engagement Trigger API
 order: 231
 permalink: engagement-trigger-api-changelog.html
 indicator: chat

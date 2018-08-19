@@ -1,11 +1,11 @@
 ---
-title: Microsoft Dynamics
+pagename: Microsoft Dynamics
 redirect_from:
   - microsoftdynamics.html
 permalink: crm-integrations-microsoft-dynamics.html
 sitesection: Solutions
-level2: Integrations
-level3: CRM Integrations
+categoryname: Integrations
+documentname: CRM Integrations
 order: 20
 ---
 

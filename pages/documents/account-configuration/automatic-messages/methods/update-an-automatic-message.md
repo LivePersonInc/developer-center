@@ -1,12 +1,12 @@
 ---
-title: Update an Automatic Message
+pagename: Update an Automatic Message
 redirect_from:
   - account-configuration-automatic-messages-update-an-automatic-message.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Automatic Messages API
-level4: Methods
+categoryname: Account Configuration
+documentname: Automatic Messages API
+subfoldername: Methods
 
 order: 30
 permalink: automatic-messages-api-methods-update-an-automatic-message.html

@@ -1,11 +1,11 @@
 ---
-title: Getting Started
+pagename: Getting Started
 redirect_from:
   - products-bots-gettingstarted.html
 
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 order: 3
 

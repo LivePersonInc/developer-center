@@ -1,12 +1,12 @@
 ---
-title: Retrieve the Agent's Typing Status
+pagename: Retrieve the Agent's Typing Status
 redirect_from:
   - consumer-experience-server-chat-retrieve-agent-typing-status.html
 
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 131
 

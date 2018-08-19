@@ -1,11 +1,11 @@
 ---
-title: getEngagementInfo
+pagename: getEngagementInfo
 redirect_from:
   - trigger-getinfo.html
 sitesection: Documents
-level2: Consumer Information
-level3: Engagement Trigger API
-level4: Methods
+categoryname: Consumer Information
+documentname: Engagement Trigger API
+subfoldername: Methods
 order: 20
 permalink: engagement-trigger-api-methods-getengagementinfo.html
 

@@ -1,11 +1,11 @@
 ---
-title: Categories List
+pagename: Categories List
 redirect_from:
   - account-configuration-predefined-list.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-categories-list.html
 order: 11

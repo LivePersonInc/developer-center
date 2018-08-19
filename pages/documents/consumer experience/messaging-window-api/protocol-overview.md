@@ -1,10 +1,10 @@
 ---
-title: Protocol Overview
+pagename: Protocol Overview
 redirect_from:
   - consumer-int-protocol-overview.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
+categoryname: Consumer Experience
+documentname: Messaging Window API
 
 order: 1
 permalink: messaging-window-api-protocol-overview.html

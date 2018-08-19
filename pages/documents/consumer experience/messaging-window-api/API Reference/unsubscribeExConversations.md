@@ -1,11 +1,11 @@
 ---
-title: Unsubscribe from Conversation Metadata
+pagename: Unsubscribe from Conversation Metadata
 redirect_from:
   - consumer-int-msg-unsub-conv.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 180
 layout: page

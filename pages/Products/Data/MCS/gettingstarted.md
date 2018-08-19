@@ -1,10 +1,10 @@
 ---
-title: Getting Started
+pagename: Getting Started
 redirect_from:
   - products-mcs-gettingstarted.html
 sitesection: Solutions
-level2: Data
-level3: MCS Toolkit
+categoryname: Data
+documentname: MCS Toolkit
 
 order: 10
 permalink: mcs-toolkit-getting-started.html

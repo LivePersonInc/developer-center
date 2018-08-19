@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - connector-api-overview.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: API Reference
 order: 10
 indicator: messaging
 permalink: connector-api-api-reference-overview.html

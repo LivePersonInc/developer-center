@@ -1,11 +1,11 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - rt-interactions-validate-engagement-changelog.html
 Keywords:
 sitesection: Documents
-level2: Consumer Information
-level3: Validate Engagement API
+categoryname: Consumer Information
+documentname: Validate Engagement API
 order: 231
 permalink: validate-engagement-api-changelog.html
 indicator: both

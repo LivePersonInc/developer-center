@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - guides-retry-policy.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: Retry and KeepAlive Best Practices
+categoryname: Guides
+documentname: Retry and KeepAlive Best Practices
 
 level-order: 11
 order: 10

@@ -1,11 +1,11 @@
 ---
-title: Wording
+pagename: Wording
 redirect_from:
   - consumer-experience-voice-video-ios-appearance-wording.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: Customizing
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: Customizing
 order: 70
 permalink: voice-&-video-for-ios-sdk-beta-customizing-wording.html
 indicator: messaging

@@ -1,11 +1,11 @@
 ---
-title: Installing LiveEngage Applications
+pagename: Installing LiveEngage Applications
 redirect_from:
   - guides-le-applications-installing.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: LiveEngage Applications
+categoryname: Guides
+documentname: LiveEngage Applications
 order: 20
 permalink: liveengage-applications-installing-liveengage-applications.html
 indicator: both

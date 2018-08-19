@@ -1,12 +1,12 @@
 ---
-title: Retrieve Current Availability
+pagename: Retrieve Current Availability
 redirect_from:
   - agent-retrieve-current-availability.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 20
 permalink: chat-agent-api-methods-retrieve-current-availability.html

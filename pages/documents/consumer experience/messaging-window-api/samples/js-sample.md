@@ -1,11 +1,11 @@
 ---
-title: JavaScript Sample
+pagename: JavaScript Sample
 redirect_from:
   - consumer-int-js-sample.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Samples
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Samples
 
 order: 90
 

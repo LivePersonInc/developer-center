@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - guides-customizedchat.html
 sitesection: Documents
-level2: Guides
-level3: Customized Chat Windows
+categoryname: Guides
+documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-overview.html
 root-link: true

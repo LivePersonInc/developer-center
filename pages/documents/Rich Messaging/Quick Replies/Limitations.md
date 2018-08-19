@@ -1,11 +1,11 @@
 ---
-title: Limitations
+pagename: Limitations
 redirect_from:
   - rich-messaging-quick-replies-limitations.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Quick Replies
+categoryname: Rich Messaging
+documentname: Quick Replies
 order: 30
 permalink: quick-replies-limitations.html
 indicator: messaging

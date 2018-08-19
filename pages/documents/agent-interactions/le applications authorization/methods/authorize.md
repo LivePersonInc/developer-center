@@ -1,10 +1,10 @@
 ---
-title: Authorization Request
+pagename: Authorization Request
 Keywords:
 sitesection:
-level2: Agent Interactions
-level3: LE Applications Authorization
-level4: Methods
+categoryname: Agent Interactions
+documentname: LE Applications Authorization
+subfoldername: Methods
 order: 9
 permalink: le-applications-authorization-methods-authorization-request.html
 indicator: both

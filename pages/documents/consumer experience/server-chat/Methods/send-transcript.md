@@ -1,11 +1,11 @@
 ---
-title: Send a Transcript
+pagename: Send a Transcript
 redirect_from:
   - consumer-experience-server-chat-send-transcript.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 170
 permalink: server-chat-api-methods-send-a-transcript.html

@@ -1,8 +1,8 @@
 ---
-title: Common Use Cases
+pagename: Common Use Cases
 sitesection: Documents
-level2: Guides
-level3: Getting Started with LiveEngage APIs
+categoryname: Guides
+documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-common-use-cases.html
 indicator: both
 ---

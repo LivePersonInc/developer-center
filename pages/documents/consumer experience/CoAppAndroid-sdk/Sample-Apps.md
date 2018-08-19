@@ -1,10 +1,10 @@
 ---
-title: Sample Apps
+pagename: Sample Apps
 redirect_from:
   - consumer-experience-voice-video-android-sample-app.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for Android SDK (BETA)
+categoryname: Consumer Experience
+documentname: Voice & Video for Android SDK (BETA)
 order: 90
 permalink: voice-&-video-for-android-sdk-beta-sample-apps.html
 indicator: messaging

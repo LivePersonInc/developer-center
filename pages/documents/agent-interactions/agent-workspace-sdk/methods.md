@@ -1,11 +1,11 @@
 ---
-title: Methods
+pagename: Methods
 redirect_from:
   - agent-workspace-sdk-methods.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Agent Workspace Widget SDK
+categoryname: Agent Interactions
+documentname: Agent Workspace Widget SDK
 
 order: 50
 permalink: agent-workspace-widget-sdk-methods.html

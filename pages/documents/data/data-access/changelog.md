@@ -1,10 +1,10 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - data-data-access-changelog.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
+categoryname: Data
+documentname: Data Access API
 
 order: 62
 permalink: data-access-api-changelog.html

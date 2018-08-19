@@ -1,11 +1,11 @@
 ---
-title: Messaging Current Queue Health
+pagename: Messaging Current Queue Health
 redirect_from:
   - data-messaging-operations-messaging-current-queue-health.html
 sitesection: Documents
-level2: Data
-level3: Messaging Operations API
-level4: Methods
+categoryname: Data
+documentname: Messaging Operations API
+subfoldername: Methods
 order: 30
 permalink: messaging-operations-api-methods-messaging-current-queue-health.html
 

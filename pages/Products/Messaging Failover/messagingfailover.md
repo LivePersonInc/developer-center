@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - usecases-alternate-messaging-notifications.html
 sitesection: Solutions
-level2: Channels
-level3: Alternate Messaging Notifications
+categoryname: Channels
+documentname: Alternate Messaging Notifications
 
 order: 1
 level-order: 10

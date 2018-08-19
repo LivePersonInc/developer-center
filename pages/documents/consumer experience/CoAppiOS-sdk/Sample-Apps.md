@@ -1,10 +1,10 @@
 ---
-title: Sample App
+pagename: Sample App
 redirect_from:
   - consumer-experience-voice-video-ios-sample-app.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
 
 order: 120
 permalink: voice-&-video-for-ios-sdk-beta-sample-app.html

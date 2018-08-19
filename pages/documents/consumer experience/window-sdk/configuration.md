@@ -1,11 +1,11 @@
 ---
-title: Configuration
+pagename: Configuration
 redirect_from:
   - rt-interactions-window-sdk-configuration.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Engagement Window Widget SDK
-level4: Instructions
+categoryname: Consumer Experience
+documentname: Engagement Window Widget SDK
+subfoldername: Instructions
 
 order: 10
 permalink: engagement-window-widget-sdk-instructions-configuration.html

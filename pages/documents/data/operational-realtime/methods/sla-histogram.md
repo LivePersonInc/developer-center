@@ -1,11 +1,11 @@
 ---
-title: SLA Histogram
+pagename: SLA Histogram
 redirect_from:
   - data-operational-realtime-sla-histogram.html
 sitesection: Documents
-level2: Data
-level3: Operational Realtime API
-level4: Methods
+categoryname: Data
+documentname: Operational Realtime API
+subfoldername: Methods
 order: 50
 permalink: operational-realtime-api-methods-sla-histogram.html
 

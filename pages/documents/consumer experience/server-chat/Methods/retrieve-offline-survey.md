@@ -1,11 +1,11 @@
 ---
-title: Retrieve Offline Survey
+pagename: Retrieve Offline Survey
 redirect_from:
   - consumer-experience-server-chat-retrieve-offline-survey.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 50
 permalink: server-chat-api-methods-retrieve-offline-survey.html

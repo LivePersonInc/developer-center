@@ -1,11 +1,11 @@
 ---
-title: Webhooks Examples
+pagename: Webhooks Examples
 redirect_from:
   - webhooks-examples.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Webhooks
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Webhooks
 order: 52
 indicator: messaging
 permalink: connector-api-webhooks-webhooks-examples.html

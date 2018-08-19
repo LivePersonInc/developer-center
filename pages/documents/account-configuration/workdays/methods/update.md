@@ -1,12 +1,12 @@
 ---
-title: Update workdays
+pagename: Update workdays
 redirect_from:
   - account-configuration-workdays-update.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Workdays API
-level4: Methods
+categoryname: Account Configuration
+documentname: Workdays API
+subfoldername: Methods
 order: 20
 permalink: workdays-api-methods-update-workdays.html
 indicator: messaging

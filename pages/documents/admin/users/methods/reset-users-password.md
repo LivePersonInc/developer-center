@@ -1,12 +1,12 @@
 ---
-title: Reset User's Password
+pagename: Reset User's Password
 redirect_from:
   - administration-reset-users-password.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Users API
-level4: Methods
+categoryname: Admin
+documentname: Users API
+subfoldername: Methods
 
 
 order: 90

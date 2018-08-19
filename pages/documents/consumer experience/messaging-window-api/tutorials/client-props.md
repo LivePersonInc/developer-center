@@ -1,11 +1,11 @@
 ---
-title: Client Properties
+pagename: Client Properties
 redirect_from:
   - consumer-int-client-props.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 70
 permalink: messaging-window-api-tutorials-client-properties.html

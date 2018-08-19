@@ -1,10 +1,10 @@
 ---
-title: Visit Information
+pagename: Visit Information
 redirect_from:
   - rt-interactions-visit-information-visit-information.html
 sitesection: Documents
-level2: Consumer Information
-level3: Visit Information API
+categoryname: Consumer Information
+documentname: Visit Information API
 
 order: 2
 permalink: visit-information-api-visit-information.html

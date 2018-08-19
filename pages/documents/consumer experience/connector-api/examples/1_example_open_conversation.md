@@ -1,11 +1,11 @@
 ---
-title: Create a new conversation
+pagename: Create a new conversation
 redirect_from:
   - create-conversation-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 59
 indicator: messaging
 permalink: connector-api-examples-create-a-new-conversation.html

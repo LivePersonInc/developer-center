@@ -1,12 +1,12 @@
 ---
-title: Get all LOBs
+pagename: Get all LOBs
 redirect_from:
   - administration-get-all-lobs.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: LOBs API
-level4: Methods
+categoryname: Admin
+documentname: LOBs API
+subfoldername: Methods
 
 
 order: 10

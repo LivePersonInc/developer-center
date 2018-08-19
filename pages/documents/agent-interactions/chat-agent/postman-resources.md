@@ -1,11 +1,11 @@
 ---
-title: Postman Resources
+pagename: Postman Resources
 redirect_from:
   - chat-agent-postman-resources.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API  
+categoryname: Agent Interactions
+documentname: Chat Agent API  
 
 order: 242
 permalink: chat-agent-api-postman-resources.html

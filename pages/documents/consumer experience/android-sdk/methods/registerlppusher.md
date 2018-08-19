@@ -1,12 +1,12 @@
 ---
-title: registerLPPusher
+pagename: registerLPPusher
 redirect_from:
   - android-registerlppusher.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 110
 permalink: mobile-app-messaging-sdk-for-android-methods-registerlppusher.html

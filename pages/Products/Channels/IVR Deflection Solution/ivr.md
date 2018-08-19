@@ -1,11 +1,11 @@
 ---
-title: IVR Deflection for Chat
+pagename: IVR Deflection for Chat
 redirect_from:
   - products-channels-ivr-deflection-solution-introduction.html
 keywords: ['IVR', 'IVR Deflection', 'IVR Deflection for Messaging']
 sitesection: Solutions
-level2: Channels
-level3: IVR Deflection
+categoryname: Channels
+documentname: IVR Deflection
 order: 20
 permalink: ivr-deflection-ivr-deflection-for-chat.html
 indicator: chat

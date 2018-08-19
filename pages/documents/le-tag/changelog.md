@@ -1,11 +1,11 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - lp-tag-tag-events-changelog.html
 Keywords:
 sitesection: Documents
-level2: Consumer Information
-level3: LE-Tag
+categoryname: Consumer Information
+documentname: LE-Tag
 order: 231
 permalink: le-tag-changelog.html
 indicator: chat

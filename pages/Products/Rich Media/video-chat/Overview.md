@@ -1,10 +1,10 @@
 ---
-title: Add video to chat conversations
+pagename: Add video to chat conversations
 redirect_from:
   - products-video-chat-overview.html
 sitesection: Solutions
-level2: Rich Media
-level3: Video Chat
+categoryname: Rich Media
+documentname: Video Chat
 
 order: 1
 level-order: 1

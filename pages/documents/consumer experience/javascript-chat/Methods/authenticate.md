@@ -1,12 +1,12 @@
 ---
-title: authenticate
+pagename: authenticate
 redirect_from:
   - consumer-experience-javascript-chat-authenticate.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Javascript Chat SDK
-level4: Methods
+categoryname: Consumer Experience
+documentname: Javascript Chat SDK
+subfoldername: Methods
 
 order: 31
 permalink: javascript-chat-sdk-methods-authenticate.html

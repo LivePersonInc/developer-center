@@ -1,12 +1,12 @@
 ---
-title: Retrieve Agent Information
+pagename: Retrieve Agent Information
 redirect_from:
   - agent-retrieve-agent-information.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 60
 permalink: chat-agent-api-methods-retrieve-agent-information.html

@@ -1,11 +1,11 @@
 ---
-title: Agent Workspace Requirements
+pagename: Agent Workspace Requirements
 redirect_from:
   - consumer-experience-voice-video-ios-requirements.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: LiveEngage Configuration
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: LiveEngage Configuration
 order: 80
 permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-agent-workspace-requirements.html
 indicator: messaging

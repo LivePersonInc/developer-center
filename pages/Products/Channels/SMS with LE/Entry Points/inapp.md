@@ -1,10 +1,10 @@
 ---
-title: SMS via Mobile App Messaging
+pagename: SMS via Mobile App Messaging
 redirect_from:
   - products-channels-sms-inapp.html
 sitesection: Solutions
-level2: Channels
-level3: SMS with LiveEngage
+categoryname: Channels
+documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-sms-via-mobile-app-messaging.html
 order: 40

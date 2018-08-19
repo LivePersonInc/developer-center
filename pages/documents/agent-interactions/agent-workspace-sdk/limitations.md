@@ -1,11 +1,11 @@
 ---
-title: Limitations
+pagename: Limitations
 redirect_from:
   - agent-workspace-sdk-limitations.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Agent Workspace Widget SDK
+categoryname: Agent Interactions
+documentname: Agent Workspace Widget SDK
 
 order: 30
 permalink: agent-workspace-widget-sdk-limitations.html

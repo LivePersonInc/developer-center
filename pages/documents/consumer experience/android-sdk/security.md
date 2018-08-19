@@ -1,12 +1,12 @@
 ---
-title: Security
+pagename: Security
 redirect_from:
   - android-security.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Appendix
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Appendix
 
 order: 320
 permalink: mobile-app-messaging-sdk-for-android-appendix-security.html

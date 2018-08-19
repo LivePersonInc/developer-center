@@ -1,11 +1,11 @@
 ---
-title: Share Image File
+pagename: Share Image File
 redirect_from:
   - share-image-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 68
 indicator: messaging
 permalink: connector-api-examples-share-image-file.html

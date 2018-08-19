@@ -1,10 +1,10 @@
 ---
-title: Token Request
+pagename: Token Request
 Keywords:
 sitesection:
-level2: Agent Interactions
-level3: LE Applications Authorization
-level4: Methods
+categoryname: Agent Interactions
+documentname: LE Applications Authorization
+subfoldername: Methods
 
 order: 10
 permalink: le-applications-authorization-methods-token-request.html

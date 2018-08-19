@@ -1,12 +1,12 @@
 ---
-title: unregisterLPPusher
+pagename: unregisterLPPusher
 redirect_from:
   - android-unregisterlppusher.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 120
 permalink: mobile-app-messaging-sdk-for-android-methods-unregisterlppusher.html

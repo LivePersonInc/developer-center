@@ -1,12 +1,12 @@
 ---
-title: Photo Sharing
+pagename: Photo Sharing
 redirect_from:
   - android-photo-sharing.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Advanced Features
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Advanced Features
 
 order: 285
 permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html

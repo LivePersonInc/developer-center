@@ -1,10 +1,10 @@
 ---
-title: IVR Deflection
+pagename: IVR Deflection
 redirect_from:
   - products-channels-ivrmessaging.html
 sitesection: Solutions
-level2: Channels
-level3: IVR Deflection
+categoryname: Channels
+documentname: IVR Deflection
 root-link: true
 permalink: ivr-deflection-ivr-deflection.html
 order: 10

@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - administration-profiles-appendix.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Profiles API
+categoryname: Admin
+documentname: Profiles API
 
 
 order: 101

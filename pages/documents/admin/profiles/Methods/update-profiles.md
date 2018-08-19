@@ -1,12 +1,12 @@
 ---
-title: Update Profiles
+pagename: Update Profiles
 redirect_from:
   - administration.update-profiles.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Profiles API
-level4: Methods
+categoryname: Admin
+documentname: Profiles API
+subfoldername: Methods
 
 
 order: 50

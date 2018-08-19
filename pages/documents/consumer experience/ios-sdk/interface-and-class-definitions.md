@@ -1,12 +1,12 @@
 ---
-title: Interface and class definitions
+pagename: Interface and class definitions
 redirect_from:
   - consumer-experience-ios-sdk-interfacedefinitions.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: SDK APIs
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: SDK APIs
 
 order: 12
 permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-interface-and-class-definitions.html

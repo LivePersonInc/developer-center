@@ -1,12 +1,12 @@
 ---
-title: Retrieve Special Occasion by ID
+pagename: Retrieve Special Occasion by ID
 redirect_from:
   - account-configuration-special-occasions-retrieve-by-id.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Special Occasions API
-level4: Methods
+categoryname: Account Configuration
+documentname: Special Occasions API
+subfoldername: Methods
 
 order: 40
 permalink: special-occasions-api-methods-retrieve-special-occasion-by-id.html

@@ -1,12 +1,12 @@
 ---
-title: Audio Messages
+pagename: Audio Messages
 redirect_from:
   - consumer-experience-android-sdk-advanced-audio.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Advanced Features
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Advanced Features
 
 order: 293
 permalink: mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html

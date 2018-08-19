@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - account-configuration-automatic-messages-overview.html
 keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Automatic Messages API
+categoryname: Account Configuration
+documentname: Automatic Messages API
 
 level-order: 5
 order: 9

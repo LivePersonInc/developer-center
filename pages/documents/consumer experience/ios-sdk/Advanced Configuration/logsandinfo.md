@@ -1,12 +1,12 @@
 ---
-title: Logs and Info
+pagename: Logs and Info
 redirect_from:
   - consumer-experience-ios-sdk-logs-info.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Configuration
 
 order: 8
 permalink: mobile-app-messaging-sdk-for-ios-configuration-logs-and-info.html

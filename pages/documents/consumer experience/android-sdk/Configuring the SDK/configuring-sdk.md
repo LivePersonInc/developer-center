@@ -1,12 +1,12 @@
 ---
-title: Customizing the SDK
+pagename: Customizing the SDK
 redirect_from:
   - android-configuring-sdk.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Customization and Branding
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Customization and Branding
 
 order: 150
 permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html

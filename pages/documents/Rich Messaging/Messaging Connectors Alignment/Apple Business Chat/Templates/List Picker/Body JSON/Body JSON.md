@@ -1,10 +1,10 @@
 ---
-title: Basic Layout Body
+pagename: Basic Layout Body
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Apple Business Chat Templates
-level4: List Picker
+categoryname: Rich Messaging
+documentname: Apple Business Chat Templates
+subfoldername: List Picker
 level5: Basic Layout Body
 order: 50
 permalink: rich-messaging-connectors-abc-listpicker-body.html

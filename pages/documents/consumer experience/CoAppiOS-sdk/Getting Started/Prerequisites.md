@@ -1,11 +1,11 @@
 ---
-title: Prerequisites
+pagename: Prerequisites
 redirect_from:
   - consumer-experience-voice-video-ios-prerequisites.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: Getting Started
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: Getting Started
 
 order: 10
 permalink: voice-&-video-for-ios-sdk-beta-getting-started-prerequisites.html

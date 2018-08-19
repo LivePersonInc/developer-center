@@ -1,12 +1,12 @@
 ---
-title: Predefined Content Query Delta
+pagename: Predefined Content Query Delta
 redirect_from:
   - account-configuration-predefined-content-query-delta.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Content API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Content API
+subfoldername: Methods
 
 order: 30
 permalink: predefined-content-api-methods-predefined-content-query-delta.html

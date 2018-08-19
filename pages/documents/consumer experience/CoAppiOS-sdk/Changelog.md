@@ -1,10 +1,10 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - consumer-experience-voice-video-ios-changelog.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
 
 order: 129
 permalink: voice-&-video-for-ios-sdk-beta-changelog.html

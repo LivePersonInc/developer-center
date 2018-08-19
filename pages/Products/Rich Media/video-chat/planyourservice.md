@@ -1,10 +1,10 @@
 ---
-title: Plan Your Service
+pagename: Plan Your Service
 redirect_from:
   - products-video-chat-plan-your-service.html
 sitesection: Solutions
-level2: Rich Media
-level3: Video Chat
+categoryname: Rich Media
+documentname: Video Chat
 
 order: 2
 

@@ -1,12 +1,12 @@
 ---
-title: setUserProfile
+pagename: setUserProfile
 redirect_from:
   - android-setuserprofile.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 90
 permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile.html

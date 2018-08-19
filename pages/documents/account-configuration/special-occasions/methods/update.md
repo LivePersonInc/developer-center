@@ -1,12 +1,12 @@
 ---
-title: Update
+pagename: Update
 redirect_from:
   - account-configuration-special-occasions-update.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Special Occasions API
-level4: Methods
+categoryname: Account Configuration
+documentname: Special Occasions API
+subfoldername: Methods
 
 order: 20
 permalink: special-occasions-api-methods-update.html

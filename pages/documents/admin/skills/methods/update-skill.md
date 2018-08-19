@@ -1,12 +1,12 @@
 ---
-title: Update skill
+pagename: Update skill
 redirect_from:
   - administration-update-skill.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Skills API
-level4: Methods
+categoryname: Admin
+documentname: Skills API
+subfoldername: Methods
 
 
 order: 60

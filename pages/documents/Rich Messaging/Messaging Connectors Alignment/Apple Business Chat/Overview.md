@@ -1,9 +1,9 @@
 ---
-title: Introduction
+pagename: Introduction
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Apple Business Chat Templates
+categoryname: Rich Messaging
+documentname: Apple Business Chat Templates
 level-order: 4
 order: 10
 permalink: rich-messaging-apple-business-chat-templates.html

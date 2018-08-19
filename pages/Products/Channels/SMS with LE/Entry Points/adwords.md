@@ -1,10 +1,10 @@
 ---
-title: Google AdWords - Click-to-Message
+pagename: Google AdWords - Click-to-Message
 redirect_from:
   - products-channels-sms-adwords.html
 sitesection: Solutions
-level2: Channels
-level3: SMS with LiveEngage
+categoryname: Channels
+documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-google-adwords---click-to-message.html
 order: 31

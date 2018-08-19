@@ -1,12 +1,12 @@
 ---
-title: toggleChatActions
+pagename: toggleChatActions
 redirect_from:
   - consumer-experience-ios-sdk-togglechatactions.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Methods
 
 order: 50
 permalink: mobile-app-messaging-sdk-for-ios-methods-togglechatactions.html

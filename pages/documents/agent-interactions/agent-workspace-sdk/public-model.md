@@ -1,11 +1,11 @@
 ---
-title: Public Model Structure
+pagename: Public Model Structure
 redirect_from:
   - agent-workspace-sdk-public-model.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Agent Workspace Widget SDK
+categoryname: Agent Interactions
+documentname: Agent Workspace Widget SDK
 
 order: 60
 permalink: agent-workspace-widget-sdk-public-model-structure.html
@@ -524,7 +524,7 @@ Structure example:
 | total    | The total value of the transaction              | string |
 | orderId  | The order ID                                    | string |
 | products | Array of products, as in the viewedProducts SDE | array  |
-| numItems | The number of items in the purchase             | number | 
+| numItems | The number of items in the purchase             | number |
 
 Structure example:
 

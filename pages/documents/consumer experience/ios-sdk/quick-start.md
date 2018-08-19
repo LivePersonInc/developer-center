@@ -1,11 +1,11 @@
 ---
-title: Quick Start
+pagename: Quick Start
 redirect_from:
   - consumer-experience-ios-sdk-quick-start.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
 
 order: 1
 permalink: mobile-app-messaging-sdk-for-ios-quick-start.html

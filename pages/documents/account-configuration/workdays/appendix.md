@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - account-configuration-workdays-appendix.html
 Keywords:
 sitesection:
-level2: Account Configuration
-level3: Workdays API
+categoryname: Account Configuration
+documentname: Workdays API
 order: 60
 permalink: workdays-api-appendix.html
 indicator: messaging

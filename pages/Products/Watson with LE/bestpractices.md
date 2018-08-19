@@ -1,11 +1,11 @@
 ---
-title: Best Practices and Known Issues
+pagename: Best Practices and Known Issues
 redirect_from:
   - watson-best-practices.html
 keywords:
 sitesection: Solutions
-level2: Channels
-level3: Watson with LiveEngage
+categoryname: Channels
+documentname: Watson with LiveEngage
 order: 40
 permalink: watson-with-liveengage-best-practices-and-known-issues.html
 indicator: messaging

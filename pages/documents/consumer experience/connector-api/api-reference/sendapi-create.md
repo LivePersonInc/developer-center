@@ -1,11 +1,11 @@
 ---
-title: CONVERSATION
+pagename: CONVERSATION
 redirect_from:
   - sendapi-create.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: API Reference
 order: 11
 indicator: messaging
 permalink: connector-api-api-reference-conversation.html

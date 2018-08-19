@@ -1,11 +1,11 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - rt-interactions-engagement-attributes-changelog.html
 Keywords:
 sitesection: Documents
-level2: Consumer Information
-level3: Engagement Attributes API
+categoryname: Consumer Information
+documentname: Engagement Attributes API
 order: 231
 permalink: engagement-attributes-api-changelog.html
 indicator: both

@@ -1,12 +1,12 @@
 ---
-title: String Localization
+pagename: String Localization
 redirect_from:
   - consumer-experience-ios-sdk-stringlocalization.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: String Localization
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: String Localization
 
 order: 227
 permalink: mobile-app-messaging-sdk-for-ios-string-localization-string-localization.html

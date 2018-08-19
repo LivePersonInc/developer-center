@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - administration-lobs-appendix.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: LOBs API
+categoryname: Admin
+documentname: LOBs API
 
 
 order: 100

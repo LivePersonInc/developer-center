@@ -1,11 +1,11 @@
 ---
-title: Retrieve the Visitor's Typing Status
+pagename: Retrieve the Visitor's Typing Status
 redirect_from:
   - consumer-experience-server-chat-retrieve-visitor-typing-status.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 130
 permalink: server-chat-api-methods-retrieve-the-visitors-typing-status.html

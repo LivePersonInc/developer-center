@@ -1,12 +1,12 @@
 ---
-title: checkAgentID
+pagename: checkAgentID
 redirect_from:
   - android-checkagentid.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 180
 permalink: mobile-app-messaging-sdk-for-android-methods-checkagentid.html

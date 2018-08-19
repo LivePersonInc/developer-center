@@ -1,11 +1,11 @@
 ---
-title: Event Structure
+pagename: Event Structure
 redirect_from:
   - rt-interactions-window-sdk-event-structure.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Engagement Window Widget SDK
-level4: Instructions
+categoryname: Consumer Experience
+documentname: Engagement Window Widget SDK
+subfoldername: Instructions
 
 order: 30
 permalink: engagement-window-widget-sdk-instructions-event-structure.html

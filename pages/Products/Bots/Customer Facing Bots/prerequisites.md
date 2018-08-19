@@ -1,10 +1,10 @@
 ---
-title: Prerequisites
+pagename: Prerequisites
 redirect_from:
   - products-bots-prerequisites.html
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 
 

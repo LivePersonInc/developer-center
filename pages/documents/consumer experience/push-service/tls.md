@@ -1,10 +1,10 @@
 ---
-title: TLS Authentication
+pagename: TLS Authentication
 redirect_from:
   - push-service-tls.html
 Keywords:
 sitesection: Documents
-level2: Guides
+categoryname: Guides
 
 
 order: 20

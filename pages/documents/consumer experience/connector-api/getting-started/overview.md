@@ -1,11 +1,11 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - connectorapioverview.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Connector API
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Connector API
 order: 1
 level-order: 8
 root-link: true

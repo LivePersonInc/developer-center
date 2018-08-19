@@ -1,11 +1,11 @@
 ---
-title: Close ConversationTTR
+pagename: Close ConversationTTR
 redirect_from:
   - consumer-int-msg-conv-ttr.html
 
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 121
 layout: page

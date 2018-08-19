@@ -1,11 +1,11 @@
 ---
-title: File Sharing
+pagename: File Sharing
 redirect_from:
   - messaging-window-api-tutorials-file-sharing
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 88
 

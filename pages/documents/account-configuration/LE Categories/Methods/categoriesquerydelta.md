@@ -1,11 +1,11 @@
 ---
-title: Categories Query Delta
+pagename: Categories Query Delta
 redirect_from:
   - account-configuration-categories-delta.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-categories-query-delta.html
 order: 40

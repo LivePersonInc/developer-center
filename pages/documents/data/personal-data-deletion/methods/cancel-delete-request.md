@@ -1,12 +1,12 @@
 ---
-title: Cancel Deletion Request
+pagename: Cancel Deletion Request
 redirect_from:
   - personal-data-deletion-cancel-delete-request.html
 keywords:
 sitesection: Documents
-level2: Data 
-level3: Personal Data Deletion API
-level4: Methods
+categoryname: Data 
+documentname: Personal Data Deletion API
+subfoldername: Methods
 order: 20
 permalink: personal-data-deletion-api-methods-cancel-deletion-request.html
 indicator: both

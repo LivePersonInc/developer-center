@@ -1,11 +1,11 @@
 ---
-title: CoBrowse
+pagename: CoBrowse
 redirect_from:
   - consumer-int-cobrowse.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 89
 permalink: messaging-window-api-tutorials-cobrowse.html

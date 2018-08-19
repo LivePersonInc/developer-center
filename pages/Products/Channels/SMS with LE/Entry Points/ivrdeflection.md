@@ -1,10 +1,10 @@
 ---
-title: IVR Deflection
+pagename: IVR Deflection
 redirect_from:
   - products-channels-sms-ivr.html
 sitesection: Solutions
-level2: Channels
-level3: SMS with LiveEngage
+categoryname: Channels
+documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-ivr-deflection.html
 order: 10

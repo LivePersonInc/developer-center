@@ -1,12 +1,12 @@
 ---
-title: Retrieve Chat Resources, Events and Information
+pagename: Retrieve Chat Resources, Events and Information
 redirect_from:
   - agent-retrieve-chat-resources.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 100
 permalink: chat-agent-api-methods-retrieve-chat-resources-events-and-information.html

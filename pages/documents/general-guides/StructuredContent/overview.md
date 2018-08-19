@@ -1,11 +1,11 @@
 ---
-title: Structured Content Templates
+pagename: Structured Content Templates
 redirect_from:
   - structured-content-templates.html
 Keywords:
 sitesection: 
-level2: Guides
-level3: Structured Content
+categoryname: Guides
+documentname: Structured Content
 
 level-order: 9
 order: 10

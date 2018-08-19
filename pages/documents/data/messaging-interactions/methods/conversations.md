@@ -1,11 +1,11 @@
 ---
-title: Conversations
+pagename: Conversations
 redirect_from:
   - data-messaging-interactions-conversations.html
 sitesection: Documents
-level2: Data
-level3: Messaging Interactions API
-level4: Methods
+categoryname: Data
+documentname: Messaging Interactions API
+subfoldername: Methods
 order: 10
 permalink: messaging-interactions-api-methods-conversations.html
 indicator: messaging

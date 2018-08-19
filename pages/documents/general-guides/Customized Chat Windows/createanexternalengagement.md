@@ -1,10 +1,10 @@
 ---
-title: Create an API Engagement
+pagename: Create an API Engagement
 redirect_from:
   - guides-customizedchat-create-an-external-engagement.html
 sitesection: Documents
-level2: Guides
-level3: Customized Chat Windows
+categoryname: Guides
+documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-create-an-api-engagement.html
 order: 3

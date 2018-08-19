@@ -1,12 +1,12 @@
 ---
-title: Retrieve Chat Events
+pagename: Retrieve Chat Events
 redirect_from:
   - agent-retrieve-chat-events.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 120
 permalink: chat-agent-api-methods-retrieve-chat-events.html

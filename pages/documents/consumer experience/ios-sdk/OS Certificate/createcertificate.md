@@ -1,12 +1,12 @@
 ---
-title: OS Certificate Creation
+pagename: OS Certificate Creation
 redirect_from:
   - consumer-experience-ios-sdk-createcertificate.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Appendix
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Appendix
 
 order: 245
 permalink: mobile-app-messaging-sdk-for-ios-appendix-os-certificate-creation.html

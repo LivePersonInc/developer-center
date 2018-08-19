@@ -1,12 +1,12 @@
 ---
-title: Retrieve Available Skills
+pagename: Retrieve Available Skills
 redirect_from:
   - agent-chat-agent-retrieve-skills.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
-level4: Methods
+categoryname: Agent Interactions
+documentname: Chat Agent API
+subfoldername: Methods
 
 order: 200
 permalink: chat-agent-api-methods-retrieve-available-skills.html

@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Apple Business Chat Templates
-level4: Time Picker
+categoryname: Rich Messaging
+documentname: Apple Business Chat Templates
+subfoldername: Time Picker
 order: 80
 permalink: rich-messaging-connectors-abc-timepicker.html
 indicator: messaging

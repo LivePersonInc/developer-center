@@ -1,12 +1,12 @@
 ---
-title: removeConversation
+pagename: removeConversation
 redirect_from:
   - consumer-experience-ios-sdk-removeconversation.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Methods
 
 order: 30
 permalink: mobile-app-messaging-sdk-for-ios-methods-removeconversation.html

@@ -1,12 +1,12 @@
 ---
-title: Delete Skill
+pagename: Delete Skill
 redirect_from:
   - administration-delete-skill.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Skills API
-level4: Methods
+categoryname: Admin
+documentname: Skills API
+subfoldername: Methods
 
 
 order: 80

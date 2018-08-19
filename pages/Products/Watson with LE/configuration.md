@@ -1,11 +1,11 @@
 ---
-title: Configuration
+pagename: Configuration
 redirect_from:
   - watson-configuration.html
 keywords:
 sitesection: Solutions
-level2: Channels
-level3: Watson with LiveEngage
+categoryname: Channels
+documentname: Watson with LiveEngage
 order: 27
 permalink: watson-with-liveengage-configuration.html
 indicator: messaging

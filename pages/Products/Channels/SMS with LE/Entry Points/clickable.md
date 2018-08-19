@@ -1,10 +1,10 @@
 ---
-title: Clickable Mobile Content to SMS
+pagename: Clickable Mobile Content to SMS
 redirect_from:
   - products-channels-sms-clickable.html
 sitesection: Solutions
-level2: Channels
-level3: SMS with LiveEngage
+categoryname: Channels
+documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-clickable-mobile-content-to-sms.html
 order: 20

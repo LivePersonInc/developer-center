@@ -1,11 +1,11 @@
 ---
-title: Conversation Metadata Guide
+pagename: Conversation Metadata Guide
 redirect_from:
   - guides-conversation-metadata-guide.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Messaging Agent SDK
+categoryname: Agent Interactions
+documentname: Messaging Agent SDK
 level-order: 10
 order: 10
 permalink: messaging-agent-sdk-conversation-metadata-guide.html

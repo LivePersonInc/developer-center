@@ -1,11 +1,11 @@
 ---
-title: Quick Start
+pagename: Quick Start
 redirect_from:
   - android-quickstart.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
 
 order: 10
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html

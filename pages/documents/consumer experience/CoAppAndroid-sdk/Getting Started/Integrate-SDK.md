@@ -1,11 +1,11 @@
 ---
-title: Installing the SDK
+pagename: Installing the SDK
 redirect_from:
   - consumer-experience-voice-video-android-installing-the-sdk.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for Android SDK (BETA)
-level4: Getting Started
+categoryname: Consumer Experience
+documentname: Voice & Video for Android SDK (BETA)
+subfoldername: Getting Started
 order: 20
 permalink: voice-&-video-for-android-sdk-beta-getting-started-installing-the-sdk.html
 indicator: messaging

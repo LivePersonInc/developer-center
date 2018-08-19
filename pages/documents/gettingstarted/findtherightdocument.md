@@ -1,8 +1,8 @@
 ---
-title: Find the Right Document
+pagename: Find the Right Document
 sitesection: Documents
-level2: Guides
-level3: Getting Started with LiveEngage APIs
+categoryname: Guides
+documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-find-the-right-document.html
 indicator: both
 ---

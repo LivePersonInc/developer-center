@@ -1,12 +1,12 @@
 ---
-title: Open Source List
+pagename: Open Source List
 redirect_from:
   - consumer-experience-ios-sdk-opensource.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Appendix
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Appendix
 
 order: 246
 permalink: mobile-app-messaging-sdk-for-ios-appendix-open-source-list.html

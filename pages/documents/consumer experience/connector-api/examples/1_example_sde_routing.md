@@ -1,11 +1,11 @@
 ---
-title: Create a new conversation and report SDEs
+pagename: Create a new conversation and report SDEs
 redirect_from:
   - sdes-routing-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 60
 indicator: messaging
 permalink: connector-api-examples-create-a-new-conversation-and-report-sdes.html

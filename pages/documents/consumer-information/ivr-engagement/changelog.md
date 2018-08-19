@@ -1,11 +1,11 @@
 ---
-title: Changelog
+pagename: Changelog
 redirect_from:
   - rt-interactions-ivr-engagement-changelog.html
 Keywords:
 sitesection: Documents
-level2: Consumer Information
-level3: IVR Engagement API
+categoryname: Consumer Information
+documentname: IVR Engagement API
 order: 231
 permalink: ivr-engagement-api-changelog.html
 indicator: chat

@@ -1,11 +1,11 @@
 ---
-title: Get All Changes Query
+pagename: Get All Changes Query
 redirect_from:
   - account-configuration-categories-get-all.html
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Categories API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Categories API
+subfoldername: Methods
 
 permalink: predefined-categories-api-methods-get-all-changes-query.html
 order: 50

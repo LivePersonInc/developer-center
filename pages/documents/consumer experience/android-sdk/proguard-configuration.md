@@ -1,12 +1,12 @@
 ---
-title: Proguard Configuration
+pagename: Proguard Configuration
 redirect_from:
   - android-proguard.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Configuration
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Configuration
 
 order: 80
 permalink: mobile-app-messaging-sdk-for-android-configuration-proguard-configuration.html

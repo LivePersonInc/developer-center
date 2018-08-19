@@ -1,10 +1,10 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - guides-customizedchat-appendix.html
 sitesection: Documents
-level2: Guides
-level3: Customized Chat Windows
+categoryname: Guides
+documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-appendix.html
 order: 4

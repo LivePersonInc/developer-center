@@ -1,10 +1,10 @@
 ---
-title: Enable Messaging Features
+pagename: Enable Messaging Features
 redirect_from:
   - consumer-int-account-provision.html
 
-level2: Consumer Experience
-level3: Messaging Window API
+categoryname: Consumer Experience
+documentname: Messaging Window API
 
 order: 3
 permalink: messaging-window-api-enable-messaging-features.html

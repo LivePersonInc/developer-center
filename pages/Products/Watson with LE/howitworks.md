@@ -1,11 +1,11 @@
 ---
-title: How it works - Operational Flow
+pagename: How it works - Operational Flow
 redirect_from:
   - watson-how-it-works.html
 keywords:
 sitesection: Solutions
-level2: Channels
-level3: Watson with LiveEngage
+categoryname: Channels
+documentname: Watson with LiveEngage
 order: 20
 permalink: watson-with-liveengage-how-it-works---operational-flow.html
 indicator: messaging

@@ -1,12 +1,12 @@
 ---
-title: Interface and Class Definitions
+pagename: Interface and Class Definitions
 redirect_from:
   - android-interface-definitions.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: SDK APIs
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: SDK APIs
 
 order: 110
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html

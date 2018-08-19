@@ -1,11 +1,11 @@
 ---
-title: Avoid Websocket Headers
+pagename: Avoid Websocket Headers
 redirect_from:
   - consumer-int-no-headers.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 80
 permalink: messaging-window-api-tutorials-avoid-websocket-headers.html

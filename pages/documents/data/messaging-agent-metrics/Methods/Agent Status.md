@@ -1,11 +1,11 @@
 ---
-title: Agent Status
+pagename: Agent Status
 redirect_from:
   - data-messaging-interactions-methods-agent-status.html
 sitesection: Documents
-level2: Data
-level3: Agent Metrics API
-level4: Methods
+categoryname: Data
+documentname: Agent Metrics API
+subfoldername: Methods
 order: 10
 permalink: agent-metrics-api-methods-agent-status.html
 

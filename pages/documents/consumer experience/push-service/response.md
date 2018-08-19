@@ -1,10 +1,10 @@
 ---
-title: HTTP Response Codes
+pagename: HTTP Response Codes
 redirect_from:
   - push-service-codes.html
 Keywords:
 sitesection: Documents
-level2: Guides
+categoryname: Guides
 
 
 order: 30

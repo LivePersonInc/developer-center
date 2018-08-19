@@ -1,11 +1,11 @@
 ---
-title: Account Settings
+pagename: Account Settings
 redirect_from:
   - consumer-experience-voice-video-android-wording.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for Android SDK (BETA)
-level4: Customizing
+categoryname: Consumer Experience
+documentname: Voice & Video for Android SDK (BETA)
+subfoldername: Customizing
 order: 80
 permalink: voice-&-video-for-android-sdk-beta-customizing-account-settings.html
 indicator: messaging

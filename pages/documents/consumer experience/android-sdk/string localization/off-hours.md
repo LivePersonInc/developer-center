@@ -1,12 +1,12 @@
 ---
-title: Date and Time
+pagename: Date and Time
 redirect_from:
   - android-off-hours.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: String Localization
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: String Localization
 
 order: 240
 permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-time.html

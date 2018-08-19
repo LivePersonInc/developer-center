@@ -1,14 +1,14 @@
 ---
-title: Direct skill routing
+pagename: Direct skill routing
 redirect_from:
   - direct-skill-routing-example.html
 sitesection: Documents
-level2:
-level3:
-level4:
+categoryname:
+documentname:
+subfoldername:
 order:
-indicator: 
-permalink: level3:-level4:-direct-skill-routing.html
+indicator:
+permalink: documentname:-subfoldername:-direct-skill-routing.html
 
 ---
 

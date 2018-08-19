@@ -1,11 +1,11 @@
 ---
-title: Engagement Window Events
+pagename: Engagement Window Events
 redirect_from:
   - lp-tag-engagement-window.html
 sitesection: Documents
-level2: Consumer Information
-level3: LE-Tag
-level4: Events
+categoryname: Consumer Information
+documentname: LE-Tag
+subfoldername: Events
 
 order: 30
 permalink: le-tag-events-engagement-window-events.html

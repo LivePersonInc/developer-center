@@ -1,11 +1,11 @@
 ---
-title: Complex Layout
+pagename: Complex Layout
 redirect_from:
   - rich-messaging-structured-content-complex-layout.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: Structured Content
+categoryname: Rich Messaging
+documentname: Structured Content
 order: 10
 permalink: structured-content-complex-layout.html
 indicator: both

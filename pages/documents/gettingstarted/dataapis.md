@@ -1,8 +1,8 @@
 ---
-title: Getting Started with Data APIs
+pagename: Getting Started with Data APIs
 sitesection: Documents
-level2: Guides
-level3: Getting Started with LiveEngage APIs
+categoryname: Guides
+documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-getting-started-with-data-apis.html
 order: 30
 indicator: both

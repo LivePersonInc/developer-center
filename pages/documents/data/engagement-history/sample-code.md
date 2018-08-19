@@ -1,10 +1,10 @@
 ---
-title: Sample Code
+pagename: Sample Code
 redirect_from:
   - data-engagement-history-sample-code.html
 sitesection: Documents
-level2: Data
-level3: Engagement History API
+categoryname: Data
+documentname: Engagement History API
 
 order: 11
 permalink: engagement-history-api-sample-code.html

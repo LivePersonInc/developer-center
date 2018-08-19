@@ -1,11 +1,11 @@
 ---
-title: VoIP Configuration
+pagename: VoIP Configuration
 redirect_from:
   - consumer-experience-voice-video-ios-voip-configuration.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: LiveEngage Configuration
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: LiveEngage Configuration
 order: 100
 permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-voip-configuration.html
 indicator: messaging

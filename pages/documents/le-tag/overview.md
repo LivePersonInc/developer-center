@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - lp-tag-tag-events-overview.html
 sitesection: Documents
-level2: Consumer Information
-level3: LE-Tag
+categoryname: Consumer Information
+documentname: LE-Tag
 
 level-order: 3
 order: 1

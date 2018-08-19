@@ -1,11 +1,11 @@
 ---
-title: App Install Manifest for Connectors
+pagename: App Install Manifest for Connectors
 redirect_from:
   - app-install-manifest-connectors.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Connector API
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Connector API
 order: 3
 indicator: messaging
 permalink: connector-api-connector-api-app-install-manifest-for-connectors.html

@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - account-configuration-predefined-content-appendix.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Content API
+categoryname: Account Configuration
+documentname: Predefined Content API
 
 order: 101
 permalink: predefined-content-api-appendix.html

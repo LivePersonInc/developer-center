@@ -1,12 +1,12 @@
 ---
-title: Update an Unified Automatic Message
+pagename: Update an Unified Automatic Message
 redirect_from:
   - account-configuration-unified-automatic-messages-update-an-automatic-message.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Unified Automatic Messages API
-level4: Methods
+categoryname: Account Configuration
+documentname: Unified Automatic Messages API
+subfoldername: Methods
 
 order: 30
 permalink: unified-automatic-messages-api-methods-update-an-unified-automatic-message.html

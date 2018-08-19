@@ -1,11 +1,11 @@
 ---
-title: System Messages
+pagename: System Messages
 redirect_from:
   - agent-system-messages.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Chat Agent API
+categoryname: Agent Interactions
+documentname: Chat Agent API
 
 order: 240
 permalink: chat-agent-api-system-messages.html

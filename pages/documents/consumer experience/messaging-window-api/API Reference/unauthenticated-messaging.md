@@ -1,9 +1,9 @@
 ---
-title: Unauthenticated Messaging
+pagename: Unauthenticated Messaging
 sitesection:
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 order: 40
 permalink: consumer-int-unauth-authentication.html
 indicator: messaging

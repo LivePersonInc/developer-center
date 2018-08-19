@@ -1,9 +1,9 @@
 ---
-title: Examples
+pagename: Examples
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Messaging Agent SDK
+categoryname: Agent Interactions
+documentname: Messaging Agent SDK
 
 order: 2
 permalink: messaging-agent-sdk-examples.html

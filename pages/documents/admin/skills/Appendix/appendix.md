@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - administration-skills-appendix.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Skills API
+categoryname: Admin
+documentname: Skills API
 
 
 order: 100

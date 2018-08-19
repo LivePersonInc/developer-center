@@ -1,11 +1,11 @@
 ---
-title: Queue Health
+pagename: Queue Health
 redirect_from:
   - data-operational-realtime-queue-health.html
 sitesection: Documents
-level2: Data
-level3: Operational Realtime API
-level4: Methods
+categoryname: Data
+documentname: Operational Realtime API
+subfoldername: Methods
 order: 10
 permalink: operational-realtime-api-methods-queue-health.html
 

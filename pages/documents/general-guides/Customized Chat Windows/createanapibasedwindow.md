@@ -1,10 +1,10 @@
 ---
-title: Create an API-based Window
+pagename: Create an API-based Window
 redirect_from:
   - guides-customizedchat-create-an-api-based-window.html
 sitesection: Documents
-level2: Guides
-level3: Customized Chat Windows
+categoryname: Guides
+documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-create-an-api-based-window.html
 order: 2

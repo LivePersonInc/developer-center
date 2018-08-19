@@ -1,12 +1,12 @@
 ---
-title: Delete Profiles
+pagename: Delete Profiles
 redirect_from:
   - administration-delete-profiles.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Profiles API
-level4: Methods
+categoryname: Admin
+documentname: Profiles API
+subfoldername: Methods
 
 
 order: 70

@@ -1,12 +1,12 @@
 ---
-title: Open Source List and Dependencies
+pagename: Open Source List and Dependencies
 redirect_from:
   - android-opensource.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Appendix
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Appendix
 
 order: 340
 permalink: mobile-app-messaging-sdk-for-android-appendix-open-source-list-and-dependencies.html

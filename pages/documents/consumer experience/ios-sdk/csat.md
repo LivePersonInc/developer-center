@@ -1,12 +1,12 @@
 ---
-title: CSAT Behavior
+pagename: CSAT Behavior
 redirect_from:
   - consumer-experience-ios-sdk-advanced-csat.html
 Keywords:
 sitesection: Documents
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Advanced Features
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Advanced Features
 
 order: 233
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-csat-behavior.html

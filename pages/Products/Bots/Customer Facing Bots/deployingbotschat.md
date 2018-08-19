@@ -1,11 +1,11 @@
 ---
-title: Deploying Bots on Live Chat
+pagename: Deploying Bots on Live Chat
 redirect_from:
   - products-bots-chat.html
 
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 order: 6
 

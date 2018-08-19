@@ -1,10 +1,10 @@
 ---
-title: Installing a Monitoring API Application
+pagename: Installing a Monitoring API Application
 redirect_from:
   - rt-interactions-monitoring-app-install.html
 sitesection: Documents
-level2: Consumer Information
-level3: Monitoring API
+categoryname: Consumer Information
+documentname: Monitoring API
 order: 11
 permalink: monitoring-api-installing-a-monitoring-api-application.html
 indicator: messaging

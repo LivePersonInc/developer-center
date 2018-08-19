@@ -1,12 +1,12 @@
 ---
-title: showConversation (Deprecated)
+pagename: showConversation (Deprecated)
 redirect_from:
   - consumer-experience-ios-sdk-showconversationdeprecated.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for iOS
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Methods
 
 order: 25
 permalink: mobile-app-messaging-sdk-for-ios-methods-showconversation-(deprecated).html

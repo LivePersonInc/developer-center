@@ -1,12 +1,12 @@
 ---
-title: Get Default Predefined Content by ID
+pagename: Get Default Predefined Content by ID
 redirect_from:
   - account-configuration-predefined-content-get-default-items-by-id.html
 Keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Predefined Content API
-level4: Methods
+categoryname: Account Configuration
+documentname: Predefined Content API
+subfoldername: Methods
 
 order: 10
 permalink: predefined-content-api-methods-get-default-predefined-content-by-id.html

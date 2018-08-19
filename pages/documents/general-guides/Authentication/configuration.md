@@ -1,10 +1,10 @@
 ---
-title: Configuration
+pagename: Configuration
 redirect_from:
   - guides-authentication-configuration.html
 sitesection: Documents
-level2: Guides
-level3: Authentication
+categoryname: Guides
+documentname: Authentication
 
 permalink: authentication-configuration.html
 order: 3

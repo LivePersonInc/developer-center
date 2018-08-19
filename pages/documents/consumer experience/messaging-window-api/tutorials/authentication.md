@@ -1,11 +1,11 @@
 ---
-title: Authentication
+pagename: Authentication
 redirect_from:
   - consumer-int-authentication.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: Tutorials
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: Tutorials
 
 order: 40
 

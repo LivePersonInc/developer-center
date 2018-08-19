@@ -1,10 +1,10 @@
 ---
-title: Messaging Metrics
+pagename: Messaging Metrics
 redirect_from:
   - products-data-custom-dashboard-messaging-metrics.html
 sitesection: Solutions
-level2: Data
-level3: Custom Dashboard
+categoryname: Data
+documentname: Custom Dashboard
 
 order: 3
 

@@ -1,11 +1,11 @@
 ---
-title: Subscribe to Messaging Events
+pagename: Subscribe to Messaging Events
 redirect_from:
   - consumer-int-msg-sub-events.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
-level4: API Reference
+categoryname: Consumer Experience
+documentname: Messaging Window API
+subfoldername: API Reference
 
 order: 200
 layout: page

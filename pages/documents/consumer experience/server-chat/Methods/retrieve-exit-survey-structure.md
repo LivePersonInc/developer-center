@@ -1,11 +1,11 @@
 ---
-title: Retrieve Exit Survey Structure
+pagename: Retrieve Exit Survey Structure
 redirect_from:
   - consumer-experience-server-chat-retrieve-exit-survey-structure.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Server Chat API
-level4: Methods
+categoryname: Consumer Experience
+documentname: Server Chat API
+subfoldername: Methods
 
 order: 150
 permalink: server-chat-api-methods-retrieve-exit-survey-structure.html

@@ -1,10 +1,10 @@
 ---
-title: Automatically Update Predefined Content
+pagename: Automatically Update Predefined Content
 redirect_from:
   - products-admin-predefined-content.html
 sitesection: Solutions
-level2:
-level3: Predefined Content
+categoryname:
+documentname: Predefined Content
 
 order: 1
 level-order: 1

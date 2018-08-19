@@ -1,11 +1,11 @@
 ---
-title: Schema
+pagename: Schema
 redirect_from:
   - data-data-access-schema.html
 sitesection: Documents
-level2: Data
-level3: Data Access API
-level4: Methods
+categoryname: Data
+documentname: Data Access API
+subfoldername: Methods
 order: 60
 permalink: data-access-api-methods-schema.html
 

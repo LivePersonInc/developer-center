@@ -1,11 +1,11 @@
 ---
-title: Release Notes
+pagename: Release Notes
 redirect_from:
   - messaging-agent-sdk-releasenotes.html
 Keywords:
 sitesection: Documents
-level2: Agent Interactions
-level3: Messaging Agent SDK
+categoryname: Agent Interactions
+documentname: Messaging Agent SDK
 
 order: 120
 permalink: messaging-agent-sdk-release-notes.html

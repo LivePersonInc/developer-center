@@ -1,11 +1,11 @@
 ---
-title: Appendix
+pagename: Appendix
 redirect_from:
   - administration-agent-groups-appendix.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Agent Groups API
+categoryname: Admin
+documentname: Agent Groups API
 
 order: 110
 permalink: agent-groups-api-appendix.html

@@ -1,11 +1,11 @@
 ---
-title: Send Chat State Events
+pagename: Send Chat State Events
 redirect_from:
   - send-chat-state-example.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Connector API
-level4: Examples
+categoryname: Consumer Experience
+documentname: Connector API
+subfoldername: Examples
 order: 63
 indicator: messaging
 permalink: connector-api-examples-send-chat-state-events.html

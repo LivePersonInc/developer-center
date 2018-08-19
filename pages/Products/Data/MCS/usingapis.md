@@ -1,10 +1,10 @@
 ---
-title: Using APIs to Build the Toolkit
+pagename: Using APIs to Build the Toolkit
 redirect_from:
   - products-mcs-usingtheapis.html
 sitesection: Solutions
-level2: Data
-level3: MCS Toolkit
+categoryname: Data
+documentname: MCS Toolkit
 
 order: 20
 permalink: mcs-toolkit-using-apis-to-build-the-toolkit.html

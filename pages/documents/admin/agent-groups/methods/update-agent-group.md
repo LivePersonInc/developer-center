@@ -1,12 +1,12 @@
 ---
-title: Update Agent Group
+pagename: Update Agent Group
 redirect_from:
   - administration-update-agent-group.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Agent Groups API
-level4: Methods
+categoryname: Admin
+documentname: Agent Groups API
+subfoldername: Methods
 
 
 order: 60

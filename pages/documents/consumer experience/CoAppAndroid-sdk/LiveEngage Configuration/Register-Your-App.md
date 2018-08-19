@@ -1,11 +1,11 @@
 ---
-title: Register Your App
+pagename: Register Your App
 redirect_from:
   - consumer-experience-voice-video-android-register-app.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for Android SDK (BETA)
-level4: LiveEngage Configuration
+categoryname: Consumer Experience
+documentname: Voice & Video for Android SDK (BETA)
+subfoldername: LiveEngage Configuration
 order: 60
 permalink: voice-&-video-for-android-sdk-beta-liveengage-configuration-register-your-app.html
 indicator: messaging

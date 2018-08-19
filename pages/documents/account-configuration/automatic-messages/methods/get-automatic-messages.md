@@ -1,12 +1,12 @@
 ---
-title: Get Automatic Messages
+pagename: Get Automatic Messages
 redirect_from:
   - account-configuration-automatic-messages-get-automatic-messages.html
 keywords:
 sitesection: Documents
-level2: Account Configuration
-level3: Automatic Messages API
-level4: Methods
+categoryname: Account Configuration
+documentname: Automatic Messages API
+subfoldername: Methods
 
 order: 10
 permalink: automatic-messages-api-methods-get-automatic-messages.html

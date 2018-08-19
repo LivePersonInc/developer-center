@@ -1,10 +1,10 @@
 ---
-title: Getting Started
+pagename: Getting Started
 redirect_from:
   - consumer-int-getting-started.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Messaging Window API
+categoryname: Consumer Experience
+documentname: Messaging Window API
 
 order: 2
 permalink: messaging-window-api-getting-started.html

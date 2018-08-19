@@ -1,11 +1,11 @@
 ---
-title: Best Practices for Messaging
+pagename: Best Practices for Messaging
 redirect_from:
   - engagement-attributes-best-practices-messaging.html
 Keywords:
 sitesection: Documents
-level2: Guides
-level3: Engagement Attributes
+categoryname: Guides
+documentname: Engagement Attributes
 order: 50
 permalink: engagement-attributes-best-practices-for-messaging.html
 indicator: messaging

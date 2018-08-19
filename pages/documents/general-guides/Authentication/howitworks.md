@@ -1,10 +1,10 @@
 ---
-title: How It Works
+pagename: How It Works
 redirect_from:
   - guides-authentication-howitworks.html
 sitesection: Documents
-level2: Guides
-level3: Authentication
+categoryname: Guides
+documentname: Authentication
 
 permalink: authentication-how-it-works.html
 order: 4

@@ -1,10 +1,10 @@
 ---
-title: Major Components
+pagename: Major Components
 redirect_from:
   - guides-authentication-majorcomponents.html
 sitesection: Documents
-level2: Guides
-level3: Authentication
+categoryname: Guides
+documentname: Authentication
 
 permalink: authentication-major-components.html
 order: 2

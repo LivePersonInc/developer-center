@@ -1,12 +1,12 @@
 ---
-title: Get skill by ID
+pagename: Get skill by ID
 redirect_from:
   - administration-get-skill-by-id.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Skills API
-level4: Methods
+categoryname: Admin
+documentname: Skills API
+subfoldername: Methods
 order: 20
 permalink: skills-api-methods-get-skill-by-id.html
 indicator: both

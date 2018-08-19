@@ -1,10 +1,10 @@
 ---
-title: Overview
+pagename: Overview
 redirect_from:
   - consumer-experience-messaging-history-overview.html
 sitesection: Documents
-level2: Data
-level3: Consumer Messaging History API
+categoryname: Data
+documentname: Consumer Messaging History API
 level-order: 7
 order: 1
 permalink: consumer-messaging-history-api-overview.html

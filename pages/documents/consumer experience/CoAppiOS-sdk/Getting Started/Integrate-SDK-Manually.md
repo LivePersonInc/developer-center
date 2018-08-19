@@ -1,11 +1,11 @@
 ---
-title: Installing the SDK manually
+pagename: Installing the SDK manually
 redirect_from:
   - consumer-experience-voice-video-ios-manually.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Voice & Video for iOS SDK (BETA)
-level4: Getting Started
+categoryname: Consumer Experience
+documentname: Voice & Video for iOS SDK (BETA)
+subfoldername: Getting Started
 order: 30
 permalink: voice-&-video-for-ios-sdk-beta-getting-started-installing-the-sdk-manually.html
 indicator: messaging

@@ -1,10 +1,10 @@
 ---
-title: Considerations
+pagename: Considerations
 redirect_from:
   - products-bots-considerations.html
 sitesection: Solutions
-level2: Bots
-level3: Customer Facing Bots
+categoryname: Bots
+documentname: Customer Facing Bots
 
 order: 4
 

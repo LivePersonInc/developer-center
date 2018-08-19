@@ -1,10 +1,10 @@
 ---
-title: Add Your Own Widgets to the Agent Workspace
+pagename: Add Your Own Widgets to the Agent Workspace
 redirect_from:
   - guides-agent-workspace-widget.html
 sitesection: Documents
-level2: Guides
-level3: Add Agent Widgets
+categoryname: Guides
+documentname: Add Agent Widgets
 
 permalink: add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html
 root-link: true

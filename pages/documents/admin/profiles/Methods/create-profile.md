@@ -1,12 +1,12 @@
 ---
-title: Create profile
+pagename: Create profile
 redirect_from:
   - administration-create-profile.html
 keywords:
 sitesection: Documents
-level2: Admin
-level3: Profiles API
-level4: Methods
+categoryname: Admin
+documentname: Profiles API
+subfoldername: Methods
 
 
 order: 30

@@ -1,11 +1,11 @@
 ---
-title: Step 7 - Download File From Storage
+pagename: Step 7 - Download File From Storage
 redirect_from:
   - rich-messaging-file-sharing-7.html
 Keywords:
 sitesection: Documents
-level2: Rich Messaging
-level3: File Sharing
+categoryname: Rich Messaging
+documentname: File Sharing
 order: 80
 permalink: file-sharing-step-7---download-file-from-storage.html
 indicator: both

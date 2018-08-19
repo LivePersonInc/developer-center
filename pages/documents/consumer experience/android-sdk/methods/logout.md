@@ -1,12 +1,12 @@
 ---
-title: logOut
+pagename: logOut
 redirect_from:
   - android-logout.html
 Keywords:
 
-level2: Consumer Experience
-level3: Mobile App Messaging SDK for Android
-level4: Methods
+categoryname: Consumer Experience
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Methods
 
 order: 260
 permalink: mobile-app-messaging-sdk-for-android-methods-logout.html

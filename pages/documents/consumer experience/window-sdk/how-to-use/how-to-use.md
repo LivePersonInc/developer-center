@@ -1,11 +1,11 @@
 ---
-title: How to use the SDK
+pagename: How to use the SDK
 redirect_from:
   - rt-interactions-window-sdk-how-to-use.html
 sitesection: Documents
-level2: Consumer Experience
-level3: Engagement Window Widget SDK
-level4: Instructions
+categoryname: Consumer Experience
+documentname: Engagement Window Widget SDK
+subfoldername: Instructions
 
 
 order: 20

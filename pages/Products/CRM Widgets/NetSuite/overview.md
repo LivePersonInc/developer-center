@@ -1,11 +1,11 @@
 ---
-title: NetSuite
+pagename: NetSuite
 redirect_from:
   - netsuite.html
 permalink: crm-integrations-netsuite.html
 sitesection: Solutions
-level2: Integrations
-level3: CRM Integrations
+categoryname: Integrations
+documentname: CRM Integrations
 order: 30
 ---
 
