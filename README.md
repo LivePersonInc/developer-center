@@ -16,13 +16,13 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `keywords`: this replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `level1`: this key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
+* `level1`: this key can have either "Documents" or "Solutions". This designates which part of the site the document is under. **DEPRECATED, use `documentname` instead. All other rules above apply.**
 
-* `level2`: this is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Admin. Therefore, it's level2 is "Admin".
+* `level2`: this is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Admin. Therefore, it's level2 is "Admin". **DEPRECATED, use `categoryname` instead. All other rules above apply.**
 
-* `level3`: this is the API to which the document belongs.
+* `level3`: this is the API to which the document belongs. **DEPRECATED, use `documentname` instead. All other rules above apply.**
 
-* `level4`: this is a sub-folder to which the document belongs, if there is one.
+* `level4`: this is a sub-folder to which the document belongs, if there is one. **DEPRECATED, use `subfoldername` instead. All other rules above apply.**
 
 * `root-link`: this key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it.
 
@@ -32,9 +32,18 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
 
-  * 
+  * If the page has a `subfoldername` value: documentname - subfoldername - pagename. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`
+
+  * If the page does not have a `subfoldername` value: documentname - pagename. For example: users-api-overview.html
 
 * `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts "chat", "messaging" or "both".
+
+
+#### Adding New Documents to the Sidebar
+
+Once you've created a new document, you'll need to have it manually added. We chose a manual process for the side for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to build a sidebar in a site of our size and complexity are time and resource consuming).
+
+The sidebar's YAML file can be found in the `_data` folder. It's called `documents.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
 
 ### Building the Site Locally
 
@@ -49,9 +58,11 @@ Once you have installed Ruby, clone this repository to your machine. Once done, 
 3. Run `bundle exec jekyll serve`. This builds the site and serves it over localhost:4000 (by default, you can change the `port` parameter in config.yml to whatever port you'd prefer).
 4. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
 
+
+
 **Serving the site after the first install**
 
-All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit "save"). When `--incremental` is used, Jekyll won't rebuild the entire site on every save, only the affected sections.
+All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit "save"). When `--incremental` is used, Jekyll won't rebuild the entire site on every save, only the affected sections. If you'd like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
 
 **Note**: changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply "kill" the build and run `bundle exec jekyll serve` without the suffix.
 
