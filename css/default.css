@@ -10,6 +10,10 @@ body {
   padding-top: 0 !important;
 }
 
+b, strong {
+  font-weight: 500 !important;
+}
+
 a:hover, a:focus {
   text-decoration: none !important;
 }
@@ -108,6 +112,7 @@ pre {
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased;
   }
 
   .defaultbutton {
@@ -210,11 +215,15 @@ pre {
   width: 100%;
 }
 
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  font-weight: 400;
+}
+
 /* Algolia Styling Ends */
 
 table {
   table-layout: fixed;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .important {
@@ -261,10 +270,11 @@ table {
 .documentsbutton {
   flex: 1;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   margin-right: 50px;
   display: flex;
   align-items: center;
+  font-weight: 300;
 }
 
 .documentsbutton a {
@@ -278,9 +288,10 @@ table {
 .solutionsbutton {
   flex: 1;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   align-items: center;
+  font-weight: 300;
 }
 
 .solutionsbutton a {
@@ -364,7 +375,7 @@ table {
 
 .innerfolder > a {
   color: #f2f1f2 !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   display: flex;
   margin-left: -4px;
@@ -402,7 +413,6 @@ table {
 }
 
 .documentslist, .solutionslist .innerlink {
-  color: #4a4a4a !important;
   font-size: 14px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   padding-left: 19px;
@@ -451,14 +461,14 @@ table {
 
 /* Sidebar Styling Ends */
 
-.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby {
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml {
   display: flex;
   flex-direction: column;
 }
 
-.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before {
   position: absolute;
-  color: #ccc;
+  color: #a2a2a2;
   text-align: right;
   font-size: 0.75em;
   padding-top: 5px;
@@ -467,7 +477,7 @@ table {
   padding-left: 10px;
   line-height: 15px;
   height: 15px;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 2px;
   align-self: flex-end;
 }
@@ -513,11 +523,10 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 
 .documenttitle .h1{
   align-self: center;
-  flex: 40;
 }
 
 .pagehr {
-  margin-top: 38px;
+  margin-top: 24px;
   border: 0;
   border-top: 1px solid #dedddd;;
 }
@@ -531,21 +540,21 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 }
 
 .supportbutton {
-  padding: 10px 60px;
+  padding: 10px 42px;
   border: solid 1px #f2f1f2;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 68px;
+  margin-left: 68px;
 }
 
 .supportbutton span {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #f2f1f2;
 }
 
 .anchorlist {
   background-color: #f2f2f2;
-  padding: 2px 10px 2px 10px;
+  padding: 6px 10px 6px 10px;
   align-self: flex-end;
   width: 20%;
   z-index: 1000;
@@ -577,6 +586,7 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 
 .anchorlist li a {
   color: #248ec2 !important;
+  margin-bottom: 10px;
 }
 
 
@@ -626,6 +636,17 @@ button span:last-of-type {
 
 .highlighter-rouge {
   background-color: #f5f5f5;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.post-content:first-child {
+  margin-top: -11px;
+}
+
+.post-content > p:first-of-type {
+  margin-top: 30px;
 }
 
 @media screen and (max-width:1440px){
@@ -640,10 +661,6 @@ button span:last-of-type {
 
   ul.mysidebar {
     width: 22.4% !important;
-  }
-
-  .defaultcontent {
-    margin-left: 70px;
   }
 
   .documenttitlecontainer {

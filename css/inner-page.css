@@ -23,6 +23,7 @@ a:focus {
 /*inner page css */
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], dt[id] {
   margin-top: 30px;
+  margin-bottom: 5px;
   padding-top: 0;
 }
 
@@ -38,10 +39,6 @@ h3[id]{
   color:#4a4a4a;
   font-size: 16px;
   font-weight: 500;
-}
-
-h3[id]:first-of-type {
-  margin-top: 0px;
 }
 
 h4[id]{
@@ -60,8 +57,8 @@ h4 code.highlighter-rouge {
 .h1 {
   color: #5879da;
   font-family: "Roboto",Arial;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .h2 {
@@ -112,8 +109,8 @@ pre code {
   background-color: #f8f8f8;
 }
 
-.post-content table  tr  td {
-   font-size: 0.8em;
+.post-content table tr td {
+   font-size: 1em;
    font-family: "Open Sans";
    color: #666666;
    max-width: 160px;
@@ -126,7 +123,7 @@ pre code {
 
 .post-content table > thead > tr > th {
   font-family: "Open Sans";
-  font-weight: bold;
+  font-weight: 600;
   color: #4a4a4a;
   font-size: 14px;
   padding: 14px 22px;
@@ -231,6 +228,12 @@ div#toc > ul {
   margin-top: -10px;
 }
 
+.post-content ul, ol {
+  padding-left: 16px !important;
+}
+
+
+
 div#toc ul li {
   font-size: 110%;
   list-style: none;
@@ -318,7 +321,7 @@ ul#mysiderbar li{
 
 .innerlink {
   color: #4a4a4a;
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   font-weight: 300;
 }
@@ -345,7 +348,7 @@ ul#mysiderbar li{
 .innerpageitem {
   padding-left: 15px !important;
   border-left: 4px solid #646a79;
-  margin-left: 32px;
+  margin-left: 31px;
 }
 
 .activeitem {
@@ -371,11 +374,11 @@ ul.mysidebar li ul li{
 
 ul.mysidebar.nav li a.active{
   color: #f2f1f2;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .active > a {
-  font-weight: bold !important;
+  font-weight: 500 !important;
 }
 
 .nav > li.active > a {
@@ -392,7 +395,7 @@ ul.mysidebar.nav li.activepage a{
   color: #172136;
 }
 .mysidebar.nav li.folder > a{
- font-size: 15px;
+ font-size: 14px;
  font-weight: 300;
  margin-top: -2px;
 }
@@ -416,7 +419,7 @@ ul.mysidebar.nav li ul li {
 
 .activepage {
   color: #90a6e6 !important;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 
@@ -463,8 +466,7 @@ div.sidebarTitle-holder {
   cursor: default;
   height: 20px;
   align-self: center;
-  margin-left: 18px;
-  flex: 1
+  margin-left: 13px;
 }
 
 .indicator:nth-child(3) {
@@ -488,7 +490,7 @@ div.sidebarTitle-holder {
   min-height: 42px;
   padding-bottom: 5px;
   padding-left: 0;
-  padding-top: 30px;
+  padding-top: 26px;
   z-index: 10;
 }
 .breadcrumb-item + .breadcrumb-item::before{
@@ -527,7 +529,7 @@ div.sidebarTitle-holder {
 
 .post-content {
   max-width: 743px;
-  margin-top: 32px;
+  margin-top: 15px;
 }
 
 .post-content .zoomimg {
@@ -559,7 +561,6 @@ div.sidebarTitle-holder {
 
 
 pre {
-  margin: 20px 0;
   border: none;
   border-radius: 0px;
   padding: 0px 97px 16px 10px;

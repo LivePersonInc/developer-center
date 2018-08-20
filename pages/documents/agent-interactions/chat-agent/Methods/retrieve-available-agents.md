@@ -76,21 +76,28 @@ The body media type must have one of the following formats:
 
 Response example for JSON:
 
-    {    "availableAgents" :
-        {
-            "agents" : {
-                "agent" : [ {
-                    "@chatState" : "4",
-                    "@id" : "2",
-                    "@maxChats" : "-1",
-                    "@voiceState" : "1",
-                    "email" : "test@test.com",
-                    "nickname" : "Agent1-Nickname",
-                    "privilegeGroup" : "administrators",
-                    "skills" : { "skill" : [ "2" , "4" ] },
-                    "userName" : "Agent1"
-                } ] },
-                "link" : { "@href" : "https://webserver/api/account/20026006/agentSession/982759926/availableAgents?timeStamp=1331544926464",
-                        "@rel" : "next"
-                }
-        }}
+```json
+{
+  "availableAgents": {
+    "agents": {
+      "agent": [{
+        "@chatState": "4",
+        "@id": "2",
+        "@maxChats": "-1",
+        "@voiceState": "1",
+        "email": "test@test.com",
+        "nickname": "Agent1-Nickname",
+        "privilegeGroup": "administrators",
+        "skills": {
+          "skill": ["2", "4"]
+        },
+        "userName": "Agent1"
+      }]
+    },
+    "link": {
+      "@href": "https://webserver/api/account/20026006/agentSession/982759926/availableAgents?timeStamp=1331544926464",
+      "@rel": "next"
+    }
+  }
+}
+```

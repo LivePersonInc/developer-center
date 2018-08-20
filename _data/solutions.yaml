@@ -1,22 +1,24 @@
 - solutionname: IVR Deflection
+  image: agent-interaction
   documents:
     - documentname: IVR Deflection
     - documentname: IVR Deflection for Chat
-    - documentname: Setting up the IVR Deflection Solution for Chat
+    - documentname: Setting Up IVR Deflection for Chat
 
 - solutionname: Mobile App Messaging
+  image: agent-interaction
   documents:
     - documentname: Add Messaging to Your App
 
-
-
 - solutionname: MCS Toolkit
+  image: agent-interaction
   documents:
     - documentname: Overview
     - documentname: Getting Started
     - documentname: Using API to Build the Toolkit
 
 - solutionname: CRM Integrations
+  image: agent-interaction
   documents:
     - documentname: SalesForce
     - documentname: Microsoft Dynamics
@@ -25,6 +27,7 @@
     - documentname: Zendesk
 
 - solutionname: SMS with LiveEngage
+  image: agent-interaction
   documents:
     - documentname: Overview
     - documentname: IVR Deflection
@@ -34,11 +37,8 @@
     - documentname: SMS via Mobile App Messaging
     - documentname: Appendix
 
-- solutionname: Data Integration and Analysis
-  documents:
-    - documentname: Integrate Your LivePerson Data
-
 - solutionname: LiveEngage MMS Viewer
+  image: agent-interaction
   documents:
     - documentname: Overview
     - documentname: Technical Description
@@ -46,13 +46,14 @@
     - documentname: Additional Options
 
 - solutionname: Custom Dashboard
+  image: agent-interaction
   documents:
     - documentname: Create a Custom Real Time Dashboard
     - documentname: Chat Metrics
     - documentname: Messaging Metrics
-    - documentname: Design Integration & Service
 
 - solutionname: Video Chat
+  image: agent-interaction
   documents:
     - documentname: Add Video to Chat Conversations
     - documentname: Plan Your Service
