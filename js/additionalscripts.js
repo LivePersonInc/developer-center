@@ -7,6 +7,7 @@ function navigateContent(url) {
     populateAnchors ();
     menuDrop ();
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+    var scroll = new SmoothScroll('a[href*="#"]');
     codeButtons();
   });
   $title.load(url + ' .documenttitle > *');
@@ -25,9 +26,11 @@ function navigateContent(url) {
 }
 
 $(document).ready(function () {
-  menuDrop ();
+  anchors.add('h3');
   populateAnchors ();
+  menuDrop ();
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+  var scroll = new SmoothScroll('a[href*="#"]');
   codeButtons();
 });
 
@@ -113,7 +116,7 @@ function populateAnchors () {
   }else {
     $('.anchorlist').css('display', 'block');
     $.each(anchorlinks, function() {
-      $(anchorlist).append('<li><a href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
+      $(anchorlist).append('<li><a data-scroll href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
     });
   };
 };
