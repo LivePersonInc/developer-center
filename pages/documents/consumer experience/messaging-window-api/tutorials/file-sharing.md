@@ -7,7 +7,7 @@ level4: Tutorials
 
 order: 88
 
-permalink: messaging-window-api-tutorials-file-sharing
+permalink: messaging-window-api-tutorials-file-sharing.html
 indicator: messaging
 ---
 
