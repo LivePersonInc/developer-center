@@ -398,6 +398,11 @@
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
+  - documentname: LiveDeflect API
+    pages:
+    - pagename: Overview
+    - pagename: contextAndInvite
+    - pagename: getLiveDeflectData
   - documentname: IVR Engagement API
     pages:
     - pagename: Overview

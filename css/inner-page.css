@@ -44,7 +44,7 @@ h3[id]{
 h4[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 0.96em;
+  font-size: 1em;
   font-weight: 600;
   font-style: inherit;
 }
@@ -230,6 +230,10 @@ div#toc > ul {
 
 .post-content ul, ol {
   padding-left: 16px !important;
+}
+
+.post-content ol li:first-of-type {
+  margin-bottom: 10px;
 }
 
 
