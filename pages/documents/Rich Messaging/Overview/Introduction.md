@@ -5,11 +5,11 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: Rich Messaging
-documentname: Getting Started
+documentname: Getting Started with Rich Messaging
 
 level-order: 1
 order: 10
-permalink: getting-started-introduction.html
+permalink: getting-started-with-rich-messaging-introduction.html
 root-link: true
 indicator: both
 ---
