@@ -160,6 +160,15 @@ pre {
   width: inherit;
 }
 
+.copybefore {
+  display: block;
+  margin-top: 3px;
+}
+
+.copyafter {
+  display: none;
+}
+
 /* Algolia Styling Begins */
 
 #aa-search-input {

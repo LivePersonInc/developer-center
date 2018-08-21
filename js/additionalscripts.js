@@ -6,9 +6,9 @@ function navigateContent(url) {
     anchors.add('h3');
     populateAnchors ();
     menuDrop ();
+    codeButtons();
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
     var scroll = new SmoothScroll('a[href*="#"]');
-    codeButtons();
   });
   $title.load(url + ' .documenttitle > *');
   //from here, the rest of the code has to do with link highlighting for the sidebar
@@ -29,9 +29,9 @@ $(document).ready(function () {
   anchors.add('h3');
   populateAnchors ();
   menuDrop ();
+  codeButtons();
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   var scroll = new SmoothScroll('a[href*="#"]');
-  codeButtons();
 });
 
 function codeButtons () {
@@ -45,11 +45,15 @@ function codeButtons () {
   $(this).attr('id', currentId);
 
   //trigger
-  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
      $(this).append(clipButton);
   });
 
   new ClipboardJS('.codebtn');
+  $('.codebtn').click(function() {
+    $(this).find('.copybefore').hide();
+    $(this).find('.copyafter').show();
+  });
 };
 
 function linkclick(that) {
