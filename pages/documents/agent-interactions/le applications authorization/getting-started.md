@@ -1,7 +1,7 @@
 ---
 title: Overview
 Keywords:
-level1:
+level1: Documents
 level2: Agent Interactions
 level3: LE Applications Authorization
 order: 8
@@ -36,6 +36,7 @@ This API provides standard oauth 2.0 endpoints to receive and refresh access tok
 
 After finishing the installation, please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.
 
+{:start="2"}
 2. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
 
 	* sentinel

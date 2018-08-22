@@ -1,7 +1,7 @@
 ---
 title: Token Request
 Keywords:
-level1:
+level1: Documents
 level2: Agent Interactions
 level3: LE Applications Authorization
 level4: Methods
@@ -48,7 +48,7 @@ This request should be made after obtaining the code from the [authorize request
 
 **Example**:
 
-```
+```sh
 client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
 ```
 
