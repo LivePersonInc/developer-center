@@ -2,8 +2,8 @@
 pagename: Getting Started with Authentication
 sitesection: Documents
 categoryname: Guides
-documentname: Getting Started with LiveEngage APIs
-permalink: getting-started-with-liveengage-apis-getting-started-with-authentication.html
+documentname: Major Platform Components
+permalink: major-platform-components-getting-started-with-authentication.html
 order: 10
 indicator: both
 ---

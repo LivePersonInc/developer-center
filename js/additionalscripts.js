@@ -3,6 +3,7 @@ function navigateContent(url) {
   var $title = $('.documenttitle');
   //go to the indicated url passed from the linkclick function and find the content div and load it
   $content.load(url + ' #defaultcontent > *', function () {
+    //add anchor links to all h3 titles. See respective functions below for what they do.
     anchors.add('h3');
     populateAnchors ();
     menuDrop ();
@@ -18,6 +19,7 @@ function navigateContent(url) {
   //make the string we found previously active
   $('.folder').removeClass("active");
   selected = selected.addClass("activepage");
+  //just some code to make sure sidebar styling works well.
   if (selected.parent().hasClass('innerpageitem')) {
     $('.innerpageitem').removeClass("activeitem");
     $(".activepage").parent().addClass("activeitem");
@@ -26,30 +28,34 @@ function navigateContent(url) {
 }
 
 $(document).ready(function () {
+  //add anchor links to all h3 titles. See respective functions below for what they do.
   anchors.add('h3');
   populateAnchors ();
   menuDrop ();
   codeButtons();
+  //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+  //call smooth-scroll on all anchorlinks
   var scroll = new SmoothScroll('a[href*="#"]');
 });
 
 function codeButtons () {
-  // get all <code> elements
+  // get all <code> elements.
   var allCodeBlocksElements = $('div[class^="language-"]');
   allCodeBlocksElements.each(function(i) {
-   	// add different id for each code block
+   	// add different id for each code block.
 
-	// target
+	// add a sequentially increasing id to each code block.
   var currentId = "codeblock" + (i + 1);
   $(this).attr('id', currentId);
 
-  //trigger
+  //define and then add a clipboard button to all code blocks.
   var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
      $(this).append(clipButton);
   });
-
+//instantiate clipboardjs on the buttons.
   new ClipboardJS('.codebtn');
+  //switch between clipboard icon to checkmark icon on click.
   $('.codebtn').click(function() {
     $(this).find('.copybefore').hide();
     $(this).find('.copyafter').show();
@@ -76,17 +82,20 @@ $(window).on('popstate', (e) => {
 
 function solutionsbuttonclick(event) {
   event.preventDefault();
+  //show/hide the appropriate sidebar when clicking on the button
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
   documentsSideBar.fadeOut(200, function () {
     solutionsSideBar.fadeIn(200);
   });
+  //show/hide the underline on the appropriate sidebar when clicking on the button
   $('.documentsbutton > .underline').removeClass('lined');
   $('.solutionsbutton > .solutionsunderline').addClass('lined');
 };
 
 function sidebarbuttonclick(event) {
   event.preventDefault();
+  //same as above, just the other button
   var documentsSideBar = $('.documentslist');
   var solutionsSideBar = $('.solutionslist');
   solutionsSideBar.fadeOut(200, function () {
@@ -98,6 +107,8 @@ function sidebarbuttonclick(event) {
 
 
 function menuDrop () {
+  //a simple dropdown behavior for the anchorlinks box
+  $(".anchorlist > a").data("expanded", "false");
   $(".anchorlist > a").click(function(event){
       event.preventDefault();
       var hasExpanded = $(this).data("expanded") == "true";
@@ -113,14 +124,20 @@ function menuDrop () {
 };
 
 function populateAnchors () {
+  //remove all previous anchoritems populated in the box
+  $(".anchoritem").remove();
+  //find all h3 titles on the page
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
+  //if there are no anchrolinks, hide the box
   if (anchorlinks.length == 0){
     $('.anchorlist').css('display', 'none');
+    //if there are anchorlinks, display the box
   }else {
     $('.anchorlist').css('display', 'block');
+    //for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
     $.each(anchorlinks, function() {
-      $(anchorlist).append('<li><a data-scroll href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
+      $(anchorlist).append('<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');
     });
   };
 };

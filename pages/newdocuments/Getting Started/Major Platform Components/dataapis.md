@@ -2,8 +2,8 @@
 pagename: Getting Started with Data APIs
 sitesection: Documents
 categoryname: Guides
-documentname: Getting Started with LiveEngage APIs
-permalink: getting-started-with-liveengage-apis-getting-started-with-data-apis.html
+documentname: Major Platform Components
+permalink: major-platform-components-getting-started-with-data-apis.html
 order: 30
 indicator: both
 ---

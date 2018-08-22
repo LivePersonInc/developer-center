@@ -2,8 +2,8 @@
 pagename: Getting Started with Engagement Attributes
 sitesection: Documents
 categoryname: Guides
-documentname: Getting Started with LiveEngage APIs
-permalink: getting-started-with-liveengage-apis-getting-started-with-engagement-attributes.html
+documentname: Major Platform Components
+permalink: major-platform-components-getting-started-with-engagement-attributes.html
 order: 20
 indicator: both
 ---

@@ -686,6 +686,17 @@
       pages:
         - pagename: What Is a LiveEngage Application?
         - pagename: Installing LiveEngage Applications
+    - documentname: Authorizing LiveEngage Applications
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+          - subpagename: Authorization Request
+          - subpagename: Refresh Request
+          - subpagename: Token Request
+        - pagename: Samples
+          subpages:
+            - subpagename: Application Login Sample App
     - documentname: Cookies and LiveEngage
       pages:
         - pagename: Overview
