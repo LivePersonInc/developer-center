@@ -684,6 +684,7 @@ button span:last-of-type {
 
   .defaultcontent {
     margin-left: 70px;
+    grid-column: 4 / span 2;
   }
 
   .defaultbutton {

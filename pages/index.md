@@ -3,42 +3,40 @@ pagename: Welcome!
 permalink: index.html
 ---
 
-### Welcome to LivePerson Developers!
+Welcome to the LivePerson Developer Documentation! Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third party apps into our Agent Workspace, you’ll find the documentation here.
 
-Welcome to the LivePerson Developer Docs. Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third party apps into our Agent Workspace, you’ll find the documentation here.
+Keep reading to learn what you need to get started, [how to read our documents](getting-started-with-liveengage-apis-how-to-read-our-documents.html), common use cases for our APIs, the basic components of our platform, and [how to use multiple LiveEngage APIs to create complex solutions](major-flows.html).
 
 If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly via the "Looking for Support?" button on the left hand side.
 
-<div class="bluehighlight">Keep reading</div> to learn what you need to get started, how to read our documents, common use cases for our APIs, the basic components of our platform, and how to use multiple LiveEngage APIs to create complex solutions.
-
 ### Getting Started with LivePerson APIs:
 
-* Before You Get Started
+* [Before You Get Started](getting-started-with-liveengage-apis-before-you-get-started.html)
 
-* Create a LiveEngage account
+* [Create a LiveEngage account](http://register.liveperson.com/developer/signup)
 
-* Retrieve API Keys
+* [Retrieve API Keys](retrieve-api-keys-create-a-new-api-key.html)
 
-* Retrieve your Domain
+* [Retrieve your Domain](retrieve-api-domains-using-the-domain-api.html)
 
-* Retry and KeepAlive Policy
+* [Retry and KeepAlive Policy](retry-and-keepalive-best-practices-overview.html)
 
-* Getting Started with Authentication
+* [Getting Started with Authentication](major-platform-components-getting-started-with-authentication.html)
 
 ### Common Use Cases:
 
-* **Integrating LiveEngage with your native app** - refer to our Mobile App Messaging SDKs, for iOS or for Android.
+* Integrating LiveEngage with your native app - refer to our Mobile App Messaging SDKs, [for iOS](mobile-app-messaging-sdk-for-ios-overview.html) or [for Android](mobile-app-messaging-sdk-for-android-overview.html).
 
-* **Customizing LiveEngage reporting** - work with our Data APIs to customize LiveEngage reports.
+* Customizing LiveEngage reporting - work with our Data APIs to customize LiveEngage reports.
 
-* **Building or integrating an Agent Workspace widget** - add third party service widgets into the agent workspace for quick reference.
+* [Building or integrating an Agent Workspace widget](agent-workspace-widget-sdk-overview.html) - add third party service widgets into the agent workspace for quick reference.
 
 ### Major Platform Capabilities:
 
-* Engagement Attributes - report on and pass consumer data to other APIs and integrations
+* [Engagement Attributes](major-platform-components-getting-started-with-engagement-attributes.html) - report on and pass consumer data to other APIs and integrations
 
-* Authentication - authenticate using LivePerson protocols and best practices
+* [Authentication](authentication-introduction.html) - authenticate using LivePerson protocols and best practices
 
-* Data APIs - poll LivePerson servers to collect and aggregate historical and real-time data
+* [Data APIs](major-platform-components-getting-started-with-data-apis.html) - poll LivePerson servers to collect and aggregate historical and real-time data
 
-* Connectors - integrate third party messaging platforms and LiveEngage
+* [Connectors](connector-api-connector-api-overview.html) - integrate third party messaging platforms and LiveEngage
