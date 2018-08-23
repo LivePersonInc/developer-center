@@ -114,117 +114,117 @@ indicator: both
 
 Structure example:
 
-```javascript
+```json
 {
-    chatInfo: {
-        rtSessionId: '',
-        accountId: '',
-        chatRequestedTime: 1,
-        chatStartTime: 1,
-        sessionStartTime: 1,
-        chatStartUrl: '',
-        spectatedEngagement: false,
-        chatSkill: ''
+    "chatInfo": {
+        "rtSessionId": "",
+        "accountId": "",
+        "chatRequestedTime": 1,
+        "chatStartTime": 1,
+        "sessionStartTime": 1,
+        "chatStartUrl": "",
+        "spectatedEngagement": false,
+        "chatSkill": ""
     },
-    chattingAgentInfo: {
-        agentName: '',
-        agentGroupName: '',
-        agentId: 1,
-        agentNickname: ''
+    "chattingAgentInfo": {
+        "agentName": "",
+        "agentGroupName": "",
+        "agentId": 1,
+        "agentNickname": ""
     },
-    agentInfo: {
-        accountId: '',
-        agentName: '',
-        agentId: 1,
-        agentNickname: '',
-        agentEmail: '',
-        maxChats: 1,
-    }
-    chatTranscript: {
-        lines: []
+    "agentInfo": {
+        "accountId": "",
+        "agentName": "",
+        "agentId": 1,
+        "agentNickname": "",
+        "agentEmail": "",
+        "maxChats": 1
     },
-    surveyQuestions: {
-        preChat: {
-            email: {
-                value: '',
-                displayName: ''
+    "chatTranscript": {
+        "lines": []
+    },
+    "surveyQuestions": {
+        "preChat": {
+            "email": {
+                "value": "",
+                "displayName": ""
             },
-            phone: {
-                 value: '',
-                 displayName: ''
+            "phone": {
+                 "value": "",
+                 "displayName": ""
             },
-            name: {
-                 value: '',
-                 displayName: ''
+            "name": {
+                 "value": "",
+                 "displayName": ""
             },
-            customizedQuestions: []
+            "customizedQuestions": []
         },
-        postChat: []
-        agentSurvey: []
+        "postChat": [],
+        "agentSurvey": []
     },
-    visitorInfo: {
-        visitorId: '',
-        visitorName: '',
-        visitorSso: false,
-        device: '',
-        browser: '',
-        operatingSystem: '',
-        country: '',
-        state: '',
-        city: '',
-        isp: '',
-        organization: '',
-        IpAddress: '',
-        visitStartTime: '',
-        chattingVisitorState: '',
-        chatRequestedTime: '',
-        chatStartUrl: '',
-        visitorTimezone: '',
-        visitorTyping: false
+    "visitorInfo": {
+        "visitorId": "",
+        "visitorName": "",
+        "visitorSso": false,
+        "device": "",
+        "browser": "",
+        "operatingSystem": "",
+        "country": "",
+        "state": "",
+        "city": "",
+        "isp": "",
+        "organization": "",
+        "IpAddress": "",
+        "visitStartTime": "",
+        "chattingVisitorState": "",
+        "chatRequestedTime": "",
+        "chatStartUrl": "",
+        "visitorTimezone": "",
+        "visitorTyping": false
     },
-    campaignInfo: {
-        campaignName: '',
-        campaignId: '',
-        campaignDescription: '',
-        targetAudience: [],
-        goalName: '',
-        goalId: '',
-        goalDescription: ''
+    "campaignInfo": {
+        "campaignName": "",
+        "campaignId": "",
+        "campaignDescription": "",
+        "targetAudience": [],
+        "goalName": "",
+        "goalId": "",
+        "goalDescription": ""
     },
-    engagementInfo: {
-        VisitorBehavior: [],
-        skill: '',
-        engagementType: '',
-        engagementId: '',
-        engagementName: '',
-        agentNote: '',
-        engagementSkill: ''
+    "engagementInfo": {
+        "VisitorBehavior": [],
+        "skill": "",
+        "engagementType": "",
+        "engagementId": "",
+        "engagementName": "",
+        "agentNote": "",
+        "engagementSkill": ""
     },
-    visitorJourney: {
-        pages: [],
-        searchEngine: {
-            searchProvider: '',
-            searchKeywords: ''
+    "visitorJourney": {
+        "pages": [],
+        "searchEngine": {
+            "searchProvider": "",
+            "searchKeywords": ""
         }
     },
-    SDE: {
-        customerDetails: [],
-        personalInfo: [],
-        marketingSource: [],
-        leadGeneration: [],
-        transaction: [],
-        viewedProducts: [],
-        shoppingCart: [],
-        serviceActivity: [],
-        error: []
+    "SDE": {
+        "customerDetails": [],
+        "personalInfo": [],
+        "marketingSource": [],
+        "leadGeneration": [],
+        "transaction": [],
+        "viewedProducts": [],
+        "shoppingCart": [],
+        "serviceActivity": [],
+        "error": []
     },
-    authenticatedData: {
-        customerDetails: [],
-        personalInfo: [],
+    "authenticatedData": {
+        "customerDetails": [],
+        "personalInfo": []
     },
-    customVariables: [],
-    splitSession: {
-        customVariables: []
+    "customVariables": [],
+    "splitSession": {
+        "customVariables": []
     }
 }
 ```
@@ -250,39 +250,39 @@ Structure example:
 
 
 
-```javascript
+```json
 {
-    id: '',
-    type: 'line',
-    by: '',
-    source: 'visitor',
-    subType: 'REGULAR',
-    systemMessageId: 1,
-    text: '',
-    textType: 'html',
-    time: '',
-    clientProperties: {
-        appId: "LivePerson.SDK-Maker",
-        appVersion: "",
-        browser: "",
-        browserVersion: "",
-        deviceFamily: "TABLET",
-        deviceModel: "iPad4,1",
-        deviceManufacture: "",
-        integration: "MOBILE_SDK",
-        integrationVersion: "2.3.0.3",
-        ipAddress: "192.168.226.81",
-        os: "IOS",
-        osName: "IOS",
-        osVersion: "10.2.1",
-        timeZone: "US/Pacific",
-        features: {
-            "CO_BROWSE",
-            "CO_APP",
-            "PHOTO_SHARING",
-            "SECURE_FORMS",
-            "AUTO_MESSAGES",
-            "RICH_CONTENT"
+    "id": "",
+    "type": "line",
+    "by": "",
+    "source": "visitor",
+    "subType": "REGULAR",
+    "systemMessageId": 1,
+    "text": "",
+    "textType": "html",
+    "time": "",
+    "clientProperties": {
+        "appId": "LivePerson.SDK-Maker",
+        "appVersion": "",
+        "browser": "",
+        "browserVersion": "",
+        "deviceFamily": "TABLET",
+        "deviceModel": "iPad4,1",
+        "deviceManufacture": "",
+        "integration": "MOBILE_SDK",
+        "integrationVersion": "2.3.0.3",
+        "ipAddress": "192.168.226.81",
+        "os": "IOS",
+        "osName": "IOS",
+        "osVersion": "10.2.1",
+        "timeZone": "US/Pacific",
+        "features": {
+            "CO_BROWSE": "",
+            "CO_APP": "",
+            "PHOTO_SHARING": "",
+            "SECURE_FORMS": "",
+            "AUTO_MESSAGES": "",
+            "RICH_CONTENT": ""
         }
     }
 }
@@ -303,14 +303,14 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    @scope: 'session',
-    @source: 'rule engine',
-    name: '',
-    displayName: '',
-    time: '',
-    value: ''
+    "@scope": "session",
+    "@source": "rule engine",
+    "name": "",
+    "displayName": "",
+    "time": "",
+    "value": ""
 }
 ```
 
@@ -324,11 +324,11 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    id: 1,
-    name: '',
-    description: ''
+    "id": 1,
+    "name": "",
+    "description": ""
 }
 ```
 
@@ -342,11 +342,11 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    id: 1,
-    name: '',
-    description: ''
+    "id": 1,
+    "name": "",
+    "description": ""
 }
 ```
 
@@ -373,27 +373,27 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    id: '',
-    pageBasic: {
-        referrer: '',
-        sections: '',
-        startTime: 1,
-        title: '',
-        url: ''
+    "id": "",
+    "pageBasic": {
+        "referrer": "",
+        "sections": "",
+        "startTime": 1,
+        "title": "",
+        "url": ""
     },
-    pageLoaded: true,
-    pageTitle: '',
-    referrer: '',
-    revActiveOSLs: {
-        1234: {
-            revision: 1
+    "pageLoaded": true,
+    "pageTitle": "",
+    "referrer": "",
+    "revActiveOSLs": {
+        "1234": {
+            "revision": 1
         }
     },
-    startTime: 1,
-    timeOnPage: 1,
-    url: ''
+    "startTime": 1,
+    "timeOnPage": 1,
+    "url": ""
 }
 ```
 
@@ -419,21 +419,21 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    accountName: '',
-    balance: '',
-    companySize: 1,
-    companyBranch: '',
-    customerId: '',
-    imei: '',
-    lastPaymentDate: '',
-    registrationDate: '',
-    role: '',
-    socialId: '',
-    status: '',
-    type: '',
-    userName: ''
+    "accountName": "",
+    "balance": "",
+    "companySize": 1,
+    "companyBranch": "",
+    "customerId": "",
+    "imei": "",
+    "lastPaymentDate": "",
+    "registrationDate": "",
+    "role": "",
+    "socialId": "",
+    "status": "",
+    "type": "",
+    "userName": ""
 }
 ```
 
@@ -451,15 +451,15 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    age: 1,
-    birthday: '',
-    company: '',
-    contactInfo: [],
-    gender: '',
-    language: '',
-    name: ''
+    "age": 1,
+    "birthday": "",
+    "company": "",
+    "contactInfo": [],
+    "gender": "",
+    "language": "",
+    "name": ""
 }
 ```
 
@@ -472,10 +472,10 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    email: '',
-    phone: ''
+    "email": "",
+    "phone": ""
 }
 ```
 
@@ -491,11 +491,11 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    originatingChannel: '',
-    affiliate: '',
-    campaignId: ''
+    "originatingChannel": "",
+    "affiliate": "",
+    "campaignId": ""
 }
 ```
 
@@ -509,11 +509,11 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    leadId: '',
-    topic: '',
-    value: ''
+    "leadId": "",
+    "topic": "",
+    "value": ""
 }
 ```
 
@@ -528,12 +528,12 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    total: '',
-    orderId: '',
-    products: [],
-    numItems: 1
+    "total": "",
+    "orderId": "",
+    "products": [],
+    "numItems": 1
 }
 ```
 **Note: There's currently a known issue with numItems. This key currently displays as null regardless of the number you pass it.**
@@ -548,11 +548,11 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    cartTotal: '',
-    numItems: 1,
-    products: []
+    "cartTotal": "",
+    "numItems": 1,
+    "products": []
 }
 ```
 
@@ -568,13 +568,13 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    name: '',
-    category: '',
-    sku: '',
-    price: '',
-    quantity: 1
+    "name": "",
+    "category": "",
+    "sku": "",
+    "price": "",
+    "quantity": 1
 }
 ```
 **Note: SDE.viewedProducts does not contain the quantity field**
@@ -590,12 +590,12 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    category: '',
-    id: '',
-    status: '',
-    topic: ''
+    "category": "",
+    "id": "",
+    "status": "",
+    "topic": ""
 }
 ```
 
@@ -616,18 +616,18 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    contextId: '',
-    contextIdTooltip: '',
-    message: '',
-    messageTooltip: '',
-    code: '',
-    codeTooltip: '',
-    level: 1,
-    levelTooltip: '',
-    resolved: true,
-    resolvedTooltip: ''
+    "contextId": "",
+    "contextIdTooltip": "",
+    "message": "",
+    "messageTooltip": "",
+    "code": "",
+    "codeTooltip": "",
+    "level": 1,
+    "levelTooltip": "",
+    "resolved": true,
+    "resolvedTooltip": ""
 }
 ```
 
@@ -645,11 +645,11 @@ Structure example:
 
 Structure example:
 
-```javascript
+```json
 {
-    keywords: [
-        { value: 'Hello world!' },
-        { value: 'Hello again!' }
+    "keywords": [
+        { "value": "Hello world!" },
+        { "value": "Hello again!" }
     ]
 }
 ```

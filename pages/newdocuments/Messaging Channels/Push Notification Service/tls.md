@@ -13,9 +13,7 @@ permalink: push-notification-service-tls-authentication.html
 indicator: messaging
 ---
 
-Customers supply a valid client key and certificate for a TLS connection (two-way SSL). The
-key and certificate is used in every request to the relevant proxy call. The key is securely
-stored in LivePerson’s server.
+Customers supply a valid client key and certificate for a TLS connection (one-way SSL). The key and certificate is used in every request to the relevant proxy call. The key is securely stored in LivePerson’s server.
 
 ### Request Details
 

@@ -6,7 +6,6 @@ function navigateContent(url) {
     //add anchor links to all h3 titles. See respective functions below for what they do.
     anchors.add('h3');
     populateAnchors ();
-    menuDrop ();
     codeButtons();
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
     var scroll = new SmoothScroll('a[href*="#"]');
@@ -108,6 +107,8 @@ function sidebarbuttonclick(event) {
 
 function menuDrop () {
   //a simple dropdown behavior for the anchorlinks box
+  console.log("called");
+  var called = true;
   $(".anchorlist > a").data("expanded", "false");
   $(".anchorlist > a").click(function(event){
       event.preventDefault();
@@ -115,9 +116,11 @@ function menuDrop () {
       if (hasExpanded) {
           $(this).next().slideUp(400);
           $(this).data("expanded","false");
+          console.log("false happened");
       } else {
           $(this).next().slideDown(400);
           $(this).data("expanded","true");
+          console.log("true happened");
       }
       return false;
   });

@@ -45,7 +45,7 @@ Returns an XML or JSON response with the Pre-Chat survey.
 | visitorIp | This parameter can be used by the LivePerson Rules Engine to decide which survey to return. | alphanumeric (IP) | The visitor's host name is found using this IP address. If no IP address is specified, the visitor's IP  will be taken from the request's IP. |
 | userAgent | This parameter can be used by the LivePerson Rules Engine to decide which survey to return.  | alphanumeric | If no user agent is specified, it will be  taken from the HTTP "User-Agent" header. |
 | surveyName | Requests a specific survey.  | alphanumeric | If visitorprofile or skill parameters are provided, and a survey with this name exists, the requested survey will be returned unless there is a rule that overrides this name. |
-  
+
 ### Response
 
 **Response Codes**
@@ -64,7 +64,7 @@ JSON Example
         "questions" : {
           "question" : [ {
             "mandatory" : "true",
-    
+
             "validationType" : "alpha_numeric",
             "order" : "0",
             "logicId" : "4",
@@ -83,7 +83,7 @@ JSON Example
             }]
           }, {
             "mandatory" : "true",
-    
+
             "validationType" : "alpha_numeric",
             "order" : "1",
             "logicId" : "5",
@@ -107,7 +107,7 @@ JSON Example
 | question | Contains all the question data. | | |
 | mandatory | Whether this question is mandatory in the survey. | Boolean | |
 | order | The order of the question in the survey. | | You should display the questions according to their order number. |
-| logicId | Unique ID of this question for logic. | | See [Logic](#logic) below |
+| logicId | Unique ID of this question for logic. | | See Logic below |
 | id |  Unique ID of this question. | | |
 | type | Identifies the question answer type. | Dropdown Box <br> Checkbox <br> Radio Button (side by side) <br> Radio Button <br> Text Field <br> Text Area | |
 | validationType | Identifies the question validation type.  | alphanumeric <br> numeric <br> email | |

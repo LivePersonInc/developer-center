@@ -22,9 +22,6 @@ code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
 
-pre {
-  word-break: normal !important;
-}
 
 .defaultwrapper {
   height: 100vh;
@@ -168,6 +165,10 @@ pre {
 
 .copyafter {
   display: none;
+}
+
+.bluehighlight {
+  color: #5879DA;
 }
 
 /* Algolia Styling Begins */

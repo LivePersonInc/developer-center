@@ -253,7 +253,7 @@
         subpages:
           - subpagename: Get All Profiles
           - subpagename: Get Profile by ID
-          - subpagename: Create Proflie
+          - subpagename: Create Profile
           - subpagename: Update Profiles
           - subpagename: Update Profile
           - subpagename: Delete Profiles
@@ -292,7 +292,7 @@
         - pagename: Methods
           subpages:
           - subpagename: Get Automatic Messages
-          - subpagename: Get Automatic Messages by ID
+          - subpagename: Get Automatic Message by ID
           - subpagename: Update an Automatic Message
     - documentname: Agent Status Reason API
       pages:
@@ -342,7 +342,7 @@
         - pagename: Methods
           subpages:
             - subpagename: Get Unified Automatic Messages
-            - subpagename: Get Unified Automatic Messages by ID
+            - subpagename: Get Unified Automatic Message by ID
             - subpagename: Update an Unified Automatic Message
             - subpagename: Delete an Unified Automatic Message
 

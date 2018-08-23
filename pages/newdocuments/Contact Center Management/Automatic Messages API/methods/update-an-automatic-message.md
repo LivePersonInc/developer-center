@@ -46,7 +46,7 @@ The request body is able to accept single JSON object as shown below, or a JSON 
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
-                    "lang": "ca-ES",
+                    "lang": "ca-ES"
                 }
             ],
             "attributes":[
@@ -56,7 +56,7 @@ The request body is able to accept single JSON object as shown below, or a JSON 
                 }
             ]
     }
-    ```
+```
 
 **Path Parameters**
 

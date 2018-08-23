@@ -108,20 +108,16 @@ Now close the conversation from the Agent Workspace using the ``Close conversati
 
 In order to use the consumer token (LP_JWT) in the following tutorials, we will put a file on your machine. Create a new file outside of the ``lp-shell`` and paste the following content into it:
 
-`
-LP_ACCOUNT=qa57221676					put your account id here
+```sh
+LP_ACCOUNT=qa57221676	put your account id here
 
 * Put here the jwt you have created in this tutorial
 * You can use echo $LP_JWT from your lp-shell to view it
 LP_JWT=eyJraWQiOiIwMDAwMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJmMDY4ZTllZi1lMzkzLTQxYTEtYmMyYy1hOTZhOWZmMGY2ZmIiLCJhdWQiOiJhY2M6cWE1NzIyMTY3NiIsImlzcyI6Imh0dHBzOlwvXC9pZHAubGl2ZXBlcnNvbi5uZXQiLCJleHAiOjE4ODIwMjM2MzIsImlhdCI6MTQ3MTc4MzU5Mn0.HUJe1CZzqzRoJJxoTll_vDvRalKIeJJRt2MEhY-aFq__V6lrN-ebrRxydozm-gjbpMecKiZDZZiJPw3hf560iKbW-gK1AzsfHxiPrxMdg_TRZqsNhXui_7k579IpfAvKSdgQHZ5uLfGq2XtQNfBdvKWPCIAfW8mJ7oZT-aNMhjE
-`
+```
 
 ### What's next
 
-You can now close the ``lp-shell`` and move on to the [next tutorial](consumer-int-get-msg.html){:target="_blank"}.
+You can now close the ```lp-shell``` and move on to the [next tutorial](consumer-int-get-msg.html){:target="_blank"}.
 
 Explore API messages in the [API Reference](consumer-int-api-reference.html){:target="_blank"} page. In order to build your own messages, you can use the [``message builder`` <i class="fa fa-magic" aria-hidden="true"></i>](consumer-int-msg-reqs.html){:target="_blank"}
-
-
-
-{% include links.html %}

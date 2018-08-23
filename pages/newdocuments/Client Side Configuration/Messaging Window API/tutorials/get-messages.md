@@ -1,5 +1,5 @@
 ---
-pagename: Get Messages 
+pagename: Get Messages
 redirect_from:
   - consumer-int-get-msg.html
 sitesection: Documents
@@ -8,7 +8,7 @@ documentname: Messaging Window API
 subfoldername: Tutorials
 
 order: 10
-permalink: messaging-window-api-tutorials-get-messages-.html
+permalink: messaging-window-api-tutorials-get-messages.html
 
 indicator: messaging
 ---
@@ -57,7 +57,7 @@ Open the WebSocket connection using the following:
 wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
 ```
 
-Replace the ``__LP_ACCOUNT__`` with your account ID, and then send a request on the connection to create a new conversation with the following JSON object: 
+Replace the ``__LP_ACCOUNT__`` with your account ID, and then send a request on the connection to create a new conversation with the following JSON object:
 
 ```json
 {"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
@@ -88,12 +88,12 @@ Type a few messages in the Agent Workspace.
 
 ### Step 4 - Subscribe to Conversation Content
 
-In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``consersationId`` you got in the response in the previous step, and paste it into the opened WebSocket. 
+In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``consersationId`` you got in the response in the previous step, and paste it into the opened WebSocket.
 
 ```json
 {"kind":"req","id":"22","body":{"fromSeq":0,"dialogId":"__YOUR_CONVERSATION_ID__"},"type":"ms.SubscribeMessagingEvents"}
 ```
-**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message. 
+**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 In response, you will get a subscription success message:
 
