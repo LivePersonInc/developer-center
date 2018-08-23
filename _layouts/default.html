@@ -23,9 +23,7 @@
   </div>
   {% if page.pagename %}
   <div class="documenttitlecontainer">
-  {% if page.pagename != "Welcome!" %}
     {% include nav-breadcrumbs.html %}
-  {% endif %}
   <div class="documenttitle">
     <div class='h1'>{{ page.pagename}}</div>
     {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}

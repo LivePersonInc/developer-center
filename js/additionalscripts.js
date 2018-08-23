@@ -1,6 +1,7 @@
 function navigateContent(url) {
   var $content = $('#defaultcontent');
   var $title = $('.documenttitle');
+  var $breadcrumbs = $('.breadcrumbs');
   //go to the indicated url passed from the linkclick function and find the content div and load it
   $content.load(url + ' #defaultcontent > *', function () {
     //add anchor links to all h3 titles. See respective functions below for what they do.
@@ -10,7 +11,16 @@ function navigateContent(url) {
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
     var scroll = new SmoothScroll('a[href*="#"]');
   });
+  //go to the indicated url passed from the linkclick function and find the title div and load it
   $title.load(url + ' .documenttitle > *');
+  //go to the indicated url passed from the linkclick function and find the breadcrumbs div and load it. Then, set breadcrumbs display if welcome page/normal page.
+  $breadcrumbs.load(url + ' .breadcrumbs > *', function () {
+    if (url.indexOf('index') != -1) {
+      $(this).addClass('breadhidden');
+    } else {
+      $(this).removeClass('breadhidden');
+    }
+  });
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');
   //make sure no other links are set to active
@@ -36,6 +46,12 @@ $(document).ready(function () {
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
   var scroll = new SmoothScroll('a[href*="#"]');
+  //set breadcrumbs display if welcome page/normal page.
+  if (window.location.href.indexOf('index') != -1) {
+    return false;
+  } else {
+    $('.breadcrumbs').removeClass('breadhidden');
+  }
 });
 
 function codeButtons () {
