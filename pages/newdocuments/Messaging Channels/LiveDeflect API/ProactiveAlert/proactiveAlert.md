@@ -113,88 +113,78 @@ The following information should be provided to LivePerson.
     <td>Meta tag field used to classify templates for easier management <b>e.g.</b> “1”</td>
     <td>False</td>
   </tr>
+</tbody>
 </table>
 
 
 ### Example Request Payload
 
-<table>
-  <tr>
-    <td>{
-"siteId":"25508804",  
-"skill": "service",
-"customerCountryCode":"1",
-"customerPhoneNumber":"7703101414",
-"externalCustomerId":"123",
-"externalCustomerIdDescriptor":"VIP",
-"externalAlertId":"1265168451",
-"alertInfo":{"Sky Miles":1234567890,"T-Shirt Size":"Large"},
-"firstName":"Matt",
-"lastName":"Fanning",
-"proactiveChannel":"",
-"proactiveLanguage":"english",
-"proactiveTemplate":"flightdelay",
-"proactiveVariables":{"@Time":"7:35 pm","@City":"Kansas City","@Gate":"C35"},
-"proactiveTemplateVersion":"1"
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 1.0 LiveDeflect proactiveAlert JSON request for sending an outbound alert</td>
-  </tr>
-</table>
+```json
+{
+  "siteId":"25508804",  
+  "skill": "service",
+  "customerCountryCode":"1",
+  "customerPhoneNumber":"7703101414",
+  "externalCustomerId":"123",
+  "externalCustomerIdDescriptor":"VIP",
+  "externalAlertId":"1265168451",
+  "alertInfo":{"Sky Miles":1234567890,"T-Shirt Size":"Large"},
+  "firstName":"Matt",
+  "lastName":"Fanning",
+  "proactiveChannel":"",
+  "proactiveLanguage":"english",
+  "proactiveTemplate":"flightdelay",
+  "proactiveVariables":{"@Time":"7:35 pm","@City":"Kansas City","@Gate":"C35"},
+  "proactiveTemplateVersion":"1"
+}
+```
 
 
 ### Example Response Success
 
 The following information will be returned upon a successful call to LivePerson.
 
-
 HTTP Response Code - 200 OK
 
-<table>
-  <tr>
-    <td>{
-    "success": true,
-    "response": {
-        "name": "phones/+17703101414/agentMessages/1534532110",
-        "sendTime": "2018-08-17T18:55:10.100Z",
-        "contentMessage": {
-            "richCard": {
-                "standaloneCard": {
-                    "cardOrientation": "VERTICAL",
-                    "thumbnailImageAlignment": "RIGHT",
-                    "cardContent": {
-                        "title": "Tap to Select Desired Action",
-                        "media": {
-                            "fileName": "files/jkl7y5btiioJTIjSNahX0heD",
-                            "height": "TALL"
-                        },
-                        "suggestions": [
-                            {
-                                "reply": {
-                                    "text": "See Menu of Functions",
-                                    "postbackData": "postback_data_Menu"
-                                }
-                            },
-                            {
-                                "reply": {
-                                    "text": "Learn More",
-                                    "postbackData": "postback_data_LearnMore"
-                                }
+```json
+
+{
+"success": true,
+"response": {
+    "name": "phones/+17703101414/agentMessages/1534532110",
+    "sendTime": "2018-08-17T18:55:10.100Z",
+    "contentMessage": {
+        "richCard": {
+            "standaloneCard": {
+                "cardOrientation": "VERTICAL",
+                "thumbnailImageAlignment": "RIGHT",
+                "cardContent": {
+                    "title": "Tap to Select Desired Action",
+                    "media": {
+                        "fileName": "files/jkl7y5btiioJTIjSNahX0heD",
+                        "height": "TALL"
+                    },
+                    "suggestions": [
+                        {
+                            "reply": {
+                                "text": "See Menu of Functions",
+                                "postbackData": "postback_data_Menu"
                             }
-                        ]
-                    }
+                        },
+                        {
+                            "reply": {
+                                "text": "Learn More",
+                                "postbackData": "postback_data_LearnMore"
+                            }
+                        }
+                    ]
                 }
             }
         }
     }
+  }
 }
-</td>
-  </tr>
-  <tr>
-    <td>Figure 1.1 LiveDeflect proactiveAlert JSON response for sending an outbound alert </td>
-  </tr>
-</table>
+```
 
 
 ### Example Request Failure
@@ -204,38 +194,25 @@ The following information will be returned upon a failed call to LivePerson.
 
 HTTP Response Code - 200 OK
 
-<table>
-  <tr>
-    <td>{
-  "success" : “false”,
-  “message” : “{}”,
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 1.2 LiveDeflect proactiveAlert JSON response for a failed proactive alert</td>
-  </tr>
-</table>
-
+```json
+{
+  "success" : "false",
+  "message" : "{}",
+}
+```
 
 ### Example Request Failure
 
 The following information will be returned upon a failed call to LivePerson.
 
-
 HTTP Response Code - 400 Bad Request
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "success": false,
     "error": "Failed Compatibility Check"
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 1.2 LiveDeflect proactiveAlert JSON response for a failed proactive alert</td>
-  </tr>
-</table>
-
+}
+```
 
 ### Example Authentication Failure
 
@@ -244,17 +221,11 @@ The following information will be returned upon a failed call to LivePerson when
 
 HTTP Response Code - 401 Unauthorized
 
-<table>
-  <tr>
-    <td>{
-  "error" : “No Authorization Header”
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 1.3 LiveDeflect proactiveAlert JSON response for API Authentication failure</td>
-  </tr>
-</table>
-
+```json
+{
+  "error" : "No Authorization Header"
+}
+```
 
 ### Example Authentication Failure
 
@@ -263,13 +234,8 @@ The following information will be returned upon a failed call to LivePerson when
 
 HTTP Response Code - 401 Unauthorized
 
-<table>
-  <tr>
-    <td>{
+```json
+{
   "error" : “Invalid Nonce - Nonce has been previously used”
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 1.4 LiveDeflect proactiveAlert JSON response for API Authentication failure</td>
-  </tr>
-</table>
+}
+```
