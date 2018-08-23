@@ -50,6 +50,7 @@ $(document).ready(function () {
           $(this).parent().removeClass("active");
           $(".innerfolder > .active > button").removeClass("clicked");
       } else {
+          $(".innerfolder > .active > button").removeClass("clicked");
           $(".folder ul").slideUp(400,null);
           $(".folder > a").data("expanded","false");
           $(this).next().slideDown(400);

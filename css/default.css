@@ -555,10 +555,10 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 }
 
 .supportbutton {
-  padding: 10px 42px;
+  padding: 10px 41px;
   border: solid 1px #f2f1f2;
-  margin-right: 68px;
-  margin-left: 68px;
+  margin-right: 67px;
+  margin-left: 67px;
 }
 
 .supportbutton span {
