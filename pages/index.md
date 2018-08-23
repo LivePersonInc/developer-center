@@ -3,7 +3,7 @@ pagename: Welcome!
 permalink: index.html
 ---
 
-Welcome to the LivePerson Developer Documentation! Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third party apps into our Agent Workspace, you’ll find the documentation here.
+Welcome to the LivePerson Developer Documentation. Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third party apps into our Agent Workspace, you’ll find the documentation here.
 
 Keep reading to learn what you need to get started, [how to read our documents](getting-started-with-liveengage-apis-how-to-read-our-documents.html), common use cases for our APIs, the basic components of our platform, and [how to use multiple LiveEngage APIs to create complex solutions](major-flows.html).
 
@@ -29,7 +29,7 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 * Customizing LiveEngage reporting - work with our Data APIs to customize LiveEngage reports.
 
-* [Building or integrating an Agent Workspace widget](agent-workspace-widget-sdk-overview.html) - add third party service widgets into the agent workspace for quick reference.
+* Building or integrating an Agent Workspace widget - add third party service widgets into the agent workspace for quick reference with our [Agent Workspace SDK](agent-workspace-widget-sdk-overview.html).
 
 ### Major Platform Capabilities:
 
