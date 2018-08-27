@@ -22,7 +22,7 @@ This request should be made after obtaining the code from the [authorize request
 
 | Method | URL |
 | :--- | :--- |
-| POST |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/token?v=2.0 |
+| POST |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/sentinel/api/account/{accountId}/token?v=2.0 |
 
 **Query Parameters**
 
