@@ -1,10 +1,17 @@
 ---
 pagename: Refresh Request
 Keywords:
+<<<<<<< HEAD:pages/newdocuments/Security & Authenication/LiveEngage Applications/LE Applications Authorization/methods/refresh.md
 sitesection:
 categoryname: Agent Interactions
 documentname: Authorizing LiveEngage Applications
 subfoldername: Methods
+=======
+level1: Documents
+level2: Agent Interactions
+level3: LE Applications Authorization
+level4: Methods
+>>>>>>> a74522c47a9fedd3ec11f9b3dae133b0fd338fcb:pages/documents/agent-interactions/le applications authorization/methods/refresh.md
 order: 11
 permalink: le-applications-login-methods-refresh-request.html
 indicator: both
@@ -43,7 +50,7 @@ In order to refresh an existing access token, the application should use a refre
 
 Example:
 
-```
+```sh
 client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZQQYbYS6WxSbIA
 ```
 

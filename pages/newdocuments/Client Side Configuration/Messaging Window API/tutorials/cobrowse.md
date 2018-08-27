@@ -55,10 +55,10 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 ```json
 {
-    "dialogId": "COAPP",
+    "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
     "participants": [
         "cc05f2b9-916b-496e-89fe-66a46d975ae2",
-        "le83624296:356285412"
+        "le83624296.356285412"
     ],
     "dialogType": "OTHER",
     "channelType": "COBROWSE",
@@ -139,7 +139,7 @@ A CoBrowse invitation can be cancelled by the agent or expires after 2 minutes i
 
 ```json
 {
-	"dialogId": "COAPP",
+	"dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
 	"dialogType": "OTHER",
 	"channelType": "COBROWSE",
 	"metaData": {

@@ -1,10 +1,17 @@
 ---
 pagename: Authorization Request
 Keywords:
+<<<<<<< HEAD:pages/newdocuments/Security & Authenication/LiveEngage Applications/LE Applications Authorization/methods/authorize.md
 sitesection:
 categoryname: Agent Interactions
 documentname: Authorizing LiveEngage Applications
 subfoldername: Methods
+=======
+level1: Documents
+level2: Agent Interactions
+level3: LE Applications Authorization
+level4: Methods
+>>>>>>> a74522c47a9fedd3ec11f9b3dae133b0fd338fcb:pages/documents/agent-interactions/le applications authorization/methods/authorize.md
 order: 9
 permalink: authorizing-liveengage-applications-methods-authorization-request.html
 indicator: both

@@ -1,10 +1,17 @@
 ---
 pagename: Token Request
 Keywords:
+<<<<<<< HEAD:pages/newdocuments/Security & Authenication/LiveEngage Applications/LE Applications Authorization/methods/token.md
 sitesection:
 categoryname: Agent Interactions
 documentname: Authorizing LiveEngage Applications
 subfoldername: Methods
+=======
+level1: Documents
+level2: Agent Interactions
+level3: LE Applications Authorization
+level4: Methods
+>>>>>>> a74522c47a9fedd3ec11f9b3dae133b0fd338fcb:pages/documents/agent-interactions/le applications authorization/methods/token.md
 
 order: 10
 permalink: authorizing-liveengage-applications-methods-token-request.html
@@ -48,7 +55,7 @@ This request should be made after obtaining the code from the [authorize request
 
 **Example**:
 
-```
+```sh
 client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
 ```
 

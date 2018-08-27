@@ -10,7 +10,7 @@ $('.sidebarTitle').ready(function(){
     }
 );
 
-//level4 collapsing
+//sidebar collpasing
 $(document).ready(function () {
   var originalURL = window.location.href;
   var modifiedURL = '/' + originalURL.split('/').reverse()[0];
