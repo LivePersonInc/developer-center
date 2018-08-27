@@ -29,7 +29,7 @@ This returns a list of engagements with all their metadata and related transcrip
 | :----- | :--------- | :--------- | :--- | :--- |
 | offset | The offset from where to retrieve the chat. | numeric | Optional | Default is 0.  |
 | limit | Max chats to be received in the response.  | numeric | Optional | Default is 50. Max value is 100. The remaining chats can be obtained using pagination (using offset, in a subsequent request). |
-| sort | Sort the results in a predefined order. | string | Optional | Example: start:des will order chats by descending value of the start time. start:asc,duration:desc will orders chat by ascending value of start time AND then by descending value of duration. <br> Valid values: "start", "end", "duration", "visitor", "engagementId", "interactive", "visitor", "agentId", "skillId"(multiple values are valid). Order:[asc/des] |
+| sort | Sort the results in a predefined order. | string | Optional | Example: start:des will order chats by descending value of the start time. start:asc,duration:desc will orders chat by ascending value of start time AND then by descending value of duration. <br> Valid values: "start", "end", "duration", "visitor", "engagementId", "interactive", "visitor", "agentId", "skillId"(multiple values are valid). Order:[asc/desc] |
 
 **BODY/POST Parameters**
 

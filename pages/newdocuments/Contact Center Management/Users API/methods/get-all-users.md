@@ -19,17 +19,15 @@ This API retrieves a list of users for a specific account.
 
 ### Request
 
- |Method|               URL |
- |:------              |:-------- |
- |GET|                  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users  |
+ |Method|URL |
+ |:------|:-------- |
+ |GET|https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users  |
 
 **Request Headers**
 
- | Header | Description | Notes| 
-  |:-------  |:-------------- | :--- |
-  |Authorization | Contains token string to allow request authentication and authorization. | 
-  |If-Match  |Contains data revision, as known by the client. | Allows optimization of backend, networking and client resource utilization. |
-
+| Header | Description | Notes|
+|:-------  |:-------------- | :--- |
+|Authorization | Contains token string to allow request authentication and authorization. |
 
 
 **Request Body**
@@ -41,18 +39,18 @@ This API retrieves a list of users for a specific account.
  |Parameter|  Description|   Type/Value  |
 |:-------  |:-------------- | :--- |
  |AccountId|            LP site ID|             |
- 
+
  **Query Parameters**
- 
+
  | Name            | Description                                                                  | Type    | Notes                                          |
  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: id,pid,deleted,loginName  |
- 
+
 
 ### Response
 
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -65,7 +63,7 @@ This API retrieves a list of users for a specific account.
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. | 
+| ac-revision | Account config object type collection revision. |
 
 **Response Body**
 

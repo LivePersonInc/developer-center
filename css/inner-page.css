@@ -318,6 +318,7 @@ ul.mysidebar > li.folder ul {
   display: none;
   list-style: none;
   line-height: 2.3;
+  width: 100%;
 }
 ul.mysidebar > li.folder ul.folderactive{
    display: block;
@@ -329,7 +330,7 @@ ul#mysiderbar li{
 
 .innerlink {
   color: #4a4a4a;
-  font-size: 13px !important;
+  font-size: 13px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   font-weight: 300;
 }
@@ -614,23 +615,7 @@ pre code {
   margin-top: 68px;
   position: initial !important;
 }
-@media (min-width: 1114px)
-{
-  ul.mysidebar {
-  margin-left: 9px;
-  top: 160px;
-  width: 19.2%;
-  height: 100%;
-  margin-left: 0px;
-}
 
-.inside-page-content {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-
-}
 
 @media (max-width: 1190px){
     div.sidebarTitle{
@@ -646,37 +631,6 @@ pre code {
 
 }
 
-@media (max-width: 992px){
-  div.inside-page-content{
-    margin-top: 30px;
-  }
-  div.inside-page-content {
-
-    margin-left: 12px;
-  }
-  .post-content table tr td{
-    max-width: 200px;
-  }
-  div.sidebarTitle{
-        position: initial;
-      }
-  div#toc {
-      margin-top: 6px;
-      position: fixed;
-      width: 100%;
-      left: 0px;
-  }
-  div#toc ul{
-    padding-left:10px;
-  }
-}
-
-@media (max-width: 414px)
-{
-  div.sidebarTitle {
-      margin-top: 84px;
-  }
-}
 
 .contactusBtn {
     background: #3498db;

@@ -1,6 +1,9 @@
 - categoryname: Getting Started
   image: agent-interaction
   documents:
+  - documentname: Before You Get Started
+    pages:
+    - pagename: Considerations and Requirements
   - documentname: Retrieve API Keys
     pages:
     - pagename: Create a New API Key
@@ -18,7 +21,7 @@
     - pagename: Major Flows
 
 - categoryname: Agent Experience & Bots
-  image: agent-interaction
+  image: agent-experience
   documents:
   - documentname: Add Agent Widgets
     pages:
@@ -49,7 +52,7 @@
       - pagename: Deploying Bots on Messaging
 
 - categoryname: Client Side Configuration
-  image: agent-interaction
+  image: client-side
   documents:
     - documentname: Customized Chat Windows
       pages:
@@ -211,7 +214,7 @@
       - pagename: Sample Postman Collection
 
 - categoryname: Contact Center Management
-  image: agent-interaction
+  image: contact-center
   documents:
     - documentname: Audit Trail API
       pages:
@@ -347,7 +350,7 @@
             - subpagename: Delete an Unified Automatic Message
 
 - categoryname: Historical Data
-  image: agent-interaction
+  image: historical-data
   documents:
   - documentname: Data Access API
     pages:
@@ -560,7 +563,7 @@
     - pagename: IP Whitelisting
 
 - categoryname: Real-Time Data
-  image: agent-interaction
+  image: rt-data
   documents:
   - documentname: Operational Realtime API
     pages:
@@ -592,7 +595,7 @@
       - pagename: Appendix
 
 - categoryname: Rich Media
-  image: agent-interaction
+  image: rich-media
   documents:
     - documentname: Getting Started with Rich Messaging
       pages:
@@ -680,7 +683,7 @@
       - pagename: Release Notes
 
 - categoryname: 'Security & Authentication'
-  image: agent-interaction
+  image: security-authentication
   documents:
     - documentname: LiveEngage Applications
       pages:
@@ -717,8 +720,8 @@
             - subpagename: Refresh
             - subpagename: Logout
 
-- categoryname: 'Website Monitoring & App Analytics'
-  image: agent-interaction
+- categoryname: Website Monitoring
+  image: website-monitoring
   documents:
     - documentname: Engagement Attributes
       pages:

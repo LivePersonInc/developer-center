@@ -1,6 +1,6 @@
 function navigateContent(url) {
   var $content = $('#defaultcontent');
-  var $title = $('.documenttitle');
+  var $titlecontainer = $('.documenttitle');
   var $breadcrumbs = $('.breadcrumbs');
   //go to the indicated url passed from the linkclick function and find the content div and load it
   $content.load(url + ' #defaultcontent > *', function () {
@@ -12,7 +12,12 @@ function navigateContent(url) {
     var scroll = new SmoothScroll('a[href*="#"]');
   });
   //go to the indicated url passed from the linkclick function and find the title div and load it
-  $title.load(url + ' .documenttitle > *');
+  $titlecontainer.load(url + ' .documenttitle > *', function () {
+    //after the title is loaded, find the text of the title
+    var $title = $('.h1').text();
+    //then set it as the document's title so it shows up properly
+    $(document).prop('title', $title);
+  });
   //go to the indicated url passed from the linkclick function and find the breadcrumbs div and load it. Then, set breadcrumbs display if welcome page/normal page.
   $breadcrumbs.load(url + ' .breadcrumbs > *', function () {
     if (url.indexOf('index') != -1) {
@@ -32,6 +37,9 @@ function navigateContent(url) {
   if (selected.parent().hasClass('innerpageitem')) {
     $('.innerpageitem').removeClass("activeitem");
     $(".activepage").parent().addClass("activeitem");
+  }
+  if (selected.parent().hasClass('pageitem')) {
+    $('.innerpageitem').removeClass("activeitem");
   }
   $(".activepage").parent().parent().parent().addClass("active");
 }
@@ -54,6 +62,7 @@ $(document).ready(function () {
   }
 });
 
+//a function to create copy buttons on all code blocks
 function codeButtons () {
   // get all <code> elements.
   var allCodeBlocksElements = $('div[class^="language-"]');
@@ -77,6 +86,7 @@ function codeButtons () {
   });
 };
 
+//a function to control a click on the sidebar links
 function linkclick(that) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
@@ -95,6 +105,7 @@ $(window).on('popstate', (e) => {
   }
 });
 
+//a function to creaste the animation when you click the "solutions" button
 function solutionsbuttonclick(event) {
   event.preventDefault();
   //show/hide the appropriate sidebar when clicking on the button
@@ -108,6 +119,7 @@ function solutionsbuttonclick(event) {
   $('.solutionsbutton > .solutionsunderline').addClass('lined');
 };
 
+//a function to creaste the animation when you click the "documents" button
 function sidebarbuttonclick(event) {
   event.preventDefault();
   //same as above, just the other button
@@ -121,27 +133,29 @@ function sidebarbuttonclick(event) {
 };
 
 
+//a simple dropdown behavior for the anchorlinks box
 function menuDrop () {
-  //a simple dropdown behavior for the anchorlinks box
-  console.log("called");
-  var called = true;
+  //begin by setting the list's data to reflect that it's closed
   $(".anchorlist > a").data("expanded", "false");
+  //when a click on the list occurs
   $(".anchorlist > a").click(function(event){
       event.preventDefault();
+      //set data to true for toggle behavior
       var hasExpanded = $(this).data("expanded") == "true";
       if (hasExpanded) {
+        //if it has been clicked before, close it
           $(this).next().slideUp(400);
           $(this).data("expanded","false");
-          console.log("false happened");
       } else {
+        //if it hasn't been clicked before, open it
           $(this).next().slideDown(400);
           $(this).data("expanded","true");
-          console.log("true happened");
       }
       return false;
   });
 };
 
+//a function to loop over all amchpr;omls amd create a dropdown menu from them
 function populateAnchors () {
   //remove all previous anchoritems populated in the box
   $(".anchoritem").remove();

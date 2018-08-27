@@ -1,9 +1,9 @@
 ---
-pagename: Before You Get Started
+pagename: Considerations and Requirements
 sitesection: Documents
 categoryname: Guides
-documentname: Getting Started with LiveEngage APIs
-permalink: getting-started-with-liveengage-apis-before-you-get-started.html
+documentname: Getting Started
+permalink: before-you-get-started-considerations-and-requirements.html
 indicator: both
 ---
 

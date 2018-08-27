@@ -1,17 +1,9 @@
 ---
-<<<<<<< HEAD:pages/newdocuments/Security & Authenication/LiveEngage Applications/LE Applications Authorization/sample/application-login-sample-app.md
 pagename: Application Login Sample App
 sitesection:
 categoryname: Agent Interactions
 documentname: Authorizing LiveEngage Applications
 subfoldername: Sample App
-=======
-title: Application Login Sample App
-level1: Documents
-level2: Agent Interactions
-level3: LE Applications Authorization
-level4: Sample App
->>>>>>> a74522c47a9fedd3ec11f9b3dae133b0fd338fcb:pages/documents/agent-interactions/le applications authorization/sample/application-login-sample-app.md
 order: 70
 permalink: authorizing-liveengage-applications-sample-code-application-login-sample-app.html
 ---

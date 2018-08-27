@@ -9,9 +9,9 @@ Keep reading to learn what you need to get started, [how to read our documents](
 
 If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly via the "Looking for Support?" button on the left hand side.
 
-### Getting Started with LivePerson APIs:
+### Getting Started with LivePerson APIs
 
-* [Before You Get Started](getting-started-with-liveengage-apis-before-you-get-started.html)
+* [Before You Get Started](before-you-get-started-considerations-and-requirements.html)
 
 * [Create a LiveEngage account](http://register.liveperson.com/developer/signup)
 
@@ -23,7 +23,7 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 * [Getting Started with Authentication](major-platform-components-getting-started-with-authentication.html)
 
-### Common Use Cases:
+### Common Use Cases
 
 * Integrating LiveEngage with your native app - refer to our Mobile App Messaging SDKs, [for iOS](mobile-app-messaging-sdk-for-ios-overview.html) or [for Android](mobile-app-messaging-sdk-for-android-overview.html).
 
@@ -31,7 +31,7 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 * Building or integrating an Agent Workspace widget - add third party service widgets into the agent workspace for quick reference with our [Agent Workspace SDK](agent-workspace-widget-sdk-overview.html).
 
-### Major Platform Capabilities:
+### Major Platform Capabilities
 
 * [Engagement Attributes](major-platform-components-getting-started-with-engagement-attributes.html) - report on and pass consumer data to other APIs and integrations
 

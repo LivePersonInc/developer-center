@@ -18,6 +18,11 @@ a:hover, a:focus {
   text-decoration: none !important;
 }
 
+.nav > li {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
 code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
@@ -320,7 +325,7 @@ table {
 .underline:after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -13px;
   left: 0;
   width: 0;
   height: 2px;
@@ -338,7 +343,7 @@ table {
 .solutionsunderline:after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -13px;
   left: 180px;
   width: 0;
   height: 2px;
@@ -437,7 +442,10 @@ table {
 .topfolder img {
   float: left;
   margin-right: 10px;
-  margin-top: 11px;
+}
+
+.sidebarimage {
+  align-self: center;
 }
 
 .subfolder {
@@ -678,8 +686,13 @@ button span:last-of-type {
     grid-column: 1 / span 3;
   }
 
+  .defaultfooter {
+    grid-column: 4 / span 6;
+  }
+
   ul.mysidebar {
-    width: 22.4% !important;
+    width: 22.4%;
+    margin-left: 0px;
   }
 
   .documenttitlecontainer {
@@ -694,6 +707,7 @@ button span:last-of-type {
   .defaultbutton {
     width: 120px;
     padding: 12px 13px;
+    margin-top: 12px;
   }
 
   .sidebartop {
@@ -713,7 +727,8 @@ button span:last-of-type {
   }
 
   .solutionsunderline.lined:after {
-    width: 38%;
+    width: 45%;
+    left: 148px;
   }
 
   .topfolder {
@@ -729,6 +744,63 @@ button span:last-of-type {
   }
 }
 
-@media screen and (max-width:1440px){
+@media screen and (max-width:1024px){
 
+  .sitelogo {
+    margin-top: 15px;
+    margin-left: 18px;
+  }
+
+  .sidebarbuttons {
+    flex-direction: column;
+    top: 85px;
+  }
+
+  .documentsbutton {
+    margin-bottom: 34px;
+  }
+
+  .underline:after {
+    bottom: 52px;
+  }
+
+  .underline.lined:after {
+    width: 91%;
+  }
+
+  .solutionsunderline.lined:after {
+    width: 91%;
+    left: 0;
+  }
+
+  .sidebartop {
+    width: 21.3%;
+  }
+
+  ul.mysidebar {
+    width: 21.3%;
+  }
+
+  .mysidebar.nav li.folder > a {
+    font-size: 11px !important;
+  }
+
+  .innerfolder > a > span {
+    font-size: 11px !important;
+  }
+
+  .innerlink {
+    font-size: 10px !important;
+  }
+
+  .topfolder {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  .supportbutton {
+    padding: 10px 22px;
+    margin-right: 27px;
+    margin-left: 27px;
+  }
 }
