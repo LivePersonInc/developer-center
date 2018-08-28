@@ -27,6 +27,9 @@ code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
 
+.mobileheader {
+  display: none;
+}
 
 .defaultwrapper {
   height: 100vh;
@@ -91,6 +94,11 @@ code pre {
     padding-left: 10px;
     display: flex;
     align-items: center;
+  }
+
+  ul.mysidebar.nav {
+    align-self: flex-end;
+    width: 20%;
   }
 
   .sidebartop {
@@ -204,21 +212,21 @@ code pre {
   font-weight: 300;
   font-size: 16px
 }
-.homesearch #aa-search-input::-moz-placeholder { /* Firefox 19+ */
+#aa-search-input::-moz-placeholder { /* Firefox 19+ */
   color: #a2a2a2 !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px
 }
 
-.homesearch #aa-search-input:-ms-input-placeholder { /* IE 10+ */
+#aa-search-input:-ms-input-placeholder { /* IE 10+ */
   color: #a2a2a2 !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px
 }
 
-.homesearch #aa-search-input:-moz-placeholder { /* Firefox 18- */
+#aa-search-input:-moz-placeholder { /* Firefox 18- */
   color: #a2a2a2 !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -229,6 +237,10 @@ code pre {
   width: 100%;
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  z-index: 1001;
 }
 
 .aa-input-search {
@@ -625,7 +637,7 @@ a.anchoritem {
   word-break: break-word;
 }
 
-button {
+.sidebarbutton {
   color: #f2f2f2;
   background: inherit;
   width: 20px;
@@ -636,24 +648,24 @@ button {
   align-self: center;
 }
 
-button:focus {
+.sidebarbutton:focus {
   outline: none;
 }
 
-button span {
+.sidebarbutton span {
   position: absolute;
   transition: .3s;
   background: #b1b5bc;
 }
 
-button span:first-of-type {
+.sidebarbutton span:first-of-type {
   top: 25%;
   bottom: 25%;
   width: 10%;
   left: 45%;
 }
 
-button span:last-of-type {
+.sidebarbutton span:last-of-type {
   left: 25%;
   right: 25%;
   height: 10%;
@@ -691,8 +703,11 @@ button span:last-of-type {
   }
 
   ul.mysidebar {
-    width: 22.4%;
     margin-left: 0px;
+  }
+
+  ul.mysidebar.nav {
+    width: 23.4%;
   }
 
   .documenttitlecontainer {
@@ -754,6 +769,7 @@ button span:last-of-type {
   .sidebarbuttons {
     flex-direction: column;
     top: 85px;
+    left: 10px;
   }
 
   .documentsbutton {
@@ -777,7 +793,7 @@ button span:last-of-type {
     width: 21.3%;
   }
 
-  ul.mysidebar {
+  ul.mysidebar.nav {
     width: 21.3%;
   }
 
@@ -799,8 +815,97 @@ button span:last-of-type {
   }
 
   .supportbutton {
-    padding: 10px 22px;
-    margin-right: 27px;
-    margin-left: 27px;
+    padding: 10px 14px;
+    margin-right: 34px;
+    margin-left: 34px;
+  }
+
+  .supportbutton span {
+    font-size: 12px;
+  }
+
+  .anchorlist {
+    margin-right: -190px;
+    width: 25.7%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .anchorlist {
+    display: none !important;
+  }
+
+  .defaultbutton {
+    display:none;
+  }
+
+  .defaultcontent {
+    margin-top: 40px;
+  }
+
+  .pagehr {
+    margin-top: 28px;
+  }
+
+  .defaultsidebar {
+    width: 125%;
+  }
+
+  ul.mysidebar.nav {
+    width: 28%;
+  }
+
+  .sidebartop {
+    width: 28.6%;
+  }
+
+@media screen and (max-width: 450px) {
+  .defaultheader {
+    grid-column: 1 / span 7;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #3d4558;
+  }
+
+  .defaultheader img {
+    width: auto;
+  }
+
+  .mobileheader {
+    display: flex;
+  }
+
+  .searchimage {
+    display: none;
+  }
+
+  .algolia-autocomplete {
+    display: none !important;;
+  }
+
+  .defaultsidebar {
+    display: none;
+  }
+
+  .defaultcontent {
+    margin-left: 30px;
+    grid-column: 1 / span 6;
+  }
+
+  .documenttitlecontainer {
+    margin-left: 30px;
+    grid-column: 1 / span 6;
+  }
+
+  .defaultfooter {
+    grid-column: 1 / span 7;
+  }
+
+  .defaultfooter span {
+    margin: 19px 0px 19px 30px;
+  }
+
+  .h1 {
+    font-size: 17px;
   }
 }

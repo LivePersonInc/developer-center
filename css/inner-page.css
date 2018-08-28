@@ -134,11 +134,7 @@ pre code {
   border-bottom: 2.5px solid #5879DA;
 }
 
-@media screen and (max-width:768px){
-  .post-content table{
-    max-width: 88%;
-  }
-}
+
 
 @media screen and (max-width:425px){
   .post-content table{
@@ -707,4 +703,15 @@ pre code {
 
 .hide {
   visibility: none;
+}
+
+@media screen and (max-width:768px){
+  .post-content table{
+    max-width: 88%;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 25px;
+  }
+
 }

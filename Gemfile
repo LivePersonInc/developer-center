@@ -8,4 +8,6 @@ group :jekyll_plugins do
    gem 'algoliasearch-jekyll', '~> 0.8.0'
    gem 'jekyll-redirect-from'
    gem 'jekyll-gzip'
+   gem 'autoprefixer-rails'
+   gem 'jekyll-assets'
 end
