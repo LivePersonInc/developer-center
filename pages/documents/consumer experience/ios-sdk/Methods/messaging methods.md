@@ -26,6 +26,9 @@ func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInit
 | brandId | An account ID of the Brand| Optional Parameter
 | monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter
 
+*Note: if you want to register for push notifications immediately, the SDK needs to be initialized with an Account number, this only works for authenticated users.*
+
+
 ### showConversation
 
 This method is used to open the conversation screen.
@@ -236,6 +239,9 @@ func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->(
 | Completion block | A completion block for successfully logout. | Completion block will be invoked only if all logout steps succeeded. |
 | Failure block | A failure block with a specified error for logout failure. | Failure block will be invoked if at least one of the logout steps has failed. |
 
+*Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})*
+
+
 ### logout (Deprecated)
 
 This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
@@ -297,8 +303,14 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 | :--- | :--- | :--- |
 | token | A token that identifies the device to APNs. The token is an opaque data type because that is the form that the provider needs to submit to the APNs servers when it sends a notification to a device. | The APNs servers require a binary format for performance reasons. <br> This is the exact same dictionary as received in application:didRegisterForRemoteNotificationsWithDeviceToken: method |
 | notificationDelegate | An implementer of LPMessagingSDKNotificationDelegate. | |
-| alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-dev" string to the bundle ID.  |
-| authenticationParams | An optional authentication ([LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html)) param to be used for immediate Pusher registration | If passing authentication params, this method will register immediately to Pusher, the registration will be performed when calling showConversation |
+| alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-Dev" string to the bundle ID.  |
+| authenticationParams | An optional authentication ([LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html)) param to be used for immediate Pusher registration | If passing authentication params, this method will register immediately to Pusher, otherwise the registration will be performed when calling showConversation. |
+
+<div class="important">
+Important:
+</div>
+
+**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number, this only works for authenticated users. *Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})***
 
 
 ### getUnreadMessagesCount
