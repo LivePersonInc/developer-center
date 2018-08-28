@@ -1,3 +1,22 @@
+$(document).ready(function () {
+  //add anchor links to all h3 titles. See respective functions below for what they do.
+  anchors.add('h3');
+  populateAnchors ();
+  menuDrop ();
+  codeButtons();
+  mobileHamburger();
+  //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
+  $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+  //call smooth-scroll on all anchorlinks
+  var scroll = new SmoothScroll('a[href*="#"]');
+  //set breadcrumbs display if welcome page/normal page.
+  if (window.location.href.indexOf('index') != -1) {
+    return false;
+  } else {
+    $('.breadcrumbs').removeClass('breadhidden');
+  }
+});
+
 function navigateContent(url) {
   var $content = $('#defaultcontent');
   var $titlecontainer = $('.documenttitle');
@@ -42,25 +61,9 @@ function navigateContent(url) {
     $('.innerpageitem').removeClass("activeitem");
   }
   $(".activepage").parent().parent().parent().addClass("active");
-}
+};
 
-$(document).ready(function () {
-  //add anchor links to all h3 titles. See respective functions below for what they do.
-  anchors.add('h3');
-  populateAnchors ();
-  menuDrop ();
-  codeButtons();
-  //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
-  $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
-  //call smooth-scroll on all anchorlinks
-  var scroll = new SmoothScroll('a[href*="#"]');
-  //set breadcrumbs display if welcome page/normal page.
-  if (window.location.href.indexOf('index') != -1) {
-    return false;
-  } else {
-    $('.breadcrumbs').removeClass('breadhidden');
-  }
-});
+
 
 //a function to create copy buttons on all code blocks
 function codeButtons () {
@@ -176,9 +179,17 @@ function populateAnchors () {
 };
 
 function mobileHamburger (){
-  var $hamburger = $(".hamburger");
-  $hamburger.on("click", function(e) {
-  $hamburger.toggleClass("is-active");
-   // Do something else, like open/close menu
+  var $hamburger = $('.hamburger');
+  var sidebar = $('#mysidebar');
+  $hamburger.on('click', function(e) {
+  $hamburger.toggleClass('is-active');
+  var hasExpanded = $(sidebar).data("expanded") == "true";
+  if (hasExpanded) {
+      $(sidebar).slideUp(400);
+      $(sidebar).data("expanded","false");
+  } else {
+      $(sidebar).slideDown(400);
+      $(sidebar).data("expanded","true");
+  }
  });
 }

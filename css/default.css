@@ -828,6 +828,10 @@ a.anchoritem {
     margin-right: -190px;
     width: 25.7%;
   }
+
+  .codebtn {
+    display: none;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -865,6 +869,7 @@ a.anchoritem {
     margin-left: 0;
     margin-right: 0;
     background-color: #3d4558;
+    padding: 0;
   }
 
   .defaultheader img {
@@ -873,6 +878,16 @@ a.anchoritem {
 
   .mobileheader {
     display: flex;
+    grid-column: 1 / span 2;
+  }
+
+  .mobilelogo {
+    flex: 1;
+    margin-top: 20px;
+  }
+
+  .placeholder {
+    flex: 1;
   }
 
   .searchimage {
@@ -884,6 +899,43 @@ a.anchoritem {
   }
 
   .defaultsidebar {
+    grid-row: auto;
+  }
+
+  .sidebartop {
+    display: none;
+  }
+
+  #mysidebar {
+    display: none;
+  }
+
+  ul.mysidebar.nav {
+    background-color: #3d4558;
+    z-index: 100;
+    left: 0px;
+    top: 82px !important;
+    position: absolute !important;
+    width: 100%;
+  }
+
+  .mysidebar.nav li.folder > a {
+    font-size: 18px !important;
+  }
+
+  .innerlink {
+    font-size: 18px !important;
+  }
+
+  .innerfolder > a > span {
+    font-size: 18px !important;
+  }
+
+  .sidebarhr {
+    display: none;
+  }
+
+  .supportbutton {
     display: none;
   }
 
@@ -907,5 +959,13 @@ a.anchoritem {
 
   .h1 {
     font-size: 17px;
+  }
+
+  .codebtn {
+    display: none;
+  }
+
+  .highlight {
+    padding-top: 22px;
   }
 }

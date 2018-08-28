@@ -707,7 +707,7 @@ pre code {
 
 @media screen and (max-width:768px){
   .post-content table{
-    max-width: 88%;
+    max-width: 100%;
   }
 
   .breadcrumbs {
