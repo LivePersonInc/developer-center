@@ -10,7 +10,8 @@ $(document).ready(function () {
   //call smooth-scroll on all anchorlinks
   var scroll = new SmoothScroll('a[href*="#"]');
   //set breadcrumbs display if welcome page/normal page.
-  if (window.location.href.indexOf('index') != -1) {
+  var $title = $('.h1').text();
+  if ($title.indexOf('Welcome') != -1) {
     return false;
   } else {
     $('.breadcrumbs').removeClass('breadhidden');

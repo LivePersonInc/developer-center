@@ -165,6 +165,12 @@ code pre {
   margin-top: 1px;
   order: 1;
   margin-right: 7%;
+  border: none;
+  background-color: inherit;
+}
+
+.codebtn:focus {
+  outline: none;
 }
 
 .codebtn img {
@@ -523,6 +529,7 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 
 .language-swift:before{
   content: "SWIFT";
+  margin-left: 5px;
 }
 
 .language-json:before{
