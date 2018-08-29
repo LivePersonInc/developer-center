@@ -5,6 +5,7 @@ $(document).ready(function () {
   menuDrop ();
   codeButtons();
   mobileHamburger();
+  sidebarMenuClick();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -90,12 +91,16 @@ function codeButtons () {
   });
 };
 
+//a function to wrap the function which controls the sidebar links - yes I know this is dumb, blame Firefox and the way it handles events.
+function sidebarMenuClick() {
+//grab all the innerlinks
+var sidebarlink = document.getElementsByClassName('innerlink');
 //a function to control a click on the sidebar links
-function linkclick(that) {
+function linkclick(event) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
   //grab the url to which the link is pointing
-  var url = $(that).attr("href");
+  var url = $(this).attr("href");
   // call the navigateContent function and pass that url to it
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
@@ -108,6 +113,11 @@ $(window).on('popstate', (e) => {
     navigateContent(state.url);
   }
 });
+//for every lnnerlink, add an event listener that will call the above function.
+for (var i = 0 ; i < sidebarlink.length; i++) {
+   sidebarlink[i].addEventListener('click' , linkclick , false ) ;
+}
+};
 
 //a function to creaste the animation when you click the "solutions" button
 function solutionsbuttonclick(event) {

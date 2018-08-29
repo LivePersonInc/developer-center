@@ -695,6 +695,21 @@ a.anchoritem {
   padding-left: 10px;
 }
 
+.mysidebar::-webkit-scrollbar-track {
+	background-color: #3d4558;
+}
+
+.mysidebar::-webkit-scrollbar{
+	width: 10px;
+	background-color: #3d4558;
+}
+
+.mysidebar::-webkit-scrollbar-thumb {
+	background-color: #f2f2f2;
+}
+
+/* Media Queries Begin */
+
 @media screen and (max-width:1440px){
   .defaultheader {
     grid-column: 4 / span 4;
@@ -759,6 +774,7 @@ a.anchoritem {
 
   .supportbutton {
     padding: 10px 18px;
+    margin-bottom: 20px;
   }
 
   .anchorlist {

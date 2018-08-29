@@ -10,7 +10,7 @@
     <div class="sidebarimage">
       <img src="img/getting-started.png" />
     </div>
-    <a onclick='linkclick(this)' href="/index.html">WELCOME</a>
+    <a  class="innerlink" href="/index.html">WELCOME</a>
   </li>
   {% for category in site.data.documentsupdated %}
   <li class="folder topfolder">
@@ -28,14 +28,14 @@
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
           <li class="pageitem">
-            <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a  class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -53,7 +53,7 @@
   </a>
 </ul>
 
-<ul id="mysidebarsolutions" class="mysidebar nav fixed sidebarmobileclosed solutionslist">
+<ul id="mysidebarsolutions" class="mysidebar nav fixed sidebarmobileclosed solutionslist gray-skin">
 {% for solution in site.data.solutions %}
 <li class="folder topfolder">
   <img src="img/{{ solution.image }}.png" />
@@ -61,7 +61,7 @@
   <ul>
     {% for document in solution.documents %}
     <li class="pageitem">
-      <a onclick='linkclick(this)' class="innerlink" id="innerlink" href="/{{ solution.solutionname | append: '/' | append: document.documentname | slugify }}.html">{{ document.documentname }}</span></a>
+      <a  class="innerlink" id="innerlink" href="/{{ solution.solutionname | append: '/' | append: document.documentname | slugify }}.html">{{ document.documentname }}</span></a>
     </li>
     {% endfor %}
   </ul>
