@@ -236,6 +236,10 @@ div#toc > ul {
   margin-bottom: 10px;
 }
 
+.post-content .important:first-of-type {
+  margin-top: 0;
+}
+
 
 
 div#toc ul li {
@@ -302,8 +306,8 @@ ul.mysidebar.nav {
   margin-top: -18px;
   height: 100%;
   position: fixed;
-  top: 202px;
-  height: 75.4vh;
+  top: 109px;
+  height: 90vh;
   overflow-y: auto;
   list-style: none;
   padding-top: 20px;
