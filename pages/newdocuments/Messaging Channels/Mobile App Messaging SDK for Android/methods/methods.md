@@ -70,10 +70,7 @@ There are 2 authenticated connection methods:
 _**Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail._
 
 <div class="important">
-Optional:
-
-When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
-
+<b>Optional:</b> When using this method, you can also set a special redirect URL when authenticating by calling : <b>lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)</b>
 </div>
 
 {:start="2"}
@@ -199,9 +196,8 @@ There are 2 authenticated connection methods:
 
 _**Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail._
 
-<div class="important"> Optional:
-When using this method, you can also set a special redirect URL when authenticating by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
-
+<div class="important"> <b>Optional:</b>
+When using this method, you can also set a special redirect URL when authenticating by calling : <b>lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)</b>
 </div>
 
 {:start="2"}
@@ -411,11 +407,7 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
 <div class="important">
-Important:
-
-
-**The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.**
-
+The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.
 </div>
 
 
@@ -604,7 +596,7 @@ public static void shutDown()
 
 *Note: This does not end the current messaging conversation.*
 
-**Important: This method must not be called when the conversation screen is displayed.**
+<div class="important"> This method must not be called when the conversation screen is displayed.</div>
 
 ### clearHistory
 
@@ -634,11 +626,7 @@ In order to unregister from push, it must be called when there is network availa
 *Note: This does not end the current messaging conversation.*
 
 <div class="important">
-Important:
-
-
-**This method must not be called when the conversation screen is displayed.**
-
+This method must not be called when the conversation screen is displayed.
 </div>
 
 ```swift

@@ -30,12 +30,9 @@ You can find all the related configurations in the [resources ID table](consumer
     - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
     - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
     - **Important:** Values for these descriptions are up to the brand to define, these are only examples.
-    
+
 <div class="important">
-Important:
-
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
 </div>
 
 ```swift

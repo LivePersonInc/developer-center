@@ -40,13 +40,7 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
 | onInitFailed | Callback that indicates the init process has failed. <br> *Note: You can call initialize before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK in your app's Application class.* |
 
 <div class="important">
-Important:
-
-
-**To use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params)**
-
-Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
-
+In order tso use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click <a href="android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params">here</a>. Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
 </div>
 
 The SDK supports two operation modes:

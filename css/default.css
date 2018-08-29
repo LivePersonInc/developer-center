@@ -75,6 +75,7 @@ code pre {
 
   .defaultheader img {
       width: 22px;
+      min-width: 22px;
   }
 
   .documenttitlecontainer {
@@ -558,6 +559,10 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
   content: "RUBY";
 }
 
+.language-xml:before {
+  content: "XML";
+}
+
 .documenttitle {
   display: flex;
   margin-top: 25px;
@@ -568,9 +573,9 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 }
 
 .pagehr {
-  margin-top: 24px;
   border: 0;
   border-top: 1px solid #dedddd;;
+  margin-top: 20px;
 }
 
 .sidebarhr {
@@ -586,6 +591,7 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
   border: solid 1px #f2f1f2;
   margin-right: 67px;
   margin-left: 67px;
+  text-align: center;
 }
 
 .supportbutton span {

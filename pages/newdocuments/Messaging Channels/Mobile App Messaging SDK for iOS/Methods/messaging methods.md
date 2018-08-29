@@ -80,10 +80,7 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 
 <div class="important">
-Important:
-
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
 </div>
 
 ```swift
@@ -290,11 +287,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 ```
 
 <div class="important">
-Important:
-
-
-**The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.**
-
+The proprietary SDK notification is only for display purposes, interacting with it will launch the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 </div>
 
 ### registerPushNotifications
@@ -315,11 +308,7 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 | authenticationParams | An optional authentication ([LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html)) param to be used for immediate Pusher registration | If passing authentication params, this method will register immediately to Pusher, otherwise the registration will be performed when calling showConversation. |
 
 <div class="important">
-Important:
-
-
-**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number. This only works for authenticated users. *Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize))**
-
+In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number. This only works for authenticated users. After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see <a href="/consumer-experience-ios-sdk-messaging-methods.html#initialize">initialized</a>.
 </div>
 
 
@@ -330,15 +319,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 The unread messages number is passed to the SDK through LP Push service with every push.
 
 <div class="important">
-IMPORTANT NOTES :
-
-
-A push is sent to the last device which was registered to the LP push service, meaning that the unread messages indication can be fetched by only one device.
-
-* If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once a message has been sent from that device and the push arrives to it.
-
-* In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
-
+A push is sent to the last device which was registered to the LP push service, meaning that the unread messages indication can be fetched by only one device. If the user is using two devices in parallel, the device that does not receive push events will receive updates of the unread message indicator only once a message has been sent from that device and the push arrives to it. In addition, if a conversation is ongoing in web messaging, then the push will not arrive to the device, since the web-socket is already open.
 </div>
 
 **Getting the unread message badge counter**

@@ -40,11 +40,7 @@ _**Note:** In order to avoid collisions, each SDK resource starts with a prefix 
 ```
 
 <div class="important">
-Important:
-
-
 If you want to change the Brand name, when using the SDK on Activity Mode, you'll need to create an English Locale and override the name.
-
 </div>
 
 ### Create new Localization File

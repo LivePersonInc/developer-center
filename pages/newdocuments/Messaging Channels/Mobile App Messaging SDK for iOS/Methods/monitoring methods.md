@@ -15,10 +15,7 @@ indicator: messaging
 ---
 
 <div class="important">
-Important:
-
-Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the following [steps](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params)
-
+Monitoring API is enabled only when the SDK is initialized with <a href="consumer-experience-ios-sdk-interfacedefinitions.html">LPMonitoringParams</a>, to use this initialization refer to the following <a href="consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params">steps</a>.
 </div>
 
 ### sendSDE

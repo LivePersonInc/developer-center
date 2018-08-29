@@ -80,9 +80,8 @@ More info in [Configuring the SDK](/android-configuring-sdk.html).
 <bool name="show_yes_no_question">
 ```
 
-<div class="important">Important:
-If both agentView(**show_agent_details_csat**) and resolutionConfirmationView(**show_yes_no_question**) are shown, resolutionConfirmationView will be always hidden (even if set to true).
-
+<div class="important">
+If both agentView (<b>show_agent_details_csat</b>) and resolutionConfirmationView (<b>how_yes_no_question</b>) are shown, resolutionConfirmationView will be always hidden (even if set to true).
 </div>
 
 - The question text color is defined with:
