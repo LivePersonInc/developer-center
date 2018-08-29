@@ -1,5 +1,5 @@
 - categoryname: Getting Started
-  image: agent-interaction
+  image: getting-started
   documents:
   - documentname: Before You Get Started
     pages:
@@ -783,3 +783,53 @@
             - subpagename: Engagement Events
             - subpagename: Engagement Window Events
         - pagename: Changelog
+
+- categoryname: Solutions
+  image: mcs-toolkit
+  documents:
+    - documentname: IVR Deflection
+      pages:
+        - pagename: IVR Deflection
+        - pagename: IVR Deflection for Chat
+        - pagename: Setting Up IVR Deflection for Chat
+    - documentname: Mobile App Messaging
+      pages:
+        - pagename: Add Messaging to Your App
+    - documentname: MCS Toolkit
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Using API to Build the Toolkit
+    - documentname: CRM Integrations
+      pages:
+        - pagename: SalesForce
+        - pagename: Microsoft Dynamics
+        - pagename: NetSuite
+        - pagename: SugarCRM
+        - pagename: Zendesk
+    - documentname: SMS with LiveEngage
+      pages:
+        - pagename: Overview
+        - pagename: IVR Deflection
+        - pagename: Clickable Mobile Content to SMS
+        - pagename: Desktop Content Campaign
+        - pagename: Google AdWords - Click-to-Message
+        - pagename: SMS via Mobile App Messaging
+        - pagename: Appendix
+    - documentname: LiveEngage MMS Viewer
+      pages:
+        - pagename: Overview
+        - pagename: Technical Description
+        - pagename: Deployment Steps
+        - pagename: Additional Options
+    - documentname: Custom Dashboard
+      pages:
+        - pagename: Create a Custom Real Time Dashboard
+        - pagename: Chat Metrics
+        - pagename: Messaging Metrics
+    - documentname: Video Chat
+      pages:
+        - pagename: Add Video to Chat Conversations
+        - pagename: Plan Your Service
+        - pagename: Develop the Service
+        - pagename: Build Your Widgets

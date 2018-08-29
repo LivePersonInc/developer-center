@@ -63,6 +63,7 @@ function navigateContent(url) {
     $('.innerpageitem').removeClass("activeitem");
   }
   $(".activepage").parent().parent().parent().addClass("active");
+  window.scrollTo(0,0);
 };
 
 
@@ -129,8 +130,8 @@ function solutionsbuttonclick(event) {
     solutionsSideBar.fadeIn(200);
   });
   //show/hide the underline on the appropriate sidebar when clicking on the button
-  $('.documentsbutton > .underline').removeClass('lined');
-  $('.solutionsbutton > .solutionsunderline').addClass('lined');
+  $('.documentsbutton').removeClass('lined');
+  $('.solutionsbutton').addClass('lined');
 };
 
 //a function to creaste the animation when you click the "documents" button
@@ -142,8 +143,8 @@ function sidebarbuttonclick(event) {
   solutionsSideBar.fadeOut(200, function () {
     documentsSideBar.fadeIn(200);
   });
-  $('.solutionsbutton > .solutionsunderline').removeClass('lined');
-  $('.documentsbutton > .underline').addClass('lined');
+  $('.solutionsbutton').removeClass('lined');
+  $('.documentsbutton').addClass('lined');
 };
 
 

@@ -299,11 +299,11 @@ table {
 }
 
 .sidebarbuttons {
-  display: flex;
-  align-self: center;
-  position: fixed;
-  top: 145px;
-  left: 38px;
+  display: none;
+  flex: 1;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 
 .documentsbutton {
@@ -344,7 +344,7 @@ table {
 .underline:after {
   content: "";
   position: absolute;
-  bottom: -13px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -356,13 +356,13 @@ table {
 }
 
 .underline.lined:after {
-  width: 45%;
+  width: 37%;
 }
 
 .solutionsunderline:after {
   content: "";
   position: absolute;
-  bottom: -13px;
+  bottom: 0;
   left: 180px;
   width: 0;
   height: 2px;
@@ -374,7 +374,7 @@ table {
 }
 
 .solutionsunderline.lined:after {
-  width: 42%;
+  width: 32%;
 }
 
 .topfolder {
@@ -459,7 +459,6 @@ table {
 }
 
 .topfolder img {
-  float: left;
   margin-right: 10px;
 }
 
@@ -711,7 +710,7 @@ a.anchoritem {
 }
 
 .mysidebar::-webkit-scrollbar-thumb {
-	background-color: #f2f2f2;
+	background-color: #53576E;
 }
 
 /* Media Queries Begin */
