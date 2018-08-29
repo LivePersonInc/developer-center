@@ -26,7 +26,7 @@ func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInit
 | brandId | An account ID of the Brand| Optional Parameter
 | monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter
 
-*Note: if you want to register for push notifications immediately, the SDK needs to be initialized with an Account number, this only works for authenticated users.*
+*Note: if you want to register for push notifications immediately, the SDK needs to be initialized with an Account number. This only works for authenticated users.*
 
 
 ### showConversation
