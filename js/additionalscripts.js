@@ -22,14 +22,13 @@ function navigateContent(url) {
   var $content = $('#defaultcontent');
   var $titlecontainer = $('.documenttitle');
   var $breadcrumbs = $('.breadcrumbs');
-  //go to the indicated url passed from the linkclick function and find the content div and load it
-  $content.load(url + ' #defaultcontent > *', function () {
-    //add anchor links to all h3 titles. See respective functions below for what they do.
-    anchors.add('h3');
-    populateAnchors ();
-    codeButtons();
-    $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
-    var scroll = new SmoothScroll('a[href*="#"]');
+  //go to the indicated url passed from the linkclick function and find the breadcrumbs div and load it. Then, set breadcrumbs display if welcome page/normal page.
+  $breadcrumbs.load(url + ' .breadcrumbs > *', function () {
+    if (url.indexOf('index') != -1) {
+      $(this).addClass('breadhidden');
+    } else {
+      $(this).removeClass('breadhidden');
+    }
   });
   //go to the indicated url passed from the linkclick function and find the title div and load it
   $titlecontainer.load(url + ' .documenttitle > *', function () {
@@ -38,13 +37,14 @@ function navigateContent(url) {
     //then set it as the document's title so it shows up properly
     $(document).prop('title', $title);
   });
-  //go to the indicated url passed from the linkclick function and find the breadcrumbs div and load it. Then, set breadcrumbs display if welcome page/normal page.
-  $breadcrumbs.load(url + ' .breadcrumbs > *', function () {
-    if (url.indexOf('index') != -1) {
-      $(this).addClass('breadhidden');
-    } else {
-      $(this).removeClass('breadhidden');
-    }
+  //go to the indicated url passed from the linkclick function and find the content div and load it
+  $content.load(url + ' #defaultcontent > *', function () {
+    //add anchor links to all h3 titles. See respective functions below for what they do.
+    anchors.add('h3');
+    populateAnchors ();
+    codeButtons();
+    $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+    var scroll = new SmoothScroll('a[href*="#"]');
   });
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');
