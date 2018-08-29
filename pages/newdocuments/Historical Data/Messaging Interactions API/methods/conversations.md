@@ -430,7 +430,7 @@ events          | The SDEs that were received from the brand. | Container (see [
 serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
 sdeType         | Type of SDE.                                | enum
 
-[Here](/data-messaging-interactions-appendix.html){:target="_blank"} you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
+[Here](/data-messaging-interactions-appendix.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
 
 
 *Response Time Info*

@@ -13,12 +13,12 @@ indicator: chat
 
 ### Major components
 
-[Server Chat API](consumer-experience-server-chat-getting-started.html){:target="_blank"}
+[Server Chat API](consumer-experience-server-chat-getting-started.html)
 
-[JS Chat API](consumer-experience-javascript-chat-getting-started.html){:target="_blank"}
+[JS Chat API](consumer-experience-javascript-chat-getting-started.html)
 
-[App Engagement API](rt-interactions-app-engagement-overview.html){:target="_blank"}
+[App Engagement API](rt-interactions-app-engagement-overview.html)
 
 ### Additional APIs
 
-[Domain API](agent-domain-domain-api.html){:target="_blank"}
+[Domain API](agent-domain-domain-api.html)

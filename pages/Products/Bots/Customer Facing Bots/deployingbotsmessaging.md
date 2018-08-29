@@ -28,7 +28,7 @@ indicator:
 
 ### Step 2 - Implement the Messaging Agent SDK
 
-Our Messaging Agent SDK can be found at [this location](messaging-agent-sdk-overview.html){:target="_blank"}.
+Our Messaging Agent SDK can be found at [this location](messaging-agent-sdk-overview.html).
 
 Based on the use cases identified for your bot, you can create a simple bot for specific tasks or operations, or a more complex bot that acts as a virtual agent. 
 
@@ -38,7 +38,7 @@ A simple bot within LiveEngage is one that handles a simple task and does not ha
 
 The following example and sample code demonstrate an 'automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message. 
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} for sample code and instructions. 
+[Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) for sample code and instructions. 
 ​
 
 #### Creating an advanced bot
@@ -47,11 +47,11 @@ Utilize the methods provided by LivePerson’s Messaging Agent SDK to automate y
 
 The following example demonstrating running a bot using the major API calls.
 
-[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot){:target="_blank"} to review the full code repository on Github. 
+[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github. 
 
 You can also watch this demo video, which will guide you on how to run this example bot:
 
-[https://www.youtube.com/embed/7PVj6nhjG5o](https://www.youtube.com/embed/7PVj6nhjG5o){:target="_blank"}
+[https://www.youtube.com/embed/7PVj6nhjG5o](https://www.youtube.com/embed/7PVj6nhjG5o)
 
 ### Step 3 - Create backup systems for your bot with Clusters (optional)
 
@@ -65,13 +65,13 @@ For enterprise brands, take additional measure to ensure the scalability of your
 
 This example demonstrates running a bot on a ​horizontal scalable cluster. It can be used for a few use cases:
 
-[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster){:target="_blank"} to review the full code repository on Github. 
+[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github. 
 ​
 You can also watch the demo video which will guide you through this example bot:
-[https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho){:target="_blank"}
+[https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho)
 
 ​As well as a code review video: 
-[https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk){:target="_blank"}
+[https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk)
 
 ### Step 4 - Assign your bot to engagements and manage bot escalations
 

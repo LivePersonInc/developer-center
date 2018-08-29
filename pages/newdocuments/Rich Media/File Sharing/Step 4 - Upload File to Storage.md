@@ -33,7 +33,7 @@ Upload the file as binary.
 | 401 | Temp URL invalid |
 
 
-**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}_
+**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection)_
 
 
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/){:target="_blank"}_
+Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/)_

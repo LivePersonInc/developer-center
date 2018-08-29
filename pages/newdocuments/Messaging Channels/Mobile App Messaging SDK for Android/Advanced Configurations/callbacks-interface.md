@@ -93,4 +93,4 @@ To remove a callback:
 public static void removeCallBack()
 ```
 
-Click [here](android-callbacks-index.html){:target="_blank"} for more information.
+Click [here](android-callbacks-index.html) for more information.

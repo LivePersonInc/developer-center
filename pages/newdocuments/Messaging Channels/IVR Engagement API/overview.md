@@ -38,7 +38,7 @@ Before getting started with the IVR API, set up a LiveEngage campaign with an IV
 
 3. Copy the static link, as shown below, if choosing to skip the availability check.
 
-3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
 
 ![IVR Guide](img/ivr.png)
 
@@ -48,15 +48,15 @@ From there, follow the instructions found in the rest of this document to use th
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* smt
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 **Benefits of the IVR Deflection Solution**
 
@@ -70,4 +70,4 @@ Top use cases of deflecting calls to mobile messaging are for inquiries that are
 
 * Requests regarding services provided online or via mobile apps, for example, ordering checks or signing up for digital services such as automatic bill payment or alerts.
 
-In addition to this API, please see [IVR Call Deflection document](products-channels-ivr-deflection-solution-introduction.html){:target="_blank"}. For more detailed information on setting up IVR engagements (a type of offsite engagement) within LiveEngage, refer to the Offsite Engagements connection area article.
+In addition to this API, please see [IVR Call Deflection document](products-channels-ivr-deflection-solution-introduction.html). For more detailed information on setting up IVR engagements (a type of offsite engagement) within LiveEngage, refer to the Offsite Engagements connection area article.

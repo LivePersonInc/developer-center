@@ -32,7 +32,7 @@ This API retrieves a list of users for a specific account.
 
 **Request Body**
 
-[Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-users-appendix.html) for Entity Structure and Entity Example.
 
 **Path Parameters**
 
@@ -67,4 +67,4 @@ This API retrieves a list of users for a specific account.
 
 **Response Body**
 
-[Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-users-appendix.html) for Entity Structure and Entity Example.

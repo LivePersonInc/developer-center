@@ -16,7 +16,7 @@ indicator: chat
 
 Triggered in response to getPreChatSurvey.
 
-*Note: For more information about the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html){:target="_blank"}.*
+*Note: For more information about the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html).*
 
 **Sample Response**
 

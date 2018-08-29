@@ -15,11 +15,11 @@ keywords: oauth2.0 jwt token
 indicator: messaging
 ---
 
-In this tutorial you will use the APIs with the authenticated identity of the consumer using a [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519){:target="_blank"}.
+In this tutorial you will use the APIs with the authenticated identity of the consumer using a [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519).
 
 ### Prerequisites
-See [Prerequisites](consumer-int-get-msg.html#prerequisites){:target="_blank"}.
-In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator) according to [these instructions](consumer-int-account-provision.html){:target="_blank"}.
+See [Prerequisites](consumer-int-get-msg.html#prerequisites).
+In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator) according to [these instructions](consumer-int-account-provision.html).
 
 ### Step 1 - Configure the Authentication Connector
 Log into LiveEngage and navigate to Campaigns > Data Sources > Authentication Server > Configure.

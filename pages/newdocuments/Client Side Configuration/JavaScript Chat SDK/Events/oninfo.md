@@ -24,13 +24,13 @@ This is published when there is a change in the chat information.
 | visitorName    | The visitor name.                   | string      |                                                                                                                                                         |
 | agentName      | The agent name.                     | string      |                                                                                                                                                         |
 | rtSessionId    | The chat session identifier.        | string      |                                                                                                                                                         |
-| intialised     | Chat initialization state.          | Boolean     | Depends on the [onInit](consumer-experience-javascript-chat-oninit.html){:target="_blank"} event having been triggered.                                                   |
+| intialised     | Chat initialization state.          | Boolean     | Depends on the [onInit](consumer-experience-javascript-chat-oninit.html) event having been triggered.                                                   |
 | agentTyping    | The agent typing state.             | Boolean     |                                                                                                                                                         |
 | chatInProgress | If a chat is currently in progress. | Boolean     |                                                                                                                                                         |
 | visitorId      | The visitor identifier.             | string      | This should be passed in from monitoring on the chat request and also between chats if you re-start a new chat.                                         |
 | agentId        | The agent identifier for this site. | string      |                                                                                                                                                         |
 | chatSessionKey | The chat session key.               | string      |                                                                                                                                                         |
-| lastUpdate     | The last time the chat was updated. | date        | The [onInfo](consumer-experience-javascript-chat-oninfo.html){:target="_blank"} state event will not be triggered if this is the only change since the last onInfo event. |
+| lastUpdate     | The last time the chat was updated. | date        | The [onInfo](consumer-experience-javascript-chat-oninfo.html) state event will not be triggered if this is the only change since the last onInfo event. |
 | state          | The current chat state.             | string      | This is the same information that returns on chat request response for information on the info fields.                                                  |
 
 **Sample Response**

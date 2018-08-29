@@ -15,7 +15,7 @@ indicator: messaging
 
 The client can send information about its type, for example, mobile, desktop, browser type, OS version, etc. In this tutorial, we will see how to attach this information to client requests, and where to read the equivalent information about the agent.
 
-In order to send client properties, repeat the [Getting Started](consumer-int-getting-started.html){:target="_blank"} tutorial. In Step 3, you are asked to open a new connection. Instead of the shell command written there, use the following command:
+In order to send client properties, repeat the [Getting Started](consumer-int-getting-started.html) tutorial. In Step 3, you are asked to open a new connection. Instead of the shell command written there, use the following command:
 
 ```sh
 LP_PROPS='{"type":".ClientProperties","deviceFamily":"MOBILE","os":"ANDROID"}'
@@ -24,9 +24,9 @@ wscat -k 60 -H "Authorization:jwt $LP_JWT" -H "Client-Properties:$LP_PROPS" -c "
 
 After sending a text message in Step 5, the device type and OS will be displayed in the Agent Workspace under the ``Consumer Info`` table:
 
-![consumer-msg](img/consumer_client_properties.png){:target="_blank"}
+![consumer-msg](img/consumer_client_properties.png)
 
-Other ``ClientProperties`` that can be sent can be found in the [API Reference](consumer-int-api-reference.html#conection-establishment){:target="_blank"}.
+Other ``ClientProperties`` that can be sent can be found in the [API Reference](consumer-int-api-reference.html#conection-establishment).
 
 This object can be used as part of the websocket headers, or as part of the ``InitConnection`` request.
 {% include json.html name = "req_editor" 

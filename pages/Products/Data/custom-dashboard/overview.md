@@ -25,7 +25,7 @@ Create your own custom dashboards to manage your contact center performance in r
 
 * Monitor performance at account level, skill level or agent level.
 
-_Note: LiveEngage and our report builder functionality provide you with a slew of reports and dashboards. Before you invest time in developing your own dashboards, we recommend that you first review what’s available to ensure your needs are not already met out of the box. For more info on our report builder, [please click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/AM/Report+Builder+User+Guide.pdf){:target="_blank"}.
+_Note: LiveEngage and our report builder functionality provide you with a slew of reports and dashboards. Before you invest time in developing your own dashboards, we recommend that you first review what’s available to ensure your needs are not already met out of the box. For more info on our report builder, [please click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/AM/Report+Builder+User+Guide.pdf).
 
 **Plan your dashboard audience & goal**
 

@@ -49,8 +49,8 @@ The body media type must have one of the following formats:
 | agent-survey | URI for retrieving the Agent survey structure and submitting the survey data. link relationship                                       |                   |
 | info         | Retrieves information regarding the current status of the chat.                                                                       | link relationship |
 | next         | The method for polling additional events. This will retrieve events added after your last poll.                                       | link relationship |
-| ``           | The chat events. See [Chat events](agent-retrieve-chat-events.html){:target="_blank"}.                                                                  | -                 |
-| ``           | The actual information about the chat. See [Chat information](agent-retrieve-chat-info.html){:target="_blank"}.                                           |                   |
+| ``           | The chat events. See [Chat events](agent-retrieve-chat-events.html).                                                                  | -                 |
+| ``           | The actual information about the chat. See [Chat information](agent-retrieve-chat-info.html).                                           |                   |
 
 **Response Codes**
 

@@ -19,9 +19,9 @@ Once you have the video service and accompanying html elements in place, you are
 
 **To create your agent side widget, you will need:**
 
-* [Agent Workspace Widget SDK](/agent-workspace-sdk-overview.html){:target="_blank"}
+* [Agent Workspace Widget SDK](/agent-workspace-sdk-overview.html)
 
-* [Add widget to the agent workspace](/guides-agent-workspace-widget.html){:target="_blank"}
+* [Add widget to the agent workspace](/guides-agent-workspace-widget.html)
 
 The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the LiveEngage Workspace. 
 
@@ -39,7 +39,7 @@ Hosted in the web service resources. Used only to bind on session data in order 
 
 To create your consumer side widget you will need:
 
-* [Engagement Window Widget](/rt-interactions-window-sdk-overview.html){:target="_blank"}
+* [Engagement Window Widget](/rt-interactions-window-sdk-overview.html)
 
 * Help from your LivePerson contact to integrate
 

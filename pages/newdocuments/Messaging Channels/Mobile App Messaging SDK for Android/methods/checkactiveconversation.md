@@ -20,5 +20,5 @@ Checks whether there is an active (unresolved) conversation. The result will be 
 
 | Parameter | Description |
 | :--- | :--- |
-| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
 

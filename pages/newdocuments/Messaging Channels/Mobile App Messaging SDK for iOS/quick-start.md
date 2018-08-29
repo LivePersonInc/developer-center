@@ -30,7 +30,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 * Swift 4.0 or lower, or Objective-C
 
 
-_Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"}._
+_Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf)._
 
 ### Step 1: Installing the SDK into your project
 LiveEngage Mobile App Messaging SDK for iOS supports multiple methods of installations.

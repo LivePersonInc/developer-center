@@ -12,7 +12,7 @@ permalink: custom-dashboard-chat-metrics.html
 indicator:
 ---
 
-When creating dashboards consisting of Live Chat data, utilize the **[LiveEngage Real time Operational API](data-operational-realtime-overview.html){:target="_blank"}** . This API offers a wide array of data points reflecting your LivePerson operations and is available to you in real time.
+When creating dashboards consisting of Live Chat data, utilize the **[LiveEngage Real time Operational API](data-operational-realtime-overview.html)** . This API offers a wide array of data points reflecting your LivePerson operations and is available to you in real time.
 
 * Select the metrics and filters that will meet the goals you defined for your dashboard.
 

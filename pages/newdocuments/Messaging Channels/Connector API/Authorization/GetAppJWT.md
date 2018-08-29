@@ -14,13 +14,13 @@ search: include
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* sentinel
 
 ### Authorization with AppJWT
 
-Before sending any request with the Send API, you must first obtain an **AppJWT** authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html){:target="_blank"} chapter.
+Before sending any request with the Send API, you must first obtain an **AppJWT** authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html) chapter.
 
 The **AppJWT** is an access token obtained from **Sentinel**, which is a LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access the LiveEngage platform.
 

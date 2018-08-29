@@ -20,17 +20,17 @@ The Validate Engagement API was designed to be used as part of a click-to-call s
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* smt
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
 
 
 
@@ -42,4 +42,4 @@ Example click-to-call invitation from a website:
 
 ![ValidateEngagement](img/validateengagement.png)
 
-Please refer to the [Click to Call solution document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/technical+doc/Click+to+Call+in+LE+v1.0.pdf){:target="_blank"} for more information.
+Please refer to the [Click to Call solution document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/technical+doc/Click+to+Call+in+LE+v1.0.pdf) for more information.

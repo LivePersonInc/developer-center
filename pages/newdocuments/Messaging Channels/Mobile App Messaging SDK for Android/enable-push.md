@@ -19,9 +19,9 @@ _**Note:** In order to enable push notifications, you must also configure them w
 
 To implement push notifications on the client side:
 
-- Get your app’s AppKey from [Google GCM](https://developers.google.com/cloud-messaging/gcm){:target="_blank"} or [Google FCM](https://firebase.google.com/docs/cloud-messaging/){:target="_blank"} and set it in the LiveEngage backend, as explained below, to identify your app by LiveEngage.
-- On every app launch get the GCM Token from your device and register it on the LiveEngage push service using the [registerLPPusher()](android-registerlppusher.html){:target="_blank"} API call so it knows which device should get each push message.
-- Upon receiving a push message to your app, [handle](android-handlepush.html){:target="_blank"} it so it is displayed to the customer.
+- Get your app’s AppKey from [Google GCM](https://developers.google.com/cloud-messaging/gcm) or [Google FCM](https://firebase.google.com/docs/cloud-messaging/) and set it in the LiveEngage backend, as explained below, to identify your app by LiveEngage.
+- On every app launch get the GCM Token from your device and register it on the LiveEngage push service using the [registerLPPusher()](android-registerlppusher.html) API call so it knows which device should get each push message.
+- Upon receiving a push message to your app, [handle](android-handlepush.html) it so it is displayed to the customer.
 
 
 ```swift
@@ -52,7 +52,7 @@ Follow the instructions below to set up your app key to enable push notification
 
 *Note: Before you begin the setup, you must ensure your LiveEngage account is configured and connected to the SDK.*
 
-1. Enter your LiveEngage account through this [Login URL](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~){:target="_blank"}.
+1. Enter your LiveEngage account through this [Login URL](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
 	You will need the following info from your LivePerson account team:
 

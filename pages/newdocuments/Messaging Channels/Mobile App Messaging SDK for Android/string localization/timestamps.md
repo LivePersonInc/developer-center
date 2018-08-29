@@ -16,10 +16,10 @@ indicator: messaging
 
 Android provides 4 different default types of date and time formats:
 
-- [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} is completely numeric (12.13.52 or 3:30pm)
-- [MEDIUM](https://developer.android.com/reference/java/text/DateFormat.html#MEDIUM){:target="_blank"} is longer and contains the first 3 letters of the month (Jan 12, 1952)
-- [LONG](https://developer.android.com/reference/java/text/DateFormat.html#LONG){:target="_blank"} is longer (January 12, 1952 or 3:30:32pm)
-- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL){:target="_blank"} specifies the complete time and date (Tuesday, April 12, 1952 AD or 3:30:42pm) PST.
+- [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) is completely numeric (12.13.52 or 3:30pm)
+- [MEDIUM](https://developer.android.com/reference/java/text/DateFormat.html#MEDIUM) is longer and contains the first 3 letters of the month (Jan 12, 1952)
+- [LONG](https://developer.android.com/reference/java/text/DateFormat.html#LONG) is longer (January 12, 1952 or 3:30:32pm)
+- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL) specifies the complete time and date (Tuesday, April 12, 1952 AD or 3:30:42pm) PST.
 
 For each feature we added a special resource ID in case customizing the date/time formatting is needed. By default, all these formatting resources are empty in order to take the default device locale.
 We define 3 configurable formatting resources:

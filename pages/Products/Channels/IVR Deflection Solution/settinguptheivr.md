@@ -43,7 +43,7 @@ Sample scenarios can be:
 
 Most modern IVRs also have built-in SMS gateways, which allow them to send or receive (SMS) transmissions. IVRs can use gateways to send chat invite links to voice callers. In cases where the IVR does not support an SMS gateway, you can configure the IVR to send SMS using 3rd party SMS gateways.
 
-The [Appendix](products-channels-ivr-deflection-solution-appendix.html){:target="_blank"} provides 2 SMS gateway integration samples.
+The [Appendix](products-channels-ivr-deflection-solution-appendix.html) provides 2 SMS gateway integration samples.
 
 **The following is an example of VoiceXML 2.1 using a Voxeo IVR SMS solution and a static link:**
 

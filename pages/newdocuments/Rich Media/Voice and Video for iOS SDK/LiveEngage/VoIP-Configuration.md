@@ -137,7 +137,7 @@ Now delete `myvoipapp-private-key.pem` again.You should end up with two remainin
   * `myvoipapp-certificate.pem`
   * `myvoipapp-private-key-nopass.pem`
 
-This is it. The created files are required to be uploaded to LivePerson's App Configurations of your LiveEngage Account. To learn how to upload your certificates, please continue reading [Register Your App](consumer-experience-voice-video-ios-register-app.html){:target="_blank"}.
+This is it. The created files are required to be uploaded to LivePerson's App Configurations of your LiveEngage Account. To learn how to upload your certificates, please continue reading [Register Your App](consumer-experience-voice-video-ios-register-app.html).
 
 
 ## Push via Tokens

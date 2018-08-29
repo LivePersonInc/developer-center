@@ -39,12 +39,12 @@ Instead of flipping between browser tabs, use the Agent Workspace Widget to conn
 
 ### Getting Started
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 Follow the steps below to integrate the application you developed using the client.
 
-1. Reference the [Client SDK](https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js){:target="_blank"}.
-2. In your LiveEngage account, define a new custom widget with the URL of your web application (which uses the client-SDK). [Learn more](guides-agent-workspace-widget.html){:target="_blank"}.
+1. Reference the [Client SDK](https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js).
+2. In your LiveEngage account, define a new custom widget with the URL of your web application (which uses the client-SDK). [Learn more](guides-agent-workspace-widget.html).
 
 
 

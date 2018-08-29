@@ -54,4 +54,4 @@ Event type="line" Parameters
 | textType        | The type of message.                | plain/html   |                                                    |
 | by              | Type of message that is sent.       | string       | Valid values: "info", "agent", "visitor"           |
 | source          | Indication of who sent the message. | string       | Valid values: "system", "agent", "visitor"         |
-| systemMessageId | The ID of the message.              | numeric      | See [System Messages](agent-system-messages.html){:target="_blank"}. |
+| systemMessageId | The ID of the message.              | numeric      | See [System Messages](agent-system-messages.html). |

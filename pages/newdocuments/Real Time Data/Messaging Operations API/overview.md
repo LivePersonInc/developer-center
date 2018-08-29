@@ -22,7 +22,7 @@ This API is based on the REST architecture style, which allows clients to send H
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing either of the following service names:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing either of the following service names:
 
 	* leDataReporting (this domain is used for all methods **except** Estimated Wait Time)
 
@@ -30,9 +30,9 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

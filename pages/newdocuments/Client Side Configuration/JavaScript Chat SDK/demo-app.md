@@ -18,13 +18,13 @@ This sample app includes information on how to work with the SDK. There are two 
 - [Unmonitored Flow](#unmonitored-flow)
 - [Monitored Flow](#monitored-flow)
 
-Download the Sample App from the following [Github repository](https://github.com/LivePersonInc/chat-js-sdk-sample-app){:target="_blank"}.
+Download the Sample App from the following [Github repository](https://github.com/LivePersonInc/chat-js-sdk-sample-app).
 
 ### Unmonitored Flow
 
 ###  Prerequisites for un-monitored flow
 
-- An existing LiveEngage site - [click here](https://register.liveperson.com/){:target="_blank"} to create a site.      
+- An existing LiveEngage site - [click here](https://register.liveperson.com/) to create a site.      
 - An existing API-based engagement window configured in LiveEngage.
 - An existing External engagement configured in LiveEngage, which refers to the above API-based engagement window. 
 - An available user (agent) who is logged into LiveEngage.
@@ -42,7 +42,7 @@ Download the Sample App from the following [Github repository](https://github.co
 
 ###  Prerequisites for monitored flow
 
-- An existing LiveEngage site - [click here](https://register.liveperson.com/){:target="_blank"} to create a site.
+- An existing LiveEngage site - [click here](https://register.liveperson.com/) to create a site.
 - An existing API-based engagement window configured in LiveEngage, with the context:`window` and methodName: `externalJsMethodName`. <br> *Note: Please contact your LivePerson representative in order to create your API-based engagement window.*
 - An existing Website engagement configured in LiveEngage, which refers to the above API-based engagement window.  <br> *Note: This is configured in the Engagement template gallery.*
 - An available user (agent) who is logged into LiveEngage.
@@ -61,4 +61,4 @@ Download the Sample App from the following [Github repository](https://github.co
 
 - In our Sample App project there is an example of using [Auth0](https://auth0.com/) with liveEngage authenticated visitors flow.
 - Inside script.js you will find two parameters: AUTH0_CLIENT_ID, AUTH0_DOMAIN, fill them with your own data.
-- Fill the correct data in the [Data Sources](/guides-authentication-configuration.html){:target="_blank"} section on LiveEngage;
+- Fill the correct data in the [Data Sources](/guides-authentication-configuration.html) section on LiveEngage;

@@ -16,7 +16,7 @@ indicator: messaging
 In order to show the agent which messages were accepted by the consumer device and which were read by the consumer, the client should publish read/accept receipts. The same events are published by the agent side and may be displayed to the consumer. In this tutorial we will see how to publish these events.
 
 ### Prerequisites
-See [Prerequisites](consumer-int-get-msg.html#prerequisites){:target="_blank"}.
+See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
 ### Step 1 - Create a Conversation
 Open the WebSocket connection using:

@@ -24,15 +24,15 @@ This API supports the HTTP POST functionality (data retrieval), and all data is 
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* msgHist
 
 2. This API requires authorization using API key or via login.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Temporarily, please utilize the same key as the Engagement History API.
+	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Temporarily, please utilize the same key as the Engagement History API.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

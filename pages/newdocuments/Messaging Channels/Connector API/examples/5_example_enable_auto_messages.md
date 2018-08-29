@@ -25,11 +25,11 @@ The following example illustrates how to enable the auto messages feature upon c
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### How to enable AUTO_MESSAGES
 
@@ -46,8 +46,8 @@ The following example illustrates how to enable the auto messages feature upon c
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Additional Request Header**
 
@@ -111,8 +111,8 @@ The following example illustrates how to enable the auto messages feature upon c
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Additional Request Header**
 

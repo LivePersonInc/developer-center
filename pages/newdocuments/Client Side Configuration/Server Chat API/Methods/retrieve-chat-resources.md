@@ -19,7 +19,7 @@ Retrieves all information available for this chat, including both Events and Inf
 
 | Method | URL  |
 | :--- | :--- |
-| GET | Accessed from a link in the Location header from the response to the [Start Chat](consumer-experience-server-chat-start-chat.html){:target="_blank"} POST request. |
+| GET | Accessed from a link in the Location header from the response to the [Start Chat](consumer-experience-server-chat-start-chat.html) POST request. |
 
 **Formats**
 

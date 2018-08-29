@@ -62,4 +62,4 @@ This API deletes skills from a specific account.
 
 **Response Body**
 
-[Appendix](administration-skills-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-skills-appendix.html) for Entity Structure and Entity Example.

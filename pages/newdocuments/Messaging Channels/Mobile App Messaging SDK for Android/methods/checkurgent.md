@@ -20,4 +20,4 @@ Checks whether the current conversation is marked as urgent. The result is retur
 
 | Parameter | Description |
 | :--- | :--- |
-| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
+| callback | An [ICallback](android-callbacks-index.html) implementation |

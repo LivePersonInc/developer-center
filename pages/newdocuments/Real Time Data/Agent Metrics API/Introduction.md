@@ -24,15 +24,15 @@ LE Messaging Agents list use the Agent Metrics API:
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* msgHist
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Please use the Engagement History / Messaging Interactions keys.
+	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Please use the Engagement History / Messaging Interactions keys.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 
@@ -42,4 +42,4 @@ A few things you'll need to get started with this API:
 
 * Combine this information with other data source in order to create your own real-time dashboard
 
-For more information and instructions, please see [creating custom dashboards](products-data-custom-dashboard-overview.html){:target="_blank"}
+For more information and instructions, please see [creating custom dashboards](products-data-custom-dashboard-overview.html)

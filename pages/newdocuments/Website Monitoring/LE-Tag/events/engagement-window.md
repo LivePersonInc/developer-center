@@ -62,7 +62,7 @@ This event triggers when the conversation data was changed, for example the conv
 | skill | The conversation skill. | string | |
 | engagementId | The engagement ID that was clicked to open the chat. | ALPHA_NUMERIC | |
 | campaignId | The engagement’s campaign ID. | ALPHA_NUMERIC | |
-| language | The conversation language. | string | An [ISO 639-1 Alpha-2](http://openid.net/specs/openid-connect-core-1_0.html#ISO639-1){:target="_blank"} language code in lowercase and an [ISO 3166-1 Alpha-2](http://openid.net/specs/openid-connect-core-1_0.html#ISO3166-1){:target="_blank"} country code in uppercase, separated by a dash. For example, en-US or fr-CA. |
+| language | The conversation language. | string | An [ISO 639-1 Alpha-2](http://openid.net/specs/openid-connect-core-1_0.html#ISO639-1) language code in lowercase and an [ISO 3166-1 Alpha-2](http://openid.net/specs/openid-connect-core-1_0.html#ISO3166-1) country code in uppercase, separated by a dash. For example, en-US or fr-CA. |
 | engagementName | The engagement name as defined in LiveEngage UI. | string  | |
 
 *Example:*

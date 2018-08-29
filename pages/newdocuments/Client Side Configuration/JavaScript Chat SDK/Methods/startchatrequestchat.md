@@ -113,8 +113,8 @@ var failedRequest = chat.requestChat({
 
 **Notes**:
 
-- *The event is broken down into onState event and onLine events. For a detailed description of these properties, refer to [onState](consumer-experience-javascript-chat-onstate.html){:target="_blank"} and [onLine](consumer-experience-javascript-chat-online.html){:target="_blank"}.*
-- *For a description of the info object, see [onInfo](consumer-experience-javascript-chat-oninfo.html){:target="_blank"}.*
+- *The event is broken down into onState event and onLine events. For a detailed description of these properties, refer to [onState](consumer-experience-javascript-chat-onstate.html) and [onLine](consumer-experience-javascript-chat-online.html).*
+- *For a description of the info object, see [onInfo](consumer-experience-javascript-chat-oninfo.html).*
 
 **Sample response**
 

@@ -47,4 +47,4 @@ This API deletes an agent group from a specific account.
 
 **User Entity Structure**
 
-[Appendix](administration-agent-groups-appendix.html){:target="_blank"}{:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-agent-groups-appendix.html) for Entity Structure and Entity Example.

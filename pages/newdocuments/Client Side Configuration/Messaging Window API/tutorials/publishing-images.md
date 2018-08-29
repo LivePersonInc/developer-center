@@ -16,7 +16,7 @@ indicator: messaging
 In this tutorial we will publish images to a conversation.
 
 ###  Prerequisites
-See [Prerequisites](consumer-int-get-msg.html#prerequisites){:target="_blank"}.
+See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
 ### Step 1 - Enable Image Sharing
 

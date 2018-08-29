@@ -14,4 +14,4 @@ In order to determine the content of the image (e.g. the possibility of inapprop
 
 Note: Cloud Vision API pricing exists outside the SMS Offering that LivePerson provides.
 
-More info can be found here: [https://cloud.google.com/vision/](https://cloud.google.com/vision/){:target="_blank"}
+More info can be found here: [https://cloud.google.com/vision/](https://cloud.google.com/vision/)

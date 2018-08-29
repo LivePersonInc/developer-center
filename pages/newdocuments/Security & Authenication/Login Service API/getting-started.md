@@ -20,9 +20,9 @@ This API allows you to Login to LiveEngage, as a *user*, using a username and pa
 
 This API provides endpoints for managing the User Session (User Login, Application Login, Logout and Refresh).
 
-[Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+[Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
-When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
 
 **Use Cases**
 
@@ -39,26 +39,26 @@ When using this API, it is recommended that you implement our [Retry Policy and 
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* agentVep
 
     **Request example**:
 
-    [http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0](http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0){:target="_blank"}
+    [http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0](http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0)
 
 {:start="2"}
 2. Choose your method of login:
 
   As a user:
 
-  * use your LiveEngage username and password to [login](/agent-user-login.html){:target="_blank"}.
+  * use your LiveEngage username and password to [login](/agent-user-login.html).
 
   As an application:
 
   **_Note: In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward_**.
 
-  * [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
+  * [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
 
       ![APIKeyCreation](img/APIKeyCreation.png)
 

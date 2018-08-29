@@ -43,7 +43,7 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
 Important:
 
 
-**To use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}**
+**To use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params)**
 
 Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
 
@@ -55,7 +55,7 @@ The SDK supports two operation modes:
 
 * Fragment.
 
-_**Note: For more information about each mode, refer to [Step 3: Code integration for basic deployment](android-quickstart.html#step-3-code-integration-for-basic-deployment){:target="_blank"}.**_
+_**Note: For more information about each mode, refer to [Step 3: Code integration for basic deployment](android-quickstart.html#step-3-code-integration-for-basic-deployment).**_
 
 To start LivePerson's Activity mode:
 
@@ -80,7 +80,7 @@ Close LivePerson Messaging SDK- Uninitialized SDK without cleaning data.
 public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
 ```
 
-Click [here](android-shutdown.html){:target="_blank"} for more information.
+Click [here](android-shutdown.html) for more information.
 
 **Logout**
 
@@ -90,4 +90,4 @@ Close LivePerson Messaging SDK- Clear LivePerson Messaging SDK data and unregist
 public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)
 ```
 
-Click [here](android-logout.html){:target="_blank"} for more information.
+Click [here](android-logout.html) for more information.

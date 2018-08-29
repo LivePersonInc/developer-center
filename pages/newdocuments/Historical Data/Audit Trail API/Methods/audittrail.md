@@ -39,7 +39,7 @@ N/A
 
 **Request Body**
 
-Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/){:target="_blank"}.
+Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/).
 
 ```json
 {"query" : "{auditData  

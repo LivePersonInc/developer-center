@@ -593,7 +593,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 **Version 3.1 planned roll-out: March 18h 2018**
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf)
 
 #### New functionalities
 
@@ -1151,7 +1151,7 @@ These are the main feature releases available in the Mobile App Messaging SDK ve
 
 Version 2.9 planned roll-out: November 12th 2017
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf)
 
 #### New functionalities
 
@@ -1269,7 +1269,7 @@ These are the main feature releases available in the Mobile App Messaging SDK ve
 
 Version 2.8 roll-out: October 3rd 2017
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf)
 
 #### New functionalities
 
@@ -1453,7 +1453,7 @@ These are the main feature releases available in the Mobile App Messaging SDK ve
 
 Version 2.5 roll-out: July 2nd 2017
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf)
 
 
 #### New functionalities
@@ -1563,7 +1563,7 @@ The following properties of the secure form bubble on the agent side can now be 
 ### Android Messaging SDK -  version 2.3
 These are the main feature releases available in the **Mobile App Messaging SDK version 2.3 for Android**.
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf)
 
 
 
@@ -1592,7 +1592,7 @@ Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
-_This feature requires consulting services support. For more information, please refer to the LiveEngage ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf){:target="_blank"}_.
+_This feature requires consulting services support. For more information, please refer to the LiveEngage ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
 
 ![Secure Form](img/releasesecure.png)
 

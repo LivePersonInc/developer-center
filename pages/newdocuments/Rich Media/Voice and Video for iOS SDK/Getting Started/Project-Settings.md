@@ -58,8 +58,8 @@ NSCameraUsageDescription = "Allow for video calls";
 
 Also set the key __`Localized resources can be mixed`__ in your `Info.plist` to `YES`
 
-For a complete documentation see: [Apple Tech FAQ](https://developer.apple.com/library/content/qa/qa1937/_index.html){:target="_blank"}
-& [Info.plist HowTo](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-102276){:target="_blank"}
+For a complete documentation see: [Apple Tech FAQ](https://developer.apple.com/library/content/qa/qa1937/_index.html)
+& [Info.plist HowTo](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-102276)
 
 ### Ring Sound
 

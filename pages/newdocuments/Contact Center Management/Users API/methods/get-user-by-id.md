@@ -37,7 +37,7 @@ https://API_REQUEST?v=4.0
 
 **Request Body**
 
-[Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-users-appendix.html) for Entity Structure and Entity Example.
 
 **Path Parameters**
 
@@ -74,4 +74,4 @@ https://API_REQUEST?v=4.0
 
 **Response Body**
 
-[Appendix](administration-users-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-users-appendix.html) for Entity Structure and Entity Example.

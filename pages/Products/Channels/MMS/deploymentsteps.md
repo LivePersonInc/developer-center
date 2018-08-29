@@ -63,7 +63,7 @@ exports.handler = function(context, event, callback) {
 
 {:start="5"}
 5. Change the SMS webhook for your SMS number under the **Programmable SMS** configuration page to the Twilio function’s webhook.
-6. Navigate to the [MMS Viewer code package](https://github.com/cjames1224/mmsviewerle){:target="_blank"} and pull the latest repository. Install the necessary dependencies with `npm install`.
+6. Navigate to the [MMS Viewer code package](https://github.com/cjames1224/mmsviewerle) and pull the latest repository. Install the necessary dependencies with `npm install`.
 7. Host the node package on your servers and expose the homepage /index from a secure domain (begins with **https://**)
 8. Update the NODE_APP_DOMAIN in the Twilio function from step 4, to match the location where you've hosted your app.
 9. Add the homepage from step 7 to LiveEngage in the **Integration Widget** section of LiveEngage under Night Vision

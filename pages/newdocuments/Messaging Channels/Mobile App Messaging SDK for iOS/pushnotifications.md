@@ -76,7 +76,7 @@ Follow the instructions below to set up your certificate and key file to enable 
 
 _**Note: Before you begin the setup, you must ensure your LiveEngage account is configured and connected to the SDK.**_
 
-1. Enter your LiveEngage account through this [Login URL](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~){:target="_blank"}.
+1. Enter your LiveEngage account through this [Login URL](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
 	You will need the following info from your LivePerson account team:
 
@@ -101,7 +101,7 @@ _**Note: Before you begin the setup, you must ensure your LiveEngage account is 
 ![keymanagement](img/keymanagement.png)
 
 {:start="5"}
-5. Select your platform as iOS, enter your app’s name, and then click **Create app**. Then, upload your app certificate and key file in the appropriate locations. For more information on your app certificate, please **[click here](consumer-experience-ios-sdk-createcertificate.html){:target="_blank"}**.
+5. Select your platform as iOS, enter your app’s name, and then click **Create app**. Then, upload your app certificate and key file in the appropriate locations. For more information on your app certificate, please **[click here](consumer-experience-ios-sdk-createcertificate.html)**.
 
 <div class="important">
 Important:

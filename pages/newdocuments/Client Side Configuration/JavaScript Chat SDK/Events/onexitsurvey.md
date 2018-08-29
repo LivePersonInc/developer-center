@@ -14,9 +14,9 @@ permalink: javascript-chat-sdk-events-onexitsurvey.html
 indicator: chat
 ---
 
-Triggered in response to the [getExitSurvey](consumer-experience-javascript-chat-getexitsurvey.html){:target="_blank"} method.
+Triggered in response to the [getExitSurvey](consumer-experience-javascript-chat-getexitsurvey.html) method.
 
-*Note: For more information on the Survey object see [Surveys](consumer-experience-javascript-chat-surveys.html){:target="_blank"}.*
+*Note: For more information on the Survey object see [Surveys](consumer-experience-javascript-chat-surveys.html).*
 
 ```json
 {

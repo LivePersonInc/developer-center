@@ -24,7 +24,7 @@ Method to notify the agent that the visitor has ended the chat. The method publi
 | :--- | :--- | :--- | :--- |
 | disposeVisitor | If set to true will not retrieve this session's data on refresh. | Boolean | Optional |
 
-*Note: This will also cause the [onStop](consumer-experience-javascript-chat-onstop.html){:target="_blank"} event to be triggered from the server.*
+*Note: This will also cause the [onStop](consumer-experience-javascript-chat-onstop.html) event to be triggered from the server.*
 
 **Sample code**
 

@@ -36,21 +36,21 @@ Authenticated Customer Information increases the security of the communication a
 
 *	**OAuth 2.0**: A standard way in which a user (referred to as Resource Owner) of one service (referred to as Resource Server) can delegate credentials to another service (referred to as Client Application). In this case, the client application is LivePerson Service, the resource server is the Authentication Service of the customer, and the user/resource_owner is the customer of the customer (the consumer).
 
-*	**OpenID Connect**: A simple identity layer on top of the OAuth 2.0 protocol. In this case, the user delegates the access to their identity properties to the other service. OpenID Connect has been adopted by [numerous companies](http://openid.net/foundation/sponsoring-members/){:target="_blank"} including Google, Cisco, RSA, Verizon, PayPal, PingIdentity, Symantec, and more.
+*	**OpenID Connect**: A simple identity layer on top of the OAuth 2.0 protocol. In this case, the user delegates the access to their identity properties to the other service. OpenID Connect has been adopted by [numerous companies](http://openid.net/foundation/sponsoring-members/) including Google, Cisco, RSA, Verizon, PayPal, PingIdentity, Symantec, and more.
 
 *	**OAuth 2.0 code**: In some flows, instead of directly receiving the access_token, the Authentication Server provides a code which can be used only along with other secret information in order to get the access token. This way, the intermediator that passes the OAuth 2.0 code is not able to gain access to the data.
 
 *	**Code Flow**: An authentication flow in which LivePerson Service gets the authentication assertion directly from the customer authorization server. In OAuth 2.0, this flow is implemented using the OpenID Connect Code Flow. This flow is also called Server-to-Server flow, or simply Server Flow.
 
-*	**Implicit Flow**: In this flow, LivePerson Service does not get the authentication assertion directly from the customer server, but through the user. The assertion is signed by the customer Authorization Service, and optionally encrypted using the LivePerson Service key. In OAuth 2.0, it is implemented using the OpenID Connect [Implicit Flow](http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth){:target="_blank"}. This flow is also called Client Flow or Envelope Flow.
+*	**Implicit Flow**: In this flow, LivePerson Service does not get the authentication assertion directly from the customer server, but through the user. The assertion is signed by the customer Authorization Service, and optionally encrypted using the LivePerson Service key. In OAuth 2.0, it is implemented using the OpenID Connect [Implicit Flow](http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth). This flow is also called Client Flow or Envelope Flow.
 
 ### Principles
 
 **Industry Standards**
 
-The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. For OpenID Connect, Code Flow and Implicit Flow are used. These flows are described in [a section of the OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#Authentication){:target="_blank"}.
+The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. For OpenID Connect, Code Flow and Implicit Flow are used. These flows are described in [a section of the OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#Authentication).
 
-[Google OpenID Connect](https://developers.google.com/identity/protocols/OpenIDConnect?hl=en){:target="_blank"} will be used as a reference implementation for the Code Flow. This means that the LivePerson solution will be built and tested against Google OpenID Connect servers. Our beta environments will use the Google Identity provider for our end-to-end tests. Customers should follow the Google identity response format to use the LivePerson Authentication Service.
+[Google OpenID Connect](https://developers.google.com/identity/protocols/OpenIDConnect?hl=en) will be used as a reference implementation for the Code Flow. This means that the LivePerson solution will be built and tested against Google OpenID Connect servers. Our beta environments will use the Google Identity provider for our end-to-end tests. Customers should follow the Google identity response format to use the LivePerson Authentication Service.
 
 ### Prerequisites
 

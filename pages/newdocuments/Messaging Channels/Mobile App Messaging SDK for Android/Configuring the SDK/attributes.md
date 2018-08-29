@@ -15,7 +15,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-_**Note:** for things like Brand name, which is a string, refer to the [string Localization](android-modifying-string.html){:target="_blank"}._
+_**Note:** for things like Brand name, which is a string, refer to the [string Localization](android-modifying-string.html)._
 ### Brand
 
 <table class="bigtable">

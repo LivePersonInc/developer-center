@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-
 indicator: messaging
 ---
 
-*This method was deprecated - please use the [getConversationFragment( LPAuthenticationParams, ConversationViewParams) ](android-getconversationfragfull.html){:target="_blank"}.*
+*This method was deprecated - please use the [getConversationFragment( LPAuthenticationParams, ConversationViewParams) ](android-getconversationfragfull.html).*
 
 The getConversationFragment method creates and returns the conversation fragment.
 

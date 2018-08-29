@@ -94,11 +94,11 @@ public class Example {
 ```
 The example can be found in Twilio’s documentation:
 
-[https://www.twilio.com/docs/api/rest/sending-messages](https://www.twilio.com/docs/api/rest/sending-messages){:target="_blank"}
+[https://www.twilio.com/docs/api/rest/sending-messages](https://www.twilio.com/docs/api/rest/sending-messages)
 
 For the complete Twilio Rest API documentation please refer to:
 
-[https://www.twilio.com/docs/api/rest](https://www.twilio.com/docs/api/rest){:target="_blank"}
+[https://www.twilio.com/docs/api/rest](https://www.twilio.com/docs/api/rest)
 
 ### Implementing IVR Deflection with Mobile App Messaging
 

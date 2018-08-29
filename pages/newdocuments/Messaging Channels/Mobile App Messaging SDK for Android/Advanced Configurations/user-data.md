@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-user-data.html
 indicator: messaging
 ---
 
-Pass and display consumer information to agents, and agent information to consumers. See more information about each method [click here for setUserProfile](android-methods.html#setuserprofile){:target="_blank"} and [click here for checkAgentID](android-methods.html#checkagentid){:target="_blank"}
+Pass and display consumer information to agents, and agent information to consumers. See more information about each method [click here for setUserProfile](android-methods.html#setuserprofile) and [click here for checkAgentID](android-methods.html#checkagentid)
 
 * To set the User Profile (Not an SDE):
 

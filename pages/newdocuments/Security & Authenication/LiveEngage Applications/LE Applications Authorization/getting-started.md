@@ -15,11 +15,11 @@ indicator: both
 
 This API authorizes users for your application. This is needed so that your application can interact with LiveEngage on behalf of your users in a secure and authorized way. The application should be installed in the context of your account.
 
-This API provides standard oauth 2.0 endpoints to receive and refresh access tokens. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749){:target="_blank"} for more information.
+This API provides standard oauth 2.0 endpoints to receive and refresh access tokens. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749) for more information.
 
 ### Getting Started
 
-1. Install a LiveEngage application. Here is a [guide to installing LiveEngage applications](guides-le-applications-installing.html){:target="_blank"}. The following two fields are mandatory for this flow, `grant_types` and `redirect_uris`. In addition, all normally mandatory fields, as detailed in the guide above, should be populated as well. Here is an example showing how to configure them:
+1. Install a LiveEngage application. Here is a [guide to installing LiveEngage applications](guides-le-applications-installing.html). The following two fields are mandatory for this flow, `grant_types` and `redirect_uris`. In addition, all normally mandatory fields, as detailed in the guide above, should be populated as well. Here is an example showing how to configure them:
 
 ```json
 {"client_name": "<YOURAPPNAME>",
@@ -36,7 +36,7 @@ This API provides standard oauth 2.0 endpoints to receive and refresh access tok
 
 After finishing the installation, please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.
 
-2. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+2. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* sentinel
 

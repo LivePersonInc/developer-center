@@ -33,7 +33,7 @@ This API updates a list of skills for a specific account.
   
 **Request Body** 
 
-[Appendix](administration-skills-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-skills-appendix.html) for Entity Structure and Entity Example.
 
 **Path Parameters**
 
@@ -61,4 +61,4 @@ This API updates a list of skills for a specific account.
 
 **Response Body**
 
-[Appendix](administration-skills-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-skills-appendix.html) for Entity Structure and Entity Example.

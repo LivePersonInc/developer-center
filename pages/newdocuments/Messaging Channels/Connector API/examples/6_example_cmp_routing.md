@@ -16,11 +16,11 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Create new conversation and send campaign information
 
@@ -34,8 +34,8 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Example Request Body - JSON Payload**
 
@@ -85,4 +85,4 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 
 **Note**:
 
-For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns){:target="_blank"}.
+For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns).

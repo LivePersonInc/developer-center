@@ -44,4 +44,4 @@ This API deletes LoBs from a specific account.
 
 **Response Body**
 
-[Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-lobs-appendix.html) for Entity Structure and Entity Example.

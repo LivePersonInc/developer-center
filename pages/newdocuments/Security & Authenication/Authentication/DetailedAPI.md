@@ -185,7 +185,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 
 **Custom Claim**:
 
-Custom Claims will be added in LP SDE form from the SDEs list, see the [Engagement Attributes Overview document](engagement-attributes-overview.html){:target="_blank"} for more info on the possible Engagement Attributes. (**Please note that some Engagement Attributes are NOT supported in an authenticated flow. Please see the document for details on which attributes are supported and which aren't**).
+Custom Claims will be added in LP SDE form from the SDEs list, see the [Engagement Attributes Overview document](engagement-attributes-overview.html) for more info on the possible Engagement Attributes. (**Please note that some Engagement Attributes are NOT supported in an authenticated flow. Please see the document for details on which attributes are supported and which aren't**).
 
 Example for Mandatory+Standard+Custom Claims JWT:
 

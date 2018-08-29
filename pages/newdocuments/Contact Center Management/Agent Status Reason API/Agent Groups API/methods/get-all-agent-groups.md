@@ -46,4 +46,4 @@ This API retrieves a list of agent groups for a specific account.
 
 **Response Body**
 
-[Appendix](administration-agent-groups-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-agent-groups-appendix.html) for Entity Structure and Entity Example.

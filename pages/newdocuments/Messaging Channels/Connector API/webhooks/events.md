@@ -25,4 +25,4 @@ An application registering for WH notifications can be configured to receive not
 
   * **ms.MessagingEventNotification.ContentEvent**
 
-**Note**! Within the context of an [**App Installation Schema**](connector-onboarding.html){:target="_blank"}, each event type can be configured only once per account, specifying a single endpoint to which it should be sent (meaning that for an account, a given application cannot request the same event type to be sent to multiple endpoints).
+**Note**! Within the context of an [**App Installation Schema**](connector-onboarding.html), each event type can be configured only once per account, specifying a single endpoint to which it should be sent (meaning that for an account, a given application cannot request the same event type to be sent to multiple endpoints).

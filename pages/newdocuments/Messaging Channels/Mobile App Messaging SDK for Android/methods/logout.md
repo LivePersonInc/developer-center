@@ -16,7 +16,7 @@ indicator: messaging
 
 Logout from the SDK - when all user data should be removed.
 
-Calls [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"}, [shutDown](android-shutdown.html){:target="_blank"} and, in addition, deletes all user data (messages and user details) from the device.
+Calls [unregisterLPPusher](android-unregisterlppusher.html), [shutDown](android-shutdown.html) and, in addition, deletes all user data (messages and user details) from the device.
 
 In order to unregister from push, it must be called when there is network available. After logout the SDK is unavailable until re-initiated.
 
@@ -33,7 +33,7 @@ In order to unregister from push, it must be called when there is network availa
 | context | A context from the host app. |
 | brandId | An account ID. |
 | appId | The host app ID. |
-| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html){:target="_blank"} implementation. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
 
 

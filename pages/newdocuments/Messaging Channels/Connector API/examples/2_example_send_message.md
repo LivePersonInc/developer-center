@@ -16,11 +16,11 @@ This is an example of how to send a message to LiveEngage to an open conversatio
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Send a message
 
@@ -34,8 +34,8 @@ This is an example of how to send a message to LiveEngage to an open conversatio
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Request Body - JSON Payload**
 

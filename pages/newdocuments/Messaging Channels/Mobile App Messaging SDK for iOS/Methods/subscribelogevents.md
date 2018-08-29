@@ -20,5 +20,5 @@ Subscribe to log events (Trace, Debug, Info, Warning, Error). Each time a log ev
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
-| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"}. |
-| logEvent | The completion block will pass [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html){:target="_blank"} object which consists all the information for the log. |
+| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html). |
+| logEvent | The completion block will pass [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html) object which consists all the information for the log. |

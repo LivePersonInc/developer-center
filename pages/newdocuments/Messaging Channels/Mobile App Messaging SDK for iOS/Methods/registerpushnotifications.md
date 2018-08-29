@@ -16,7 +16,7 @@ indicator: messaging
 
 Register to LPMessagingSDK push notifications with the following code in AppDelegate:
 
-*Note: Push notifications must be pre-configured, and an APN certificate has to be uploaded to the LiveEngage platform. See more info on [how to configure push notifications](consumer-experience-ios-sdk-configuration.html){:target="_blank"}.*
+*Note: Push notifications must be pre-configured, and an APN certificate has to be uploaded to the LiveEngage platform. See more info on [how to configure push notifications](consumer-experience-ios-sdk-configuration.html).*
 
 `func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil)`
 

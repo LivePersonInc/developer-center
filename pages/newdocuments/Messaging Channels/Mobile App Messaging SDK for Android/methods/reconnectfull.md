@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-reconnect.html
 indicator: messaging
 ---
 
-Reconnect with a new authentication key / new JWT. the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html#token-expired){:target="_blank"} callback / local intent method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
+Reconnect with a new authentication key / new JWT. the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html#token-expired) callback / local intent method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 
 
 There are 2 authenticated connection methods:

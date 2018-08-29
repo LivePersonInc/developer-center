@@ -18,8 +18,8 @@ The Exit survey will be displayed after the chat has ended if one was configured
 
 **Notes**:
 
-- *For more information on the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html){:target="_blank"}.*
-- *To submit this survey use the [submitExitSurvey](consumer-experience-javascript-chat-submitexitsurvey.html){:target="_blank"} method.*
+- *For more information on the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html).*
+- *To submit this survey use the [submitExitSurvey](consumer-experience-javascript-chat-submitexitsurvey.html) method.*
 
 ### Request
 

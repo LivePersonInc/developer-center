@@ -28,7 +28,7 @@ public static void resolveConversation()
 public static boolean clearHistory()
 ```
 
-*Note: Click [here](android-methods.html){:target="_blank"} for more information.*
+*Note: Click [here](android-methods.html) for more information.*
 
 Also via Callbacks:
 
@@ -38,4 +38,4 @@ void onConversationResolved(LPConversationData convData);
 void onConnectionChanged(boolean isConnected);
 ```
 
-*Note: Click [here](android-callbacks-index.html#livepersoncallback){:target="_blank"} for more information.*
+*Note: Click [here](android-callbacks-index.html#livepersoncallback) for more information.*

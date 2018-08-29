@@ -29,7 +29,7 @@ The Language and Region controls are used to test localization.
 ![sampleapplication](img/sampleapplication.png)
 
 **setCallBack method**
-Sets the host app implementation of [LivePersonCallback](android-callbacks-index.html){:target="_blank"} to the SDK. This implementation simply display a toast message on every callback received.
+Sets the host app implementation of [LivePersonCallback](android-callbacks-index.html) to the SDK. This implementation simply display a toast message on every callback received.
 
 **initActivityConversation method**
 Opens the conversation view in Activity mode (see [Quick Start](android-quickstart.html#step-3-code-integration-for-basic-deployment))
@@ -42,9 +42,9 @@ This method starts the FragmentContainerActivity that is simply the fragment con
 This is an activity class that has a fragment container. It gets the conversation fragment from the SDK (LivePerson.getConversationFragment()) and attach it to the container.
 
 **Push package**
-The push package contains sample code for implementing push notification in both [Google GCM](https://developers.google.com/cloud-messaging/gcm){:target="_blank"} or [Google FCM](https://firebase.google.com/docs/cloud-messaging/){:target="_blank"}. This is a simple code taken from Google documentation and integrated to be used in SampleApp and the Messaging SDK.
+The push package contains sample code for implementing push notification in both [Google GCM](https://developers.google.com/cloud-messaging/gcm) or [Google FCM](https://firebase.google.com/docs/cloud-messaging/). This is a simple code taken from Google documentation and integrated to be used in SampleApp and the Messaging SDK.
 
 **branding.xml**
-Demonstrate the overriding of parameters (e.g. colors, dimensions etc.) used by the SDK. Please refer to the [Configuring the SDK](android-initialization.html){:target="_blank"} section for more details.
+Demonstrate the overriding of parameters (e.g. colors, dimensions etc.) used by the SDK. Please refer to the [Configuring the SDK](android-initialization.html) section for more details.
 
-[LiveEngage Messaging Platform Security Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/LiveEngage+Messaging+Platform+Security+Overview.pdf){:target="_blank"}
+[LiveEngage Messaging Platform Security Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/LiveEngage+Messaging+Platform+Security+Overview.pdf)

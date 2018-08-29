@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-string-localization-bubble-times
 indicator: messaging
 ---
 
-Bubbles contains only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} time format, according to the locale (default or custom) and to device setting.
+Bubbles contains only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to device setting.
 
 - If device is set to 12 hours format : "3:30pm"
 - If device is set to 24 hours format : "15:30"

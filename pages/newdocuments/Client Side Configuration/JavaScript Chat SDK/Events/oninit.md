@@ -16,11 +16,11 @@ indicator: chat
 
 Triggers when you can request some information about the chat. The following methods are supported after this event has triggered:
 
-- [getEstimatedWaitTime](consumer-experience-javascript-chat-getestimatedwaittime.html){:target="_blank"}
-- [getPreChatSurvey](consumer-experience-javascript-chat-getprechatsurvey.html){:target="_blank"}
-- [getOfflineSurvey](consumer-experience-javascript-chat-getofflinesurvey.html){:target="_blank"}
-- [submitOfflineSurvey](consumer-experience-javascript-chat-submitofflinesurvey.html){:target="_blank"}
-- [requestChat](consumer-experience-javascript-chat-requestchat.html){:target="_blank"}
+- [getEstimatedWaitTime](consumer-experience-javascript-chat-getestimatedwaittime.html)
+- [getPreChatSurvey](consumer-experience-javascript-chat-getprechatsurvey.html)
+- [getOfflineSurvey](consumer-experience-javascript-chat-getofflinesurvey.html)
+- [submitOfflineSurvey](consumer-experience-javascript-chat-submitofflinesurvey.html)
+- [requestChat](consumer-experience-javascript-chat-requestchat.html)
 
 **Response Properties**
 

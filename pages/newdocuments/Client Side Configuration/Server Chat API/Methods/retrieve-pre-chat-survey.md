@@ -15,7 +15,7 @@ indicator: chat
 
 Returns an XML or JSON response with the Pre-Chat survey.
 
-*Note: Posting answers for a Pre-Chat survey is done through [Start Chat](consumer-experience-server-chat-start-chat.html){:target="_blank"}.*
+*Note: Posting answers for a Pre-Chat survey is done through [Start Chat](consumer-experience-server-chat-start-chat.html).*
 
 ### Request
 

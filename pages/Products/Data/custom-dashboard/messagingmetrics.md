@@ -16,7 +16,7 @@ In order to create dashboard based on messaging data (Mobile App Messaging, web 
 
 ### Messaging Operational API
 
-As handling messaging conversations may differ from live chats, LiveEngage offers distinct APIs representing the data that is applicable to the unique operations of messaging.  Connection centers that are using messaging need to continuously evaluate their operational impact and manager dashboards in this cause must reflect the messaging queues and monitor the pace that is set to close conversations. Top metrics to utilize from the [Messaging Operations API](data-messaging-operations-overview.html){:target="_blank"} include:
+As handling messaging conversations may differ from live chats, LiveEngage offers distinct APIs representing the data that is applicable to the unique operations of messaging.  Connection centers that are using messaging need to continuously evaluate their operational impact and manager dashboards in this cause must reflect the messaging queues and monitor the pace that is set to close conversations. Top metrics to utilize from the [Messaging Operations API](data-messaging-operations-overview.html) include:
 
 * Messaging conversations: 
 

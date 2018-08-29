@@ -16,7 +16,7 @@ indicator: chat
 
 Retrieves the Offline survey to be displayed to the visitor, if no agent is available to chat.
 
-*Note: For more information on the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html){:target="_blank"}.*
+*Note: For more information on the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html).*
 
 ### Request
 

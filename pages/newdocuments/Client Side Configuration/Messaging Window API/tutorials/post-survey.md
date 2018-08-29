@@ -14,11 +14,11 @@ indicator: messaging
 ---
 
 ### Prerequisites
-Run the [Conversation Metadata Tutorial](consumer-int-conversation-md.html){:target="_blank"}.
+Run the [Conversation Metadata Tutorial](consumer-int-conversation-md.html).
 
 ### Step 1 - Find the closed conversation ID and Post Survey
 
-In the end of the [Conversation Metadata Tutorial](consumer-int-conversation-md.html){:target="_blank"}, you closed the conversation and got notification about it. In order to post CSAT survey, take this conversation id and paste it together with the following request:
+In the end of the [Conversation Metadata Tutorial](consumer-int-conversation-md.html), you closed the conversation and got notification about it. In order to post CSAT survey, take this conversation id and paste it together with the following request:
 
 
 ```json

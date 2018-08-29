@@ -277,7 +277,7 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
 
 **In case of Fragment mode** - set the desired orientation in your container Activity definition in AndroidManifest.xml
 
-[Android Screen Orentations](https://developer.android.com/guide/topics/manifest/activity-element.html#screen){:target="_blank"}
+[Android Screen Orentations](https://developer.android.com/guide/topics/manifest/activity-element.html#screen)
 
 
 **In case of Activity mode** - override in your application's AndroidManifest.xml the ConversationActivity definition and set the desired screen orientation:

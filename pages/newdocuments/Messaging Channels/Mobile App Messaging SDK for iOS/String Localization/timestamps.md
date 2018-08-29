@@ -18,10 +18,10 @@ indicator: messaging
 
 The iOS platform provides four different default types of date and time styles:
 
-- [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} is completely numeric.
-- [MEDIUM](https://developer.android.com/reference/java/text/DateFormat.html#MEDIUM){:target="_blank"} is longer and contains the first 3 letters of the month.
-- [LONG](https://developer.android.com/reference/java/text/DateFormat.html#LONG){:target="_blank"} is longer and contains the full month name.
-- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL){:target="_blank"} specifies the complete time and date.
+- [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) is completely numeric.
+- [MEDIUM](https://developer.android.com/reference/java/text/DateFormat.html#MEDIUM) is longer and contains the first 3 letters of the month.
+- [LONG](https://developer.android.com/reference/java/text/DateFormat.html#LONG) is longer and contains the full month name.
+- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL) specifies the complete time and date.
 
 *iOS examples:*
 
@@ -80,13 +80,13 @@ Off hours can appear in different time zones with this resource ID :
 
     ;offHoursTimeZoneName: String = "";
 
-A list of timezone IDs can be found [here](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/){:target="_blank"}.
+A list of timezone IDs can be found [here](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/).
 
 _**Example**: "US/Pacific", "Europe/Berlin"._
 
 ### Bubble timestamp
 
-The Bubble timestamp contains the time only in the [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} time format, according to the locale (default or custom) and to the device setting.
+The Bubble timestamp contains the time only in the [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to the device setting.
 
 If the device is set to 12 hours format : "3:30 PM"
 If the device is set to 24 hours format : "15:30"
@@ -99,7 +99,7 @@ _**Example**: "hh:mm a", "HH:mm" etc._
 
 ### Separator timestamp
 
-The Separator timestamp contains the date only in the [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT){:target="_blank"} date format, according to the locale (default or custom) and to device setting.
+The Separator timestamp contains the date only in the [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) date format, according to the locale (default or custom) and to device setting.
 
 "9/25/16" for US locale / "2016/9/25" for JP locale
 

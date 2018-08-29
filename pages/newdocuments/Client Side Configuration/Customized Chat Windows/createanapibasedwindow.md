@@ -44,7 +44,7 @@ indicator: chat
 * JS context: the Javascript context where the jsMethodName is located.
 Default value: “window”
 
-[Read more about Javascript’s context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call){:target="_blank"}.
+[Read more about Javascript’s context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call).
 
 ### Step 3 - confirmation
 **Save your settings and choose the API Based Window you have just created.**

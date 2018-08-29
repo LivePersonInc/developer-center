@@ -34,7 +34,7 @@ To Create an Application Key:
 	- Secret
 	- Access token
 	- Access token secret
-6.	With these four values, generate an OAuth Authorization header according to the [OAuth specification Section 9](https://oauth.net/core/1.0/#signing_process){:target="_blank"}.
+6.	With these four values, generate an OAuth Authorization header according to the [OAuth specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
 *Example:*
 

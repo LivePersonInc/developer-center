@@ -48,7 +48,7 @@ Creates new Predefined Content for an account.
 
 **Request Body**
 
-The request body is able to accept a single JSON object, as shown below, or a JSON array of such objects. See [Appendix](account-configuration-predefined-content-appendix.html){:target="_blank"} for the object format.
+The request body is able to accept a single JSON object, as shown below, or a JSON array of such objects. See [Appendix](account-configuration-predefined-content-appendix.html) for the object format.
 
 ### Response
 

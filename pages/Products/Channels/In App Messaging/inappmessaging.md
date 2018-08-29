@@ -48,13 +48,13 @@ The following prerequisites are required:
 
 * Developer environment for Android: Android Studio (any version).
 
-*See [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"} for supported operating systems and devices. (LiveEngage Enterprise In-App Messenger SDK Supported Devices section)
+*See [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices. (LiveEngage Enterprise In-App Messenger SDK Supported Devices section)
 
 ### Implementation overview
 
 In order to have a successful deployment of messaging within your iOS or Android app, there are three main components you must
 
-* Follow the guide for the Mobile App Messaging SDK and deploy all the customization you require. Using the deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html){:target="_blank"} or [Android](android-quickstart.html){:target="_blank"}.
+* Follow the guide for the Mobile App Messaging SDK and deploy all the customization you require. Using the deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html) or [Android](android-quickstart.html).
 
 * Configure Push Notifications
 
@@ -64,7 +64,7 @@ In order to have a successful deployment of messaging within your iOS or Android
 
 Deployment of the Mobile App Messaging SDK can have several functions and tasks.  In order to make the process easier for you, we recommend you make decisions on the following topics before beginning your deployment:
 
-* **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf){:target="_blank"} to view the LiveEngage System Requirements document. Under "LiveEngage Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
+* **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) to view the LiveEngage System Requirements document. Under "LiveEngage Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
 
 * **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the the authentication.  
 
@@ -84,11 +84,11 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Full control over entire window: (iOS -ViewControler mode Android- Fragment mode): Fully control the look, feel and actions including the footer and header of the conversational window.
 
-* **Select the features you want to configure:** review the list of default configuration available in the guide ([iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html){:target="_blank"} / [Android](/android-authentication.html){:target="_blank"}) and determine what features you’d like to enable and how. [link to place in guide]  [insert video]
+* **Select the features you want to configure:** review the list of default configuration available in the guide ([iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html) / [Android](/android-authentication.html)) and determine what features you’d like to enable and how. [link to place in guide]  [insert video]
 
 * **Branding & Design**: The messaging configuration will be faster and easier for you if you have the exact design - the look and feel of the messaging experience to match your brand ready. [link to place in guide]
 
-* **Customization of messaging behavior:** You can utilize our callbacks ([iOS](consumer-experience-ios-sdk-callbacks-index.html){:target="_blank"} / [Android](/android-callbacks-index.html){:target="_blank"}) and APIs ([iOS](consumer-experience-ios-sdk-initialize.html){:target="_blank"} / [Android](/android-initializeproperties.html){:target="_blank"}) in order to control or change the default behaviors and actions of the messaging app.  Review the default list and determine if there are actions or flows you’d like to change
+* **Customization of messaging behavior:** You can utilize our callbacks ([iOS](consumer-experience-ios-sdk-callbacks-index.html) / [Android](/android-callbacks-index.html)) and APIs ([iOS](consumer-experience-ios-sdk-initialize.html) / [Android](/android-initializeproperties.html)) in order to control or change the default behaviors and actions of the messaging app.  Review the default list and determine if there are actions or flows you’d like to change
 
 * **Languages**: determine if you will offer messaging in multiple languages.  The Mobile App Messaging SDK allows you flexibility in selecting the language to display:
 

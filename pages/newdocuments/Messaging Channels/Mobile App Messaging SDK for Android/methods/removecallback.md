@@ -14,6 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-methods-removecallback.html
 indicator: messaging
 ---
 
-Removes the registered [LivePersonCallback](android-callbacks-index.html){:target="_blank"} callback.
+Removes the registered [LivePersonCallback](android-callbacks-index.html) callback.
 
 `public static void removeCallBack()`

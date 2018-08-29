@@ -36,7 +36,7 @@ The following prerequisites are required in order to build a video service on yo
 
 1. Develop your video service (backend + 2 widgets agent and visitor sides)
 
-2. Configure your widget in the agent workspace [[instructions]](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/53_Webagent+integration.pdf){:target="_blank"}
+2. Configure your widget in the agent workspace [[instructions]](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/53_Webagent+integration.pdf)
 
 3. Configure your widget in the Engagement window that displays to your visitors (via LiveEngage professional services)
 

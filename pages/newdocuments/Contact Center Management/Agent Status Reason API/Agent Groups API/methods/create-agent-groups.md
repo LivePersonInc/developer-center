@@ -31,7 +31,7 @@ This API creates an agent group for a specific account.
 
 **Request Body** 
 
-[Appendix](administration-agent-groups-appendix.html){:target="_blank"}{:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-agent-groups-appendix.html) for Entity Structure and Entity Example.
 
 **Query Parameters**
 
@@ -57,4 +57,4 @@ This API creates an agent group for a specific account.
 
 **Response Body**
 
-[Appendix](administration-agent-groups-appendix.html){:target="_blank"}{:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-agent-groups-appendix.html) for Entity Structure and Entity Example.

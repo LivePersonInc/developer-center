@@ -24,7 +24,7 @@ This event fires when the chat API instance has been created and the DOM has loa
 |----------|-------------------------|--------|--------------------------------------------------------------------------|
 | API      | The API description.    | string |                                                                          |
 | version  | Current version in use. | string |                                                                          |
-| state    | The current chat state. | string | See [Chat States](consumer-experience-javascript-chat-chat-states.html){:target="_blank"}. |
+| state    | The current chat state. | string | See [Chat States](consumer-experience-javascript-chat-chat-states.html). |
 
 **Sample Response** 
 

@@ -14,17 +14,17 @@ search: include
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* idp
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Authentication with ConsumerJWS
 
 An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (JSON Web Signature):
 
-The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html){:target="_blank"} and [SEND](sendapi-send.html){:target="_blank"} requests to LiveEngage in order to authenticate the request.
+The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html) and [SEND](sendapi-send.html) requests to LiveEngage in order to authenticate the request.
 
 A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 
@@ -61,7 +61,7 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](Create_AppJWT.html){:target="_blank"} | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
+| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](Create_AppJWT.html) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
 
 
 ### Response

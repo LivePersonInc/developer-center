@@ -155,7 +155,7 @@ enum TaskType {
 
 ###  Token Expired
 
-Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-methods.html#reconnect){:target="_blank"} with a new authentication key.
+Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-methods.html#reconnect) with a new authentication key.
 
 __Intent Action:__ ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION.
 
@@ -199,7 +199,7 @@ Called when the user taps on the agent avatar.
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode)
 
 Parameters:      
-agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html#agentdata){:target="_blank"}
+agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html#agentdata)
 
 __Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION.  
 
@@ -303,7 +303,7 @@ __Callback:__ onOfflineHoursChanges(boolean isOfflineHoursOn) method.
 
 Called when a structured content control with Link action is clicked.  
 
-Note: this callback is called only if the [structured_content_link_as_callback](android-attributes.html#structured-content){:target="_blank"} parameter in the branding.xml is set to true.
+Note: this callback is called only if the [structured_content_link_as_callback](android-attributes.html#structured-content) parameter in the branding.xml is set to true.
 
 Parameters:  
 uri - The URI of the link  
@@ -319,7 +319,7 @@ __Callback:__ onStructuredContentLinkClicked(String uri) method.
 Called if the required system permission was denied by the user. For example, when the user clicks on the camera/gallery button to add an image, the permission system dialog was displayed and the user denied the permission. **If the user denied the permission and in addition marked the "Never ask again" checkbox, the _doNotShowAgainMarked_ parameter is _true_.**
 
 Parameters:  
-permissionType - The permission type from the [PermissionType](android-interface-definitions.html#permissiontype){:target="_blank"} enum.
+permissionType - The permission type from the [PermissionType](android-interface-definitions.html#permissiontype) enum.
 
 **Note: doNotShowAgainMarked - _true_ if the user checked the "Never ask again" checkbox, _false_ if not.**
 
@@ -339,7 +339,7 @@ the user clicks on the camera/gallery buttons to add an image, this callback wil
 If the user already allowed the permission, this callback will not be called.
 
 Parameters:  
-permissionType - The permission type from the [PermissionType](android-interface-definitions.html#permissiontype){:target="_blank"} enum.
+permissionType - The permission type from the [PermissionType](android-interface-definitions.html#permissiontype) enum.
 
 Note: this callback is relevant to Android 6.0 and above
 

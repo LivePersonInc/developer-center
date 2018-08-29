@@ -16,7 +16,7 @@ permalink: connector-api-connector-api-overview.html
 
 The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.
 
-A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html){:target="_blank"} notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
+A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html) notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
 
 **Why do we need the Connector API?**
 
@@ -26,11 +26,11 @@ LiveEngage already provides out of the box connectors to Facebook, Google My Bus
 
 The Connector API consists of two main components:
 
-1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html){:target="_blank"}) and send message ([SEND](sendapi-send.html){:target="_blank"}) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
+1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html) framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html)) and send message ([SEND](sendapi-send.html)) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
 
-2. **[Webhooks](webhooks-overview.html){:target="_blank"} Notification Service**: This component sends notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html){:target="_blank"} framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the connector, such as agent/consumer replied, closed conversation, is typing and so on.
+2. **[Webhooks](webhooks-overview.html) Notification Service**: This component sends notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html) framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the connector, such as agent/consumer replied, closed conversation, is typing and so on.
 
-Please note: as part of using the Connector API, brands will be required to expose their Webhooks' HTTPS-endpoints. The Webhooks component allows the connector to register for notifications on LivePerson (LP) events. For more information on using Webhooks, please refer to the [Webhooks Overview](webhooks-overview.html){:target="_blank"}.
+Please note: as part of using the Connector API, brands will be required to expose their Webhooks' HTTPS-endpoints. The Webhooks component allows the connector to register for notifications on LivePerson (LP) events. For more information on using Webhooks, please refer to the [Webhooks Overview](webhooks-overview.html).
 
 ### Capabilities enabled by the Connector API
 
@@ -38,15 +38,15 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 | Capability | Achieved by | Endpoint |
 | :-- | :--- | :--- |
-| Create a new conversation and send SDEs in one step | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [CONVERSATION](sendapi-create.html){:target="_blank"} |
-| Send text messages | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
-| Send images | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
-| See SENT, READ and RECEIVED indications | [Webhooks](webhooks-overview.html){:target="_blank"} | N/A |
-| Send chat state events (COMPOSING (i.e. Consumer is typing), ACTIVE, INACTIVE etc.) | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
-| See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) | [Webhooks](webhooks-overview.html){:target="_blank"} | N/A |
-| Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid){:target="_blank"} | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
-| Close conversation | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
-| Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html){:target="_blank"} | [SEND](sendapi-send.html){:target="_blank"} |
+| Create a new conversation and send SDEs in one step | [Messaging SEND API](connector-api-overview.html) | [CONVERSATION](sendapi-create.html) |
+| Send text messages | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| Send images | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| See SENT, READ and RECEIVED indications | [Webhooks](webhooks-overview.html) | N/A |
+| Send chat state events (COMPOSING (i.e. Consumer is typing), ACTIVE, INACTIVE etc.) | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) | [Webhooks](webhooks-overview.html) | N/A |
+| Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid) | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| Close conversation | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
 
 #### On the **agent** side
 
@@ -56,7 +56,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 * Send a text message
 
-* Send [structured content](/rich-messaging-structured-content-card.html){:target="_blank"}
+* Send [structured content](/rich-messaging-structured-content-card.html)
 
 * See SENT, READ and RECEIVED indications
 
@@ -82,4 +82,4 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 ### Samples
 
-Refer to the [Connector Sample App](connector-sample-app.html){:target="_blank"}.
+Refer to the [Connector Sample App](connector-sample-app.html).

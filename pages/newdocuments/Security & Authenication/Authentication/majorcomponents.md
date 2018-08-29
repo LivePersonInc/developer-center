@@ -21,7 +21,7 @@ The customer web app is very similar to the mobile app, except that it runs on a
 
 ### Customer Token Endpoint (Mandatory for Code Flow)
 
-This endpoint implements the standard OpenID Connect [token endpoint](http://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint){:target="_blank"}. This API accepts a valid OAuth 2.0 code along with the clientID and secret information. It should then respond with validation approval that contains some of the user’s basic information, encoded and signed as a [JWT](https://tools.ietf.org/html/rfc7519){:target="_blank"} and access_token for further inquiries.
+This endpoint implements the standard OpenID Connect [token endpoint](http://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint). This API accepts a valid OAuth 2.0 code along with the clientID and secret information. It should then respond with validation approval that contains some of the user’s basic information, encoded and signed as a [JWT](https://tools.ietf.org/html/rfc7519) and access_token for further inquiries.
 
 **Example Request**:
 

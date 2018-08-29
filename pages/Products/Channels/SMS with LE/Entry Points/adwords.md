@@ -67,7 +67,7 @@ You’ll need to provide the following information:
 
 
 {:start="5"}
-5. For best practices please see the Google AdWords support page here: [https://support.google.com/adwords/answer/7182126](https://support.google.com/adwords/answer/7182126){:target="_blank"}
+5. For best practices please see the Google AdWords support page here: [https://support.google.com/adwords/answer/7182126](https://support.google.com/adwords/answer/7182126)
 
 ### Ensuring the best consumer experience
 

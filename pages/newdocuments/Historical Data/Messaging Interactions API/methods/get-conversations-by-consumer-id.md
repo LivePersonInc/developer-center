@@ -32,4 +32,4 @@ Filter is sent in the POST data (body) with the following JSON structure.
 
 ### Response
 
-See Response in the [Conversations](data-messaging-interactions-conversations.html){:target="_blank"} method.
+See Response in the [Conversations](data-messaging-interactions-conversations.html) method.

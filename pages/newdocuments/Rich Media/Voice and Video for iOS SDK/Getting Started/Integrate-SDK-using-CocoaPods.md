@@ -13,7 +13,7 @@ indicator: messaging
 
 **UNAVAILABLE DURING BETA PHASE, PLEASE CONTACT YOUR ACCOUNT TEAM FOR INSTALLATION GUIDELINES**
 
-We recommend installing the SDK using the _CocoaPods_ dependency manager, as this minimizes integration effort. If you are not yet familiar with CocoaPods, we recommend reading the official guide of [CocoaPods](https://cocoapods.org/about){:target="_blank"}.
+We recommend installing the SDK using the _CocoaPods_ dependency manager, as this minimizes integration effort. If you are not yet familiar with CocoaPods, we recommend reading the official guide of [CocoaPods](https://cocoapods.org/about).
 
 ### Step 1: Edit your Podfile
 After setting up CocoaPods, edit your `Podfile` to look something like this:

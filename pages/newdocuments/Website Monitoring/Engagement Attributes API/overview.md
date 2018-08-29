@@ -21,10 +21,10 @@ This API provides a way to report back to LivePerson consumer events such as the
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* smt
 
-2. In order to utilize this API, you will need an API key. [Here are the instructions on how to get that](guides-gettingstarted.html){:target="_blank"}.
+2. In order to utilize this API, you will need an API key. [Here are the instructions on how to get that](guides-gettingstarted.html).
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).

@@ -14,11 +14,11 @@ permalink: connector-api-examples-share-image-file.html
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Introduction
 
@@ -79,8 +79,8 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Request Body Example - JSON Payload**
 
@@ -120,7 +120,7 @@ Use the following request and the parameters obtained in step 3 (`relativePath`,
 
 **Note**: file expiration is set to 1 minute by default.
 
-**Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+**Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* swift
 
@@ -178,7 +178,7 @@ In order to generate a thumbnail you need to convert your image to base64. The o
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| dialogId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpint](sendapi-create.html#response){:target="_blank"} |
+| dialogId | The `conversationId` created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpint](sendapi-create.html#response) |
 | type | The messaging event type | ContentEvent | string | true | ContentEvent will be used for sending a text message or a file |
 | contentType | Which content is sent | "hosted/file" | string | true | file is hosted on swing server |
 | message | Array of properties describing the file | {"caption": "File logo", "relativePath": "{relativePath}", "fileType": "JPEG", "preview": "data:image/png;base64,{imageData}"} | Array of file properties | true | **caption** is an optional string, **relative path** is Mandatory (extracted on step 3), **file type** (JPEG,PNG) is Mandatory and **preview** is the base64 data conversion of the file (optional) |

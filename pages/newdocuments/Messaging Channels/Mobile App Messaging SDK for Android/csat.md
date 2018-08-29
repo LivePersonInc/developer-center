@@ -16,7 +16,7 @@ indicator: messaging
 
 ### Overview
 
-This document describes the CSAT behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under [Survey Screen](android-attributes.html){:target="_blank"}.
+This document describes the CSAT behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under [Survey Screen](android-attributes.html).
 
 ### Show CSAT flow
 
@@ -56,7 +56,7 @@ CSAT screen includes several content containers:
   - If conversation has assigned agent and its image was downloaded previously using profileUrl, this image will be presented in the view.
   - If no image available, default avatar is presented. Its background and tint color is according to the agent bubble with **lp_messaging_ui_ic_agent_avatar** and **agent_avatar_background_color**.
 
-More info in [Configuring the SDK](/android-configuring-sdk.html){:target="_blank"}.
+More info in [Configuring the SDK](/android-configuring-sdk.html).
 
 - Contains agent name:
   - By default it’s an empty label.
@@ -91,4 +91,4 @@ If both agentView(**show_agent_details_csat**) and resolutionConfirmationView(**
 <color name="feedback_fragment_title_yesno">
 ```
 
-All the configuration related to Yes/No buttons is explained in the [Survey Screen](android-attributes.html){:target="_blank"} resources table and starting with the prefix: **feedback_fragment_yesno_btn_**.
+All the configuration related to Yes/No buttons is explained in the [Survey Screen](android-attributes.html) resources table and starting with the prefix: **feedback_fragment_yesno_btn_**.

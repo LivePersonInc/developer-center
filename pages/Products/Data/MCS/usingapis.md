@@ -17,13 +17,13 @@ The Login Service API provides developers with the ability to login and take adv
 
 This means that once an official LiveEngage user account is provided. That user account, and its applicable access permissions, can then be utilized with custom solutions that leverage any of the supported LiveEngage APIs.
 
-Alternatively, LiveEngage also supports the use of key based authentication using the oAuth1.0a standard - however, this solution does carry with it a dependency of creating a set of application keys via Data Sources in LiveEngage and persisting these keys to generate the authentication between LiveEngage and the custom API based solution. [More info on this method of logging in can be found here](guides-authentication-introduction.html){:target="_blank"}.
+Alternatively, LiveEngage also supports the use of key based authentication using the oAuth1.0a standard - however, this solution does carry with it a dependency of creating a set of application keys via Data Sources in LiveEngage and persisting these keys to generate the authentication between LiveEngage and the custom API based solution. [More info on this method of logging in can be found here](guides-authentication-introduction.html).
 
 In the case of the MCS Toolkit, a simple prompt asks the user to enter their credentials, ensuring that each session is securely authenticated and allowing the user to only need to remember their login and password rather than a set of obscurer keys.
 
 ### Messaging Interactions API & Engagement History API
 
-The [Messaging Interaction (Messaging)](data-messaging-interactions-conversations.html){:target="_blank"} and [Engagement History (Chat)](data-engagement-history-overview.html) APIs provide data associated with interactions between a consumer and agent (API data depends on a connection having taken place) and includes the conversation history (i.e. transcript) and associated metadata of the engagement (e.g Surveys, Campaign, Device, Source, etc). These APIs were used to access the actual MCS and other data of the interactions in order to display them in the toolkit.
+The [Messaging Interaction (Messaging)](data-messaging-interactions-conversations.html) and [Engagement History (Chat)](data-engagement-history-overview.html) APIs provide data associated with interactions between a consumer and agent (API data depends on a connection having taken place) and includes the conversation history (i.e. transcript) and associated metadata of the engagement (e.g Surveys, Campaign, Device, Source, etc). These APIs were used to access the actual MCS and other data of the interactions in order to display them in the toolkit.
 
 ### Features
 

@@ -30,7 +30,7 @@ This example demonstrates running a System Message type bot, which subscribes to
 
 There are two parts to making this example work:
 
-1. In order to setup the agent-side code which achieves the Greeting Bot, [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the greeting bot example on Github.
+1. In order to setup the agent-side code which achieves the Greeting Bot, [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) to review the greeting bot example on Github.
 
 2. In order to generate a conversation with the account (and the Greeting Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
 
@@ -40,7 +40,7 @@ This example demonstrates running an Agent Bot, which serves as the standard age
 
 There are two parts to making this example work:
 
-1. In order to setup the agent-side code which achieves the Agent Bot example (echo bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app){:target="_blank"} to review the Agent Bot (echo bot) example on Github.
+1. In order to setup the agent-side code which achieves the Agent Bot example (echo bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) to review the Agent Bot (echo bot) example on Github.
 
 2. In order to generate a conversation with the account (and the Echo Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
 
@@ -72,9 +72,9 @@ Use the Agent Bot example when you are looking to review and develop with the va
 
 * subscribeAgentsState
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot){:target="_blank"} to review the full code repository on Github.
+[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github.
 
-You can also watch this demo video, which will guide you on how to run this example bot: [https://www.youtube.com/embed/7PVj6nhjG5o](https://www.youtube.com/embed/7PVj6nhjG5o){:target="_blank"}
+You can also watch this demo video, which will guide you on how to run this example bot: [https://www.youtube.com/embed/7PVj6nhjG5o](https://www.youtube.com/embed/7PVj6nhjG5o)
 
 ### Bots Cluster Example
 
@@ -84,10 +84,10 @@ This example demonstrates running a bot on a ​horizontal scalable cluster. It 
 
 * Multiple Bots - The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster){:target="_blank"} to review the full code repository on Github.​
+[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github.​
 
 You can also watch the demo video which will guide you through this example bot:
 
-[https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho){:target="_blank"}
+[https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho)
 
-As well as a code review video: [https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk){:target="_blank"}
+As well as a code review video: [https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk)

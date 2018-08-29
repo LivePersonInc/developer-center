@@ -24,7 +24,7 @@ From lp-shell:
 wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
 ```
 
-Client properties can be added to the connection URL as query params. The full list of supported client properties can be found [here](consumer-int-client-props.html){:target="_blank"}.
+Client properties can be added to the connection URL as query params. The full list of supported client properties can be found [here](consumer-int-client-props.html).
 
 
 Where LP_JWT is your token.
@@ -223,7 +223,7 @@ curl https://$LP_ACCDNDOMAIN/api/account/$LP_ACCOUNT/configuration/le-users/user
 
 ### Other APIs
 
-* [Consumer Token Creation](common-consumer-token-creation.html){:target="_blank"}
+* [Consumer Token Creation](common-consumer-token-creation.html)
 
 
 {% include links.html %}

@@ -21,7 +21,7 @@ The API consists of two types of calls:
 ### Messaging API WebSocket Connection
 
 ###  Establishment
-Refer to the [Getting Started](consumer-int-getting-started.html){:target="_blank"} section to see an example of how to establish this connection.
+Refer to the [Getting Started](consumer-int-getting-started.html) section to see an example of how to establish this connection.
 
 ###  Keep Alive
 The server will close any idle connection. In order to keep the connection open, the client should send a message every 60 seconds. For this purpose, the client can use one of the following:
@@ -30,7 +30,7 @@ The server will close any idle connection. In order to keep the connection open,
 * For clients that cannot send Ping messages (such as browsers): Utilize the applicative ``GetClock`` request: ```{"kind":"req","id":"1","type":"GetClock"}```.
 
 ###  Error Handling
-Upon disconnection, the client will receive a standard status code as defined by [rfc6455](https://tools.ietf.org/html/rfc6455#section-7.4){:target="_blank"}. Two custom status codes are used by the API:
+Upon disconnection, the client will receive a standard status code as defined by [rfc6455](https://tools.ietf.org/html/rfc6455#section-7.4). Two custom status codes are used by the API:
 
 * **4401** - A fresh token is required from the customer. When an authenticated connection is used, this code states that the request does not contain the required autorization token, or contains an expired token. This response asks the client to supply a new token from the customer.
 * **4407** - For unauthenticated identities, this status code states that the client should ask the LivePerson IDP service to extend the validity of the current identity.
@@ -85,7 +85,7 @@ Responses should be sent with some kind of correlation to the request that they 
 }
 ```
 
-The response message will also contain a ``code`` field. This field will be populated with the status code of the request. The values of this field will be taken from the [HTTP Semantics](https://tools.ietf.org/html/rfc7231){:target="_blank"}.
+The response message will also contain a ``code`` field. This field will be populated with the status code of the request. The values of this field will be taken from the [HTTP Semantics](https://tools.ietf.org/html/rfc7231).
 
 ###  Subscriptions
 
@@ -97,7 +97,7 @@ In this pattern the client has to send some kind of request message to the serve
 
 In order for the client to be compatible with future API changes, it should:
 
-* Ignore any field that is not documented in the [API reference](consumer-int-api-reference.html){:target="_blank"}. This includes existing fields that are not documented (for deprecation reasons), as well as new fields that will be added to the messages in newer versions.
+* Ignore any field that is not documented in the [API reference](consumer-int-api-reference.html). This includes existing fields that are not documented (for deprecation reasons), as well as new fields that will be added to the messages in newer versions.
 * Ignore any enum fields that contain undocumented values.
 
 ###  Single Element Arrays
@@ -116,7 +116,7 @@ The consumer initiates the messaging application on their device. At this point,
 2. Open a WebSocket connection to the Interaction API.
 3. Subscribe itself to the conversations metadata (in order to get the conversations list). This list may contain previously closed conversations along with existing active conversations. The list may be presented to the consumer.
 
-The user may now want to [continue an existing conversation](#continue-an-existing-conversation){:target="_blank"} or [start a new conversation](#start-a-new-conversation){:target="_blank"}.
+The user may now want to [continue an existing conversation](#continue-an-existing-conversation) or [start a new conversation](#start-a-new-conversation).
 
 ###  Continue an existing conversation
 
@@ -138,7 +138,7 @@ In order to create a new conversation, the client should do the following:
 1. Send a request to create a new conversation.
 2. Get a notification about the new conversation.
 
-The client should continue as described above for an [existing conversation](#continue-an-existing-conversation){:target="_blank"}.
+The client should continue as described above for an [existing conversation](#continue-an-existing-conversation).
 
 ###  Finish a conversation
 

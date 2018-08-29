@@ -20,7 +20,7 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html){:target="_blank"}).
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html)).
 
 
 `func logout()`

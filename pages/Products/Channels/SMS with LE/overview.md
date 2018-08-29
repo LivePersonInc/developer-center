@@ -37,16 +37,16 @@ Brands enjoy the benefits of using the LiveEngage SMS messaging solution:
 
 ### Best Practices
 
-For best practices and considerations regarding security and architecture please see the [LiveEngage Out-of-the-Box Connectors Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Out+of+the+box+connectors+overview.pdf){:target="_blank"} and review the SMS section.
+For best practices and considerations regarding security and architecture please see the [LiveEngage Out-of-the-Box Connectors Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Out+of+the+box+connectors+overview.pdf) and review the SMS section.
 
-There are specific legal considerations that a brand needs to think about when implementing SMS. For full details please reference this [Best Practice for Complying with Text Messaging Regulations](http://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Best+Practices+for+Complying+with+Text+Messaging+Regulations.pdf){:target="_blank"}.
+There are specific legal considerations that a brand needs to think about when implementing SMS. For full details please reference this [Best Practice for Complying with Text Messaging Regulations](http://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Best+Practices+for+Complying+with+Text+Messaging+Regulations.pdf).
 
 For an even more in-depth look at messaging best practices please see:
 
-[Messaging - Best Practice for Agents](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+for+Agents.pdf){:target="_blank"}
+[Messaging - Best Practice for Agents](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+for+Agents.pdf)
 
-[Messaging - Best Practice Predefined Content](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+Predefined+content.pdf){:target="_blank"}
+[Messaging - Best Practice Predefined Content](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+Predefined+content.pdf)
 
-[Messaging - Best Practices Blended Accounts](https://docs.google.com/document/d/1L3xuUPw5Zz3bZNX-ymTRZTNsLwKEcWA6ZrdCusKXVHY/edit){:target="_blank"}
+[Messaging - Best Practices Blended Accounts](https://docs.google.com/document/d/1L3xuUPw5Zz3bZNX-ymTRZTNsLwKEcWA6ZrdCusKXVHY/edit)
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5275421544001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>

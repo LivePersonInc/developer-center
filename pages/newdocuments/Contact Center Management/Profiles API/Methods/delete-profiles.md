@@ -44,4 +44,4 @@ This API deletes profiles from a specific account.
 
 **Response Body**
 
-[Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.

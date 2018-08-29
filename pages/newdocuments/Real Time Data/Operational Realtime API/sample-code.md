@@ -20,7 +20,7 @@ The core implementation of OAuth is implemented in OAuthUtil.java. This is attac
 
 **Download**
 
-- Download the [zip file](https://www.google.com/url?q=https%3A%2F%2Fce-sr.s3.amazonaws.com%2FOperational%2520Real-Time%2FRT-API-oAuth-Sample.zip&sa=D&sntz=1&usg=AFQjCNGKRPpEpEU4v9u407ia04zGkD_Bvg){:target="_blank"}.
+- Download the [zip file](https://www.google.com/url?q=https%3A%2F%2Fce-sr.s3.amazonaws.com%2FOperational%2520Real-Time%2FRT-API-oAuth-Sample.zip&sa=D&sntz=1&usg=AFQjCNGKRPpEpEU4v9u407ia04zGkD_Bvg).
 - Unzip the file.
 - Open in any Integrated Development Environment (IDE).
 - Build the project and run in Tomcat.

@@ -419,6 +419,7 @@
       subpages:
       - subpagename: Overview
       - subpagename: App Install Manifest for Connectors
+      - subpagename: Getting Started
     - pagename: Authorization and Authentication
       subpages:
       - subpagename: Get AppJWT

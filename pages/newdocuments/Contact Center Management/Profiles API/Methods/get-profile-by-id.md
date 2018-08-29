@@ -31,7 +31,7 @@ This API retrieves a single profile (by ID) for a specific account.
 
 **Request Body**
 
-[Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.
 
 **Path Parameters**
 
@@ -44,4 +44,4 @@ This API retrieves a single profile (by ID) for a specific account.
 
 **Response Body**
 
-Please see the [Appendix](administration-profiles-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+Please see the [Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.

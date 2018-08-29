@@ -22,7 +22,7 @@ This sample demonstrates the usage of the messaging API from browser JavaScript 
 
 ### Step 1 - Wire the sample to your account.
 
-Open the following [codepen page](https://codepen.io/liveperson/pen/xRzXXd?editors=0010){:target="_blank"}
+Open the following [codepen page](https://codepen.io/liveperson/pen/xRzXXd?editors=0010)
 
 <p data-height="498" data-theme-id="0" data-slug-hash="xRzXXd" data-default-tab="js" data-user="liveperson" data-embed-version="2" data-pen-title="UMS js example" class="codepen">See the Pen <a href="https://codepen.io/liveperson/pen/xRzXXd/">UMS js example</a> by liveperson (<a href="http://codepen.io/liveperson" target="_blank">@liveperson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -47,6 +47,6 @@ You can close the conversation, and the consumer in the JavaScript window will b
 
 You can fork the codepen and make changes in the code.
 
-The sample code uses sample library that handles the network layer. The sample library can be found [here](https://codepen.io/liveperson/pen/oYyLJr.babel){:target="_blank"}.
+The sample code uses sample library that handles the network layer. The sample library can be found [here](https://codepen.io/liveperson/pen/oYyLJr.babel).
 
 {% include links.html %}

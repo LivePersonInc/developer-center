@@ -44,9 +44,9 @@ There are 2 authenticated connection methods:
     ```
 
 
-Once the Authentication key is expired, you will be notified with callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired){:target="_blank"}.
+Once the Authentication key is expired, you will be notified with callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired).
 
-To re-connect with new Authentication key use [reconnect( LPAuthenticationParams lpAuthenticationParams) ](android-methods.html#reconnect){:target="_blank"}
+To re-connect with new Authentication key use [reconnect( LPAuthenticationParams lpAuthenticationParams) ](android-methods.html#reconnect)
 
 
 **Note: errors while trying to connect will call callback : void onError(TaskType type, String message);**

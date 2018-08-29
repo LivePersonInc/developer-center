@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile-(deprecat
 indicator: messaging
 ---
 
-*Deprecated. Please use the [setUserProfile](android-setuserprofile.html){:target="_blank"} (String firstName, String lastName, String phone) method ).*
+*Deprecated. Please use the [setUserProfile](android-setuserprofile.html) (String firstName, String lastName, String phone) method ).*
 
 The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the messaging Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
 

@@ -17,7 +17,7 @@ indicator: chat
 Executes engagements eligibility and availability check.   
 This method exposes the ability to start a visitor session, add SDEs to the session, and reports events that happened on the application on the consumer side.
 It should be used only in in an 'unmonitored flow' (non tagged pages).
-Getting engagement details from the server might require few attempts until it becomes available so it's recommended to create a retry mechanism as a callback to the [onEngagement](consumer-experience-javascript-chat-onengagement.html){:target="_blank"} (here is an [example](https://github.com/LivePersonInc/chat-js-sdk-sample-app/blob/master/script.js#L76){:target="_blank"}).
+Getting engagement details from the server might require few attempts until it becomes available so it's recommended to create a retry mechanism as a callback to the [onEngagement](consumer-experience-javascript-chat-onengagement.html) (here is an [example](https://github.com/LivePersonInc/chat-js-sdk-sample-app/blob/master/script.js#L76)).
 
 ### Request
 
@@ -113,6 +113,6 @@ Engagement is not available:
 }
 ```
 
-Response object gets transferred as parameter to [onEngagement](consumer-experience-javascript-chat-onengagement.html){:target="_blank"} callback.
+Response object gets transferred as parameter to [onEngagement](consumer-experience-javascript-chat-onengagement.html) callback.
 
 

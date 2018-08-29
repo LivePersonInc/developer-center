@@ -36,7 +36,7 @@ When the LiveEngage Tag is not part of the flow, retrieving an engagement is the
 
 **Engagement retrieval**
 
-In order to display an engagement with an up-to-date availability state, you must access the LivePerson Monitoring system to create a consumer session and retrieve an engagement. This call is made by the `getEngagement()` function of the [App Engagement API](rt-interactions-app-engagement-overview.html){:target="_blank"} or directly from the [JS Chat API](consumer-experience-javascript-chat-getting-started.html){:target="_blank"}.
+In order to display an engagement with an up-to-date availability state, you must access the LivePerson Monitoring system to create a consumer session and retrieve an engagement. This call is made by the `getEngagement()` function of the [App Engagement API](rt-interactions-app-engagement-overview.html) or directly from the [JS Chat API](consumer-experience-javascript-chat-getting-started.html).
 
 **Using the Chat API**
 

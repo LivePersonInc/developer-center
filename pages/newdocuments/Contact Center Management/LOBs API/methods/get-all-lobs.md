@@ -31,7 +31,7 @@ This API retrieves a list of LoBs for a specific account.
 
 **Request Body**
 
-[Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-lobs-appendix.html) for Entity Structure and Entity Example.
 
 **Path Parameters**
 
@@ -43,4 +43,4 @@ This API retrieves a list of LoBs for a specific account.
 
 **Response Body**
 
-[Appendix](administration-lobs-appendix.html){:target="_blank"} for Entity Structure and Entity Example.
+[Appendix](administration-lobs-appendix.html) for Entity Structure and Entity Example.

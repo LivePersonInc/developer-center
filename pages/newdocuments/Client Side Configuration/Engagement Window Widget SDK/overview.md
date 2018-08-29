@@ -23,14 +23,14 @@ The SDK is a lightweight, client-side code package for communicating with the Li
 Once an application is developed, follow these two steps in order to integrate it into the
 window SDK:
 
-1. Reference the [Client SDK file](https://lpcdn.lpsnmedia.net/unifiedwindow/widgetSDK.min.js){:target="_blank"}.
+1. Reference the [Client SDK file](https://lpcdn.lpsnmedia.net/unifiedwindow/widgetSDK.min.js).
 
 2. After developing the webapp integration, contact the LivePerson Technical Solutions
 Team to configure the widget over the "LP Unified Window" taglet.
 
 In the near future, Widget configuration will be available directly via LiveEngage.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

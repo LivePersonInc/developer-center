@@ -16,7 +16,7 @@ LivePerson Voice & Video is a SDK (_Source Development Kit_) for the **Apple iOS
 
 
 ### Dependencies
-The SDK requires our LivePerson [**Messaging SDK**](consumer-experience-ios-sdk-overview.html){:target="_blank"} integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
+The SDK requires our LivePerson [**Messaging SDK**](consumer-experience-ios-sdk-overview.html) integrated into your app. Your consumers will always engage in a messaging conversation first, before your agents choose to escalate the conversation to a *Voice*, *Video* or *CoBrowse* session.
 
 ### Supported iOS Versions
 

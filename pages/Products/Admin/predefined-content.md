@@ -21,4 +21,4 @@ The predefined content tool within LiveEngage is one which agents rely on to pro
 
 Building and maintaining a current and comprehensive set of pre-defined content for your agents is crucial for accuracy and efficiency of agent responses.
 
-**Using the [Predefined Content API](account-configuration-predefined-content-overview.html){:target="_blank"}, brands can automate the upkeep of these important messages.**
+**Using the [Predefined Content API](account-configuration-predefined-content-overview.html), brands can automate the upkeep of these important messages.**

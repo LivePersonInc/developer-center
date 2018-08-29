@@ -49,7 +49,7 @@ Updates an existing Predefined Content item for a specific account.
 
 **Request Body**
 
-See [Appendix](account-configuration-predefined-content-appendix.html){:target="_blank"} for objects’ data structure.
+See [Appendix](account-configuration-predefined-content-appendix.html) for objects’ data structure.
 
 ### Response
 

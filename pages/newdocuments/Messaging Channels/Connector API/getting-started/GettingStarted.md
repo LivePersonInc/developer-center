@@ -13,13 +13,13 @@ permalink: connector-api-connector-api-getting-started.html
 
 ### Getting Started with the Connector API
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
-3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
 
 [comment]: <> (guides-retry-policy.html needs to be updated with Connector API as well)
 
@@ -30,9 +30,9 @@ permalink: connector-api-connector-api-getting-started.html
 
 	The connector is a server application that is used to make HTTPS calls on behalf of consumers to LiveEngage. For that purpose, the application must be registered and known to LiveEngage for authorization and user validation. This process can happen before even writing one line of code.
 
-	In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](app-install-manifest-connectors.html){:target="_blank"} and replace or fill in the required information.
+	In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](app-install-manifest-connectors.html) and replace or fill in the required information.
 
-	The main sections to be filled are (Refer to the [JSON](app-install-manifest-connectors.html){:target="_blank"} for more information):
+	The main sections to be filled are (Refer to the [JSON](app-install-manifest-connectors.html) for more information):
 
 	* Your **connector/application name** (`client_name` and optionally also the `description`).
 
@@ -55,7 +55,7 @@ permalink: connector-api-connector-api-getting-started.html
 
 	 https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
 
-	Refer to [Getting an AppJWT](Create_AppJWT.html){:target="_blank"} for more information.
+	Refer to [Getting an AppJWT](Create_AppJWT.html) for more information.
 
 3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in LiveEngage:
 
@@ -63,8 +63,8 @@ permalink: connector-api-connector-api-getting-started.html
 
 	 https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/consumer?v=1.0|
 
-	Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html){:target="_blank"} for more information.
+	Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html) for more information.
 
-4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html){:target="_blank"} to get started.
+4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html) to get started.
 
 	**Note**: The above **AppJWT** and **ConsumerJWS** will be passed in the request headers of every API call to LiveEngage for authorization of the connector and identification of the consumer.

@@ -36,7 +36,7 @@ Use this API to report on engagement attributes (SDEs) for a consumer in an appI
 | failure | A Failure callback with an error in case the request fails |  Yes |
 
 ### sendSDE (Deprecated)
-*This method was deprecated since SDK version 3.2.0 Use [sendSDE(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->()) instead](consumer-experience-ios-sdk-methods.html#sendSDE){:target="_blank"} instead*
+*This method was deprecated since SDK version 3.2.0 Use [sendSDE(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->()) instead](consumer-experience-ios-sdk-methods.html#sendSDE) instead*
 
 Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
@@ -70,7 +70,7 @@ func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, c
 | failure | A Failure callback with an error in case the request fails |  Yes |
 
 ### getEngagement (Deprecated)
-*This method was deprecated since SDK version 3.2.0 Use [getEngagement(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->()) instead) instead](consumer-experience-ios-sdk-methods.html#getEngagement){:target="_blank"} instead*
+*This method was deprecated since SDK version 3.2.0 Use [getEngagement(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->()) instead) instead](consumer-experience-ios-sdk-methods.html#getEngagement) instead*
 
 Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
 

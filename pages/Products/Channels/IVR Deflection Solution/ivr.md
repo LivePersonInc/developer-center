@@ -21,7 +21,7 @@ If an engagement is available, the IVR Engagement API returns a URL to start the
 In some cases, brands can choose to skip the availability check and provide the option to move to mobile messaging regardless using a static link. In this this case, it is the brand’s responsibility to ensure that their service center is properly staffed.
 
 In addition to cost-effectiveness over voice, live messaging and chat interactions have also been proven to drive higher CSAT. In a [study
-conducted by [Amdocs](http://www.amdocs.com/news/pages/amdocs-survey-improved-proactive-care-mobile-self-service-tools.aspx){:target="_blank"}, 76% of consumers say they prefer to communicate with brands via mobile messaging. However, 92% of interactions with brands are still conducted over the phone.
+conducted by [Amdocs](http://www.amdocs.com/news/pages/amdocs-survey-improved-proactive-care-mobile-self-service-tools.aspx), 76% of consumers say they prefer to communicate with brands via mobile messaging. However, 92% of interactions with brands are still conducted over the phone.
 
 The LivePerson IVR Deflection Solution provides brands with the opportunity to facilitate consumers who have already dialed their service number with the option to move their interaction to mobile chat.
 

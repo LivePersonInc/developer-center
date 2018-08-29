@@ -52,6 +52,6 @@ Off hours can appear in different time zone with this resource ID:
 <string name="lp_ttr_message_off_hours_time_zone_id"></string>
 ```
 
-You can find a list of timezone IDs [here](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/){:target="_blank"}.
+You can find a list of timezone IDs [here](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/).
 
 _**Example**: "US/Pacific", "Europe/Berlin"._

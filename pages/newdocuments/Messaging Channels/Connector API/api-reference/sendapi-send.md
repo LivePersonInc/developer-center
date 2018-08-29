@@ -16,11 +16,11 @@ The SEND method allows you to send a JSON payload to LiveEngage. This method is 
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Request URI
 
@@ -44,8 +44,8 @@ The SEND method allows you to send a JSON payload to LiveEngage. This method is 
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Body**
 
@@ -79,10 +79,10 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response){:target="_blank"} |
+| dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response) |
 | type | The messaging event type | ContentEvent | string | true | ContentEvent will be used for sending a text message or a file |
-| contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](share-image-example.html){:target="_blank"} for more details. |
-| message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](share-image-example.html){:target="_blank"} for more details. |
+| contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](share-image-example.html) for more details. |
+| message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](share-image-example.html) for more details. |
 
 
 **Example Request Body - Consumer is Typing - JSON Payload**
@@ -106,7 +106,7 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response){:target="_blank"} |
+| dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response) |
 | type | The messaging event type | ChatStateEvent | string | true |
 | ChatState | Chat Status of the consumer | "COMPOSING" - Consumer is typing | String | true | Possible values: **"ACTIVE"** (user is in the chat), **"INACTIVE"** (e.g Consumer navigated away but application is still open), **"GONE"** (e.g Consumer closed the chat application), **"COMPOSING"** (Consumer is typing), **"PAUSE"** (Consumer has stopped typing) |
 
@@ -135,10 +135,10 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response){:target="_blank"} |
+| dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response) |
 | type | The messaging event type | "AcceptStatusEvent" | string | true |
 | status | Acceptance status of the message sent by the Agent to the Consumer | "ACCEPT" | string | true | Possible values: **"ACCEPT"** (message was accepted by the consumer), **"READ"** (message was read by the consumer), **"ACCESS"** (Consumer has accessed the file), **"NACK"** (message not received), **"ACTION"** (used in conjunction with metadata to reply on structured content sent by the Agent) |
-| sequenceList | List of **sequence** values | [2,3] | Array of integers | true |  See [example](webhooks-examples.html#agent-sent-a-text-messages){:target="_blank"}. You can mention more than one sequence number hence the sequence list |   
+| sequenceList | List of **sequence** values | [2,3] | Array of integers | true |  See [example](webhooks-examples.html#agent-sent-a-text-messages). You can mention more than one sequence number hence the sequence list |   
 
 **Note**: LiveEngage assigns a number to every message. That number controls where that message appears in the sequence. In order to refer to a specific message or group of messages, you need to pass their sequence IDs. For example, if you want to "ACCEPT" the first and second message, you will pass the sequenceList as above.
 

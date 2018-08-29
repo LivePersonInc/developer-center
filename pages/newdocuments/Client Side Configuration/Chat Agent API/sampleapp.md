@@ -14,7 +14,7 @@ indicator: chat
 
 ### Introduction
 
-You can find the [Agent Sample App here](https://github.com/LivePersonInc/agent-sample-app){:target="_blank"}. This is a virtual agent simulator built over the Chat Agent API. In this demo the simulator implements the following Chat Agent API endpoints:
+You can find the [Agent Sample App here](https://github.com/LivePersonInc/agent-sample-app). This is a virtual agent simulator built over the Chat Agent API. In this demo the simulator implements the following Chat Agent API endpoints:
 
 * LiveEngage login
 

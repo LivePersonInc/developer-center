@@ -17,7 +17,7 @@ indicator:
 
 ### Step 1 - Set Up Your LiveEngage Configuration
 
-If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html){:target="_blank"}.
+If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
 
 1. Create a user for your bot: Go to the users tab and create a new user > populate the form with the bot information including the name that will display to customers as well as the icon.
 
@@ -27,15 +27,15 @@ If your brand is using Live Chat - both desktop and mobile web chats can incorpo
 
 In order to use the Chat Agent API, please follow the steps below:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information.
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information.
 
-2. **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html){:target="_blank"}. Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all Chat Agent API requests.
+2. **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all Chat Agent API requests.
 
-3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html){:target="_blank"}.
+3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html).
 
-4. **Log out** using the [Login Service API](agent-logout.html){:target="_blank"}.
+4. **Log out** using the [Login Service API](agent-logout.html).
 
-You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [C​lick here](https://github.com/LivePersonInc/agent-sample-app){:target="_blank"} to review the full code repository on Github.
+You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [C​lick here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
 
 ### Step 3 - Assign your bot to a LiveEngage campaign and manage bot escalations
 

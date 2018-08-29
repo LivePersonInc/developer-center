@@ -13,7 +13,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(deprec
 
 indicator: messaging
 ---
-*This method was deprecated - please use the [showConversation(Activity, LPAuthenticationParams, ConversationViewParams) ](android-showconversationfull.html){:target="_blank"}.*
+*This method was deprecated - please use the [showConversation(Activity, LPAuthenticationParams, ConversationViewParams) ](android-showconversationfull.html).*
 
 The showConversation API displays the messaging screen as a new activity with the conversation fragment. The consumer can then start or continue a conversation. The conversation screen is controlled entirely by the SDK.
 

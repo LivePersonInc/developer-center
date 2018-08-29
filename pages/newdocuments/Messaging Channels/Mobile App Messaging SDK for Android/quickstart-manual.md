@@ -31,7 +31,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 Follow the steps below to download and unzip the SDK.
 
-1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK){:target="_blank"}.
+1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK).
 
 2. Extract the ZIP file to a folder on your computer.
 
@@ -313,7 +313,7 @@ class ContainerActivity extends FragmentActivity implements ConversationFragment
 
 **In case of Fragment mode** - set the desired orientation in your container Activity definition in AndroidManifest.xml
 
-[Android Screen Orentations](https://developer.android.com/guide/topics/manifest/activity-element.html#screen){:target="_blank"}
+[Android Screen Orentations](https://developer.android.com/guide/topics/manifest/activity-element.html#screen)
 
 
 **In case of Activity mode** - override in your application's AndroidManifest.xml the ConversationActivity definition and set the desired screen orientation:

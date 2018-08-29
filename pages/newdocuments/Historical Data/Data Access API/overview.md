@@ -53,7 +53,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key that is available in the LiveEngage API Keys tab.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.  
+3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).  
 
 4. This API requires backend enablement, please contact your account manager to do so. 
 

@@ -17,7 +17,7 @@ In this tutorial we will demonstrate the mechanism that enables the consumer to 
 
 ### Prerequisites
 
-At the end of the [Getting Started](consumer-int-getting-started.html){:target="_blank"} tutorial, we created the ``lp.env`` file. In order to launch ``lp-shell`` with your previous settings, type the following:
+At the end of the [Getting Started](consumer-int-getting-started.html) tutorial, we created the ``lp.env`` file. In order to launch ``lp-shell`` with your previous settings, type the following:
 
 ```sh
 docker run --env-file lp.env -it lpinc/shell
@@ -48,7 +48,7 @@ You will now be able to see the content of the JWT:
 
 The ``sub`` property contains your ``consumerId``.
 
-**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/){:target="_blank"}.
+**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
 
 ### Step 2 - Create a Conversation
 Open the WebSocket connection using the following:

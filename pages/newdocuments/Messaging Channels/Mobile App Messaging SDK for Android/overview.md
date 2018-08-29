@@ -36,4 +36,4 @@ indicator: messaging
 
 <img src="img/inappoverviewandroid1.png" alt="InAppOverviewAndroid1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverviewandroid2.png" alt="InAppOverviewAndroid2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverviewandroid3.png" alt="InAppOverviewAndroid3" style="max-width:230px;max-height:700px;">
 
-For guidance on considerations and how to get started with Mobile App Messaging, [click here](products-channels-inapp-messaging.html){:target="_blank"}.
+For guidance on considerations and how to get started with Mobile App Messaging, [click here](products-channels-inapp-messaging.html).

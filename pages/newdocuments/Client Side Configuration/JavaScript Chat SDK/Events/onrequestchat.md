@@ -14,12 +14,12 @@ permalink: javascript-chat-sdk-events-onrequestchat.html
 indicator: chat
 ---
 
-Triggered in response to [requestChat](consumer-experience-javascript-chat-startchatrequestchat.html){:target="_blank"}.
+Triggered in response to [requestChat](consumer-experience-javascript-chat-startchatrequestchat.html).
 
 **Notes**:
 
-- *See [onInfo](consumer-experience-javascript-chat-oninfo.html){:target="_blank"} and [onLine](consumer-experience-javascript-chat-online.html){:target="_blank"} to understand the data in this method.*
-- *It is a best practice to listen to specific events that are a breakdown of this one: [onState](consumer-experience-javascript-chat-onstate.html){:target="_blank"}, [onInfo](consumer-experience-javascript-chat-oninfo.html){:target="_blank"} , [onLine](consumer-experience-javascript-chat-online.html){:target="_blank"} and [onStart](consumer-experience-javascript-chat-onstart.html){:target="_blank"} will provide the same information to deal with in more granular detail.*
+- *See [onInfo](consumer-experience-javascript-chat-oninfo.html) and [onLine](consumer-experience-javascript-chat-online.html) to understand the data in this method.*
+- *It is a best practice to listen to specific events that are a breakdown of this one: [onState](consumer-experience-javascript-chat-onstate.html), [onInfo](consumer-experience-javascript-chat-oninfo.html) , [onLine](consumer-experience-javascript-chat-online.html) and [onStart](consumer-experience-javascript-chat-onstart.html) will provide the same information to deal with in more granular detail.*
 
 **Sample Response**
 

@@ -29,4 +29,4 @@ void onOfflineHoursChanges(boolean isOfflineHoursOn);
 void onAgentAvatarTapped(AgentData agentData);
 ```
 
-*Note: For the full list of Callbacks, click [here](android-callbacks-index.html#livepersoncallback){:target="_blank"} for more information.*
+*Note: For the full list of Callbacks, click [here](android-callbacks-index.html#livepersoncallback) for more information.*

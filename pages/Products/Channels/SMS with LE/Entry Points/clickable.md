@@ -142,7 +142,7 @@ Save and publish your engagements. They will not display until you've added the 
 
 In order for your Entry Points to work, you need code on your website to tell LiveEngage which Entry Point the visitor is on.
 
-Add the following code to your website to detect which mobile Operating System (OS) the visitor is using. This way the visitor will see the correct engagement with the correct SMS link for their OS. For a full explanation on section variables please see this [article](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=engagement-attributes-overview){:target="_blank"}.
+Add the following code to your website to detect which mobile Operating System (OS) the visitor is using. This way the visitor will see the correct engagement with the correct SMS link for their OS. For a full explanation on section variables please see this [article](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=engagement-attributes-overview).
 
 ```javascript
 <script>

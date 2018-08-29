@@ -61,4 +61,4 @@ Retrieves a Predefined Content item by ID from a specific account.
 
 **Response Body**
 
-See [Appendix](account-configuration-predefined-content-appendix.html){:target="_blank"}.
+See [Appendix](account-configuration-predefined-content-appendix.html).

@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-ios-methods-dismissurgent.html
 indicator: messaging
 ---
 
-This API is used to cancel the [markAsUrgent API](consumer-experience-ios-sdk-markasurgent.html){:target="_blank"}. It will reset the SLA for the agent response back to default.  This API can be called only for open conversations.
+This API is used to cancel the [markAsUrgent API](consumer-experience-ios-sdk-markasurgent.html). It will reset the SLA for the agent response back to default.  This API can be called only for open conversations.
 
 `func dismissUrgent(_ conversationQuery: ConversationParamProtocol`)
 

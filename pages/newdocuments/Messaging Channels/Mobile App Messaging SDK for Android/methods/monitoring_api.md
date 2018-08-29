@@ -17,7 +17,7 @@ indicator: messaging
 
 
 
-**Note:** Monitoring API is enabled only when the SDK is initialized with [MonitoringInitParams](android-interface-definitions.html){:target="_blank"}, for how to initialize the SDK with MonitoringParams, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params){:target="_blank"}.
+**Note:** Monitoring API is enabled only when the SDK is initialized with [MonitoringInitParams](android-interface-definitions.html), for how to initialize the SDK with MonitoringParams, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params).
 
 ### sendSde
 
@@ -32,7 +32,7 @@ public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> 
 | context | A context from the host app | Yes |
 | identities | A list of LPMonitoringIdentity objects with the consumer identities | Yes |
 | monitoringParams | An mandatory MonitoringParams with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
-| callback | A callback of type [SdeCallback](android-interface-definitions.html#sdecallback){:target="_blank"}. This response includes SessionId, VisitorId and PageId for future use | Yes |
+| callback | A callback of type [SdeCallback](android-interface-definitions.html#sdecallback). This response includes SessionId, VisitorId and PageId for future use | Yes |
 
 
 ### getEngagement
@@ -50,7 +50,7 @@ public static void getEngagement(Context context, @Nullable List<LPMonitoringIde
 | context | A context from the host app | Yes |
 | identities | A list of LPMonitoringIdentity objects with the consumer identities | No |
 | monitoringParams | An optional object with optional pageId, Entry Points array and Engagement Attributes | No |
-| callback | A callback of type [EngagementCallback](android-interface-definitions.html#engagementcallback){:target="_blank"}. This response include SessionId, VisitorId and a list of [EngagementDetails](android-interface-definitions.html#engagementdetails){:target="_blank"} objects | Yes |
+| callback | A callback of type [EngagementCallback](android-interface-definitions.html#engagementcallback). This response include SessionId, VisitorId and a list of [EngagementDetails](android-interface-definitions.html#engagementdetails) objects | Yes |
 
 
-*Please refer to the [Interface and Class Definitions](android-interface-definitions.html){:target="_blank"} section for parameter classes.*
+*Please refer to the [Interface and Class Definitions](android-interface-definitions.html) section for parameter classes.*

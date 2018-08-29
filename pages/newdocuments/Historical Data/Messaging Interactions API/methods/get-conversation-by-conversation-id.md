@@ -32,4 +32,4 @@ Required:
 
 ### Response
 
-See Response in the  [Conversations](data-messaging-interactions-conversations.html){:target="_blank"} method.
+See Response in the  [Conversations](data-messaging-interactions-conversations.html) method.

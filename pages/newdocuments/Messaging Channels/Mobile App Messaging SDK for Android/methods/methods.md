@@ -17,7 +17,7 @@ indicator: messaging
 
 ### initialize (deprecated)
 
-*This method was deprecated - please use the [new method](android-initializeproperties.html){:target="_blank"}.*
+*This method was deprecated - please use the [new method](android-initializeproperties.html).*
 
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK. All subsequent API calls, except to the handlePushMessage, assume that the SDK has been initialized.
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session.
@@ -39,7 +39,7 @@ To allow user interaction, the Messaging Mobile SDK must be initiated. This API 
 
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session. This method gets InitLivePersonProperties, which includes the properties needed for the init phase of the SDK.
 
-InitLivePersonProperties has a new [MonitoringInitParams](android-interface-definitions.html){:target="_blank"} member that initializes the Monitoring API. Passing the MonitoringInitParams is mandatory when using Monitoring API capabilities.
+InitLivePersonProperties has a new [MonitoringInitParams](android-interface-definitions.html) member that initializes the Monitoring API. Passing the MonitoringInitParams is mandatory when using Monitoring API capabilities.
 
 ```swift
 public static void initialize (Context context, InitLivePersonProperties initProperties)
@@ -154,7 +154,7 @@ public static boolean showConversation(Activity activity)
 
 ### showConversation (with authentication support) (Deprecated)
 
-Same as [showConversation](android-showconversation.html){:target="_blank"} with the addition of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
+Same as [showConversation](android-showconversation.html) with the addition of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
 ```swift
 public static boolean showConversation(Activity activity, String authenticationKey)
@@ -275,7 +275,7 @@ _**Note:** This API does not show the actual screen, but only creates the fragme
 
 ### getConversationFragment with authentication support (Deprecated)
 
-Same as [getConversationFragment](android-getconversationfrag.html){:target="_blank"} with the attention of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified, or your backend isn’t set up with the LivePerson backend, this call will fail.
+Same as [getConversationFragment](android-getconversationfrag.html) with the attention of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified, or your backend isn’t set up with the LivePerson backend, this call will fail.
 
 ```swift
 public static Fragment getConversationFragment(String authKey)
@@ -288,7 +288,7 @@ public static Fragment getConversationFragment(String authKey)
 ### reconnect
 
 Reconnect with a new LPAuthenticationParams object: that contains String mAuthKey, String mHostAppJWT, String mHostAppRedirectUri .
-When connecting, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
+When connecting, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html) callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 When creating a new LPAuthenticationParams - you may call empty constructor and then call setAuthKey() or setHostAppJWT() according to the host parameter
 
 ```swift
@@ -301,7 +301,7 @@ public static void reconnect(LPAuthenticationParams lPAuthenticationParams)
 
 ### reconnect (Deprecated)
 
-Reconnect with a new authentication key. When connecting with an authentication key, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
+Reconnect with a new authentication key. When connecting with an authentication key, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html) callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 
 ```swift
 public static void reconnect(String authKey)
@@ -344,7 +344,7 @@ public static void setUserProfile(String appId, String firstName, String lastNam
 
 Register to LPMessagingSDK push notifications. Providing the authenticationParams parameter enables registering to the LPPusher without opening a conversation first. If the registrationCompletedCallback callback is provided, it will be called when registeration is finished successfully or if it failed and indicate which one happened.
 
-If the registration fails due to an expired token, the [onTokenExpired](android-callbacks-index.html){:target="_blank"} callback is called.
+If the registration fails due to an expired token, the [onTokenExpired](android-callbacks-index.html) callback is called.
 
 ```swift
 public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
@@ -461,7 +461,7 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 | Parameter | Description |
 | :--- | :--- |
 | appId | The host app ID |
-| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
 
 ### getNumUnreadMessages (Deprecated)
 
@@ -489,7 +489,7 @@ public static String getSDKVersion()
 
 ### setCallback
 
-Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. See [LivePerson Callbacks Interface](android-callbacks-interface.html){:target="_blank"} for more information.
+Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. See [LivePerson Callbacks Interface](android-callbacks-interface.html) for more information.
 
 ```swift
 public static void setCallback(final LivePersonCallback listener)
@@ -501,7 +501,7 @@ public static void setCallback(final LivePersonCallback listener)
 
 ### removeCallBack
 
-Removes the registered [LivePersonCallback](android-callbacks-index.html){:target="_blank"} callback.
+Removes the registered [LivePersonCallback](android-callbacks-index.html) callback.
 
 ```swift
 public static void removeCallBack()
@@ -517,13 +517,13 @@ public static void checkActiveConversation(final ICallback<Boolean, Exception> c
 
 | Parameter | Description |
 | :--- | :--- |
-| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
 
 ### checkAgentID
 
 If there is an active conversation, this API returns agent data through the provided callback. If there is no active conversation, the API returns null.
 
-[AgentData definition](android-interface-and-class-definitions.html){:target="_blank"}
+[AgentData definition](android-interface-and-class-definitions.html)
 
 ```swift
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
@@ -531,7 +531,7 @@ public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 
 | Parameter | Description |
 | :--- | :--- |
-| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
 
 ### markConversationAsUrgent
 
@@ -559,7 +559,7 @@ public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Ex
 
 | Parameter | Description |
 | :--- | :--- |
-| callback | An [ICallback](android-callbacks-index.html){:target="_blank"} implementation |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
 
 ### resolveConversation
 
@@ -577,11 +577,11 @@ public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
 
 | Parameter | Description |
 | :--- | :--- |
-| shutdownCallback | A [ShutDownLivePersonCallback](android-callbacks-index.html){:target="_blank"} implementation to get indication whether the shutdown succeeded or failed |
+| shutdownCallback | A [ShutDownLivePersonCallback](android-callbacks-index.html) implementation to get indication whether the shutdown succeeded or failed |
 
 Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection.
 
-The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"} API.
+The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html) API.
 
 ShutDownLivePersonCallback callback description:
 
@@ -592,11 +592,11 @@ _**Note: This does not end the current messaging conversation.**_
 
 ### shutDown (deprecated)
 
-*Deprecated. Please use the [shutDown(ShutDownLivePersonCallback)](android-shutdown.html){:target="_blank"} method.*
+*Deprecated. Please use the [shutDown(ShutDownLivePersonCallback)](android-shutdown.html) method.*
 
 Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection.
 
-The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"} API.
+The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html) API.
 
 ```swift
 public static void shutDown()
@@ -625,7 +625,7 @@ public static boolean clearHistory()
 
 Logout from the SDK - when all user data should be removed.
 
-Calls [unregisterLPPusher](android-unregisterlppusher.html){:target="_blank"}, [shutDown](android-shutdown.html){:target="_blank"} and, in addition, deletes all user data (messages and user details) from the device.
+Calls [unregisterLPPusher](android-unregisterlppusher.html), [shutDown](android-shutdown.html) and, in addition, deletes all user data (messages and user details) from the device.
 
 In order to unregister from push, it must be called when there is network available. After logout the SDK is unavailable until re-initiated.
 
@@ -650,4 +650,4 @@ public static void logOut(Context context, String brandId, String appId, LogoutL
 | context | A context from the host app. |
 | brandId | An account ID. |
 | appId | The host app ID. |
-| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html){:target="_blank"} implementation. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |

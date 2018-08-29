@@ -21,7 +21,7 @@ This API exposes another mechanism to enable the client to get conversation meta
 In order to get the metadata for the existing conversations, the client should subscribe itself to the conversation metadata stream. Upon any change, the client will get a notification about the updated conversation. Using this mechanism, the client is aware of changes done by the agent (close, join, transfer, and more). For clients that do not keep state such as browsers, this mechanism can be helpful for retrieving the current state after connection resstablishment.
 
 ### Prerequisites
-See [Prerequisites](consumer-int-get-msg.html#prerequisites){:target="_blank"}.
+See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
 ### Step 1 - Subscribe
 

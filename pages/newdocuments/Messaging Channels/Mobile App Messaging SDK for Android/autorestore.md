@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-android-automatic-
 indicator: messaging
 ---
 
-Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If this feature is enabled on an App, when reinstalling the application all stored data is restored to the device. refer to [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html){:target="_blank"} for more info.
+Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If this feature is enabled on an App, when reinstalling the application all stored data is restored to the device. refer to [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
 
 Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore and needs to be disabled on the host app if the app enabled Automatic Backup.
 

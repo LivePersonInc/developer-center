@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-Users that use your application are first redirected to the LivePerson Identity Service in order to receive an authorization grant in the form of code from our Identity Service. The code is appended to the redirect URL as a parameter (see example below). This code is later used in the [token request](/authorizing-liveengage-applications-methods-token-request.html){:target="_blank"} in order to receive an access token that the application can use in order to interact with LE services.
+Users that use your application are first redirected to the LivePerson Identity Service in order to receive an authorization grant in the form of code from our Identity Service. The code is appended to the redirect URL as a parameter (see example below). This code is later used in the [token request](/authorizing-liveengage-applications-methods-token-request.html) in order to receive an access token that the application can use in order to interact with LE services.
 
 This call should be made when the application does not posses a valid access token or refresh token.
 

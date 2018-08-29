@@ -22,17 +22,17 @@ See below a few examples of how to do so.
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 **Note**
 
-* We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html){:target="_blank"}.
+* We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html).
 
-* The supported SDEs for sending are the [Customer Info](engagement-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](engagement-attributes-types.html#personal-info){:target="_blank"} SDEs.
+* The supported SDEs for sending are the [Customer Info](engagement-attributes-types.html#customer-info) and [Personal Info](engagement-attributes-types.html#personal-info) SDEs.
 
 
 ### Examples
@@ -49,8 +49,8 @@ See below a few examples of how to do so.
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Example Request Body - JSON Payload**
 

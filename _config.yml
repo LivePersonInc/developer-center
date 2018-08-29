@@ -21,7 +21,7 @@ google_analytics: UA-96175782-1
 
 extlinks:
   attributes: {target: _blank}
-# This tells the onclick module which attribute to add to links
+# This tells the extlinks plugin which attribute to add to links
 
 plugins:
   - algoliasearch-jekyll

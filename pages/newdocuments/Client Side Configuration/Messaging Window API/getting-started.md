@@ -15,8 +15,8 @@ indicator: messaging
 In this tutorial you will create a new conversation with your contact center, publish text messages, and receive agent responses.
 
 ### Prerequisites
-* [Docker](https://docs.docker.com/engine/installation){:target="_blank"}
-* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact [LivePerson Support](consumer-int-account-provision.html){:target="_blank"}.
+* [Docker](https://docs.docker.com/engine/installation)
+* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact [LivePerson Support](consumer-int-account-provision.html).
 
 ### Step 1 - Launch your Shell
 
@@ -118,6 +118,6 @@ LP_JWT=eyJraWQiOiIwMDAwMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJmMDY4Z
 
 ### What's next
 
-You can now close the ```lp-shell``` and move on to the [next tutorial](consumer-int-get-msg.html){:target="_blank"}.
+You can now close the ```lp-shell``` and move on to the [next tutorial](consumer-int-get-msg.html).
 
-Explore API messages in the [API Reference](consumer-int-api-reference.html){:target="_blank"} page. In order to build your own messages, you can use the [``message builder`` <i class="fa fa-magic" aria-hidden="true"></i>](consumer-int-msg-reqs.html){:target="_blank"}
+Explore API messages in the [API Reference](consumer-int-api-reference.html) page. In order to build your own messages, you can use the [``message builder`` <i class="fa fa-magic" aria-hidden="true"></i>](consumer-int-msg-reqs.html)

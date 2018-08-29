@@ -804,7 +804,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 **Version 3.1 planned roll-out: March 18th 2018**
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.4.pdf)
 
 
 #### New functionalities
@@ -1211,7 +1211,7 @@ Improved memory allocation for conversation screen
 
 **Version 2.9.3 planned roll-out: November 29th 2017**
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf)
 
 These are the main feature releases available in the **Mobile App Messaging SDK version 2.9 for iOS**.
 
@@ -1246,7 +1246,7 @@ Overlap will no longer occur due to backend fixes.
 
 **Version 2.9 planned roll-out: November 12th 2017**
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.1.pdf)
 
 These are the main feature releases available in the **Mobile App Messaging SDK version 2.9 for iOS**.
 
@@ -1398,7 +1398,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 **Version 2.8 planned roll-out: September 27th 2017**
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v6.0.pdf)
 
 These are the main feature releases available in the **Mobile App Messaging SDK version 2.8 for iOS**.
 
@@ -1766,7 +1766,7 @@ The method carried out the following steps:
 
 * Clears all SDK persistent data.
 
-* Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html){:target="_blank"}).
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html)).
 
 * Invokes destruct() method
 
@@ -2078,7 +2078,7 @@ The following properties for the controller bubble can now be configured:
 These are the main feature releases available in the Mobile App Messaging SDK version 2.7 for iOS.
 Version 2.7 roll-out: September 3rd 2017
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.9.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.9.pdf)
 
 #### New functionalities
 
@@ -2377,7 +2377,7 @@ These are the main feature releases available in the Mobile App Messaging SDK ve
 
 Version 2.5 roll-out: July 2nd 2017
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.8.pdf)
 
 
 ##### New functionalities
@@ -2493,7 +2493,7 @@ The following capability which was first introduced in v2.3 has been disabled to
 
 ### iOS Messaging SDK - Version 2.3.0
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf)
 
 
 These are the main feature releases available in the **Mobile App Messaging SDK version 2.3 for iOS**.
@@ -2503,7 +2503,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 The LiveEngage in-app SDK is fully compatible with the most recent versions of Apple’s developer tools, XCode 8.3 and Swift 3.1.
 
-The SDK is also compatible with [CocoaPods](https://cocoapods.org/){:target="_blank"}, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
+The SDK is also compatible with [CocoaPods](https://cocoapods.org/), a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
 
 Note: Sample Apps are now using CocoaPods.
 
@@ -2533,7 +2533,7 @@ Note: Sample Apps are now using CocoaPods.
 
     $ pod install
 
-5.	In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for the simulator). This step is a workaround for the [known iOS issue](http://www.openradar.me/radar?id=6409498411401216){:target="_blank"} and is necessary for archiving your app before publishing it to the App Store.
+5.	In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for the simulator). This step is a workaround for the [known iOS issue](http://www.openradar.me/radar?id=6409498411401216) and is necessary for archiving your app before publishing it to the App Store.
 
 ```shell
 bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
@@ -2547,7 +2547,7 @@ The secure form gives consumers the confidence to submit sensitive information, 
 
 The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
-_This feature requires consulting services support. For more information, please refer to the LiveEngage [secure form for messaging documentation](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf){:target="_blank"}_.
+_This feature requires consulting services support. For more information, please refer to the LiveEngage [secure form for messaging documentation](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
 
 ![Release Notes Secure Form](img/releasenotessecureform.png)
 
@@ -2587,7 +2587,7 @@ The Web Socket remains open for a maximum of 60 seconds (using Background Task) 
 
 ### iOS Messaging SDK - Version 2.0
 
-[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf){:target="_blank"}
+[Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.0.pdf)
 
 
 These are the main feature releases available in the Mobile App Messaging SDK version 2.0.

@@ -12,15 +12,15 @@ permalink: connector-api-api-reference-conversation.html
 search: exclude
 ---
 
-The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows, since LiveEngage expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response. The most important value obtained by this endpoint is the `conversationId` which will be used for the following [SEND](sendapi-send.html){:target="_blank"} calls to LiveEngage.
+The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows, since LiveEngage expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response. The most important value obtained by this endpoint is the `conversationId` which will be used for the following [SEND](sendapi-send.html) calls to LiveEngage.
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Request URI
 
@@ -44,8 +44,8 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html){:target="_blank"}) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html){:target="_blank"}) |
+| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
 
 **Request Body**
 
@@ -84,11 +84,11 @@ For the sake of simplicity, the next request body example illustrates the minima
 
 Nevertheless, we strongly recommend not to create conversations as such, as there is no user information passed in the body of the payload with `type` _userprofile.SetUserProfile_ nor there is any information passed in the body of the payload with `type` _cm.ConsumerRequestConversation_ that will enable targeting the conversation to the right skill or engagement in LiveEngage.
 
-Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](engagement-attributes-types.html){:target="_blank"} to LiveEngage.
+Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](engagement-attributes-types.html) to LiveEngage.
 
-The [SDEs](engagement-attributes-types.html){:target="_blank"} are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
+The [SDEs](engagement-attributes-types.html) are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
 
-The SDEs supported for sending are the [Customer Info](engagement-attributes-types.html#customer-info){:target="_blank"} and [Personal Info](engagement-attributes-types.html#personal-info){:target="_blank"} SDEs.
+The SDEs supported for sending are the [Customer Info](engagement-attributes-types.html#customer-info) and [Personal Info](engagement-attributes-types.html#personal-info) SDEs.
 
 The next request body example illustrates how to create a conversation and send SDEs in one request:
 
@@ -137,7 +137,7 @@ If you have set up Campaigns for Messaging on your account, you can send the **C
 
 <img class="zoomimg" src="img/ConnectorAPI3.png" alt="connectoroverview">
 
-In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html){:target="_blank"}. This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"}, allows you to send LiveEngage the user information (`consumerId` OR the `visitorId` & `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples){:target="_blank"}.
+In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html). This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html), allows you to send LiveEngage the user information (`consumerId` OR the `visitorId` & `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples).
 
 The connector can then use the above properties in the CONVERSATION request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
 
@@ -200,10 +200,10 @@ The connector can then use the above properties in the CONVERSATION request body
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to LiveEngage | "ctmrinfo" / "personal" | string | true |
-| info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagement-attributes-types.html#customer-info){:target="_blank"} |
+| info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagement-attributes-types.html#customer-info) |
 | socialId | Social Media ID of your choice e.g.: FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
 | ctype | Customer type/tier (case insensitive) | "Gold" | string | false |
-| personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](engagement-attributes-types.html#personal-info){:target="_blank"} |
+| personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](engagement-attributes-types.html#personal-info) |
 | firstname | Visitor's first name | "John" | string | false |
 | lastname | Visitor's surename | "Doe" | string | false |
 | gender |  Visitor's gender | MALE, FEMALE, OTHER | string | false |
@@ -214,9 +214,9 @@ The connector can then use the above properties in the CONVERSATION request body
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
 | conversationContext | Describes the conversation environment, like from where it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | conversationContext is of type SharkContext and all the attributes passed in this example are part of this conversationContext. See more details in the next table below |
-| campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | Used in conjunction with [campaigns for messaging](https://www.liveperson.com/services/technical-support/about-campaigns){:target="_blank"} for conversation routing to the right skill |
-| campaignId | The campaignId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"} Monitoring API endpoint  | "99999" | false |
-| engagementId | The engagementId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"} Monitoring API endpoint | "88888" | false |
+| campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | Used in conjunction with [campaigns for messaging](https://www.liveperson.com/services/technical-support/about-campaigns) for conversation routing to the right skill |
+| campaignId | The campaignId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint  | "99999" | false |
+| engagementId | The engagementId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "88888" | false |
 | channelType | Which channel type is used | "MESSAGING" | string | true | Always use "MESSAGING" |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
 | skillId | Skill ID you would like to route the conversation to | string | false | Use -1 as default to target all skills available | Avoid routing conversations by passing skills. Instead, implement campaigns for messaging and pass the campaignId and engagementId |
@@ -225,9 +225,9 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"} Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device - important for monitoring and reporting |
-| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"} Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device - important for monitoring and reporting |
-| interactionContextId | contextId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html){:target="_blank"} Monitoring API endpoint | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples){:target="_blank"}
+| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device - important for monitoring and reporting |
+| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device - important for monitoring and reporting |
+| interactionContextId | contextId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples)
 | type | Type of conversationContext | "SharkContext" | string | false | Always use "SharkContext" when using Monitoring API properties i.e. when using Campaign For Messaging |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | string | false | Check first if the language used here is configured for the engagement in the LE UI |
 

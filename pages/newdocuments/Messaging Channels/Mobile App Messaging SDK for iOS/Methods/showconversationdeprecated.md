@@ -13,7 +13,7 @@ permalink: mobile-app-messaging-sdk-for-ios-methods-showconversation-(deprecated
 
 indicator: messaging
 ---
-*This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams)](consumer-experience-ios-sdk-showconversation.html){:target="_blank"} instead*
+*This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams)](consumer-experience-ios-sdk-showconversation.html) instead*
 
 This method is used to open the conversation screen.
 
