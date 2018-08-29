@@ -239,7 +239,7 @@ func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->(
 | Completion block | A completion block for successfully logout. | Completion block will be invoked only if all logout steps succeeded. |
 | Failure block | A failure block with a specified error for logout failure. | Failure block will be invoked if at least one of the logout steps has failed. |
 
-*Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})*
+**Note**: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})
 
 
 ### logout (Deprecated)
