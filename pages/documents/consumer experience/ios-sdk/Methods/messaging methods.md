@@ -79,8 +79,9 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 
 <div class="important">
 Important:
-</div>
+
 - When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+</div>
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -308,9 +309,11 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 
 <div class="important">
 Important:
-</div>
 
-**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number, this only works for authenticated users. *Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})***
+
+**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number. This only works for authenticated users. *Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})**
+
+</div>
 
 
 ### getUnreadMessagesCount
