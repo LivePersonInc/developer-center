@@ -1,10 +1,10 @@
 ---
-pagename: Refresh Request
+title: Refresh Request
 Keywords:
-sitesection: Documents
-categoryname: Agent Interactions
-documentname: Authorizing LiveEngage Applications
-subfoldername: Methods
+level1: Documents
+level2: Agent Interactions
+level3: LE Applications Authorization
+level4: Methods
 order: 11
 permalink: le-applications-login-methods-refresh-request.html
 indicator: both
@@ -18,7 +18,7 @@ In order to refresh an existing access token, the application should use a refre
 
 | Method | URL |
 | :--- | :--- |
-| POST |  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/token?v=2.0 |
+| POST |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/sentinel/api/account/{accountId}/token?v=2.0 |
 
 **Query Parameters**
 
