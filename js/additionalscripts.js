@@ -64,6 +64,7 @@ function navigateContent(url) {
   }
   $(".activepage").parent().parent().parent().addClass("active");
   window.scrollTo(0,0);
+  $(".hamburger").removeClass("is-active");
 };
 
 

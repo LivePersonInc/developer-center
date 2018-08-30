@@ -5,9 +5,11 @@
 .algolia-autocomplete .ds-dropdown-menu {
   max-width: unset !important;
   min-width: unset !important;
-  width: 105%;
-  top: 186% !important;
-  margin-right: -5px !important;
+  width: 101.4%;
+  top: 89% !important;
+  margin-right: 0 !important;
+  height: 80vh !important;
+  overflow-y: scroll;
 }
 
 
@@ -27,7 +29,7 @@
   font-size: 16px !important;
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   color: #5879da !important;;
-  width: 13% !important;
+  width: 60% !important;
   text-align: left !important;
 }
 
@@ -60,4 +62,8 @@
 
 .algolia-autocomplete .algolia-docsearch-suggestion--title {
   color: #6f6f6f;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--subcategory-column:after {
+  content: none !important;
 }

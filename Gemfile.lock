@@ -59,9 +59,6 @@ GEM
       nokogiri (~> 1.8)
       pathutil (~> 0.16)
       sprockets (>= 3.3, < 4.1.beta)
-    jekyll-extlinks (0.0.4)
-      jekyll (~> 3.0)
-      nokogiri (~> 1.6)
     jekyll-feed (0.10.0)
       jekyll (~> 3.3)
     jekyll-gzip (1.1.0)
@@ -125,7 +122,6 @@ DEPENDENCIES
   autoprefixer-rails
   jekyll (~> 3.5.0)
   jekyll-assets
-  jekyll-extlinks
   jekyll-feed (~> 0.6)
   jekyll-gzip
   jekyll-redirect-from

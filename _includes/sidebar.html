@@ -14,7 +14,7 @@
   </li>
 {% for category in site.data.documentsupdated %}
   {% if forloop.last == true %}
-  <hr class="sidebarhr" />
+  <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder">
     <img src="img/{{ category.image }}.svg" />
     <a href="">{{ category.categoryname }}</a>
@@ -80,7 +80,7 @@
   </li>
 {% endif %}
 {% endfor %}
-    <hr class="sidebarhr" />
+    <hr class="sidebarhr lesstop" />
     <a href="https://support.liveperson.com/ask-question/" target="_blank">
     <div class="supportbutton">
       <span>Looking for Support?</span>
@@ -88,7 +88,7 @@
   </a>
 </ul>
 
-<ul id="mysidebarsolutions" class="mysidebar nav fixed sidebarmobileclosed solutionslist gray-skin">
+<!-- <ul id="mysidebarsolutions" class="mysidebar nav fixed sidebarmobileclosed solutionslist gray-skin">
 {% for solution in site.data.solutions %}
 <li class="folder topfolder">
   <img src="img/{{ solution.image }}.svg" />
@@ -108,4 +108,4 @@
     <span>Looking for Support?</span>
   </div>
 </a>
-</ul>
+</ul> -->
