@@ -48,24 +48,26 @@ The body media type must have one of the following formats:
 
 Request body examples:
 
+```json
+{
+    "event":
     {
-        "event":
-        {
-            "@type": "line",
-            "text": "<div dir="ltr" style="direction: ltr; text-align: left;">this is a line of text</div>",
-            "textType": "html"
-        }
+        "@type": "line",
+        "text": "<div dir='ltr' style='direction:ltr;text-align:left;'>this is a line of text</div>",
+        "textType": "html"
     }
+}
 
+{
+    "event":
     {
-        "event":
-        {
-            "@type": "line",
-            "text": "This is a private message, only visible to agents",
-            "textType": "plain",
-            "subType": "ONLY_TO_REP"
-        }
+        "@type": "line",
+        "text": "This is a private message, only visible to agents",
+        "textType": "plain",
+        "subType": "ONLY_TO_REP"
     }
+}
+```
 
 **Text Types**
 

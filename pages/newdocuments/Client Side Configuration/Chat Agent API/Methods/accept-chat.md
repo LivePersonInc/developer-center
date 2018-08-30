@@ -65,11 +65,13 @@ If a chat request exists, the request will return an existing chat session.
 
 Response example for JSON:
 
-    {
-     "chatLocation": {
-       "link": {
-         "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}",
-         "@rel": "location"
-       }
-     }
-    }
+```json
+{
+ "chatLocation": {
+   "link": {
+     "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}",
+     "@rel": "location"
+   }
+ }
+}
+```

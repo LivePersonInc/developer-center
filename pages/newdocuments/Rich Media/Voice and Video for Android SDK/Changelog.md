@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for Android SDK (BETA)
 
 order: 110
-permalink: voice-&-video-for-android-sdk-beta-release-notes.html
+permalink: voice-and-video-for-android-sdk-beta-release-notes.html
 indicator: messaging
 ---
 

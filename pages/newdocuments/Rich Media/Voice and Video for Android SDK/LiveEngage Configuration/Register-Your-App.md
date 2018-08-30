@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 60
-permalink: voice-&-video-for-android-sdk-beta-liveengage-configuration-register-your-app.html
+permalink: voice-and-video-for-android-sdk-beta-liveengage-configuration-register-your-app.html
 indicator: messaging
 ---
 

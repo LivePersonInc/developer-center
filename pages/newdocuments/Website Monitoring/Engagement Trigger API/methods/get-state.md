@@ -17,9 +17,11 @@ This method receives an engagement ID and returns the engagement state if it exi
 
 **Syntax**
 
-	`lpTag.taglets.rendererStub.getEngagementState(engagementId);`
+```javascript
+lpTag.taglets.rendererStub.getEngagementState(engagementId);
+```
 
-**Parameters**
+### Parameters
 
 | Name | Description |
 | :--- | :--- |
@@ -34,17 +36,19 @@ This method receives an engagement ID and returns the engagement state if it exi
     }
 ```
 
-**Return value**
+### Return value
 
 The method returns a JSON with the engagement information.
 
 *Example*
 
-    {
-    "state" : 0,
-    "desc" : "NA",
-    "engagementId" : 123
-    }
+``json
+{
+  "state" : 0,
+  "desc" : "NA",
+  "engagementId" : 123
+}
+```
 
 **Elements in the response**
 

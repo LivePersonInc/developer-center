@@ -8,7 +8,7 @@ documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Getting Started
 
 order: 10
-permalink: voice-&-video-for-ios-sdk-beta-getting-started-prerequisites.html
+permalink: voice-and-video-for-ios-sdk-beta-getting-started-prerequisites.html
 indicator: messaging
 ---
 

@@ -45,18 +45,18 @@ https://API_REQUEST?v=4.0
  |:------|    :--------|    :--------|
  |accountId|  LP site ID|   String |
  |userId|     User Id|      Positive long number greater than zero |
- 
+
  **Query Parameters**
-  
+
   | Name            | Description                                                                  | Type    | Notes                                          |
   |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
   | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
-  
+
 
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -70,7 +70,7 @@ https://API_REQUEST?v=4.0
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. | 
+| ac-revision | Account config object type collection revision. |
 
 **Response Body**
 

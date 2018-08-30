@@ -58,7 +58,7 @@ JSON
     <th>Parameter</th>
     <th>Description</th>
     <th>Notes</th>
-  <tr>
+  </tr>
   </thead>
   <tbody>
     <tr>
@@ -78,7 +78,7 @@ This is the expected and general format for an Agent Status object, appearing in
   "id": 121212,
   "text": "some text252",
   "state": "Away",
-  "deleted": false,  
+  "deleted": false,
   "enabled": true
 }
 ```
@@ -89,13 +89,13 @@ This is the expected and general format for an Agent Status object, appearing in
     <th>Attribute</th>
     <th>Description</th>
     <th>Notes</th>
-  <tr>
+  </tr>
   </thead>
   <tbody>
     <tr>
       <td>id</td>
       <td>Account Config object’s unique id.</td>
-      <td><ul><li> <ul><li>Type: long number (automatically generated)</li></ul></td>
+      <td>Type: long number (automatically generated)</td>
     </tr>
     <tr>
       <td>name</td>
@@ -105,7 +105,7 @@ This is the expected and general format for an Agent Status object, appearing in
     <tr>
       <td>state</td>
       <td>agent state</td>
-      <td><ul><li>type: string</li><li>possible values: "Online", "Occupied", "Away"</li></ul></li></ul></td>
+      <td><ul><li>type: string</li><li>possible values: "Online", "Occupied", "Away"</li></ul></td>
     </tr>
     <tr>
       <td>deleted</td>

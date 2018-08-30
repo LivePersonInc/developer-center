@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Getting Started
 order: 20
-permalink: voice-&-video-for-ios-sdk-beta-getting-started-installing-the-sdk-with-cocoapods.html
+permalink: voice-and-video-for-ios-sdk-beta-getting-started-installing-the-sdk-with-cocoapods.html
 indicator: messaging
 ---
 

@@ -61,36 +61,38 @@ The body media type must have one of the following formats:
 
 Response example:
 
-    {
-     "info": {
-       "link": {
-         "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/info",
-         "@rel": "self"
+```json
+{
+ "info": {
+   "link": {
+     "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/info",
+     "@rel": "self"
+   },
+   "agentName": "John Smith",
+   "displayName": "John Smith",
+   "loginName": "John@company.com",
+   "id": "25025413",
+   "maxChats": "-1",
+   "availability": {
+     "chat": "Online",
+     "voice": "Offline"
+   },
+   "skillsInfo": {
+     "skillInfo": [
+       {
+         "id": "25975313",
+         "name": "Sales"
        },
-       "agentName": "John Smith",
-       "displayName": "John Smith",
-       "loginName": "John@company.com",
-       "id": "25025413",
-       "maxChats": "-1",
-       "availability": {
-         "chat": "Online",
-         "voice": "Offline"
+       {
+         "id": "26060413",
+         "name": "Billing"
        },
-       "skillsInfo": {
-         "skillInfo": [
-           {
-             "id": "25975313",
-             "name": "Sales"
-           },
-           {
-             "id": "26060413",
-             "name": "Billing"
-           },
-           {
-             "id": "26077613",
-             "name": "OrdersHandlers"
-           }
-         ]
+       {
+         "id": "26077613",
+         "name": "OrdersHandlers"
        }
-     }
-    }
+     ]
+   }
+ }
+}
+```

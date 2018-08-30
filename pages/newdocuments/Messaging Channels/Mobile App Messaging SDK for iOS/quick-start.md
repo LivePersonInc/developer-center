@@ -69,14 +69,14 @@ end
 {:start="4"}
  4. Run the following command in the terminal under your project folder:
 
-```sh
+```bash
 $ pod install
 ```
 
 {:start="5"}
  5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
 
-```sh
+```bash
 $ pod update
 ```
 
@@ -87,7 +87,7 @@ $ pod update
 This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.
 </div>
 
-```sh
+```bash
 bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
 ```
 
@@ -107,7 +107,7 @@ bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks
 This step is a workaround for <a href="http://www.openradar.me/radar?id=6409498411401216">known iOS issue</a> and is necessary for archiving your app before publishing it to the App Store.
 </div>
 
-```sh
+```bash
 bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 ```
 

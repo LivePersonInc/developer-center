@@ -16,7 +16,7 @@ This integration will allow you to see and create your Microsoft Dynamics Contac
 <hr class="solutionshr" />
 
 
-<img src="images/dynamics1.png" style="width:900px;max-width:900px;"  alt="InAppOverview1">
+<img src="images/dynamics1.png"   alt="InAppOverview1">
 
 <br>
 <br>

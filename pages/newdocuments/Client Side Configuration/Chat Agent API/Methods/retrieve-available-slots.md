@@ -24,7 +24,7 @@ The capacity (or number of slots) in the chat system is the total number of chat
 
 **Request Headers**
 
- |Header | Description| 
+ |Header | Description|
  |:---|  :--- |
  |Authorization| Bearer {bearer-from-login} |
  |Content-Type|  application/json |
@@ -56,17 +56,20 @@ For requesting available slots for a specific agent:
 
 **Response Codes**
 
- |Code  |Response| 
- |:---|  :---| 
+ |Code  |Response|
+ |:---|  :---|
  |200  |OK |
 
 Response example:
 
-    {
-     "availableSlots": 1
-    }
+```json
+{
+ "availableSlots": 1
+}
+```
 
 **Notes**:
 
-- *The calculation of wait time is based on a statistical estimate and may change constantly.*
-- *When the number of available slots is unlimited, the response is -1.*
+* The calculation of wait time is based on a statistical estimate and may change constantly.
+
+* When the number of available slots is unlimited, the response is -1.

@@ -53,7 +53,7 @@ Before calling the Monitoring API, you will need to fetch the Monitoring API dom
 
 You can now try and get an engagement using the Monitoring API **engagement resource**
 
-```javascript
+```sh
 curl -i \
 -H "Accept: application/json" \
 -H "Content-Type: application/json" \
@@ -84,7 +84,7 @@ The response will look like this:
 
 You could also report on the **Impression Display Engagement Attribute** once the engagement was displayed by your application with the visitorId and sessionId provided in the response:
 
-```javascript
+```sh
 curl -i \
     -H "Accept: application/json" \
     -H "X-HTTP-Method-Override: PUT" \

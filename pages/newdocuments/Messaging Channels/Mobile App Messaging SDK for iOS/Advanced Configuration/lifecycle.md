@@ -24,6 +24,7 @@ During the course of the conversation, consumers can take several actions such a
 
 ```swift
 public func checkActiveConversation(conversationQuery: ConversationParamProtocol) -> Bool
+```
 
 {:start="2"}
 2. This method marks the current conversation as Urgent.

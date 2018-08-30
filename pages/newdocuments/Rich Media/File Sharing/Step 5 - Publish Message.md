@@ -1,5 +1,5 @@
 ---
-pagename: Step 5 - Publish Message
+pagename: Publish Message
 redirect_from:
   - rich-messaging-file-sharing-5.html
 Keywords:
@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: Rich Messaging
 documentname: File Sharing
 order: 60
-permalink: file-sharing-step-5---publish-message.html
+permalink: file-sharing-publish-message.html
 indicator: both
 ---
 

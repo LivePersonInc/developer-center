@@ -35,4 +35,4 @@ A typical flow of setting up the file sharing feature using the Messaging Window
 
 We will examine and explain each stage in detail as part of this documentation.
 
-**Note:** If you would like to follow the steps using bash, please see the (Prerequisites document)(consumer-int-get-msg.html#prerequisites).
+**Note:** If you would like to follow the steps using `bash`, please see the [Prerequisites document](consumer-int-get-msg.html#prerequisites).

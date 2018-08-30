@@ -27,10 +27,6 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], dt[id] {
   padding-top: 0;
 }
 
-.post-content h3[id]:first-child {
-  margin-top: 0;
-}
-
 h2[id] {
   color: #162036;
   font-family: "Roboto",Arial;
@@ -51,6 +47,7 @@ h4[id]{
   font-size: 1em;
   font-weight: 600;
   font-style: inherit;
+  margin-top: 10px;
 }
 
 h4 code.highlighter-rouge {
@@ -63,6 +60,7 @@ h4 code.highlighter-rouge {
   font-family: "Roboto",Arial;
   font-size: 22px;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .h2 {
@@ -161,6 +159,7 @@ table > tbody > tr:nth-of-type(even) {
   line-height: 2.4em !important;
   text-align: center;
   font-weight: bold;
+  vertical-align: inherit;
 }
 
 .designsheet table tr th {
@@ -196,7 +195,8 @@ code {
   border-radius: 4px;
   color: #77777a;
   padding: 2px 4px;
-  white-space: initial
+  white-space: initial;
+  width: 89%;
 }
 
 td code {
@@ -232,11 +232,7 @@ div#toc > ul {
   padding-left: 16px !important;
 }
 
-.post-content ol li:first-of-type {
-  margin-bottom: 10px;
-}
-
-.post-content .important:first-of-type {
+.post-content > *:first-child {
   margin-top: 0;
 }
 
@@ -567,7 +563,7 @@ div.sidebarTitle-holder {
 pre {
   border: none;
   border-radius: 0px;
-  padding: 0px 97px 16px 10px;
+  padding: 0px 97px 16px 20px;
   order: 10;
 }
 

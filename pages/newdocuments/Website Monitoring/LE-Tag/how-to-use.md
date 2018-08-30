@@ -46,11 +46,12 @@ lpTag.events.bind({
 
 **Event Information structure:**
 
-       {
-            eventName: "MYEVENT",
-            appName: "TRIGGERINGAPP"
-       }
-
+```json
+{
+  "eventName": "MYEVENT",
+  "appName": "TRIGGERINGAPP"
+}
+```
 **Callback Function example:**
 
 The example below prints the event data and event info:

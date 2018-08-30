@@ -23,6 +23,10 @@ a:hover, a:focus {
   flex-wrap: wrap;
 }
 
+li > p {
+  margin-bottom: 0;
+}
+
 code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
@@ -504,12 +508,12 @@ table {
 
 /* Sidebar Styling Ends */
 
-.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml {
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http {
   display: flex;
   flex-direction: column;
 }
 
-.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before {
   position: absolute;
   color: #a2a2a2;
   text-align: right;
@@ -525,10 +529,6 @@ table {
   align-self: flex-end;
 }
 
-li .language-json:before, li .language-swift:before, li .language-html:before, li .language-java:before, li .language-javascript:before, li .language-sh:before, li .language-ruby:before {
-  margin-left: 654px;
-}
-
 .language-swift:before{
   content: "SWIFT";
   margin-left: 5px;
@@ -540,6 +540,10 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 
 .language-html:before {
   content: "HTML";
+}
+
+.language-http:before {
+  content: "HTTP";
 }
 
 .language-java:before {
@@ -562,6 +566,10 @@ li .language-json:before, li .language-swift:before, li .language-html:before, l
 
 .language-xml:before {
   content: "XML";
+}
+
+.language-bash:before {
+  content: "Bash";
 }
 
 .documenttitle {
@@ -699,7 +707,6 @@ a.anchoritem {
   background-color: #f5f5f5;
   margin-bottom: 20px;
   margin-top: 20px;
-  padding-left: 10px;
 }
 
 .mysidebar::-webkit-scrollbar-track {

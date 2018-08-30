@@ -1,5 +1,5 @@
 ---
-pagename: Step 1 - Enable File Sharing
+pagename: Enable File Sharing
 redirect_from:
   - rich-messaging-file-sharing-1.html
 Keywords:
@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: Rich Messaging
 documentname: File Sharing
 order: 20
-permalink: file-sharing-step-1---enable-file-sharing.html
+permalink: file-sharing-enable-file-sharing.html
 indicator: both
 ---
 

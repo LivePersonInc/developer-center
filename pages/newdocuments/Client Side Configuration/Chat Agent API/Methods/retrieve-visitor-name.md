@@ -9,7 +9,7 @@ documentname: Chat Agent API
 subfoldername: Methods
 
 order: 160
-permalink: chat-agent-api-methods-retrieve-visitors-name.html
+permalink: chat-agent-api-methods-retrieve-visitor-s-name.html
 
 indicator: chat
 ---

@@ -52,21 +52,25 @@ There are two primary reasons to utilize the Chat Agent API:
 
 	* Build a mobile app for your agents
 
-	The Chat Agent API provides information on the following:
+The Chat Agent API provides information on the following:
 
-	- Agent availability (agent status)
-	- Number of available agents
-	- Visitor info (device, IP, OS, etc.)
-	- Pre-chat survey info
+* Agent availability (agent status)
 
-	**Notes:**
+* Number of available agents\
 
-	- *Other complementary APIs may be required in order to use the full functionality of the Agent Workspace.*
-	- *To establish and use an agent session via unsigned requests, you must correctly handle cookies which are set by the server in response to API requests. Cookies are scoped to a specific agent session. When working with multiple agents, make sure to track cookies separately for each agent session. There is no need to use this security cookie when using Signed requests, therefore it will not be set by the server.*
+* Visitor info (device, IP, OS, etc.)
 
-	The LiveEngage Agent workspace example:
+* Pre-chat survey info
 
-	![AgentWorkspaceSDK](img/agentworkspace2.png)
+**Notes:**
+
+* Other complementary APIs may be required in order to use the full functionality of the Agent Workspace.
+
+* To establish and use an agent session via unsigned requests, you must correctly handle cookies which are set by the server in response to API requests. Cookies are scoped to a specific agent session. When working with multiple agents, make sure to track cookies separately for each agent session. There is no need to use this security cookie when using Signed requests, therefore it will not be set by the server.
+
+The LiveEngage Agent workspace example:
+
+![AgentWorkspaceSDK](img/agentworkspace2.png)
 
 ### Samples
 

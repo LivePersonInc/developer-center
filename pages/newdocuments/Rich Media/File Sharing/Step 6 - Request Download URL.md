@@ -1,5 +1,5 @@
 ---
-pagename: Step 6 - Request Download URL
+pagename: Request Download URL
 redirect_from:
   - rich-messaging-file-sharing-6.html
 Keywords:
@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: Rich Messaging
 documentname: File Sharing
 order: 70
-permalink: file-sharing-step-6---request-download-url.html
+permalink: file-sharing-request-download-url.html
 indicator: both
 ---
 

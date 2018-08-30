@@ -6,7 +6,7 @@ level2: Agent Interactions
 level3: LE Applications Authorization
 level4: Methods
 order: 11
-permalink: le-applications-login-methods-refresh-request.html
+permalink: authorizing-liveengage-applications-methods-refresh-request.html
 indicator: both
 ---
 

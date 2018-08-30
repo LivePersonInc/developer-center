@@ -21,7 +21,7 @@ The Messaging Agent SDK (Node.JS) was built in order to help developers and our 
 
 ### Getting Started
 
-To access the Messaging Agent SDK, [click here.](https://github.com/LivePersonInc/node-agent-sdk)
+To access the Messaging Agent SDK, [click here.](https://github.com/LivePersonInc/node-agent-sdk). Below you can find an overview video describing bots, LiveEngage and the benefits of using them on top of our platform.
 
 
 

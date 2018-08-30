@@ -100,7 +100,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
    "deviceFamily": "MOBILE",
    "ipAddress": "192.168.5.2"
  },
- *"consumerId":"uniqueIdInBrand",*
+ "consumerId":"uniqueIdInBrand",
  "identities": [
    {
         "iss": "LivePerson",

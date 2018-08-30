@@ -38,7 +38,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
-| v | The API version | numeric/3 | 
+| v | The API version | numeric/3 |
 
 **Request Headers**
 
@@ -135,7 +135,7 @@ The above request is much better as it also includes the user SDEs which will po
 The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
 If you have set up Campaigns for Messaging on your account, you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
 
-<img class="zoomimg" src="img/ConnectorAPI3.png" alt="connectoroverview">
+<img src="img/ConnectorAPI3.png" alt="connectoroverview">
 
 In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html). This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html), allows you to send LiveEngage the user information (`consumerId` OR the `visitorId` & `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples).
 
@@ -221,7 +221,7 @@ The connector can then use the above properties in the CONVERSATION request body
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
 | skillId | Skill ID you would like to route the conversation to | string | false | Use -1 as default to target all skills available | Avoid routing conversations by passing skills. Instead, implement campaigns for messaging and pass the campaignId and engagementId |
 
-**conversationContext Properties**
+#### conversationContext Properties
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

@@ -6,7 +6,7 @@ sitesection: Solutions
 categoryname: Channels
 documentname: SMS with LiveEngage
 
-permalink: sms-with-liveengage-google-adwords---click-to-message.html
+permalink: sms-with-liveengage-google-adwords-click-to-message.html
 order: 31
 indicator:
 ---

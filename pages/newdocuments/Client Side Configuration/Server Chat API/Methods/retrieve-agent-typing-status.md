@@ -10,7 +10,7 @@ subfoldername: Methods
 
 order: 131
 
-permalink: server-chat-api-methods-retrieve-the-agents-typing-status.html
+permalink: server-chat-api-methods-retrieve-the-agent-s-typing-status.html
 
 indicator: chat
 ---

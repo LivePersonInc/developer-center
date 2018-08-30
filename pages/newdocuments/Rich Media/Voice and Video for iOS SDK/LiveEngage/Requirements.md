@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 80
-permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-agent-workspace-requirements.html
+permalink: voice-and-video-for-ios-sdk-beta-liveengage-configuration-agent-workspace-requirements.html
 indicator: messaging
 ---
 Your agents will be using LiveEngage from a regular web browser to make calls to your consumers. The following sections explain how to setup your LiveEngage account for voice & video support.

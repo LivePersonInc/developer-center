@@ -24,7 +24,7 @@ This method returns a list of the chat-session URIs that this agent managed in t
 
 **Request Headers**
 
- |Header|  Description| 
+ |Header|  Description|
  |:---  |:--- |
  |Authorization| Bearer {bearer-from-login} |
  |Content-Type|  application/json |
@@ -49,25 +49,27 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
- |Code|  Response| 
- |:---|  :---| 
- |200|  OK| 
+ |Code|  Response|
+ |:---|  :---|
+ |200|  OK|
 
 Response example for JSON:
 
-    {
-      "chatSessions": {
-        "chatSession": [
-          {
-            "link": {
-              "href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}",
-              "rel": "chat-session"
-            },
-            "chatSessionKey": "H31879676690579736-632532233958645150K8414055",
-            "startTime": 1440934609097
-          }
-        ]
+```json
+{
+  "chatSessions": {
+    "chatSession": [
+      {
+        "link": {
+          "href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}",
+          "rel": "chat-session"
+        },
+        "chatSessionKey": "H31879676690579736-632532233958645150K8414055",
+        "startTime": 1440934609097
       }
-    }   
+    ]
+  }
+}   
+```
 
-*Note: This resource is intended to provide a "continuity" ability to the agent while moving between one device to another. This means that the secondary agent session login action must take place while there is a current agent session active for that specific agent. In case the agent logs out of the system and then logs in again, any active chat session from the previous session will be returned back to the queue or disconnected in case there is no suitable agent to take the chat. Recommended polling interval should not be less that 2 seconds (2000 ms).*
+**Note**: This resource is intended to provide a "continuity" ability to the agent while moving between one device to another. This means that the secondary agent session login action must take place while there is a current agent session active for that specific agent. In case the agent logs out of the system and then logs in again, any active chat session from the previous session will be returned back to the queue or disconnected in case there is no suitable agent to take the chat. Recommended polling interval should not be less that 2 seconds (2000 ms).

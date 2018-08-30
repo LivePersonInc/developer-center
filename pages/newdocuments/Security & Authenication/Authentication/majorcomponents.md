@@ -25,7 +25,7 @@ This endpoint implements the standard OpenID Connect [token endpoint](http://ope
 
 **Example Request**:
 
-```
+```http
 POST /oauth2/v3/token HTTP/1.1
 Host: www.customer.com
 Content-Type: application/x-www-form-urlencoded
@@ -39,7 +39,7 @@ grant_type=authorization_code
 
 **Example Response**:
 
-```json
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Cache-Control: no-store

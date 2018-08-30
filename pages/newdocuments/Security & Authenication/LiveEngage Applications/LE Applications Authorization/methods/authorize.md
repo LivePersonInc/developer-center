@@ -59,7 +59,7 @@ the application with error and error description parameters.
 
 An example of a successful redirection to application follows below. Note the `code` parameter appended to the URL:
 
-```
+```http
 HTTP/1.1 302 Found
 Location: https://le-app.com/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=xyz
 ```

@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: Customizing
 order: 70
-permalink: voice-&-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
+permalink: voice-and-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
 indicator: messaging
 ---
 

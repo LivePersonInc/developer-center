@@ -8,7 +8,7 @@ documentname: Server Chat API
 subfoldername: Methods
 
 order: 130
-permalink: server-chat-api-methods-retrieve-the-visitors-typing-status.html
+permalink: server-chat-api-methods-retrieve-the-visitor-s-typing-status.html
 
 indicator: chat
 ---

@@ -15,7 +15,7 @@ This integration will allow you to see and create your Zendesk Contact tickets r
 
 <hr class="solutionshr" />
 
-<img src="images/zen1.png" style="width:900px;max-width:900px;" alt="InAppOverview1">
+<img src="images/zen1.png"  alt="InAppOverview1">
 
 Brands that use LiveEngage for sales and support can offer a more personalized, informed experience with access to Zendesk, by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads. Through the LiveEngage Zendesk integration, agents can utilize the workspace to conduct all conversations with customers, and get instant access to pertinent information without having to open a separate browser window to manually check the Zendesk record. Agents can also search through records using the field from pre-chat surveys and/or through the widget.
 

@@ -50,11 +50,13 @@ N/A
 
 **Response Codes**
 
-|200 OK|
-|304 Not Modified|
-|400 Bad Request|
-|401 Not Authorized|
-|403 Forbidden|
-|404 Data not found|
-|409 Conflict|
-|500 Internal server error|
+**Response Codes**
+
+|Code | Description |
+|:----|:----|
+|200 |OK|
+|400 |Bad Request|
+|401 |Not Authenticated|
+|403 |Not Authorized|
+|404 |Data not found|
+|500 |Internal server error|

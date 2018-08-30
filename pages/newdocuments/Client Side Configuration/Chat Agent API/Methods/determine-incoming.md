@@ -55,8 +55,10 @@ The body media type must have one of the following formats:
 
 Response example for JSON:
 
-    {
-     "incomingRequests": {
-       "ringingCount": "0"
-     }
-    }
+```json
+{
+ "incomingRequests": {
+   "ringingCount": "0"
+ }
+}
+```

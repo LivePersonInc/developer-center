@@ -87,7 +87,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ```json
 {
- *"consumerId":"myConsumerId",*
+ "consumerId":"myConsumerId",
  "identities": [
    {
         "iss": "LivePerson",

@@ -1,5 +1,5 @@
 ---
-pagename: Step 2 - Create a Conversation
+pagename: Create a Conversation
 redirect_from:
   - rich-messaging-file-sharing-2.html
 Keywords:
@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: Rich Messaging
 documentname: File Sharing
 order: 30
-permalink: file-sharing-step-2---create-a-conversation.html
+permalink: file-sharing-step-create-a-conversation.html
 indicator: both
 ---
 

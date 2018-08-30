@@ -27,7 +27,7 @@ This method exposes a short-term, one-time, non-cacheable URL for starting the e
 | v | API version number | double. <br> Supported Value: 1.0 | Required |
 
 **BODY/POST Parameters**
- 
+
 | Name | Description | Type/Value | Required |
 | :--- | :--- | :--- | :--- |
 | appType | External system type | string <br> Supported Values: IVR | Required |
@@ -37,29 +37,32 @@ This method exposes a short-term, one-time, non-cacheable URL for starting the e
 
 Example:
 
-	{
-	"appType":	"IVR",
-	"consumerSections":	["Support","English","Other"],
-	"engagementAttributes":	[
-	{"type":"personal","personal":{"contacts":{"phone":"22222222222222"}}}
-	],
-	"externalWaitTimeSeconds":300
-	}
+```json
+{
+  "appType":	"IVR",
+  "consumerSections":	["Support","English","Other"],
+  "engagementAttributes":	[
+  {"type":"personal","personal":{"contacts":{"phone":"22222222222222"}}}
+  ],
+  "externalWaitTimeSeconds":300
+}
+```
 
 ### Response
 
 Example:
-
-    {
-    "status":	"Available",
-    "engagementDetails":	{
-    "urlToChat":	"https://www.mybrand.com/?someQueryParams,
+```json
+{
+  "status":	"Available",
+  "engagementDetails":	{
+    "urlToChat":	"https://www.mybrand.com/?someQueryParams",
     "validForSeconds":	300,
     "expectedWaitTimeSeconds":120,
     "queueSize":	9
-    }
-    }
-  
+  }
+}
+```
+
 **Elements in the Response**
 
 | Name | Description | Type/Value |
@@ -69,15 +72,17 @@ Example:
 | expectedWaitTimeSeconds | Expected wait time (in seconds). Returned when the status is Available. | integer |
 | queueSize | Current queue size. Returned when the status is Available. | integer |
 | urlToChat | URL link for chat initiation. Returned when the status is Available. | |
-| validForSeconds | The period in seconds that the urlToChat will be valid. Returned when the status is Available | integer | 
+| validForSeconds | The period in seconds that the urlToChat will be valid. Returned when the status is Available | integer |
 
 Sample error response:
 
-	{
-	"time":"2015-07-02T10:29:19.890-04:00",
-	"message":"Illegal	Version",
-	"internalCode":"33"
-	}
+```json
+{
+  "time":"2015-07-02T10:29:19.890-04:00",
+  "message":"Illegal	Version",
+  "internalCode":"33"
+}
+```
 
 **Elements in the Error Response**
 

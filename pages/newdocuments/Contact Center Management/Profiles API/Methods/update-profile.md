@@ -1,5 +1,5 @@
 ---
-pagename: Update profile
+pagename: Update Profile
 redirect_from:
   - administration-update-profile.html
 keywords:

@@ -9,7 +9,7 @@ documentname: Chat Agent API
 subfoldername: Methods
 
 order: 170
-permalink: chat-agent-api-methods-retrieve-agents-typing-status.html
+permalink: chat-agent-api-methods-retrieve-agent-s-typing-status.html
 
 indicator: chat
 ---

@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for iOS SDK (BETA)
 
 order: 130
-permalink: voice-&-video-for-ios-sdk-beta-appendix.html
+permalink: voice-and-video-for-ios-sdk-beta-appendix.html
 indicator: messaging
 ---
 

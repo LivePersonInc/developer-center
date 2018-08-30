@@ -1,14 +1,14 @@
 ---
-pagename: Get Deletion Requests
+pagename: Get Deletion Request
 redirect_from:
   - personal-data-deletion-get-deletion-requests.html
 keywords:
 sitesection: Documents
-categoryname: Data 
+categoryname: Data
 documentname: Personal Data Deletion API
 subfoldername: Methods
 order: 30
-permalink: personal-data-deletion-api-methods-get-deletion-requests.html
+permalink: personal-data-deletion-api-methods-get-deletion-request.html
 indicator: both
 ---
 

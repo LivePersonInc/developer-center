@@ -17,17 +17,17 @@ indicator: both
 
 This API retrieves a list of agent groups for a specific account.
 
-### Request 
+### Request
 
 | Method | URL |
 | :------- | :----- |
-| GET   https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups |
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups |
 
 **Request Headers**
 
 | Header  | Description  |Required |
 | :------- | :--------------- | :--- |
-| Authorization | Contains token string to allow request authentication and authorization. | Required 
+| Authorization | Contains token string to allow request authentication and authorization. | Required
 | If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization.|  Optional |
 
 **Path Parameters**

@@ -9,7 +9,7 @@ documentname: Chat Agent API
 subfoldername: Methods
 
 order: 180
-permalink: chat-agent-api-methods-set-agents-typing-status.html
+permalink: chat-agent-api-methods-set-agent-s-typing-status.html
 
 indicator: chat
 ---
@@ -20,7 +20,7 @@ This method sets the agent's typing status.
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true| 
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info/agentTyping?v=1&NC=true|
 **Request Headers**
 
 | Header | Description |

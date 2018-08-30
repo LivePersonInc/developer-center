@@ -18,7 +18,6 @@
     - pagename: Getting Started with Authentication
     - pagename: Getting Started with Data APIs
     - pagename: Getting Started with Engagement Attributes
-    - pagename: Major Flows
 
 - categoryname: Agent Experience & Bots
   image: agent-experience
@@ -39,8 +38,8 @@
     pages:
       - pagename: Overview
       - pagename: Examples
-      - pagename: Release Notes
       - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
   - documentname: Customer Facing Bots
     pages:
       - pagename: Overview
@@ -367,13 +366,6 @@
       - pagename: PGP Encryption
       - pagename: Changelog
       - pagename: Appendix
-  - documentname: Audit Trail API
-    pages:
-      - pagename: Introduction
-      - pagename: Methods
-        subpages:
-          - subpagename: Retrieve Audit Trail Records
-          - subpagename: Export Audit Trail to CSV File
   - documentname: Messaging Interactions API
     pages:
       - pagename: Overview
@@ -401,11 +393,11 @@
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
-  - documentname: LiveDeflect API
-    pages:
-    - pagename: Overview
-    - pagename: contextAndInvite
-    - pagename: getLiveDeflectData
+  # - documentname: LiveDeflect API
+  #   pages:
+  #   - pagename: Overview
+  #   - pagename: contextAndInvite
+  #   - pagename: getLiveDeflectData
   - documentname: IVR Engagement API
     pages:
     - pagename: Overview
@@ -634,8 +626,8 @@
         - pagename: Complex Layout
         - pagename: Templates
           subpages:
-            - pagename: Card
-            - pagename: Carousel
+            - subpagename: Card
+            - subpagename: Carousel
         - pagename: Best Practices
         - pagename: Limitations
         - pagename: Structured Content Rendering Tool
@@ -822,11 +814,11 @@
         - pagename: Technical Description
         - pagename: Deployment Steps
         - pagename: Additional Options
-    - documentname: Custom Dashboard
-      pages:
-        - pagename: Create a Custom Real Time Dashboard
-        - pagename: Chat Metrics
-        - pagename: Messaging Metrics
+    # - documentname: Custom Dashboard
+    #   pages:
+    #     - pagename: Create a Custom Real Time Dashboard
+    #     - pagename: Chat Metrics
+    #     - pagename: Messaging Metrics
     - documentname: Video Chat
       pages:
         - pagename: Add Video to Chat Conversations

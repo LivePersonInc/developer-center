@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Customizing
 order: 60
-permalink: voice-&-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
+permalink: voice-and-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
 indicator: messaging
 ---
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, don't hesitate to contact you LivePerson account manager for help.

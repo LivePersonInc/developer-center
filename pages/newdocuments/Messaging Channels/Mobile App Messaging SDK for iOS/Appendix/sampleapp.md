@@ -44,13 +44,13 @@ indicator: messaging
 
 1. On the terminal window, type the following command:
 
-```sh
+```bash
 $ gem install cocoapods
 ```
 
 2. After the installation is over, navigate to your project folder and init a new pod using the following command:
 
-```sh
+```bash
 $ pod init
 ```
 
@@ -91,12 +91,12 @@ end
 ```
 * If you already had a Podfile, on your terminal run the following command:
 
-```sh
+```bash
 $ pod update
 ```
 * if not, run the following command:
 
-```sh
+```bash
 $ pod init
 ```
 
@@ -144,7 +144,7 @@ bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks
 
 * If sdk installed by coping Libraries to Xcode project, use the following script:
 
-```sh
+```bash
 bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 ```
 
@@ -507,14 +507,14 @@ Creating both **key.pem** file and **cert.pem** file
 8. Using the **Terminal** locate the folder in which you saved the **aps_development.cert** file,
 9. Create a **.pem** file using the **.cert** file, run the following command on the **Terminal**:
 
-```sh
+```bash
 $ openssl x509 -in aps_development.cer -inform der -out dev-cert.pem
 ```
 
 {:start="10"}
 10. Convert the private keys **.p12** file into a **.pem**:
 
-```sh
+```bash
 $ cp Certificates.p12 key.p12
 $ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 ```
@@ -524,7 +524,7 @@ $ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 {:start="11"}
 11. Create a RSA **.pem** key, you'll be prompt for the **passphrase** you used on the previous step:
 
-```sh
+```bash
  $ openssl rsa -in keyWithPassword.pem -out hostkey.pem
 ```
 
@@ -616,14 +616,14 @@ print("Token:: \(token)")
 
 1. On the terminal window, type the following command:
 
-```sh
+```bash
 $ gem install cocoapods
 ```
 
 {:start="2"}
 2. After the installation is over, navigate to your project folder and initialize a new pod using the following command:
 
-```sh
+```bash
 $ pod init
 ```
 
@@ -668,14 +668,14 @@ end
 {:start="4"}
 4. If you already had a Podfile, your terminal run the following command:
 
-```sh
+```bash
 $ pod update
 ```
 
 {:start="5"}
 5. if not, run the following command:
 
-```sh
+```bash
 $ pod init
 ```
 
@@ -712,13 +712,13 @@ This step is required in order to be able to upload your host app into the App S
 
   * If frameworks installed using CocoaPods, use the following script:
 
-```sh
+```bash
 bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
 ```
 
   *   If frameworks installed by coping Libraries to Xcode project, use the following script:
 
-```sh
+```bash
 bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
 ```
 
@@ -1094,13 +1094,13 @@ Creating both **key.pem** file and **cert.pem** file
 
 9. Create a **.pem** file using the **.cert** file, run the following command on the **Terminal**:
 
-```sh
+```bash
 $ openssl x509 -in aps_development.cer -inform der -out dev-cert.pem
 ```
 
 10. Convert the private keys **.p12** file into a **.pem**:
 
-```sh
+```bash
 $ cp Certificates.p12 key.p12
 $ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 ```
@@ -1109,7 +1109,7 @@ $ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 
 11. Create a RSA **.pem** key, you'll be prompt for the **passphrase** you used on the previous step:
 
-```sh
+```bash
  $ openssl rsa -in keyWithPassword.pem -out hostkey.pem
 ```
 

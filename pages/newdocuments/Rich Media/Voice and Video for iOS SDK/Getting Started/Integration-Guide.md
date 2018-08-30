@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Getting Started
 order: 50
-permalink: voice-&-video-for-ios-sdk-beta-getting-started-integration-guide.html
+permalink: voice-and-video-for-ios-sdk-beta-getting-started-integration-guide.html
 indicator: messaging
 ---
 

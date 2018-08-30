@@ -8,7 +8,7 @@ documentname: Voice & Video for iOS SDK (BETA)
 
 level-order: 3
 order: 1
-permalink: voice-&-video-for-ios-sdk-beta-overview.html
+permalink: voice-and-video-for-ios-sdk-beta-overview.html
 root-link: true
 indicator: messaging
 ---

@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: Getting Started
 order: 30
-permalink: voice-&-video-for-android-sdk-beta-getting-started-integration-guide.html
+permalink: voice-and-video-for-android-sdk-beta-getting-started-integration-guide.html
 indicator: messaging
 ---
 

@@ -1,5 +1,5 @@
 ---
-pagename: Get all profiles
+pagename: Get All Profiles
 redirect_from:
   - administration-get-all-profiles.html
 keywords:

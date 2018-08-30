@@ -1,5 +1,5 @@
 ---
-pagename: Step 3 - Request Upload URL
+pagename: Request Upload URL
 redirect_from:
   - rich-messaging-file-sharing-3.html
 Keywords:
@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: Rich Messaging
 documentname: File Sharing
 order: 40
-permalink: file-sharing-step-3---request-upload-url.html
+permalink: file-sharing-request-upload-url.html
 indicator: both
 ---
 

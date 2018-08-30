@@ -7,7 +7,7 @@ categoryname: Consumer Experience
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 110
-permalink: voice-&-video-for-ios-sdk-beta-liveengage-configuration-register-your-app.html
+permalink: voice-and-video-for-ios-sdk-beta-liveengage-configuration-register-your-app.html
 indicator: messaging
 ---
 
