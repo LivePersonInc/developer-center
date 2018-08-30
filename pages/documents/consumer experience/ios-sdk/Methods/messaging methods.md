@@ -309,16 +309,9 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 
 <div class="important">
 Important:
-
-<<<<<<< HEAD
-**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number, this only works for authenticated users. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})**
-=======
-
-**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number. This only works for authenticated users. *Note: After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})**
-
 </div>
->>>>>>> d2f8f5f7a667ef334134936bb39ae62880cd91fc
 
+**In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number, this only works for authenticated users. (see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize){:target="_blank"})**
 
 ### getUnreadMessagesCount
 
