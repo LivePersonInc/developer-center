@@ -1,7 +1,7 @@
 ---
 pagename: Overview
 sitesection: Documents
-categoryname: Messaging Channels
+categoryname: "Messaging Channels"
 documentname: LiveDeflect API
 permalink: livedeflect-api-overview.html
 indicator: both

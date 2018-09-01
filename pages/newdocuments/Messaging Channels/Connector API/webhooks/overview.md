@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - webhooks-overview.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Webhooks
 order: 19

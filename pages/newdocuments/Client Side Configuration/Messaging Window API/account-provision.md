@@ -3,7 +3,7 @@ pagename: Enable Messaging Features
 redirect_from:
   - consumer-int-account-provision.html
 
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 
 order: 3

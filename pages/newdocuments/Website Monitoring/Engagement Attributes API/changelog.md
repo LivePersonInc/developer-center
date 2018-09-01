@@ -4,7 +4,7 @@ redirect_from:
   - rt-interactions-engagement-attributes-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Engagement Attributes API
 order: 231
 permalink: engagement-attributes-api-changelog.html

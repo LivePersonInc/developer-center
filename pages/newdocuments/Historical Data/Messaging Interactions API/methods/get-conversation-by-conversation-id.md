@@ -3,7 +3,7 @@ pagename: Get conversation by conversation ID
 redirect_from:
   - data-messaging-interactions-get-conversation-by-conversation-id.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Messaging Interactions API
 subfoldername: Methods
 order: 20

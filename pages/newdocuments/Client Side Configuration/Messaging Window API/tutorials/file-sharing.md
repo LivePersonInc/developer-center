@@ -3,7 +3,7 @@ pagename: File Sharing
 redirect_from:
   - messaging-window-api-tutorials-file-sharing
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 

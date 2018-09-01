@@ -3,7 +3,7 @@ pagename: Import Account Categories
 redirect_from:
   - account-configuration-categories-import.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

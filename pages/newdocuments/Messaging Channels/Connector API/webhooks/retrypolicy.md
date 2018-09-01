@@ -3,7 +3,7 @@ pagename: Retry Policy
 redirect_from:
   - webhooks-retrypolicy.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Webhooks
 order: 40

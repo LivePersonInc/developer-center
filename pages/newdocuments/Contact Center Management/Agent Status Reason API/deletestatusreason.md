@@ -3,7 +3,7 @@ pagename: Delete Status Reason
 redirect_from:
   - account-configuration-agent-status-reason-deletestatusreason.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Agent Status Reason API
 subfoldername: Methods
 permalink: agent-status-reason-api-methods-delete-status-reason.html

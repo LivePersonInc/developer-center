@@ -4,7 +4,7 @@ redirect_from:
   - android-push-notifications.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 
 order: 140

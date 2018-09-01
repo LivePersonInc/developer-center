@@ -3,7 +3,7 @@ pagename: Detailed API
 redirect_from:
   - guides-authentication-detailedapi.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Security & Authentication"
 documentname: Authentication
 
 permalink: authentication-detailed-api.html

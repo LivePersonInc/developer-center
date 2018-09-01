@@ -1,7 +1,7 @@
 ---
 pagename: Overview
 sitesection: Documents
-categoryname: Messaging Channels
+categoryname: "Messaging Channels"
 documentname: LiveDeflect API
 subfoldername: Proactive Alert API
 permalink: livedeflect-api-proactive-alert-api-overview.html

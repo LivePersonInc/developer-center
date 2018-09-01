@@ -3,7 +3,7 @@ pagename: Create Category
 redirect_from:
   - account-configuration-categories-create.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

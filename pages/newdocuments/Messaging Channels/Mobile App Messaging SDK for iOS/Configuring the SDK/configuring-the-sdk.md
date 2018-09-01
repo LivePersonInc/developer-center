@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-ios-sdk-configuring-the-sdk.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Customization and Branding
 

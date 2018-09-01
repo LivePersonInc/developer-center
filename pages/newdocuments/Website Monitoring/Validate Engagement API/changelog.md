@@ -4,7 +4,7 @@ redirect_from:
   - rt-interactions-validate-engagement-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Validate Engagement API
 order: 231
 permalink: validate-engagement-api-changelog.html

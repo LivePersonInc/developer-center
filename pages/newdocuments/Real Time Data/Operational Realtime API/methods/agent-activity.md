@@ -3,7 +3,7 @@ pagename: Agent Activity
 redirect_from:
   - data-operational-realtime-agent-activity.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Operational Realtime API
 subfoldername: Methods
 order: 30

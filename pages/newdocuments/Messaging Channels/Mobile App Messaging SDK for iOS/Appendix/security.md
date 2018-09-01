@@ -5,7 +5,7 @@ redirect_from:
 
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Appendix
 

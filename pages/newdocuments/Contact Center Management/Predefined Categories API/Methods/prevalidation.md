@@ -3,7 +3,7 @@ pagename: Import Categories Pre Validation
 redirect_from:
   - account-configuration-categories-prevalidation.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

@@ -4,7 +4,7 @@ redirect_from:
   - administration-update-agent-group.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
 

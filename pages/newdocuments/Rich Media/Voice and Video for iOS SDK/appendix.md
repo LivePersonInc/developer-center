@@ -3,7 +3,7 @@ pagename: Appendix
 redirect_from:
   - consumer-experience-voice-video-ios-appendix.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 
 order: 130

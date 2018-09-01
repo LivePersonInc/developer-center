@@ -3,7 +3,7 @@ pagename: getEngagementState
 redirect_from:
   - trigger-getstate.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Engagement Trigger API
 subfoldername: Methods
 order: 30

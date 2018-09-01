@@ -3,7 +3,7 @@ pagename: Start Chat
 redirect_from:
   - consumer-experience-server-chat-start-chat.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

@@ -3,7 +3,7 @@ pagename: Considerations
 redirect_from:
   - products-bots-considerations.html
 sitesection: Solutions
-categoryname: Bots
+categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots
 
 order: 4

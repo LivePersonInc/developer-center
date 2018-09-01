@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-android-sdk-release-notes.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 order: 310
 permalink: mobile-app-messaging-sdk-for-android-release-notes.html

@@ -3,7 +3,7 @@ pagename: Account Settings
 redirect_from:
   - consumer-experience-voice-video-android-wording.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: Customizing
 order: 80

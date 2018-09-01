@@ -3,7 +3,7 @@ pagename: Close Conversation
 redirect_from:
   - consumer-int-msg-close-conv.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

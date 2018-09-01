@@ -3,7 +3,7 @@ pagename: Close a conversation
 redirect_from:
   - close-conversation-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 62

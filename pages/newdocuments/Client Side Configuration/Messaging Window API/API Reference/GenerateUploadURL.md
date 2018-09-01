@@ -3,7 +3,7 @@ pagename: Generate Upload URL
 redirect_from:
   - consumer-int-msg-generate-temp-upload-url.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

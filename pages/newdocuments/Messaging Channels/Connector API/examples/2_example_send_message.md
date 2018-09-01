@@ -3,7 +3,7 @@ pagename: Send a message
 redirect_from:
   - send-message-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 61

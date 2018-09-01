@@ -3,7 +3,7 @@ pagename: Getting Started
 redirect_from:
   - connectorapi-getting-started.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Connector API
 order: 2

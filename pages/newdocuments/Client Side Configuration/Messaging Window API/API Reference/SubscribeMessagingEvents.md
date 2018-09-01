@@ -3,7 +3,7 @@ pagename: Subscribe to Messaging Events
 redirect_from:
   - consumer-int-msg-sub-events.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

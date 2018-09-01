@@ -3,7 +3,7 @@ pagename: Send Consumer Satisfaction (CSAT)
 redirect_from:
   - consumer-int-msg-csat-conv.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

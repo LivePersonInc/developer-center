@@ -3,7 +3,7 @@ pagename: Event Structure
 redirect_from:
   - rt-interactions-window-sdk-event-structure.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
 subfoldername: Instructions
 

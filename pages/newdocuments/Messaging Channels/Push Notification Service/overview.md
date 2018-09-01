@@ -4,7 +4,7 @@ redirect_from:
   - push-service-overview.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: "Messaging Channels"
 
 
 level-order: 7

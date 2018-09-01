@@ -3,7 +3,7 @@ pagename: Publish Images
 redirect_from:
   - consumer-int-publishing-images.html
 
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 

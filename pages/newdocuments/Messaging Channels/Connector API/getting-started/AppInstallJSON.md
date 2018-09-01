@@ -3,7 +3,7 @@ pagename: App Install Manifest for Connectors
 redirect_from:
   - app-install-manifest-connectors.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Connector API
 order: 3

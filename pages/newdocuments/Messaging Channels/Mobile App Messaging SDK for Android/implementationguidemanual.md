@@ -4,7 +4,7 @@ redirect_from:
   - android-integration-guide-manual.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Appendix
 

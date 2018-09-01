@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - consumer-experience-voice-video-ios.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 
 level-order: 3

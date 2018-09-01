@@ -4,7 +4,7 @@ redirect_from:
   - guides-retry-policy.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: "Getting Started"
 documentname: Retry and KeepAlive Best Practices
 
 level-order: 11

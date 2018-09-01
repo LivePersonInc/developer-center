@@ -3,7 +3,7 @@ pagename: Delete Multiple Categories
 redirect_from:
   - account-configuration-categories-delete-multiple.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

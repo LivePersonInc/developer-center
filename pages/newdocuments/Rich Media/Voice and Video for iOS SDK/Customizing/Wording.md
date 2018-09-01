@@ -3,7 +3,7 @@ pagename: Wording
 redirect_from:
   - consumer-experience-voice-video-ios-appearance-wording.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Customizing
 order: 70

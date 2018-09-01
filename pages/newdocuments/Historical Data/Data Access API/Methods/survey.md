@@ -3,7 +3,7 @@ pagename: Survey
 redirect_from:
   - data-data-access-survey.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Data Access API
 subfoldername: Methods
 order: 50

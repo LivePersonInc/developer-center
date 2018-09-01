@@ -3,7 +3,7 @@ pagename: Agent Activity
 redirect_from:
   - data-data-access-agent-activity.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Data Access API
 subfoldername: Methods
 order: 20

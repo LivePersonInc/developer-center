@@ -4,7 +4,7 @@ redirect_from:
   - login-getting-started.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Security & Authentication"
 documentname: Login Service API
 
 order: 9

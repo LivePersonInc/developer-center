@@ -3,7 +3,7 @@ pagename: How to use LiveEngage Tag Events
 redirect_from:
   - lp-tag-tag-events-how.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: LE-Tag
 
 order: 2

@@ -3,7 +3,7 @@ pagename: Create an API Engagement
 redirect_from:
   - guides-customizedchat-create-an-external-engagement.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-create-an-api-engagement.html

@@ -4,7 +4,7 @@ redirect_from:
   - administration-update-user.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 

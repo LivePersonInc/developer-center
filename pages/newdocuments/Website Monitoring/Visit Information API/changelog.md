@@ -4,7 +4,7 @@ redirect_from:
   - rt-interactions-visit-information-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Visit Information API
 order: 231
 permalink: visit-information-api-changelog.html

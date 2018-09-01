@@ -3,7 +3,7 @@ pagename: Introduction
 redirect_from:
   - account-configuration-meta-data-introduction.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Audit Trail API
 permalink: audit-trail-api-introduction.html
 root-link: true

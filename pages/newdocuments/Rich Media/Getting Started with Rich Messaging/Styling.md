@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-styling.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Getting Started
 order: 110
 permalink: getting-started-styling.html

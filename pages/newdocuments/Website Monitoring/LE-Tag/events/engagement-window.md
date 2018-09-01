@@ -3,7 +3,7 @@ pagename: Engagement Window Events
 redirect_from:
   - lp-tag-engagement-window.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: LE-Tag
 subfoldername: Events
 

@@ -3,7 +3,7 @@ pagename: Release Notes
 redirect_from:
   - consumer-experience-voice-video-android-changelog.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 
 order: 110

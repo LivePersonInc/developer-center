@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-ios-sdk-handlepush.html
 Keywords:
 
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
 

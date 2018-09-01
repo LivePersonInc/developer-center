@@ -3,7 +3,7 @@ pagename: Sample App
 redirect_from:
   - consumer-experience-voice-video-ios-sample-app.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 
 order: 120

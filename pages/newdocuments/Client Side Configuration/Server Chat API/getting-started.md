@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - consumer-experience-server-chat-getting-started.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 level-order: 7
 order: 1

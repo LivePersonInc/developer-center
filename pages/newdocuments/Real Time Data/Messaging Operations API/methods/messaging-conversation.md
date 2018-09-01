@@ -3,7 +3,7 @@ pagename: Messaging Conversation
 redirect_from:
   - data-messaging-operations-messaging-conversation.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Messaging Operations API
 subfoldername: Methods
 order: 10

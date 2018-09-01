@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - rt-interactions-ivr-engagement-overview.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Messaging Channels"
 documentname: IVR Engagement API
 
 level-order: 3

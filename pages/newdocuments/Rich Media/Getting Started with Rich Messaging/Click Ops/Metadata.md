@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-click-ops-metadata.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Getting Started
 subfoldername: Click Operations
 order: 100

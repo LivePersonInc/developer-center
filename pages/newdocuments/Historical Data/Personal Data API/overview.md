@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - personal-data-deletion-overview.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Personal Data Deletion API
 level-order: 8
 order: 1

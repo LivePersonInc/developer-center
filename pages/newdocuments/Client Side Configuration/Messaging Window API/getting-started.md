@@ -3,7 +3,7 @@ pagename: Getting Started
 redirect_from:
   - consumer-int-getting-started.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 
 order: 2

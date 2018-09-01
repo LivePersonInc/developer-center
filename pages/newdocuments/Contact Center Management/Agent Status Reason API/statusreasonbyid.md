@@ -3,7 +3,7 @@ pagename: Agent Status Reason by ID
 redirect_from:
   - account-configuration-agent-status-reason-agentstatusreasonid.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Agent Status Reason API
 subfoldername: Methods
 permalink: agent-status-reason-api-methods-agent-status-reason-by-id.html

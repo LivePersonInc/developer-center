@@ -3,7 +3,7 @@ pagename: Category By ID
 redirect_from:
   - account-configuration-categories-id.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

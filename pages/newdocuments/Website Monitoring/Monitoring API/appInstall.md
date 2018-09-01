@@ -3,7 +3,7 @@ pagename: Installing a Monitoring API Application
 redirect_from:
   - rt-interactions-monitoring-app-install.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Monitoring API
 order: 11
 permalink: monitoring-api-installing-a-monitoring-api-application.html

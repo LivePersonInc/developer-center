@@ -5,7 +5,7 @@ redirect_from:
 
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
 

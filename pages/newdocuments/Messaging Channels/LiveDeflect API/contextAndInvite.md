@@ -1,7 +1,7 @@
 ---
 pagename: contextAndInvite
 sitesection: Documents
-categoryname: Messaging Channels
+categoryname: "Messaging Channels"
 documentname: LiveDeflect API
 permalink: livedeflect-api-contextandinvite.html
 indicator: both

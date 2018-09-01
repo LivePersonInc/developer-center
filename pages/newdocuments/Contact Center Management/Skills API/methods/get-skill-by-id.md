@@ -4,7 +4,7 @@ redirect_from:
   - administration-get-skill-by-id.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
 order: 20

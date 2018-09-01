@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-structured-content-overview.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Structured Content
 
 level-order: 2

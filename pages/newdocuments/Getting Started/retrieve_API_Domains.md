@@ -4,7 +4,7 @@ redirect_from:
   - agent-domain-domain-api.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: "Getting Started"
 documentname: Retrieve API Domains
 
 level-order: 2

@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - guides-customizedchat.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-overview.html

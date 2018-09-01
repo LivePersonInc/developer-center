@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-ios-sdk-toastnotifications.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 
 order: 16

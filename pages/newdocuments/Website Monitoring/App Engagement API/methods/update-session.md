@@ -3,7 +3,7 @@ pagename: Update Session
 redirect_from:
   - rt-interactions-update-session.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: App Engagement API
 subfoldername: Methods
 

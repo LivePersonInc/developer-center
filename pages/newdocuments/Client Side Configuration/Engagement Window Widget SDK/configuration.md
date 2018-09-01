@@ -3,7 +3,7 @@ pagename: Configuration
 redirect_from:
   - rt-interactions-window-sdk-configuration.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
 subfoldername: Instructions
 

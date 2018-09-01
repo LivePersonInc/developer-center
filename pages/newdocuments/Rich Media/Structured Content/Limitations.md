@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-structured-content-limitations.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Structured Content
 order: 70
 permalink: structured-content-limitations.html

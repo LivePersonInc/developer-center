@@ -3,7 +3,7 @@ pagename: Visitor Flow Events
 redirect_from:
   - lp-tag-visitor-flow.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: LE-Tag
 subfoldername: Events
 

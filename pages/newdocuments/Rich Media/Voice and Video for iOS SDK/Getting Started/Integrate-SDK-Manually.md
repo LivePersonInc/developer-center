@@ -3,7 +3,7 @@ pagename: Installing the SDK manually
 redirect_from:
   - consumer-experience-voice-video-ios-manually.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Getting Started
 order: 30

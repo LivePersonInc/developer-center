@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-basic-elements-button.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Getting Started
 subfoldername: Basic Elements
 order: 50

@@ -3,7 +3,7 @@ pagename: Connector Sample App
 redirect_from:
   - connector-sample-app.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Sample Code
 order: 70

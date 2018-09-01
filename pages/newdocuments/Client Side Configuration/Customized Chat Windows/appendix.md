@@ -3,7 +3,7 @@ pagename: Appendix
 redirect_from:
   - guides-customizedchat-appendix.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-appendix.html

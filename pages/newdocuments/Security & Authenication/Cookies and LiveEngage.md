@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - guides-cookies.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Security & Authentication"
 documentname: Cookies and LiveEngage
 level-order: 12
 order: 10

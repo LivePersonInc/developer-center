@@ -3,7 +3,7 @@ pagename: Create a new conversation and report SDEs
 redirect_from:
   - sdes-routing-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 60

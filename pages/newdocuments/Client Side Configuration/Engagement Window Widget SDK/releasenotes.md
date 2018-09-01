@@ -4,7 +4,7 @@ redirect_from:
   - rt-interactions-window-sdk-releasenotes.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
 
 order: 120

@@ -4,7 +4,7 @@ redirect_from:
   - products-bots-chat.html
 
 sitesection: Solutions
-categoryname: Bots
+categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots
 
 order: 6

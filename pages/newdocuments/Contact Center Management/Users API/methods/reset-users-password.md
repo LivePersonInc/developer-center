@@ -4,7 +4,7 @@ redirect_from:
   - administration-reset-users-password.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 

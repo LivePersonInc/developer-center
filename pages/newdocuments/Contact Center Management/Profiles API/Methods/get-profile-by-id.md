@@ -4,7 +4,7 @@ redirect_from:
   - administration-get-profile-by-id.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
 

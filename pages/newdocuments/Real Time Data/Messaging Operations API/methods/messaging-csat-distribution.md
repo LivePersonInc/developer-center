@@ -3,7 +3,7 @@ pagename: Messaging CSAT Distribution
 redirect_from:
   - data-messaging-operations-messaging-csat-distribution.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Messaging Operations API
 subfoldername: Methods
 order: 50

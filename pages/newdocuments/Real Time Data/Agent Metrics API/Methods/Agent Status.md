@@ -3,7 +3,7 @@ pagename: Agent Status
 redirect_from:
   - data-messaging-interactions-methods-agent-status.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Agent Metrics API
 subfoldername: Methods
 order: 10

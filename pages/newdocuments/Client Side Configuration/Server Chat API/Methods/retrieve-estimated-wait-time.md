@@ -3,7 +3,7 @@ pagename: Retrieve Estimated Wait Time
 redirect_from:
   - consumer-experience-server-chat-retrieve-estimated-wait-time.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

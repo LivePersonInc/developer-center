@@ -3,7 +3,7 @@ pagename: Installing the SDK
 redirect_from:
   - consumer-experience-voice-video-android-installing-the-sdk.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: Getting Started
 order: 20

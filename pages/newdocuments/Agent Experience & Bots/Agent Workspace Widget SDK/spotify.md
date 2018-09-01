@@ -4,7 +4,7 @@ redirect_from:
   - agent-workspace-sdk-spotify-use-case.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Agent Experience & Bot"
 
 
 order: 80

@@ -2,7 +2,7 @@
 pagename: Business Event Section
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Apple Business Chat Templates
 subfoldername: Time Picker
 order: 100

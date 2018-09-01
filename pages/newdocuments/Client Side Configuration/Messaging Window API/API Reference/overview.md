@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - consumer-int-api-reference.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

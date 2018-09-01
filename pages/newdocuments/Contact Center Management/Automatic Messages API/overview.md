@@ -4,7 +4,7 @@ redirect_from:
   - account-configuration-automatic-messages-overview.html
 keywords:
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Automatic Messages API
 
 level-order: 5

@@ -3,7 +3,7 @@ pagename: Set the Visitor's Typing Status
 redirect_from:
   - consumer-experience-server-chat-set-visitor-typing-status.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

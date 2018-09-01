@@ -3,7 +3,7 @@ pagename: Add Your Own Widgets to the Agent Workspace
 redirect_from:
   - guides-agent-workspace-widget.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Agent Experience & Bot"
 documentname: Add Agent Widgets
 
 permalink: add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html

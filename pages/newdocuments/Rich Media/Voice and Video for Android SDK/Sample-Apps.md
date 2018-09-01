@@ -3,7 +3,7 @@ pagename: Sample Apps
 redirect_from:
   - consumer-experience-voice-video-android-sample-app.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 order: 90
 permalink: voice-and-video-for-android-sdk-beta-sample-apps.html

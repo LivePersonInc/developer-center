@@ -4,7 +4,7 @@ redirect_from:
   - administration-lobs-overview.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: LOBs API
 
 

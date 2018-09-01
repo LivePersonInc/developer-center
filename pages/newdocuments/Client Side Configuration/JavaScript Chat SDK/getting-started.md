@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-javascript-chat-getting-started.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 
 level-order: 6

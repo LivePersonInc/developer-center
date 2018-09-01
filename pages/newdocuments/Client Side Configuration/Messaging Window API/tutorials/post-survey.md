@@ -3,7 +3,7 @@ pagename: Post Conversation Survey
 redirect_from:
   - consumer-int-post-survey.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 

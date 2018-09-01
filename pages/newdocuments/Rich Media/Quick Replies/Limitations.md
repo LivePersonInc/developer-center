@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-quick-replies-limitations.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Quick Replies
 order: 30
 permalink: quick-replies-limitations.html

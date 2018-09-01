@@ -4,7 +4,7 @@ redirect_from:
   - agent-retrieve-survey-structure.html
 Keywords:
 sitesection: 
-categoryname: Agent Interactions
+categoryname: "Client Side Configuration"
 documentname: Chat Agent API
 subfoldername: Methods
 order: 220

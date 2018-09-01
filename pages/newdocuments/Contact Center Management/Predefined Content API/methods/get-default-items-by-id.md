@@ -4,7 +4,7 @@ redirect_from:
   - account-configuration-predefined-content-get-default-items-by-id.html
 Keywords:
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
 

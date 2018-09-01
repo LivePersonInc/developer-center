@@ -2,7 +2,7 @@
 pagename: Introduction
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Apple Business Chat Templates
 level-order: 4
 order: 10

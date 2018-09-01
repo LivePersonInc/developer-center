@@ -1,7 +1,7 @@
 ---
 pagename: Common Use Cases
 sitesection: Documents
-categoryname: Guides
+categoryname: "Welcome"
 documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-common-use-cases.html
 indicator: both

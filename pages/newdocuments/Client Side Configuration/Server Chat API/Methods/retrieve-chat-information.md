@@ -3,7 +3,7 @@ pagename: Retrieve Chat Information
 redirect_from:
   - consumer-experience-server-chat-retrieve-chat-information.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

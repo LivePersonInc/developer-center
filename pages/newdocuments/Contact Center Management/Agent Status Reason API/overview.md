@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - account-configuration-agent-status-reason-overview.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Agent Status Reason API
 permalink: agent-status-reason-api-overview.html
 root-link: true

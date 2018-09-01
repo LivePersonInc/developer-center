@@ -3,7 +3,7 @@ pagename: Client Properties
 redirect_from:
   - consumer-int-client-props.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 

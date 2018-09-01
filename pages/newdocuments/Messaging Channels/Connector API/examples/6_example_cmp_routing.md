@@ -3,7 +3,7 @@ pagename: Campaign for messaging Routing
 redirect_from:
   - cmp-routing-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 65

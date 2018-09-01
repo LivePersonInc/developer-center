@@ -4,7 +4,7 @@ redirect_from:
   - agent-workspace-sdk-releasenotes.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Agent Experience & Bot"
 documentname: Agent Workspace Widget SDK
 
 order: 120

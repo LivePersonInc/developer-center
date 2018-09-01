@@ -1,7 +1,7 @@
 ---
 pagename: Getting Started with Authentication
 sitesection: Documents
-categoryname: Guides
+categoryname: "Getting Started"
 documentname: Major Platform Components
 permalink: major-platform-components-getting-started-with-authentication.html
 order: 10

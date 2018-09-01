@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-operational-realtime-overview.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Operational Realtime API
 
 level-order: 5

@@ -3,7 +3,7 @@ pagename: Major Components
 redirect_from:
   - guides-authentication-majorcomponents.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Security & Authentication"
 documentname: Authentication
 
 permalink: authentication-major-components.html

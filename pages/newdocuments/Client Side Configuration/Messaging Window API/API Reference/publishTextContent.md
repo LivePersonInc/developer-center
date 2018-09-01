@@ -3,7 +3,7 @@ pagename: Publishing Text Content
 redirect_from:
   - consumer-int-msg-text-cont.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

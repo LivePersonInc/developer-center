@@ -3,7 +3,7 @@ pagename: Current Queue State
 redirect_from:
   - data-operational-realtime-current-queue-state.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Operational Realtime API
 subfoldername: Methods
 order: 40

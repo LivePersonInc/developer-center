@@ -3,7 +3,7 @@ pagename: Account Settings
 redirect_from:
   - consumer-experience-voice-video-ios-account-settings.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 90

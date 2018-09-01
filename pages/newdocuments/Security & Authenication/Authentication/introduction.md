@@ -3,7 +3,7 @@ pagename: Introduction
 redirect_from:
   - guides-authentication-introduction.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Security & Authentication"
 documentname: Authentication
 
 permalink: authentication-introduction.html

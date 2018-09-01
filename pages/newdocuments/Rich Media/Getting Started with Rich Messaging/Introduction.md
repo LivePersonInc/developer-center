@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-getting-started.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Getting Started with Rich Messaging
 
 level-order: 1

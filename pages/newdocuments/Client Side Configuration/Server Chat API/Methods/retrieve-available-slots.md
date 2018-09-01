@@ -3,7 +3,7 @@ pagename: Retrieve Available Slots
 redirect_from:
   - consumer-experience-server-chat-retrieve-available-slots.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

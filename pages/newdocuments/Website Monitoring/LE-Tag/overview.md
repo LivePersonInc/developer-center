@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - lp-tag-tag-events-overview.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: LE-Tag
 
 level-order: 3

@@ -3,7 +3,7 @@ pagename: Send Chat State Events
 redirect_from:
   - send-chat-state-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 63

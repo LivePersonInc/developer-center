@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-structured-content-pollock.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Structured Content
 order: 80
 permalink: structured-content-structured-content-rendering-tool.html

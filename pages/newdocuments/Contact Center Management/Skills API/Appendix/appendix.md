@@ -4,7 +4,7 @@ redirect_from:
   - administration-skills-appendix.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Skills API
 
 

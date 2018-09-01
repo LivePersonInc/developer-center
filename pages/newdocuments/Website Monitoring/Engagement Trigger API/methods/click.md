@@ -3,7 +3,7 @@ pagename: Click
 redirect_from:
   - trigger-click.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Engagement Trigger API
 subfoldername: Methods
 order: 10

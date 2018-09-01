@@ -3,7 +3,7 @@ pagename: Engagement Attributes
 redirect_from:
   - rt-interactions-engagement-attributes-engagement-attributes.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Engagement Attributes API
 
 order: 2

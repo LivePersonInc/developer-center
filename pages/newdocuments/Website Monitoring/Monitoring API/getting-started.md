@@ -3,7 +3,7 @@ pagename: Getting Started
 redirect_from:
   - rt-interactions-monitoring-getting-started.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Monitoring API
 order: 10
 permalink: monitoring-api-getting-started.html

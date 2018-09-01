@@ -4,7 +4,7 @@ redirect_from:
   - account-configuration-meta-data-audit-trail-export.html
 keywords:
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Historical Data"
 documentname: Audit Trail API
 subfoldername: Methods
 order: 20

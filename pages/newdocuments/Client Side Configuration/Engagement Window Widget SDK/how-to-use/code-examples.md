@@ -3,7 +3,7 @@ pagename: Code Examples
 redirect_from:
   - rt-interactions-window-sdk-code-examples.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
 subfoldername: Instructions
 

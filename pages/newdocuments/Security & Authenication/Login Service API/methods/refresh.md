@@ -5,7 +5,7 @@ redirect_from:
 permalink: login-service-api-methods-refresh.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
 

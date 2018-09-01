@@ -3,7 +3,7 @@ pagename: Architecture
 redirect_from:
   - data-data-access-architecture.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Data Access API
 order: 2
 permalink: data-access-api-architecture.html

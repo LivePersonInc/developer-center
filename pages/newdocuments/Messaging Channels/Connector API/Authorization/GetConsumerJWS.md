@@ -3,7 +3,7 @@ pagename: Get ConsumerJWS
 redirect_from:
   - Create_ConsumerJWS.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Authorization and Authentication
 order: 5

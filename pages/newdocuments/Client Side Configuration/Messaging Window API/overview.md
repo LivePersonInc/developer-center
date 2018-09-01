@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - consumer-int-overview.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 
 level-order: 5

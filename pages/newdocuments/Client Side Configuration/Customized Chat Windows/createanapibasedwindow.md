@@ -3,7 +3,7 @@ pagename: Create an API-based Window
 redirect_from:
   - guides-customizedchat-create-an-api-based-window.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
 
 permalink: customized-chat-windows-create-an-api-based-window.html

@@ -3,7 +3,7 @@ pagename: Release Notes
 redirect_from:
   - consumer-experience-javascript-chat-changelog.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 
 order: 500

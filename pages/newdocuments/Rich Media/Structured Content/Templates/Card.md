@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-structured-content-card.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Structured Content
 subfoldername: Templates
 order: 30

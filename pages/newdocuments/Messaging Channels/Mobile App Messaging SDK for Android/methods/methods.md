@@ -4,7 +4,7 @@ redirect_from:
   - android-methods.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: SDK APIs
 

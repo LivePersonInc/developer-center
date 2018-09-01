@@ -1,7 +1,7 @@
 ---
 pagename: Unauthenticated Messaging
 sitesection:
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 order: 40

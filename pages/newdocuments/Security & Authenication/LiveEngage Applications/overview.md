@@ -4,7 +4,7 @@ redirect_from:
   - guides-le-applications-what-is.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: "Security & Authentication"
 documentname: LiveEngage Applications
 level-order: 13
 order: 10

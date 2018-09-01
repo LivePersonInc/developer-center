@@ -3,7 +3,7 @@ pagename: How to enable a feature
 redirect_from:
   - enable-feature-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 64

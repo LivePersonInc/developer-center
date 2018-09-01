@@ -3,7 +3,7 @@ pagename: Unsubscribe from Conversation Metadata
 redirect_from:
   - consumer-int-msg-unsub-conv.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

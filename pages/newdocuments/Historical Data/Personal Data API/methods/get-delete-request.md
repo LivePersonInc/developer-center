@@ -4,7 +4,7 @@ redirect_from:
   - personal-data-deletion-get-deletion-requests.html
 keywords:
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Personal Data Deletion API
 subfoldername: Methods
 order: 30

@@ -3,7 +3,7 @@ pagename: VoIP Configuration
 redirect_from:
   - consumer-experience-voice-video-ios-voip-configuration.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 100

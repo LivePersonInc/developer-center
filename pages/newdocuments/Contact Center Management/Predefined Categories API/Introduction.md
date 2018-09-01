@@ -3,7 +3,7 @@ pagename: Introduction
 redirect_from:
   - account-configuration-categories-introduction.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 
 permalink: predefined-categories-api-introduction.html

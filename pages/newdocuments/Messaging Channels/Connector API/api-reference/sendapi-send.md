@@ -3,7 +3,7 @@ pagename: SEND
 redirect_from:
   - sendapi-send.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: API Reference
 order: 12

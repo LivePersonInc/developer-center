@@ -3,7 +3,7 @@ pagename: Integration Guide
 redirect_from:
   - consumer-experience-voice-video-ios-integration-guide.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: Getting Started
 order: 50

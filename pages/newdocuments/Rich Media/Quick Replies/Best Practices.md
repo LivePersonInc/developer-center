@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-quick-replies-best-practices.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Quick Replies
 order: 40
 permalink: quick-replies-best-practices.html

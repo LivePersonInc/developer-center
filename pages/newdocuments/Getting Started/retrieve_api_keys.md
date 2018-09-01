@@ -3,7 +3,7 @@ pagename: Create a new API Key
 redirect_from:
   - guides-gettingstarted.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Getting Started"
 documentname: Retrieve API Keys
 
 permalink: retrieve-api-keys-create-a-new-api-key.html

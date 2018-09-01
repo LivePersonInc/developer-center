@@ -3,7 +3,7 @@ pagename: Appendix
 redirect_from:
   - data-messaging-operations-appendix.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Messaging Operations API
 
 order: 100

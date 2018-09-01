@@ -3,7 +3,7 @@ pagename: Report
 redirect_from:
   - rt-interactions-monitoring-methods-report.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Monitoring API
 subfoldername: Methods
 order: 30

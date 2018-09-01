@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-javascript-chat-getestimatedwaittime.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
 

@@ -3,7 +3,7 @@ pagename: CONVERSATION
 redirect_from:
   - sendapi-create.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: API Reference
 order: 11

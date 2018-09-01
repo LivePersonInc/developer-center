@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-structured-content-complex-layout.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Structured Content
 order: 10
 permalink: structured-content-complex-layout.html

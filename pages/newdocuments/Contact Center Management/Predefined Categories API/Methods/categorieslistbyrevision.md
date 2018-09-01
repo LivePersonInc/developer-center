@@ -3,7 +3,7 @@ pagename: Categories List By Revision
 redirect_from:
   - account-configuration-categories-revision.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

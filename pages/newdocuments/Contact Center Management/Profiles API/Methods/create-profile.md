@@ -4,7 +4,7 @@ redirect_from:
   - administration-create-profile.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
 

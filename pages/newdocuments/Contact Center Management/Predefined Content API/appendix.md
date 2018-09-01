@@ -4,7 +4,7 @@ redirect_from:
   - account-configuration-predefined-content-appendix.html
 Keywords:
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Content API
 
 order: 101

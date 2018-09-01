@@ -1,7 +1,7 @@
 ---
 pagename: How to Read Our Documents
 sitesection: Documents
-categoryname: Guides
+categoryname: "Welcome"
 documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-how-to-read-our-documents.html
 indicator: both

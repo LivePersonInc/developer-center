@@ -4,7 +4,7 @@ redirect_from:
   - account-configuration-unified-automatic-messages-delete-an-automatic-message.html
 Keywords:
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Unified Automatic Messages API
 subfoldername: Methods
 

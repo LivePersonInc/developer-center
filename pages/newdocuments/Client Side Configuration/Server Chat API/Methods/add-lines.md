@@ -3,7 +3,7 @@ pagename: Add Lines / End Chat
 redirect_from:
   - consumer-experience-server-chat-add-lines.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

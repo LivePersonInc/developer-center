@@ -3,7 +3,7 @@ pagename: How It Works
 redirect_from:
   - guides-authentication-howitworks.html
 sitesection: Documents
-categoryname: Guides
+categoryname: "Security & Authentication"
 documentname: Authentication
 
 permalink: authentication-how-it-works.html

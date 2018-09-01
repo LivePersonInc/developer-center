@@ -4,7 +4,7 @@ redirect_from:
   - push-service-whitelist.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: "Messaging Channels"
 
 
 order: 50

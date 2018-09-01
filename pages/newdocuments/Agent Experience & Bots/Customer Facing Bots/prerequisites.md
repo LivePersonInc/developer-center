@@ -3,7 +3,7 @@ pagename: Prerequisites
 redirect_from:
   - products-bots-prerequisites.html
 sitesection: Solutions
-categoryname: Bots
+categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots
 
 

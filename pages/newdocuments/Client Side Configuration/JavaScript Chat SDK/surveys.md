@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-javascript-chat-surveys.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 
 order: 3

@@ -4,7 +4,7 @@ redirect_from:
   - lp-tag-tag-events-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: LE-Tag
 order: 231
 permalink: le-tag-changelog.html

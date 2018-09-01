@@ -4,7 +4,7 @@ redirect_from:
   - rt-interactions-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: App Engagement API
 order: 231
 permalink: app-engagement-api-changelog.html

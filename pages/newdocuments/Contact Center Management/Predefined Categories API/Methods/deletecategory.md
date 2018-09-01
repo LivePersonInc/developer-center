@@ -3,7 +3,7 @@ pagename: Delete a Category
 redirect_from:
   - account-configuration-categories-delete.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Predefined Categories API
 subfoldername: Methods
 

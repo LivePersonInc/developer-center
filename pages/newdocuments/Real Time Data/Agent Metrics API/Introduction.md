@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-messaging-agent-metrics-overview.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Agent Metrics API
 
 level-order: 2

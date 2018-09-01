@@ -3,7 +3,7 @@ pagename: Get AppJWT
 redirect_from:
   - Create_AppJWT.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Authorization and Authentication
 order: 4

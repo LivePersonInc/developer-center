@@ -3,7 +3,7 @@ pagename: Limitations
 redirect_from:
   - rt-interactions-window-sdk-limitations.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
 
 order: 3

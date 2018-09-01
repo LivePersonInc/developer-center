@@ -3,7 +3,7 @@ pagename: Conversation Metadata
 redirect_from:
   - consumer-int-conversation-md.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 

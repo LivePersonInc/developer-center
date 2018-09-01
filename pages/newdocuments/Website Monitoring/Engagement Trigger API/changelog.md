@@ -4,7 +4,7 @@ redirect_from:
   - trigger-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Engagement Trigger API
 order: 231
 permalink: engagement-trigger-api-changelog.html

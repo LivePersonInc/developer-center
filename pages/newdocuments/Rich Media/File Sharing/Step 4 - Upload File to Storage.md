@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-file-sharing-4.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: File Sharing
 order: 50
 permalink: file-sharing-upload-file-to-storage.html

@@ -4,7 +4,7 @@ redirect_from:
   - agent-workspace-sdk-how-to-use.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Agent Experience & Bots"
 documentname: Agent Workspace Widget SDK
 
 order: 40

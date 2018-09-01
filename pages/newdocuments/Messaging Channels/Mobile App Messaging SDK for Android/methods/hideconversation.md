@@ -4,7 +4,7 @@ redirect_from:
   - android-hideconversation.html
 Keywords:
 
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
 

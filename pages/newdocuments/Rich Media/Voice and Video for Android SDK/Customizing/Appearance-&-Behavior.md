@@ -3,7 +3,7 @@ pagename: Appearance and Behavior
 redirect_from:
   - consumer-experience-voice-video-android-appearance-behavior.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: Customizing
 order: 70

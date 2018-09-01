@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - rt-interactions-visit-information-overview.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: Visit Information API
 
 level-order: 2

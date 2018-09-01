@@ -1,7 +1,7 @@
 ---
 pagename: Find the Right Document
 sitesection: Documents
-categoryname: Guides
+categoryname: "Welcome"
 documentname: Getting Started with LiveEngage APIs
 permalink: getting-started-with-liveengage-apis-find-the-right-document.html
 indicator: both

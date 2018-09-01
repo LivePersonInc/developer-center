@@ -1,7 +1,7 @@
 ---
 pagename: Application Login Sample App
 sitesection:
-categoryname: Agent Interactions
+categoryname: "Security & Authentication"
 documentname: Authorizing LiveEngage Applications
 subfoldername: Sample App
 order: 70

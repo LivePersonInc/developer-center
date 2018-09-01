@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - consumer-experience-voice-video-android.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 
 level-order: 4

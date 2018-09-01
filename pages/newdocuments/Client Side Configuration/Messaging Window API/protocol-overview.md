@@ -3,7 +3,7 @@ pagename: Protocol Overview
 redirect_from:
   - consumer-int-protocol-overview.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 
 order: 1

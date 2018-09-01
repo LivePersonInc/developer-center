@@ -3,7 +3,7 @@ pagename: Events
 redirect_from:
   - webhooks-events.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Webhooks
 order: 20

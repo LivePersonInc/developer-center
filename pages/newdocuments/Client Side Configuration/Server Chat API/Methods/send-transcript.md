@@ -3,7 +3,7 @@ pagename: Send a Transcript
 redirect_from:
   - consumer-experience-server-chat-send-transcript.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

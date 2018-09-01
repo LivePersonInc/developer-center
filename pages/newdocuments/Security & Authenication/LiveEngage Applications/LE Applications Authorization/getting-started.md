@@ -2,7 +2,7 @@
 pagename: Overview
 Keywords:
 sitesection:
-categoryname: Agent Interactions
+categoryname: "Security & Authentication"
 documentname: Authorizing LiveEngage Applications
 order: 8
 permalink: authorizing-liveengage-applications-overview.html

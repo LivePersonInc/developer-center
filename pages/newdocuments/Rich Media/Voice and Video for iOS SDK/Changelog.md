@@ -3,7 +3,7 @@ pagename: Changelog
 redirect_from:
   - consumer-experience-voice-video-ios-changelog.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 
 order: 129

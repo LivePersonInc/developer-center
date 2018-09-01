@@ -4,7 +4,7 @@ redirect_from:
   - administration-users-appendix.html
 keywords:
 sitesection: Documents
-categoryname: Admin
+categoryname: "Contact Center Management"
 documentname: Users API
 
 

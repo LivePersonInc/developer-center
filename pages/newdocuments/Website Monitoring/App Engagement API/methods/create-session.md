@@ -3,7 +3,7 @@ pagename: Create Session
 redirect_from:
   - rt-interactions-create-session.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Website Monitoring"
 documentname: App Engagement API
 subfoldername: Methods
 

@@ -4,7 +4,7 @@ redirect_from:
   - account-configuration-meta-data-audit-trail-export.html
 keywords:
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Audit Trail API
 subfoldername: Methods
 order: 20

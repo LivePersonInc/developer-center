@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - connector-api-overview.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: API Reference
 order: 10

@@ -2,7 +2,7 @@
 pagename: Guidelines and Limitations
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Apple Business Chat Templates
 order: 400
 permalink: rich-messaging-apple-business-chat-templates-guidelines-and-limitations.html

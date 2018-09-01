@@ -3,7 +3,7 @@ pagename: Messaging Estimated Wait Time
 redirect_from:
   - data-messaging-operations-messaging-estimated-wait-time.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Real Time Data"
 documentname: Messaging Operations API
 subfoldername: Methods
 order: 40

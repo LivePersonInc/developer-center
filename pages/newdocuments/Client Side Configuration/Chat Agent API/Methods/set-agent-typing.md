@@ -4,7 +4,7 @@ redirect_from:
   - agent-set-agent-typing.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Client Side Configuration"
 documentname: Chat Agent API
 subfoldername: Methods
 

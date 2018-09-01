@@ -3,7 +3,7 @@ pagename: Init Connection
 redirect_from:
   - consumer-int-msg-init-con.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 

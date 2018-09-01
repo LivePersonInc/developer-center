@@ -3,7 +3,7 @@ pagename: Create a new conversation
 redirect_from:
   - create-conversation-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 59

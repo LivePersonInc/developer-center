@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-messaging-interactions-overview.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Messaging Interactions API
 
 level-order: 3

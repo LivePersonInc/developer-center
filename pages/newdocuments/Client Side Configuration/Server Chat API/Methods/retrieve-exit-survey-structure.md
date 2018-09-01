@@ -3,7 +3,7 @@ pagename: Retrieve Exit Survey Structure
 redirect_from:
   - consumer-experience-server-chat-retrieve-exit-survey-structure.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
 

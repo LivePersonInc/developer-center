@@ -1,7 +1,7 @@
 ---
 pagename: Getting Started with Engagement Attributes
 sitesection: Documents
-categoryname: Guides
+categoryname: "Getting Started"
 documentname: Major Platform Components
 permalink: major-platform-components-getting-started-with-engagement-attributes.html
 order: 20

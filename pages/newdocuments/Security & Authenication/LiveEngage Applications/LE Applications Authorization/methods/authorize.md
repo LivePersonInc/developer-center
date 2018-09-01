@@ -2,7 +2,7 @@
 pagename: Authorization Request
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Security & Authentication"
 documentname: Authorizing LiveEngage Applications
 subfoldername: Methods
 order: 9

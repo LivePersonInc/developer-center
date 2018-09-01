@@ -4,7 +4,7 @@ redirect_from:
   - agent-logout.html
 Keywords:
 sitesection: Documents
-categoryname: Agent Interactions
+categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
 

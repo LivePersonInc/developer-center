@@ -3,7 +3,7 @@ pagename: Agent Workspace Requirements
 redirect_from:
   - consumer-experience-voice-video-ios-requirements.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for iOS SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 80

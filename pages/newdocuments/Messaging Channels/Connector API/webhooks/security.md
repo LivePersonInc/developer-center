@@ -3,7 +3,7 @@ pagename: Notification Protocol
 redirect_from:
   - webhooks-security.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Webhooks
 order: 30

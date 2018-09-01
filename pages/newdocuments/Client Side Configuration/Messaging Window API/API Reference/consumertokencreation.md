@@ -3,7 +3,7 @@ pagename: Consumer Token Creation
 redirect_from:
   - common-consumer-token-creation.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
 permalink: messaging-window-api-api-reference-consumer-token-creation.html

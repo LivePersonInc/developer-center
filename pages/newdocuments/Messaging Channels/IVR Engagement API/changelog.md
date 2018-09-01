@@ -4,7 +4,7 @@ redirect_from:
   - rt-interactions-ivr-engagement-changelog.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Messaging Channels"
 documentname: IVR Engagement API
 order: 231
 permalink: ivr-engagement-api-changelog.html

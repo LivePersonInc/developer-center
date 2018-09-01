@@ -3,7 +3,7 @@ pagename: External Engagement
 redirect_from:
   - rt-interactions-ivr-engagement-external engagement.html
 sitesection: Documents
-categoryname: Consumer Information
+categoryname: "Messaging Channels"
 documentname: IVR Engagement API
 subfoldername: Methods
 order: 10

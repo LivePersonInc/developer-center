@@ -2,7 +2,7 @@
 pagename: "Basic Layout Body - Item Section"
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Apple Business Chat Templates
 subfoldername: List Picker
 order: 70

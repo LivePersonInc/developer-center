@@ -3,7 +3,7 @@ pagename: Sample Postman Collection
 redirect_from:
   - consumer-experience-server-chat-sample.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Server Chat API
 
 order: 171

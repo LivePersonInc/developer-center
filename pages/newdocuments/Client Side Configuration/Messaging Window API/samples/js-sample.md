@@ -3,7 +3,7 @@ pagename: JavaScript Sample
 redirect_from:
   - consumer-int-js-sample.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Samples
 

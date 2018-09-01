@@ -3,7 +3,7 @@ pagename: Register Your App
 redirect_from:
   - consumer-experience-voice-video-android-register-app.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 60

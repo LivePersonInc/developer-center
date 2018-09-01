@@ -3,7 +3,7 @@ pagename: Conversations
 redirect_from:
   - data-messaging-interactions-conversations.html
 sitesection: Documents
-categoryname: Data
+categoryname: "Historical Data"
 documentname: Messaging Interactions API
 subfoldername: Methods
 order: 10

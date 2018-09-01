@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-quick-replies-styling.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Quick Replies
 order: 20
 permalink: quick-replies-styling.html

@@ -4,7 +4,7 @@ redirect_from:
   - rich-messaging-structured-content-best-practices.html
 Keywords:
 sitesection: Documents
-categoryname: Rich Messaging
+categoryname: "Rich Media"
 documentname: Structured Content
 order: 60
 permalink: structured-content-best-practices.html

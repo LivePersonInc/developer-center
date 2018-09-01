@@ -3,7 +3,7 @@ pagename: Retrieve Audit Trail Records
 redirect_from:
   - account-configuration-meta-data-audit-trail.html
 sitesection: Documents
-categoryname: Account Configuration
+categoryname: "Contact Center Management"
 documentname: Audit Trail API
 subfoldername: Methods
 permalink: audit-trail-api-methods-retrieve-audit-trail-records.html

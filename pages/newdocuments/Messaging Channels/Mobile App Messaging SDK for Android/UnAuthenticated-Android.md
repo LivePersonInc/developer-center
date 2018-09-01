@@ -4,7 +4,7 @@ redirect_from:
   - consumer-experience-android-sdk-advanced-unauth.html
 Keywords:
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Advanced Features
 

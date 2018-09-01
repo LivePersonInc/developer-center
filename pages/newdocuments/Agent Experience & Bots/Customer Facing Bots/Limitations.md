@@ -3,7 +3,7 @@ pagename: Limitations
 redirect_from:
   - products-bots-limitations.html
 sitesection: Solutions
-categoryname: Bots
+categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots
 
 

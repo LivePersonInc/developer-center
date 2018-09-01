@@ -3,7 +3,7 @@ pagename: Agent Workspace Requirements
 redirect_from:
   - consumer-experience-voice-video-android-workspace-requirements.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Rich Media"
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: LiveEngage Configuration
 order: 40

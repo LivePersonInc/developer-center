@@ -3,7 +3,7 @@ pagename: Share Image File
 redirect_from:
   - share-image-example.html
 sitesection: Documents
-categoryname: Consumer Experience
+categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Examples
 order: 68
