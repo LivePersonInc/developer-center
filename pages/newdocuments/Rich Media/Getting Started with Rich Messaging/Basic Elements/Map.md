@@ -8,7 +8,7 @@ categoryname: "Rich Media"
 documentname: Getting Started
 subfoldername: Basic Elements
 order: 70
-permalink: getting-started-basic-elements-map.html
+permalink: getting-started-with-rich-messaging-basic-elements-map.html
 indicator: both
 ---
 

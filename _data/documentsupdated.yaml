@@ -612,7 +612,7 @@
         - pagename: Create a Conversation
         - pagename: Request Upload URL
         - pagename: Upload File to Storage
-        - pagename: Publish Messages
+        - pagename: Publish Message
         - pagename: Request Download URL
         - pagename: Download File From Storage
     - documentname: Quick Replies

@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Rich Media"
 documentname: Getting Started
 order: 110
-permalink: getting-started-styling.html
+permalink: getting-started-with-rich-messaging-styling.html
 indicator: both
 ---
 

@@ -7,7 +7,7 @@ categoryname: Data
 documentname: MCS Toolkit
 
 order: 20
-permalink: mcs-toolkit-using-apis-to-build-the-toolkit.html
+permalink: mcs-toolkit-using-api-to-build-the-toolkit.html
 indicator:
 ---
 

@@ -5,7 +5,7 @@ categoryname: "Security & Authentication"
 documentname: Authorizing LiveEngage Applications
 subfoldername: Sample App
 order: 70
-permalink: authorizing-liveengage-applications-sample-code-application-login-sample-app.html
+permalink: authorizing-liveengage-applications-samples-application-login-sample-app.html
 ---
 
 ### Overview

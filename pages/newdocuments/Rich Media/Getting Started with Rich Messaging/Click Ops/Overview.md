@@ -8,7 +8,7 @@ categoryname: "Rich Media"
 documentname: Getting Started
 subfoldername: Click Operations
 order: 80
-permalink: getting-started-click-operations-overview.html
+permalink: getting-started-with-rich-messaging-click-operations-overview.html
 indicator: both
 ---
 
