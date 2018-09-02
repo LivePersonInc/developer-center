@@ -42,6 +42,7 @@ Retrieves the information about the current messaging queue state (and all its r
 
 Request by skillIds=12,13
 
+```json
     {
         "skillsMetrics": {
             "12": {
@@ -81,7 +82,7 @@ Request by skillIds=12,13
             "unassignedConversationsAndFirstTimeConsumer": 4
         }
     }
-
+```
 
 **Elements in the Response**
 

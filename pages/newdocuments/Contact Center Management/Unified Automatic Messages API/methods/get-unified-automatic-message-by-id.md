@@ -10,7 +10,7 @@ subfoldername: Methods
 
 order: 20
 permalink: unified-automatic-messages-api-methods-get-unified-automatic-message-by-id.html
- 
+
 indicator: both
 ---
 
@@ -32,8 +32,8 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes| 
- |:----------|  :--------------|  :--------------|  :---| 
+ |Parameter|  Description|  Type|  Notes|
+ |:----------|  :--------------|  :--------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
  | unifiedAutoMessageId | Unique account config object ID | Positive long number greater than zero |
 
@@ -51,7 +51,7 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 | view            | view                                                                         | string  | Optional flag to indicate that the response should include SKILL context data as well     |
 | merge_data      | lag to indicate whether the data should be merge                             | Boolean | Optional flag to indicate whether the data should be merge with the default values, when false only override will be return. Default value is true.     |
 
-> NOTE: if view=BY_CONTEXT, context parameters are irrelevant
+**NOTE**: if view=BY_CONTEXT, context parameters are irrelevant.
 
 
 
@@ -71,11 +71,12 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 **Response Headers**
 
 | Header|  Description |
- |:-------  | :----- | 
- |ac-revision | Account config object type collection revision. | 
+ |:-------  | :----- |
+ |ac-revision | Account config object type collection revision. |
 
 **Response Body**
 
+```json
     {
             "messageEventId": "On-hold message #1",
             "deleted": false,
@@ -96,9 +97,11 @@ Retrieves an Unified Automatic Message by ID for a specific account.
                 }
             ]
     }
+```
 
 Contexted Response:
 
+```json
     {
 	  "SKILL": {
 	    "123": {
@@ -120,5 +123,4 @@ Contexted Response:
 	    }
 	  }
 	}
-
-
+```

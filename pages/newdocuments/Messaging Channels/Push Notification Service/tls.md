@@ -37,13 +37,21 @@ Shared:
 
 - **backendService** - The originator service that sends the push to the pusher (in most
 cases will be "ams").
+
 - **conversationId** - The associated conversation ID.
+
 - **push-service** - The ENUM describing the service type (APNS - 1, GCM - 2).
+
 - **originatorId** - The originator context for the push (AccountID.AgentNumber).
+
 - **brandId** - The account number associated with the push.
+
 - **notificationType** - The type of notification (APN or GCM).
+
 - **device-token** - The device token used for the push.
+
 - **badge** - The number of unread messages to be displayed on the unread messages badge.
+
 - **sequence** - The sequence id of the message which triggered the push.
 
 iOS (APNS) only:
@@ -57,7 +65,7 @@ Android (GCM) only:
 - **message** - Raw message text.
 
 **iOS JSON:**
-
+```json
     {
     "aps":	{
     "alert":	"My	Test:	123\\n",
@@ -73,9 +81,10 @@ Android (GCM) only:
     "sequence":8,
     "notificationType":	"apn"
     }
-
+```
 **Android JSON:**
 
+```json
     {
     "data":	{
     "message":	"My	Test:	111\\n",
@@ -92,3 +101,4 @@ Android (GCM) only:
     "device-token":	"01408800000259",
     "notificationType":	"gcm"
     }
+```

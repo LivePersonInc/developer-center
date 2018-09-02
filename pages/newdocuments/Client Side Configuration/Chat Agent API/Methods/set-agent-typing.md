@@ -53,6 +53,8 @@ The body media type must have one of the following formats:
 
 Response example for JSON:
 
-    {
-    "agentTyping" : "typing"
-    }
+```json
+{
+  "agentTyping" : "typing"
+}
+```

@@ -48,7 +48,6 @@ The [Appendix](products-channels-ivr-deflection-solution-appendix.html) provides
 **The following is an example of VoiceXML 2.1 using a Voxeo IVR SMS solution and a static link:**
 
 ```xml
-
 <?xml version="1.0" encoding="UTF-8"?>
 <vxml version = "2.1">
 <meta name="maintainer" content="<author email>"/>
@@ -62,7 +61,6 @@ The [Appendix](products-channels-ivr-deflection-solution-appendix.html) provides
 <prompt>Please enter a your phone number including the country code and area number. To finish press the pound sign.</prompt>
 <filled>
 <prompt>A chat link will be send to <say-as interpret-as="vxml:phone"><value expr="user"/></say-as>. Thank you and good bye.</prompt>
-
 ```
 
 **Note**: Other SMS providers may use a different method to send SMS text messages.

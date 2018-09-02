@@ -33,7 +33,7 @@ This event is triggered when an Engagement Attribute (/SDE) is reported.
 
 *Example (Transaction Engagement Attribute):*
 
-```javascript
+```json
 {
        "type": "cart", //MANDATORY
        "total": 11.7, //TOTAL CART VALUE
@@ -68,6 +68,8 @@ This event is triggered when monitoring starts and/or when its state is changed.
 
 *Example:*
 
+```json
     {
-       active: true/false
+       "active": "boolean"
     }
+```

@@ -40,8 +40,10 @@ URL Parameters
 
 **JSON Example**
 
-    {
-      Request by histogram=0,5,10,20,30. Assuming 2 chats waited for 2 seconds, 2 chats waited for 7 seconds and 1 chat waited for 27 seconds.
+Request by histogram=0,5,10,20,30. Assuming 2 chats waited for 2 seconds, 2 chats waited for 7 seconds and 1 chat waited for 27 seconds.
+
+```json
+
       {
        "slaDataRange": {
          "0": {
@@ -71,6 +73,7 @@ URL Parameters
          }
        }
     }
+```
 
 **Elements in the Response**
 

@@ -38,6 +38,7 @@ Retrieves information regarding the current status of the chat. The information 
 
 Response JSON Example
 
+```json
     {
       "info": {
         "link": [
@@ -81,6 +82,7 @@ Response JSON Example
         "language": "en-US"
       }
     }
+```
 
 **Elements in the Response**
 
@@ -94,7 +96,7 @@ Response JSON Example
 | lastUpdate | The last time that any request was sent to the chat session. | date time | |
 | chatTimeout | The time in seconds from the last update time, after which the chat times out and must be updated again before this timeout. | numeric | |
 | visitorId | The ID number of the visitor that is chatting with the agent. | numeric | |
-| agentTyping | Indicates if the agent is currently typing a message. | string | Valid values: "typing", "not-typing" | 
+| agentTyping | Indicates if the agent is currently typing a message. | string | Valid values: "typing", "not-typing" |
 | visitorTyping | Indicates if the visitor is currently typing a message. | string |  Valid values: "typing", "not-typing" |
 | visitorName | Is the name of the visitor that is chatting with the agent. | alphanumeric | |
 | rtSessionId | The real-time session ID that can be used to match the chat session on the agent side with the session on the visitor side. | numeric |

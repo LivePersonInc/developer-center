@@ -63,13 +63,15 @@ Body example:
 
 Response example for JSON:
 
-    {
-     "chatLocation": {
-       "link": {
-         "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events/{number}",
-         "@rel": "location"
-       }
-     }
-    }
+```json
+{
+ "chatLocation": {
+   "link": {
+     "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events/{number}",
+     "@rel": "location"
+   }
+ }
+}
+```
 
 *Note: The "ended" event ends the chat (and adds an "ended" event to the chat content), but it does NOT delete the chat session resource.*

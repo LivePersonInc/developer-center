@@ -58,6 +58,7 @@ If no custom Away state reasons are configured, the 'reasons' field will be retu
 
 Request by v=1 and timeframe=120 and agentIds=all (including two agentIds: 2 and 3).
 
+```json
     {
       "agentsMetrics": {
         "metricsPerAgent": {
@@ -170,9 +171,11 @@ Request by v=1 and timeframe=120 and agentIds=all (including two agentIds: 2 and
         "metricsTotals": []
       }
     }
+```
 
 Request by v=1 and timeframe=120 and agentIds=all and interval=60 (including two agentIds: 2 and 3).
 
+```json
     {
       "metricsByIntervals": [
         {
@@ -479,6 +482,7 @@ Request by v=1 and timeframe=120 and agentIds=all and interval=60 (including two
         "metricsTotals": []
       }
     }  
+```
 
 **Elements in the Response**
 

@@ -12,7 +12,7 @@ permalink: data-access-api-methods-survey.html
 indicator: chat
 ---
 
-Survey retrieves all the survey data in .zip format files. The survey data consists of information about the different surveys that occur during the visitor session. It can be all viewed or submitted pre/post/offline surveys as well as the operator survey that the agent viewed or submitted. 
+Survey retrieves all the survey data in .zip format files. The survey data consists of information about the different surveys that occur during the visitor session. It can be all viewed or submitted pre/post/offline surveys as well as the operator survey that the agent viewed or submitted.
 
 ### Request
 
@@ -35,6 +35,7 @@ Required:
 
 Request for account 75555851:
 
+```json
     {
       "dataAccessFiles": {
         "@id": "75555851",
@@ -58,6 +59,7 @@ Request for account 75555851:
         ]
       }
     }
+```
 
 **Elements in the Response**
 
@@ -74,6 +76,7 @@ Request for account 75555851:
 
 JSON Example
 
+```json
     {
        "dataType": {
            "com.liveperson.dataaccess.DataTypeEnum": "Survey"
@@ -212,6 +215,7 @@ JSON Example
            }
        ]
     }
+```
 
 **Header**
 
@@ -232,7 +236,7 @@ The following table describes the information that is available for survey data:
 | conversationId | Conversation unique identifier. | string |
 | contents | List of contents of this survey. | SurveyContent - array |
 
-###  SurveyContent 
+###  SurveyContent
 
 | Parameter | Description | Type / Value |
 | :------- | :--------- | :----------- |

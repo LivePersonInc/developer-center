@@ -14,7 +14,7 @@ permalink: chat-agent-api-methods-retrieve-current-availability.html
 indicator: chat
 ---
 
-This method returns the agent's availability to accept chat requests. 
+This method returns the agent's availability to accept chat requests.
 
 Available states are:
 
@@ -25,7 +25,7 @@ Available states are:
 ### Request
 
  |Method|  URL |
- |:---|  :---| 
+ |:---|  :---|
  |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/availability?v=1&NC=true |
 
 **Request Headers**
@@ -59,9 +59,11 @@ The body media type must have one of the following formats:
 
 Response example:
 
-    {
-     "availability": {
-       "chat": "Online",
-       "voice": "Offline"
-     }
-    }
+```json
+{
+ "availability": {
+   "chat": "Online",
+   "voice": "Offline"
+ }
+}
+```

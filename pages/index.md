@@ -25,11 +25,11 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 ### Common Use Cases
 
-* Integrating LiveEngage with your native app - refer to our Mobile App Messaging SDKs, [for iOS](mobile-app-messaging-sdk-for-ios-overview.html) or [for Android](mobile-app-messaging-sdk-for-android-overview.html).
+* [Messaging for your Native App in iOS](mobile-app-messaging-sdk-for-ios-overview.html) or [Android](/mobile-app-messaging-sdk-for-android-overview.html): Add asynchronous messaging to any mobile application using our robust SDKs
 
-* Customizing LiveEngage reporting - work with our Data APIs to customize LiveEngage reports.
+* [Custom Reporting](major-platform-components-getting-started-with-data-apis.html) - work with our Data APIs to create any dashboards, reports or KPIs.  Integrate LiveEngage data into any Contact Center tools or dashboards
 
-* Building or integrating an Agent Workspace widget - add third party service widgets into the agent workspace for quick reference with our [Agent Workspace SDK](agent-workspace-widget-sdk-overview.html).
+* [Agent Widgets](agent-workspace-widget-sdk-overview.html): Build or integrate widgets such as CRM integration, KB or AI tools in the Agent Workspace
 
 ### Major Platform Capabilities
 

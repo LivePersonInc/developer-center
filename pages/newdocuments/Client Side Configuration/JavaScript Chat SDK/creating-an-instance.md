@@ -28,9 +28,9 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
     appKey: "12345678945613",
     // The LivePerson site number
     lpNumber: "123456",
-    
+
     //**************Here start samples of event binding via the config **************************************
-    
+
     // Binding an inline function to onLoad
     onLoad: function (data) {
         alert(JSON.stringify(data));
@@ -40,7 +40,7 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
         // The function that will be called back
         callback: myObj.handleInit,
         // The execution context
-        context: myObj 
+        context: myObj
     },
     // Binding a function to the onState event
     onState: function (data) {
@@ -52,10 +52,10 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
             // A function that will be called back
             callback: myObj.handleLine,
             // The execution context for this callback
-            context: myObj 
+            context: myObj
         },
         // An inline callback also bound to onLine
-        function (lineData) { 
+        function (lineData) {
             alert(JSON.stringify(data));
         }
     ]
@@ -67,7 +67,7 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 | :--- | :--- | :--- | :--- | :--- |
 | appKey | The app key that was provisioned for this account. | string | Required | |
 | lpNumber | The LivePerson account number. | string | Required | |
-| domain | If you know the domain for the site. | string | Optional | This is taken care of in case you do not know the domain. | 
+| domain | If you know the domain for the site. | string | Optional | This is taken care of in case you do not know the domain. |
 | sessionUID | Allows you to control if the session is automatically resumed on refresh. | string | Optional | If set, it will need to be set to the same info for refreshes, otherwise the chat will not be automatically resumed. |
 | failureTolerance | Allows you to control the number of concurrent failures (when trying to fetch events from the server), after which the chat is no longer valid for the client. | number | Optional | |
 | moveToPrimaryRetry| The number of retries to get chat information when the server responds it has not found the visitor. | number | Optional ||
@@ -79,10 +79,10 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 
 | Type | Value/Properties |
 | :--- | :--- |
-| Function  | An inline function or function pointer. | 
+| Function  | An inline function or function pointer. |
 | Object | An object containing properties: <br> - callback - the callback function (Required) <br> - context - the execution context for the function (Optional) |
 | Array | An array containing functions, or objects with the above syntax, or both. |
-  
+
 **Examples**
 
 Function:
@@ -94,29 +94,29 @@ or
 
 ```javascript
 onLoad: function(data){ alert(data); }
-```    
-Object: 
+```
 
-```javascript
+Object:
+
+```json
 {
-onLoad: {
-    callback: myObj.handlleLoad,
-    context: myObj
+"onLoad": {
+    "callback": myObj.handlleLoad,
+    "context": myObj
+}
 }
 ```
+
 Array:
 
-```javascript
-onLoad: [
+```json
+"onLoad": [
     {
-        callback: myObj.handlleLoad,
-        context: myObj
+        "callback": myObj.handlleLoad,
+        "context": myObj
     },
-    function(data){ 
-        alert(data); 
+    function(data){
+        alert(data);
     }
 ]
 ```
-
-
-

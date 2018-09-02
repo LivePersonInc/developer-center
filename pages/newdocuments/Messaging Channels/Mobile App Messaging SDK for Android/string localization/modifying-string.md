@@ -16,16 +16,19 @@ indicator: messaging
 
 You may change every string appearing on the SDK interface by overriding the respective string key.
 
-_**Note:** for how to create a new locale file, click [here](android-localization-strings.html#create-new-localization-file)_
+**Note:** for how to create a new locale file, click [here](android-localization-strings.html#create-new-localization-file)
 
-**General**
+### General
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lp_enter_message</td>
   <td>Enter message text box when empty.</td>
@@ -447,6 +450,7 @@ Example</td>
   <td>The Camera icon’s text in the attachment menu</td>
   <td>CAMERA</td>
 </tr>
+</tbody>
 </table>
 
 | String name                                           | Used in                                                                 | Default value                                                                                       |
@@ -464,14 +468,17 @@ Example</td>
 | lpmessaging_ui_secure_form_consumer_submitted_message | Consumer-Submission bubble confirming form submission                   | I have submitted the %s form                                                                        |
 
 
-**Clear History dialog**
+### Clear History dialog
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lp_clear_history_dialog_title</td>
   <td>Title of the Clear History confirm dialog</td>
@@ -492,17 +499,21 @@ Example</td>
   <td>Message text displayed when trying to clear history and the conversation is not resolved</td>
   <td>Please resolve the conversation first.</td>
 </tr>
+</tbody>
 </table>
 
 
-**Masking**
+### Masking
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>s
 <tr>
   <td>lp_system_message_real_time_masked</td>
   <td>Text of system message, added after detecting a real time masked message (if this feature is enabled).</td>
@@ -523,17 +534,21 @@ Example</td>
   <td>The character used to mask client only string.</td>
   <td>*</td>
 </tr>
+</tbody>
 </table>
 
 
-**Structured Content**
+### Structured Content
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lp_structured_content_display_failed</td>
   <td>Message displayed in the conversation if there is an error parsing the structured content message</td>
@@ -544,16 +559,20 @@ Example</td>
   <td>Message displayed on the scroll down indicator when a structured content message is received</td>
   <td>New message</td>
 </tr>
+</tbody>
 </table>
 
-**Audio Messaging**
+### Audio Messaging
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lp_accessibility_voice</td>
   <td>Accessibility on the mic button</td>
@@ -574,16 +593,20 @@ Example</td>
   <td>Tooltip shown when the maximum recording time reached.</td>
   <td>Long tap to record</td>
 </tr>
+</tbody>
 </table>
 
-**Unauthenticated In-App Messaging**
+### Unauthenticated In-App Messaging
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lp_new_unauth_user_dialog_title</td>
   <td>The title of the presented dialog when the identity is expired.</td>
@@ -599,16 +622,20 @@ Example</td>
   <td>The button of the presented dialog when the identity is expired.</td>
   <td>OK</td>
 </tr>
+</tbody>
 </table>
 
-**Quick Replies**
+### Quick Replies
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lpmessaging_ui_quick_replies_section</td>
   <td>Accessibility string when hovering on the Quick Replies control</td>
@@ -619,16 +646,20 @@ Example</td>
   <td>Accessibility string when hovering on the Quick Replies button</td>
   <td></td>
 </tr>
+</tbody>
 </table>
 
-**Accessibility strings (used by the Accessibility TalkBack)**
+### Accessibility strings (used by the Accessibility TalkBack)
 
 <table>
+<thead>
 <tr>
   <th>String name</th>
   <th>Used in</th>
   <th>Default value</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td>lp_accessibility_received</td>
   <td>Received message status</td>
@@ -759,4 +790,5 @@ Example</td>
   <td>Announced when an agent without a nickname is typing (applicable only in Activity mode)</td>
   <td>Agent is typing</td>
 </tr>
+</tbody>
 </table>

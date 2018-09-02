@@ -42,6 +42,7 @@ Retrieves engagement activity-related metrics at the account, skill, or agent le
 
 Request by skillIds=2 (no interval, the data is for agentID=3).
 
+```json
     {  
     "skillsMetricsPerAgent": {  
     "metricsPerSkill": {  
@@ -73,9 +74,11 @@ Request by skillIds=2 (no interval, the data is for agentID=3).
     }  
     }  
     }  
+```
 
 Request by skillIds=all and agentIds=3 (there is data only for skill=2).
 
+```json
     {  
     "skillsMetricsPerAgent": {  
     "metricsPerSkill": {  
@@ -125,9 +128,11 @@ Request by skillIds=all and agentIds=3 (there is data only for skill=2).
     }  
     }  
     }  
-
+```
+
 Request with no skillId / agentId (there is some data).
 
+```json
     {  
     "metricsTotals": {  
     "totalInteractiveChats": 1,  
@@ -137,9 +142,11 @@ Request with no skillId / agentId (there is some data).
     "connectedEngagements": 3  
     }  
     }
+```
 
 Request with skillId and agentId but there is no data for the specified IDs.
 
+```json
     {  
     "skillsMetricsPerAgent": {  
     "metricsPerSkill": {},  
@@ -162,9 +169,11 @@ Request with skillId and agentId but there is no data for the specified IDs.
     }  
     }  
     }  
+```
 
 Request with agentId = 2, timeframe=1200 and interval = 600.
 
+```json
     {  
     "metricsByIntervals": [  
     {  
@@ -240,9 +249,11 @@ Request with agentId = 2, timeframe=1200 and interval = 600.
     }  
     }  
     }  
+```
 
 Request with skillId (no data), timeframe = 1200 and interval=600.
 
+```json
     {  
     "metricsByIntervals": [  
     {  
@@ -302,9 +313,10 @@ Request with skillId (no data), timeframe = 1200 and interval=600.
     }  
     }  
     }  
-
+```
 Request with no skill/agent, there is some data: timeframe=1200 and interval=600.
 
+```json
     {  
     "metricsByIntervals": [  
     {  
@@ -352,6 +364,7 @@ Request with no skill/agent, there is some data: timeframe=1200 and interval=600
     "connectedEngagements": 3  
     }  
     }  
+```
 
 **Elements in the Response**
 

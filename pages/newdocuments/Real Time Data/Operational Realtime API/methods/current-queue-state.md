@@ -39,6 +39,7 @@ You can request queue state data using the following parameters:
 
 Request by all skills
 
+```json
     {  
         "skills":{  
             "1":{  
@@ -63,9 +64,11 @@ Request by all skills
             "currentQueueSize":54
         }
     }
+```
 
 Request by skills=1,2
 
+```json
     {  
         "skills":{  
             "1":{  
@@ -82,8 +85,11 @@ Request by skills=1,2
             "currentQueueSize":19
         }
     }
+```
 
-    Request by skills=1,100 (skill 100 has no queue state data)
+Request by skills=1,100 (skill 100 has no queue state data)
+
+```json
     {  
         "skills":{  
             "1":{  
@@ -100,6 +106,7 @@ Request by skills=1,2
             "currentQueueSize":5
         }
     }
+```
 
 **Elements in the Response**
 

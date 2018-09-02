@@ -42,7 +42,7 @@ Returns an XML or JSON response with an Offline survey, or posts an Offline surv
 | visitorProfile | Requests a survey for a specific visitor profile. |  alphanumeric | If both the skill and visitor profile parameters are provided, only the visitor profile parameter will be considered. |
 | visitorId | The ID of this visitor. | alphanumeric | |
 | surveyName | Requests a specific survey. | alphanumeric | If visitorProfile or skill parameters are provided, and a survey with this name exists, the requested survey will be returned unless there is a rule that overrides this name. |
-  
+
 ### Response
 
 **Response Codes**
@@ -53,6 +53,7 @@ Returns an XML or JSON response with an Offline survey, or posts an Offline surv
 
 JSON Example
 
+```json
     {
       "survey" : {
         "id" : "40290",
@@ -62,7 +63,7 @@ JSON Example
           "question" : {
             "mandatory" : "false",
             "order" : "0",
-    
+
             "validationType" : "alpha_numeric",
             "logicId" : "6",
             "id" : "13387460",
@@ -73,6 +74,7 @@ JSON Example
         }
       }
     }
+```
 
 **Elements in the Response**
 

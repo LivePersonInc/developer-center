@@ -13,7 +13,7 @@ permalink: server-chat-api-methods-retrieve-estimated-wait-time.html
 indicator: chat
 ---
 
-Returns the estimated wait time in seconds before a chat starts. 
+Returns the estimated wait time in seconds before a chat starts.
 
 The following wait times are explained below:
 
@@ -50,7 +50,7 @@ The following wait times are explained below:
 | :--- | :--- | :--- |
 | skill | Checks for the wait time for a specific skill. | alphanumeric |
 | serviceQueue | Service queue name. Checks for the wait time in a specific Service Queue. | alphanumeric |
- 
+
 ### Response
 
 **Response Codes**
@@ -61,7 +61,8 @@ The following wait times are explained below:
 
 JSON Example
 
+```json
     {
       "estimatedWaitTime": 0
     }
-
+```

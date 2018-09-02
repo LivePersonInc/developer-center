@@ -61,11 +61,13 @@ For backwards compatibility purposes, you must include the following request bod
 
 Response example for JSON:
 
-    {
-     "agentSessionLocation": {
-       "link": {
-         "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSession Id}",
-         "@rel": "location"
-       }
-     }
-    }  
+```json
+{
+ "agentSessionLocation": {
+   "link": {
+     "@href": "https://{domain}/api/account/{accountId}/agentSession/{agentSession Id}",
+     "@rel": "location"
+   }
+ }
+}  
+```

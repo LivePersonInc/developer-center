@@ -17,7 +17,7 @@ indicator: both
 ### Request
 
 | Method | URL |
-| :--- | :--- | 
+| :--- | :--- |
 | POST |  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/logout |
 
 **Headers**
@@ -41,9 +41,11 @@ indicator: both
 
 Example:
 
+```json
     {
         "csrf":"87f9c1e535b03494194d0b5e76b48ca8f4497114a8ba20afb22a67f375a29adb"
     }
+```
 
 ### Response
 
@@ -55,8 +57,9 @@ Example:
 | 401  | Unauthorized - Bad Authentication (invalid site or agent). |
 | 500 | Internal server error. |
 
-<a name="note2">*Note*</a>*: In case csrf is invalid, response code is 401 Unauthorized with the following body:*
+*Note*: In case csrf is invalid, response code is 401 Unauthorized with the following body:*
 
+```json
     {
       "error": {
         "time": "Sep 22, 2016 4:10:15 PM",
@@ -65,3 +68,4 @@ Example:
         "responseStatus": "UNAUTHORIZED"
       }
     }
+```

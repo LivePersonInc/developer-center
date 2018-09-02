@@ -50,6 +50,7 @@ Retrieves all information available for this chat, including both Events and Inf
 
 JSON Example:
 
+```json
     {
       "chat": {
         "link": [
@@ -178,6 +179,7 @@ JSON Example:
         }
       }
     }
+```
 
 **Elements in the Response**
 

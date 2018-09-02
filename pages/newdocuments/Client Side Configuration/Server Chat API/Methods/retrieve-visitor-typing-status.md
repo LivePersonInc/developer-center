@@ -44,9 +44,11 @@ Returns the visitor's typing status.
 
 JSON Example:
 
+```json
     {
       "visitorTyping": "not-typing"
     }
+```
 
 **Elements in the Response**
 

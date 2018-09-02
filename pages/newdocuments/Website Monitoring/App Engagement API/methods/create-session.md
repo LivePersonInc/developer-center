@@ -58,6 +58,7 @@ Use this method to start a new session and to get an engagement according to the
 
 https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visitor-id}?v=1.0&sid={session-id}
 
+```json
     {
      "appType": "MSDK",
      "appDetails":{
@@ -91,6 +92,7 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
        }
      ]
     }
+```
 
 ### Response
 
@@ -136,6 +138,7 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 
 Status code: 200 OK (engagement is available)
 
+```json
     {
       "status": "Available",
       "sessionId": "abc",
@@ -154,12 +157,15 @@ Status code: 200 OK (engagement is available)
         "connectorId":"568046210"
        }
     }
+```
 
 Status code: 200 OK (engagement is not available)
 
+```json
     {
         "status" : "NotAvailable",
         "sessionId": "abc",
         "visitorId": "xyz",
         "pageId" : "4743822558"
     }
+```

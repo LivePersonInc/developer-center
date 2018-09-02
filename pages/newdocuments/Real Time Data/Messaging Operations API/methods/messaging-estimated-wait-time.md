@@ -45,6 +45,7 @@ This method returns the current average wait time in queue, per requested skill.
 
 This is an example response which contains information for two skills, skills=2,3 where there is data only for skill "3".
 
+```json
     {
         "estimatedWaitTimeResponse": [
             {
@@ -59,6 +60,7 @@ This is an example response which contains information for two skills, skills=2,
             }
         ]
     }
+```
 
 **Elements in the Response**
 

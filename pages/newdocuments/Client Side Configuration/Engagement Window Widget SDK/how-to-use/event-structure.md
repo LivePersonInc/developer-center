@@ -15,20 +15,20 @@ indicator: both
 
 Each event contains three parameters: id, type and data. They appear as follows:
 
-```javascript
+```json
 {
-  id: <string>,
-  type: lpTag.LPWidgetSDK.API.events.[key],
-  data: <object>
+  "id": "<string>",
+  "type": lpTag.LPWidgetSDK.API.events.[key],
+  "data": "<object>"
 }
 ```
 
 ### Event types
 
 | type: lpTag.LPWidgetSDK.API.events.[key] | Type |
-| :--- | :--- | 
+| :--- | :--- |
 | "conversationInfo" | object |
-| "messages" | object | 
+| "messages" | object |
 | "participants" | array |
 | "uiWindow" | object |
 | "uiWidget" | object |
@@ -37,94 +37,91 @@ Each event contains three parameters: id, type and data. They appear as follows:
 
 **"conversationInfo"**
 
-```javascript
+```json
 {
-  conversationId: <string>,
-  sessionId: <string>,
-  *dialogId: <string>,
-  startTime: <string>,
-  state: lpTag.LPWidgetSDK.API.states,
-  *dialogType: <string>,
-  channelType: <string> // ("chat"/"messaging")
+  "conversationId": ""<string>"",
+  "sessionId": "<string>",
+  "*dialogId": "<string>",
+  "startTime": "<string>",
+  "state": lpTag.LPWidgetSDK.API.states,
+  "*dialogType": "<string>",
+  "channelType": "<string>" // ("chat"/"messaging")
 }
 ```
 
 **"engagementInfo"**
 
-```javascript
+```json
 {
-  allowUnauthMsg: <boolean>,
-  async: <boolean>,
-  availabilityPolicy: 0,
-  cid: 1231231312,
-  connector: <object>,
-  eid: 1231231312,
-  env: <string>,
-  ename: <string>,
-  eventName: <string>,
-  isPopOut: <boolean>,
-  lang: <string>,
-  lewid: 1231231312,
-  params: <string>,
-  scid: <string>,
-  sessionKey: <string>,
-  site: <string>,
-  ssid: <string>,
-  ssuid: <string>,
-  svid: <string>,
-  target: <string>
+  "allowUnauthMsg": "<boolean>",
+  "async": "<boolean>",
+  "availabilityPolicy": 0,
+  "cid": 1231231312,
+  "connector": "<object>",
+  "eid": 1231231312,
+  "env": "<string>",
+  "ename": "<string>",
+  "eventName": "<string>",
+  "isPopOut": "<boolean>",
+  "lang": "<string>",
+  "lewid": 1231231312,
+  "params": "<string>",
+  "scid": "<string>",
+  "sessionKey": "<string>",
+  "site": "<string>",
+  "ssid": "<string>",
+  "ssuid": "<string>",
+  "svid": "<string>",
+  "target": "<string>"
 }
 ```
 
 **"messages"**
 
-```javascript
+```json
 {
-  id: <string>,
-  ts: 1231231312,
-  type: <string> 
-  content: <string>,
-  originator: {
-      type: <string> // ("visitor"/"agent"/"system"), name: <string>
+  "id": "<string>",
+  "ts": 1231231312,
+  "type": "<string>"
+  "content": "<string>",
+  "originator": {
+      "type": "<string>" // ("visitor"/"agent"/"system"),
+      "name": "<string>"
       }
 }
 ```
 
 **"participants"**
 
-```javascript
+```json
 {
   {
-      "id": <string>,
-      "name": <string>,
+      "id": "<string>",
+      "name": "<string>",
       "type": "visitor"
   },
   {
-      "id": <string>,
-      "name": <string>,
+      "id": "<string>",
+      "name": "<string>",
       "type": "agent",
-      "imgPath": <string>,
-      "description": <string>
+      "imgPath": "<string>",
+      "description": "<string>"
   }
 }
 ```
 
 **"uiWindow"**
 
-```javascript
+```json
 {
-    "isMaximized": <boolean>
+    "isMaximized": "<boolean>"
 }
 ```
 
 **"uiWidget"**
 
-```javascript
+```json
 {
-    "isShown": <boolean>
+    "isShown": "<boolean>"
 }
 ```
-
-
-
-

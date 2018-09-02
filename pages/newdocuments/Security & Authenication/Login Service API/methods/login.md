@@ -37,11 +37,12 @@ indicator: both
 
 Example:
 
+```json
     {
         "username": "name",
         "password": "password"
     }
-
+```
 
 ### Response
 

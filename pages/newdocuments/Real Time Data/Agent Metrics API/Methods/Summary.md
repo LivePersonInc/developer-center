@@ -35,7 +35,7 @@ Optional:
 
 **Response**
 
-_JSON Example_
+JSON Example:
 
 ```json
 {

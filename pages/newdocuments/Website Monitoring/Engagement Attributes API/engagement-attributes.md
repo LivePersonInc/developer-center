@@ -62,7 +62,7 @@ https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/curr
 **Request BODY Example**
 
 
-```javascript
+```json
     [{
            "type": "lead", //MANDATORY
                "lead": {

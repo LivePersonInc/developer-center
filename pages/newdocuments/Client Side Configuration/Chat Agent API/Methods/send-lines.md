@@ -93,6 +93,7 @@ Changing the text type is handled as follows:
 
 Response example for JSON (adding a line):
 
+```json
     {
      "chatEventLocation": {
        "link": {
@@ -101,5 +102,6 @@ Response example for JSON (adding a line):
        }
      }
     }
+```
 
 *Note: Only one event can be added per POST event request.*

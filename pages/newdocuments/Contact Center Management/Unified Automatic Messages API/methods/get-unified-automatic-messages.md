@@ -32,8 +32,8 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes| 
- |:----------|  :--------------|  :--------------|  :---| 
+ |Parameter|  Description|  Type|  Notes|
+ |:----------|  :--------------|  :--------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
 
 **Query Parameters**
@@ -55,8 +55,8 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 **Response Headers**
 
 | Header|  Description |
- |:-------  | :----- | 
- |ac-revision | Account config object type collection revision. | 
+ |:-------  | :----- |
+ |ac-revision | Account config object type collection revision. |
 
 **Response Codes**
 
@@ -69,7 +69,8 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 
 **Response Body**
 
-    {
+```json
+
         {
             "messageEventId": "CHAT_STARTED",
             "deleted": false,
@@ -81,7 +82,7 @@ Retrieves a list of Unified Automatic Messages for a specific account.
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
-                    "lang": "ca-ES" 
+                    "lang": "ca-ES"
                 }
             ]
         },
@@ -92,11 +93,11 @@ Retrieves a list of Unified Automatic Messages for a specific account.
             "data": [
                 {
                     "msg": "I'll be right with you.",
-                    "lang": "en-us" 
+                    "lang": "en-us"
                 },
                 {
                     "msg": "Que está conversando {nombre del agente}",
-                    "lang": "ca-ES" 
+                    "lang": "ca-ES"
                 }
             ],
             "attributes": [
@@ -105,16 +106,17 @@ Retrieves a list of Unified Automatic Messages for a specific account.
                 }
             ]
         }
-    {
-    
+```
+
 Contexted response:
 
-    {
+```json
+
 		[
 		  {
 		    "messageEventId": "CHAT_STARTED",
 		    "enabled": true,
-		    "deleted": false
+		    "deleted": false,
 		    "data": [
 		      {
 		        "lang": "en-US",
@@ -129,7 +131,7 @@ Contexted response:
 		          {
 		              "timer": "60"
 		          }
-		    ]
+		    ],
 		    "contexts": {
 		      "SKILL": ["3"],
 		      "ACCOUNT": ["111"]
@@ -140,7 +142,5 @@ Contexted response:
 		      }
 		    ],
 		  }
-		  ...
 		]
-	}
-
+```

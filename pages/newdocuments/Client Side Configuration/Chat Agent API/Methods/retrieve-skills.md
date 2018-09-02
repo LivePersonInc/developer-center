@@ -53,4 +53,17 @@ The body media type must have one of the following formats:
 
 **Response example:**
 
-    {"transfer":{"skill":[{"id":"25975313","name":"Sales","onlineAgents":"1"},{"id":"26060413","name":"Billing","onlineAgents":"1"},
+```json
+{
+"transfer": {
+  "skill":[
+    {
+      "id":"25975313","name":"Sales","onlineAgents":"1"
+    },
+    {
+      "id":"26060413","name":"Billing","onlineAgents":"1"
+    },
+  ]
+}
+}
+```

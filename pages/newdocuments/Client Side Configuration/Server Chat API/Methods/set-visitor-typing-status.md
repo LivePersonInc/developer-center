@@ -39,9 +39,11 @@ Sets the visitor's typing status.
 
 JSON Request Body example:
 
+```json
     {
       "visitorTyping": "not-typing"
     }
+```
 
 ### Response
 

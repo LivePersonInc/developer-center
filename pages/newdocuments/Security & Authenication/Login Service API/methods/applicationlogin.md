@@ -67,6 +67,7 @@ Example:
 
 Example:
 
+```json
     {
       "csrf": "d5d07326cfe2240b9453e19e8092c59844921dcdc6ebb105c55fea9ed45c9d77",
       "wsuk": "766900772095619056",
@@ -120,5 +121,6 @@ Example:
       "sessionTTl": "28800000",
       "bearer": "9cf6ee24b6a1031e202f292a0ad20c8f52bfd9f01abc8b9489365995052c6603"
     }
+```
 
 *Note: Response contains csrf (should be saved and used in refresh and logout), bearer, wsuk, siteConfig, csdsCollectionResponse, accountData and sessionTTl.*

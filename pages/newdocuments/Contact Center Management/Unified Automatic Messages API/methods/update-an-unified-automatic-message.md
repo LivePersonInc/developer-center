@@ -24,8 +24,8 @@ Updates an existing Unified Automatic Message for a specific account.
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes| 
- |:----------|  :--------------|  :--------------|  :---| 
+ |Parameter|  Description|  Type|  Notes|
+ |:----------|  :--------------|  :--------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
 
 
@@ -50,6 +50,7 @@ Updates an existing Unified Automatic Message for a specific account.
 
 The request body is able to accept single JSON object as shown below, or a JSON array of such objects.
 
+```json
     {
             "messageEventId":"On-hold message #1",
             "deleted":false,
@@ -70,6 +71,7 @@ The request body is able to accept single JSON object as shown below, or a JSON 
                 }
             ]
     }
+```
 
 **Path Parameters**
 
@@ -96,5 +98,5 @@ Updated Unified Auto Message’s JSON.
 **Response Headers**
 
 | Header|  Description |
- |:-------  | :----- | 
- |ac-revision | Account config object type collection revision. | 
+ |:-------  | :----- |
+ |ac-revision | Account config object type collection revision. |

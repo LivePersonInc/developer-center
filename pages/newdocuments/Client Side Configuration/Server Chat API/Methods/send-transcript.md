@@ -49,9 +49,11 @@ Here's an example image of the email:
 
 Request Body Example:
 
+```json
     {
       "email": "visitorEmail@gmail.com"
     }
+```
 
 ### Response
 

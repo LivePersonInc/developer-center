@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Appendix
 
 order: 342
-permalink: mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android---manual.html
+permalink: mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html
 
 indicator: messaging
 ---
@@ -55,7 +55,7 @@ And then select the LivePerson SDK module
 ```java
 repositories {
             flatDir {
-                dirs project(':lp_messaging_sdk').file('aars')
+                dirs project(":lp_messaging_sdk").file("aars")
               }
   }
 ```
@@ -64,22 +64,22 @@ repositories {
 4. Under the Dependencies section, add the following line:
 
 ```java
-compile project(':lp_messaging_sdk')
+compile project(":lp_messaging_sdk")
 ```
 
 **Build.gradle file example:**
 
 ```java
-apply plugin: 'com.android.application'
+apply plugin: "com.android.application"
 
     android {
     repositories {
         flatDir {
-            dirs project(':lp_messaging_sdk').file('aars')
+            dirs project(":lp_messaging_sdk").file("aars")
         }
     }
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.shaym.sdk28"
         minSdkVersion 19
@@ -93,26 +93,26 @@ apply plugin: 'com.android.application'
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    compile fileTree(dir: "libs", include: ["*.jar"])
+    androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
+        exclude group: "com.android.support", module: "support-annotations"
     })
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.google.firebase:firebase-messaging:11.6.0'
-    compile 'com.google.firebase:firebase-core:11.6.0'
+    compile "com.android.support.constraint:constraint-layout:1.0.2"
+    compile "com.google.firebase:firebase-messaging:11.6.0"
+    compile "com.google.firebase:firebase-core:11.6.0"
 
 
-    testCompile 'junit:junit:4.12'
+    testCompile "junit:junit:4.12"
     //Liveperson SDK
-    compile project(path: ':lp_messaging_sdk')
+    compile project(path: ":lp_messaging_sdk")
 }
-apply plugin: 'com.google.gms.google-services'
+apply plugin: "com.google.gms.google-services"
 ```
 
 
@@ -120,7 +120,7 @@ apply plugin: 'com.google.gms.google-services'
 5. Make sure you have the following line written in your settings.gradle file:
 
 ```java
-include ':lp_messaging_sdk'
+include ":lp_messaging_sdk"
 ```
 
 ### Step 4 - Manifest modifications
@@ -278,7 +278,7 @@ private void initOpenConversationButton() {
 
 A few notes on this step:
 
-* In this step we will initialize the SDK, but only if we're not already in a `valid` state (we checked for that in the previous section).
+* In this step we will initialize the SDK, but only if we"re not already in a `valid` state (we checked for that in the previous section).
 
 * We are using the brandID and appID which we declared in the top of this class.
 
@@ -292,7 +292,7 @@ private void  initActivityConversation() {
      LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
          @Override
          public void onInitSucceed() {
-             // you can't register pusher before initialization
+             // you can"t register pusher before initialization
              handleGCMRegistration(MainActivity.this);
              runOnUiThread(new Runnable() {
                  @Override
@@ -317,7 +317,7 @@ private void  initActivityConversation() {
 {:start="6"}
 6. **The openActivity function**
 
-Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren't using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
+Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren"t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
 
 ```java
 private void openActivity() {
@@ -355,11 +355,11 @@ private void openActivity() {
 **Add the following lines in your app.gradle dependencies section:**
 
 ```java
-compile 'com.google.firebase:firebase-messaging:11.6.0'
-compile 'com.google.firebase:firebase-core:11.6.0'
+compile "com.google.firebase:firebase-messaging:11.6.0"
+compile "com.google.firebase:firebase-core:11.6.0"
 ```
 
-**Change the 'multiDexEnabled' under the android tag to true**
+**Change the "multiDexEnabled" under the android tag to true**
 
 ```java
 multiDexEnabled true
@@ -367,14 +367,14 @@ multiDexEnabled true
 
 ### LiveEngage Configuration
 
-1. Connect to your account via LiveEngage, click on the campaigns tab. Then choose 'Data Sources'
+1. Connect to your account via LiveEngage, click on the campaigns tab. Then choose "Data Sources"
 
 ![Data Sources](img/androiddatasources.jpg)
 
 ![Data Sources Step 2](img/androiddatasources2.jpg)
 
 {:start="2"}
-2. Click Manage, on the right of 'Mobile app management' tab
+2. Click Manage, on the right of "Mobile app management" tab
 
 {:start="3"}
 3. Click Add new, in order to add your app to the mobile campaign
@@ -384,7 +384,7 @@ multiDexEnabled true
 {:start="4"}
 4. Fill in your mobile package name under mobile app name, Google Firebase Legacy API key under push notification API key.
 
-Then click 'Create app'
+Then click "Create app"
 
 ![Create App](img/addnewapp.png)
 
@@ -429,7 +429,7 @@ Then click 'Create app'
 ```
 
 
-**Note**: After you've added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, MyFirebaseInstanceIDService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
+**Note**: After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, MyFirebaseInstanceIDService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
 
 **Change the path of the services according to the classes you just created.**
 
@@ -601,7 +601,7 @@ Enter your account number as account, and your package name as appID in order to
 
 `MyFirebaseMessagingService`
 
-This service is always running in the background and handles incoming messages, here's a simple example:
+This service is always running in the background and handles incoming messages, here"s a simple example:
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 

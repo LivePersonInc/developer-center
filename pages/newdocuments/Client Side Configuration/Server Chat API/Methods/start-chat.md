@@ -70,8 +70,13 @@ Note that we expect you to send the parameters under the `"request"` key - see t
 | answer | Given answer for the container question. | alphanumeric | If the question is a multiselection type (CheckBox) it can contain more than one answer.|
 
 Request Body Example
-
-    {"request":{"skill":"Sales","interactionTimeout":40,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36","LETagVisitorId":"rloXnVgEQ-iQuoOytvKNqA","LETagSessionId":"rN82d4rATN6EuiA4cJwaPg","LETagContextId":"2","engagementId":27469613,"campaignId":26948813,"language":"en-US"}}
+```json
+    {
+      "request":{
+        "skill":"Sales","interactionTimeout":40,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36","LETagVisitorId":"rloXnVgEQ-iQuoOytvKNqA","LETagSessionId":"rN82d4rATN6EuiA4cJwaPg","LETagContextId":"2","engagementId":27469613,"campaignId":26948813,"language":"en-US"
+        }
+    }
+```
 
 *Notes:*
 
@@ -121,7 +126,11 @@ Request Body Example
 
 Request Body Example
 
-    {"authChatConnId":568046210,"ssoKey":"k12197","engagementId":567609310,"LETagContextId":"2","LETagSessionId":"90o5l5twRUGu1rN7bzwNMA","LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"}
+```json
+    {
+      "authChatConnId":568046210,"ssoKey":"k12197","engagementId":567609310,"LETagContextId":"2","LETagSessionId":"90o5l5twRUGu1rN7bzwNMA","LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"
+    }
+```
 
 #### Response
 
@@ -133,4 +142,8 @@ Request Body Example
 
 JSON Example:
 
-    {"participantId":"6f22cb2d-7e87-41dd-bc1f-d9b740f1f09f","conversationId":"ff0ff4f4-29ec-4eff-82d0-4f047cdc01a0"}
+```json
+    {
+      "participantId":"6f22cb2d-7e87-41dd-bc1f-d9b740f1f09f","conversationId":"ff0ff4f4-29ec-4eff-82d0-4f047cdc01a0"
+    }
+```

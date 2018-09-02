@@ -44,6 +44,7 @@ Retrieves information about the state of the queue (with all related metrics) fo
 
 Request by skillIds=12,13 (no interval), timeframe=180
 
+```json
     {
         "skillsMetrics": {
             "12": {
@@ -81,14 +82,16 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "unassignedConversationsAndFirstTimeConsumer": 4
         }
     }
+```
 
 Request by skillIds=12,13 interval=60, timeframe=180
 
+```json
     {
         "metricsByIntervals": [
             {
                 "timestamp": 1516261915679,
-                {
+
                        "skillsMetrics": {
                            "12": {
                                "unassignedConversations": 50,
@@ -124,11 +127,9 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "notActionableAndManualSla": 0,
                            "unassignedConversationsAndFirstTimeConsumer": 34
                        }
-                }
-            },
+                },
             {
                 "timestamp": 1516258315679,
-                {
                        "skillsMetrics": {
                            "12": {
                                "unassignedConversations": 0,
@@ -147,7 +148,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableConversations": 2,
                                "notActionableConversations": 10,
                                "actionableAndManualSla": 2,
-                               "actionableAndDuringTransfer": 2
+                               "actionableAndDuringTransfer": 2,
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
@@ -159,14 +160,13 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableConversations": 2,
                            "notActionableConversations": 10,
                            "actionableAndManualSla": 2,
-                           "actionableAndDuringTransfer": 2
+                           "actionableAndDuringTransfer": 2,
                            "actionableAndConsumerLastMessage": 0,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
                            "unassignedConversationsAndFirstTimeConsumer": 0
                        }
-                }
-            },
+                },
             {
                 "timestamp": 1516254715679,
                 "metricsData": {
@@ -200,7 +200,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                     "actionableConversations": 1,
                     "notActionableConversations": 0,
                     "actionableAndManualSla": 1,
-                    "actionableAndDuringTransfer": 0
+                    "actionableAndDuringTransfer": 0,
                     "actionableAndConsumerLastMessage": 0,
                     "notActionableDuringTransfer": 0,
                     "notActionableAndManualSla": 0,
@@ -217,7 +217,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableConversations": 10,
                        "notActionableConversations": 14,
                        "actionableAndManualSla": 7,
-                       "actionableAndDuringTransfer": 6
+                       "actionableAndDuringTransfer": 6,
                        "actionableAndConsumerLastMessage": 3,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
@@ -241,7 +241,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                    "actionableConversations": 12,
                    "notActionableConversations": 14,
                    "actionableAndManualSla": 9,
-                   "actionableAndDuringTransfer": 2
+                   "actionableAndDuringTransfer": 2,
                    "actionableAndConsumerLastMessage": 3,
                    "notActionableDuringTransfer": 0,
                    "notActionableAndManualSla": 0,
@@ -249,6 +249,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                }
         }
     }
+```
 
 **Elements in the Response**
 

@@ -51,6 +51,7 @@ This method retrieves the chat events. The possible event types include: state, 
 
 JSON Example:
 
+```json
     {
       "events": {
         "link": [
@@ -111,6 +112,7 @@ JSON Example:
         ]
       }
     }
+```
 
 **Elements in the Response**
 
@@ -127,8 +129,6 @@ JSON Example:
 
 Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs. **Please note**: while the **systemMessageID** field in the response is numeric, it is a number passed as a string.
 ​
-
-
 | ID | Event |
 | :--- | :--- |
 | 4 | Routing chat to an operator. |

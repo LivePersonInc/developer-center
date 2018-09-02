@@ -45,7 +45,7 @@ Use this method to update the session and add SDEs.
 
 **Body entity example**
 
-
+```json
     {  
        "pageId":"4743822558",
        "impAttributes":[  
@@ -93,6 +93,7 @@ Use this method to update the session and add SDEs.
          }
        ]
     }
+```
 
 ### Response
 
@@ -118,17 +119,20 @@ Use this method to update the session and add SDEs.
 
 Error Response entity:
 
+```json
     {
-      "time" : Long
-      "message" : String [Optional]
-      "internalCode" : Integer
+      "time" : "Long",
+      "message": "String" [Optional],
+      "internalCode": "Integer"
     }
-
+```
 
 Example:
 
+```json
     {
                  "time":1469543282471,
                  "message":"Illegal Version",
                  "internalCode":33
     }
+```

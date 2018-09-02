@@ -50,11 +50,8 @@ All surveys follow the same structure and behavior patterns. To avoid duplicatio
 
 Logic Example:
 
-```javascript
+```json
 logic : {
-    showLogicId : [2 ,3 ,4]
+    "showLogicId" : [2 ,3 ,4]
 }
 ```
-
-
-

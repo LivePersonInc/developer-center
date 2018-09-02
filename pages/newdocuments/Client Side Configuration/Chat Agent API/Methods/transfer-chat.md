@@ -55,29 +55,33 @@ The following parameters can be used in the XML body:
 
 Request body example for JSON (skill):
 
-    {
-        "transfer": {
-            "skill":
-                    {
-                      "id": 2
-                  }
-              ,
-        "text" : "I think this person needs some help from you."
-        }
-    }
+```json
+{
+  "transfer": {
+      "skill":
+              {
+                "id": 2
+            }
+        ,
+  "text" : "I think this person needs some help from you."
+  }
+}
+```
 
 Request body example for JSON (agent):
 
-    {
-          "transfer": {
-                "agent":
-                          {
-                              "id": 6
-                          }
-                ,
-                "text" : "I think this person needs some help from you."
-                }
-    }
+```json
+{
+  "transfer": {
+        "agent":
+                  {
+                      "id": 6
+                  }
+        ,
+        "text" : "I think this person needs some help from you."
+        }
+}
+```
 
 ### Response
 

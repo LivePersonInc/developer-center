@@ -13,7 +13,7 @@ indicator: chat
 ---
 
 
-This is the base resource that retrieves the list of available Data Access Uniform Resource Identifiers (URIs) for an account. A dedicated URI is used as the access point to retrieve each of the four types of Data Access supported data listed above: agent activity, web session, engagement and survey. 
+This is the base resource that retrieves the list of available Data Access Uniform Resource Identifiers (URIs) for an account. A dedicated URI is used as the access point to retrieve each of the four types of Data Access supported data listed above: agent activity, web session, engagement and survey.
 
 ### Request
 
@@ -27,6 +27,7 @@ This is the base resource that retrieves the list of available Data Access Unifo
 
 Request for account 28045150:
 
+```json
     {
       "le": {
         "@accountId": "28045150",
@@ -36,17 +37,17 @@ Request for account 28045150:
             "@rel": "self"
           },
           {
-            "@href": 
+            "@href":
     "https://va-a.da.liveperson.net/data_access_le/account/28045150/le/agentActivity",
             "@rel": "agentActivity"
           },
           {
-            "@href": 
+            "@href":
     "https://va-a.da.liveperson.net/data_access_le/account/28045150/le/webSession",
             "@rel": "webSession"
           },
           {
-            "@href": 
+            "@href":
     "https://va-a.da.liveperson.net/data_access_le/account/28045150/le/engagement",
             "@rel": "engagement"
           },
@@ -60,6 +61,8 @@ Request for account 28045150:
           }
         ]
       }
+    }
+```
 
 **Elements in the Response**
 

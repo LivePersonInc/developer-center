@@ -72,4 +72,27 @@ This section contains API details that are common to every API’s resource and 
 
 ### Entity Example
 
-{"id":18799,"deleted":false,"enabled":true,"hotkey":{"prefix":"a", "suffix":"9"},"type":0,"data": [{"msg": "Hello, how can I help you?","lang": "en-us","title": "Hello","isDefault":false},{"msg": "!שלום","lang": "he-il","title": "משפט פתיחה","isDefault":false}],"categoriesIds": [234,5674,4,3],"skillIds": [234,5674,4,3],"lobIds": [10,11,12,13]}
+```json
+{
+  "id":18799,
+  "deleted":false,
+  "enabled":true,
+  "hotkey":{
+    "prefix":"a", "suffix":"9"
+    },
+    "type":0,"data":[
+      {
+        "msg": "Hello, how can I help you?",
+        "lang": "en-us",
+        "title": "Hello",
+        "isDefault":false
+      },
+        {
+          "msg": "Hello!",
+          "lang": "en-us","title": "Opening Line","isDefault":false}
+        ],
+  "categoriesIds": [234,5674,4,3],
+  "skillIds": [234,5674,4,3],
+  "lobIds": [10,11,12,13]
+}
+```

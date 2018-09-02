@@ -41,6 +41,7 @@ Retrieves queue-related metrics at the account or skill level.
 
 Request by skillIds=199,200 (no interval)
 
+```json
     {  
         "skillsMetrics":{  
             "199":{  
@@ -111,9 +112,11 @@ Request by skillIds=199,200 (no interval)
             "queueSizeCount":8
         }
     }
+```
 
 Request by skillIds=11,21,269364510, interval=360, timeframe=720
 
+```json
     {  
         "metricsByIntervals":[  
             {  
@@ -493,6 +496,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
             "connectedEng":150
         }
     }
+```
 
 **Elements in the Response**
 

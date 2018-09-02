@@ -2084,7 +2084,6 @@ Version 2.7 roll-out: September 3rd 2017
 
 ##### Structured content enablement (Beta)
 
-![StructuredContent](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/00-structuredContent.jpg)
 
 **This version of the SDK delivers structured content enablement only; the feature will be made fully productive in October.*
 
@@ -2132,7 +2131,6 @@ The following additional conditions and configurations are required:*
 | Yes | Yes | Yes | Yes | Yes |
 
 ##### Tablet split-screen supportability
-![TabletSplitScreen](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/01-tabletSplitScreen.jpg)
 To ensure that consumers using tablets can connect with brands while enjoying the tablet experience, brands can enable tablet applications to host the conversation window within an application page, as a fragment for Android or viewcontroller for iOS.
 
 Until now the SDK has provided support for a full page layout for messaging conversations. SDK 2.7 provides full support for conversations in a split-screen with viewcontroller / fragment modes. Brands can own the wrapper and host the conversation in split-screen.
@@ -2176,7 +2174,6 @@ By default, the font is set to Helvetica. However brands can choose from any of 
 
 Aria, Arial, Arial Black, Bookman Old Style, Comic Sans MS, Courier New, Garamond, Georgia, Helvetica, HelveticaNeue, HelveticaNeue-Light, Impact, Lato, Lucida Console, Lucida Sans Unicode, MS Sans Serif, MS Serif, Palatino Linotype, Tahoma, Times New Roman, Trebuchet MS, Verdana.
 
-![PCI](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/02-pciBranding.jpg)
 
 ###### Related properties: [Secure form branding enhancements](#new-properties)
 
@@ -2216,7 +2213,6 @@ The SDK now offers a new RunTime mode in addition to the edit mode, known as vie
 This mode gives brands greater control over how consumers are able to use messaging within the brand’s app.
 Future SDKs will support additional modes.
 
-![ViewOnly](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/03-viewOnlyMode.jpg)
 
 ###### Related properties: [View-only mode](#new-properties)
 
@@ -2233,7 +2229,6 @@ If the consumer refuses permission, the SDK sends a callback to the host app. Br
 
 In order to present a custom banner, brands can create and present a new UIAlertViewController as well as a UIView, and present them on the SDK container ViewController or the root UIWindow.
 
-![PCI](https://raw.githubusercontent.com/LP-Messaging/iOS-Messaging-SDK/gh-pages/images/04-photoSharingCallback.jpg)
 
 ###### Related properties: [Photo sharing permissions callback](#new-properties)
 

@@ -46,9 +46,11 @@ Returns the agent's typing status.
 
 XML Example:
 
-    {
-      "agentTyping": "not-typing"
-    }
+```json
+{
+  "agentTyping": "not-typing"
+}
+```
 
 **Elements in the Response**
 

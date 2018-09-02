@@ -37,16 +37,30 @@ The URI of the event that was added is returned in the Location header.
 
 JSON Body Example: Adding a line:
 
-    {"event":{"@type":"line","text":"hi"}}
+```json
+{
+  "event":{
+    "@type":"line","text":"hi"
+  }
+}
+```
 
 JSON Body Example: Ending a chat:
 
-    {"event":{"@type":"state","state":"ended"}}
+```json
+{
+  "event":{
+    "@type":"state","state":"ended"
+    }
+}
+```
 
 **Notes**:
 
 - *This API does not support sending HTML, therefore HTML will be presented as text to the agent and will not be translated into its representation.*
+
 - *The "ended" event ends the chat (and adds an "ended" event to the chat content), but it does NOT delete the chat session resource.*
+
 - *Only one event can be added per POST event request.*
 
 ### Response

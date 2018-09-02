@@ -30,6 +30,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 
 Example:
 
+```json
     {
     "sdes": {
       "events": [
@@ -37,7 +38,7 @@ Example:
           "cartStatus": {
             "serverTimeStamp": "1440412721832",
             "total": "11.7",
-            "currency" : "USD"
+            "currency" : "USD",
             "numItems": "6",
             "products": [
               {
@@ -55,6 +56,7 @@ Example:
       ]
     }
     }
+```
 
 ###  customerInfo
 
@@ -80,7 +82,7 @@ Example:
 
 Example:
 
-
+```json
     {
     "sdes": {
       "events": [
@@ -91,7 +93,7 @@ Example:
               "customerStatus": "cancelled",
               "customerType": "vip",
               "balance": "-400.99",
-              "Currency": "USD"
+              "Currency": "USD",
               "customerId": "138766AC",
               "socialId": 4444,
               "imei": null,
@@ -118,7 +120,7 @@ Example:
       ]
     }
     }
-
+```
 
 
 ###  Lead
@@ -133,7 +135,7 @@ Example:
 
 Example:
 
-
+```json
     {
     "sdes": {
       "events": [
@@ -151,6 +153,7 @@ Example:
       ]
     }
     }
+```
 
 ###  marketingCampaignInfo
 
@@ -163,6 +166,7 @@ Example:
 
 Example:
 
+```json
     {
     "sdes": {
       "events": [
@@ -179,6 +183,7 @@ Example:
       ]
     }
     }
+```
 
 ###  personalInfo
 
@@ -196,7 +201,7 @@ Example:
 
 Example:
 
-
+```json
     {
     "sdes": {
       "events": [
@@ -229,7 +234,7 @@ Example:
       ]
     }
     }
-
+```
 
 ###  Purchase
 
@@ -250,7 +255,7 @@ Example:
 
 Example:
 
-
+```json
     {
     "purchase": {
       "total": "11.7",
@@ -274,6 +279,7 @@ Example:
       "orderId": "DRV1534XC"
     }
     }
+```
 
 ###  serviceActivity
 
@@ -287,7 +293,7 @@ Example:
 
 Example:
 
-
+```json
     {
     "sdes": {
       "events": [
@@ -303,7 +309,9 @@ Example:
           }
         }
       ]
-    }}
+    }
+  }
+```
 
 ###  VisitorError
 
@@ -318,7 +326,7 @@ Example:
 
 Example:
 
-
+```json
     {
     "sdes": {
       "events": [
@@ -337,6 +345,7 @@ Example:
       ]
     }
     }
+```
 
 ###  viewedProduct
 
@@ -351,7 +360,7 @@ Example:
 
  Example:
 
-
+```json
     {
     "sdes": {
       "events": [
@@ -374,6 +383,7 @@ Example:
       ]
     }
     }
+```
 
 ###  searchContent
 
@@ -384,6 +394,7 @@ Example:
 
 Example:
 
+```json
     {
     "sdes": {
             "events": [
@@ -399,3 +410,4 @@ Example:
             ]
           }
     }
+```

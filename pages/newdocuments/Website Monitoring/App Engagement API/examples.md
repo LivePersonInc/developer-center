@@ -14,6 +14,7 @@ indicator: both
 
 ImpressionAcceptEvent, ImpressionDisplayEvent
 
+```json
      {
       "pageId": "4743822558",
       "impAttributes": [
@@ -43,9 +44,11 @@ ImpressionAcceptEvent, ImpressionDisplayEvent
         }
       ]
     }
+```
 
 ImpressionExpandedEvent:
 
+```json
     {
           "type": "impExpanded",
           "expanded": null,
@@ -55,30 +58,37 @@ ImpressionExpandedEvent:
           "engId": 3115242810,
           "revision": 537
         }
+```
 
 ImpressionTimeoutEvent:
 
+```json
     {
       "type": "impTimeout",
       "campaign": 3115242510,
       "engId": 3115242810,
       "revision": 537
     }
+```
 
 ImpressionCloseEvent:
 
+```json
     {
       "type": "impClose",
       "campaign": 3115242510,
       "engId": 3115242810,
       "revision": 537
     }
+```
 
 ImpressionCloseEvent:
 
+```json
     {
       "type": "impClose",
       "campaign": 3115242510,
       "engId": 3115242810,
       "revision": 537
     }
+```

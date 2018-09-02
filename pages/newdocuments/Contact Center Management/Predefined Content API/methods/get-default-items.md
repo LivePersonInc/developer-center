@@ -18,8 +18,8 @@ Retrieves default Predefined Content items from a specific account.
 
 ### Request
 
-| Method|  URL| 
- |:--------|  :-----| 
+| Method|  URL|
+ |:--------|  :-----|
  |GET|  /api/configuration/defaults/engagement-window/canned-responses/ |
 
 ### Response
@@ -27,13 +27,14 @@ Retrieves default Predefined Content items from a specific account.
 **Response Codes**
 
  |Code  |Description |
- |:-----|  :--------------| 
+ |:-----|  :--------------|
  |200  |OK |
- |404|  Data Not Found| 
+ |404|  Data Not Found|
 
 **Response Body**
 
-    {
+```json
+
      {
        "templateId": "canned-response-template-1",
        "templateDeleted": false,
@@ -364,4 +365,4 @@ Retrieves default Predefined Content items from a specific account.
        ],
        "type": 0
      }
-    {
+```

@@ -18,14 +18,14 @@ Retrieves a list of Predefined Content items from a specific account.
 
 ### Request
 
-| Method  |URL| 
- |:--------|  :------| 
+| Method  |URL|
+ |:--------|  :------|
  |GET|  /api/account/{accountId}/configuration/engagement-window/canned-responses |
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes| 
- |:----------|  :--------------|  :--------------|  :---| 
+ |Parameter|  Description|  Type|  Notes|
+ |:----------|  :--------------|  :--------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
 
 **Query Parameters**
@@ -44,14 +44,14 @@ Retrieves a list of Predefined Content items from a specific account.
 
 **Request Headers**
 
-| Header | Description | Notes| 
+| Header | Description | Notes|
  |:-------  |:-------------- | :--- |
- |Authorization | Contains token string to allow request authentication and authorization. | 
+ |Authorization | Contains token string to allow request authentication and authorization. |
  |If-Match  |Contains data revision, as known by the client. | Allows optimization of backend, networking and client resource utilization. |
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -65,16 +65,17 @@ Retrieves a list of Predefined Content items from a specific account.
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. | 
+| ac-revision | Account config object type collection revision. |
 
 **Response Body**
 
-    {
+```json
+
         {
             "id":18799,
             "deleted":false,
             "enabled":true,
-            "hotkey":{"prefix":"a", "suffix":"9"}, 
+            "hotkey":{"prefix":"a", "suffix":"9"},
             "type":0,
             "data": [
                 {
@@ -115,11 +116,11 @@ Retrieves a list of Predefined Content items from a specific account.
             ],
             "categoriesIds": [13,22,46],
              "skillIds": [234,5674,4,3]
-        }
-    {
-
+           }
+```
 **Response group by categories**
 
+```json
     {
       "275396111": [
         {
@@ -209,4 +210,4 @@ Retrieves a list of Predefined Content items from a specific account.
         }
       ]
     }
-
+```

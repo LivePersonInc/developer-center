@@ -40,18 +40,18 @@ The capacity (or number of slots) in the chat system, is the total  number of ch
 | :--- | :--- | :--- | :--- |
 | skill | Calculates the number of available slots in queue for a specific skill. | alphanumeric | |
 | maxWaitTime | The maximum time in seconds that a visitor can wait before a chat starts. | numeric | Must be between 0 and 86,400 seconds (24 hours). Use 0 for immediate availability. |
- 
+
 Availability for a specific agent can be requested using the following parameter:
 
 | Name	| Description | Type | Notes |
 | :--- | :--- | :--- |  :--- |
 | agent | Agent login name, calculates the number of available slots for a specific agent. | alphanumeric | Cannot be used with other parameters. |
-  
+
 **Notes**:
 
 - *The calculation of wait time is based on a statistical estimate and might constantly change.*
 - *When the number of available slots is unlimited the response is -1.*
- 
+
 ### Response
 
 **Response Codes**
@@ -62,6 +62,8 @@ Availability for a specific agent can be requested using the following parameter
 
 JSON Example
 
+```json
     {
       "availableSlots": 1
     }
+```

@@ -40,7 +40,7 @@ Returns the exit survey structure. The survey structure is an XML response descr
 
 **Query Parameters**
 
-| Name  | Description | Type | 
+| Name  | Description | Type |
 | :--- | :--- | :--- | :--- |
 | surveyName | Requests a specific survey. If a survey with this name exists, the requested survey will be returned unless there is a rule that overrides this name. | alphanumeric |
 
@@ -54,6 +54,7 @@ Returns the exit survey structure. The survey structure is an XML response descr
 
 JSON Example:
 
+```json
     {
       "survey": {
         "id": 361348,
@@ -96,6 +97,7 @@ JSON Example:
         }
       }
     }
+```
 
 **Elements in the Response**
 

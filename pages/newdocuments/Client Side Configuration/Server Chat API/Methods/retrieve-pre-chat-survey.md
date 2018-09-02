@@ -56,6 +56,7 @@ Returns an XML or JSON response with the Pre-Chat survey.
 
 JSON Example
 
+```json
     {
       "survey" : {
         "id" : "40216",
@@ -95,6 +96,7 @@ JSON Example
         }
       }
     }
+```
 
 *Note: The examples above demonstrate the usage of question logic. Question logicId 5 will be displayed when the 'CATS' answer is selected via the drop-down box in the question with id="12786273". This behavior is set by the "showLogicId" element.*
 

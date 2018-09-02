@@ -36,6 +36,7 @@ Required:
 
 Request for account 75555851:
 
+```json
     {
      "dataAccessFiles": {
        "@id": "28045150",
@@ -78,6 +79,7 @@ Request for account 75555851:
        ]
      }
     }
+```
 
 **Elements in the Response**
 
@@ -94,6 +96,7 @@ Request for account 75555851:
 
 JSON Example
 
+```json
     {
        "dataType": {
            "com.liveperson.dataaccess.DataTypeEnum": "AgentActivity"
@@ -244,6 +247,7 @@ JSON Example
            }
        ]
     }
+```
 
 The following table describes the information that is available in the agent activity data:
 
@@ -268,5 +272,5 @@ The following table describes the information that is available in the agent act
 | agentLoginName | Agent’s login name. | string |
 | prevConcurrentEng | How many chats were handled concurrently prior to state change. | long |
 | concurrentEng | How many chats were handled concurrently at the time of state change. | long |
-| maxConcurrentEng | The maximum amount of chats the agent can take at one time. In cases of agent login / logout the value is -9. | long | 
+| maxConcurrentEng | The maximum amount of chats the agent can take at one time. In cases of agent login / logout the value is -9. | long |
 | agentGroupID | Agent group’s ID. | long |

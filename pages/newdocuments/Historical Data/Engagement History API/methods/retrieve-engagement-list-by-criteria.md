@@ -87,7 +87,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
             "start":{
                  "from":1433140200000,"to":1435645800000
              },
-       	   “keyword”: “ipad”,
+       	   "keyword": "ipad",
        "keyword_search_area": {
            "types": [
                "chatLine",

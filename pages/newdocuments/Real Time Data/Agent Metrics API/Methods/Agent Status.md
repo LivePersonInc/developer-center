@@ -35,8 +35,9 @@ Filter is sent in the POST data (body) with the following JSON structure:
 
 **Response**
 
-_JSON Example_:
+JSON Example:
 
+```json
 		        {
 			"_metadata": {
 				"count": 2,
@@ -119,7 +120,7 @@ _JSON Example_:
 				}
 			]
 		}
-
+```
 
 | Name   |      Description      |  Type/Value |
 |----------|-------------|------|

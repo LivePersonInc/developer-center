@@ -16,10 +16,10 @@ indicator: both
 
 Changes Queries in Predefined Content data.
 
-### Request 
+### Request
 
  |Method | URL |
- |:--------|  :----------| 
+ |:--------|  :----------|
  |POST|  /api/account/configuration/engagement-window/canned-responses/query |
 
 **Query Parameters**
@@ -41,6 +41,7 @@ There are 2 types of queries:
 
 Type 0 (delta):
 
+```json
     {
        "type":0,
        "parameters":[
@@ -54,9 +55,11 @@ Type 0 (delta):
             }
        ]
     }
+```
 
 Type 1 (all changes)
 
+```json
     {
        " type":1,
        "parameters":[
@@ -72,6 +75,7 @@ Type 1 (all changes)
             }
        ]
     }
+```
 
 **Request Headers**
 
@@ -92,6 +96,7 @@ Type 1 (all changes)
 
 **Response Body for Delta Query**
 
+```json
     {
      "appDataList":[
        {
@@ -137,7 +142,7 @@ Type 1 (all changes)
                        "prefix":"b",
                        "suffix":"9"
                      },
-                     "type":0",
+                     "type":"0",
                      "data":[
                        {
                          "msg":"Thank you for chatting with me!",
@@ -167,11 +172,11 @@ Type 1 (all changes)
        }
      ]
     }
+```
 
 **Response Body - All Changes Query**
-
+```json
     {
-     {
        "revisionsCollection": [
          {
            "revision": 2,
@@ -248,4 +253,4 @@ Type 1 (all changes)
        ],
        "siteId": "S69757867"
      }
-    {
+```

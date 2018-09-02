@@ -23,10 +23,6 @@ a:hover, a:focus {
   flex-wrap: wrap;
 }
 
-li > p {
-  margin-bottom: 0;
-}
-
 code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
@@ -143,11 +139,14 @@ code pre {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
   }
 
   .defaultbutton a {
     color: #5879DA;
+  }
+
+  .defaultbutton div {
+    padding: 10px;
   }
 
   .defaultfooter {
@@ -159,10 +158,6 @@ code pre {
 
 
 /* CSS-Grid Ends */
-
-.post-content img {
-  width: 100%;
-}
 
 .codebtn {
   user-select: none;
@@ -269,6 +264,10 @@ code pre {
 table {
   table-layout: fixed;
   margin-bottom: 20px;
+}
+
+table tbody td img {
+  width: 100%;
 }
 
 .important {
@@ -510,12 +509,12 @@ table {
 
 /* Sidebar Styling Ends */
 
-.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http {
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle {
   display: flex;
   flex-direction: column;
 }
 
-.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before {
   position: absolute;
   color: #a2a2a2;
   text-align: right;
@@ -550,6 +549,12 @@ table {
 
 .language-java:before {
   content: "JAVA";
+}
+
+.language-gradle:before {
+  content: "GRADLE";
+  margin-left: 5px;
+  font-size: 0.65em;
 }
 
 .language-javascript:before {
@@ -734,6 +739,11 @@ a.anchoritem {
 
 /* Media Queries Begin */
 
+@media screen and (max-width:1870px){
+  .defaultbutton div {
+    text-align: center;
+  }
+
 @media screen and (max-width:1440px){
   .defaultheader {
     grid-column: 4 / span 4;
@@ -766,7 +776,6 @@ a.anchoritem {
   }
 
   .defaultbutton {
-    width: 120px;
     padding: 12px 13px;
     margin-top: 12px;
   }

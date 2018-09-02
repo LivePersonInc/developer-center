@@ -36,6 +36,8 @@ Required:
 
 Request for account 75555851:
 
+```json
+
     {
         "dataAccessFiles": {
             "@id": "75555851",
@@ -82,6 +84,7 @@ Request for account 75555851:
             ]
         }
     }
+```
 
 **Elements in the Response**
 
@@ -98,6 +101,7 @@ Request for account 75555851:
 
 JSON Example
 
+```json
     {
         "dataType": {
             "com.liveperson.dataaccess.DataTypeEnum": "Engagement"
@@ -228,6 +232,7 @@ JSON Example
             }
         ]
     }
+```
 
 **Header**
 

@@ -45,7 +45,7 @@ This event is triggered when the flow to display the engagement has started.
 
 *Example:*
 
-```javascript
+```json
 {
     "contexts": [
         {"EngagementContext": {
@@ -88,7 +88,7 @@ See [START](lp-tag-engagement.html#start) event.
 
 *Example:*
 
-```javascript
+```json
 {
     "contexts": [
         {"EngagementContext": {"id": "2"}},
