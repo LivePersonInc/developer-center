@@ -19,33 +19,41 @@ $(document).ready(function () {
 });
 
 function navigateContent(url) {
+  //call ajax with the target url
   $.ajax(url)
   .done(function(content) {
+    //once done, figure out if we're being redirected by the plugin or not
     if (content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
       url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
-      // todo: pushstate
       navigateContent(url);
     } else {
+      //grab the various part of the target page
       var $newData = $(content);
       var $content = $('#defaultcontent');
       var $titlecontainer = $('.documenttitle');
       var $breadcrumbs = $('.breadcrumbs');
+      //exchange the content of those parts with the new parts loaded via ajax
       $breadcrumbs.html($newData.find('.breadcrumbs').html());
       $titlecontainer.html($newData.find('.documenttitle').html());
       $content.html($newData.find('#defaultcontent').html());
+      //hide/display title if on welcome page or not
       if (url.indexOf('index') != -1) {
         $('.breadcrumbs').addClass('breadhidden');
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
       }
+      //grab the page's title
       var $title = $('.h1').text();
-      //then set it as the document's title so it shows up properly
+      //then set it as the document's title so it shows up properly in the tab
       $(document).prop('title', $title);
     }
+    //add anchor links to all h3 titles. See respective functions below for what they do.
       anchors.add('h3');
       populateAnchors ();
       codeButtons();
+      //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
       $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+      //call smoothscrolling on all anchors
       var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
       var selected = $('a[href="'+url+'"]');
