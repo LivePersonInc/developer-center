@@ -454,7 +454,6 @@ sdeType         | Type of sde.                                | enum
           "agentGroupId": -1,
           "time": "2016-08-29 15:14:05.005+0000",
           "timeL": 1472483645005,
-          "permission": "ASSIGNED_AGENT"
           "permission": "ASSIGNED_AGENT",
           "contextData": {
             "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent        identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation   identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some    reason\",\"reasonId\":\"some reason Id\"}]",
