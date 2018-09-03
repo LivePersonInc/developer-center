@@ -20,7 +20,7 @@ google_analytics: UA-96175782-1
 
 
 extlinks:
-  attributes: {target: _blank}
+  attributes: {target: _blank, onclick: "linkclick(event, this)"}
 # This tells the extlinks plugin which attribute to add to links
 
 plugins:

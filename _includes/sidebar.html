@@ -10,7 +10,7 @@
     <div class="sidebarimage">
       <img src="img/getting-started.png" />
     </div>
-    <a  class="innerlink" href="/index.html">WELCOME</a>
+    <a  onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li>
 {% for category in site.data.documentsupdated %}
   {% if forloop.last == true %}
@@ -30,14 +30,14 @@
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  onclick="linkclick(event,this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
           <li class="pageitem">
-            <a  class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -62,14 +62,14 @@
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
           <li class="pageitem">
-            <a  class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}

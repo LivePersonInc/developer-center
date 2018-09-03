@@ -53,14 +53,15 @@ module Jekyll
       return content unless doc
 
       doc.css('a').each do |a|
-      next unless a.get_attribute('href') =~ /\Ahttp/i
 
         attributes.each do |attr, value|
-          if attr.downcase == 'rel'
-            # If there's a rel already don't change it
-            next unless !a.get_attribute('rel') || a.get_attribute('rel').empty?
-            # Skip whitelisted hosts for the 'rel' attribute
-            next if rel_exclude && contains_any(a.get_attribute('href'), rel_exclude)
+          if attr.downcase == 'target'
+          #check if link is external. If so, add the target attribute as defined in the config
+          next unless a.get_attribute('href') =~ /\Ahttp/i
+          end
+          #check if link is internal. If so, add the target attribute as defined in the config
+          if attr.downcase == 'onclick'
+          next unless a.get_attribute('href') !~ /\Ahttp/i
           end
           a.set_attribute(attr, value)
         end

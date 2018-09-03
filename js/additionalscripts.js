@@ -5,7 +5,6 @@ $(document).ready(function () {
   menuDrop ();
   codeButtons();
   mobileHamburger();
-  sidebarMenuClick();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -20,56 +19,54 @@ $(document).ready(function () {
 });
 
 function navigateContent(url) {
-  var $content = $('#defaultcontent');
-  var $titlecontainer = $('.documenttitle');
-  var $breadcrumbs = $('.breadcrumbs');
-  //go to the indicated url passed from the linkclick function and find the breadcrumbs div and load it. Then, set breadcrumbs display if welcome page/normal page.
-  $breadcrumbs.load(url + ' .breadcrumbs > *', function () {
-    if (url.indexOf('index') != -1) {
-      $(this).addClass('breadhidden');
+  $.ajax(url)
+  .done(function(content) {
+    if (content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
+      url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
+      // todo: pushstate
+      navigateContent(url);
     } else {
-      $(this).removeClass('breadhidden');
+      var $newData = $(content);
+      var $content = $('#defaultcontent');
+      var $titlecontainer = $('.documenttitle');
+      var $breadcrumbs = $('.breadcrumbs');
+      $breadcrumbs.html($newData.find('.breadcrumbs').html());
+      $titlecontainer.html($newData.find('.documenttitle').html());
+      $content.html($newData.find('#defaultcontent').html());
+      if (url.indexOf('index') != -1) {
+        $('.breadcrumbs').addClass('breadhidden');
+      } else {
+        $('.breadcrumbs').removeClass('breadhidden');
+      }
+      var $title = $('.h1').text();
+      //then set it as the document's title so it shows up properly
+      $(document).prop('title', $title);
     }
-    console.log('crumbsloaded');
+      anchors.add('h3');
+      populateAnchors ();
+      codeButtons();
+      $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+      var scroll = new SmoothScroll('a[href*="#"]');
+      //from here, the rest of the code has to do with link highlighting for the sidebar
+      var selected = $('a[href="'+url+'"]');
+      //make sure no other links are set to active
+      $('a').removeClass("activepage");
+      //make the string we found previously active
+      $('.folder').removeClass("active");
+      selected = selected.addClass("activepage");
+      //just some code to make sure sidebar styling works well.
+      if (selected.parent().hasClass('innerpageitem')) {
+        $('.innerpageitem').removeClass("activeitem");
+        $(".activepage").parent().addClass("activeitem");
+      }
+      if (selected.parent().hasClass('pageitem')) {
+        $('.innerpageitem').removeClass("activeitem");
+      }
+      $(".activepage").parent().parent().parent().addClass("active");
+      window.scrollTo(0,0);
+      $(".hamburger").removeClass("is-active");
   });
-  //go to the indicated url passed from the linkclick function and find the title div and load it
-  $titlecontainer.load(url + ' .documenttitle > *', function () {
-    //after the title is loaded, find the text of the title
-    var $title = $('.h1').text();
-    //then set it as the document's title so it shows up properly
-    $(document).prop('title', $title);
-    console.log('titleloaded');
-  });
-  //go to the indicated url passed from the linkclick function and find the content div and load it
-  $content.load(url + ' #defaultcontent > *', function () {
-    //add anchor links to all h3 titles. See respective functions below for what they do.
-    anchors.add('h3');
-    populateAnchors ();
-    codeButtons();
-    $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
-    var scroll = new SmoothScroll('a[href*="#"]');
-    console.log('contentloaded');
-  });
-  //from here, the rest of the code has to do with link highlighting for the sidebar
-  var selected = $('a[href="'+url+'"]');
-  //make sure no other links are set to active
-  $('a').removeClass("activepage");
-  //make the string we found previously active
-  $('.folder').removeClass("active");
-  selected = selected.addClass("activepage");
-  //just some code to make sure sidebar styling works well.
-  if (selected.parent().hasClass('innerpageitem')) {
-    $('.innerpageitem').removeClass("activeitem");
-    $(".activepage").parent().addClass("activeitem");
-  }
-  if (selected.parent().hasClass('pageitem')) {
-    $('.innerpageitem').removeClass("activeitem");
-  }
-  $(".activepage").parent().parent().parent().addClass("active");
-  window.scrollTo(0,0);
-  $(".hamburger").removeClass("is-active");
-};
-
+}
 
 
 //a function to create copy buttons on all code blocks
@@ -96,18 +93,13 @@ function codeButtons () {
   });
 };
 
-//a function to wrap the function which controls the sidebar links - yes I know this is dumb, blame Firefox and the way it handles events.
-function sidebarMenuClick() {
-//grab all the innerlinks
-var sidebarlink = document.getElementsByClassName('innerlink');
-var contentlinks = document.getElementById('post-content').getElementsByTagName('a');
-var internalhref = new RegExp ('^\/.*', 'g');
+
 //a function to control a click on the sidebar links
-function linkclick(event) {
+function linkclick(event, that) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
   //grab the url to which the link is pointing
-  var url = $(this).attr("href");
+  var url = $(that).attr("href");
   // call the navigateContent function and pass that url to it
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
@@ -120,20 +112,6 @@ $(window).on('popstate', (e) => {
     navigateContent(state.url);
   }
 });
-//for every innerlink, and it's not a part of the api reference for the messaging window API (those documents require a refresh) add an event listener that will call the above function.
-for (var i = 0 ; i < sidebarlink.length; i++) {
-  if (sidebarlink[i].href.indexOf('messaging-window-api-api-reference') == -1) {
-   sidebarlink[i].addEventListener('click' , linkclick , false ) ;
-}
-};
-//for every link in the content, check if it's internal and if it is, add an event listener that will call the above function
-$.each(contentlinks, function() {
-  // if (this.href.indexOf(internalhref)) {
-  //   this.addEventListener('click' , linkclick , false ) ;
-  // }
-  this.addEventListener('click' , linkclick , false ) ;
-});
-};
 
 //a function to creaste the animation when you click the "solutions" button
 function solutionsbuttonclick(event) {
