@@ -23,10 +23,10 @@ require 'jekyll'
 require 'nokogiri'
 
 module Jekyll
-  module ExtLinks
+  module IntLinks
     # Access plugin config in _config.yml
     def config
-      @context.registers[:site].config['extlinks']
+      @context.registers[:site].config['intlinks']
     end
 
     # Checks if str contains any fragment of the fragments array
@@ -35,7 +35,7 @@ module Jekyll
       true
     end
 
-    def extlinks(content)
+    def intlinks(content)
       # Process configured link attributes and whitelisted hosts
       if config
         if config['attributes']
@@ -53,7 +53,7 @@ module Jekyll
       return content unless doc
 
       doc.css('a').each do |a|
-      next unless a.get_attribute('href') =~ /\Ahttp/i
+      next unless a.get_attribute('href') !~ /\Ahttp/i
 
         attributes.each do |attr, value|
           if attr.downcase == 'rel'

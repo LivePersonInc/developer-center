@@ -97,6 +97,8 @@ function codeButtons () {
 function sidebarMenuClick() {
 //grab all the innerlinks
 var sidebarlink = document.getElementsByClassName('innerlink');
+var contentlinks = document.getElementById('post-content').getElementsByTagName('a');
+var internalhref = new RegExp ('^\/.*', 'g');
 //a function to control a click on the sidebar links
 function linkclick(event) {
   //prevent the link from actually navigating to the url
@@ -115,10 +117,15 @@ $(window).on('popstate', (e) => {
     navigateContent(state.url);
   }
 });
-//for every lnnerlink, add an event listener that will call the above function.
+//for every innerlink, add an event listener that will call the above function.
 for (var i = 0 ; i < sidebarlink.length; i++) {
    sidebarlink[i].addEventListener('click' , linkclick , false ) ;
 }
+$.each(contentlinks, function() {
+  if (this.href.indexOf(internalhref)) {
+    this.addEventListener('click' , linkclick , false ) ;
+  }
+});
 };
 
 //a function to creaste the animation when you click the "solutions" button
