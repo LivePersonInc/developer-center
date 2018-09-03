@@ -30,6 +30,7 @@ function navigateContent(url) {
     } else {
       $(this).removeClass('breadhidden');
     }
+    console.log('crumbsloaded');
   });
   //go to the indicated url passed from the linkclick function and find the title div and load it
   $titlecontainer.load(url + ' .documenttitle > *', function () {
@@ -37,6 +38,7 @@ function navigateContent(url) {
     var $title = $('.h1').text();
     //then set it as the document's title so it shows up properly
     $(document).prop('title', $title);
+    console.log('titleloaded');
   });
   //go to the indicated url passed from the linkclick function and find the content div and load it
   $content.load(url + ' #defaultcontent > *', function () {
@@ -46,6 +48,7 @@ function navigateContent(url) {
     codeButtons();
     $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
     var scroll = new SmoothScroll('a[href*="#"]');
+    console.log('contentloaded');
   });
   //from here, the rest of the code has to do with link highlighting for the sidebar
   var selected = $('a[href="'+url+'"]');
@@ -117,14 +120,18 @@ $(window).on('popstate', (e) => {
     navigateContent(state.url);
   }
 });
-//for every innerlink, add an event listener that will call the above function.
+//for every innerlink, and it's not a part of the api reference for the messaging window API (those documents require a refresh) add an event listener that will call the above function.
 for (var i = 0 ; i < sidebarlink.length; i++) {
+  if (sidebarlink[i].href.indexOf('messaging-window-api-api-reference') == -1) {
    sidebarlink[i].addEventListener('click' , linkclick , false ) ;
 }
+};
+//for every link in the content, check if it's internal and if it is, add an event listener that will call the above function
 $.each(contentlinks, function() {
-  if (this.href.indexOf(internalhref)) {
-    this.addEventListener('click' , linkclick , false ) ;
-  }
+  // if (this.href.indexOf(internalhref)) {
+  //   this.addEventListener('click' , linkclick , false ) ;
+  // }
+  this.addEventListener('click' , linkclick , false ) ;
 });
 };
 
