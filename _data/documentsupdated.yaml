@@ -407,7 +407,7 @@
   #   - pagename: getLiveDeflectData
   - documentname: Connector API
     pages:
-    - pagename: Connector API
+    - pagename: First Steps
       subpages:
       - subpagename: Overview
       - subpagename: App Install Manifest for Connectors

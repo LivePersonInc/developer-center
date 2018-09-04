@@ -3,7 +3,7 @@ pagename: Clickable Mobile Content to SMS
 redirect_from:
   - products-channels-sms-clickable.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-clickable-mobile-content-to-sms.html

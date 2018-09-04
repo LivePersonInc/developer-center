@@ -4,7 +4,7 @@ redirect_from:
   - zendesk.html
 permalink: crm-integrations-zendesk.html
 sitesection: Solutions
-categoryname: Integrations
+
 documentname: CRM Integrations
 order: 50
 ---

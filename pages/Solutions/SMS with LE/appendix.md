@@ -3,7 +3,7 @@ pagename: Appendix
 redirect_from:
   - products-channels-sms-appendix.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 permalink: sms-with-liveengage-appendix.html
 order: 41

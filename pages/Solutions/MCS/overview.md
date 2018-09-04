@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - products-mcs-overview.html
 sitesection: Solutions
-categoryname: Data
+
 documentname: MCS Toolkit
 
 order: 1

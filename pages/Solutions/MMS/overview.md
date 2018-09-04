@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - products-channels-mms-overview.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-overview.html
 level-order: 4

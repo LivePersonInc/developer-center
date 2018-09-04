@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - products-channels-sms-overview.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 permalink: sms-with-liveengage-overview.html
 level-order:

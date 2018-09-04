@@ -4,7 +4,7 @@ redirect_from:
   - products-bots-gettingstarted.html
 
 sitesection: Solutions
-categoryname: Bots
+
 documentname: Customer Facing Bots
 
 order: 3

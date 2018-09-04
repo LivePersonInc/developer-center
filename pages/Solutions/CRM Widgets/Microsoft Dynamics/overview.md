@@ -4,7 +4,7 @@ redirect_from:
   - microsoftdynamics.html
 permalink: crm-integrations-microsoft-dynamics.html
 sitesection: Solutions
-categoryname: Integrations
+
 documentname: CRM Integrations
 order: 20
 ---

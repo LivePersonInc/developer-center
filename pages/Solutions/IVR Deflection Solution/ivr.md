@@ -4,7 +4,7 @@ redirect_from:
   - products-channels-ivr-deflection-solution-introduction.html
 keywords: ['IVR', 'IVR Deflection', 'IVR Deflection for Messaging']
 sitesection: Solutions
-categoryname: Channels
+
 documentname: IVR Deflection
 order: 20
 permalink: ivr-deflection-ivr-deflection-for-chat.html

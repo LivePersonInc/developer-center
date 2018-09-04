@@ -3,7 +3,7 @@ pagename: IVR Deflection
 redirect_from:
   - products-channels-sms-ivr.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-ivr-deflection.html

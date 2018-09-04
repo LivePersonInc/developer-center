@@ -3,7 +3,7 @@ pagename: Plan Your Service
 redirect_from:
   - products-video-chat-plan-your-service.html
 sitesection: Solutions
-categoryname: Rich Media
+
 documentname: Video Chat
 
 order: 2

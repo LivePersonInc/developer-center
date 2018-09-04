@@ -3,7 +3,7 @@ pagename: Deployment Steps
 redirect_from:
   - products-channels-mms-deployment.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-deployment-steps.html
 order: 30

@@ -3,7 +3,7 @@ pagename: Google AdWords - Click-to-Message
 redirect_from:
   - products-channels-sms-adwords.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-google-adwords-click-to-message.html

@@ -5,7 +5,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: Connector API
+subfoldername: First Steps
 order: 3
 indicator: messaging
 permalink: connector-api-connector-api-app-install-manifest-for-connectors.html

@@ -3,7 +3,7 @@ pagename: Setting Up IVR Deflection for Chat
 redirect_from:
   - products-channels-ivr-deflection-solution-setting-up-ivr.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: IVR Deflection
 order: 30
 permalink: ivr-deflection-setting-up-ivr-deflection-for-chat.html

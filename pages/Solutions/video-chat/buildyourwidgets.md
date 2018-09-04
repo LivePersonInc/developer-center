@@ -3,7 +3,7 @@ pagename: Build Your Widgets
 redirect_from:
   - products-video-chat-build-your-widgets.html
 sitesection: Solutions
-categoryname: Rich Media
+
 documentname: Video Chat
 
 order: 4

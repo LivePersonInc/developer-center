@@ -5,7 +5,7 @@ permalink: index.html
 
 Welcome to the LivePerson Developer Documentation. Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third party apps into our Agent Workspace, you’ll find the documentation here.
 
-Keep reading to learn what you need to get started, [how to read our documents](getting-started-with-liveengage-apis-how-to-read-our-documents.html), common use cases for our APIs, the basic components of our platform, and more!
+Keep reading to learn what you need to get started, [how to read our documents](getting-started-with-liveengage-apis-how-to-read-our-documents.html), common use cases for our APIs, the basic components of our platform, and more.
 
 If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly via the "Looking for Support?" button on the left hand side.
 

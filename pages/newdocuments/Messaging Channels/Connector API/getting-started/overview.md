@@ -5,7 +5,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: Connector API
+subfoldername: First Steps
 order: 1
 level-order: 8
 root-link: true

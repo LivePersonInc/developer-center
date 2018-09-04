@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - usecases-alternate-messaging-notifications.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: Alternate Messaging Notifications
 
 order: 1

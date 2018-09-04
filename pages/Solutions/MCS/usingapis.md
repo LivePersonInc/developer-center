@@ -3,7 +3,7 @@ pagename: Using APIs to Build the Toolkit
 redirect_from:
   - products-mcs-usingtheapis.html
 sitesection: Solutions
-categoryname: Data
+
 documentname: MCS Toolkit
 
 order: 20

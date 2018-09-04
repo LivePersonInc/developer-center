@@ -3,7 +3,7 @@ pagename: Getting Started
 redirect_from:
   - products-mcs-gettingstarted.html
 sitesection: Solutions
-categoryname: Data
+
 documentname: MCS Toolkit
 
 order: 10

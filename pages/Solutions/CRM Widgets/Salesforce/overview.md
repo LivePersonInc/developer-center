@@ -4,7 +4,7 @@ redirect_from:
   - salesforce.html
 permalink: crm-integrations-salesforce.html
 sitesection: Solutions
-categoryname: Integrations
+
 documentname: CRM Integrations
 order: 10
 ---

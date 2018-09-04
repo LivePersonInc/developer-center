@@ -3,7 +3,7 @@ pagename: Additional Options
 redirect_from:
   - products-channels-mms-additional.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-additional-options.html
 order: 40

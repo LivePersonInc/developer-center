@@ -3,7 +3,7 @@ pagename: Desktop content campaign
 redirect_from:
   - products-channels-sms-desktop.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-desktop-content-campaign.html

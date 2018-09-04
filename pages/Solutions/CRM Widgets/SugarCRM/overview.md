@@ -4,7 +4,7 @@ redirect_from:
   - sugarcrm.html
 permalink: crm-integrations-sugarcrm.html
 sitesection: Solutions
-categoryname: Integrations
+
 documentname: CRM Integrations
 order: 40
 ---

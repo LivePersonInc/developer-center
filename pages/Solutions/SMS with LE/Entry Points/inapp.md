@@ -3,7 +3,7 @@ pagename: SMS via Mobile App Messaging
 redirect_from:
   - products-channels-sms-inapp.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: SMS with LiveEngage
 
 permalink: sms-with-liveengage-sms-via-mobile-app-messaging.html

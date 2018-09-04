@@ -3,7 +3,7 @@ pagename: Technical Description
 redirect_from:
   - products-channels-mms-technical.html
 sitesection: Solutions
-categoryname: Channels
+
 documentname: LiveEngage MMS Viewer
 permalink: liveengage-mms-viewer-technical-description.html
 order: 10
