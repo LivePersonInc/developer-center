@@ -5,11 +5,11 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API
 subfoldername: Methods
-indicator: both
+indicator: messaging
 permalink: shift-status-api-methods-get-shift-status-by-account.html
 ---
 
-This API retrieves a list of skills of a specific account, and displays for each skill it's current shift status (on/off).
+This API retrieves a list of skills for a specific account and displays the current shift status for each skill as defined on the account or skill level. This is indicated under the `onShift` parameter which is `boolean`.
 
 ### Request
 
@@ -47,10 +47,10 @@ This API retrieves a list of skills of a specific account, and displays for each
 
 | Attribute | Description | Type/Value | Notes |
 | :--------- | :-------------- | :----------- | :--- | :--- |
-| skill | Skill unique ID | Long | |
-| onShift | Whether the current skill is on shift or not | Boolean | For skills who did not override the account default workdays, the shift status will be taken from the account level |
-| nextOn | When does the next shift starts  | Long | Epoch time in milliseconds. This value can be null if the shift is 24\7 |
-| nextOff | When does the current\next shift ends | Long | Epoch time in milliseconds. This value can be null if the shift is 24\7 or if the skill has no configuration and it uses the account level, which is manual and currently off. |
+| skill | A Skill's unique ID | Long | |
+| onShift | Whether the current skill is on shift or not | Boolean | For skills which did not override the account default configuration, the shift status will be taken from the account level |
+| nextOn | The start time of the next shift | Long | Epoch time in milliseconds. This value can be null if the shift is 24\7 |
+| nextOff | The end time of the next shift | Long | Epoch time in milliseconds. This value can be null if the shift is 24\7 or if the skill has no configuration and it uses an account level configuration which is manual and currently off. |
 
 ### Entity Example
 
