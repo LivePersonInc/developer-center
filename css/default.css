@@ -507,7 +507,8 @@ table tbody td img {
 .sitelogo {
   margin-top: 21px;
   margin-left: 32px;
-  position: fixed;
+  position: sticky;
+  height: fit-content;
 }
 
 
