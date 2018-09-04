@@ -5,11 +5,11 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API
 subfoldername: Methods
-indicator: both
+indicator: messaging
 permalink: shift-status-api-methods-get-shift-status-by-skill.html
 ---
 
-This API retrieves a skill entity and displays it's current shift status (on/off).
+This API retrieves a skill entity and displays its current shift status. This status is indicated under the `onShift` parameter which is `boolean`.
 
 ### Request
 
