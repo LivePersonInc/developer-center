@@ -11,6 +11,8 @@ permalink: shift-status-api-methods-get-shift-status-by-skill.html
 
 This API retrieves a skill entity and displays its current shift status. This status is indicated under the `onShift` parameter which is `boolean`.
 
+<div class="important"> If you use the following API while providing a Skill ID which does not exist under the target account, the API will return the Skill's status according to the account level configuration</div>
+
 ### Request
 
  |Method           |        URL |
