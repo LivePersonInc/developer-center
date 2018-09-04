@@ -299,14 +299,12 @@ div#toc ul li ul li ul{
 /*left nav bar */
 ul.mysidebar.nav {
   text-decoration: none;
-  margin-top: -18px;
-  height: 100%;
-  position: fixed;
-  top: 109px;
-  height: 90vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  height: 88vh;
   overflow-y: auto;
   list-style: none;
-  padding-top: 20px;
 
 }
 
