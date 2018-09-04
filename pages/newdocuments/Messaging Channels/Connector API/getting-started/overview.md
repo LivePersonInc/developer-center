@@ -10,7 +10,7 @@ order: 1
 level-order: 8
 root-link: true
 indicator: messaging
-permalink: connector-api-connector-api-overview.html
+permalink: connector-api-first-steps-overview.html
 ---
 ### Introduction
 

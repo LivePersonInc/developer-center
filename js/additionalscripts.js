@@ -176,10 +176,10 @@ function populateAnchors () {
   var anchorlist = $('.anchorlist ul');
   //if there are no anchrolinks, hide the box
   if (anchorlinks.length == 0){
-    $('.anchorlist').css('display', 'none');
+    $('.anchorlist').css('visibility', 'hidden');
     //if there are anchorlinks, display the box
   }else {
-    $('.anchorlist').css('display', 'block');
+    $('.anchorlist').css('visibility', 'visible');
     //for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
     $.each(anchorlinks, function() {
       $(anchorlist).append('<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' +  $(this).text() + '</a></li>');

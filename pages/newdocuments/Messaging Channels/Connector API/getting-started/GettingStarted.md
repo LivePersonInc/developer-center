@@ -8,7 +8,7 @@ documentname: Connector API
 subfoldername: First Steps
 order: 2
 indicator: messaging
-permalink: connector-api-connector-api-getting-started.html
+permalink: connector-api-first-steps-getting-started.html
 ---
 
 ### Getting Started with the Connector API

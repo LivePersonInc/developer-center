@@ -515,12 +515,12 @@ table tbody td img {
 
 /* Sidebar Styling Ends */
 
-.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle {
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle, .language-css {
   display: flex;
   flex-direction: column;
 }
 
-.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before, .language-css:before {
   position: absolute;
   color: #a2a2a2;
   text-align: right;
@@ -539,6 +539,10 @@ table tbody td img {
 .language-swift:before{
   content: "SWIFT";
   margin-left: 5px;
+}
+
+.language-css:before {
+  content: "CSS";
 }
 
 .language-json:before{
@@ -630,6 +634,7 @@ table tbody td img {
   z-index: 99;
   position: -webkit-sticky;
   position: sticky;
+  visibility: hidden;
 }
 
 .anchorlist ul {
