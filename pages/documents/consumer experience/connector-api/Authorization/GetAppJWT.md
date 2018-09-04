@@ -29,7 +29,7 @@ An **AppJWT** can be obtained with the following HTTPS request:
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
 
 
 **Path Parameters**

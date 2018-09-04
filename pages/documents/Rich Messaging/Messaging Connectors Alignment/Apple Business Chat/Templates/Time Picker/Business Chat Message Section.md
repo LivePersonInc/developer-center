@@ -10,15 +10,15 @@ permalink: rich-messaging-connectors-abc-timepicker-businesschatmsg.html
 indicator: messaging
 ---
 
-Part of the Time Picker LiveEngage Structured Content metadata JSON
+Part of the Time Picker LiveEngage Structured Content metadata JSON.
 
 ### Fields
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of metadata. <br/> Must be 'BusinessChatMessage' | Enum | Y |  |
-| receivedMessage | Defines how the bubble layout displayed when message is received. | Object  | Y |  |
-| replyMessage | Defines how the bubble displayed when message is sent back by the consumer. | Object | N |  |
+| receivedMessage | Defines how the bubble layout will be displayed when a message is received. | Object  | Y |  |
+| replyMessage | Defines how the bubble will be displayed when a message is sent back by the consumer. | Object | N |  |
 
 
 ### Received and Reply messages
@@ -32,9 +32,9 @@ The Reply Message is the reply card presented to the consumer after selecting th
 | Style | Defines the size of the message. <br/>Can be set to icon, small or large. <br/>Defaults to icon. | String | N |  |
 | title | The title of the message | String | Y | 85 characters (30 is recommended by Apple) |
 | Subtitle | Subtitle to be displayed under title of the message | String | N | 400 characters (85 is recommended by Apple) |
-| imageURL | Image to be placed in the Time Picker received and reply message layout | String | N | JPG and PNG Only <br/>Up to 1.5Mb of total images size in the Time Picker |
-| secondarySubtitle | Title that is aligned right of the message | String | N |  |
-| tertiarySubtitle | Subtitle that is aligned right of the message | String | N |  |
+| imageURL | Image to be placed in the Time Picker received and reply message layout | String | N | JPG and PNG Only <br/>The image size in the Time Picker is limited to 0.5MB |
+| secondarySubtitle | Title that is aligned to the right of the message | String | N |  |
+| tertiarySubtitle | Subtitle that is aligned to the right of the message | String | N |  |
 
 
 ### Example

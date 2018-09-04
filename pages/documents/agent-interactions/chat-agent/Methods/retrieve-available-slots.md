@@ -18,7 +18,7 @@ The capacity (or number of slots) in the chat system is the total number of chat
 
  |Method|  URL |
   |:---|  :--- |
- |GET| https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/chat/availableSlots?v=1&NC=true |
+ |GET| https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/availableSlots?v=1&NC=true |
 
 **Request Headers**
 

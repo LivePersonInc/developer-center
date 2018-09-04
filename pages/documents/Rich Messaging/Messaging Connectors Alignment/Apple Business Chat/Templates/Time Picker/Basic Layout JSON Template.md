@@ -10,18 +10,16 @@ permalink: rich-messaging-connectors-abc-timepicker-layout.html
 indicator: messaging
 ---
 
-In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content JSON structure must be applied for any Time Picker template.
+In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content JSON structure must be applied to any Time Picker template.
 
 Each Time Picker template has the following mandatory sections:
 
-1. [Business Event](rich-messaging-connectors-abc-timepicker-businessevent.html) (part of the metadata JSON): defines the object as a time picker object for Apple Business Chat.<br/>
-It includes: timing and location properties
+1. [Business Event](rich-messaging-connectors-abc-timepicker-businessevent.html) (part of the metadata JSON): defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
 
-2. [Business Chat Message](rich-messaging-connectors-abc-timepicker-businesschatmsg.html) (part of the metadata JSON): defines the received and reply messages
+2. [Business Chat Message](rich-messaging-connectors-abc-timepicker-businesschatmsg.html) (part of the metadata JSON): defines the received and reply messages.
 
-3. [Time Picker Items](rich-messaging-connectors-abc-timepicker-item.html) (part of the JSON body): defines the dates available and the timeslots for selection.
+3. [Time Picker Items](rich-messaging-connectors-abc-timepicker-item.html) (part of the JSON body): defines the dates available and the time slots for selection as part of the Time Picker.
 
-<br/>
 The following JSON metadata and body structures are templates for any Time Picker object:
 
 ### Metadata JSON template
@@ -39,7 +37,7 @@ The following JSON metadata and body structures are templates for any Time Picke
       "lo": LONGITUDE,
       "radius": RADIUS
     },
-    "title": "TITLE OF THE CALANDER MEETING"
+    "title": "TITLE OF THE CALENDAR MEETING"
   },
   {
     "type": "BusinessChatMessage",
@@ -90,11 +88,11 @@ The following JSON metadata and body structures are templates for any Time Picke
     {
       "type": "horizontal",
       "elements": [
-        ///LIST OF AVAILABLE TIMESLOTS FOR ITEM #1
+        ///LIST OF AVAILABLE TIME SLOTS FOR ITEM #1
         {
-          ///TIMESLOT #1
+          ///TIME SLOT #1
           "type": "button",
-          "title": "THIS IS THE TIMESLOT HOUR",
+          "title": "THIS IS THE TIME SLOT HOUR",
           "click": {
             "metadata": [
               {
@@ -105,7 +103,7 @@ The following JSON metadata and body structures are templates for any Time Picke
                 "type": "BusinessEvent",
                 "timing": {
                   "startTime": "DATE OBJECT",
-                  "duration": DURATION OF THE TIMESLOT IN SECONDS
+                  "duration": DURATION OF THE TIME SLOT IN SECONDS
                 }
               }
             ],
@@ -116,12 +114,12 @@ The following JSON metadata and body structures are templates for any Time Picke
               }
             ]
           }
-        }///END OF TIMESLOT #1,
+        }///END OF TIME SLOT #1,
         {
-          ///TIMESLOT #2
+          ///TIME SLOT #2
         },
         {
-          ///TIMESLOT #3
+          ///TIME SLOT #3
         },
           ///ETC
       ]

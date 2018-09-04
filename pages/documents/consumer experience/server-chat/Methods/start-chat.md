@@ -23,7 +23,7 @@ _For Visitor Authentication flow please collect necessary parameters from the [f
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/chat/request?v=1&NC=true |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/request?v=1&NC=true |
 
 **Formats**
 
@@ -90,7 +90,7 @@ Request Body Example
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/conversation.json?v=1&NC=true |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/conversation.json?v=1&NC=true |
 
 **Formats**
 

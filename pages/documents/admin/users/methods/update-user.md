@@ -25,7 +25,7 @@ https://API_REQUEST?v=4.0
 
  |Method    |  URL  |
  |:-------- | :--- |
- |PUT|  https://{domain}/api/account/{accountId}/configuration/le-users/users/{userId}  |
+ |PUT|  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users/{userId}  |
 
 **Request Headers**
 

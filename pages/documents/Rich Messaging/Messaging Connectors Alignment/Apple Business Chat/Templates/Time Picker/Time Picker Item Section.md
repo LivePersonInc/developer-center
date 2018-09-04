@@ -10,11 +10,11 @@ permalink: rich-messaging-connectors-abc-timepicker-item.html
 indicator: messaging
 ---
 
-Part of the Time Picker LiveEngage Structured Content body JSON, enabling an agent to generate an array of timeslots for the consumer’s options.
+Part of the Time Picker LiveEngage Structured Content body JSON, enabling an agent to generate an array of time slots for the consumer’s options.
 
-The Time Picker item elements consists of a title element and a row of available timeslots per specific date to choose from.
+The Time Picker item elements consists of a title element and a row of available time slots per specific date to choose from.
 
-They are based in the basic [Rich Message elements](rich-messaging-getting-started.html) with some limitations.
+They are based on the basic [Rich Message elements](rich-messaging-getting-started.html) with some limitations.
 
 The following section describes those elements and their specific configuration fields.  
 
@@ -42,19 +42,19 @@ Based on [Rich Messaging Text](rich-messaging-basic-elements-text.html) element 
 | type | Type of the element. <br/>Must be “text” | string | Y |  |
 | text | Must be “datePicker” | String | Y |  |
 
-_* Text section should no use style element_
+**Note: The text section should not use style element**
 
 
-#### Timeslot Element Fields
+#### Time slot Element Fields
 
 Based on [Rich Messaging Button](rich-messaging-basic-elements-button.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of the element. <br/>Must be “button” | string | Y |  |
-| title | The hour of the timeslot. <br/>It only affects non-Apple Business Chat rendering clients. | String | Y |  |
+| title | The hour of the time slot. <br/>Only affects non-Apple Business Chat rendering clients. | String | Y |  |
 
-_* Button section should no use style element_
+**Note: The button section should not use style element**
 
 <br/>
 Time Picker button has additional [Click Metadata](rich-messaging-click-ops.html) parameters that are specific to Apple Business Chat:
@@ -62,7 +62,7 @@ Time Picker button has additional [Click Metadata](rich-messaging-click-ops.html
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of the element. <br/>Must be “BusinessEvent” | string | Y |  |
-| timing | An object describing the start time and the duration of the timeslot | Object | Y |  |
+| timing | An object describing the start time and the duration of the time slot | Object | Y |  |
 
 
 **Timing Object Fields**
@@ -70,7 +70,7 @@ Time Picker button has additional [Click Metadata](rich-messaging-click-ops.html
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | startTime | A UTC date string, represented by a valid date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2018-05-26T08:27:55+00:00, 2018-05-26T08:27:55+0000, or 2018-05-26T08:27:55Z | string | Y |  |
-| Duration | An integer representing the duration of the timeslot, in seconds | integer | Y |  |
+| Duration | An integer representing the duration of the time slot, in seconds | integer | Y |  |
 
 
 ### Example
@@ -108,5 +108,6 @@ Time Picker button has additional [Click Metadata](rich-messaging-click-ops.html
         ]
       }
     }
-  }
+  ]
+}
 ```

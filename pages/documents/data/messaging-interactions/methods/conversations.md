@@ -15,7 +15,7 @@ This method retrieves a list of conversations with all their metadata and relate
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST   | https://{domain}/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
+POST   | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/search?offset=0&limit=50
 
 **URL Parameters**
 
@@ -348,6 +348,7 @@ userTypeName   | The name of the user type,can be one of the following: System, 
 agentGroupId   | Agent's group ID.                                                  | long       |
 agentGroupName | The agent's group name.                                            | string     |
 permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"
+contextData    | Contains context information about the transfer, including raw and structured metadata.| container| |
 
 _Consumer Participant info_
 
@@ -641,7 +642,32 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "agentGroupId": -1,
           "time": "2016-08-29 15:14:05.005+0000",
           "timeL": 1472483645005,
-          "permission": "ASSIGNED_AGENT"
+          "permission": "ASSIGNED_AGENT",
+          "contextData": {
+            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent        identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation   identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some    reason\",\"reasonId\":\"some reason Id\"}]",
+            "structuredMetadata": [
+              {
+                "botResponse": {
+                  "externalConversationId": "conversation identifier",
+                  "businessCases": [
+                    "business case name"
+                  ],
+                  "intents": [
+                    {
+                      "id": "some intent identifier",
+                      "confidence": "MEDIUM",
+                      "confidenceScore": 0.753
+                    }
+                  ]
+                }
+              },
+              {
+                "actionReason": {
+                  "reason": "some reason"
+                }
+              }
+            ]
+          }
         }
       ],
       "consumerParticipant": [

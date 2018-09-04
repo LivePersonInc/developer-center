@@ -17,7 +17,7 @@ Returns the visitor's name that was set by the visitor. The default is "you".
 
 | Method | URL |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/chat/{chatId}/info/visitorName?v=1&NC=true |
+| GET | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/info/visitorName?v=1&NC=true |
 
 **Formats**
 

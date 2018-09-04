@@ -15,7 +15,7 @@ indicator: both
 
 | Method | URL |
 | :--- | :--- |
-| POST |  https://{domain}/api/account/{accountId}/login?v=1.3 |
+| POST |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/login?v=1.3 |
 
 **Query Parameters**
 

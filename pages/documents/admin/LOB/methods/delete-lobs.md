@@ -19,7 +19,7 @@ This API deletes LoBs from a specific account.
 
  |Method    |  URL    |     
  |:-------- |  :--------- |
- |DELETE   |   https://{domain}/api/account/{accountId}/configuration/le-users/lobs |
+ |DELETE   |   https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/lobs |
 
 **Request Headers**
 

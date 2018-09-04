@@ -11,6 +11,8 @@ permalink: rich-messaging-connectors-abc-listpicker-body.html
 indicator: messaging
 ---
 
+The List Picker Body JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html#body-json-template).
+
 ### List Picker Body JSON Fields
 
 | Property Name | Description | Type | Required | Size Limit |
@@ -19,9 +21,7 @@ indicator: messaging
 | tag | Must be “list” | String | Y |  |
 | elements | List of Time Picker elements  | Elements | Y |  |
 
-The List Picker Body JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html#body-json-template).
-
-View the [List Picker Header](rich-messaging-connectors-abc-listpicker-body-header.html) and [List Picker Item](rich-messaging-connectors-abc-listpicker-body-item.html) sections for details how to construct the List Picker Body JSON.
+View the [List Picker Header](rich-messaging-connectors-abc-listpicker-body-header.html) and [List Picker Item](rich-messaging-connectors-abc-listpicker-body-item.html) sections for details on how to construct the List Picker Body JSON.
 
 ### List Picker Body JSON Example
 

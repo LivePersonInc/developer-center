@@ -18,7 +18,7 @@ This method returns the number of incoming chat requests assigned to the logged 
 
 | Method | URL                                                                                                 |
 |--------|-----------------------------------------------------------------------------------------------------|
-| GET    | https://{domain}/api/account/{accountId}/agentSession/{agentSessionId}/incomingRequests?v=1&NC=true |
+| GET    | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/incomingRequests?v=1&NC=true |
 
 **Request Headers**
 

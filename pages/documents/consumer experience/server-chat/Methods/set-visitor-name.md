@@ -11,7 +11,7 @@ Sets the visitor's name. The default is "you".
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/chat/{chatId}/info/visitorName?v=1&NC=true |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/info/visitorName?v=1&NC=true |
 
 *Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.*
 

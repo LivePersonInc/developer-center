@@ -19,7 +19,7 @@ This API creates a list of LoBs for a specific account.
 
 | Method |  URL  |
 | :--------  | :----- |
- |POST  |      https://{domain}/api/account/{accountId}/configuration/le-users/lobs |
+ |POST  |      https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/lobs |
 
 **Request Headers**
 
