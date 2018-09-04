@@ -31,7 +31,7 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 * [Agent Widgets](agent-workspace-widget-sdk-overview.html): Build or integrate widgets such as CRM integration, KB or AI tools in the Agent Workspace
 
-### Major Platform Capabilities
+### Essential Resources
 
 * [Engagement Attributes](major-platform-components-getting-started-with-engagement-attributes.html) - report on and pass consumer data to other APIs and integrations
 
