@@ -11,6 +11,7 @@ indicator: both
 ---
 
 You can send images by sharing a URL. Supported formats are JPG and PNG.
+Images are not stored within LiveEngage and therefore there is no file size limit when using images within a Structured Content image element.
 
 ### Fields
 
