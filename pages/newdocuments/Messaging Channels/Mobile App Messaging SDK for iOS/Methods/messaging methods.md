@@ -311,7 +311,6 @@ Register to LPMessagingSDK push notifications with the following code in AppDele
 In order to register for push notifications before showing the conversation view the SDK must have been initialized with an account number. This only works for authenticated users. After calling logout and before calling any other SDK methods it is strongly recommended that you call initialize again. (see <a href="/consumer-experience-ios-sdk-messaging-methods.html#initialize">initialized</a>.
 </div>
 
-
 ### getUnreadMessagesCount
 
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
