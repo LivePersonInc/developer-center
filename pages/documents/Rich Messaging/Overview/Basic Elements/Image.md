@@ -10,8 +10,7 @@ permalink: rich-messaging-basic-elements-image.html
 indicator: both
 ---
 
-You can send images by sharing a URL. Supported formats are JPG and PNG.
-Images are not stored within LiveEngage and therefore there is no file size limit when using images within a Structured Content image element.
+You can send images by sharing a URL. Supported formats are JPG and PNG. Since, in this case, images are not stored on LivePerson servers, there is no file size limit when using images within a Structured Content image element.
 
 ### Fields
 
