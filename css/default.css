@@ -628,6 +628,8 @@ table tbody td img {
   align-self: flex-end;
   width: 20%;
   z-index: 99;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .anchorlist ul {
@@ -670,6 +672,10 @@ table tbody td img {
 a.anchoritem {
   width: 100%;
   word-break: break-word;
+}
+
+.anchordown {
+  top: auto !important;
 }
 
 .sidebarbutton {

@@ -52,7 +52,7 @@ function navigateContent(url) {
       populateAnchors ();
       codeButtons();
       //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
-      $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+      $('#anchorlist').scrollToFixed({ dontSetWidth: false });
       //call smoothscrolling on all anchors
       var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
