@@ -1,5 +1,5 @@
 ---
-title: Basic Layout Body > Header Section
+title: "Basic Layout Body - Header Section"
 Keywords:
 level1: Documents
 level2: Rich Messaging
@@ -41,7 +41,6 @@ Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) elem
 }
 ```
 
-
 ### List Picker Header Subtitle
 
 #### Fields
@@ -53,8 +52,7 @@ Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) elem
 | type | Type of element. <br/> Must be ‘text’ | Enum | Y |  |
 | tag | Must be “subtitle” | String | Y |  |
 
-_* subtitle section should not use style element_
-
+**Note: the subtitle section should not use style element**
 
 #### Example
 

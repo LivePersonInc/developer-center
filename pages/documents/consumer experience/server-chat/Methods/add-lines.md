@@ -18,7 +18,7 @@ The URI of the event that was added is returned in the Location header.
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/chat/{chatId}/events?v=1&NC=true |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/events?v=1&NC=true |
 
 **Formats**
 

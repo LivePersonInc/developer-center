@@ -22,7 +22,7 @@ By consumerId - deletion of personal data that is related to a specific consumer
 
  |Method|      URL|  
  |:--------  |:---  |
- |POST|  https://{domain}/api/account/{site_id}/personal-data-deletion |
+ |POST|  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{site_id}/personal-data-deletion |
 
 **Request Headers**
 

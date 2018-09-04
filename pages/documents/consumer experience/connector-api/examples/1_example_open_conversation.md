@@ -30,7 +30,7 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Request Headers**
 

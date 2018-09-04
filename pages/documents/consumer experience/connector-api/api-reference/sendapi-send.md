@@ -24,7 +24,7 @@ The SEND method allows you to send a JSON payload to LiveEngage. This method is 
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation/send?v=3 |
 
 **Path Parameters**
 

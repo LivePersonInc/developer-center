@@ -41,7 +41,7 @@ See below a few examples of how to do so.
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Request Headers**
 
@@ -99,7 +99,7 @@ See below a few examples of how to do so.
 
 | Method | URL  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountid}/messaging/consumer/conversation?v=3 |
+| POST | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
 **Example Request Body - JSON Payload**
 

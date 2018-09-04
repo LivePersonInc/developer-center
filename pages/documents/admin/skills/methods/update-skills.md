@@ -19,7 +19,7 @@ This API updates a list of skills for a specific account.
 
  |Method | URL |
  |:--- | :--- |
- |PUT | https://{domain}/api/account/{accountId}/configuration/le-users/skills |
+ |PUT | https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/skills |
 
 **Request Headers**
 

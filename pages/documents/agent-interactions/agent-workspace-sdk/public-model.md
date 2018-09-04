@@ -404,6 +404,7 @@ Structure example:
 | accountName      | The name of the company or account                    | string |
 | balance          | The current balance of the customer                   | string |
 | companySize      | The number of employees                               | number |
+| companyBranch    | The company's branch                                  | string |
 | customerId       | The customer ID                                       | string |
 | imei             | Unique phone identifier                               | string |
 | lastPaymentDate  | The customer's last payment date                      | string |
@@ -421,6 +422,7 @@ Structure example:
     accountName: '',
     balance: '',
     companySize: 1,
+    companyBranch: '',
     customerId: '',
     imei: '',
     lastPaymentDate: '',
@@ -437,18 +439,13 @@ Structure example:
 
 | Property         | Description                                           | Type   |
 |------------------|-------------------------------------------------------|--------|
-| accountName      | The name of the company or account                    | string |
-| balance          | The current balance of the customer                   | string |
-| companySize      | The number of employees                               | number |
-| customerId       | The customer ID                                       | string |
-| imei             | Unique phone identifier                               | string |
-| lastPaymentDate  | The customer's last payment date                      | string |
-| registrationDate | The customer's registration date                      | string |
-| role             | Role title of the consumer in his brand               | string |
-| socialId         | The social ID of your choice: Facebook, Twitter, etc. | string |
-| status           | Customer status                                       | string |
-| type             | Customer type                                         | string |
-| userName         | Nickname or username of the consumer                  | string |
+| age              | The age of the customer                               | number |
+| birthday         | The customer's date of birth                          | string |
+| company          | The compamy the customer belongs to                   | string |
+| contactInfo      | The contact info of the customer                      | array  |
+| gender           | The gender of the customer                            | string |
+| language         | The language the customer speaks                      | string |
+| name             | The name of the customer                              | string |
 
 Structure example:
 
@@ -459,6 +456,7 @@ Structure example:
     company: '',
     contactInfo: [],
     gender: '',
+    language: '',
     name: ''
 }
 ```
@@ -519,23 +517,26 @@ Structure example:
 
 ### SDE.transaction
 
-| Property | Description                        | Type   |
-|----------|------------------------------------|--------|
-| total    | The total value of the transaction | string |
-| orderId  | The order ID                       | number |
-| cart     | A shopping cart object             | object |
+| Property | Description                                     | Type   |
+|----------|-------------------------------------------------|--------|
+| total    | The total value of the transaction              | string |
+| orderId  | The order ID                                    | string |
+| products | Array of products, as in the viewedProducts SDE | array  |
+| numItems | The number of items in the purchase             | number | 
 
 Structure example:
 
 ```javascript
 {
     total: '',
-    orderId: 1
-    cart: {}
+    orderId: '',
+    products: [],
+    numItems: 1
 }
 ```
+**Note: There's currently a known issue with numItems. This key currently displays as null regardless of the number you pass it.**
 
-### SDE.shoppingCart, SDE.transaction.[].cart
+### SDE.shoppingCart
 
 | Property  | Description                                     | Type   |
 |-----------|-------------------------------------------------|--------|
@@ -574,6 +575,7 @@ Structure example:
     quantity: 1
 }
 ```
+**Note: SDE.viewedProducts does not contain the quantity field**
 
 ### SDE.serviceActivity
 
@@ -600,24 +602,53 @@ Structure example:
 | Property       | Description                                      | Type    |
 |----------------|--------------------------------------------------|---------|
 | contextId      | The context ID                                   | string  |
+| contextIdTooltip| (deprecated)                                   | string  |
 | message        | The error message                                | string  |
-| messageTooltip | The error message tooltip (for display purposes) | string  |
+| messageTooltip | The error message tooltip (for display purposes)(deprecated) | string  |
 | code           | The error code                                   | string  |
-| codeTooltip    | The error code tooltip (for display purposes)    | string  |
-| level          | The error level                                  | string  |
+| codeTooltip    | The error code tooltip (for display purposes)(deprecated)   | string  |
+| level          | The error level                                  | number  |
+| levelTooltip          | (deprecated)                                  | number  |
 | resolved       | Is the error resolved                            | Boolean |
+| resolvedTooltip| (deprecated)                            | string |
 
 Structure example:
 
 ```javascript
 {
     contextId: '',
+    contextIdTooltip: '',
     message: '',
     messageTooltip: '',
     code: '',
     codeTooltip: '',
-    level: '',
-    resolved: true
+    level: 1,
+    levelTooltip: '',
+    resolved: true,
+    resolvedTooltip: ''
+}
+```
+
+### SDE.searchContent
+
+| Property       | Description                                      | Type    |
+|----------------|--------------------------------------------------|---------|
+| keywords       | The search keywords                              | array   |
+
+### SDE.searchContent.keywords
+
+| Property | Description                      | Type   |
+|----------|----------------------------------|--------|
+| value    | The searched query value         | string |
+
+Structure example:
+
+```javascript
+{
+    keywords: [
+        { value: 'Hello world!' },
+        { value: 'Hello again!' }
+    ]
 }
 ```
 

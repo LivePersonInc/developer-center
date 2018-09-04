@@ -1,5 +1,5 @@
 ---
-title: Basic Layout Body > Item Section
+title: "Basic Layout Body - Item Section"
 Keywords:
 level1: Documents
 level2: Rich Messaging
@@ -37,11 +37,11 @@ Based on the [Rich Messaging Image](rich-messaging-basic-elements-image.html) el
 | type | Type of element. <br/> Must be 'image' | Enum | Y |  |
 | uri | Image URL. <br/> Must be whitelisted by a LivePerson representative | String | Y |  |
 
-_* Image section should not use style element_
+**Note: The image section should not use style element**
 
 #### Title Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
@@ -51,25 +51,25 @@ Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) ele
 
 #### Subtitle Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of element. <br/> Must be 'text' | Enum | Y |  |
 | Tag | Must be “subtitle” | String | Y |  |
 
-_* Subtitle section should not use style element_
+**Note: The subtitle section should not use style element**
 
 #### Button Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-button.html) element with the following restrictions:
+Based on the [Rich Messaging Button](rich-messaging-basic-elements-button.html) element with the following restrictions:
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of element. <br/> Must be 'button' | Enum | Y |  |
 | click | Click operation must use “publishText” type only  | Enum | Y |  |
 
-_* Button section should not use style element_
+**Note: The button section should not use style element**
 
 
 ### List Picker Item JSON Example

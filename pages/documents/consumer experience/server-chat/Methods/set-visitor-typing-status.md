@@ -17,7 +17,7 @@ Sets the visitor's typing status.
 
 | Method | URL |
 | :--- |  :--- |
-| PUT |  https://{domain}/api/account/{accountId}/chat/{chatId}/info/visitorTyping?v=1&NC=true |
+| PUT |  https://[{domain}](https://developers.liveperson.com/agent-domain-domain-api.html)/api/account/{accountId}/chat/{chatId}/info/visitorTyping?v=1&NC=true |
 
 *Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.*
 

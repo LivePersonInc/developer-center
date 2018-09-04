@@ -10,7 +10,7 @@ permalink: rich-messaging-connectors-abc-timepicker-businessevent.html
 indicator: messaging
 ---
 
-Part of the Time Picker LiveEngage Structured Content metadata JSON
+Part of the Time Picker LiveEngage Structured Content metadata JSON. Defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
 
 ### Fields
 
@@ -18,7 +18,7 @@ Part of the Time Picker LiveEngage Structured Content metadata JSON
 | :--- | :--- | :--- | :--- | :--- |
 | type | Type of metadata. <br/> Must be 'BusinessEvent' | Enum | Y |  |
 | Timing | Defines the GMT time offset configuration | Object  | N |  |
-| location | Enabling the brand to add a describer to the appointment location, allowing the consumer to immediately see the location once appointment is saved in the calendar | Object | N |  |
+| location | Enables the brand to add a descriptor to the appointment location, allowing the consumer to immediately see the location once appointment is saved in the calendar | Object | N |  |
 | title | Title of the calendar meeting | String | Y |  |
 
 
@@ -26,7 +26,7 @@ Part of the Time Picker LiveEngage Structured Content metadata JSON
 
 | Property Name | Description | Type | Required | Size Limit |
 | :--- | :--- | :--- | :--- | :--- |
-| presentedTimezoneOffset | Time zone offset configuration. Represent the number of minutes from GMT, while specifying the timezone of the event’s location. <br/>If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location | Enum | N |  |
+| presentedTimezoneOffset | Time zone offset configuration. Represents the number of minutes from GMT, while specifying the timezone of the event’s location. <br/>If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location | Enum | N |  |
 
 
 #### Location Object Fields

@@ -10,7 +10,7 @@ permalink: rich-messaging-connectors-abc-listpicker-layout.html
 indicator: messaging
 ---
 
-In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content JSON structure must be applied for any List Picker template.
+In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content JSON schema must be applied to any List Picker template.
 
 Each List Picker template has the following mandatory sections:
 
@@ -61,7 +61,7 @@ The following JSON metadata and body structures are templates for any List Picke
       "type": "vertical",
       "elements": [
         {
-          ///START TITLE OFS ECTION HEADER
+          ///START TITLE OF SECTION HEADER
 		  "type": "text",
           "text": "HEADER TITLE TEXT",
           "Tag": "title",
@@ -89,7 +89,7 @@ The following JSON metadata and body structures are templates for any List Picke
               "tooltip": "IMAGE TOOLTIP"
             },
             {
-              ///LIST ITEM TITLE, SUBTITLE and BUTTON ACTION.
+              ///LIST ITEM TITLE, SUBTITLE AND BUTTON ACTION.
               ///WILL ALWAYS BE IN A VERTICAL LAYOUT
               "type": "vertical",
               "elements": [

@@ -9,7 +9,7 @@ indicator: messaging
 permalink: webhooks-configuration.html
 ---
 
-### WebHooks Capabilities Configuration
+### Webhooks Capabilities Configuration
 
 A registration of an application to receive Webhooks (WH) notifications is achieved by enabling the “webhooks” capability of that application. This is done by adding the “webhooks” json attribute inside the “capabilities” section of the [**App Installation JSON**](app-install-manifest-connectors.html){:target="_blank"}.
 
