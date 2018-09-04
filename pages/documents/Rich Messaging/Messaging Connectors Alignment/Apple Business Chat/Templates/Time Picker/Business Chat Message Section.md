@@ -32,7 +32,7 @@ The Reply Message is the reply card presented to the consumer after selecting th
 | Style | Defines the size of the message. <br/>Can be set to icon, small or large. <br/>Defaults to icon. | String | N |  |
 | title | The title of the message | String | Y | 85 characters (30 is recommended by Apple) |
 | Subtitle | Subtitle to be displayed under title of the message | String | N | 400 characters (85 is recommended by Apple) |
-| imageURL | Image to be placed in the Time Picker received and reply message layout | String | N | JPG and PNG Only <br/>Up to 0.5Mb of total images size in the Time Picker |
+| imageURL | Image to be placed in the Time Picker received and reply message layout | String | N | JPG and PNG Only <br/>Up to 1.5Mb of total images size in the Time Picker |
 | secondarySubtitle | Title that is aligned right of the message | String | N |  |
 | tertiarySubtitle | Subtitle that is aligned right of the message | String | N |  |
 
