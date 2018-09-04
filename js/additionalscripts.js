@@ -82,12 +82,9 @@ function codeButtons () {
   // get all <code> elements.
   var allCodeBlocksElements = $('div[class^="language-"]');
   allCodeBlocksElements.each(function(i) {
-   	// add different id for each code block.
-
 	// add a sequentially increasing id to each code block.
   var currentId = "codeblock" + (i + 1);
   $(this).attr('id', currentId);
-
   //define and then add a clipboard button to all code blocks.
   var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
      $(this).append(clipButton);
