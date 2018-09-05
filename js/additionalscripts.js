@@ -1,10 +1,11 @@
 $(document).ready(function () {
+  var url = window.location.href;
   //add anchor links to all h3 titles. See respective functions below for what they do.
-  sidebarClick();
-  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
-    sidebarCollapse ();
-  }
   anchors.add('h3');
+  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
+    sidebarCollapse (url);
+  }
+  sidebarClick();
   populateAnchors ();
   menuDrop ();
   codeButtons();
@@ -52,7 +53,7 @@ function navigateContent(url) {
       $(document).prop('title', $title);
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
-      sidebarCollapse ();
+      sidebarCollapse (url);
       anchors.add('h3');
       populateAnchors ();
       codeButtons();
@@ -73,8 +74,6 @@ function navigateContent(url) {
       if (selected.parent().hasClass('pageitem')) {
         $('.innerpageitem').removeClass("activeitem");
       }
-      $(".folder > a").removeClass("active");
-      $(".activepage").parent().parent().parent().addClass("active");
       //jump to top when page loads
       window.scrollTo(0,0);
   });
@@ -121,33 +120,6 @@ $(window).on('popstate', (e) => {
     navigateContent(state.url);
   }
 });
-
-//a function to creaste the animation when you click the "solutions" button
-function solutionsbuttonclick(event) {
-  event.preventDefault();
-  //show/hide the appropriate sidebar when clicking on the button
-  var documentsSideBar = $('.documentslist');
-  var solutionsSideBar = $('.solutionslist');
-  documentsSideBar.fadeOut(200, function () {
-    solutionsSideBar.fadeIn(200);
-  });
-  //show/hide the underline on the appropriate sidebar when clicking on the button
-  $('.documentsbutton').removeClass('lined');
-  $('.solutionsbutton').addClass('lined');
-};
-
-//a function to creaste the animation when you click the "documents" button
-function sidebarbuttonclick(event) {
-  event.preventDefault();
-  //same as above, just the other button
-  var documentsSideBar = $('.documentslist');
-  var solutionsSideBar = $('.solutionslist');
-  solutionsSideBar.fadeOut(200, function () {
-    documentsSideBar.fadeIn(200);
-  });
-  $('.solutionsbutton').removeClass('lined');
-  $('.documentsbutton').addClass('lined');
-};
 
 
 //a simple dropdown behavior for the anchorlinks box
@@ -209,9 +181,8 @@ function mobileHamburger (){
 }
 
 
-function sidebarCollapse () {
-  var originalURL = window.location.href;
-  var modifiedURL = '/' + originalURL.split('/').reverse()[0];
+function sidebarCollapse (url) {
+  var modifiedURL = '/' + url.split('/').reverse()[0];
   var currentPage = $('a[href="'+modifiedURL+'"]');
   //make sure no other links are set to active
   $('a').removeClass("activepage");
@@ -237,6 +208,15 @@ function sidebarCollapse () {
     $(".activepage").parent().prev().data("expanded","true");
     $("ul#mysidebar").css("visibility","visible");
     $(".innerfolder > .active > button").addClass("clicked");
+    $(".homeitem").removeClass("active");
+    $(".homeitem > a").data("expanded", "false");
+    $(".post-content a").click(function (){
+      $(".sidebarbutton").removeClass("clicked");
+      $(".topfolder > a").next().slideUp(400);
+      $(".topfolder > a").data("expanded", "false");
+      $(".homeitem > a").removeClass("active");
+      $(".topfolder > a").removeClass("active");
+    });
     };
   };
 
@@ -271,7 +251,7 @@ $(".innerfolder > a").click(function(event){
         $(this).data("expanded","false");
         $(this).removeClass("active");
         $(this).parent().removeClass("active");
-        $(button).removeClass("clicked", );
+        $(button).removeClass("clicked");
     } else {
         $(this).next().slideDown(400);
         $(this).data("expanded","true");
