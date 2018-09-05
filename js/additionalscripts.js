@@ -1,5 +1,9 @@
 $(document).ready(function () {
   //add anchor links to all h3 titles. See respective functions below for what they do.
+  sidebarClick();
+  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
+    sidebarCollapse ();
+  }
   anchors.add('h3');
   populateAnchors ();
   menuDrop ();
@@ -48,6 +52,7 @@ function navigateContent(url) {
       $(document).prop('title', $title);
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
+      sidebarCollapse ();
       anchors.add('h3');
       populateAnchors ();
       codeButtons();
@@ -57,9 +62,7 @@ function navigateContent(url) {
       var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
       var selected = $('a[href="'+url+'"]');
-      //make sure no other links are set to active
-      $('a').removeClass("activepage");
-      //make the string we found previously active
+      //make the string we found previously is active
       $('.folder').removeClass("active");
       selected = selected.addClass("activepage");
       //just some code to make sure sidebar styling works well.
@@ -70,7 +73,9 @@ function navigateContent(url) {
       if (selected.parent().hasClass('pageitem')) {
         $('.innerpageitem').removeClass("activeitem");
       }
+      $(".folder > a").removeClass("active");
       $(".activepage").parent().parent().parent().addClass("active");
+      //jump to top when page loads
       window.scrollTo(0,0);
   });
 }
@@ -202,3 +207,79 @@ function mobileHamburger (){
   }
  });
 }
+
+
+function sidebarCollapse () {
+  var originalURL = window.location.href;
+  var modifiedURL = '/' + originalURL.split('/').reverse()[0];
+  var currentPage = $('a[href="'+modifiedURL+'"]');
+  //make sure no other links are set to active
+  $('a').removeClass("activepage");
+  currentPage = currentPage.addClass("activepage");
+  var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
+  var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
+  if (toOpen || toOpenHigher) {
+    $(".activepage").parent().parent().show();
+    $(".activepage").parent().parent().parent().show();
+    $(".activepage").parent().parent().parent().parent().show();
+    $(".activepage").parent().parent().parent().parent().parent().show();
+    $(".activepage").parent().parent().parent().parent().parent().parent().show();
+    $(".activepage").parent().show();
+    $(".activepage").parent().parent().prev().data("expanded","true");
+    $(".activepage").parent().parent().parent().parent().prev().data("expanded","true");
+    $(".activepage").parent().parent().parent().parent().parent().parent().prev().data("expanded","true");
+    if ($(".activepage").parent().hasClass("innerpageitem")) {
+      $(".activepage").parent().addClass("activeitem");
+    }
+    $(".activepage").parent().parent().prev().addClass("active");
+    $(".activepage").parent().parent().parent().parent().prev().addClass("active");
+    $(".activepage").parent().parent().parent().parent().parent().parent().prev().addClass("active");
+    $(".activepage").parent().prev().data("expanded","true");
+    $("ul#mysidebar").css("visibility","visible");
+    $(".innerfolder > .active > button").addClass("clicked");
+    };
+  };
+
+function sidebarClick () {
+$(".topfolder > a").click(function(){
+    var hasExpanded = $(this).data("expanded") == "true";
+    if (hasExpanded) {
+        $(this).next().slideUp(400);
+        $(this).data("expanded","false");
+        $(this).removeClass("active");
+        $(this).parent().removeClass("active");
+        $(".innerfolder > .active > button").removeClass("clicked");
+    } else {
+        $(".innerfolder > .active > button").removeClass("clicked");
+        $(".folder ul").slideUp(400,null);
+        $(".folder > a").data("expanded","false");
+        $(this).next().slideDown(400);
+        $(this).data("expanded","true");
+        $(".folder > a").removeClass("active");
+        $(this).addClass("active");
+    }
+
+    return false;
+});
+
+$(".innerfolder > a").click(function(event){
+    event.preventDefault();
+    var hasExpanded = $(this).data("expanded") == "true";
+    var button = $(this).find("button");
+    if (hasExpanded) {
+        $(this).next().slideUp(400);
+        $(this).data("expanded","false");
+        $(this).removeClass("active");
+        $(this).parent().removeClass("active");
+        $(button).removeClass("clicked", );
+    } else {
+        $(this).next().slideDown(400);
+        $(this).data("expanded","true");
+        $(this).addClass("active");
+        $(button).addClass("clicked");
+    }
+    return false;
+});
+};
+
+$('#mysidebar').height($(".nav").height());
