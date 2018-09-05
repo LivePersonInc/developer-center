@@ -1,16 +1,13 @@
-output: web
-# this property is useful for conditional filtering of content that is separate from the PDF.
-
-topnav_title: LivePerson APIs
+topnav_title: LivePerson Developers
 # this appears on the top navigation bar next to the home button
 
-site_title: LivePerson APIs
+site_title: LivePerson Developers
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: LivePerson
 # this appears in the footer
 
-disqus_shortname: idrbwjekyll
+disqus_shortname:
 # if you're using disqus for comments, add the shortname here. if not, leave this value blank.
 
 host: 127.0.0.1
@@ -20,39 +17,30 @@ port: 4000
 # the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
 
 google_analytics: UA-96175782-1
-#baseurl: /liveperson
 
-# This tells the onclick module which attribute to add to links
+
 extlinks:
-  attributes: {target: _blank}
+  attributes: {target: _blank, onclick: "linkclick(event, this)"}
+# This tells the extlinks plugin which attribute to add to links
 
-gems:
+plugins:
   - algoliasearch-jekyll
+  - jekyll-redirect-from
+
 
 algolia:
   application_id: "1ITT6KY19C"
   index_name: "dev_BASE"
+#values for the Algolia plugin
+
 
 github: [metadata]
+#needed so that Github APIs don't throw a fit
 
 exclude:
   - .idea/
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
-
-feedback_subject_line: LivePerson APIs
-
-feedback_email: edenk@liveperson.com
-# used as a contact email for the Feedback link in the top navigation bar
-
-feedback_disable: true
-# if you uncomment the previous line, the Feedback link gets removed
-
-# feedback_text: "Need help?"
-# if you uncomment the previous line, it changes the Feedback text
-
-# feedback_link: "http://helpy.io/"
-# if you uncomment the previous line, it changes where the feedback link points to
 
 highlighter: rouge
 # library used for syntax highlighting
@@ -77,15 +65,17 @@ defaults:
       comments: true
       search: true
 
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+description: "LivePerson Developera is the main repository for documentation of LivePerson APIs and SDKs."
 # the description is used in the feed.xml file
 
-# needed for sitemap.xml file only
-url: https://developers.liveperson.com
 
-#footer links
+url: https://developers.liveperson.com
+# needed for sitemap.xml file only
+
+
 Copyright: "https://www.liveperson.com/policies/copyright"
 Disclaimer: "https://www.liveperson.com/policies/disclaimer"
 TermsofUse: "https://www.liveperson.com/policies/terms-of-use"
 APITermsofUse: "https://www.liveperson.com/policies/apitou"
 PrivacyPolicy: "https://www.liveperson.com/policies/privacy"
+#footer links

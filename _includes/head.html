@@ -3,51 +3,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">-->
 <!--<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">-->
-{% if (level3 != null) %}
-<title>{{ page.level3 }} - {{ page.title }} | {{ site.site_title }}</title>
+{% if (page.documentname != null) %}
+<title>{{ page.documentname }} - {{ page.pagename }} | {{ site.site_title }}</title>
 {% else %}
-<title> {{ page.title }} | {{ site.site_title }}</title>
+<title> {{ page.pagename }} | {{ site.site_title }}</title>
 {% endif %}
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ "css/default.min.css" }}">
+<link rel="stylesheet" href="{{ "css/404.css" }}">
+<link rel="stylesheet" href="{{ "css/hamburgers.css"}}">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
 <link rel="stylesheet" href="{{ "css/modern-business.css" }}">
-<link rel="stylesheet" href="{{ "css/lavish-bootstrap.css" }}">
-<link rel="stylesheet" href="{{ "css/customstyles.css" }}">
 <link rel="stylesheet" href="{{ "css/theme-black.css" }}">
-<link rel="stylesheet" href="{{ "css/main.css" }}">
 <link rel="stylesheet" href="{{ "css/breadcrumb-style.css" }}">
-<link rel="stylesheet" href="css/products.css">
-<link rel="stylesheet" href="css/documents.css">
-<link rel="stylesheet" href="css/preview.css">
-
+<link rel="stylesheet" href="{{ "css/home.css" }}">
+<link rel="stylesheet" href="{{ "css/lavish-bootstrap.min.css" }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,400,500,600,700,300" >
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,600,700,300" >
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,600" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400italic,700,700italic,300,600" >
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="{{ "js/jquery.navgoco.min.js" }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.8.3/jquery.mark.js" ></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
-
-<script src="https://unpkg.com/lunr/lunr.js"></script>
-
-<script src="{{ "js/toc.js" }}"></script>
-<script src="{{ "js/customscripts.js" }}"></script>
-<script src="{{ "js/additionalscripts.js" }}"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script  src="{{ "js/jquery.linkunderanim.min.js" }}"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.8.3/jquery.mark.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script  src="{{ "js/jquery-scrolltofixed-min.js" }}"></script>
+<script  src="{{ "js/additionalscripts.min.js" }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script async src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script async src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">

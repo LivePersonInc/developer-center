@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <head>
     {% include head.html %}
-
-     <link rel="stylesheet" type="text/css" href="css/inner-page.css">
+    <link rel="stylesheet" href="{{ "css/search.css" }}">
+     <link rel="stylesheet" type="text/css" href="css/inner-page.min.css">
      <meta name="description" content="LivePerson for Developers. Build on LiveEngage with our powerful digital toolbox">
      <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
      <meta name="author" content="LivePerson Inc.">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
-
 </head>
 <body>
-{% include topnav.html %}
-{% if page.public == false %}
-{% include not-available.html %}
-{% else %}
-<!-- Page Content -->
-<div class="container">
-    <div class="col-lg-12">
+<div class="defaultwrapper">
+  <div class="defaultheader">
+    <div class="mobileheader">
+      <button class="hamburger hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="mobilelogo"><img src="img/desktop.png" /></div>
+      <div class="placeholder"></div>
+    </div>
+    <div class="searchimage">
+    <img src="img/searchicon.png" />
+  </div>
+    <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search documentation" name="search" autocomplete="on" />
+  </div>
+  <div id="defaultsidebar" class="defaultsidebar">
+    {% include sidebar.html %}
+  </div>
+  {% if page.pagename %}
+  <div class="documenttitlecontainer">
     {% include nav-breadcrumbs.html %}
-    </div>
-   <div class="sidebarTitle fixed"><span class="titlespan">{{ page.level3 }}</span></div>
-   <div class="sidebarTitle-holder">{{ page.level3 }}</div>
-    <!-- Content Row -->
-    <div class="row">
-        <!-- Sidebar Column -->
-        <div class="col-md-3 side-bar">
+  <div class="documenttitle">
+    <div class='h1'>{{ page.pagename }}</div>
+    {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
+    <div class="indicator chat">Chat</div>
+    {% endif %}
+    {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
+    <div class="indicator messaging">Messaging</div>
+    {% endif %}
+  </div>
+  <hr class="pagehr" />
+  <div id="anchorlist" class="anchorlist folder">
+    <a href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    <ul></ul>
+  </div>
+  </div>
 
-          {% include sidebar.html  %}
-        </div>
-    <!-- Content Column -->
-    <div class="col-md-9 inside-page-content">
-        {% if page.level4 %}
-        <div class="h1">{{ page.level4 }}</div>
-        <div class="h2">{{ page.title }}</div>
-        {% else %}
-        <div class="h1">{{ page.title }}</div>
-        {% endif %}
-        {{content}}
-        <br />
-        <br />
-         <br />
-        <br />
-        <div class="visible-xs visible-sm">
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
+  {% endif %}
+  <div id="defaultcontent" class="defaultcontent">
+    {{ content | extlinks }}
+  </div>
+  <a class="defaultbutton" href="http://register.liveperson.com/developer/signup">
+    <div>
+      <span>Create Account</span>
     </div>
-    <!-- /.row -->
-</div>
-{% endif %}
+  </a>
+  <div id="defaultfooter" class="defaultfooter">
+    <span>LivePerson Inc 2018 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
+    </span>
+  </div>
 <!-- /.container -->
-    </div>
- {% include footer.html %}
+</div>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 <script type="text/javascript">
 const search = docsearch({
@@ -63,47 +71,61 @@ indexName: 'liveperson',
 inputSelector: '.aa-input-search',
 debug: false,
 algoliaOptions: {
-  hitsPerPage: 100
+  hitsPerPage: 50
 },
 autocompleteOptions: {
-  openOnFocus: true
+  openOnFocus: true,
+  templates: {
+     //'suggestion' templating function used to render a single suggestion
+     suggestion: function(suggestion) {
+       if (suggestion._highlightResult.content && suggestion._highlightResult.title) {
+         return '<span>' + '<a  class="searchlink" href="' + suggestion.permalink +'">' + suggestion._highlightResult.title.value + '</a> </span>' + '<br />' + '<span>' + '<a  class="searchlinktext" href="' + suggestion.permalink +'">' +  suggestion._highlightResult.content.value + '</a> </span>';
+       };
+     }
+ }
 }
 });
+
+search.autocomplete.on({
+  'autocomplete:shown': function() {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
+},
+  'autocomplete:closed': function () {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
+},
+  'autocomplete:empty': function () {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
+},
+  'autocomplete:updated': function () {
+    if (this.value === '') {
+      var content = document.getElementById('defaultcontent');
+      var sidebar = document.getElementById('defaultsidebar');
+      var footer = document.getElementById('defaultfooter');
+      content.classList.remove('overlayvisible');
+      sidebar.classList.remove('overlayvisible');
+      footer.classList.remove('overlayvisible');
+}}});
 </script>
-
-<!-- this does not currently work because the search icon is in :before and JS cannot edit pseudo-classes.
-<script type="text/javascript">
-var inputElement = document.getElementById("aa-search-input");
-var $el = $(".aa-search-input");
-inputElement.setAttribute("oninput", "onInput(this)");
-function onInput(el) {
-    setTimeout(function () {
-        if (el && el.value) {
-            $("body").addClass("search-opened");
-            $(".search-cancel").css("display","block");
-            $el.pseudo("before", "content", "'hey'");
-        } else {
-            $("body").removeClass("search-opened");
-            $(".search-cancel").css("display", "none");
-            $el.pseudo("before", "content", "\f002");
-        }
-    }, 0);
-
-};
-
-    $(".search-cancel").click(function() {
-      setTimeout(function() {
-	       search.autocomplete.autocomplete.setVal('');
-         search.autocomplete.focus();
-      }, 10);
-      $("body").removeClass("search-opened");
-      $(".search-cancel").css("display","none");
-      $el.pseudo("before", "content", "\f002");
-    });
+<script>
+  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/152790/script.js');
 </script>
--->
-
-
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}

@@ -1,0 +1,61 @@
+- solutionname: IVR Deflection
+  image: ivr-deflection
+  documents:
+    - documentname: IVR Deflection
+    - documentname: IVR Deflection for Chat
+    - documentname: Setting Up IVR Deflection for Chat
+
+- solutionname: Mobile App Messaging
+  image: mobile-app-messaging
+  documents:
+    - documentname: Add Messaging to Your App
+
+- solutionname: MCS Toolkit
+  image: mcs-toolkit
+  documents:
+    - documentname: Overview
+    - documentname: Getting Started
+    - documentname: Using API to Build the Toolkit
+
+- solutionname: CRM Integrations
+  image: crm-integrations
+  documents:
+    - documentname: SalesForce
+    - documentname: Microsoft Dynamics
+    - documentname: NetSuite
+    - documentname: SugarCRM
+    - documentname: Zendesk
+
+- solutionname: SMS with LiveEngage
+  image: sms-with-live-engage
+  documents:
+    - documentname: Overview
+    - documentname: IVR Deflection
+    - documentname: Clickable Mobile Content to SMS
+    - documentname: Desktop Content Campaign
+    - documentname: Google AdWords - Click-to-Message
+    - documentname: SMS via Mobile App Messaging
+    - documentname: Appendix
+
+- solutionname: LiveEngage MMS Viewer
+  image: live-engage-mms-viewer
+  documents:
+    - documentname: Overview
+    - documentname: Technical Description
+    - documentname: Deployment Steps
+    - documentname: Additional Options
+
+- solutionname: Custom Dashboard
+  image: custom-dashboard
+  documents:
+    - documentname: Create a Custom Real Time Dashboard
+    - documentname: Chat Metrics
+    - documentname: Messaging Metrics
+
+- solutionname: Video Chat
+  image: video-chat
+  documents:
+    - documentname: Add Video to Chat Conversations
+    - documentname: Plan Your Service
+    - documentname: Develop the Service
+    - documentname: Build Your Widgets
