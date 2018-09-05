@@ -47,16 +47,13 @@ function navigateContent(url) {
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
       }
-      //grab the page's title
-      var $title = $('.h1').text();
-      //then set it as the document's title so it shows up properly in the tab
-      $(document).prop('title', $title);
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
       sidebarCollapse (url);
       anchors.add('h3');
       populateAnchors ();
       codeButtons();
+      replaceTitle();
       //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
       $('#anchorlist').scrollToFixed({ dontSetWidth: false });
       //call smoothscrolling on all anchors
@@ -261,5 +258,14 @@ $(".innerfolder > a").click(function(event){
     return false;
 });
 };
+
+function replaceTitle () {
+  var $originalTitle = document.title;
+  //grab the page's new title
+  var $newTitleText = " - " + $('.h1').text() + " |";
+  //then set it as the document's title so it shows up properly in the tab
+  var $newTitle = $originalTitle.replace(/\-.*\|/, $newTitleText);
+  document.title = $newTitle;
+}
 
 $('#mysidebar').height($(".nav").height());
