@@ -117,19 +117,6 @@ $(window).on('popstate', function (e) {
   var state = e.originalEvent.state;
   if (state && state.url) {
     navigateContent(state.url);
-  }
-});
-
-function doPopState(e) {
-  var state = e.originalEvent.state;
-  if (state && state.url) {
-    navigateContent(state.url);
-  }
-}
-
-$(window).on('popstate', doPopState);
-if (window.navigator.userAgent.indexOf("MSIE ") > -1 || !!window.navigator.userAgent.match(/Trident.*rv\:11\./)) {
-  window.onhashchange = doPopState;
 }
 
 
