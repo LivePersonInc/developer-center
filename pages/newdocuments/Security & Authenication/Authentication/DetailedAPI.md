@@ -32,12 +32,19 @@ In order to enable targeting for messaging engagements ( authenticated and unaut
   }
 
 ```
+**Identity object description**
+* iss - Issuer, who identified the consumer - usually the brand. Any value is accepted.
+* acr - Authentication Context Class Reference, the level of the authentication. Currently, we support the level loa1 only and thus only it should be used here.
+* sub - unique and non-guessable identifier of the consumer. This is used to identify returning users and immediately continue an open conversation.
+
+For more information please see the [Monitoring API documentation](https://developers.liveperson.com/monitoring-api-overview.html).
+
 
 By attributing the conversation to the customer identity, new incoming messages will be delivered and displayed as a window in a minimized state, with new message notifications.
 
 _Note: It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not, it will be used just as a regular engagement attribute. LE monitoring services will be using this new function to identify if the user is authenticated on each page and not session based as it was previously._  
 
-In this use case, it is the Customer’s Web App responsibility to set the customerId and generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
+In this use case, it is the Customer’s Web App responsibility to set the customer identity and generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
 
 The callback method accepts two parameters:
 
