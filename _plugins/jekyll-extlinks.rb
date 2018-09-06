@@ -56,11 +56,13 @@ module Jekyll
 
         attributes.each do |attr, value|
           if attr.downcase == 'target'
-          #check if link is external. If so, add the target attribute as defined in the config
-          next unless a.get_attribute('href') =~ /\Ahttp/i
+          #check if link is external or a schema. If so, add the target attribute as defined in the config
+          next unless a.get_attribute('href') =~ /\Ahttp/i || a.get_attribute('href') =~ /assets\/schema\/.*/
+
           end
-          #check if link is internal. If so, add the target attribute as defined in the config
+          #check if link is internal or a schema. If so, add the target attribute as defined in the config
           if attr.downcase == 'onclick'
+          next unless a.get_attribute('href') !~ /assets\/schema\/.*/
           next unless a.get_attribute('href') !~ /\Ahttp/i
           end
           a.set_attribute(attr, value)
