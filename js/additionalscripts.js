@@ -11,6 +11,7 @@ $(document).ready(function () {
   menuDrop ();
   codeButtons();
   mobileHamburger();
+  msieversion();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
