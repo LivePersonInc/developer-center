@@ -8,7 +8,7 @@ documentname:
 subfoldername:
 order:
 indicator:
-permalink: documentname:-subfoldername:-direct-skill-routing.html
+permalink:
 
 ---
 

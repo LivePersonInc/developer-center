@@ -709,7 +709,7 @@ a.anchoritem {
 
 .sidebarbutton {
   color: #f2f2f2;
-  background: inherit;
+  background: #3d4558;
   width: 20px;
   height: 20px;
   border: 0;
@@ -776,6 +776,74 @@ a.anchoritem {
 
 .lessbottom {
   margin-bottom: 10px;
+}
+
+.defaultwrapperexplorer {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.defaultheaderexplorer {
+ width: 75%;
+ margin: 0 auto;
+ margin-left: 440px;
+ display: flex;
+}
+
+.defaultheaderexplorer .searchimage {
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  padding-left: 15px;
+}
+
+.defaultsidebarexplorer {
+ width: 20%;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+}
+
+.defaultsidebarexplorer .nav>li {
+  display: block !important;
+}
+
+.defaultsidebarexplorer .nav>li > a:focus {
+  background-color: #3d4558 !important;
+}
+
+.defaultsidebarexplorer .nav>li:first-of-type {
+  display: flex !important;
+}
+
+.defaultsidebarexplorer ul.mysidebar.nav {
+  width: 20%;
+  top: 100px;
+}
+
+.documenttitlecontainerexplorer {
+ width: 75%;
+ margin: 0 auto;
+ margin-left: 440px;
+}
+
+.documenttitlecontainerexplorer .anchorlist {
+  width: 14%;
+}
+
+.defaultcontentexplorer {
+ width: 54%;
+ margin: 0 auto;
+}
+
+.defaultfooterexplorer {
+ width: 100%;
+ margin: 0 auto;
+}
+
+.defaultfooterexplorer span {
+ margin-left: 400px;
 }
 
 /* Media Queries Begin */

@@ -24,14 +24,14 @@ extlinks:
 # This tells the extlinks plugin which attribute to add to links
 
 plugins:
-  - algoliasearch-jekyll
+  # - algoliasearch-jekyll
   - jekyll-redirect-from
 
 
-algolia:
-  application_id: "1ITT6KY19C"
-  index_name: "dev_BASE"
-#values for the Algolia plugin
+# algolia:
+#   application_id: "1ITT6KY19C"
+#   index_name: "dev_BASE"
+# #values for the Algolia plugin
 
 
 github: [metadata]

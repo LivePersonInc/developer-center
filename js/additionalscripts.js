@@ -11,6 +11,7 @@ $(document).ready(function () {
   menuDrop ();
   codeButtons();
   mobileHamburger();
+  isExplorer();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -109,14 +110,14 @@ function linkclick(event, that) {
   // call the navigateContent function and pass that url to it
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
-  window.history.pushState({url}, '', url);
+  window.history.pushState({url: url}, '', url);
 };
 //handle back/forward and refresh events
-$(window).on('popstate', (e) => {
-  var state = e.originalEvent.state;
-  if (state && state.url) {
-    navigateContent(state.url);
-  }
+$(window).on('popstate', function (e) {
+var state = e.originalEvent.state;
+if (state && state.url) {
+  navigateContent(state.url);
+}
 });
 
 
@@ -275,12 +276,25 @@ function replaceTitle () {
   document.title = $newTitle;
 }
 
-//code for IE alert
+function isExplorer() {
 var ua = window.navigator.userAgent;
 var is_ie = /MSIE|Trident/.test(ua);
 
 if ( is_ie ) {
-  alert('Thank you for visiting our Developer Documentation. This site is best viewed using a modern browser, like Chrome or Firefox. Internet Explorer version is coming soon!')//IE specific code goes here
+  console.log("I'm running");
+  var wrapper = document.getElementById('defaultwrapper');
+  var header = document.getElementById('defaultheader');
+  var sidebar = document.getElementById('defaultsidebar');
+  var documenttitlecontainer = document.getElementById('documenttitlecontainer');
+  var footer = document.getElementById('defaultfooter');
+  var content = document.getElementById('defaultcontent')
+  wrapper.classList.add('defaultwrapperexplorer');
+  header.classList.add('defaultheaderexplorer');
+  sidebar.classList.add('defaultsidebarexplorer');
+  documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
+  footer.classList.add('defaultfooterexplorer');
+  content.classList.add('defaultcontentexplorer');
 }
+};
 
 $('#mysidebar').height($(".nav").height());

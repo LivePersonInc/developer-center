@@ -408,7 +408,15 @@ ul.mysidebar.nav li.activepage a{
 }
 
 .mysidebar.nav li.folder > a:focus {
-  background-color: initial !important;
+  background-color: #3d4558 !important;
+}
+
+.defaultsidebarexplorer .mysidebar.nav li.folder > a:focus {
+  background-color: #3d4558 !important;
+}
+
+.defaultsidebarexplorer .mysidebar.nav li.folder > a:hover {
+  background-color: #3d4558 !important;
 }
 
 ul.mysidebar.nav li ul li {
