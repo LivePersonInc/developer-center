@@ -135,9 +135,9 @@ code pre {
     grid-column: 6 / span 1;
     grid-row: 2;
     height: 44px;
-    background-color: #f2f2f2;
+    background-color: #162036;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     margin-top: 13px;
     display: flex;
     align-items: center;
@@ -151,7 +151,7 @@ code pre {
 
   .defaultbutton div {
     padding: 10px;
-    color: #5879DA;
+    color: #fff;
   }
 
   .defaultfooter {
@@ -766,6 +766,10 @@ a.anchoritem {
   }
 
 @media screen and (max-width:1440px){
+  .defaultwrapper {
+    grid-template-columns: 2fr 0.5fr 0.5fr 5fr 3fr 1fr 1.5fr;
+  }
+
   .defaultheader {
     grid-column: 4 / span 4;
     margin-left: 70px;
@@ -898,6 +902,18 @@ a.anchoritem {
   }
 }
 
+@media screen and (max-width: 1120px) {
+
+  .defaultwrapper {
+    grid-template-columns: 2fr 0.5fr 0.5fr 5fr 3fr 1fr 2fr;
+  }
+
+@media screen and (max-width: 960px) {
+  .defaultwrapper {
+    grid-template-columns: 3fr 0.5fr 0.5fr 5fr 3fr 1fr 2fr;
+  }
+}
+
 @media screen and (max-width:768px) {
   .anchorlist {
     display: none !important;
@@ -1023,5 +1039,17 @@ a.anchoritem {
 
   .highlight {
     padding-top: 22px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 55px;
+  }
+
+  .pagehr {
+    margin-top: 40px;
+  }
+
+  .pagecontent {
+    margin-top: 80px;
   }
 }

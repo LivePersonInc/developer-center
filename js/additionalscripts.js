@@ -1,10 +1,12 @@
 $(document).ready(function () {
+  var url = window.location.href;
   //add anchor links to all h3 titles. See respective functions below for what they do.
-  sidebarClick();
-  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
-    sidebarCollapse ();
-  }
   anchors.add('h3');
+  //detect if mobile user
+  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
+    sidebarCollapse (url);
+  }
+  sidebarClick();
   populateAnchors ();
   menuDrop ();
   codeButtons();
@@ -46,23 +48,20 @@ function navigateContent(url) {
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
       }
-      //grab the page's title
-      var $title = $('.h1').text();
-      //then set it as the document's title so it shows up properly in the tab
-      $(document).prop('title', $title);
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
-      sidebarCollapse ();
+      sidebarCollapse (url);
       anchors.add('h3');
       populateAnchors ();
       codeButtons();
+      replaceTitle();
       //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
       $('#anchorlist').scrollToFixed({ dontSetWidth: false });
       //call smoothscrolling on all anchors
       var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
       var selected = $('a[href="'+url+'"]');
-      //make the string we found previously is active
+      //make the string we found previously active
       $('.folder').removeClass("active");
       selected = selected.addClass("activepage");
       //just some code to make sure sidebar styling works well.
@@ -73,8 +72,6 @@ function navigateContent(url) {
       if (selected.parent().hasClass('pageitem')) {
         $('.innerpageitem').removeClass("activeitem");
       }
-      $(".folder > a").removeClass("active");
-      $(".activepage").parent().parent().parent().addClass("active");
       //jump to top when page loads
       window.scrollTo(0,0);
   });
@@ -93,7 +90,7 @@ function codeButtons () {
   var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
      $(this).append(clipButton);
   });
-//instantiate clipboardjs on the buttons.
+//instantiate clipboardjs on the buttons. This controls the copy action.
   new ClipboardJS('.codebtn');
   //switch between clipboard icon to checkmark icon on click.
   $('.codebtn').click(function() {
@@ -122,33 +119,6 @@ $(window).on('popstate', (e) => {
   }
 });
 
-//a function to creaste the animation when you click the "solutions" button
-function solutionsbuttonclick(event) {
-  event.preventDefault();
-  //show/hide the appropriate sidebar when clicking on the button
-  var documentsSideBar = $('.documentslist');
-  var solutionsSideBar = $('.solutionslist');
-  documentsSideBar.fadeOut(200, function () {
-    solutionsSideBar.fadeIn(200);
-  });
-  //show/hide the underline on the appropriate sidebar when clicking on the button
-  $('.documentsbutton').removeClass('lined');
-  $('.solutionsbutton').addClass('lined');
-};
-
-//a function to creaste the animation when you click the "documents" button
-function sidebarbuttonclick(event) {
-  event.preventDefault();
-  //same as above, just the other button
-  var documentsSideBar = $('.documentslist');
-  var solutionsSideBar = $('.solutionslist');
-  solutionsSideBar.fadeOut(200, function () {
-    documentsSideBar.fadeIn(200);
-  });
-  $('.solutionsbutton').removeClass('lined');
-  $('.documentsbutton').addClass('lined');
-};
-
 
 //a simple dropdown behavior for the anchorlinks box
 function menuDrop () {
@@ -172,14 +142,14 @@ function menuDrop () {
   });
 };
 
-//a function to loop over all amchpr;omls amd create a dropdown menu from them
+//a function to loop over all anchor elements and create a dropdown menu from them
 function populateAnchors () {
   //remove all previous anchoritems populated in the box
   $(".anchoritem").remove();
   //find all h3 titles on the page
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
-  //if there are no anchrolinks, hide the box
+  //if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
   if (anchorlinks.length == 0){
     $('.anchorlist').css('visibility', 'hidden');
     //if there are anchorlinks, display the box
@@ -192,26 +162,29 @@ function populateAnchors () {
   };
 };
 
+//a function to control a click on the mobile hamburger button
 function mobileHamburger (){
   var $hamburger = $('.hamburger');
   var sidebar = $('#mysidebar');
+  //on click, set data to control the toggle behavior.
   $hamburger.on('click', function(e) {
   $hamburger.toggleClass('is-active');
   var hasExpanded = $(sidebar).data("expanded") == "true";
   if (hasExpanded) {
+    //if clicked, slide up and set data to unclicked.
       $(sidebar).slideUp(400);
       $(sidebar).data("expanded","false");
   } else {
+    //if unclicked, slide down and set data to clicked.
       $(sidebar).slideDown(400);
       $(sidebar).data("expanded","true");
   }
  });
 }
 
-
-function sidebarCollapse () {
-  var originalURL = window.location.href;
-  var modifiedURL = '/' + originalURL.split('/').reverse()[0];
+//this function is a nightmare and needs to be refactored. Will update comment once that's done.
+function sidebarCollapse (url) {
+  var modifiedURL = '/' + url.split('/').reverse()[0];
   var currentPage = $('a[href="'+modifiedURL+'"]');
   //make sure no other links are set to active
   $('a').removeClass("activepage");
@@ -237,9 +210,19 @@ function sidebarCollapse () {
     $(".activepage").parent().prev().data("expanded","true");
     $("ul#mysidebar").css("visibility","visible");
     $(".innerfolder > .active > button").addClass("clicked");
+    $(".homeitem").removeClass("active");
+    $(".homeitem > a").data("expanded", "false");
+    $(".post-content a").click(function (){
+      $(".sidebarbutton").removeClass("clicked");
+      $(".topfolder > a").next().slideUp(400);
+      $(".topfolder > a").data("expanded", "false");
+      $(".homeitem > a").removeClass("active");
+      $(".topfolder > a").removeClass("active");
+    });
     };
   };
 
+//control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick () {
 $(".topfolder > a").click(function(){
     var hasExpanded = $(this).data("expanded") == "true";
@@ -271,7 +254,7 @@ $(".innerfolder > a").click(function(event){
         $(this).data("expanded","false");
         $(this).removeClass("active");
         $(this).parent().removeClass("active");
-        $(button).removeClass("clicked", );
+        $(button).removeClass("clicked");
     } else {
         $(this).next().slideDown(400);
         $(this).data("expanded","true");
@@ -281,5 +264,23 @@ $(".innerfolder > a").click(function(event){
     return false;
 });
 };
+
+//a function to make sure the page's title is updated on load
+function replaceTitle () {
+  var $originalTitle = document.title;
+  //grab the page's new title
+  var $newTitleText = " - " + $('.h1').text() + " |";
+  //then set it as the document's title so it shows up properly in the tab
+  var $newTitle = $originalTitle.replace(/\-.*\|/, $newTitleText);
+  document.title = $newTitle;
+}
+
+//code for IE alert
+var ua = window.navigator.userAgent;
+var is_ie = /MSIE|Trident/.test(ua);
+
+if ( is_ie ) {
+  alert('Thank you for visiting our Developer Documentation. This site is best viewed using a modern browser, like Chrome or Firefox. Internet Explorer version is coming soon!')//IE specific code goes here
+}
 
 $('#mysidebar').height($(".nav").height());

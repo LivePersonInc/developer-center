@@ -37,7 +37,7 @@ The MCS Toolkit was built by utilizing LiveEngage APIs that are available now fo
 
 Specifically, the APIs used to bring the MCS Toolkit to life are:
 
-* [Login Service API](login-getting-started.html)
+* [Login Service API](/login-getting-started.html)
 
 * [Messaging Interaction API](data-messaging-interactions-overview.html)
 
