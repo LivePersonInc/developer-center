@@ -112,13 +112,16 @@ function linkclick(event, that) {
   window.history.pushState({url: url}, '', url);
 };
 //handle back/forward and refresh events
-$(window).on('popstate', (e) => {
+function doPopState(e) {
   var state = e.originalEvent.state;
   if (state && state.url) {
     navigateContent(state.url);
   }
-});
-
+}
+$(window).on('popstate', doPopState);
+if (window.navigator.useragent.indexof("MSIE ") > -1 || !!window.navigator.userAgent.match(/Trident.*rv\:11\./)) {
+  window.onhashchange = doPopState;
+}
 
 //a simple dropdown behavior for the anchorlinks box
 function menuDrop () {
