@@ -77,6 +77,10 @@ code pre {
   color: #8b8b8b;
 }
 
+
+
+
+
 /* CSS-Grid Begins */
 
 @supports (display: grid) {
@@ -1076,4 +1080,44 @@ a.anchoritem {
   .pagecontent {
     margin-top: 80px;
   }
+}
+
+/*css for the unbelievable microsoft */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     .defaultwrapper {
+       height: 100vh;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+     }
+
+     .defaultheader {
+       width: 50%;
+       margin: 0 auto;
+     }
+
+     .defaultsidebar {
+       width: 20%;
+       height: 100vh;
+       position: fixed;
+     }
+
+     .documenttitlecontainer {
+       width: 50%;
+       margin: 0 auto;
+     }
+
+     .defaultcontent {
+       width: 50%;
+       margin: 0 auto;
+     }
+
+     .defaultfooter {
+       width: 100%;
+       margin: 0 auto;
+     }
+
+     .defaultfooter span {
+       margin-left: 400px;
+     }
 }
