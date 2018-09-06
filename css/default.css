@@ -790,6 +790,7 @@ a.anchoritem {
  margin: 0 auto;
  margin-left: 440px;
  display: flex;
+ margin-top: 20px;
 }
 
 .defaultheaderexplorer .searchimage {
