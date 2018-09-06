@@ -109,7 +109,7 @@ function linkclick(event, that) {
   // call the navigateContent function and pass that url to it
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
-  window.history.pushState({url}, '', url);
+  window.history.pushState({url: url}, '', url);
 };
 //handle back/forward and refresh events
 $(window).on('popstate', (e) => {
