@@ -2,6 +2,7 @@ $(document).ready(function () {
   var url = window.location.href;
   //add anchor links to all h3 titles. See respective functions below for what they do.
   anchors.add('h3');
+  //detect if mobile user
   if (/Mobi|Android/i.test(navigator.userAgent) == false) {
     sidebarCollapse (url);
   }
@@ -60,7 +61,7 @@ function navigateContent(url) {
       var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
       var selected = $('a[href="'+url+'"]');
-      //make the string we found previously is active
+      //make the string we found previously active
       $('.folder').removeClass("active");
       selected = selected.addClass("activepage");
       //just some code to make sure sidebar styling works well.
@@ -89,7 +90,7 @@ function codeButtons () {
   var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
      $(this).append(clipButton);
   });
-//instantiate clipboardjs on the buttons.
+//instantiate clipboardjs on the buttons. This controls the copy action.
   new ClipboardJS('.codebtn');
   //switch between clipboard icon to checkmark icon on click.
   $('.codebtn').click(function() {
@@ -141,14 +142,14 @@ function menuDrop () {
   });
 };
 
-//a function to loop over all amchpr;omls amd create a dropdown menu from them
+//a function to loop over all anchor elements and create a dropdown menu from them
 function populateAnchors () {
   //remove all previous anchoritems populated in the box
   $(".anchoritem").remove();
   //find all h3 titles on the page
   var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = $('.anchorlist ul');
-  //if there are no anchrolinks, hide the box
+  //if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
   if (anchorlinks.length == 0){
     $('.anchorlist').css('visibility', 'hidden');
     //if there are anchorlinks, display the box
@@ -161,23 +162,27 @@ function populateAnchors () {
   };
 };
 
+//a function to control a click on the mobile hamburger button
 function mobileHamburger (){
   var $hamburger = $('.hamburger');
   var sidebar = $('#mysidebar');
+  //on click, set data to control the toggle behavior.
   $hamburger.on('click', function(e) {
   $hamburger.toggleClass('is-active');
   var hasExpanded = $(sidebar).data("expanded") == "true";
   if (hasExpanded) {
+    //if clicked, slide up and set data to unclicked.
       $(sidebar).slideUp(400);
       $(sidebar).data("expanded","false");
   } else {
+    //if unclicked, slide down and set data to clicked.
       $(sidebar).slideDown(400);
       $(sidebar).data("expanded","true");
   }
  });
 }
 
-
+//this function is a nightmare and needs to be refactored. Will update comment once that's done.
 function sidebarCollapse (url) {
   var modifiedURL = '/' + url.split('/').reverse()[0];
   var currentPage = $('a[href="'+modifiedURL+'"]');
@@ -217,6 +222,7 @@ function sidebarCollapse (url) {
     };
   };
 
+//control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick () {
 $(".topfolder > a").click(function(){
     var hasExpanded = $(this).data("expanded") == "true";
@@ -259,6 +265,7 @@ $(".innerfolder > a").click(function(event){
 });
 };
 
+//a function to make sure the page's title is updated on load
 function replaceTitle () {
   var $originalTitle = document.title;
   //grab the page's new title
@@ -266,6 +273,14 @@ function replaceTitle () {
   //then set it as the document's title so it shows up properly in the tab
   var $newTitle = $originalTitle.replace(/\-.*\|/, $newTitleText);
   document.title = $newTitle;
+}
+
+//code for IE alert
+var ua = window.navigator.userAgent;
+var is_ie = /MSIE|Trident/.test(ua);
+
+if ( is_ie ) {
+  alert('Thank you for visiting our Developer Documentation. This site is best viewed using a modern browser, like Chrome or Firefox. Internet Explorer version is coming soon!')//IE specific code goes here
 }
 
 $('#mysidebar').height($(".nav").height());
