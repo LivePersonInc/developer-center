@@ -100,7 +100,6 @@ function codeButtons () {
   });
 };
 
-
 //a function to control a click on the sidebar links
 function linkclick(event, that) {
   //prevent the link from actually navigating to the url
