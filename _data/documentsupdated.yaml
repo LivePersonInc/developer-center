@@ -495,7 +495,9 @@
       - subpagename: Resolve Message
     - pagename: Advanced Features
       subpages:
+      - subpagename: Unauthenticated In-App Messaging
       - subpagename: Photo Sharing
+      - subpagename: Audio Messages
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
@@ -542,7 +544,9 @@
       - subpagename: Timestamps Formatting
     - pagename: Advanced Features
       subpages:
+      - subpagename: Unauthenticated In-App Messaging
       - subpagename: CSAT Behavior
+      - subpagename: Audio Messages
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
