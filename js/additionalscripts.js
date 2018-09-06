@@ -275,12 +275,21 @@ function replaceTitle () {
   document.title = $newTitle;
 }
 
-//code for IE alert
-var ua = window.navigator.userAgent;
-var is_ie = /MSIE|Trident/.test(ua);
+function msieversion() {
 
-if ( is_ie ) {
-  alert('Thank you for visiting our Developer Documentation. This site is best viewed using a modern browser, like Chrome or Firefox. Internet Explorer version is coming soon!')//IE specific code goes here
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+    {
+        $('.defaultwrapper').addClass('testingIE');
+    }
+    else  // If another browser, return 0
+    {
+        return false;
+    }
+
+    return false;
 }
 
 $('#mysidebar').height($(".nav").height());
