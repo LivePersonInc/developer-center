@@ -284,10 +284,12 @@ function msieversion() {
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
     {
         $('.defaultwrapper').addClass('testingIE');
+        console.log("IE detected");
     }
     else  // If another browser, return 0
     {
         return false;
+        console.log("No IE detected");
     }
 
     return false;
