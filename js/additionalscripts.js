@@ -114,10 +114,11 @@ function linkclick(event, that) {
 };
 //handle back/forward and refresh events
 $(window).on('popstate', function (e) {
-  var state = e.originalEvent.state;
-  if (state && state.url) {
-    navigateContent(state.url);
+var state = e.originalEvent.state;
+if (state && state.url) {
+  navigateContent(state.url);
 }
+});
 
 
 //a simple dropdown behavior for the anchorlinks box
