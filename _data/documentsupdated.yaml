@@ -49,41 +49,41 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Chat Agent API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Start Agent Session
+          - subpagename: Retrieve Current Availability
+          - subpagename: Set Agent Availability
+          - subpagename: Retrieve Available Agents
+          - subpagename: Retrieve Available Slots
+          - subpagename: Retrieve Agent Information
+          - subpagename: Determine Incoming Chat Request
+          - subpagename: Accept a Chat
+          - subpagename: Retrieve Chat Sessions
+          - subpagename: Retrieve Chat Resources, Events and Information
+          - subpagename: Retrieve Data for Multiple Chats
+          - subpagename: Retrieve Chat Events
+          - subpagename: Send Lines and Structured Content
+          - subpagename: End Chat
+          - subpagename: Retrieve Chat Information
+          - subpagename: Retrieve Visitor's Name
+          - subpagename: Retrieve Agent's Typing Status
+          - subpagename: Set Agent's Typing Status
+          - subpagename: Retrieve Visitor's Typing Status
+          - subpagename: Retrieve Available Skills
+          - subpagename: Transfer a Chat
+          - subpagename: Retrieve Agent Survey Structure
+          - subpagename: Submit Survey Data
+      - pagename: System Messages
+      - pagename: Sample App
+      - pagename: Postman Resources
 
 - categoryname: Client Side Configuration
   image: client-side
   documents:
-    - documentname: Chat Agent API
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Start Agent Session
-            - subpagename: Retrieve Current Availability
-            - subpagename: Set Agent Availability
-            - subpagename: Retrieve Available Agents
-            - subpagename: Retrieve Available Slots
-            - subpagename: Retrieve Agent Information
-            - subpagename: Determine Incoming Chat Request
-            - subpagename: Accept a Chat
-            - subpagename: Retrieve Chat Sessions
-            - subpagename: Retrieve Chat Resources, Events and Information
-            - subpagename: Retrieve Data for Multiple Chats
-            - subpagename: Retrieve Chat Events
-            - subpagename: Send Lines and Structured Content
-            - subpagename: End Chat
-            - subpagename: Retrieve Chat Information
-            - subpagename: Retrieve Visitor's Name
-            - subpagename: Retrieve Agent's Typing Status
-            - subpagename: Set Agent's Typing Status
-            - subpagename: Retrieve Visitor's Typing Status
-            - subpagename: Retrieve Available Skills
-            - subpagename: Transfer a Chat
-            - subpagename: Retrieve Agent Survey Structure
-            - subpagename: Submit Survey Data
-        - pagename: System Messages
-        - pagename: Sample App
-        - pagename: Postman Resources
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
