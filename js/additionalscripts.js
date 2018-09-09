@@ -185,7 +185,7 @@ function mobileHamburger (){
 
 //this function is a nightmare and needs to be refactored. Will update comment once that's done.
 function sidebarCollapse (url) {
-  var modifiedURL = '/' + url.split('/').reverse()[0];
+  var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
   var currentPage = $('a[href="'+modifiedURL+'"]');
   //make sure no other links are set to active
   $('a').removeClass("activepage");
@@ -276,12 +276,12 @@ function replaceTitle () {
   document.title = $newTitle;
 }
 
+//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
 var ua = window.navigator.userAgent;
 var is_ie = /MSIE|Trident/.test(ua);
 
 if ( is_ie ) {
-  console.log("I'm running");
   var wrapper = document.getElementById('defaultwrapper');
   var header = document.getElementById('defaultheader');
   var sidebar = document.getElementById('defaultsidebar');
