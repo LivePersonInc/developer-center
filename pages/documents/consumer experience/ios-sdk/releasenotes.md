@@ -14,71 +14,19 @@ indicator: messaging
 <br>
 
 ### iOS Messaging SDK - Version 3.2.5
+Version 3.2.5 includes fixes for the following bugs:
 
-iOS Messaging SDK v3.2.5 contains the following bug fixes:
+1. In some cases, when consumers would go into the conversation screen, the loading progress bar would get stuck.
+2. When starting to fill a secure form, if a customer exits out of the form and opens a new secure form, the values from the first form appears in the new form for a ~second and then disappeared.
+3. When applying a regex for real time masking, the entire string will be affected rather than only the matching part.
+4. Missing auto scroll to bottom when a conversation is closed.
+5. The first message is hidden when using the Control History APIs. After sending the second message, all messages will be visible.
+6. In some cases, when consumers send the app to the background and later return to the conversation screen, the socket will not get connected and the consumer will not be able to send\receive messages.
+7. When going into the conversation screen after the app was killed, the screen will be scrolled to the top instead to the bottom.
+8. When replacing rootViewController, in-app push notifications stops working.
+9. If a failure occurred while unregistering for Push Notifications, customers were unable to logout from the SDK
 
-#### Symptom:
-In some cases, when consumers would go into the conversation screen, the loading progress bar will get stuck.
-
-#### Fix:
-History will get properly retrieved and the conversation screen will be loaded and presented.
-
-
-#### Symptom:
-When starting to fill a secure form, going out of it and opening a new secure form, the values from the first form appears in the new form for a ~second and then disappears.
-
-#### Fix:
-Details from previous secure forms will not appear in other secure forms
-
-
-#### Symptom:
-When applying a regex for real time masking, the entire string will be affected rather than only the matching part.
-
-#### Fix:
-Only the matching parts will be affected by the regex
-
-
-#### Symptom:
-After a conversation is closed, auto scroll to bottom is not happening
-
-#### Fix:
-When a conversation is closed, auto scroll to bottom will happen
-
-
-#### Symptom:
-When opening the screen while applying a filter on the presented conversations and sending a message to the agent, the first message will be invisible.
-
-#### Fix:
-All messages will be visible.
-
-
-#### Symptom:
-In some cases, when consumers sends the app to the background and returns back to the conversation screen, the socket will not get connected
-
-#### Fix:
-Socket will get connected when returning to the conversation screen.
-
-
-#### Symptom:
-When going into the conversation screen after the app was killed, the screen will be scrolled to the top instead to the bottom.
-
-#### Fix:
-When going into the conversation screen after the app was killed, the screen will be scrolled to bottom.
-
-
-#### Symptom:
-In some cases, when going into the conversation screen
-
-#### Fix:
-When going into the conversation screen after the app was killed, the screen will be scrolled to bottom.
-
-
-#### Symptom:
-When replacing rootViewController in-app push stops working
-
-#### Fix:
-In-app notifications will be presented when replacing rootViewController
-
+The full release notes can be found [Here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/2018/iOS+3.2.5+release+notes.pdf)
 
 ### iOS Messaging SDK - Version 3.2.4
 
