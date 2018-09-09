@@ -531,7 +531,6 @@ var onError = function(err) {
 var consumerData = {
     avatarUrl:"",
     backgndImgUri:"",
-    description: "",
     email: "",
     firstName: "",
     lastName: "",
