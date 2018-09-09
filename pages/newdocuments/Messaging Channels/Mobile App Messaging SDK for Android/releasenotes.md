@@ -10,13 +10,13 @@ order: 310
 permalink: mobile-app-messaging-sdk-for-android-release-notes.html
 indicator: messaging
 ---
-<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
 
 ### Android Messaging SDK -  Version 3.2.2
 
-**Version 3.2.2 release: September 9th 2018** 
+**Version 3.2.2 release: September 9th 2018**
 
 Version 3.2.2 includes fixes for the following bugs:
 
@@ -24,13 +24,13 @@ Version 3.2.2 includes fixes for the following bugs:
 
 2. Sporadic crashes when conversations are initiated, when the 3.2.1 version of the Mobile App SDK was used on Android platform version 4.4.2.
 
-3. Consumer’s OS parameter is missing from the agent workspace.
+3. Consumer’s OS parameter was missing from the agent workspace.
 
-4. Redundant animation to indicate new messages from agent, when using ("show_agent_typing_in_message_bubble”)
+4. Redundant animation to indicate new messages from agent, when using `show_agent_typing_in_message_bubble`
 
 5. When a message fails to be sent, subsequent messages may also fail when they should be re-sent successfully.
 
-6. Invalid JWT authentication token causes host application to freeze after retry mechanism has been complete
+6. Invalid JWT authentication token causes host application to freeze after retry mechanism has been completed.
 
 
 The full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/2018/Android+3.2.2+release+notes.pdf).
