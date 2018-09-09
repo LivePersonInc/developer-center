@@ -14,6 +14,27 @@ indicator: messaging
 <br>
 <br>
 
+### Android Messaging SDK -  Version 3.2.2
+
+**Version 3.2.2 release: September 9th 2018** 
+
+Version 3.2.2 includes fixes for the following bugs:
+
+1. Improper exception handling would cause the host application to freeze.
+
+2. Sporadic crashes when conversations are initiated, when the 3.2.1 version of the Mobile App SDK was used on Android platform version 4.4.2.
+
+3. Consumer’s OS parameter is missing from the agent workspace.
+
+4. Redundant animation to indicate new messages from agent, when using ("show_agent_typing_in_message_bubble”)
+
+5. When a message fails to be sent, subsequent messages may also fail when they should be re-sent successfully.
+
+6. Invalid JWT authentication token causes host application to freeze after retry mechanism has been complete
+
+
+The full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/2018/Android+3.2.2+release+notes.pdf).
+
 ### Android Messaging SDK -  Version 3.2
 
 **Version 3.2 release: July 1st 2018**
