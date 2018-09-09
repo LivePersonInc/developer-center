@@ -2,7 +2,7 @@
 pagename: Getting Started with Engagement Attributes
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Major Platform Components
+documentname: Essential Resources
 permalink: essential-resources-getting-started-with-engagement-attributes.html
 order: 20
 indicator: both

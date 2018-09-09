@@ -2,7 +2,7 @@
 pagename: Getting Started with Authentication
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Major Platform Components
+documentname: Essential Resources
 permalink: essential-resources-getting-started-with-authentication.html
 order: 10
 indicator: both
