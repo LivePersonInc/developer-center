@@ -501,6 +501,7 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Release Notes
     - pagename: Appendix
       subpages:
       - subpagename: Security
