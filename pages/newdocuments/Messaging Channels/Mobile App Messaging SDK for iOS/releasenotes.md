@@ -11,9 +11,93 @@ order: 243
 permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
 indicator: messaging
 ---
-<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content" target="_blank">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+
+### iOS Messaging SDK - Version 3.2.5
+
+iOS Messaging SDK v3.2.5 contains the following bug fixes:
+
+#### Symptom:
+
+In some cases, when consumers would go into the conversation screen, the loading progress bar would get stuck.
+
+#### Fix:
+
+History will be properly retrieved and the conversation screen will be loaded and presented.
+
+
+#### Symptom:
+
+When starting to fill a secure form and then closing it and opening a new secure form, the values from the first form would appear in the new form for about a second and then disappear.
+
+#### Fix:
+
+Details from previous secure forms will no longer appear in other secure forms.
+
+
+#### Symptom:
+
+When applying a Regular Expression for real time masking, the entire string will be affected rather than only the matching part.
+
+#### Fix:
+
+Only the matching parts will be affected by the Regular Expression.
+
+
+#### Symptom:
+
+After a conversation is closed, auto scroll to bottom was not happening.
+
+#### Fix:
+
+When a conversation is closed, auto scroll to bottom will happen.
+
+
+#### Symptom:
+
+When opening the screen while applying a filter on the presented conversations and sending a message to the agent, the first message would be invisible.
+
+#### Fix:
+
+All messages will be visible.
+
+
+#### Symptom:
+
+In some cases, when consumers send the app to the background and return back to the conversation screen, the socket would not connect.
+
+#### Fix:
+
+Socket will connect when returning to the conversation screen.
+
+
+#### Symptom:
+
+When entering the conversation screen after the app was killed, the screen would be scrolled to the top instead to the bottom.
+
+#### Fix:
+
+When entering the conversation screen after the app was killed, the screen will be scrolled to bottom.
+
+
+#### Symptom:
+
+In some cases, when going into the conversation screen after the app was killed, the screen would not auto scroll to bottom.
+
+#### Fix:
+
+When going into the conversation screen after the app was killed, the screen will be scrolled to bottom.
+
+
+#### Symptom:
+
+When replacing `rootViewController` in-app push stopped working.
+
+#### Fix:
+
+In-app notifications will be presented when replacing `rootViewController`.
 
 ### iOS Messaging SDK - Version 3.2.4
 
