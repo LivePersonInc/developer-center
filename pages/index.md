@@ -21,22 +21,22 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 * [Retry and KeepAlive Policy](retry-and-keepalive-best-practices-overview.html)
 
-* [Getting Started with Authentication](major-platform-components-getting-started-with-authentication.html)
+* [Getting Started with Authentication](essential-resources-getting-started-with-authentication.html)
 
 ### Common Use Cases
 
 * [Messaging for your Native App in iOS](mobile-app-messaging-sdk-for-ios-overview.html) or [Android](/mobile-app-messaging-sdk-for-android-overview.html): Add asynchronous messaging to any mobile application using our robust SDKs
 
-* [Custom Reporting](major-platform-components-getting-started-with-data-apis.html) - work with our Data APIs to create any dashboards, reports or KPIs.  Integrate LiveEngage data into any Contact Center tools or dashboards
+* [Custom Reporting](essential-resources-getting-started-with-data-apis.html) - work with our Data APIs to create any dashboards, reports or KPIs.  Integrate LiveEngage data into any Contact Center tools or dashboards
 
 * [Agent Widgets](agent-workspace-widget-sdk-overview.html): Build or integrate widgets such as CRM integration, KB or AI tools in the Agent Workspace
 
 ### Essential Resources
 
-* [Engagement Attributes](major-platform-components-getting-started-with-engagement-attributes.html) - report on and pass consumer data to other APIs and integrations
+* [Engagement Attributes](essential-resources-getting-started-with-engagement-attributes.html) - report on and pass consumer data to other APIs and integrations
 
 * [Authentication](authentication-introduction.html) - authenticate using LivePerson protocols and best practices
 
-* [Data APIs](major-platform-components-getting-started-with-data-apis.html) - poll LivePerson servers to collect and aggregate historical and real-time data
+* [Data APIs](essential-resources-getting-started-with-data-apis.html) - poll LivePerson servers to collect and aggregate historical and real-time data
 
 * [Connectors](connector-api-connector-api-overview.html) - integrate third party messaging platforms and LiveEngage

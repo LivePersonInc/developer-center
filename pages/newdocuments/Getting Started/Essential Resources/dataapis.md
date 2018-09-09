@@ -3,7 +3,7 @@ pagename: Getting Started with Data APIs
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Major Platform Components
-permalink: major-platform-components-getting-started-with-data-apis.html
+permalink: essential-resources-getting-started-with-data-apis.html
 order: 30
 indicator: both
 ---
