@@ -220,6 +220,9 @@ function sidebarCollapse (url) {
       $(".homeitem > a").removeClass("active");
       $(".topfolder > a").removeClass("active");
     });
+    $('#mysidebar').animate({
+    scrollTop: currentPage.offset().top - 200
+    }, 1000);
     };
   };
 
