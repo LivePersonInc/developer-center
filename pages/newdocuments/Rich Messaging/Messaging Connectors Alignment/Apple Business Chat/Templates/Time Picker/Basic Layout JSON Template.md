@@ -1,12 +1,14 @@
 ---
 pagename: Basic Layout JSON Template
+redirect_from:
+  - rich-messaging-connectors-abc-timepicker-layout.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Business Chat Templates
 subfoldername: Time Picker
 order: 90
-permalink: rich-messaging-connectors-abc-timepicker-layout.html
+permalink: apple-business-chat-templates-time-picker-basic-layout-json-template.html
 indicator: messaging
 ---
 

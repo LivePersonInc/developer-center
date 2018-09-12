@@ -1,12 +1,14 @@
 ---
 pagename: Basic Layout JSON Template
+redirect_from:
+  - rich-messaging-connectors-abc-listpicker-layout.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Business Chat Templates
 subfoldername: List Picker
 order: 30
-permalink: rich-messaging-connectors-abc-listpicker-layout.html
+permalink: apple-business-chat-templates-list-picker-basic-layout-json-template.html
 indicator: messaging
 ---
 

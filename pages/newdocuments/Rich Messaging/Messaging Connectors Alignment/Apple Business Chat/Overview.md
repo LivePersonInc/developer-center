@@ -1,12 +1,14 @@
 ---
 pagename: Introduction
+redirect_from:
+  - rich-messaging-apple-business-chat-templates.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Business Chat Templates
 level-order: 4
 order: 10
-permalink: rich-messaging-apple-business-chat-templates.html
+permalink: apple-business-chat-templates-introduction.html
 root-link: true
 indicator: messaging
 ---

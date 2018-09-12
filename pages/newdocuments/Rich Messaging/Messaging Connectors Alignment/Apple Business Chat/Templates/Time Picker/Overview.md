@@ -1,12 +1,14 @@
 ---
 pagename: Overview
+redirect_from:
+  - rich-messaging-connectors-abc-timepicker.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Business Chat Templates
 subfoldername: Time Picker
 order: 80
-permalink: rich-messaging-connectors-abc-timepicker.html
+permalink: apple-business-chat-templates-time-picker-overview.html
 indicator: messaging
 ---
 

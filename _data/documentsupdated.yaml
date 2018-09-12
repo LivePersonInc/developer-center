@@ -602,6 +602,26 @@
 - categoryname: Rich Messaging
   image: rich-media
   documents:
+    - documentname: Apple Business Chat Templates
+      pages:
+        - pagename: Introduction
+        - pagename: List Picker
+          subpages:
+            - subpagename: Overview
+            - subpagename: Basic Layout JSON Template
+            - subpagename: Basic Layout Metadata
+            - subpagename: Basic Layout Body
+            - subpagename: Basic Layout Body - Header Section
+            - subpagename: Basic Layout Body - Item Section
+        - pagename: Time Picker
+          subpages:
+            - subpagename: Overview
+            - subpagename: Basic Layout JSON Template
+            - subpagename: Business Event Section
+            - subpagename: Business Chat Messaging Section
+            - subpagename: Time Picker Item
+            - subpagename: Time Picker Examples
+        - pagename: Guidelines and Limitations
     - documentname: File Sharing
       pages:
         - pagename: Introduction

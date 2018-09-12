@@ -1,12 +1,14 @@
 ---
 pagename: "Basic Layout Body - Item Section"
+redirect_from:
+  - rich-messaging-connectors-abc-listpicker-body-item.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Business Chat Templates
 subfoldername: List Picker
 order: 70
-permalink: rich-messaging-connectors-abc-listpicker-body-item.html
+permalink: apple-business-chat-templates-list-picker-basic-layout-body-item-section.html
 indicator: messaging
 ---
 
