@@ -40,7 +40,7 @@ A few things you'll need to get started with this API:
 
 * Extract all chat transcripts and accompanying data in order to integrate with any 3rd party application or database
 
-* Extract a type of conversation (e.g. low CSAT score, high MCS) and take an action on them.
+* Extract types of conversations (e.g. low CSAT score, high MCS) and take an action on them.
 
 Example of interactive tool created based on Messaging Interactions API.  This example utilizes the information to filter, sort and read through various transcripts:
 

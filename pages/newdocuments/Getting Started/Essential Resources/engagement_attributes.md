@@ -8,7 +8,7 @@ order: 20
 indicator: both
 ---
 
-LiveEngage provides out-of-the-box basic information about your visitors. For example, the visitor’s geolocation, the amount of time they spent on a page, and which pages they viewed. For
+LiveEngage provides out-of-the-box basic information about your visitors. For example, the visitor’s geolocation, the amount of time they spent on a page, and which pages they viewed.
 
 In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information to LiveEngage by using Engagement Attributes (otherwise known as a Standard Data Entity - an SDE). An SDE is a JSON format expected by LivePerson APIs. This format standardizes how visitor traits, behaviors and paths are communicated to LiveEngage. These are in practice data snippets which contain information on the consumer in JSON format.
 
@@ -38,7 +38,7 @@ By using our SDEs, you can enrich your use of our APIs with more data from your 
 
 1) Map the consumer info which you are interested in according to the list of SDEs supported by LivePerson. For example, your CRM system has information on the invoices the consumer has paid in the last month, transactions, their balance and so forth. You could take the consumer's balance and map it into the `balance` key found in the Customer Info SDE or to map the consumer's status (like account closed or overdue) to the `type` key.
 
-2) Once we've mapped our different data sets into LivePerson SDEs, we have two choices:
+2) Once you've mapped our different data sets into LivePerson SDEs, we have two choices:
 
   * You can start feeding real time data into these SDEs from your website. A good way to do that is to develop code on your site for example, which will send information via SDEs to LiveEngage programmatically. For example, if a user adds a certain product to their cart, the code should translate this action into an SDE format and send it to LiveEngage via the LiveEngage Tag. More documentation on how to use the tag to do so can be found [here](engagement-attributes-setting-up.html).
 
