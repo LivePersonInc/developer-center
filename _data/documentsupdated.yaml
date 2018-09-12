@@ -347,6 +347,28 @@
             - subpagename: Get Unified Automatic Message by ID
             - subpagename: Update an Unified Automatic Message
             - subpagename: Delete an Unified Automatic Message
+    - documentname: Special Occasions API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Special Occasion
+            - subpagename: Update Special Occasion
+            - subpagename: Delete Special Occasion
+            - subpagename: Retrieve Special Occasion by ID
+            - subpagename: Retrieve Special Occasions by List
+        - pagename: Appendix
+    - documentname: Workdays API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Workdays Object
+            - subpagename: Update Workdays Object
+            - subpagename: Delete Workdays Object
+            - subpagename: Retrieve Workdays Object by ID
+            - subpagename: Retrieve Workdays Objects by List
+        - pagename: Appendix
 
 - categoryname: Historical Data
   image: historical-data
