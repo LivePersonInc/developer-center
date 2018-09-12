@@ -25,15 +25,17 @@ In order to enable targeting for messaging engagements ( authenticated and unaut
   lpTag.identities.push(identityFn);
   function identityFn(callback) {
       callback({
-          iss: "replace with issuer",
+          iss: "<REPLACE_WITH_ISSUER>",
           acr: "loa1",
-          sub: "replace with customerID"
+          sub: "<REPLACE_WITH_CustomerID>"
       });
   }
 
 ```
 **Identity object description**
-* iss - Issuer, who identified the consumer - usually the brand. Any value is accepted.
+
+All 3 object keys are mandatory.
+* iss - Issuer, who identified the consumer - usually the brand. Any alphanumeric string value is accepted.
 * acr - Authentication Context Class Reference, the level of the authentication. Currently, we support the level loa1 only and thus only it should be used here.
 * sub - unique and non-guessable identifier of the consumer. This is used to identify returning users and immediately continue an open conversation.
 
