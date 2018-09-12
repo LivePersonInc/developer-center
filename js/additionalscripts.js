@@ -271,13 +271,20 @@ $(".innerfolder > a").click(function(event){
 
 //a function to make sure the page's title is updated on load
 function replaceTitle () {
+  //grab the page's current title
   var $originalTitle = document.title;
-  //grab the page's new title
-  var $newTitleText = " - " + $('.h1').text() + " |";
+  var $newDocument = document.getElementsByClassName("breadcrumb-item");
+  if ($newDocument.length > 2) {
+  var $newDocumentText = $newDocument[2].innerText;
+  //lay out the new title
+  var $newTitleText = $newDocumentText + " - " + $('.h1').text() + " |";
   //then set it as the document's title so it shows up properly in the tab
-  var $newTitle = $originalTitle.replace(/\-.*\|/, $newTitleText);
+  var $newTitle = $originalTitle.replace(/^.*\|/, $newTitleText);
+} else {
+  var $newTitle = $originalTitle.replace(/^.*\-.*\|/, "Welcome! |");
+};
   document.title = $newTitle;
-}
+};
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
