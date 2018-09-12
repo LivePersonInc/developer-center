@@ -1108,11 +1108,16 @@ a.anchoritem {
   .defaultcontent {
     margin-left: 30px;
     grid-column: 1 / span 6;
+    margin-top: 70px;
   }
 
   .documenttitlecontainer {
     margin-left: 30px;
     grid-column: 1 / span 6;
+  }
+
+  .documenttitle {
+    margin-top: 45px;
   }
 
   .defaultfooter {

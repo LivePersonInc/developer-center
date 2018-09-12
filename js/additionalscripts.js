@@ -75,6 +75,10 @@ function navigateContent(url) {
       }
       //jump to top when page loads
       window.scrollTo(0,0);
+      if (/Mobi|Android/i.test(navigator.userAgent) == true) {
+        $('#mysidebar').slideUp(400);
+        $('#mysidebar').data("expanded","false");
+      };
   });
 }
 
