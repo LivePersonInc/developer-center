@@ -10,7 +10,7 @@ permalink: messaging-agent-sdk-examples.html
 indicator: messaging
 ---
 
-Here are a few sample bot integrations, which demonstrates some of the use cases that can be achieved with the SDK. Before getting started with any of these examples, you must check that you have the following prerequisites:
+Here are a few sample bot integrations, which demonstrate some of the use cases that can be achieved with the SDK. Before getting started with any of these examples, you must check that you have the following prerequisites:
 
 1. You must have a LiveEngage account.
 
@@ -72,9 +72,9 @@ Use the Agent Bot example when you are looking to review and develop with the va
 
 * subscribeAgentsState
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github.
+<div class="important"><a href="https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot">Click here</a> to review the full code repository on Github for this example. You can also watch <a href="https://www.youtube.com/embed/7PVj6nhjG5o">this demo video</a>, which will guide you on how to run this example bot.</div>
 
-You can also watch this demo video, which will guide you on how to run this example bot: [https://www.youtube.com/embed/7PVj6nhjG5o](https://www.youtube.com/embed/7PVj6nhjG5o)
+
 
 ### Bots Cluster Example
 
@@ -84,10 +84,4 @@ This example demonstrates running a bot on a ​horizontal scalable cluster. It 
 
 * Multiple Bots - The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github.​
-
-You can also watch the demo video which will guide you through this example bot:
-
-[https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho)
-
-As well as a code review video: [https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk)
+<div class="important"><a href="https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster">Click here</a> to review the full code repository on Github for this example. You can also watch <a href="https://www.youtube.com/embed/4FgZa87sDho">this demo video</a>, which will guide you on how to run this example bot, as well as a <a href="https://www.youtube.com/embed/QZiNzkWgPWk">code review video</a>.</div>
