@@ -1,5 +1,7 @@
 ---
 pagename: Retrieve Special Occasion by ID
+redirect_from:
+  - account-configuration-special-occasions-retrieve-by-id.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

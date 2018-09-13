@@ -1,5 +1,7 @@
 ---
 pagename: Appendix
+redirect_from:
+  - account-configuration-special-occasions-appendix.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

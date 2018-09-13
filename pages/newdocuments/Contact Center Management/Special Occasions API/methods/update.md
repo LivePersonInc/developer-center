@@ -1,5 +1,7 @@
 ---
 pagename: Update Special Occasion
+redirect_from:
+  - account-configuration-special-occasions-update.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

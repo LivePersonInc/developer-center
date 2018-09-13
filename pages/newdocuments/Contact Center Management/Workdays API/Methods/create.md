@@ -1,5 +1,7 @@
 ---
 pagename: Create Workdays Object
+redirect_from:
+  - account-configuration-workdays-create.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

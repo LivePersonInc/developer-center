@@ -1,5 +1,7 @@
 ---
 pagename: Retrieve Workdays Objects by List
+redirect_from:
+  - account-configuration-workdays-get-by-list.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

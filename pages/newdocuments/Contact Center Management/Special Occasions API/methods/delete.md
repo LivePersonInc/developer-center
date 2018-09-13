@@ -1,5 +1,7 @@
 ---
 pagename: Delete Special Occasion
+redirect_from:
+  - account-configuration-special-occasions-delete.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

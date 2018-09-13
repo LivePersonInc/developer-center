@@ -1,5 +1,7 @@
 ---
 pagename: Delete Workdays Object
+redirect_from:
+  - account-configuration-workdays-delete.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

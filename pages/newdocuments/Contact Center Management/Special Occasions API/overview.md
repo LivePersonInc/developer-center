@@ -1,5 +1,7 @@
 ---
 pagename: Overview
+redirect_from:
+  - account-configuration-special-occasions-overview.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

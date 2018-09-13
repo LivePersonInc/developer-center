@@ -1,5 +1,7 @@
 ---
 pagename: Appendix
+redirect_from:
+  - account-configuration-workdays-appendix.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
