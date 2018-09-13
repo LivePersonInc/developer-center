@@ -57,7 +57,7 @@ For backwards compatibility purposes, you must include the following request bod
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK |
+| 201 | Created |
 
 Response example for JSON:
 
