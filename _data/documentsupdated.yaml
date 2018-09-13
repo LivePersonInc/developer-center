@@ -34,21 +34,6 @@
       - pagename: Public Model Structure
       - pagename: Public Properties
       - pagename: Release Notes
-  - documentname: Customer Facing Bots
-    pages:
-      - pagename: Overview
-      - pagename: Prerequisites
-      - pagename: Getting Started
-      - pagename: Considerations
-      - pagename: Limitations
-      - pagename: Deploying Bots on Live Chat
-      - pagename: Deploying Bots on Messaging
-  - documentname: Messaging Agent SDK
-    pages:
-      - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
   - documentname: Chat Agent API
     pages:
       - pagename: Overview
@@ -80,6 +65,22 @@
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
+  - documentname: Customer Facing Bots
+    pages:
+      - pagename: Overview
+      - pagename: Prerequisites
+      - pagename: Getting Started
+      - pagename: Considerations
+      - pagename: Limitations
+      - pagename: Deploying Bots on Live Chat
+      - pagename: Deploying Bots on Messaging
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
+
 
 - categoryname: Client Side Configuration
   image: client-side
