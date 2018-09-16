@@ -13,6 +13,11 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.2.6
+Version 3.2.6 includes fixes for the following bugs:
+1. In some cases, when consumers send the app to the background and later return to the conversation screen, the socket will not get connected and the consumer will not be able to send\receive messages.
+2. After killing the app, getEngagement (Monitoring APIs) will not return the details of the open conversation. 
+
 ### iOS Messaging SDK - Version 3.2.5
 Version 3.2.5 includes fixes for the following bugs:
 
