@@ -1,8 +1,7 @@
 $(document).ready(function () {
   var url = window.location.href;
   //add anchor links to all h3 titles. See respective functions below for what they do.
-  anchors.options.truncate = 24;
-  anchors.add('h3, .highlighter-rouge');
+  anchors.add('h3');
   //detect if mobile user
   if (/Mobi|Android/i.test(navigator.userAgent) == false) {
     sidebarCollapse (url);
