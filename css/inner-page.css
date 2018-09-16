@@ -112,9 +112,10 @@ pre code {
 }
 
 .post-content table tr td {
-   font-size: 1em;
+   font-size: 12px;
    font-family: "Open Sans";
    color: #666666;
+   line-height: 1.8;
    max-width: 160px;
    height: 50px;
    hyphens: none;

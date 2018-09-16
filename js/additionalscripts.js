@@ -1,7 +1,8 @@
 $(document).ready(function () {
   var url = window.location.href;
   //add anchor links to all h3 titles. See respective functions below for what they do.
-  anchors.add('h3');
+  anchors.options.truncate = 24;
+  anchors.add('h3, .highlighter-rouge');
   //detect if mobile user
   if (/Mobi|Android/i.test(navigator.userAgent) == false) {
     sidebarCollapse (url);
@@ -99,8 +100,14 @@ function codeButtons () {
   new ClipboardJS('.codebtn');
   //switch between clipboard icon to checkmark icon on click.
   $('.codebtn').click(function() {
-    $(this).find('.copybefore').hide();
-    $(this).find('.copyafter').show();
+    var before = $(this).find('.copybefore');
+    var after = $(this).find('.copyafter');
+    before.hide();
+    after.show();
+    setTimeout(function() {
+      after.hide();
+      before.show();
+    }, 5000);
   });
 };
 
