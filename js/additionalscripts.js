@@ -114,11 +114,19 @@ function codeButtons () {
   });
 
   $('.nightbtn').click(function() {
+    if ($(this).parent().hasClass("darken")) {
+      $(this).parent().removeClass("darken")
+    } else {
     $(this).parent().addClass("darken");
+  };
   })
 
   $('.daybtn').click(function() {
-    $(this).parent().removeClass("darken");
+    if ($(this).parent().hasClass("darken")) {
+      $(this).parent().removeClass("darken")
+    } else {
+    $(this).parent().addClass("darken");
+  };
   })
 
 };
