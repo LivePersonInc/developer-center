@@ -201,6 +201,61 @@ code pre {
   position: absolute;
 }
 
+.daybtn {
+  user-select: none;
+  order: 1;
+  align-self: flex-end;
+  width: 15px;
+  margin-top: 3px;
+  order: 1;
+  margin-left: -1.9%;
+  border: none;
+  background-color: #e4e3e3;
+  position: absolute;
+}
+
+.nightbtn {
+  user-select: none;
+  order: 1;
+  align-self: flex-end;
+  width: 15px;
+  margin-top: 3px;
+  order: 1;
+  margin-left: -2.9%;
+  border: none;
+  background-color: #e4e3e3;
+  position: absolute;
+}
+
+.darken {
+  background-color: #3e396b !important;
+}
+
+.darken::before {
+  background-color: #35305a !important;
+}
+
+.darken .highlight {
+  background-color: #3e396b !important;
+}
+
+.darken button {
+  background-color: #35305a !important;
+  color: white;
+}
+
+.darken code {
+  filter: brightness(195%);
+}
+
+.daybtn:focus {
+  outline: none;
+}
+
+.nightbtn:focus {
+  outline: none;
+}
+
 .codebtn:focus {
   outline: none;
 }

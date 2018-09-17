@@ -92,8 +92,12 @@ function codeButtons () {
   var currentId = "codeblock" + (i + 1);
   $(this).attr('id', currentId);
   //define and then add a clipboard button to all code blocks.
-  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
+  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><i class="fa fa-files-o copybefore" aria-hidden="true"></i><i class="fa fa-check copyafter" aria-hidden="true" style="display: none;"></i></button>';
+  var dayButton = '<button class="daybtn"><i class="fa fa-sun-o" aria-hidden="true"></i></button>';
+  var nightButton = '<button class="nightbtn"><i class="fa fa-moon-o" aria-hidden="true"></i></button>'
      $(this).append(clipButton);
+     $(this).append(dayButton);
+     $(this).append(nightButton);
   });
 //instantiate clipboardjs on the buttons. This controls the copy action.
   new ClipboardJS('.codebtn');
@@ -108,6 +112,15 @@ function codeButtons () {
       before.show();
     }, 5000);
   });
+
+  $('.nightbtn').click(function() {
+    $(this).parent().addClass("darken");
+  })
+
+  $('.daybtn').click(function() {
+    $(this).parent().removeClass("darken");
+  })
+
 };
 
 
