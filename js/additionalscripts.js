@@ -114,18 +114,18 @@ function codeButtons () {
   });
 
   $('.nightbtn').click(function() {
-    if ($(this).parent().hasClass("darken")) {
-      $(this).parent().removeClass("darken")
+    if ($(".highlighter-rouge").hasClass("darken")) {
+      $(".highlighter-rouge").removeClass("darken")
     } else {
-    $(this).parent().addClass("darken");
+    $(".highlighter-rouge").addClass("darken");
   };
   })
 
   $('.daybtn').click(function() {
-    if ($(this).parent().hasClass("darken")) {
-      $(this).parent().removeClass("darken")
+    if ($(".highlighter-rouge").hasClass("darken")) {
+      $(".highlighter-rouge").removeClass("darken")
     } else {
-    $(this).parent().addClass("darken");
+    $(".highlighter-rouge").addClass("darken");
   };
   })
 

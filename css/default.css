@@ -196,8 +196,9 @@ code pre {
   padding-top: 10px;
   order: 1;
   border: none;
-  background-color: #e4e3e3;
+  background-color: transparent;
   position: absolute;
+  z-index: 10;
 }
 
 .daybtn {
