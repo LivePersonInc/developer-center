@@ -15,27 +15,34 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.2.6
+
+Version 3.2.6 includes fixes for the following bugs:
+
+1. In some cases, when consumers sent the app to the background and later returned to the conversation screen, the socket would not get connected and the consumer was not able to send or receive messages.
+
+2. After killing the app, `getEngagement` (a Monitoring API method) would not return the details of the open conversation.
+
 ### iOS Messaging SDK - Version 3.2.5
 
 Version 3.2.5 includes fixes for the following bugs:
 
 1. In some cases, when consumers would go into the conversation screen, the loading progress bar would get stuck.
 
-2. When starting to fill a secure form, if a customer exits out of the form and opens a new one, the values from the first form appeared in the new form for a about a second and then disappeared.
+2. When starting to fill a secure form, if a customer exits out of the form and opens a new secure form, the values from the first form appears in the new form for a ~second and then disappeared.
 
-3. When applying a Regular Expression for real time masking, the entire string would be affected rather than only the matching part.
+3. When applying a regex for real time masking, the entire string will be affected rather than only the matching part.
+4. Missing auto scroll to bottom when a conversation is closed.
 
-4. Missing auto scroll to bottom when a conversation was closed.
+5. The first message is hidden when using the Control History APIs. After sending the second message, all messages will be visible.
 
-5. The first message was hidden when using the Control History APIs. After sending the second message, all messages would be visible.
+6. In some cases, when consumers send the app to the background and later return to the conversation screen, the socket will not get connected and the consumer will not be able to send\receive messages.
 
-6. In some cases, when consumers sent the app to the background and later return to the conversation screen, the socket would not get connected and the consumer was not able to send/receive messages.
+7. When going into the conversation screen after the app was killed, the screen will be scrolled to the top instead to the bottom.
 
-7. When going into the conversation screen after the app was killed, the screen would be scrolled to the top instead of to the bottom.
+8. When replacing rootViewController, in-app push notifications stops working.
 
-8. When replacing `rootViewController`, in-app push notifications stopped working.
-
-9. If a failure occurred while unregistering for Push Notifications, customers were unable to logout from the SDK.
+9. If a failure occurred while unregistering for Push Notifications, customers were unable to logout from the SDK
 
 The full release notes can be found [Here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/2018/iOS+3.2.5+release+notes.pdf)
 
@@ -50,8 +57,6 @@ The SDK would crash after the user sent messages in iOS 12.
 #### Fix:
 
 The user can now send messages without an SDK crash when running on iOS 12.
-
-
 
 ### iOS Messaging SDK - Version 3.2.3
 
