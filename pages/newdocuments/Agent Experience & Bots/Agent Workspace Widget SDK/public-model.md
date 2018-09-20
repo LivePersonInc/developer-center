@@ -128,6 +128,10 @@ Structure example:
         "customerDetails": [],
         "personalInfo": []
     },
+    "claimsAndAuthType": {
+        "claims": {},
+        "acr": ""
+    },
     "customVariables": [],
     "splitSession": {
         "customVariables": []
@@ -225,6 +229,9 @@ Structure example:
 | **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  |                                                            |
 | authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  |                                                            |
 | authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  |                                                            |
+| **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                          | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                            |
+| claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                  | Object containing SDEs passed by the IDP on the JWT                                      | object  |                                                            |
+| claimsAndAuthType.acr                       | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                              | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                            |
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
