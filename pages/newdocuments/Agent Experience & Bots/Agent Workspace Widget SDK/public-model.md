@@ -488,6 +488,40 @@ Structure example:
 
 *Note: This is an array in order that that the customer can provide home contact info, work contact info, and other contact info.*
 
+
+### claimsAndAuthType in unauthenticated case
+
+| Property   | Description            | Type   |
+|------------|------------------------|--------|
+| customerId | The customer id        | string |
+
+Structure example:
+
+```json
+{
+  "claims": {
+    "sub": "712f0c95-6111-48be-af0c-95611118becc",
+    "iss": "https://idp.liveperson.net",
+    "lp_sdes": [
+      {
+        "type": "ctmrinfo",
+        "info": {
+          "customerId": "712f0c95-6111-48be-af0c-95611118becc"
+        }
+      },
+      {
+        "type": "personal",
+        "personal": {}
+      }
+    ]
+  },
+  "acr": "0"
+}
+```
+
+*note: This enables to send customer id even for unauthenticated user.*
+
+
 ### SDE.marketingSource
 
 | Property           | Description                       | Type   |
