@@ -128,7 +128,7 @@ This section contains API details that are common to every API’s resource and 
 | 10016      | Contact LivePersonsupport within the Connection Area | Chat with the LivePerson support team.   |
 | 10017      | View Connection Area Content    | View relevant content from the Connection Area per journey.      |
 | 10018      | Configure shift status       | For brands who have enabled the Messaging feature, this permission allows an admin to configure the shift status.                          |
-| 10027      | Configure skill workdays       | View skill list, assign and edit Schedule and Special occasion item.                          |
+| 10027      | Configure skill workdays       | View a list of skills and assign and edit Schedule and Special Occasion items associated with them.                          |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |
 | 20001      | Join Agents' conversations  | Join a conversation handled by another Agent within their Group  |
 | 20002      | View Agents' conversations | View conversations handled by other Agents within their Group    |
@@ -166,7 +166,7 @@ This section contains API details that are common to every API’s resource and 
 | 30021      | View Connection Area Content                                   | View relevant content from the Connection Area per journey.      |
 | 30022      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
 | 30023      | Configure shift status                                         | For brands who have enabled the Messaging feature, this permission allows an agent manager to configure the shift status                   |
-| 30035      | Configure skill workdays                                       | Access users module, view skill list, assign and edit Schedule and Special occasion items.    |
+| 30035      | Configure skill workdays                                       | Access users module, view a list of skills and assign and edit Schedule and Special Occasion items associated with them.    |
 | 40000      | Campaign Manager core permissions                              | Core permissions that are included with the Campaign Manager role and cannot be disabled.   |
 | 40001      | Edit campaigns  | Create and modify campaigns                                      |
 | 40002      | Publish campaigns    | Control the publishing of campaigns                              |
@@ -184,4 +184,4 @@ This section contains API details that are common to every API’s resource and 
 | 40018      | Edit skills     | Edit skills and configure default survey for skill change        |
 | 40019      | View reports in Campaign BI                                    | View reports in the Campaign BI dashboard                        |
 | 40021      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
-| 40028      | Configure Schedule and Special Occasion library items          | View and edit Schedule and Special occasion library items       |
+| 40028      | Configure Schedule and Special Occasion library items          | View and edit Schedule and Special Occasion library items       |
