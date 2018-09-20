@@ -200,8 +200,16 @@ code {
   width: 89%;
 }
 
+p .darken {
+  color: #fff;
+}
+
 td code {
   color: #666666;
+}
+
+td .darken {
+  color: #fff !important;
 }
 
 /*toc nav bar */
