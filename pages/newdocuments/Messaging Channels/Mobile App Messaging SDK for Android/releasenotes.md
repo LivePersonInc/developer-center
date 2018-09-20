@@ -18,22 +18,36 @@ indicator: messaging
 
 **Version 3.2.2 release: September 9th 2018**
 
-Version 3.2.2 includes fixes for the following bugs:
+This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support & solution teams. This release version does not include new features or behavior changes.
+
+#### Environment Requirements
+The SDK’s minimum API is 19 and the target API is 27.
+
+#### Issues that have been addressed in this release:
 
 1. Improper exception handling would cause the host application to freeze.
 
 2. Sporadic crashes when conversations are initiated, when the 3.2.1 version of the Mobile App SDK was used on Android platform version 4.4.2.
 
-3. Consumer’s OS parameter was missing from the agent workspace.
+3. Consumer’s OS parameter is missing from the agent workspace.
 
-4. Redundant animation to indicate new messages from agent, when using `show_agent_typing_in_message_bubble`
+4. Redundant animation to indicate new messages from agent, when using `show_agent_typing_in_message_bubble`.
 
 5. When a message fails to be sent, subsequent messages may also fail when they should be re-sent successfully.
 
-6. Invalid JWT authentication token causes host application to freeze after retry mechanism has been completed.
+6. Invalid JWT authentication token causes host application to freeze after retry mechanism has been complete.
 
+#### Known Issues
 
-The full release notes can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/2018/Android+3.2.2+release+notes.pdf).
+The following issues are still being investigated & have been prioritized for a subsequent release based on their frequency of occurrence and severity:
+
+1. Audio/Image message fails to be sent, when it is the first message in the conversation.
+
+2. Infrequent crash when initializing the SDK for Authenticated mode and providing an empty/null JWT.
+
+3. Conversation is not auto-scrolled to bottom when sending a message, if the Agent is typing and `show_agent_typing_in_message_bubble` is set to true.
+
+4. When an expired authentication token is used to register for push notifications, the registration does not complete and OnTokenExpire does not trigger Customers should notify support if they are seeing any increase of frequency or impact from any of the following issues.
 
 ### Android Messaging SDK -  Version 3.2
 
