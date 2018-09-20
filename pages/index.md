@@ -39,4 +39,4 @@ If you're looking for support with any of the documents or APIs on the site, ple
 
 * [Data APIs](essential-resources-getting-started-with-data-apis.html) - poll LivePerson servers to collect and aggregate historical and real-time data
 
-* [Connectors](connector-api-connector-api-overview.html) - integrate third party messaging platforms and LiveEngage
+* [Connectors](connector-api-first-steps-overview.html) - integrate third party messaging platforms and LiveEngage
