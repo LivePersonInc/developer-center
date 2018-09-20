@@ -58,7 +58,7 @@ This section contains API details that are common to every API’s resource and 
 | skillOrder | The skill’s order | int (number) | Optional | |
 | maxWaitTime | The skill’s max wait time. | int (number) |  Optional |  Defaults to 120 |
 | defaultPostChatSurveyId | The default post chat survey id | String | Optional | |
-| defaultOnlineSurveyId | The default online chat survey id | String | Optional | |
+| defaultOfflineSurveyId | The default offline chat survey id | String | Optional | |
 | defaultAgentSurveyId | The default agent chat survey id | String | Optional | |
 | dateUpdated | The last update user change date.  | Date (numbers) | Optional | The format: year-month-date hrs:min:sec |
 | skillRoutingConfiguration | For each agent group the parameters of the percentage and priority split routing. | TreeSet | Optional | If priority is not in use, pass 1 as value. |
