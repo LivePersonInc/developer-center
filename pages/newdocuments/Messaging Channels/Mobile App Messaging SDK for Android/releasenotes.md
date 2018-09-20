@@ -999,7 +999,7 @@ A full list of supported and certified devices can be found in the [LiveEngage S
 **SDK configuration**: This features requires items to be configured in the SDK.
 
 
-**Mobile App Messaging SDK version 3.0 **.
+### Mobile App Messaging SDK version 3.0
 
 #### New functionalities
 
