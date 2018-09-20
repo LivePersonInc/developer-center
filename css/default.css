@@ -193,7 +193,7 @@ code pre {
   order: 1;
   align-self: flex-end;
   width: 35px;
-  padding-top: 10px;
+  padding-top: 9px;
   order: 1;
   border: none;
   background-color: transparent;
@@ -201,30 +201,16 @@ code pre {
   z-index: 10;
 }
 
-.daybtn {
-  position: absolute;
-  user-select: none;
-  order: 1;
-  align-self: flex-end;
-  width: 80px;
-  padding-top: 10px;
-  order: 1;
-  border: none;
-  background-color: transparent;
-  opacity: 1;
-}
-
 .nightbtn {
   user-select: none;
   order: 1;
   align-self: flex-end;
-  width: 125px;
+  width: 85px;
   padding-top: 10px;
   order: 1;
   border: none;
   background-color: transparent;
   position: absolute;
-  opacity: 0.3;
 }
 
 .darken {
@@ -250,7 +236,7 @@ code pre {
 }
 
 .darken code span::selection{
-  background-color: darkgray;
+  background-color: cornflowerblue;
 }
 
 .darken .nightbtn {

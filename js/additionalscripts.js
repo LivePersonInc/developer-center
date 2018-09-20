@@ -92,11 +92,9 @@ function codeButtons () {
   var currentId = "codeblock" + (i + 1);
   $(this).attr('id', currentId);
   //define and then add a clipboard button to all code blocks.
-  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><i class="fa fa-files-o copybefore" aria-hidden="true"></i><i class="fa fa-check copyafter" aria-hidden="true" style="display: none;"></i></button>';
-  var dayButton = '<button class="daybtn"><i class="fa fa-sun-o" aria-hidden="true"></i></button>';
-  var nightButton = '<button class="nightbtn"><i class="fa fa-moon-o" aria-hidden="true"></i></button>'
+  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><i class="far fa-copy copybefore" aria-hidden="true"></i><i class="fas fa-check copyafter" aria-hidden="true" style="display: none;"></i></button>';
+  var nightButton = '<button class="nightbtn"><i class="far fa-moon" aria-hidden="true"></i></button>'
      $(this).append(clipButton);
-     $(this).append(dayButton);
      $(this).append(nightButton);
   });
 //instantiate clipboardjs on the buttons. This controls the copy action.
@@ -115,29 +113,26 @@ function codeButtons () {
   var selectedCodeHighlight = localStorage.getItem('selectedCode');
   if (selectedCodeHighlight == 'light') {
     $(".highlighter-rouge").removeClass("darken");
+    $(".fa-moon").removeClass("fas");
+    $(".fa-moon").addClass("far");
   } else if (selectedCodeHighlight == 'dark'){
     $(".highlighter-rouge").addClass("darken");
+    $(".fa-moon").removeClass("far");
+    $(".fa-moon").addClass("fas");
   }
   $('.nightbtn').click(function() {
     if ($(".highlighter-rouge").hasClass("darken")) {
+      $(".fa-moon").removeClass("fas");
+      $(".fa-moon").addClass("far");
       $(".highlighter-rouge").removeClass("darken");
       localStorage.setItem('selectedCode', 'light');
     } else {
+    $(".fa-moon").removeClass("far");
+    $(".fa-moon").addClass("fas");
     $(".highlighter-rouge").addClass("darken");
     localStorage.setItem('selectedCode', 'dark');
   };
-  })
-
-  $('.daybtn').click(function() {
-    if ($(".highlighter-rouge").hasClass("darken")) {
-      $(".highlighter-rouge").removeClass("darken");
-      localStorage.setItem('selectedCode', 'light');
-    } else {
-    $(".highlighter-rouge").addClass("darken");
-    localStorage.setItem('selectedCode', 'dark');
-  };
-  })
-
+});
 };
 
 

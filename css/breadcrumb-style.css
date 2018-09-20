@@ -71,12 +71,17 @@
 
 .breadcrumbs a.breadcrumb-item:after {
   display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
   padding-right: 1em;
   padding-left: 1em;
   color: #979797;
-  content: "\f105";
   text-decoration: none;
-  font-family:"FontAwesome";
 }
 
 .breadcrumbs .icon:after {
