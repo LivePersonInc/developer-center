@@ -231,7 +231,7 @@ Structure example:
 | authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  |                                                            |
 | **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                          | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                            |
 | claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                  | Object containing SDEs passed by the IDP on the JWT                                      | object  |                                                            |
-| claimsAndAuthType.acr                       | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                              | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                            |
+| claimsAndAuthType.acr                       | The authentication type ("0" - unauthenticated, "loa1" - authenticated)                              | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                            |
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
@@ -406,7 +406,7 @@ Structure example:
 
 *Note: Some of the parameters are duplicated within the 'pageBasic' object.*
 
-### SDE.customerDetails, authenticatedData.customerDetails
+### SDE.customerDetails, authenticatedData.customerDetails, claimsAndAuthType.customerDetails
 
 | Property         | Description                                           | Type   |
 |------------------|-------------------------------------------------------|--------|
@@ -444,7 +444,7 @@ Structure example:
 }
 ```
 
-### SDE.personalInfo, authenticatedData.personalInfo
+### SDE.personalInfo, authenticatedData.personalInfo, claimsAndAuthType.personalInfo
 
 | Property         | Description                                           | Type   |
 |------------------|-------------------------------------------------------|--------|
@@ -470,7 +470,7 @@ Structure example:
 }
 ```
 
-### SDE.personalInfo.contactInfo, authenticatedData.personalInfo.contactInfo
+### SDE.personalInfo.contactInfo, authenticatedData.personalInfo.contactInfo, claimsAndAuthType.personalInfo.contactInfo
 
 | Property | Description                      | Type   |
 |----------|----------------------------------|--------|
