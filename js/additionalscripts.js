@@ -112,20 +112,29 @@ function codeButtons () {
       before.show();
     }, 5000);
   });
-
+  var selectedCodeHighlight = localStorage.getItem('selectedCode');
+  if (selectedCodeHighlight == 'light') {
+    $(".highlighter-rouge").removeClass("darken");
+  } else if (selectedCodeHighlight == 'dark'){
+    $(".highlighter-rouge").addClass("darken");
+  }
   $('.nightbtn').click(function() {
     if ($(".highlighter-rouge").hasClass("darken")) {
-      $(".highlighter-rouge").removeClass("darken")
+      $(".highlighter-rouge").removeClass("darken");
+      localStorage.setItem('selectedCode', 'light');
     } else {
     $(".highlighter-rouge").addClass("darken");
+    localStorage.setItem('selectedCode', 'dark');
   };
   })
 
   $('.daybtn').click(function() {
     if ($(".highlighter-rouge").hasClass("darken")) {
-      $(".highlighter-rouge").removeClass("darken")
+      $(".highlighter-rouge").removeClass("darken");
+      localStorage.setItem('selectedCode', 'light');
     } else {
     $(".highlighter-rouge").addClass("darken");
+    localStorage.setItem('selectedCode', 'dark');
   };
   })
 
