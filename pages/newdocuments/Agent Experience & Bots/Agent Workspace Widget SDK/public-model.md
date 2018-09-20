@@ -226,12 +226,12 @@ Structure example:
 | SDE.shoppingCart                            | Array of shopping cart updates                                                                       | Array of shopping cart updates                                                           | array   |                                                            |
 | SDE.serviceActivity                         | Array of service activity information                                                                | Array of service activity information                                                    | array   |                                                            |
 | SDE.error                                   | Array of visitor errors                                                                              | Array of visitor errors                                                                  | array   |                                                            |
-| **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  |                                                            | To be depracated
-| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  |                                                            | To be depracated
-| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  |                                                            | To be depracated
-| **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                         | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                            | Replacing the "authenticatedData" key, that will be deprecated
-| claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                 | Object containing SDEs passed by the IDP on the JWT                                      | object  |                                                          |
-| claimsAndAuthType.acr                       | The authentication type ("0" - unauthenticated, "loa1" - authenticated)                             | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                          |
+| **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  | To be depracated by 'claimsAndAuthType.claims'             |
+| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  | To be depracated                                            | 
+| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  | To be depracated                                            | 
+| **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                         | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                              |
+| claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                 | Object containing SDEs passed by the IDP on the JWT                                      | object  | deprecates the "authenticatedData" key                |
+| claimsAndAuthType.acr                       | The authentication type ("0" - unauthenticated, "loa1" - authenticated)                             | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                              |
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
@@ -500,13 +500,13 @@ Structure example:
 ```json
 {
   "claims": {
-    "sub": "712f0c95-6111-48be-af0c-95611118becc",
-    "iss": "https://idp.liveperson.net",
+    "sub": "",
+    "iss": "",
     "lp_sdes": [
       {
         "type": "ctmrinfo",
         "info": {
-          "customerId": "712f0c95-6111-48be-af0c-95611118becc"
+          "customerId": ""
         }
       },
       {
