@@ -20,6 +20,8 @@ By Messaging Conversation - deletion of personal data that is related to specifi
 
 By consumerId - deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request).
 
+By ticketId - deletion of personal data that is related to a specific consumer ticket related interactions (does not include the consumer's chats; those must be deleted in a separate request)..
+
 ### Request
 
  |Method|      URL|  
@@ -50,6 +52,7 @@ All fields are sent in a JSON format
  | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response).  |
  | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | |
  | consumer| Consumer ids for deletion | array of strings | Optional |  |
+ | ticketing| Ticket ids for deletion | array of strings |  |  |
 
 BODY Examples:
 
@@ -74,6 +77,14 @@ Example 3:
 ```json
   {
     "conversation": ["0345bf7d-08dc-4e61-8a11-e566e3bcd787","a2776761-5e66-4ea8-83e7-a955cd925471"]
+  }
+```
+
+Example 4:
+
+```json
+  {
+    "ticketing": ["12191053030","a12191053430"]
   }
 ```
 
