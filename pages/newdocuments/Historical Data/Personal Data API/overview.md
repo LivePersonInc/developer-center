@@ -84,6 +84,23 @@ The brand will need to follow the below steps to achieve this:
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method and make two requests: one with the list of conversations to delete and another with the consumerId. This makes sure that both the conversation and the rest of the consumer's data is completely deleted.
 
+**Ticketing**
+
+This flow is initiated by the consumer requesting for one or all of his tickets to be deleted.
+
+The brand will need to follow the below steps to achieve this:
+
+1. The brand will need to have passed the ids of tickets it wishes to mask.
+
+2. This can be accomplished by searching for the relevant ticket ids via the legacy agent console or via the dedicated Ticket Search page in the legacy admin area (provisioned on the Ticket Search feature) according to some identifying contact attributes like Name, Email, Phone and/or Keyword (free text field).
+In the agent console the search is limited to 31 days sliding window up to 13 months back.
+In the admin area the search is limited to 31 days sliding window with no historical limit.
+   
+3. Use the Create Delete Request method with the list of ticket ids (without the 'LTK' prefix and 'X' suffix) to delete.
+
+The tickets themselves will not be deleted but rather the metadata which links the tickets to the requesting consumer,such as ticket message (email) headers, UDEs (legacy SDEs) and ticket contact info, will be masked (with the ‘*** LP deleted data ***’ string).
+Attachments in the relevant tickets will be deleted.
+
 ### Limitations:
 
 This API is not aimed for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
