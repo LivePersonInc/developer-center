@@ -7,8 +7,8 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 
-order: 243
-permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
+
+permalink: mobile-app-messaging-sdk-for-ios-release-notes-2.0.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
@@ -2504,7 +2504,7 @@ Configuring Camera's button colors
 | remoteUserDefaultAvatarImage | The default avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations. If the remote user has an avatar image in his profile, this attribute will be ignored. | nil |
 
 
-## Mobile App Messaging SDK Version 2.3.1
+### Mobile App Messaging SDK Version 2.3.1
 
 Mobile App Messaging SDK v2.3.1 for iOS contains the following bug fix:
 
