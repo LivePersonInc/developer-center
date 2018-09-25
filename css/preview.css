@@ -11,7 +11,7 @@ html body .preview-page div.container div.title {
   font-family: "Open Sans";
 }
 html body .preview-page div.container div.text a {
-    margin-bottom: 4px ;  
+    margin-bottom: 4px ;
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 12px;
@@ -31,8 +31,8 @@ html body .preview-page div.container div.text a {
 
 .preview-page .documents, .preview-page .products, .preview-page .events {
     margin-top: 0px;
-    width: 95%;
-    padding-top: 30px;
+    width: 98%;
+    padding-top: 24px;
     background-color: inherit;
 }
 html body .preview-page div.container div.text {
