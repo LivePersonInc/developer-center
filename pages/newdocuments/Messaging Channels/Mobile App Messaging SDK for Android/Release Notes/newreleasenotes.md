@@ -1,10 +1,10 @@
 ---
-pagename: Release Notes
+pagename: Latest Release Notes
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-permalink: mobile-app-messaging-sdk-for-android-release-notes.html
+permalink: mobile-app-messaging-sdk-for-android-latest-release-notes.html
 indicator: messaging
 ---
 

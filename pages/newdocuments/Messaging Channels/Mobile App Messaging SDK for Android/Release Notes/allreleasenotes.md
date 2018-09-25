@@ -4,7 +4,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-permalink: mobile-app-messaging-sdk-for-android-release-notes-all-release-notes.html
+permalink: mobile-app-messaging-sdk-for-android-all-release-notes.html
 indicator: messaging
 ---
 
