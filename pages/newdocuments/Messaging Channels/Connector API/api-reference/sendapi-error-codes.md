@@ -12,7 +12,7 @@ permalink: connector-api-api-reference-error-responses.html
 search: exclude
 ---
 
-The API returns an error response whenever authentication or authorization failed. Such an error response contains a JSON payload which details on the reason. For example, if the AppJWT is missing then the Send API will return the following response.
+The API returns an error response for every authentication failure. Such an error response, contains a JSON payload which details the error reason. For example, if the AppJWT is missing, then the Send API will return the following response:
 
 ```json
 {
