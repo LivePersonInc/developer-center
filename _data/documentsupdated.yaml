@@ -1,0 +1,877 @@
+- categoryname: Getting Started
+  image: getting-started
+  documents:
+  - documentname: Before You Get Started
+    pages:
+    - pagename: Considerations and Requirements
+  - documentname: Retrieve API Keys
+    pages:
+    - pagename: Create a New API Key
+  - documentname: Retrieve API Domains
+    pages:
+    - pagename: Using the Domain API
+  - documentname: Retry and KeepAlive Best Practices
+    pages:
+    - pagename: Overview
+  - documentname: Essential Resources
+    pages:
+    - pagename: Getting Started with Authentication
+    - pagename: Getting Started with Data APIs
+    - pagename: Getting Started with Engagement Attributes
+
+- categoryname: Agent Experience & Bots
+  image: agent-experience
+  documents:
+  - documentname: Add Agent Widgets
+    pages:
+    - pagename: Add Your Own Widgets to the Agent Workspace
+  - documentname: Agent Workspace Widget SDK
+    pages:
+      - pagename: Overview
+      - pagename: Limitations
+      - pagename: How to Use the SDK
+      - pagename: Methods
+      - pagename: Public Model Structure
+      - pagename: Public Properties
+      - pagename: Release Notes
+  - documentname: Chat Agent API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Start Agent Session
+          - subpagename: Retrieve Current Availability
+          - subpagename: Set Agent Availability
+          - subpagename: Retrieve Available Agents
+          - subpagename: Retrieve Available Slots
+          - subpagename: Retrieve Agent Information
+          - subpagename: Determine Incoming Chat Request
+          - subpagename: Accept a Chat
+          - subpagename: Retrieve Chat Sessions
+          - subpagename: Retrieve Chat Resources, Events and Information
+          - subpagename: Retrieve Data for Multiple Chats
+          - subpagename: Retrieve Chat Events
+          - subpagename: Send Lines and Structured Content
+          - subpagename: End Chat
+          - subpagename: Retrieve Chat Information
+          - subpagename: Retrieve Visitor's Name
+          - subpagename: Retrieve Agent's Typing Status
+          - subpagename: Set Agent's Typing Status
+          - subpagename: Retrieve Visitor's Typing Status
+          - subpagename: Retrieve Available Skills
+          - subpagename: Transfer a Chat
+          - subpagename: Retrieve Agent Survey Structure
+          - subpagename: Submit Survey Data
+      - pagename: System Messages
+      - pagename: Sample App
+      - pagename: Postman Resources
+  - documentname: Customer Facing Bots
+    pages:
+      - pagename: Overview
+      - pagename: Prerequisites
+      - pagename: Getting Started
+      - pagename: Considerations
+      - pagename: Limitations
+      - pagename: Deploying Bots on Live Chat
+      - pagename: Deploying Bots on Messaging
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
+
+
+- categoryname: Client Side Configuration
+  image: client-side
+  documents:
+    - documentname: Customized Chat Windows
+      pages:
+      - pagename: Overview
+      - pagename: Create an API-based Window
+      - pagename: Create an API Engagement
+      - pagename: Appendix
+    - documentname: Engagement Window Widget SDK
+      pages:
+        - pagename: Overview
+        - pagename: Limitations
+        - pagename: Instructions
+          subpages:
+            - subpagename: Configuration
+            - subpagename: How to Use the SDK
+            - subpagename: Event Structure
+            - subpagename: Code Examples
+        - pagename: Release Notes
+    - documentname: JavaScript Chat SDK
+      pages:
+      - pagename: Overview
+      - pagename: Chat States
+      - pagename: Surveys
+      - pagename: Creating an Instance
+      - pagename: Sample App
+      - pagename: Methods
+        subpages:
+        - subpagename: getPreChatSurvey
+        - subpagename: getEngagement
+        - subpagename: requestChat
+        - subpagename: authenticate
+        - subpagename: addLine
+        - subpagename: setVisitorTyping
+        - subpagename: setVisitorName
+        - subpagename: endChat
+        - subpagename: requestTranscript
+        - subpagename: getExitSurvey
+        - subpagename: submitExitSurvey
+        - subpagename: cancelSurvey
+        - subpagename: getOfflineSurvey
+        - subpagename: submitOfflineSurvey
+        - subpagename: getState
+        - subpagename: getAgentLoginName
+        - subpagename: getVisitorName
+        - subpagename: getAgentId
+        - subpagename: getRtSessionId
+        - subpagename: getSessionKey
+        - subpagename: getAgentTyping
+        - subpagename: getEstimatedWaitTime
+        - subpagename: disposeVisitor
+      - pagename: Events
+        subpages:
+        - subpagename: onLoad
+        - subpagename: onInit
+        - subpagename: onEngagement
+        - subpagename: onPreChatSurvey
+        - subpagename: onOfflineSurvey
+        - subpagename: onVisitorDisposed
+        - subpagename: onStart
+        - subpagename: onStop
+        - subpagename: onRequestChat
+        - subpagename: onTranscript
+        - subpagename: onLine
+        - subpagename: onState
+        - subpagename: onInfo
+        - subpagename: onAgentTyping
+        - subpagename: onExitSurvey
+        - subpagename: onAccountToAccountTransfer
+      - pagename: Release Notes
+    - documentname: Messaging Window API
+      pages:
+      - pagename: Overview
+      - pagename: Protocol Overview
+      - pagename: Getting Started
+      - pagename: Tutorials
+        subpages:
+        - subpagename: Get Messages
+        - subpagename: Conversation Metadata
+        - subpagename: Read and Accept Events
+        - subpagename: Authentication
+        - subpagename: Post Conversation Survey
+        - subpagename: Client Properties
+        - subpagename: Avoid Websocket Headers
+        - subpagename: CoBrowse
+      - pagename: Samples
+        subpages:
+        - subpagename: JavaScript Sample
+      - pagename: API Reference
+        subpages:
+        - subpagename: Overview
+        - subpagename: Request Builder
+        - subpagename: Response Builder
+        - subpagename: Notification Builder
+        - subpagename: New Conversation
+        - subpagename: Close Conversation
+        - subpagename: Send Consumer Satisfaction (CSAT)
+        - subpagename: Subscribe to Conversation Metadata
+        - subpagename: Unsubscribe from Conversation Metadata
+        - subpagename: Publishing Text Content
+        - subpagename: Subscribe to Messaging Events
+        - subpagename: Consumer Token Creation
+        - subpagename: Init Connection
+        - subpagename: Generate Upload URL
+        - subpagename: Generate Download URL
+    - documentname: Server Chat API
+      pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+        - subpagename: Retrieve Availability
+        - subpagename: Retrieve Available Slots
+        - subpagename: Retrieve Estimated Wait Time
+        - subpagename: Retrieve Pre-Chat Survey
+        - subpagename: Retrieve Offline Survey
+        - subpagename: Post Offline Survey
+        - subpagename: Start Chat
+        - subpagename: Retrieve Chat Resources, Events and Information
+        - subpagename: Retrieve Chat Events
+        - subpagename: Add Lines / End Chat
+        - subpagename: Retrieve Chat Information
+        - subpagename: Retrieve Visitor's Name
+        - subpagename: Retrieve the Visitor's Typing Status
+        - subpagename: Retrieve the Agent's Typing Status
+        - subpagename: Set the Visitor's Typing Status
+        - subpagename: Retrieve Exit Survey Structure
+        - subpagename: Submit Survey Data
+        - subpagename: Send a Transcript
+      - pagename: Sample Postman Collection
+
+- categoryname: Contact Center Management
+  image: contact-center
+  documents:
+    - documentname: Agent Groups API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get All Agent Groups
+            - subpagename: Get Agent Groups by ID
+            - subpagename: Create Agent Groups
+            - subpagename: Update Agent Groups
+            - subpagename: Update Agent Group
+            - subpagename: Delete Agent Groups
+            - subpagename: Delete Agent Group
+        - pagename: Appendix
+    - documentname: Agent Status Reason API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Agent Status List
+            - subpagename: Agent Status Reason by ID
+            - subpagename: Create Status Reason
+            - subpagename: Update Status Reason
+            - subpagename: Delete Status Reason
+    - documentname: Automatic Messages API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+          - subpagename: Get Automatic Messages
+          - subpagename: Get Automatic Message by ID
+          - subpagename: Update an Automatic Message
+    - documentname: Audit Trail API
+      pages:
+        - pagename: Introduction
+        - pagename: Methods
+          subpages:
+            - subpagename: Retrieve Audit Trail Records
+            - subpagename: Export Audit Trail to CSV File
+    - documentname: LOBs API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get all LOBs
+            - subpagename: Get LOB by ID
+            - subpagename: Create LOB
+            - subpagename: Update LOBs
+            - subpagename: Update LOB
+            - subpagename: Delete LOBs
+            - subpagename: Delete LOB
+        - pagenme: Appendix
+    - documentname: Predefined Content API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Default Predefined Content by ID
+            - subpagename: Predefined Content Query Delta
+            - subpagename: Create Predefined Content
+            - subpagename: Update Predefined Content
+            - subpagename: Get Predefined Content Items
+            - subpagename: Delete Predefined Content
+            - subpagename: Get Predefined Content by ID
+            - subpagename: Delete Predefined Content Items
+            - subpagename: Get Default Predefined Content Items
+        - pagename: Appendix
+    - documentname: Predefined Categories API
+      pages:
+        - pagename: Introduction
+        - pagename: Methods
+          subpages:
+            - subpagename: General
+            - subpagename: Categories List
+            - subpagename: Categories List by Revision
+            - subpagename: Category by ID
+            - subpagename: Categories Query Delta
+            - subpagename: Get All Changes Query
+            - subpagename: Create Category
+            - subpagename: Update Category
+            - subpagename: Delete a Category
+            - subpagename: Delete Multiple Categories
+            - subpagename: Import Account Categories
+            - subpagename: Import Categories Pre Validation
+    - documentname: Profiles API
+      pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Get All Profiles
+          - subpagename: Get Profile by ID
+          - subpagename: Create Profile
+          - subpagename: Update Profiles
+          - subpagename: Update Profile
+          - subpagename: Delete Profiles
+          - subpagename: Delete Profile
+      - pagename: Appendix
+    - documentname: Skills API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get All Skills
+            - subpagename: Get Skill by ID
+            - subpagename: Create Skills
+            - subpagename: Update Skills
+            - subpagename: Update Skill
+            - subpagename: Delete Skills
+            - subpagename: Delete Skill
+        - pagename: Appendix
+    - documentname: Users API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get All Users
+            - subpagename: Get User by ID
+            - subpagename: Create Users
+            - subpagename: Update Users
+            - subpagename: Update User
+            - subpagename: Delete Users
+            - subpagename: Delete User
+            - subpagename: Reset User's Password
+        - pagename: Appendix
+    - documentname: Unified Automatic Messages API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Unified Automatic Messages
+            - subpagename: Get Unified Automatic Message by ID
+            - subpagename: Update an Unified Automatic Message
+            - subpagename: Delete an Unified Automatic Message
+    - documentname: Special Occasions API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Special Occasion
+            - subpagename: Update Special Occasion
+            - subpagename: Delete Special Occasion
+            - subpagename: Retrieve Special Occasion by ID
+            - subpagename: Retrieve Special Occasions by List
+        - pagename: Appendix
+    - documentname: Workdays API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Workdays Object
+            - subpagename: Update Workdays Object
+            - subpagename: Delete Workdays Object
+            - subpagename: Retrieve Workdays Object by ID
+            - subpagename: Retrieve Workdays Objects by List
+        - pagename: Appendix
+
+- categoryname: Historical Data
+  image: historical-data
+  documents:
+  - documentname: Consumer Messaging History API
+    pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Conversations - Content
+            - subpagename: Conversations - Metadata
+  - documentname: Data Access API
+    pages:
+      - pagename: Overview
+      - pagename: Architecture
+      - pagename: Methods
+        subpages:
+          - subpagename: Base Resource
+          - subpagename: Agent Activity
+          - subpagename: Web Session
+          - subpagename: Engagement
+          - subpagename: Survey
+          - subpagename: Schema
+      - pagename: PGP Encryption
+      - pagename: Changelog
+      - pagename: Appendix
+  - documentname: Engagement History API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+      - pagename: Sample Code
+      - pagename: Engagement Attributes
+  - documentname: Messaging Interactions API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Conversations
+          - subpagename: Get Conversation by Conversation ID
+          - subpagename: Get Conversations by Consumer ID
+      - pagename: Engagement Attributes
+  - documentname: Personal Data Deletion API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Create Deletion Request
+          - subpagename: Cancel Deletion Request
+          - subpagename: Get Deletion Request
+
+- categoryname: Messaging Channels
+  image: agent-interaction
+  documents:
+  # - documentname: LiveDeflect API
+  #   pages:
+  #   - pagename: Overview
+  #   - pagename: contextAndInvite
+  #   - pagename: getLiveDeflectData
+  - documentname: Connector API
+    pages:
+    - pagename: First Steps
+      subpages:
+      - subpagename: Overview
+      - subpagename: App Install Manifest for Connectors
+      - subpagename: Getting Started
+    - pagename: Authorization and Authentication
+      subpages:
+      - subpagename: Get AppJWT
+      - subpagename: Get ConsumerJWS
+    - pagename: API Reference
+      subpages:
+      - subpagename: Overview
+      - subpagename: CONVERSATION
+      - subpagename: SEND
+    - pagename: Webhooks
+      subpages:
+      - subpagename: Overview
+      - subpagename: Events
+      - subpagename: Configuration
+      - subpagename: Notification Protocol
+      - subpagename: Retry Policy
+      - subpagename: Disclaimers
+      - subpagename: Troubleshooting
+      - subpagename: Webhooks Examples
+    - pagename: Examples
+      subpages:
+      - subpagename: Create a New Conversation
+      - subpagename: Create a New Conversation and Report SDEs
+      - subpagename: Send a Message
+      - subpagename: Close a Conversation
+      - subpagename: Send Chat State Events
+      - subpagename: How to Enable a Feature
+      - subpagename: Campaign for Messaging Routing
+      - subpagename: Share Image File
+    - pagename: Sample Code
+      subpages:
+      - subpagename: Connector Sample App
+  - documentname: IVR Engagement API
+    pages:
+    - pagename: Overview
+    - pagename: Methods
+      subpages:
+        - subpagename: External Engagement
+    - pagename: Changelog
+  - documentname: Mobile App Messaging SDK for Android
+    pages:
+    - pagename: Overview
+    - pagename: Quick Start
+    - pagename: Quick Start - Manual
+    - pagename: Configuration
+      subpages:
+      - subpagename: Initialization
+      - subpagename: LivePerson Callbacks Interface
+      - subpagename: Conversations Lifecycle
+      - subpagename: UI
+      - subpagename: User Data
+      - subpagename: Logs and Info
+      - subpagename: Proguard Configuration
+      - subpagename: Android Automatic Restore
+      - subpagename: Google Maps Key
+    - pagename: SDK APIs
+      subpages:
+      - subpagename: Messaging API
+      - subpagename: Monitoring API
+      - subpagename: Interface and Class Definitions
+      - subpagename: Callbacks Index
+    - pagename: Authentication
+    - pagename: Notifications
+    - pagename: Customization and Branding
+      subpages:
+      - subpagename: Customizing the SDK
+      - subpagename: Attributes
+      - subpagename: Attributes Design Sheet
+      - subpagename: Modifying Resources
+      - subpagename: Configuring the Message's Edit Text
+      - subpagename: Changing Fonts
+    - pagename: String Localization
+      subpages:
+      - subpagename: Modifying Strings
+      - subpagename: Plural String resource Example
+      - subpagename: Timestamps Formatting
+      - subpagename: Date and Time
+      - subpagename: Bubble Timestamp
+      - subpagename: Separator Timestamp
+      - subpagename: Override SDK Strings
+      - subpagename: Resolve Message
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Unauthenticated In-App Messaging
+      - subpagename: Photo Sharing
+      - subpagename: Audio Messages
+      - subpagename: CSAT Behavior
+      - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Control History APIs
+    - pagename: Release Notes
+    - pagename: Appendix
+      subpages:
+      - subpagename: Security
+      - subpagename: Sample App
+      - subpagename: Open Source List and Dependencies
+      - subpagename: Using LivePerson SDK - Android
+      - subpagename: Upgrade Guide - Android
+      - subpagename: Using LivePerson SDK - Android - Manual
+  - documentname: Mobile App Messaging SDK for iOS
+    pages:
+    - pagename: Overview
+    - pagename: Quick Start
+    - pagename: Configuration
+      subpages:
+      - subpagename: Initialization
+      - subpagename: SDK Delegates
+      - subpagename: Conversations Lifecycle
+      - subpagename: UI
+      - subpagename: User Data
+      - subpagename: Logs and Info
+      - subpagename: App Extensions
+    - pagename: SDK APIs
+      subpages:
+      - subpagename: Messaging API
+      - subpagename: Monitoring API
+      - subpagename: Interface and Class Definitions
+      - subpagename: Callbacks Index
+    - pagename: Authentication
+    - pagename: Notifications
+    - pagename: Customizing Toast Notifications
+    - pagename: Customization and Branding
+      subpages:
+      - subpagename: Customizing the SDK
+      - subpagename: Attributes
+      - subpagename: Attributes Design Sheet
+      - subpagename: Deprecated Attributes
+    - pagename: String Localization
+      subpages:
+      - subpagename: Localization Keys
+      - subpagename: String Localization
+      - subpagename: Timestamps Formatting
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Unauthenticated In-App Messaging
+      - subpagename: CSAT Behavior
+      - subpagename: Audio Messages
+      - subpagename: Photo Sharing
+      - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Control History APIs
+    - pagename: Release Notes
+    - pagename: Appendix
+      subpages:
+      - subpagename: Security
+      - subpagename: OS Certificate Creation
+      - subpagename: Open Source List
+      - subpagename: Using LivePerson SDK - iOS
+      - subpagename: Upgrade Guide - iOS
+  - documentname: Push Notification Service
+    pages:
+    - pagename: Overview
+    - pagename: TLS Authentication
+    - pagename: HTTP Response Codes
+    - pagename: Configuration of Push Proxy
+    - pagename: IP Whitelisting
+
+- categoryname: Real-Time Data
+  image: rt-data
+  documents:
+  - documentname: Agent Metrics API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Agent Status
+          - subpagename: Summary
+  - documentname: Messaging Operations API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Messaging Conversation
+          - subpagename: Messaging Queue Health
+          - subpagename: Messaging Current Queue Health
+          - subpagename: Messaging Estimated Wait Time
+          - subpagename: Messaging CSAT Distribution
+      - pagename: Appendix
+  - documentname: Operational Realtime API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Queue Health
+          - subpagename: Engagement Activity
+          - subpagename: Agent Activity
+          - subpagename: Current Queue State
+          - subpagename: SLA Histogram
+
+- categoryname: Rich Messaging
+  image: rich-media
+  documents:
+    - documentname: Apple Business Chat Templates
+      pages:
+        - pagename: Introduction
+        - pagename: List Picker
+          subpages:
+            - subpagename: Overview
+            - subpagename: Basic Layout JSON Template
+            - subpagename: Basic Layout Metadata
+            - subpagename: Basic Layout Body
+            - subpagename: Basic Layout Body - Header Section
+            - subpagename: Basic Layout Body - Item Section
+        - pagename: Time Picker
+          subpages:
+            - subpagename: Overview
+            - subpagename: Basic Layout JSON Template
+            - subpagename: Business Event Section
+            - subpagename: Business Chat Messaging Section
+            - subpagename: Time Picker Item
+            - subpagename: Time Picker Examples
+        - pagename: Guidelines and Limitations
+    - documentname: File Sharing
+      pages:
+        - pagename: Introduction
+        - pagename: Enable File Sharing
+        - pagename: Create a Conversation
+        - pagename: Request Upload URL
+        - pagename: Upload File to Storage
+        - pagename: Publish Message
+        - pagename: Request Download URL
+        - pagename: Download File From Storage
+    - documentname: Getting Started with Rich Messaging
+      pages:
+        - pagename: Introduction
+        - pagename: Basic Elements
+          subpages:
+            - subpagename: Text
+            - subpagename: Button
+            - subpagename: Image
+            - subpagename: Map
+        - pagename: Click Operations
+          subpages:
+            - subpagename: Overview
+            - subpagename: Actions
+            - subpagename: Metadata
+        - pagename: Styling
+    - documentname: Quick Replies
+      pages:
+        - pagename: Overview
+        - pagename: Styling
+        - pagename: Limitations
+        - pagename: Best Practices
+    - documentname: Structured Content
+      pages:
+        - pagename: Complex Layout
+        - pagename: Templates
+          subpages:
+            - subpagename: Card
+            - subpagename: Carousel
+        - pagename: Best Practices
+        - pagename: Limitations
+        - pagename: Structured Content Rendering Tool
+    - documentname: Voice and Video for iOS SDK (BETA)
+      pages:
+      - pagename: Overview
+      - pagename: Getting Started
+        subpages:
+        - subpagename: Prerequisites
+        - subpagename: Installing the SDK with CocoaPods
+        - subpagename: Installing the SDK Manually
+        - subpagename: Project Settings
+        - subpagename: Integration Guide
+      - pagename: Customizing
+        subpages:
+        - subpagename: Appearance and Behavior
+        - subpagename: Wording
+      - pagename: LiveEngage Configuration
+        subpages:
+        - subpagename: Agent Workspace Requirements
+        - subpagename: Account Settings
+        - subpagename: VoIP Configuration
+        - subpagename: Register Your App
+      - pagename: Sample App
+      - pagename: Changelog
+      - pagename: Appendix
+    - documentname: Voice and Video for Android SDK (BETA)
+      pages:
+      - pagename: Overview
+      - pagename: Getting Started
+        subpages:
+        - subpagename: Prerequisites
+        - subpagename: Installing the SDK
+        - subpagename: Integration Guide
+      - pagename: LiveEngage Configuration
+        subpages:
+        - subpagename: Agent Workspace Requirements
+        - subpagename: Account Settings
+        - subpagename: Register Your App
+      - pagename: Customizing
+        subpages:
+        - subpagename: Appearance and Behavior
+        - subpagename: Account Settings
+      - pagename: Sample Apps
+      - pagename: FAQ
+      - pagename: Release Notes
+
+- categoryname: 'Security & Authentication'
+  image: security-authentication
+  documents:
+    - documentname: Cookies and LiveEngage
+      pages:
+        - pagename: Overview
+    - documentname: Authentication
+      pages:
+      - pagename: Introduction
+      - pagename: Major Components
+      - pagename: Configuration
+      - pagename: How It Works
+      - pagename: Detailed API
+    - documentname: LiveEngage Applications
+      pages:
+        - pagename: What Is a LiveEngage Application?
+        - pagename: Installing LiveEngage Applications
+    - documentname: Authorizing LiveEngage Applications
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+          - subpagename: Authorization Request
+          - subpagename: Refresh Request
+          - subpagename: Token Request
+        - pagename: Samples
+          subpages:
+            - subpagename: Application Login Sample App
+    - documentname: Login Service API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: User Login
+            - subpagename: Application Login
+            - subpagename: Refresh
+            - subpagename: Logout
+
+- categoryname: Website Monitoring
+  image: website-monitoring
+  documents:
+    - documentname: App Engagement API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Session
+            - subpagename: Update Session
+        - pagename: Impression Events Body Example
+        - pagename: Changelog
+    - documentname: Engagement Attributes
+      pages:
+      - pagename: Overview
+      - pagename: Types of Engagement Attributes
+      - pagename: Setting up Engagement Attributes
+      - pagename: Best Practices
+      - pagename: Best Practices for Messaging
+    - documentname: Engagement Attributes API
+      pages:
+        - pagename: Overview
+        - pagename: Engagement Attributes
+        - pagename: Changelog
+    - documentname: Engagement Trigger API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Click
+            - subpagename: getEngagementInfo
+            - subpagename: getEngagementState
+        - pagename: Changelog
+    - documentname: LE-Tag
+      pages:
+        - pagename: Overview
+        - pagename: How to Use LiveEngage Tag Events
+        - pagename: Events
+          subpages:
+            - subpagename: Visitor Flow Events
+            - subpagename: Engagement Events
+            - subpagename: Engagement Window Events
+        - pagename: Changelog
+    - documentname: Monitoring API
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Installing a Monitoring API Application
+        - pagename: Methods
+          subpages:
+            - subpagename: Engagement
+            - subpagename: Report
+    - documentname: Validate Engagement API
+      pages:
+        - pagename: Overview
+        - pagename: Validate Engagement
+        - pagename: Changelog
+    - documentname: Visit Information API
+      pages:
+        - pagename: Overview
+        - pagename: Visit Information
+        - pagename: Changelog
+
+- categoryname: Solutions
+  image: mcs-toolkit
+  documents:
+    - documentname: CRM Integrations
+      pages:
+        - pagename: SalesForce
+        - pagename: Microsoft Dynamics
+        - pagename: NetSuite
+        - pagename: SugarCRM
+        - pagename: Zendesk
+    - documentname: IVR Deflection
+      pages:
+        - pagename: IVR Deflection
+        - pagename: IVR Deflection for Chat
+        - pagename: Setting Up IVR Deflection for Chat
+    - documentname: Mobile App Messaging
+      pages:
+        - pagename: Add Messaging to Your App
+    - documentname: LiveEngage MMS Viewer
+      pages:
+        - pagename: Overview
+        - pagename: Technical Description
+        - pagename: Deployment Steps
+        - pagename: Additional Options
+    - documentname: MCS Toolkit
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Using API to Build the Toolkit
+    - documentname: SMS with LiveEngage
+      pages:
+        - pagename: Overview
+        - pagename: IVR Deflection
+        - pagename: Clickable Mobile Content to SMS
+        - pagename: Desktop Content Campaign
+        - pagename: Google AdWords - Click-to-Message
+        - pagename: SMS via Mobile App Messaging
+        - pagename: Appendix
+    - documentname: Video Chat
+      pages:
+        - pagename: Add Video to Chat Conversations
+        - pagename: Plan Your Service
+        - pagename: Develop the Service
+        - pagename: Build Your Widgets

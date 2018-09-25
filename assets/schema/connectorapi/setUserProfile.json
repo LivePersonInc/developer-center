@@ -3,13 +3,6 @@
   "id": 1,
   "type": "userprofile.SetUserProfile",
   "body": {
-    "firstName": "",
-    "lastName": "",
-    "userId": "",
-    "avatarUrl": "",
-    "role": "",
-    "backgndImgUri": "",
-    "description": "",
     "authenticatedData": {
       "lp_sdes": [
         {
