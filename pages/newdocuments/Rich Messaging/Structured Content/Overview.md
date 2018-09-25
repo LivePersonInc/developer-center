@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - rich-messaging-structured-content-overview.html
+  - structured-content-templates.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
@@ -35,7 +36,7 @@ LE VX (Unified Window) version 9.4
 
 In-app Messaging SDK v2.7 (for Cards) or SDK 3.2 (for Carousel) or above available for both Android and iOS
 * Integrate the SDK into your brand app
-* Ensure that the following toggle is enabled within the SDK: [Android](android-attributes.html#structured-content) | [iOS](consumer-experience-ios-sdk-attributes.html#structured-content)
+* Ensure that the following toggle is enabled within the SDK - [Android](android-attributes.html#structured-content) or [iOS](consumer-experience-ios-sdk-attributes.html#structured-content)
 
 ### Sending Structured Content
 

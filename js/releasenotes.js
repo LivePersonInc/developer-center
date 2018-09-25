@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/documents/Rich Messaging',
+    root: './pages/newdocuments/Messaging Channels/Mobile App Messaging SDK for iOS/Release Notes',
     entryType: 'files',
     depth: 3
 };
@@ -43,11 +43,18 @@ readdirp(settings)
         'utf-8',
         (error, content) => {
           const lines = content.split('\n');
-          //console.log(lines);
-          let link = lines.find(line => line.startsWith('!'));
+          for (line in lines) {
+            if (line.startsWith('###')) {
+              console.log(line);
+              var fileContent = null;
+              var filepath = "./pages/newdocuments/Messaging Channels/Mobile App Messaging SDK for iOS/Release Notes/" + line + ".md";
+              fs.writeFile(filepath, fileContent, (err) => {
+                if (err) throw err;
+              })
+            }
+          }
 
-          console.log(lines.join('\n'));
-          fs.writeFile(entry.fullPath, lines.join('\n'));
+          // fs.writeFile(entry.fullPath, lines.join('\n'));
         },
         (error) => {
           console.log(error);
