@@ -32,7 +32,7 @@ This section contains API details that are common to every API’s resource and 
 ### Query Parameters
 
 | Name| Description | Type | Required | Notes |
-|----|----|----|----|----|----|
+|----|----|----|----|----|
 | v| API version| Double| Required | Validation fail error code: 400|
 | select| Dynamic selection of the response fields.| YOGA 'gdata' dialect.| Optional | Validation error: 400 Non-existing field: no error, blank in response. Supported fields: any in response body|
 | fields| List of required fields| Comma delimited list of strings| Optional | Validation fail error code: 400. Non existing field error code: 400. Supported fields: 1. enabled 2. data 3. categoriesIds 4. hot-key 5. type |
