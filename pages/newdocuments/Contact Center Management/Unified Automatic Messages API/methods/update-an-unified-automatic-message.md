@@ -44,6 +44,7 @@ Updates an existing Unified Automatic Message for a specific account.
 | X-HTTP-Method-Override=PUT | Overrides unsupported HTTP methods. To be used with the 'PUT’ value. |
  |Authorization | Contains token string to allow request authentication and authorization. |
 | If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
+| Content-Type | application/json |
 
 
 **Request Body**

@@ -35,7 +35,7 @@ Retrieves an Unified Automatic Message by ID for a specific account.
  |Parameter|  Description|  Type|  Notes|
  |:----------|  :--------------|  :--------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
- | unifiedAutoMessageId | Unique account config object ID | Positive long number greater than zero |
+ | unifiedAutoMessageId | Message event ID | string |
 
 **Query Parameters**
 
