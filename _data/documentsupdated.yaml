@@ -444,7 +444,6 @@
       - subpagename: Overview
       - subpagename: CONVERSATION
       - subpagename: SEND
-      - subpagename: Authorization Error Responses
     - pagename: Webhooks
       subpages:
       - subpagename: Overview
