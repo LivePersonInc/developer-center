@@ -375,7 +375,8 @@ table tbody td img {
 .important::before {
   content: "\f06a";
   color: #f88181;
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-size: 18px;
   font-weight: 900;
   margin-right: 5px;

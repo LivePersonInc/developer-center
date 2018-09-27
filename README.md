@@ -10,7 +10,7 @@ All pages on the site correspond to a Markdown file (.md) which can be found ins
 
 #### Updating/Creating Headers
 
-Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange the various documents in the site under a hierarchy or navigation. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all YAML formatting and rules apply to it. Our headers are usually comprised of the following key/value pairs:
+Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply to it. Our headers are usually comprised of the following key/value pairs:
 
 * `title`: this is the name of the page that will appear at the top of the document. **DEPRECATED, use `pagename` instead. All other rules above apply.**
 
@@ -43,7 +43,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 Once you've created a new document, you'll need to have it manually added. We chose a manual process for the side for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to build a sidebar in a site of our size and complexity are time and resource consuming).
 
-The sidebar's YAML file can be found in the `_data` folder. It's called `documents.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
+The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
 
 ### Building the Site Locally
 
