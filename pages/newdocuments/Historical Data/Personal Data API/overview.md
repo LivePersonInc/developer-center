@@ -96,7 +96,7 @@ The brand will need to follow the below steps to achieve this:
 
 2. This can be accomplished by searching for the relevant ticket ids via the legacy agent console or via the dedicated Ticket Search page in the legacy admin area (provisioned as part of the Ticket Search feature) according to some identifying contact attributes like Name, Email, Phone and/or Keyword (free text field). In the agent console, the search is limited to 31 days adjustable time window up to 13 months back. In the admin area, the search is limited to 31 days adjustable time window with no historical limit.
    
-3. Use the Create Delete Request method with the list of ticket ids (without the 'LTK' prefix and 'X' suffix) to delete.
+3. Use the [Create Delete Request method](personal-data-deletion-api-methods-create-deletion-request.html) with the list of ticket ids (without the 'LTK' prefix and 'X' suffix) to delete.
 
 The tickets themselves will not be deleted but rather the metadata which links the tickets to the requesting consumer, such as ticket message (email) headers, UDEs (legacy SDEs) and ticket contact info, will be masked. Attachments in the relevant tickets will be deleted.
 
