@@ -20,7 +20,7 @@ By Messaging Conversation - deletion of personal data that is related to specifi
 
 By consumerId - deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request).
 
-By ticketId - deletion of personal data that is related to a specific consumer ticket related interactions (does not include the consumer's chats; those must be deleted in a separate request)..
+By ticketId - deletion of personal data that is related to a specific consumer's ticket and all related interactions to that ticket (this does not include the consumer's chats; those must be deleted in a separate request).
 
 ### Request
 
