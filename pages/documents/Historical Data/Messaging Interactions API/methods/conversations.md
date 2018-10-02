@@ -760,22 +760,21 @@ skillName    | The name of the skill associated with the dialog.| string     |
         }
       ],
       "dialogs": [
-			  {
+      	{
          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
-			    "status": "OPEN",
-					"dialogType": "MAIN",
-					"channelType": "Text",
-					"startTime": "2017-09-25 07:55:58.000+0000",
-					"startTimeL": 1506326158000,
-					"endTime": "2017-09-25 07:56:53.422+0000",
-					"endTimeL": 1506326213422,
-					"closeReason": “AGENT”
-					“closeReasonDescription”:”MANUAL_CLOSE” 
-					“skillId”: 1234
-					“skillName”: “skill3”
-				
-				}
-			],
+	 "status": "OPEN",
+	 "dialogType": "MAIN",
+	 "channelType": "Text",
+	 "startTime": "2017-09-25 07:55:58.000+0000",
+	 "startTimeL": 1506326158000,
+	 "endTime": "2017-09-25 07:56:53.422+0000",
+	 "endTimeL": 1506326213422,
+	 "closeReason": “AGENT”
+	 “closeReasonDescription”:”MANUAL_CLOSE” 
+	 “skillId”: 1234
+	 “skillName”: “skill3”
+	}
+      ],
       "messageScore": [
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
