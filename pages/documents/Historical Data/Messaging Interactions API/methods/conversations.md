@@ -140,6 +140,7 @@ startTime            | Start-time of the conversation.                          
 endTime              | End-time of the conversation.                                              | long       |
 duration             | Time from when the consumer started the conversation until it ended.       | long       | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
 closeReason          | Reason for closing the conversation - by agent / consumer.                 | string     |
+closeReasonDescription | Additinal information regarding the conversation close reason            | string     |
 firstConversation    | Whether it is the consumer's first conversation.                           | Boolean    |
 csat                 | CSAT score of the conversation (as given in the answer).                   | int        | Range: 1 to 5.
 mcs                  | Meaningful Connection Score of the conversation.                           | int        | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
@@ -300,8 +301,10 @@ Name                  | Description                                             
 messageId             | ID of message.                                              | string
 time                  | Time the change in message status occurred.                 | string
 timeL                 | Time the change in message status occurred, in long format. | long
-messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).   | long
+messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).   | string
 dailogId              | The Id of the message dialog.                               | string 
+participantId         | The Id of the participant sending the message               | string
+participantType       | The type of participant                                     | string
 
 _Message Score info_
 
@@ -372,6 +375,8 @@ lastName      | Consumer's last name (provided by consumer in their profile).   
 phone         | Consumer's phone number (provided by consumer in their profile). | string
 email         | Consumer's email (provided by consumer in their profile).        | string
 token         | Private identifier of the user.                                  | string
+dialogId      | The Id of the dialog the agent is participating.                 | string
+
 
 _Transfer info_
 
@@ -458,7 +463,7 @@ Name         | Description                                     | Type/Value | No
 dialogId     | The Id of the dialog.                           | string     | 
 status       | Status of the dialog.                           | string     |
 dialogType   | The dialog type.                                | string     | Valid values: "POST_SURVEY", "MAIN".
-channelType  | The dialog channel type.                        | string     |
+dialogChannelType | The dialog channel type.                   | string     |
 startTime    | The dialog start time, readable format.         | string     |
 startTimeL   | The dialog start time, epoch time in milliseconds.| long – epoch time in milliseconds |
 endTime      | The dialog end time, readable format.           | string     |
@@ -567,7 +572,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           },
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
           "seq": 0,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "source": "APP",
           "time": "2016-08-29 15:14:19.564+0000",
@@ -587,7 +592,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           },
           "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",
           "seq": 1,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "3677470410",
           "source": "APP",
           "time": "2016-08-29 15:14:20.569+0000",
@@ -629,7 +634,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           },
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
           "seq": 2,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "source": "APP",
           "time": "2016-08-29 15:15:42.568+0000",
@@ -649,7 +654,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           },
           "messageId": "ms::conv:cd5926e0-5b57-4c82-85c5-9c95f88263a1::msg:8",
           "seq": 3,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "2198186612",
           "source": "APP",
           "time": "2017-10-24 10:24:52.962+0000",
@@ -711,7 +716,8 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "avatarURL": "undefined",
           "time": "2016-08-29 14:30:24.573+0000",
           "timeL": 1472481024573,
-          "consumerName": "Visitor"
+          "consumerName": "Visitor",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "transfers": [
@@ -728,8 +734,8 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "sourceAgentId": "196875613",
           "sourceAgentFullName": "michal1",
           "sourceAgentLoginName": "michal1",
-          "sourceAgentNickname": "michal1"
-          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+          "sourceAgentNickname": "michal1",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         },
         {
           "timeL": 1498127562332,
@@ -744,7 +750,8 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "sourceAgentId": "7",
           "sourceAgentFullName": "michal",
           "sourceAgentLoginName": "michal@lp.com",
-          "sourceAgentNickname": "michal"
+          "sourceAgentNickname": "michal",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "interactions": [
@@ -755,8 +762,8 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "assignedAgentNickname": "michal@lp.com",
           "interactionTimeL": 1472483644999,
           "interactionTime": "2016-08-29 15:14:04.999+0000",
-          "interactiveSequence": 1
-          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+          "interactiveSequence": 1,
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "dialogs": [
@@ -764,14 +771,14 @@ skillName    | The name of the skill associated with the dialog.| string     |
          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
 	 "status": "OPEN",
 	 "dialogType": "MAIN",
-	 "channelType": "Text",
+	 "dialogChannelType": "MESSAGING",
 	 "startTime": "2017-09-25 07:55:58.000+0000",
 	 "startTimeL": 1506326158000,
 	 "endTime": "2017-09-25 07:56:53.422+0000",
 	 "endTimeL": 1506326213422,
-	 "closeReason": “AGENT”
-	 “closeReasonDescription”:”MANUAL_CLOSE” 
-	 “skillId”: 1234
+	 "closeReason": “AGENT”,
+	 “closeReasonDescription”:”MANUAL_CLOSE”,
+	 “skillId”: 1234,
 	 “skillName”: “skill3”
 	}
       ],
@@ -809,7 +816,8 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "timeL": 1472483742609,
           "participantId": "3677470410",
           "participantType": "Agent",
-          "messageDeliveryStatus": "ACCEPT"
+          "messageDeliveryStatus": "ACCEPT",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         },
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
@@ -818,7 +826,8 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "timeL": 1472483758272,
           "participantId": "3677470410",
           "participantType": "Agent",
-          "messageDeliveryStatus": "READ"
+          "messageDeliveryStatus": "READ",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "conversationSurveys": [
