@@ -211,7 +211,7 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
-            “dialogId”: "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "serverTimestamp": 1501399101110,
             "event": {
                 "type": "AcceptStatusEvent",
