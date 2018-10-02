@@ -627,6 +627,21 @@
 - categoryname: Rich Messaging
   image: rich-media
   documents:
+    - documentname: Getting Started with Rich Messaging
+      pages:
+        - pagename: Introduction
+        - pagename: Basic Elements
+          subpages:
+            - subpagename: Text
+            - subpagename: Button
+            - subpagename: Image
+            - subpagename: Map
+        - pagename: Click Operations
+          subpages:
+            - subpagename: Overview
+            - subpagename: Actions
+            - subpagename: Metadata
+        - pagename: Styling
     - documentname: Apple Business Chat Templates
       pages:
         - pagename: Introduction
@@ -657,21 +672,6 @@
         - pagename: Publish Message
         - pagename: Request Download URL
         - pagename: Download File From Storage
-    - documentname: Getting Started with Rich Messaging
-      pages:
-        - pagename: Introduction
-        - pagename: Basic Elements
-          subpages:
-            - subpagename: Text
-            - subpagename: Button
-            - subpagename: Image
-            - subpagename: Map
-        - pagename: Click Operations
-          subpages:
-            - subpagename: Overview
-            - subpagename: Actions
-            - subpagename: Metadata
-        - pagename: Styling
     - documentname: Quick Replies
       pages:
         - pagename: Overview
