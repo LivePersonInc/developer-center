@@ -103,7 +103,7 @@ _Metadata info_
 
 Name      | Description                                        | Type/Value
 :-------- | :------------------------------------------------- | :-----------------
-\_metadata | All response-related Metadata.                     | container
+metadata | All response-related Metadata.                     | container
 rel       | Name of a link to be used in the next request.     | alphanumeric (256)
 href      | A specific link to be used in the next request.    | alphanumeric (256)
 count     | Number of sessions using the current query/filter. | numeric
@@ -449,7 +449,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
 
 **JSON Example**
 
-```
+```json
 {
   "_metadata": {
     "count": 1,
