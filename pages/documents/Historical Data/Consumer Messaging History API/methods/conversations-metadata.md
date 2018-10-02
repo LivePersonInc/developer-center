@@ -55,6 +55,7 @@ stage                | State of the entire conversation.                        
 startTs              | Start-time of the conversation.                                   | long       |
 endTs                | End-time of the conversation.                                     | long       |
 csat                 | Contains information about the csat given by the consumer.        | container  |
+closeReason          | The close reason for the main dialog                              | string     |
 
 _Conversation participants
 
@@ -126,7 +127,7 @@ channelType          | The dialog channel type                     | string     
                   "closedBy": "Agent",
                   "creationTs": 1501047777465,
                   "endTs": 1501047800467,
-                  "channelType": "text"
+                  "channelType": "MESSAGING"
                 }
             ]     
             "state": "CLOSE",
@@ -137,7 +138,8 @@ channelType          | The dialog channel type                     | string     
                 "csatRate": 3,
                 "csatResolutionConfirmation": false,
                 "status": "FILLED"
-            }
+            },
+            "closeReason": "CONSUMER"
         }
     ]
 }
