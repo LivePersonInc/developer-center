@@ -49,6 +49,9 @@ Name                 | Description                                              
 :------------------- | :---------------------------------------------------------------- | :---------
 convId               | ID of the conversation.                                           | String     |
 participants         | Contains information about the participating in the conversation. | container  |
+dialogs              | Contains information about the dialogs in the conversation.       | container  |
+state                | State of the main dialog.                                         | string     |
+stage                | State of the entire conversation.                                 | string     |
 startTs              | Start-time of the conversation.                                   | long       |
 endTs                | End-time of the conversation.                                     | long       |
 csat                 | Contains information about the csat given by the consumer.        | container  |
@@ -68,6 +71,19 @@ Name          | Description                                 | Type/Value | Notes
 csatRate                   | Time score given by the consumer.           | double     |
 csatResolutionConfirmation | Indicates whether the issue was resolved.   | boolean    |
 status                     | The status of the csat survey               | string     | Valid values: "FILLED", "PARTIALLY_FILLED","SKIPPED"
+
+_Conversation dialogs
+
+Name                 | Description                                 | Type/Value | Notes
+:------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
+dialogId             | ID of the dialog.                           | string     |
+participantsDetails  | Contains information about the participating in the dialog. | container |
+dialogType           | Type of the dialog.                         | string     | Valid values: "MAIN", "POST_SURVEY".
+state                | State of the dialog                         | string     | Valid values: "OPEN", "CLOSE".
+closedBy             | The participant that closed the dialog      | string     |
+creationTs           | Time of the dialog creation                 | long       |
+endTs                | End time of the dialog                      | long       |
+channelType          | The dialog channel type                     | string     |
 
 **JSON Example**
 
@@ -96,7 +112,25 @@ status                     | The status of the csat survey               | strin
                     "role": "ASSIGNED_AGENT"
                 }
             ],
+            "dialogs": [
+                {
+                  "dialogId": "2ba1f774-0455-4759-9e5c-42d9b67db3f1",
+                  "participantsDetails": [
+                    {
+                      "id": "d74812871d96945af08f77b95b16b39cc2f29438bbe48b0109e2719575787332",
+                      "role": "CONSUMER"
+                    },
+                  ],
+                  "dialogType": "MAIN",
+                  "state": "CLOSE",
+                  "closedBy": "Agent",
+                  "creationTs": 1501047777465,
+                  "endTs": 1501047800467,
+                  "channelType": "text"
+                }
+            ]     
             "state": "CLOSE",
+            "stage": "OPEN",
             "startTs": 1501047777465,
             "endTs": 1501047800467,
             "csat": {
