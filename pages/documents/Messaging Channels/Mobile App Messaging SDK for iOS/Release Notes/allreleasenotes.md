@@ -13,7 +13,7 @@ Listed below are all of the Release Notes for previous versions of our Mobile Ap
 {% for operatingsystem in site.data.releasenotesios %}
 {% for release in operatingsystem.releases %}
 {% if forloop.first %}
-<a href="mobile-app-messaging-sdk-for-ios-release-notes.html">Mobile App Messaging SDK for iOS Release Notes {{ release.releasename }}</a>
+<a href="mobile-app-messaging-sdk-for-ios-latest-release-notes.html">Mobile App Messaging SDK for iOS Release Notes {{ release.releasename }}</a>
 {% else %}
 <a href="/{{ release.releasename | slugify }}.html">{{ release.releasename }}</a>
 {% endif %}

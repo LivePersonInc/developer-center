@@ -1,5 +1,5 @@
 ---
-pagename: Release Notes - New
+pagename: Latest Release Notes
 redirect_from:
   - consumer-experience-ios-sdk-release-notes.html
 Keywords:
