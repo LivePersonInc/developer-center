@@ -57,7 +57,7 @@ endTs                | End-time of the conversation.                            
 csat                 | Contains information about the csat given by the consumer.        | container  |
 closeReason          | The close reason for the main dialog                              | string     |
 
-_Conversation participants
+_Conversation participants_
 
 Name                 | Description                                 | Type/Value | Notes
 :------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ id                   | ID of the participant (Agent or Consumer).  | string     
 role                 | The role pf the participant .               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
 
 
-_Conversation csat
+_Conversation csat_
 
 Name          | Description                                 | Type/Value | Notes
 :------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
@@ -73,12 +73,12 @@ csatRate                   | Time score given by the consumer.           | doubl
 csatResolutionConfirmation | Indicates whether the issue was resolved.   | boolean    |
 status                     | The status of the csat survey               | string     | Valid values: "FILLED", "PARTIALLY_FILLED","SKIPPED"
 
-_Conversation dialogs
+_Conversation dialogs_
 
 Name                 | Description                                 | Type/Value | Notes
 :------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
 dialogId             | ID of the dialog.                           | string     |
-participantsDetails  | Contains information about the participating in the dialog. | container |
+participantsDetails  | Contains information about the participants in the dialog. | container |
 dialogType           | Type of the dialog.                         | string     | Valid values: "MAIN", "POST_SURVEY".
 state                | State of the dialog                         | string     | Valid values: "OPEN", "CLOSE".
 closedBy             | The participant that closed the dialog      | string     |

@@ -140,7 +140,7 @@ startTime            | Start-time of the conversation.                          
 endTime              | End-time of the conversation.                                              | long       |
 duration             | Time from when the consumer started the conversation until it ended.       | long       | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
 closeReason          | Reason for closing the conversation - by agent / consumer.                 | string     |
-closeReasonDescription | Additinal information regarding the conversation close reason            | string     |
+closeReasonDescription | Additional information regarding the conversation close reason            | string     |
 firstConversation    | Whether it is the consumer's first conversation.                           | Boolean    |
 csat                 | CSAT score of the conversation (as given in the answer).                   | int        | Range: 1 to 5.
 mcs                  | Meaningful Connection Score of the conversation.                           | int        | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
@@ -302,8 +302,8 @@ messageId             | ID of message.                                          
 time                  | Time the change in message status occurred.                 | string
 timeL                 | Time the change in message status occurred, in long format. | long
 messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).   | string
-dailogId              | The Id of the message dialog.                               | string 
-participantId         | The Id of the participant sending the message               | string
+dialogId              | The ID of the message dialog.                               | string
+participantId         | The ID of the participant sending the message               | string
 participantType       | The type of participant                                     | string
 
 _Message Score info_
@@ -359,7 +359,7 @@ agentGroupId   | Agent's group ID.                                              
 agentGroupName | The agent's group name.                                            | string     |
 permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"
 contextData    | Contains context information about the transfer, including raw and structured metadata.| container| |
-dialogId       | The Id of the dialog the agent is participating.                   | string     |
+dialogId       | The ID of the dialog the agent is participating in.                   | string     |
 
 _Consumer Participant info_
 
@@ -375,7 +375,7 @@ lastName      | Consumer's last name (provided by consumer in their profile).   
 phone         | Consumer's phone number (provided by consumer in their profile). | string
 email         | Consumer's email (provided by consumer in their profile).        | string
 token         | Private identifier of the user.                                  | string
-dialogId      | The Id of the dialog the agent is participating.                 | string
+dialogId      | The ID of the dialog the agent is participating in.                 | string
 
 
 _Transfer info_
@@ -399,7 +399,7 @@ sourceAgentNickname    | The source agent nickname.                             
 sourceAgentFullName    | The source agent full name.                                   | string
 reason                 | Reason for transfer (back2Q, Agent, Skill, TakeOver)          | string
 contextData            | Contains context information about the transfer, including raw and structured metadata.            | container| |
-dialogId               | The Id of the dialog being transfered.                        | string
+dialogId               | The ID of the dialog being transfered.                        | string
 
 
 _Interaction info_
@@ -413,7 +413,7 @@ agentFullName       | The agent's full name.                                    
 interactionTime     | Interaction start time.                                   | string
 interactionTimeL    | Interaction start time (in long format).                  | long
 interactiveSequence | Interaction's sequence within the conversation.           | int
-dialogId            | The Id of the dialog having the interaction.              | string
+dialogId            | The ID of the dialog having the interaction.              | string
 
 _Survey info_
 
@@ -421,7 +421,7 @@ Name         | Description                                     | Type/Value | No
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
 surveyType   | Type of the survey.                             | string     | Currently always "Resolution"
 surveyStatus | Status of the submission of the survey.         | string     |
-dialogId     | The Id of the dialog of the survey.             | string     |
+dialogId     | The ID of the dialog of the survey.             | string     |
 surveyData   | List of the question and answers in the survey. | container  |
 
 _SurveyData info_
@@ -460,7 +460,7 @@ _Dialog info_
 
 Name         | Description                                     | Type/Value | Notes
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
-dialogId     | The Id of the dialog.                           | string     | 
+dialogId     | The ID of the dialog.                           | string     |
 status       | Status of the dialog.                           | string     |
 dialogType   | The dialog type.                                | string     | Valid values: "POST_SURVEY", "MAIN".
 dialogChannelType | The dialog channel type.                   | string     |
@@ -470,7 +470,7 @@ endTime      | The dialog end time, readable format.           | string     |
 endTimeL     | The dialog end time, epoch time in milliseconds.| long – epoch time in milliseconds |
 closeReason  | The dialog close reason.                        | string     |
 closeReasonDescription | The dialog close reason description.  | string     |
-skillId      | The skill Id associated with the dialog.        | string     |
+skillId      | The skill ID associated with the dialog.        | string     |
 skillName    | The name of the skill associated with the dialog.| string     |
 
 
@@ -600,7 +600,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "device": "undefined",
           "sentBy": "Agent",
           "contextData": {
-            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason Id\"}]",
+            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]",
             "structuredMetadata": [
               {
                 "botResponse": {
@@ -679,7 +679,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "permission": "ASSIGNED_AGENT",
           "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
           "contextData": {
-            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent        identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation   identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some    reason\",\"reasonId\":\"some reason Id\"}]",
+            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent        identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation   identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some    reason\",\"reasonId\":\"some reason ID\"}]",
             "structuredMetadata": [
               {
                 "botResponse": {
