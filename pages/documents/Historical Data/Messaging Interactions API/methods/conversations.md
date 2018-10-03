@@ -127,6 +127,7 @@ coBrowseSessions     | Contains information about CoBrowse sessions for the curr
 summary              | Contains information about the conversation's summary.                         | container
 sdes                 | List of Engagement Attributes.                                                 | container
 responseTime         | Response time                                                                  | container
+dialogs              | Contains information about the different dialogs for the current conversation. | container
 
 _Conversation info_
 
@@ -139,6 +140,7 @@ startTime            | Start-time of the conversation.                          
 endTime              | End-time of the conversation.                                              | long       |
 duration             | Time from when the consumer started the conversation until it ended.       | long       | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
 closeReason          | Reason for closing the conversation - by agent / consumer.                 | string     |
+closeReasonDescription | Additinal information regarding the conversation close reason            | string     |
 firstConversation    | Whether it is the consumer's first conversation.                           | Boolean    |
 csat                 | CSAT score of the conversation (as given in the answer).                   | int        | Range: 1 to 5.
 mcs                  | Meaningful Connection Score of the conversation.                           | int        | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
@@ -158,6 +160,7 @@ browser | The browser or hosted application of the engagement.                 |
 operatingSystem |  Operating system of the device | string     | Possible values:WINDOWS, MAC_OSX, LINUX, IOS, ANDROID.
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
+fullDialogStatus     | Indicates the status of all the dialogs in the conversation.               | string     | Valid values: "OPEN", "CLOSE".
 
 _Campaign info_
 
@@ -298,7 +301,10 @@ Name                  | Description                                             
 messageId             | ID of message.                                              | string
 time                  | Time the change in message status occurred.                 | string
 timeL                 | Time the change in message status occurred, in long format. | long
-messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).   | long
+messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).   | string
+dailogId              | The Id of the message dialog.                               | string 
+participantId         | The Id of the participant sending the message               | string
+participantType       | The type of participant                                     | string
 
 _Message Score info_
 
@@ -353,6 +359,7 @@ agentGroupId   | Agent's group ID.                                              
 agentGroupName | The agent's group name.                                            | string     |
 permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"
 contextData    | Contains context information about the transfer, including raw and structured metadata.| container| |
+dialogId       | The Id of the dialog the agent is participating.                   | string     |
 
 _Consumer Participant info_
 
@@ -368,6 +375,8 @@ lastName      | Consumer's last name (provided by consumer in their profile).   
 phone         | Consumer's phone number (provided by consumer in their profile). | string
 email         | Consumer's email (provided by consumer in their profile).        | string
 token         | Private identifier of the user.                                  | string
+dialogId      | The Id of the dialog the agent is participating.                 | string
+
 
 _Transfer info_
 
@@ -390,6 +399,8 @@ sourceAgentNickname    | The source agent nickname.                             
 sourceAgentFullName    | The source agent full name.                                   | string
 reason                 | Reason for transfer (back2Q, Agent, Skill, TakeOver)          | string
 contextData            | Contains context information about the transfer, including raw and structured metadata.            | container| |
+dialogId               | The Id of the dialog being transfered.                        | string
+
 
 _Interaction info_
 
@@ -402,6 +413,7 @@ agentFullName       | The agent's full name.                                    
 interactionTime     | Interaction start time.                                   | string
 interactionTimeL    | Interaction start time (in long format).                  | long
 interactiveSequence | Interaction's sequence within the conversation.           | int
+dialogId            | The Id of the dialog having the interaction.              | string
 
 _Survey info_
 
@@ -409,7 +421,8 @@ Name         | Description                                     | Type/Value | No
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
 surveyType   | Type of the survey.                             | string     | Currently always "Resolution"
 surveyStatus | Status of the submission of the survey.         | string     |
-surveyData   | List of the question and answers in the survey. | container
+dialogId     | The Id of the dialog of the survey.             | string     |
+surveyData   | List of the question and answers in the survey. | container  |
 
 _SurveyData info_
 
@@ -443,6 +456,22 @@ Name            | Description                                       | Type/Value
 latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
 configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
 
+_Dialog info_
+
+Name         | Description                                     | Type/Value | Notes
+:----------- | :---------------------------------------------- | :--------- | :----------------------------
+dialogId     | The Id of the dialog.                           | string     | 
+status       | Status of the dialog.                           | string     |
+dialogType   | The dialog type.                                | string     | Valid values: "POST_SURVEY", "MAIN".
+dialogChannelType | The dialog channel type.                   | string     |
+startTime    | The dialog start time, readable format.         | string     |
+startTimeL   | The dialog start time, epoch time in milliseconds.| long – epoch time in milliseconds |
+endTime      | The dialog end time, readable format.           | string     |
+endTimeL     | The dialog end time, epoch time in milliseconds.| long – epoch time in milliseconds |
+closeReason  | The dialog close reason.                        | string     |
+closeReasonDescription | The dialog close reason description.  | string     |
+skillId      | The skill Id associated with the dialog.        | string     |
+skillName    | The name of the skill associated with the dialog.| string     |
 
 
 
@@ -484,6 +513,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
         "mcs": 67,
         "alertedMCS": 1,
         "status": "OPEN",
+        "fullDialogStatus": "OPEN",
         "firstConversation": false,
         "csatRate": 5,
         "device": "undefined",
@@ -542,7 +572,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           },
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
           "seq": 0,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "source": "APP",
           "time": "2016-08-29 15:14:19.564+0000",
@@ -562,7 +592,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           },
           "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",
           "seq": 1,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "3677470410",
           "source": "APP",
           "time": "2016-08-29 15:14:20.569+0000",
@@ -604,7 +634,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           },
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
           "seq": 2,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "source": "APP",
           "time": "2016-08-29 15:15:42.568+0000",
@@ -624,7 +654,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           },
           "messageId": "ms::conv:cd5926e0-5b57-4c82-85c5-9c95f88263a1::msg:8",
           "seq": 3,
-          "dialogId": "undefined",
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
           "participantId": "2198186612",
           "source": "APP",
           "time": "2017-10-24 10:24:52.962+0000",
@@ -647,6 +677,7 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "time": "2016-08-29 15:14:05.005+0000",
           "timeL": 1472483645005,
           "permission": "ASSIGNED_AGENT",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
           "contextData": {
             "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent        identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation   identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some    reason\",\"reasonId\":\"some reason Id\"}]",
             "structuredMetadata": [
@@ -685,7 +716,8 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "avatarURL": "undefined",
           "time": "2016-08-29 14:30:24.573+0000",
           "timeL": 1472481024573,
-          "consumerName": "Visitor"
+          "consumerName": "Visitor",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "transfers": [
@@ -702,7 +734,8 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "sourceAgentId": "196875613",
           "sourceAgentFullName": "michal1",
           "sourceAgentLoginName": "michal1",
-          "sourceAgentNickname": "michal1"
+          "sourceAgentNickname": "michal1",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         },
         {
           "timeL": 1498127562332,
@@ -717,7 +750,8 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "sourceAgentId": "7",
           "sourceAgentFullName": "michal",
           "sourceAgentLoginName": "michal@lp.com",
-          "sourceAgentNickname": "michal"
+          "sourceAgentNickname": "michal",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "interactions": [
@@ -728,8 +762,25 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "assignedAgentNickname": "michal@lp.com",
           "interactionTimeL": 1472483644999,
           "interactionTime": "2016-08-29 15:14:04.999+0000",
-          "interactiveSequence": 1
+          "interactiveSequence": 1,
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
+      ],
+      "dialogs": [
+      	{
+         "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+	 "status": "OPEN",
+	 "dialogType": "MAIN",
+	 "dialogChannelType": "MESSAGING",
+	 "startTime": "2017-09-25 07:55:58.000+0000",
+	 "startTimeL": 1506326158000,
+	 "endTime": "2017-09-25 07:56:53.422+0000",
+	 "endTimeL": 1506326213422,
+	 "closeReason": “AGENT”,
+	 “closeReasonDescription”:”MANUAL_CLOSE”,
+	 “skillId”: 1234,
+	 “skillName”: “skill3”
+	}
       ],
       "messageScore": [
         {
@@ -755,7 +806,8 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "timeL": 1472483659626,
           "participantId": "3677470410",
           "participantType": "Agent",
-          "messageDeliveryStatus": "ACCEPT"
+          "messageDeliveryStatus": "ACCEPT",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         },
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
@@ -764,7 +816,8 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "timeL": 1472483742609,
           "participantId": "3677470410",
           "participantType": "Agent",
-          "messageDeliveryStatus": "ACCEPT"
+          "messageDeliveryStatus": "ACCEPT",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         },
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
@@ -773,13 +826,15 @@ configuredResponseTime | Conversation's configured response time. | long – epo
           "timeL": 1472483758272,
           "participantId": "3677470410",
           "participantType": "Agent",
-          "messageDeliveryStatus": "READ"
+          "messageDeliveryStatus": "READ",
+	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "conversationSurveys": [
         {
           "surveyType": "Satisfaction",
           "surveyStatus": "FILLED",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
           "surveyData": [
             {
               "question": "Confirm Resolution",

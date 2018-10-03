@@ -36,7 +36,9 @@ Name                 | Description                                              
 sequence             | The event sequence within the conversation.               | Int        | Currently available only for message of type 'ContentEvent'
 originatorId         | The id of the participant who wrote/accepted the message. | String     |
 serverTimestamp      | Event time stamp.                                         | long       |
-event                | Contains message event data.                              | container  | Valid types: ContentEvent, RichContentEvent, AcceptStatusEvent  
+dialogId             | The dialog Id of this message dialog                      | string     |
+event                | Contains message event data.                              | container  | Valid types: ContentEvent, RichContentEvent, AcceptStatusEvent
+originatorMetadata   | Contains metadata regarding the message originator        | container  |
 
 _event - ContentEvent_
 
@@ -92,6 +94,13 @@ type                 | The type of the message.                         | string
 status               | The status of the message event.                 | string       | Valid values: "ACCEPT","READ"
 sequenceList         | The sequence of the message the status refers to | Array[int]   |
 
+_originatorMetadata record_
+
+Name                 | Description                | Type/Value          | Notes
+:------------------- | :--------------------------| :-------------------|---------------------------------------------
+id                   | The originator Id.         | string              |
+role                 | The originator role.       | string              |
+
 **JSON Example**
 
 ```json
@@ -99,8 +108,13 @@ sequenceList         | The sequence of the message the status refers to | Array[
     "messageEventRecords": [
         {
             "sequence": 0,
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "originatorId": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
             "serverTimestamp": 1501399092573,
+            "originatorMetadata": {
+                "id": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "ContentEvent",
                 "contentType": "text/plain",
@@ -109,8 +123,13 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "sequence": 3,
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
             "serverTimestamp": 1501399110926,
+            "originatorMetadata": {
+                "id": "de4fa420-52d6-538a-bb94-9f0fef829840",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "ContentEvent",
                 "contentType": "text/plain",
@@ -119,8 +138,13 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "sequence": 6,
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "originatorId": "9a8392e5-33d1-4d34-a91e-a00bc9e111c0",
             "serverTimestamp": 1515321942786,
+            "originatorMetadata": {
+                "id": "9a8392e5-33d1-4d34-a91e-a00bc9e111c0",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "ContentEvent",
                 "contentType": "hosted/file",
@@ -134,8 +158,13 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "sequence": 4,
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "originatorId": "5fd32975-1874-5db2-a1eb-affbbe99cc98",
             "serverTimestamp": 1514985573710,
+            "originatorMetadata": {
+                "id": "5fd32975-1874-5db2-a1eb-affbbe99cc98",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "RichContentEvent",
                 "content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"text\",\"text\":\"product name (Title)\",\"tooltip\":\"text tooltip\",\"style\":{\"bold\":true,\"size\":\"large\"}},{\"type\":\"text\",\"text\":\"product name (Title)\",\"tooltip\":\"text tooltip\"}]}"
@@ -143,8 +172,13 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "sequence": 15,
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "originatorId": "5fd32975-1874-5db2-a1eb-affbbe99cc98",
             "serverTimestamp": 1514987081780,
+            "originatorMetadata": {
+                "id": "5fd32975-1874-5db2-a1eb-affbbe99cc98",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "ContentEvent",
                 "contentType": "forms/secure-invitation",
@@ -156,8 +190,13 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "sequence": 19,
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "originatorId": "a5571603699415cf60a94c34eb031159b144bb9ab2c4ef84064ec4848dbf0921",
             "serverTimestamp": 1514987089576,
+            "originatorMetadata": {
+                "id": "a5571603699415cf60a94c34eb031159b144bb9ab2c4ef84064ec4848dbf0921",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "ContentEvent",
                 "contentType": "forms/secure-submission",
@@ -168,7 +207,12 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "serverTimestamp": 1501399101249,
+            "originatorMetadata": {
+                "id": "de4fa420-52d6-538a-bb94-9f0fef829840",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "AcceptStatusEvent",
                 "status": "READ",
@@ -179,7 +223,12 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "originatorId": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "serverTimestamp": 1501399111006,
+            "originatorMetadata": {
+                "id": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "AcceptStatusEvent",
                 "status": "ACCEPT",
@@ -190,7 +239,12 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "originatorId": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "serverTimestamp": 1501399113240,
+            "originatorMetadata": {
+                "id": "45b7a957369a46b5bb9fa4dc7c556a54e4d8c0b00f9a7ebc9d8d67a35580c77e",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "AcceptStatusEvent",
                 "status": "READ",
@@ -201,7 +255,12 @@ sequenceList         | The sequence of the message the status refers to | Array[
         },
         {
             "originatorId": "de4fa420-52d6-538a-bb94-9f0fef829840",
+            "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
             "serverTimestamp": 1501399101110,
+            "originatorMetadata": {
+                "id": "de4fa420-52d6-538a-bb94-9f0fef829840",
+                "role": "AGENT"
+            },
             "event": {
                 "type": "AcceptStatusEvent",
                 "status": "ACCEPT",
