@@ -12,7 +12,7 @@ permalink: authorizing-liveengage-applications-samples-application-login-sample-
 
 This sample application allows you to use the API in a few simple steps:
 
-1. Install a LiveEngage Application. Here is a [LiveEngage Applications installation guide](guides-retry-policy.html). After finishing the installation please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.
+1. Install a LiveEngage Application. Here is a [LiveEngage Applications installation guide](liveengage-applications-installing-liveengage-applications.html). After finishing the installation please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.
 
 2. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
