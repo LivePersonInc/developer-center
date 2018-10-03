@@ -27,6 +27,10 @@ code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
 
+.far {
+  font-size: 15px;
+}
+
 .mobileheader {
   display: none;
 }
