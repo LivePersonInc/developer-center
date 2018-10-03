@@ -1,11 +1,13 @@
 ---
-title: Step 4 - Upload File to Storage
+pagename: Upload File to Storage
+redirect_from:
+  - rich-messaging-file-sharing-4.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: File Sharing
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: File Sharing
 order: 50
-permalink: rich-messaging-file-sharing-4.html
+permalink: file-sharing-upload-file-to-storage.html
 indicator: both
 ---
 
@@ -31,7 +33,7 @@ Upload the file as binary.
 | 401 | Temp URL invalid |
 
 
-**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection){:target="_blank"}_
+**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection)_
 
 
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/){:target="_blank"}_
+Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/)_

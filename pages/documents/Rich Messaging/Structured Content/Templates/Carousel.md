@@ -1,12 +1,14 @@
 ---
-title: Carousel
+pagename: Carousel
+redirect_from:
+  - rich-messaging-structured-content-carousel.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: Structured Content
-level4: Templates
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Structured Content
+subfoldername: Templates
 order: 40
-permalink: rich-messaging-structured-content-carousel.html
+permalink: structured-content-templates-carousel.html
 indicator: messaging
 ---
 

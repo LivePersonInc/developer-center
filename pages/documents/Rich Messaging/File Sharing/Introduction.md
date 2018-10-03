@@ -1,19 +1,21 @@
 ---
-title: Introduction
+pagename: Introduction
+redirect_from:
+  - rich-messaging-file-sharing.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: File Sharing
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: File Sharing
 level-order: 5
 order: 10
-permalink: rich-messaging-file-sharing.html
+permalink: file-sharing-introduction.html
 root-link: true
 indicator: both
 ---
 
 ### Introduction
 
-The LiveEngage Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images. File Sharing can also be enabled by using the Connector API, for cases when images are sent through third party applications. Please refer to the [Connector API documentation](https://developers.liveperson.com/share-image-example.html) for more information on how to do this.
+The LiveEngage Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images. File Sharing can also be enabled by using the Connector API, for cases when images are sent through third party applications. Please refer to the [Connector API documentation](share-image-example.html) for more information on how to do this.
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
@@ -33,4 +35,4 @@ A typical flow of setting up the file sharing feature using the Messaging Window
 
 We will examine and explain each stage in detail as part of this documentation.
 
-**Note:** If you would like to follow the steps using bash, please see the (Prerequisites document)(consumer-int-get-msg.html#prerequisites).
+**Note:** If you would like to follow the steps using `bash`, please see the [Prerequisites document](consumer-int-get-msg.html#prerequisites).

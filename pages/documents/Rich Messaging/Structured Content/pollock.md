@@ -1,11 +1,13 @@
 ---
-title: Structured Content Rendering Tool
+pagename: Structured Content Rendering Tool
+redirect_from:
+  - rich-messaging-structured-content-pollock.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: Structured Content
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Structured Content
 order: 80
-permalink: rich-messaging-structured-content-pollock.html
+permalink: structured-content-structured-content-rendering-tool.html
 indicator: both
 ---
 
@@ -15,12 +17,13 @@ You can find the GitHub repository for this project [here](https://github.com/Li
 
 **A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
 
-<div class="important">Important Note</div>
+<div class="important">
 The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors. There is no SLA or an official support process provided for this web tool. The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.
+</div>
 
 ### Installation
 
-```
+```sh
 npm i json-pollock --save
 ```
 
@@ -51,7 +54,7 @@ Using [RequireJS](http://requirejs.org/):
 
 Map the JsonPollock path in the RequireJs config, and then:
 
-```js
+```javascript
 require(["JsonPollock"],(jsonPollock) => {
     ...
 })
@@ -59,7 +62,7 @@ require(["JsonPollock"],(jsonPollock) => {
 
 Using [CommonJS](http://requirejs.org/docs/commonjs.html):.
 
-```js
+```javascript
 const JsonPollock = require("JsonPollock");
 ```
 
@@ -69,7 +72,7 @@ const JsonPollock = require("JsonPollock");
 
 You can call the `init` function if you want to configure JsonPollock - it is not mandatory; if you don't call it, JsonPollock will be initialized with defaults.
 
-```js
+```javascript
 JsonPollock.init({
 	maxAllowedElements: 50    // max DOM elements that will be rendered, other elements will be ignored, default is 50.
 });
@@ -79,7 +82,7 @@ JsonPollock.init({
 
 The *render* function renders json into a DOM element.
 
-```js
+```javascript
 const content = {
 	"type": "vertical",
 	"elements": [{
@@ -104,7 +107,7 @@ document.getElementById('container').appendChild(rooEl);
 
 The *registerAction* function allows to register a callback to a certain action type, as defined in the [spec](rich-messaging-structured-content-card.html).
 
-```js
+```javascript
 const linkCallback = (data) => {
 	//data => {actionData: <action configuration>, metadata: <metadata configuration, if given>}
     	window.open(data.actionData.uri,"_blank")
@@ -116,7 +119,7 @@ JsonPollock.registerAction('link', linkCallback);
 
 The *unregisterAction* function allow to unregister a callback to a certain action type, as defined in the [spec](rich-messaging-structured-content-card.html).
 
-```js
+```javascript
 JsonPollock.unregisterAction('link');
 ```
 
@@ -124,7 +127,7 @@ JsonPollock.unregisterAction('link');
 
 The *unregisterAllActions* function allow to unregister all callbacks to all action types.
 
-```js
+```javascript
 JsonPollock.unregisterAllActions();
 ```
 
@@ -134,7 +137,7 @@ JsonPollock.unregisterAllActions();
 
 Prior to the rendering, the JSON object is validated against the JSON schema. If it fails to validate, the error object will also include an *errors* property that will hold the validation errors.
 
-```js
+```javascript
 ...
 try {
     const rooEl = JsonPollock.render(json);

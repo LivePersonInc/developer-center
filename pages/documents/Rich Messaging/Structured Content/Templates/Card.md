@@ -1,12 +1,14 @@
 ---
-title: Card
+pagename: Card
+redirect_from:
+  - rich-messaging-structured-content-card.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: Structured Content
-level4: Templates
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Structured Content
+subfoldername: Templates
 order: 30
-permalink: rich-messaging-structured-content-card.html
+permalink: structured-content-templates-card.html
 indicator: both
 ---
 

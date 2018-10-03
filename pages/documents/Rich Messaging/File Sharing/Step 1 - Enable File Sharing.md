@@ -1,11 +1,13 @@
 ---
-title: Step 1 - Enable File Sharing
+pagename: Enable File Sharing
+redirect_from:
+  - rich-messaging-file-sharing-1.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: File Sharing
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: File Sharing
 order: 20
-permalink: rich-messaging-file-sharing-1.html
+permalink: file-sharing-enable-file-sharing.html
 indicator: both
 ---
 

@@ -1,11 +1,13 @@
 ---
-title: Step 6 - Request Download URL
+pagename: Request Download URL
+redirect_from:
+  - rich-messaging-file-sharing-6.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: File Sharing
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: File Sharing
 order: 70
-permalink: rich-messaging-file-sharing-6.html
+permalink: file-sharing-request-download-url.html
 indicator: both
 ---
 

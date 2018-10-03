@@ -1,13 +1,15 @@
 ---
-title: Overview
+pagename: Overview
+redirect_from:
+  - rich-messaging-quick-replies-overview.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: Quick Replies
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Quick Replies
 
 level-order: 3
 order: 10
-permalink: rich-messaging-quick-replies-overview.html
+permalink: quick-replies-overview.html
 root-link: true
 indicator: messaging
 ---

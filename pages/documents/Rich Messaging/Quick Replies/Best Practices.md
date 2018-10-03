@@ -1,11 +1,13 @@
 ---
-title: Best Practices
+pagename: Best Practices
+redirect_from:
+  - rich-messaging-quick-replies-best-practices.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: Quick Replies
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Quick Replies
 order: 40
-permalink: rich-messaging-quick-replies-best-practices.html
+permalink: quick-replies-best-practices.html
 indicator: messaging
 ---
 

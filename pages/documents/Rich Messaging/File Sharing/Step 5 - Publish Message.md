@@ -1,15 +1,17 @@
 ---
-title: Step 5 - Publish Message
+pagename: Publish Message
+redirect_from:
+  - rich-messaging-file-sharing-5.html
 Keywords:
-level1: Documents
-level2: Rich Messaging
-level3: File Sharing
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: File Sharing
 order: 60
-permalink: rich-messaging-file-sharing-5.html
+permalink: file-sharing-publish-message.html
 indicator: both
 ---
 
-Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](https://developers.liveperson.com/consumer-int-msg-reqs.html). Event type should be `HostedFile`.
+Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](consumer-int-msg-reqs.html). Event type should be `HostedFile`.
 
 Example message:
 
