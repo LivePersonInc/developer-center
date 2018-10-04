@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Customization and Branding
 
 order: 190
-permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edittext.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edit-text.html
 
 indicator: messaging
 ---
