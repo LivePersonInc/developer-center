@@ -6,13 +6,83 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-order: 310
-
+permalink: mobile-app-messaging-sdk-for-android-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+
+### Android Messaging SDK -  Version 3.3.0
+
+Android Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
+
+#### Environment Requirements
+
+The SDK’s minimum API is 19 and the target API is 27.
+
+#### Main Features
+
+##### Post Conversation Survey
+
+**Available to all customers?**  No. Please contact account team.
+
+**Description**
+
+The post conversation survey enables brands to both collect feedback and measure their success from their consumers after conversations have taken place. The survey is delivered via a conversational experience to drive higher completion rates and provide consumers with the best experience possible.
+
+Brands can customize the survey to their needs, including predefined questions (CSAT, NPS and FCR), custom questions and free text, as well as the ability to configure the logic and flow from question to question.
+
+This enables brands to prove the success of messaging and compare their KPIs across different channels. Additional information about Post Conversation Survey can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) .
+
+#### Update for Google Maps API key meta tag
+
+**Available to all customers?** Yes.
+
+**Description**
+
+Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY` to `com.google.android.geo.API_KEY`.
+
+* The Geo key meta tag is backwards compatible with V2 keys.
+
+* Brands who do not specify the Maps API key meta tag in the app’s `Manifest.xml`, do not need to perform any change.
+
+* Brands who specify the the Maps API key meta tag in the app’s Manifest.xml as `com.google.android.maps.v2.API_KEY` should change it to `com.google.android.geo.API_KEY`.
+
+#### Bugs
+
+**Fixed Bugs**
+
+* Improper exception handling would cause the host application to freeze.
+
+* Sporadic crashes when conversations are initiated, when the 3.2.1 version of the Mobile App SDK was used on Android platform version 4.4.2.
+
+* Consumer’s OS parameter is missing from the agent workspace.
+
+* Redundant animation to indicate new messages from agent, when using ("show_agent_typing_in_message_bubble”).
+
+* When a message fails to be sent, subsequent messages may also fail when they should be re-sent successfully.
+
+* Invalid JWT authentication token causes host application to freeze after retry mechanism has been complete.
+
+* Not registering to push notifications will result in a failure to logout from the SDK.
+
+* `getNumUnreadMessages` function returns wrong value after clear history is performed.
+
+* The host app crashed when it tried to access the application context, after process is killed by Android OS.
+
+**Known Issues**
+
+* When using `registerLPPusher` with authentication parameters and opening the conversation screen before JWT renewal was completed, the authentication process will go into an infinite loop.
+
+* Monitoring APIs URLs are using HTTP instead of HTTPS. This can changed by replacing the current URLs with the following:
+
+`<string name="get_engagement_url">https://%1$s/api/account/%2$s/app/%3$s/engage ment?v=1.0&lt;/string>`
+
+`<string name="send_sde_url"> https://%1$s/api/account/%2$s/app/%3$s/report?v=1.0&lt ;/string >`
+
+* In some cases, the assigned agent details are not presented in the CSAT form.
+
 
 ### Android Messaging SDK -  Version 3.2.2
 

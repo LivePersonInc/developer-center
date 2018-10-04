@@ -44,10 +44,16 @@ h3[id]{
 h4[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 600;
   font-style: inherit;
   margin-top: 15px;
+}
+
+h5[id] {
+  font-family: "Roboto", Arial;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 h4 code.highlighter-rouge {

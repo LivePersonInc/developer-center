@@ -30,7 +30,7 @@ public func handlePush(userInfo: [NSObject : AnyObject])
 public func registerPushNotifications(token token: NSData, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil)
 ```
 
-_**Note: this method pass the Device Token to the SDK, the actual registration ocurrs only after showConversation method is called.**_
+_**Note: this method passes the Device Token to the SDK, the actual registration occurs only after showConversation method is called.**_
 
 {:start="3"}
 3. Will add custom behavior if LivePerson Push Notification was touched

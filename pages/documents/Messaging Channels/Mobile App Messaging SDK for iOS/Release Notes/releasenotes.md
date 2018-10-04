@@ -8,12 +8,76 @@ categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 
 
-permalink: mobile-app-messaging-sdk-for-ios-release-notes-2.0.html
+permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
 indicator: messaging
 ---
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+
+### iOS Messaging SDK - Version 3.3.0
+
+iOS Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, support for iOS 12, XCode 10 and Swift 4.2 and addresses several bugs reported by customers.
+
+#### Environment Requirements
+
+iOS Mobile App SDK v3.3 is compatible with XCode 10, Swift 4.2 and iOS versions 9 through 12.
+
+#### Main Features
+
+##### Post Conversation Survey
+
+**Available to all customers?**  No. Please contact account team.
+
+**Description**
+
+The post conversation survey enables brands to both collect feedback and measure their success from their consumers after conversations have taken place. The survey is delivered via a conversational experience to drive higher completion rates and provide consumers with the best experience possible.
+
+Brands can customize the survey to their needs, including predefined questions (CSAT, NPS and FCR), custom questions and free text, as well as the ability to configure the logic and flow from question to question.
+
+This enables brands to prove the success of messaging and compare their KPIs across different channels. Additional information about Post Conversation Survey can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) .
+
+##### Support for iOS 12, XCode 10 & Swift 4.2
+
+**Available to all customers?** Yes.
+
+**Description**
+
+Mobile App SDK v3.3 supports iOS 12, XCode 10 & Swift 4.2.
+
+#### Bugs
+
+**Fixed Bugs**
+
+* In some cases, when consumers would go into the conversation screen, the loading progress bar would get stuck.
+
+* When starting to fill a secure form, if a customer exits out of the form and opens a new secure form, the values from the first form appear in the new form for about a second and then disappear.
+
+* When applying a regex for real time masking, the entire string will be affected rather than only the matching part.
+
+* Missing auto scroll to bottom when a conversation is closed.
+
+* The first message is hidden when using the Control History APIs. After sending the second message, all messages will be visible.
+
+* In some cases, when consumers send the app to the background and later return to the conversation screen, the socket will not get connected and the consumer will not be able to send/receive messages.
+
+* When going into the conversation screen after the app was killed, the screen will be scrolled to the top instead of to the bottom.
+
+* When replacing rootViewController, in-app push notifications stops working.
+
+* If a failure occurred while unregistering for Push Notifications, customers were unable to logout from the SDK.
+
+* When Voiceover is turned on, the Secure Forms ‘X’ button reads “stop” instead of “close”.
+
+* When Voiceover is turned on and the send button is customized, the send message button reads as “button” instead of the button’s functionality.
+
+* When Voiceover is turned on, when reading messages, agent reads as “agent” instead of the agent’s nickname.
+
+**Known Issues**
+
+* Resolving unauthenticated conversations fails when setting the flag ‘show history for closed messaging conversations’ to no. The feature works as expected when the flag is set to yes.
+
+
 
 ### iOS Messaging SDK - Version 3.2.6
 
