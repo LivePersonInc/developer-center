@@ -128,6 +128,10 @@ Structure example:
         "customerDetails": [],
         "personalInfo": []
     },
+    "claimsAndAuthType": {
+        "claims": {},
+        "acr": ""
+    },
     "customVariables": [],
     "splitSession": {
         "customVariables": []
@@ -222,9 +226,12 @@ Structure example:
 | SDE.shoppingCart                            | Array of shopping cart updates                                                                       | Array of shopping cart updates                                                           | array   |                                                            |
 | SDE.serviceActivity                         | Array of service activity information                                                                | Array of service activity information                                                    | array   |                                                            |
 | SDE.error                                   | Array of visitor errors                                                                              | Array of visitor errors                                                                  | array   |                                                            |
-| **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  |                                                            |
-| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  |                                                            |
-| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  |                                                            |
+| **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  | deprecated - use 'claimsAndAuthType' instead             |
+| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            | 
+| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            | 
+| **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                         | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                              |
+| claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                 | Object containing SDEs passed by the IDP on the JWT                                      | object  | deprecates the "authenticatedData" key                |
+| claimsAndAuthType.acr                       | The authentication type ("0" - unauthenticated, "loa1" - authenticated)                             | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                              |
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
@@ -399,7 +406,7 @@ Structure example:
 
 *Note: Some of the parameters are duplicated within the 'pageBasic' object.*
 
-### SDE.customerDetails, authenticatedData.customerDetails
+### SDE.customerDetails, authenticatedData.customerDetails, claimsAndAuthType.customerDetails
 
 | Property         | Description                                           | Type   |
 |------------------|-------------------------------------------------------|--------|
@@ -437,7 +444,7 @@ Structure example:
 }
 ```
 
-### SDE.personalInfo, authenticatedData.personalInfo
+### SDE.personalInfo, authenticatedData.personalInfo, claimsAndAuthType.personalInfo
 
 | Property         | Description                                           | Type   |
 |------------------|-------------------------------------------------------|--------|
@@ -463,7 +470,7 @@ Structure example:
 }
 ```
 
-### SDE.personalInfo.contactInfo, authenticatedData.personalInfo.contactInfo
+### SDE.personalInfo.contactInfo, authenticatedData.personalInfo.contactInfo, claimsAndAuthType.personalInfo.contactInfo
 
 | Property | Description                      | Type   |
 |----------|----------------------------------|--------|
@@ -480,6 +487,40 @@ Structure example:
 ```
 
 *Note: This is an array in order that that the customer can provide home contact info, work contact info, and other contact info.*
+
+
+### claimsAndAuthType in unauthenticated case
+
+| Property   | Description            | Type   |
+|------------|------------------------|--------|
+| customerId | The customer id        | string |
+
+Structure example:
+
+```json
+{
+  "claims": {
+    "sub": "",
+    "iss": "",
+    "lp_sdes": [
+      {
+        "type": "ctmrinfo",
+        "info": {
+          "customerId": ""
+        }
+      },
+      {
+        "type": "personal",
+        "personal": {}
+      }
+    ]
+  },
+  "acr": "0"
+}
+```
+
+*note: This enables to send customer id even for unauthenticated user.*
+
 
 ### SDE.marketingSource
 
