@@ -19,7 +19,7 @@ _**Note**: once your app is capable of receivinging Push Notifications, you can 
 
 ### Step 0: Adding Push Notifications (Optional)
 
-1. if you need to Configure the Push Notifications follow this [Guide](https://lpgithub.dev.lprnd.net/dvillacis/SwiftSDK2.8#step-4-configuring-app-for-push-notifications)
+1. if you need to Configure the Push Notifications follow this [Guide](push-notification-service-overview.html)
 
 ### Step 1: LPMessagingSDK Notification Delegate
 
@@ -65,7 +65,7 @@ Note: if you were using the **LPMessagingSDK.instance.registerPushNotifications(
   /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
   /// - Returns: true for showing Push Notifications/ false for hidding In-App Push Notification
   func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool {}
-  
+
 ```
 
 ### Step 2: Implementing LPMessagingSDK Notification Delegate

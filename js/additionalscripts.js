@@ -12,6 +12,7 @@ $(document).ready(function () {
   codeButtons();
   mobileHamburger();
   isExplorer();
+  apiBuilder();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -320,6 +321,25 @@ function replaceTitle () {
 };
   document.title = $newTitle;
 };
+
+function apiBuilder() {
+  var apiName = document.getElementById("apiName");
+  var apiList = document.getElementById("apiList");
+  var methodName = document.getElementById("methodName");
+  apiName.click(function() {
+    var hasExpanded = $(this).next.data("expanded") == "true";
+    if (hasExpanded) {
+        $(this).next.slideUp(400);
+        $(this).next.data("expanded","false");
+        $(this).next.removeClass("active");
+        $(this).removeClass("active");
+    } else {
+        $(this).next().slideDown(400);
+        $(this).next.data("expanded","true");
+        $(this).next.addClass("active");
+    }
+  })
+}
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
