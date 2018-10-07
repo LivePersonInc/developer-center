@@ -312,6 +312,13 @@
           - subpagename: Delete Profiles
           - subpagename: Delete Profile
       - pagename: Appendix
+    - documentname: Shift Status API
+      pages:
+          - pagename: Overview
+          - pagename: Methods
+            subpages:
+              - subpagename: Get Shift Status by Account
+              - subpagename: Get Shift Status by Skill
     - documentname: Skills API
       pages:
         - pagename: Overview
