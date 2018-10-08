@@ -22,7 +22,7 @@ Information collected using Engagement Attributes can be used to achieve the fol
 
 * Measure and track campaign goals.
 
-To view all supported SDE types, please [refer to this document](engagment-attributes-overview.html).
+To view all supported SDE types, please [refer to this document](engagement-attributes-overview.html).
 
 ### Use Cases
 

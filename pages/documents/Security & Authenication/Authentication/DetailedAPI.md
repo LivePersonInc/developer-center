@@ -13,11 +13,45 @@ indicator: both
 
 ### Web Interaction Embedded Window API
 
-In order to enable targeting for messaging engagements, configure the CustomerId Engagement Attribute in order to identify the visitor utilizing LivePerson’s backend authentication services. The CustomerId variable is part of CustomerInfo Engagement Attribute set. It is not used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor.
+<div class="important"> It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. LiveEngage monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.</div>
 
-By attributing the conversation to the CustomerID, new incoming messages will be delivered and displayed as a window in a minimized state, with new message notifications.
+In order to enable targeting for messaging engagements (authenticated _and_ unauthenticated web messaging), the identity of the consumer must be passed to the API using the identities array and identity function. The information in this array should match the values assigned to the user when they authenticate on your site; this information is _not_ used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor. In essence, this information _identifies_ rather than _authenticates_ a user; it passes unique information to LiveEngage, allowing for targeted engagements and continuity between conversations to apply according to the information passed.
 
-In this use case, it is the Customer’s Web App responsibility to set the customerId and generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
+The identity function should be implemented on every authenticated page (the LivePerson tag will set the identity of unauthenticated visitors).
+
+**Code Example**
+
+```javascript
+  // Initialize the lpTag namespace and the identity array, if the identity function is placed above the tag.
+  var lpTag = {};
+  lpTag.identities = [];
+
+  lpTag.identities.push(identityFn);
+  function identityFn(callback) {
+      callback({
+          iss: "<REPLACE_WITH_ISSUER>",
+          acr: "loa1",
+          sub: "<REPLACE_WITH_CUSTOMER_IDENTIFICATION>"
+      });
+  }
+
+```
+
+**Identity object description**
+
+<div class="important">All 3 object keys are mandatory.</div>
+
+* iss - Issuer, who identified the consumer - usually the brand. Any alphanumeric string value is accepted, meaning that this value is arbitrary and can be set entirely by the brand according to their own needs and specifications.
+
+* acr - Authentication Context Class Reference based on [NIST-2 (2013)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf), the level of the authentication. Currently, we support the level `loa1` only and thus only it should be used in this context.
+
+* sub - unique and non-guessable identifier of the consumer as set by the brand on their website. This is used to identify returning users and immediately continue an open conversation (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and moved between consumers).
+
+For more information on these keys, please see the [Monitoring API documentation](https://developers.liveperson.com/monitoring-api-overview.html).
+
+After attributing the conversation to the customer identity, any new incoming messages will be delivered and displayed to the consumer as a window in a minimized state, with new message notifications.
+
+In this use case, it is the brand’s responsibility to set the customer identity and generate a valid token. The LivePerson Web SDK calls a JavaScript method located on the page, and provides it with a callback method to execute when it has a token as a response to LivePerson Web Tag, and is able to continue the flow.
 
 The callback method accepts two parameters:
 
@@ -32,14 +66,6 @@ The Customer web page method name can be either the default LivePerson method na
 **Code Example**
 
 ```javascript
-    log("set customerId");
-    lpTag.sdes.push({
-        "type": "ctmrinfo",
-        "info": {
-            "customerId": customerId
-        }
-    });
-
     var lpMethods = {
         lpGetAuthenticationToken: function(callback) {
             log("LP asked for id_token");

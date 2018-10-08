@@ -5,10 +5,13 @@
 <div>
   <button id="apiName" name="headApiName">Choose an API</button>
   <ul id="apiList">
-    <li>Users API</li>
-    <li>Monitoring API</li>
-    <li>Messaging Operations API</li>
+    {% for category in site.data.documentsupdated %}
+      {% for document in category.documents %}
+      <li data-link="{{document.documentname}}" class="apiLink">{{document.documentname}}</li>
+      {% endfor %}
+    {% endfor %}
   </ul>
+  <input id="apiNameInput" type="text" />
 </div>
 <div>
   <button id="methodName" name="headMethodName">Choose a method</button>

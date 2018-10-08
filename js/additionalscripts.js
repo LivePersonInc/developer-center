@@ -323,21 +323,26 @@ function replaceTitle () {
 };
 
 function apiBuilder() {
-  var apiName = document.getElementById("apiName");
   var apiList = document.getElementById("apiList");
   var methodName = document.getElementById("methodName");
-  apiName.click(function() {
-    var hasExpanded = $(this).next.data("expanded") == "true";
+  $("#apiName").click(function() {
+    console.log("click");
+    var hasExpanded = $("#apiList").data("expanded") == "true";
     if (hasExpanded) {
-        $(this).next.slideUp(400);
-        $(this).next.data("expanded","false");
-        $(this).next.removeClass("active");
+        $("#apiList").slideUp(400);
+        $("#apiList").data("expanded","false");
+        $("#apiList").removeClass("active");
         $(this).removeClass("active");
     } else {
-        $(this).next().slideDown(400);
-        $(this).next.data("expanded","true");
-        $(this).next.addClass("active");
+        $("#apiList").slideDown(400);
+        $("#apiList").data("expanded","true");
+        $("#apiList").addClass("active");
     }
+  })
+  $("#apiList > li").click(function (){
+    var value= $(this).dataset.link;
+    var input = $('#apiNameInput');
+    input.val(value);
   })
 }
 
