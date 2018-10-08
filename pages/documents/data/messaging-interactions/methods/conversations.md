@@ -131,6 +131,7 @@ mcs                  | Meaningful Connection Score of the conversation.         
 alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, Negative.          | int        | Values: -1, 0, 1
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
+deviceModel          | The model of the mobile device that opened the connection | string     | For example: "Iphone9,4"
 latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation is started, assigned to an agent or transferred to a skill.                       | long       |
 latestSkillName      | Most recent skill name that the conversation was assigned to.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
@@ -141,9 +142,21 @@ agentDeleted | Indicates whether agent was deleted. | Boolean |
 latestAgentGroupId   | Group ID of the agent most recently assigned to the conversation.          | long       |
 latestAgentGroupName | Group name of the agent most recently assigned to the conversation.        | string     |
 browser | The browser or hosted application of the engagement.                 | string     |
+browserVersion | Detailed version info of the user agent (browser or host-application).  | string     |
 operatingSystem |  Operating system of the device | string     | Possible values:WINDOWS, MAC_OSX, LINUX, IOS, ANDROID.
+operatingSystemVersion | The operating system version, and distribution type (if relevant). | string | Examples: Ubuntu 15.00
 latestQueueState     | Indicates if the conversation is assigned to an agent or waiting in queue. | string     | Valid values: "IN_QUEUE", "ACTIVE"
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
+sessionId | Session ID in LP system. | string | 
+interactionContextId | Session ID in LP system. | string | 
+timeZone | The time zone. | string | 
+features | The features that the connection is using | list of strings | For example: ["PHOTO_SHARING","QUICK_REPLIES","CO_APP","AUTO_MESSAGES","RICH_CONTENT","SECURE_FORMS"]
+language | Language of the conversation's context | string | 
+integration | The integration type: mobile-sdk, web-sdk, brand-sdk | string | 
+integrationVersion | The version of the integration | string | 
+appName | We have a few: ConsumerApp, tMobileApp, WebAgent, BrandAgent | string | 
+appVersion | The hosted application version. | string | 
+ipAddress | Current connection user IP | string | 
 
 _Campaign info_
 
