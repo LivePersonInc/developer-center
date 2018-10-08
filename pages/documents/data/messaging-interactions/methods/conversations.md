@@ -154,7 +154,7 @@ features | The features that the connection is using | list of strings | For exa
 language | Language of the conversation's context | string | 
 integration | The integration type: mobile-sdk, web-sdk, brand-sdk | string | 
 integrationVersion | The version of the integration | string | 
-appId | The name of the application | string | We have a few: ConsumerApp, WebAgent, BrandAgent
+appId | The name of the application | string | We have a few internal application names: ConsumerApp, WebAgent, BrandAgent |
 appVersion | The hosted application version. | string | 
 ipAddress | Current connection user IP | string | 
 
