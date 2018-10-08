@@ -910,6 +910,26 @@ a.anchoritem {
  margin-left: 400px;
 }
 
+#apiList {
+  display: none;
+}
+
+.apinamecontainer {
+  display: flex;
+}
+
+.apilistcontainer {
+  flex: 1;
+}
+
+.inputcontainer {
+  flex: 1;
+}
+
+#apiNameInput {
+  width: 100%;
+}
+
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){

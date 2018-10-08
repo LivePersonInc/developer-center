@@ -324,9 +324,10 @@ function replaceTitle () {
 
 function apiBuilder() {
   var apiList = document.getElementById("apiList");
+  var listItem = document.getElementsByClassName("apiLink");
+  var accountNumberInput = $('#accountnumber');
   var methodName = document.getElementById("methodName");
   $("#apiName").click(function() {
-    console.log("click");
     var hasExpanded = $("#apiList").data("expanded") == "true";
     if (hasExpanded) {
         $("#apiList").slideUp(400);
@@ -339,11 +340,16 @@ function apiBuilder() {
         $("#apiList").addClass("active");
     }
   })
-  $("#apiList > li").click(function (){
-    var value= $(this).dataset.link;
+  $(listItem).on("click", function() {
     var input = $('#apiNameInput');
-    input.val(value);
-  })
+    var accountNumber = accountNumberInput.val();
+    var originalvalue = $(this).data("apiLink");
+    if (accountNumber != undefined) {
+      var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
+      input.val(finalvalue);
+    } else
+    input.val(originalvalue);
+  });
 }
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special

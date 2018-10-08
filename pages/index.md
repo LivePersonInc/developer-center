@@ -9,6 +9,7 @@ Keep reading to learn what you need to get started, [how to read our documents](
 
 If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly via the "Looking for Support?" button on the left hand side.
 
+
 ### Getting Started with LivePerson APIs
 
 * [Before You Get Started](before-you-get-started-considerations-and-requirements.html)
