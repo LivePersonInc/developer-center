@@ -19,7 +19,7 @@ Use this method to start a new session and to get an engagement according to the
 
 | Method | URL |
 | :--- | :--- |
-|POST|https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id} |
+|POST|https://{domain}/api/account/{accountId}/app/engagement/visitors/{visitor-id} |
 
 | Header | Value |
 | --- | --- |

@@ -19,7 +19,7 @@ Use this method to update the session and add SDEs.
 
 | Method | URL |
 | :--- | :--- |
-| PUT |`https://<CSDSdomainForMSDKGW>/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
+| PUT |`https://{domain}}/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
 
 **Path Parameters**
 

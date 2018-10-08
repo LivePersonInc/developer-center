@@ -35,6 +35,7 @@
       - pagename: Public Properties
       - pagename: Release Notes
   - documentname: Chat Agent API
+    basedomain: https://{domain}.net/api/account/{accountId}/agentSession/
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -189,6 +190,7 @@
         - subpagename: Generate Upload URL
         - subpagename: Generate Download URL
     - documentname: Server Chat API
+      basedomain: https://{domain}/api/account/{accountId}/chat/
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -217,6 +219,7 @@
   image: contact-center
   documents:
     - documentname: Agent Groups API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups/
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -229,7 +232,8 @@
             - subpagename: Delete Agent Groups
             - subpagename: Delete Agent Group
         - pagename: Appendix
-    - documentname: Agent Status Reason API
+    - documentname: Agent Status Reason
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons/
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -240,6 +244,7 @@
             - subpagename: Update Status Reason
             - subpagename: Delete Status Reason
     - documentname: Automatic Messages API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/auto-messages
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -248,6 +253,7 @@
           - subpagename: Get Automatic Message by ID
           - subpagename: Update an Automatic Message
     - documentname: Audit Trail API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/metadata/audit
       pages:
         - pagename: Introduction
         - pagename: Methods
@@ -255,6 +261,7 @@
             - subpagename: Retrieve Audit Trail Records
             - subpagename: Export Audit Trail to CSV File
     - documentname: LOBs API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/lobs
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -268,6 +275,7 @@
             - subpagename: Delete LOB
         - pagenme: Appendix
     - documentname: Predefined Content API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/canned-responses
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -283,6 +291,7 @@
             - subpagename: Get Default Predefined Content Items
         - pagename: Appendix
     - documentname: Predefined Categories API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-categories/categories/
       pages:
         - pagename: Introduction
         - pagename: Methods
@@ -300,6 +309,7 @@
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
     - documentname: Profiles API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -313,6 +323,7 @@
           - subpagename: Delete Profile
       - pagename: Appendix
     - documentname: Shift Status API
+      basedomain: https://{domain}/api/account/{accountId}/shift-status
       pages:
           - pagename: Overview
           - pagename: Methods
@@ -320,6 +331,7 @@
               - subpagename: Get Shift Status by Account
               - subpagename: Get Shift Status by Skill
     - documentname: Skills API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/skills
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -333,6 +345,7 @@
             - subpagename: Delete Skill
         - pagename: Appendix
     - documentname: Users API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/users
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -347,6 +360,7 @@
             - subpagename: Reset User's Password
         - pagename: Appendix
     - documentname: Unified Automatic Messages API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/unified-auto-messages
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -356,6 +370,7 @@
             - subpagename: Update an Unified Automatic Message
             - subpagename: Delete an Unified Automatic Message
     - documentname: Special Occasions API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/ac-common/specialoccasion
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -367,6 +382,7 @@
             - subpagename: Retrieve Special Occasions by List
         - pagename: Appendix
     - documentname: Workdays API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/ac-common/workinghours
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -382,6 +398,7 @@
   image: historical-data
   documents:
   - documentname: Consumer Messaging History API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/conversations
     pages:
         - pagename: Overview
         - pagename: Methods
@@ -389,6 +406,7 @@
             - subpagename: Conversations - Content
             - subpagename: Conversations - Metadata
   - documentname: Data Access API
+    basedomain: https://{domain}/data_access_le/account/{accountID}/le
     pages:
       - pagename: Overview
       - pagename: Architecture
@@ -404,12 +422,14 @@
       - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
+    basedomain: https://<domain>/interaction_history/api/account/{accountID}/interactions
     pages:
       - pagename: Overview
       - pagename: Methods
       - pagename: Sample Code
       - pagename: Engagement Attributes
   - documentname: Messaging Interactions API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/conversations
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -418,7 +438,8 @@
           - subpagename: Get Conversation by Conversation ID
           - subpagename: Get Conversations by Consumer ID
       - pagename: Engagement Attributes
-  - documentname: Personal Data Deletion API
+  - documentname: Personal Data Deletion
+    basedomain: https://{domain}/api/account/{site_id}/personal-data-deletion
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -436,6 +457,7 @@
   #   - pagename: contextAndInvite
   #   - pagename: getLiveDeflectData
   - documentname: Connector API
+    basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
     - pagename: First Steps
       subpages:
@@ -475,6 +497,7 @@
       subpages:
       - subpagename: Connector Sample App
   - documentname: IVR Engagement API
+    basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:
     - pagename: Overview
     - pagename: Methods
@@ -603,6 +626,7 @@
   image: rt-data
   documents:
   - documentname: Agent Metrics API
+    basedomain: https://<domain>/messaging_history/api/account/{accountID}/agent-view
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -610,6 +634,7 @@
           - subpagename: Agent Status
           - subpagename: Summary
   - documentname: Messaging Operations API
+    basedomain: https://{domain}/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -621,6 +646,7 @@
           - subpagename: Messaging CSAT Distribution
       - pagename: Appendix
   - documentname: Operational Realtime API
+    basedomain: https://<domain>/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -768,6 +794,7 @@
           subpages:
             - subpagename: Application Login Sample App
     - documentname: Login Service API
+      basedomain: https://{domain}/api/account/{accountId}
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -781,6 +808,7 @@
   image: website-monitoring
   documents:
     - documentname: App Engagement API
+      basedomain: https://{domain}/api/account/{accountId}/app/engagement/visitors/{visitor-id}
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -821,6 +849,7 @@
             - subpagename: Engagement Window Events
         - pagename: Changelog
     - documentname: Monitoring API
+      basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
         - pagename: Overview
         - pagename: Getting Started
