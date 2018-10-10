@@ -44,10 +44,16 @@ h3[id]{
 h4[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 600;
   font-style: inherit;
-  margin-top: 10px;
+  margin-top: 15px;
+}
+
+h5[id] {
+  font-family: "Roboto", Arial;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 h4 code.highlighter-rouge {
@@ -112,9 +118,10 @@ pre code {
 }
 
 .post-content table tr td {
-   font-size: 1em;
+   font-size: 12px;
    font-family: "Open Sans";
    color: #666666;
+   line-height: 1.8;
    max-width: 160px;
    height: 50px;
    hyphens: none;
@@ -199,8 +206,16 @@ code {
   width: 89%;
 }
 
+p .darken {
+  color: #fff;
+}
+
 td code {
   color: #666666;
+}
+
+td .darken {
+  color: #fff !important;
 }
 
 /*toc nav bar */
@@ -400,7 +415,7 @@ ul.mysidebar.nav li.activepage a{
 .mysidebar.nav li.folder > a{
  font-size: 14px;
  font-weight: 300;
- margin-top: -2px;
+ margin-top: -1px;
 }
 
 .mysidebar.nav li.folder > a:hover {
@@ -408,7 +423,15 @@ ul.mysidebar.nav li.activepage a{
 }
 
 .mysidebar.nav li.folder > a:focus {
-  background-color: initial !important;
+  background-color: #3d4558 !important;
+}
+
+.defaultsidebarexplorer .mysidebar.nav li.folder > a:focus {
+  background-color: #3d4558 !important;
+}
+
+.defaultsidebarexplorer .mysidebar.nav li.folder > a:hover {
+  background-color: #3d4558 !important;
 }
 
 ul.mysidebar.nav li ul li {

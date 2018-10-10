@@ -11,7 +11,7 @@ order: 10
 
 This integration will allow you to see and create your Salesforce Contact, Lead, Account and Opportunity record data right from within LiveEngage. It will also allow you to view your LiveEngage transcripts from within Salesforce. Brands that use LiveEngage for sales and support can offer a more personalized, informed experience with access to Salesforce by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads.
 
-<div class="inntertext configlink"><a href="https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Factsheets/SFDC+Widget+for+LiveEngage+-+Installation+and+Configuration+Guide.pdf" target="_blank">Click here</a> for the Salesforce Widget Integration Guide!</div> and check out the video below for an overview of how the integration works.
+<div class="innertext configlink"><a href="https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Factsheets/SFDC+Widget+for+LiveEngage+-+Installation+and+Configuration+Guide.pdf" target="_blank">Click here</a> for the Salesforce Widget Integration Guide!</div> and check out the video below for an overview of how the integration works.
 <hr class="solutionshr" />
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TXl-xpsECQ0" frameborder="0" allowfullscreen></iframe>

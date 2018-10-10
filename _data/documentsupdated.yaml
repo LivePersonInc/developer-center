@@ -13,7 +13,7 @@
   - documentname: Retry and KeepAlive Best Practices
     pages:
     - pagename: Overview
-  - documentname: Major Platform Components
+  - documentname: Essential Resources
     pages:
     - pagename: Getting Started with Authentication
     - pagename: Getting Started with Data APIs
@@ -34,6 +34,82 @@
       - pagename: Public Model Structure
       - pagename: Public Properties
       - pagename: Release Notes
+  - documentname: Chat Agent API
+    basedomain: https://{domain}/api/account/{accountId}/agentSession
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Start Agent Session
+          - subpagename: Retrieve Current Availability
+            methodurl: /{agentSessionId}/availability
+            httpmethod: GET
+          - subpagename: Set Agent Availability
+            methodurl: /{agentSessionId}/availability
+            httpmethod: POST
+          - subpagename: Retrieve Available Agents
+            methodurl: /{agentSessionId}/availableAgents
+            httpmethod: GET
+          - subpagename: Retrieve Available Slots
+            methodurl: /{agentSessionId}/chat/availableSlots
+            httpmethod: GET
+          - subpagename: Retrieve Agent Information
+            methodurl: /{agentSessionId}/info
+            httpmethod: GET
+          - subpagename: Determine Incoming Chat Request
+            methodurl: /{agentSessionId}/incomingRequests
+            httpmethod: GET
+          - subpagename: Accept a Chat
+            methodurl: /{agentSessionId}/incomingRequests
+            httpmethod: POST
+          - subpagename: Retrieve Chat Sessions
+            methodurl: /{agentSessionId}/chatSessions
+            httpmethod: GET
+          - subpagename: Retrieve Chat Resources, Events and Information
+            methodurl: /chat/{chatId}
+            httpmethod: GET
+          - subpagename: Retrieve Data for Multiple Chats
+            methodurl: See document for more info.
+            httpmethod: GET
+          - subpagename: Retrieve Chat Events
+            methodurl: /chat/{chatId}/events
+            httpmethod: GET
+          - subpagename: Send Lines and Structured Content
+            methodurl: /chat/{chatId}/events
+            httpmethod: POST
+          - subpagename: End Chat
+            methodurl: /chat/{chatId}/events
+            httpmethod: POST
+          - subpagename: Retrieve Chat Information
+            methodurl: /chat/{chatId}/info
+            httpmethod: GET
+          - subpagename: Retrieve Visitor's Name
+            methodurl: /chat/{chatId}/info/visitorName
+            httpmethod: GET
+          - subpagename: Retrieve Agent's Typing Status
+            methodurl: /chat/{chatId}/info/agentTyping
+            httpmethod: GET
+          - subpagename: Set Agent's Typing Status
+            methodurl: /chat/{chatId}/info/agentTyping
+            httpmethod: POST
+          - subpagename: Retrieve Visitor's Typing Status
+            methodurl: /chat/{chatId}/info/visitorTyping
+            httpmethod: GET
+          - subpagename: Retrieve Available Skills
+            methodurl: /chat/{chatId}/transfer
+            httpmethod: GET
+          - subpagename: Transfer a Chat
+            methodurl: /chat/{chatId}/transfer
+            httpmethod: POST
+          - subpagename: Retrieve Agent Survey Structure
+            methodurl: /chat/{chatId}/survey
+            httpmethod: GET
+          - subpagename: Submit Survey Data
+            methodurl: /chat/{chatId}/survey
+            httpmethod: PUT
+      - pagename: System Messages
+      - pagename: Sample App
+      - pagename: Postman Resources
   - documentname: Customer Facing Bots
     pages:
       - pagename: Overview
@@ -50,40 +126,10 @@
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
 
+
 - categoryname: Client Side Configuration
   image: client-side
   documents:
-    - documentname: Chat Agent API
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Start Agent Session
-            - subpagename: Retrieve Current Availability
-            - subpagename: Set Agent Availability
-            - subpagename: Retrieve Available Agents
-            - subpagename: Retrieve Available Slots
-            - subpagename: Retrieve Agent Information
-            - subpagename: Determine Incoming Chat Request
-            - subpagename: Accept a Chat
-            - subpagename: Retrieve Chat Sessions
-            - subpagename: Retrieve Chat Resources, Events and Information
-            - subpagename: Retrieve Data for Multiple Chats
-            - subpagename: Retrieve Chat Events
-            - subpagename: Send Lines and Structured Content
-            - subpagename: End Chat
-            - subpagename: Retrieve Chat Information
-            - subpagename: Retrieve Visitor's Name
-            - subpagename: Retrieve Agent's Typing Status
-            - subpagename: Set Agent's Typing Status
-            - subpagename: Retrieve Visitor's Typing Status
-            - subpagename: Retrieve Available Skills
-            - subpagename: Transfer a Chat
-            - subpagename: Retrieve Agent Survey Structure
-            - subpagename: Submit Survey Data
-        - pagename: System Messages
-        - pagename: Sample App
-        - pagename: Postman Resources
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
@@ -188,6 +234,7 @@
         - subpagename: Generate Upload URL
         - subpagename: Generate Download URL
     - documentname: Server Chat API
+      basedomain: https://{domain}/api/account/{accountId}/chat
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -216,6 +263,7 @@
   image: contact-center
   documents:
     - documentname: Agent Groups API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -228,7 +276,8 @@
             - subpagename: Delete Agent Groups
             - subpagename: Delete Agent Group
         - pagename: Appendix
-    - documentname: Agent Status Reason API
+    - documentname: Agent Status Reason
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -239,6 +288,7 @@
             - subpagename: Update Status Reason
             - subpagename: Delete Status Reason
     - documentname: Automatic Messages API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/auto-messages
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -247,6 +297,7 @@
           - subpagename: Get Automatic Message by ID
           - subpagename: Update an Automatic Message
     - documentname: Audit Trail API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/metadata/audit
       pages:
         - pagename: Introduction
         - pagename: Methods
@@ -254,6 +305,7 @@
             - subpagename: Retrieve Audit Trail Records
             - subpagename: Export Audit Trail to CSV File
     - documentname: LOBs API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/lobs
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -267,6 +319,7 @@
             - subpagename: Delete LOB
         - pagenme: Appendix
     - documentname: Predefined Content API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/canned-responses
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -282,6 +335,7 @@
             - subpagename: Get Default Predefined Content Items
         - pagename: Appendix
     - documentname: Predefined Categories API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-categories/categories/
       pages:
         - pagename: Introduction
         - pagename: Methods
@@ -299,6 +353,7 @@
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
     - documentname: Profiles API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -311,7 +366,16 @@
           - subpagename: Delete Profiles
           - subpagename: Delete Profile
       - pagename: Appendix
+    - documentname: Shift Status API
+      basedomain: https://{domain}/api/account/{accountId}/shift-status
+      pages:
+          - pagename: Overview
+          - pagename: Methods
+            subpages:
+              - subpagename: Get Shift Status by Account
+              - subpagename: Get Shift Status by Skill
     - documentname: Skills API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/skills
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -325,6 +389,7 @@
             - subpagename: Delete Skill
         - pagename: Appendix
     - documentname: Users API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/users
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -339,6 +404,7 @@
             - subpagename: Reset User's Password
         - pagename: Appendix
     - documentname: Unified Automatic Messages API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/unified-auto-messages
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -347,11 +413,36 @@
             - subpagename: Get Unified Automatic Message by ID
             - subpagename: Update an Unified Automatic Message
             - subpagename: Delete an Unified Automatic Message
+    - documentname: Special Occasions API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/ac-common/specialoccasion
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Special Occasion
+            - subpagename: Update Special Occasion
+            - subpagename: Delete Special Occasion
+            - subpagename: Retrieve Special Occasion by ID
+            - subpagename: Retrieve Special Occasions by List
+        - pagename: Appendix
+    - documentname: Workdays API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/ac-common/workinghours
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Workdays Object
+            - subpagename: Update Workdays Object
+            - subpagename: Delete Workdays Object
+            - subpagename: Retrieve Workdays Object by ID
+            - subpagename: Retrieve Workdays Objects by List
+        - pagename: Appendix
 
 - categoryname: Historical Data
   image: historical-data
   documents:
   - documentname: Consumer Messaging History API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/conversations
     pages:
         - pagename: Overview
         - pagename: Methods
@@ -359,6 +450,7 @@
             - subpagename: Conversations - Content
             - subpagename: Conversations - Metadata
   - documentname: Data Access API
+    basedomain: https://{domain}/data_access_le/account/{accountID}/le
     pages:
       - pagename: Overview
       - pagename: Architecture
@@ -374,12 +466,14 @@
       - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
+    basedomain: https://{domain}/interaction_history/api/account/{accountID}/interactions
     pages:
       - pagename: Overview
       - pagename: Methods
       - pagename: Sample Code
       - pagename: Engagement Attributes
   - documentname: Messaging Interactions API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/conversations
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -388,7 +482,8 @@
           - subpagename: Get Conversation by Conversation ID
           - subpagename: Get Conversations by Consumer ID
       - pagename: Engagement Attributes
-  - documentname: Personal Data Deletion API
+  - documentname: Personal Data Deletion
+    basedomain: https://{domain}/api/account/{site_id}/personal-data-deletion
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -406,6 +501,7 @@
   #   - pagename: contextAndInvite
   #   - pagename: getLiveDeflectData
   - documentname: Connector API
+    basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
     - pagename: First Steps
       subpages:
@@ -445,6 +541,7 @@
       subpages:
       - subpagename: Connector Sample App
   - documentname: IVR Engagement API
+    basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:
     - pagename: Overview
     - pagename: Methods
@@ -501,6 +598,8 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Latest Release Notes
+    - pagename: All Release Notes
     - pagename: Appendix
       subpages:
       - subpagename: Security
@@ -550,7 +649,8 @@
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
-    - pagename: Release Notes
+    - pagename: Latest Release Notes
+    - pagename: All Release Notes
     - pagename: Appendix
       subpages:
       - subpagename: Security
@@ -570,6 +670,7 @@
   image: rt-data
   documents:
   - documentname: Agent Metrics API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -577,6 +678,7 @@
           - subpagename: Agent Status
           - subpagename: Summary
   - documentname: Messaging Operations API
+    basedomain: https://{domain}/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -588,6 +690,7 @@
           - subpagename: Messaging CSAT Distribution
       - pagename: Appendix
   - documentname: Operational Realtime API
+    basedomain: https://{domain}/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -601,16 +704,6 @@
 - categoryname: Rich Messaging
   image: rich-media
   documents:
-    - documentname: File Sharing
-      pages:
-        - pagename: Introduction
-        - pagename: Enable File Sharing
-        - pagename: Create a Conversation
-        - pagename: Request Upload URL
-        - pagename: Upload File to Storage
-        - pagename: Publish Message
-        - pagename: Request Download URL
-        - pagename: Download File From Storage
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
@@ -626,6 +719,36 @@
             - subpagename: Actions
             - subpagename: Metadata
         - pagename: Styling
+    - documentname: Apple Business Chat Templates
+      pages:
+        - pagename: Introduction
+        - pagename: List Picker
+          subpages:
+            - subpagename: Overview
+            - subpagename: Basic Layout JSON Template
+            - subpagename: Basic Layout Metadata
+            - subpagename: Basic Layout Body
+            - subpagename: Basic Layout Body - Header Section
+            - subpagename: Basic Layout Body - Item Section
+        - pagename: Time Picker
+          subpages:
+            - subpagename: Overview
+            - subpagename: Basic Layout JSON Template
+            - subpagename: Business Event Section
+            - subpagename: Business Chat Messaging Section
+            - subpagename: Time Picker Item
+            - subpagename: Time Picker Examples
+        - pagename: Guidelines and Limitations
+    - documentname: File Sharing
+      pages:
+        - pagename: Introduction
+        - pagename: Enable File Sharing
+        - pagename: Create a Conversation
+        - pagename: Request Upload URL
+        - pagename: Upload File to Storage
+        - pagename: Publish Message
+        - pagename: Request Download URL
+        - pagename: Download File From Storage
     - documentname: Quick Replies
       pages:
         - pagename: Overview
@@ -715,6 +838,7 @@
           subpages:
             - subpagename: Application Login Sample App
     - documentname: Login Service API
+      basedomain: https://{domain}/api/account/{accountId}
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -728,6 +852,7 @@
   image: website-monitoring
   documents:
     - documentname: App Engagement API
+      basedomain: https://{domain}/api/account/{accountId}/app/engagement/visitors/{visitor-id}
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -768,6 +893,7 @@
             - subpagename: Engagement Window Events
         - pagename: Changelog
     - documentname: Monitoring API
+      basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
         - pagename: Overview
         - pagename: Getting Started

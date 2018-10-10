@@ -11,7 +11,8 @@ $(document).ready(function () {
   menuDrop ();
   codeButtons();
   mobileHamburger();
-  msieversion();
+  isExplorer();
+  apiBuilder();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -75,6 +76,10 @@ function navigateContent(url) {
       }
       //jump to top when page loads
       window.scrollTo(0,0);
+      if (/Mobi|Android/i.test(navigator.userAgent) == true) {
+        $('#mysidebar').slideUp(400);
+        $('#mysidebar').data("expanded","false");
+      };
   });
 }
 
@@ -88,16 +93,47 @@ function codeButtons () {
   var currentId = "codeblock" + (i + 1);
   $(this).attr('id', currentId);
   //define and then add a clipboard button to all code blocks.
-  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><img class="copybefore" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"><img class="copyafter" src="img/done.svg" width="13" alt="Copy to clipboard"></button>';
+  var clipButton = '<button class="codebtn" data-clipboard-target="#' + currentId + '"><i class="far fa-copy copybefore" aria-hidden="true"></i><i class="fas fa-check copyafter" aria-hidden="true" style="display: none;"></i></button>';
+  var nightButton = '<button class="nightbtn"><i class="far fa-moon" aria-hidden="true"></i></button>'
      $(this).append(clipButton);
+     $(this).append(nightButton);
   });
 //instantiate clipboardjs on the buttons. This controls the copy action.
   new ClipboardJS('.codebtn');
   //switch between clipboard icon to checkmark icon on click.
   $('.codebtn').click(function() {
-    $(this).find('.copybefore').hide();
-    $(this).find('.copyafter').show();
+    var before = $(this).find('.copybefore');
+    var after = $(this).find('.copyafter');
+    before.hide();
+    after.show();
+    setTimeout(function() {
+      after.hide();
+      before.show();
+    }, 5000);
   });
+  var selectedCodeHighlight = localStorage.getItem('selectedCode');
+  if (selectedCodeHighlight == 'light') {
+    $(".highlighter-rouge").removeClass("darken");
+    $(".fa-moon").removeClass("fas");
+    $(".fa-moon").addClass("far");
+  } else if (selectedCodeHighlight == 'dark'){
+    $(".highlighter-rouge").addClass("darken");
+    $(".fa-moon").removeClass("far");
+    $(".fa-moon").addClass("fas");
+  }
+  $('.nightbtn').click(function() {
+    if ($(".highlighter-rouge").hasClass("darken")) {
+      $(".fa-moon").removeClass("fas");
+      $(".fa-moon").addClass("far");
+      $(".highlighter-rouge").removeClass("darken");
+      localStorage.setItem('selectedCode', 'light');
+    } else {
+    $(".fa-moon").removeClass("far");
+    $(".fa-moon").addClass("fas");
+    $(".highlighter-rouge").addClass("darken");
+    localStorage.setItem('selectedCode', 'dark');
+  };
+});
 };
 
 
@@ -110,14 +146,14 @@ function linkclick(event, that) {
   // call the navigateContent function and pass that url to it
   navigateContent(url);
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
-  window.history.pushState({url}, '', url);
+  window.history.pushState({url: url}, '', url);
 };
 //handle back/forward and refresh events
-$(window).on('popstate', (e) => {
-  var state = e.originalEvent.state;
-  if (state && state.url) {
-    navigateContent(state.url);
-  }
+$(window).on('popstate', function (e) {
+var state = e.originalEvent.state;
+if (state && state.url) {
+  navigateContent(state.url);
+}
 });
 
 
@@ -185,7 +221,7 @@ function mobileHamburger (){
 
 //this function is a nightmare and needs to be refactored. Will update comment once that's done.
 function sidebarCollapse (url) {
-  var modifiedURL = '/' + url.split('/').reverse()[0];
+  var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
   var currentPage = $('a[href="'+modifiedURL+'"]');
   //make sure no other links are set to active
   $('a').removeClass("activepage");
@@ -220,6 +256,9 @@ function sidebarCollapse (url) {
       $(".homeitem > a").removeClass("active");
       $(".topfolder > a").removeClass("active");
     });
+    $('#mysidebar').animate({
+    scrollTop: currentPage.offset().top - 200
+    }, 1000);
     };
   };
 
@@ -268,31 +307,113 @@ $(".innerfolder > a").click(function(event){
 
 //a function to make sure the page's title is updated on load
 function replaceTitle () {
+  //grab the page's current title
   var $originalTitle = document.title;
-  //grab the page's new title
-  var $newTitleText = " - " + $('.h1').text() + " |";
+  var $newDocument = document.getElementsByClassName("breadcrumb-item");
+  if ($newDocument.length > 2) {
+  var $newDocumentText = $newDocument[2].innerText;
+  //lay out the new title
+  var $newTitleText = $newDocumentText + " - " + $('.h1').text() + " |";
   //then set it as the document's title so it shows up properly in the tab
-  var $newTitle = $originalTitle.replace(/\-.*\|/, $newTitleText);
+  var $newTitle = $originalTitle.replace(/^.*\|/, $newTitleText);
+} else {
+  var $newTitle = $originalTitle.replace(/^.*\-.*\|/, "Welcome! |");
+};
   document.title = $newTitle;
-}
+};
 
-function msieversion() {
-
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
-    {
-        $('.defaultwrapper').addClass('testingIE');
-        console.log("IE detected");
+function apiBuilder() {
+  var apiList = document.getElementById("apiList");
+  var listItem = document.getElementsByClassName("apiLink");
+  var accountNumberInput = $('#accountnumber');
+  var methodName = document.getElementById("methodName");
+  var methodItem = document.getElementsByClassName('methodLink');
+  var methodURL;
+  //find the call input field
+  var input = $('#apiNameInput');
+  $("#apiName").click(function() {
+    var hasExpanded = $("#apiList").data("expanded") == "true";
+    if (hasExpanded) {
+        $("#apiList").slideUp(400);
+        $("#apiList").data("expanded","false");
+        $("#apiList").removeClass("active");
+        $(this).removeClass("active");
+    } else {
+        $("#apiList").slideDown(400);
+        $("#apiList").data("expanded","true");
+        $("#apiList").addClass("active");
     }
-    else  // If another browser, return 0
-    {
-        return false;
-        console.log("No IE detected");
-    }
+  });
+  $(listItem).on("click", function() {
+    //grab the account number from its input field
+    var accountNumber = accountNumberInput.val();
+    //grab the data attribute from the link we clicked on above
+    var originalvalue = $(this).data("apiLink");
+    //if user filled in an account number
+    if (accountNumber != "") {
+      //edit the string we got from the data attribute so that it contains the account number
+      var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
+      methodURL = finalvalue;
+      //fill the input field with the call + account number
+      input.val(finalvalue);
+      //no account number added by user
+    } else {
+    //just fill in the call
+    input.val(originalvalue);
+    methodURL = originalvalue;
+  };
+    //hide the prompt to choose an API
+    $(".chooseapi").css("display", "none");
+    //display the list of methods and categories
+    $("#methodlist").css ("display", "block");
+    //for each list item
+    $.each($(this), function () {
+      //grab the name of the item
+      var categoryName = $(this).text();
+      //grab all the methods
+      var allCategories = document.getElementsByClassName("methodcategory");
+      //for each method
+      $.each(allCategories, function() {
+        //check if the data category of each method matches the name of the item clicked
+        if ($(this).data("apiCategory") == categoryName) {
+          //if it matches, hide all other methods
+          $(allCategories).css("display", "none");
+          //display the matching methods
+          $(this).css("display", "block")
+          //display their parent list;
+          $('#methodList').css("visibility", "visible");
+        };
+      });
+    })
+  });
+  $(methodItem).on("click", function() {
+    var methodValue = $(this).data("apiMethod");
+    var httpValue = $(this).data("httpMethod");
+    var methodInput = $("#methodType");
+    input.val(methodURL + methodValue);
+    methodInput.val(httpValue);
+  });
+};
 
-    return false;
+//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
+function isExplorer() {
+var ua = window.navigator.userAgent;
+var is_ie = /MSIE|Trident/.test(ua);
+
+if ( is_ie ) {
+  var wrapper = document.getElementById('defaultwrapper');
+  var header = document.getElementById('defaultheader');
+  var sidebar = document.getElementById('defaultsidebar');
+  var documenttitlecontainer = document.getElementById('documenttitlecontainer');
+  var footer = document.getElementById('defaultfooter');
+  var content = document.getElementById('defaultcontent')
+  wrapper.classList.add('defaultwrapperexplorer');
+  header.classList.add('defaultheaderexplorer');
+  sidebar.classList.add('defaultsidebarexplorer');
+  documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
+  footer.classList.add('defaultfooterexplorer');
+  content.classList.add('defaultcontentexplorer');
 }
+};
 
 $('#mysidebar').height($(".nav").height());

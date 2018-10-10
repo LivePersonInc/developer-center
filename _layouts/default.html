@@ -9,8 +9,8 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 </head>
 <body>
-<div class="defaultwrapper">
-  <div class="defaultheader">
+<div class="defaultwrapper" id="defaultwrapper">
+  <div class="defaultheader" id="defaultheader">
     <div class="mobileheader">
       <button class="hamburger hamburger--slider" type="button">
         <span class="hamburger-box">
@@ -29,7 +29,7 @@
     {% include sidebar.html %}
   </div>
   {% if page.pagename %}
-  <div class="documenttitlecontainer">
+  <div class="documenttitlecontainer" id="documenttitlecontainer">
     {% include nav-breadcrumbs.html %}
   <div class="documenttitle">
     <div class='h1'>{{ page.pagename }}</div>
@@ -48,7 +48,7 @@
   </div>
 
   {% endif %}
-  <div id="defaultcontent" class="defaultcontent">
+  <div id="defaultcontent" class="defaultcontent" id="defaultcontent">
     {{ content | extlinks }}
   </div>
   <a class="defaultbutton" href="http://register.liveperson.com/developer/signup">
@@ -79,7 +79,7 @@ autocompleteOptions: {
      //'suggestion' templating function used to render a single suggestion
      suggestion: function(suggestion) {
        if (suggestion._highlightResult.content && suggestion._highlightResult.title) {
-         return '<span>' + '<a  class="searchlink" href="' + suggestion.permalink +'">' + suggestion._highlightResult.title.value + '</a> </span>' + '<br />' + '<span>' + '<a  class="searchlinktext" href="' + suggestion.permalink +'">' +  suggestion._highlightResult.content.value + '</a> </span>';
+         return '<span>' + '<a  onclick="linkclick(event, this)" class="searchlink" href="' + suggestion.permalink +'">' + suggestion._highlightResult.title.value + '</a> </span>' + '<br />' + '<span>' + '<a onclick="linkclick(event, this)" class="searchlinktext" href="' + suggestion.permalink +'">' +  suggestion._highlightResult.content.value + '</a> </span>';
        };
      }
  }
@@ -99,9 +99,9 @@ search.autocomplete.on({
     var content = document.getElementById('defaultcontent');
     var sidebar = document.getElementById('defaultsidebar');
     var footer = document.getElementById('defaultfooter');
-    content.classList.add('overlayvisible');
-    sidebar.classList.add('overlayvisible');
-    footer.classList.add('overlayvisible');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+    footer.classList.remove('overlayvisible');
 },
   'autocomplete:empty': function () {
     var content = document.getElementById('defaultcontent');
@@ -120,11 +120,6 @@ search.autocomplete.on({
       sidebar.classList.remove('overlayvisible');
       footer.classList.remove('overlayvisible');
 }}});
-</script>
-<script>
-  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/153578/script.js');
 </script>
 </body>
 {% if site.google_analytics %}

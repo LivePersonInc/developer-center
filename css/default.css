@@ -27,6 +27,10 @@ code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
 
+.far {
+  font-size: 15px;
+}
+
 .mobileheader {
   display: none;
 }
@@ -196,12 +200,71 @@ code pre {
   user-select: none;
   order: 1;
   align-self: flex-end;
-  width: 15px;
-  margin-top: 1px;
+  width: 35px;
+  padding-top: 9px;
   order: 1;
-  margin-right: 7%;
   border: none;
-  background-color: inherit;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+}
+
+.nightbtn {
+  user-select: none;
+  order: 1;
+  align-self: flex-end;
+  width: 85px;
+  padding-top: 10px;
+  order: 1;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+}
+
+.darken {
+  background-color: #303643 !important;
+}
+
+.darken::before {
+  background-color: #3d4558 !important;
+  color: #f2f1f2 !important;
+}
+
+.darken .highlight {
+  background-color: #303643 !important;
+}
+
+.darken button {
+  background-color: transparent !important;
+  color: white;
+}
+
+.darken code {
+  filter: brightness(280%);
+}
+
+.darken code span::selection{
+  background-color: cornflowerblue;
+}
+
+.darken .nightbtn {
+  opacity: 1;
+}
+
+.darken .daybtn {
+  opacity: 0.4;
+}
+
+.darken .codebtn {
+  color: #f2f1f2;
+}
+
+.daybtn:focus {
+  outline: none;
+}
+
+.nightbtn:focus {
+  outline: none;
 }
 
 .codebtn:focus {
@@ -320,7 +383,8 @@ table tbody td img {
 .important::before {
   content: "\f06a";
   color: #f88181;
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-size: 18px;
   font-weight: 900;
   margin-right: 5px;
@@ -537,7 +601,7 @@ table tbody td img {
   margin-top: 21px;
   margin-left: 32px;
   position: sticky;
-  height: fit-content;
+  height: 47px;
 }
 
 
@@ -549,24 +613,26 @@ table tbody td img {
 }
 
 .language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before, .language-css:before {
-  position: absolute;
   color: #a2a2a2;
   text-align: right;
-  font-size: 0.75em;
-  padding-top: 5px;
+  font-size: 14px;
   padding-right: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   padding-left: 10px;
   line-height: 15px;
-  height: 15px;
+  height: 40px;
   font-weight: 500;
-  margin-top: 2px;
   align-self: flex-end;
+  width: 100%;
+  position: relative;
+  background-color: #e4e3e3;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
 }
 
 .language-swift:before{
   content: "SWIFT";
-  margin-left: 5px;
 }
 
 .language-css:before {
@@ -591,18 +657,14 @@ table tbody td img {
 
 .language-gradle:before {
   content: "GRADLE";
-  margin-left: 5px;
-  font-size: 0.65em;
 }
 
 .language-javascript:before {
-  content: "JS";
-  padding-left: 22px;
+  content: "JavaScript";
 }
 
 .language-sh:before {
   content: "SH";
-  padding-left: 22px;
 }
 
 .language-ruby:before {
@@ -713,7 +775,7 @@ a.anchoritem {
 
 .sidebarbutton {
   color: #f2f2f2;
-  background: inherit;
+  background: #3d4558;
   width: 20px;
   height: 20px;
   border: 0;
@@ -780,6 +842,112 @@ a.anchoritem {
 
 .lessbottom {
   margin-bottom: 10px;
+}
+
+.defaultwrapperexplorer {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.defaultheaderexplorer {
+ width: 75%;
+ margin: 0 auto;
+ margin-left: 440px;
+ display: flex;
+ margin-top: 20px;
+}
+
+.defaultheaderexplorer .searchimage {
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  padding-left: 15px;
+}
+
+.defaultsidebarexplorer {
+ width: 20%;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+}
+
+.defaultsidebarexplorer .nav>li {
+  display: block !important;
+}
+
+.defaultsidebarexplorer .nav>li > a:focus {
+  background-color: #3d4558 !important;
+}
+
+.defaultsidebarexplorer .nav>li:first-of-type {
+  display: flex !important;
+}
+
+.defaultsidebarexplorer ul.mysidebar.nav {
+  width: 20%;
+  top: 100px;
+}
+
+.documenttitlecontainerexplorer {
+ width: 75%;
+ margin: 0 auto;
+ margin-left: 440px;
+}
+
+.documenttitlecontainerexplorer .anchorlist {
+  width: 14%;
+}
+
+.defaultcontentexplorer {
+ width: 54%;
+ margin: 0 auto;
+}
+
+.defaultfooterexplorer {
+ width: 100%;
+ margin: 0 auto;
+ display: none;
+}
+
+.defaultfooterexplorer span {
+ margin-left: 400px;
+}
+
+#apiList {
+  display: none;
+}
+
+.apinamecontainer {
+  display: flex;
+}
+
+.apilistcontainer {
+  flex: 1;
+}
+
+.inputcontainer {
+  flex: 1;
+}
+
+#apiNameInput {
+  width: 100%;
+}
+
+#methodList {
+  visibility: hidden;
+}
+
+.methodcategory {
+  display: none;
+}
+
+.apiLink {
+  cursor: pointer;
+}
+
+.methodLink {
+  cursor: pointer;
 }
 
 /* Media Queries Begin */
@@ -861,6 +1029,14 @@ a.anchoritem {
   .anchorlist {
     margin-right: -220px;
   }
+/*
+  .daybtn {
+    margin-left: -2.1%
+  }
+
+  .nightbtn {
+    margin-left: -3.3%;
+  }*/
 }
 
 @media screen and (max-width:1260px){
@@ -925,9 +1101,17 @@ a.anchoritem {
     width: 25.7%;
   }
 
-  .codebtn {
-    display: none;
+  /*.codebtn {
+    /*margin-left: 1.5%;
   }
+
+  .daybtn {
+    margin-left: -2.5%;
+  }
+
+  .nightbtn {
+    margin-left: -4%;
+  }*/
 }
 
 @media screen and (max-width: 1120px) {
@@ -962,6 +1146,15 @@ a.anchoritem {
   .defaultsidebar {
     width: 125%;
   }
+
+  /*.daybtn {
+    margin-left: -3%;
+  }
+
+  .nightbtn {
+    margin-left: -5%;
+  }*/
+}
 
 @media screen and (max-width: 450px) {
   .defaultheader {
@@ -1042,11 +1235,16 @@ a.anchoritem {
   .defaultcontent {
     margin-left: 30px;
     grid-column: 1 / span 6;
+    margin-top: 70px;
   }
 
   .documenttitlecontainer {
     margin-left: 30px;
     grid-column: 1 / span 6;
+  }
+
+  .documenttitle {
+    margin-top: 45px;
   }
 
   .defaultfooter {
@@ -1067,6 +1265,7 @@ a.anchoritem {
 
   .highlight {
     padding-top: 22px;
+    padding-right: 20px;
   }
 
   .breadcrumbs {
@@ -1079,6 +1278,14 @@ a.anchoritem {
 
   .pagecontent {
     margin-top: 80px;
+  }
+
+  .nightbtn {
+    margin-left: 4%;
+  }
+
+  .daybtn {
+    margin-left: 4%;
   }
 }
 
