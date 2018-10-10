@@ -16,11 +16,30 @@
         {% endfor %}
       </ul>
     </div>
-    <div class="inputcontainer">
-      <input id="apiNameInput" type="text" />
-    </div>
 </div>
   <div>
-    <button id="methodName" name="headMethodName">Choose a method</button>
+    <div id="methodName" name="headMethodName">Available Methods</div>
+    <div class="chooseapi">You have not chosen an API!</div>
+    <ul id="methodList">
+      {% for category in site.data.documentsupdated %}
+        {% for document in category.documents %}
+          {% for page in document.pages %}
+            {% if page.pagename == "Methods" and page.subpages %}
+              <li data-api-category="{{document.documentname}}" class="methodcategory">{{document.documentname}} - {{page.pagename}}
+                <ul class="methodlinks">
+                  {% for subpage in page.subpages %}
+                  <li data-api-method="{{subpage.methodurl}}" data-http-method="{{subpage.httpmethod}}" class="methodLink">{{subpage.subpagename}}</li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
   </div>
+</div>
+<div class="inputcontainer">
+  <input id="methodType" type="text" />
+  <input id="apiNameInput" type="text" />
 </div>

@@ -327,6 +327,10 @@ function apiBuilder() {
   var listItem = document.getElementsByClassName("apiLink");
   var accountNumberInput = $('#accountnumber');
   var methodName = document.getElementById("methodName");
+  var methodItem = document.getElementsByClassName('methodLink');
+  var methodURL;
+  //find the call input field
+  var input = $('#apiNameInput');
   $("#apiName").click(function() {
     var hasExpanded = $("#apiList").data("expanded") == "true";
     if (hasExpanded) {
@@ -339,18 +343,57 @@ function apiBuilder() {
         $("#apiList").data("expanded","true");
         $("#apiList").addClass("active");
     }
-  })
-  $(listItem).on("click", function() {
-    var input = $('#apiNameInput');
-    var accountNumber = accountNumberInput.val();
-    var originalvalue = $(this).data("apiLink");
-    if (accountNumber != undefined) {
-      var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
-      input.val(finalvalue);
-    } else
-    input.val(originalvalue);
   });
-}
+  $(listItem).on("click", function() {
+    //grab the account number from its input field
+    var accountNumber = accountNumberInput.val();
+    //grab the data attribute from the link we clicked on above
+    var originalvalue = $(this).data("apiLink");
+    //if user filled in an account number
+    if (accountNumber != "") {
+      //edit the string we got from the data attribute so that it contains the account number
+      var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
+      methodURL = finalvalue;
+      //fill the input field with the call + account number
+      input.val(finalvalue);
+      //no account number added by user
+    } else {
+    //just fill in the call
+    input.val(originalvalue);
+    methodURL = originalvalue;
+  };
+    //hide the prompt to choose an API
+    $(".chooseapi").css("display", "none");
+    //display the list of methods and categories
+    $("#methodlist").css ("display", "block");
+    //for each list item
+    $.each($(this), function () {
+      //grab the name of the item
+      var categoryName = $(this).text();
+      //grab all the methods
+      var allCategories = document.getElementsByClassName("methodcategory");
+      //for each method
+      $.each(allCategories, function() {
+        //check if the data category of each method matches the name of the item clicked
+        if ($(this).data("apiCategory") == categoryName) {
+          //if it matches, hide all other methods
+          $(allCategories).css("display", "none");
+          //display the matching methods
+          $(this).css("display", "block")
+          //display their parent list;
+          $('#methodList').css("visibility", "visible");
+        };
+      });
+    })
+  });
+  $(methodItem).on("click", function() {
+    var methodValue = $(this).data("apiMethod");
+    var httpValue = $(this).data("httpMethod");
+    var methodInput = $("#methodType");
+    input.val(methodURL + methodValue);
+    methodInput.val(httpValue);
+  });
+};
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {

@@ -930,6 +930,22 @@ a.anchoritem {
   width: 100%;
 }
 
+#methodList {
+  visibility: hidden;
+}
+
+.methodcategory {
+  display: none;
+}
+
+.apiLink {
+  cursor: pointer;
+}
+
+.methodLink {
+  cursor: pointer;
+}
+
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){

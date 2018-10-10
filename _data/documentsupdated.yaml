@@ -35,34 +35,78 @@
       - pagename: Public Properties
       - pagename: Release Notes
   - documentname: Chat Agent API
-    basedomain: https://{domain}.net/api/account/{accountId}/agentSession/
+    basedomain: https://{domain}/api/account/{accountId}/agentSession
     pages:
       - pagename: Overview
       - pagename: Methods
         subpages:
           - subpagename: Start Agent Session
           - subpagename: Retrieve Current Availability
+            methodurl: /{agentSessionId}/availability
+            httpmethod: GET
           - subpagename: Set Agent Availability
+            methodurl: /{agentSessionId}/availability
+            httpmethod: POST
           - subpagename: Retrieve Available Agents
+            methodurl: /{agentSessionId}/availableAgents
+            httpmethod: GET
           - subpagename: Retrieve Available Slots
+            methodurl: /{agentSessionId}/chat/availableSlots
+            httpmethod: GET
           - subpagename: Retrieve Agent Information
+            methodurl: /{agentSessionId}/info
+            httpmethod: GET
           - subpagename: Determine Incoming Chat Request
+            methodurl: /{agentSessionId}/incomingRequests
+            httpmethod: GET
           - subpagename: Accept a Chat
+            methodurl: /{agentSessionId}/incomingRequests
+            httpmethod: POST
           - subpagename: Retrieve Chat Sessions
+            methodurl: /{agentSessionId}/chatSessions
+            httpmethod: GET
           - subpagename: Retrieve Chat Resources, Events and Information
+            methodurl: /chat/{chatId}
+            httpmethod: GET
           - subpagename: Retrieve Data for Multiple Chats
+            methodurl: See document for more info.
+            httpmethod: GET
           - subpagename: Retrieve Chat Events
+            methodurl: /chat/{chatId}/events
+            httpmethod: GET
           - subpagename: Send Lines and Structured Content
+            methodurl: /chat/{chatId}/events
+            httpmethod: POST
           - subpagename: End Chat
+            methodurl: /chat/{chatId}/events
+            httpmethod: POST
           - subpagename: Retrieve Chat Information
+            methodurl: /chat/{chatId}/info
+            httpmethod: GET
           - subpagename: Retrieve Visitor's Name
+            methodurl: /chat/{chatId}/info/visitorName
+            httpmethod: GET
           - subpagename: Retrieve Agent's Typing Status
+            methodurl: /chat/{chatId}/info/agentTyping
+            httpmethod: GET
           - subpagename: Set Agent's Typing Status
+            methodurl: /chat/{chatId}/info/agentTyping
+            httpmethod: POST
           - subpagename: Retrieve Visitor's Typing Status
+            methodurl: /chat/{chatId}/info/visitorTyping
+            httpmethod: GET
           - subpagename: Retrieve Available Skills
+            methodurl: /chat/{chatId}/transfer
+            httpmethod: GET
           - subpagename: Transfer a Chat
+            methodurl: /chat/{chatId}/transfer
+            httpmethod: POST
           - subpagename: Retrieve Agent Survey Structure
+            methodurl: /chat/{chatId}/survey
+            httpmethod: GET
           - subpagename: Submit Survey Data
+            methodurl: /chat/{chatId}/survey
+            httpmethod: PUT
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
@@ -190,7 +234,7 @@
         - subpagename: Generate Upload URL
         - subpagename: Generate Download URL
     - documentname: Server Chat API
-      basedomain: https://{domain}/api/account/{accountId}/chat/
+      basedomain: https://{domain}/api/account/{accountId}/chat
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -219,7 +263,7 @@
   image: contact-center
   documents:
     - documentname: Agent Groups API
-      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups/
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -233,7 +277,7 @@
             - subpagename: Delete Agent Group
         - pagename: Appendix
     - documentname: Agent Status Reason
-      basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons/
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -422,7 +466,7 @@
       - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
-    basedomain: https://<domain>/interaction_history/api/account/{accountID}/interactions
+    basedomain: https://{domain}/interaction_history/api/account/{accountID}/interactions
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -626,7 +670,7 @@
   image: rt-data
   documents:
   - documentname: Agent Metrics API
-    basedomain: https://<domain>/messaging_history/api/account/{accountID}/agent-view
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -646,7 +690,7 @@
           - subpagename: Messaging CSAT Distribution
       - pagename: Appendix
   - documentname: Operational Realtime API
-    basedomain: https://<domain>/operations/api/account/{accountID}
+    basedomain: https://{domain}/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
