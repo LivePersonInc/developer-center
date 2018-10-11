@@ -33,7 +33,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 {:start="2"}
 2. In the dependencies section, insert the following line:
 
-```javascript
+```gradle
 dependencies {
   implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
 }
@@ -41,7 +41,7 @@ dependencies {
 
 **Example: Build.gradle (Module: app) file**
 
-```javascript
+```gradle
 apply plugin: 'com.android.application'
 
 android {
@@ -107,7 +107,7 @@ dependencies {
 {:start="2"}
 2. Add the following imports to your class imports section:
 
-```swift
+```gradle
 import com.liveperson.api.LivePersonCallback;
 import com.liveperson.infra.InitLivePersonProperties;
 import com.liveperson.infra.callbacks.InitLivePersonCallBack;
@@ -121,7 +121,7 @@ import com.liveperson.messaging.sdk.api.LivePerson;
 
   You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class.
 
-```swift
+```java
 String brandID = "YourLivepersonAccountIdString";
 String appID = "your app package name"
 LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
@@ -132,7 +132,7 @@ LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, a
   @Override
   public void onInitFailed(Exception e) {
   }
-});
+}));
 ```
 
 
@@ -167,7 +167,7 @@ LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, a
 _Example implementation:_
 
 
-```swift
+```java
 LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new  InitLivePersonCallBack() {
   @Override
   public void onInitSucceed() {
@@ -178,7 +178,7 @@ LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new 
   public void onInitFailed(Exception e) {
     Toast.makeText(MainActivity.this, "Init Failed", Toast.LENGTH_SHORT).show();
   }
-});
+}));
 ```
 
 {:start="4"}
@@ -196,7 +196,7 @@ Activity mode implements the toolbar that displays the agent name the consumer i
 
 To open conversation window in separate activity use the following. This will start a new conversation activity:
 
-```swift
+```java
 LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
@@ -210,7 +210,7 @@ _**Note: Ensure that the init process finished successfully. These should be cal
 
 To open conversation window in a fragment: This returns a conversation fragment to be placed in a container in your activity:
 
-```swift
+```java
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
@@ -223,7 +223,7 @@ In Fragment mode, there is an option to get notified of the CSAT screen state (*
 
 The container Activity (the Activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
-```swift
+```java
 public interface ConversationFragmentCallbacks {
   void setFeedBackMode(boolean on, IFeedbackActions actions);
 
@@ -250,7 +250,7 @@ Once the CSAT screen is visible, **setFeedBackMode** will be called with **true*
 
 Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
 
-```swift
+```java
 class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
   @Override
   public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
@@ -298,7 +298,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
   You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class.
 
-```swift
+```java
 String brandID = "YourLivepersonAccountIdString";
 String appID = "your app package name"
 MonitoringInitParams monitoringParams = new MonitoringInitParams("appInstallationId");
@@ -311,13 +311,13 @@ LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, a
   @Override
   public void onInitFailed(Exception e) {
   }
-});
+}));
 ```
 
 {:start="2"}
 2. Create **MonitoringParams**. The entry points and engagement attributes used here are dummies:
 
-```swift
+```java
 // Create Entry Points JSON
 JSONArray entryPoints = null;
 try {
@@ -349,7 +349,7 @@ MonitoringParams params = new MonitoringParams(null, entryPoints, engagementAttr
 {:start="3"}
 3. Using the **LivepersonMonitoring**, get the Engagement for the Use. This is needed to start a new conversation with a specific campaign, this call will use the MonitoringParams created on the previous step.
 
-```swift
+```java
 // Get Engagement
 LivepersonMonitoring.getEngagement(context, consumerID, params, new EngagementCallback() {
   @Override
@@ -394,7 +394,7 @@ LivepersonMonitoring.getEngagement(context, consumerID, params, new EngagementCa
 {:start="4"}
 4. Set up the ConversationViewParams with the Campaign Information.
 
-```swift
+```java
 // Create new ConversationViewParams
 ConversationViewParams params = new ConversationViewParams();
 // Set Campaign Info
@@ -406,7 +406,7 @@ params.setReadOnlyMode(false);
 {:start="5"}
 5. Using the previously created ConversationViewParams to start a new Conversation:
 
-```swift
+```java
 // Show Conversation - Activity Mode
 LivePerson.showConversation(MessagingActivity.this, authParams, params);
 
