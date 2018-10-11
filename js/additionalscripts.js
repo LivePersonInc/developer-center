@@ -12,7 +12,7 @@ $(document).ready(function () {
   codeButtons();
   mobileHamburger();
   isExplorer();
-  apiBuilder();
+  requestBuilder();
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -322,7 +322,7 @@ function replaceTitle () {
   document.title = $newTitle;
 };
 
-function apiBuilder() {
+function requestBuilder() {
   var apiList = document.getElementById("apiList");
   var listItem = document.getElementsByClassName("apiLink");
   var accountNumberInput = $('#accountnumber');

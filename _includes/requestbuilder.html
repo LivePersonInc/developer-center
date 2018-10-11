@@ -12,7 +12,7 @@
       <ul id="apiList">
         {% for category in site.data.documentsupdated %}
           {% for document in category.documents %}
-          {% if document.basedomain %}  
+          {% if document.basedomain %}
           <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
           {% endif %}
           {% endfor %}
