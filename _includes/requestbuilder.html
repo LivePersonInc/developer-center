@@ -1,20 +1,45 @@
 <div>
-  <label for="accountnumber">Account Number</label>
+  <h3 id="buildertitle">Build your API call in just a few steps!</h3>
+  <hr class="builderhr" />
+  <label for="accountnumber">Enter your Account Number:</label>
   <input type="text" id="accountnumber" name="account_number">
 </div>
+<hr class="builderhr" />
 <div class="methodcontainer">
   <div class="apinamecontainer">
     <div class="apilistcontainer">
       <button id="apiName" name="headApiName">Choose an API</button>
-      <ul id="apiList">
         {% for category in site.data.documentsupdated %}
           {% for document in category.documents %}
           {% if document.basedomain %}
+          <ul id="apiList">
+          {% if forloop.length <= 5 %}
           <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
+          {% endif %}
+          </ul>
+          <ul id="apiList">
+          {% if forloop.length <= 10 and > 5 %}
+          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
+          {% endif %}
+          </ul>
+          <ul id="apiList">
+          {% if forloop.length <= 15 and > 10 %}
+          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
+          {% endif %}
+          </ul>
+          <ul id="apiList">
+          {% if forloop.length <= 20 and > 15 %}
+          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
+          {% endif %}
+          </ul>
+          <ul id="apiList">
+          {% if forloop.length <= 25 and > 20 %}
+          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
+          {% endif %}
+          </ul>
           {% endif %}
           {% endfor %}
         {% endfor %}
-      </ul>
     </div>
 </div>
   <div>
@@ -39,6 +64,7 @@
     </ul>
   </div>
 </div>
+<hr class="builderhr" />
 <div class="inputcontainer">
   <input id="methodType" type="text" />
   <input id="apiNameInput" type="text" />
