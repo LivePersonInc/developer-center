@@ -9,37 +9,15 @@
   <div class="apinamecontainer">
     <div class="apilistcontainer">
       <button id="apiName" name="headApiName">Choose an API</button>
+      <ul id="apiList">
         {% for category in site.data.documentsupdated %}
           {% for document in category.documents %}
-          {% if document.basedomain %}
-          <ul id="apiList">
-          {% if forloop.length <= 5 %}
+          {% if document.basedomain %}  
           <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
-          {% endif %}
-          </ul>
-          <ul id="apiList">
-          {% if forloop.length <= 10 and > 5 %}
-          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
-          {% endif %}
-          </ul>
-          <ul id="apiList">
-          {% if forloop.length <= 15 and > 10 %}
-          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
-          {% endif %}
-          </ul>
-          <ul id="apiList">
-          {% if forloop.length <= 20 and > 15 %}
-          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
-          {% endif %}
-          </ul>
-          <ul id="apiList">
-          {% if forloop.length <= 25 and > 20 %}
-          <li data-api-link="{{document.basedomain}}" class="apiLink">{{document.documentname}}</li>
-          {% endif %}
-          </ul>
           {% endif %}
           {% endfor %}
         {% endfor %}
+      </ul>
     </div>
 </div>
   <div>
