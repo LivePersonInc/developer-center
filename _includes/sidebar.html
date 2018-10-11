@@ -1,81 +1,89 @@
-{% include custom/sidebarconfigs.html %}
+<div class="sidebartop"><img class="sitelogo" src="img/desktop.png" />
+<div class="sidebarbuttons">
+  <div class="documentsbutton underline lined"><img class="documentsbuttonimage" src="img/documents.svg" /><a onclick='sidebarbuttonclick(event)' href="">Documents</a></div>
+  <div id="solutionsbutton" class="solutionsbutton solutionsunderline"><img class="solutionsbuttonimage" src="img/solutions.svg" /><a onclick='solutionsbuttonclick(event)' href="">Solutions</a></div>
+</div>
+</div>
 
-
-
-
-<ul id="mysidebar" class="nav fixed" >
-  {% if (page.indicator != null and (page.indicator == "both" or page.indicator == "chat")) %}
-  <div class="indicator chat">C
-    <span class="indicatortooltip">Applies to Live Chat</span>
-  </div>
-  {% endif %}
-  {% if (page.indicator != null and (page.indicator == "both" or page.indicator == "messaging")) %}
-  <div class="indicator messaging">M
-    <span class="indicatortooltip">Applies to Messaging</span>
-  </div>
-  {% endif %}
-  {% assign level4 = null %}
-  <!--loop over all the level3 documents -->
-  {% assign filtered = site.pages | where_exp:"p","p.level1 == page.level1" | where_exp:"p","p.level2 == page.level2" | where_exp:"p","p.level3 == page.level3" %}
-  {% assign visible = filtered | where_exp:"item","item.visible != false" %}
-  {% assign sorted = visible | sort: "order" %}
-  {% for p in sorted %}
-    {% if (level4 != null and level4 != p.level4) %}
+<ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
+  <li class="homeitem folder topfolder active">
+    <div class="sidebarimage">
+      <img src="img/getting-started.png" />
+    </div>
+    <a  onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
+  </li>
+{% for category in site.data.documentsupdated %}
+  {% if forloop.last == true %}
+  <hr class="sidebarhr lessbottom" />
+  <li class="folder topfolder">
+    <img src="img/{{ category.image }}.svg" />
+    <a href="">{{ category.categoryname }}</a>
+    <ul>
+      {% for document in category.documents %}
+      <li class="folder innerfolder sidebarcategory">
+        <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
+        <ul>
+          {% for page in document.pages %}
+          {% if page.subpages %}
+          <li class="folder innerfolder subfolder">
+            <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+            <ul>
+              {% for subpage in page.subpages %}
+              <li class="innerpageitem">
+                <a  onclick="linkclick(event,this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+            {% else %}
+          <li class="pageitem">
+            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
         </ul>
       </li>
-    {% endif %}
-    {% if (p.level4 != null and level4 != p.level4) %}
-      <li class="folder">
-        <a href="#">{{ p.level4 }}</a>
+      {% endfor %}
+    </ul>
+  </li>
+  {% else %}
+  <li class="folder topfolder">
+    <img src="img/{{ category.image }}.svg" />
+    <a href="">{{ category.categoryname }}</a>
+    <ul>
+      {% for document in category.documents %}
+      <li class="folder innerfolder sidebarcategory">
+        <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
-    {% endif %}
-    {% if p.permalink == page.permalink %}
-       <li class="activepage"><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
-    {% else %}
-       <li><a href="{{site.baseurl}}/{{ p.permalink }}">{{p.title }}</a></li>
-    {% endif %}
-
-    {% assign level4 = p.level4 %}
-  {% endfor %}
-  {% if (level4 != null) %}
-      </ul>
-    </li>
-  {% endif %}
-<a class="report" href="https://support.liveperson.com/ask-question/" target="_blank">Looking for Support?</a>
-    <!--<br>
-    <button type="button" onclick="window.open('https://github.com/LivePersonInc/developers-community/issues/new', '_blank');" class="contactusBtn">Need assistance?<br>Contact us via our GitHub space</button>=-->
+          {% for page in document.pages %}
+          {% if page.subpages %}
+          <li class="folder innerfolder subfolder">
+            <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+            <ul>
+              {% for subpage in page.subpages %}
+              <li class="innerpageitem">
+                <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+            {% else %}
+          <li class="pageitem">
+            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+{% endif %}
+{% endfor %}
+    <hr class="sidebarhr lesstop" />
+    <a href="https://support.liveperson.com/ask-question/" target="_blank">
+    <div class="supportbutton">
+      <span>Looking for Support?</span>
+    </div>
+  </a>
 </ul>
-
-<!-- this highlights the active parent class in the navgoco sidebar.
-this is critical so that the parent expands when you're viewing a page.
-This must appear below the sidebar code above. Otherwise,
-if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<!--<script>$("li.active").parents('li').toggleClass("active");</script>-->
-
-<!--set the width of the side menu to the width of the text -->
-<script>
-   // $("div#toc").css("max-width",($(".sidebarTitle").width() + 35));
-    //$("#mysidebar.nav li.active").parents('li').toggleClass("active");
-
-    if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
-
-    }
-    else{
-         //$("#mysidebar.nav").css("width","auto");
-    }
-    window.onresize = function(){
-      if($(window).width() > 1220 && $("#mysidebar.nav").css("position") == "fixed"){
-
-      }
-      else{
-         //$("#mysidebar.nav").css("width","auto");
-      }
-
-    }
-</script>
-<script type="text/javascript">
-  document.write(
-    '<div class="visualping-container" style="height:118px;"><iframe id="iframe" src="https://visualping.io/externalfiles/widget/vpwidget.html?clientid=12&csspreselect=targetedcsstocrop&style=custom&url=' +
-    parent.document.URL +
-    '" width="230" height="118" ></iframe></div>');
-</script>
