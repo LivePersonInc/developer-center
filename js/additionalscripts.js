@@ -345,6 +345,7 @@ function requestBuilder() {
     }
   });
   $(listItem).on("click", function() {
+    $("#methodType").val("");
     //grab the account number from its input field
     var accountNumber = accountNumberInput.val();
     //grab the data attribute from the link we clicked on above

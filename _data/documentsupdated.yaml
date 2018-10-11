@@ -41,6 +41,8 @@
       - pagename: Methods
         subpages:
           - subpagename: Start Agent Session
+            methodurl:
+            httpmethod: POST
           - subpagename: Retrieve Current Availability
             methodurl: /{agentSessionId}/availability
             httpmethod: GET

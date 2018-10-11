@@ -914,8 +914,24 @@ a.anchoritem {
  margin-left: 400px;
 }
 
-.apiList {
+#apiList {
   display: none;
+  height: 165px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#apiList::-webkit-scrollbar-track {
+	background-color: grey;
+}
+
+#apiList::-webkit-scrollbar{
+	width: 10px;
+	background-color: grey;
+}
+
+#apiList::-webkit-scrollbar-thumb {
+	background-color: #53576E;
 }
 
 .apinamecontainer {
@@ -925,6 +941,7 @@ a.anchoritem {
 .apilistcontainer {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
 
@@ -940,12 +957,35 @@ a.anchoritem {
   visibility: hidden;
 }
 
+.methodlinks {
+  height: 165px;
+  overflow-y: scroll;
+}
+
+.methodlinks::-webkit-scrollbar-track {
+	background-color: grey;
+}
+
+.methodlinks::-webkit-scrollbar{
+	width: 10px;
+	background-color: grey;
+}
+
+.methodlinks::-webkit-scrollbar-thumb {
+	background-color: #53576E;
+}
+
+.methodLink {
+  list-style: none;
+}
+
 .methodcategory {
   display: none;
 }
 
 .apiLink {
   cursor: pointer;
+  list-style: none;
 }
 
 .methodLink {
