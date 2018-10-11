@@ -107,7 +107,7 @@ dependencies {
 {:start="2"}
 2. Add the following imports to your class imports section:
 
-```gradle
+```java
 import com.liveperson.api.LivePersonCallback;
 import com.liveperson.infra.InitLivePersonProperties;
 import com.liveperson.infra.callbacks.InitLivePersonCallBack;

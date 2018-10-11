@@ -22,7 +22,7 @@ Resolve message use default SHORT date and SHORT time according to the locale (d
   **"Conversation resolved by [agent name] \n 9/25/16, 15:30"**
 - In case you want special date/hour format, you can use:
 
-```swift
+```java
 <string name="lp_date_time_format"></string>
 ```
 

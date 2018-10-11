@@ -18,7 +18,7 @@ During the course of the conversation, consumers can take several actions such a
 
 LivePerson API:
 
-```swift
+```java
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
 public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Exception> callback)
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
@@ -32,7 +32,7 @@ public static boolean clearHistory()
 
 Also via Callbacks:
 
-```swift
+```java
 void onConversationStarted(LPConversationData convData);
 void onConversationResolved(LPConversationData convData);
 void onConnectionChanged(boolean isConnected);

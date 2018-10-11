@@ -24,7 +24,7 @@ To implement push notifications on the client side:
 - Upon receiving a push message to your app, [handle](android-handlepush.html) it so it is displayed to the customer.
 
 
-```swift
+```java
 public class MyFirebase extends FirebaseMessagingService {
   /**
    * Called when message is received.

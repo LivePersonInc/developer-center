@@ -16,7 +16,7 @@ indicator: messaging
 
 Add the code below to initialize the SDK:
 
-```swift
+```java
 String brandID = "Your-Liveperson-Account-Id-String";
 String appID = "your-app-package-name"
 LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
@@ -29,7 +29,7 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
     public void onInitFailed(Exception e) {
     }
   }
-);
+));
 ```
 
 | Element | Description |
@@ -53,13 +53,13 @@ _**Note: For more information about each mode, refer to [Step 3: Code integratio
 
 To start LivePerson's Activity mode:
 
-```swift
+```java
 LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
 To start LivePerson's Fragment mode: (Attach the returned fragment to a container in your activity) :
 
-```swift
+```java
 LivePerson.getConversationFragment( LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
@@ -70,7 +70,7 @@ When using fragment mode, you could use the provided SDK callbacks in your app i
 
 Close LivePerson Messaging SDK- Uninitialized SDK without cleaning data.
 
-```swift
+```java
 public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
 ```
 
@@ -80,7 +80,7 @@ Click [here](android-shutdown.html) for more information.
 
 Close LivePerson Messaging SDK- Clear LivePerson Messaging SDK data and unregister push.
 
-```swift
+```java
 public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)
 ```
 

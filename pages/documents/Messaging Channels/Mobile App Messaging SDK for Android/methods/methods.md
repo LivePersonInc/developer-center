@@ -22,7 +22,7 @@ indicator: messaging
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK. All subsequent API calls, except to the handlePushMessage, assume that the SDK has been initialized.
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session.
 
-```swift
+```java
 public static void initialize (Context context, String brandId, InitLivePersonCallBack initCallBack)
 ```
 
@@ -41,7 +41,7 @@ When the conversation screen is displayed, the server connection for messaging w
 
 InitLivePersonProperties has a new [MonitoringInitParams](android-interface-definitions.html) member that initializes the Monitoring API. Passing the MonitoringInitParams is mandatory when using Monitoring API capabilities.
 
-```swift
+```java
 public static void initialize (Context context, InitLivePersonProperties initProperties)
 ```
 
@@ -82,7 +82,7 @@ _**Note:** if you want to connect in an *unAuthenticated* way, you can pass null
 
 * **viewOnlyMode** - Define if enter message area (under the conversation view), is shown/hide.
 
-```swift
+```java
 new ConversationViewParams(false);
 // Or
 new ConversationViewParams().setReadOnlyMode(false);
@@ -97,7 +97,7 @@ new ConversationViewParams().setReadOnlyMode(false);
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
         * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
 
-```swift
+```java
 new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
 ```
 
@@ -107,7 +107,7 @@ new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversatio
         * LPConversationHistoryMaxDaysDateType.startConversationDate (**Default**)
         * LPConversationHistoryMaxDaysDateType.endConversationDate
 
-```swift
+```java
 new ConversationViewParams().setHistoryConversationMaxDaysType(LPConversationHistoryMaxDaysDateType.endConversationDate);
 ```
 
@@ -115,13 +115,13 @@ new ConversationViewParams().setHistoryConversationMaxDaysType(LPConversationHis
 
     * Possible values: Any Positive Integer (**Default** : -1 , **No limit**)
 
-```swift
+```java
 new ConversationViewParams().setHistoryConversationsMaxDays(20);
 ```
 
 * **ShowConversation** method:
 
-```swift
+```java
 public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)
 ```
 
@@ -141,7 +141,7 @@ This method returns a Boolean value to indicate success or failure in opening th
 
 Initiating the conversation screen opens the WebSocket to the LivePerson Messaging Server.
 
-```swift
+```java
 public static boolean showConversation(Activity activity)
 ```
 
@@ -153,7 +153,7 @@ public static boolean showConversation(Activity activity)
 
 Same as [showConversation](android-showconversation.html) with the addition of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
-```swift
+```java
 public static boolean showConversation(Activity activity, String authenticationKey)
 ```
 
@@ -166,7 +166,7 @@ public static boolean showConversation(Activity activity, String authenticationK
 
 The hideConversation API hides the conversation activity. The conversation screen is shown again by calling showConversation.
 
-```swift
+```java
 public static void hideConversation(Activity activity)
 ```
 
@@ -209,7 +209,7 @@ _**Note:** if you want to connect in an *unAuthenticated* way, you can pass null
 
 * **viewOnlyMode** - Define if enter message area (under the conversation view), is shown/hide.
 
-```swift
+```java
 new ConversationViewParams(false);
 // Or
 new ConversationViewParams().setReadOnlyMode(false);
@@ -224,7 +224,7 @@ new ConversationViewParams().setReadOnlyMode(false);
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
         * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
 
-```swift
+```java
 new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
 ```
 
@@ -234,7 +234,7 @@ new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversatio
         * LPConversationHistoryMaxDaysDateType.startConversationDate (**Default**)
         * LPConversationHistoryMaxDaysDateType.endConversationDate
 
-```swift
+```java
 new ConversationViewParams().setHistoryConversationMaxDaysType(LPConversationHistoryMaxDaysDateType.endConversationDate);
 ```
 
@@ -242,13 +242,13 @@ new ConversationViewParams().setHistoryConversationMaxDaysType(LPConversationHis
 
     * Possible values: Any Positive Integer (**Default** : -1 , **No limit**)
 
-```swift
+```java
 new ConversationViewParams().setHistoryConversationsMaxDays(20);
 ```
 
 * **ShowConversation** method:
 
-```swift
+```java
 public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)
 ```
 
@@ -261,7 +261,7 @@ public static Fragment getConversationFragment(LPAuthenticationParams lpAuthenti
 
 The getConversationFragment method creates and returns the conversation fragment.
 
-```swift
+```java
 public static Fragment getConversationFragment()
 ```
 
@@ -273,7 +273,7 @@ _**Note:** This API does not show the actual screen, but only creates the fragme
 
 Same as [getConversationFragment](android-getconversationfrag.html) with the attention of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified, or your backend isn’t set up with the LivePerson backend, this call will fail.
 
-```swift
+```java
 public static Fragment getConversationFragment(String authKey)
 ```
 
@@ -287,7 +287,7 @@ Reconnect with a new LPAuthenticationParams object: that contains String mAuthKe
 When connecting, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html) callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 When creating a new LPAuthenticationParams - you may call empty constructor and then call setAuthKey() or setHostAppJWT() according to the host parameter
 
-```swift
+```java
 public static void reconnect(LPAuthenticationParams lPAuthenticationParams)
 ```
 
@@ -299,7 +299,7 @@ public static void reconnect(LPAuthenticationParams lPAuthenticationParams)
 
 Reconnect with a new authentication key. When connecting with an authentication key, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html) callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 
-```swift
+```java
 public static void reconnect(String authKey)
 ```
 
@@ -311,7 +311,7 @@ public static void reconnect(String authKey)
 
 The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the messaging Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
 
-```swift
+```java
 public static void setUserProfile(ConsumerProfile profile)
 ```
 
@@ -325,7 +325,7 @@ public static void setUserProfile(ConsumerProfile profile)
 
 The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the messaging Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
 
-```swift
+```java
 public static void setUserProfile(String appId, String firstName, String lastName, String phone)*
 ```
 
@@ -342,7 +342,7 @@ Register to LPMessagingSDK push notifications. Providing the authenticationParam
 
 If the registration fails due to an expired token, the [onTokenExpired](android-callbacks-index.html) callback is called.
 
-```swift
+```java
 public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
 ```
 
@@ -362,7 +362,7 @@ Register to LPMessagingSDK push notifications
 
 *Deprecated. Please use the [registerLPPusher](android-methods.html#registerlppusher)(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams,final ICallback<Void, Exception> registrationCompletedCallback) method ).*
 
-```swift
+```java
 public static void registerLPPusher(String brandId, String appId, String gcmToken)
 ```
 
@@ -378,7 +378,7 @@ _**Note: If you use the gcmToken as a custom value, you need to handle the mappi
 
 Unregister from registered push notification service.
 
-```swift
+```java
 public static void unregisterLPPusher(String brandId, String appId)
 ```
 
@@ -395,7 +395,7 @@ In case a host app decides to show its own custom notification, it can call hand
 
 _**Note: To get unread messages feature will work properly - host app must call this method upon receiving SDK push messages (whether showing custom notification or not).**_
 
-```swift
+```java
 public static PushMessage handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)
 ```
 
@@ -424,7 +424,7 @@ Handling the push message allows the host app to do the following:
 
 _**Note: Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePushMessage method.**_
 
-```swift
+```java
 public static void handlePushMessage(Context context, Bundle data, String brandId, Boolean showNotification)
 ```
 
@@ -446,7 +446,7 @@ it will be fetched again with new data.
 **Note:** the SDK needs to be initialized before calling this API.
 
 
-```swift
+```java
 public static void getNumUnreadMessages(String appId, final ICallback<Integer, Exception> callback)
 ```
 
@@ -463,7 +463,7 @@ To get updates on the unread messages counter: create a BroadcastReceiver that w
 
 To get the number of unread messages out of the intent use the following extra key: **LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA;**
 
-```swift
+```java
 public static int getNumUnreadMessages(String brandId)
 ```
 
@@ -475,7 +475,7 @@ public static int getNumUnreadMessages(String brandId)
 
 Returns the SDK version.
 
-```swift
+```java
 public static String getSDKVersion()
 ```
 
@@ -483,7 +483,7 @@ public static String getSDKVersion()
 
 Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. See [LivePerson Callbacks Interface](android-callbacks-interface.html) for more information.
 
-```swift
+```java
 public static void setCallback(final LivePersonCallback listener)
 ```
 
@@ -495,7 +495,7 @@ public static void setCallback(final LivePersonCallback listener)
 
 Removes the registered [LivePersonCallback](android-callbacks-index.html) callback.
 
-```swift
+```java
 public static void removeCallBack()
 ```
 
@@ -503,7 +503,7 @@ public static void removeCallBack()
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
 
-```swift
+```java
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
 ```
 
@@ -517,7 +517,7 @@ If there is an active conversation, this API returns agent data through the prov
 
 [AgentData definition](android-interface-and-class-definitions.html)
 
-```swift
+```java
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 ```
 
@@ -529,7 +529,7 @@ public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 
 Marks the current conversation as urgent.
 
-```swift
+```java
 public static void markConversationAsUrgent()
 ```
 
@@ -537,7 +537,7 @@ public static void markConversationAsUrgent()
 
 Marks the current conversation as normal.
 
-```swift
+```java
 public static void markConversationAsNormal()
 ```
 
@@ -545,7 +545,7 @@ public static void markConversationAsNormal()
 
 Checks whether the current conversation is marked as urgent. The result is returned through the provided callback.
 
-```swift
+```java
 public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Exception> callback)
 ```
 
@@ -557,13 +557,13 @@ public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Ex
 
 Resolves the current conversation.
 
-```swift
+```java
 public static void resolveConversation()
 ```
 
 ### shutDown
 
-```swift
+```java
 public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
 ```
 
@@ -590,7 +590,7 @@ Shuts down the SDK and removes the footprint of the user session from local memo
 
 The server continues to send push notifications when the SDK is shut down. To unregister from push services, call [unregisterLPPusher](android-unregisterlppusher.html) API.
 
-```swift
+```java
 public static void shutDown()
 ```
 
@@ -609,7 +609,7 @@ The return value indicates whether the action was completed successfully or not:
 
 _**Note: The clearHistory API call will work only if there is currently no active conversation.**_
 
-```swift
+```java
 public static boolean clearHistory()
 ```
 
@@ -629,8 +629,8 @@ In order to unregister from push, it must be called when there is network availa
 This method must not be called when the conversation screen is displayed.
 </div>
 
-```swift
-public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback){
+```java
+public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback)
 ```
 
 | Parameter | Description |

@@ -23,7 +23,7 @@ indicator: messaging
 
 Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
-```swift
+```java
 public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> identities, @NonNull MonitoringParams monitoringParams, SdeCallback callback)
 ```
 
@@ -41,7 +41,7 @@ Use this method to get an engagement for a consumer in an appInstallationId cont
 
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 
-```swift
+```java
 public static void getEngagement(Context context, @Nullable List<LPMonitoringIdentity> identities, MonitoringParams monitoringParams, EngagementCallback callback)
 ```
 

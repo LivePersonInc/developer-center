@@ -21,7 +21,7 @@ _**Note:** There are 2 ways to register to LivePerson events. For more informati
 ### LivePersonIntents
 Definition:  
 
-```swift
+```java
 public interface ILivePersonIntentAction{  
 
   String LP_ON_ERROR_INTENT_ACTION = "LP_ON_ERROR_INTENT_ACTION";
@@ -64,7 +64,7 @@ public interface ILivePersonIntentAction{
 
 Intent parameters:
 
-```swift
+```java
 public interface ILivePersonIntentExtras{
 
   String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";
@@ -95,7 +95,7 @@ public interface ILivePersonIntentExtras{
 
 Definition:
 
-```swift
+```java
 public interface LivePersonCallback{
   void onError(TaskType type, String message);
   void onTokenExpired();
@@ -137,7 +137,7 @@ __Callback:__ onError(TaskType type, String message) method.
 
 ###  TaskType enum:
 
-```swift
+```java
 enum TaskType {
   CSDS,
   IDP,

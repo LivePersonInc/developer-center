@@ -18,7 +18,7 @@ Pass and display consumer information to agents, and agent information to consum
 
 * To set the User Profile (Not an SDE):
 
-```swift
+```java
 public static void setUserProfile(ConsumerProfile profile)
 ```
 
@@ -26,6 +26,6 @@ _**Note:** when using SDEs (Authenticated Chat), SDEs have priority and will ove
 
 * Get Agent Details:
 
-```swift
+```java
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 ```

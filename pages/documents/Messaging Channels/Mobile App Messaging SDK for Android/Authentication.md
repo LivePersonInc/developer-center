@@ -17,13 +17,13 @@ If your system implementation involves an authentication step , you can use one 
 
 To start LivePerson's Activity mode:
 
-```swift
+```java
 LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
 To start LivePerson's Fragment mode: (Attach the returned fragment to a container in your activity):
 
-```swift
+```java
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
@@ -31,7 +31,7 @@ There are 2 authenticated connection methods:
 
  1. **AuthenticationKey** - Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
-    ```swift
+    ```java
     LPAuthenticationParams().setAuthKey("yourAuthCode").
     ```
 
@@ -39,7 +39,7 @@ There are 2 authenticated connection methods:
 
  2. **JWT**:
 
-    ```swift
+    ```java
     LPAuthenticationParams().setHostAppJWT("yourJwt")
     ```
 

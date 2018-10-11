@@ -16,7 +16,7 @@ indicator: messaging
 
 ### ICallback
 
-```swift
+```java
 public interface ICallback<T, E extends Throwable> {
   void onSuccess(T value);
   void onError(E exception);
@@ -25,7 +25,7 @@ public interface ICallback<T, E extends Throwable> {
 
 ### AgentData
 
-```swift
+```java
 public class AgentData {
   public String mFirstName;
   public String mLastName;
@@ -39,7 +39,7 @@ public class AgentData {
 
 ### InitLivePersonProperties
 
-```swift
+```java
 public class InitLivePersonProperties{
   private String brandId;
   private String appId;
@@ -51,7 +51,7 @@ public class InitLivePersonProperties{
 
 ### ConsumerProfile
 
-```swift
+```java
 public class ConsumerProfile {
   private String mFirstName;
   private String mLastName;
@@ -63,7 +63,7 @@ public class ConsumerProfile {
 
 ### PushMessage
 
-```swift
+```java
 public class PushMessage {
   private String mBrandId;
   private String mMessage;
@@ -79,7 +79,7 @@ public class PushMessage {
 ### LPConversationData
 
 
-```swift
+```java
 public class LPConversationData{
   private CloseReason closeReason;
   private String conversationId;
@@ -89,7 +89,7 @@ public class LPConversationData{
 ### PermissionType
 
 
-```swift
+```java
 public enum PermissionType {
   PHOTO_SHARING
 }  
@@ -97,7 +97,7 @@ public enum PermissionType {
 
 ### LPAuthenticationParams
 
-```swift
+```java
 public class LPAuthenticationParams{
   private LPAuthenticationType mType;
     private String mAuthKey;
@@ -124,7 +124,7 @@ public class ConversationViewParams{
 
 ### LPConversationsHistoryStateToDisplay
 
-```swift
+```java
 public enum LPConversationsHistoryStateToDisplay {
   OPEN, CLOSE , ALL
 }
@@ -134,7 +134,7 @@ public enum LPConversationsHistoryStateToDisplay {
 
 ### LPConversationHistoryMaxDaysDateType
 
-```swift
+```java
 public enum LPConversationHistoryMaxDaysDateType {
   startConversationDate, endConversationDate
 }
@@ -145,7 +145,7 @@ public enum LPConversationHistoryMaxDaysDateType {
 
 ### MonitoringInitParams
 
-```swift
+```java
 public class MonitoringInitParams {
   private String mAppInstallId;
 }
@@ -153,7 +153,7 @@ public class MonitoringInitParams {
 
 ### MonitoringParams
 
-```swift
+```java
 public class MonitoringParams {
   private String pageId;
   private JSONArray entryPoints;
@@ -163,7 +163,7 @@ public class MonitoringParams {
 
 ### EngagementCallback
 
-```swift
+```java
 public interface EngagementCallback {
   void onSuccess(LPEngagementResponse engagementResponse);
   void onError(MonitoringErrorType errorType, Exception e);
@@ -172,7 +172,7 @@ public interface EngagementCallback {
 
 ### SdeCallback
 
-```swift
+```java
 public interface SdeCallback {
   void onSuccess(LPSdeResponse sdeResponse);
   void onError(MonitoringErrorType errorType, Exception e);
@@ -181,7 +181,7 @@ public interface SdeCallback {
 
 ### LPEngagementResponse
 
-```swift
+```java
 
 public final class LPEngagementResponse {
   @NotNull
@@ -197,7 +197,7 @@ public final class LPEngagementResponse {
 
 ### LPSdeResponse
 
-```swift
+```java
 public class LPSdeResponse {
   @NotNull
   private String pageId;
@@ -210,7 +210,7 @@ public class LPSdeResponse {
 
 ### EngagementDetails
 
-```swift
+```java
 public final class EngagementDetails {
   @NotNull
   private  String campaignId;
@@ -229,7 +229,7 @@ public final class EngagementDetails {
 
 ### MonitoringErrorType
 
-```swift
+```java
 enum class MonitoringErrorType {
   NOT_INITIALIZED,
   INITIALIZATION_ERROR,
@@ -249,7 +249,7 @@ consumerId - unique and non-guessable identifier of the consumer (email and phon
 
 issuer - Issuer, who identified the consumer - usually the brand.
 
-```swift
+```java
 class LPMonitoringIdentity(val consumerId: String? = "", val issuer: String? = ""){
 }
 ```

@@ -28,7 +28,7 @@ To easily register to all the intent Actions, we provide an `IntentFilter` that 
 
 To register `BroadcastReceiver` for all Intents, use this code::
 
-```swift
+```java
 LocalBroadcastManager.getInstance(
   getApplicationContext()).registerReceiver(<your receiver>,
   LivePersonIntents.getIntentFilterForAllEvents()
@@ -37,7 +37,7 @@ LocalBroadcastManager.getInstance(
 
 To register `BroadcastReceiver` for a specific set of Intents, use this example:
 
-```swift
+```java
 IntentFilter filter = new IntentFilter();
 filter.addAction(LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION);
 filter.addAction(LivePersonIntents.ILivePersonIntentAction.LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION);
@@ -51,7 +51,7 @@ Then,to catch the Broadcast:
 
 
 
-```swift
+```java
 BroadcastReceiver <your receiver> = new BroadcastReceiver(){
   @Override
   public void onReceive(Context context, Intent intent) {

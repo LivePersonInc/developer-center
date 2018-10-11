@@ -18,7 +18,7 @@ To determine the layout of messaging within the app, you can utilize various act
 
 LivePerson callbacks:
 
-```swift
+```java
 void onAgentTyping(boolean isTyping);
 void onAgentDetailsChanged(AgentData agentData);
 void onCsatDismissed();
