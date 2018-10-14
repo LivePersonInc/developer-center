@@ -29,10 +29,6 @@ This API supports OAuth 1.0 authentication patterns and requires SSL protocol. P
 | accountId | LP site ID | string | Required |  |
 | visitorId | Visitor ID | string | Required | |
 
-**Note**: the `visitorId` parameter referenced above is retrieved from the LiveEngage Tag. Each visitor receives from the Tag their own `visitorId` which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation [here](/lp-tag-engagement-window.html).
-
-This method is relevant to monitored sessions only. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default LiveEngage window), you'll need to use the [App Engagement API](rt-interactions-app-engagement-overview.html) instead.
-
 **Query Parameters**
 
 | Name     | Description | Type | Required |
@@ -41,11 +37,14 @@ This method is relevant to monitored sessions only. If you're trying to retrieve
 | v | API version  | string | Required |
 | sid | Session ID | string | Required |
 
-*Note: "sid" parameter is passed by LivePerson to a page owned and hosted by the brand.*
+<div class="important">The <strong>visitorId</strong> and the <strong>sid</strong> parameters referenced above are retrieved from the LiveEngage Tag. Each visitor receives from the Tag their own <strong>visitorId</strong> (also called <strong>vid</strong>) and <strong>sid</strong> (also called <strong>Session ID</strong>) which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation <a href="/lp-tag-engagement-window.html">here</a>.
+<br>
+<br>
+<strong>This method of retrieving the parameters is relevant to monitored sessions only</strong>. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default LiveEngage window), you'll need to use the <a href="/rt-interactions-app-engagement-overview.html">App Engagement API</a> instead, specifically the Create Session method which returns both of these parameters.</div>
 
 **Request Example**
 
-`https://lo.v.liveperson.net/api/account/12345678/monitoring/visitors/222/visits/current/state?v=1&filter=agent&sid=123.567`
+`https://lo.v.liveperson.net/api/account/12345678/monitoring/visitors/cyNGViYjc4MmU2MzEzZThm/visits/current/state?v=1&filter=agent&sid=qCsUrTldTh0UEWLjLCGqkQ`
 
 ### Response
 
