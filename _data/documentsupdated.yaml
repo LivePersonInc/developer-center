@@ -278,7 +278,7 @@
             - subpagename: Delete Agent Groups
             - subpagename: Delete Agent Group
         - pagename: Appendix
-    - documentname: Agent Status Reason
+    - documentname: Agent Status Reason API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
         - pagename: Overview
