@@ -13,6 +13,20 @@ $(document).ready(function () {
   mobileHamburger();
   isExplorer();
   apiBuilder();
+  //check if refresh events are supported
+  if (window.performance) {
+    //if they are, check if refresh happened
+    if (performance.navigation.type == 1) {
+      //if it did, no need for linkload again since it was called on load
+      return false;
+    } else {
+      //if there's no refresh, this is a load and linkload will be called
+      linkload();
+    };
+  //if refresh events can't be detected just call the function (enjoy explorer)
+  } else {
+    linkload();
+  };
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -45,7 +59,8 @@ function navigateContent(url) {
       $titlecontainer.html($newData.find('.documenttitle').html());
       $content.html($newData.find('#defaultcontent').html());
       //hide/display title if on welcome page or not
-      if (url.indexOf('index') != -1) {
+      var $title = $('.h1').text();
+      if ($title.indexOf('Welcome') != -1) {
         $('.breadcrumbs').addClass('breadhidden');
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
@@ -145,6 +160,20 @@ function linkclick(event, that) {
   var url = $(that).attr("href");
   // call the navigateContent function and pass that url to it
   navigateContent(url);
+  //make sure the window recognizes this and adds it to the history queue for back and refresh actions
+  window.history.pushState({url: url}, '', url);
+};
+//handle back/forward and refresh events
+$(window).on('popstate', function (e) {
+var state = e.originalEvent.state;
+if (state && state.url) {
+  navigateContent(state.url);
+}
+});
+
+function linkload() {
+  //grab the url for the page
+  var url = window.location.href;
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
   window.history.pushState({url: url}, '', url);
 };
