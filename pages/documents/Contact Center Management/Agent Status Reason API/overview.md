@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - account-configuration-agent-status-reason-overview.html
+  - agent-status-reason-overview.html
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Status Reason API
