@@ -37,6 +37,7 @@ $(document).ready(function () {
     return false;
   } else {
     $('.breadcrumbs').removeClass('breadhidden');
+    $('.suggestbutton').removeClass('suggesthidden');
   }
 });
 
@@ -64,6 +65,7 @@ function navigateContent(url) {
         $('.breadcrumbs').addClass('breadhidden');
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
+        $('.suggestbutton').removeClass('suggesthidden');
       }
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
@@ -352,7 +354,7 @@ function replaceTitle () {
   document.title = $newTitle;
 };
 
-function apiBuilder() {
+function requestBuilder() {
   var apiList = document.getElementById("apiList");
   var listItem = document.getElementsByClassName("apiLink");
   var accountNumberInput = $('#accountnumber');
@@ -375,6 +377,7 @@ function apiBuilder() {
     }
   });
   $(listItem).on("click", function() {
+    $("#methodType").val("");
     //grab the account number from its input field
     var accountNumber = accountNumberInput.val();
     //grab the data attribute from the link we clicked on above
