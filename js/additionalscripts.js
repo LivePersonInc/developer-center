@@ -12,7 +12,21 @@ $(document).ready(function () {
   codeButtons();
   mobileHamburger();
   isExplorer();
-  requestBuilder();
+  apiBuilder();
+  //check if refresh events are supported
+  if (window.performance) {
+    //if they are, check if refresh happened
+    if (performance.navigation.type == 1) {
+      //if it did, no need for linkload again since it was called on load
+      return false;
+    } else {
+      //if there's no refresh, this is a load and linkload will be called
+      linkload();
+    };
+  //if refresh events can't be detected just call the function (enjoy explorer)
+  } else {
+    linkload();
+  };
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -23,7 +37,6 @@ $(document).ready(function () {
     return false;
   } else {
     $('.breadcrumbs').removeClass('breadhidden');
-    $('.suggestbutton').removeClass('suggesthidden');
   }
 });
 
@@ -46,11 +59,11 @@ function navigateContent(url) {
       $titlecontainer.html($newData.find('.documenttitle').html());
       $content.html($newData.find('#defaultcontent').html());
       //hide/display title if on welcome page or not
-      if (url.indexOf('index') != -1) {
+      var $title = $('.h1').text();
+      if ($title.indexOf('Welcome') != -1) {
         $('.breadcrumbs').addClass('breadhidden');
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
-        $('.suggestbutton').removeClass('suggesthidden');
       }
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
@@ -113,6 +126,7 @@ function codeButtons () {
       before.show();
     }, 5000);
   });
+  //simple code for removing and adding the darken and lighten classes + localStorage to remember the user's choice
   var selectedCodeHighlight = localStorage.getItem('selectedCode');
   if (selectedCodeHighlight == 'light') {
     $(".highlighter-rouge").removeClass("darken");
@@ -139,7 +153,7 @@ function codeButtons () {
 };
 
 
-//a function to control a click on the sidebar links
+//a function to control a click on internal links
 function linkclick(event, that) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
@@ -147,6 +161,20 @@ function linkclick(event, that) {
   var url = $(that).attr("href");
   // call the navigateContent function and pass that url to it
   navigateContent(url);
+  //make sure the window recognizes this and adds it to the history queue for back and refresh actions
+  window.history.pushState({url: url}, '', url);
+};
+//handle back/forward and refresh events
+$(window).on('popstate', function (e) {
+var state = e.originalEvent.state;
+if (state && state.url) {
+  navigateContent(state.url);
+}
+});
+
+function linkload() {
+  //grab the url for the page
+  var url = window.location.href;
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
   window.history.pushState({url: url}, '', url);
 };
@@ -324,7 +352,7 @@ function replaceTitle () {
   document.title = $newTitle;
 };
 
-function requestBuilder() {
+function apiBuilder() {
   var apiList = document.getElementById("apiList");
   var listItem = document.getElementsByClassName("apiLink");
   var accountNumberInput = $('#accountnumber');
@@ -347,7 +375,6 @@ function requestBuilder() {
     }
   });
   $(listItem).on("click", function() {
-    $("#methodType").val("");
     //grab the account number from its input field
     var accountNumber = accountNumberInput.val();
     //grab the data attribute from the link we clicked on above
