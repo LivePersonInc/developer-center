@@ -1,7 +1,6 @@
 ---
 pagename: File Sharing
 redirect_from:
-  - messaging-window-api-tutorials-file-sharing
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
