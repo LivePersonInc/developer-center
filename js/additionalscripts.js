@@ -23,6 +23,7 @@ $(document).ready(function () {
     return false;
   } else {
     $('.breadcrumbs').removeClass('breadhidden');
+    $('.suggestbutton').removeClass('suggesthidden');
   }
 });
 
@@ -49,6 +50,7 @@ function navigateContent(url) {
         $('.breadcrumbs').addClass('breadhidden');
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
+        $('.suggestbutton').removeClass('suggesthidden');
       }
     }
     //add anchor links to all h3 titles. See respective functions below for what they do.
