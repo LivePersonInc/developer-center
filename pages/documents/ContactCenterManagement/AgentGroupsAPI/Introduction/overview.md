@@ -14,6 +14,7 @@ permalink: agent-groups-api-overview.html
 root-link: true
 indicator: both
 ---
+
 ### Introduction
 
 Businesses are often divided into groups that reflect their organization and hierarchy. A connection center can be thought of as group: in which sub-groups of agents are each responsible for a different area of support. To help you mirror your connection center structure in LiveEngage, we’ve created the Agent Groups capability.

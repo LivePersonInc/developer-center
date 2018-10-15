@@ -126,6 +126,7 @@ function codeButtons () {
       before.show();
     }, 5000);
   });
+  //simple code for removing and adding the darken and lighten classes + localStorage to remember the user's choice
   var selectedCodeHighlight = localStorage.getItem('selectedCode');
   if (selectedCodeHighlight == 'light') {
     $(".highlighter-rouge").removeClass("darken");
@@ -152,7 +153,7 @@ function codeButtons () {
 };
 
 
-//a function to control a click on the sidebar links
+//a function to control a click on internal links
 function linkclick(event, that) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
