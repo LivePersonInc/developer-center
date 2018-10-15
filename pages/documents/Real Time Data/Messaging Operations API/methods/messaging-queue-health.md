@@ -52,22 +52,34 @@ Request by skillIds=12,13 (no interval), timeframe=180
                 "actionableConversations": 10,
                 "notActionableConversations": 14,
                 "actionableAndManualSla": 7,
-                "actionableAndDuringTransfer": 6
+                "actionableAndDuringTransfer": 6,
                 "actionableAndConsumerLastMessage": 3,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 4
+                "unassignedConversationsAndFirstTimeConsumer": 4,
+                "avgWaitTimeForAgentAssignment_NewConversation": 159,
+                "avgWaitTimeForAgentAssignment_AfterTransfer": 171,
+                "maxWaitTimeForAgentAssignment": 274,
+                "waitTimeForAgentAssignment_50thPercentile": 160,
+                "waitTimeForAgentAssignment_90thPercentile": 150
+
             },
             "13": {
                 "unassignedConversations": 2,
                 "actionableConversations": 2,
                 "notActionableConversations": 0,
                 "actionableAndManualSla": 2,
-                "actionableAndDuringTransfer": 2
+                "actionableAndDuringTransfer": 2,
                 "actionableAndConsumerLastMessage": 0,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 0
+                "unassignedConversationsAndFirstTimeConsumer": 0,
+                "avgWaitTimeForAgentAssignment_NewConversation": 300,
+                "avgWaitTimeForAgentAssignment_AfterTransfer": 245,
+                "maxWaitTimeForAgentAssignment": 370,
+                "waitTimeForAgentAssignment_50thPercentile": 220,
+                "waitTimeForAgentAssignment_90thPercentile": 240
+
             }
         },
         "metricsTotal": {
@@ -75,11 +87,18 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "actionableConversations": 12,
             "notActionableConversations": 14,
             "actionableAndManualSla": 9,
-            "actionableAndDuringTransfer": 2
+            "actionableAndDuringTransfer": 2,
             "actionableAndConsumerLastMessage": 3,
             "notActionableDuringTransfer": 0,
             "notActionableAndManualSla": 0,
-            "unassignedConversationsAndFirstTimeConsumer": 4
+            "unassignedConversationsAndFirstTimeConsumer": 4,
+            "avgWaitTimeForAgentAssignment_NewConversation":272,
+            "avgWaitTimeForAgentAssignment_AfterTransfer": 233 ,
+            "maxWaitTimeForAgentAssignment": 370,
+            "waitTimeForAgentAssignment_50thPercentile":  170,
+            "waitTimeForAgentAssignment_90thPercentile": 224
+
+            
         }
     }
 ```
@@ -98,7 +117,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableConversations": 25,
                                "notActionableConversations": 25,
                                "actionableAndManualSla": 22,
-                               "actionableAndDuringTransfer": 23
+                               "actionableAndDuringTransfer": 23,
                                "actionableAndConsumerLastMessage": 7,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
@@ -109,7 +128,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableConversations": 4,
                                "notActionableConversations": 0,
                                "actionableAndManualSla": 4,
-                               "actionableAndDuringTransfer": 2
+                               "actionableAndDuringTransfer": 2,
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
@@ -121,7 +140,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableConversations": 29,
                            "notActionableConversations": 25,
                            "actionableAndManualSla": 26,
-                           "actionableAndDuringTransfer": 25
+                           "actionableAndDuringTransfer": 25,
                            "actionableAndConsumerLastMessage": 7,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
@@ -136,7 +155,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableConversations": 0,
                                "notActionableConversations": 0,
                                "actionableAndManualSla": 0,
-                               "actionableAndDuringTransfer": 0
+                               "actionableAndDuringTransfer": 0,
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
@@ -188,7 +207,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "actionableConversations": 0,
                         "notActionableConversations": 0,
                         "actionableAndManualSla": 0,
-                        "actionableAndDuringTransfer": 0
+                        "actionableAndDuringTransfer": 0,
                         "actionableAndConsumerLastMessage": 0,
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
@@ -229,7 +248,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableConversations": 2,
                        "notActionableConversations": 0,
                        "actionableAndManualSla": 2,
-                       "actionableAndDuringTransfer": 2
+                       "actionableAndDuringTransfer": 2,
                        "actionableAndConsumerLastMessage": 0,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
@@ -272,4 +291,8 @@ timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. | double |
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. | double |  
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
-| unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. | double |
+| avgWaitTimeForAgentAssignment_NewConversation | The average number in milliseconds that new conversation   waited in the queue.  | long |
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number in milliseconds that transferred conversation waited in the queue. | long |
+| maxWaitTimeForAgentAssignment | The maximum number in milliseconds consumer waited in the queue | double. |
+| waitTimeForAgentAssignment_50thPercentile | The mean number in milliseconds consumer waited in the queue. | long |
+| waitTimeForAgentAssignment_90thPercentile | The 90th percentile  number in milliseconds consumer waited in the queue. | long |
