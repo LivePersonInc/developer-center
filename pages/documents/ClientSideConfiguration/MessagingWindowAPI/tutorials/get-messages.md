@@ -88,7 +88,7 @@ Type a few messages in the Agent Workspace.
 
 ### Step 4 - Subscribe to Conversation Content
 
-In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``consersationId`` you got in the response in the previous step, and paste it into the opened WebSocket.
+In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the ``__YOUR_CONVERSATION_ID__`` with the ``consersationId`` you got in the response in the previous step, and paste it into the opened WebSocket.
 
 ```json
 {"kind":"req","id":"22","body":{"fromSeq":0,"dialogId":"__YOUR_CONVERSATION_ID__"},"type":"ms.SubscribeMessagingEvents"}
