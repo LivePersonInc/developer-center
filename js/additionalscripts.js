@@ -12,6 +12,21 @@ $(document).ready(function () {
   codeButtons();
   mobileHamburger();
   isExplorer();
+  apiBuilder();
+  //check if refresh events are supported
+  if (window.performance) {
+    //if they are, check if refresh happened
+    if (performance.navigation.type == 1) {
+      //if it did, no need for linkload again since it was called on load
+      return false;
+    } else {
+      //if there's no refresh, this is a load and linkload will be called
+      linkload();
+    };
+  //if refresh events can't be detected just call the function (enjoy explorer)
+  } else {
+    linkload();
+  };
   //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
   $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
   //call smooth-scroll on all anchorlinks
@@ -44,7 +59,8 @@ function navigateContent(url) {
       $titlecontainer.html($newData.find('.documenttitle').html());
       $content.html($newData.find('#defaultcontent').html());
       //hide/display title if on welcome page or not
-      if (url.indexOf('index') != -1) {
+      var $title = $('.h1').text();
+      if ($title.indexOf('Welcome') != -1) {
         $('.breadcrumbs').addClass('breadhidden');
       } else {
         $('.breadcrumbs').removeClass('breadhidden');
@@ -110,6 +126,7 @@ function codeButtons () {
       before.show();
     }, 5000);
   });
+  //simple code for removing and adding the darken and lighten classes + localStorage to remember the user's choice
   var selectedCodeHighlight = localStorage.getItem('selectedCode');
   if (selectedCodeHighlight == 'light') {
     $(".highlighter-rouge").removeClass("darken");
@@ -136,7 +153,7 @@ function codeButtons () {
 };
 
 
-//a function to control a click on the sidebar links
+//a function to control a click on internal links
 function linkclick(event, that) {
   //prevent the link from actually navigating to the url
   event.preventDefault();
@@ -144,6 +161,20 @@ function linkclick(event, that) {
   var url = $(that).attr("href");
   // call the navigateContent function and pass that url to it
   navigateContent(url);
+  //make sure the window recognizes this and adds it to the history queue for back and refresh actions
+  window.history.pushState({url: url}, '', url);
+};
+//handle back/forward and refresh events
+$(window).on('popstate', function (e) {
+var state = e.originalEvent.state;
+if (state && state.url) {
+  navigateContent(state.url);
+}
+});
+
+function linkload() {
+  //grab the url for the page
+  var url = window.location.href;
   //make sure the window recognizes this and adds it to the history queue for back and refresh actions
   window.history.pushState({url: url}, '', url);
 };
@@ -319,6 +350,79 @@ function replaceTitle () {
   var $newTitle = $originalTitle.replace(/^.*\-.*\|/, "Welcome! |");
 };
   document.title = $newTitle;
+};
+
+function apiBuilder() {
+  var apiList = document.getElementById("apiList");
+  var listItem = document.getElementsByClassName("apiLink");
+  var accountNumberInput = $('#accountnumber');
+  var methodName = document.getElementById("methodName");
+  var methodItem = document.getElementsByClassName('methodLink');
+  var methodURL;
+  //find the call input field
+  var input = $('#apiNameInput');
+  $("#apiName").click(function() {
+    var hasExpanded = $("#apiList").data("expanded") == "true";
+    if (hasExpanded) {
+        $("#apiList").slideUp(400);
+        $("#apiList").data("expanded","false");
+        $("#apiList").removeClass("active");
+        $(this).removeClass("active");
+    } else {
+        $("#apiList").slideDown(400);
+        $("#apiList").data("expanded","true");
+        $("#apiList").addClass("active");
+    }
+  });
+  $(listItem).on("click", function() {
+    //grab the account number from its input field
+    var accountNumber = accountNumberInput.val();
+    //grab the data attribute from the link we clicked on above
+    var originalvalue = $(this).data("apiLink");
+    //if user filled in an account number
+    if (accountNumber != "") {
+      //edit the string we got from the data attribute so that it contains the account number
+      var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
+      methodURL = finalvalue;
+      //fill the input field with the call + account number
+      input.val(finalvalue);
+      //no account number added by user
+    } else {
+    //just fill in the call
+    input.val(originalvalue);
+    methodURL = originalvalue;
+  };
+    //hide the prompt to choose an API
+    $(".chooseapi").css("display", "none");
+    //display the list of methods and categories
+    $("#methodlist").css ("display", "block");
+    //for each list item
+    $.each($(this), function () {
+      //grab the name of the item
+      var categoryName = $(this).text();
+      //grab all the methods
+      var allCategories = document.getElementsByClassName("methodcategory");
+      //for each method
+      $.each(allCategories, function() {
+        //check if the data category of each method matches the name of the item clicked
+        if ($(this).data("apiCategory") == categoryName) {
+          //if it matches, hide all other methods
+          $(allCategories).css("display", "none");
+          //display the matching methods
+          $(this).css("display", "block")
+          //display their parent list;
+          $('#methodList').css("visibility", "visible");
+        };
+      });
+    })
+  });
+  $(methodItem).on("click", function() {
+    var methodValue = $(this).data("apiMethod");
+    var httpValue = $(this).data("httpMethod");
+    var methodInput = $("#methodType");
+    input.val(methodURL + methodValue);
+    methodInput.val(httpValue);
+  });
 };
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special

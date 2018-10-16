@@ -27,6 +27,10 @@ code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
 
+.far {
+  font-size: 15px;
+}
+
 .mobileheader {
   display: none;
 }
@@ -375,7 +379,8 @@ table tbody td img {
 .important::before {
   content: "\f06a";
   color: #f88181;
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-size: 18px;
   font-weight: 900;
   margin-right: 5px;
@@ -903,6 +908,42 @@ a.anchoritem {
 
 .defaultfooterexplorer span {
  margin-left: 400px;
+}
+
+#apiList {
+  display: none;
+}
+
+.apinamecontainer {
+  display: flex;
+}
+
+.apilistcontainer {
+  flex: 1;
+}
+
+.inputcontainer {
+  flex: 1;
+}
+
+#apiNameInput {
+  width: 100%;
+}
+
+#methodList {
+  visibility: hidden;
+}
+
+.methodcategory {
+  display: none;
+}
+
+.apiLink {
+  cursor: pointer;
+}
+
+.methodLink {
+  cursor: pointer;
 }
 
 /* Media Queries Begin */

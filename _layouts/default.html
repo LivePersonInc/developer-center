@@ -99,9 +99,9 @@ search.autocomplete.on({
     var content = document.getElementById('defaultcontent');
     var sidebar = document.getElementById('defaultsidebar');
     var footer = document.getElementById('defaultfooter');
-    content.classList.add('overlayvisible');
-    sidebar.classList.add('overlayvisible');
-    footer.classList.add('overlayvisible');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+    footer.classList.remove('overlayvisible');
 },
   'autocomplete:empty': function () {
     var content = document.getElementById('defaultcontent');

@@ -10,25 +10,25 @@ All pages on the site correspond to a Markdown file (.md) which can be found ins
 
 #### Updating/Creating Headers
 
-Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange the various documents in the site under a hierarchy or navigation. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all YAML formatting and rules apply to it. Our headers are usually comprised of the following key/value pairs:
+Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply to it. Our headers are usually comprised of the following key/value pairs:
 
-* `title`: this is the name of the page that will appear at the top of the document. **DEPRECATED, use `pagename` instead. All other rules above apply.**
+* `title`: **DEPRECATED, use `pagename` instead. All other rules apply.** this is the name of the page that will appear at the top of the document. **DEPRECATED, use `pagename` instead. All other rules apply.**
 
 * `keywords`: this replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `level1`: this key can have either "Documents" or "Solutions". This designates which part of the site the document is under. **DEPRECATED, use `documentname` instead. All other rules above apply.**
+* `level1`: **DEPRECATED, use `documentname` instead. All other rules apply.** this key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
 
-* `level2`: this is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management". **DEPRECATED, use `categoryname` instead. All other rules above apply.**
+* `level2`: **DEPRECATED, use `categoryname` instead. All other rules apply.** this is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
 
-* `level3`: this is the API to which the document belongs. **DEPRECATED, use `documentname` instead. All other rules above apply.**
+* `level3`: **DEPRECATED, use `documentname` instead. All other rules apply.** this is the API to which the document belongs.
 
-* `level4`: this is a sub-folder to which the document belongs, if there is one. **DEPRECATED, use `subfoldername` instead. All other rules above apply.**
+* `level4`: **DEPRECATED, use `subfoldername` instead. All other rules apply.** this is a sub-folder to which the document belongs, if there is one.
 
-* `root-link`: this key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it. **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and displays all document links.**
+* `root-link`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and displays all document links.** this key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it.
 
-* `level-order`: this key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Contact Center Management) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appear before the Skills API (which is also under Contact Center Management) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`. **DEPRECATED. No longer needed as the sidebar is now alphabetically organized.**
+* `level-order`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized.** this key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Contact Center Management) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appear before the Skills API (which is also under Contact Center Management) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`.
 
-* `order`: this value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents. **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and the site hierarchy is determined by a manually updated YAML file. See below for more info.**
+* `order`:  **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and the site hierarchy is determined by a manually updated YAML file. See below for more info.** this value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents.
 
 * `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
 
@@ -43,7 +43,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 Once you've created a new document, you'll need to have it manually added. We chose a manual process for the side for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to build a sidebar in a site of our size and complexity are time and resource consuming).
 
-The sidebar's YAML file can be found in the `_data` folder. It's called `documents.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
+The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
 
 ### Building the Site Locally
 
