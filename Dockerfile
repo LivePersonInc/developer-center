@@ -1,4 +1,4 @@
-FROM ruby:2.1
+FROM ruby:2.5.1
 MAINTAINER mrafayaleem@gmail.com
 
 RUN apt-get clean \
@@ -23,4 +23,3 @@ EXPOSE 4000
 
 WORKDIR /src
 ENTRYPOINT ["jekyll"]
-
