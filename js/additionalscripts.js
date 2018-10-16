@@ -2,10 +2,6 @@ $(document).ready(function () {
   var url = window.location.href;
   //add anchor links to all h3 titles. See respective functions below for what they do.
   anchors.add('h3');
-  //detect if mobile user
-  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
-    sidebarCollapse (url);
-  }
   sidebarClick();
   populateAnchors ();
   menuDrop ();
@@ -13,6 +9,10 @@ $(document).ready(function () {
   mobileHamburger();
   isExplorer();
   apiBuilder();
+  //detect if mobile user
+  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
+    sidebarCollapse (url);
+  }
   //check if refresh events are supported
   if (window.performance) {
     //if they are, check if refresh happened
@@ -45,12 +45,13 @@ function navigateContent(url) {
   //call ajax with the target url
   $.ajax(url)
   .done(function(content) {
-    //once done, figure out if we're being redirected by the plugin or not
+    //once done, figure out if we're being redirected by the redirect plugin or not
     if (content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
+      //if we are, set the URL to match the original one before redirect and then call navigate content again
       url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
       navigateContent(url);
     } else {
-      //grab the various part of the target page
+      //if we're not being redirected, grab the various part of the target page
       var $newData = $(content);
       var $content = $('#defaultcontent');
       var $titlecontainer = $('.documenttitle');
@@ -97,6 +98,10 @@ function navigateContent(url) {
         $('#mysidebar').slideUp(400);
         $('#mysidebar').data("expanded","false");
       };
+  })
+  .fail(function() {
+    url = "http://localhost:4000/404.html";
+    navigateContent(url);
   });
 }
 
