@@ -13,7 +13,7 @@ permalink: messaging-window-api-tutorials-post-conversation-survey-pcs.html
 indicator: messaging
 ---
 
-In this tutorial we will demonstrate how to enable the consumer getting Post Conversation Survey sent by the agent at the end of the conversation. This tutorial is referring to the (new) Post Conversation Survey (PCS) and not to the (older) [existing survey solution](messaging-window-api-tutorials-post-conversation-survey-csat.html){:target="_blank"} where a single CSAT question can be presented to the consumer when the conversation ends.
+In this tutorial we will demonstrate how to enable the consumer getting Post Conversation Survey sent by the agent at the end of the conversation. This tutorial is referring to the (new) Post Conversation Survey (PCS) and not to the (older) [existing survey solution](messaging-window-api-tutorials-post-conversation-survey-csat.html) where a single CSAT question can be presented to the consumer when the conversation ends.
 
 **Note**:
 
@@ -49,9 +49,9 @@ In this tutorial we will demonstrate how to enable the consumer getting Post Con
 
 ### Prerequisites
 
-* Configure the Post Conversation Survey (PCS) and get familiar with it. Please refer [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf){:target="_blank"} for more information.
+* Configure the Post Conversation Survey (PCS) and get familiar with it. Please refer [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) for more information.
 
-* At the end of the [Getting Started](consumer-int-getting-started.html){:target="_blank"} tutorial, we created the ``lp.env`` file. In order to launch ``lp-shell`` with your previous settings, type the following:
+* At the end of the [Getting Started](consumer-int-getting-started.html) tutorial, we created the ``lp.env`` file. In order to launch ``lp-shell`` with your previous settings, type the following:
 
 ```sh
 docker run --env-file lp.env -it lpinc/shell
@@ -76,7 +76,7 @@ In order to indicate to LivePerson that your custom window supports multi dialog
   ]
 }
 
-Refer to [Client Side Configuration](messaging-window-api-tutorials-client-properties.html){:target="_blank"} to see how to set LP_PROPS with the desired Client Properties. The command should look as follows:
+Refer to [Client Side Configuration](messaging-window-api-tutorials-client-properties.html) to see how to set LP_PROPS with the desired Client Properties. The command should look as follows:
 
 ```sh
 LP_PROPS='{"type":".ClientProperties","appId":"webAsync","integrationVersion":"3.0.5","integration":"WEB_SDK","features":["AUTO_MESSAGES","RICH_CONTENT","CO_BROWSE","PHOTO_SHARING","QUICK_REPLIES","MULTI_DIALOG"]}'
@@ -104,7 +104,7 @@ You will now be able to see the content of the JWT:
 
 The ``sub`` property contains your ``consumerId``.
 
-**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/){:target="_blank"}.
+**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
 
 
 ### Step 3 - Open the WebSocket connection
@@ -969,7 +969,7 @@ Example:
 
 * As you can see from the above you can have full control on the style of the button by editing its keys i.e bold, size, color etc. For more information about the style rules defined for basic elements, refer [here](rich-messaging-styling.html).
 
-* The design of your post survey including its quick replies and buttons styles is fully adjustable via the Bot Studio. Please refer [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf){:target="_blank"} for more information.
+* The design of your post survey including its quick replies and buttons styles is fully adjustable via the Bot Studio. Please refer [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) for more information.
 
 ![bot-studio-design-button](img/bot_studio_design_button.png)
 
