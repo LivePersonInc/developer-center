@@ -93,7 +93,7 @@ In order to get existing or new messages from the agent side, the consumer shoul
 ```json
 {"kind":"req","id":"22","body":{"fromSeq":0,"dialogId":"__YOUR_CONVERSATION_ID__"},"type":"ms.SubscribeMessagingEvents"}
 ```
-**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
+**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 In response, you will get a subscription success message:
 
