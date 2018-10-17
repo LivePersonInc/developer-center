@@ -8,12 +8,12 @@ indicator: both
 ---
 
 <div id="metrics">
-<input id="metricsSearch" placeholder="Search" />
+<input id="metricsSearch" placeholder="Search by Metric or Channel" />
 <table id="datametricstable">
   <thead>
     <th>Metric</th>
     <th>Analysis Type</th>
-    <th>Chanel</th>
+    <th>Channel</th>
     <th>Formula (Optional)</th>
     <th>Description</th>
     <th>Dashboard</th>
