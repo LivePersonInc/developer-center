@@ -7,6 +7,8 @@ permalink: essential-resources-data-metrics.html
 indicator: both
 ---
 
+<div id="metrics">
+<input id="metricsSearch" placeholder="Search" />
 <table id="datametricstable">
   <thead>
     <th>Metric</th>
@@ -17,17 +19,18 @@ indicator: both
     <th>Dashboard</th>
     <th>Filtered By</th>
   </thead>
-  <tbody>
+  <tbody class="list">
   {% for metricitem in site.data.reportbuilder %}
     <tr>
-      <td>{{ metricitem.Metric }}</td>
-      <td>{{ metricitem.analysisType }}</td>
-      <td>{{ metricitem.Channel }}</td>
-      <td>{{ metricitem.formulaOptional }}</td>
-      <td>{{ metricitem.Description }}</td>
-      <td>{{ metricitem.Dashboard }}</td>
-      <td>{{ metricitem.filteredBy }}</td>
+      <td class="metric">{{ metricitem.Metric }}</td>
+      <td class="analysis">{{ metricitem.analysisType }}</td>
+      <td class="channel">{{ metricitem.Channel }}</td>
+      <td class="formula">{{ metricitem.formulaOptional }}</td>
+      <td class="description">{{ metricitem.Description }}</td>
+      <td class="dashboard">{{ metricitem.Dashboard }}</td>
+      <td class="filtered">{{ metricitem.filteredBy }}</td>
     </tr>
   {% endfor %}
 </tbody>
 </table>
+</div>

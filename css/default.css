@@ -364,6 +364,7 @@ table tbody td img {
 
 #datametricstable {
   width: 165%;
+  max-width: none;
 }
 
 .important {
