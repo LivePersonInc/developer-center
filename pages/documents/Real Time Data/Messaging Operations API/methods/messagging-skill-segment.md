@@ -12,9 +12,14 @@ permalink: messaging-operations-api-methods-messaging-skill-segment.html
 indicator: messaging
 ---
 
-Retrieves messaging conversation related metrics at the site and skill level.
+Retrieves messaging conversation related metrics at and skill level.
 
-This method aggregation data about skill segment. each segment available for aggregation only by the time the segment is closed.
+This method returns data on metrics which a calculated for each skill separately. The logic behind these metrics is 
+based on segments of Messaging conversations. A segment of a conversation is determined based on the skill assigned to it.
+A skill-segment begins when a consumer enters a skill’s queue, and once the skill changes (for example, when a 
+transfer to another skill takes place), the segment ends.
+A single conversation may include more than one segment for each participating skill. 
+This happens when the conversation is transferred to another skill and back to the original skill.
 
 ### Retrieving Messaging segment Data by Account and Skills
 
@@ -195,13 +200,13 @@ timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity
 | skill id | When skillIDs value(/s) provided: The skill ID. | long |
 | timeframeSummary | When interval is provided in the request, this entity will contain data for the entire timeframe, similar to the response when requesting with no intervals. <br> Note that the averages values for the entire timeframe will NOT be equal to the summation of totals under each interval. | element |
 | timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example : Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
-| totalSkillConversationSegments | Total number of skill segment. | Long |
-| skillSegmentsAbandonedByConsumers |  Number of  times consumers abandoned a conversation. | Long |
-| skillSegmentsAbandonedByConsumersInQueue | Number of times consumers abandoned a conversation while in queue to be assigned to an agent | Long |
-| skillSegmentsWithNonresponsiveConsumers | TNumber of skill-segments which ended in a transfer to another skill or closed with no response from the consumer to an agent’s message. | Long |
-| skillSegmentsWithNonresponsiveAgents |  Number of skill-segments which ended in a transfer to another skill or closed by agent/system with no message from an agent. | Long |
-| interactiveSkillSegments | Number of skill-segments which ended in a transfer to another skill or closed with at least one response from a consumer to a skilled-agent’s message. | Long |
-| avgTimetoFirstAgentMessageFromAgentAssignment | The time on average taken by an agent to respond to a consumer from the time the agent is assigned to the conversation. Measured by millisecond | Long |
+| totalSkillConversationSegments | Total number of skill-segments. May be larger than the number of conversations assigned to the skill as a conversation may include more than one skill segment. | Long |
+| skillSegmentsAbandonedByConsumers | Number of times consumers abandoned a conversation during the last skill-segment. An abandoned segment end with the consumer closing the conversation with no response sent from the agent. | Long |
+| skillSegmentsAbandonedByConsumersInQueue |Number of times consumers abandoned a conversation while in queue, waiting to be assigned to an agent. Measured for the last skill-segment of a conversation, for conversations closed by consumers. | Long |
+| skillSegmentsWithNonresponsiveConsumers |The number of skill-segments which ended in a transfer to another skill or closed, with no response from the consumer to an agent’s message. | Long |
+| skillSegmentsWithNonresponsiveAgents | The number of skill-segments which ended in a transfer to another skill or closed by an agent or system (“auto close”), with no message from an agent. | Long |
+| interactiveSkillSegments |The number of skill-segments which ended in a transfer to another skill or closed with at least one response from a consumer to a an agent message. | Long |
+| avgTimetoFirstAgentMessageFromAgentAssignment | The time on average taken by an agent to respond to a consumer from the time the agent is assigned to the conversation. Measured in millisecond. | Long |
 
 
 

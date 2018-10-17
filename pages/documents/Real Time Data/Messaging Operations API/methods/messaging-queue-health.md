@@ -121,7 +121,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 7,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 30
+                               "unassignedConversationsAndFirstTimeConsumer": 30,
+                               "avgWaitTimeForAgentAssignment_NewConversation": 33,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 483,
+                               "maxWaitTimeForAgentAssignment": 999,
+                               "waitTimeForAgentAssignment_50thPercentile": 340,
+                               "waitTimeForAgentAssignment_90thPercentile": 420                       
                            },
                            "13": {
                                "unassignedConversations": 4,
@@ -132,7 +137,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 4
+                               "unassignedConversationsAndFirstTimeConsumer": 4,
+                               "avgWaitTimeForAgentAssignment_NewConversation": 234,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 765,
+                               "maxWaitTimeForAgentAssignment": 1011,
+                               "waitTimeForAgentAssignment_50thPercentile": 520,
+                               "waitTimeForAgentAssignment_90thPercentile": 670                                 
                            }
                        },
                        "metricsTotal": {
@@ -144,7 +154,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableAndConsumerLastMessage": 7,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
-                           "unassignedConversationsAndFirstTimeConsumer": 34
+                           "unassignedConversationsAndFirstTimeConsumer": 34,
+                           "avgWaitTimeForAgentAssignment_NewConversation": 62,
+                           "avgWaitTimeForAgentAssignment_AfterTransfer": 320,
+                           "maxWaitTimeForAgentAssignment": 1011,
+                           "waitTimeForAgentAssignment_50thPercentile": 420,
+                           "waitTimeForAgentAssignment_90thPercentile": 550                             
                        }
                 },
             {
@@ -291,8 +306,8 @@ timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. | double |
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. | double |  
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
-| avgWaitTimeForAgentAssignment_NewConversation | The average number in milliseconds that new conversation   waited in the queue.  | long |
-| avgWaitTimeForAgentAssignment_AfterTransfer | The average number in milliseconds that transferred conversation waited in the queue. | long |
-| maxWaitTimeForAgentAssignment | The maximum number in milliseconds consumer waited in the queue | double. |
-| waitTimeForAgentAssignment_50thPercentile | The mean number in milliseconds consumer waited in the queue. | long |
-| waitTimeForAgentAssignment_90thPercentile | The 90th percentile  number in milliseconds consumer waited in the queue. | long |
+| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation waited in queue (unassigned) for the first agent to be assigned to it.  | long |
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation waited in queue (unassigned) for the next agent to be assigned to it. Measure for transfers back-to-queue and skill-to-skill.| long |
+| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waited in queue (unassigned) for an agent to be assigned to it. | double. |
+| waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in queue (unassigned) waited below this value, i.e. the median wait time in queue. | long |
+| waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in queue (unassigned) waited below this value. | long |

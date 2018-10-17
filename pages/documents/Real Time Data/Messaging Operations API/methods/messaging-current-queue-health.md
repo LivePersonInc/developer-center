@@ -120,9 +120,9 @@ Metrics under the 'metricsTotal' entity will contain the summation of all skills
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. |long|
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. |long|
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. |long|
-| avgWaitTimeForAgentAssignment_NewConversation | The time on average a new conversation is in currently in queue. measured in millisecond|long|
-| avgWaitTimeForAgentAssignment_AfterTransfer | The time on average a transferred conversation is in currently in queue. measured in millisecond|long|
-| maxWaitTimeForAgentAssignment | The maximum time a conversation is currently in the queue. measured in millisecond|long|
-| waitTimeForAgentAssignment_50thPercentile | The mean time a conversation is currently in the queue. measured in millisecond|long|
-| waitTimeForAgentAssignment_90thPercentile | The 90th precentile time a conversation is currently in the queue. measured in millisecond|long|
+| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation is waiting in queue (unassigned) for the first agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation is waiting in queue (unassigned) for the next agent to be assigned to it.Measure for transfers back-to-queue and skill-to-skill.|long|
+| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in queue (unassigned) for an agent to be assigned to it.|long|
+| waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in queue (unassigned) are waiting below this value, i.e. the median wait time in queue.|long|
+| waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in queue (unassigned) are waiting below this value.|long|
 
