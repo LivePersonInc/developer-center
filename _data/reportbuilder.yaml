@@ -1,0 +1,2864 @@
+- metricitem:
+  Metric: AWAY
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: 'Cumulative time ([h]:mm) in \\"Away\\" state.\nCan be viewed and filteredBy the \\"AWAY REASON\\" attribute.'
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY RATE
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional: AWAY / LOGGED IN TIME
+  Description: Percentage (%) of time spent by agents in “Away” state out of the logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY TIME ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: Cumulative time ([h]:mm) in "Away" state but engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: BACK SOON
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Cumulative time ([h]:m m) in "Back Soon" state
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: BACK SOON RATE
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional: BACK SOON / LOGGED IN TIME
+  Description: Percentage (%) of time spent by agents in "Back Soon" state out of the logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: BACK SOON TIME ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: Cumulative time ([h]:mm) in "Back Soon" state but engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: CONC. ENGAGED
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: CONCURRENT ENG. TIME / ENGAGED TIME
+  Description: Number of concurrent engagements handled by agents during their engaged time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: CONC. LABOR
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: CONCURRENT ENG. TIME / LABOR TIME
+  Description: Number of concurrent engagements handled by agents during their labor time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: CONC. LOGGED-IN
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: CONCURRENT ENG. TIME / LOGGED IN TIME
+  Description: Number of concurrent engagements handled by agents during their logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: ENGAGED TIME
+  analysisType: Agent Status
+  Channel: Chat
+  formulaOptional:
+  Description: Total time spent by agent engaging with one or more consumers
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: ENGAGED TIME RATE
+  analysisType: Agent Status
+  Channel: Chat
+  formulaOptional: ENGAGED TIME / LOGGED IN TIME
+  Description: The percentage (%) of time agents were engaged in one or more chats out of the logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: INTERACTIVE ENGAGEMENTS PER HOUR
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: INTERACTIVE ENGAGEMENTS / LABOR TIME * 24
+  Description: Average number of interactive engagements agents handled during their labor time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: LABOR TIME
+  analysisType: Agent Status
+  Channel: Chat
+  formulaOptional:
+  Description: Cumulative time ([h]:mm) agents were in "Online" state plus the engaged time in the "Away" state or "Back Soon” state
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: LABOR TIME RATE
+  analysisType: Agent Status
+  Channel: Chat
+  formulaOptional: LABOR TIME /  LOGGED IN TIME
+  Description: The percentage (%) of the labor time out of the logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: NON ENGAGED RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: NON ENGAGED TIME / LOGGED IN TIME
+  Description: The percentage (%) of the cumulative time agents were not engaged out of logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: NON ENGAGED TIME
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: LOGGED IN TIME - ENGAGED TIME
+  Description: Total time an agent was not engaged with any consumer
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: ONLINE
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: 'Cumulative time ([h]:mm) in \\"Online\\" state\n\nNote! Messaging Agents must have a configured Chat concurrency (greater than 0) in order for the system to populate this metric value. Messaging agents with a Chat concurrency of 0 appear with 0 online time.'
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: ONLINE RATE
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional: ONLINE / LOGGED IN TIME
+  Description: The percentage (%) of time the agent spent in the "Online" state out of the logged in time
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: ONLINE TIME ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: Cumulative time ([h]:mm) agents were in the "Online" state and engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: TOTAL ENGAGEMENTS PER HOUR
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: (INTERACTIVE ENG. + NON-INTERACTIVE ENG.) / LABOR TIME * 24
+  Description: Total number of interactive and non-interactive engagements divided by the number of labor hours
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY (TOTAL)
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional: AWAY + BACK SOON
+  Description: Combined time (in hours) that the agent was not available (in the "Away" and "Back Soon" states)
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY ENG. RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY TIME ENG. / LOGGED IN TIME
+  Description: The percentage (%) of logged in time the agent spent in the "Away" state, but was actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY NOT ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY - AWAY TIME ENG.
+  Description: Time spent by the agent in the "Away" state while not actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY NOT ENG. RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY NOT ENG. / LOGGED IN TIME
+  Description: The percentage (%) of logged in time the agent spent in the "Away" state and was not actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY TOTAL ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY TIME ENG. + BACK SOON TIME ENG.
+  Description: Combined time (in hours) that the agent was not available but was actively engaged (Away Engaged and Back Soon Engaged)
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY TOTAL ENG. RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY TOTAL ENG. / LABOR TIME
+  Description: The percentage (%) of labor time (in hours) that the agent was not available while actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY TOTAL NOT ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY (TOTAL) - AWAY TOTAL ENG.
+  Description: Combined time (in hours) that the agent was neither available nor actively engaged (Away Not Engaged + Back Soon Not Engaged)
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY TOTAL NOT ENG. RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: AWAY TOTAL NOT ENG. / LABOR TIME
+  Description: The percentage (%) of labor time (in hours) that the agent was neither available nor actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AWAY TOTAL RATE
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional: AWAY (TOTAL) / LOGGED IN TIME
+  Description: The percentage (%) of logged in time that the agent was in either the "Away" or "Back Soon" states (combined total of "Away" + "Back Soon")
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: BACK SOON ENG. RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: BACK SOON TIME ENG. / LOGGED IN TIME
+  Description: The percentage (%) of logged in time that the agent was in the "Back Soon" state while actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: BACK SOON NOT ENG.
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: BACK SOON - BACK SOON TIME ENG.
+  Description: Time spent in the "Back Soon" state while not actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: BACK SOON NOT ENG. RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: BACK SOON NOT ENG. / LOGGED IN TIME
+  Description: The percentage (%) of logged in time the agent spent in the "Back Soon" state while not actively engaged
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: LOGGED IN TIME
+  analysisType: Agent Status
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Cumulative agents logged in time (hh:mm)
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: OCCUPANCY RATE
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional: ONLINE TIME ENG. / ONLINE
+  Description: The percentage (%) of time the agent spent in the "Online" state while actively engaged (Occupied)
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: AGENT RESPONSES PER CLOSED CONVERSATIONS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional: TOTAL NO. OF AGENT RESPONSES / CLOSED COVNERSATIONS
+  Description: Average number of responses provided by agent per closed conversation
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. AGENT FIRST RESPONSE TIME TO FIRST TIME CONVERSATIONS
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional:
+  Description: Average time it took an agent to respond to a consumer who messaged the brand for the first time
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. RESPONSE TIME BY AGENT
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional:
+  Description: "Average time taken by the agent to respond to a consumer message. \nTime is measured from the first of consecutive messages sent by a consumer"
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. TIME TO AGENT FIRST RESPONSE
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional:
+  Description: Average time taken by the agent to respond to the first message a consumer sent in a conversation
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CSAT SCORE (UNIFIED)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional: NUMBER OF 4 OR 5 RESPONSES / NUMBER OF RESPONSES
+  Description: "CSAT score for closed conversations (including unassigned). \nWhen filtering by date/time, the CSAT SCORE will be ascosiated with the time the conversation ended.\n\nContains both results from the first generation survey and the Survey bot driven flows."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: MCS
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional: "AVERAGE OF 3 POSSIBLE MCS VALUES:\n1) POSITIVE = 100\n2) NEUTRAL = 0\n3) NEGATIVE = -100"
+  Description: Meaningful Connection Score (MCS - an automated, real time measurement of consumer sentiment) for closed conversations, including unassigned conversations
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CLOSED CONVERSATIONS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional: NO. OF CONVERSATIONS CLOSED BY AGENT + NO. OF CONVERSATIONS CLOSED BY CONSUMER + NO. OF CONVERSATIONS CLOSED BY SYSTEM
+  Description: Number of conversations closed by agent, consumer or the system
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF CONVERSATIONS CLOSED BY AGENT
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of conversations that were closed by agents
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF CONVERSATIONS CLOSED BY CONSUMER
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of conversations closed by consumers
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF CONVERSATIONS CLOSED BY SYSTEM
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of conversations closed by the system
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: HANDLED CONVERSATIONS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of conversations in which the agent sent at least one message during the selected timeframe.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF CONVERSATIONS OPENED BY AGENT
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of conversations resumed (opened) by agents
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AGENT TO AGENT TRANSFERS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: "Total number of transfers to an Agent.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: BACK TO QUEUE TRANSFERS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: "Total number of transfers back to the queue.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: SKILL TO SKILL TRANSFERS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: "Total number of transfers to a skill.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF AGENT RESPONSES
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of responses provided by agent
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF FIRST RESPONSES
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of first responses to conversations
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF FIRST RESPONSES TO FIRST TIME CONVERSATIONS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of first responses by agents to first time consumer conversations
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF MESSAGES SENT BY AGENT
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of messages sent by Agent
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF TRANSFERS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: "Number of transfers.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. CONVERSATION DURATION
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: Average duration of conversions, from open time to close time. Attributed to the agent, group and skill at the time the conversation was closed
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ABANDONED CONVERSATIONS
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: 'Number of conversations during which an agent did not respond to a consumer message.\nConversations in which the Agent is the first to message (\\"Resume\\") cannot be marked as abandoned, even if the consumer did not respond to an agent message'
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ABANDONED RATE
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional: ABANDONED CONVERSATIONS / CLOSED CONVERSATIONS
+  Description: Percentage of abandoned conversations out of the total number of closed conversations
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INTERACTIVE CONVERSATIONS
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of conversations during which the consumers responded at least once to an agent message
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INTERACTIVE RATE
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional: INTERACTIVE CONVERSATIONS / CLOSED CONVERSATIONS
+  Description: Percentage of interactive conversations out of the total number of closed conversations
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NON - INTERACTIVE CONVERSATIONS
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: 'Number of conversations during which the consumers did not respond to an agent message.\nConversations in which the Agent is the first to message (\\"Resume\\"), and do not include a consumer response to the agent message, are considered Non Interactive (and not abandoned)'
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NON - INTERACTIVE RATE
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional: NON - INTERACTIVE CONVERSATIONS / CLOSED CONVERSATIONS
+  Description: Percentage of non-interactive conversations out of the total number of closed conversations
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: HANDLED CONVERSATIONS PER LOGIN HOUR
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional: HANDLED CONVERSATIONS / LOGGED IN TIME
+  Description: The average number of conversations an agent handled during their time logged into LiveEngage.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: HANDLED CONSUMERS
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of consumers who received a message from an agent during the selected timeframe
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. TIME TO FIRST HUMAN AGENT RESPONSE
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional:
+  Description: 'The time on average a consumer waits for a response from the first human agent assigned to the conversation.\nIf a bot was the first assigned aget, the responses from the bot are omitted from this calculation.'
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. TIME TO FIRST HUMAN AGENT RESPONSE FROM BOT ESCALATION
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional:
+  Description: The time on average a consumer waits for the first response in a conversation by a human agent. Measured from the point a bot escalates a conversation to another skill-queue.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TAKEOVERS BY AGENT
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of times an agent (user) takes over conversations from another agent (bot or human).\nIn most cases this metric applies to Agent Managers who have the permission to take over conversations."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TAKEOVERS FROM AGENT
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of times another agent (user) takesover conversations from a given agent.\nUsed to analyse how many time conversations were taken over FROM a bot or human agent (Example: How many conversations were takenover from 'Concierge-Bot' agent/user?)."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. CONSUMER RESPONSE TIME
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent’s message.\nIn case of multiple consecutive agent messages, the time will be measured from the first message. \nIn case of multiple consecutive consumer responses, the time will be measured until the first response.\nThis KPI is not assigned to an Agent"
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF CONVERSATIONS OPENED BY CONSUMER
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of conversations opened by consumers. This KPI is assigned to skill (not agent)
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF OPENED CONVERSATIONS
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional: NO. OF CONVERSATIONS OPENED BY CONSUMER + NO. OF CONVERSATIONS OPENED BY AGENT
+  Description: Number of opened conversations by either Agents or Consumers
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF CONSUMER RESPONSES
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: 'Number of responses provided by consumers to an agent''s message. This KPI is assigned to skill (not agent).'
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF MESSAGES SENT BY CONSUMER
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of messages sent by consumers, including unassigned conversations. This KPI is not assigned to a specific agent
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL NO. OF MESSAGES SENT BY CONSUMER TO AGENT
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of messages sent by consumers, while an Agent was assigned to the conversation. This KPI is not assigned to a specific Agent
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ACTIVE CONSUMERS
+  analysisType: Consumer Expereience
+  Channel: Messaging
+  formulaOptional: COUNT DISTINCT CONSUMERS
+  Description: "The number of consumers who were active during a selected timeframe.\nA consumer is marked as active if at least one of the following occurred:\n1) Consumer opened a conversation\n2) Consumer sent a message in a conversation\n3) Consumer closed the conversation"
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: CROSS SESSION DIRECT REVENUE AFTER ENGAGEMENT / CROSS SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  Description: Average Order Value from purchases attributed to the selected campaign. Purchases occurred after an engagement which took place during a previous session but within the account-defined window.
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: CROSS SESSION DIRECT REVENUE AFTER EXPOSURE / CROSS SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  Description: Average Order Value from purchases attributed to the selected campaign. Purchases occurred after an exposure which took place during a previous session, and within the account-defined window.
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an engagement occurred in a previous session. The previous session is attributed to the same consumer by their browser and device. The length of time between sessions is defined in the campaign area footnote.
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an exposure occurred in a previous session. The previous session is attributed to the same consumer by their browser and device. The length of time between sessions is defined in the campaign area footnote.
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after engagements. The engagement and the purchase transaction happened in 2 different sessions (the previous session is attributed to the same consumer by their browser and device, the length of time between sessions is defined in the campaign area footnote).
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after exposures. The exposures and the purchase transaction happened in 2 different sessions (the previous session is attributed to the same consumer by their browser and device, the length of time between sessions is defined in the campaign area footnote)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER ENGAGEMENT / ENGAGED
+  Description: Percentage of goals achieved after engagement out of all consumers that were exposed to an engagement. Does not include conversion goals.
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER EXPOSURE (CAMP)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / EXPOSED (CAMP)
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified campaign. Does not include conversion goals.\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER EXPOSURE (ENG)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / EXPOSED (ENG)
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to the specified Engagement. Does not include conversion goals.\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER EXPOSURE (LOB)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / EXPOSED (LOB)
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to a campaign in the specified LOB. Does not include conversion goals.\n(Pre-aggregated by LOB. Summarizing this metric across different LOBs may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOALS REACHED AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of goals reached after engagement. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOALS REACHED AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct campaign goals reached after exposure. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: IN SESSION DIRECT REVENUE AFTER ENGAGEMENT / IN SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  Description: Average of the total direct revenue achieved after engagement out of the number of purchase transactions completed after engagement. Engagement and purchase happened in the same session
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: IN SESSION DIRECT REVENUE AFTER EXPOSURE / IN SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  Description: Average of the total direct revenue achieved after exposures out of the number of purchase transactions completed after exposures. Exposure and purchase happened in the same session
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an engagement in the same session
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an exposure in the same session
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after engagements. Engagement and purchase happened in the same session
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after exposures. Exposure and purchase happened in the same session
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INDIRECT GOALS REACHED AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of indirect goals reached after engagement. An indirect goal is one that is not attached to a campaign. Indirect goals may still be achieved by an engagement
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INDIRECT GOALS REACHED AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of indirect goals reached after exposure. An indirect goal is one that is not attached to a campaign. Indirect goals may still be achieved by an engagement
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL DIRECT REVENUE AFTER ENGAGEMENT / TOTAL DIRECT CONVERSIONS AFTER ENGAGEMENT
+  Description: Average of the total direct revenue achieved after engagements out of the number of purchase transactions completed after engagement
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL DIRECT REVENUE AFTER EXPOSURE / TOTAL DIRECT CONVERSIONS AFTER EXPOSURE
+  Description: Average of the total direct revenue achieved after exposures out of the number of purchase transactions completed after exposures
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of direct conversions achieved after engagement
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of direct conversions achieved after exposure
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved from all Campaigns after engagement
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved from all Campaigns after exposure
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of indirect conversions achieved during or after an engagement. An indirect conversion is one that achieved a goal that is not attached to a Campaign
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of indirect conversions achieved after an exposure. An indirect conversion is one that achieved a goal that is not attached to a Campaign
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total indirect revenue achieved during or after an engagement. The indirect revenue is generated by conversions that achieved a goal that is not attached to a campaign
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total indirect revenue achieved after an exposure. The indirect revenue is generated by conversions that achieved a goal that is not attached to a campaign
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INCREMENTAL CONVERSION RATIO (CAMP)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: INCREMENTAL CONVERSIONS (CAMP) / TOTAL CONVERSIONS AFTER ENGAGEMENT
+  Description: The percentage (%) of total Conversions that may not have otherwise occurred (Incremental Conversion) (calculated at the Campaign level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INCREMENTAL CONVERSION RATIO (LOB)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: INCREMENTAL CONVERSIONS (LOB) / TOTAL CONVERSIONS AFTER ENGAGEMENT
+  Description: The percentage (%) of total Conversions that may not have otherwise occurred (Incremental Conversion) (calculated at the LOB level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INCREMENTAL CONVERSIONS (CAMP)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: (TOTAL CONVERSION RATE AFTER ENGAGEMENT - TOTAL CONVERSION RATE AFTER EXPOSURE NOT ENGAGEMENT (CAMP)) * ENGAGED
+  Description: Number of Incremental Conversions (calculated at the Campaign level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INCREMENTAL CONVERSIONS (LOB)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: (TOTAL CONVERSION RATE AFTER ENGAGEMENT - TOTAL CONVERSION RATE AFTER EXPOSURE NOT ENGAGEMENT (LOB)) * ENGAGED
+  Description: Number of Incremental Conversions (calculated at the LOB level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSION RATE AFTER EXPOSURE NOT ENGAGEMENT (CAMP)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL CONVERSIONS AFTER EXPOSURE NOT ENGAGEMENT / (EXPOSED (CAMP) - ENGAGED
+  Description: The percentage (%) of Exposures that did not result in an Engagement, but that did lead to a Conversion (calculated at the Campaign level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSION RATE AFTER EXPOSURE NOT ENGAGEMENT (LOB)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL CONVERSIONS AFTER EXPOSURE NOT ENGAGEMENT / (EXPOSED (LOB) - ENGAGED)
+  Description: The percentage (%) of Exposures that did not result in an Engagement, but that did lead to a Conversion (calculated at the LOB level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSIONS AFTER EXPOSURE NOT ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL CONVERSIONS AFTER EXPOSURE - TOTAL CONVERSIONS AFTER ENGAGEMENT
+  Description: Number of total conversions which occurred after an exposure that did not result in an engagement
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: CROSS SESSION REVENUE AFTER ENGAGEMENT / CROSS SESSION CONVERSIONS AFTER ENGAGEMENT
+  Description: Average Order Value from purchases which occurred after an engagement. The engagement took place during a previous session but within the account-defined window.
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: CROSS SESSION REVENUE AFTER EXPOSURE / CROSS SESSION CONVERSIONS AFTER EXPOSURE
+  Description: Average Order Value from purchases which occurred after an exposure. The exposure took place during a previous session but within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of conversions achieved after an engagement which took place during a previous session, and within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of conversions achieved after an exposure which occurred during a previous session, and within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved after an engagement which took place during a previous session, and within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved after an exposure which occurred during a previous session, and within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: GOALS REACHED AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of goals reached after engagement. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: GOALS REACHED AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of goals reached after exposure. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: IN SESSION REVENUE AFTER ENGAGEMENT / IN SESSION CONVERSIONS AFTER ENGAGEMENT
+  Description: Average Order Value from orders generated during or after an engagement, and within the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: IN SESSION REVENUE AFTER EXPOSURE / IN SESSION CONVERSIONS AFTER EXPOSURE
+  Description: Average Order Value from orders generated after an exposure, and within the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of conversions achieved after an engagement which took place during the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of conversions achieved after an exposure which occurred during the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved after an engagement which took place during the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved after an exposure which occurred during the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL REVENUE AFTER ENGAGEMENT / TOTAL CONVERSIONS AFTER ENGAGEMENT
+  Description: Average Order Value from purchases which occurred after an engagement
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL REVENUE AFTER EXPOSURE / TOTAL CONVERSIONS AFTER EXPOSURE
+  Description: Average Order Value from purchases which occurred after an exposure
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSION RATE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL CONVERSIONS AFTER ENGAGEMENT / ENGAGED
+  Description: Percentage of conversions achieved after or during an engagement out of all sessions containing an engagement
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSION RATE AFTER EXPOSURE (BRAND)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL CONVERSIONS AFTER EXPOSURE / EXPOSED (BRAND)
+  Description: Percentage of conversions achieved after exposure out of all session during which an exposure ocurred
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of conversions achieved during or after an engagement
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of conversion which occured after an exposure
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CROSS SESSION PURCHASES AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of purchase transactions following an engagement that occurred during a previous session, and within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CROSS SESSION PURCHASES AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of purchase transactions following an exposure that occurred during a previous session, and within the account-defined window
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL GOAL REACHED RATE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL GOALS REACHED AFTER ENGAGEMENT / ENGAGED
+  Description: Percentage of goals reached during or after an engagement out of all consumers engaged. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL GOAL REACHED RATE AFTER EXPOSURE (BRAND)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL GOALS REACHED AFTER EXPOSURE / EXPOSED (BRAND)
+  Description: Percentage of goals reached after an exposure out of all consumers engaged. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL GOALS REACHED AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of goals reached after engagement. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL GOLAS REACHED AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of goals reached after exposure. Does not include conversion goals
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL IN SESSION PURCHASES AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of purchase transactions following an engagement that took place during the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL IN SESSION PURCHASES AFTER EXPOSURES
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of purchase transactions following an exposure that occurred during the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved during or after engagement
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved after exposure
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL REVENUE WITHOUT CONVERSION AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved without conversions during or after engagement
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL REVENUE WITHOUT CONVERSION AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue achieved without conversions after an exposure
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: INCREMENTAL CONVERSION RATIO (BRAND)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: INCREMENTAL CONVERSIONS (BRAND) / TOTAL CONVERSIONS AFTER ENGAGEMENT
+  Description: The percentage (%) of total Conversions that may not have otherwise occurred (Incremental Conversion) (calculated at the Brand level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: INCREMENTAL CONVERSIONS (BRAND)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: (TOTAL CONVERSION RATE AFTER ENGAGEMENT - TOTAL CONVERSION RATE AFTER EXPOSURE NOT ENGAGEMENT (BRAND)) * ENGAGED
+  Description: The number (#) of Incremental Conversions (calculated at the Brand level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL CONVERSION RATE AFTER EXPOSURE NOT ENGAGEMENT (BRAND)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL CONVERSIONS AFTER EXPOSURE NOT ENGAGEMENT / (EXPOSED (BRAND) - ENGAGED)
+  Description: The percentage (%) of Exposures that did not result in an Engagement, but that did lead to a Conversion (calculated at the Brand level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL IN SESSION PURCHASES AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of purchase events following an exposure in the same session
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CONVERSIONS
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: 'Number of conversions generated by consumers following engagements with an agent.\nConversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION CONVERSION/GOAL
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a goal was achieved by consumers after initiating an engagement with an agent. The goal was achieved during a separate session from the one in which the engagement took place, and within the account-defined window
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION CONVERSIONS
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: 'Number of conversions generated by consumers after initiating an engagement with an agent. The conversion was generated during a separate session from the one in which the engagement took place, and within the account-defined window. \nConversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION REVENUE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue generated from purchases placed by consumers after initiating an engagement with an agent. The purchase was placed during a separate session from the one in which the engagement took place, and within the account-defined window
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION CONVERSION/GOAL
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a goal was achieved by consumers after initiating an engagement with an agent, and before ending the session
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION CONVERSIONS
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: 'Number of conversions generated by consumers after initiating an engagement with an agent, and before ending the session.\nConversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION REVENUE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue generated from purchases placed by consumers after initiating an engagement with an agent, and before ending the session
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: NUMBER OF ITEMS
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of items in the shopping cart at time of purchase. Derived from the numItems engagement attribute under the transaction SDE
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: REVENUE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total revenue generated by consumers after initiating an engagement with an agent
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: VALUES
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: ROUND(VALUE)
+  Description: Total value of products purchased. Derived from the "total" engagement attribute under the Transaction SDE
+  Dashboard: Agent Activity ,Goal Tracker
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: CROSS SESSION DIRECT REVENUE AFTER ENGAGEMENT / CROSS SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  Description: Average Order Value from purchases attributed to the selected campaign. Purchases ocurred after an engagement which took place during a previous session but within the account-defined window
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: CROSS SESSION DIRECT REVENUE AFTER EXPOSURE / CROSS SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  Description: Average Order Value from purchases attributed to the selected campaign. Purchases ocurred after an exposure which took place during a previous session, and within the account-defined window
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an engagement occured in a previous session. The previous session is attributed to the same consumer by their browser and device. The length of time between sessions is defined in the campaign area footnote
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an exposure occured in a previous session. The previous session is attributed to the same consumer by their browser and device. The length of time between sessions is defined in the campaign area footnote
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after engagements. The engagement and the purchase transaction happened in 2 different sessions (the previous session is attributed to the same consumer by their browser and device, the length of time between sessions is defined in the campaign area footnote)
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CROSS SESSION DIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after exposures. The exposures and the purchase transaction happened in 2 different sessions (the previous session is attributed to the same consumer by their browser and device, the length of time between sessions is defined in the campaign area footnote)
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER ENGAGEMENT / ENGAGED
+  Description: Percentage of goals achieved after engagement out of all consumers that were exposed to an engagement. Does not include conversion goals.
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER EXPOSURE (SKILL CAMP)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / CHAT EXPOSED (SKILL CAMP)
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified campaign. Does not include conversion goals.\n(Pre-aggregated by Skill and Campaign. Summarizing this metric across different skills and campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER EXPOSURE (SKILL ENG)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / CHAT EXPOSED (SKILL ENG)
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified engagement. Does not include conversion goals.\n(Pre-aggregated by Skill and Engagement. Summarizing this metric across different skills and engagements may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOAL REACHED RATE AFTER EXPOSURE (SKILL)
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / CHAT EXPOSED (SKILL)
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to the engagements on which the select skill is configured. Does not include conversion goals.\n(Pre-aggregated by Skill. Summarizing this metric across different skills  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOALS REACHED AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of goals reached after engagement. Does not include conversion goals
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: DIRECT GOALS REACHED AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct campaign goals reached after exposure. Does not include conversion goals
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: IN SESSION DIRECT REVENUE AFTER ENGAGEMENT / IN SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  Description: Average of the total direct revenue achieved after engagement out of the number of purchase transactions completed after engagement. Engagement and purchase happened in the same session
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: IN SESSION DIRECT REVENUE AFTER EXPOSURE / IN SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  Description: Average of the total direct revenue achieved after exposures out of the number of purchase transactions completed after exposures. Exposure and purchase happened in the same session
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an engagement in the same session
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of direct conversions achieved after an exposure in the same session
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after engagements. Engagement and purchase happened in the same session
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: IN SESSION DIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved after exposures. Exposure and purchase happened in the same session
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INDIRECT GOALS REACHED AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of indirect goals reached after engagement. An indirect goal is one that is not attached to a campaign. Indirect goals may still be achieved by an engagement
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: INDIRECT GOALS REACHED AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of indirect goals reached after exposure. An indirect goal is one that is not attached to a campaign. Indirect goals may still be achieved by an engagement
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT AOV AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL DIRECT REVENUE AFTER ENGAGEMENT / TOTAL DIRECT CONVERSIONS AFTER ENGAGEMENT
+  Description: Average of the total direct revenue achieved after engagements out of the number of purchase transactions completed after engagement
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT AOV AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL DIRECT REVENUE AFTER EXPOSURE / TOTAL DIRECT CONVERSIONS AFTER EXPOSURE
+  Description: Average of the total direct revenue achieved after exposures out of the number of purchase transactions completed after exposures
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSION RATE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional: TOTAL DIRECT CONVERSIONS AFTER ENGAGEMENTS / ENGAGED
+  Description: Percentage of direct conversions achieved after or during an engagement out of all sessions containing an engagement
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSION RATE AFTER EXPOSURE (SKILL CAMP)
+  analysisType: Campaign Conversions
+  Channel: Chat
+  formulaOptional: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE / CHAT EXPOSED (SKILL CAMP)
+  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Calculated per campaign according to the session start time, and aggregated by skill. Use this metric when breakdown per Campaign is needed.\n(Pre-aggregated by Skill and Campaign. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSION RATE AFTER EXPOSURE (SKILL ENG)
+  analysisType: Campaign Conversions
+  Channel: Chat
+  formulaOptional: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE / CHAT EXPOSED (SKILL ENG)
+  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Calculated per engagement according to the session start time, and aggregated by skill. Use this metric when breakdown per Engagement is needed.\n(Pre-aggregated by Skill and Engagement. Summarizing this metric across different skills or engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSION RATE AFTER EXPOSURE (SKILL)
+  analysisType: Campaign Conversions
+  Channel: Chat
+  formulaOptional: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE / CHAT EXPOSED (SKILL)
+  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Aggregated by the skill configured on the engagement.\n(Pre-aggregated by Skill. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of direct conversions achieved after engagement
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of direct conversions achieved after exposure
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved from all Campaigns after engagement
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL DIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total direct revenue achieved from all Campaigns after exposure
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT CONVERSIONS AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of indirect conversions achieved after an engagement. An indirect conversion is one that achieved a goal not attached to a Campaign.
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT CONVERSIONS AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of indirect conversions achieved after an exposure. An indirect conversion is one that achieved a goal not attached to a Campaign.
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT REVENUE AFTER ENGAGEMENT
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total indirect revenue achieved. The indirect revenue is generated by conversions from engagements that achieved goals not attached to Campaigns.
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: TOTAL INDIRECT REVENUE AFTER EXPOSURE
+  analysisType: Campaign Conversions
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total indirect revenue achieved. The indirect revenue is generated by conversions from exposures that achieved goals not attached to Campaigns.
+  Dashboard: Operational and Staffing
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: SALES CONVERSIONS
+  analysisType: Campaign Conversions
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of “sell product / service” goals reached during or after a messaging conversation
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: SALES CONVERSION RATE
+  analysisType: Campaign Conversions
+  Channel: Messaging
+  formulaOptional:
+  Description: Percentage of “sell product / service” goals reached after or during a messaging conversation out of all messaging conversations that were assigned to an agent
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: SALES REVENUE
+  analysisType: Campaign Conversions
+  Channel: Messaging
+  formulaOptional:
+  Description: Total revenue achieved, during or after a messaging conversation, from all transactions which led to a “sell product / service” goal reached.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: SALES AOV
+  analysisType: Campaign Conversions
+  Channel: Messaging
+  formulaOptional:
+  Description: The average revenue generated by the orders placed after or during a messaging conversation which reached a “sell product / service” goal
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ENGAGED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of sessions which included at least one engagement during their session
+  Dashboard: Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ENGAGEMENTS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of interactive live chats, connected messaging engagements, and clicks on content
+  Dashboard: Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CONNECTED MESSAGING ENG.
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of web-messaging conversations that were selected from queue by the agent
+  Dashboard: Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ENGAGED RATE (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: ENGAGED / EXPOSED (CAMP)
+  Description: The percentage (%) of consumers exposed that were then engaged (calculated at the Campaign level)
+  Dashboard: Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ENGAGED RATE (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: ENGAGED / EXPOSED (LOB)
+  Description: The percentage (%) of consumers exposed that were then engaged (calculated at the LOB level)
+  Dashboard: Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ENGAGED RATE (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: ENGAGED / EXPOSED (BRAND)
+  Description: The percentage (%) of consumers exposed that were then engaged (calculated at the Brand level)
+  Dashboard: Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURE RATE (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: CHAT ONLINE EXPOSURES (CAMP) / EXPOSURES (CAMP)
+  Description: The percentage (%) of Total Chat Exposures that were Online Exposures (calculated at the Campaign level)
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. EXPOSURES (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSURES (CAMP) / EXPOSED (CAMP)
+  Description: "Average number of times consumers were exposed to each Engagement in the selected campaign.\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected campaign.\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY EXPOSURES (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURES (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT EXPOSURES (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each content engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer was offered an engagement from the selected campaign in any state\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSURES (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: PROSPECTS (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED RATE (CAMP)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSED (CAMP) / PROSPECTS (CAMP)
+  Description: The percentage (%) of Prospects that were Exposed (calculated at the Campaign level)
+  Dashboard: Business Activity
+  filteredBy: Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURE RATE (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: ONLINE EXPOSURES (ENG) / EXPOSURES (ENG)
+  Description: The percentage (%) of Total Chat Exposures that were Online Exposures (calculated at the Engagement level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY EXPOSURES (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE EXPOSURES (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURES (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT EXPOSURES (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times a specific content engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer was offered a specific engagement in any state\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSURES (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: PROSPECTS (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED RATE (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSED (ENG) / PROSPECTS (ENG)
+  Description: The percentage (%) of Prospects that were Exposed (calculated at the Engagement level)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. EXPOSURES (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSURES (LOB) / EXPOSED (LOB)
+  Description: "Average number of times consumers were exposed to each Engagement in any of the campaigns assigned to the selected Line of Business.\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected LoB.\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY EXPOSURES (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE EXPOSURES (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURES (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT EXPOSURES (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each content engagement within a  campaign associated with the selected Line of Business, was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer was offered an engagement from a campaign associated with the selected Line of Business, in any state\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSURES (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: PROSPECTS (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign associated to the selected Line of Business. Includes control group consumers if defined in the account\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURE RATE (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: CHAT ONLINE EXPOSURES (LOB) / EXPOSURES (LOB)
+  Description: The percentage (%) of Total Chat Exposures that were Online Exposures (calculated at the LOB level)
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED RATE (LOB)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSED (LOB) / PROSPECTS (LOB)
+  Description: The percentage (%) of Prospects that were Exposed (calculated at the LOB level)
+  Dashboard: Business Activity
+  filteredBy: LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURE RATE (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: CHAT ONLINE EXPOSURES (BRAND) / EXPOSURES (BRAND)
+  Description: The percentage (%) of Total Chat Exposures that were Online Exposures (calculated at the Brand level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. EXPOSURES (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSURES (BRAND) / EXPOSED (BRAND)
+  Description: "Average number of times consumers were exposed to each Engagement (setup in the campaigns the consumer was targeted by).\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement."
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY EXPOSURES (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE EXPOSURES (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURES (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT EXPOSURES (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each content engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of sessions during which the consumer was offered an engagement in any state
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSURES (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer.\nIf the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: PROSPECTS (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED RATE (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSED (BRAND) / PROSPECTS (BRAND)
+  Description: The percentage (%) of prospects that were exposed (calculated at the Brand level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: PROSPECT RATE (BRAND)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: PROSPECTS (BRAND) / SESSIONS
+  Description: The percentage (%) of consumers that were identified as prospects (calculated at the Brand level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. EXPOSURES (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSURES (ENTRY POINT) / EXPOSED (ENTRY POINT)
+  Description: "Average number of times a consumer was exposed to each Engagement assigned to a specific entry point.\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement.\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY EXPOSURES (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in busy state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure.\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE EXPOSURES (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in offline state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURES (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in online state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT EXPOSURES (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each content engagement assigned to the selected entry point, was offered to a consumer.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of sessions during which a consumer was offered an engagement assigned to the selected entry point, in any state\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSURES (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of times each engagement was offered to a consumer.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: PROSPECTS (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: "Number of consumers that were eligible to receive at least one engagement assigned to the selected entry point. Includes control group consumers if defined in the account\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSURE RATE (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: ONLINE EXPOSURES (ENTRY POINT) / EXPOSURES (ENTRY POINT)
+  Description: The percentage (%) of Total Chat Exposures that were Online Exposures (calculated at the Entry Point level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: EXPOSED RATE (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: EXPOSED (ENTRY POINT) / PROSPECTS (ENTRY POINT)
+  Description: The percentage (%) of Prospects that led to being Exposed (calculated at the Entry Point level)
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE EXPOSED (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of consumers who were exposed to an online engagement offer
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY EXPOSED (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of consumers who were exposed to a busy engagement offer
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE EXPOSED (ENTRY POINT)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of consumers who were exposed to an offline engagement offer
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: CHAT BUSY EXPOSURES (SKILL CAMP)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: CHAT EXPOSED (SKILL CAMP)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: CHAT EXPOSURES (SKILL CAMP)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: CHAT OFFLINE EXPOSURES (SKILL CAMP)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: CHAT ONLINE EXPOSURES (SKILL CAMP)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: CHAT PROSPECTS (SKILL CAMP)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Campaign
+- metricitem:
+  Metric: CHAT BUSY EXPOSURES (SKILL)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: CHAT EXPOSED (SKILL)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: CHAT EXPOSURES (SKILL)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: CHAT OFFLINE EXPOSURES (SKILL)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: CHAT ONLINE EXPOSURES (SKILL)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: CHAT PROSPECTS (SKILL)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill
+- metricitem:
+  Metric: CHAT BUSY EXPOSURES (SKILL ENG)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: CHAT EXPOSED (SKILL ENG)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: CHAT EXPOSURES (SKILL ENG)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: CHAT OFFLINE EXPOSURES (SKILL ENG)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: CHAT ONLINE EXPOSURES (SKILL ENG)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific engagement was offered to a consumer in online state.\nDistinct at the engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: CHAT PROSPECTS (SKILL ENG)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement
+- metricitem:
+  Metric: CHAT BUSY EXPOSURES (SKILL LOB)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in busy state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,LOB
+- metricitem:
+  Metric: CHAT EXPOSED (SKILL LOB)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,LOB
+- metricitem:
+  Metric: CHAT EXPOSURES (SKILL LOB)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,LOB
+- metricitem:
+  Metric: CHAT OFFLINE EXPOSURES (SKILL LOB)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,LOB
+- metricitem:
+  Metric: CHAT ONLINE EXPOSURES (SKILL LOB)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of times engagements were offered to consumers in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,LOB
+- metricitem:
+  Metric: CHAT PROSPECTS (SKILL LOB)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(This figure is pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,LOB
+- metricitem:
+  Metric: AVG. INTERACTIVE CHAT LENGTH
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Average time ([h]:mm) from when consumers were connected to an agent until the Chat Engagement Window was closed. This only includes Chat engagements during which the consumer entered at least one text line
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: AVG. NON-INTERACTIVE CHAT LENGTH
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Average time ([h]:mm) from when consumers were connected to an agent until the Chat Engagement Window was closed. Including only Chat engagement during which the consumer did not enter any line in chat.
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: NON-INTERACTIVE CHATS
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Number of Chat engagements connected to an agent during which consumers did not enter any line in chat
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: AVG. CHAT LENGTH
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: CUMULATIVE ENGAGED CHAT TIME / INTERACTIVE CHATS
+  Description: Average time ([h]:mm) from when consumers were connected to an agent until the Chat Engagement Window was closed
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: AVG. TIME TO ANSWER CHAT
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Average time ([h]:mm) it took an agent to connect to a consumer, measured from the time the consumer entered the queue
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: CUMULATIVE ENGAGED CHAT TIME
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: "Cumulative concurrent time ([h]:mm) agents were engaged in Chat sessions\n(if an agent was engaged in 2 chats during 1 hour, the total conc. engaged time will be 2 hours)"
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: CONNECTED CHAT RATE (REQUESTED)
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional: CONNECTED CHATS / REQUESTED CHATS
+  Description: The percentage (%) of connected Chat engagements out of the total number of requested engagements
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: CONNECTED CHATS
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Number of Chat engagements which agents accepted from the queue
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: INTERACTIVE CHATS
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Number of Chat engagements during which consumers entered at least one text line
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: INTERACTIVE CHAT RATE
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional: INTERACTIVE CHATS / CONNECTED CHATS
+  Description: The percentage (%) of interactive Chat engagements out of the total number of connected Chat engagements
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: MAX. TIME TO ANSWER CHAT
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Maximum time ([h]:mm) from when consumers entered the queue to when they connected to an agent
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: CONNECTED CHAT RATE (ACCEPTED)
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional: (CONNECTED MESSAGING ENG. + CONNECTED CHATS) / ACCEPTED OFFERS
+  Description: The percentage (%) of engagements that were connected to an agent out of the total engagement offers accepted by consumers
+  Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: ABANDONED CHAT RATE
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional: ABANDONED CHATS / REQUESTED CHATS
+  Description: The percentage (%) of consumers who abandoned the queue out of all consumers that entered the queue
+  Dashboard: Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: ABANDONED CHATS
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Number of times a consumer abandoned the queue while waiting for an agent to connect
+  Dashboard: Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: AVG. TIME TO ABANDON CHAT
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Average time ([h]:mm) it took consumers to abandon the queue after accepting an engagement offer, and before being connected to an agent
+  Dashboard: Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: MAX TIME TO ABANDON CHAT
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Maximum time ([h]:mm) it took a consumer to abandon the queue after accepting a Chat engagement offer, and before being connected to an agent
+  Dashboard: Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: REQUESTED CHATS
+  analysisType: Campaign Funnel
+  Channel: Chat
+  formulaOptional:
+  Description: Number of consumers who clicked on a Chat engagement offer and entered the queue, including transfers
+  Dashboard: Skill Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: ANSWER COUNT
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: The number of times the answer is submitted to the question
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: ANSWER RATE
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional: ANSWER COUNT / ANSWERED QUESTIONS
+  Description: The percentage (%) of answers to the question out of the number of consumers that answered the question
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: ANSWERED QUESTIONS
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: The number of times a question was answered. Choosing more than one answer in multiple choice questions (such as with multiple check boxes) counts as a single answer
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: ANSWERED QUESTIONS CSAT
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: The number of consumers that answered a CSAT question
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: CSAT / CSAT SCORE
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional: CSAT POSTIVIE ANSWER COUNT / ANSWERED QUESTIONS CSAT
+  Description: Customer satisfaction score
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: CSAT POSITIVE ANSWER COUNT
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: Number of positive answers submitted by consumers to a CSAT post-chat survey question. An answer is considered "positive" if defined as so in the Post-Chat survey settings of the Engagement Window as part of LiveEngage Campaign setup
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: QUESTION COMPLETION RATE
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional: ANSWERED QUESTIONS / COMPELETED SURVEY
+  Description: The percentage (%) of times a question was completed out of the total number of surveys completed
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: COMPLETED SURVEYS
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: Number of survey forms completed
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: SURVEY COMPLETION RATE
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional: COMPLETED SURVEY / VIEWED SURVEY
+  Description: The percentage (%) of completed survey forms out of viewed survey forms
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: SURVEY FORMS
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: Number of different survey forms viewed or completed. Each survey form is counted once
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: VIEWED SURVEY
+  analysisType: Surveys
+  Channel: Chat
+  formulaOptional:
+  Description: Number of survey forms viewed by consumers
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  filteredBy: Agent,Group, Skill
+- metricitem:
+  Metric: ACCEPTED OFFERS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of all engagement offers that were accepted by consumers
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY OFFERS ACCEPTED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of busy chat engagement offers that were clicked by consumers
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a busy engagement offer was presented to a consumer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT CLICKED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of content engagements that were clicked by consumers
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CONTENT ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a content engagement was offered to a consumer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of time san engagement offer was presented to a consumer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE OFFERS ACCEPTED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a consumer clicked on an offline chat engagement offer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times an offline chat engagement offer was presented to a consumer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE OFFERS ACCEPTED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a consumer clicked on an online chat engagement offer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times an online chat engagement offer was presented to a consumer
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ACCEPTED RATE (ENG)
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional: '[ONLINE OFFERS ACCEPTED]/[ONLINE EXPOSURES (ENG)]'
+  Description: The percentage (%) of online exposures that resulted in a click (Accept)
+  Dashboard: Business Activity
+  filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY OFFERS ACCEPTED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of chat engagement offers that were clicked by consumers (in any state)
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: BUSY ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a busy chat engagement offer was presented to a consumer
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE OFFERS ACCEPTED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of busy chat engagement offers that were clicked by consumers
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFLINE ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times an offline chat engagement offer was presented to a consumer
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE OFFERS ACCEPTED
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times a consumer clicked on an offline chat engagement offer
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ONLINE ENGAGEMENT VIEWS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Number of times an online chat engagement offer was presented to a consumer
+  Dashboard: Operational and Staffing
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: SESSIONS
+  analysisType: Campaign Funnel
+  Channel: Messaging,Chat
+  formulaOptional:
+  Description: Total number of web sessions on the monitored web pages
+  Dashboard: Business Activity
+  filteredBy: End-Point ("Source Type")
+- metricitem:
+  Metric: NO. OF COBROWSE INTERACTIVE SESSIONS (CHAT)
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Number of CoBrowse interactive sessions that occurred within a chat. An interactive session involves participation of both agent and consumer, and lasts 60 seconds or more
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: NO. OF SECURE FORM (PCI) SENT (CHAT)
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Number of secure forms sent by an agent to a consumer during a chat
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: NO. OF SECURE FORM (PCI) SUBMITTED (CHAT)
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Number of secure forms completed and submitted back to the agent by a consumer during a chat
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: NO. OF SECURE FORM (PCI) VIEWED (CHAT)
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: Number of secure forms viewed by the consumer during a chat
+  Dashboard: Agent Activity ,Business Activity ,Operational and Staffing
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
+- metricitem:
+  Metric: Avg. Unassigned Conversations
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of unassigned conversations (in-queue).\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Actionable Unassigned Conversations (consumer messaged last)
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because the last message in the conversation was sent by the consumer.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Actionable Unassigned Conversations (manual TTR is set)
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because an agent set a manual TTR (SLA) on these conversation.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Actionable Unassigned Conversations (in transfer)
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because these conversations were transfered into the queue by an agent.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Actionable Unassigned Conversations
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of actionable conversation in queue.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Not Actionable Unassigned Conversations (manual TTR is set)
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of not-actionable conversations in queue. These conversations include those in which an agent set a manual TTR (SLA). Conversations in-queue and set with manual TTR are considered actionable by default, unless the brand chooses to change the queue management configuration.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Not Actionable Unassigned Conversations (in transfer)
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of not-actionable conversations in queue. These conversations include those that were transfered by an agent into the queue. Conversations in-queue and in-transfer are considered actionable by default, unless the brand chooses to change the queue management configuration.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: Avg. Not Actionable Unassigned Conversations
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
+  Description: "The average number of not-actionable conversation in queue.\nFilterable by Skill."
+  Dashboard: Messaging Performance
+  filteredBy: Skill
+- metricitem:
+  Metric: CLOSED SURVEY
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of survey dialogs which were closed. A closed dialog is one that none of the participants can send messages in.
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CLOSED SURVEY RATE
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional: '[Closed Survey] / Sum([Closed Survey])'
+  Description: "The percentage (%) of survey instances closed with a specific outcome. Supported by the “Survey Outcome” attribute (filter).\n\n* Presents 100% when not filtered / split by outcome."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. DURATION OF SURVEY AVAILABILITY
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions.\n\nMeasured from the time the survey is offered by the Survey Bot till the time the survey is closed.\n\nAttributed to the Date/Hour during which the survey was offered (not close time of the survey). \n\nFormat: [h]:mm:ss"
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: OFFERED QUESTION
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of times a question was offered to a consumer by the bot. A question is considered offered when it is sent by the bot to the consumer in a survey dialog.\nDepending on the survey flow, a question may be offered more than once to a consumer (cycli flows, retries, etc.). "
+  Dashboard: Messaging Performance
+  filteredBy: Skill,End-Point ("Source Type")
+- metricitem:
+  Metric: ANSWERED QUESTION
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of questions presented to the consumer by the bot and were responded by the consumer with a valid (configured) answer (recognized by the bot as a valid answer).\n\n* Used to compare with the metric “Offered Question”. When a question is offered multiple times but validly answered less times, there may be an issue with the question text (behavioral or technical)."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,End-Point ("Source Type")
+- metricitem:
+  Metric: ANSWER RATE (OFFERED QUESTION)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional: '[Answered Question] / [Offered Question]'
+  Description: "Formula: [Answered Question] / [Offered Question]\n\nThe percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,End-Point ("Source Type")
+- metricitem:
+  Metric: AVG. TIME TO RESPOND TO SURVEY QUESTION
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The time on average taken by the consumer to respond to a question.\n \nMeasured from the time the Bot presented a question, to the time the consumer submitted a response to that question (recognized or unrecognized by the Bot).\n\nAttributed to the time the question was offered (not response time).\n\nIf no response was given to the question, the metric will be associated with an empty cell in the dashboard (Null).\n\nFormat: [h]:mm:ss"
+  Dashboard: Messaging Performance
+  filteredBy: Skill,End-Point ("Source Type")
+- metricitem:
+  Metric: CSAT (BRAND)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The percentage of answers “4” or “5” (top two boxes) out of the total responses submitted by consumers to a predefined CSAT question type.\n\nInvalid answers, unrecognized by the bot, are excluded from the formula.\n\nCalculated at the Bradn level."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: FCR (BRAND)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The percentage of answers “Yes” out of the total responses submitted by consumers to a predefined FCR question type.\n\nCalculated at the Btand level."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NPS (BRAND)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The Net Promoter Score, based on a scale of 0 to 10 and derived from the predefined NPS question type.\n\nCalculated at the Brand level."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ANSWER COUNT (BRAND)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer.\n\nAdditional buckets include:\n“Skipped” for questions with configured Skip option\n“Unrecognized by bot” for counting how many invalid answers were submitted for a question\n\nAttributed to the time the survey was offered (not close time).\n\nCalculated at the Brand level."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ANSWER RATIO (BRAND)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional: '[Answer Count (Brand)] / Sum([Answer Count (Brand)]) {per Question}'
+  Description: "The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot.\n\nCalculated at the Brand level."
+  Dashboard: Messaging Performance
+  filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: CSAT (AGENT AND SKILL)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The percentage of answers “4” or “5” (top two boxes) out of the total responses submitted by consumers to a predefined CSAT question type.\n\nInvalid answers, unrecognized by the bot, are excluded from the formula.\n\nCalculated at the Agent and Skill level."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: FCR (AGENT AND SKILL)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The percentage of answers “Yes” out of the total responses submitted by consumers to a predefined FCR question type.\n\nCalculated at the Agent and Skill level."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: NPS (AGENT AND SKILL)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The Net Promoter Score, based on a scale of 0 to 10 and derived from the predefined NPS question type.\n\nCalculated at the Agent and Skill level."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ANSWER COUNT (AGENT AND SKILL)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer.\n\nAdditional buckets include:\n“Skipped” for questions with configured Skip option\n“Unrecognized by bot” for counting how many invalid answers were submitted for a question\n\nAttributed to the time the survey was offered (not close time).\n\nCalculated at the Agent and Skill level."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: ANSWER RATIO (AGENT AND SKILL)
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional: '[Answer Count (Agent and Skill)] / Sum([Answer Count (Agent and Skill)]) {per Question}'
+  Description: "The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot.\n\nCalculated at the Agent and Skill level."
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
+- metricitem:
+  Metric: Avg. Agent Load
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The average conversation load on an agent. The load is determined by the weights assigned to conversations by Smart Capacity. A conversation can have a maximum weight of “1” and a minimum of 0.1.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: Max Agent Load
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The maximum conversation load on an agent. The load is determined by the weights assigned to conversations by Smart Capacity. A conversation can have a maximum weight of “1” and a minimum of 0.1.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: Min Agent Load
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The minimum conversation load on an agent. The load is determined by the weights assigned to conversations by Smart Capacity. A conversation can have a maximum weight of “1” and a minimum of 0.1.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: Average No. of Active Conversations
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The average number of conversations assigned to an agent with the maximum weight by Smart Capacity, and therefore occupying a full agent capacity slot. These are named “Active Conversations”.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: Average No. of Assigned Conversations
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The average number of conversations concurrently assigned to an agent.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group
+- metricitem:
+  Metric: Active Conversation Ratio
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The percentage (%) of active conversations assigned to agents out of the total number of assigned conversations.
+  Dashboard: Messaging Performance
+  filteredBy: Agent,Group
