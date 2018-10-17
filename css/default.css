@@ -367,6 +367,10 @@ table tbody td img {
   max-width: none;
 }
 
+#metricsSearch {
+  width: 25%;
+}
+
 .important {
   border-left-color: #f66;
   padding: 12px 24px 12px 30px;
