@@ -362,6 +362,10 @@ table tbody td img {
   width: 100%;
 }
 
+#datametricstable {
+  width: 165%;
+}
+
 .important {
   border-left-color: #f66;
   padding: 12px 24px 12px 30px;
