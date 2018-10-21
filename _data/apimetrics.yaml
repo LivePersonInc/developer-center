@@ -5,7 +5,7 @@
   formulaOptional:
   Description: The duration of the current status (in Milliseconds).
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: currentStatusReasonDuration
   analysisType: Agent Status
@@ -13,7 +13,7 @@
   formulaOptional:
   Description: The duration of the reason for the "AWAY" status (in Milliseconds).
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: load
   analysisType: Agent Utilization
@@ -21,7 +21,7 @@
   formulaOptional:
   Description: Indication for the agent’s efficiency (i.e. the amount of work the agent needs to handle, relative to the maximum capacity). It is the total weight of the assigned conversations divided by the agent’s maximum capacity. This is represented in percentage value.
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: ringingSlots
   analysisType: Agent Utilization
@@ -29,7 +29,7 @@
   formulaOptional:
   Description: Number of ringing slots.
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: busySlots
   analysisType: Agent Utilization
@@ -37,7 +37,7 @@
   formulaOptional:
   Description: Number of busy slots.
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: openAssignedConversations
   analysisType: Agent Utilization
@@ -45,7 +45,7 @@
   formulaOptional:
   Description: The agent’s number of open assigned conversations.
   apiMethod: Agent Metrics - Agent Status,Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: intenseConversations
   analysisType: Agent Utilization
@@ -53,7 +53,7 @@
   formulaOptional:
   Description: The agent’s number of intense conversations.
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: configuredMaxSlots
   analysisType: Agent Utilization
@@ -61,7 +61,7 @@
   formulaOptional:
   Description: The agent’s number of configured maximum slots.
   apiMethod: Agent Metrics - Agent Status
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: weightedAvgLoad
   analysisType: Agent Utilization
@@ -69,7 +69,7 @@
   formulaOptional:
   Description: Weighted average load of logged in agents, this is represented in percentage value.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: minLoad
   analysisType: Agent Utilization
@@ -77,7 +77,7 @@
   formulaOptional:
   Description: Agent’s minimum load.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: maxLoad
   analysisType: Agent Utilization
@@ -85,7 +85,7 @@
   formulaOptional:
   Description: Agent’s maximum load.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: minConfiguredMaxSlots
   analysisType: Agent Utilization
@@ -93,7 +93,7 @@
   formulaOptional:
   Description: The minimum number of configured maximum slots among agents.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: maxConfiguredMaxSlots
   analysisType: Agent Utilization
@@ -101,7 +101,7 @@
   formulaOptional:
   Description: The maximum number of configured maximum slots among agents.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: numAwayAgents
   analysisType: Agent Status
@@ -109,7 +109,7 @@
   formulaOptional:
   Description: Number of agents in AWAY status.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: numBackSoonAgents
   analysisType: Agent Status
@@ -117,7 +117,7 @@
   formulaOptional:
   Description: Number of agents in BACK SOON status.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: numOnlineAgents
   analysisType: Agent Status
@@ -125,7 +125,7 @@
   formulaOptional:
   Description: Number of agents in ONLINE status.
   apiMethod: Agent Metrics - Summary
-  filteredBy: Agent,Group,Skill
+  filteredBy: Agent, Group,Skill
 - metricitem:
   Metric: resolvedConversations_byCCP
   analysisType: Agent Productivity
@@ -133,7 +133,7 @@
   formulaOptional:
   Description: The number of conversations that were marked as resolved by the CCP in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: resolvedConversations_byConsumer
   analysisType: Agent Productivity
@@ -141,7 +141,7 @@
   formulaOptional:
   Description: The number of conversations that were marked as resolved by the consumer in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: resolvedConversations_bySystem
   analysisType: Agent Productivity
@@ -149,7 +149,7 @@
   formulaOptional:
   Description: The number of conversations that were marked as resolved by the system (that is, by timeout) in the current interval/timeframe.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalResolvedConversations
   analysisType: Agent Productivity
@@ -157,7 +157,7 @@
   formulaOptional:
   Description: The total number of conversations that were marked as resolved in the current interval/timeframe.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalHandlingTime_resolvedConversationsThetotalbyCCP
   analysisType: Agent Productivity
@@ -165,7 +165,7 @@
   formulaOptional:
   Description: Handling time of conversations that were marked as resolved by the CCP in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalHandlingTime_resolvedConversationsThetotalbyConsumer
   analysisType: Agent Productivity
@@ -173,7 +173,7 @@
   formulaOptional:
   Description: Handling time of conversations that were marked as resolved by the consumer in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalHandlingTime_resolvedConversationsThetotalbySystem
   analysisType: Agent Productivity
@@ -181,7 +181,7 @@
   formulaOptional:
   Description: Handling time of conversations that were marked as resolved by the system (that is, by timeout) in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalHandlingTime_resolvedConversations
   analysisType: Agent Productivity
@@ -189,7 +189,7 @@
   formulaOptional:
   Description: The total handling time of conversations that were marked as resolved in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: avgTime_resolvedConversations_byCCP
   analysisType: Consumer Experience
@@ -197,7 +197,7 @@
   formulaOptional:
   Description: The average handling time of conversations that were marked as resolved by the CCP in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: avgTime_resolvedConversations_byConsumer
   analysisType: Consumer Experience
@@ -205,7 +205,7 @@
   formulaOptional:
   Description: The average handling time of conversations that were marked as resolved by the consumer in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: avgTime_resolvedConversations_bySystem
   analysisType: Consumer Experience
@@ -213,7 +213,7 @@
   formulaOptional:
   Description: The average handling time of conversations that were marked as resolved by the system (that is, by timeout) in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: avgTime_resolvedConversations
   analysisType: Consumer Experience
@@ -221,7 +221,7 @@
   formulaOptional:
   Description: The average handling time of conversations that were marked as resolved in the current interval/time frame.
   apiMethod: Messaging Operations - Messaging Conversation
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: unassignedConversations
   analysisType: Queue Health
@@ -349,7 +349,7 @@
   formulaOptional:
   Description: The number of times CSAT answer 1 was submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: csat_score2_answers
   analysisType: Surveys
@@ -357,7 +357,7 @@
   formulaOptional:
   Description: The number of times CSAT answer 2 was submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: csat_score3_answers
   analysisType: Surveys
@@ -365,7 +365,7 @@
   formulaOptional:
   Description: The number of times CSAT answer 3 was submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: csat_score4_answers
   analysisType: Surveys
@@ -373,7 +373,7 @@
   formulaOptional:
   Description: The number of times CSAT answer 4 was submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: csat_score5_answers
   analysisType: Surveys
@@ -381,7 +381,7 @@
   formulaOptional:
   Description: The number of times CSAT answer 5 was submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: total_answers
   analysisType: Surveys
@@ -389,7 +389,7 @@
   formulaOptional:
   Description: The total number of answers which were submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: positive_answers
   analysisType: Surveys
@@ -397,7 +397,7 @@
   formulaOptional:
   Description: The total number of CSAT 4 and 5 answers which were submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: csat_score
   analysisType: Surveys
@@ -405,7 +405,7 @@
   formulaOptional:
   Description: The percentage of the total answers which were positive (scores 4 and 5) which were submitted in the current time frame.
   apiMethod: Messaging Operations - Messaging CSAT Distribution
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalSkillConversationSegments
   analysisType: Skill Performance
@@ -637,7 +637,7 @@
   formulaOptional:
   Description: The number of interactive chats that were closed in the current interval/time frame.
   apiMethod: Operational Realtime - Engagement Activity
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalNonInteractiveChats
   analysisType: Agent Productivity
@@ -645,7 +645,7 @@
   formulaOptional:
   Description: The number of non-interactive chats were closed in the current interval/time frame (this also includes chats that were abandoned by the visitor).
   apiMethod: Operational Realtime - Engagement Activity
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: totalHandlingTime
   analysisType: Agent Productivity
@@ -653,7 +653,7 @@
   formulaOptional:
   Description: The total time in seconds that was spent handing the interactive chats in the current interval/time frame.
   apiMethod: Operational Realtime - Engagement Activity
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: nonInteractiveTotalHandlingTime
   analysisType: Agent Productivity
@@ -661,7 +661,7 @@
   formulaOptional:
   Description: The total time in seconds that was spent handing the non-interactive chats in the current interval/time frame.
   apiMethod: Operational Realtime - Engagement Activity
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: connectedEngagements
   analysisType: Agent Productivity
@@ -669,7 +669,7 @@
   formulaOptional:
   Description: The number of chats connected to an agent in the current interval/time frame.
   apiMethod: Operational Realtime - Engagement Activity
-  filteredBy: Agent,Skill
+  filteredBy: Agent, Skill
 - metricitem:
   Metric: total
   analysisType: Agent Status

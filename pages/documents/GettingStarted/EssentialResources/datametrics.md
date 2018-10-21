@@ -8,7 +8,7 @@ indicator: both
 ---
 
 <div id="metrics">
-<input id="metricsSearch" placeholder="Search by Metric or Channel" />
+<input id="metricsSearch" placeholder="Search by Metric or Dashboard" />
 <table class="metricstable" id="datametricstable">
   <thead>
     <th>Metric</th>

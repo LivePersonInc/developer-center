@@ -439,17 +439,22 @@ function searchFunction() {
 	// Declare variables
 	var input, filter, table, tr, td, i;
 	input = document.getElementById("metricsSearch");
-	// Loop through all table rows, and hide those who don't match the search query
+  td = document.getElementsByTagName("td");
+  for (i = 0; i < td.length; i++) {
+    td[i].innerText = td[i].innerText.replace(/,(?=[^\s])/g, ", ");
+  }
+	// Loop through all table rows, and hide those who don't match the search query on input
 	$(input).on('input', function () {
 		filter = input.value.toUpperCase();
+    //if this is the report builder page
 		if ($(".metricstable").is("#datametricstable")) {
       table = document.getElementById("datametricstable");
     	tr = table.getElementsByTagName("tr");
 			for (i = 0; i < tr.length; i++) {
 				tdMetric = tr[i].getElementsByTagName("td")[0];
-				tdChannel = tr[i].getElementsByTagName("td")[2];
-				if (tdMetric || tdChannel) {
-					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdChannel.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tdDashboard = tr[i].getElementsByTagName("td")[5];
+				if (tdMetric || tdDashboard) {
+					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
 						tr[i].style.display = "";
 					} else {
 						tr[i].style.display = "none";
@@ -457,6 +462,7 @@ function searchFunction() {
 				}
 			}
 		} else {
+      //if this is the API metrics page
       table = document.getElementById("apimetricstable");
       tr = table.getElementsByTagName("tr");
 			for (i = 0; i < tr.length; i++) {
