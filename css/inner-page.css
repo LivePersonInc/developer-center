@@ -143,7 +143,8 @@ pre code {
 
 @media screen and (max-width:425px){
   .post-content table{
-    max-width: 90%;
+    max-width: unset;
+    width: auto;
   }
 }
 /*
