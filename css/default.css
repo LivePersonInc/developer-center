@@ -362,8 +362,8 @@ table tbody td img {
   width: 100%;
 }
 
-#datametricstable {
-  width: 165%;
+.metricstable {
+  width: 165% !important;
   max-width: none;
 }
 
