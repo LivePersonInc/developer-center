@@ -1,11 +1,11 @@
 ---
 pagename: Unauthenticated Messaging
-sitesection:
+sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 order: 40
-permalink: consumer-int-unauth-authentication.html
+permalink: messaging-window-api-tutorials-unauthenticated-messaging.html
 indicator: messaging
 ---
 
@@ -18,7 +18,7 @@ In order to use unauthenticated tokens, your account must be provisioned by an L
 
 ### Creating and Using a Token for Unauthenticated Messaging Conversations
 
-First, launch a shell for your account with the ``CONNECTOR_ID`` supplied by your LPA:
+First, launch a shell for your account with the `CONNECTOR_ID` supplied by your LPA:
 
 ```sh
 docker run --env LP_ACCOUNT=__YOUR_ACCOUNT_ID__ --env LP_CONN_ID=__CONNECTOR_ID__ -it lpinc/shell
