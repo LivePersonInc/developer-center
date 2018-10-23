@@ -105,6 +105,8 @@ Request by skillIds=12,13
 *Note*: All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skilll.
 Metrics under the 'metricsTotal' entity will contain the summation of all skills listed.
 
+*default*: In case there is no relevant data on metrics the default value is -1. 
+
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

@@ -174,7 +174,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 0
+                               "unassignedConversationsAndFirstTimeConsumer": 0,
+                               "avgWaitTimeForAgentAssignment_NewConversation":123,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 344 ,
+                               "maxWaitTimeForAgentAssignment": 555,
+                               "waitTimeForAgentAssignment_50thPercentile":  160,
+                               "waitTimeForAgentAssignment_90thPercentile": 220                       
 
                            },
                            "13": {
@@ -186,7 +191,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 0
+                               "unassignedConversationsAndFirstTimeConsumer": 0,
+                               "avgWaitTimeForAgentAssignment_NewConversation":12,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 34 ,
+                               "maxWaitTimeForAgentAssignment": 55,
+                               "waitTimeForAgentAssignment_50thPercentile":  16,
+                               "waitTimeForAgentAssignment_90thPercentile": 22                                  
                            }
                        },
                        "metricsTotal": {
@@ -198,7 +208,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableAndConsumerLastMessage": 0,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
-                           "unassignedConversationsAndFirstTimeConsumer": 0
+                           "unassignedConversationsAndFirstTimeConsumer": 0,
+                           "avgWaitTimeForAgentAssignment_NewConversation":70,
+                           "avgWaitTimeForAgentAssignment_AfterTransfer": 160 ,
+                           "maxWaitTimeForAgentAssignment": 555,
+                           "waitTimeForAgentAssignment_50thPercentile":  99,
+                           "waitTimeForAgentAssignment_90thPercentile": 130                              
                        }
                 },
             {
@@ -214,7 +229,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "actionableAndConsumerLastMessage": 0,
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
-                        "unassignedConversationsAndFirstTimeConsumer": 0
+                        "unassignedConversationsAndFirstTimeConsumer": 0,
+                        "avgWaitTimeForAgentAssignment_NewConversation":700,
+                        "avgWaitTimeForAgentAssignment_AfterTransfer": 1600,
+                        "maxWaitTimeForAgentAssignment": 5550,
+                        "waitTimeForAgentAssignment_50thPercentile":  990,
+                        "waitTimeForAgentAssignment_90thPercentile": 870                           
 
                     },
                     "13": {
@@ -226,7 +246,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "actionableAndConsumerLastMessage": 0,
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
-                        "unassignedConversationsAndFirstTimeConsumer": 0
+                        "unassignedConversationsAndFirstTimeConsumer": 0,
+                        "avgWaitTimeForAgentAssignment_NewConversation":333,
+                        "avgWaitTimeForAgentAssignment_AfterTransfer": 444,
+                        "maxWaitTimeForAgentAssignment": 555,
+                        "waitTimeForAgentAssignment_50thPercentile":  333,
+                        "waitTimeForAgentAssignment_90thPercentile": 384                         
                     }
                 },
                 "metricsTotal": {
@@ -238,7 +263,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                     "actionableAndConsumerLastMessage": 0,
                     "notActionableDuringTransfer": 0,
                     "notActionableAndManualSla": 0,
-                    "unassignedConversationsAndFirstTimeConsumer": 0
+                    "unassignedConversationsAndFirstTimeConsumer": 0,
+                    "avgWaitTimeForAgentAssignment_NewConversation":520,
+                    "avgWaitTimeForAgentAssignment_AfterTransfer": 490,
+                    "maxWaitTimeForAgentAssignment": 5550,
+                    "waitTimeForAgentAssignment_50thPercentile":  500,
+                    "waitTimeForAgentAssignment_90thPercentile": 600                      
                 }
                 }
             }
@@ -255,7 +285,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableAndConsumerLastMessage": 3,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
-                       "unassignedConversationsAndFirstTimeConsumer": 4
+                       "unassignedConversationsAndFirstTimeConsumer": 4,
+                       "avgWaitTimeForAgentAssignment_NewConversation":622,
+                       "avgWaitTimeForAgentAssignment_AfterTransfer": 576,
+                       "maxWaitTimeForAgentAssignment": 5550,
+                       "waitTimeForAgentAssignment_50thPercentile":  655,
+                       "waitTimeForAgentAssignment_90thPercentile": 734                            
 
                    },
                    "13": {
@@ -267,7 +302,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableAndConsumerLastMessage": 0,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
-                       "unassignedConversationsAndFirstTimeConsumer": 0
+                       "unassignedConversationsAndFirstTimeConsumer": 0,
+                       "avgWaitTimeForAgentAssignment_NewConversation":700,
+                       "avgWaitTimeForAgentAssignment_AfterTransfer": 676,
+                       "maxWaitTimeForAgentAssignment": 1011,
+                       "waitTimeForAgentAssignment_50thPercentile":  588,
+                       "waitTimeForAgentAssignment_90thPercentile": 797                        
                    }
                },
                "metricsTotal": {
@@ -279,7 +319,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                    "actionableAndConsumerLastMessage": 3,
                    "notActionableDuringTransfer": 0,
                    "notActionableAndManualSla": 0,
-                   "unassignedConversationsAndFirstTimeConsumer": 4
+                   "unassignedConversationsAndFirstTimeConsumer": 4,
+                   "avgWaitTimeForAgentAssignment_NewConversation":723,
+                   "avgWaitTimeForAgentAssignment_AfterTransfer": 721,
+                   "maxWaitTimeForAgentAssignment": 5550,
+                   "waitTimeForAgentAssignment_50thPercentile":  600,
+                   "waitTimeForAgentAssignment_90thPercentile": 785                      
                }
         }
     }
@@ -290,6 +335,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
 *Note*: All metrics under the hierarchy of 'skillsMetrics' represent the average values for each skill under the interval they appear in (or the average value of the entire
 timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity will contain the summation of all averages of the same hierarchy level.
 
+
+*default*: In case there is no relevant data on metrics the default value is -1. 
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |
