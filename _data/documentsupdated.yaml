@@ -690,6 +690,8 @@
           - subpagename: Messaging Current Queue Health
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
+          - subpagename: Messaging Skill Segment
+
       - pagename: Appendix
   - documentname: Operational Realtime API
     basedomain: https://{domain}/operations/api/account/{accountID}
