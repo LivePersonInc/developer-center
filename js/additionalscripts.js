@@ -49,7 +49,7 @@ function navigateContent(url) {
 	$.ajax(url)
 		.done(function (content) {
 			//once done, figure out if we're being redirected by the plugin or not
-			if (content.indexOf("<title>Redirecting…</title>") > -1) {
+			if (content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
 				url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
 				navigateContent(url);
 			} else {
