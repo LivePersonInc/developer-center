@@ -383,6 +383,15 @@ table tbody td img {
   width: 100%;
 }
 
+.metricstable {
+  width: 165% !important;
+  max-width: none;
+}
+
+#metricsSearch {
+  width: 26.5%;
+}
+
 .important {
   border-left-color: #f66;
   padding: 12px 24px 12px 30px;

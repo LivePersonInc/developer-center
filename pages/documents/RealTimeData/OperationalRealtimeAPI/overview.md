@@ -59,5 +59,3 @@ A few things you'll need to get started with this API:
 Example of a dashboard created with this data:
 
 ![OperationalRealtime](img/operationalrealtime.png)
-
-For more information and instructions, please see [creating custom dashboards](products-data-custom-dashboard-overview.html)

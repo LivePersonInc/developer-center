@@ -52,22 +52,34 @@ Request by skillIds=12,13 (no interval), timeframe=180
                 "actionableConversations": 10,
                 "notActionableConversations": 14,
                 "actionableAndManualSla": 7,
-                "actionableAndDuringTransfer": 6
+                "actionableAndDuringTransfer": 6,
                 "actionableAndConsumerLastMessage": 3,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 4
+                "unassignedConversationsAndFirstTimeConsumer": 4,
+                "avgWaitTimeForAgentAssignment_NewConversation": 159,
+                "avgWaitTimeForAgentAssignment_AfterTransfer": 171,
+                "maxWaitTimeForAgentAssignment": 274,
+                "waitTimeForAgentAssignment_50thPercentile": 160,
+                "waitTimeForAgentAssignment_90thPercentile": 150
+
             },
             "13": {
                 "unassignedConversations": 2,
                 "actionableConversations": 2,
                 "notActionableConversations": 0,
                 "actionableAndManualSla": 2,
-                "actionableAndDuringTransfer": 2
+                "actionableAndDuringTransfer": 2,
                 "actionableAndConsumerLastMessage": 0,
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 0
+                "unassignedConversationsAndFirstTimeConsumer": 0,
+                "avgWaitTimeForAgentAssignment_NewConversation": 300,
+                "avgWaitTimeForAgentAssignment_AfterTransfer": 245,
+                "maxWaitTimeForAgentAssignment": 370,
+                "waitTimeForAgentAssignment_50thPercentile": 220,
+                "waitTimeForAgentAssignment_90thPercentile": 240
+
             }
         },
         "metricsTotal": {
@@ -75,11 +87,18 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "actionableConversations": 12,
             "notActionableConversations": 14,
             "actionableAndManualSla": 9,
-            "actionableAndDuringTransfer": 2
+            "actionableAndDuringTransfer": 2,
             "actionableAndConsumerLastMessage": 3,
             "notActionableDuringTransfer": 0,
             "notActionableAndManualSla": 0,
-            "unassignedConversationsAndFirstTimeConsumer": 4
+            "unassignedConversationsAndFirstTimeConsumer": 4,
+            "avgWaitTimeForAgentAssignment_NewConversation":272,
+            "avgWaitTimeForAgentAssignment_AfterTransfer": 233 ,
+            "maxWaitTimeForAgentAssignment": 370,
+            "waitTimeForAgentAssignment_50thPercentile":  170,
+            "waitTimeForAgentAssignment_90thPercentile": 224
+
+
         }
     }
 ```
@@ -98,22 +117,32 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableConversations": 25,
                                "notActionableConversations": 25,
                                "actionableAndManualSla": 22,
-                               "actionableAndDuringTransfer": 23
+                               "actionableAndDuringTransfer": 23,
                                "actionableAndConsumerLastMessage": 7,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 30
+                               "unassignedConversationsAndFirstTimeConsumer": 30,
+                               "avgWaitTimeForAgentAssignment_NewConversation": 33,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 483,
+                               "maxWaitTimeForAgentAssignment": 999,
+                               "waitTimeForAgentAssignment_50thPercentile": 340,
+                               "waitTimeForAgentAssignment_90thPercentile": 420                       
                            },
                            "13": {
                                "unassignedConversations": 4,
                                "actionableConversations": 4,
                                "notActionableConversations": 0,
                                "actionableAndManualSla": 4,
-                               "actionableAndDuringTransfer": 2
+                               "actionableAndDuringTransfer": 2,
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 4
+                               "unassignedConversationsAndFirstTimeConsumer": 4,
+                               "avgWaitTimeForAgentAssignment_NewConversation": 234,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 765,
+                               "maxWaitTimeForAgentAssignment": 1011,
+                               "waitTimeForAgentAssignment_50thPercentile": 520,
+                               "waitTimeForAgentAssignment_90thPercentile": 670                                 
                            }
                        },
                        "metricsTotal": {
@@ -121,11 +150,16 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableConversations": 29,
                            "notActionableConversations": 25,
                            "actionableAndManualSla": 26,
-                           "actionableAndDuringTransfer": 25
+                           "actionableAndDuringTransfer": 25,
                            "actionableAndConsumerLastMessage": 7,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
-                           "unassignedConversationsAndFirstTimeConsumer": 34
+                           "unassignedConversationsAndFirstTimeConsumer": 34,
+                           "avgWaitTimeForAgentAssignment_NewConversation": 62,
+                           "avgWaitTimeForAgentAssignment_AfterTransfer": 320,
+                           "maxWaitTimeForAgentAssignment": 1011,
+                           "waitTimeForAgentAssignment_50thPercentile": 420,
+                           "waitTimeForAgentAssignment_90thPercentile": 550                             
                        }
                 },
             {
@@ -136,11 +170,16 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableConversations": 0,
                                "notActionableConversations": 0,
                                "actionableAndManualSla": 0,
-                               "actionableAndDuringTransfer": 0
+                               "actionableAndDuringTransfer": 0,
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 0
+                               "unassignedConversationsAndFirstTimeConsumer": 0,
+                               "avgWaitTimeForAgentAssignment_NewConversation":123,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 344 ,
+                               "maxWaitTimeForAgentAssignment": 555,
+                               "waitTimeForAgentAssignment_50thPercentile":  160,
+                               "waitTimeForAgentAssignment_90thPercentile": 220                       
 
                            },
                            "13": {
@@ -152,7 +191,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "actionableAndConsumerLastMessage": 0,
                                "notActionableDuringTransfer": 0,
                                "notActionableAndManualSla": 0,
-                               "unassignedConversationsAndFirstTimeConsumer": 0
+                               "unassignedConversationsAndFirstTimeConsumer": 0,
+                               "avgWaitTimeForAgentAssignment_NewConversation":12,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 34 ,
+                               "maxWaitTimeForAgentAssignment": 55,
+                               "waitTimeForAgentAssignment_50thPercentile":  16,
+                               "waitTimeForAgentAssignment_90thPercentile": 22                                  
                            }
                        },
                        "metricsTotal": {
@@ -164,7 +208,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "actionableAndConsumerLastMessage": 0,
                            "notActionableDuringTransfer": 0,
                            "notActionableAndManualSla": 0,
-                           "unassignedConversationsAndFirstTimeConsumer": 0
+                           "unassignedConversationsAndFirstTimeConsumer": 0,
+                           "avgWaitTimeForAgentAssignment_NewConversation":70,
+                           "avgWaitTimeForAgentAssignment_AfterTransfer": 160 ,
+                           "maxWaitTimeForAgentAssignment": 555,
+                           "waitTimeForAgentAssignment_50thPercentile":  99,
+                           "waitTimeForAgentAssignment_90thPercentile": 130                              
                        }
                 },
             {
@@ -180,7 +229,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "actionableAndConsumerLastMessage": 0,
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
-                        "unassignedConversationsAndFirstTimeConsumer": 0
+                        "unassignedConversationsAndFirstTimeConsumer": 0,
+                        "avgWaitTimeForAgentAssignment_NewConversation":700,
+                        "avgWaitTimeForAgentAssignment_AfterTransfer": 1600,
+                        "maxWaitTimeForAgentAssignment": 5550,
+                        "waitTimeForAgentAssignment_50thPercentile":  990,
+                        "waitTimeForAgentAssignment_90thPercentile": 870                           
 
                     },
                     "13": {
@@ -188,11 +242,16 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "actionableConversations": 0,
                         "notActionableConversations": 0,
                         "actionableAndManualSla": 0,
-                        "actionableAndDuringTransfer": 0
+                        "actionableAndDuringTransfer": 0,
                         "actionableAndConsumerLastMessage": 0,
                         "notActionableDuringTransfer": 0,
                         "notActionableAndManualSla": 0,
-                        "unassignedConversationsAndFirstTimeConsumer": 0
+                        "unassignedConversationsAndFirstTimeConsumer": 0,
+                        "avgWaitTimeForAgentAssignment_NewConversation":333,
+                        "avgWaitTimeForAgentAssignment_AfterTransfer": 444,
+                        "maxWaitTimeForAgentAssignment": 555,
+                        "waitTimeForAgentAssignment_50thPercentile":  333,
+                        "waitTimeForAgentAssignment_90thPercentile": 384                         
                     }
                 },
                 "metricsTotal": {
@@ -204,7 +263,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                     "actionableAndConsumerLastMessage": 0,
                     "notActionableDuringTransfer": 0,
                     "notActionableAndManualSla": 0,
-                    "unassignedConversationsAndFirstTimeConsumer": 0
+                    "unassignedConversationsAndFirstTimeConsumer": 0,
+                    "avgWaitTimeForAgentAssignment_NewConversation":520,
+                    "avgWaitTimeForAgentAssignment_AfterTransfer": 490,
+                    "maxWaitTimeForAgentAssignment": 5550,
+                    "waitTimeForAgentAssignment_50thPercentile":  500,
+                    "waitTimeForAgentAssignment_90thPercentile": 600                      
                 }
                 }
             }
@@ -221,7 +285,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableAndConsumerLastMessage": 3,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
-                       "unassignedConversationsAndFirstTimeConsumer": 4
+                       "unassignedConversationsAndFirstTimeConsumer": 4,
+                       "avgWaitTimeForAgentAssignment_NewConversation":622,
+                       "avgWaitTimeForAgentAssignment_AfterTransfer": 576,
+                       "maxWaitTimeForAgentAssignment": 5550,
+                       "waitTimeForAgentAssignment_50thPercentile":  655,
+                       "waitTimeForAgentAssignment_90thPercentile": 734                            
 
                    },
                    "13": {
@@ -229,11 +298,16 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "actionableConversations": 2,
                        "notActionableConversations": 0,
                        "actionableAndManualSla": 2,
-                       "actionableAndDuringTransfer": 2
+                       "actionableAndDuringTransfer": 2,
                        "actionableAndConsumerLastMessage": 0,
                        "notActionableDuringTransfer": 0,
                        "notActionableAndManualSla": 0,
-                       "unassignedConversationsAndFirstTimeConsumer": 0
+                       "unassignedConversationsAndFirstTimeConsumer": 0,
+                       "avgWaitTimeForAgentAssignment_NewConversation":700,
+                       "avgWaitTimeForAgentAssignment_AfterTransfer": 676,
+                       "maxWaitTimeForAgentAssignment": 1011,
+                       "waitTimeForAgentAssignment_50thPercentile":  588,
+                       "waitTimeForAgentAssignment_90thPercentile": 797                        
                    }
                },
                "metricsTotal": {
@@ -245,7 +319,12 @@ Request by skillIds=12,13 interval=60, timeframe=180
                    "actionableAndConsumerLastMessage": 3,
                    "notActionableDuringTransfer": 0,
                    "notActionableAndManualSla": 0,
-                   "unassignedConversationsAndFirstTimeConsumer": 4
+                   "unassignedConversationsAndFirstTimeConsumer": 4,
+                   "avgWaitTimeForAgentAssignment_NewConversation":723,
+                   "avgWaitTimeForAgentAssignment_AfterTransfer": 721,
+                   "maxWaitTimeForAgentAssignment": 5550,
+                   "waitTimeForAgentAssignment_50thPercentile":  600,
+                   "waitTimeForAgentAssignment_90thPercentile": 785                      
                }
         }
     }
@@ -253,9 +332,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 
 **Elements in the Response**
 
-*Note*: All metrics under the hierarchy of 'skillsMetrics' represent the average values for each skill under the interval they appear in (or the average value of the entire
-timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity will contain the summation of all averages of the same hierarchy level.
-
+<div class="important">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |
@@ -272,4 +349,8 @@ timeframe if no intervals are provided). Metrics under the 'metricsTotal' entity
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. | double |
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. | double |  
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
-| unassignedConversationsAndFirstTimeConsumer | The number of unassigned conversations where the consumer has started for the first time. | double |
+| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation is waiting in the queue (unassigned) for the first agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation is waiting in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
+| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in the queue (unassigned) for an agent to be assigned to it.|long|
+| waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
+| waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|

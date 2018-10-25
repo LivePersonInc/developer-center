@@ -12,7 +12,6 @@ root-link: true
 indicator: chat
 ---
 
-
 ### Getting Started with the Server Chat API
 
 In order to use the Server Chat API, please follow the steps below:

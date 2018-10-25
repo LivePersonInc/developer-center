@@ -41,5 +41,3 @@ A few things you'll need to get started with this API:
 * Workforce Management integration (WFM)
 
 * Combine this information with other data source in order to create your own real-time dashboard
-
-For more information and instructions, please see [creating custom dashboards](products-data-custom-dashboard-overview.html)

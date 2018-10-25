@@ -486,7 +486,7 @@
           - subpagename: Get Conversation by Conversation ID
           - subpagename: Get Conversations by Consumer ID
       - pagename: Engagement Attributes
-  - documentname: Personal Data Deletion
+  - documentname: Personal Data Deletion API
     basedomain: https://{domain}/api/account/{site_id}/personal-data-deletion
     pages:
       - pagename: Overview
@@ -692,6 +692,8 @@
           - subpagename: Messaging Current Queue Health
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
+          - subpagename: Messaging Skill Segment
+
       - pagename: Appendix
   - documentname: Operational Realtime API
     basedomain: https://{domain}/operations/api/account/{accountID}

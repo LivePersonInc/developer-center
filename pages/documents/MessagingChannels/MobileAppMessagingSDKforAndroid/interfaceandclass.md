@@ -1,7 +1,7 @@
 ---
 pagename: Interface and Class Definitions
 redirect_from:
-  - android-interface-definitions.html
+  - android-interface-and-class-definitions.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
