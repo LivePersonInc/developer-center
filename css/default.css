@@ -52,6 +52,25 @@ code pre {
   padding-top: 40px;
 }
 
+.titlecontainer {
+  display: flex;
+  flex: 1;
+}
+
+.fa-pencil-alt {
+  margin-right: 5px;
+  color: #5879da;
+}
+
+.suggestbutton {
+  color: #5879da;
+  align-self: center;
+}
+
+.suggesthidden {
+  display: none;
+}
+
 .defaultsidebar {
   background-color: #3d4558;
   display:flex;
@@ -81,6 +100,10 @@ code pre {
   color: #8b8b8b;
 }
 
+
+
+
+
 /* CSS-Grid Begins */
 
 @supports (display: grid) {
@@ -100,7 +123,7 @@ code pre {
   }
 
   .documenttitlecontainer {
-    grid-column: 4 / span 2;
+    grid-column: 4 / span 3;
     grid-row: 2 / span 1;
   }
 
@@ -151,17 +174,15 @@ code pre {
   }
 
   .defaultbutton {
-    grid-column: 6 / span 1;
-    grid-row: 2;
-    height: 44px;
-    background-color: #162036;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    margin-top: 13px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-self: end;
+    margin-right: 21px;
+    border: solid 1px #f2f1f2;
+    text-align: center;
   }
 
   .defaultbutton a {
@@ -170,7 +191,7 @@ code pre {
 
   .defaultbutton div {
     padding: 10px;
-    color: #fff;
+    color: #f2f1f2;
   }
 
   .defaultfooter {
@@ -707,11 +728,23 @@ table tbody td img {
   border-top: none;
 }
 
+.sidebarbuttoncontainer {
+  display: flex;
+}
+
 .supportbutton {
-  padding: 10px 41px;
+  padding: 10px;
   border: solid 1px #f2f1f2;
-  margin-right: 67px;
-  margin-left: 67px;
+  margin-left: 21px;
+  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  margin-right: 39px;
+  border: solid 1px #f2f1f2;
   text-align: center;
 }
 
@@ -921,6 +954,22 @@ a.anchoritem {
 
 #apiList {
   display: none;
+  height: 165px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#apiList::-webkit-scrollbar-track {
+	background-color: grey;
+}
+
+#apiList::-webkit-scrollbar{
+	width: 10px;
+	background-color: grey;
+}
+
+#apiList::-webkit-scrollbar-thumb {
+	background-color: #53576E;
 }
 
 .apinamecontainer {
@@ -929,6 +978,9 @@ a.anchoritem {
 
 .apilistcontainer {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .inputcontainer {
@@ -943,12 +995,35 @@ a.anchoritem {
   visibility: hidden;
 }
 
+.methodlinks {
+  height: 165px;
+  overflow-y: scroll;
+}
+
+.methodlinks::-webkit-scrollbar-track {
+	background-color: grey;
+}
+
+.methodlinks::-webkit-scrollbar{
+	width: 10px;
+	background-color: grey;
+}
+
+.methodlinks::-webkit-scrollbar-thumb {
+	background-color: #53576E;
+}
+
+.methodLink {
+  list-style: none;
+}
+
 .methodcategory {
   display: none;
 }
 
 .apiLink {
   cursor: pointer;
+  list-style: none;
 }
 
 .methodLink {
@@ -958,9 +1033,6 @@ a.anchoritem {
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){
-  .defaultbutton div {
-    text-align: center;
-  }
 
   .anchorlist {
     margin-right: initial;
@@ -996,13 +1068,6 @@ a.anchoritem {
   .defaultcontent {
     margin-left: 70px;
     grid-column: 4 / span 2;
-  }
-
-  .defaultbutton {
-    padding: 12px 13px;
-    margin-top: 12px;
-    grid-column: 7 / span 1;
-    margin-right: 10px;
   }
 
   .sidebarbuttons {
@@ -1134,10 +1199,6 @@ a.anchoritem {
 @media screen and (max-width:768px) {
   .anchorlist {
     display: none !important;
-  }
-
-  .defaultbutton {
-    display:none;
   }
 
   .defaultcontent {
@@ -1292,4 +1353,44 @@ a.anchoritem {
   .daybtn {
     margin-left: 4%;
   }
+}
+
+/*css for the unbelievable microsoft */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     .defaultwrapper {
+       height: 100vh;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+     }
+
+     .defaultheader {
+       width: 50%;
+       margin: 0 auto;
+     }
+
+     .defaultsidebar {
+       width: 20%;
+       height: 100vh;
+       position: fixed;
+     }
+
+     .documenttitlecontainer {
+       width: 50%;
+       margin: 0 auto;
+     }
+
+     .defaultcontent {
+       width: 50%;
+       margin: 0 auto;
+     }
+
+     .defaultfooter {
+       width: 100%;
+       margin: 0 auto;
+     }
+
+     .defaultfooter span {
+       margin-left: 400px;
+     }
 }

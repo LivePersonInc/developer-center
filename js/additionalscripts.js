@@ -1,107 +1,108 @@
 $(document).ready(function () {
-	var url = window.location.href;
-	//add anchor links to all h3 titles. See respective functions below for what they do.
-	anchors.add('h3');
-	//detect if mobile user
-	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
-		sidebarCollapse(url);
-	}
-	sidebarClick();
-	populateAnchors();
-	menuDrop();
-	codeButtons();
-	mobileHamburger();
-	isExplorer();
-	apiBuilder();
-	searchFunction();
-	//check if refresh events are supported
-	if (window.performance) {
-		//if they are, check if refresh happened
-		if (performance.navigation.type == 1) {
-			//if it did, no need for linkload again since it was called on load
-			return false;
-		} else {
-			//if there's no refresh, this is a load and linkload will be called
-			linkload();
-		};
-		//if refresh events can't be detected just call the function (enjoy explorer)
-	} else {
-		linkload();
-	};
-	//call scrolltofixed on the anchorlist box so that it goes fixed on scroll
-	$('#anchorlist').scrollToFixed({
-		marginTop: 10,
-		dontSetWidth: false
-	});
-	//call smooth-scroll on all anchorlinks
-	var scroll = new SmoothScroll('a[href*="#"]');
-	//set breadcrumbs display if welcome page/normal page.
-	var $title = $('.h1').text();
-	if ($title.indexOf('Welcome') != -1) {
-		return false;
-	} else {
-		$('.breadcrumbs').removeClass('breadhidden');
-	}
+  var url = window.location.href;
+  //add anchor links to all h3 titles. See respective functions below for what they do.
+  anchors.add('h3');
+  sidebarClick();
+  populateAnchors ();
+  menuDrop ();
+  codeButtons();
+  mobileHamburger();
+  isExplorer();
+  apiBuilder();
+  //detect if mobile user
+  if (/Mobi|Android/i.test(navigator.userAgent) == false) {
+    sidebarCollapse (url);
+  }
+  //check if refresh events are supported
+  if (window.performance) {
+    //if they are, check if refresh happened
+    if (performance.navigation.type == 1) {
+      //if it did, no need for linkload again since it was called on load
+      return false;
+    } else {
+      //if there's no refresh, this is a load and linkload will be called
+      linkload();
+    };
+  //if refresh events can't be detected just call the function (enjoy explorer)
+  } else {
+    linkload();
+  };
+  //call scrolltofixed on the anchorlist box so that it goes fixed on scroll
+  $('#anchorlist').scrollToFixed({ marginTop: 10, dontSetWidth: false });
+  //call smooth-scroll on all anchorlinks
+  var scroll = new SmoothScroll('a[href*="#"]');
+  //set breadcrumbs display if welcome page/normal page.
+  var $title = $('.h1').text();
+  if ($title.indexOf('Welcome') != -1) {
+    return false;
+  } else {
+    $('.breadcrumbs').removeClass('breadhidden');
+    $('.suggestbutton').removeClass('suggesthidden');
+  }
 });
 
 function navigateContent(url) {
-	//call ajax with the target url
-	$.ajax(url)
-		.done(function (content) {
-			//once done, figure out if we're being redirected by the plugin or not
-			if (content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
-				url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
-				navigateContent(url);
-			} else {
-				//grab the various part of the target page
-				var $newData = $(content);
-				var $content = $('#defaultcontent');
-				var $titlecontainer = $('.documenttitle');
-				var $breadcrumbs = $('.breadcrumbs');
-				//exchange the content of those parts with the new parts loaded via ajax
-				$breadcrumbs.html($newData.find('.breadcrumbs').html());
-				$titlecontainer.html($newData.find('.documenttitle').html());
-				$content.html($newData.find('#defaultcontent').html());
-				//hide/display title if on welcome page or not
-				var $title = $('.h1').text();
-				if ($title.indexOf('Welcome') != -1) {
-					$('.breadcrumbs').addClass('breadhidden');
-				} else {
-					$('.breadcrumbs').removeClass('breadhidden');
-				}
-			}
-			//add anchor links to all h3 titles. See respective functions below for what they do.
-			sidebarCollapse(url);
-			anchors.add('h3');
-			populateAnchors();
-			codeButtons();
-			replaceTitle();
-			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
-			$('#anchorlist').scrollToFixed({
-				dontSetWidth: false
-			});
-			//call smoothscrolling on all anchors
-			var scroll = new SmoothScroll('a[href*="#"]');
-			//from here, the rest of the code has to do with link highlighting for the sidebar
-			var selected = $('a[href="' + url + '"]');
-			//make the string we found previously active
-			$('.folder').removeClass("active");
-			selected = selected.addClass("activepage");
-			//just some code to make sure sidebar styling works well.
-			if (selected.parent().hasClass('innerpageitem')) {
-				$('.innerpageitem').removeClass("activeitem");
-				$(".activepage").parent().addClass("activeitem");
-			}
-			if (selected.parent().hasClass('pageitem')) {
-				$('.innerpageitem').removeClass("activeitem");
-			}
-			//jump to top when page loads
-			window.scrollTo(0, 0);
-			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
-				$('#mysidebar').slideUp(400);
-				$('#mysidebar').data("expanded", "false");
-			};
-		});
+  //call ajax with the target url
+  $.ajax(url)
+  .done(function(content) {
+    //once done, figure out if we're being redirected by the redirect plugin or not
+    if (content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
+      //if we are, set the URL to match the original one before redirect and then call navigate content again
+      url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
+      navigateContent(url);
+    } else {
+      //if we're not being redirected, grab the various part of the target page
+      var $newData = $(content);
+      var $content = $('#defaultcontent');
+      var $titlecontainer = $('.documenttitle');
+      var $breadcrumbs = $('.breadcrumbs');
+      //exchange the content of those parts with the new parts loaded via ajax
+      $breadcrumbs.html($newData.find('.breadcrumbs').html());
+      $titlecontainer.html($newData.find('.documenttitle').html());
+      $content.html($newData.find('#defaultcontent').html());
+      //hide/display title if on welcome page or not
+      var $title = $('.h1').text();
+      if ($title.indexOf('Welcome') != -1) {
+        $('.breadcrumbs').addClass('breadhidden');
+      } else {
+        $('.breadcrumbs').removeClass('breadhidden');
+        $('.suggestbutton').removeClass('suggesthidden');
+      }
+    }
+    //add anchor links to all h3 titles. See respective functions below for what they do.
+      sidebarCollapse (url);
+      anchors.add('h3');
+      populateAnchors ();
+      codeButtons();
+      replaceTitle();
+      //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
+      $('#anchorlist').scrollToFixed({ dontSetWidth: false });
+      //call smoothscrolling on all anchors
+      var scroll = new SmoothScroll('a[href*="#"]');
+      //from here, the rest of the code has to do with link highlighting for the sidebar
+      var selected = $('a[href="'+url+'"]');
+      //make the string we found previously active
+      $('.folder').removeClass("active");
+      selected = selected.addClass("activepage");
+      //just some code to make sure sidebar styling works well.
+      if (selected.parent().hasClass('innerpageitem')) {
+        $('.innerpageitem').removeClass("activeitem");
+        $(".activepage").parent().addClass("activeitem");
+      }
+      if (selected.parent().hasClass('pageitem')) {
+        $('.innerpageitem').removeClass("activeitem");
+      }
+      //jump to top when page loads
+      window.scrollTo(0,0);
+      if (/Mobi|Android/i.test(navigator.userAgent) == true) {
+        $('#mysidebar').slideUp(400);
+        $('#mysidebar').data("expanded","false");
+      };
+  })
+  .fail(function() {
+    url = "http://localhost:4000/404.html";
+    navigateContent(url);
+  });
 }
 
 

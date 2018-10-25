@@ -41,6 +41,8 @@
       - pagename: Methods
         subpages:
           - subpagename: Start Agent Session
+            methodurl:
+            httpmethod: POST
           - subpagename: Retrieve Current Availability
             methodurl: /{agentSessionId}/availability
             httpmethod: GET
@@ -209,8 +211,8 @@
         - subpagename: Conversation Metadata
         - subpagename: Read and Accept Events
         - subpagename: Authentication
-        - subpagename: Unauthenticated Messaging
-        - subpagename: Post Conversation Survey
+        - subpagename: Post Conversation Survey (PCS)
+        - subpagename: Post Conversation Survey (CSAT)
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse

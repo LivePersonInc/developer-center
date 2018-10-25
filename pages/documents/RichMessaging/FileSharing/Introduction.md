@@ -19,7 +19,7 @@ The LiveEngage Messaging Window API includes a file sharing feature. This featur
 
 <div class="important">The below tutorials assume that you have performed the initial steps required in order to work with this API, which can be found <a href="/messaging-window-api-getting-started.html">here</a>.</div>
 
-File Sharing can also be enabled by using the Connector API, for cases when images are sent through third party applications. Please refer to the [Connector API documentation](share-image-example.html) for more information on how to do this.
+File Sharing can also be enabled by using the Connector API, for cases when images are sent through third party applications. Please refer to the [Connector API documentation](/share-image-example.html) for more information on how to do this.
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
