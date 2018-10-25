@@ -13,33 +13,29 @@ root-link: true
 indicator: both
 ---
 
-# What is Structured Content
+### What is Structured Content
 
-Most conversations involve plain text like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, etc) to a consumer in a more clear, rich, and _structured_ format. This _structured content_ is persistent in the conversation history and customizable to suit various needs to promote specific content.
+Most conversations involve plain text, like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, etc) to a consumer in a more clear, rich, and _structured_ format. This _structured content_ is persistent in the conversation history and customizable to suit various needs to promote specific content.
 
-For example, rather than sending an address to a location, you can send a picture of the location on a map that links out to a map application.
-
-In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered. The most common format is JSON (Javascript Object Notation). 
-
-So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los Angeles, CA`, you would send the address in JSON format like below:
+For example, rather than sending an address to a location, you can send a picture of the location on a map that links to a map application such as Google Maps. In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered. The most common format is JSON (Javascript Object Notation). So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los Angeles, CA`, you would send the address in JSON format like below:
 
 ```json
 {
-  "text": yourBusinessName,
+  "text": "[yourBusinessName]",
   "type": "vertical",
   "elements": [
     {
       "type": "map",
-      "lo": yourLongitude,
-      "la": yourLatitude,
+      "lo": "[yourLongitude]",
+      "la": "[yourLatitude]",
       "tooltip": "Map",
       "click": {
         "actions": [
           {
             "type": "navigate",
             "name": "navigate",
-            "lo": yourLongitude,
-            "la": yourLatitude
+            "lo": "[yourLongitude]",
+            "la": "[yourLatitude]"
           }  
         ]
       }
@@ -49,7 +45,7 @@ So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los An
       "text": "1234 Hollywood Boulevard, Los Angeles, CA"
     },
   ],
-  "metadata": { "fallback": url_link_map_link }
+  "metadata": { "fallback": "url_link_map_link" }
 }
 ```
 
@@ -57,13 +53,13 @@ This JSON format is called a **template**. Every template contains **elements** 
 
 LivePerson provides a [Structured Content **Framework**](structured-content-framework.html) that supplies templates and elements for all rich messaging enabled channels.
 
-# How to Send Structured Content to the Conversation
+### How to Send Structured Content to the Conversation
 
 How a structured content template is sent to a consumer is different depending on if it is sent by a human or virtual agent.
 
-## Human Agent
+#### Human Agent
 
-With a human agent, a developer will need to implement a new widget based on the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html).
+With a human agent, a developer will need to implement a new widget based on the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html). This widget will allow the human agent to select predefined JSON templates and send them as part of their interaction with the consumer.
 
 The developer will use the `writeSC` command to push the template to the conversation from the widget. Below is example code of what the widget would need at the minimum for our example.
 
@@ -116,47 +112,43 @@ lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
 
 Continuing with the map example, the agent widget would contain a text field that allows the agent to enter an address and click a "send" button. This "send" button would:
 
-* convert the address to the correct template with the desired elements
-* send the template to the consumer with the `writeSC` command
+* Convert the address to the correct template with the desired elements
 
-For further information, refer to the [Developer Community documentation](agent-workspace-sdk-methods.html#command).
+* Send the template to the consumer with the `writeSC` command
 
-## Virtual Agent
+For further information, refer to the [Developer Community documentation](agent-workspace-sdk-methods.html#command) on the relevant Agent Workspace Widget methods.
 
-A developer will need to set up a bot integration using the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
+#### Virtual Agent
 
-For more general information about using the SDK to integrate bots, please refer to the [Solution’s documentation](products-customer-facing-bots-overview.html).
+A developer will need to set up a bot integration using the [Messaging Agent SDK](messaging-agent-sdk-overview.html). For more general information about using the SDK to integrate bots, please refer to the [Solution’s documentation](products-customer-facing-bots-overview.html).
 
 Once the bot exists, the developer will perform the same transformation as with the Agent Workspace Widget:
 
-* convert the data to the correct template with the desired elements
-* send the template to the consumer with the Agent Workspace SDK command
+* Convert the data to the correct template with the desired elements
+
+* Send the template to the consumer with the Agent Workspace SDK command
 
 For a specific example of using the SDK to send Structured Content, please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content).
 
-# Templates
+### Templates
 
 LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html#Rich-Messaging-enabled-channels).
 
-In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
+In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar, cohesive way.
 
-Each structured content template will contain one or many **elements**. Below you will find basic elements, their styling, and their click operations, that are common within all templates.
+Each structured content template will contain one or many **elements**. Below you will find basic elements, their styling, and their click operations, that are common within all templates. When you're comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK & Web, Facebook Messenger, Apple Business Chat, etc and explore the differences between each use case.
 
-When you're comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK & Web, Facebook Messenger, Apple Business Chat, etc.
+#### Basic Elements
 
-## Basic Elements
-
-Basic elements are the core components of the structured content messaging framework. By using these elements in your template, you can send basic messages, such as simple text, images or buttons.
-
-You can also send a Structured Content template which includes multiple basic elements with attached actions, creating a more complex message layout.
+Basic elements are the core components of the structured content messaging framework. By using these elements in your template, you can send basic messages, such as simple text, images or buttons. You can also send a Structured Content template which includes multiple basic elements with attached actions, creating a more complex message layout.
 
 See the types of basic elements supported by the framework below:
 
-### Button
+##### Button
 
 A simple Button which triggers an Action when clicked.
 
-#### Fields
+##### Fields
 
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -171,7 +163,7 @@ For the 'click' field, please see the [Click Operations](rich-messaging-click-op
 
 For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -191,11 +183,11 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](ri
 }
 ```
 
-### Image
+#### Image
 
 You can send images by sharing a URL. Supported formats are JPG and PNG. Since, in this case, images are not stored on LivePerson servers, there is no file size limit when using images within a Structured Content image element.
 
-#### Fields
+##### Fields
 
 | Property Name | Description                                                                                                                                            | Type      | Required | Size Limit |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- | :------- | :--------- |
@@ -213,7 +205,7 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](ri
 
 **Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -234,11 +226,11 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](ri
 }
 ```
 
-### Map
+#### Map
 
 Map that points to a specific location.
 
-#### Fields
+##### Fields
 
 | Property Name | Description                                                   | Type      | Required |
 | :------------ | :------------------------------------------------------------ | :-------- | :------- |
@@ -253,7 +245,7 @@ For the 'click' field, please see the [Click Operations](rich-messaging-click-op
 
 For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -273,11 +265,11 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](ri
 }
 ```
 
-### Text
+#### Text
 
 Simple plain text message.
 
-#### Fields
+##### Fields
 
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -289,7 +281,7 @@ Simple plain text message.
 
 For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -300,7 +292,7 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](ri
 }
 ```
 
-## Click Operations
+### Click Operations
 
 An element which has an "actions" field, an [on-click operation](rich-messaging-click-ops.html) (executed when the consumer clicks on the element) and a [metadata field](rich-messaging-click-ops-metadata.html). These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action be be opening a link, a third party navigation app and more.
 
@@ -331,26 +323,29 @@ On-click operations can result from two object types:
 }
 ```
 
-### Actions
+#### Actions
 
-Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of an operation. For instance: navigate with a third party navigation app to a predefined place.
+Actions are a list of applicative capabilities that will run on the consumer side and will help them to achieve some kind of an operation. For instance: navigate with a third party navigation app to a predefined place.
 
 **Note**: Only button, image and map objects can receive the actions field.
 
 Types of actions supported by the platform:
 
 * Navigate
+
 * Link
+
 * Publish Text
 
-#### Navigate
+##### Navigate
 
 This actions has two use cases:
 
 * Web: open Google Maps with the location preselected.
+
 * Mobile: navigate to the location with a third party navigation app.
 
-##### Fields
+**Fields**
 
 | Property Name | Description                      | Type  | Required |
 | :------------ | :------------------------------- | :---- | :------- |
@@ -358,7 +353,7 @@ This actions has two use cases:
 | lo            | Longitude                        | Float | Y        |
 | la            | Latitude                         | Float | Y        |
 
-##### Example
+**Example**
 
 ```json
 {
@@ -368,20 +363,20 @@ This actions has two use cases:
 }
 ```
 
-#### Link
+##### Link
 
 Open a URL in a web view when opened in mobile, or in a new tab for web. This action can be used for deep link purposes.
 
 Each environment can override the URI for their specific needs.
 
-##### Fields
+**Fields**
 
 | Property Name | Description                  | Type   | Required | Size Limit |
 | :------------ | :--------------------------- | :----- | :------- | :--------- |
 | type          | Type of action. Must be link | Enum   | Y        |            |
 | uri           | The url to open              | String | Y        | 2048 chars |
 
-##### Example
+**Example**
 
 ```json
 {
@@ -399,14 +394,14 @@ Each environment can override the URI for their specific needs.
 }
 ```
 
-#### Publish Text
+##### Publish Text
 
 In order to support sending a message as a response for a button click, we introduced a new action called "Publish Text".
 This action allows the brand to send a message on behalf of the consumer that will appear in the transcript.
 
 This action will be used also by the clients (the Mobile Messaging App for example or LiveEngage's window) to send a response when a button was clicked.
 
-##### Fields
+**Fields**
 
 | Property Name | Description                                                       | Type   | Required | Size Limit |
 | :------------ | :---------------------------------------------------------------- | :----- | :------- | :--------- |
@@ -414,7 +409,7 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 | text          | The text to display in the transcript once the action was clicked | String | Y        | 5000 chars |
 
 
-##### Example
+**Example**
 
 ```json
  {
@@ -438,7 +433,7 @@ You can see an example in the [Messaging Agent SDK](https://github.com/LivePerso
 If the type of action is 'publishText' (see above for an example), the metadata should be attached to the 'ContentEvent' as well.
 This is so that a certain text which is published is associated with the click which sent it.
 
-## Styling
+### Styling
 
 Each basic element can have specific style rules defined for it, controlling how it looks like when rendered.
 
