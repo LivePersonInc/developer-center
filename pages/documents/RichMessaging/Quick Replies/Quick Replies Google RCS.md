@@ -11,25 +11,30 @@ indicator: messaging
 
 ### Overview
 
-RCS quick replies are actionable, automated responses, which the consumer can choose from in response to a question or statement. They appear as a set of buttons that each contain a title text and/or emojis, providing brands with streamlined consumer input. The buttons always appear above the message composition in the Android Messages Messenger window, and will be published in the conversation thread upon the consumer tapping a button to make their selection. 
+RCS quick replies are actionable, automated responses, which the consumer can choose from in response to a question or statement. They appear as a set of buttons that each contain a title text and/or emojis, providing brands with streamlined consumer input. The buttons always appear above the message composition in the Android Messages Messenger window, and will be published in the conversation thread upon the consumer tapping a button to make their selection.
 
-Quick Replies for RCS Business Messaging include the question/statement text and a set of up to 11 buttons and that each contain:
+Quick Replies for RCS Business Messaging include the question/statement text and a set of up to 11 buttons that each contain:
 
 * Title text (including emojis)
+
 * Publish text click action
 
 Quick Replies example image:
+
 ![image alt text](img/google_rcs_structuredcontent_image_5.png)
 
 ### JSON Template Properties
 
 <table>
-  <thead><tr>
+  <thead>
+  <tr>
     <th>Property Name</th>
     <th>Description</th>
     <th>Type</th>
     <th>Required</th>
-  </tr></thead>
+  </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>type</td>
     <td>Types of basic elements supported by Structured Content framework. Will always be set to "quickReplies"</td>
@@ -66,6 +71,7 @@ Quick Replies example image:
     <td>Enum - “publishText””</td>
     <td>N</td>
   </tr>
+  </tbody>
 </table>
 
 ### Quick Replies template code example
@@ -133,7 +139,10 @@ Quick Replies example image:
 
 ### Limitations
 
-* Quick replies have a maximum of 11 chips for each message
-  * Each quick reply can contain up to 25 characters 
-* Colors of quick reply bubble frames is taken by default from the profile branding color that the brand has configured
-* Agent or bot will receive an error when trying to send a Quick Replies if the text exceeds 25 characters
+* RCS Quick Replies have a maximum of 11 chips for each message.
+
+  * Each quick reply can contain up to 25 characters.
+
+* Colors of quick reply bubble frames is taken by default from the profile branding color that the brand has configured.
+
+* Agent or bot will receive an error when trying to send a Quick Reply if the text exceeds 25 characters.

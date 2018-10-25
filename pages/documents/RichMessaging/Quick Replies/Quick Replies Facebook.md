@@ -11,13 +11,13 @@ indicator: messaging
 
 ### Overview
 
-The [Quick Reply template](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies) provides a way to receive consumer input to a question/statement by a set of buttons that each contain a title text and/or emojis. The quick reply options always appear above the message composition in the Facebook Messenger window, and will be published in the conversation thread upon consumer button tap. 
+The [Quick Reply template](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies) provides a way to receive consumer input to a question/statement via a set of buttons, each containing a title text and/or emojis. The quick reply options always appear above the message composition in the Facebook Messenger window, and will be published in the conversation thread upon consumer button tap.
 
-Quick Reply for Facebook Messenger includes a set of up to 11 buttons that can each contain a text title and a publish text click action.
+Quick Reply layouts for Facebook Messenger include a set of up to 11 buttons that can each contain a text title and a publish text click action.
 
-Brands will be able to share the Quick Reply template through LiveEngage structured content basic elements, while using the structured content JSON properties.  Please note that should you want to share a question/statement before sending the quick reply buttons, the text message should be shared with the JSON. 
+Brands will be able to share the Quick Reply template through LiveEngage structured content basic elements, while using the structured content JSON properties.  Please note that should you want to share a question/statement before sending the quick reply buttons, the text message should be shared alongside the JSON.
 
-Below is an image of a Quick Reply with four buttons:
+Below is an image of a Quick Reply layout with four buttons:
 
 ![image alt text](img/fb_structuredcontent_image_7.png)![image alt text](img/fb_structuredcontent_image_8.png)
 
@@ -32,6 +32,7 @@ Below is an image of a Quick Reply with four buttons:
       <th>Required</th>
     </tr>
   </thead>
+  <tbody>
   <tr>
     <td>type</td>
     <td>Types of basic elements supported by Structured Content framework. Will always be set to "quickReplies"</td>
@@ -68,6 +69,7 @@ Below is an image of a Quick Reply with four buttons:
     <td>Enum - “publishText”</td>
     <td>N</td>
   </tr>
+  </tbody>
 </table>
 
 ### Example Template
@@ -135,11 +137,12 @@ Below is an image of a Quick Reply with four buttons:
 
 ### Best Practices
 
-To create unified layouts when looking to use the **Quick Replies** Messenger templates, please use these limitations guidelines to create layouts with common denominator: 
+To create unified layouts when looking to use the **Quick Replies** Facebook Messenger templates, please use these limitations guidelines to create layouts:
 
-* Facebook has a maximum of 11 buttons in each quick reply template. LiveEngage does no have a limit on the number of buttons. 
+* Facebook has a maximum of 11 buttons in each quick reply template. LiveEngage does not have a limit on the number of buttons.
+
 * Facebook does not allow more than 20 characters on button text title.  LiveEngage will allow up to 128 characters.
 
 ### Limitations
 
-* Facebook allows to share images within quick replies buttons - this is not supported with the template.
+* Facebook allows to share images within quick replies buttons - this is not supported with this template.

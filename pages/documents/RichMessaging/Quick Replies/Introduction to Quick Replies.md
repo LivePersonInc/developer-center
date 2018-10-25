@@ -13,13 +13,13 @@ indicator: messaging
 
 ### What are Quick Replies
 
-Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of possible responses (**chips**) that temporarily appear as part of the conversation. 
+Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of possible responses (**chips**) that temporarily appear as part of the conversation.
 
 Once a consumer clicks on one of these chips, a pre-rendered message is sent to the conversation without the consumer having to type it out and the chips disappear. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
 
 ![Quick Replies](images/quick-replies.gif)
 
-One common use case for Quick Replies is when a bot is attempting to provide a direction for conversations using (eg. routing a consumer to a specific LiveEngage skill). Because these answers are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
+One common use case for Quick Replies is when a bot is attempting to provide a direction for conversations using Quick Replies (eg. routing a consumer to a specific LiveEngage skill). Because these answers are pre-formatted, it enables a bot to continue the conversation freely and smoothly, "channeling" the consumer towards pre-specific directions.
 
 Quick Replies are different from Structured Content in that they are temporary in the conversation, not styled, and not content for promotion.
 
