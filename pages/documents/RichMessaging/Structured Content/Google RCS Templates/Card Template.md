@@ -14,35 +14,50 @@ indicator: messaging
 The RCS Business Messaging card has 2 layout orientation options:
 
 1. Vertical card
-2. Horizontal card 
 
-The vertical card contains the following elements: 
+2. Horizontal card
+
+#### Vertical Card
+
+The vertical card contains the following elements:
 
 * Title text
+
 * Subtitle text
-* Image: image in a vertical card is displayed as a horizontal image at the top of the card with aspect ratio of 2:1, 16:9, or 7:3. 
+
+* Image: image in a vertical card is displayed as a horizontal image at the top of the card with aspect ratio of 2:1, 16:9, or 7:3.
+
 * Up to 4 buttons (RCS limitation) with the following actions:
+
     * Link
-    * Navigation 
-    * Publish text 
 
+    * Navigation
 
-The horizontal card contains the following elements: 
+    * Publish text
+
+#### Horizontal Card
+
+The horizontal card contains the following elements:
 
 * Title text
+
 * Subtitle text
+
 * Image: in a horizontal card a vertical image is displayed at on the left side of the card with aspect ratio of 3:4.
+
 * Up to 4 buttons (RCS limitation) with the following actions:
 
     * Link
-    * Navigation 
-    * Publish text 
 
-Horizontal card example image: 
+    * Navigation
+
+    * Publish text
+
+Horizontal card example image:
 
 ![image alt text](img/google_rcs_structuredcontent_image_2.png)
 
-Vertical card example image: 
+Vertical card example image:
 
 ![image alt text](img/google_rcs_structuredcontent_image_3.png)
 
@@ -57,20 +72,16 @@ Vertical card example image:
     <th>Required</th>
   </tr>
   </thead>
+  <tbody>
   <tr>
     <td>type</td>
-    <td>Types of basic elements supported by Structured Content framework.
-
-If using RCS Cards - type of header element should always be set to "vertical" or “horizontal,” per the wanted user experience.
-
-If using RCS Carousels - type of header element will always be “carousel”</td>
+    <td>Types of basic elements supported by Structured Content framework. If using RCS Cards - type of header element should always be set to "vertical" or “horizontal,” per the wanted user experience. If using RCS Carousels - type of header element will always be “carousel”</td>
     <td>Enum</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>tag</td>
-    <td>Tag of layout view, must be “generic” for RCS rich content templates. 
-
+    <td>Tag of layout view, must be “generic” for RCS rich content templates.
 Within basic element objects, will be “title”/”subtitle”, which will indicate what text should be rendered in each of those elements (the title and subtitle have a default style in RCS)</td>
     <td>Enum</td>
     <td>Y</td>
@@ -136,9 +147,10 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
     <td>Enum - “publishText”, “link”, “navigate”</td>
     <td>N</td>
   </tr>
+  </tbody>
 </table>
 
-### Code Examples
+### Examples
 
 #### Vertical Card
 

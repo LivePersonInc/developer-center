@@ -11,18 +11,24 @@ indicator: messaging
 
 ### Overview
 
-The RCS carousel is a horizontally scrollable carousel of up to 10 vertical rich cards. Each card can include the following elements:
+The RCS carousel is a horizontally scrollable carousel of up to 10 vertical cards. Each card can include the following elements:
 
 * Title text
+
 * Subtitle text
-* Image (which will be placed above the title, subtitle and buttons) - image is not required to be placed in a card 
+
+* Image (which will be placed above the title, subtitle and buttons) - image is not required to be placed in a card
+
 * Up to 4 buttons (RCS limitation) with the following actions:
 
     * Link
-    * Navigation 
-    * Publish text 
 
-Carousel example image: 
+    * Navigation
+
+    * Publish text
+
+Carousel example image:
+
 ![image alt text](img/google_rcs_structuredcontent_image_4.png)
 
 ### JSON Template Properties
@@ -36,6 +42,7 @@ Carousel example image:
     <th>Required</th>
   </tr>
   </thead>
+  <tbody>
   <tr>
     <td>type</td>
     <td>Types of basic elements supported by Structured Content framework.
@@ -48,7 +55,7 @@ If using RCS Carousels - type of header element will always be “carousel”</t
   </tr>
   <tr>
     <td>tag</td>
-    <td>Tag of layout view, must be “generic” for RCS rich content templates. 
+    <td>Tag of layout view, must be “generic” for RCS rich content templates.
 
 Within basic element objects, will be “title”/”subtitle”, which will indicate what text should be rendered in each of those elements (the title and subtitle have a default style in RCS)</td>
     <td>Enum</td>
@@ -115,6 +122,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
     <td>Enum - “publishText”, “link”, “navigate”</td>
     <td>N</td>
   </tr>
+  </tbody>
 </table>
 
 ### Carousel template code example
