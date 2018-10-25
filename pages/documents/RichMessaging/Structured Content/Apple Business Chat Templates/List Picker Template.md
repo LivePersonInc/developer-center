@@ -16,10 +16,13 @@ indicator: messaging
 
 [Business Chat List Picker](https://developer.apple.com/documentation/businesschat/enhancing_the_customer_s_user_experience/sending_a_list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
 
-* Define items information - item name, description, image.
-* Item sections - divide your list of items into sections based on the product categories.
-* Multi-selection - Allow the consumer to select multiple items.
-* receivedMessage and replyMessage bubbles style structures - define the layouts for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
+1. **Define item's information** - item name, description, image.
+
+2. **Item sections** - divide your list of items into sections based on the product categories.
+
+3. **Multi-selection** - Allow the consumer to select multiple items.
+
+4. **receivedMessage** and **replyMessage** bubbles style structures - define the layouts for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
 
 Using metadata fields, brands can define the received and reply bubble structures and enable multi-selection capabilities.
 
@@ -38,8 +41,6 @@ Each List Picker template has the following mandatory sections:
 2. [List Picker header](rich-messaging-connectors-abc-listpicker-body-header.html): title and subtitle (part of the [JSON body](rich-messaging-connectors-abc-listpicker-body.html))
 
 3. [List Picker list items](rich-messaging-connectors-abc-listpicker-body-item.html): title, subtitle and an optional image (part of the [JSON body](rich-messaging-connectors-abc-listpicker-body.html))
-
-
 
 The following JSON metadata and body structures are templates for any List Picker object:
 
@@ -166,7 +167,7 @@ The following JSON metadata and body structures are templates for any List Picke
 
 ### Metadata - Business Chat Message
 
-The List Picker Metadata JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html###metadata-json-template).
+The List Picker Metadata JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html#metadata-json-template).
 
 #### List Picker Metadata JSON Fields
 
@@ -180,11 +181,11 @@ The List Picker Metadata JSON is based on [this JSON template](rich-messaging-co
 
 #### Received and Reply Message
 
-The Received Message is the first card presented to the consumer, from which they access the list of items to choose from. It consists of an image and actions.
+The **Received Message** is the first card presented to the consumer, from which they access the list of items to choose from. It consists of an image and actions.
 
-The Reply Message is the reply card presented to the consumer after selecting items from the list.
+The **Reply Message** is the reply card presented to the consumer after selecting items from the list.
 
-The configuration of the Received and Reply Messages is done via a metadata JSON file.
+The configuration of the Received and Reply Messages is done via a metadata JSON file, using the fields below.
 
 
 ##### Received and Reply Message Fields
@@ -228,7 +229,7 @@ The configuration of the Received and Reply Messages is done via a metadata JSON
 
 ### Body
 
-The List Picker Body JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html###body-json-template).
+The List Picker Body JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html#body-json-template).
 
 #### List Picker Body JSON Fields
 
@@ -534,4 +535,3 @@ Based on the [Rich Messaging Button](rich-messaging-basic-elements-button.html) 
   ]
 }
 ```
-
