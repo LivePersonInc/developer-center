@@ -15,7 +15,7 @@ indicator: both
 
 ### Maps
 
-Both the web window (visitor side) and the workspace (agent side) do not show map by user-specific location but instead shows a static snapshot, the default map view defined.
+Both the web window (visitor side) and the workspace (agent side) do not show maps with a user-specific location but instead shows a static snapshot, the default map view defined.
 
 ### Styling
 
@@ -41,4 +41,3 @@ Both the web window (visitor side) and the workspace (agent side) do not show ma
 #### Web (Chat/Messaging)
 
 You cannot customize the branding of the structured content bubble in the web window view. Cards may be branded using the JSON schema only.
-

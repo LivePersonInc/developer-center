@@ -16,9 +16,9 @@ The very basic structured content elements that can contain either/or elements, 
 
 ![Card](img/card.png)
 
-## Examples
+### Examples
 
-### Simple Card (Image + Text)
+#### Simple Card (Image + Text)
 
 ```json
  {
@@ -43,7 +43,7 @@ The very basic structured content elements that can contain either/or elements, 
     }
 ```
 
-### Multiple Actions Card
+#### Multiple Actions Card
 
 ```json
 {
