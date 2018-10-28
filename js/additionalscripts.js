@@ -9,6 +9,7 @@ $(document).ready(function () {
   mobileHamburger();
   isExplorer();
   apiBuilder();
+  searchFunction();
   //detect if mobile user
   if (/Mobi|Android/i.test(navigator.userAgent) == false) {
     sidebarCollapse (url);
@@ -468,10 +469,18 @@ function searchFunction() {
       tr = table.getElementsByTagName("tr");
 			for (i = 0; i < tr.length; i++) {
 				tdMetric = tr[i].getElementsByTagName("td")[0];
-				tdApi = tr[i].getElementsByTagName("td")[5];
+				tdApi = tr[i].getElementsByTagName("td")[2];
 				if (tdMetric || tdApi) {
 					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
 						tr[i].style.display = "";
+            function boldString () {
+            var findFilter = new RegExp(filter, 'g');
+            var metricResult = tdMetric.innerHTML.toUpperCase();
+            var apiResult = tdApi.innerHTML.toUpperCase();
+            return metricResult.replace(findFilter, '<b>'+filter+'</b>')
+            return apiResult.replace(findFilter, '<b>'+filter+'</b>')
+            }
+            boldString();
 					} else {
 						tr[i].style.display = "none";
 					}

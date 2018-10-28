@@ -12,10 +12,10 @@ indicator: both
 <table class="metricstable" id="apimetricstable">
   <thead>
     <th>Metric</th>
-    <th>Analysis Type</th>
-    <th>Channel</th>
     <th>Description</th>
     <th>API - Method</th>
+    <th>Channel</th>
+    <th>Analysis Type</th>
     <th>Filtered By</th>
     <th>Formula (Optional)</th>
   </thead>
@@ -23,10 +23,10 @@ indicator: both
   {% for metricitem in site.data.apimetrics %}
     <tr>
       <td class="metric">{{ metricitem.Metric }}</td>
-      <td class="analysis">{{ metricitem.analysisType }}</td>
-      <td class="channel">{{ metricitem.Channel }}</td>
       <td class="description">{{ metricitem.Description }}</td>
       <td class="apiMethod">{{ metricitem.apiMethod }}</td>
+      <td class="channel">{{ metricitem.Channel }}</td>
+      <td class="analysis">{{ metricitem.analysisType }}</td>
       <td class="filtered">{{ metricitem.filteredBy }}</td>
       <td class="formula">{{ metricitem.formulaOptional }}</td>
     </tr>
