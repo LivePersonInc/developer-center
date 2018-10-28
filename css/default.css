@@ -173,27 +173,6 @@ code pre {
     margin-top: 16px;
   }
 
-  .defaultbutton {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: end;
-    margin-right: 21px;
-    border: solid 1px #f2f1f2;
-    text-align: center;
-  }
-
-  .defaultbutton a {
-    color: #5879DA;
-  }
-
-  .defaultbutton div {
-    padding: 10px;
-    color: #f2f1f2;
-  }
-
   .defaultfooter {
     grid-row: 11 / span 1;
     grid-column: 3 / span 6;
@@ -730,13 +709,12 @@ table tbody td img {
 
 .sidebarbuttoncontainer {
   display: flex;
+  flex-direction: column;
 }
 
 .supportbutton {
   padding: 10px;
-  border: solid 1px #f2f1f2;
   margin-left: 21px;
-  text-align: center;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 14px;
   display: flex;
@@ -752,6 +730,38 @@ table tbody td img {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #f2f1f2;
+}
+
+.defaultbutton {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  margin-left: 21px;
+  margin-right: 39px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #A9ACB4;
+}
+
+.defaultbutton:hover{
+  background-color: #162036;
+}
+
+.defaultbutton a {
+  color: #5879DA;
+}
+
+.defaultbutton div {
+  padding: 10px;
+  color: #3D4558;
+  width: 100%;
+}
+
+.defaultbutton div:hover {
+    color: #fff;
 }
 
 .anchorlist {
