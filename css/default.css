@@ -63,8 +63,13 @@ code pre {
 }
 
 .suggestbutton {
-  color: #5879da;
+  color: #5879da !important;
   align-self: center;
+}
+
+.suggestbutton i {
+  color: #5879da;
+  margin-right: 8px;
 }
 
 .suggesthidden {
@@ -368,7 +373,9 @@ table tbody td img {
 }
 
 #metricsSearch {
-  width: 26.5%;
+  width: 30.5%;
+  padding: 5px;
+  padding-left: 10px;
 }
 
 .important {
