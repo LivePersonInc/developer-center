@@ -13,13 +13,13 @@ permalink: connector-api-sample-code-connector-sample-app.html
 
 ### Overview
 
-With the Demo App for Connector API you can create a conversation within a consumer and an agent. 
-You can send messages and events as well as visualize the incoming notifications.
+With the Connector Sample App for the Connector API you can create a sample conversation between a consumer and an agent. 
+This will allow you to send messages and events, as well as visualize the incoming notifications for those messages and events.
 
 A running version is deployed [here](https://connector-api.dev.liveperson.net).
 
 ### Source code
 
-The source code is published on Github, you can find it on [this link](https://github.com/LivePersonInc/lp-demo-app-connector-api).
+The source code is published on Github, you can find it through [this link](https://github.com/LivePersonInc/lp-demo-app-connector-api).
 
 
