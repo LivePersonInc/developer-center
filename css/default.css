@@ -728,7 +728,7 @@ table tbody td img {
 
 .supportbutton {
   padding: 10px;
-  margin-left: 21px;
+  margin-left: 39px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 14px;
   display: flex;
@@ -753,7 +753,7 @@ table tbody td img {
   align-items: center;
   justify-content: center;
   justify-self: end;
-  margin-left: 21px;
+  margin-left: 39px;
   margin-right: 39px;
   text-align: center;
   margin-top: 20px;
