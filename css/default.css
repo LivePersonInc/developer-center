@@ -23,6 +23,10 @@ a:hover, a:focus {
   flex-wrap: wrap;
 }
 
+a:-webkit-any-link{
+  color: inherit;
+}
+
 code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
 }
@@ -63,8 +67,11 @@ code pre {
 }
 
 .suggestbutton {
-  color: #5879da !important;
   align-self: center;
+}
+
+.suggestbutton a{
+  color: #5879da;
 }
 
 .suggestbutton i {
