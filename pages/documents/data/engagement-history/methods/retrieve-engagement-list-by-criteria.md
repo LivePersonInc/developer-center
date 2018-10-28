@@ -48,7 +48,6 @@ Filter is sent in the POST data with the following JSON structure.
 | engagementId | Engagement ID. | numeric | Optional | When used, all time limitations are ignored. The format should be the account id + chat id (same as the engagementId returned in the response). |
 | alertedMcsValues | Alerted MCS of the chat. | Array `<alertedMCS>` | Optional | Valid values: "-1", "0", "1" |
 | chatMCS {from,to} | Range of Meaningful Connection Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
-| hasCoBrowse | Indication whether a CoBrowse session occurred during the chat | Boolean | Optional |  |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
 | lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
