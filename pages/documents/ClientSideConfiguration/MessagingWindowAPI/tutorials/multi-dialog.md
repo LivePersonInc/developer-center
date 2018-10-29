@@ -10,13 +10,13 @@ permalink: messaging-window-api-tutorials-post-conversation-survey-pcs.html
 indicator: messaging
 ---
 
-In this tutorial, we will demonstrate how to enable the  Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation . When we use the term "Post Conversation Survey" in this tutorial, we refer to the **(new) Post Conversation Survey (PCS)** and not to the (older) [existing survey solution](messaging-window-api-tutorials-post-conversation-survey-csat.html), where only a single CSAT question could be presented to the consumer when the conversation ends.
+In this tutorial, we will demonstrate how to enable the Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation . When we use the term "Post Conversation Survey" in this tutorial, we refer to the **(new) Post Conversation Survey (PCS)** and not to the (older) [existing survey solution](messaging-window-api-tutorials-post-conversation-survey-csat.html), where only a single CSAT question could be presented to the consumer when the conversation ends.
 
-<div class="important">Once the PCS Survey is configured & working, it will be presented to the consumer instead of the old one (CSAT) i.e. there is no situation in which both will work together.</div>
+<div class="important">Once the PCS Survey is configured and working, it will be presented to the consumer instead of the old one (CSAT) i.e. there is no situation in which both will work together.</div>
 
 ### Multi-Dialog Conversation
 
-Up until now, a Conversation contained only one dialog type (``MAIN``), holding the main messaging conversation and its data (messages sent, received, etc.). In order to support the new Post Conversation Survey, we developed a Multi-Dialog Conversation concept. This means that the Conversation is a container for dialogs and can contain several such dialogs. There can also be multiple types of dialogs, where each dialog has a different channel type for example.
+Up until now, a conversation contained only one dialog type (``MAIN``), holding the main messaging conversation and its data (messages sent, received, etc.). In order to support the new Post Conversation Survey, we developed a Multi-Dialog Conversation concept. This means that the conversation is a container for dialogs and can contain several such dialogs. There can also be multiple types of dialogs, where each dialog has a different channel type for example. Each dialog represents a different kind of interaction, like the conversation between a consumer and an agent itself or an interaction with a survey.
 
 The new Post Conversation Survey uses a new dialog type called the ``POST_SURVEY`` dialog. This dialog also has a channel type of ``MESSAGING``. This dialog holds the messaging conversation between a consumer and a survey bot. The dialog itself provides the context of the conversation, whether it is a conversation between an agent and a consumer or a conversation between a bot and a consumer, such as in the case of the new Survey.
 
@@ -190,40 +190,7 @@ In the response you will receive the new conversationId.
 }
 ```
 
-### Step 6 - Consumer Subscribes to the Messaging Events of the Conversation - SubscribeMessagingEvents
-
-Use the `conversationId` value you got in the previous step to populate the `dialogId` as well.
-
-```json
-{"kind":"req","id":"2","type":"ms.SubscribeMessagingEvents","body":{"dialogId":"__YOUR_CONVERSATION_ID__","conversationId":"__YOUR_CONVERSATION_ID__","fromSeq":0}}
-```
-
-**Expected 200 Response**
-
-```json
-{
-  "kind": "resp",
-  "reqId": "2",
-  "code": 200,
-  "body": {
-
-  },
-  "type": "GenericSubscribeResponse"
-}
-```
-**Expected Notification**
-
-```json
-{
-  "kind": "notification",
-  "body": {
-    "changes": [ ]
-  },
-  "type": "ms.MessagingEventNotification"
-}
-```
-
-### Step 7 - Agent Sends Messages
+### Step 6 - Agent Sends Messages
 
 In this stage, switch to the Agent-Workspace and accept the ring of the incoming request. Click the blinking `Accept` button.
 
@@ -231,7 +198,7 @@ In this stage, switch to the Agent-Workspace and accept the ring of the incoming
 
 Type a few messages in the Agent Workspace and send them to the consumer.
 
-### Step 8 - Subscribe to Conversation Content
+### Step 7 - Subscribe to Conversation Content
 
 In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the `__YOUR_CONVERSATION_ID__` with the the `conversationId` you got in the response of the previous step, and paste it into the opened WebSocket.
 
@@ -263,7 +230,7 @@ You will now get all the existing content of the conversation in the following f
         "serverTimestamp": 1538490042014,
         "event": {
           "type": "ContentEvent",
-          "message": "Hello from the Agent",
+          "message": "Hello from the agent",
           "contentType": "text/plain"
         },
         "dialogId": "__YOUR_CONVERSATION_ID__"
@@ -274,7 +241,7 @@ You will now get all the existing content of the conversation in the following f
 }
 ```
 
-You will notice that you got all the messages that were published by the consumer, or by the agent. In order to find which messages were published by the consumer, refer to the `originatorId` field. Messages that were published by the consumer will have a value equal to the `consumerId` you found in [Step 2](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-2---find-your-consumer-id) while messages from the agent will have a different `originatorId`.
+You will notice that you got all the messages that were published by the consumer, or by the agent. In order to find which messages were published by the consumer, refer to the `originatorId` field. Messages that were published by the consumer will have a value equal to the `consumerId` you found in [Step 2](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-2---retrieve-your-consumer-id) while messages from the agent will have a different `originatorId`. From this point on, you will receive notifications for all messaging events in this conversation.
 
 #### Notification Examples
 
@@ -335,7 +302,7 @@ The below are examples for notifications that the consumer might receive after b
 }
 ```
 
-**Agent has stopped typing**
+**Agent has stopped typing - chatSate set to ACTIVE**
 
 ```json
 {
@@ -361,7 +328,7 @@ The below are examples for notifications that the consumer might receive after b
 }
 ```
 
-### Step 9 - Consumer Sends a Message
+### Step 8 - Consumer Sends a Message
 
 Use the following request to send a message on behalf of the consumer:
 
@@ -394,7 +361,7 @@ Use the following request to send a message on behalf of the consumer:
         "serverTimestamp": 1538493548533,
         "event": {
           "type": "ContentEvent",
-          "message": "Hello from Consumer",
+          "message": "Hello from the consumer",
           "contentType": "text/plain"
         },
         "conversationId": "__YOUR_CONVERSATION_ID__",
@@ -468,11 +435,11 @@ Use the following request to send a message on behalf of the consumer:
 }
 ```
 
-### Step 10 - Close the Conversation (The MAIN DIALOG)
+### Step 9 - Close the Conversation (The MAIN DIALOG)
 
 Use the below to close the conversation when necessary by closing the main dialog rather than the entire Conversation container.
 
-Before closing this dialog it is recommended to send an indication that the Consumer has stopped typing:
+Before closing this dialog it is recommended to send an indication that the Consumer has stopped typing (this is not mandatory):
 
 ```json
 {"kind":"req","id":"2","type":"ms.PublishEvent","body":{"dialogId":"__YOUR_CONVERSATION_ID__","conversationId":"__YOUR_CONVERSATION_ID__","event":{"type":"ChatStateEvent","chatState":"ACTIVE"}}}
@@ -547,7 +514,7 @@ After closing the main dialogue, the Post-Survey dialog should automatically app
 
 ![post-survey](img/post-survey.png)
 
-Thanks to Step 4, we will receive the following notification:
+Thanks to [Step 4](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-4---subscribe-the-consumer-to-all-relevant-conversations---subscribeexconversations), we will receive the following notification:
 
 ```json
 {
@@ -655,13 +622,13 @@ Thanks to Step 4, we will receive the following notification:
 
 You can see from the above notification that the Conversation now has a new `stage` field. `stage` is a newly added field in the ExConv notification that indicates the Conversation container status (open/closed) (thus indicating whether the entire Conversation, both main dialog and post-survey dialog, has been closed). The old use of the `state` field (which is now being handled by the `stage` field as indicated above) was deprecated and it will now indicate whether the **Main Dialog** is open or closed.
 
-### Step 11 - Re-subscribe to Conversation Content
+### Step 10 - Re-subscribe to Conversation Content
 
 After the dialog change (main dialog closed, post dialog open), the consumer should no longer receive messaging events on the conversation. Therefore, you'll need to subscribe the consumer once again to the new, open post-survey dialog.
 
-* Use the last notification from [Step 10](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-10---close-the-conversation-the-main-dialog) to extract the dialogId of the dialog with `dialogType` set to `POST_SURVEY`.
+* Use the last notification from [Step 9](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-9---close-the-conversation-the-main-dialog) to extract the dialogId of the dialog with `dialogType` set to `POST_SURVEY`.
 
-* In order to get the post survey content and messaging events on the client side the consumer needs to execute [Step 6](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-6---consumer-subscribes-to-the-messaging-events-of-the-conversation---subscribemessagingevents) from above while the dialogId is set to `__YOUR_POST_SURVEY_DIALOG_ID__`, as below:
+* In order to get the post survey content and messaging events on the client side the consumer needs to execute [step 7](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-7---subscribe-to-conversation-content) from above while the dialogId is set to `__YOUR_POST_SURVEY_DIALOG_ID__`, as below:
 
 ```json
 {"kind":"req","id":"2","type":"ms.SubscribeMessagingEvents","body":{"dialogId":"__YOUR_POST_SURVEY_DIALOG_ID__","conversationId":"__YOUR_CONVERSATION_ID__","fromSeq":0}}
@@ -923,7 +890,7 @@ In LivePerson's unified window the above Post Survey will be rendered as such:
 
 ![post-survey](img/Post_Survey.png)
 
-### Step 12 - Display the Survey in Your Custom Window
+### Step 11 - Display the Survey in Your Custom Window
 
 As you can see from the above notification, the Post Survey is essentially a rich message including text, structured content templates (in this case a quick replies array which consists of eight clickable buttons that trigger actions) in one message.
 
@@ -980,7 +947,7 @@ The design of your post survey, including its quick replies and button styles, i
 
 ![bot-studio-design-button](img/bot_studio_design_button.png)
 
-### Step 13 - Consumer Responds on the Post Survey
+### Step 12 - Consumer Responds on the Post Survey
 
 After the Post Conversation Survey appears on your custom window, the consumer can choose as per the above example one of the quick reply items which are actionable buttons.
 
@@ -1017,7 +984,7 @@ One request should contain the 'ACTION' (used in conjunction with metadata to re
 
 **Note**:
 
-* The `sequenceList` field matters. Review the notification that includes the Survey, received on [step 11](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-11---re-subscribe-to-conversation-content) and check the sequence number field for the object which includes the 'quickReplies' key. Then, use the same value when making this call under the `sequenceList` key (in this example, it is set to "1").
+* The `sequenceList` field matters. Review the notification that includes the Survey, received on [step 11](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-10---re-subscribe-to-conversation-content) and check the sequence number field for the object which includes the 'quickReplies' key. Then, use the same value when making this call under the `sequenceList` key (in this example, it is set to "1").
 
 ![seq-quick-replies-sc](img/seq_quick_replies_sc.png)
 
@@ -1246,6 +1213,12 @@ The Second request is sent to Publish the selected text of the button, again in 
 
 **Notification - Post survey completed - survey dialog & conversation are closed**
 
+Because we have configured in the Bot Studio one survey question only in this example, the conversation will close immediately after it. When it closes, we'll receive the following and lasts messaging notification regarding survey completion and the closure of the conversation.
+
+In case you have configured multiple sequential questions you'll need to repeat [step 11](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-11---display-the-survey-on-your-custom-window) and [step 12](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-12---consumer-responds-on-the-post-survey) per each survey question before you'll get this last notification.
+
++**Conversation closed - Survey completed**
+
 ```json
 {
   "kind": "notification",
@@ -1360,7 +1333,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 
 ### Additional Notes
 
-Unlike the example in Step 10, which only closes the MAIN DIALOG, in order to completely close the Conversation and skip the survey, you can call the `UpdateConversationField` API with the field `stage` instead of `state` and the ``conversationState`` set to ``CLOSE``. This will close the conversation and all dialogs beneath and will not allow another dialog to open. This can be used for example if you configured the Post Survey but wish to simply close the conversation without sending the Post Conversation Survey.
+Unlike the example in Step 10, which only closes the MAIN DIALOG, in order to completely close the Conversation and skip the survey, you can call the `UpdateConversationField` API with the field `stage` instead of `state` and the ``conversationState`` set to ``CLOSE``. This will close the conversation and all dialogs beneath and will not allow another dialog to open. This can be used for example if you configured the Post Survey but wish to simply close the conversation without sending the Post Conversation Survey to the consumer.
 
 ```json
 {"kind":"req","id":"11","body":{"conversationId":"__YOUR_CONVERSATION_ID__","conversationField":{"field":"Stage","conversationState":"CLOSE"}},"type":"cm.UpdateConversationField"}
