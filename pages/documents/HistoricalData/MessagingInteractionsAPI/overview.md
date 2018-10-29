@@ -20,7 +20,7 @@ The API returns the conversation’s transcripts and all of its related metadata
 
 This API supports the HTTP POST functionality (data retrieval), and all data is returned in JSON format.
 
-<div class="important"Please note that when data is unavailable for a certain field, that field will <b>not be returned</b> as part of the JSON.</div>
+<div class="important">Please note that when data is unavailable for a certain field, that field will <b>not be returned</b> as part of the JSON.</div>
 
 ### Getting Started
 
