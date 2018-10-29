@@ -303,7 +303,7 @@ code pre {
 /* Algolia Styling Begins */
 
 #aa-search-input {
-  background-color: none !important;
+  background-color: transparent !important;
   border: none;
   width: 100%;
   font-size: 18px;
