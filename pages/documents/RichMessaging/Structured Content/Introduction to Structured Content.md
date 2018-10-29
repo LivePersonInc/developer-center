@@ -17,6 +17,8 @@ indicator: both
 
 Most conversations involve plain text, like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, etc) to a consumer in a more clear, rich, and _structured_ format. This _structured content_ is persistent in the conversation history and customizable to suit various needs to promote specific content.
 
+[Cale-insert picture here instead of just descirbing in text. Eitan from our team can provide you the graphics as needed (should already have some exaples ready)]
+
 For example, rather than sending an address to a location, you can send a picture of the location on a map that links to a map application such as Google Maps. In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered. The most common format is JSON (Javascript Object Notation). So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los Angeles, CA`, you would send the address in JSON format like below:
 
 ```json
@@ -55,11 +57,13 @@ LivePerson provides a [Structured Content **Framework**](structured-content-fram
 
 ### How to Send Structured Content to the Conversation
 
-How a structured content template is sent to a consumer is different depending on if it is sent by a human or virtual agent.
+How a structured content template is sent to a consumer is different depending on if it is sent by a human or bot agent.
 
 #### Human Agent
 
-With a human agent, a developer will need to implement a new widget based on the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html). This widget will allow the human agent to select predefined JSON templates and send them as part of their interaction with the consumer.
+With a human agent, a developer will need to implement a new widget based on the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html). This widget will allow the agent to select predefined JSON templates and send them as part of their interaction with the consumer.
+
+[I'm not sure the tense 'the developer will use' is right - since we're addressing developers - talk to Eden about being consistant with the tense throughout the dev comm ]
 
 The developer will use the `writeSC` command to push the template to the conversation from the widget. Below is example code of what the widget would need at the minimum for our example.
 
@@ -118,7 +122,7 @@ Continuing with the map example, the agent widget would contain a text field tha
 
 For further information, refer to the [Developer Community documentation](agent-workspace-sdk-methods.html#command) on the relevant Agent Workspace Widget methods.
 
-#### Virtual Agent
+#### Bot Agent
 
 A developer will need to set up a bot integration using the [Messaging Agent SDK](messaging-agent-sdk-overview.html). For more general information about using the SDK to integrate bots, please refer to the [Solution’s documentation](products-customer-facing-bots-overview.html).
 
@@ -164,6 +168,8 @@ For the 'click' field, please see the [Click Operations](rich-messaging-click-op
 For the 'style' field, please see the [Rich Messaging Basic Elements Styling](rich-messaging-styling.html) section.
 
 ##### Example
+
+[in other sample codes in this doc we don't have the 'example' title - in this one we do - should be consistant]
 
 ```json
 {
