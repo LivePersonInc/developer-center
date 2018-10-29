@@ -19,7 +19,8 @@ The LiveEngage Messaging Interactions API retrieves the most up to date informat
 The API returns the conversation’s transcripts and all of its related metadata such as start time, end time, MCS, CSAT, summary, participated agents, the reason the conversation was closed etc.
 
 This API supports the HTTP POST functionality (data retrieval), and all data is returned in JSON format.
-Please note that when the data is unavailable the corresponding field will not be returned as part of the JSON.
+
+<div class="important"Please note that when data is unavailable for a certain field, that field will <b>not be returned</b> as part of the JSON.</div>
 
 ### Getting Started
 
