@@ -92,7 +92,8 @@ h4 code.highlighter-rouge {
   margin-top: 7px;
 }
 .post-content table{
-  width: 125%;
+  width: 130%;
+  max-width: 130%;
 }
 
 .post-content table tbody tr td ul {
