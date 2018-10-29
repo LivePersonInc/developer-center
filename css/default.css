@@ -177,7 +177,7 @@ code pre {
   }
 
   .defaultcontent {
-    grid-column: 4 / span 1;
+    grid-column: 4 / span 3;
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
@@ -375,7 +375,7 @@ table tbody td img {
 }
 
 .metricstable {
-  width: 165% !important;
+  width: 100% !important;
   max-width: none;
 }
 

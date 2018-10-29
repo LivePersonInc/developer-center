@@ -8,7 +8,7 @@ indicator: both
 ---
 
 <div id="metrics">
-<input id="metricsSearch" placeholder="Search by Metric or API" />
+<input id="metricsSearch" placeholder="Search by Metric or API Method" />
 <table class="metricstable" id="apimetricstable">
   <thead>
     <th>Metric</th>
