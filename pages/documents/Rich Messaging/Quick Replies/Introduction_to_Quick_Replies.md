@@ -13,13 +13,13 @@ indicator: messaging
 
 ### What are Quick Replies
 
-Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of **chips** (possible responses) that temporarily appear as part of the conversation. 
+Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of actionable, automatic responses that temporarily appear as part of the conversation. 
 
-Once a consumer clicks on one of these chips, a pre-rendered message is sent to the conversation without the consumer having to type it out. The chips then disappear after having been clicked. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
+Once a consumer clicks on one of the replies, a pre-rendered message is sent to the conversation without the consumer having to type it out. The quick replies then disappear after having been clicked. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
 
 ![Quick Replies](images/quick-replies.gif)
 
-One common use case for Quick Replies is when a bot is attempting to direct the conversation outcome (eg. routing a consumer to a specific LiveEngage skill). Because these chips (possible responses) are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
+One common use case for Quick Replies is when a bot is attempting to direct the conversation outcome (eg. routing a consumer to a specific LiveEngage skill). Because these possible responses are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
 
 Quick Replies are different from Structured Content in that they are temporary in the conversation and not intended for content for promotion.
 
@@ -96,10 +96,10 @@ The primary difference between Structured Content and Quick Replies is that, for
 
 ### Quick Reply Templates
 
-LivePerson provides different Quick Replies templates for each compatible, unique messaging channel.
+LivePerson provides different Quick Reply templates for each compatible, unique messaging channel.
 
-Similar to Structured Content, Quick Replies *templates* are composed of *elements*. Each **chip** in a Quick Replies template has the same specification as a [button](structured-content-introduction-to-structured-content.html#button) structured content element.
+Similar to Structured Content, Quick Reply **templates** are composed of **elements**. Each quick reply element in the template has the same specification as a [button](structured-content-introduction-to-structured-content.html#button) structured content element. Each messaging channel limits a different maximum of replies per one template.
 
-In the above example code, you will notice then that a Quick Replies template contains an array of button elements, each with their own [click action](structured-content-introduction-to-structured-content.html#element-click-operations). Quick Replies will typically use the `publishText` click action.
+In the above example code, you will notice then that a Quick Reply template contains an array of button elements, each with their own [click action](structured-content-introduction-to-structured-content.html#element-click-operations). Quick Replies will typically use the `publishText` click action.
 
 When you are comfortable with the information presented here, proceed to the desired channel's template document.

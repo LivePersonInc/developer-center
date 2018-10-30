@@ -11,13 +11,13 @@ indicator: messaging
 
 ### Overview
 
-The [Quick Reply template](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies) provides a way to receive consumer input to a question/statement by a set of chips that each contain a title text and/or emojis. The quick reply options always appear above the message composition in the Facebook Messenger window, and will be published in the conversation thread upon consumer selection. 
+The [Quick Reply template](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies) provides a way to receive consumer input to a question/statement by a set of buttons that each contain a title text and/or emojis. The quick reply options always appear above the message composition in the Facebook Messenger window, and will be published in the conversation thread upon consumer selection. 
 
-Quick Reply for Facebook Messenger includes a set of up to 11 chips that can each contain a text title and a publish text click action.
+Quick Replies for Facebook Messenger includes a set of up to 11 buttons that can each contain a text title and a publish text click action.
 
-Please note that should you want to share a question/statement before sending the quick reply chips, the text message should be shared with the JSON. 
+Please note that should you want to share a question/statement before sending the quick replies, the text message should be shared with the JSON. 
 
-Below is an image of a Quick Reply with four chips:
+Below is an image of a Quick Reply template with four quick replies:
 
 ![image alt text](img/fb_structuredcontent_image_7.png)![image alt text](img/fb_structuredcontent_image_8.png)
 
@@ -64,7 +64,7 @@ Below is an image of a Quick Reply with four chips:
   </tr>
   <tr>
     <td>action</td>
-    <td>Actions are a list of applicative user actions on chips, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook Quick Reply can be set to “publishText” only</td>
+    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook Quick Reply can be set to “publishText” only</td>
     <td>Enum - “publishText”</td>
     <td>N</td>
   </tr>
@@ -137,9 +137,9 @@ Below is an image of a Quick Reply with four chips:
 
 To create unified layouts when looking to use the **Quick Replies** Messenger templates, please use these limitations guidelines to create layouts with common denominator: 
 
-* Facebook has a maximum of 11 chips in each quick reply template. LiveEngage does not have a limit on the number of chips. 
+* Facebook has a maximum of 11 replies in each quick reply template. LiveEngage does not have a limit on the number of replies. 
 * Facebook does not allow more than 20 characters on button title text.  LiveEngage will allow up to 128 characters.
 
 ### Limitations
 
-* Facebook allows sharing images within quick replies chips - this is not supported with the template.
+* Facebook allows sharing images within quick replies - this is not supported with the template, however.

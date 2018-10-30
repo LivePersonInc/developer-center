@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Overview
 
-Quick Replies for RCS Business Messaging include the question/statement text and a set of up to 11 chips and that each contain:
+Quick Replies for RCS Business Messaging include the question/statement text and a set of up to 11 replies that each contain:
 
 * Title text (including emojis)
 * Publish text click action
@@ -66,7 +66,7 @@ Quick Replies example image:
   </tr>
 </table>
 
-### Quick Replies template code example
+### Quick Reply template code example
 
 ```json
 {
@@ -131,7 +131,7 @@ Quick Replies example image:
 
 ### Limitations
 
-* Quick replies have a maximum of 11 chips for each message
+* Maximum of 11 replies for each template
   * Each quick reply can contain up to 25 characters 
 * Colors of quick reply bubble frames is taken by default from the profile branding color that the brand has configured
 * Agent or bot will receive an error when trying to send a Quick Replies if the text exceeds 25 characters
