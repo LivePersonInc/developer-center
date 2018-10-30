@@ -238,7 +238,7 @@ The List Picker Body JSON is based on [this JSON template](#body-json-template).
 | tag           | Must be “list”                                | String   | Y        |            |
 | elements      | List of Time Picker elements                    | Elements | Y        |            |
 
-View the [List Picker Header](#body-list-picker-header) and [List Picker Item](#body-list-picker-items) sections for details on how to construct the List Picker Body JSON.
+View the [List Picker Header](#body---list-picker-header) and [List Picker Item](#body---list-picker-items) sections for details on how to construct the List Picker Body JSON.
 
 #### List Picker Body JSON Example
 
