@@ -11,9 +11,7 @@ indicator: messaging
 
 ### Overview
 
-RCS quick replies are actionable, automated responses, which the consumer can choose from in response to a question or statement. They appear as a set of buttons that each contain a title text and/or emojis, providing brands with streamlined consumer input. The buttons always appear above the message composition in the Android Messages Messenger window, and will be published in the conversation thread upon the consumer tapping a button to make their selection. 
-
-Quick Replies for RCS Business Messaging include the question/statement text and a set of up to 11 buttons and that each contain:
+Quick Replies for RCS Business Messaging include the question/statement text and a set of up to 11 chips and that each contain:
 
 * Title text (including emojis)
 * Publish text click action

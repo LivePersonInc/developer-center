@@ -13,17 +13,23 @@ indicator: messaging
 
 ### What are Quick Replies
 
-Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of possible responses (**chips**) that temporarily appear as part of the conversation. 
+Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of **chips** (possible responses) that temporarily appear as part of the conversation. 
 
-Once a consumer clicks on one of these chips, a pre-rendered message is sent to the conversation without the consumer having to type it out and the chips disappear. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
+Once a consumer clicks on one of these chips, a pre-rendered message is sent to the conversation without the consumer having to type it out. The chips then disappear after having been clicked. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
 
 ![Quick Replies](images/quick-replies.gif)
 
-One common use case for Quick Replies is when a bot is attempting to provide a direction for conversations using (eg. routing a consumer to a specific LiveEngage skill). Because these answers are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
+One common use case for Quick Replies is when a bot is attempting to direct the conversation outcome (eg. routing a consumer to a specific LiveEngage skill). Because these chips (possible responses) are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
 
-Quick Replies are different from Structured Content in that they are temporary in the conversation, not styled, and not content for promotion.
+Quick Replies are different from Structured Content in that they are temporary in the conversation and not intended for content for promotion.
 
 ### How to send Quick Replies to the Conversation
+
+Quick Replies are very similar in implementation to Structured Content. For this reason, see [How to Send Structured Content to the Conversation](structured-content-introduction-to-structured-content.html#How-to-Send-Structured-Content-to-the-Conversation) for more information. 
+
+The primary difference between Structured Content and Quick Replies is that, for the agent widget implementation, you will use the `write` command instead of the `writeSC` command.
+
+#### Agent Widget Code Example
 
 ```javascript
 {
@@ -90,4 +96,10 @@ Quick Replies are different from Structured Content in that they are temporary i
 
 ### Quick Reply Templates
 
-LivePerson provides different Quick Reply templates for each compatible, unique messaging channel.
+LivePerson provides different Quick Replies templates for each compatible, unique messaging channel.
+
+Similar to Structured Content, Quick Replies *templates* are composed of *elements*. Each **chip** in a Quick Replies template has the same specification as a [button](structured-content-introduction-to-structured-content.html#button) structured content element.
+
+In the above example code, you will notice then that a Quick Replies template contains an array of button elements, each with their own [click action](structured-content-introduction-to-structured-content.html#element-click-operations). Quick Replies will typically use the `publishText` click action.
+
+When you are comfortable with the information presented here, proceed to the desired channel's template document.

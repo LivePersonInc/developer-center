@@ -38,11 +38,11 @@ In order to comply with the Apple Business Chat JSON structure, the below LiveEn
 
 Each Time Picker template has the following mandatory sections:
 
-1. [Business Event](rich-messaging-connectors-abc-timepicker-businessevent.html) (part of the metadata JSON): defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
+1. [Business Event](#metadata---business-event) (part of the metadata JSON): defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
 
-2. [Business Chat Message](rich-messaging-connectors-abc-timepicker-businesschatmsg.html) (part of the metadata JSON): defines the received and reply messages.
+2. [Business Chat Message](#metadata---business-chat-message) (part of the metadata JSON): defines the received and reply messages.
 
-3. [Time Picker Items](rich-messaging-connectors-abc-timepicker-item.html) (part of the JSON body): defines the dates available and the time slots for selection as part of the Time Picker.
+3. [Time Picker Items](#body---time-picker-items) (part of the JSON body): defines the dates available and the time slots for selection as part of the Time Picker.
 
 The following JSON metadata and body structures are templates for any Time Picker object:
 
@@ -261,11 +261,11 @@ Part of the Time Picker LiveEngage Structured Content body JSON, enabling an age
 
 The Time Picker item elements consists of a title element and a row of available time slots per specific date to choose from.
 
-They are based on the basic [Rich Message elements](rich-messaging-getting-started.html) with some limitations.
+They are based on the Structured Content [basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
 
 The following section describes those elements and their specific configuration fields.  
 
-#### Fields
+#### Template Fields
 
 | Property Name | Description                                      | Type     | Required | Size Limit |
 | :------------ | :----------------------------------------------- | :------- | :------- | :--------- |
@@ -273,16 +273,9 @@ The following section describes those elements and their specific configuration 
 | tag           | Must be “datePicker”                           | String   | Y        |            |
 | elements      | List of time picker elements                     | Elements | Y        |            |
 
-
-#### Time Picker Item Elements Configurations
-
-The Time Picker Item elements are based on the basic [Rich Messaging elements](rich-messaging-getting-started.html) with some limitations.
-
-The following section describes those elements and their specific configuration fields.
-
 #### Text Element Fields
 
-Based on [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) with the following restrictions:
 
 | Property Name | Description                                | Type   | Required | Size Limit |
 | :------------ | :----------------------------------------- | :----- | :------- | :--------- |
@@ -294,7 +287,7 @@ Based on [Rich Messaging Text](rich-messaging-basic-elements-text.html) element 
 
 #### Time slot Element Fields
 
-Based on [Rich Messaging Button](rich-messaging-basic-elements-button.html) element with the following restrictions:
+Based on [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) with the following restrictions:
 
 | Property Name | Description                                                                             | Type   | Required | Size Limit |
 | :------------ | :-------------------------------------------------------------------------------------- | :----- | :------- | :--------- |
@@ -304,7 +297,7 @@ Based on [Rich Messaging Button](rich-messaging-basic-elements-button.html) elem
 **Note: The button section should not use style element**
 
 <br/>
-Time Picker button has additional [Click Metadata](rich-messaging-click-ops.html) parameters that are specific to Apple Business Chat:
+Time Picker button has additional [Click Metadata](structured-content-introduction-to-structured-content.html#element-click-operations) parameters that are specific to Apple Business Chat:
 
 | Property Name | Description                                                           | Type   | Required | Size Limit |
 | :------------ | :-------------------------------------------------------------------- | :----- | :------- | :--------- |

@@ -13,21 +13,15 @@ indicator: messaging
 
 The LiveEngage Facebook Messenger connector now supports sending structured content elements via a set of templates that are rendered by Facebook. When agents or bots on LiveEngage share structured content templates, consumers will view the rendered templates via the Facebook Messenger mobile or desktop app. 
 
-See the [Structured Content Overview](structured-content-overview.html) for more information.
-
-Developers will configure a JSON structured content schema and send the schema to the consumer via [LiveEngage Agent Widgets](https://developers.liveperson.com/agent-workspace-sdk-overview.html) (for human agent use cases) or via the [Messaging Agent SDK](https://developers.liveperson.com/messaging-agent-sdk-overview.html) (for bot use cases). The LivePerson Messaging Gateway then handles the transferring of the structured content JSON to the Facebook Messenger template payload which is rendered on the device and received by the consumer.  
+See the [Introduction to Structured Content](structured-content-introduction-to-structured-content.html) for more information.
 
 The structured content templates explained and outlined in this document include [generic, button, list, and carousel](https://developers.facebook.com/docs/messenger-platform/send-messages/templates).
 
-To learn more about the LivePerson structured content framework, please review [the developer community guide](https://developers.liveperson.com/structured-content-templates.html). 
-
-### Setup
-
-#### Account Setup
+### Account Setup
 
 If your account is not currently using the Facebook connector, please refer to the [onboarding guide](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=facebook-connector) to start managing your Facebook pages' conversations with LiveEngage.
 
-#### Facebook Messenger Setup
+### Facebook Messenger Setup
 
 Some changes need to be made for certain Button actions:
 

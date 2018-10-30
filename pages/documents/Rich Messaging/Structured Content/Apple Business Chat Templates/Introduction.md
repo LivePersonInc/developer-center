@@ -14,6 +14,7 @@ root-link: true
 indicator: messaging
 ---
 
-The following document describes how to construct LiveEngage rich messaging JSON files that fit the requirements of Apple Business Chats rich messaging templates.
+LivePerson has created Structured Content Templates for Apple Business Chat. Currently, these templates include a List Picker and a Time Picker. A familiarity with LivePerson's [basic elements](structured-content-introduction-to-structured-content.html#basic-elements) will be helpful to understanding the following templates.
 
-Please note that all third party specifications are subject to change on their end. Therefore, this documentation might by out of date from time to time, although we will always attempt to use the most updated third party documentation. If you come across any errors or out of date content, please contact LivePerson support and we will attempt to update it as soon as possible.
+Please note that all third party specifications are subject to change on Apple's end. Therefore, this documentation might by out of date from time to time, although we will always attempt to use the most updated third party documentation. If you come across any errors or out of date content, please contact LivePerson support and we will attempt to update it as soon as possible.
+

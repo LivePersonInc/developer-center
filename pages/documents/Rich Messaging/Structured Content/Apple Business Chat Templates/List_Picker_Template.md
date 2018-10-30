@@ -33,11 +33,11 @@ In order to comply with the Apple Business Chat JSON structure, the below LiveEn
 
 Each List Picker template has the following mandatory sections:
 
-1. [Business Chat Message](rich-messaging-connectors-abc-listpicker-metadata.html): multi selection, Received bubble, Reply bubbles (part of the [metadata JSON](rich-messaging-connectors-abc-listpicker-metadata.html))
+1. [Business Chat Message](#metadata---business-chat-message): multi selection, Received bubble, Reply bubbles (part of the metadata JSON
 
-2. [List Picker header](rich-messaging-connectors-abc-listpicker-body-header.html): title and subtitle (part of the [JSON body](rich-messaging-connectors-abc-listpicker-body.html))
+2. [List Picker header](#body---list-picker-header): title and subtitle (part of the JSON body)
 
-3. [List Picker list items](rich-messaging-connectors-abc-listpicker-body-item.html): title, subtitle and an optional image (part of the [JSON body](rich-messaging-connectors-abc-listpicker-body.html))
+3. [List Picker list items](#body---list-picker-items): title, subtitle and an optional image (part of the JSON body)
 
 
 
@@ -166,7 +166,7 @@ The following JSON metadata and body structures are templates for any List Picke
 
 ### Metadata - Business Chat Message
 
-The List Picker Metadata JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html###metadata-json-template).
+The List Picker Metadata JSON is based on [this JSON template](#metadata-json-template).
 
 #### List Picker Metadata JSON Fields
 
@@ -226,9 +226,9 @@ The configuration of the Received and Reply Messages is done via a metadata JSON
 ]
 ```
 
-### Body
+### Body - Overview
 
-The List Picker Body JSON is based on [this JSON template](rich-messaging-connectors-abc-listpicker-layout.html###body-json-template).
+The List Picker Body JSON is based on [this JSON template](#body-json-template).
 
 #### List Picker Body JSON Fields
 
@@ -238,7 +238,7 @@ The List Picker Body JSON is based on [this JSON template](rich-messaging-connec
 | tag           | Must be “list”                                | String   | Y        |            |
 | elements      | List of Time Picker elements                    | Elements | Y        |            |
 
-View the [List Picker Header](rich-messaging-connectors-abc-listpicker-body-header.html) and [List Picker Item](rich-messaging-connectors-abc-listpicker-body-item.html) sections for details on how to construct the List Picker Body JSON.
+View the [List Picker Header](#body-list-picker-header) and [List Picker Item](#body-list-picker-items) sections for details on how to construct the List Picker Body JSON.
 
 #### List Picker Body JSON Example
 
@@ -363,13 +363,13 @@ View the [List Picker Header](rich-messaging-connectors-abc-listpicker-body-head
 
 The List Picker Header consists of a Title and a Subtitle.
 
-The configuration of the header is done as part of the [List Picker Body JSON](rich-messaging-connectors-abc-listpicker-body.html).
+The configuration of the header is done as part of the [List Picker Body JSON](#body-overview).
 
 #### List Picker Header Title
 
 ##### Fields
 
-Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) with the following restrictions:
 
 | Property Name | Description                                                                                                   | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -396,7 +396,7 @@ Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) elem
 
 ##### Fields
 
-Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) with the following restrictions:
 
 | Property Name | Description                             | Type   | Required | Size Limit |
 | :------------ | :-------------------------------------- | :----- | :------- | :--------- |
@@ -420,7 +420,7 @@ Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) elem
 
 Each List Picker Item consists of an image (optional), a title, a subtitle and a button, ordered in a horizontal layout.
 
-The configuration of the List Picker Item is done as part of the [List Picker Body JSON](rich-messaging-connectors-abc-listpicker-body.html).
+The configuration of the List Picker Item is done as part of the [List Picker Body JSON](#body-overview).
 
 #### List Picker Item Fields
 
@@ -432,13 +432,13 @@ The configuration of the List Picker Item is done as part of the [List Picker Bo
 
 #### List Picker Item Elements Configurations
 
-The List Picker Item elements are based on the basic [Rich Messaging elements](rich-messaging-getting-started.html) with some limitations.
+The List Picker Item elements are based on the basic [Structured Content basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
 
 The following section describes those elements and their specific configuration fields.
 
 ##### Image Element Fields
 
-Based on the [Rich Messaging Image](rich-messaging-basic-elements-image.html) element with the following restrictions:
+Based on the [Structured Content Basic Element Image](structured-content-introduction-to-structured-content.html#image) element with the following restrictions:
 
 | Property Name | Description                                                         | Type   | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------ | :----- | :------- | :--------- |
@@ -449,7 +449,7 @@ Based on the [Rich Messaging Image](rich-messaging-basic-elements-image.html) el
 
 ##### Title Element Fields
 
-Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) element with the following restrictions:
 
 | Property Name | Description                                                                                                   | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -459,7 +459,7 @@ Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) elem
 
 ##### Subtitle Element Fields
 
-Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) element with the following restrictions:
+Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) element with the following restrictions:
 
 | Property Name | Description                           | Type   | Required | Size Limit |
 | :------------ | :------------------------------------ | :----- | :------- | :--------- |
@@ -470,7 +470,7 @@ Based on the [Rich Messaging Text](rich-messaging-basic-elements-text.html) elem
 
 ##### Button Element Fields
 
-Based on the [Rich Messaging Button](rich-messaging-basic-elements-button.html) element with the following restrictions:
+Based on the [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) element with the following restrictions:
 
 | Property Name | Description                                        | Type | Required | Size Limit |
 | :------------ | :------------------------------------------------- | :--- | :------- | :--------- |

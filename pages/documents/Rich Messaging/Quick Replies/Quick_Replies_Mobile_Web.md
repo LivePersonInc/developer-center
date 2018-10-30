@@ -11,8 +11,6 @@ indicator: messaging
 
 ### Overview
 
-Quick Replies are a group of actionable items (chips) that appear as part of the conversation, making it easier to have an automated conversation with consumers. Once a consumer clicks on one of these chips, a pre-rendered message is sent to a bot, without the consumer having to type it out. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience and provide a direction for conversations using bot interactions. Because these answers are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
-
 LiveEngage enables creating and displaying up to 24 Quick Replies chips per message (that is, a consumer will have up to 24 chips to choose from per message they'll send).
 
 Each chip can have:
@@ -27,7 +25,7 @@ When a Quick Reply chip is tapped, the rest of the chips are dismissed. The agen
 
 ![Quick Replies](images/quick-replies.gif)
 
-### Fields
+### Template Fields
 
 | Property Name | Description             | Type   | Required | Size Limit |
 | :------------ | :---------------------- | :----- | :------- | :--------- |
@@ -36,9 +34,7 @@ When a Quick Reply chip is tapped, the rest of the chips are dismissed. The agen
 | replies       | A list of chips         | Array  | Y        | 24 items   |
 
 
-### Chip
-
-A Quick Reply chip has the same specification as a [button](rich-messaging-basic-elements-button.html):
+### Chip Element
 
 | Property Name | Description                                                   | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -48,9 +44,9 @@ A Quick Reply chip has the same specification as a [button](rich-messaging-basic
 | tooltip       | Chip tooltip, used also as aria                               | String    | N        | 256 chars  |
 | style         | Styling elements for the chip.                                | Container | N        |            |
 
-For the 'click' field, please see the [Click Operations](rich-messaging-click-ops.html) section.
+For the 'click' field, you will want to use the `publishText` action.
 
-For the 'style' field of a chip, please see the [Quick Replies Styling](rich-messaging-quick-replies-styling.html) section.
+For the 'style' field of a chip, please see the [Styling](#Styling) section.
 
 ### Example
 
@@ -150,7 +146,7 @@ Additional styling configuration is available for Mobile SDK: [Android](android-
 
 4. If you wish the agent to be able to follow the consumer's clicks, we recommend adding a publish text click-event to each chip. The publish-text click-event will add a message to the transcript on behalf of the consumer, which will be available for the agent to follow and record for later use.
 
-5. Don't use Quick Replies if you wish to let consumers use them more than once in a conversation (like a menu a consumer can go back to). Quick Replies disappear after a chip was clicked (or consumer made another action in the conversation window). Use [Structured Content templates](rich-messaging-structured-content-card.html) instead as they stay persistent in the conversation.
+5. Don't use Quick Replies if you wish to let consumers use them more than once in a conversation (like a menu a consumer can go back to). Quick Replies disappear after a chip was clicked (or consumer made another action in the conversation window). Use [Structured Content templates](structured-content-mobile-sdk-web-templates-card-template.html) instead as they stay persistent in the conversation.
 
 ### Limitations
 
