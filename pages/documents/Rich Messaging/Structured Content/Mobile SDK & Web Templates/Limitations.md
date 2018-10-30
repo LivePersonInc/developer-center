@@ -40,5 +40,7 @@ Both the web window (visitor side) and the workspace (agent side) do not show ma
 
 #### Web (Chat/Messaging)
 
-You cannot customize the branding of the structured content bubble in the web window view. Cards may be branded using the JSON schema only.
+You cannot customize the branding of the structured content bubble in the web window view. 
+
+Cards may be branded using the JSON template only.
 

@@ -136,7 +136,7 @@ JsonPollock.unregisterAllActions();
 
 *JsonPollock.render()* will throw an Error if it fails for any reason. The error object will have a *message* property that will supply the error description.
 
-Prior to the rendering, the JSON object is validated against the JSON schema. If it fails to validate, the error object will also include an *errors* property that will hold the validation errors.
+Prior to the rendering, the JSON object is validated against the JSON template. If it fails to validate, the error object will also include an *errors* property that will hold the validation errors.
 
 ```javascript
 ...

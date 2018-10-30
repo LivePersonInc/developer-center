@@ -29,7 +29,7 @@ Below is an image example of a Business Chat List Picker with multi-selection tu
 
 ### Basic Template Overview
 
-In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content JSON schema must be applied to any List Picker template.
+In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content template must be applied.
 
 Each List Picker template has the following mandatory sections:
 
