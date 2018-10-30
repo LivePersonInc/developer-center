@@ -18,7 +18,7 @@ indicator: messaging
 
 The following capabilities are supported:
 
-1. **receivedMessage and replyMessage** bubbles style structures (which are the layouts for the bubbles that are received by the consumer and then sent back by the consumer). This allows the brand to create a Time Picker with bubbles containing title, subtitle, style size and image.
+1. **receivedMessage and replyMessage** bubbles style structures (which are the templates for the bubbles that are received by the consumer and then sent back by the consumer). This allows the brand to create a Time Picker with bubbles containing title, subtitle, style size and image.
 
 2. **Timeslots** - Enables the agent to generate an array of time slots for the consumer’s options.
 
@@ -26,7 +26,7 @@ The following capabilities are supported:
 
 4. **Location** - Enables the brand to add a describer to the appointment location, allowing the consumer to immediately see the location once an appointment is saved in the calendar.
 
-By Using the using metadata fields, the brand can also define the received and reply bubble structures.
+By Using the using metadata properties, the brand can also define the received and reply bubble structures.
 
 Below is an example image of a Business Chat time picker:
 
@@ -163,12 +163,12 @@ The following JSON metadata and body structures are templates for any Time Picke
 
 Part of the Time Picker LiveEngage Structured Content metadata JSON.
 
-#### Fields
+#### Properties
 
 | Property Name   | Description                                                                           | Type   | Required | Size Limit |
 | :-------------- | :------------------------------------------------------------------------------------ | :----- | :------- | :--------- |
 | type            | Type of metadata. <br/> Must be 'BusinessChatMessage'                                 | Enum   | Y        |            |
-| receivedMessage | Defines how the bubble layout will be displayed when a message is received.           | Object | Y        |            |
+| receivedMessage | Defines how the bubble template will be displayed when a message is received.           | Object | Y        |            |
 | replyMessage    | Defines how the bubble will be displayed when a message is sent back by the consumer. | Object | N        |            |
 
 
@@ -183,7 +183,7 @@ The Reply Message is the reply card presented to the consumer after selecting th
 | Style             | Defines the size of the message. <br/>Can be set to icon, small or large. <br/>Defaults to icon. | String | N        |                                                                             |
 | title             | The title of the message                                                                         | String | Y        | 85 characters (30 is recommended by Apple)                                  |
 | Subtitle          | Subtitle to be displayed under title of the message                                              | String | N        | 400 characters (85 is recommended by Apple)                                 |
-| imageURL          | Image to be placed in the Time Picker received and reply message layout                          | String | N        | JPG and PNG Only <br/>The image size in the Time Picker is limited to 0.5MB |
+| imageURL          | Image to be placed in the Time Picker received and reply message template                          | String | N        | JPG and PNG Only <br/>The image size in the Time Picker is limited to 0.5MB |
 | secondarySubtitle | Title that is aligned to the right of the message                                                | String | N        |                                                                             |
 | tertiarySubtitle  | Subtitle that is aligned to the right of the message                                             | String | N        |                                                                             |
 
@@ -211,7 +211,7 @@ The Reply Message is the reply card presented to the consumer after selecting th
 
 Part of the Time Picker LiveEngage Structured Content metadata JSON. Defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
 
-#### Fields
+#### Properties
 
 | Property Name | Description                                                                                                                                                        | Type   | Required | Size Limit |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----- | :------- | :--------- |
@@ -221,21 +221,21 @@ Part of the Time Picker LiveEngage Structured Content metadata JSON. Defines the
 | title         | Title of the calendar meeting                                                                                                                                      | String | Y        |            |
 
 
-#### Timing Object Fields
+#### Timing Object Properties
 
 | Property Name           | Description                                                                                                                                                                                                                                                                                                                 | Type | Required | Size Limit |
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :--------- |
 | presentedTimezoneOffset | Time zone offset configuration. Represents the number of minutes from GMT, while specifying the timezone of the event’s location. <br/>If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location | Enum | N        |            |
 
 
-#### Location Object Fields
+#### Location Object Properties
 
 | Property Name | Description                                                                                                                                   | Type   | Required | Size Limit |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------- | :----- | :------- | :--------- |
 | title         | Location name                                                                                                                                 | String | N        |            |
 | la            | A double representing the latitude of the location                                                                                            | double | N        |            |
 | lo            | A double representing the longitude of the location                                                                                           | double | N        |            |
-| radios        | A double representing the location radius, in meters. <br/>Business Chat ignores this field when latitude and longitude are missing or empty. | double | N        |            |
+| radios        | A double representing the location radius, in meters. <br/>Business Chat ignores this property when latitude and longitude are missing or empty. | double | N        |            |
 
 #### Example
 
@@ -263,17 +263,17 @@ The Time Picker item elements consists of a title element and a row of available
 
 They are based on the Structured Content [basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
 
-The following section describes those elements and their specific configuration fields.  
+The following section describes those elements and their specific configuration properties.  
 
-#### Template Fields
+#### Template Properties
 
 | Property Name | Description                                      | Type     | Required | Size Limit |
 | :------------ | :----------------------------------------------- | :------- | :------- | :--------- |
-| type          | layout of the element. <br/>Must be “vertical” | string   | Y        |            |
+| type          | template of the element. <br/>Must be “vertical” | string   | Y        |            |
 | tag           | Must be “datePicker”                           | String   | Y        |            |
 | elements      | List of time picker elements                     | Elements | Y        |            |
 
-#### Text Element Fields
+#### Text Element Properties
 
 Based on [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) with the following restrictions:
 
@@ -285,7 +285,7 @@ Based on [Structured Content Basic Element Text](structured-content-introduction
 **Note: The text section should not use style element**
 
 
-#### Time slot Element Fields
+#### Time slot Element Properties
 
 Based on [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) with the following restrictions:
 
@@ -305,7 +305,7 @@ Time Picker button has additional [Click Metadata](structured-content-introducti
 | timing        | An object describing the start time and the duration of the time slot | Object | Y        |            |
 
 
-**Timing Object Fields**
+**Timing Object Properties**
 
 | Property Name | Description                                                                                                                                                                                           | Type    | Required | Size Limit |
 | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- | :--------- |

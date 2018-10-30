@@ -25,7 +25,7 @@ When a Quick Reply chip is tapped, the rest of the chips are dismissed. The agen
 
 ![Quick Replies](images/quick-replies.gif)
 
-### Template Fields
+### Template Properties
 
 | Property Name | Description             | Type   | Required | Size Limit |
 | :------------ | :---------------------- | :----- | :------- | :--------- |
@@ -44,9 +44,9 @@ When a Quick Reply chip is tapped, the rest of the chips are dismissed. The agen
 | tooltip       | Chip tooltip, used also as aria                               | String    | N        | 256 chars  |
 | style         | Styling elements for the chip.                                | Container | N        |            |
 
-For the 'click' field, you will want to use the `publishText` action.
+For the 'click' property, you will want to use the `publishText` action.
 
-For the 'style' field of a chip, please see the [Styling](#Styling) section.
+For the 'style' property of a chip, please see the [Styling](#Styling) section.
 
 ### Example
 
@@ -110,7 +110,7 @@ Each Quick Reply chip can have its own style elements.
 <br/>
 Additional styling configuration is available for Mobile SDK: [Android](android-attributes.html###quick-replies) | [iOS](consumer-experience-ios-sdk-attributes.html###quick-reply)
 
-#### Fields
+#### Properties
 
 | Property Name    | Description                            | Type                      |
 | :--------------- | :------------------------------------- | :------------------------ |

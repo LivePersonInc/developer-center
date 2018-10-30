@@ -116,7 +116,7 @@ var data = {
 lpTag.agentSDK.command(cmdName, data, notifyWhenDone);
 ```
 
-Continuing with the map example, the agent widget would contain a text field that allows the agent to enter an address and click a "send" button. This "send" button would:
+Continuing with the map example, the agent widget would contain a text property that allows the agent to enter an address and click a "send" button. This "send" button would:
 
 * convert the address to the correct template with the desired elements
 * send the template to the consumer with the `writeSC` command
@@ -150,7 +150,7 @@ When you are comfortable with the basic elements, you can see them in action in 
 
 Basic elements are the core components of the structured content messaging framework. By using these elements in your template, you can send basic messages, such as simple text, images or buttons.
 
-You can also send a Structured Content template which includes multiple basic elements with attached actions, creating a more complex message layout.
+You can also send a Structured Content template which includes multiple basic elements with attached actions, creating a more complex message template.
 
 See the types of basic elements supported by the framework below:
 
@@ -158,7 +158,7 @@ See the types of basic elements supported by the framework below:
 
 A simple Button which triggers an Action when clicked.
 
-##### Fields
+##### Properties
 
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -169,9 +169,9 @@ A simple Button which triggers an Action when clicked.
 | style         | Styling elements                                                                                                                                        | Container | N        |            |
 | rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false. | Boolean   | N        |            |
 
-For the 'click' field, please see the [Click Operations](#Element-Click-Operations) section.
+For the 'click' property, please see the [Click Operations](#Element-Click-Operations) section.
 
-For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
 
 ##### Example
 
@@ -197,7 +197,7 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#E
 
 You can send images by sharing a URL. Supported formats are JPG and PNG. Since, in this case, images are not stored on LivePerson servers, there is no file size limit when using images within a Structured Content image element.
 
-##### Fields
+##### Properties
 
 | Property Name | Description                                                                                                                                            | Type      | Required | Size Limit |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- | :------- | :--------- |
@@ -209,9 +209,9 @@ You can send images by sharing a URL. Supported formats are JPG and PNG. Since, 
 | tooltip       | Image tooltip, used also as aria                                                                                                                       | String    | N        |            |
 | style         | Styling elements                                                                                                                                       | Container | N        |            |
 
-For the 'click' field, please see the [Click Operations](#Element-Click-Operations) section.
+For the 'click' property, please see the [Click Operations](#Element-Click-Operations) section.
 
-For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
 
 **Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
 
@@ -240,7 +240,7 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#E
 
 Map that points to a specific location.
 
-##### Fields
+##### Properties
 
 | Property Name | Description                                                   | Type      | Required |
 | :------------ | :------------------------------------------------------------ | :-------- | :------- |
@@ -251,9 +251,9 @@ Map that points to a specific location.
 | tooltip       | Map tooltip, used also as aria                                | String    | N        |
 | style         | Styling elements                                              | Container | N        |  |
 
-For the 'click' field, please see the [Click Operations](#Element-Click-Operations) section.
+For the 'click' property, please see the [Click Operations](#Element-Click-Operations) section.
 
-For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
 
 ##### Example
 
@@ -279,7 +279,7 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#E
 
 Simple plain text message.
 
-##### Fields
+##### Properties
 
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
@@ -289,7 +289,7 @@ Simple plain text message.
 | style         | Styling elements                                                                                                                                        | Container | N        |            |
 | rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false. | Boolean   | N        |            |
 
-For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
 
 ##### Example
 
@@ -304,7 +304,7 @@ For the 'style' field, please see the [Rich Messaging Basic Elements Styling](#E
 
 ### Element Click Operations
 
-An element which has an "actions" field, an [on-click operation](rich-messaging-click-ops.html) (executed when the consumer clicks on the element) and a [metadata field](rich-messaging-click-ops-metadata.html). These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action be be opening a link, a third party navigation app and more.
+An element which has an "actions" property, an [on-click operation](rich-messaging-click-ops.html) (executed when the consumer clicks on the element) and a [metadata property](rich-messaging-click-ops-metadata.html). These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action be be opening a link, a third party navigation app and more.
 
 On-click operations can result from two object types:
 
@@ -337,7 +337,7 @@ On-click operations can result from two object types:
 
 Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of an operation. For instance: navigate with a third party navigation app to a predefined place.
 
-**Note**: Only button, image and map objects can receive the actions field.
+**Note**: Only button, image and map objects can receive the actions property.
 
 Types of actions supported by the platform:
 
@@ -352,7 +352,7 @@ This actions has two use cases:
 * Web: open Google Maps with the location preselected.
 * Mobile: navigate to the location with a third party navigation app.
 
-###### Fields
+###### Properties
 
 | Property Name | Description                      | Type  | Required |
 | :------------ | :------------------------------- | :---- | :------- |
@@ -376,7 +376,7 @@ Open a URL in a web view when opened in mobile, or in a new tab for web. This ac
 
 Each environment can override the URI for their specific needs.
 
-###### Fields
+###### Properties
 
 | Property Name | Description                  | Type   | Required | Size Limit |
 | :------------ | :--------------------------- | :----- | :------- | :--------- |
@@ -408,7 +408,7 @@ This action allows the brand to send a message on behalf of the consumer that wi
 
 This action will be used also by the clients (the Mobile Messaging App for example or LiveEngage's window) to send a response when a button was clicked.
 
-###### Fields
+###### Properties
 
 | Property Name | Description                                                       | Type   | Required | Size Limit |
 | :------------ | :---------------------------------------------------------------- | :----- | :------- | :--------- |
@@ -435,7 +435,7 @@ This is important for reporting on consumer interaction with the card, as well a
 
 You can see an example in the [Messaging Agent SDK](https://github.com/LivePersonInc/node-agent-sdk###example-sending-rich-content-structured-content) by searching for “ExternalID”.
 
-**Note:** when using our APIs to communicate as a consumer (for example, by using the Messaging Window API or the Connector API), metadata should always be added to an action. This is so that our services have an indication that an element was clicked. The metadata should be sent as part of 'AcceptStatusEvent' with the assigned status of 'ACTION'. For more information on 'AcceptStatusEvent' and its status field, please see the [Messaging Window API](agent-int-api-reference.html).
+**Note:** when using our APIs to communicate as a consumer (for example, by using the Messaging Window API or the Connector API), metadata should always be added to an action. This is so that our services have an indication that an element was clicked. The metadata should be sent as part of 'AcceptStatusEvent' with the assigned status of 'ACTION'. For more information on 'AcceptStatusEvent' and its status property, please see the [Messaging Window API](agent-int-api-reference.html).
 
 If the type of action is 'publishText' (see above for an example), the metadata should be attached to the 'ContentEvent' as well.
 This is so that a certain text which is published is associated with the click which sent it.
@@ -444,7 +444,7 @@ This is so that a certain text which is published is associated with the click w
 
 Each basic element can have specific style rules defined for it, controlling how it looks like when rendered.
 
-#### Fields
+#### Properties
 
 | Property Name    | Description                            | Type                      |
 | :--------------- | :------------------------------------- | :------------------------ |

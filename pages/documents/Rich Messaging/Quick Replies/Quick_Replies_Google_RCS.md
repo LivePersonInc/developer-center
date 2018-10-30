@@ -48,7 +48,7 @@ Quick Replies example image:
   </tr>
   <tr>
     <td>button</td>
-    <td>Buttons contain click and action fields that define the type of action set on user click operation </td>
+    <td>Buttons contain click and action properties that define the type of action set on user click operation </td>
     <td>Object </td>
     <td>Y</td>
   </tr>

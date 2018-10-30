@@ -52,7 +52,7 @@ Below is an image of a Quick Reply with four chips:
   </tr>
   <tr>
     <td>button</td>
-    <td>Button elements contain click and actions fields that define the type of action set on user click operation </td>
+    <td>Button elements contain click and actions properties that define the type of action set on user click operation </td>
     <td>Object </td>
     <td>Y</td>
   </tr>

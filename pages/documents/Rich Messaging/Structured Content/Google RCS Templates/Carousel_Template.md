@@ -48,7 +48,7 @@ If using RCS Carousels - type of header element will always be “carousel”</t
   </tr>
   <tr>
     <td>tag</td>
-    <td>Tag of layout view, must be “generic” for RCS rich content templates. 
+    <td>Tag of template view, must be “generic” for RCS rich content templates. 
 
 Within basic element objects, will be “title”/”subtitle”, which will indicate what text should be rendered in each of those elements (the title and subtitle have a default style in RCS)</td>
     <td>Enum</td>
@@ -57,8 +57,8 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
   <tr>
     <td>elements
 </td>
-    <td>Array of elements/layouts. By using elements in your structured content template, you can send basic elements, such as simple text, images or buttons	</td>
-    <td>Elements/Layouts</td>
+    <td>Array of elements/templates. By using elements in your structured content template, you can send basic elements, such as simple text, images or buttons	</td>
+    <td>Elements/Templates</td>
     <td>Y</td>
   </tr>
   <tr>
@@ -99,7 +99,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
   </tr>
   <tr>
     <td>button</td>
-    <td>Buttons contain click and action fields that define the type of action set on user click operation </td>
+    <td>Buttons contain click and action properties that define the type of action set on user click operation </td>
     <td>Object </td>
     <td>N</td>
   </tr>

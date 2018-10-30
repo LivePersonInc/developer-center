@@ -9,15 +9,15 @@ permalink: structured-content-facebook-messenger-templates-best-practices.html
 indicator: messaging
 ---
 
-### Finding the common denominator for the structured content layout between mobile messaging, web messaging and Facebook Messenger. 
+### Finding the common denominator for the structured content template between mobile messaging, web messaging and Facebook Messenger. 
 
-In order to make it easier to create multi source type structured content layouts, we recommend finding the common denominator between the sources that are using structured content as part of your agents and bots conversational flow. 
+In order to make it easier to create multi source type structured content templates, we recommend finding the common denominator between the sources that are using structured content as part of your agents and bots conversational flow. 
 
-Here are the basic rules for creating unified structured content layouts and experience across mobile messaging, web messaging and Facebook Messenger: 
+Here are the basic rules for creating unified structured content templates and experience across mobile messaging, web messaging and Facebook Messenger: 
 
 #### Generic, Button and Carousel Messenger templates
 
-To create unified layouts when looking to use the **Generic, Button and Carousel** Messenger templates, please use these limitations guidelines to create layouts with common denominator: 
+To create unified templates when looking to use the **Generic, Button and Carousel** Messenger templates, please use these limitations guidelines to create templates with common denominator: 
 
 * Facebook button limit is 3 buttons. LiveEngage does not have any limitations for number of buttons, but nonetheless will still send the card to Messenger, but will render up to the 3rd button while ignoring the 4th button and up. 
 * Facebook does not allow more than 20 characters on button text title. LiveEngage will allow up to 128 characters.
@@ -27,10 +27,10 @@ To create unified layouts when looking to use the **Generic, Button and Carousel
 
 #### List Messenger templates
 
-To create unified layouts when looking to use the **List** Messenger templates, please use these limitations guidelines to create layouts with common denominator: 
+To create unified templates when looking to use the **List** Messenger templates, please use these limitations guidelines to create templates with common denominator: 
 
 * Facebook has a minimum of 2 item objects. LiveEngage does not have any minimum.
-* Facebook has a maximum of 4 item objects. LiveEngage does not have any limitation on number of items, but nonetheless, If layout is created with more than 4 item objects and sent to Messenger channel, LiveEngage will ignore the 5th list item and will send up to 4th item
+* Facebook has a maximum of 4 item objects. LiveEngage does not have any limitation on number of items, but nonetheless, If template is created with more than 4 item objects and sent to Messenger channel, LiveEngage will ignore the 5th list item and will send up to 4th item
 * Facebook does not allow for more than 1 button in a list item object. LiveEngage to does have any limitation for number of buttons in list object.
 * Facebook does not allow more than 20 characters on button text title.  LiveEngage will allow up to 128 characters.
 * Facebook does not allow more than 80 characters on title or subtitle text title. LiveEngage will allow up to 5000 characters.

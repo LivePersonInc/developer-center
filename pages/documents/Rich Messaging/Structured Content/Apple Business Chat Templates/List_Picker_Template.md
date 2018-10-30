@@ -19,9 +19,9 @@ indicator: messaging
 * Define items information - item name, description, image.
 * Item sections - divide your list of items into sections based on the product categories.
 * Multi-selection - Allow the consumer to select multiple items.
-* receivedMessage and replyMessage bubbles style structures - define the layouts for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
+* receivedMessage and replyMessage bubbles style structures - define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
 
-Using metadata fields, brands can define the received and reply bubble structures and enable multi-selection capabilities.
+Using metadata properties, brands can define the received and reply bubble structures and enable multi-selection capabilities.
 
 Below is an image example of a Business Chat List Picker with multi-selection turned on:
 
@@ -168,13 +168,13 @@ The following JSON metadata and body structures are templates for any List Picke
 
 The List Picker Metadata JSON is based on [this JSON template](#metadata-json-template).
 
-#### List Picker Metadata JSON Fields
+#### List Picker Metadata JSON Properties
 
 | Property Name     | Description                                                                                 | Type    | Required | Size Limit |
 | :---------------- | :------------------------------------------------------------------------------------------ | :------ | :------- | :--------- |
 | type              | Type of metadata. </br> Must be BusinessChatMessage                                         | Enum    | Y        |            |
 | multipleSelection | Value that indicates if the customer can make multiple selections. </br> Defaults to false. | Boolean | N        |            |
-| receivedMessage   | Defines how the bubble layout will be displayed when a message is received.                 | Object  | Y        |            |
+| receivedMessage   | Defines how the bubble template will be displayed when a message is received.                 | Object  | Y        |            |
 | replyMessage      | Defines how the bubble will be displayed when a message is sent back by the consumer.       | Object  | Y        |            |
 
 
@@ -187,14 +187,14 @@ The Reply Message is the reply card presented to the consumer after selecting it
 The configuration of the Received and Reply Messages is done via a metadata JSON file.
 
 
-##### Received and Reply Message Fields
+##### Received and Reply Message Properties
 
 | Property Name     | Description                                                                                  | Type   | Required | Size Limit                                                                         |
 | :---------------- | :------------------------------------------------------------------------------------------- | :----- | :------- | :--------------------------------------------------------------------------------- |
 | Style             | Defines the size of the message. Can be set to icon, small or large. <br/> Defaults to icon. | String | N        |                                                                                    |
 | title             | The title of the message                                                                     | String | Y        | 85 characters (30 is recommended by Apple)                                         |
 | Subtitle          | Subtitle to be displayed under title of the message                                          | String | N        | 400 characters (85 is recommended by Apple)                                        |
-| imageURL          | Image to be placed in the List Picker received and reply message layout                      | String | N        | JPG and PNG Only <br/> The total image size in the list picker is limited to 0.5MB |
+| imageURL          | Image to be placed in the List Picker received and reply message template                      | String | N        | JPG and PNG Only <br/> The total image size in the list picker is limited to 0.5MB |
 | secondarySubtitle | Title that is aligned right of the message                                                   | String | Y        |                                                                                    |
 | tertiarySubtitle  | Subtitle that is aligned right of the message                                                | String | Y        |                                                                                    |
 
@@ -230,7 +230,7 @@ The configuration of the Received and Reply Messages is done via a metadata JSON
 
 The List Picker Body JSON is based on [this JSON template](#body-json-template).
 
-#### List Picker Body JSON Fields
+#### List Picker Body JSON Properties
 
 | Property Name | Description                                     | Type     | Required | Size Limit |
 | :------------ | :---------------------------------------------- | :------- | :------- | :--------- |
@@ -367,14 +367,14 @@ The configuration of the header is done as part of the [List Picker Body JSON](#
 
 #### List Picker Header Title
 
-##### Fields
+##### Properties
 
 Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) with the following restrictions:
 
 | Property Name | Description                                                                                                   | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
 | type          | Type of element. <br/> Must be ‘text’                                                                       | Enum      | Y        |            |
-| style         | Styling elements of the title. </br>Must have the following fields:<br/>{ "bold":true,<br/>			"size":"large"} | Container | N        |            |
+| style         | Styling elements of the title. </br>Must have the following properties:<br/>{ "bold":true,<br/>			"size":"large"} | Container | N        |            |
 | tag           | Must be “title”                                                                                             | String    | Y        |            |
 
 ##### Example
@@ -394,7 +394,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 
 #### List Picker Header Subtitle
 
-##### Fields
+##### Properties
 
 Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) with the following restrictions:
 
@@ -418,15 +418,15 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 
 ### Body - List Picker Items
 
-Each List Picker Item consists of an image (optional), a title, a subtitle and a button, ordered in a horizontal layout.
+Each List Picker Item consists of an image (optional), a title, a subtitle and a button, ordered in a horizontal template.
 
 The configuration of the List Picker Item is done as part of the [List Picker Body JSON](#body-overview).
 
-#### List Picker Item Fields
+#### List Picker Item Properties
 
 | Property Name | Description                                                                                    | Type     | Required | Size Limit |
 | :------------ | :--------------------------------------------------------------------------------------------- | :------- | :------- | :--------- |
-| type          | Type of layout. <br/> Must be ‘horizontal’                                                   | Enum     | Y        |            |
+| type          | Type of template. <br/> Must be ‘horizontal’                                                   | Enum     | Y        |            |
 | elements      | Array of elements: image (optional), title, subtitle and a button. <br/> Must be in that order | Elements | Y        |            |
 
 
@@ -434,9 +434,9 @@ The configuration of the List Picker Item is done as part of the [List Picker Bo
 
 The List Picker Item elements are based on the basic [Structured Content basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
 
-The following section describes those elements and their specific configuration fields.
+The following section describes those elements and their specific configuration properties.
 
-##### Image Element Fields
+##### Image Element Properties
 
 Based on the [Structured Content Basic Element Image](structured-content-introduction-to-structured-content.html#image) element with the following restrictions:
 
@@ -447,17 +447,17 @@ Based on the [Structured Content Basic Element Image](structured-content-introdu
 
 **Note: The image section should not use style element**
 
-##### Title Element Fields
+##### Title Element Properties
 
 Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) element with the following restrictions:
 
 | Property Name | Description                                                                                                   | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
 | type          | Type of element. <br/> Must be 'text'                                                                         | Enum      | Y        |            |
-| style         | Styling elements of the title. </br>Must have the following fields:<br/>{ "bold":true,<br/>			"size":"large"} | Container | Y        |            |
+| style         | Styling elements of the title. </br>Must have the following properties:<br/>{ "bold":true,<br/>			"size":"large"} | Container | Y        |            |
 | Tag           | Must be “title”                                                                                             | String    | Y        |            |
 
-##### Subtitle Element Fields
+##### Subtitle Element Properties
 
 Based on the [Structured Content Basic Element Text](structured-content-introduction-to-structured-content.html#text) element with the following restrictions:
 
@@ -468,7 +468,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 
 **Note: The subtitle section should not use style element**
 
-##### Button Element Fields
+##### Button Element Properties
 
 Based on the [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) element with the following restrictions:
 

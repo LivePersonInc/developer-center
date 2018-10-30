@@ -44,15 +44,15 @@ If using Carousel, type of header element will always be “carousel”</td>
   </tr>
   <tr>
     <td>tag</td>
-    <td>Tag of layout view, must be “generic”, “button” or “list” for Facebook templates. Within basic elements objects, will be “title”/”subtitle”, which will indicate what text should rendered in each of those elements (the title and subtitle have default style in Facebook)</td>
+    <td>Tag of template view, must be “generic”, “button” or “list” for Facebook templates. Within basic elements objects, will be “title”/”subtitle”, which will indicate what text should rendered in each of those elements (the title and subtitle have default style in Facebook)</td>
     <td>Enum</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>elements
 </td>
-    <td>Array of elements/layouts. By using elements in your structured content template, you can send basic elements, such as simple text, images or buttons	</td>
-    <td>Elements/Layouts</td>
+    <td>Array of elements/templates. By using elements in your structured content template, you can send basic elements, such as simple text, images or buttons	</td>
+    <td>Elements/Templates</td>
     <td>Y</td>
   </tr>
   <tr>
@@ -81,19 +81,19 @@ If using Carousel, type of header element will always be “carousel”</td>
   </tr>
   <tr>
     <td>bold</td>
-    <td>Defines if text will be bold or not. Will always be set to ‘true’ in Facebook generic, button or list layouts </td>
+    <td>Defines if text will be bold or not. Will always be set to ‘true’ in Facebook generic, button or list templates </td>
     <td>Boolean</td>
     <td>N</td>
   </tr>
   <tr>
     <td>size</td>
-    <td>Defines the element size. Will always be set to ‘large’ in Facebook generic, button or list layouts</td>
+    <td>Defines the element size. Will always be set to ‘large’ in Facebook generic, button or list templates</td>
     <td>Enum - small/medium/large</td>
     <td>N</td>
   </tr>
   <tr>
     <td>button</td>
-    <td>Buttons contains click and actions fields that define the type of action set on user click operation </td>
+    <td>Buttons contains click and actions properties that define the type of action set on user click operation </td>
     <td>Object </td>
     <td>Y</td>
   </tr>
@@ -105,7 +105,7 @@ If using Carousel, type of header element will always be “carousel”</td>
   </tr>
   <tr>
     <td>action</td>
-    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook generic, button or list layout can be set to Publish text, Link or Navigate</td>
+    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook generic, button or list template can be set to Publish text, Link or Navigate</td>
     <td>Enum - “publishText”, “link”, “navigate”</td>
     <td>Y</td>
   </tr>

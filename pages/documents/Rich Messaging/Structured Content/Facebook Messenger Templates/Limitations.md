@@ -22,9 +22,9 @@ indicator: messaging
     * If number of characters in "title" or “subtitle” text is more than 80
     * If map element is applied
   * In case of generic template only:
-    * If a "subtitle" tag is placed **without** a “title” tag in the structured content card layout 
-    * If a "image" element is placed **without** a “title” text in the structured content card layout
-    * If a "button" elements are placed **without** a “title” text in the structured content card layout
+    * If a "subtitle" tag is placed **without** a “title” tag in the structured content card template 
+    * If a "image" element is placed **without** a “title” text in the structured content card template
+    * If a "button" elements are placed **without** a “title” text in the structured content card template
   * In case of List template
     * If number of list items is lower than 2 items
     * If number of buttons is larger than 1 in a list item object 
@@ -32,4 +32,4 @@ indicator: messaging
     * If number of characters in "title" or “subtitle” text is more than 80 
     * If a "title" text tag is placed **without** a “subtitle” text tag **OR** “Image” element in the structured content list item object 
     * If Image element is placed without a title or subtitle in list item object 
-    * If map element is placed in a List layout 
+    * If map element is placed in a List template 

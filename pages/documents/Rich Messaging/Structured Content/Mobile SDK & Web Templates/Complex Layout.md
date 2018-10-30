@@ -1,38 +1,38 @@
 ---
-pagename: Complex Layout
+pagename: Complex Template
 redirect_from:
-  - rich-messaging-structured-content-complex-layout.html
+  - rich-messaging-structured-content-complex-template.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Structured Content
 subfoldername: Mobile SDK & Web Templates
 order: 10
-permalink: structured-content-mobile-sdk-&-web-templates-complex-layout.html
+permalink: structured-content-mobile-sdk-&-web-templates-complex-template.html
 indicator: both
 ---
 
-Complex layouts have a different JSON structure - the basic elements which make up the layout are contained in another hierarchy which specifies their ordering.
+Complex templates have a different JSON structure - the basic elements which make up the template are contained in another hierarchy which specifies their ordering.
 This adds the option to send Structured Content templates with more friendly structure, including more [elements and actions](rich-messaging-getting-started.html).
 
-Each layout can include other basic elements or different layouts.
+Each template can include other basic elements or different templates.
 
-**Supported Layouts**
+**Supported Templates**
 
-* **Vertical:** the block layout allows you to present a set of items vertically.
+* **Vertical:** the block template allows you to present a set of items vertically.
 
-* **Horizontal:** the block layout allows you to present a set of items horizontally.
+* **Horizontal:** the block template allows you to present a set of items horizontally.
 
 ### Vertical
 
-Layout that allows you to present a set of items (elements/layouts) vertically.
+Template that allows you to present a set of items (elements/templates) vertically.
 
-#### Fields
+#### Properties
 
 | Property Name | Description                       | Type             | Required | Size Limit   |
 | :------------ | :-------------------------------- | :--------------- | :------- | :----------- |
 | type          | Type of element. Must be vertical | Enum             | Y        |              |
-| elements      | Array of Elements/Layouts         | Elements/Layouts | Y        | 256 elements |
+| elements      | Array of Elements/Templates         | Elements/Templates | Y        | 256 elements |
 
 #### Example
 
@@ -46,14 +46,14 @@ Layout that allows you to present a set of items (elements/layouts) vertically.
 
 ### Horizontal
 
-Layout that allows you to present a set of items (elements/layouts) horizontally.
+Template that allows you to present a set of items (elements/templates) horizontally.
 
-#### Fields
+#### Properties
 
 | Property Name | Description                         | Type             | Required | Size Limit   |
 | :------------ | :---------------------------------- | :--------------- | :------- | :----------- |
 | type          | Type of element. Must be horizontal | Enum             | Y        |              |
-| elements      | Array of Elements/Layouts           | Elements/Layouts | Y        | 256 elements |
+| elements      | Array of Elements/Templates           | Elements/Templates | Y        | 256 elements |
 
 #### Example
 

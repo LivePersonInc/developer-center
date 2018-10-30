@@ -12,7 +12,7 @@ permalink: structured-content-mobile-sdk-web-templates-card-template.html
 indicator: both
 ---
 
-The very basic structured content elements that can contain either/or elements, layout, styling and actions.
+The very basic structured content elements that can contain either/or elements, template, styling and actions.
 
 ![Card](img/card.png)
 
