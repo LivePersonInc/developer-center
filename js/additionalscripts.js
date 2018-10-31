@@ -453,7 +453,7 @@ function searchFunction() {
     // Loop through all table rows, and hide those who don't match the search query on input
     $(input).on('input', function() {
         $('td').unhighlight({
-          className: 'metricHighlight'
+            className: 'metricHighlight'
         });
         filter = input.value.toUpperCase();
         //if this is the report builder page
@@ -462,12 +462,12 @@ function searchFunction() {
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
                 tdMetric = tr[i].getElementsByTagName("td")[0];
-                tdDashboard = tr[i].getElementsByTagName("td")[5];
+                tdDashboard = tr[i].getElementsByTagName("td")[4];
                 if (tdMetric || tdDashboard) {
                     if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
                         $('td').highlight(filter.toString(), {
-                          className: 'metricHighlight'
+                            className: 'metricHighlight'
                         });
                     } else {
                         tr[i].style.display = "none";
@@ -485,7 +485,7 @@ function searchFunction() {
                     if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
                         $('td').highlight(filter.toString(), {
-                          className: 'metricHighlight'
+                            className: 'metricHighlight'
                         });
                     } else {
                         tr[i].style.display = "none";
