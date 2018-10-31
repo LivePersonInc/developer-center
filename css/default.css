@@ -1139,6 +1139,14 @@ a.anchoritem {
   .nightbtn {
     margin-left: -3.3%;
   }*/
+
+  .metricstable {
+    width: 104% !important
+  }
+
+  .metricstable .description {
+    display: none;
+  }
 }
 
 @media screen and (max-width:1260px){
@@ -1222,6 +1230,11 @@ a.anchoritem {
     grid-template-columns: 2fr 0.5fr 0.5fr 5fr 3fr 1fr 2fr;
   }
 
+  .metricstable .formula {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .defaultwrapper {
     grid-template-columns: 3fr 0.5fr 0.5fr 5fr 3fr 1fr 2fr;
@@ -1252,6 +1265,10 @@ a.anchoritem {
   .nightbtn {
     margin-left: -5%;
   }*/
+
+  .suggestbutton {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1385,4 +1402,33 @@ a.anchoritem {
   .daybtn {
     margin-left: 4%;
   }
+
+  #metricsSearch {
+    width: 90.5%;
+  }
+
+  .metricstable .description{
+    display: none;
+  }
+
+  .metricstable .analysis {
+    display: none;
+  }
+
+  .metricstable .filtered {
+    display: none;
+  }
+
+  .metricstable .formula {
+    display: none;
+  }
+
+  .metricstable .dashboard {
+    display: none;
+  }
+
+  #datametricstable .description {
+    display: table-cell !important;
+  }
+
 }

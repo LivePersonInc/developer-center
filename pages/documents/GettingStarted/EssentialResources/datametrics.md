@@ -14,12 +14,12 @@ The table below outlines all of the data metrics available in the Report Builder
 <table class="metricstable" id="datametricstable">
   <thead>
     <th>Metric</th>
-    <th>Analysis Type</th>
-    <th>Channel</th>
-    <th>Description</th>
-    <th>Dashboard</th>
-    <th>Filtered By</th>
-    <th>Formula (Optional)</th>
+    <th class="analysis">Analysis Type</th>
+    <th class="channel">Channel</th>
+    <th class="description">Description</th>
+    <th class="dashboard">Dashboard</th>
+    <th class="filtered">Filtered By</th>
+    <th class="formula">Formula (Optional)</th>
   </thead>
   <tbody class="list">
   {% for metricitem in site.data.reportbuilder %}

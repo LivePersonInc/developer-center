@@ -14,12 +14,12 @@ The table below outlines all of the data metrics available when using our Data A
 <table class="metricstable" id="apimetricstable">
   <thead>
     <th>Metric</th>
-    <th>Description</th>
+    <th class="description">Description</th>
     <th>API - Method</th>
     <th>Channel</th>
-    <th>Analysis Type</th>
-    <th>Filtered By</th>
-    <th>Formula (Optional)</th>
+    <th class="analysis">Analysis Type</th>
+    <th class="filtered">Filtered By</th>
+    <th class="formula">Formula (Optional)</th>
   </thead>
   <tbody class="list">
   {% for metricitem in site.data.apimetrics %}
