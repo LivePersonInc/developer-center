@@ -6,8 +6,9 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Structured Content
+subfoldername: Mobile SDK and Web Templates
 order: 70
-permalink: structured-content-limitations.html
+permalink: structured-content-mobile-sdk-and-web-templates-limitations.html
 indicator: both
 ---
 
@@ -39,4 +40,7 @@ Both the web window (visitor side) and the workspace (agent side) do not show ma
 
 #### Web (Chat/Messaging)
 
-You cannot customize the branding of the structured content bubble in the web window view. Cards may be branded using the JSON schema only.
+You cannot customize the branding of the structured content bubble in the web window view. 
+
+Cards may be branded using the JSON template only.
+

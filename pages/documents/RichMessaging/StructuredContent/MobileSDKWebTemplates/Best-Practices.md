@@ -6,8 +6,9 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Structured Content
+subfoldername: Mobile SDK and Web Templates
 order: 60
-permalink: structured-content-best-practices.html
+permalink: structured-content-mobile-sdk-and-web-templates-best-practices.html
 indicator: both
 ---
 

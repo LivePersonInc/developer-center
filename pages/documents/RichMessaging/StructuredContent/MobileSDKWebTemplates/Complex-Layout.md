@@ -6,9 +6,9 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Structured Content
-subfoldername: Mobile SDK & Web Templates
+subfoldername: Mobile SDK and Web Templates
 order: 10
-permalink: structured-content-mobile-sdk-&-web-templates-complex-template.html
+permalink: structured-content-mobile-sdk-and-web-templates-complex-template.html
 indicator: both
 ---
 

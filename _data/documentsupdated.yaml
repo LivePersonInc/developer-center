@@ -718,7 +718,7 @@
     - documentname: Structured Content
       pages:
         - pagename: Introduction to Structured Content
-        - pagename: Mobile SDK & Web Templates
+        - pagename: Mobile SDK and Web Templates
           subpages:
             - subpagename: Introduction
             - subpagename: Card Template
