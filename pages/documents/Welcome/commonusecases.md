@@ -11,7 +11,7 @@ Below you'll find a full description of each section of the documentation. This 
 
 * **Integrating LiveEngage with your Native App** - simply refer to our Mobile App Messaging SDKs, [for iOS](consumer-experience-ios-sdk-overview.html) or [for Android](android-overview.html). These include everything you need to know in order to integrate LiveEngage with mobile applications.
 
-* **Customizing LiveEngage Reporting or Creating New Reports** - this use case would involve working with our Data APIs, specifically our [Data Access API](data-data-access-overview.html). It would also require developing some sort of UI if you'd like to display these reports. For more information, you can also refer to our [Custom Dashboard solution document](products-data-custom-dashboard-overview.html).
+* **Customizing LiveEngage Reporting or Creating New Reports** - this use case would involve working with our Data APIs, specifically our [Data Access API](data-data-access-overview.html). It would also require developing some sort of UI if you'd like to display these reports.
 
 * **Building or Integrating a New Workspace Widget** - LiveEngage gives you the ability to add third party service widgets into the agent workspace for quick reference. For example, you could add your CRM to the agent workspace, allowing your agents to submit or update leads right from LiveEngage. To achieve this, please refer to the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html).
 

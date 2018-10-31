@@ -92,7 +92,8 @@ h4 code.highlighter-rouge {
   margin-top: 7px;
 }
 .post-content table{
-  width: 125%;
+  width: 130%;
+  max-width: 130%;
 }
 
 .post-content table tbody tr td ul {
@@ -143,7 +144,8 @@ pre code {
 
 @media screen and (max-width:425px){
   .post-content table{
-    max-width: 90%;
+    max-width: unset;
+    width: auto;
   }
 }
 /*

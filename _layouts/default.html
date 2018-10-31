@@ -32,13 +32,16 @@
   <div class="documenttitlecontainer" id="documenttitlecontainer">
     {% include nav-breadcrumbs.html %}
   <div class="documenttitle">
-    <div class='h1'>{{ page.pagename }}</div>
-    {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
-    <div class="indicator chat">Chat</div>
-    {% endif %}
-    {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
-    <div class="indicator messaging">Messaging</div>
-    {% endif %}
+    <div class="titlecontainer">
+      <div class='h1'>{{ page.pagename }}</div>
+      {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
+      <div class="indicator chat">Chat</div>
+      {% endif %}
+      {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
+      <div class="indicator messaging">Messaging</div>
+      {% endif %}
+    </div>
+    <div class="suggestbutton"><a href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}" target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
   </div>
   <hr class="pagehr" />
   <div id="anchorlist" class="anchorlist folder">
@@ -51,11 +54,6 @@
   <div id="defaultcontent" class="defaultcontent" id="defaultcontent">
     {{ content | extlinks }}
   </div>
-  <a class="defaultbutton" href="http://register.liveperson.com/developer/signup">
-    <div>
-      <span>Create Your Account</span>
-    </div>
-  </a>
   <div id="defaultfooter" class="defaultfooter">
     <span>LivePerson Inc 2018 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
     </span>

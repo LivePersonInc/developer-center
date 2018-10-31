@@ -60,9 +60,10 @@ module Jekyll
           next unless a.get_attribute('href') =~ /\Ahttp/i || a.get_attribute('href') =~ /assets\/schema\/.*/
 
           end
-          #check if link is internal or a schema. If so, add the target attribute as defined in the config
+          #check if link isn't internal or a schema. If so, add the onclick attribute as defined in the config
           if attr.downcase == 'onclick'
           next unless a.get_attribute('href') !~ /assets\/schema\/.*/
+          next unless a.get_attribute('href') !~ /assets\/content\/.*/
           next unless a.get_attribute('href') !~ /\Ahttp/i
           end
           a.set_attribute(attr, value)
