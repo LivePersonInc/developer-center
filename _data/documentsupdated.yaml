@@ -18,6 +18,8 @@
     - pagename: Getting Started with Authentication
     - pagename: Getting Started with Data APIs
     - pagename: Getting Started with Engagement Attributes
+    - pagename: API Data Metrics
+    - pagename: Report Builder Data Metrics
 
 - categoryname: Agent Experience & Bots
   image: agent-experience

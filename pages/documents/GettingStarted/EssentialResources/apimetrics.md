@@ -1,11 +1,13 @@
 ---
-pagename: API Metrics
+pagename: API Data Metrics
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources
-permalink: essential-resources-api-metrics.html
+permalink: essential-resources-api-data-metrics.html
 indicator: both
 ---
+
+The table below outlines all of the data metrics available when using our Data APIs. These represent the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 <div id="metrics">
 <input id="metricsSearch" placeholder="Search by Metric or API Method" />

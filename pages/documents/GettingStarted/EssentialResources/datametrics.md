@@ -1,11 +1,13 @@
 ---
-pagename: Report Builder Metrics
+pagename: Report Builder Data Metrics
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources
-permalink: essential-resources-report-builder-metrics.html
+permalink: essential-resources-report-builder-data-metrics.html
 indicator: both
 ---
+
+The table below outlines all of the data metrics available in the Report Builder, with their definition and location within the different dashboards. More information on the Report Builder can be found [here](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=report-builder).
 
 <div id="metrics">
 <input id="metricsSearch" placeholder="Search by Metric or Dashboard" />
