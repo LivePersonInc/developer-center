@@ -24,7 +24,7 @@ a:hover, a:focus {
 }
 
 a:-webkit-any-link{
-  color: inherit;
+  color: #5879da;
 }
 
 code pre {
