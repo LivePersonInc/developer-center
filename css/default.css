@@ -195,6 +195,10 @@ code pre {
 
 /* CSS-Grid Ends */
 
+.metricHighlight {
+  background: rgba(0, 119, 255, 0.1);
+}
+
 .defaultheader img {
     width: 22px;
     min-width: 22px;

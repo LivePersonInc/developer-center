@@ -452,6 +452,9 @@ function searchFunction() {
     }
     // Loop through all table rows, and hide those who don't match the search query on input
     $(input).on('input', function() {
+        $('td').unhighlight({
+          className: 'metricHighlight'
+        });
         filter = input.value.toUpperCase();
         //if this is the report builder page
         if ($(".metricstable").is("#datametricstable")) {
@@ -463,6 +466,9 @@ function searchFunction() {
                 if (tdMetric || tdDashboard) {
                     if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
+                        $('td').highlight(filter.toString(), {
+                          className: 'metricHighlight'
+                        });
                     } else {
                         tr[i].style.display = "none";
                     }
@@ -478,20 +484,9 @@ function searchFunction() {
                 if (tdMetric || tdApi) {
                     if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
-                        $('td').highlight(filter.toString());
-                        // var oldFilter = localStorage.getItem('oldFilter');;
-                        // var findFilter;
-                        // var findBold;
-                        // findFilter = new RegExp(filter, 'g');
-                        // findBold = new RegExp(/\<b\>\w*\<\/b\>/, 'g');
-                        // if (oldFilter != undefined && oldFilter != "") {
-                        //     tdMetric.innerHTML = tdMetric.innerHTML.replace(findBold, oldFilter)
-                        //     tdApi.innerHTML = tdApi.innerHTML.replace(findBold, oldFilter)
-                        // }
-                        // if (filter != "") {
-                        //     tdMetric.innerHTML = tdMetric.innerHTML.replace(findFilter, '<b>' + filter + '</b>')
-                        //     tdApi.innerHTML = tdApi.innerHTML.replace(findFilter, '<b>' + filter + '</b>')
-                        // }
+                        $('td').highlight(filter.toString(), {
+                          className: 'metricHighlight'
+                        });
                     } else {
                         tr[i].style.display = "none";
                     }
