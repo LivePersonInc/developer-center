@@ -9,7 +9,7 @@ indicator: both
 
 ### Considerations and Requirements
 
-Because this site includes a host of diverse documents, encompassing the considerations and the requirements for all of them in this document is challenging. Therefore, each document has its own overview, where specific considerations for using the API/SDK are listed. However, there are a few considerations and requirements which are true for all resources on this sit and we'll cover them here for quick reference.
+Because this site includes a host of diverse documents, encompassing the considerations and the requirements for all of them in this document is challenging. Therefore, each document has its own overview, where specific considerations for using the API/SDK are listed. However, there are a few considerations and requirements which are true for all resources on this sit and we'll cover them here for fast reference.
 
 #### Account requirements
 
