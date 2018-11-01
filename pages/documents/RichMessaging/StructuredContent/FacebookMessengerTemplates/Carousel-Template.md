@@ -13,14 +13,14 @@ indicator: messaging
 
 The [Carousel template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/generic#carousel) is a horizontally scrollable carousel of generic or button templates.
 
-The carousel includes a list of up to 10 generic or button cards that each can include: 
+The carousel includes a list of up to 10 generic or button cards that each can include:
 
 * text title
 * text subtitle
 * image
-* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions 
+* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions
 
-Below is an image of a carousel template with all type of button actions, including a link button and navigation button tap view:
+*Carousel example with all button actions, including a link button and navigation button tap view:*
 
 ![image alt text](img/fb_structuredcontent_image_6.png)
 
@@ -37,7 +37,7 @@ Below is an image of a carousel template with all type of button actions, includ
   </thead>
   <tr>
     <td>type</td>
-    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”. 
+    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”.
 If using Carousel, type of header element will always be “carousel”</td>
     <td>Enum</td>
     <td>Y</td>

@@ -16,8 +16,9 @@ Quick Replies for RCS Business Messaging include the question/statement text and
 * Title text (including emojis)
 * Publish text click action
 
-Quick Replies example image:
-![image alt text](img/google_rcs_structuredcontent_image_5.png)
+*Quick Replies example image:*
+
+![Quick Replies example](img/google_rcs_structuredcontent_image_5.png)
 
 ### JSON Template Properties
 
@@ -132,6 +133,6 @@ Quick Replies example image:
 ### Limitations
 
 * Maximum of 11 replies for each template
-  * Each quick reply can contain up to 25 characters 
+  * Each quick reply can contain up to 25 characters
 * Colors of quick reply bubble frames is taken by default from the profile branding color that the brand has configured
 * Agent or bot will receive an error when trying to send a Quick Replies if the text exceeds 25 characters
