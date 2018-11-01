@@ -1,5 +1,5 @@
 ---
-pagename: Complex Template
+pagename: Complex Layout
 redirect_from:
   - rich-messaging-structured-content-complex-template.html
 Keywords:
@@ -8,7 +8,7 @@ categoryname: "Rich Messaging"
 documentname: Structured Content
 subfoldername: Mobile SDK and Web Templates
 order: 10
-permalink: structured-content-mobile-sdk-and-web-templates-complex-template.html
+permalink: structured-content-mobile-sdk-and-web-templates-complex-layout.html
 indicator: both
 ---
 
