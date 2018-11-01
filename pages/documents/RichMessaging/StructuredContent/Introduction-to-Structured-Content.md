@@ -121,7 +121,7 @@ Continuing with the map example, the agent widget would contain a text property 
 * convert the address to the correct template with the desired elements
 * send the template to the consumer with the `writeSC` command
 
-For further information, refer to the [Developer Community documentation](agent-workspace-sdk-methods.html###command).
+For further information, refer to the [Developer Community documentation](agent-workspace-sdk-methods.html#command).
 
 #### Bot Agent
 
@@ -134,11 +134,11 @@ Once the bot exists, the developer will perform the same transformation as with 
 * convert the data to the correct template with the desired elements
 * send the template to the consumer with the Agent Workspace SDK command
 
-For a specific example of using the SDK to send Structured Content, please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk###example-sending-rich-content-structured-content).
+For a specific example of using the SDK to send Structured Content, please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content).
 
 ### Templates
 
-LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html###Rich-Messaging-enabled-channels).
+LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html#rich-Messaging-enabled-channels).
 
 In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
 
@@ -169,9 +169,9 @@ A simple Button which triggers an Action when clicked.
 | style         | Styling elements                                                                                                                                        | Container | N        |            |
 | rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false. | Boolean   | N        |            |
 
-For the 'click' property, please see the [Click Operations](#Element-Click-Operations) section.
+For the 'click' property, please see the [Click Operations](#element-click-operations) section.
 
-For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#element-styling) section.
 
 ##### Example
 
@@ -209,9 +209,9 @@ You can send images by sharing a URL. Supported formats are JPG and PNG. Since, 
 | tooltip       | Image tooltip, used also as aria                                                                                                                       | String    | N        |            |
 | style         | Styling elements                                                                                                                                       | Container | N        |            |
 
-For the 'click' property, please see the [Click Operations](#Element-Click-Operations) section.
+For the 'click' property, please see the [Click Operations](#element-click-operations) section.
 
-For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#element-styling) section.
 
 **Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
 
@@ -251,9 +251,9 @@ Map that points to a specific location.
 | tooltip       | Map tooltip, used also as aria                                | String    | N        |
 | style         | Styling elements                                              | Container | N        |  |
 
-For the 'click' property, please see the [Click Operations](#Element-Click-Operations) section.
+For the 'click' property, please see the [Click Operations](#element-click-operations) section.
 
-For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#element-styling) section.
 
 ##### Example
 
@@ -289,7 +289,7 @@ Simple plain text message.
 | style         | Styling elements                                                                                                                                        | Container | N        |            |
 | rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false. | Boolean   | N        |            |
 
-For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#Element-Styling) section.
+For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#element-styling) section.
 
 ##### Example
 
@@ -433,7 +433,7 @@ When creating the JSON structure, the metadata ExternalID that will be returned 
 
 This is important for reporting on consumer interaction with the card, as well as for bot activity. A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
 
-You can see an example in the [Messaging Agent SDK](https://github.com/LivePersonInc/node-agent-sdk###example-sending-rich-content-structured-content) by searching for “ExternalID”.
+You can see an example in the [Messaging Agent SDK](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content) by searching for “ExternalID”.
 
 **Note:** when using our APIs to communicate as a consumer (for example, by using the Messaging Window API or the Connector API), metadata should always be added to an action. This is so that our services have an indication that an element was clicked. The metadata should be sent as part of 'AcceptStatusEvent' with the assigned status of 'ACTION'. For more information on 'AcceptStatusEvent' and its status property, please see the [Messaging Window API](agent-int-api-reference.html).
 

@@ -13,7 +13,7 @@ indicator: messaging
 
 ### What are Quick Replies
 
-Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of actionable, automatic responses that temporarily appear as part of the conversation. 
+Many conversations require asking questions with a limited number of possible responses. Quick Replies are a group of actionable, automatic responses that temporarily appear as part of the conversation.
 
 Once a consumer clicks on one of the replies, a pre-rendered message is sent to the conversation without the consumer having to type it out. The quick replies then disappear after having been clicked. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
 
@@ -25,7 +25,7 @@ Quick Replies are different from Structured Content in that they are temporary i
 
 ### How to send Quick Replies to the Conversation
 
-Quick Replies are very similar in implementation to Structured Content. For this reason, see [How to Send Structured Content to the Conversation](structured-content-introduction-to-structured-content.html#How-to-Send-Structured-Content-to-the-Conversation) for more information. 
+Quick Replies are very similar in implementation to Structured Content. For this reason, see [How to Send Structured Content to the Conversation](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information. 
 
 The primary difference between Structured Content and Quick Replies is that, for the agent widget implementation, you will use the `write` command instead of the `writeSC` command.
 
