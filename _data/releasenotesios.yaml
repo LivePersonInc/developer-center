@@ -1,6 +1,7 @@
 - operatingsystem: iOS
   releases:
-  - releasename: 3.3.0
+  - releasename: 3.4.0
+  - releasename: Mobile App Messaging SDK for iOS Release Notes 3.3.0
   - releasename: Mobile App Messaging SDK for iOS Release Notes 3.2.6
   - releasename: Mobile App Messaging SDK for iOS Release Notes 3.2.5
   - releasename: Mobile App Messaging SDK for iOS Release Notes 3.2.4

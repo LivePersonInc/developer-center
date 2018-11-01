@@ -13,6 +13,79 @@ indicator: messaging
 <br>
 <br>
 
+
+### Android Messaging SDK - Version 3.4
+
+### Overview
+
+Android Mobile App SDK v3.4 contains fixes for high priority bugs reported by customers and a new call back for leaving the conversation screen. There is one API change which will be explained in this document.
+
+#### Environmental Requirements
+
+The SDK’s minimum API is 19 and the target API is 27.
+
+### Main Features
+
+The `onConversationFragmentClosed` callback is returned when a consumer leaves the conversation screen.
+
+**Available to all customers**? Yes.
+
+**Description**
+
+When a consumer leaves the conversation screen, the call back `onConversationFragmentClosed` will be returned.
+
+### Bugs
+
+#### Bug Fixes
+
+* When using unauthenticated messaging and setting the history flag to false, in case the conversation was resolved while the SDK was in the background, the conversation screen will be stuck and the consumer will not be able to start a new conversation.
+
+* Accessibility - When Voiceover was turned on, the Secure Forms ‘X’ button read “Unlabeled Button”.
+
+* Accessibility - When Voiceover was turned on, messages inside the conversation window read as actionable items.
+
+* Accessibility - When Voiceover was turned on, the Secure Form title was skipped.
+
+* Monitoring APIs - SDK was not using the returned VID when querying "getEngagement" request. This might have caused a longer time for getting a response.
+
+* Accessibility - When Voiceover was turned on, the talk over tried to read a blank area inside the CSAT field.
+
+* During conversation, a "no internet connection" message was displayed but the send button was enabled.
+
+* Monitoring APIs URLs were using HTTP instead of HTTPS.
+
+* When using registerLPPusher with authentication parameters and opening the conversation screen before JWT renewal was completed, the authentication process would go into an infinite loop. **Please note the API change explained below**.
+
+* SetUserProfile behaveed differently on iOS and Android for the `phonenumber` attribute.
+
+* In some cases, when opening the conversation screen with a filter for presenting only the closed conversations, the “There are currently no conversations at the time” message appeared.
+
+* In some cases, when the consumer went into the conversation via push notification and then out multiple times, the app could crash with IndexOutOfBounds exception.
+
+### API Changes
+
+#### updateTokenInBackground
+
+**Description**: When using registerLPPusher with authentication parameters for JWT renewal (JWT renewal when in background) the authentication process will go into an infinite loop. In order to solve the issue we’ve introduced a new API to separate the register to push and updating the token when in background.
+
+**How to use**? When JWT expires, the `onTokenExpired()` callback is called. If the screen is in the background the host app should use the new API `updateTokenInBackground()` with new authentication parameters instead of calling r`egisterLPPusher()`.
+
+**Note**: No change in cases where the screen is in foreground - host app should call `reconnect()` to renew the JWT.
+
+#### Code sample
+
+```java
+
+@Override
+ public void onTokenExpired() {
+
+ String jwt = generateNewJwt(); // A host app method
+
+ LivePerson.updateTokenInBackground("1234567", new LPAuthenticationParams().setAuthKey(jwt));
+
+}
+```
+
 ### Android Messaging SDK -  Version 3.3.0
 
 Android Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
