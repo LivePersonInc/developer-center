@@ -108,7 +108,7 @@ For the 'style' property of a reply, please see the [Styling](#Styling) section.
 
 Each Quick Reply can have its own style elements.
 <br/>
-Additional styling configuration is available for Mobile SDK: [Android](android-attributes.html#quick-replies) | [iOS](consumer-experience-ios-sdk-attributes.html#quick-reply)
+Additional styling configuration is available for Mobile SDK: [Android](/mobile-app-messaging-sdk-for-android-customization-and-branding-attributes.html#quick-replies) | [iOS](/mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html#quick-reply)
 
 #### Properties
 
