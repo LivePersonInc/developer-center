@@ -133,6 +133,6 @@ Quick Replies for RCS Business Messaging include the question/statement text and
 ### Limitations
 
 * Maximum of 11 replies for each template
-  * Each quick reply can contain up to 25 characters
+* Each quick reply can contain up to 25 characters
 * Colors of quick reply bubble frames is taken by default from the profile branding color that the brand has configured
-* Agent or bot will receive an error when trying to send a Quick Replies if the text exceeds 25 characters
+* Agent or bot will receive an error when trying to send Quick Replies if the text exceeds 25 characters

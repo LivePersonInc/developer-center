@@ -11,7 +11,9 @@ indicator: messaging
 
 ### Overview
 
-LiveEngage enables creating and displaying up to 24 Quick Replies per template (that is, a consumer will have up to 24 replies to choose from per template they recieve).
+Web Messaging and the Mobile SDK channels now allow for Quick Replies.
+
+LiveEngage enables creating and displaying up to 24 Quick Replies per template (that is, a consumer will have up to 24 replies to choose from per template they receive).
 
 Each reply can have:
 
@@ -138,7 +140,7 @@ Additional styling configuration is available for Mobile SDK: [Android](/mobile-
 
 ### Best Practices
 
-1. A Quick Reply template does not exist on its own. An agent sends a message to the consumer (a question, a remark or even a Structured Content message) followed by a Quick Replies bundle. For example, a message such as "In which color would you like this product?" would be followed by a bundle of buttons with "Red", "Black", "Blue" etc. as possible replies. When designing the Quick Reply template, you should also design the coupled message assigned to it.
+1. A Quick Reply template does not exist on its own. An agent sends a message to the consumer (a question, a remark or even a Structured Content message) followed by a bundle of Quick Replies. For example, a message such as "In which color would you like this product?" would be followed by a bundle of buttons with "Red", "Black", "Blue" etc. as possible replies. *When designing the Quick Reply template, you should also design the coupled message assigned to it.*
 
 2. Use Quick Replies to prompt for specific next steps, or use them as answers for surveys or conversational forms.
 
@@ -148,8 +150,9 @@ Additional styling configuration is available for Mobile SDK: [Android](/mobile-
 
 5. Don't use Quick Replies if you wish to let consumers use them more than once in a conversation (like a menu a consumer can go back to). Quick Replies disappear after being clicked (or consumer made another action in the conversation window). Use [Structured Content templates](structured-content-mobile-sdk-web-templates-card-template.html) instead as they stay persistent in the conversation.
 
+6. If a consumer decides to type the text of the reply, instead of clicking on it, then no click-operation will be executed (no action or metadata will be sent to the server). If your bot depends on such data, consider "teaching" the bot to accept typed-replies, and not just clicked-replies.
+
 ### Limitations
 
-* Once a max replies per row is set (max 8), the number of rows is calculated automatically (up to 3 rows). If the number of replies exceeds max replies per row times 3, then extra replies will be added to the last row.
+* Once `itemsPerRow` is set (max 8), the number of rows is calculated automatically (up to 3 rows). If the number of replies exceeds `itemsPerRow` times 3, then extra replies will be added to the last row.
 * A reply's title is set to have a maximum of 25 characters. If more are set, then the first 22 characters will be used with ellipsis.
-* If a consumer decided to type the text of the reply, instead of clicking on it, then no click-operation will be executed (no action or metadata will be sent to the server). If your bot depends on such data, consider "teaching" the bot to accept typed-replies, and not just clicked-replies.
