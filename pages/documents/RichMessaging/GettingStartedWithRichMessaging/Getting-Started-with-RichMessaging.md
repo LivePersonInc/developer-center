@@ -15,7 +15,7 @@ indicator: both
 
 The majority of messages in a conversation are plain text like you are reading now. However, LivePerson provides many ways to enhance these messages with various interactive and styled messages.
 
-Rich Messaging consists of add-ons to an _existing_ messaging channel that allows you to push something more rich than just plain text.
+Rich Messaging consists of add-ons to an _existing_ channel that allows you to push something more rich than just plain text.
 
 ### Rich Messaging Feature Availability
 

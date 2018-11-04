@@ -11,17 +11,21 @@ indicator: messaging
 
 ### Overview
 
-The [Generic template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/generic) is a simple structured card message that includes: 
+The [Generic template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/generic) is a simple structured card message that includes:
 
 * text title
 * text subtitle
 * image
-* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions 
+* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions
 
-Below is an example of a generic template with all type of button actions, including a link button and navigation button tap view:
-![image alt text](img/fb_structuredcontent_image_0.jpg)![image alt text](img/fb_structuredcontent_image_1.jpg)![image alt text](img/fb_structuredcontent_image_2.jpg)
+*Generic example images with all button actions, including a link button and navigation button tap view:*
 
-Agent side experience: 
+![image alt text](img/fb_structuredcontent_image_0.jpg)
+![image alt text](img/fb_structuredcontent_image_1.jpg)
+![image alt text](img/fb_structuredcontent_image_2.jpg)
+
+*Agent side experience:*
+
 ![image alt text](img/fb_structuredcontent_image_3.png)
 
 ### Template Properties
@@ -37,7 +41,7 @@ Agent side experience:
   </thead>
   <tr>
     <td>type</td>
-    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”. 
+    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”.
 If using Carousel, type of header element will always be “carousel”</td>
     <td>Enum</td>
     <td>Y</td>

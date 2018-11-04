@@ -15,11 +15,11 @@ The [Button template](https://developers.facebook.com/docs/messenger-platform/se
 
 * Text title
 * Text subtitle
-* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions 
+* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions
 
-Below is a button template example image with all type of button actions, including publish text button tap view:
+*Button example image with all button actions, including publish text button tap view:*
 
-![image alt text](img/fb_structuredcontent_image_4.jpg)
+![Button Example](img/fb_structuredcontent_image_4.jpg)
 
 ### Template Properties
 
@@ -34,7 +34,7 @@ Below is a button template example image with all type of button actions, includ
   </thead>
   <tr>
     <td>type</td>
-    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”. 
+    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”.
 If using Carousel, type of header element will always be “carousel”</td>
     <td>Enum</td>
     <td>Y</td>

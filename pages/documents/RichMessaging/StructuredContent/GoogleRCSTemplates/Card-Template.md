@@ -14,20 +14,20 @@ indicator: messaging
 The RCS Business Messaging card has 2 template orientation options:
 
 1. Vertical card
-2. Horizontal card 
+2. Horizontal card
 
-The vertical card contains the following elements: 
+The vertical card contains the following elements:
 
 * Title text
 * Subtitle text
-* Image: image in a vertical card is displayed as a horizontal image at the top of the card with aspect ratio of 2:1, 16:9, or 7:3. 
+* Image: image in a vertical card is displayed as a horizontal image at the top of the card with aspect ratio of 2:1, 16:9, or 7:3.
 * Up to 4 buttons (RCS limitation) with the following actions:
     * Link
-    * Navigation 
-    * Publish text 
+    * Navigation
+    * Publish text
 
 
-The horizontal card contains the following elements: 
+The horizontal card contains the following elements:
 
 * Title text
 * Subtitle text
@@ -35,16 +35,16 @@ The horizontal card contains the following elements:
 * Up to 4 buttons (RCS limitation) with the following actions:
 
     * Link
-    * Navigation 
-    * Publish text 
+    * Navigation
+    * Publish text
 
-Horizontal card example image: 
+*Horizontal card example image:*
 
-![image alt text](img/google_rcs_structuredcontent_image_2.png)
+![Horizontal card example](img/google_rcs_structuredcontent_image_2.png)
 
-Vertical card example image: 
+*Vertical card example image:*
 
-![image alt text](img/google_rcs_structuredcontent_image_3.png)
+![Vertical card example](img/google_rcs_structuredcontent_image_3.png)
 
 ### JSON Template Properties
 
@@ -69,7 +69,7 @@ If using RCS Carousels - type of header element will always be “carousel”</t
   </tr>
   <tr>
     <td>tag</td>
-    <td>Tag of template view, must be “generic” for RCS rich content templates. 
+    <td>Tag of template view, must be “generic” for RCS rich content templates.
 
 Within basic element objects, will be “title”/”subtitle”, which will indicate what text should be rendered in each of those elements (the title and subtitle have a default style in RCS)</td>
     <td>Enum</td>

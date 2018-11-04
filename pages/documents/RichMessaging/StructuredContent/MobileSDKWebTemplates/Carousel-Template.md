@@ -9,7 +9,7 @@ documentname: Structured Content
 subfoldername: Mobile SDK and Web Templates
 order: 40
 permalink: structured-content-mobile-sdk-and-web-templates-carousel-template.html
-indicator: messaging
+indicator: both
 ---
 
 A horizontal representation of 2-10 Structured Content cards of the same business logic and structure. The carousel format can support a variety of businesses and needs to showcase service offerings, events and more.

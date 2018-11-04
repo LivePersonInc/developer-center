@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Overview
 
-Facebook Messenger has full support for list template messages. 
+Facebook Messenger has full support for list template messages.
 [List template](https://developers.facebook.com/docs/messenger-platform/send-messages/template/list) messages are a vertically structured, controllable set of up to 4 items (Facebook limitation) that may each contain:
 
 * Text title
@@ -19,9 +19,9 @@ Facebook Messenger has full support for list template messages.
 * Image
 * Each item can contain a button with link, navigation or publish text actions.
 
-Below is a list template example image:
+*List example image:*
 
-![image alt text](img/fb_structuredcontent_image_5.jpg)
+![list example](img/fb_structuredcontent_image_5.jpg)
 
 ### Template Properties
 
@@ -36,7 +36,7 @@ Below is a list template example image:
   </thead>
   <tr>
     <td>type</td>
-    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”. 
+    <td>Types of basic elements supported by Structured Content framework. Can be "text", “image” or “button”.
 If using Carousel, type of header element will always be “carousel”</td>
     <td>Enum</td>
     <td>Y</td>

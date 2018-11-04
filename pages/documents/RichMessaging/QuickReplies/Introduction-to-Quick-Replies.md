@@ -25,7 +25,7 @@ Quick Replies are different from Structured Content in that they are temporary i
 
 ### How to send Quick Replies to the Conversation
 
-Quick Replies are very similar in implementation to Structured Content. For this reason, see [How to Send Structured Content to the Conversation](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information. 
+Quick Replies are very similar in implementation to Structured Content. For this reason, see [How to Send Structured Content to the Conversation](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information.
 
 The primary difference between Structured Content and Quick Replies is that, for the agent widget implementation, you will use the `write` command instead of the `writeSC` command.
 
