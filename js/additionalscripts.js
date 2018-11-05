@@ -10,6 +10,7 @@ $(document).ready(function () {
 	isExplorer();
 	apiBuilder();
 	searchFunction();
+	capabilitiesSearch()
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -80,6 +81,7 @@ function navigateContent(url) {
 			codeButtons();
 			replaceTitle();
 			searchFunction();
+			capabilitiesSearch()
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -502,6 +504,35 @@ function searchFunction() {
 		}
 	});
 };
+
+function capabilitiesSearch() {
+	// Declare variables
+	var input, filter, table, tr, td, i;
+	input = document.getElementById("capabilitiesSearch");
+	table = document.getElementById("featurestable");
+	tr = table.getElementsByTagName("tr");
+	td = document.getElementsByTagName("td");
+	$(input).on('input', function () {
+	filter = input.value.toUpperCase();
+	$('td').unhighlight({
+		className: 'metricHighlight'
+	});
+	for (i = 0; i < tr.length; i++) {
+		capabilityName = tr[i].getElementsByTagName("td")[0];
+		if (capabilityName) {
+			if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+				$(capabilityName).highlight(filter.toString(), {
+					className: 'metricHighlight'
+				});
+			} else {
+				tr[i].style.display = "none";
+			};
+		};
+	};
+});
+}
+
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
 	var ua = window.navigator.userAgent;

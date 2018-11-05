@@ -378,6 +378,51 @@ table tbody td img {
   width: 100%;
 }
 
+#featurestable {
+  width: 180%;
+  max-width: none;
+}
+
+#featurestable thead > tr > th {
+  padding: 14px 10px;
+}
+
+#featurestable thead > tr > th:first-child {
+  width: 13%;
+}
+
+#featurestable .green {
+  color: green;
+}
+
+#featurestable .yellow {
+  color: yellow;
+}
+
+#featurestable .red {
+  color: red;
+}
+
+#capabilitiesSearch {
+  width: 30.5%;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.categoryrow {
+  background-color: #162036 !important;
+}
+
+.categoryrow td {
+  border-right:solid 0px #fff !important;
+  color: #fff !important;
+}
+
+.categoryrow td:first-child {
+  padding: 12px 25.5px 10px 23px;
+}
+
+
 .metricstable {
   width: 165% !important;
   max-width: none !important;

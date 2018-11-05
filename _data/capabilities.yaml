@@ -1,0 +1,591 @@
+- categoryName: Consumer Experience
+  features:
+  - featureName: Typing indication - consumer to agent
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Not Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Typing indication - agent to consumer
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Read indication - consumer to agent
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Not Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Read indication - agent to consumer
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Delivered indication - consumer to agent
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Delivered indication - agent to consumer
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: In-thread new messages notification
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "N/A in Channel"
+    - connectorAPI: "N/A in Channel"
+  - featureName: Hyperlinked regular expressions (phone number, date, url)
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "N/A in Channel"
+    - connectorAPI: "N/A in Channel"
+  - featureName: Desktop application support
+    channels:
+    - mobileAppMessaging: "N/A in Channel"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "N/A in Channel"
+    - line: "Supported"
+    - messagingWindowAPI: "N/A in Channel"
+    - connectorAPI: "N/A in Channel"
+  - featureName: Continuity across devices
+    channels:
+    - mobileAppMessaging: "Supported (authenticated only)"
+    - webMessaging: "Supported (authenticated only)"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Consumer resolve conversation
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "N/A in Channel"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Window branding and customization
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Accessbility
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "N/A in Channel"
+    - connectorAPI: "N/A in Channel"
+
+
+- categoryName: Rich Messaging
+  features:
+  - featureName: Emojis (both directions)
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Enlarged emojis
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "N/A in Channel"
+    - whatsapp: "Supported"
+    - googleRCS: "N/A in Channel"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Not Supported"
+  - featureName: Stickers - consumer to agent
+    channels:
+    - mobileAppMessaging: "N/A in Channel"
+    - webMessaging: "N/A in Channel"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
+  - featureName: Stickers - agent to consumer
+    channels:
+    - mobileAppMessaging: "N/A in Channel"
+    - webMessaging: "N/A in Channel"
+    - appleBusinessChat: "Not Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Not Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
+  - featureName: Photo Sharing - consumer to agent
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: GIF - consumer to agent
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Not Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Link previews
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Quick Replies
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Structured content cards
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Structured content carousel
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Structured content list
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Structured content time picker
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Audio Messages
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Payment
+    channels:
+    - mobileAppMessaging: "Not Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "N/A in Channel"
+    - facebook: "Not Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "Not Supported"
+    - line: "N/A in Channel"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+
+- categoryName: Consumer Profile
+  features:
+  - featureName: Consumer name
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+    - featureName: Consumer unique identifier
+      channels:
+      - mobileAppMessaging: "Supported"
+      - webMessaging: "Supported"
+      - appleBusinessChat: "Supported"
+      - sms: "Supported"
+      - facebook: "Supported"
+      - whatsapp: "Supported"
+      - googleRCS: "Supported"
+      - line: "Supported"
+      - messagingWindowAPI: "Supported"
+      - connectorAPI: "Supported"
+  - featureName: Consumer image
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
+
+- categoryName: Operations
+  features:
+  - featureName: Skill routing
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Engagement Attributes
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: December
+    - sms: Q1, 2019
+    - facebook: Q1, 2019
+    - whatsapp: Q1, 2019
+    - googleRCS: Q1, 2019
+    - line: Q1, 2019
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Automatic Messages
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: CSAT question
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Agent surveys
+    channels:
+    - mobileAppMessaging: "Not Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Not Supported"
+    - sms: "Not Supported"
+    - facebook: "Not Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Not Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
+  - featureName: LiveDeflect support (brand initiated conversation)
+    channels:
+    - mobileAppMessaging: "Not Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Not Supported"
+    - sms: "Supported"
+    - facebook: "Not Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
+  - featureName: Encryption (as conversation is in transit)
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Not Supported"
+    - facebook: "Not Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Encryption at rest
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Authentication (channel natively supports a way to verify that the consumer is "trusted.")
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Not Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Not Supported"
+    - facebook: "Not Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Not Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
+  - featureName: Client side data masking
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Not Supported"
+    - sms: "Not Supported"
+    - facebook: "Not Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Not Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "N/A in Channel"
+    - connectorAPI: "N/A in Channel"
+  - featureName: Agent side historical data masking (ex. credit card)
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Secure form
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: Soon
+    - sms: Soon
+    - facebook: Soon
+    - whatsapp: Soon
+    - googleRCS: Soon
+    - line: Soon
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+
+- categoryName: Automation
+  features:
+  - featureName: Bots
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Supported"
+    - googleRCS: "Supported"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Out-of-the-box automations
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Routing bot
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Preconversation survey bot
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: Post conversation survey bot
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+  - featureName: After hours bot
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "Supported"
+    - sms: "Supported"
+    - facebook: "Supported"
+    - whatsapp: "Not Supported"
+    - googleRCS: "Supported"
+    - line: "Not Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
