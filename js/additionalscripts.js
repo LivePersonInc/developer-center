@@ -80,7 +80,6 @@ function navigateContent(url) {
 			replaceTitle();
 			searchFunction();
 			capabilitiesSearch()
-			linkload();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
