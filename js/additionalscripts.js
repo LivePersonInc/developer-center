@@ -2,6 +2,7 @@ $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3');
+	linkload();
 	sidebarClick();
 	populateAnchors();
 	menuDrop();
@@ -10,6 +11,7 @@ $(document).ready(function () {
 	isExplorer();
 	apiBuilder();
 	searchFunction();
+	capabilitiesSearch()
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -17,13 +19,10 @@ $(document).ready(function () {
 	//check if refresh events are supported
 	if (window.performance) {
 		//if they are, check if refresh happened
-		if (performance.navigation.type == 1) {
-			//if it did, no need for linkload again since it was called on load
-			return false;
-		} else {
+		if (performance.navigation.type != 1) {
 			//if there's no refresh, this is a load and linkload will be called
 			linkload();
-		};
+		}
 		//if refresh events can't be detected just call the function (enjoy explorer)
 	} else {
 		linkload();
@@ -38,7 +37,7 @@ $(document).ready(function () {
 	//set breadcrumbs display if welcome page/normal page.
 	var $title = $('.h1').text();
 	if ($title.indexOf('Welcome') != -1) {
-		return false;
+		console.log("Welcome to LivePerson Developers!");
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
@@ -80,6 +79,8 @@ function navigateContent(url) {
 			codeButtons();
 			replaceTitle();
 			searchFunction();
+			capabilitiesSearch()
+			linkload();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -444,64 +445,99 @@ function apiBuilder() {
 };
 
 function searchFunction() {
-	// Declare variables
-	var input, filter, table, tr, td, i;
-	input = document.getElementById("metricsSearch");
-	td = document.getElementsByTagName("td");
-	for (i = 0; i < td.length; i++) {
-		td[i].innerText = td[i].innerText.replace(/,(?=[^\s])/g, ", ");
-	}
-	// Loop through all table rows, and hide those who don't match the search query on input
-	function reportDisplay() {
-		table = document.getElementById("datametricstable");
-		tr = table.getElementsByTagName("tr");
-		for (i = 0; i < tr.length; i++) {
-			tdMetric = tr[i].getElementsByTagName("td")[0];
-			tdDashboard = tr[i].getElementsByTagName("td")[4];
-			if (tdMetric || tdDashboard) {
-				if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					tr[i].style.display = "";
-					$('td').highlight(filter.toString(), {
-						className: 'metricHighlight'
-					});
-				} else {
-					tr[i].style.display = "none";
+	var $title = $('.h1').text();
+	if ($title.indexOf('API Data Metrics') > -1 || $title.indexOf('Report Builder Data Metrics') > -1) {
+		// Declare variables
+		var input, filter, table, tr, td, i;
+		input = document.getElementById("metricsSearch");
+		td = document.getElementsByTagName("td");
+		for (i = 0; i < td.length; i++) {
+			td[i].innerText = td[i].innerText.replace(/,(?=[^\s])/g, ", ");
+		}
+		// Loop through all table rows, and hide those who don't match the search query on input
+		function reportDisplay() {
+			table = document.getElementById("datametricstable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				tdMetric = tr[i].getElementsByTagName("td")[0];
+				tdDashboard = tr[i].getElementsByTagName("td")[4];
+				if (tdMetric || tdDashboard) {
+					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+						$('td').highlight(filter.toString(), {
+							className: 'metricHighlight'
+						});
+					} else {
+						tr[i].style.display = "none";
+					}
 				}
 			}
-		}
-	};
-	function metricsDisplay() {
-		//if this is the API metrics page
-		table = document.getElementById("apimetricstable");
-		tr = table.getElementsByTagName("tr");
-		for (i = 0; i < tr.length; i++) {
-			tdMetric = tr[i].getElementsByTagName("td")[0];
-			tdApi = tr[i].getElementsByTagName("td")[2];
-			if (tdMetric || tdApi) {
-				if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					tr[i].style.display = "";
-					$('td').highlight(filter.toString(), {
-						className: 'metricHighlight'
-					});
-				} else {
-					tr[i].style.display = "none";
+		};
+		function metricsDisplay() {
+			//if this is the API metrics page
+			table = document.getElementById("apimetricstable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				tdMetric = tr[i].getElementsByTagName("td")[0];
+				tdApi = tr[i].getElementsByTagName("td")[2];
+				if (tdMetric || tdApi) {
+					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+						$('td').highlight(filter.toString(), {
+							className: 'metricHighlight'
+						});
+					} else {
+						tr[i].style.display = "none";
+					}
 				}
 			}
-		}
+		};
+		$(input).on('input', function () {
+			$('td').unhighlight({
+				className: 'metricHighlight'
+			});
+			filter = input.value.toUpperCase();
+			//if this is the report builder page
+			if ($(".metricstable").is("#datametricstable")) {
+				setTimeout(reportDisplay, 300);
+			} else {
+				metricsDisplay();
+			}
+		});
 	};
-	$(input).on('input', function () {
+};
+
+function capabilitiesSearch() {
+	var $title = $('.h1').text();
+	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
+		// Declare variables
+		var input, filter, table, tr, td, i;
+		input = document.getElementById("capabilitiesSearch");
+		table = document.getElementById("featurestable");
+		tr = table.getElementsByTagName("tr");
+		td = document.getElementsByTagName("td");
+		$(input).on('input', function () {
+		filter = input.value.toUpperCase();
 		$('td').unhighlight({
 			className: 'metricHighlight'
 		});
-		filter = input.value.toUpperCase();
-		//if this is the report builder page
-		if ($(".metricstable").is("#datametricstable")) {
-			setTimeout(reportDisplay, 300);
-		} else {
-			metricsDisplay();
-		}
+		for (i = 0; i < tr.length; i++) {
+			capabilityName = tr[i].getElementsByTagName("td")[0];
+			if (capabilityName) {
+				if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+					$(capabilityName).highlight(filter.toString(), {
+						className: 'metricHighlight'
+					});
+				} else {
+					tr[i].style.display = "none";
+				};
+			};
+		};
 	});
+	};
 };
+
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
 	var ua = window.navigator.userAgent;
