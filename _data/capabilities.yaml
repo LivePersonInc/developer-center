@@ -14,7 +14,7 @@
     - connectorAPI: "Supported"
   - featureName: Typing indication - agent to consumer
     channels:
-    - mobileAppMessaging: "Supported"
+    - mobileAppMessaging: "Not Supported"
     - webMessaging: "Supported"
     - appleBusinessChat: "Supported"
     - sms: "N/A in Channel"
