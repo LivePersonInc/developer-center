@@ -80,20 +80,29 @@ Example:
 import requests
 import json
 
-account_id = 'xxx'
+csrf = "csrf_from_login_response"
+session_id_cookie = {
+    "Session_id": "cookie_from_login_response"
+}
 
-domain = 'exampleDomain.liveperson.net'
+logout_url = (
+    "https://"
+    + domain
+    + "/api/account/"
+    + account_id
+    + "/logout"
+)
 
-csrf = 'csrf_from_login_response'
-session_id_cookie = { 'Session_id' : 'cookie_from_login_response' }
-
-logout_url = 'https://'+domain+'/api/account/'+account_id+'/logout'
-
-logout_body = { 'csrf' : csrf }
+logout_body = {"csrf": csrf}
 
 client = requests.session()
 
-logout_response = client.post(url=logout_url, headers=header, data=json.dumps(logout_body), cookies=session_id_cookie)
+logout_response = client.post(
+    url=logout_url,
+    headers=header,
+    data=json.dumps(logout_body),
+    cookies=session_id_cookie,
+)
 
-print('logout response='+str(logout_response.status_code))
+print("logout response=" + str(logout_response.status_code))
 ```

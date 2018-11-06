@@ -14,7 +14,7 @@ order: 20
 indicator: both
 ---
 
-_Note_: as a Best Practice recommendation, it is best to call this method every three to five minutes to make sure the Login Service stays refreshed.
+_Note:_ as a Best Practice recommendation, it is best to call this method every three to five minutes to make sure the Login Service stays refreshed.
 
 ### Request
 
@@ -81,20 +81,31 @@ Session_id containing the login session ID.
 import requests
 import json
 
-account_id = 'xxx'
+csrf = "csrf_from_login_response"
+session_id_cookie = {
+    "Session_id": "cookie_from_login_response"
+}
 
-domain = 'exampleDomain.liveperson.net'
+refresh_url = (
+    "https://"
+    + domain
+    + "/api/account/"
+    + account_id
+    + "/logout"
+)
 
-csrf = 'csrf_from_login_response'
-session_id_cookie = { 'Session_id' : 'cookie_from_login_response' }
-
-refresh_url = 'https://'+domain+'/api/account/'+account_id+'/logout'
-
-refresh_body = { 'csrf' : csrf }
+refresh_body = {"csrf": csrf}
 
 client = requests.session()
 
-refresh_response = client.post(url=refresh_url, headers=header, data=json.dumps(refresh_body), cookies=session_id_cookie)
+refresh_response = client.post(
+    url=refresh_url,
+    headers=header,
+    data=json.dumps(refresh_body),
+    cookies=session_id_cookie,
+)
 
-print('refresh response='+str(refresh_response.status_code))
+print(
+    "refresh response=" + str(refresh_response.status_code)
+)
 ```

@@ -135,36 +135,38 @@ Example:
 import requests
 import json
 
-account_id = 'xxx'
-
-domain = 'exampleDomain.liveperson.net'
-
-username = 'xxx'
-app_key = 'xxx'
-secret = 'xxx'
-access_token = 'xxx'
-access_token_secret = 'xxx'
-
-app_login_url = 'https://'+domain+'/api/account/'+account_id+'/login?v=1.3'
+app_login_url = (
+    "https://"
+    + domain
+    + "/api/account/"
+    + account_id
+    + "/login?v=1.3"
+)
 
 app_login_body = {
-    'username' : username,
-    'appKey' : app_key,
-    'secret' : secret,
-    'accessToken' : access_token,
-    'accessTokenSecret' : access_token_secret,
+    "username": username,
+    "appKey": app_key,
+    "secret": app_secret,
+    "accessToken": access_token,
+    "accessTokenSecret": access_token_secret,
 }
 
-header = {'content-type': 'application/json'}
+header = {"content-type": "application/json"}
 
 client = requests.session()
 
-app_login_response = client.post(url=app_login_url, headers=header, data=json.dumps(app_login_body)).json()
+app_login_response = client.post(
+    url=app_login_url,
+    headers=header,
+    data=json.dumps(app_login_body),
+).json()
 
-# Use csrf and session_id_cookie in Refresh and Logout methods 
-csrf = app_login_response['csrf']
-session_id_cookie = { 'Session_id' : app_login_response['sessionId'] }
+# Use csrf and session_id_cookie in Refresh and Logout methods
+csrf = app_login_response["csrf"]
+session_id_cookie = {
+    "Session_id": app_login_response["sessionId"]
+}
 
-print('csrf='+csrf)
-print('Session ID cookie='+str(session_id_cookie))
+print("csrf=" + csrf)
+print("Session ID cookie=" + str(session_id_cookie))
 ```

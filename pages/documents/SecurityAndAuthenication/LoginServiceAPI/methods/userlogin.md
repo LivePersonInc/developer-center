@@ -131,30 +131,35 @@ Example:
 import requests
 import json
 
-account_id = 'xxx'
-
-domain = 'exampleDomain.liveperson.net'
-
-username = 'xxx'
-password = 'xxx'
-
-user_login_url = 'https://'+domain+'/api/account/'+account_id+'/login?v=1.3'
+user_login_url = (
+    "https://"
+    + domain
+    + "/api/account/"
+    + account_id
+    + "/login?v=1.3"
+)
 
 user_login_body = {
-    'username' : username,
-    'password' : password,
+    "username": username,
+    "password": password,
 }
 
-header = {'content-type': 'application/json'}
+header = {"content-type": "application/json"}
 
 client = requests.session()
 
-user_login_response = client.post(url=user_login_url, headers=header, data=json.dumps(user_login_body)).json()
+user_login_response = client.post(
+    url=user_login_url,
+    headers=header,
+    data=json.dumps(user_login_body),
+).json()
 
 # Use csrf and session_id_cookie in Refresh and Logout methods
-csrf = user_login_response['csrf']
-session_id_cookie = { 'Session_id' : user_login_response['sessionId'] }
+csrf = user_login_response["csrf"]
+session_id_cookie = {
+    "Session_id": user_login_response["sessionId"]
+}
 
-print('csrf='+csrf)
-print('Session ID cookie='+str(session_id_cookie))
+print("csrf=" + csrf)
+print("Session ID cookie=" + str(session_id_cookie))
 ```
