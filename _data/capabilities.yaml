@@ -467,12 +467,12 @@
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
-    - appleBusinessChat: Soon
-    - sms: Soon
-    - facebook: Soon
-    - whatsapp: Soon
-    - googleRCS: Soon
-    - line: Soon
+    - appleBusinessChat: Coming Soon
+    - sms: Coming Soon
+    - facebook: Coming Soon
+    - whatsapp: Coming Soon
+    - googleRCS: Coming Soon
+    - line: Coming Soon
     - messagingWindowAPI: "Supported"
     - connectorAPI: "Supported"
 
