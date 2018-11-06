@@ -426,6 +426,11 @@ table tbody td img {
   padding: 12px 25.5px 10px 23px;
 }
 
+.tableIcon {
+  width: 24px;
+  margin: 0 20px 0 24px;
+}
+
 
 .metricstable {
   width: 165% !important;

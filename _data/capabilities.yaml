@@ -329,45 +329,6 @@
     - messagingWindowAPI: "Supported"
     - connectorAPI: "Supported"
 
-- categoryName: Consumer Profile
-  features:
-  - featureName: Consumer name
-    channels:
-    - mobileAppMessaging: "Supported"
-    - webMessaging: "Supported"
-    - appleBusinessChat: "N/A in Channel"
-    - sms: "N/A in Channel"
-    - facebook: "Supported"
-    - whatsapp: "N/A in Channel"
-    - googleRCS: "N/A in Channel"
-    - line: "Supported"
-    - messagingWindowAPI: "Supported"
-    - connectorAPI: "Supported"
-    - featureName: Consumer unique identifier
-      channels:
-      - mobileAppMessaging: "Supported"
-      - webMessaging: "Supported"
-      - appleBusinessChat: "Supported"
-      - sms: "Supported"
-      - facebook: "Supported"
-      - whatsapp: "Supported"
-      - googleRCS: "Supported"
-      - line: "Supported"
-      - messagingWindowAPI: "Supported"
-      - connectorAPI: "Supported"
-  - featureName: Consumer image
-    channels:
-    - mobileAppMessaging: "Supported"
-    - webMessaging: "Supported"
-    - appleBusinessChat: "N/A in Channel"
-    - sms: "N/A in Channel"
-    - facebook: "Supported"
-    - whatsapp: "N/A in Channel"
-    - googleRCS: "N/A in Channel"
-    - line: "Supported"
-    - messagingWindowAPI: "Not Supported"
-    - connectorAPI: "Not Supported"
-
 - categoryName: Operations
   features:
   - featureName: Skill routing
@@ -589,3 +550,42 @@
     - line: "Not Supported"
     - messagingWindowAPI: "Supported"
     - connectorAPI: "Supported"
+
+- categoryName: Consumer Profile
+  features:
+  - featureName: Consumer name
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "Supported"
+    - messagingWindowAPI: "Supported"
+    - connectorAPI: "Supported"
+    - featureName: Consumer unique identifier
+      channels:
+      - mobileAppMessaging: "Supported"
+      - webMessaging: "Supported"
+      - appleBusinessChat: "Supported"
+      - sms: "Supported"
+      - facebook: "Supported"
+      - whatsapp: "Supported"
+      - googleRCS: "Supported"
+      - line: "Supported"
+      - messagingWindowAPI: "Supported"
+      - connectorAPI: "Supported"
+  - featureName: Consumer image
+    channels:
+    - mobileAppMessaging: "Supported"
+    - webMessaging: "Supported"
+    - appleBusinessChat: "N/A in Channel"
+    - sms: "N/A in Channel"
+    - facebook: "Supported"
+    - whatsapp: "N/A in Channel"
+    - googleRCS: "N/A in Channel"
+    - line: "Supported"
+    - messagingWindowAPI: "Not Supported"
+    - connectorAPI: "Not Supported"
