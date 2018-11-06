@@ -45,7 +45,7 @@
         </ul>
       </li>
       {% else %}
-    <li class="folder innerfolder sidebarcategory">
+    <li class="folder innerfolder sidebarcategory sololink">
       <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
     </li>
     {% endif %}
