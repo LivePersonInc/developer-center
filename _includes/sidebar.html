@@ -37,16 +37,16 @@
             </ul>
           </li>
             {% else %}
-          <li class="folder innerfolder sidebarcategory sololink">
-            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
-          </li>
+            <li class="pageitem">
+              <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            </li>
           {% endif %}
           {% endfor %}
         </ul>
       </li>
       {% else %}
-    <li class="pageitem">
-      <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+    <li class="folder innerfolder sidebarcategory">
+      <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
     </li>
     {% endif %}
       {% endfor %}

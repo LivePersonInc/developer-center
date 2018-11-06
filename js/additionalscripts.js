@@ -443,7 +443,7 @@ function capabilitiesSearch() {
 	var $title = $('.h1').text();
 	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
 		// Declare variables
-		var input, filter, table, tr, td, i;
+		var input, filter, table, tr, categorytr, td, i;
 		input = document.getElementById("capabilitiesSearch");
 		table = document.getElementById("featurestable");
 		tr = table.getElementsByTagName("tr");
@@ -454,6 +454,9 @@ function capabilitiesSearch() {
 			className: 'metricHighlight'
 		});
 		for (i = 0; i < tr.length; i++) {
+			if (tr[i].hasClass("categoryrow")) {
+				this.css("display", "none");
+			}
 			capabilityName = tr[i].getElementsByTagName("td")[0];
 			if (capabilityName) {
 				if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
