@@ -32,7 +32,7 @@ indicator: messaging
         <td><img class="tableIcon" src="img/web-messaging.svg" /></td>
         <td><img class="tableIcon" src="img/abc.svg" /></td>
         <td><img class="tableIcon" src="img/sms.svg" /></td>
-        <td><img class="tableIcon" src="img/facebook.svg" /></td>
+        <td><img class="tableIcon" src="img/fb-messenger.svg" /></td>
         <td><img class="tableIcon" src="img/whatsapp.svg" /></td>
         <td><img class="tableIcon" src="img/google-rsc.svg" /></td>
         <td><img class="tableIcon" src="img/line.svg" /></td>
