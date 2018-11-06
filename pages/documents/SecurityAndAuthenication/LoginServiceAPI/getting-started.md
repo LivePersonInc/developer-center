@@ -22,7 +22,7 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
 [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
-When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](retry-and-keepalive-best-practices-overview.html)
 
 **Use Cases**
 
