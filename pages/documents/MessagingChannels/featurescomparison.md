@@ -7,9 +7,6 @@ permalink: messaging-channels-capabilities-comparison.html
 indicator: messaging
 ---
 
-
-Keep track of LivePerson's extensive and growing messaging capabilities per channel with our Messaging Channel Capabilities comparison table. The table is divided according to capability (on the left) and into categories (the deep blue rows). Each column represents a different LivePerson or third party messaging channel. Note that the table is searchable by capability name; simply enter the name in the search box below and the table will filter according to your input! 
-
 <div class="mobilefeaturestable">This table contains all of LiveEngage's Messaging capabilities compared over several channels. As such, it is too complex to navigate and view on a tablet or a mobile device. Please open it on your laptop of desktop computer to view it properly.</div>
 
 <input id="capabilitiesSearch" placeholder="Search by Capability Name" />
