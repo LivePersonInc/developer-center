@@ -389,6 +389,7 @@ table tbody td img {
 
 #featurestable thead > tr > th {
   padding: 14px 10px;
+  text-align: center;
 }
 
 #featurestable thead > tr > th:first-child {
