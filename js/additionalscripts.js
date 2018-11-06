@@ -9,7 +9,6 @@ $(document).ready(function () {
 	codeButtons();
 	mobileHamburger();
 	isExplorer();
-	apiBuilder();
 	searchFunction();
 	capabilitiesSearch()
 	//detect if mobile user
@@ -140,6 +139,7 @@ function codeButtons() {
 			before.show();
 		}, 5000);
 	});
+
 	//simple code for removing and adding the darken and lighten classes + localStorage to remember the user's choice
 	var selectedCodeHighlight = localStorage.getItem('selectedCode');
 	if (selectedCodeHighlight == 'light') {
@@ -267,7 +267,7 @@ function mobileHamburger() {
 	});
 }
 
-//this function is a nightmare and needs to be refactored. Will update comment once that's done.
+//Inherited this function in all its nightmarish qualities. Will refactor at some point, maybe.
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
@@ -370,90 +370,20 @@ function replaceTitle() {
 	document.title = $newTitle;
 };
 
-function apiBuilder() {
-	var apiList = document.getElementById("apiList");
-	var listItem = document.getElementsByClassName("apiLink");
-	var accountNumberInput = $('#accountnumber');
-	var methodName = document.getElementById("methodName");
-	var methodItem = document.getElementsByClassName('methodLink');
-	var methodURL;
-	//find the call input field
-	var input = $('#apiNameInput');
-	$("#apiName").click(function () {
-		var hasExpanded = $("#apiList").data("expanded") == "true";
-		if (hasExpanded) {
-			$("#apiList").slideUp(400);
-			$("#apiList").data("expanded", "false");
-			$("#apiList").removeClass("active");
-			$(this).removeClass("active");
-		} else {
-			$("#apiList").slideDown(400);
-			$("#apiList").data("expanded", "true");
-			$("#apiList").addClass("active");
-		}
-	});
-	$(listItem).on("click", function () {
-		//grab the account number from its input field
-		var accountNumber = accountNumberInput.val();
-		//grab the data attribute from the link we clicked on above
-		var originalvalue = $(this).data("apiLink");
-		//if user filled in an account number
-		if (accountNumber != "") {
-			//edit the string we got from the data attribute so that it contains the account number
-			var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
-			methodURL = finalvalue;
-			//fill the input field with the call + account number
-			input.val(finalvalue);
-			//no account number added by user
-		} else {
-			//just fill in the call
-			input.val(originalvalue);
-			methodURL = originalvalue;
-		};
-		//hide the prompt to choose an API
-		$(".chooseapi").css("display", "none");
-		//display the list of methods and categories
-		$("#methodlist").css("display", "block");
-		//for each list item
-		$.each($(this), function () {
-			//grab the name of the item
-			var categoryName = $(this).text();
-			//grab all the methods
-			var allCategories = document.getElementsByClassName("methodcategory");
-			//for each method
-			$.each(allCategories, function () {
-				//check if the data category of each method matches the name of the item clicked
-				if ($(this).data("apiCategory") == categoryName) {
-					//if it matches, hide all other methods
-					$(allCategories).css("display", "none");
-					//display the matching methods
-					$(this).css("display", "block")
-					//display their parent list;
-					$('#methodList').css("visibility", "visible");
-				};
-			});
-		})
-	});
-	$(methodItem).on("click", function () {
-		var methodValue = $(this).data("apiMethod");
-		var httpValue = $(this).data("httpMethod");
-		var methodInput = $("#methodType");
-		input.val(methodURL + methodValue);
-		methodInput.val(httpValue);
-	});
-};
-
+//a function which creates and operates the search for the API Metrics and Report Builder Tables
 function searchFunction() {
 	var $title = $('.h1').text();
+	//only run if on the relevant pages
 	if ($title.indexOf('API Data Metrics') > -1 || $title.indexOf('Report Builder Data Metrics') > -1) {
 		// Declare variables
 		var input, filter, table, tr, td, i;
 		input = document.getElementById("metricsSearch");
 		td = document.getElementsByTagName("td");
+		//fixing lack of commas and spaces on source data
 		for (i = 0; i < td.length; i++) {
 			td[i].innerText = td[i].innerText.replace(/,(?=[^\s])/g, ", ");
 		}
-		// Loop through all table rows, and hide those who don't match the search query on input
+		// Loop through all table rows, and hide those who don't match the search query (represented by the "filter" variable) on input. Both functions do the same thing but are called below on the separate pages.
 		function reportDisplay() {
 			table = document.getElementById("datametricstable");
 			tr = table.getElementsByTagName("tr");
@@ -492,12 +422,14 @@ function searchFunction() {
 			}
 		};
 		$(input).on('input', function () {
+			//get rid of previous highligthing before we highlight anything new
 			$('td').unhighlight({
 				className: 'metricHighlight'
 			});
 			filter = input.value.toUpperCase();
 			//if this is the report builder page
 			if ($(".metricstable").is("#datametricstable")) {
+				//timeout is important because the table is so large and if it tries to load in parallel to the function, it stalls.
 				setTimeout(reportDisplay, 300);
 			} else {
 				metricsDisplay();
@@ -506,6 +438,7 @@ function searchFunction() {
 	};
 };
 
+//very similar to the search function above, just for the capabilities comparison table
 function capabilitiesSearch() {
 	var $title = $('.h1').text();
 	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
