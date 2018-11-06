@@ -24,16 +24,21 @@ This API provides endpoints for managing the User Session (User Login, Applicati
 
 When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](retry-and-keepalive-best-practices-overview.html)
 
-**Use Cases**
+### Use Cases
 
-1. User Login - use this method when you need to provide a programmatic way for _users_ to access and manage a LiveEngage session such as customized agent workspace or hosting a LiveEngage user in an external app. _Note_:
+#### User Login
 
-    * Using the User Login method, logged in users will be managed under the same restrictions as normal users in LiveEngage, including (for example) password expiration, concurrent conversations limits, skill groups and so on.
+Use this method when you need to provide a programmatic way for _users_ to access and manage a LiveEngage session such as customized agent workspace or hosting a LiveEngage user in an external app.
 
-    * Using the User Login method, if your account has SSO enabled, this method will not be standalone and you will have to register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.
+_Note:_
 
-{:start="2"}
-2. Appplication Login - use this method when you need to provide a programmatic way for _applications_ to access and manage a LiveEngage session such as bots, virtual agents or any other app that needs to act as an agent in the LiveEngage.
+* Using the User Login method, logged in users will be managed under the same restrictions as normal users in LiveEngage, including (for example) password expiration, concurrent conversations limits, skill groups and so on.
+
+* Using the User Login method, if your account has SSO enabled, this method will not be standalone and you will have to register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.
+
+#### Application Login
+
+Use this method when you need to provide a programmatic way for _applications_ to access and manage a LiveEngage session such as bots, virtual agents or any other app that needs to act as an agent in the LiveEngage.
 
     * **_Note: the Application Login method overcomes both issues detailed above with the User Login method, for example password expiration or SSO integration_**.
 
