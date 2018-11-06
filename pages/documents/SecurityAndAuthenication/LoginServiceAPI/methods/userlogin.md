@@ -151,11 +151,10 @@ client = requests.session()
 
 user_login_response = client.post(url=user_login_url, headers=header, data=json.dumps(user_login_body)).json()
 
+# Use csrf and session_id_cookie in Refresh and Logout methods
 csrf = user_login_response['csrf']
-
 session_id_cookie = { 'Session_id' : user_login_response['sessionId'] }
 
 print('csrf='+csrf)
-
 print('Session ID cookie='+str(session_id_cookie))
 ```
