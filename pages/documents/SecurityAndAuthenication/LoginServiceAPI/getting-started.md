@@ -40,47 +40,60 @@ _Note:_
 
 Use this method when you need to provide a programmatic way for _applications_ to access and manage a LiveEngage session such as bots, virtual agents or any other app that needs to act as an agent in the LiveEngage.
 
-    * **_Note: the Application Login method overcomes both issues detailed above with the User Login method, for example password expiration or SSO integration_**.
+_Note:_
+
+* The Application Login method overcomes both issues detailed above with the User Login method, for example password expiration or SSO integration_**.
 
 ### Getting Started
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
+#### Retrieve your domain
 
-	* agentVep
+Use the [LivePerson Domain API](retrieve-api-domains-using-the-domain-api.html) to retrieve this information by providing the service name `agentVep`.
 
-    **Request example**:
+##### Request URL Example
 
-    [http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0](http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0)
+`http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0`
 
-{:start="2"}
-2. Choose your method of login:
+#### Choose your method of login
 
-  As a user:
+##### As a User
 
-  * use your LiveEngage username and password to [login](/agent-user-login.html).
+Use your LiveEngage username and password to [login](/agent-user-login.html).
 
-  As an application:
+##### As an Application
 
-  **_Note: In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward_**.
+_Note: In order to login as an application, you first need to have the "User Type - Bot" feature activated. Please contact your account team before moving forward._
 
-  * [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Select the "Agent Interactions" category and check the "User Login" box.
+1. [Follow these instructions](retrieve-api-keys-create-a-new-api-key.html), to create and use an API key. Select the "Agent Interactions" category and check the "User Login" API.
 
-      ![APIKeyCreation](img/APIKeyCreation.png)
+    ![APIKeyCreation](img/APIKeyCreation.png)
 
-      Note that all of the authentication details below have been filled out. You will use these in the application login body of this API.
+    After checking the "User Login" API, you will be provided the following authentication details:
+    * App Key
+    * App Secret
+    * Access Token
+    * Access Token Secret
 
-      Copy the generated app key to clipboard for future use.
+    You will use these in the request body of this API.
 
-      ![APIKeyCreation1](img/apikeycreation1.png)
+    Copy the generated app key to clipboard for future use.
 
-  * Create a new user from within LiveEngage and set the user type to "Bot":
+    ![APIKeyCreation1](img/apikeycreation1.png)
 
-      ![SetBot](img/setbot.png)
+2. Create a new user from within LiveEngage and set the user type to "Bot":
 
-  * Select "App Key" from the Login Method dropdown:
+    ![SetBot](img/setbot.png)
 
-      ![LoginMethod](img/loginmethod.png)
+    You will use the username value to login.
 
-  * Paste the app key you generated earlier into the app key field and finish creating the user (fill in all mandatory fields). Once done, click save at the top right.
+3. Select "App Key" from the Login Method dropdown:
 
-      ![UserWithKey](img/userwithkey.png)
+    ![LoginMethod](img/loginmethod.png)
+
+4. Paste the app key you generated earlier into the app key field and finish creating the user (fill in all mandatory fields). Once done, click save at the top right.
+
+    ![UserWithKey](img/userwithkey.png)
+
+    You will use the Username field in the request body of this API
+
+5. Use the authentication details from step 1 and username from step 4 to [login](login-service-api-methods-application-login.html).
