@@ -69,3 +69,31 @@ Example:
       }
     }
 ```
+
+### Example Code
+
+#### Python 3
+
+```python
+#! python3
+
+import requests
+import json
+
+account_id = 'xxx'
+
+domain = 'exampleDomain.liveperson.net'
+
+csrf = 'csrf_from_login_response'
+session_id_cookie = { 'Session_id' : 'cookie_from_login_response' }
+
+logout_url = 'https://'+domain+'/api/account/'+account_id+'/logout'
+
+logout_body = { 'csrf' : csrf }
+
+client = requests.session()
+
+logout_response = client.post(url=logout_url, headers=header, data=json.dumps(logout_body), cookies=session_id_cookie)
+
+print('logout response='+str(logout_response.status_code))
+```
