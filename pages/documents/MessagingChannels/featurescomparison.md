@@ -41,7 +41,11 @@ indicator: messaging
       </tr>
       {% for feature in category.features %}
       <tr>
+        {% if feature.tooltip %}
+        <td>{{ feature.featureName }} <i class="fas fa-info tooltipicon"><span class="tooltipinfo">{{ feature.tooltip }}</span></i></td>
+        {% else %}
         <td>{{ feature.featureName }}</td>
+        {% endif %}
         {% for channel in feature.channels %}
         {% if forloop.index == 1 %}
         {% if channel.mobileAppMessaging == "Supported" %}

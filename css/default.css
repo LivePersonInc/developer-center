@@ -412,6 +412,40 @@ table tbody td img {
   color: red;
 }
 
+.tooltipicon {
+  font-size: 8px;
+  color: #666;
+  position: absolute;
+  margin-left: 2px;
+}
+
+.tooltipicon:hover .tooltipinfo {
+  display: flex;
+}
+
+.tooltipinfo {
+  display: none;
+  background-color: #162036;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin-top: 9px;
+  margin-left: -8.1px;
+}
+
+.tooltipinfo::before {
+  content: " ";
+  position: absolute;
+  bottom: 65%;
+  left: -9px;
+  margin-left: 5.4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
 #capabilitiesSearch {
   width: 25.5%;
   padding: 5px;

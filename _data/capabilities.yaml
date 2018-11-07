@@ -84,7 +84,8 @@
     - line: "Supported"
     - messagingWindowAPI: "N/A in Channel"
     - connectorAPI: "N/A in Channel"
-  - featureName: Hyperlinked regular expressions (phone number, date, url)
+  - featureName: Hyperlinked regular expressions
+    tooltip: 'For auto-linking of phone numbers, dates, url, etc.'
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Not Supported"
@@ -160,7 +161,8 @@
 
 - categoryName: Rich Messaging
   features:
-  - featureName: Emojis (both directions)
+  - featureName: Emojis
+    tooltip: 'Both directions, agent to consumer and consumer to agent'
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
@@ -391,7 +393,8 @@
     - line: "Not Supported"
     - messagingWindowAPI: "Not Supported"
     - connectorAPI: "Not Supported"
-  - featureName: LiveDeflect support (brand initiated conversation)
+  - featureName: LiveDeflect support
+    tooltip: 'Brand initiated conversation.'
     channels:
     - mobileAppMessaging: "Not Supported"
     - webMessaging: "Not Supported"
@@ -403,7 +406,8 @@
     - line: "Not Supported"
     - messagingWindowAPI: "Not Supported"
     - connectorAPI: "Not Supported"
-  - featureName: Encryption (as conversation is in transit)
+  - featureName: Encryption
+    tooltip: 'As conversation is in transit.'
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
@@ -427,7 +431,8 @@
     - line: "Supported"
     - messagingWindowAPI: "Supported"
     - connectorAPI: "Supported"
-  - featureName: Authentication (channel natively supports a way to verify that the consumer is "trusted.")
+  - featureName: Authentication
+    tooltip: 'Channel natively supports a way to verify that the consumer is "trusted."'
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Not Supported"
@@ -451,7 +456,8 @@
     - line: "Not Supported"
     - messagingWindowAPI: "N/A in Channel"
     - connectorAPI: "N/A in Channel"
-  - featureName: Agent side historical data masking (ex. credit card)
+  - featureName: Agent side historical data masking
+    tooltip: 'For example, a credit card number.'
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
