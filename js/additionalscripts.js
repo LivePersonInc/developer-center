@@ -454,9 +454,6 @@ function capabilitiesSearch() {
 			className: 'metricHighlight'
 		});
 		for (i = 0; i < tr.length; i++) {
-			if (tr[i].hasClass("categoryrow")) {
-				this.css("display", "none");
-			}
 			capabilityName = tr[i].getElementsByTagName("td")[0];
 			if (capabilityName) {
 				if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -466,6 +463,15 @@ function capabilitiesSearch() {
 					});
 				} else {
 					tr[i].style.display = "none";
+				};
+			};
+			//if the tr being looped over is one of the blue categoryrows
+			if ($(tr[i]).hasClass("categoryrow")) {
+				//hide it always
+					$(tr[i]).css("display", "none");
+					//except when user has deleted the input
+				if (input.value == "") {
+					$(tr[i]).css("display", "table-row");
 				};
 			};
 		};

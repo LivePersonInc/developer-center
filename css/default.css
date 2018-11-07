@@ -396,6 +396,10 @@ table tbody td img {
   width: 13%;
 }
 
+#featurestable tr td {
+  vertical-align: middle;
+}
+
 #featurestable .green {
   color: green;
 }
