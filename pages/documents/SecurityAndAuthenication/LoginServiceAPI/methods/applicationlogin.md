@@ -167,6 +167,6 @@ session_id_cookie = {
     "Session_id": app_login_response["sessionId"]
 }
 
-print("csrf=" + csrf)
-print("Session ID cookie=" + str(session_id_cookie))
+# Use bearer in subsequent API authorization headers (User API, Engagement History API, etc)
+bearer = app_login_response["bearer"]
 ```

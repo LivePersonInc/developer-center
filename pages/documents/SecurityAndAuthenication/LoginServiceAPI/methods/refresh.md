@@ -105,7 +105,5 @@ refresh_response = client.post(
     cookies=session_id_cookie,
 )
 
-print(
-    "refresh response=" + str(refresh_response.status_code)
-)
+print("refresh response=" + str(refresh_response.status_code))
 ```
