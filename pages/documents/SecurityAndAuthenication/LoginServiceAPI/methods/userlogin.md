@@ -133,7 +133,7 @@ import json
 
 user_login_url = (
     "https://"
-    + domain
+    + domain # from Domain API
     + "/api/account/"
     + account_id
     + "/login?v=1.3"

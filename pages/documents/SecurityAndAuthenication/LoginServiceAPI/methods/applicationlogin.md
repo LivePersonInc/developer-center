@@ -137,14 +137,14 @@ import json
 
 app_login_url = (
     "https://"
-    + domain
+    + domain # from Domain API
     + "/api/account/"
     + account_id
     + "/login?v=1.3"
 )
 
 app_login_body = {
-    "username": username,
+    "username": username, # from the creation of the bot user
     "appKey": app_key,
     "secret": app_secret,
     "accessToken": access_token,
