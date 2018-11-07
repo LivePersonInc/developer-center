@@ -17,16 +17,6 @@ The majority of messages in a conversation are plain text like you are reading n
 
 Rich Messaging consists of add-ons to an _existing_ channel that allows you to push something more rich than just plain text.
 
-### Rich Messaging Feature Availability
+The documents within Rich Messaging are organized by feature type. Within each feature dropdown, you will find the templates for each channel.
 
-| Channel                        | Structured Content | Quick Replies | Pay | Voice and Video Calling |
-| ------------------------------ | ------------------ | ------------- | --- | --- |
-| Web Messaging                  | Y                  | Y             | N | N |
-| Web Chat                       | Y                  | N             | N | N |
-| Mobile SDK                     | Y                  | Y             | N | Y |
-| Facebook Messenger             | Y                  | Y             | N | N |
-| WhatsApp Business                       | N                  | N             | N | N |
-| Apple Business Chat            | Y                  | N             | Y | N |
-| Google RCS Business Messaging | Y                  | N             | Y | N |
-| SMS                            | N                  | N             | N | N |
-| LINE                        | N | N | N | N |
+For a list of capabilities for each channel, see the Rich Messaging section of the [Messaging Channels Capabilities Comparison](messaging-channels-capabilities-comparison.html).
