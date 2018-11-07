@@ -1,4 +1,4 @@
-<div class="sidebartop"><img class="sitelogo" src="img/desktop.png" />
+<div class="sidebartop"><a href="https://developers.liveperson.com/"><img class="sitelogo" src="img/desktop.png" /></a>
 <div class="sidebarbuttons">
   <div class="documentsbutton underline lined"><img class="documentsbuttonimage" src="img/documents.svg" /><a onclick='sidebarbuttonclick(event)' href="">Documents</a></div>
   <div id="solutionsbutton" class="solutionsbutton solutionsunderline"><img class="solutionsbuttonimage" src="img/solutions.svg" /><a onclick='solutionsbuttonclick(event)' href="">Solutions</a></div>
@@ -20,6 +20,7 @@
     <a href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
+      {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
         <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
@@ -36,13 +37,18 @@
             </ul>
           </li>
             {% else %}
-          <li class="pageitem">
-            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
-          </li>
+            <li class="pageitem">
+              <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            </li>
           {% endif %}
           {% endfor %}
         </ul>
       </li>
+      {% else %}
+    <li class="folder innerfolder sidebarcategory sololink">
+      <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+    </li>
+    {% endif %}
       {% endfor %}
     </ul>
   </li>
@@ -52,6 +58,7 @@
     <a href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
+      {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
         <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
@@ -75,6 +82,11 @@
           {% endfor %}
         </ul>
       </li>
+      {% else %}
+      <li class="folder innerfolder sidebarcategory sololink">
+        <a onclick="linkclick(event, this)" class="innerlink " id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+      </li>
+      {% endif %}
       {% endfor %}
     </ul>
   </li>
@@ -83,14 +95,14 @@
     <hr class="sidebarhr lesstop" />
     <div class="sidebarbuttoncontainer">
     <a href="https://support.liveperson.com/ask-question/" target="_blank">
-    <div class="supportbutton">
-      <span>Looking for Support?</span>
-    </div>
-    </a>
-    <a class="defaultbutton" href="http://register.liveperson.com/developer/signup">
-      <div>
-        <span>Create Your Account</span>
-      </div>
+      <li class="folder topfolder">
+        <img src="img/support-icon.png" />
+        <a href="https://support.liveperson.com/ask-question/">Looking for Support?</a>
+      </li>
+    <li class="folder topfolder">
+      <img src="img/create-account-icon.png" />
+      <a href="http://register.liveperson.com/developer/signup">Create Your Account</a>
+    </li>
     </a>
   </div>
 </ul>

@@ -2,14 +2,15 @@ $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3');
+	linkload();
 	sidebarClick();
 	populateAnchors();
 	menuDrop();
 	codeButtons();
 	mobileHamburger();
 	isExplorer();
-	apiBuilder();
 	searchFunction();
+	capabilitiesSearch()
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -17,13 +18,10 @@ $(document).ready(function () {
 	//check if refresh events are supported
 	if (window.performance) {
 		//if they are, check if refresh happened
-		if (performance.navigation.type == 1) {
-			//if it did, no need for linkload again since it was called on load
-			return false;
-		} else {
+		if (performance.navigation.type != 1) {
 			//if there's no refresh, this is a load and linkload will be called
 			linkload();
-		};
+		}
 		//if refresh events can't be detected just call the function (enjoy explorer)
 	} else {
 		linkload();
@@ -38,7 +36,7 @@ $(document).ready(function () {
 	//set breadcrumbs display if welcome page/normal page.
 	var $title = $('.h1').text();
 	if ($title.indexOf('Welcome') != -1) {
-		return false;
+		console.log("Welcome to LivePerson Developers!");
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
@@ -80,6 +78,7 @@ function navigateContent(url) {
 			codeButtons();
 			replaceTitle();
 			searchFunction();
+			capabilitiesSearch()
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -140,6 +139,7 @@ function codeButtons() {
 			before.show();
 		}, 5000);
 	});
+
 	//simple code for removing and adding the darken and lighten classes + localStorage to remember the user's choice
 	var selectedCodeHighlight = localStorage.getItem('selectedCode');
 	if (selectedCodeHighlight == 'light') {
@@ -267,7 +267,7 @@ function mobileHamburger() {
 	});
 }
 
-//this function is a nightmare and needs to be refactored. Will update comment once that's done.
+//Inherited this function in all its nightmarish qualities. Will refactor at some point, maybe.
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
@@ -370,138 +370,115 @@ function replaceTitle() {
 	document.title = $newTitle;
 };
 
-function apiBuilder() {
-	var apiList = document.getElementById("apiList");
-	var listItem = document.getElementsByClassName("apiLink");
-	var accountNumberInput = $('#accountnumber');
-	var methodName = document.getElementById("methodName");
-	var methodItem = document.getElementsByClassName('methodLink');
-	var methodURL;
-	//find the call input field
-	var input = $('#apiNameInput');
-	$("#apiName").click(function () {
-		var hasExpanded = $("#apiList").data("expanded") == "true";
-		if (hasExpanded) {
-			$("#apiList").slideUp(400);
-			$("#apiList").data("expanded", "false");
-			$("#apiList").removeClass("active");
-			$(this).removeClass("active");
-		} else {
-			$("#apiList").slideDown(400);
-			$("#apiList").data("expanded", "true");
-			$("#apiList").addClass("active");
+//a function which creates and operates the search for the API Metrics and Report Builder Tables
+function searchFunction() {
+	var $title = $('.h1').text();
+	//only run if on the relevant pages
+	if ($title.indexOf('API Data Metrics') > -1 || $title.indexOf('Report Builder Data Metrics') > -1) {
+		// Declare variables
+		var input, filter, table, tr, td, i;
+		input = document.getElementById("metricsSearch");
+		td = document.getElementsByTagName("td");
+		//fixing lack of commas and spaces on source data
+		for (i = 0; i < td.length; i++) {
+			td[i].innerText = td[i].innerText.replace(/,(?=[^\s])/g, ", ");
 		}
-	});
-	$(listItem).on("click", function () {
-		//grab the account number from its input field
-		var accountNumber = accountNumberInput.val();
-		//grab the data attribute from the link we clicked on above
-		var originalvalue = $(this).data("apiLink");
-		//if user filled in an account number
-		if (accountNumber != "") {
-			//edit the string we got from the data attribute so that it contains the account number
-			var finalvalue = originalvalue.replace(/\{accountId\}/, accountNumber);
-			methodURL = finalvalue;
-			//fill the input field with the call + account number
-			input.val(finalvalue);
-			//no account number added by user
-		} else {
-			//just fill in the call
-			input.val(originalvalue);
-			methodURL = originalvalue;
+		// Loop through all table rows, and hide those who don't match the search query (represented by the "filter" variable) on input. Both functions do the same thing but are called below on the separate pages.
+		function reportDisplay() {
+			table = document.getElementById("datametricstable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				tdMetric = tr[i].getElementsByTagName("td")[0];
+				tdDashboard = tr[i].getElementsByTagName("td")[4];
+				if (tdMetric || tdDashboard) {
+					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+						$('td').highlight(filter.toString(), {
+							className: 'metricHighlight'
+						});
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
 		};
-		//hide the prompt to choose an API
-		$(".chooseapi").css("display", "none");
-		//display the list of methods and categories
-		$("#methodlist").css("display", "block");
-		//for each list item
-		$.each($(this), function () {
-			//grab the name of the item
-			var categoryName = $(this).text();
-			//grab all the methods
-			var allCategories = document.getElementsByClassName("methodcategory");
-			//for each method
-			$.each(allCategories, function () {
-				//check if the data category of each method matches the name of the item clicked
-				if ($(this).data("apiCategory") == categoryName) {
-					//if it matches, hide all other methods
-					$(allCategories).css("display", "none");
-					//display the matching methods
-					$(this).css("display", "block")
-					//display their parent list;
-					$('#methodList').css("visibility", "visible");
-				};
+		function metricsDisplay() {
+			//if this is the API metrics page
+			table = document.getElementById("apimetricstable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				tdMetric = tr[i].getElementsByTagName("td")[0];
+				tdApi = tr[i].getElementsByTagName("td")[2];
+				if (tdMetric || tdApi) {
+					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+						$('td').highlight(filter.toString(), {
+							className: 'metricHighlight'
+						});
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		};
+		$(input).on('input', function () {
+			//get rid of previous highligthing before we highlight anything new
+			$('td').unhighlight({
+				className: 'metricHighlight'
 			});
-		})
-	});
-	$(methodItem).on("click", function () {
-		var methodValue = $(this).data("apiMethod");
-		var httpValue = $(this).data("httpMethod");
-		var methodInput = $("#methodType");
-		input.val(methodURL + methodValue);
-		methodInput.val(httpValue);
-	});
+			filter = input.value.toUpperCase();
+			//if this is the report builder page
+			if ($(".metricstable").is("#datametricstable")) {
+				//timeout is important because the table is so large and if it tries to load in parallel to the function, it stalls.
+				setTimeout(reportDisplay, 300);
+			} else {
+				metricsDisplay();
+			}
+		});
+	};
 };
 
-function searchFunction() {
-	// Declare variables
-	var input, filter, table, tr, td, i;
-	input = document.getElementById("metricsSearch");
-	td = document.getElementsByTagName("td");
-	for (i = 0; i < td.length; i++) {
-		td[i].innerText = td[i].innerText.replace(/,(?=[^\s])/g, ", ");
-	}
-	// Loop through all table rows, and hide those who don't match the search query on input
-	function reportDisplay() {
-		table = document.getElementById("datametricstable");
+//very similar to the search function above, just for the capabilities comparison table
+function capabilitiesSearch() {
+	var $title = $('.h1').text();
+	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
+		// Declare variables
+		var input, filter, table, tr, categorytr, td, i;
+		input = document.getElementById("capabilitiesSearch");
+		table = document.getElementById("featurestable");
 		tr = table.getElementsByTagName("tr");
-		for (i = 0; i < tr.length; i++) {
-			tdMetric = tr[i].getElementsByTagName("td")[0];
-			tdDashboard = tr[i].getElementsByTagName("td")[4];
-			if (tdMetric || tdDashboard) {
-				if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdDashboard.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					tr[i].style.display = "";
-					$('td').highlight(filter.toString(), {
-						className: 'metricHighlight'
-					});
-				} else {
-					tr[i].style.display = "none";
-				}
-			}
-		}
-	};
-	function metricsDisplay() {
-		//if this is the API metrics page
-		table = document.getElementById("apimetricstable");
-		tr = table.getElementsByTagName("tr");
-		for (i = 0; i < tr.length; i++) {
-			tdMetric = tr[i].getElementsByTagName("td")[0];
-			tdApi = tr[i].getElementsByTagName("td")[2];
-			if (tdMetric || tdApi) {
-				if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					tr[i].style.display = "";
-					$('td').highlight(filter.toString(), {
-						className: 'metricHighlight'
-					});
-				} else {
-					tr[i].style.display = "none";
-				}
-			}
-		}
-	};
-	$(input).on('input', function () {
+		td = document.getElementsByTagName("td");
+		$(input).on('input', function () {
+		filter = input.value.toUpperCase();
 		$('td').unhighlight({
 			className: 'metricHighlight'
 		});
-		filter = input.value.toUpperCase();
-		//if this is the report builder page
-		if ($(".metricstable").is("#datametricstable")) {
-			setTimeout(reportDisplay, 300);
-		} else {
-			metricsDisplay();
-		}
+		for (i = 0; i < tr.length; i++) {
+			capabilityName = tr[i].getElementsByTagName("td")[0];
+			if (capabilityName) {
+				if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+					$(capabilityName).highlight(filter.toString(), {
+						className: 'metricHighlight'
+					});
+				} else {
+					tr[i].style.display = "none";
+				};
+			};
+			//if the tr being looped over is one of the blue categoryrows
+			if ($(tr[i]).hasClass("categoryrow")) {
+				//hide it always
+					$(tr[i]).css("display", "none");
+					//except when user has deleted the input
+				if (input.value == "") {
+					$(tr[i]).css("display", "table-row");
+				};
+			};
+		};
 	});
+	};
 };
+
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
 	var ua = window.navigator.userAgent;

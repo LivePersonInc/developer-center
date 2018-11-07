@@ -46,8 +46,8 @@ Request by skillIds=12,13 (no interval), timeframe=180
 	        "totalSkillConversationSegments": 95,
             "skillSegmentsAbandonedByConsumers": 21,
             "skillSegmentsAbandonedByConsumersInQueue": 17,
-            "skillSegmentsWithNonresponsiveConsumers": 27,
-            "skillSegmentsWithNonresponsiveAgents": 13,
+            "skillSegmentsWithNonResponsiveConsumers": 27,
+            "skillSegmentsWithNonResponsiveAgents": 13,
             "interactiveSkillSegments": 34,
             "avgTimetoFirstAgentMessageFromAgentAssignment": 28
          },
@@ -55,8 +55,8 @@ Request by skillIds=12,13 (no interval), timeframe=180
 		    "totalSkillConversationSegments": 82,
             "skillSegmentsAbandonedByConsumers": 14,
             "skillSegmentsAbandonedByConsumersInQueue": 10,
-            "skillSegmentsWithNonresponsiveConsumers": 4,
-            "skillSegmentsWithNonresponsiveAgents": 12,
+            "skillSegmentsWithNonResponsiveConsumers": 4,
+            "skillSegmentsWithNonResponsiveAgents": 12,
             "interactiveSkillSegments": 52,
             "avgTimetoFirstAgentMessageFromAgentAssignment": 28
         }
@@ -65,8 +65,8 @@ Request by skillIds=12,13 (no interval), timeframe=180
 	    "totalSkillConversationSegments": 177,
         "skillSegmentsAbandonedByConsumers": 35,
         "skillSegmentsAbandonedByConsumersInQueue": 27,
-        "skillSegmentsWithNonresponsiveConsumers": 31,
-        "skillSegmentsWithNonresponsiveAgents": 25,
+        "skillSegmentsWithNonResponsiveConsumers": 31,
+        "skillSegmentsWithNonResponsiveAgents": 25,
         "interactiveSkillSegments": 86,
         "avgTimetoFirstAgentMessageFromAgentAssignment": 28
     }
@@ -85,8 +85,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                 "totalSkillConversationSegments": 45,
                 "skillSegmentsAbandonedByConsumers": 8,
                 "skillSegmentsAbandonedByConsumersInQueue": 6,
-                "skillSegmentsWithNonresponsiveConsumers": 11,
-                "skillSegmentsWithNonresponsiveAgents": 4,
+                "skillSegmentsWithNonResponsiveConsumers": 11,
+                "skillSegmentsWithNonResponsiveAgents": 4,
                 "interactiveSkillSegments": 22,
                 "avgTimetoFirstAgentMessageFromAgentAssignment": 40
               },
@@ -94,8 +94,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                 "totalSkillConversationSegments": 40,
                 "skillSegmentsAbandonedByConsumers": 6,
                 "skillSegmentsAbandonedByConsumersInQueue": 4,
-                "skillSegmentsWithNonresponsiveConsumers": 1,
-                "skillSegmentsWithNonresponsiveAgents": 5,
+                "skillSegmentsWithNonResponsiveConsumers": 1,
+                "skillSegmentsWithNonResponsiveAgents": 5,
                 "interactiveSkillSegments": 28,
                 "avgTimetoFirstAgentMessageFromAgentAssignment": 30
               }
@@ -104,8 +104,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
               "totalSkillConversationSegments": 85,
               "skillSegmentsAbandonedByConsumers": 14,
               "skillSegmentsAbandonedByConsumersInQueue": 10,
-              "skillSegmentsWithNonresponsiveConsumers": 12,
-              "skillSegmentsWithNonresponsiveAgents": 9,
+              "skillSegmentsWithNonResponsiveConsumers": 12,
+              "skillSegmentsWithNonResponsiveAgents": 9,
               "interactiveSkillSegments": 50,
               "avgTimetoFirstAgentMessageFromAgentAssignment": 35
             }
@@ -118,8 +118,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                 "totalSkillConversationSegments": 50,
                 "skillSegmentsAbandonedByConsumers": 13,
                 "skillSegmentsAbandonedByConsumersInQueue": 11,
-                "skillSegmentsWithNonresponsiveConsumers": 16,
-                "skillSegmentsWithNonresponsiveAgents": 9,
+                "skillSegmentsWithNonResponsiveConsumers": 16,
+                "skillSegmentsWithNonResponsiveAgents": 9,
                 "interactiveSkillSegments": 12,
                 "avgTimetoFirstAgentMessageFromAgentAssignment": 25
               },
@@ -127,8 +127,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                 "totalSkillConversationSegments": 42,
                 "skillSegmentsAbandonedByConsumers": 8,
                 "skillSegmentsAbandonedByConsumersInQueue": 6,
-                "skillSegmentsWithNonresponsiveConsumers": 3,
-                "skillSegmentsWithNonresponsiveAgents": 7,
+                "skillSegmentsWithNonResponsiveConsumers": 3,
+                "skillSegmentsWithNonResponsiveAgents": 7,
                 "interactiveSkillSegments": 24,
                 "avgTimetoFirstAgentMessageFromAgentAssignment": 35
               }
@@ -137,8 +137,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
               "totalSkillConversationSegments": 92,
               "skillSegmentsAbandonedByConsumers": 21,
               "skillSegmentsAbandonedByConsumersInQueue": 17,
-              "skillSegmentsWithNonresponsiveConsumers": 19,
-              "skillSegmentsWithNonresponsiveAgents": 16,
+              "skillSegmentsWithNonResponsiveConsumers": 19,
+              "skillSegmentsWithNonResponsiveAgents": 16,
               "interactiveSkillSegments": 36,
               "avgTimetoFirstAgentMessageFromAgentAssignment": 30
             }
@@ -152,8 +152,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
 			    "totalSkillConversationSegments": 95,
                 "skillSegmentsAbandonedByConsumers": 21,
                 "skillSegmentsAbandonedByConsumersInQueue": 17,
-                "skillSegmentsWithNonresponsiveConsumers": 27,
-                "skillSegmentsWithNonresponsiveAgents": 13,
+                "skillSegmentsWithNonResponsiveConsumers": 27,
+                "skillSegmentsWithNonResponsiveAgents": 13,
                 "interactiveSkillSegments": 34,
                 "avgTimetoFirstAgentMessageFromAgentAssignment": 28
             },
@@ -161,8 +161,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
 			    "totalSkillConversationSegments": 82,
                 "skillSegmentsAbandonedByConsumers": 14,
                 "skillSegmentsAbandonedByConsumersInQueue": 10,
-                "skillSegmentsWithNonresponsiveConsumers": 4,
-                "skillSegmentsWithNonresponsiveAgents": 12,
+                "skillSegmentsWithNonResponsiveConsumers": 4,
+                "skillSegmentsWithNonResponsiveAgents": 12,
                 "interactiveSkillSegments": 52,
                 "avgTimetoFirstAgentMessageFromAgentAssignment": 28
                }
@@ -171,8 +171,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
 	        "totalSkillConversationSegments": 177,
             "skillSegmentsAbandonedByConsumers": 35,
             "skillSegmentsAbandonedByConsumersInQueue": 27,
-            "skillSegmentsWithNonresponsiveConsumers": 31,
-            "skillSegmentsWithNonresponsiveAgents": 25,
+            "skillSegmentsWithNonResponsiveConsumers": 31,
+            "skillSegmentsWithNonResponsiveAgents": 25,
             "interactiveSkillSegments": 86,
             "avgTimetoFirstAgentMessageFromAgentAssignment": 28
         }
@@ -196,7 +196,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 | totalSkillConversationSegments | Total number of skill-segments. May be larger than the number of conversations assigned to the skill as a conversation may include more than one skill segment. | Long |
 | skillSegmentsAbandonedByConsumers | Number of times consumers abandoned a conversation during the last skill-segment. An abandoned segment ends with the consumer closing the conversation with no response sent from the agent. | Long |
 | skillSegmentsAbandonedByConsumersInQueue |Number of times consumers abandoned a conversation while in queue, waiting to be assigned to an agent. Measured for the last skill-segment of a conversation, for conversations closed by consumers. | Long |
-| skillSegmentsWithNonresponsiveConsumers |The number of skill-segments which ended in a transfer to another skill or closed, with no response from the consumer to an agent’s message. | Long |
-| skillSegmentsWithNonresponsiveAgents | The number of skill-segments which ended in a transfer to another skill or closed by an agent or system (“auto close”), with no message from an agent. | Long |
+| skillSegmentsWithNonResponsiveConsumers |The number of skill-segments which ended in a transfer to another skill or closed, with no response from the consumer to an agent’s message. | Long |
+| skillSegmentsWithNonResponsiveAgents | The number of skill-segments which ended in a transfer to another skill or closed by an agent or system (“auto close”), with no message from an agent. | Long |
 | interactiveSkillSegments |The number of skill-segments which ended in a transfer to another skill or closed with at least one response from a consumer to a an agent message. | Long |
 | avgTimetoFirstAgentMessageFromAgentAssignment | The time on average taken by an agent to respond to a consumer from the time the agent is assigned to the conversation. Measured in millisecond. | Long |
