@@ -162,7 +162,7 @@
 - categoryName: Rich Messaging
   features:
   - featureName: Emojis
-    tooltip: 'Both directions, agent to consumer and consumer to agent'
+    tooltip: 'Both directions, agent to consumer and consumer to agent.'
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
