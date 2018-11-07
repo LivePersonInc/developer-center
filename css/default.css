@@ -1193,9 +1193,6 @@ a.anchoritem {
     margin-bottom: 20px;
   }
 
-  .anchorlist {
-    margin-right: -220px;
-  }
 /*
   .daybtn {
     margin-left: -2.1%
@@ -1222,7 +1219,7 @@ a.anchoritem {
   }
 
   #featurestable tr td {
-    padding: 21px 5.5px 21px 23px;
+    padding: 21px 5.5px 21px 13.5px;
   }
 }
 
