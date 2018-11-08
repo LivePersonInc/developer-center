@@ -313,6 +313,7 @@ function sidebarCollapse(url) {
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
 	$(".topfolder > a").click(function () {
+		if (!$(this).hasClass("bottombuttons")) {
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
 			$(this).next().slideUp(400);
@@ -329,8 +330,8 @@ function sidebarClick() {
 			$(".folder > a").removeClass("active");
 			$(this).addClass("active");
 		}
-
 		return false;
+	};
 	});
 
 	$(".innerfolder > a").click(function (event) {
