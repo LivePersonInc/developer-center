@@ -1,5 +1,7 @@
 ---
 pagename: Getting Started with Engagement Attributes
+redirect_from:
+  - engagment-attributes-overview.html
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources

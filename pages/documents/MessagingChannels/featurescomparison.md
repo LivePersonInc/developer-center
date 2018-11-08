@@ -12,6 +12,7 @@ indicator: messaging
 <input id="capabilitiesSearch" placeholder="Search by Capability Name" />
 <table id="featurestable">
   <thead>
+  <tr id="featuresheader">
     <th></th>
     <th>Mobile App Messaging</th>
     <th>Web Messaging</th>
@@ -23,6 +24,7 @@ indicator: messaging
     <th>Line</th>
     <th>Messaging Window API</th>
     <th>Connector API</th>
+  </tr>
   </thead>
   <tbody>
     {% for category in site.data.capabilities %}
