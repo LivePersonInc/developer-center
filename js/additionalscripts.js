@@ -48,7 +48,7 @@ function navigateContent(url) {
 	$.ajax(url)
 		.done(function (content) {
 			//once done, figure out if we're being redirected by the redirect plugin or not
-			if (content.indexOf("<title>Redirecting…</title>") > -1) {
+			if (content.indexOf("<title>Redirecting…</title>") > -1 || content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
 				//if we are, set the URL to match the original one before redirect and then call navigate content again
 				url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
 				navigateContent(url);
@@ -86,7 +86,7 @@ function navigateContent(url) {
 			//call smoothscrolling on all anchors
 			var scroll = new SmoothScroll('a[href*="#"]');
 			//from here, the rest of the code has to do with link highlighting for the sidebar
-			var selected = $('a[href="' + url + '"]');
+			var selected = $('a[href*="' + url + '"]');
 			//make the string we found previously active
 			$('.folder').removeClass("active");
 			selected = selected.addClass("activepage");
