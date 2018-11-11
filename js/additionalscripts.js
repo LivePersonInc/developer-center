@@ -273,6 +273,7 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	//make sure no other links are set to active
 	$('a').removeClass("activepage");
+	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
 	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
 	var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
