@@ -35,6 +35,7 @@
       - pagename: Methods
       - pagename: Public Model Structure
       - pagename: Public Properties
+      - pagename: Best Practices and Troubleshooting
       - pagename: Release Notes
   - documentname: Chat Agent API
     basedomain: https://{domain}/api/account/{accountId}/agentSession
