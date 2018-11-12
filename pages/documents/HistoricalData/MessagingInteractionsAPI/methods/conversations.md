@@ -173,6 +173,7 @@ integrationVersion | The version of the integration | string |
 appId | The name of the application | string | We have a few internal application names: ConsumerApp, WebAgent, BrandAgent |
 appVersion | The hosted application version. | string |
 ipAddress | Current connection user IP | string |
+isTruncated | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean | 
 
 _Campaign info_
 
