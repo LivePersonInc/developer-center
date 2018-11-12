@@ -16,7 +16,8 @@ indicator: chat
 
 This method accepts the next chat request.
 
-*Note: You should verify the results to see if there are any chat requests before accessing the resource.*
+**Note 1**: *You should verify the results to see if there are any chat requests before accessing the resource.*
+**Note 2**: *If an assigned chat is not accepted within 20 seconds, the system will assume the agent being idle and set the agent status to "away".*
 
 ### Request
 
