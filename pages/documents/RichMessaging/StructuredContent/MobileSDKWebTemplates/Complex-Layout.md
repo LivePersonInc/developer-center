@@ -1,7 +1,7 @@
 ---
 pagename: Complex Layout
 redirect_from:
-  - rich-messaging-structured-content-complex-template.html
+  - rich-messaging-structured-content-complex-layout.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"

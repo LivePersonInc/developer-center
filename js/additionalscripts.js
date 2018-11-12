@@ -48,7 +48,7 @@ function navigateContent(url) {
 	$.ajax(url)
 		.done(function (content) {
 			//once done, figure out if we're being redirected by the redirect plugin or not
-			if (content.indexOf("<title>Redirecting…</title>") > -1) {
+			if (content.indexOf("<title>Redirecting…</title>") > -1 || content.indexOf("<title>Redirecting&hellip;</title>") > -1) {
 				//if we are, set the URL to match the original one before redirect and then call navigate content again
 				url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
 				navigateContent(url);
@@ -86,7 +86,7 @@ function navigateContent(url) {
 			//call smoothscrolling on all anchors
 			var scroll = new SmoothScroll('a[href*="#"]');
 			//from here, the rest of the code has to do with link highlighting for the sidebar
-			var selected = $('a[href="' + url + '"]');
+			var selected = $('a[href*="' + url + '"]');
 			//make the string we found previously active
 			$('.folder').removeClass("active");
 			selected = selected.addClass("activepage");
@@ -273,6 +273,7 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	//make sure no other links are set to active
 	$('a').removeClass("activepage");
+	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
 	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
 	var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
@@ -313,6 +314,7 @@ function sidebarCollapse(url) {
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
 	$(".topfolder > a").click(function () {
+		if (!$(this).hasClass("bottombuttons")) {
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
 			$(this).next().slideUp(400);
@@ -329,8 +331,8 @@ function sidebarClick() {
 			$(".folder > a").removeClass("active");
 			$(this).addClass("active");
 		}
-
 		return false;
+	};
 	});
 
 	$(".innerfolder > a").click(function (event) {
