@@ -13,9 +13,7 @@ indicator: messaging
 
 The Apple Business Chat messaging channel now supports a new Rich Message type that allows you to submit payment requests to consumers using **Apple Pay**. The consumers can then respond to the payment request using their preferred Apple Pay payment methods.
 
-This rich messaging feature is similar to the [Apple Business Chat structured content templates](structured-content-apple-business-chat-templates-introduction.html) in terms of implementation. However, this feature is unique in the sense that it is a two-way communication. 
-
-You submit an Apple Pay request to the consumer (similar to sending a structured content template), and the consumer replies with their payment response.
+You submit an Apple Pay request to the consumer (similar to sending a [structured content template](structured-content-apple-business-chat-templates-introduction.html)), and the consumer replies with their payment response.
 
 See the message flow below:
 
@@ -32,7 +30,7 @@ Register a Merchant Identifier (Merchant ID) in your Apple Developer Account to 
 
 Then create a private Apple Pay account and supply your Apple Pay Merchant ID on your Apple management area (register.apple.com).
 
-You will use your Merchant ID in the `merchantIdentifier` properties.
+You will use your Merchant ID in the `merchantIdentifier` properties of the Metadata JSON.
 
 ### Sending an Apple Pay Request to a Consumer
 
