@@ -13,7 +13,7 @@ indicator: messaging
 
 The Apple Business Chat messaging channel now supports a new Rich Message type that allows you to submit payment requests to consumers using **Apple Pay**. The consumers can then respond to the payment request using their preferred Apple Pay payment methods.
 
-You submit an Apple Pay request to the consumer (similar to sending a [structured content template](structured-content-apple-business-chat-templates-introduction.html)), and the consumer replies with their payment response.
+An Apple Pay request is sent to the consumer, and the consumer replies with their payment response.
 
 See the message flow below:
 
@@ -30,15 +30,13 @@ Register a Merchant Identifier (Merchant ID) in your Apple Developer Account to 
 
 Then create a private Apple Pay account and supply your Apple Pay Merchant ID on your Apple management area (register.apple.com).
 
-You will use your Merchant ID in the `merchantIdentifier` properties of the Metadata JSON.
+You will use your Merchant ID in the `merchantIdentifier` properties of the Metadata template.
 
 ### Sending an Apple Pay Request to a Consumer
 
 Similar to [Apple structured content templates](structured-content-apple-business-chat-templates-introduction.html), you will send two template payloads (Metadata and Body) for the Apple Pay request to the consumer.
 
-Different from Apple structured content templates, the **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace (for conversational context, transcript and historic records, as well as ease of use for agents). The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
-
-For full instructions on the structured content body property descriptions and different template options please refer to the [structured content guide in our dev community.](structured-content-introduction-to-structured-content.html)
+Different from Apple structured content templates, the **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
 _Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on LiveEngage)_
 ![](img/apple_pay_consumer1.png) ![](img/apple_pay_consumer2.png)
@@ -324,11 +322,13 @@ This object defines how the Apple Pay template is displayed on the consumer devi
 
 #### Request Body
 
-The request body defines how the Apple Pay bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
+The request body defines how the Apple Pay bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. This Apple Pay structured content in the Agent Workspace is for conversational context, transcript and historic records, as well as ease of use for agents.
+
+See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
 
 ##### Example
 
-A very simple, basic structured content template would be just an image and text in a horizontal arrangement.
+A very simple, basic structured content template for Apple Pay would be just an image and text in a horizontal arrangement.
 
 ```json
 {
