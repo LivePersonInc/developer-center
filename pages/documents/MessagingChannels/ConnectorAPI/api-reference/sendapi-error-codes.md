@@ -3,9 +3,9 @@ pagename: Authorization Error Responses
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: API Reference
+subfoldername: Authorization and Authentication
 indicator: messaging
-permalink: connector-api-api-reference-authorization-error-responses.html
+permalink: connector-api-authorization-and-authentication-authorization-error-responses.html
 ---
 
 <div class="important">The error response format described here will be available in the next release.</div>

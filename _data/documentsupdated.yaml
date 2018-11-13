@@ -520,6 +520,7 @@
       subpages:
       - subpagename: Get AppJWT
       - subpagename: Get ConsumerJWS
+      - subpagename: Authorization Error Responses
     - pagename: API Reference
       subpages:
       - subpagename: Overview
