@@ -239,4 +239,4 @@ Status code: 500 Server Error - Loading account:
 | 4xx | Client side error | Do not retry, fix problems in code |
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="important"> Specifically in the case of a "500 - Loading account" response (as shown in the response entity examples above), it is important to retrieve the value of the `vid` from the response body and append it as the value of the `vid` query param for the retry request (to be issued following a pause interval of a few seconds).</div>
+<div class="important"> Specifically in the case of a "500 - Loading account" response (as shown in the response entity examples above), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
