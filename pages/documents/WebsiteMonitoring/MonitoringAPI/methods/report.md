@@ -52,10 +52,9 @@ As engagement attributes are considered unauthenticated, it should not be used f
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
 | identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1 |
 | identities.sub | The subject for identification | string | Required | |
-
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
-| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
+| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] <br><br> At least one form of identification is required (ConsumerID or VisitorID).
 
 <sup>[1]</sup> At least one form of identification is required (`consumerId` / an `identities.sub` or `vid`).
 
