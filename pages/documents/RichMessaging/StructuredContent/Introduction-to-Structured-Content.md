@@ -138,7 +138,7 @@ For a specific example of using the SDK to send Structured Content, please refer
 
 ### Templates
 
-LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html#rich-Messaging-enabled-channels).
+LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html).
 
 In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
 

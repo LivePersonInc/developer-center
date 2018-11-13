@@ -38,19 +38,19 @@ You will use your Merchant ID in the `merchantIdentifier` properties.
 
 Similar to [Apple structured content templates](structured-content-apple-business-chat-templates-introduction.html), you will send two template payloads (Metadata and Body) for the Apple Pay request to the consumer.
 
-Different from the other Apple structured content templates, the **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace (for conversational context, transcript and historic records, as well as ease of use for agents). The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+Different from Apple structured content templates, the **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace (for conversational context, transcript and historic records, as well as ease of use for agents). The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
 For full instructions on the structured content body property descriptions and different template options please refer to the [structured content guide in our dev community.](structured-content-introduction-to-structured-content.html)
 
 _Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on LiveEngage)_
-![](img/apple_pay_consumer1.png)![](img/apple_pay_consumer2.png)
+![](img/apple_pay_consumer1.png) ![](img/apple_pay_consumer2.png)
 
 _Consumer completes payment process and receives the reply message bubble with the payment status_
 
 _Agent views Apple Pay Request in LiveEngage Agent Workspace_
 ![](img/apple_pay_le.png)
 
-### Request Metadata
+#### Request Metadata
 
 **BusinessChatMessage - receivedMessage and replyMessage bubbles**
 
@@ -62,7 +62,7 @@ The payment request holds the full Apple Pay transaction details (details of pur
 
 To edit the Connector Payment Request and Business Chat Message (with received and reply bubble) via Structured Content, please use the metadata template with the relevant properties, as presented in the example JSON below.
 
-#### Apple Pay Request Metadata example
+##### Request Metadata example
 
 ```json
 [
@@ -158,7 +158,7 @@ To edit the Connector Payment Request and Business Chat Message (with received a
 ]
 ```
 
-#### Apple Pay Request Metadata Properties
+##### Request Metadata Properties
 
 <table>
   <thead>
@@ -324,11 +324,11 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   </tbody>
 </table>
 
-### Request Body
+#### Request Body
 
 The request body defines how the Apple Pay bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
 
-#### Example
+##### Example
 
 A very simple, basic structured content template would be just an image and text in a horizontal arrangement.
 
@@ -347,11 +347,11 @@ After the consumer submits their Apple Pay details in the form, the Apple Pay re
 
 Conversational Metadata provides a way for developers to pass metadata or context information to a bot using the Messaging Agent SDK.
 
-### Response Metadata
+#### Response Metadata
 
 Apple Pay response metadata is context information about the consumer payment status and details. This information should be used to allow the bot to validate the payment against your payment backend, as well as to enable the bot to continue with next steps per the payment details (fetch order confirmation and share with the consumer, remove item for backend inventory systems, etc).
 
-#### Successful payment response example:
+##### Successful payment response example:
 
 ```json
 {  
@@ -361,7 +361,7 @@ Apple Pay response metadata is context information about the consumer payment st
 }
 ```
 
-#### Failed payment response example:
+##### Failed payment response example:
 
 ```json
 {  
@@ -371,7 +371,7 @@ Apple Pay response metadata is context information about the consumer payment st
 }
 ```
 
-#### `"type": "ConnectorPaymentRequest"` Object Properties
+###### `"type": "ConnectorPaymentRequest"` Object Properties
 
 <table>
   <thead>
