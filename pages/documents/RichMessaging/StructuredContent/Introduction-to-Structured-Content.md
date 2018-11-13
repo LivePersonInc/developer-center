@@ -142,9 +142,35 @@ LivePerson provides multiple structured content **templates** for each unique ri
 
 In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
 
-Each structured content template will contain one or many **elements**. Below you will find basic elements, their styling, and their click operations, that are common within all templates.
+Each structured content template will contain one or more **elements** in the `elements` array seen in the example below:
+
+#### Example
+
+```json
+{
+  "type": "type",
+  "tag": "tag",
+  "elements": [
+    // Basic elements here
+  ]
+}
+```
+
+#### Properties
+
+| Property Name | Description                                                                         | Type   | Required |
+| :------------ | :---------------------------------------------------------------------------------- | :----- | :------- |
+| type          | Type of template. Often used to specify arrangement like "vertical" or "horizontal" | Enum   | Y        |
+| tag           | Further specifies the template type                                                 | String | N        |
+| elements      | List of element objects                                                             | Array  | Y        |
+
+All templates will have a basic object that holds the elements array. The object will always have a type and optionally have a tag. Tag is only relevant when using third party connector like FB, RCS, 
+
+Below you will find basic elements, their styling, and their click operations, that are common within all templates.
 
 When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK & Web, Facebook Messenger, Apple Business Chat, etc.
+
+
 
 ### Basic Elements
 
