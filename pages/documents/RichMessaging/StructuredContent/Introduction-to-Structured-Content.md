@@ -129,7 +129,7 @@ You will need to set up a bot integration using the [Messaging Agent SDK](messag
 
 For more general information about using the SDK to integrate bots, please refer to the [Solution’s documentation](products-customer-facing-bots-overview.html).
 
-Once the bot exists, the developer will perform the same transformation as with the Agent Workspace Widget:
+Once the bot exists, you will perform the same transformation as with the Agent Workspace Widget:
 
 * convert the data to the correct template with the desired elements
 * send the template to the consumer with the Agent Workspace SDK command
