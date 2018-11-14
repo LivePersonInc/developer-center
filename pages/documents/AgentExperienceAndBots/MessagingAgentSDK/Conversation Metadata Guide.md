@@ -241,6 +241,31 @@ Structured content identifier metadata is used to both identify a specific "Card
 
 **Type**: ConnectorAuthenticationResponse
 
+<table>
+  <thead>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Status</td>
+    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>token</td>
+    <td>Token string - will be available only when authentication was successful </td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>errors</td>
+    <td>Type of authentication error as received from channel - will be available only when authentication failed </td>
+    <td>Array</td>
+  </tr>
+  </tbody>
+</table>
+
 ### Use Cases and Examples
 
 #### Bot escalation to human agent
