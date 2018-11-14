@@ -21,20 +21,23 @@ See the message flow below:
 
 1. Send the Apple Pay template via an agent or bot with the Structured Content framework and configuration (similar to list and time picker).
 2. Payment transactions will be performed by your payment gateway
-3. Agents and bots on LiveEngage will get real-time updates upon a consumer payment response
-4. Upon successful or failed payment, LiveEngage will support passing the payment details back to LiveEngage Conversational Metadata (via the [Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation on the payment information against their Apple Pay account
+3. Upon successful or failed payment, LiveEngage will support passing the payment details back to LiveEngage Conversational Metadata (via the [Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation on the payment information against the Apple Pay account
 
 ### Setup
+
+The first step is to [configure your Apple developer account for Apple Pay](https://developer.apple.com/videos/play/tutorials/configuring-your-developer-account-for-apple-pay/).
 
 Register a Merchant Identifier (Merchant ID) in your Apple Developer Account to enable Apple Pay payments in Messages. For information on creating your merchant ID, see [Configuring Your Environment.](https://developer.apple.com/library/content/ApplePay_Guide/Configuration.html#//apple_ref/doc/uid/TP40014764-CH2)
 
 Then create a private Apple Pay account and supply your Apple Pay Merchant ID on your Apple management area (register.apple.com).
 
-You will use your Merchant ID in the `merchantIdentifier` properties of the Metadata template.
+You will use your Merchant ID in the `merchantIdentifier` properties of the Apple Pay Request metadata template.
 
 ### Sending an Apple Pay Request to a Consumer
 
-Similar to [Apple structured content templates](structured-content-apple-business-chat-templates-introduction.html), you will send two template payloads (Metadata and Body) for the Apple Pay request to the consumer.
+Similar to [Apple structured content templates](structured-content-apple-business-chat-templates-introduction.html), you will send a metadata template and a body template for the Apple Pay request to the consumer.
+
+See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for a background on how to send these.
 
 Different from Apple structured content templates, the **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
@@ -44,19 +47,19 @@ _Agent/bot generates Apple Pay Interactive Message to consumer (using structured
 _Consumer completes payment process and receives the reply message bubble with the payment status_
 
 _Agent views Apple Pay Request in LiveEngage Agent Workspace_
-![](img/apple_pay_le.png)
+![](img/apple_pay_agentworkspace2.png)
 
 #### Request Metadata
 
-**BusinessChatMessage - receivedMessage and replyMessage bubbles**
+**BusinessChatMessage - receivedMessage bubbles**
 
-The Business Chat Message holds the received and reply message, which defines how the bubble element will be displayed when a message is received on the consumer’s device and submits back on the consumer device.
+The `BusinessChatMessage` holds the received message, which defines how the bubble element will be displayed when a message is received on the consumer’s device. The Apple Pay reply message on the consumer device is not configurable.
 
 **ConnectorPaymentRequest**
 
 The payment request holds the full Apple Pay transaction details (details of purchased services, payment capabilities, shipping methods, and transaction amounts). You can also request billing and shipping methods in this request.
 
-To edit the Connector Payment Request and Business Chat Message (with received and reply bubble) via Structured Content, please use the metadata template with the relevant properties, as presented in the example JSON below.
+To edit the `ConnectorPaymentRequest` and `BusinessChatMessage` metadata template, please use the relevant properties, as presented in the example JSON below.
 
 ##### Request Metadata example
 
@@ -270,7 +273,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>requestIdentifier </td>
-    <td>An identifier for the request. Business Chat includes the identifier in its response to LiveEngage - this is an important property which allows you to correlate the payment response with their backend payment service  </td>
+    <td>A UUID for the request. Business Chat includes the identifier in its response to LiveEngage - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
     <td>string</td>
     <td>Y</td>
   </tr>
@@ -307,7 +310,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   </tr>
   <tr>
     <td>merchantSession</td>
-    <td>Containing the payment session provided by Apple Pay after requesting a new payment session. For more information, see Requesting an Apple Pay Payment Session.</td>
+    <td>Containing the payment session provided by Apple Pay after requesting a new payment session. For more information, see <a href="https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session">Requesting an Apple Pay Payment Session</a>.</td>
     <td>object</td>
     <td>Y</td>
   </tr>
@@ -322,19 +325,26 @@ This object defines how the Apple Pay template is displayed on the consumer devi
 
 #### Request Body
 
-The request body defines how the Apple Pay bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. This Apple Pay structured content in the Agent Workspace is for conversational context, transcript and historic records, as well as ease of use for agents.
+The request body is standard structured content. The template is sent to LiveEngage and defines how the Apple Pay bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. This request body template is useful for conversational context, transcript and historical records, as well as ease of use for agents.
 
 See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
 
 ##### Example
 
-A very simple, basic structured content template for Apple Pay would be just an image and text in a horizontal arrangement.
+A very simple, basic structured content template for Apple Pay would be an image and text in a horizontal arrangement.
 
 ```json
 {
   "type": "horizontal",
   "elements": [
-    // image and text elements here
+    {
+      "type": "image",
+      "url": "apple_pay_image_url"
+    },
+    {
+      "type": "text",
+      "text": "Your Order"
+    }
   ]
 }
 ```
@@ -343,11 +353,15 @@ A very simple, basic structured content template for Apple Pay would be just an 
 
 After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered to LiveEngage using [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html).
 
-Conversational Metadata provides a way for developers to pass metadata or context information to a bot using the Messaging Agent SDK.
+Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
+
+Please see [the guide](messaging-agent-sdk-conversation-metadata-guide.html#receiving) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
+
+_Note:_ Only a bot can listen for Conversational Metadata at this time.
 
 #### Response Metadata
 
-Apple Pay response metadata is context information about the consumer payment status and details. This information should be used to allow the bot to validate the payment against your payment backend, as well as to enable the bot to continue with next steps per the payment details (fetch order confirmation and share with the consumer, remove item for backend inventory systems, etc).
+Apple Pay response metadata is context information about the consumer payment status and details. You will recieve the payment response and with your `requestIdentifier` value that was sent with the initial request. Then this `requestIdentifier` should be used to allow the bot to validate the payment against your payment backend.
 
 ##### Successful payment response example:
 
@@ -369,7 +383,7 @@ Apple Pay response metadata is context information about the consumer payment st
 }
 ```
 
-###### `"type": "ConnectorPaymentRequest"` Object Properties
+###### `"type": "ConnectorPaymentResponse"` Object Properties
 
 <table>
   <thead>
@@ -385,7 +399,7 @@ Apple Pay response metadata is context information about the consumer payment st
   </tr>
   <tr>
     <td>requestIdentifier</td>
-    <td>Identifier of the payment response. Will enable you to correlate between the payment request and response. </td>
+    <td>UUID of the payment response. This information should be used to allow the bot to validate the payment against your payment backend.</td>
     <td>String</td>
   </tr>
   </tbody>
@@ -398,7 +412,7 @@ Apple Pay response metadata is context information about the consumer payment st
 * Upon payment response from consumer - It is very important that you perform validation on the payment response against your payment backend using the request identifier.
 * Each Apple Pay merchant session will be available for only 5 minutes (based on Apple standards) - if the consumer will not reply to the payment request within that time frame the session will end, and you will need to perform another payment request to allow the consumer to pay.
 
-#### Received and reply bubble behavior 
+#### Consumer received and reply bubble behavior 
 
 * If using received bubble with style "icon" -
   * Received bubble experience - the image in the received bubble will only be presented in the push preview message. Once you tap to view the bubble in the conversation thread, the image will not be presented (only the default Apple Pay logo) and the size will be set to "icon" as the  default view.  
@@ -410,9 +424,9 @@ Apple Pay response metadata is context information about the consumer payment st
   * Received bubble experience - the image in the bubble will be presented in the push message preview as well as in the conversation thread bubble. The size of the bubble will stay "large" as set in the SC request
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request
 * ImageURL of the received bubble must be whitelisted in LiveEngage
-  * Images added in the RecievedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.
+  * Image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.
 
 ### Limitations
 
-* In the current version of the Apple Pay template, only a bot in LiveEngage (using the Agent SDK) will be able to receive the payment response (using the Conversation Metadata). 
-  * A Human Agent is currently not exposed to these events. Adding UI indication in the LiveEngage Workspace is planned for Q4, 2018
+* In the current version of the Apple Pay template, only a bot in LiveEngage (using the Messaging Agent SDK) will be able to receive the payment response (using the Conversation Metadata). 
+  * A Human Agent is currently not exposed to these events. There will be an option to recieve payment response data without the Messaging Agent SDK in Q1 2019
