@@ -134,7 +134,47 @@ Once the bot exists, the developer will perform the same transformation as with 
 * convert the data to the correct template with the desired elements
 * send the template to the consumer with the Agent Workspace SDK command
 
-For a specific example of using the SDK to send Structured Content, please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content).
+Below is an example of sending the same location map.
+
+```javascript
+agent.publishEvent({
+	dialogId: 'MY_DIALOG_ID',
+	event: {
+		type: 'RichContentEvent',
+		content: {
+      "text": yourBusinessName,
+      "type": "vertical",
+      "elements": [
+        {
+          "type": "map",
+          "lo": yourLongitude,
+          "la": yourLatitude,
+          "tooltip": "Map",
+          "click": {
+            "actions": [
+              {
+                "type": "navigate",
+                "name": "navigate",
+                "lo": yourLongitude,
+                "la": yourLatitude
+              }  
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "text": "1234 Hollywood Boulevard, Los Angeles, CA"
+        },
+      ],
+      "metadata": { "fallback": url_link_map_link }
+    }
+	}
+}, null, [{type: 'ExternalId', id: 'MY_CARD_ID'}]);  // ExternalId is how this card will be referred to in reports
+
+// Success response: {"sequence":29}
+```
+
+Please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content) for more examples.
 
 ### Templates
 
