@@ -52,10 +52,9 @@ As engagement attributes are considered unauthenticated, it should not be used f
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
 | identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1 |
 | identities.sub | The subject for identification | string | Required | |
-
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
-| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] | At least one form of identification is required (ConsumerID or VisitorID).
+| entryPoints | List of entry points in the external system relevant for the engagement | Comma delimited list of strings | Optional | Example: ["http://one.url","tel://972672626"] <br><br> At least one form of identification is required (ConsumerID or VisitorID).
 
 <sup>[1]</sup> At least one form of identification is required (`consumerId` / an `identities.sub` or `vid`).
 
@@ -258,7 +257,7 @@ Status code: 500 Server Error - Loading account:
 | 4xx | Client side error | Do not retry, fix problems in code |
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="important">Specifically in the case of a "500 - Loading account" response (as shown in the response entity examples above), it is important to retrieve the value of the `vid` from the response body and append it as the value of the `vid` query param for the retry request (to be issued following an pause interval of a few seconds).</div>
+<div class="important">Specifically in the case of a "500 - Loading account" response (as shown in the response entity examples above), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following an pause interval of a few seconds).</div>
 
 ### Limitations
 
