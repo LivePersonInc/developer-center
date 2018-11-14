@@ -355,7 +355,7 @@ After the consumer submits their Apple Pay details in the form, the Apple Pay re
 
 Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
 
-Please see [the guide](messaging-agent-sdk-conversation-metadata-guide.html#receiving) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
+Please see [the Conversational Metadata guide](http://localhost:4000/messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
 
 _Note:_ Only a bot can listen for Conversational Metadata at this time.
 
