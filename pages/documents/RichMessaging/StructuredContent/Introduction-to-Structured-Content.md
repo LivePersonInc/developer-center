@@ -328,7 +328,7 @@ For the 'style' property, please see the [Rich Messaging Basic Elements Styling]
 
 ### Element Click Operations
 
-An element which has an "actions" property, an [on-click operation](rich-messaging-click-ops.html) (executed when the consumer clicks on the element) and a [metadata property](rich-messaging-click-ops-metadata.html). These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action be be opening a link, a third party navigation app and more.
+An element which has an "actions" property, an on-click operation (executed when the consumer clicks on the element) and a metadata property. These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action could be opening a link, a third party navigation app and more.
 
 On-click operations can result from two object types:
 
@@ -451,7 +451,7 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 
 #### Metadata
 
-Metadata is a list of predefined objects that can be sent back to the agent and be used in reporting. Metadata can be defined in the header section of the request or inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
+Metadata is a list of predefined objects that can be sent back to the agent / bot and be used in reporting / analysis. Metadata can be defined in the header section of the request or inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html).
 
 When creating the JSON structure, the metadata ExternalID that will be returned to LiveEngage when an element in the card is clicked, also needs to be defined.
 
