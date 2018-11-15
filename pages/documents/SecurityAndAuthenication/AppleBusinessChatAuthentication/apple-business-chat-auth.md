@@ -20,7 +20,7 @@ indicator: messaging
 * Agents and bots on LiveEngage will get real-time updates upon a consumer’s response
 * Upon successful or failed authentication, LiveEngage will support passing the authentication status and token back to LiveEngage [Conversational Metadata](https://developers.liveperson.com/messaging-agent-sdk-conversation-metadata-guide.html) (via the agent SDK) to allow the brand to perform validation on the authentication information.
 
-![image alt text](image_13.png)
+<img class="zoomimg" style="width:800px" src="img/apple_auth.png" alt="apple business chat authentication flow">
 
 ### Authentication Interactive Message Request via Structured Content
 
