@@ -258,7 +258,14 @@ A very simple, basic structured content template for Apple Auth would be just an
 {
   "type": "horizontal",
   "elements": [
-    // image and text elements here
+    {
+      "type": "image",
+      "url": "apple_auth_image_url"
+    },
+    {
+      "type": "text",
+      "text": “authentication details“
+    }
   ]
 }
 ```
