@@ -821,7 +821,10 @@
     - documentname: Cookies and LiveEngage
       pages:
         - pagename: Overview
-    - documentname: Authentication
+    - documentname: Apple Business Chat Authentication
+      pages:
+        - pagename: Overview
+    - documentname: Mobile SDK and Web Authentication
       pages:
       - pagename: Introduction
       - pagename: Major Components
