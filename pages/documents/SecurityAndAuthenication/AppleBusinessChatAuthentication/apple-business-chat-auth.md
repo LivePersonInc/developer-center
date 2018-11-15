@@ -10,15 +10,16 @@ indicator: messaging
 
 ### Overview
 
-The Apple Business Chat messaging channel now allows you to authenticate consumers (only from iOS 12 onwards) using an OAuth 2.0 provider.
+The Apple Business Chat messaging channel now allows you to send an authenticate request to consumers (only from iOS 12 onwards) using an OAuth 2.0 provider. The consumers then respond to the authentication request with their user/pass credentials which can be validated against the OAuth 2.0 provider.
 
-* LiveEngage will support agent/bot generation of the new Authentication Interactive Message using the Structured Content framework and configuration (similar to list and time picker)
-* Agent/bot will know if consumer supports the new Authentication Message via an engagement attribute, in order to determine if the consumer is qualified to receive the authentication message before sending it (a new SDE will be exposed with the Authentication supportability).
-* Consumer will receive the Authentication Interactive Message and will be able to tap to authenticate on the brand’s Authentication service URL
-* Agents and bots on LiveEngage will get real-time updates upon a consumer’s response
-* Upon successful or failed authentication, LiveEngage will support passing the authentication status and token back to LiveEngage [Conversational Metadata](https://developers.liveperson.com/messaging-agent-sdk-conversation-metadata-guide.html) (via the agent SDK) to allow the brand to perform validation on the authentication information.
+See the message flow below:
 
 <img class="zoomimg" style="width:800px" src="img/apple_auth.png" alt="apple business chat authentication flow">
+
+1. Agent or bot is notified if consumer supports the new Authentication Message via an engagement attribute, in order to determine if the consumer is qualified to receive the authentication message before sending it (a new SDE will be exposed with authentication support).
+2. Send the Apple Auth template via an agent or bot with the Structured Content framework and configuration (similar to Apple list and time picker templates).
+3. Authentication is done by your OAuth 2.0 provider
+4. Upon successful or failed authentication, LiveEngage passes the payment details back to LiveEngage Conversational Metadata (via the [Messaging Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation on the authentication
 
 ### Setup
 
@@ -40,13 +41,33 @@ The details include:
 6. Copy Auth URL, Token Url, Client Secret (It is at the top) and put it in your register.apple.com portal
 7. Once Apple approves the new auth details, use the Structured Content to trigger the Bubble.
 
+### Checking for Apple Auth consumer compatibility
+
+Before the agent or bot sends an authentication request to a consumer, they will need to know if the consumer device is compatible (on iOS 12 or newer) with Apple Auth.
+
+In an Apple Business Chat Conversation, the messaging channel will automatically send an authenticated "role" engagement attribute to LiveEngage:
+
+* If consumer Apple device supports authentication, value will be: "Apple Authentication supported"
+* If consumer Apple device does not support authentication, value will be: "Apple Authentication not supported"
+
+**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in LiveEngage, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in LiveEngage.
+
+
+![role engagement attributes](img/apple_auth_role_sde.png)
+
+_Top: unauthenticated, custom attribute sent by developer._
+
+_Bottom: Authenticated attribute sent automatically by messaging channel_
+
+The agent or bot should read the consumer engagement attributes to check for this engagement attribute before sending the Apple Authentication request to the consumer.
+
 ### Sending an Apple Authentication Request to a Consumer
 
 Similar to [Apple structured content templates](structured-content-apple-business-chat-templates-introduction.html), you will send two template payloads (Metadata and Body) for the Apple Auth request to the consumer.
 
-Different from Apple structured content templates, the **body** template will only define how the Apple Auth bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for a background on how to send these.
 
-Please see
+Different from Apple structured content templates, the **body** template will only define how the Apple Auth bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
 #### Request Metadata
 
@@ -236,7 +257,7 @@ Conversational Metadata provides a way for developers to pass metadata or contex
 
 Please see [the Conversational Metadata guide](http://localhost:4000/messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
 
-_Note:_ Only a bot can listen for Conversational Metadata at this time.
+**Note:** Only a bot can listen for Conversational Metadata at this time.
 
 #### Response Metadata
 
@@ -270,7 +291,6 @@ Authentication response metadata is context information about the consumer authe
 
 ###### `"type": "ConnectorAuthenticationResponse"` Object Properties
 
-
 <table>
   <thead>
     <th>Property Name</th>
@@ -296,23 +316,28 @@ Authentication response metadata is context information about the consumer authe
   </tbody>
 </table>
 
-
-
 ### Guidelines
 
-* The agent or bot will know if the consumer supports the Authentication capability via the "role" SDE:
-    * If consumer device supports authentication, value will be: "Apple Authentication supported"
-    * If consumer device does not support authentication, value will be: "Apple Authentication not supported"
-    * Please note: If the consumers updates the iOS version from 11 to 12 when still in an active conversation in LiveEngage, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in LiveEngage.
-* Received and reply bubble experience:
-    * If using received bubble with style "icon", “small”, “large” -
-        * Received bubble experience - If image was added, the image in the received bubble will not be presented in the push preview message. Once you tap to view bubble in the conversation thread, the image will be presented. The size of the received bubble will be defaulted to "icon"
-        * Reply bubble experience -  Image will always be defaulted to the "received" bubble image (if configured), if no image was added to the received bubble, no image will be presented in the reply bubble. The size of the reply bubble will be defaulted to “icon”.
-        * If authentication fails, the Reply bubble text and subtitle configured will be overridden by apple to the following text "Authentication failed"
-* Image URLs must be whitelisted in LiveEngage - Images added in the RecievedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact you LP representative to whitelist images.
+#### General Guidelines
+
+* Image URLs must be whitelisted in LiveEngage
+  * Images added in the RecievedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact your LP representative to whitelist images.
+
+#### Consumer received and reply bubble behavior 
+
+If using received bubble with style "icon", “small”, “large”:
+
+* Received bubble experience
+  * If image was added, the image in the received bubble will not be presented in the push preview message. Once you tap to view bubble in the conversation thread, the image will be presented. The size of the received bubble will be defaulted to "icon"
+* Reply bubble experience
+  * Image will always be defaulted to the "received" bubble image (if configured), if no image was added to the received bubble, no image will be presented in the reply bubble. The size of the reply bubble will be defaulted to “icon”.
+* If authentication fails, the Reply bubble text and subtitle configured will be overridden by apple to the following text "Authentication failed"
 
 ### Limitations
 
-* In the current version of Authentication Interactive Message support, only a bot in LiveEngage (using the Agent SDK) will be able to receive the authentication response (using the Conversation Metadata). Human Agent is currently not exposed to these events. Adding UI indication in LiveEngage Workspace is planned for Q4, 2018
-* Currently any Business Chat conversation are appearing as authenticated conversation in LiveEngage (once the consumer authenticates using the interactive message the conversation status of will stay the same) - Changing the Business Chat conversation status to unauthenticated is planned for Q1, 2018.  
+* In the current version of Apple Auth support, only a bot in LiveEngage (using the [Messaging Agent SDK](messaging-agent-sdk-overview.html)) will be able to receive the authentication response (using the [Conversation Metadata](messaging-agent-sdk-conversation-metadata-guide.html)). 
+  * Human Agent is currently not exposed to these events. Adding UI indication in LiveEngage Workspace is planned for Q4, 2018
+* Currently, all Apple Business Chat conversations appear as "authenticated" in the LiveEngage UI.
+  * Once the consumer authenticates using the Apple Auth flow shown in this document, the conversation status will stay the same in the UI.
+  * Changing the Apple Business Chat authentication status in the LiveEngage UI is planned for Q1, 2018.
 
