@@ -264,7 +264,7 @@ A very simple, basic structured content template for Apple Auth would be just an
     },
     {
       "type": "text",
-      "text": “authentication details“
+      "text": "authentication details"
     }
   ]
 }
@@ -357,6 +357,6 @@ If using received bubble with style "icon", “small”, “large”:
 ### Limitations
 
 * In the current version of Apple Auth support, only a bot in LiveEngage (using the [Messaging Agent SDK](messaging-agent-sdk-overview.html)) will be able to receive the authentication response (using the [Conversation Metadata](messaging-agent-sdk-conversation-metadata-guide.html)). 
-  * Human Agent is currently not exposed to these events. This will be solved for in Q1 2019
-* Updating the Apple Business Chat authentication status in the LiveEngage UI is planned for 2019
+  * Human Agent is currently not exposed to these events. There will be an option to recieve authentication response data without the Messaging Agent SDK in Q1 2019
+* Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned for 2019
 
