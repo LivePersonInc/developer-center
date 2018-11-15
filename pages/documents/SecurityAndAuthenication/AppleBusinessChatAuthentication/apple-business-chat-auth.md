@@ -23,9 +23,9 @@ See the message flow below:
 
 ### Setup
 
-Use your private OAuth service and supply the service details in your Apple management area (register.apple.com). 
+Supply your private OAuth2 service details in your Apple management area (register.apple.com). 
 
-The details include:  
+The required details include:
 
 * Authentication endpoint URL
 * Token URL
@@ -68,6 +68,26 @@ Similar to [Apple structured content templates](structured-content-apple-busines
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for a background on how to send these.
 
 Different from Apple structured content templates, the **body** template will only define how the Apple Auth bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+
+![](img/apple_auth_agent1.png)
+
+_Agent sends auth request to consumer via Agent Workspace SDK widget_
+
+![](img/apple_auth_consumer1.png)
+
+_Consumer sees auth request bubble_
+
+![](img/apple_auth_consumer2.png)
+
+_Consumer fills out form from OAuth2 provider_
+
+![](img/apple_auth_consumer3.png)
+
+_Consumer sees confirmation_
+
+![](img/apple_auth_agent2.png)
+
+_Agent sees confirmation_
 
 #### Request Metadata
 
