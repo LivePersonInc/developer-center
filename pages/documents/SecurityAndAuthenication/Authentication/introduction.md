@@ -4,9 +4,8 @@ redirect_from:
   - guides-authentication-introduction.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authentication
-
-permalink: authentication-introduction.html
+documentname: Mobile SDK and Web Authentication
+permalink: mobile-sdk-and-web-authentication-introduction.html
 root-link: true
 level-order: 6
 order: 1

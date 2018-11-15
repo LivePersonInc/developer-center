@@ -4,9 +4,8 @@ redirect_from:
   - guides-authentication-majorcomponents.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authentication
-
-permalink: authentication-major-components.html
+documentname: Mobile SDK and Web Authentication
+permalink: mobile-sdk-and-web-authentication-major-components.html
 order: 2
 indicator: both
 ---

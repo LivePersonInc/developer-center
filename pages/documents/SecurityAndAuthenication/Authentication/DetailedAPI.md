@@ -4,9 +4,8 @@ redirect_from:
   - guides-authentication-detailedapi.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authentication
-
-permalink: authentication-detailed-api.html
+documentname: Mobile SDK and Web Authentication
+permalink: mobile-sdk-and-web-authentication-detailed-api.html
 order: 5
 indicator: both
 ---

@@ -4,9 +4,8 @@ redirect_from:
   - guides-authentication-howitworks.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authentication
-
-permalink: authentication-how-it-works.html
+documentname: Mobile SDK and Web Authentication
+permalink: mobile-sdk-and-web-authentication-how-it-works.html
 order: 4
 indicator: both
 ---
