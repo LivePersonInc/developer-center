@@ -334,7 +334,14 @@ A very simple, basic structured content template for Apple Pay would be just an 
 {
   "type": "horizontal",
   "elements": [
-    // image and text elements here
+    {
+      "type": "image",
+      "url": "apple_auth_image_url"
+    },
+    {
+      "type": "text",
+      "text": "Authentication details"
+    }
   ]
 }
 ```
@@ -414,5 +421,5 @@ Apple Pay response metadata is context information about the consumer payment st
 
 ### Limitations
 
-* In the current version of the Apple Pay template, only a bot in LiveEngage (using the Agent SDK) will be able to receive the payment response (using the Conversation Metadata). 
-  * A Human Agent is currently not exposed to these events. Adding UI indication in the LiveEngage Workspace is planned for Q4, 2018
+* In the current version of the Apple Pay template, only a bot in LiveEngage (using the Messaging Agent SDK) will be able to receive the authentication response (using the Conversation Metadata). 
+  * A Human Agent is currently not exposed to these events. There will be an option to recieve authentication response data without the Messaging Agent SDK in Q1 2019
