@@ -125,8 +125,12 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/framewor
 4. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project
 settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html)
 In Xcode info.plist of the project, add two new privacy keys and values:
- * Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
- * Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
+
+ * Key: `NSPhotoLibraryUsageDescription`, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+
+ * Key: `NSCameraUsageDescription`, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+
+ * Key: `NSMicrophoneUsageDescription`, Value: "Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
 
 <div class="important">
 This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.
