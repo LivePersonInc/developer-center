@@ -41,7 +41,6 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 4. Put [https://auth.businesschat.apple.com](https://auth.businesschat.apple.com) in Allowed Origins & Allowed Web Origins
 5. On the same screen, go to the bottom and select advanced settings -> Endpoints
 6. Copy Auth URL, Token Url, Client Secret (It is at the top) and put it in your register.apple.com portal
-7. Once Apple approves the new auth details, use the Structured Content to trigger the Bubble.
 
 ### Checking for Apple Auth device compatibility
 
@@ -58,9 +57,7 @@ The agent or bot should read the consumer engagement attributes to check for thi
 
 ![role engagement attributes](img/apple_auth_role_sde.png)
 
-_Top: unauthenticated, custom attribute sent by developer._
-
-_Bottom: Authenticated attribute sent automatically by messaging channel_
+_Authenticated attribute sent automatically by Apple Business Chat channel_
 
 ### Sending an Apple Authentication Request to a Consumer
 
@@ -85,10 +82,6 @@ _Consumer fills out form from OAuth2 provider_
 ![](img/apple_auth_consumer3.png)
 
 _Consumer sees request confirmation bubble. Style here defined by metadata `replyMessage`._
-
-![](img/apple_auth_agent2.png)
-
-_Agent sees request confirmation. Style here defined by request body template._
 
 #### Request Metadata
 
@@ -357,8 +350,6 @@ If using received bubble with style "icon", “small”, “large”:
 ### Limitations
 
 * In the current version of Apple Auth support, only a bot in LiveEngage (using the [Messaging Agent SDK](messaging-agent-sdk-overview.html)) will be able to receive the authentication response (using the [Conversation Metadata](messaging-agent-sdk-conversation-metadata-guide.html)). 
-  * Human Agent is currently not exposed to these events. Adding UI indication in LiveEngage Workspace is planned for Q4, 2018
-* Currently, all Apple Business Chat conversations appear as "authenticated" in the LiveEngage UI.
-  * Once the consumer authenticates using the Apple Auth flow shown in this document, the conversation status will stay the same in the UI.
-  * Changing the Apple Business Chat authentication status in the LiveEngage UI is planned for Q1, 2018.
+  * Human Agent is currently not exposed to these events. This will be solved for in Q1 2019
+* Updating the Apple Business Chat authentication status in the LiveEngage UI is planned for 2019
 
