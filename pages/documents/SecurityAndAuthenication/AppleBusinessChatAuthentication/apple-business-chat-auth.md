@@ -269,7 +269,7 @@ A very simple, basic structured content template for Apple Auth would be just an
 }
 ```
 
-### Recieving an Apple Authentication Response from a Consumer
+### Receiving an Apple Authentication Response from a Consumer
 
 After the consumer submits their Apple Auth details in the form, the Apple Auth response is delivered to LiveEngage using [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html).
 
@@ -341,7 +341,7 @@ Authentication response metadata is context information about the consumer authe
 #### General Guidelines
 
 * Image URLs must be whitelisted in LiveEngage
-  * Images added in the RecievedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact your LP representative to whitelist images.
+  * Images added in the ReceivedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact your LP representative to whitelist images.
 
 #### Consumer received and reply bubble behavior 
 
