@@ -46,6 +46,8 @@ Similar to [Apple structured content templates](structured-content-apple-busines
 
 Different from Apple structured content templates, the **body** template will only define how the Apple Auth bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
+Please see
+
 #### Request Metadata
 
 **BusinessChatMessage - receivedMessage and replyMessage bubbles**
@@ -54,7 +56,7 @@ The Business Chat Message holds the received and reply message, which defines ho
 
 **ConnectorAuthenticationRequest**
 
-The authentication request holds the request identifier, which allows the brand to identify the authentication request and map the OAuth token in the response to the request originator.
+The `ConnectorAuthenticationRequest` holds the `requestIdentifier`, which allows the brand to identify the authentication request and map the OAuth token in the response to the request originator.
 
 Please use the structured content metadata JSON with the relevant fields, as presented in the example JSON below.
 
@@ -110,7 +112,7 @@ Please use the structured content metadata JSON with the relevant fields, as pre
 </table>
 
 
-###### Connector Authentication Request Object Properties
+###### `ConnectorAuthenticationRequest` Object Properties
 
 <table>
   <thead>
@@ -130,7 +132,7 @@ Please use the structured content metadata JSON with the relevant fields, as pre
 </table>
 
 
-###### Received Message Object Properties  
+###### `receivedMessage` Object Properties  
 
 <table>
   <thead>
@@ -169,7 +171,7 @@ Please use the structured content metadata JSON with the relevant fields, as pre
 </table>
 
 
-###### Reply Message Object Properties  
+###### `replyMessage` Object Properties  
 
 <table>
   <thead>
@@ -230,11 +232,15 @@ A very simple, basic structured content template for Apple Auth would be just an
 
 After the consumer submits their Apple Auth details in the form, the Apple Auth response is delivered to LiveEngage using [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html).
 
-Conversational Metadata provides a way for developers to pass metadata or context information to a bot using the Messaging Agent SDK.
+Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
+
+Please see [the Conversational Metadata guide](http://localhost:4000/messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
+
+_Note:_ Only a bot can listen for Conversational Metadata at this time.
 
 #### Response Metadata
 
-Authentication response metadata is context information about the consumer authentication response status. This information should be used to allow the bot to validate the authentication status of the consumer, as well as to enable the bot to report the auth response token back to the brand’s OAuth service in order to validate user identity.
+Authentication response metadata is context information about the consumer authentication response status. This information should be used to allow the bot to validate the authentication status of the consumer, as well as to enable the bot to report the auth response token back to the OAuth service in order to validate user identity.
 
 ##### Example Conversational Metadata response:
 
@@ -299,8 +305,8 @@ Authentication response metadata is context information about the consumer authe
     * If consumer device does not support authentication, value will be: "Apple Authentication not supported"
     * Please note: If the consumers updates the iOS version from 11 to 12 when still in an active conversation in LiveEngage, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in LiveEngage.
 * Received and reply bubble experience:
-    * If brand is using received bubble with style "icon", “small”, “large” -
-        * Received bubble experience - If image was added, the image in the received bubble will not be presented in the push preview message. Once the brand will tap to view bubble in the conversation thread, the image will be presented. The size of the received bubble will be defaulted to "icon"
+    * If using received bubble with style "icon", “small”, “large” -
+        * Received bubble experience - If image was added, the image in the received bubble will not be presented in the push preview message. Once you tap to view bubble in the conversation thread, the image will be presented. The size of the received bubble will be defaulted to "icon"
         * Reply bubble experience -  Image will always be defaulted to the "received" bubble image (if configured), if no image was added to the received bubble, no image will be presented in the reply bubble. The size of the reply bubble will be defaulted to “icon”.
         * If authentication fails, the Reply bubble text and subtitle configured will be overridden by apple to the following text "Authentication failed"
 * Image URLs must be whitelisted in LiveEngage - Images added in the RecievedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact you LP representative to whitelist images.
