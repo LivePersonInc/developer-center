@@ -10,16 +10,16 @@ indicator: messaging
 
 ### Overview
 
-The Apple Business Chat messaging channel now allows you to send an authenticate request to consumers (only from iOS 12 onwards) using an OAuth 2.0 provider. The consumers then respond to the authentication request with their user/pass credentials which can be validated against the OAuth 2.0 provider.
+The Apple Business Chat messaging channel now allows you to send an authentication request to consumers (only from iOS 12 onwards) using an OAuth 2.0 provider. The consumers then respond to the authentication request with their user/pass credentials which can be validated against the OAuth 2.0 provider.
 
 See the message flow below:
 
 <img class="zoomimg" style="width:800px" src="img/apple_auth.png" alt="apple business chat authentication flow">
 
-1. Agent or bot is notified if consumer supports the new Authentication Message via an engagement attribute, in order to determine if the consumer is qualified to receive the authentication message before sending it (a new SDE will be exposed with authentication support).
+1. Agent or bot is notified via an engagement attribute if consumer device supports the Apple Auth.
 2. Send the Apple Auth template via an agent or bot with the Structured Content framework and configuration (similar to Apple list and time picker templates).
 3. Authentication is done by your OAuth 2.0 provider
-4. Upon successful or failed authentication, LiveEngage passes the payment details back to LiveEngage Conversational Metadata (via the [Messaging Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation on the authentication
+4. Upon successful or failed authentication, LiveEngage passes the authentication details back to LiveEngage Conversational Metadata (via the [Messaging Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation
 
 ### Setup
 
@@ -33,6 +33,8 @@ The required details include:
 
 #### Instructions on how to create a free OAuth2 service using [auth0](https://auth0.com/)
 
+If you do not yet have an OAuth2 service or if you need a test service, follow the instructions below:
+
 1. Create a [auth0 account](https://auth0.com/)
 2. Create a new Application Machine to Machine
 3. Put [https://auth.businesschat.apple.com](https://auth.businesschat.apple.com) in Allowed Callback Urls
@@ -41,7 +43,7 @@ The required details include:
 6. Copy Auth URL, Token Url, Client Secret (It is at the top) and put it in your register.apple.com portal
 7. Once Apple approves the new auth details, use the Structured Content to trigger the Bubble.
 
-### Checking for Apple Auth consumer compatibility
+### Checking for Apple Auth device compatibility
 
 Before the agent or bot sends an authentication request to a consumer, they will need to know if the consumer device is compatible (on iOS 12 or newer) with Apple Auth.
 
@@ -50,16 +52,15 @@ In an Apple Business Chat Conversation, the messaging channel will automatically
 * If consumer Apple device supports authentication, value will be: "Apple Authentication supported"
 * If consumer Apple device does not support authentication, value will be: "Apple Authentication not supported"
 
-**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in LiveEngage, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in LiveEngage.
+The agent or bot should read the consumer engagement attributes to check for this engagement attribute before sending the Apple Authentication request to the consumer.
 
+**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in LiveEngage, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in LiveEngage.
 
 ![role engagement attributes](img/apple_auth_role_sde.png)
 
 _Top: unauthenticated, custom attribute sent by developer._
 
 _Bottom: Authenticated attribute sent automatically by messaging channel_
-
-The agent or bot should read the consumer engagement attributes to check for this engagement attribute before sending the Apple Authentication request to the consumer.
 
 ### Sending an Apple Authentication Request to a Consumer
 
@@ -75,7 +76,7 @@ _Agent sends auth request to consumer via Agent Workspace SDK widget_
 
 ![](img/apple_auth_consumer1.png)
 
-_Consumer sees auth request bubble_
+_Consumer sees auth request bubble. Style here defined by metadata `receivedMessage`._
 
 ![](img/apple_auth_consumer2.png)
 
@@ -83,11 +84,11 @@ _Consumer fills out form from OAuth2 provider_
 
 ![](img/apple_auth_consumer3.png)
 
-_Consumer sees confirmation_
+_Consumer sees request confirmation bubble. Style here defined by metadata `replyMessage`._
 
 ![](img/apple_auth_agent2.png)
 
-_Agent sees confirmation_
+_Agent sees request confirmation. Style here defined by request body template._
 
 #### Request Metadata
 
@@ -99,7 +100,7 @@ The Business Chat Message holds the received and reply message, which defines ho
 
 The `ConnectorAuthenticationRequest` holds the `requestIdentifier`, which allows the brand to identify the authentication request and map the OAuth token in the response to the request originator.
 
-Please use the structured content metadata JSON with the relevant fields, as presented in the example JSON below.
+Please use the metadata template with the relevant fields, as presented in the example below:
 
 ##### Metadata Template Example:
 
