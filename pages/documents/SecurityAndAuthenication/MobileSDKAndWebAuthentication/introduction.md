@@ -1,7 +1,7 @@
 ---
 pagename: Introduction
 redirect_from:
-  - guides-authentication-introduction.html
+  - authentication-introduction.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mobile SDK and Web Authentication
