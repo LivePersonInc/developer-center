@@ -1,7 +1,7 @@
 ---
 pagename: Major Components
 redirect_from:
-  - guides-authentication-majorcomponents.html
+  - authentication-major-components.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mobile SDK and Web Authentication
