@@ -2,6 +2,7 @@
 pagename: Detailed API
 redirect_from:
   - guides-authentication-detailedapi.html
+  - authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mobile SDK and Web Authentication
