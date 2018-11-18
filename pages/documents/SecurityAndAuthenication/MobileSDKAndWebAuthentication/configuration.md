@@ -2,6 +2,7 @@
 pagename: Configuration
 redirect_from:
   - guides-authentication-configuration.html
+  - authentication-configuration.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mobile SDK and Web Authentication
