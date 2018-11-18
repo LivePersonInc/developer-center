@@ -757,10 +757,10 @@
         - pagename: Mobile SDK & Web Template
         - pagename: Facebook Messenger Template
         - pagename: RCS Business Messaging Template
-    - documentname: Payment
-      pages:
-        - pagename: Apple Business Chat Template
-        - pagename: Google RCS Business Messaging Template
+    # - documentname: Payment
+    #   pages:
+    #     - pagename: Apple Business Chat Template
+    #     - pagename: Google RCS Business Messaging Template
     - documentname: File Sharing
       pages:
         - pagename: Introduction
