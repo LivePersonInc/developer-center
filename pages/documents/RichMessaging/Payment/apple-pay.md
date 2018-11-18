@@ -358,7 +358,7 @@ Conversational Metadata provides a way for developers to pass metadata or contex
 
 Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
 
-**Note:** Only a bot can listen for Conversational Metadata at this time.
+<div class="important">Only a bot can listen for Conversational Metadata at this time.</div>
 
 #### Response Metadata
 

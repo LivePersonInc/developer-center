@@ -1240,9 +1240,10 @@ a.anchoritem {
     width: 104% !important
   }
 
-  .metricstable .description {
-    display: none;
+  .metricstable {
+    table-layout: inherit !important;
   }
+
 
   #featurestable {
     width: 133%;
