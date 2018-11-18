@@ -1,7 +1,7 @@
 ---
 pagename: How It Works
 redirect_from:
-  - guides-authentication-howitworks.html
+  - authentication-how-it-works.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mobile SDK and Web Authentication
