@@ -219,7 +219,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
-        - subpagename: Share Image File
+        - subpagename: File Sharing
       - pagename: Samples
         subpages:
         - subpagename: JavaScript Sample
@@ -545,7 +545,7 @@
       - subpagename: Send Chat State Events
       - subpagename: How to Enable a Feature
       - subpagename: Campaign for Messaging Routing
-      - subpagename: Share Image File
+      - subpagename: File Sharing
     - pagename: Sample Code
       subpages:
       - subpagename: Connector Sample App
