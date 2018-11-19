@@ -1,5 +1,5 @@
 ---
-pagename: Share Image File
+pagename: File Sharing
 redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
@@ -8,7 +8,7 @@ subfoldername: Tutorials
 
 order: 88
 
-permalink: messaging-window-api-tutorials-share-image-file.html
+permalink: messaging-window-api-tutorials-file-sharing.html
 indicator: messaging
 ---
 
