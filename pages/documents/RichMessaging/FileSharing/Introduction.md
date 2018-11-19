@@ -23,19 +23,19 @@ File Sharing can also be enabled by using the Connector API, for cases when imag
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
-1. [Enable file sharing capability](rich-messaging-file-sharing-1.html)
+1. [Enable file sharing capability](file-sharing-enable-file-sharing.html)
 
-2. [Create a conversation](rich-messaging-file-sharing-2.html)
+2. [Create a conversation](file-sharing-create-a-conversation.html)
 
-3. [Request an upload URL](rich-messaging-file-sharing-3.html)
+3. [Request an upload URL](file-sharing-request-upload-url.html)
 
-4. [Upload the file to storage](rich-messaging-file-sharing-4.html)
+4. [Upload the file to storage](file-sharing-upload-file-to-storage.html)
 
-5. [Publish the file as a message inside the conversation](rich-messaging-file-sharing-5.html)
+5. [Publish the file as a message inside the conversation](file-sharing-publish-message.html)
 
-6. [Request a download URL](rich-messaging-file-sharing-6.html)
+6. [Request a download URL](file-sharing-request-download-url.html)
 
-7. [Download file from storage](rich-messaging-file-sharing-7.html)
+7. [Download file from storage](file-sharing-download-file-from-storage.html)
 
 We will examine and explain each stage in detail as part of this documentation.
 
