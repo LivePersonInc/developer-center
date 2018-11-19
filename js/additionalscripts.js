@@ -273,7 +273,7 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
 	//if this isn't the homepage
-	if (currentPageTitle == "WELCOME"){
+	if (currentPageTitle == undefined){
 		//make sure no other links are set to active
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
