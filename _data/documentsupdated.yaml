@@ -219,7 +219,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
-        - subpagename: File Sharing
+        - subpagename: Share Image File
       - pagename: Samples
         subpages:
         - subpagename: JavaScript Sample
@@ -761,9 +761,6 @@
     #   pages:
     #     - pagename: Apple Business Chat Template
     #     - pagename: Google RCS Business Messaging Template
-    - documentname: File Sharing
-      pages:
-        - pagename: File Sharing for Web Messaging
     - documentname: Voice and Video for iOS SDK (BETA)
       pages:
       - pagename: Overview
