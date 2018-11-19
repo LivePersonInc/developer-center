@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: File Sharing
 order: 80
-permalink: file-sharing-web-messaging-download-file-from-storage.html
+permalink: file-sharing-download-file-from-storage.html
 indicator: both
 ---
 
