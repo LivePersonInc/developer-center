@@ -59,13 +59,16 @@ Example:
 
 <a name="note">*Note*</a>: *In case csrf is invalid, response code is 401 - Unauthorized with the following body:*
 
-    {
-      "error": {
-        "time": "Sep 22, 2016 4:10:15 PM",
-        "message": "CSRF token invalid! The CSRF token on request does not match the CSRF token on the session",
-        "internalCode": 10,
-        "responseStatus": "UNAUTHORIZED"
-      }
+```json
+{
+    "error": {
+    "time": "Sep 22, 2016 4:10:15 PM",
+    "message": "CSRF token invalid! The CSRF token on request does not match the CSRF token on the session",
+    "internalCode": 10,
+    "responseStatus": "UNAUTHORIZED"
+    }
+}
+```
 
 **Cookies**
 
