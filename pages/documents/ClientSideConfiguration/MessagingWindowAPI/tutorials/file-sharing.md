@@ -12,4 +12,4 @@ permalink: messaging-window-api-tutorials-file-sharing.html
 indicator: messaging
 ---
 
-The Messaging Window API is one of the main ways of enabling File Sharing (mostly for image sharing) with LiveEngage. However, enabling the File Sharing feature over the Messaging Window API is covered in our Rich Messaging section. Please see [this document](file-sharing-introduction.html) for more information and to get started with File Sharing over the Messaging Window API.
+The Messaging Window API is one of the main ways of enabling File Sharing (mostly for image sharing) with LiveEngage. However, enabling the File Sharing feature over the Messaging Window API is covered in our Rich Messaging section. Please see [this document](file-sharing-file-sharing-for-web-messaging.html) for more information and to get started with File Sharing over the Messaging Window API.
