@@ -271,7 +271,15 @@ function mobileHamburger() {
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
-	//make sure no other links are set to active
+	var currentPageTitle = $(currentPage).html();
+	//if this isn't the homepage
+	if (currentPageTitle == "WELCOME"){
+		//make sure no other links are set to active
+		$(".innerfolder > .active > button").removeClass("clicked");
+		$(".folder ul").slideUp(400, null);
+		$(".folder > a").data("expanded", "false");
+		$('a').removeClass("active");
+	};
 	$('a').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
