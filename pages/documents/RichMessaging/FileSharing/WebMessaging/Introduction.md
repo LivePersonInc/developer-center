@@ -6,9 +6,10 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: File Sharing
+subfoldername: Web Messaging
 level-order: 5
 order: 10
-permalink: file-sharing-introduction.html
+permalink: file-sharing-web-messaging-introduction.html
 root-link: true
 indicator: both
 ---
@@ -23,19 +24,19 @@ File Sharing can also be enabled by using the Connector API, for cases when imag
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
-1. [Enable file sharing capability](file-sharing-enable-file-sharing.html)
+1. [Enable file sharing capability](file-sharing-web-messaging-enable-file-sharing.html)
 
-2. [Create a conversation](file-sharing-create-a-conversation.html)
+2. [Create a conversation](file-sharing-web-messaging-create-a-conversation.html)
 
-3. [Request an upload URL](file-sharing-request-upload-url.html)
+3. [Request an upload URL](file-sharing-web-messaging-request-upload-url.html)
 
-4. [Upload the file to storage](file-sharing-upload-file-to-storage.html)
+4. [Upload the file to storage](file-sharing-web-messaging-upload-file-to-storage.html)
 
-5. [Publish the file as a message inside the conversation](file-sharing-publish-message.html)
+5. [Publish the file as a message inside the conversation](file-sharing-web-messaging-publish-message.html)
 
-6. [Request a download URL](file-sharing-request-download-url.html)
+6. [Request a download URL](file-sharing-web-messaging-request-download-url.html)
 
-7. [Download file from storage](file-sharing-download-file-from-storage.html)
+7. [Download file from storage](file-sharing-web-messaging-download-file-from-storage.html)
 
 We will examine and explain each stage in detail as part of this documentation.
 

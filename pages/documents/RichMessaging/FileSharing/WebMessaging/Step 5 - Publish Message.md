@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: File Sharing
 order: 60
-permalink: file-sharing-publish-message.html
+permalink: file-sharing-web-messaging-publish-message.html
 indicator: both
 ---
 
