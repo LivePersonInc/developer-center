@@ -498,6 +498,7 @@ function searchHighlight() {
 			className: 'searchHighlight'
 		});
 	};
+	localStorage.setItem('filter', '');
 }
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
