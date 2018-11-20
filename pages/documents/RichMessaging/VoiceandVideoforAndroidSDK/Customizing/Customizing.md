@@ -1,15 +1,20 @@
 ---
-pagename: Appearance and Behavior
+pagename: Customizing
 redirect_from:
   - consumer-experience-voice-video-android-appearance-behavior.html
+  - voice-and-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
+  - consumer-experience-voice-video-android-wording.html
+  - voice-and-video-for-android-sdk-beta-customizing-account-settings.html
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Voice & Video for Android SDK (BETA)
 subfoldername: Customizing
 order: 70
-permalink: voice-and-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
+permalink: voice-and-video-for-android-sdk-beta-customizing.html
 indicator: messaging
 ---
+
+### Appearance and Behavior
 
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, please don't hesitate to contact your LivePerson account manager for help.
 
@@ -86,3 +91,9 @@ To try the fieldmasking option you can either add a `android:tag` on the layout 
 ```
 mySecureView.setTag(getResources().getString(R.string.coapp_secure_field)); // calling setTag()
 ```
+
+### Account Settings
+
+If you plan to offer a new language not yet available in the SDK, please to speak to your LivePerson account manager. These settings should only be used to customize the wording according to you app's needs. To find the String resources available for public customization, please check the `res` folder in the SDK project.
+
+**NOTE:** More options will become available once the SDK is out of BETA
