@@ -110,6 +110,9 @@ search.autocomplete.on({
     footer.classList.add('overlayvisible');
 },
   'autocomplete:updated': function () {
+    var input = document.getElementById('aa-search-input');
+    var filter = input.value.toUpperCase();
+    localStorage.setItem('filter', filter);
     if (this.value === '') {
       var content = document.getElementById('defaultcontent');
       var sidebar = document.getElementById('defaultsidebar');
@@ -117,14 +120,7 @@ search.autocomplete.on({
       content.classList.remove('overlayvisible');
       sidebar.classList.remove('overlayvisible');
       footer.classList.remove('overlayvisible');
-}},
-  'autocomplete:selected': function (suggestion) {
-    var input = document.getElementById('aa-search-input');
-  	var filter = input.value.toUpperCase();
-  	localStorage.setItem('filter', filter);
-    console.log('selected');
-  }
-});
+}}});
 </script>
 </body>
 {% if site.google_analytics %}
