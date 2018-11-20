@@ -10,7 +10,8 @@ $(document).ready(function () {
 	mobileHamburger();
 	isExplorer();
 	searchFunction();
-	capabilitiesSearch()
+	capabilitiesSearch();
+	searchHighlight();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -488,6 +489,20 @@ function capabilitiesSearch() {
 	});
 	};
 };
+
+searchHighlight() {
+	var toHighlight = localStorage.getItem('filter');
+	if (toHiglight) {
+		$('#defaultcontent').highlight(toHighlight, {
+			className: 'searchHighlight'
+		});
+	};
+	$(.'algolia-docsearch-suggestion--title').click(function () {
+		var input = document.getElementById('aa-search-input');
+		var filter = input.value.toUpperCase();
+		localStorage.setItem('filter', filter);
+	});
+}
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
