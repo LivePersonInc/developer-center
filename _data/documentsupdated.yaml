@@ -775,12 +775,6 @@
       pages:
       - pagename: Overview
       - pagename: Getting Started
-        subpages:
-        - subpagename: Prerequisites
-        - subpagename: Installing the SDK with CocoaPods
-        - subpagename: Installing the SDK Manually
-        - subpagename: Project Settings
-        - subpagename: Integration Guide
       - pagename: Customizing
         subpages:
         - subpagename: Appearance and Behavior
