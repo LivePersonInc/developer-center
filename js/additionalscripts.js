@@ -491,13 +491,6 @@ function capabilitiesSearch() {
 	};
 };
 
-
-$('.algolia-docsearch-suggestion--title').click(function () {
-	var input = document.getElementById('aa-search-input');
-	var filter = input.value.toUpperCase();
-	localStorage.setItem('filter', filter);
-});
-
 function searchHighlight() {
 	var toHighlight = localStorage.getItem('filter');
 	if (toHighlight) {
