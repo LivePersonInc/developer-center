@@ -497,7 +497,7 @@ function searchHighlight() {
 			className: 'searchHighlight'
 		});
 	};
-	$(.'algolia-docsearch-suggestion--title').click(function () {
+	$('.algolia-docsearch-suggestion--title').click(function () {
 		var input = document.getElementById('aa-search-input');
 		var filter = input.value.toUpperCase();
 		localStorage.setItem('filter', filter);
