@@ -7,10 +7,12 @@ redirect_from:
   - voice-and-video-for-android-sdk-beta-liveengage-configuration-account-settings.html
   - consumer-experience-voice-video-android-register-app.html
   - voice-and-video-for-android-sdk-beta-liveengage-configuration-register-your-app.html
+  - voice-and-video-for-android-sdk-beta-liveengage-configuration.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-permalink: voice-and-video-for-android-sdk-beta-liveengage-configuration.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-liveengage-configuration.html
 indicator: messaging
 ---
 

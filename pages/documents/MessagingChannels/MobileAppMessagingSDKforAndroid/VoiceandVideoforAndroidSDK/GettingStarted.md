@@ -7,10 +7,12 @@ redirect_from:
   - voice-and-video-for-android-sdk-beta-getting-started-installing-the-sdk.html
   - consumer-experience-voice-video-android-integrate-the-sdk.html
   - voice-and-video-for-android-sdk-beta-getting-started-integration-guide.html
+  - voice-and-video-for-android-sdk-beta-getting-started.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-permalink: voice-and-video-for-android-sdk-beta-getting-started.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-getting-started.html
 indicator: messaging
 ---
 

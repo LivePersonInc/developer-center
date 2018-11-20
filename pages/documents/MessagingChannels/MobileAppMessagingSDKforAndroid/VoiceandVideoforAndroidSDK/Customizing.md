@@ -5,10 +5,12 @@ redirect_from:
   - voice-and-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
   - consumer-experience-voice-video-android-wording.html
   - voice-and-video-for-android-sdk-beta-customizing-account-settings.html
+  - voice-and-video-for-android-sdk-beta-customizing.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-permalink: voice-and-video-for-android-sdk-beta-customizing.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-customizing.html
 indicator: messaging
 ---
 

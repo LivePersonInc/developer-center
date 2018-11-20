@@ -607,6 +607,15 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Voice and Video for Android SDK (BETA)
+      subpages:
+      - subpagename: Overview
+      - subpagename: Getting Started
+      - subpagename: LiveEngage Configuration
+      - subpagename: Customizing
+      - subpagename: Sample Apps
+      - subpagename: FAQ
+      - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Appendix
@@ -658,6 +667,15 @@
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Voice and Video for iOS SDK (BETA)
+      subpages:
+      - subpagename: Overview
+      - subpagename: Getting Started
+      - subpagename: Customizing
+      - subpagename: LiveEngage Configuration
+      - subpagename: Sample App
+      - subpagename: Changelog
+      - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Appendix
@@ -771,24 +789,6 @@
         - pagename: Publish Message
         - pagename: Request Download URL
         - pagename: Download File From Storage
-    - documentname: Voice and Video for iOS SDK (BETA)
-      pages:
-      - pagename: Overview
-      - pagename: Getting Started
-      - pagename: Customizing
-      - pagename: LiveEngage Configuration
-      - pagename: Sample App
-      - pagename: Changelog
-      - pagename: Appendix
-    - documentname: Voice and Video for Android SDK (BETA)
-      pages:
-      - pagename: Overview
-      - pagename: Getting Started
-      - pagename: LiveEngage Configuration
-      - pagename: Customizing
-      - pagename: Sample Apps
-      - pagename: FAQ
-      - pagename: Release Notes
 
 - categoryname: 'Security & Authentication'
   image: security-authentication

@@ -9,10 +9,12 @@ redirect_from:
   - voice-and-video-for-ios-sdk-beta-liveengage-configuration-voip-configuration.html
   - consumer-experience-voice-video-ios-register-app.html
   - voice-and-video-for-ios-sdk-beta-liveengage-configuration-register-your-app.html
+  - voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for iOS SDK (BETA)
-permalink: voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Voice and Video for iOS SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
 indicator: messaging
 ---
 

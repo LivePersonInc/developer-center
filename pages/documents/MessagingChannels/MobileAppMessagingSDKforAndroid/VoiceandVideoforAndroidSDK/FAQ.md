@@ -2,12 +2,12 @@
 pagename: FAQ
 redirect_from:
   - consumer-experience-voice-video-android-FAQ.html
+  - voice-and-video-for-android-sdk-beta-faq.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-
-order: 100
-permalink: voice-and-video-for-android-sdk-beta-faq.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-faq.html
 indicator: messaging
 ---
 

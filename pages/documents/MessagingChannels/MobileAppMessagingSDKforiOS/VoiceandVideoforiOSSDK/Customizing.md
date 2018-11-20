@@ -5,10 +5,12 @@ redirect_from:
   - voice-and-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
   - consumer-experience-voice-video-ios-appearance-wording.html
   - voice-and-video-for-ios-sdk-beta-customizing-wording.html
+  - voice-and-video-for-ios-sdk-beta-customizing.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for iOS SDK (BETA)
-permalink: voice-and-video-for-ios-sdk-beta-customizing.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Voice and Video for iOS SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-customizing.html
 indicator: messaging
 ---
 

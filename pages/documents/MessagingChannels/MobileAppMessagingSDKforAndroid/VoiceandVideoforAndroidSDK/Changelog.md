@@ -2,12 +2,12 @@
 pagename: Release Notes
 redirect_from:
   - consumer-experience-voice-video-android-changelog.html
+  - voice-and-video-for-android-sdk-beta-release-notes.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-
-order: 110
-permalink: voice-and-video-for-android-sdk-beta-release-notes.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-release-notes.html
 indicator: messaging
 ---
 

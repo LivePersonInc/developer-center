@@ -11,10 +11,12 @@ redirect_from:
   - voice-and-video-for-ios-sdk-beta-getting-started-project-settings.html
   - consumer-experience-voice-video-ios-integration-guide.html
   - voice-and-video-for-ios-sdk-beta-getting-started-integration-guide.html
+  - voice-and-video-for-ios-sdk-beta-getting-started.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for iOS SDK (BETA)
-permalink: voice-and-video-for-ios-sdk-beta-getting-started.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Voice and Video for iOS SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-getting-started.html
 indicator: messaging
 ---
 
