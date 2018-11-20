@@ -1,18 +1,19 @@
 ---
-pagename: Application Login
+pagename: User Login
 redirect_from:
-  - agent-app-login.html
+  - agent-user-login.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
 
-order: 11
-permalink: login-service-api-methods-application-login.html
+order: 10
+permalink: login-service-api-methods-user-login.html
 
 indicator: both
 ---
+
 ### Request
 
 | Method | URL |
@@ -37,13 +38,10 @@ indicator: both
 Example:
 
 ```json
-{
-   "username": "name",
-   "appKey": "appKey_value",
-   "secret": "secret_value",
-   "accessToken": "accessToken_value",
-   "accessTokenSecret": "accessTokenSecret_value"
-}
+    {
+        "username": "name",
+        "password": "password"
+    }
 ```
 
 ### Response
