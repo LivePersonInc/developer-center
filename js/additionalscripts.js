@@ -492,12 +492,16 @@ function capabilitiesSearch() {
 };
 
 function searchHighlight() {
+	//grab the filter element from local storage. We define this element in the inline script on the default oage.
 	var toHighlight = localStorage.getItem('filter');
+	//if the element has been created
 	if (toHighlight) {
+		//find its content within the page and apply the highlight class
 		$('#defaultcontent').highlight(toHighlight, {
 			className: 'searchHighlight'
 		});
 	};
+	//set the filter element to empty so that filtering doesn't "carry over" to future navigation
 	localStorage.setItem('filter', '');
 }
 
