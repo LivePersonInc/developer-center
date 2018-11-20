@@ -31,14 +31,14 @@
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  onclick="linkclick(event,this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  onclick="linkclick(event,this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
             <li class="pageitem">
-              <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+              <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
             </li>
           {% endif %}
           {% endfor %}
@@ -46,7 +46,7 @@
       </li>
       {% else %}
     <li class="folder innerfolder sidebarcategory sololink">
-      <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+      <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
     </li>
     {% endif %}
       {% endfor %}
@@ -69,14 +69,14 @@
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
           <li class="pageitem">
-            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -84,7 +84,7 @@
       </li>
       {% else %}
       <li class="folder innerfolder sidebarcategory sololink">
-        <a onclick="linkclick(event, this)" class="innerlink " id="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+        <a onclick="linkclick(event, this)" class="innerlink "  href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
       </li>
       {% endif %}
       {% endfor %}

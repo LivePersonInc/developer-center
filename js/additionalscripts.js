@@ -212,7 +212,7 @@ function menuDrop() {
 	//begin by setting the list's data to reflect that it's closed
 	$(".anchorlist > a").data("expanded", "false");
 	//when a click on the list occurs
-	$(".anchorlist > a").click(function (event) {
+	$(".anchorlist").on("click", "a", function (event) {
 		event.preventDefault();
 		//set data to true for toggle behavior
 		var hasExpanded = $(this).data("expanded") == "true";
@@ -308,7 +308,7 @@ function sidebarCollapse(url) {
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		$(".post-content a").click(function () {
+		$(".post-content").on("click", "a", function () {
 			$(".sidebarbutton").removeClass("clicked");
 			$(".topfolder > a").next().slideUp(400);
 			$(".topfolder > a").data("expanded", "false");
@@ -323,7 +323,7 @@ function sidebarCollapse(url) {
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
-	$(".topfolder > a").click(function () {
+	$(".topfolder").on("click", "a", function () {
 		if (!$(this).hasClass("bottombuttons")) {
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
@@ -345,7 +345,7 @@ function sidebarClick() {
 	};
 	});
 
-	$(".innerfolder > a").click(function (event) {
+	$(".innerfolder").on("click", "a", function (event) {
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
 		var button = $(this).find("button");
