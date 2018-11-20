@@ -8,8 +8,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Voice & Video for Android SDK (BETA)
-subfoldername: Customizing
-order: 70
 permalink: voice-and-video-for-android-sdk-beta-customizing.html
 indicator: messaging
 ---

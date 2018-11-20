@@ -798,19 +798,8 @@
       pages:
       - pagename: Overview
       - pagename: Getting Started
-        subpages:
-        - subpagename: Prerequisites
-        - subpagename: Installing the SDK
-        - subpagename: Integration Guide
       - pagename: LiveEngage Configuration
-        subpages:
-        - subpagename: Agent Workspace Requirements
-        - subpagename: Account Settings
-        - subpagename: Register Your App
       - pagename: Customizing
-        subpages:
-        - subpagename: Appearance and Behavior
-        - subpagename: Account Settings
       - pagename: Sample Apps
       - pagename: FAQ
       - pagename: Release Notes

@@ -10,8 +10,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Voice & Video for Android SDK (BETA)
-subfoldername: LiveEngage Configuration
-order: 40
 permalink: voice-and-video-for-android-sdk-beta-liveengage-configuration.html
 indicator: messaging
 ---
