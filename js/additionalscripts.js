@@ -492,7 +492,7 @@ function capabilitiesSearch() {
 
 function searchHighlight() {
 	var toHighlight = localStorage.getItem('filter');
-	if (toHiglight) {
+	if (toHighlight) {
 		$('#defaultcontent').highlight(toHighlight, {
 			className: 'searchHighlight'
 		});
