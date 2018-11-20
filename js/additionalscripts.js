@@ -491,6 +491,13 @@ function capabilitiesSearch() {
 	};
 };
 
+
+$('.algolia-docsearch-suggestion--title').click(function () {
+	var input = document.getElementById('aa-search-input');
+	var filter = input.value.toUpperCase();
+	localStorage.setItem('filter', filter);
+});
+
 function searchHighlight() {
 	var toHighlight = localStorage.getItem('filter');
 	if (toHighlight) {
@@ -498,11 +505,6 @@ function searchHighlight() {
 			className: 'searchHighlight'
 		});
 	};
-	$('.algolia-docsearch-suggestion--title').click(function () {
-		var input = document.getElementById('aa-search-input');
-		var filter = input.value.toUpperCase();
-		localStorage.setItem('filter', filter);
-	});
 }
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
