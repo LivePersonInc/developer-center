@@ -79,7 +79,7 @@ function navigateContent(url) {
 			codeButtons();
 			replaceTitle();
 			searchFunction();
-			capabilitiesSearch()
+			capabilitiesSearch();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -490,7 +490,7 @@ function capabilitiesSearch() {
 	};
 };
 
-searchHighlight() {
+function searchHighlight() {
 	var toHighlight = localStorage.getItem('filter');
 	if (toHiglight) {
 		$('#defaultcontent').highlight(toHighlight, {
