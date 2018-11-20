@@ -110,10 +110,11 @@ search.autocomplete.on({
     footer.classList.add('overlayvisible');
 },
   'autocomplete:updated': function () {
+    if (this.value != '') {
     var input = document.getElementById('aa-search-input');
     var filter = input.value.toUpperCase();
     localStorage.setItem('filter', filter);
-    if (this.value === '') {
+    }else {
       var content = document.getElementById('defaultcontent');
       var sidebar = document.getElementById('defaultsidebar');
       var footer = document.getElementById('defaultfooter');
