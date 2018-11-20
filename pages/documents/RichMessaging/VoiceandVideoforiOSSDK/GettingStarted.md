@@ -81,11 +81,11 @@ Make sure your target (here: _MyBrandApp_) matches your actual app build target'
 
 Then type `pod repo update && pod install` to have CocoaPods fetch and install the SDK
 
-CocoaPods will create a `*.xcworkspace` workspace for your XCode project. Use this in future _instead of_ the regular `*.xcodeproj`. Open it and continue with the [Project Settings](consumer-experience-voice-video-ios-project-settings.html) instructions.
+CocoaPods will create a `*.xcworkspace` workspace for your XCode project. Use this in future _instead of_ the regular `*.xcodeproj`. Open it and continue with the [Project Settings](#project-settings) instructions.
 
 ### Installing the SDK Manually
 
-We highly recommend integrating our SDK using CocoaPods as [described here](consumer-experience-voice-video-ios-cocoa-pods.html). If this does not fit your needs and you prefer to add the SDK manually follow these steps for your app's __XCode Project__:
+We highly recommend integrating our SDK using CocoaPods as [described here](#installing-the-sdk-with-cocoapods). If this does not fit your needs and you prefer to add the SDK manually follow these steps for your app's __XCode Project__:
 
 #### Step 1: Copy Dependencies
 
@@ -113,7 +113,7 @@ Under your target's **Build Settings**, adjust the following:
 
 **Important**: Ensure that your iOS *Base SDK* is set to *9.0* or higher.
 
-Now continue with the [Project Settings](consumer-experience-voice-video-ios-project-settings.html)
+Now continue with the Project Settings.
 
 ### Project Settings
 
@@ -180,10 +180,10 @@ Either way make sure it's included in the bundle resources of your app's target.
 
 Before you continue, make sure you have completed the steps detailed in either:
 
-   * [CocoaPods Installation](consumer-experience-voice-video-ios-cocoa-pods.html) or
-   * [Manual Installation](consumer-experience-voice-video-ios-manually.html)
+   * [CocoaPods Installation](#installing-the-sdk-with-cocoapods) or
+   * [Manual Installation](#installing-the-sdk-manually)
 
-**AND** adjusted your [Project Settings](consumer-experience-voice-video-ios-project-settings.html)
+**AND** adjusted your [Project Settings](#project-settings)
 
 #### Step 1: Header Includes
 If you are using a **Swift** project, add this to your app's **Bridging-Header**:

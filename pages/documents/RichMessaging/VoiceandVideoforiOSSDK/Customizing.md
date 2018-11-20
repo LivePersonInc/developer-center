@@ -1,36 +1,40 @@
 ---
-pagename: Appearance and Behavior
+pagename: Customizing
 redirect_from:
   - consumer-experience-voice-video-ios-appearance-behavior.html
+  - voice-and-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
+  - consumer-experience-voice-video-ios-appearance-wording.html
+  - voice-and-video-for-ios-sdk-beta-customizing-wording.html
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Voice & Video for iOS SDK (BETA)
-subfoldername: Customizing
-order: 60
-permalink: voice-and-video-for-ios-sdk-beta-customizing-appearance-and-behavior.html
+permalink: voice-and-video-for-ios-sdk-beta-customizing.html
 indicator: messaging
 ---
+
+### Appearance and Behavior
+
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, don't hesitate to contact you LivePerson account manager for help.
 
-Below you'll learn how to customize various SDK settings to fit your app's needs. You can customise different aspects of the SDK:
+Below you'll learn how to customize various SDK settings to fit your app's needs. You can customize different aspects of the SDK:
 
-   * [General Behavior](consumer-experience-voice-video-ios-appearance-behavior.html#behavior)
-   * [Appearance](consumer-experience-voice-video-ios-appearance-behavior.html#appearance)
-   * [Sounds](consumer-experience-voice-video-ios-appearance-behavior.html#sounds)
+   * [General Behavior](#behavior)
+   * [Appearance](#appearance)
+   * [Sounds](#sounds)
 
 ***
 
-### Step 1: Setup
+#### Step 1: Setup
 
 In your XCode project create a new `plist` file named:
 
   * `LPCoAppSDK.plist` and include it into your app target resources
 
-### Step 2: Add custom settings
+#### Step 2: Add custom settings
 
 Open your `LPCoAppSDK.plist` in XCode and add the settings you wish to customize.
 
-### Behavior
+#### Behavior
 <style>
 td:first-child {
   width: 200px!important;
@@ -44,14 +48,14 @@ td:first-child {
 | **speakerOnVideo** | BOOL | YES | Determines if the phone's speaker should be automatically enabled when a video call is started. This is recommended, as the volume in non-speaker mode is too low to be heard from a viewing distance. |
 | **useProximitySensor** | BOOL | YES | Determines if the device's screen should be switched off and camera streaming should be paused, while the device is close to a user's ear (e.g. in a voice-call)  |
 
-### Appearance
+#### Appearance
 
 | Key        | Type | Default Value | About  |
 | ------------- |:-------------:|:-------------:|:-----|
 |  **cobrowseFrameColor** | String  | #004dc9   | The color of the frame surrounding the app's screen during a CoBrowse session. Use a HEX color value as String, including a leading hash (#) |
 | **cobrowseTitleColor** | String | #ffffff | The color of the title on the top bar during a CoBrowse session. Make sure the color is sufficiently visible against the `cobrowseFrameColor` background |
 
-### Sounds
+#### Sounds
 
 | Key        | Type | Default Value | About  |
 | ------------- |:-------------:|:-------------:|:-----|
@@ -61,3 +65,30 @@ td:first-child {
 **Hint:** `caf` files are optimized audio files for iOS. You can convert any `aiff` file using the command below:
 
 `afconvert -v -f 'caff' -d aac -s 1 -b 192000 MySource.aif MyOutput.caf`
+
+### Wording
+
+These settings should only be used to customize the wording according to you app's needs. If you plan to offer a new language not yet available in the SDK, please to speak to your LivePerson account manager.
+
+#### Step 1: Setup
+
+In your XCode project, create a new file named:
+
+  * `LPCoAppSDK.strings` and enable __Localization__ for this file.
+
+This will put the file under your `[Language].lproj` (e.g. `EN.lproj`) folders.
+
+#### Step 2: Edit Wording
+<style>
+td:first-child {
+  width: 150px!important;
+}
+</style>
+
+Open your `LPCoAppSDK.strings` in the language you wish to edit and add (ONLY!) those keys you wish to edit. Non specified keys will use the default wording.
+
+| Key        | Default Value (EN) | Note  |
+| ------------- |:-------------:|:-----|
+|   **CALLER_NAME**   | Agent  | The name displayed to the user as the caller, if the actual agent's name could not yet be resolved OR was set to `default`. This should most likely be your **Brand's name**  |
+
+**NOTE:** More options will be made available once the SDK is out of BETA

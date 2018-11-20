@@ -776,9 +776,6 @@
       - pagename: Overview
       - pagename: Getting Started
       - pagename: Customizing
-        subpages:
-        - subpagename: Appearance and Behavior
-        - subpagename: Wording
       - pagename: LiveEngage Configuration
         subpages:
         - subpagename: Agent Workspace Requirements
