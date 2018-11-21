@@ -91,6 +91,7 @@ function navigateContent(url) {
 			var selected = $('a[href*="' + url + '"]');
 			//make the string we found previously active
 			$('.folder').removeClass("active");
+			$('.innerlink').removeClass("active");
 			selected = selected.addClass("activepage");
 			//just some code to make sure sidebar styling works well.
 			if (selected.parent().hasClass('innerpageitem')) {
@@ -323,7 +324,7 @@ function sidebarCollapse(url) {
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
-	$(".topfolder").on("click", "a", function () {
+	$(".topfolder").on("click", ".highlightlink", function () {
 		if (!$(this).hasClass("bottombuttons")) {
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
@@ -345,7 +346,7 @@ function sidebarClick() {
 	};
 	});
 
-	$(".innerfolder").on("click", "a", function (event) {
+	$(".innerfolder").on("click", ".highlightlink", function (event) {
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
 		var button = $(this).find("button");

@@ -55,17 +55,17 @@
   {% else %}
   <li class="folder topfolder">
     <img src="img/{{ category.image }}.svg" />
-    <a href="">{{ category.categoryname }}</a>
+    <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
       {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
+        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
-            <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+            <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
