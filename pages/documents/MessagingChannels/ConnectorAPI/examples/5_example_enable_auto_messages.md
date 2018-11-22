@@ -93,7 +93,14 @@ The following example illustrates how to enable the auto messages feature upon c
       "body":{  
          "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
-         "brandId":"{accountid}"
+         "brandId":"{accountid}",
+         "conversationContext": { 
+         	 "visitorId": "", 
+         	 "sessionId": "", 
+         	 "interactionContextId": "2", 
+         	 "type": "SharkContext", 
+         	 "lang": "en-US" 
+         }
       }
    }
 ]
@@ -137,3 +144,7 @@ The following example illustrates how to enable the auto messages feature upon c
    }
 }
 ```
+
+**Important for AUTO_MESSAGES**
+
+Between the two requests above, opening the new conversation and sending the first message, in order to receive AUTO MESSAGES it is important that there is no delay more than 10 seconds.
