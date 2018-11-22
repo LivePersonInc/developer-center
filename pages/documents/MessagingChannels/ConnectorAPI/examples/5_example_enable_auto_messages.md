@@ -94,12 +94,12 @@ The following example illustrates how to enable the auto messages feature upon c
          "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}",
-         "conversationContext": { 
-         	 "visitorId": "", 
-         	 "sessionId": "", 
-         	 "interactionContextId": "2", 
-         	 "type": "SharkContext", 
-         	 "lang": "en-US" 
+         "conversationContext": {
+         	 "visitorId": "",
+         	 "sessionId": "",
+         	 "interactionContextId": "2",
+         	 "type": "SharkContext",
+         	 "lang": "en-US"
          }
       }
    }
@@ -146,4 +146,4 @@ The following example illustrates how to enable the auto messages feature upon c
 ```
 
 
-<div class="important"> In order to receive AUTO MESSAGES, there must not be more than a 10 second delay between the two requests above (opening the new conversation and sending the first message).</div>
+<div class="important"> In order to receive AUTO MESSAGES, <b>there must not be more than a 10 second delay</b> between the two requests above (opening the new conversation and sending the first message).</div>
