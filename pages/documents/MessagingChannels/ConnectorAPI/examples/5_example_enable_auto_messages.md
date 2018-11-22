@@ -145,6 +145,5 @@ The following example illustrates how to enable the auto messages feature upon c
 }
 ```
 
-**Important for AUTO_MESSAGES**
 
-Between the two requests above, opening the new conversation and sending the first message, in order to receive AUTO MESSAGES it is important that there is no delay more than 10 seconds.
+<div class="important"> In order to receive AUTO MESSAGES, there must not be more than a 10 second delay between the two requests above (opening the new conversation and sending the first message).
