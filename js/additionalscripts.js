@@ -213,7 +213,7 @@ function menuDrop() {
 	//begin by setting the list's data to reflect that it's closed
 	$(".anchorlist > a").data("expanded", "false");
 	//when a click on the list occurs
-	$(".anchorlist").on("click", "a", function (event) {
+	$(".anchorlist").on("click", ".anchormain", function (event) {
 		event.preventDefault();
 		//set data to true for toggle behavior
 		var hasExpanded = $(this).data("expanded") == "true";
