@@ -361,6 +361,10 @@ ul#mysiderbar li{
 
 }
 
+.innerfolder > a{
+  color: #f2f1f2;
+}
+
 .pageitem {
   padding-left: 48px !important;
 }
