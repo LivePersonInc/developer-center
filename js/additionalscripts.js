@@ -316,9 +316,11 @@ function sidebarCollapse(url) {
 			$(".homeitem > a").removeClass("active");
 			$(".topfolder > a").removeClass("active");
 		});
+		if (currentPage.offset().top > 700) {
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
 		}, 1000);
+	};
 	};
 };
 

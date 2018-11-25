@@ -177,12 +177,16 @@ code pre {
   }
 
   .defaultcontent {
-    grid-column: 4 / span 1;
+    grid-column: 4 / span 3;
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     margin-top: 16px;
+  }
+
+  #post-content {
+    width: 60%;
   }
 
   .defaultfooter {
