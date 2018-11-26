@@ -146,4 +146,4 @@ The following example illustrates how to enable the auto messages feature upon c
 ```
 
 
-<div class="important"> In order to receive AUTO MESSAGES, the two requests from above (creating the new conversation and sending the first message) <b>must follow within 10 seconds</b>. In addition, it is required that the account has enabled the Controller Bot permissions in Account Config.</div>
+<div class="important"> In order to receive AUTO MESSAGES, the two requests from above (creating the new conversation and sending the first message) <b>must follow one after another within 10 seconds</b>. In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager to arrange this.</div>
