@@ -25,7 +25,7 @@ Information collected using Engagement Attributes can be used to achieve the fol
 
 * Measure and track campaign goals.
 
-To view all supported SDE types, please [refer to this document](engagement-attributes-overview.html).
+To view all supported SDE types, please [refer to this document](engagement-attributes-types-of-engagement-attributes.html).
 
 ### Use Cases
 
@@ -43,7 +43,7 @@ By using our SDEs, you can enrich your use of our APIs with more data from your 
 
 2) Once you've mapped our different data sets into LivePerson SDEs, we have two choices:
 
-  * You can start feeding real time data into these SDEs from your website. A good way to do that is to develop code on your site for example, which will send information via SDEs to LiveEngage programmatically. For example, if a user adds a certain product to their cart, the code should translate this action into an SDE format and send it to LiveEngage via the LiveEngage Tag. More documentation on how to use the tag to do so can be found [here](engagement-attributes-setting-up.html).
+  * You can start feeding real time data into these SDEs from your website. A good way to do that is to develop code on your site for example, which will send information via SDEs to LiveEngage programmatically. For example, if a user adds a certain product to their cart, the code should translate this action into an SDE format and send it to LiveEngage via the LiveEngage Tag. More documentation on how to use the tag to do so can be found [here](engagement-attributes-setting-up-engagement-attributes.html#javascript-code).
 
   * You can also start feeding real time data into these SDEs from various sources using our APIs. These APIs use different methods in order to accomplish this. Each API has its own methods to handle passing and receiving SDEs. In the Monitoring API for example, this is achieved via [the Report method](rt-interactions-monitoring-methods-report.html).
 

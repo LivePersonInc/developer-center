@@ -680,8 +680,8 @@ After the dialog change (main dialog closed, post dialog open), the consumer sho
             "replies": [
               {
                 "type": "button",
-                "tooltip": "1😒",
-                "title": "1😒",
+                "tooltip": "1",
+                "title": "1",
                 "style": {
                   "bold": false,
                   "size": "medium",
@@ -703,7 +703,7 @@ After the dialog change (main dialog closed, post dialog open), the consumer sho
                   "actions": [
                     {
                       "type": "publishText",
-                      "text": "1😒"
+                      "text": "1"
                     }
                   ]
                 }
@@ -800,8 +800,8 @@ After the dialog change (main dialog closed, post dialog open), the consumer sho
               },
               {
                 "type": "button",
-                "tooltip": "5😃",
-                "title": "5😃",
+                "tooltip": "5",
+                "title": "5",
                 "style": {
                   "bold": false,
                   "size": "medium",
@@ -823,7 +823,7 @@ After the dialog change (main dialog closed, post dialog open), the consumer sho
                   "actions": [
                     {
                       "type": "publishText",
-                      "text": "5😃"
+                      "text": "5"
                     }
                   ]
                 }
@@ -911,8 +911,8 @@ Example:
 ```json
 {
   "type": "button",
-  "tooltip": "1😒",
-  "title": "1😒",
+  "tooltip": "1",
+  "title": "1",
   "style": {
     "bold": false,
     "size": "medium",
@@ -934,7 +934,7 @@ Example:
     "actions": [
       {
         "type": "publishText",
-        "text": "1😒"
+        "text": "1"
       }
     ]
   }
@@ -1048,7 +1048,7 @@ The Second request is sent to Publish the selected text of the button, again in 
     "event": {
       "type": "ContentEvent",
       "contentType": "text/plain",
-      "message": "1😒"
+      "message": "1"
     }
   },
   "metadata": [
@@ -1087,7 +1087,7 @@ The Second request is sent to Publish the selected text of the button, again in 
         "serverTimestamp": 1539675582460,
         "event": {
           "type": "ContentEvent",
-          "message": "1😒",
+          "message": "1",
           "contentType": "text/plain"
         },
         "conversationId": "__YOUR_CONVERSATION_ID__",

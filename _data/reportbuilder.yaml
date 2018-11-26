@@ -3,7 +3,7 @@
   analysisType: Agent Status
   Channel: Messaging,Chat
   formulaOptional:
-  Description: 'Cumulative time ([h]:mm) in \\"Away\\" state.\nCan be viewed and filteredBy the \\"AWAY REASON\\" attribute.'
+  Description: 'Cumulative time ([h]:mm) in \\"Away\\" state. Can be viewed and filteredBy the \\"AWAY REASON\\" attribute.'
   Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
   filteredBy: Agent,Group
 - metricitem:
@@ -131,7 +131,7 @@
   analysisType: Agent Status
   Channel: Messaging,Chat
   formulaOptional:
-  Description: 'Cumulative time ([h]:mm) in \\"Online\\" state\n\nNote! Messaging Agents must have a configured Chat concurrency (greater than 0) in order for the system to populate this metric value. Messaging agents with a Chat concurrency of 0 appear with 0 online time.'
+  Description: 'Cumulative time ([h]:mm) in \\"Online\\" state. Note! Messaging Agents must have a configured Chat concurrency (greater than 0) in order for the system to populate this metric value. Messaging agents with a Chat concurrency of 0 appear with 0 online time.'
   Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
   filteredBy: Agent,Group
 - metricitem:
@@ -291,7 +291,7 @@
   analysisType: Agent Responsiveness
   Channel: Messaging
   formulaOptional:
-  Description: "Average time taken by the agent to respond to a consumer message. \nTime is measured from the first of consecutive messages sent by a consumer"
+  Description: "Average time taken by the agent to respond to a consumer message. Time is measured from the first of consecutive messages sent by a consumer"
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -307,14 +307,14 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional: NUMBER OF 4 OR 5 RESPONSES / NUMBER OF RESPONSES
-  Description: "CSAT score for closed conversations (including unassigned). \nWhen filtering by date/time, the CSAT SCORE will be ascosiated with the time the conversation ended.\n\nContains both results from the first generation survey and the Survey bot driven flows."
+  Description: "CSAT score for closed conversations (including unassigned). When filtering by date/time, the CSAT SCORE will be ascosiated with the time the conversation ended. Contains both results from the first generation survey and the Survey bot driven flows."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
   Metric: MCS
   analysisType: Consumer Expereience
   Channel: Messaging
-  formulaOptional: "AVERAGE OF 3 POSSIBLE MCS VALUES:\n1) POSITIVE = 100\n2) NEUTRAL = 0\n3) NEGATIVE = -100"
+  formulaOptional: "AVERAGE OF 3 POSSIBLE MCS VALUES: 1) POSITIVE = 100 2) NEUTRAL = 0 3) NEGATIVE = -100"
   Description: Meaningful Connection Score (MCS - an automated, real time measurement of consumer sentiment) for closed conversations, including unassigned conversations
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
@@ -371,7 +371,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: "Total number of transfers to an Agent.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Description: "Total number of transfers to an Agent. The transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -379,7 +379,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: "Total number of transfers back to the queue.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Description: "Total number of transfers back to the queue. The transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -387,7 +387,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: "Total number of transfers to a skill.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Description: "Total number of transfers to a skill. The transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -427,7 +427,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: "Number of transfers.\nThe transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
+  Description: "Number of transfers. The transfer is attributed to the skill from which the transfer was initiated and agent who initiated the transfer"
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -443,7 +443,7 @@
   analysisType: Consumer Expereience
   Channel: Messaging
   formulaOptional:
-  Description: 'Number of conversations during which an agent did not respond to a consumer message.\nConversations in which the Agent is the first to message (\\"Resume\\") cannot be marked as abandoned, even if the consumer did not respond to an agent message'
+  Description: 'Number of conversations during which an agent did not respond to a consumer message. Conversations in which the Agent is the first to message (\\"Resume\\") cannot be marked as abandoned, even if the consumer did not respond to an agent message'
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -475,7 +475,7 @@
   analysisType: Consumer Expereience
   Channel: Messaging
   formulaOptional:
-  Description: 'Number of conversations during which the consumers did not respond to an agent message.\nConversations in which the Agent is the first to message (\\"Resume\\"), and do not include a consumer response to the agent message, are considered Non Interactive (and not abandoned)'
+  Description: 'Number of conversations during which the consumers did not respond to an agent message. Conversations in which the Agent is the first to message (\\"Resume\\"), and do not include a consumer response to the agent message, are considered Non Interactive (and not abandoned)'
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -507,7 +507,7 @@
   analysisType: Agent Responsiveness
   Channel: Messaging
   formulaOptional:
-  Description: 'The time on average a consumer waits for a response from the first human agent assigned to the conversation.\nIf a bot was the first assigned aget, the responses from the bot are omitted from this calculation.'
+  Description: 'The time on average a consumer waits for a response from the first human agent assigned to the conversation. If a bot was the first assigned aget, the responses from the bot are omitted from this calculation.'
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -523,7 +523,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: "The number of times an agent (user) takes over conversations from another agent (bot or human).\nIn most cases this metric applies to Agent Managers who have the permission to take over conversations."
+  Description: "The number of times an agent (user) takes over conversations from another agent (bot or human). In most cases this metric applies to Agent Managers who have the permission to take over conversations."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -531,7 +531,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: "The number of times another agent (user) takesover conversations from a given agent.\nUsed to analyse how many time conversations were taken over FROM a bot or human agent (Example: How many conversations were takenover from 'Concierge-Bot' agent/user?)."
+  Description: "The number of times another agent (user) takesover conversations from a given agent. Used to analyse how many time conversations were taken over FROM a bot or human agent (Example: How many conversations were takenover from 'Concierge-Bot' agent/user?)."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -539,7 +539,7 @@
   analysisType: Consumer Expereience
   Channel: Messaging
   formulaOptional:
-  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent’s message.\nIn case of multiple consecutive agent messages, the time will be measured from the first message. \nIn case of multiple consecutive consumer responses, the time will be measured until the first response.\nThis KPI is not assigned to an Agent"
+  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent’s message. In case of multiple consecutive agent messages, the time will be measured from the first message. In case of multiple consecutive consumer responses, the time will be measured until the first response. This KPI is not assigned to an Agent"
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -587,7 +587,7 @@
   analysisType: Consumer Expereience
   Channel: Messaging
   formulaOptional: COUNT DISTINCT CONSUMERS
-  Description: "The number of consumers who were active during a selected timeframe.\nA consumer is marked as active if at least one of the following occurred:\n1) Consumer opened a conversation\n2) Consumer sent a message in a conversation\n3) Consumer closed the conversation"
+  Description: "The number of consumers who were active during a selected timeframe. A consumer is marked as active if at least one of the following occurred: 1) Consumer opened a conversation 2) Consumer sent a message in a conversation 3) Consumer closed the conversation"
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -651,7 +651,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / EXPOSED (CAMP)
-  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified campaign. Does not include conversion goals.\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified campaign. Does not include conversion goals. (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -659,7 +659,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / EXPOSED (ENG)
-  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to the specified Engagement. Does not include conversion goals.\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to the specified Engagement. Does not include conversion goals. (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -667,7 +667,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / EXPOSED (LOB)
-  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to a campaign in the specified LOB. Does not include conversion goals.\n(Pre-aggregated by LOB. Summarizing this metric across different LOBs may not equal a total of distinct objects)"
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to a campaign in the specified LOB. Does not include conversion goals. (Pre-aggregated by LOB. Summarizing this metric across different LOBs may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -1179,7 +1179,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional:
-  Description: 'Number of conversions generated by consumers following engagements with an agent.\nConversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
+  Description: 'Number of conversions generated by consumers following engagements with an agent. Conversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
   Dashboard: Agent Activity ,Goal Tracker
   filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1195,7 +1195,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional:
-  Description: 'Number of conversions generated by consumers after initiating an engagement with an agent. The conversion was generated during a separate session from the one in which the engagement took place, and within the account-defined window. \nConversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
+  Description: 'Number of conversions generated by consumers after initiating an engagement with an agent. The conversion was generated during a separate session from the one in which the engagement took place, and within the account-defined window. Conversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
   Dashboard: Agent Activity ,Goal Tracker
   filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1219,7 +1219,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional:
-  Description: 'Number of conversions generated by consumers after initiating an engagement with an agent, and before ending the session.\nConversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
+  Description: 'Number of conversions generated by consumers after initiating an engagement with an agent, and before ending the session. Conversion goals include \\"Sell product/service\\", \\"Generate leads\\", and \\"Service activity complete\\"'
   Dashboard: Agent Activity ,Goal Tracker
   filteredBy: Agent,Group,Skill,Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1315,7 +1315,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / CHAT EXPOSED (SKILL CAMP)
-  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified campaign. Does not include conversion goals.\n(Pre-aggregated by Skill and Campaign. Summarizing this metric across different skills and campaigns may not equal a total of distinct objects)"
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified campaign. Does not include conversion goals. (Pre-aggregated by Skill and Campaign. Summarizing this metric across different skills and campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -1323,7 +1323,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / CHAT EXPOSED (SKILL ENG)
-  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified engagement. Does not include conversion goals.\n(Pre-aggregated by Skill and Engagement. Summarizing this metric across different skills and engagements may not equal a total of distinct objects)"
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to engagements within the specified engagement. Does not include conversion goals. (Pre-aggregated by Skill and Engagement. Summarizing this metric across different skills and engagements may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -1331,7 +1331,7 @@
   analysisType: Campaign Conversions
   Channel: Messaging,Chat
   formulaOptional: DIRECT GOALS REACHED AFTER EXPOSURE / CHAT EXPOSED (SKILL)
-  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to the engagements on which the select skill is configured. Does not include conversion goals.\n(Pre-aggregated by Skill. Summarizing this metric across different skills  may not equal a total of distinct objects)"
+  Description: "Percentage of goals achieved after exposures out of all consumers that were exposed to the engagements on which the select skill is configured. Does not include conversion goals. (Pre-aggregated by Skill. Summarizing this metric across different skills  may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -1443,7 +1443,7 @@
   analysisType: Campaign Conversions
   Channel: Chat
   formulaOptional: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE / CHAT EXPOSED (SKILL CAMP)
-  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Calculated per campaign according to the session start time, and aggregated by skill. Use this metric when breakdown per Campaign is needed.\n(Pre-aggregated by Skill and Campaign. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Calculated per campaign according to the session start time, and aggregated by skill. Use this metric when breakdown per Campaign is needed. (Pre-aggregated by Skill and Campaign. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -1451,7 +1451,7 @@
   analysisType: Campaign Conversions
   Channel: Chat
   formulaOptional: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE / CHAT EXPOSED (SKILL ENG)
-  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Calculated per engagement according to the session start time, and aggregated by skill. Use this metric when breakdown per Engagement is needed.\n(Pre-aggregated by Skill and Engagement. Summarizing this metric across different skills or engagements  may not equal a total of distinct objects)"
+  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Calculated per engagement according to the session start time, and aggregated by skill. Use this metric when breakdown per Engagement is needed. (Pre-aggregated by Skill and Engagement. Summarizing this metric across different skills or engagements  may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -1459,7 +1459,7 @@
   analysisType: Campaign Conversions
   Channel: Chat
   formulaOptional: TOTAL DIRECT CONVERSIONS AFTER EXPOSURE / CHAT EXPOSED (SKILL)
-  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Aggregated by the skill configured on the engagement.\n(Pre-aggregated by Skill. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Percentage of direct conversions achieved after an exposure out of all sessions during which the consumer was exposed to an engagement. Aggregated by the skill configured on the engagement. (Pre-aggregated by Skill. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -1619,7 +1619,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (CAMP) / EXPOSED (CAMP)
-  Description: "Average number of times consumers were exposed to each Engagement in the selected campaign.\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected campaign.\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Average number of times consumers were exposed to each Engagement in the selected campaign. Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected campaign. (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1627,7 +1627,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement was offered to a consumer in busy state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1635,7 +1635,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement was offered to a consumer in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1643,7 +1643,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each content engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each content engagement was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1651,7 +1651,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer was offered an engagement from the selected campaign in any state\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer was offered an engagement from the selected campaign in any state (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1659,7 +1659,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1667,7 +1667,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account\n(Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1691,7 +1691,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer in busy state. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1699,7 +1699,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1707,7 +1707,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1715,7 +1715,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times a specific content engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific content engagement was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1723,7 +1723,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer was offered a specific engagement in any state\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer was offered a specific engagement in any state Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1731,7 +1731,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1739,7 +1739,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account\n(Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
+  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign. Includes control group consumers if defined in the account (Pre-aggregated by Engagement. Summarizing this metric across different Engagements  may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: Engagement,Campaign,End-Point ("Source Type")
 - metricitem:
@@ -1755,7 +1755,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (LOB) / EXPOSED (LOB)
-  Description: "Average number of times consumers were exposed to each Engagement in any of the campaigns assigned to the selected Line of Business.\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected LoB.\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Average number of times consumers were exposed to each Engagement in any of the campaigns assigned to the selected Line of Business. Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected LoB. (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1763,7 +1763,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in busy state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1771,7 +1771,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1779,7 +1779,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement within a campaign associated with the selected Line of Business, was offered to a consumer in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1787,7 +1787,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each content engagement within a  campaign associated with the selected Line of Business, was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each content engagement within a  campaign associated with the selected Line of Business, was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1795,7 +1795,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer was offered an engagement from a campaign associated with the selected Line of Business, in any state\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer was offered an engagement from a campaign associated with the selected Line of Business, in any state (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1803,7 +1803,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of times each engagement was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1811,7 +1811,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign associated to the selected Line of Business. Includes control group consumers if defined in the account\n(Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
+  Description: "Number of consumers that were eligible to receive at least one engagement from a campaign associated to the selected Line of Business. Includes control group consumers if defined in the account (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: LoB,End-Point ("Source Type")
 - metricitem:
@@ -1843,7 +1843,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (BRAND) / EXPOSED (BRAND)
-  Description: "Average number of times consumers were exposed to each Engagement (setup in the campaigns the consumer was targeted by).\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement."
+  Description: "Average number of times consumers were exposed to each Engagement (setup in the campaigns the consumer was targeted by). Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement."
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1851,7 +1851,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Description: "Number of times each engagement was offered to a consumer in busy state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1859,7 +1859,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Description: "Number of times each engagement was offered to a consumer in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1867,7 +1867,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Description: "Number of times each engagement was offered to a consumer in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1875,7 +1875,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each content engagement was offered to a consumer.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Description: "Number of times each content engagement was offered to a consumer. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1891,7 +1891,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer.\nIf the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Description: "Number of times each engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will be counted as one exposure"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1923,7 +1923,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (ENTRY POINT) / EXPOSED (ENTRY POINT)
-  Description: "Average number of times a consumer was exposed to each Engagement assigned to a specific entry point.\nExample: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator.\nThe denominator counts sessions during which the consumer was exposed at least once to any engagement.\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Average number of times a consumer was exposed to each Engagement assigned to a specific entry point. Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement. (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1931,7 +1931,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in busy state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure.\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in busy state. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure. (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1939,7 +1939,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in offline state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in offline state. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1947,7 +1947,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in online state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of times each engagement assigned to the selected entry point, was offered to a consumer in online state. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1955,7 +1955,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each content engagement assigned to the selected entry point, was offered to a consumer.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of times each content engagement assigned to the selected entry point, was offered to a consumer. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1963,7 +1963,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of sessions during which a consumer was offered an engagement assigned to the selected entry point, in any state\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of sessions during which a consumer was offered an engagement assigned to the selected entry point, in any state (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1971,7 +1971,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of times each engagement was offered to a consumer.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of times each engagement was offered to a consumer. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -1979,7 +1979,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional:
-  Description: "Number of consumers that were eligible to receive at least one engagement assigned to the selected entry point. Includes control group consumers if defined in the account\n(Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
+  Description: "Number of consumers that were eligible to receive at least one engagement assigned to the selected entry point. Includes control group consumers if defined in the account (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)"
   Dashboard: Business Activity
   filteredBy: End-Point ("Source Type")
 - metricitem:
@@ -2027,7 +2027,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in busy state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -2035,7 +2035,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer received a chat engagement offer. (Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -2043,7 +2043,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once. (Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -2051,7 +2051,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -2059,7 +2059,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -2067,7 +2067,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined. (Pre-aggregated by the configured skill on the engagement and campaign containing that engagement. Summarizing this metric across different skills or campaigns may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Campaign
 - metricitem:
@@ -2075,7 +2075,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in busy state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -2083,7 +2083,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer received a chat engagement offer. (Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -2091,7 +2091,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once. (Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -2099,7 +2099,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -2107,7 +2107,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -2115,7 +2115,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined. (Pre-aggregated by the configured skill on the engagement. Summarizing this metric across different skills may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill
 - metricitem:
@@ -2123,7 +2123,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer in busy state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer in busy state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -2131,7 +2131,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer received a chat engagement offer. (Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -2139,7 +2139,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once. (Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -2147,7 +2147,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -2155,7 +2155,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific engagement was offered to a consumer in online state.\nDistinct at the engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Description: "Number of times a specific engagement was offered to a consumer in online state. Distinct at the engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -2163,7 +2163,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined. (Pre-aggregated by configured skill on the engagement. Summarizing this metric across different Skills or Engagements  may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,Engagement
 - metricitem:
@@ -2171,7 +2171,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in busy state.\nDistinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in busy state. Distinct at the Engagement level - If the engagement was displayed multiple times within one session, it will be counted as one exposure (Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,LOB
 - metricitem:
@@ -2179,7 +2179,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer received a chat engagement offer.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer received a chat engagement offer. (Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,LOB
 - metricitem:
@@ -2187,7 +2187,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Description: "Number of times a specific chat engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will only be counted once. (Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,LOB
 - metricitem:
@@ -2195,7 +2195,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in offline state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in offline state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure. (Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,LOB
 - metricitem:
@@ -2203,7 +2203,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of times engagements were offered to consumers in online state.\nDistinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure.\n(Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Description: "Number of times engagements were offered to consumers in online state. Distinct at the Engagement level - if the engagement was displayed multiple times within one session, it will be counted as one exposure. (Pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,LOB
 - metricitem:
@@ -2211,7 +2211,7 @@
   analysisType: Campaign Funnel
   Channel: Chat
   formulaOptional:
-  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined.\n(This figure is pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
+  Description: "Number of sessions during which the consumer became eligible to receive at least one chat engagement from any campaign. Includes the control group when one is defined. (This figure is pre-aggregated by the configured skill on the engagement and the line of business containing the campaign in which the engagement is configured. Summarizing this metric across different skills or lines of business may not equal a total of distinct objects)"
   Dashboard: Operational and Staffing
   filteredBy: Skill,LOB
 - metricitem:
@@ -2259,7 +2259,7 @@
   analysisType: Agent Utilization
   Channel: Chat
   formulaOptional:
-  Description: "Cumulative concurrent time ([h]:mm) agents were engaged in Chat sessions\n(if an agent was engaged in 2 chats during 1 hour, the total conc. engaged time will be 2 hours)"
+  Description: "Cumulative concurrent time ([h]:mm) agents were engaged in Chat sessions (if an agent was engaged in 2 chats during 1 hour, the total conc. engaged time will be 2 hours)"
   Dashboard: Agent Activity ,Skill Activity ,Business Activity ,Operational and Staffing
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB
 - metricitem:
@@ -2356,7 +2356,7 @@
   Channel: Chat
   formulaOptional:
   Description: The number of times the answer is submitted to the question
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: ANSWER RATE
@@ -2364,7 +2364,7 @@
   Channel: Chat
   formulaOptional: ANSWER COUNT / ANSWERED QUESTIONS
   Description: The percentage (%) of answers to the question out of the number of consumers that answered the question
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: ANSWERED QUESTIONS
@@ -2372,7 +2372,7 @@
   Channel: Chat
   formulaOptional:
   Description: The number of times a question was answered. Choosing more than one answer in multiple choice questions (such as with multiple check boxes) counts as a single answer
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: ANSWERED QUESTIONS CSAT
@@ -2380,7 +2380,7 @@
   Channel: Chat
   formulaOptional:
   Description: The number of consumers that answered a CSAT question
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: CSAT / CSAT SCORE
@@ -2388,7 +2388,7 @@
   Channel: Chat
   formulaOptional: CSAT POSTIVIE ANSWER COUNT / ANSWERED QUESTIONS CSAT
   Description: Customer satisfaction score
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: CSAT POSITIVE ANSWER COUNT
@@ -2396,7 +2396,7 @@
   Channel: Chat
   formulaOptional:
   Description: Number of positive answers submitted by consumers to a CSAT post-chat survey question. An answer is considered "positive" if defined as so in the Post-Chat survey settings of the Engagement Window as part of LiveEngage Campaign setup
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: QUESTION COMPLETION RATE
@@ -2404,7 +2404,7 @@
   Channel: Chat
   formulaOptional: ANSWERED QUESTIONS / COMPELETED SURVEY
   Description: The percentage (%) of times a question was completed out of the total number of surveys completed
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: COMPLETED SURVEYS
@@ -2412,7 +2412,7 @@
   Channel: Chat
   formulaOptional:
   Description: Number of survey forms completed
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: SURVEY COMPLETION RATE
@@ -2420,7 +2420,7 @@
   Channel: Chat
   formulaOptional: COMPLETED SURVEY / VIEWED SURVEY
   Description: The percentage (%) of completed survey forms out of viewed survey forms
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: SURVEY FORMS
@@ -2428,7 +2428,7 @@
   Channel: Chat
   formulaOptional:
   Description: Number of different survey forms viewed or completed. Each survey form is counted once
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: VIEWED SURVEY
@@ -2436,7 +2436,7 @@
   Channel: Chat
   formulaOptional:
   Description: Number of survey forms viewed by consumers
-  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey  Performance
+  Dashboard: Agent Activity ,Skill Activity ,Operational and Staffing,Survey Performance
   filteredBy: Agent,Group, Skill
 - metricitem:
   Metric: ACCEPTED OFFERS
@@ -2619,7 +2619,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of unassigned conversations (in-queue).\nFilterable by Skill."
+  Description: "The average number of unassigned conversations (in-queue). Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2627,7 +2627,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of actionable conversation in queue. These conversations are actionable because the last message in the conversation was sent by the consumer.\nFilterable by Skill."
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because the last message in the conversation was sent by the consumer. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2635,7 +2635,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of actionable conversation in queue. These conversations are actionable because an agent set a manual TTR (SLA) on these conversation.\nFilterable by Skill."
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because an agent set a manual TTR (SLA) on these conversation. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2643,7 +2643,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of actionable conversation in queue. These conversations are actionable because these conversations were transfered into the queue by an agent.\nFilterable by Skill."
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because these conversations were transfered into the queue by an agent. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2651,7 +2651,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of actionable conversation in queue.\nFilterable by Skill."
+  Description: "The average number of actionable conversation in queue. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2659,7 +2659,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of not-actionable conversations in queue. These conversations include those in which an agent set a manual TTR (SLA). Conversations in-queue and set with manual TTR are considered actionable by default, unless the brand chooses to change the queue management configuration.\nFilterable by Skill."
+  Description: "The average number of not-actionable conversations in queue. These conversations include those in which an agent set a manual TTR (SLA). Conversations in-queue and set with manual TTR are considered actionable by default, unless the brand chooses to change the queue management configuration. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2667,7 +2667,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of not-actionable conversations in queue. These conversations include those that were transfered by an agent into the queue. Conversations in-queue and in-transfer are considered actionable by default, unless the brand chooses to change the queue management configuration.\nFilterable by Skill."
+  Description: "The average number of not-actionable conversations in queue. These conversations include those that were transfered by an agent into the queue. Conversations in-queue and in-transfer are considered actionable by default, unless the brand chooses to change the queue management configuration. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2675,7 +2675,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional: An hourly average of a frequest snapshot of each skill-queue. Each snapshot reports on the number of conversations in queue.
-  Description: "The average number of not-actionable conversation in queue.\nFilterable by Skill."
+  Description: "The average number of not-actionable conversation in queue. Filterable by Skill."
   Dashboard: Messaging Performance
   filteredBy: Skill
 - metricitem:
@@ -2691,7 +2691,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional: '[Closed Survey] / Sum([Closed Survey])'
-  Description: "The percentage (%) of survey instances closed with a specific outcome. Supported by the “Survey Outcome” attribute (filter).\n\n* Presents 100% when not filtered / split by outcome."
+  Description: "The percentage (%) of survey instances closed with a specific outcome. Supported by the “Survey Outcome” attribute (filter). * Presents 100% when not filtered / split by outcome."
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2699,7 +2699,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions.\n\nMeasured from the time the survey is offered by the Survey Bot till the time the survey is closed.\n\nAttributed to the Date/Hour during which the survey was offered (not close time of the survey). \n\nFormat: [h]:mm:ss"
+  Description: "The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions. Measured from the time the survey is offered by the Survey Bot till the time the survey is closed. Attributed to the Date/Hour during which the survey was offered (not close time of the survey). Format: [h]:mm:ss"
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2707,7 +2707,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The number of times a question was offered to a consumer by the bot. A question is considered offered when it is sent by the bot to the consumer in a survey dialog.\nDepending on the survey flow, a question may be offered more than once to a consumer (cycli flows, retries, etc.). "
+  Description: "The number of times a question was offered to a consumer by the bot. A question is considered offered when it is sent by the bot to the consumer in a survey dialog. Depending on the survey flow, a question may be offered more than once to a consumer (cycli flows, retries, etc.). "
   Dashboard: Messaging Performance
   filteredBy: Skill,End-Point ("Source Type")
 - metricitem:
@@ -2715,7 +2715,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The number of questions presented to the consumer by the bot and were responded by the consumer with a valid (configured) answer (recognized by the bot as a valid answer).\n\n* Used to compare with the metric “Offered Question”. When a question is offered multiple times but validly answered less times, there may be an issue with the question text (behavioral or technical)."
+  Description: "The number of questions presented to the consumer by the bot and were responded by the consumer with a valid (configured) answer (recognized by the bot as a valid answer). * Used to compare with the metric “Offered Question”. When a question is offered multiple times but validly answered less times, there may be an issue with the question text (behavioral or technical)."
   Dashboard: Messaging Performance
   filteredBy: Skill,End-Point ("Source Type")
 - metricitem:
@@ -2723,7 +2723,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional: '[Answered Question] / [Offered Question]'
-  Description: "Formula: [Answered Question] / [Offered Question]\n\nThe percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot."
+  Description: "Formula: [Answered Question] / [Offered Question]. The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot."
   Dashboard: Messaging Performance
   filteredBy: Skill,End-Point ("Source Type")
 - metricitem:
@@ -2731,7 +2731,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The time on average taken by the consumer to respond to a question.\n \nMeasured from the time the Bot presented a question, to the time the consumer submitted a response to that question (recognized or unrecognized by the Bot).\n\nAttributed to the time the question was offered (not response time).\n\nIf no response was given to the question, the metric will be associated with an empty cell in the dashboard (Null).\n\nFormat: [h]:mm:ss"
+  Description: "The time on average taken by the consumer to respond to a question. Measured from the time the Bot presented a question, to the time the consumer submitted a response to that question (recognized or unrecognized by the Bot). Attributed to the time the question was offered (not response time). If no response was given to the question, the metric will be associated with an empty cell in the dashboard (Null). Format: [h]:mm:ss"
   Dashboard: Messaging Performance
   filteredBy: Skill,End-Point ("Source Type")
 - metricitem:
@@ -2739,7 +2739,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The percentage of answers “4” or “5” (top two boxes) out of the total responses submitted by consumers to a predefined CSAT question type.\n\nInvalid answers, unrecognized by the bot, are excluded from the formula.\n\nCalculated at the Bradn level."
+  Description: "The percentage of answers “4” or “5” (top two boxes) out of the total responses submitted by consumers to a predefined CSAT question type. Invalid answers, unrecognized by the bot, are excluded from the formula. Calculated at the Bradn level."
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2747,7 +2747,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The percentage of answers “Yes” out of the total responses submitted by consumers to a predefined FCR question type.\n\nCalculated at the Btand level."
+  Description: "The percentage of answers “Yes” out of the total responses submitted by consumers to a predefined FCR question type. Calculated at the Btand level."
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2755,7 +2755,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The Net Promoter Score, based on a scale of 0 to 10 and derived from the predefined NPS question type.\n\nCalculated at the Brand level."
+  Description: "The Net Promoter Score, based on a scale of 0 to 10 and derived from the predefined NPS question type. Calculated at the Brand level."
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2763,7 +2763,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer.\n\nAdditional buckets include:\n“Skipped” for questions with configured Skip option\n“Unrecognized by bot” for counting how many invalid answers were submitted for a question\n\nAttributed to the time the survey was offered (not close time).\n\nCalculated at the Brand level."
+  Description: "The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer. Additional buckets include: “Skipped” for questions with configured Skip option “Unrecognized by bot” for counting how many invalid answers were submitted for a question  Attributed to the time the survey was offered (not close time). Calculated at the Brand level."
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2771,7 +2771,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional: '[Answer Count (Brand)] / Sum([Answer Count (Brand)]) {per Question}'
-  Description: "The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot.\n\nCalculated at the Brand level."
+  Description: "The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot. Calculated at the Brand level."
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2779,7 +2779,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The percentage of answers “4” or “5” (top two boxes) out of the total responses submitted by consumers to a predefined CSAT question type.\n\nInvalid answers, unrecognized by the bot, are excluded from the formula.\n\nCalculated at the Agent and Skill level."
+  Description: "The percentage of answers “4” or “5” (top two boxes) out of the total responses submitted by consumers to a predefined CSAT question type. Invalid answers, unrecognized by the bot, are excluded from the formula. Calculated at the Agent and Skill level."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2787,7 +2787,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The percentage of answers “Yes” out of the total responses submitted by consumers to a predefined FCR question type.\n\nCalculated at the Agent and Skill level."
+  Description: "The percentage of answers “Yes” out of the total responses submitted by consumers to a predefined FCR question type. Calculated at the Agent and Skill level."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2795,7 +2795,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The Net Promoter Score, based on a scale of 0 to 10 and derived from the predefined NPS question type.\n\nCalculated at the Agent and Skill level."
+  Description: "The Net Promoter Score, based on a scale of 0 to 10 and derived from the predefined NPS question type. Calculated at the Agent and Skill level."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2803,7 +2803,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: "The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer.\n\nAdditional buckets include:\n“Skipped” for questions with configured Skip option\n“Unrecognized by bot” for counting how many invalid answers were submitted for a question\n\nAttributed to the time the survey was offered (not close time).\n\nCalculated at the Agent and Skill level."
+  Description: "The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer. Additional buckets include: “Skipped” for questions with configured Skip option “Unrecognized by bot” for counting how many invalid answers were submitted for a question  Attributed to the time the survey was offered (not close time). Calculated at the Agent and Skill level."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:
@@ -2811,7 +2811,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional: '[Answer Count (Agent and Skill)] / Sum([Answer Count (Agent and Skill)]) {per Question}'
-  Description: "The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot.\n\nCalculated at the Agent and Skill level."
+  Description: "The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot. Calculated at the Agent and Skill level."
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point ("Source Type")
 - metricitem:

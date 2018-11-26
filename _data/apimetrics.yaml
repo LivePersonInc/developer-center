@@ -299,7 +299,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional:
-  Description: "The time on average a new conversation remains in queue until assigned to an agent. \n\nMeasured in two separate ways:\n\nFor current Queue state: for all conversations currently in queue, from the time the conversation was opened until the time of analysis (“now”).\nFor aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation was opened until the time is was assigned to an agent."
+  Description: "The time on average a new conversation remains in queue until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation was opened until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation was opened until the time is was assigned to an agent."
   apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
   filteredBy: Skill
 - metricitem:
@@ -307,7 +307,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional:
-  Description: "The time on average a conversation remains in queue after being transferred until assigned to an agent. \n\nMeasured in two separate ways:\n\nFor current Queue state: for all conversations currently in queue, from the time the conversation was opened until the time of analysis (“now”).\nFor aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation was opened until the time is was assigned to an agent."
+  Description: "The time on average a conversation remains in queue after being transferred until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation was opened until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation was opened until the time is was assigned to an agent."
   apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
   filteredBy: Skill
 - metricitem:
@@ -315,7 +315,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional:
-  Description: "The median time a conversation remains in queue until assigned to an agent. \n\nMeasured in two separate ways:\n\nFor current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”).\nFor aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
+  Description: "The median time a conversation remains in queue until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
   apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
   filteredBy: Skill
 - metricitem:
@@ -323,7 +323,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional:
-  Description: "The maximum time a conversation remains in queue until assigned to an agent. \n\nMeasured in two separate ways:\n\nFor current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”).\nFor aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
+  Description: "The maximum time a conversation remains in queue until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
   apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
   filteredBy: Skill
 - metricitem:
@@ -331,7 +331,7 @@
   analysisType: Queue Health
   Channel: Messaging
   formulaOptional:
-  Description: "The maximum time a conversation remains in queue until assigned to an agent. \n\nMeasured in two separate ways on the 90th percentile of conversation wait times:\n\nFor current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”).\nFor aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
+  Description: "The maximum time a conversation remains in queue until assigned to an agent. Measured in two separate ways on the 90th percentile of conversation wait times:For current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
   apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
   filteredBy: Skill
 - metricitem:
@@ -411,7 +411,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The number of times conversations were completed by a skill. \nMeasured for conversations that were closed or transferred to another skill.\nA conversation may be assigned more than once to a given skill. "
+  Description: "The number of times conversations were completed by a skill. Measured for conversations that were closed or transferred to another skill. A conversation may be assigned more than once to a given skill. "
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
@@ -419,7 +419,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The number of conversations closed by a consumer which included no agent message. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.\n\nFor example:\n\nStart\nConsumer: Hi\nSkill-A-Agent: Hello\nTransfer to Skill B\nConversation Closed by Consumer while  in Skill B\n\nSkill B has an abandoned segment while Skill A does not."
+  Description: "The number of conversations closed by a consumer which included no agent message. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.For example:Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill BSkill B has an abandoned segment while Skill A does not."
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
@@ -427,7 +427,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The number of conversations closed by a consumer which included no agent message since no agent was assigned. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.\n\nFor example:\n\nStart\nConsumer: Hi\nSkill-A-Agent: Hello\nTransfer to Skill B\nConversation Closed by Consumer while  in Skill B before an Agent is assigned to it\n\nSkill B has an abandoned segment while Skill A does not."
+  Description: "The number of conversations closed by a consumer which included no agent message since no agent was assigned. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.For example:Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill B before an Agent is assigned to itSkill B has an abandoned segment while Skill A does not."
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
@@ -451,7 +451,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The number of skill-segments which ended in a transfer to another skill or closed with at least one response from a consumer to a skilled-agent’s message.\nMeasured from the first message sent by an agent in a new skill-segment."
+  Description: "The number of skill-segments which ended in a transfer to another skill or closed with at least one response from a consumer to a skilled-agent’s message. Measured from the first message sent by an agent in a new skill-segment."
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
@@ -459,7 +459,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The time on average taken by an agent to respond to a consumer from the time the agent is assigned to the conversation.\nCalculated only for the first agent message sent after a skill-segment starts."
+  Description: "The time on average taken by an agent to respond to a consumer from the time the agent is assigned to the conversation. Calculated only for the first agent message sent after a skill-segment starts."
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
@@ -595,7 +595,7 @@
   analysisType: Queue Health
   Channel: Chat
   formulaOptional:
-  Description: "The current available slots. Default value if no such data exists is -1.\nNote: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1."
+  Description: "The current available slots. Default value if no such data exists is -1. Note: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1."
   apiMethod: Operational Realtime - Queue Health
   filteredBy: Skill
 - metricitem:
@@ -675,7 +675,7 @@
   analysisType: Agent Status
   Channel: Chat
   formulaOptional:
-  Description: "The total time the agent was in this state (seconds).\nNote the filters available for this metric."
+  Description: "The total time the agent was in this state (seconds). Note the filters available for this metric."
   apiMethod: Operational Realtime - Agent Activity
   filteredBy: Agent,Status,Reason (Away Reason)
 - metricitem:
@@ -683,7 +683,7 @@
   analysisType: Agent Utilization
   Channel: Chat
   formulaOptional:
-  Description: "The total time the agent was chatting in this state (seconds).\nNote the filters available for this metric."
+  Description: "The total time the agent was chatting in this state (seconds). Note the filters available for this metric."
   apiMethod: Operational Realtime - Agent Activity
   filteredBy: Agent,Status,Reason (Away Reason)
 - metricitem:
@@ -691,7 +691,7 @@
   analysisType: Agent Utilization
   Channel: Chat
   formulaOptional:
-  Description: "The total time the agent was not chatting in this state (seconds).\nNote the filters available for this metric."
+  Description: "The total time the agent was not chatting in this state (seconds). Note the filters available for this metric."
   apiMethod: Operational Realtime - Agent Activity
   filteredBy: Agent,Status,Reason (Away Reason)
 - metricitem:
@@ -699,7 +699,7 @@
   analysisType: Agent Utilization
   Channel: Chat
   formulaOptional:
-  Description: "The amount of time the agent was chatting concurrently with the maximum allowed chats in this state (seconds).\nNote the filters available for this metric."
+  Description: "The amount of time the agent was chatting concurrently with the maximum allowed chats in this state (seconds). Note the filters available for this metric."
   apiMethod: Operational Realtime - Agent Activity
   filteredBy: Agent,Status,Reason (Away Reason)
 - metricitem:
@@ -707,7 +707,7 @@
   analysisType: Queue Health
   Channel: Chat
   formulaOptional:
-  Description: "The current queue number of available slots.\nNote: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1."
+  Description: "The current queue number of available slots. Note: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1."
   apiMethod: Operational Realtime - Current Queue State
   filteredBy: Skill
 - metricitem:
@@ -723,7 +723,7 @@
   analysisType: Service Level
   Channel: Chat
   formulaOptional:
-  Description: "The percentage of chats that fall in this bucket or in earlier buckets (buckets for shorter queue wait periods).\nNote the histogram filter available for this metric."
+  Description: "The percentage of chats that fall in this bucket or in earlier buckets (buckets for shorter queue wait periods). Note the histogram filter available for this metric."
   apiMethod: Operational Realtime - SLA Histogram
   filteredBy: Group,Skill,Histogram (bucket range in sec.)
 - metricitem:
@@ -731,7 +731,7 @@
   analysisType: Service Level
   Channel: Chat
   formulaOptional:
-  Description: "The percentage of chats that fall in this bucket.\nNote the histogram filter available for this metric."
+  Description: "The percentage of chats that fall in this bucket. Note the histogram filter available for this metric."
   apiMethod: Operational Realtime - SLA Histogram
   filteredBy: Group,Skill,Histogram (bucket range in sec.)
 - metricitem:
@@ -739,6 +739,6 @@
   analysisType: Service Level
   Channel: Chat
   formulaOptional:
-  Description: "The number of chats with wait time that falls in this bucket.\nNote the histogram filter available for this metric."
+  Description: "The number of chats with wait time that falls in this bucket. Note the histogram filter available for this metric."
   apiMethod: Operational Realtime - SLA Histogram
   filteredBy: Group,Skill,Histogram (bucket range in sec.)

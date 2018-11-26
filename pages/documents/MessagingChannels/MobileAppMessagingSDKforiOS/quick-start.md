@@ -22,10 +22,12 @@ This Quick Start will quickly get you up and running with a project powered by L
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 #### Version 3.1.1 and above
+
 * XCode 9.3 or later
 * Swift 4.1 or later, or Objective-C
 
 #### Version 3.1 and below
+
 * XCode 9.2 or lower
 * Swift 4.0 or lower, or Objective-C
 
@@ -123,13 +125,17 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/framewor
 3. In Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
 4. Due to a new Apple policy for iOS 10 (or later), apps must declare in their project
-settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html)
+settings which privacy settings may be used. For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html).
 In Xcode info.plist of the project, add two new privacy keys and values:
- * Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
- * Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
+
+ * Key: `NSPhotoLibraryUsageDescription`, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+
+ * Key: `NSCameraUsageDescription`, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+
+ * Key: `NSMicrophoneUsageDescription`, Value: "Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
 
 <div class="important">
-This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library.
+ This step is required in order to be able to upload your host app into the App Store, as SDK 2.0 has the ability to share photos from the camera and/or photo library. From version 3.2, the SDK has the ability to send audio messages, hence, the microphone permission is required for upload to app store, even if you are not using this feature.
 </div>
 
 _**Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**_
