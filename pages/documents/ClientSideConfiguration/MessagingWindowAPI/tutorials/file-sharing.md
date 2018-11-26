@@ -1,13 +1,26 @@
 ---
 pagename: File Sharing
 redirect_from:
+  - rich-messaging-file-sharing.html
+  - file-sharing-introduction.html
+  - rich-messaging-file-sharing-1.html
+  - file-sharing-enable-file-sharing.html
+  - rich-messaging-file-sharing-2.html
+  - file-sharing-create-a-conversation.html
+  - rich-messaging-file-sharing-3.html
+  - file-sharing-request-upload-url.html
+  - rich-messaging-file-sharing-4.html
+  - file-sharing-upload-file-to-storage.html
+  - rich-messaging-file-sharing-5.html
+  - file-sharing-publish-message.html
+  - rich-messaging-file-sharing-6.html
+  - file-sharing-request-download-url.html
+  - rich-messaging-file-sharing-7.html
+  - file-sharing-download-file-from-storage.html
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
-order: 88
-
 permalink: messaging-window-api-tutorials-file-sharing.html
 indicator: messaging
 ---
@@ -54,13 +67,13 @@ You will need to have an active conversation, along with its `converationId`, wh
 Open a connection to the messaging service.
 
 ```sh
-	wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
+  wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
 ```
 
 Then, ask to create a new conversation:
 
 ```json
-	{"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
+  {"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
 ```
 
 In response, you will get a `conversationId` that will be used in the next steps.
@@ -77,33 +90,33 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 Request Body Example:
 
 ```json
-	{
-		"kind": "req",
-		"id": 1,
-		"body": {
-		"fileSize": "1000",
-		"fileType": "JPG"
-		},
-		"type": "ms.GenerateURLForUploadFile"
-	}
+  {
+  "kind": "req",
+  "id": 1,
+  "body": {
+  "fileSize": "1000",
+  "fileType": "JPG"
+  },
+  "type": "ms.GenerateURLForUploadFile"
+  }
 ```
 
 Request Body Example:
 
 ```json
-	{
-		"kind": "resp",
-		"reqId": "1",
-		"code": 200,
-		"body": {
-			"relativePath": "",
-			"queryParams": {
-				"temp_url_sig": "12345",
-				"temp_url_expires": "1234"
-			}
-		},
-		"type": "ms.GenerateURLResponse"
-	}
+  {
+  "kind": "resp",
+  "reqId": "1",
+  "code": 200,
+  "body": {
+  "relativePath": "",
+  "queryParams": {
+  "temp_url_sig": "12345",
+  "temp_url_expires": "1234"
+  }
+  },
+  "type": "ms.GenerateURLResponse"
+  }
 ```
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use them in the next request, to upload the file.
@@ -156,24 +169,24 @@ Once the file is saved in storage, publish the file URL along with an optional c
 Example message:
 
 ```json
-	{
-	  "kind": "req",
-	  "id": 1,
-	  "body": {
-	    "dialogId": "",
-	    "event": {
-	      "type": "ContentEvent",
-	      "contentType": "hosted/file",
-	      "message": {
-	        "caption": "Hello Kitten",
-	        "relativePath": "",
-	        "fileType": "JPG",
-	        "preview": ""
-	      }
-	    }
-	  },
-	  "type": "ms.PublishEvent"
-	}
+  {
+    "kind": "req",
+    "id": 1,
+    "body": {
+      "dialogId": "",
+      "event": {
+        "type": "ContentEvent",
+        "contentType": "hosted/file",
+        "message": {
+          "caption": "Hello Kitten",
+          "relativePath": "",
+          "fileType": "JPG",
+          "preview": ""
+        }
+      }
+    },
+    "type": "ms.PublishEvent"
+  }
 ```
 
 #### Using bash
@@ -192,14 +205,14 @@ Using the messaging API, request a download url, specifying the relative path of
 Request Body Example:
 
 ```json
-	{
+  {
   	"kind": "req",
   	"id": 1,
   	"body": {
     	"relativePath": "1234.JPG"
   	},
   	"type": "ms.GenerateURLForDownloadFile"
-	}
+  }
 ```
 
 #### Using bash
