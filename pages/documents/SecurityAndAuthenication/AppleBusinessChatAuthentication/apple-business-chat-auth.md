@@ -14,7 +14,7 @@ The Apple Business Chat messaging channel now allows you to send an authenticati
 
 See the message flow below:
 
-<img class="zoomimg" style="width:800px" src="img/apple_auth.png" alt="apple business chat authentication flow">
+<img style="width:800px" src="img/apple_auth.png" alt="apple business chat authentication flow">
 
 1. Agent or bot is notified via an engagement attribute if consumer device supports the Apple Auth feature.
 
