@@ -15,7 +15,7 @@ The Apple Business Chat messaging channel now supports a new Rich Message type t
 
 See the general message flow below:
 
-<img class="zoomimg" style="width:800px" src="img/apple_pay.png" alt="apple pay overview">
+<img style="width:800px" src="img/apple_pay.png" alt="apple pay overview">
 
 1. Send the Apple Pay template via an agent or bot with the Structured Content framework and configuration (similar to list and time picker).
 
