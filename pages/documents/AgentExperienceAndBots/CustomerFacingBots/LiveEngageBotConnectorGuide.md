@@ -10,7 +10,7 @@ indicator: both
 
 ### Introduction
 
-<div class="important">This document is for internal users to educate bot builders working on behalf of customers who want to deploy bots in LiveEngage.</div>
+<div class="important">The intended audience of this document is LivePerson Professional Services and other account stakeholders. It is to be used for consulting 3rd party bot builders in integrating their bots to LivePerson on behalf of our customers.</div>
 
 The LiveEngage platform helps orchestrate the flow of messages back and forth between consumers and Agents. Consumers can be on any end-user channel such as SMS, Web, Facebook Messenger and Apple Business chat, and communicate with both Human and Automated (Bot) agents. A bot is an automated conversational agent that performs a specific goal. LiveEngage has several avenues through which our customers can develop and deploy bots:
 
