@@ -40,7 +40,7 @@ This document covers the following different scenarios with regards to deploying
 
 8. LivePerson Conversation Builder (new in alpha, will be GA in Jan 2019)
 
-### Deploying Bots built on IBM Watson
+### IBM Watson
 
 1. Create a User Account on LiveEngage and set the type as "Bot". (Your account manager or CSM should be able to help with user account creation).
 
@@ -106,7 +106,7 @@ This document covers the following different scenarios with regards to deploying
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
-### Deploying Bots built on Google Dialog V1.0 Flow to LiveEngage
+### Google Dialog V1.0 Flow
 
 1. Create a User Account on LiveEngage and set the type as "Bot".  (Your account manager or CSM should be able to help with user account creation).
 
@@ -145,7 +145,7 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
-### Deploying Bots built on Google Dialog V2.0 Flow to LiveEngage
+### Google Dialog V2.0 Flow
 
 The Google Dialog Flow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
 
@@ -190,7 +190,7 @@ The Google Dialog Flow v2.0 connector will be available by mid December. Below a
 
 ![image alt text](img/bot-guide-dialogflow1.png)
 
-### Deploying Bots built on Microsoft to LiveEngage
+### Microsoft Bot Framework (LUIS)
 
 1. Create a User Account on LiveEngage and set the type as "Bot". Copy OAuth Keys for the corresponding user account.
 
@@ -225,7 +225,7 @@ The Google Dialog Flow v2.0 connector will be available by mid December. Below a
 
 ![image alt text](img/bot-guide-microsoft1.png)
 
-### Deploying Bots built on Lex to LiveEngage
+### Amazon Lex
 
 Custom deployment of a pre-built connector.  LivePerson technical services team has a Lex connector implemented which can be used and configured for connecting Lex Bots for any clients. Customers need to provide required connection details for Lex Account and also LiveEngage Account and Bot Users.
 
@@ -235,7 +235,7 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 
 3. We need to add some custom configuration / development time when deploying this connector to our customers.
 
-### Deploying Bots built on any other small / medium niche Bot Platforms
+### small / medium niche Bot Platforms
 
 1. Login to Liveperson Bots & Automation Platform by using
 
@@ -268,7 +268,7 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 
   7. Example of the post body:
 
-### Deploying Bots to LiveEngage using Custom Connectors
+### Custom Connectors
 
 Customers can always write their own custom Bot connector using our Messaging Agent SDK and Chat Agent API.  This is mainly for the small, medium niche platforms who want to build connectivity to LiveEngage.
 
