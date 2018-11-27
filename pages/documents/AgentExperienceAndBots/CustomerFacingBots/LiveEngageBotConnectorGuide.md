@@ -1,17 +1,16 @@
 ---
-pagename: Bot Connector Guide
+pagename: Deploying Bots to LiveEngage
 redirect_from:
-
 sitesection: Solutions
 categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots
-
-permalink: customer-facing-bots-bot-connector-guide.html
-
-indicator:
+permalink: customer-facing-bots-deploying-bots-to-liveengage.html
+indicator: both
 ---
 
 ### Introduction
+
+<div class="important">This document is for internal users to educate bot builders working on behalf of customers who want to deploy bots in LiveEngage.</div>
 
 The LiveEngage platform helps orchestrate the flow of messages back and forth between consumers and Agents. Consumers can be on any end-user channel such as SMS, Web, Facebook Messenger and Apple Business chat, and communicate with both Human and Automated (Bot) agents. A bot is an automated conversational agent that performs a specific goal. LiveEngage has several avenues through which our customers can develop and deploy bots:
 
@@ -21,7 +20,7 @@ The LiveEngage platform helps orchestrate the flow of messages back and forth be
 
 * Enterprise customers can build and deploy bots using different frameworks and products and then enable them through LiveEngage. Some of these products include IBM Watson, Microsoft Bot framework, Google Dialog Flow, Amazon Lex or any other niche bot platforms customers want to use to build bots.
 
-This guide helps you with steps required to deploy bots developed via such third party platforms on the LiveEngage platform. Deploying bots in LiveEngage enables all the messages to go through LiveEngage Hub, routing them to the bots based on the skills assigned to them. **This document is for internal users to educate bot builders working on behalf of the customers who want to deploy bots in LiveEngage**.
+This guide helps you with steps required to deploy bots developed via such third party platforms on the LiveEngage platform. Deploying bots in LiveEngage enables all the messages to go through LiveEngage Hub, routing them to the bots based on the skills assigned to them.
 
 ### Use Cases
 
