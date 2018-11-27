@@ -1,5 +1,5 @@
 ---
-pagename: Deploying Bots to LiveEngage
+pagename: Integrating Bots with LivePerson
 redirect_from:
 sitesection: Solutions
 categoryname: "Agent Experience & Bot"
@@ -235,7 +235,7 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 
 3. We need to add some custom configuration / development time when deploying this connector to our customers.
 
-### small / medium niche Bot Platforms
+### Small / medium niche Bot Platforms
 
 1. Login to Liveperson Bots & Automation Platform by using
 
