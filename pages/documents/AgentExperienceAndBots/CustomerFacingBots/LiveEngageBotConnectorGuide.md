@@ -16,7 +16,7 @@ The LiveEngage platform helps orchestrate the flow of messages back and forth be
 
 * BotCentral Platform (Owned by Liveperson, soon to be deprecated by the Conversation Builder)
 
-* Conversation Builder, a LivePerson product (in Beta), which allows customers to build and deploy bots directly within LiveEngage.
+* Conversation Builder, a LivePerson product (in Beta), which allows customers to build and deploy bots directly within LiveEngage (Support for this channel is coming soon).
 
 * Enterprise customers can build and deploy bots using different frameworks and products and then enable them through LiveEngage. Some of these products include IBM Watson, Microsoft Bot framework, Google Dialog Flow, Amazon Lex or any other niche bot platforms customers want to use to build bots.
 
@@ -26,9 +26,9 @@ This guide helps you with steps required to deploy bots developed via such third
 
 This document covers the following different scenarios with regards to deploying bots in LiveEngage:
 
-1. IBM Watson (Watson Assistant / Watson Conversation)
+1. IBM Watson (Watson Conversation)
 
-2. Google Dialog Flow 1.0 / 2.0 (available mid December 2018)
+2. Google Dialog Flow 1.0 (support for more recent versions coming soon)
 
 4. Microsoft Bot Framework (LUIS)
 
@@ -38,7 +38,7 @@ This document covers the following different scenarios with regards to deploying
 
 7. Any Bot Platform (small, medium platforms)
 
-8. LivePerson Conversation Builder (new in alpha, will be GA in Jan 2019)
+8. Support for  more services coming soon.
 
 ### IBM Watson
 
@@ -145,7 +145,8 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
-### Google Dialog V2.0 Flow
+
+<!-- ### Google Dialog V2.0 Flow
 
 The Google Dialog Flow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
 
@@ -188,7 +189,8 @@ The Google Dialog Flow v2.0 connector will be available by mid December. Below a
 
     6. Leave API Version unchanged as V2
 
-![image alt text](img/bot-guide-dialogflow1.png)
+![image alt text](img/bot-guide-dialogflow1.png) -->
+
 
 ### Microsoft Bot Framework (LUIS)
 
