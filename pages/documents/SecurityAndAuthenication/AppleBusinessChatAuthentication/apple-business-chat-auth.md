@@ -285,7 +285,7 @@ After the consumer submits their Apple Auth details in the form, the Apple Auth 
 
 Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
 
-Please see [the Conversational Metadata guide](http://localhost:4000/messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
+Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
 
 <div class="important">Only a bot can listen for Conversational Metadata at this time.</div>
 
@@ -367,3 +367,5 @@ The authentication response metadata is contextual information about the consume
 * In the current version of Apple Auth support, only a bot in LiveEngage (using the [Messaging Agent SDK](messaging-agent-sdk-overview.html)) will be able to receive the authentication response (using the [Conversation Metadata](messaging-agent-sdk-conversation-metadata-guide.html)). A human Agent is currently not exposed to these events. There will be an option to receive authentication response data without the Messaging Agent SDK in Q1 2019 (and thus as a human agent).
 
 * Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned for 2019.
+
+* Touch/Face ID is not currently supported in Apple Business Chat's Authentication solution
