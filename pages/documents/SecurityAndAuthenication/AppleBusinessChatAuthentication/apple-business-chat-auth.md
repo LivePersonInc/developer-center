@@ -78,19 +78,19 @@ Different from Apple structured content templates, the **body** template will on
 
 **Agent sends auth request to consumer via Agent Workspace SDK widget**
 
-![](img/apple**auth**agent1.png)
+![](img/apple_auth_agent1.png)
 
 **Consumer sees auth request bubble. Style here defined by metadata `receivedMessage`.**
 
-![](img/apple**auth**consumer1.png)
+![](img/apple_auth_consumer1.png)
 
 **Consumer fills out form from OAuth2 provider**
 
-![](img/apple**auth**consumer2.png)
+![](img/apple_auth_consumer2.png)
 
 **Consumer sees request confirmation bubble. Style here defined by metadata `replyMessage`.**
 
-![](img/apple**auth**consumer3.png)
+![](img/apple_auth_consumer3.png)
 
 #### Request Metadata
 
