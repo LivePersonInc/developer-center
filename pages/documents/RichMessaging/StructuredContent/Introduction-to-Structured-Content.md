@@ -129,20 +129,84 @@ You will need to set up a bot integration using the [Messaging Agent SDK](messag
 
 For more general information about using the SDK to integrate bots, please refer to the [Solution’s documentation](products-customer-facing-bots-overview.html).
 
-Once the bot exists, the developer will perform the same transformation as with the Agent Workspace Widget:
+Once the bot exists, you will perform the same transformation as with the Agent Workspace Widget:
 
 * convert the data to the correct template with the desired elements
 * send the template to the consumer with the Agent Workspace SDK command
 
-For a specific example of using the SDK to send Structured Content, please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content).
+Below is an example of sending the same location map.
+
+```javascript
+agent.publishEvent({
+	dialogId: 'MY_DIALOG_ID',
+	event: {
+		type: 'RichContentEvent',
+		content: {
+      "text": yourBusinessName,
+      "type": "vertical",
+      "elements": [
+        {
+          "type": "map",
+          "lo": yourLongitude,
+          "la": yourLatitude,
+          "tooltip": "Map",
+          "click": {
+            "actions": [
+              {
+                "type": "navigate",
+                "name": "navigate",
+                "lo": yourLongitude,
+                "la": yourLatitude
+              }  
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "text": "1234 Hollywood Boulevard, Los Angeles, CA"
+        },
+      ],
+      "metadata": { "fallback": url_link_map_link }
+    }
+	}
+}, null, [{type: 'ExternalId', id: 'MY_CARD_ID'}]);  // ExternalId is how this card will be referred to in reports
+
+// Success response: {"sequence":29}
+```
+
+Please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content) for more examples.
 
 ### Templates
 
-LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html#rich-Messaging-enabled-channels).
+LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html).
 
 In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
 
-Each structured content template will contain one or many **elements**. Below you will find basic elements, their styling, and their click operations, that are common within all templates.
+Each structured content template will contain one or more **elements** in the `elements` array seen in the example below:
+
+#### Example
+
+```json
+{
+  "type": "type",
+  "tag": "tag",
+  "elements": [
+    // Basic elements here
+  ]
+}
+```
+
+#### Properties
+
+| Property Name | Description                                                                         | Type   | Required |
+| :------------ | :---------------------------------------------------------------------------------- | :----- | :------- |
+| type          | Type of template. Often used to specify arrangement like "vertical" or "horizontal" | Enum   | Y        |
+| tag           | Further specifies the template type                                                 | String | N        |
+| elements      | List of element objects                                                             | Array  | Y        |
+
+All templates will consist of an object that holds the elements array. The object will always have a type and optionally have a tag. The tag is only relevant when using third party connectors like Facebook Messenger, Apple Business Chat, etc.
+
+Below you will find basic elements, their styling, and their click operations, that are common within all templates.
 
 When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK & Web, Facebook Messenger, Apple Business Chat, etc.
 
@@ -304,7 +368,7 @@ For the 'style' property, please see the [Rich Messaging Basic Elements Styling]
 
 ### Element Click Operations
 
-An element which has an "actions" property, an [on-click operation](rich-messaging-click-ops.html) (executed when the consumer clicks on the element) and a [metadata property](rich-messaging-click-ops-metadata.html). These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action be be opening a link, a third party navigation app and more.
+An element which has an "actions" property, an on-click operation (executed when the consumer clicks on the element) and a metadata property. These elements are clickable by the consumer, resulting in an action performed on the browser or app through which the consumer is interacting with you. This action could be opening a link, a third party navigation app and more.
 
 On-click operations can result from two object types:
 
@@ -427,11 +491,11 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 
 #### Metadata
 
-Metadata is a list of predefined objects that can be sent back to the agent and be used in reporting. Metadata can be defined in the header section of the request or inside a click block. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](guides-conversation-metadata-guide.html).
+Metadata is a list of predefined objects that can be sent back to the agent / bot and be used in reporting / analysis. Metadata can be defined in the header section of the request or inside an element click object. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html).
 
-When creating the JSON structure, the metadata ExternalID that will be returned to LiveEngage when an element in the card is clicked, also needs to be defined.
+When filling out the structured content template, if the metadata `ExternalID` is supplied, it will be returned to LiveEngage when the associated action is executed.
 
-This is important for reporting on consumer interaction with the card, as well as for bot activity. A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
+This is important for reporting on consumer interactions with the template, as well as for bot activity. A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
 
 You can see an example in the [Messaging Agent SDK](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content) by searching for “ExternalID”.
 

@@ -15,28 +15,27 @@ indicator: messaging
 
 ### Overview
 
-LiveEngage provides a way for developers and partners that are building an agent bot using the Messaging Agent SDK to pass metadata or context information on a conversation. For example, consumer identified intents, transfer / escalation reason and an identifier to message content (e.g., structure content or plain text).
+LiveEngage provides a way for developers and partners that are building a bot using the Messaging Agent SDK to pass or listen for metadata or context information on a conversation. For example, sending metadata with structured content or listening for a metadata response after sending a request (payment, authorization, etc).
 
-**Note: currently, sending metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat)**.
+_**Note:** currently, sending or listening for metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat)._
 
-The information can be used to achieve the following:
+The metadata information can be used to achieve the following:
 
 * Empower messaging agents with relevant information during messaging conversations with consumers.
-
 * Analyze the messaging conversation, the bot and the content that was presented to the consumer.
-
 
 To get started, refer to the [Messaging Agent SDK](messaging-agent-sdk-overview.html) documentation.
 
 ### Available metadata
 
-There are 3 types of available metadata:
+Below are the types of available metadata:
 
 * Bot response
-
 * Action reason
-
-* Structured / Rich content identifier
+* Escalation summary
+* Structured Content identifier
+* Payment response
+* Authorization response
 
 #### Bot response
 
@@ -44,11 +43,11 @@ Bot response metadata is context information / the bot analysis of the last cons
 
 **Type**: BotResponse
 
-|Field Name|Description|Type|
-|----------|-----------|----|
-|externalConversationId|External platform conversation identifier|String(maxLength=64)|
-|businessCases|The topics / business cases of the conversation. In Watson Virtual Agent, this data is stored in the capability field | Array &lt;String(maxLength=256)&gt;|
-|intents|List of intents identified for a consumer message|Array<Intent>|
+| Field Name             | Description                                                                                                           | Type                                |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| externalConversationId | External platform conversation identifier                                                                             | String(maxLength=64)                |
+| businessCases          | The topics / business cases of the conversation. In Watson Virtual Agent, this data is stored in the capability field | Array &lt;String(maxLength=256)&gt; |
+| intents                | List of intents identified for a consumer message                                                                     | Array<Intent>                       |
 
 **Intent**
 
@@ -214,10 +213,62 @@ Structured content identifier metadata is used to both identify a specific "Card
   </tbody>
 </table>
 
+#### Payment Response
 
-### Use cases and code sample
+**Type**: ConnectorPaymentResponse
 
-#### Bot as an agent
+<table>
+  <thead>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Status</td>
+    <td>Status of the payment response</td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>requestIdentifier</td>
+    <td>UUID of the payment response. This information should be used to allow the bot to validate the payment against your payment backend.</td>
+    <td>String</td>
+  </tr>
+  </tbody>
+</table>
+
+#### Authorization Response
+
+**Type**: ConnectorAuthenticationResponse
+
+<table>
+  <thead>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Status</td>
+    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>token</td>
+    <td>Token string - will be available only when authentication was successful </td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>errors</td>
+    <td>Type of authentication error as received from channel - will be available only when authentication failed </td>
+    <td>Array</td>
+  </tr>
+  </tbody>
+</table>
+
+### Use Cases and Examples
+
+#### Bot escalation to human agent
 
 A bot as an agent manages conversations with consumers, analyzes their intent based on their input, assists them or transfers them to a human agent.
 
@@ -331,15 +382,57 @@ agent.updateConversationField({
 });
 ```
 
-### Structured content
+#### Listen for Payment or Authorization response
 
-[Structured Content Templates](structured-content-templates.html)
+Upon sending a payment or authorization request to a consumer, it is necessary to listen for a response to confirm the transactions.
+
+**Listen for incoming Apple Authorization response example:**
+
+1. Have your bot listen for the "ms.MessagingEventNotification" messaging event notifications callback
+2. Loop through all the incoming changes and look for the correct metadata type
+3. If you find a match for the "ConnectorAuthenticationResponse" type then that is a response from the customer's login attempt to the oAuth URL
+4. Use token to call Idp endpoint to get user information for the bot
+
+```javascript
+var rp = require('request-promise'); // used to make external API calls as a Promise
+
+// partial code example for monitoring the metadata message event notifications inside an existing bot implementation
+this.on('ms.MessagingEventNotification', body => {
+ body.changes.forEach(change => {
+  if (change.metadata) {
+   const authResponse = change.metadata.find(metadata => {
+    return metadata.type === 'ConnectorAuthenticationResponse'; // or 'ConnectorPaymentResponse' for Apple Pay
+   });
+   if (authResponse) {
+    console.info('authResponse.token :', authResponse.token);
+    const authorisationCode = authResponse.token; // make a call to brand IdP endpoint sending authCode to get user info        
+    const localBot = this;
+    var auth0domain = "your.auth0.com"; // get userInfo        
+    var options = {
+     uri: `https://${auth0domain}/userinfo`,
+     qs: {},
+     headers: {
+      'Authorization': `Bearer ${authResponse.token}`
+     },
+     json: true // Automatically parses the JSON string in the response        
+    };
+    rp(options)
+     .then(function(userInfo) {
+      // do something with userInfo response object as needed          
+     })
+   }
+  }
+ });
+})
+```
+
+#### Structured content
 
 LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](structured-content-templates.html) for more information on how to build and send such structured content messages.
 
-A card identifier can be sent as metadata on the agent message (publishEvent method), in order to track the number of times a specific card was sent, delivered, or viewed.
+A template `ExternalId` can be sent as metadata on the agent message (publishEvent method) in order to track the number of times a specific template was sent, delivered, or viewed.
 
-An identifier to each action in a card can be embedded within the card JSON, in order to track the number of times a specific action was clicked / selected.  
+An `ExternalId` for each element click action can also be defined in order to track the number of times a specific action was clicked / selected.
 
 **Messaging Structured content example:**
 
@@ -370,7 +463,7 @@ const content = {
 		"title": "Add to cart",
 		"click": {
 			"metadata": [{
-				"type": "ExternalId",
+				"type": "ExternalId", // METADATA ExternalID
 				"id": "ADD TO CART ACTION IDENTIFIER"
 			}],
 			"actions": [{
@@ -387,7 +480,7 @@ const content = {
 			"tooltip": "Buy this product",
 			"click": {
 				"metadata": [{
-					"type": "ExternalId",
+					"type": "ExternalId", // METADATA ExternalID
 					"id": "BUY PRODUCT ACTION IDENTIFIER"
 				}],
 				"actions": [{
@@ -402,7 +495,7 @@ const content = {
 			"tooltip": "Find similar",
 			"click": {
 				"metadata": [{
-					"type": "ExternalId",
+					"type": "ExternalId", // METADATA ExternalID
 					"id": "FIND SIMILAR ACTION IDENTIFIER"
 				}],
 				"actions": [{
@@ -423,7 +516,7 @@ const content = {
 		"title": "Navigate",
 		"click": {
 			"metadata": [{
-				"type": "ExternalId",
+				"type": "ExternalId", // METADATA ExternalID
 				"id": "NAVIGATE ACTION IDENTIFIER"
 			}],
 			"actions": [{
@@ -440,15 +533,15 @@ agent.publishEvent({
 	dialogId: "THE CONVERSATION ID",
 	event: {
 		type: 'RichContentEvent',
-		Content: content //card
+		Content: content // Structured Content Card defined above
 	}
 }, null, [{
 	type: 'ExternalId',
-	id: 'CARD IDENTIFIER'
-}]); //card identifier
+	id: 'CARD IDENTIFIER' // METADATA ExternalID
+}]); 
 ```
 
-### Sending metadata over Chat
+#### Sending metadata over Chat
 
 ```json
 {

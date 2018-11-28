@@ -757,6 +757,10 @@
         - pagename: Mobile SDK & Web Template
         - pagename: Facebook Messenger Template
         - pagename: RCS Business Messaging Template
+    # - documentname: Payment
+    #   pages:
+    #     - pagename: Apple Business Chat Template
+    #     - pagename: Google RCS Business Messaging Template
     - documentname: File Sharing
       pages:
         - pagename: Introduction
@@ -817,7 +821,10 @@
     - documentname: Cookies and LiveEngage
       pages:
         - pagename: Overview
-    - documentname: Authentication
+    # - documentname: Apple Business Chat Authentication
+    #   pages:
+    #     - pagename: Overview
+    - documentname: Mobile SDK and Web Authentication
       pages:
       - pagename: Introduction
       - pagename: Major Components

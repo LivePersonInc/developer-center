@@ -30,6 +30,7 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
   * If the consumer declines, you should remember their response, so the LiveEngage tag is **not** deployed on subsequent pages and visits. Additionally you may choose to refresh the current page to apply the consumer’s choice so that the LiveEngage tag would not get deployed on that specific page.
 
+{:start="2"}
 2. You should include information about your use of third party cookies, such as LiveEngage cookies, and the purpose for their use, in your privacy policy or cookie notice.
 
 3. You should inform consumers about various options they can use to disable cookies.
@@ -40,7 +41,7 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 Secure storage is a client-side storage mechanism, that LivePerson has implemented in order to provide the best possible consumer experience. Secure storage uses a combination of modern browser technologies (indexedDB, localStorage, sessionStorage and first party cookies) to store necessary information on LivePerson domains - depending on browser capabilities.
 
-By default, LiveEngage uses the third-party cookie solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the cookie solution types offered by LivePerson.
+By default, LiveEngage uses the third-party cookie solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the cookies and their types offered by LivePerson.
 
 ### Monitoring Cookies
 
@@ -56,44 +57,37 @@ By default, LiveEngage uses the third-party cookie solution type for website vis
   <tr>
     <td>LPVID</td>
     <td>Visitor ID as identified in LiveEngage. Identifies a browser as long as cookie is not deleted.</td>
-    <td>1st party persistent. Fallback to sessionStorage per Tab.
-Path: parent domain /.</td>
+    <td>1st party persistent. Fallback to sessionStorage per Tab. <br><br>Path: parent domain /.</td>
   </tr>
   <tr>
     <td>LPSID-SiteID</td>
     <td>Current active (or last) monitoring session.</td>
-    <td>1st party session cookie. Fallback to sessionStorage per Tab.
-Path: parent domain /.</td>
+    <td>1st party session cookie. Fallback to sessionStorage per Tab. <br><br>Path: parent domain /.</td>
   </tr>
   <tr>
     <td>LPSessionID</td>
     <td>Current active (or last) monitoring session.</td>
-    <td>3rd party HTTPonly session cookie.
-Path: LivePerson parent domain /.</td>
+    <td>3rd party HTTPonly session cookie. <br><br>Path: LivePerson parent domain /.</td>
   </tr>
   <tr>
     <td>LPVisitorID</td>
     <td>Visitor ID as identified in LivePerson. Identifies a browser as long as cookie is not deleted.</td>
-    <td>3rd party HTTP only persistent.
-Path: LivePerson parent domain /.</td>
+    <td>3rd party HTTP only persistent. <br><br>Path: LivePerson parent domain /.</td>
   </tr>
   <tr>
     <td>lpLastVisit-</td>
     <td>Last visit timestamp</td>
-    <td>localStorage
-Duration: forever</td>
+    <td>localStorage. <br><br>Duration: forever</td>
   </tr>
   <tr>
     <td>lpTabId</td>
     <td>Tab identifier</td>
-    <td>sessionStorage
-Duration: session - same tab and domain only</td>
+    <td>sessionStorage. <br><br>Duration: session - same tab and domain only</td>
   </tr>
   <tr>
     <td>lpPmCalleeDfs</td>
     <td>For cross domain communication logic</td>
-    <td>sessionStorage
-Duration: session - same tab and domain only</td>
+    <td>sessionStorage. <br><br>Duration: session - same tab and domain only</td>
   </tr>
 </tbody>
 </table>
@@ -113,60 +107,53 @@ Duration: session - same tab and domain only</td>
   <tr>
     <td>LPCID-SiteId</td>
     <td>Token for retrieving conversation data in the client only.</td>
-    <td>First party session cookie. No fallbacks. Path: parent domain /.</td>
+    <td>First party session cookie. No fallbacks. <br><br>Path: parent domain /.</td>
   </tr>
   <tr>
     <td>LPCKEY-SiteId</td>
     <td>Token for retrieving conversation data in the client only.</td>
-    <td>First party session cookie. No fallbacks.Path: parent domain /.</td>
+    <td>First party session cookie. No fallbacks. <br><br>Path: parent domain /.</td>
   </tr>
   <tr>
     <td>LivePersonID</td>
     <td>LivePerson chat identifier.
 Note: We do not currently use this data although we do store it.</td>
-    <td>Third party persistent cookie. Path: LivePerson parent domain / Note: We do not currently use this data  although we do store it.</td>
+    <td>Third party persistent cookie. <br><br>Path: LivePerson parent domain / Note: We do not currently use this data  although we do store it.</td>
   </tr>
   <tr>
     <td>Storage_expiration-SiteId</td>
     <td>timestamp for last storage usage (used for secure storage logic)</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration: 1 day</td>
   </tr>
   <tr>
     <td>lpStrMap</td>
     <td>manages storages keys (used for secure storage logic)</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration: 1 day</td>
   </tr>
   <tr>
     <td></td>
     <td>Handles window UI states between tabs.</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration: 1 day</td>
   </tr>
   <tr>
     <td>UIConf</td>
     <td>Stores conversation settings (features, logic etc.)</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration: 1 day</td>
   </tr>
   <tr>
     <td></td>
     <td>stores chat services locations</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration: 1 day</td>
   </tr>
   <tr>
     <td>lpMessaging-</td>
     <td>Stores the JWT token and authentication code in messaging scenarios for messaging window recovery on navigation and cross tabs</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration: 1 day</td>
   </tr>
   <tr>
     <td>-lpuw</td>
     <td>session state</td>
-    <td>SecureStorage
-Duration 1 day</td>
+    <td>SecureStorage. <br><br>Duration 1 day</td>
   </tr>
 </tbody>
 </table>
@@ -186,39 +173,39 @@ Duration 1 day</td>
   <tr>
     <td>idpLastSiteId</td>
     <td>Last site id for Remember me functionality</td>
-    <td>Third party secure session cookie path / LivePerson domain. Stored as long as the session is active.</td>
+    <td>Third party secure session cookie. <br><br>Path: LivePerson domain. Stored as long as the session is active.</td>
   </tr>
   <tr>
     <td>idpLastDomain</td>
     <td>Last domain used for login for Remember me functionality</td>
-    <td>Third party secure session cookie Path / LivePerson domain
+    <td>Third party secure session cookie. <br><br>Path: LivePerson domain
 
 </td>
   </tr>
   <tr>
     <td>session_id</td>
     <td>LiveEngage agent session identification</td>
-    <td>Third party, httpOnly secure session cookie Path / LivePerson domain</td>
+    <td>Third party, httpOnly secure session cookie. <br><br>Path: LivePerson domain</td>
   </tr>
   <tr>
     <td>WSHumanClickServer</td>
     <td>Logical name of appserver handling the site</td>
-    <td>Third party, secure session cookie Path /hc/web LivePerson domain</td>
+    <td>Third party, secure session cookie. <br><br>Path: /hc/web LivePerson domain</td>
   </tr>
   <tr>
     <td>WSHumanClickWebSession</td>
     <td>Appserver web session identifier</td>
-    <td>Third party, httpOnly secure session cookie Path /hc/s-{siteid}/web LivePerson domain</td>
+    <td>Third party, httpOnly secure session cookie. <br><br>Path /hc/s-{siteid}/web LivePerson domain</td>
   </tr>
   <tr>
     <td>WSHumanClickSiteNumber</td>
     <td>Site identifier</td>
-    <td>Third party, secure session cookie Path /hc/s-{siteid}/web LivePerson domain</td>
+    <td>Third party, secure session cookie. <br><br>Path: /hc/s-{siteid}/web LivePerson domain</td>
   </tr>
   <tr>
     <td>agentSessionKey</td>
     <td>Agent session identifier in the appserver</td>
-    <td>Third party, secure session cookie Path /api/account/{accountid}/agentSession LivePerson domain</td>
+    <td>Third party, secure session cookie. <br><br>Path: /api/account/{accountid}/agentSession LivePerson domain</td>
   </tr>
 </tbody>
 </table>
@@ -238,7 +225,7 @@ Duration 1 day</td>
   <tr>
     <td>s.browser</td>
     <td>For transports based on HTTP (long-polling and callback-polling), CoBrowse sends a HTTP cookie with the handshake response, marked as HttpOnly, called s.browser. The cookie identifies the browser. See BAYEUX_BROWSER for details. Cookie is removed when the browser is closed.</td>
-    <td>Third party cookie. HttpOnly and Secure. Domain: CoBrowse Domain prefixed with siteId. Path: /sync.</td>
+    <td>Third party cookie. HttpOnly and Secure. Domain: CoBrowse Domain prefixed with siteId. <br><br>Path: /sync.</td>
   </tr>
 </tbody>
 </table>
