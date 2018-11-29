@@ -731,6 +731,12 @@ pre code {
   visibility: none;
 }
 
+@media screen and (max-width: 1440px) {
+  .post-content table {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width:768px){
   .post-content table{
     max-width: 100%;

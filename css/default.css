@@ -1193,6 +1193,10 @@ a.anchoritem {
     grid-column: 4 / span 6;
   }
 
+  #post-content {
+    width: 100%;
+  }
+
   ul.mysidebar {
     margin-left: 0px;
   }
