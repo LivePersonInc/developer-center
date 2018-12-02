@@ -10,7 +10,8 @@ $(document).ready(function () {
 	mobileHamburger();
 	isExplorer();
 	searchFunction();
-	capabilitiesSearch()
+	capabilitiesSearch();
+	searchHighlight();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -78,7 +79,8 @@ function navigateContent(url) {
 			codeButtons();
 			replaceTitle();
 			searchFunction();
-			capabilitiesSearch()
+			capabilitiesSearch();
+			searchHighlight();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -89,6 +91,7 @@ function navigateContent(url) {
 			var selected = $('a[href*="' + url + '"]');
 			//make the string we found previously active
 			$('.folder').removeClass("active");
+			$('.innerlink').removeClass("active");
 			selected = selected.addClass("activepage");
 			//just some code to make sure sidebar styling works well.
 			if (selected.parent().hasClass('innerpageitem')) {
@@ -210,7 +213,7 @@ function menuDrop() {
 	//begin by setting the list's data to reflect that it's closed
 	$(".anchorlist > a").data("expanded", "false");
 	//when a click on the list occurs
-	$(".anchorlist > a").click(function (event) {
+	$(".anchorlist").on("click", ".anchormain", function (event) {
 		event.preventDefault();
 		//set data to true for toggle behavior
 		var hasExpanded = $(this).data("expanded") == "true";
@@ -306,22 +309,24 @@ function sidebarCollapse(url) {
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		$(".post-content a").click(function () {
+		$(".post-content").on("click", "a", function () {
 			$(".sidebarbutton").removeClass("clicked");
 			$(".topfolder > a").next().slideUp(400);
 			$(".topfolder > a").data("expanded", "false");
 			$(".homeitem > a").removeClass("active");
 			$(".topfolder > a").removeClass("active");
 		});
+		if (currentPage.offset().top > 700) {
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
 		}, 1000);
+	};
 	};
 };
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
-	$(".topfolder > a").click(function () {
+	$(".topfolder").on("click", ".highlightlink", function () {
 		if (!$(this).hasClass("bottombuttons")) {
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
@@ -343,7 +348,7 @@ function sidebarClick() {
 	};
 	});
 
-	$(".innerfolder > a").click(function (event) {
+	$(".innerfolder").on("click", ".highlightlink", function (event) {
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
 		var button = $(this).find("button");
@@ -488,6 +493,20 @@ function capabilitiesSearch() {
 	});
 	};
 };
+
+function searchHighlight() {
+	//grab the filter element from local storage. We define this element in the inline script on the default oage.
+	var toHighlight = localStorage.getItem('filter');
+	//if the element has been created
+	if (toHighlight) {
+		//find its content within the page and apply the highlight class
+		$('#defaultcontent').highlight(toHighlight, {
+			className: 'searchHighlight'
+		});
+	};
+	//set the filter element to empty so that filtering doesn't "carry over" to future navigation
+	localStorage.setItem('filter', '');
+}
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {

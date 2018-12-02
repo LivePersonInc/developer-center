@@ -140,7 +140,7 @@ code pre {
   }
 
   .searchimage {
-    background-color: #f2f2f2;
+    background-color: #f2f1f2;
     grid-column: 1;
     grid-row: 1 / span 1;
     z-index: 1;
@@ -177,12 +177,16 @@ code pre {
   }
 
   .defaultcontent {
-    grid-column: 4 / span 1;
+    grid-column: 4 / span 3;
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     margin-top: 16px;
+  }
+
+  #post-content {
+    width: 60%;
   }
 
   .defaultfooter {
@@ -195,6 +199,10 @@ code pre {
 
 /* CSS-Grid Ends */
 
+.searchHighlight {
+  background: rgba(0, 119, 255, 0.1);
+}
+
 .metricHighlight {
   background: rgba(0, 119, 255, 0.1);
 }
@@ -205,7 +213,7 @@ code pre {
 }
 
 .searchimage {
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
 }
 
 .codebtn {
@@ -312,7 +320,7 @@ code pre {
   width: 100%;
   font-size: 18px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  background-color: #f2f2f2 !important;
+  background-color: #f2f1f2 !important;
   padding-top: 14px;
   padding-bottom: 13px;
   padding-left: 25px;
@@ -637,7 +645,6 @@ table tbody td img {
 }
 
 .innerfolder > a {
-  color: #f2f1f2 !important;
   font-size: 13px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   display: flex;
@@ -814,7 +821,7 @@ table tbody td img {
 
 .pagehr {
   border: 0;
-  border-top: 1px solid #dedddd;;
+  border-top: 1px solid #dddddd;;
   margin-top: 20px;
 }
 
@@ -884,7 +891,7 @@ table tbody td img {
 }
 
 .anchorlist {
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   padding: 6px 10px 6px 10px;
   align-self: flex-end;
   width: 20%;
@@ -898,7 +905,7 @@ table tbody td img {
   list-style: none;
   display: none;
   padding-left: 0;
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   margin-left: -10px;
   padding: 10px;
   margin-bottom: 0px;
@@ -941,7 +948,7 @@ a.anchoritem {
 }
 
 .sidebarbutton {
-  color: #f2f2f2;
+  color: #f2f1f2;
   background: #3d4558;
   width: 20px;
   height: 20px;
@@ -1184,6 +1191,10 @@ a.anchoritem {
 
   .defaultfooter {
     grid-column: 4 / span 6;
+  }
+
+  #post-content {
+    width: 100%;
   }
 
   ul.mysidebar {

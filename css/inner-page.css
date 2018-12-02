@@ -66,11 +66,10 @@ h4 code.highlighter-rouge {
   font-family: "Roboto",Arial;
   font-size: 22px;
   font-weight: 400;
-  text-transform: capitalize;
 }
 
 .h2 {
-  color: #172136;
+  color: #162036;
   font-family: "Roboto",Arial;
   font-size: 18px;
   margin-bottom: 30px;
@@ -159,7 +158,7 @@ table > thead > tr > th {
 }
 
 table > tbody > tr:nth-of-type(even) {
-    background-color: #f7f7f7;
+    background-color: #f8f8f8;
 }
 
 
@@ -222,7 +221,7 @@ td .darken {
 
 /*toc nav bar */
 div#toc {
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   display: none;
   margin-top: 14px;
   /*min-width: 300px;*/
@@ -361,6 +360,10 @@ ul#mysiderbar li{
 
 }
 
+.innerfolder > a{
+  color: #f2f1f2;
+}
+
 .pageitem {
   padding-left: 48px !important;
 }
@@ -412,7 +415,7 @@ ul.mysidebar.nav li.activepage{
 ul.mysidebar.nav li.activepage a{
   background-color: inherit;
   font-weight: bold;
-  color: #172136;
+  color: #162036;
 }
 .mysidebar.nav li.folder > a{
  font-size: 14px;
@@ -486,7 +489,7 @@ div.sidebarTitle-holder {
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator{
   color: #8b8b8b;
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   font-size: 12px;
   padding: 2px 4px;
   margin-bottom: -2px;
@@ -726,6 +729,12 @@ pre code {
 
 .hide {
   visibility: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .post-content table {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:768px){

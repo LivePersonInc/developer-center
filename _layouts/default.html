@@ -45,13 +45,13 @@
   </div>
   <hr class="pagehr" />
   <div id="anchorlist" class="anchorlist folder">
-    <a href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    <a class="anchormain" href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
     <ul></ul>
   </div>
   </div>
 
   {% endif %}
-  <div id="defaultcontent" class="defaultcontent" id="defaultcontent">
+  <div id="defaultcontent" class="defaultcontent">
     {{ content | extlinks }}
   </div>
   <div id="defaultfooter" class="defaultfooter">
@@ -67,7 +67,7 @@ const search = docsearch({
 apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
 indexName: 'liveperson',
 inputSelector: '.aa-input-search',
-debug: false,
+debug: true,
 algoliaOptions: {
   hitsPerPage: 50
 },
@@ -110,7 +110,11 @@ search.autocomplete.on({
     footer.classList.add('overlayvisible');
 },
   'autocomplete:updated': function () {
-    if (this.value === '') {
+    if (this.value != '') {
+    var input = document.getElementById('aa-search-input');
+    var filter = input.value.toUpperCase();
+    localStorage.setItem('filter', filter);
+    }else {
       var content = document.getElementById('defaultcontent');
       var sidebar = document.getElementById('defaultsidebar');
       var footer = document.getElementById('defaultfooter');

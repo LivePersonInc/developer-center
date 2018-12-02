@@ -25,7 +25,7 @@ You can find all the related configurations in the [resources ID table](consumer
 - *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
 - *Device storage includes up to 20 images - this is configurable.*
 - *Supported formats: .png, .jpg, .gif (non-animated).*
-- *Photo size reduction: Thumbnail - 30 KB, Preview -3 MB.*
+- *Photo size reduction: image size needs to be smaller than 3MB. Images larger than 3MBs will be resized down. The generated thumbnail from this image (base64-encoded) will be up to 30KBs in size.*
 - *App Privacy settings are needed:*
     - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
     - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"

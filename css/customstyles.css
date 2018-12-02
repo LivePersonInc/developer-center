@@ -160,7 +160,7 @@ table > tbody + tbody {
     /* b */
 }
 table > tbody > tr:nth-of-type(even) {
-    background-color: #f7f7f7;
+    background-color: #f8f8f8;
 }
 
 table col[class*="col-"] {
@@ -971,7 +971,7 @@ span.soft {
 
 .endpoint {
     padding: 15px;
-    background-color: #f0f0f0;
+    background-color: #f2f1f2;
     font-family: courier;
     font-size: 110%;
     margin: 20px 0px;
@@ -1057,7 +1057,7 @@ span.soft {
 .videoThumbs img {
     float: left;
     margin:15px 15px 15px 0px;
-    box-shadow: 2px 2px 1px #f0f0f0;
+    box-shadow: 2px 2px 1px #f2f1f2;
     border: 1px solid #dedede;
 }
 
@@ -1190,7 +1190,7 @@ table thead th code.highlighter-rouge {
 }
 
 .box:hover {
-    background-color: #f0f0f0;
+    background-color: #f2f1f2;
 }
 
 #userMap {
