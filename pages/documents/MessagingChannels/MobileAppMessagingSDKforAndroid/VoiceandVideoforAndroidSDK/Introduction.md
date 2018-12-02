@@ -2,13 +2,12 @@
 pagename: Overview
 redirect_from:
   - consumer-experience-voice-video-android.html
+  - voice-and-video-for-android-sdk-beta-overview.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-
-level-order: 4
-order: 2
-permalink: voice-and-video-for-android-sdk-beta-overview.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-overview.html
 root-link: true
 indicator: messaging
 ---

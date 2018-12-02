@@ -1,15 +1,20 @@
 ---
-pagename: Appearance and Behavior
+pagename: Customizing
 redirect_from:
   - consumer-experience-voice-video-android-appearance-behavior.html
+  - voice-and-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
+  - consumer-experience-voice-video-android-wording.html
+  - voice-and-video-for-android-sdk-beta-customizing-account-settings.html
+  - voice-and-video-for-android-sdk-beta-customizing.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-subfoldername: Customizing
-order: 70
-permalink: voice-and-video-for-android-sdk-beta-customizing-appearance-and-behavior.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-customizing.html
 indicator: messaging
 ---
+
+### Appearance and Behavior
 
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, please don't hesitate to contact your LivePerson account manager for help.
 
@@ -42,7 +47,7 @@ The Voice & Video Android SDK allows you to customize its appearance via Android
 </resources>
 ```
 
-### Colors
+#### Colors
 <style>
 td:first-child {
   width: 200px!important;
@@ -53,13 +58,13 @@ td:first-child {
 | ------------- |:-------------:|:-------------:|:-----|
 | **coapp_frame_color** | Color | #ff007aff | The color of the frame surrounding the app's screen during an In-app CoBrowse session. Use a HEX color value, including a leading hash (#) |
 
-### Settings
+#### Settings
 
 | Key        | Type | Default Value | About  |
 | ------------- |:-------------:|:-------------:|:-----|
 | **coapp_speakers_on_video** | BOOL | YES | Determines if the phone's speaker should be automatically enabled when a video call is started. This is recommended, as the volume in non-speaker mode is too low to be heard from a viewing distance. |
 
-### Sounds
+#### Sounds
 
 You can also adjust ringtones and the default avatar by overriding non-xml resources in your `res/` folder. The following resources exist:
 
@@ -69,7 +74,7 @@ You can also adjust ringtones and the default avatar by overriding non-xml resou
 | res/raw/notification_ringtone     | Ringtone sound to be played on a In-app CoBrowsing invitation or escalation | You can override these with `coapp_ringtone_call` and `coapp_ringtone_escalation` |
 |
 
-### Secure fields & fieldmasking
+#### Secure fields & fieldmasking
 
 Since the SDK offers screen sharing capabilities, it might be of interest to black out some fields the agent should not see in a screensharing session. For this, the SDK offers a mechanism to flag `View` instances which are covered by a black rectangle.
 
@@ -86,3 +91,9 @@ To try the fieldmasking option you can either add a `android:tag` on the layout 
 ```
 mySecureView.setTag(getResources().getString(R.string.coapp_secure_field)); // calling setTag()
 ```
+
+### Account Settings
+
+If you plan to offer a new language not yet available in the SDK, please to speak to your LivePerson account manager. These settings should only be used to customize the wording according to you app's needs. To find the String resources available for public customization, please check the `res` folder in the SDK project.
+
+**NOTE:** More options will become available once the SDK is out of BETA
