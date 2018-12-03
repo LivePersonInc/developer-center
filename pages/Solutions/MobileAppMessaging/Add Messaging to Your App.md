@@ -42,7 +42,7 @@ The following prerequisites are required:
 
 * iOS Apps must have a bundle ID, registered in an Apple developer account
 
-* Developer environment for iOS: XCode with the latest GA version.
+* Developer environment for iOS: Xcode with the latest GA version.
 
 * Android Apps must have a package name.
 
