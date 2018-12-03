@@ -22,7 +22,7 @@ indicator: messaging
 
 ### Prerequisites
 
-LivePerson Voice & Video is a SDK (_Source Development Kit_) for the **Apple iOS** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.
+LivePerson Voice & Video is a SDK (_Software Development Kit_) for the **Apple iOS** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.
 
 #### Dependencies
 
