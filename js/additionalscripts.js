@@ -54,7 +54,7 @@ function navigateContent(url) {
 				url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
 				navigateContent(url);
 			} else {
-				//if we're not being redirected, grab the various part of the target page
+				//if we're not being redirected, grab the various parts of the target page
 				var $newData = $(content);
 				var $content = $('#defaultcontent');
 				var $titlecontainer = $('.documenttitle');
@@ -63,7 +63,7 @@ function navigateContent(url) {
 				$breadcrumbs.html($newData.find('.breadcrumbs').html());
 				$titlecontainer.html($newData.find('.documenttitle').html());
 				$content.html($newData.find('#defaultcontent').html());
-				//hide/display title if on welcome page or not
+				//hide/display breadcrumbs if on welcome page or not
 				var $title = $('.h1').text();
 				if ($title.indexOf('Welcome') != -1) {
 					$('.breadcrumbs').addClass('breadhidden');
@@ -109,7 +109,7 @@ function navigateContent(url) {
 			};
 		})
 		.fail(function () {
-			url = "http://localhost:4000/404.html";
+			url = "http://developers.liveperson.com/404.html";
 			navigateContent(url);
 		});
 }
@@ -276,14 +276,16 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
 	//if this isn't the homepage
-	if (currentPageTitle == undefined){
+	if (currentPageTitle == "WELCOME"){
 		//make sure no other links are set to active
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
 		$(".folder > a").data("expanded", "false");
 		$('a').removeClass("active");
+		currentPage = currentPage.parent().addClass("active");
 	};
 	$('a').removeClass("activepage");
+	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
 	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
