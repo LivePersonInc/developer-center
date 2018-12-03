@@ -17,7 +17,7 @@ In order to minimize setup effort, the sample app uses [_CocoaPods_](https://coc
 
 1. `cd` to `/Sample Apps/Swift/`
 2. Type `pod repo update && pod install`
-3. Open **sampleapp-swift.xcworkspace** in _XCode_
+3. Open **sampleapp-swift.xcworkspace** in _Xcode_
 4. Replace `accountNumber` in _AppDelegate.swift_ with your LP Account Id
 5. Run `sample-app-swift`target
 

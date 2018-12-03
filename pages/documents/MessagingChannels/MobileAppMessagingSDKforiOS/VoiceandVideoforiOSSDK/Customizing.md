@@ -28,13 +28,13 @@ Below you'll learn how to customize various SDK settings to fit your app's needs
 
 #### Step 1: Setup
 
-In your XCode project create a new `plist` file named:
+In your Xcode project create a new `plist` file named:
 
   * `LPCoAppSDK.plist` and include it into your app target resources
 
 #### Step 2: Add custom settings
 
-Open your `LPCoAppSDK.plist` in XCode and add the settings you wish to customize.
+Open your `LPCoAppSDK.plist` in Xcode and add the settings you wish to customize.
 
 #### Behavior
 <style>
@@ -74,7 +74,7 @@ These settings should only be used to customize the wording according to you app
 
 #### Step 1: Setup
 
-In your XCode project, create a new file named:
+In your Xcode project, create a new file named:
 
   * `LPCoAppSDK.strings` and enable __Localization__ for this file.
 

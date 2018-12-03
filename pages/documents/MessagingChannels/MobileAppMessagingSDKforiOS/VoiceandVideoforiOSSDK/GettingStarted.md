@@ -3,8 +3,6 @@ pagename: Getting Started
 redirect_from:
   - consumer-experience-voice-video-ios-prerequisites.html
   - voice-and-video-for-ios-sdk-beta-getting-started-prerequisites.html
-  - consumer-experience-voice-video-ios-cocoa-pods.html
-  - voice-and-video-for-ios-sdk-beta-getting-started-installing-the-sdk-with-cocoapods.html
   - consumer-experience-voice-video-ios-manually.html
   - voice-and-video-for-ios-sdk-beta-getting-started-installing-the-sdk-manually.html
   - consumer-experience-voice-video-ios-project-settings.html
@@ -22,7 +20,7 @@ indicator: messaging
 
 ### Prerequisites
 
-LivePerson Voice & Video is a SDK (_Source Development Kit_) for the **Apple iOS** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.
+LivePerson Voice & Video is a SDK (_Software Development Kit_) for the **Apple iOS** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.
 
 #### Dependencies
 
@@ -57,37 +55,9 @@ Cross-platform apps using native wrappers (e.g. Cordova) can be made to integrat
 | ------------- |:-------------:|:-------------|
 | **Bitcode** | (currently) **not** supported | Set **Enable Bitcode** in your Build Settings to **NO** |
 
-### Installing the SDK with CocoaPods
-
-**UNAVAILABLE DURING BETA PHASE, PLEASE CONTACT YOUR ACCOUNT TEAM FOR INSTALLATION GUIDELINES**
-
-We recommend installing the SDK using the _CocoaPods_ dependency manager, as this minimizes integration effort. If you are not yet familiar with CocoaPods, we recommend reading the official guide of [CocoaPods](https://cocoapods.org/about).
-
-#### Step 1: Edit your Podfile
-After setting up CocoaPods, edit your `Podfile` to look something like this:
-
-```Bash
-platform :ios, '10.0'
-source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-
-target 'MyBrandApp' do
-  # add the SDK to your app, optionally specify a version '~> 0.1.0'
-  pod 'LPCoAppSDK'
-  ...
-end
-```
-
-Make sure your target (here: _MyBrandApp_) matches your actual app build target's name.
-
-#### Step 2: Install Pods
-
-Then type `pod repo update && pod install` to have CocoaPods fetch and install the SDK
-
-CocoaPods will create a `*.xcworkspace` workspace for your XCode project. Use this in future _instead of_ the regular `*.xcodeproj`. Open it and continue with the [Project Settings](#project-settings) instructions.
-
 ### Installing the SDK Manually
 
-We highly recommend integrating our SDK using CocoaPods as [described here](#installing-the-sdk-with-cocoapods). If this does not fit your needs and you prefer to add the SDK manually follow these steps for your app's __XCode Project__:
+To add the SDK manually follow these steps for your app's __Xcode Project__:
 
 #### Step 1: Copy Dependencies
 
@@ -119,7 +89,7 @@ Now continue with the Project Settings.
 
 ### Project Settings
 
-These settings must be adjusted in your XCode project.
+These settings must be adjusted in your Xcode project.
 
   1. [Bitcode Compilation](#bitcode-compilation)
   2. [VoIP Background Mode](#voip-background-mode)
@@ -180,9 +150,8 @@ Either way make sure it's included in the bundle resources of your app's target.
 
 ### Integration into App
 
-Before you continue, make sure you have completed the steps detailed in either:
+Before you continue, make sure you have completed this step
 
-   * [CocoaPods Installation](#installing-the-sdk-with-cocoapods) or
    * [Manual Installation](#installing-the-sdk-manually)
 
 **AND** adjusted your [Project Settings](#project-settings)
@@ -194,7 +163,7 @@ If you are using a **Swift** project, add this to your app's **Bridging-Header**
 #import <LPCoAppSDK/LPCoApp.h>
 ```
 
-**Note:** If you do not have a bridging header yet, simply create a new Objective-C file in your project. XCode will ask to create a briding header for you. For **Objective-C** projects, you can directly import the header in your *.m* file.
+**Note:** If you do not have a bridging header yet, simply create a new Objective-C file in your project. Xcode will ask to create a briding header for you. For **Objective-C** projects, you can directly import the header in your *.m* file.
 
 #### Step 2: Code Calls
 
