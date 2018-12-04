@@ -545,7 +545,7 @@
       - subpagename: Send Chat State Events
       - subpagename: How to Enable a Feature
       - subpagename: Campaign for Messaging Routing
-      - subpagename: Share Image File
+      - subpagename: File Sharing
     - pagename: Sample Code
       subpages:
       - subpagename: Connector Sample App
@@ -761,16 +761,6 @@
     #   pages:
     #     - pagename: Apple Business Chat Template
     #     - pagename: Google RCS Business Messaging Template
-    - documentname: File Sharing
-      pages:
-        - pagename: Introduction
-        - pagename: Enable File Sharing
-        - pagename: Create a Conversation
-        - pagename: Request Upload URL
-        - pagename: Upload File to Storage
-        - pagename: Publish Message
-        - pagename: Request Download URL
-        - pagename: Download File From Storage
     - documentname: Voice and Video for iOS SDK (BETA)
       pages:
       - pagename: Overview

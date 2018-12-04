@@ -212,6 +212,11 @@ code pre {
     min-width: 22px;
 }
 
+.activepage {
+  color: #90a6e6!important;
+  font-weight: 500;
+}
+
 .searchimage {
   background-color: #f2f1f2;
 }
@@ -480,7 +485,7 @@ table tbody td img {
 
 
 .metricstable {
-  width: 165% !important;
+  width: 150% !important;
   max-width: none !important;
 }
 
@@ -1191,6 +1196,10 @@ a.anchoritem {
 
   .defaultfooter {
     grid-column: 4 / span 6;
+  }
+
+  #post-content {
+    width: 100%;
   }
 
   ul.mysidebar {

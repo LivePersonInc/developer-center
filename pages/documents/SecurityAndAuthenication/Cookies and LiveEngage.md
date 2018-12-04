@@ -37,6 +37,8 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 ### Cookie Types
 
+<div class="important">If no duration is specified for a Cookie Type below, this means its duration is the browser session</div>
+
 **SecureStorage**
 
 Secure storage is a client-side storage mechanism, that LivePerson has implemented in order to provide the best possible consumer experience. Secure storage uses a combination of modern browser technologies (indexedDB, localStorage, sessionStorage and first party cookies) to store necessary information on LivePerson domains - depending on browser capabilities.
