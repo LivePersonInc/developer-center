@@ -1,11 +1,12 @@
 ---
-pagename: Apple Business Chat Template
+pagename: Apple Business Chat - Apple Pay
+redirect_from:
+  - payment-apple-business-chat-template.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Payment
-order: 20
-permalink: payment-apple-business-chat-template.html
+permalink: payment-apple-business-chat-apple-pay.html
 indicator: messaging
 ---
 
