@@ -70,7 +70,7 @@ dependencies {
   androidTestImplementation 'com.android.support.test:runner:1.0.1'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
   // LivePerson SDK
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.5.0'
 }
 ```
 
