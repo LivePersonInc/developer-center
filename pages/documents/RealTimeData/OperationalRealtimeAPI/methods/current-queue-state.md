@@ -38,7 +38,7 @@ You can request queue state data using the following parameters:
 
 **JSON Example**
 
-Request by all skills, with v=1
+Request by all skills, when v=1
 
 ```json
     {  
@@ -67,7 +67,7 @@ Request by all skills, with v=1
     }
 ```
 
-Request by all skills, with v=2
+Request by all skills, whene v=2
 
 ```json
     {  
@@ -152,7 +152,7 @@ Request by skills=1,100 and v=2 (skill 100 has no queue state data)
 | Name | Description | Type / Value |
 | :----- | :-------------- | :-------------- |
 | skills | An object that represent the current queue state per skills. Each entry represents a skill id and its corresponding current queue size and available slots values. | element |
-| totals | An object that represents the total values of all queue sizes and available slots listed under 'skills’. Note that in any case that for a certain skill there is no queue state data (hence a -1 value), it will not be aggregated to totals, meaning only valid (non -1) skill queue state values are summed up. The currentMaxWaitTimeInQueue nested under this element represents the max wait time in queue out of all other skills. | Element |
+| totals | An object that represents the total values of all queue sizes and available slots listed under 'skills’. Note that in any case that for a certain skill there is no queue state data (hence a -1 value), it will not be aggregated to totals, meaning only valid (non -1) skill queue state values are summed up. The currentMaxWaitTimeInQueue nested under this element represents the max wait time in queue out of all available skills. | Element |
 | currentAvailableSlots | The current queue number of available slots. <br> Note: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1. | long |
 | currentQueueSize | The current queue size | long |
 | currentMaxWaitTimeInQueue | The current max wait time in the queue in milliseconds. If no one is waiting in queue returns -1 | long 
