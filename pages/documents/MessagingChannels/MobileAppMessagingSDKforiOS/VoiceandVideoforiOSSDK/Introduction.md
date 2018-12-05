@@ -2,13 +2,12 @@
 pagename: Overview
 redirect_from:
   - consumer-experience-voice-video-ios.html
+  - voice-and-video-for-ios-sdk-beta-overview.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for iOS SDK (BETA)
-
-level-order: 3
-order: 1
-permalink: voice-and-video-for-ios-sdk-beta-overview.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Voice and Video for iOS SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-overview.html
 root-link: true
 indicator: messaging
 ---

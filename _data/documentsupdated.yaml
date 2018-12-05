@@ -607,6 +607,15 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Voice and Video for Android SDK (BETA)
+      subpages:
+      - subpagename: Overview
+      - subpagename: Getting Started
+      - subpagename: LiveEngage Configuration
+      - subpagename: Customizing
+      - subpagename: Sample Apps
+      - subpagename: FAQ
+      - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Appendix
@@ -658,6 +667,15 @@
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Voice and Video for iOS SDK (BETA)
+      subpages:
+      - subpagename: Overview
+      - subpagename: Getting Started
+      - subpagename: Customizing
+      - subpagename: LiveEngage Configuration
+      - subpagename: Sample App
+      - subpagename: Changelog
+      - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Appendix
@@ -761,49 +779,16 @@
     #   pages:
     #     - pagename: Apple Business Chat Template
     #     - pagename: Google RCS Business Messaging Template
-    - documentname: Voice and Video for iOS SDK (BETA)
+    - documentname: File Sharing
       pages:
-      - pagename: Overview
-      - pagename: Getting Started
-        subpages:
-        - subpagename: Prerequisites
-        - subpagename: Installing the SDK with CocoaPods
-        - subpagename: Installing the SDK Manually
-        - subpagename: Project Settings
-        - subpagename: Integration Guide
-      - pagename: Customizing
-        subpages:
-        - subpagename: Appearance and Behavior
-        - subpagename: Wording
-      - pagename: LiveEngage Configuration
-        subpages:
-        - subpagename: Agent Workspace Requirements
-        - subpagename: Account Settings
-        - subpagename: VoIP Configuration
-        - subpagename: Register Your App
-      - pagename: Sample App
-      - pagename: Changelog
-      - pagename: Appendix
-    - documentname: Voice and Video for Android SDK (BETA)
-      pages:
-      - pagename: Overview
-      - pagename: Getting Started
-        subpages:
-        - subpagename: Prerequisites
-        - subpagename: Installing the SDK
-        - subpagename: Integration Guide
-      - pagename: LiveEngage Configuration
-        subpages:
-        - subpagename: Agent Workspace Requirements
-        - subpagename: Account Settings
-        - subpagename: Register Your App
-      - pagename: Customizing
-        subpages:
-        - subpagename: Appearance and Behavior
-        - subpagename: Account Settings
-      - pagename: Sample Apps
-      - pagename: FAQ
-      - pagename: Release Notes
+        - pagename: Introduction
+        - pagename: Enable File Sharing
+        - pagename: Create a Conversation
+        - pagename: Request Upload URL
+        - pagename: Upload File to Storage
+        - pagename: Publish Message
+        - pagename: Request Download URL
+        - pagename: Download File From Storage
 
 - categoryname: 'Security & Authentication'
   image: security-authentication

@@ -2,11 +2,12 @@
 pagename: Sample Apps
 redirect_from:
   - consumer-experience-voice-video-android-sample-app.html
+  - voice-and-video-for-android-sdk-beta-sample-apps.html
 sitesection: Documents
-categoryname: "Rich Messaging"
-documentname: Voice & Video for Android SDK (BETA)
-order: 90
-permalink: voice-and-video-for-android-sdk-beta-sample-apps.html
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Voice & Video for Android SDK (BETA)
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-sample-apps.html
 indicator: messaging
 ---
 
