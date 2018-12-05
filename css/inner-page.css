@@ -163,19 +163,24 @@ table > tbody > tr:nth-of-type(even) {
 
 
 .designsheet table tr td {
-  font-size: 0.9em;
   line-height: 2.4em !important;
   text-align: center;
   font-weight: bold;
   vertical-align: inherit;
+  font-size: 12px;
+  font-family: "Open Sans";
+  color: #666666;
+  hyphens: none;
+  border-right: solid 1px black;
 }
 
 .designsheet table tr th {
-  background-color: #162036;
   font-family: "Open Sans";
-  font-size: 0.8888em;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 14px;
+  padding: 14px 22px;
+  border-bottom: 2.5px solid #5879DA;
 }
 
 .designsheet img {
@@ -184,18 +189,20 @@ table > tbody > tr:nth-of-type(even) {
 }
 
 .designsheetnumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50px;
   font-size: 2.5em;
-  margin-bottom: 7%;
-  padding-top: 1.5%;
-  margin-left: 40%;
+  color: #fff;
+    background-color: orange;
   border: 3px solid darkorange;
   height: 50px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 50px;
-  background-color: orange;
-  color: #fff;
+
 }
 
 code {
@@ -446,11 +453,6 @@ ul.mysidebar.nav li ul li {
   border-top: none;
   padding-left: 0px;
 
-}
-
-.activepage {
-  color: #90a6e6 !important;
-  font-weight: 500;
 }
 
 
@@ -733,7 +735,7 @@ pre code {
 
 @media screen and (max-width: 1440px) {
   .post-content table {
-    width: 100%;
+    width: 130%;
   }
 }
 
