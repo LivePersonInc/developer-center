@@ -23,6 +23,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
 ![](img/conversationimages/image_1.png)
 
+{:start="2"}
 2. Click on the Bot Builder icon.
 
 ![](img/conversationimages/image_2.png)
@@ -67,19 +68,24 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
     1. This dialog is set to respond to various greeting patterns. Once of these patterns is recognized, the bot will send out the welcome dialog. We recommend leaving the patterns as is. At the very least, leave a "hi" pattern which we use as a default trigger (otherwise, no pattern will be matched and the bot won't trigger).
 
-![](img/conversationimages/image_9.png)
+    ![](img/conversationimages/image_9.png)
 
+    {:start="2"}
     2. The Welcome text is a simple text interaction that greets the user. Edit this greeting message to introduce the automation to your users.
 
-![](img/conversationimages/image_10.png)
+    ![](img/conversationimages/image_10.png)
 
+    {:start="3"}
     3. This component, which is serving as a "Main Menu", is using a multiple choice interaction to display routing options to your users.
-![](img/conversationimages/image_11.png)
 
+    ![](img/conversationimages/image_11.png)
+
+    {:start="4"}
     4. Click on this interaction and on the top of the right panel, make sure "USER RESPONSE" is selected. This panel allows you to determine how you want this interaction to react to the user’s next response. For the moment we are using a simple pattern to match the word “billing” (by using the pattern “billing”) which will navigate to the Option 1 dialog and, within it, to the "billing text" interaction which appears in the dropdown. Ultimately, this will trigger the escalation to the Billing skill.
 
-![](img/conversationimages/image_12.png)
+    ![](img/conversationimages/image_12.png)
 
+{:start="2"}
 2. Let’s add more patterns to make our automation more responsive to the billing option. There are several considerations to take into account when we use patterns:
 
     1. **Patterns match EXACT keywords and phrases**
@@ -92,7 +98,7 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
     2. **Patterns can use alternates for specific variations**
 
-        1. eg: **I have a question about (billing|my bill|payments|paying)** will match "I have a question about billing" or “I have a question about my bill”.
+        1. For example, <span><b>״I have a question about (billing|my bill|payments|paying)</b>"</span> will match "I have a question about billing" or “I have a question about my bill”.
 
         2. Add 3 different patterns using alternates.
 
@@ -100,13 +106,13 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
     3. **Patterns can include wildcards for looser matches**
 
-        1. eg: ***billing*** would match "billing", “I have a question about billing”, “I have a billing issue”, etc.
+        1. For example, ***billing*** would match "billing", “I have a question about billing”, “I have a billing issue”, etc.
 
         2. Add 3-5 more patterns using wildcards.
 
         3. Try different variations of sentences in the previewer and see what happens.
 
-    4. Click on each of the paging dots at the bottom of the panel to see the other Conditions being matched for the other options (account, offers, other).
+    4. **Click on each of the paging dots at the bottom of the panel to see the other Conditions being matched for the other options (account, offers, other).**
 
         1. Perform the steps we just completed above for billing, for each of the other options (account, offers, other).
 
@@ -130,12 +136,15 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
 ![](img/conversationimages/image_15.png)
 
+{:start="2"}
 2. click on the New Pattern bubble and add the patterns we created earlier for **billing** and hit enter.
 
 ![](img/conversationimages/image_16.png)
 
+{:start="3"}
 3. Now we need to tell the interaction where to go when it matches. click on the Next Step drop down menu and look for Option 1 > billing text. Select it![](img/conversationimages/image_17.png)
 
+{:start="4"}
 4. Let’s add the conditions for account, offers and other. Click on the **+ Response Match & Actions link.**
 
 5. click on the **+** icon next to Conditions to add another condition.
@@ -194,7 +203,7 @@ We’ve seen what we can do with patterns thus far. Intents are different and mo
 
 1. To try this out, we need to associate this domain with our automation and the intent with the message.
 
-2. Exit the Intent Builder ![](img/conversationimages/image_26.png) and then select Bot Builder from the drop down menu. Enter your bot automation and go to ![](img/conversationimages/image_27.png) Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
+2. Exit the Intent Builder ![](img/conversationimages/image_23.png) and then select Bot Builder from the drop down menu. Enter your bot automation and go to ![](img/conversationimages/image_4.png) Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
 
 3. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings ![](img/conversationimages/image_28.png) and instead of using patterns, we are going switch to our new intent.
 
@@ -230,25 +239,25 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
 * To view debugger output, click on the previewer and type "display userid" and copy everything **AFTER** “UserId:”.
 
-* Next, click on the Debugger ![](img/conversationimages/image_35.png) icon and paste that into the field and hit REFRESH.  You should be seeing the initial logs for your bot. You’ll need to hit refresh to get the latest logs.
+* Next, click on the Debugger ![](img/conversationimages/image_4.png) icon and paste that into the field and hit REFRESH.  You should be seeing the initial logs for your bot. You’ll need to hit refresh to get the latest logs.
 
 **Add a debug message:**
 
 ![](img/conversationimages/image_36.png)
 
-* Go to the Welcome dialog of your automation and select the greeting text interaction.
+1. Go to the Welcome dialog of your automation and select the greeting text interaction.
 
-* Click the interactions settings icon and then click the CODE tab. This is where you can add additional JavaScript (if required) to run before or after your interaction displays.
+2. Click the interactions settings icon and then click the CODE tab. This is where you can add additional JavaScript (if required) to run before or after your interaction displays.
 
-* We will add our debug message before the interaction is displayed. Click the **PreProcess Code** + which will launch a JavaScript editor.
+3. We will add our debug message before the interaction is displayed. Click the **PreProcess Code** + which will launch a JavaScript editor.
 
     * Add the following to the editor and hit Save: botContext.printDebugMessage(‘Here is my Welcome debug message!’);
 
     * NOTE: if you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
 
-* You will need to type "**reset**" and “**hi**” to trigger the updated Welcome message.
+4. You will need to type "**reset**" and “**hi**” to trigger the updated Welcome message.
 
-* Switch to the Debugger and hit Refresh. You should now see your message in the log.
+5. Switch to the Debugger and hit Refresh. You should now see your message in the log.
 
 ![](img/conversationimages/image_37.png)
 
