@@ -127,7 +127,7 @@ pre code {
    hyphens: none;
    border-right: solid 1px #fff;
    padding: 21px 25.5px 21px 23px;
-   vertical-align: initial;
+   vertical-align: inherit;
 }
 
 .post-content table > thead > tr > th {

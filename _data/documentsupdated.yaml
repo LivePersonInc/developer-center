@@ -777,7 +777,7 @@
         - pagename: RCS Business Messaging Template
     # - documentname: Payment
     #   pages:
-    #     - pagename: Apple Business Chat Template
+    #     - pagename: Apple Business Chat - Apple Pay
     #     - pagename: Google RCS Business Messaging Template
     - documentname: File Sharing
       pages:
