@@ -6,8 +6,6 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Getting Started with Rich Messaging
-level-order: 1
-order: 10
 permalink: getting-started-with-rich-messaging-introduction.html
 root-link: true
 indicator: both
@@ -17,7 +15,7 @@ The majority of messages in a conversation are plain text like you are reading n
 
 Rich Messaging consists of add-ons to an _existing_ channel that allows you to push something more rich than just plain text.
 
-The documents within Rich Messaging are organized by feature type. Within each feature dropdown, you will find the templates for each channel.
+See the Introduction to Structured Content to understand how this rich messaging is implemented.
 
 <hr>
 
