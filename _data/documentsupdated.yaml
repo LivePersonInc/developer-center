@@ -779,16 +779,6 @@
     #   pages:
     #     - pagename: Apple Business Chat - Apple Pay
     #     - pagename: Google RCS Business Messaging Template
-    - documentname: File Sharing
-      pages:
-        - pagename: Introduction
-        - pagename: Enable File Sharing
-        - pagename: Create a Conversation
-        - pagename: Request Upload URL
-        - pagename: Upload File to Storage
-        - pagename: Publish Message
-        - pagename: Request Download URL
-        - pagename: Download File From Storage
 
 - categoryname: 'Security & Authentication'
   image: security-authentication
