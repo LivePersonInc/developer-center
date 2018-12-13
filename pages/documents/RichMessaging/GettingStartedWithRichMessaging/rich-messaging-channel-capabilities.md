@@ -1,12 +1,12 @@
 ---
-pagename: Channel Capabilities
+pagename: Rich Messaging Channel Capabilities
 redirect_from:
   - rich-messaging-getting-started.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Getting Started with Rich Messaging
-permalink: getting-started-with-rich-messaging-channel-capabilities.html
+permalink: getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html
 root-link: true
 indicator: both
 ---

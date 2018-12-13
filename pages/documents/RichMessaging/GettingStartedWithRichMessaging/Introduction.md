@@ -16,7 +16,7 @@ indicator: both
 
 Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the LiveEngage Structured Content Framework.
 
-For a list of Rich Messaging capabilities for each channel, see the [Rich Messaging Channel Capabilities](getting-started-with-rich-messaging-channel-capabilities.html) table.
+For a list of Rich Messaging capabilities for each channel, see the [Rich Messaging Channel Capabilities](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html) table.
 
 ### What is Structured Content
 
@@ -183,7 +183,7 @@ Please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-a
 
 ### Templates
 
-LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels and their capabilities in [Channel Capabilities](getting-started-with-rich-messaging-channel-capabilities.html).
+LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels and their capabilities in [Channel Capabilities](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html).
 
 In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
 
