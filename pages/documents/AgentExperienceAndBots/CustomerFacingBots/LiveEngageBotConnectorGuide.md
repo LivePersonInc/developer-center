@@ -282,7 +282,7 @@ Customers can always write their own custom Bot connector using our Messaging Ag
 
   * LivePerson GitHub [Sample App](https://github.com/LivePersonInc/chat-js-sdk-sample-app)
 
-{:start"2"}
+{:start="2"}
 2. Messaging Bots    
 
 **Features**: create a Conversational Bot, Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.
