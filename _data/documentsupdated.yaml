@@ -121,7 +121,6 @@
       - pagename: Prerequisites
       - pagename: Getting Started
       - pagename: Considerations
-      - pagename: Limitations
       - pagename: Deploying Bots on Live Chat
       - pagename: Deploying Bots on Messaging
   - documentname: Messaging Agent SDK
