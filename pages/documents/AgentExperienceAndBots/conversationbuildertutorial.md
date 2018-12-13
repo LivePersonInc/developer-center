@@ -35,7 +35,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
 **Before you do anything else**, we need to "Publish" the bot to your Organization. (For those with access to multiple organizations, the bot will default to Private, which is why we want to change it.)
 
-1. Click the gear ![](img/conversationimages/image_4.png) icon on the right sidebar and then Bot Settings. Scroll down and click "More Settings".
+1. Click the gear <img class="inlineimage" src="img/conversationimages/image_4.png" /> icon on the right sidebar and then Bot Settings. Scroll down and click "More Settings".
 
 2. Where it says "Publish Bot" change to the appropriate organization and hit Save.
 
@@ -43,7 +43,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
 #### Testing Your Bot
 
-To quickly test your bot’s functionality, click on the Chat preview button ![](img/conversationimages/image_6.png) on the right sidebar and type one of the options (or not, if you want to see how the bot responds to unstructured text). Keep in mind, the Chat preview is not connected to LiveEngage and cannot display the actual transfer to agent. For that you’ll need to connect your bot to LiveEngage and view an interaction with a chat or messaging consumer.
+To quickly test your bot’s functionality, click on the Chat preview button <img class="inlineimage" src="img/conversationimages/image_6.png" /> on the right sidebar and type one of the options (or not, if you want to see how the bot responds to unstructured text). Keep in mind, the Chat preview is not connected to LiveEngage and cannot display the actual transfer to agent. For that you’ll need to connect your bot to LiveEngage and view an interaction with a chat or messaging consumer.
 
 You may need to type "**reset**" and hit enter. Then type “hi” to trigger the initial Welcome message. **Reset** clears all variables to start fresh.
 
@@ -173,13 +173,13 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
 We’ve seen what we can do with patterns thus far. Intents are different and more powerful: where patterns provide a more exact match approach, intents use NLU (Natural Language Understanding) to provide a more flexible matching approach. Let’s try it!
 
-Before we make changes to our beautiful template, let's **save the current version** as a backup. 
+Before we make changes to our beautiful template, let's **save the current version** as a backup.
 
-1. Click on the versions icon ![](img/conversationimages/image_21.png) on the right sidebar. Then click Save Current Version, give it a name and then hit Save. This backup can now be used to revert to the last known good version of your automation.
+1. Click on the versions icon <img class="inlineimage" src="img/conversationimages/image_21.png" /> on the right sidebar. Then click Save Current Version, give it a name and then hit Save. This backup can now be used to revert to the last known good version of your automation.
 
     <img src="img/conversationimages/image_22.png" style="height:250px">
 
-2. Exit the Bot Builder ![](img/conversationimages/image_23.png)and select Intent Builder from the drop down menu at the top left.
+2. Exit the Bot Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and select Intent Builder from the drop down menu at the top left.
 
 3. On the Intent Builder dashboard click the Add Domain button to create your own new Domain. Domains are groups of intents and entities, usually gathered for use with one brand or bot experience. **Give your domain a unique name** and hit Add Domain.
 
@@ -205,9 +205,9 @@ Now let’s create our first intent for our Billing option.
 
 To try this out, we need to associate this domain with our automation and the intent with the message.
 
-1. Exit the Intent Builder ![](img/conversationimages/image_23.png) and then select Bot Builder from the drop down menu. Enter your bot automation and go to ![](img/conversationimages/image_4.png) Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
+1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" /> Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
 
-2. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings ![](img/conversationimages/image_28.png) and instead of using patterns, we are going switch to our new intent.
+2. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings <img class="inlineimage" src="img/conversationimages/image_28.png" /> and instead of using patterns, we are going switch to our new intent.
 
 3. In the Match Type drop down menu, select Response Intent.
 
@@ -243,7 +243,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
 * To view debugger output, click on the previewer and type "display userid" and copy everything **AFTER** “UserId:”.
 
-* Next, click on the Debugger ![](img/conversationimages/image_4.png) icon and paste that into the field and hit REFRESH.  You should be seeing the initial logs for your bot. You’ll need to hit refresh to get the latest logs.
+* Next, click on the Debugger <img class="inlineimage" src="img/conversationimages/image_4.png" /> icon and paste that into the field and hit REFRESH.  You should be seeing the initial logs for your bot. You’ll need to hit refresh to get the latest logs.
 
 ##### Add a debug message
 
@@ -277,12 +277,12 @@ Because this is a routing bot, its main purpose is to route to a particular skil
 
 <img src="img/conversationimages/image_38.png" style="height:200px">
 
-1. Select one of the options dialogs (eg: Billing), select the text interaction with the variable transferMessage being shown. 
+1. Select one of the options dialogs (eg: Billing), select the text interaction with the variable transferMessage being shown.
 
 2. Navigate to view the PreProcess code using the settings panel. This is where you will edit the **transfer message** for that intent; this is the message that will be sent to the user before being transferred to an agent.
 
 3. Currently the transfer message says "Thank you! I'll transfer you to an agent who can help with your billing issue. One moment, please." Edit this message to reflect your brand’s tone and personality. Hit Save and test in the previewer.
 
-4. Edit the transfer messages in each of the other Option dialogs as well. 
+4. Edit the transfer messages in each of the other Option dialogs as well.
 
 5. You can also see the Escalation interaction in each of these dialogs. This will perform the API call that handles the transfer to a LiveEngage agent (once your automation is connected to a LiveEngage account).

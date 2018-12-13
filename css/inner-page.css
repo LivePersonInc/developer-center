@@ -560,6 +560,17 @@ div.sidebarTitle-holder {
 	cursor: pointer;
 }
 
+.post-content img {
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.1);
+}
+
+.post-content img.inlineimage {
+  display: inline-block;
+  box-shadow: none;
+}
+
 .post-content .zoomimg {
   transition: transform .2s;
 }
