@@ -1,23 +1,15 @@
 ---
-pagename: Introduction
+pagename: Channel Capabilities
 redirect_from:
   - rich-messaging-getting-started.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Getting Started with Rich Messaging
-permalink: getting-started-with-rich-messaging-introduction.html
+permalink: getting-started-with-rich-messaging-channel-capabilities.html
 root-link: true
 indicator: both
 ---
-
-The majority of messages in a conversation are plain text like you are reading now. However, LivePerson provides many ways to enhance these messages with various interactive and styled messages.
-
-Rich Messaging consists of add-ons to an _existing_ channel that allows you to push something more rich than just plain text.
-
-See the Introduction to Structured Content to understand how this rich messaging is implemented.
-
-<hr>
 
 For a list of Rich Messaging capabilities for each channel, browse or search the table below:
 

@@ -736,7 +736,7 @@
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
-        - pagename: Introduction to Structured Content
+        - pagename: Rich Messaging Channel Capabilities
     - documentname: Mobile SDK and Web Templates
       pages:
         - pagename: Introduction

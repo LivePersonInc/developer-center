@@ -1,5 +1,5 @@
 ---
-pagename: Introduction to Structured Content
+pagename: Introduction
 redirect_from:
   - rich-messaging-structured-content-overview.html
   - structured-content-templates.html
@@ -9,20 +9,24 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Getting Started with Rich Messaging
-permalink: getting-started-with-rich-messaging-introduction-to-structured-content.html
+permalink: getting-started-with-rich-messaging-introduction.html
 root-link: true
 indicator: both
 ---
 
+Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the LiveEngage Structured Content Framework.
+
+For a list of Rich Messaging capabilities for each channel, see the [Rich Messaging Channel Capabilities](getting-started-with-rich-messaging-channel-capabilities.html) table.
+
 ### What is Structured Content
 
-Most conversations involve plain text like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, etc) to a consumer in a more clear, rich, and _structured_ format. This _structured content_ is persistent in the conversation history and customizable to suit various needs to promote specific content.
+Most conversations involve plain text like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, quick replies, etc) to a consumer in a more rich, interactive, and _structured_ format. This is achieved with _structured content_ templates.
 
 ![Carousel](img/carousel.gif)
 
 For example, rather than sending an address to a location, you can send a picture of the location on a map that links out to a map application.
 
-In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered. The most common format is JSON (Javascript Object Notation).
+In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered by LiveEngage. The most common format is JSON (Javascript Object Notation).
 
 So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los Angeles, CA`, you would send the address in JSON format like below:
 
@@ -179,7 +183,7 @@ Please refer to the [SDK’s repository](https://github.com/LivePersonInc/node-a
 
 ### Templates
 
-LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels in [Getting Started with Rich Messaging](getting-started-with-rich-messaging-introduction.html).
+LivePerson provides multiple structured content **templates** for each unique rich messaging enabled channel. See a list of rich messaging channels and their capabilities in [Channel Capabilities](getting-started-with-rich-messaging-channel-capabilities.html).
 
 In order to handle the differences in channel rendering, these templates abstract away the unique feel of each channel and allow you to implement common **elements** in a familiar way.
 
@@ -213,9 +217,9 @@ When you are comfortable with the basic elements, you can see them in action in 
 
 ### Basic Elements
 
-Basic elements are the core components of the structured content messaging framework. By using these elements in your template, you can send basic messages, such as simple text, images or buttons.
+Basic elements are the core components of the structured content framework. By using these elements in your template, you can send basic messages, such as simple text, images or buttons.
 
-You can also send a Structured Content template which includes multiple basic elements with attached actions, creating a more complex message template.
+You can also send a Structured Content template which includes multiple basic elements with attached actions, creating a more complex and interactive template.
 
 See the types of basic elements supported by the framework below:
 
