@@ -904,12 +904,6 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: LiveEngage MMS Viewer
-      pages:
-        - pagename: Overview
-        - pagename: Technical Description
-        - pagename: Deployment Steps
-        - pagename: Additional Options
     - documentname: MCS Toolkit
       pages:
         - pagename: Overview

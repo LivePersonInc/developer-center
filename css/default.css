@@ -529,6 +529,36 @@ table tbody td img {
   margin-left: -25px;
 }
 
+.deprecated {
+  border-left-color: #000000;
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+.deprecated::before {
+  content: "\f071";
+  color: #000000;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.important p:not(:first-child) {
+  margin-left: -25px;
+}
+
 /* Sidebar Styling Begins */
 
 .solutionslist {
