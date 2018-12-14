@@ -83,7 +83,7 @@ The following JSON metadata and body structures are templates for any List Picke
           ///START TITLE OF SECTION HEADER
 		  "type": "text",
           "text": "HEADER TITLE TEXT",
-          "Tag": "title",
+          "tag": "title",
           "tooltip": "TITLE TOOLTIP",
           "style": {
             "bold": true,
@@ -94,7 +94,7 @@ The following JSON metadata and body structures are templates for any List Picke
           ///START SUBTITLE OF SECTION HEADER
 		  "type": "text",
           "text": "HEADER SUBTITLE TEXT",
-          "Tag": "subtitle",
+          "tag": "subtitle",
           "tooltip": "SUBTITLE TOOLTIP"
         },
         {
@@ -383,7 +383,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 {
   "type": "text",
   "text": "Flowers",
-  "Tag": "title",
+  "tag": "title",
   "tooltip": "text tooltip",
   "style": {
     "bold": true,
@@ -411,7 +411,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 {
   "type": "text",
   "text": "Wild flowers",
-  "Tag": "subtitle",
+  "tag": "subtitle",
   "tooltip": "text tooltip"
 }
 ```
@@ -455,7 +455,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | :------------ | :------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
 | type          | Type of element. <br/> Must be 'text'                                                                         | Enum      | Y        |            |
 | style         | Styling elements of the title. </br>Must have the following properties:<br/>{ "bold":true,<br/>			"size":"large"} | Container | Y        |            |
-| Tag           | Must be “title”                                                                                             | String    | Y        |            |
+| tag           | Must be “title”                                                                                             | String    | Y        |            |
 
 ##### Subtitle Element Properties
 
@@ -464,7 +464,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | Property Name | Description                           | Type   | Required | Size Limit |
 | :------------ | :------------------------------------ | :----- | :------- | :--------- |
 | type          | Type of element. <br/> Must be 'text' | Enum   | Y        |            |
-| Tag           | Must be “subtitle”                  | String | Y        |            |
+| tag           | Must be “subtitle”                  | String | Y        |            |
 
 **Note: The subtitle section should not use style element**
 
