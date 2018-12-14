@@ -938,7 +938,7 @@ table tbody td img {
 
 .anchorlist ul {
   list-style: none;
-  display: none;
+  display: block;
   padding-left: 0;
   background-color: #f2f1f2;
   margin-left: -10px;
