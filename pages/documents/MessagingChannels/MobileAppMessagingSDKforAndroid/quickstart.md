@@ -12,6 +12,8 @@ permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 
 ---
 
+<div class="important"> The Quick Start guide for the Android Mobile App Messaging SDK includes an automatic installation of the SDK via a Gradle file. If you'd rather install the SDK manually, please use <a href="mobile-app-messaging-sdk-for-android-quick-start-manual-installation.html">this guide</a> instead</div>
+
 ###  Prerequisites
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
