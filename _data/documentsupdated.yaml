@@ -129,6 +129,13 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Conversation Builder
+    pages:
+      - pagename: Getting Started
+        subpages:
+          - subpagename: Hello World
+          - subpagename: Building Your First Intent
+      - pagename: Component Breakdown
 
 
 - categoryname: Client Side Configuration
