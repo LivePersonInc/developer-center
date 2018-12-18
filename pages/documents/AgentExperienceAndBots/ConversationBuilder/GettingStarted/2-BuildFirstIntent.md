@@ -16,16 +16,36 @@ Using the Patterns field in the Interaction Settings menu is a quick and simple 
 
 Creating an Intent allows for a more robust and re-usable way to match on User Says input.
 
-Go back to the welcome screen of the Conversation Builder by clicking on the Home button in the Settings Toolbar. Then click either the top-left or the dropdown and go to Intent Builder.
+The Intent Builder is a workspace for managing your Intents. Upon creation of Intents, these can be linked to your bot/automation Dialogs in Conversation Builder.
+
+To get to the Intent Builder, click on the Home button in the Conversation Builder Settings Toolbar. Then click either the top-leftmost logo or the dropdown and go to Intent Builder.
 
 <img src="img/ConvoBuilder/homeIcon.png" style="width:50px">
 
 <img src="img/ConvoBuilder/getHome.png" style="width:300px">
 
-
 Create a new Intent Builder domain called Hello World. This domain will hold all of your Intents for these tutorials.
 
+Create two new Intents. Call the first Greeting, call the other Goodbye. Enter the following Training Phrases manually:
 
+1. Greeting
+  * Hey
+  * Hello
+  * Hi
+  * What's up
+  * Howdy
+  * Salutations
+2. Goodbye
+  * Goodbye
+  * Bye
+  * Later
+  * So long
+  * farewell
+  * See you
+
+You should now have two Intents that you can see on the left sidebar.
+
+<img src="img/ConvoBuilder/twoIntents.png" style="width:500px">
 
 
 
