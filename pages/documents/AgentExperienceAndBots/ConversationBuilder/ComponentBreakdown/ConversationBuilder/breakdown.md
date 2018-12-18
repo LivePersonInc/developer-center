@@ -1,12 +1,12 @@
 ---
-pagename: Conversation Builder Component Breakdown
+pagename: Conversation Builder Overview
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Component Breakdown
-permalink: conversation-builder-conversation-builder-component-breakdown.html
+permalink: conversation-builder-conversation-builder-overview.html
 indicator: both
 ---
 

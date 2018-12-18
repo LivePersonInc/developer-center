@@ -1,16 +1,16 @@
 ---
-pagename: Intent Builder
+pagename: Intent Builder Overview
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Intent Builder
 subfoldername: Component Breakdown
-permalink: conversation-builder-intent-builder-component-breakdown.html
+permalink: conversation-builder-intent-intent-builder-overview.html
 indicator: both
 ---
 
-The Intent Builder allows you to build a collection of intents grouped by domain. Thus, you can define specific groups of intents for different entry points, such as a support landing page vs. an e-commerce landing page. Once you build at least one domain of intents, you'll be able to use the [Conversation Builder](placeholder.com) to associate these intents with specific user input.
+The Conversation Builder Platform's Intent Builder allows you to build a collection of intents grouped by domain. Thus, you can define specific groups of intents for different entry points, such as a support landing page vs. an e-commerce landing page. Once you build at least one domain of intents, you'll be able to use the [Conversation Builder](placeholder.com) to associate these intents with specific user input.
 
 This directs your bot/automation to be more flexible and respond to a wider variety of user input; instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured in response to this intent. Therefore, once you configure your intents with robust **Training Phrases**, expressions like "I have a question about billing", "Looking to check my account" yield the same intent and the same response from the bot/automation.
 
