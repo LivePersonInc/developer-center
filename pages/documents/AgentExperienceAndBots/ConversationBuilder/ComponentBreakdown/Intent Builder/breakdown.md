@@ -10,7 +10,11 @@ permalink: conversation-builder-component-breakdown-intent-builder-overview.html
 indicator: both
 ---
 
-The Conversation Builder Platform's Intent Builder allows you to build a collection of intents grouped by domain. Thus, you can define specific groups of intents for different entry points, such as a support landing page vs. an e-commerce landing page. Once you build at least one domain of intents, you'll be able to use the [Conversation Builder](placeholder.com) to associate these intents with specific user input.
+### Intent Builder
+
+The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](placeholder.com) to associate one domain to each dialog.
+
+An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to bot/automation dialogs that do various shipping tasks. 
 
 This directs your bot/automation to be more flexible and respond to a wider variety of user input; instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured in response to this intent. Therefore, once you configure your intents with robust **Training Phrases**, expressions like "I have a question about billing", "Looking to check my account" yield the same intent and the same response from the bot/automation.
 
