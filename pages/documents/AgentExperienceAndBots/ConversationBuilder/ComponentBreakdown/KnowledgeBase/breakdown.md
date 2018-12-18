@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Intent Builder
 subfoldername: Component Breakdown
-permalink: conversation-builder-intent-builder-knowledge-base-Overview.html
+permalink: conversation-builder-component-breakdown-knowledge-base-Overview.html
 indicator: both
 ---
 

@@ -136,6 +136,10 @@
           - subpagename: Hello World
           - subpagename: Building Your First Intent
       - pagename: Component Breakdown
+        subpages:
+          - subpagename: Conversation Builder Overview
+          - subpagename: Intent Builder Overview
+          - subpagename: Knowledge Base Overview
 
 
 - categoryname: Client Side Configuration
