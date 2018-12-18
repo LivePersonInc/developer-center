@@ -12,4 +12,4 @@ hooks:
   build: |
     gem install bundler
     bundle install
-    jekyll build
+    JEKYLL_ENV=production bundle exec jekyll build

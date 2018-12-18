@@ -63,21 +63,25 @@
 }
 
 .breadcrumbs .breadcrumb-item {
-  font-size: 0.8em;
-  color:#5896ed;
+  font-size: 0.9em;
+  color:#a2a2a2;
   font-family: "Open Sans";
+  font-weight: 300;
 }
 
 .breadcrumbs a.breadcrumb-item:after {
   display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
   padding-right: 1em;
   padding-left: 1em;
-  color: #FD8845;
-  content: "\f054";
-  font-size:0.6em;
-  font-weight:bold;
+  color: #999999;
   text-decoration: none;
-  font-family:"FontAwesome";
 }
 
 .breadcrumbs .icon:after {
