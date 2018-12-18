@@ -10,6 +10,8 @@ permalink: conversation-builder-conversation-builder-overview.html
 indicator: both
 ---
 
+### Conversation Builder
+
 LivePerson's Conversation Builder is made up of **three** different areas. In the center of the screen, you will find the **Dialog Workspace**. This panel contains the different [interactions](placeholder.com) of which the bot/automation consists; it represents the flow of the conversation (also called **a Dialog**) you are building ,including user messages the automation will respond to, the responses it will provide, and the different integrations you might use during the conversation.
 
 On the left-hand side of the window, you can find the **Interactions Toolbar**. This toolbar contains the different types of [interactions](placeholder.com) which can be used in a dialog.
