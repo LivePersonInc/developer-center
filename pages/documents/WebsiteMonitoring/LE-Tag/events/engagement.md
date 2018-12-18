@@ -125,7 +125,7 @@ See [START](lp-tag-engagement.html#start) event.
 
 ###  OFFER_CLICK
 
-This event is triggered when the engagement has been displayed on the page.
+This event is triggered when the engagement has been accepted by a user.
 
 **Event information**
 
