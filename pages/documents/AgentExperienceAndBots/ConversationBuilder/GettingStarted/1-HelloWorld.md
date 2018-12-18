@@ -10,7 +10,7 @@ permalink: conversation-builder-getting-started-hello-conversation-builder.html
 indicator: both
 ---
 
-### Hello
+### Hello Dialog
 
 After logging in to the Conversation Builder Platform, click on Conversation Builder to get started. Click on New Automation to create a new bot/automation.
 
@@ -44,7 +44,7 @@ In the Settings Toolbar on the righthand side, click on the Messaging Client to 
 
 Type in "reset" to reset the bot/automation session. Then try to type in "hello" or "hi". Your bot/automation should respond with "Hello World!". It can recognize both "hello" and "hi" because it comes with a pre-set pattern match. We'll address how to edit and create pattern matching in the next step of this tutorial.
 
-### Goodbye
+### Goodbye Dialog
 
 There is already a Welcome dialog. To create a "Goodbye" dialog, click the **+** on the bottom of the Dialog View.
 

@@ -30,31 +30,31 @@ Create two new Intents. Call the first Greeting, call the other Goodbye. Enter t
 
 1. Greeting
 
-  * Hey
+    * Hey
 
-  * Hello
+    * Hello
 
-  * Hi
+    * Hi
 
-  * What's up
+    * What's up
 
-  * Howdy
+    * Howdy
 
-  * Salutations
+    * Salutations
 
 2. Goodbye
 
-  * Goodbye
+    * Goodbye
 
-  * Bye
+    * Bye
 
-  * Later
+    * Later
 
-  * So long
+    * So long
 
-  * Farewell
+    * Farewell
 
-  * See you
+    * See you
 
 You should now have two Intents that you can see on the left sidebar.
 
