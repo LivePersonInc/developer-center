@@ -133,8 +133,8 @@
     pages:
       - pagename: Getting Started
         subpages:
-          - subpages: Hello World
-          - subpages: Building Your First Intent
+          - subpagename: Hello World
+          - subpagename: Building Your First Intent
       - pagename: Component Breakdown
 
 
