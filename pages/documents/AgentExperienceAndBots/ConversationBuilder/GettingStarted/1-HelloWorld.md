@@ -60,7 +60,7 @@ From Interaction Toolbar select the User Says interaction. Name this "Goodbye".
 
 <!--<img src="img/ConvoBuilder/userSaysGoodbyeInteraction.png" style="width:500px">-->
 
-When you first add an interaction to your Dialog Workspace, you will see the Interaction Settings menu in the Settings Toolbar.
+When you first add an interaction to your Dialog Workspace, you will see the Interaction Details menu in the Settings Toolbar.
 
 <img src="img/ConvoBuilder/interactionSettings.png" style="width:500px">
 
