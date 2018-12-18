@@ -24,10 +24,24 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 * The home icon will navigate you back to the first screen of the Intent Builder, which will allow you to view all your created domains or create a new one.
 
-* The plus icon is the default view of the domain viewer. It is the Add Intent view, where you can create new intents under the domain.
+* The plus icon is the default panel of the Domain View. It is the Add Intent panel, where you can create new intents under the domain.
 
 * The debugger icon allows you to enter sample user input to test against your intents; the NLU engine will take your inputted text and see if it can find matches in your intents. It will list these intents and the degree to which they matched with the input text.
 
 * The last icon is the Settings panel. It will allow you to rename the domain, retrieve its ID (under "More Settings" at the bottom), delete the domain and more.
 
+### What is an Intent?
+
+[TODO]
+
 ### Adding an Intent
+
+The default panel of the Domain View is the Add Intent panel. It will be the panel opened by default when you enter the Domain View. To add an intent, first use the topmost input area to enter its name.
+
+<div class="important">Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot/automation runs efficienty and smoothly</div>
+
+Once you've selected a name for your Intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click on the blue **+** sign to the right of the input area.
+
+#### Training Phrases
+
+[TODO]
