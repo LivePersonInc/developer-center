@@ -14,6 +14,6 @@ The Assist tool is a helper tool which "listens" to your dialog as you build it,
 
 ### Adding a Domain
 
-### Adding an Intent
+### Assigning an Intent to An Interaction
 
-### Adding an Entity
+### Assigning an Entity to An Interaction

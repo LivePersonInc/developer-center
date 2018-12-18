@@ -29,3 +29,5 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 * The debugger icon allows you to enter sample user input to test against your intents; the NLU engine will take your inputted text and see if it can find matches in your intents. It will list these intents and the degree to which they matched with the input text.
 
 * The last icon is the Settings panel. It will allow you to rename the domain, retrieve its ID (under "More Settings" at the bottom), delete the domain and more.
+
+### Adding an Intent
