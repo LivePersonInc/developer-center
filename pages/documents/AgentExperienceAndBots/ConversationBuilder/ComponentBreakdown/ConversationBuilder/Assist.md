@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Component Breakdown
-permalink: conversation-builder-conversation-builder-assist.md
+permalink: conversation-builder-conversation-builder-assist.html
 indicator: both
 ---
 
