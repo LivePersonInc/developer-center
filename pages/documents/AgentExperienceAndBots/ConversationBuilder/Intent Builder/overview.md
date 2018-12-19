@@ -1,18 +1,18 @@
 ---
-pagename: Intent Builder Overview
+pagename: Overview
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
-documentname: Intent Builder
-subfoldername: Component Breakdown
-permalink: conversation-builder-component-breakdown-intent-builder-overview.html
+documentname: Conversation Builder
+subfoldername: Intent Builder
+permalink: conversation-builder-intent-builder-overview.html
 indicator: both
 ---
 
 ### Intent Builder
 
-The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](conversation-builder-component-breakdown-conversation-builder-overview.html) to associate one domain to each dialog.
+The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](conversation-builder-overview-conversation-builder-overview.html) to associate one domain to each dialog.
 
 An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to bot/automation dialogs that do various shipping tasks.
 

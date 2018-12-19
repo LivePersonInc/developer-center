@@ -1,12 +1,12 @@
 ---
-pagename: Conversation Builder Overview
+pagename: Component Breakdown
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Component Breakdown
-permalink: conversation-builder-component-breakdown-conversation-builder-overview.html
+subfoldername: Overview
+permalink: conversation-builder-overview-component-breakdown.html
 indicator: both
 ---
 
@@ -22,9 +22,19 @@ On the right-hand side of the window, you can find the **Settings Toolbar**. Thi
 
 The Dialog Workspace is the main panel of the Conversation Builder. It lists the different interactions which make up this specific Dialog. A Dialog is composed of a series of interactions which together make up a back and forth conversation between the user and the bot/automation.
 
-A Dialog is always triggered by a user statement, either via simple [pattern matching](conversation-builder-component-breakdown-user-interactions.html#conditions) or via [intents](conversation-builder-component-breakdown-intent-builder-overview.html). Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by its Dialog. Thus, the Dialog Workspace will always display a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in the Dialog.
+A Dialog is always triggered by a user statement, either via simple [pattern matching](conversation-builder-overview-conditions.html#pattern-matching) or via [intents](conversation-builder-overview-intent-builder-overview.html). Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by its Dialog. Thus, the Dialog Workspace will always display a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in the Dialog.
 
 Clicking on any interaction will allow you to configure it. See below for the different configuration options and requirements for each interaction type.
+
+#### The Dialog List
+
+At the bottom of the Dialog Viewer, you'll find a view listing all your different Dialogs. Click the **+** icon at the bottom left corner of the Dialog Viewer to add a new Dialog. You'll be prompted to enter a new name for the Dialog (**we recommend using standard naming conventions to name your Dialogs, to make them more sortable and easy to find**) and choose between two options:
+
+* Dialog - the default choice is a standard dialog, as described above.
+
+* Fallback dialog - the second choice is a fallback dialog, which gets triggered when the bot/automation cannot recognize a user's input and has to fallback to an escalation/troubleshooting conversation.
+
+You can use the hamburger icon right next to the **+** icon to see a list of your different dialogs. Otherwise, they are displayed horizontally, in chronological order.
 
 ### The Interactions Toolbar
 

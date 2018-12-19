@@ -1,12 +1,12 @@
 ---
-pagename: Entities Overview
+pagename: Entities
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
-documentname: Intent Builder
-subfoldername: Component Breakdown
-permalink: conversation-builder-component-breakdown-entities-overview.html
+documentname: Conversation Builder
+subfoldername: Intent Builder
+permalink: conversation-builder-intent-builder-entities.html
 indicator: both
 ---
 

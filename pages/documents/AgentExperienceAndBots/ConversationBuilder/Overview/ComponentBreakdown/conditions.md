@@ -1,54 +1,14 @@
 ---
-pagename: User Interactions
+pagename: Conversation Builder Overview
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Component Breakdown
-permalink: conversation-builder-component-breakdown-user-interactions.html
+subfoldername: Overview
+permalink: conversation-builder-overview-conditions.html
 indicator: both
 ---
-
-The User Interactions section of the Interactions Toolbar is made up of only one type of interaction, "User Says". This interaction is the textual prompt to which the bot/automation responds, whether it is the first message which starts the Dialog or some sort of input during it. When you add a "User Says" interaction, you give an example of a question the user might ask at the start of a conversation.
-
-Instead of just looking for the specific phrase you originally defined (which would result in the bot/automation not recognizing many of your user's inputs), you can direct the bot/automation to look for a specific pattern (a method called **pattern matching**) or to look for more broad and flexible **intents** in the user's input, by using our NLU engine.
-
-For more information on Pattern Matching, see the section below. For more information on setting up and using intents, see either [this tutorial](conversation-builder-getting-started-building-your-first-intent.html) or a more in-depth [breakdown of the Intent Builder](conversation-builder-component-breakdown-intent-builder-overview.html).
-
-### Bot/Automation Interactions
-
-The **Bot** section of the Interactions Toolbar is made up of three different types of interactions:
-
-* **Statements**. This type of interaction is a straight-forward declaration by the bot which does not expect a response from the user. There are four different types of statements available to you:
-
-  * Text. For example, "Thank you for taking our survey!"
-
-  * Image.
-
-  * Audio file.
-
-  * Video.
-
-* **Questions**. This type of interaction is interactive and meant to be answered by the user. It can also be used to fill [slots](conversation-builder-component-breakdown-user-interactions.html#slots) with key information based on the user's answer, making it available for future use. The different types of question interactions available to you are:
-
-  * Multiple Choice. A simple and standard multiple choice questions allowing the user to select from a list of predefined answers.
-
-  * Text. A simple textual question.
-
-  * Structured Content. Most conversations involve plain text like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, quick replies, etc) to a consumer in a more rich, interactive, and structured format. **You can show up to 10 of these items in a horizontally scrolling carousel**.
-
-  * Button. An object that allows you to show a simple text question with an associated button actions. A click on the button would result in an action pre-configured by you (like navigation to a link, for example).
-
-  * Quick Reply. A question with a series of pre-configured replies that appear as a list of chips at the bottom of the interaction and disappear once the user has selected one.
-
-  * Listpicker. **Note: list picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of items.
-
-  * Time Picker. **Note: time picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
-
-* **Integrations**. This type of interaction involves the bot/automation querying an outside API or service and retrieving information from it. For example, you could have your bot/automation search for a certain [entity](conversation-builder-component-breakdown-entities-overview.html) and retrieve the matching product's catalogue item from your own API, populating the bot/automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the bot/automation to prompt the user to use Apply Pay to submit a payment.
-
-### Conditions
 
 When adding a question interaction to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities can deliver a powerful flow control engine for the bot/automation.
 
@@ -66,7 +26,7 @@ When a condition is met, the action defined under the Next Step dropdown menu wi
 
 <div class="important">You can add more than one condition to an interaction for more complex flow control. You can do so by clicking on the "+ Response Match & Actions" button below the condition box</div>
 
-#### Pattern Matching
+### Pattern Matching
 
 Patterns are templates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g.: "I want a pair of (headphones&#124;head phones&#124;earbuds&#124;earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can include wildcards for looser matches, e.g.: "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
 
@@ -90,9 +50,9 @@ The basic operators available for use with pattern matching are:
 
 If you need more advanced operators, you can also use [Regular Expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching,
 
-#### Slots
+### Slots
 
-Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-component-breakdown-entities-overview.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
+Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-overview-entities-overview.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
 
 To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. From there, click the blue **+** icon right to the right of Slot.
 
@@ -108,7 +68,7 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 * Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
-##### Change Response
+#### Change Response
 
 Below the condition configuration box, you will find three check boxes. These control three different responses to the interaction you can use when using conditions:
 
@@ -117,16 +77,6 @@ Below the condition configuration box, you will find three check boxes. These co
 * Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The bot will then clear the data in the slot and send the cancelled message to the user, as defined by you.
 
 * Fallback response. If a user asks for a slot to be changed but the bot/automation couldn't recognize the phrase the user used ("give me a different color" for example), it will send a fallback response. This could be something like "I'm sorry, I didn't understand. Can you try again?" for example.
-
-#### The Dialog List
-
-At the bottom of the Dialog Viewer, you'll find a view listing all your different Dialogs. Click the **+** icon at the bottom left corner of the Dialog Viewer to add a new Dialog. You'll be prompted to enter a new name for the Dialog (**we recommend using standard naming conventions to name your Dialogs, to make them more sortable and easy to find**) and choose between two options:
-
-* Dialog - the default choice is a standard dialog, as described above.
-
-* Fallback dialog - the second choice is a fallback dialog, which gets triggered when the bot/automation cannot recognize a user's input and has to fallback to an escalation/troubleshooting conversation.
-
-You can use the hamburger icon right next to the **+** icon to see a list of your different dialogs. Otherwise, they are displayed horizontally, in chronological order.
 
 #### Code
 

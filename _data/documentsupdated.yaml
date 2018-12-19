@@ -135,11 +135,17 @@
         subpages:
           - subpagename: Hello Conversation Builder
           - subpagename: Building Your First Intent
-      - pagename: Component Breakdown
+      - pagename: Overview
         subpages:
-          - subpagename: Conversation Builder Overview
-          - subpagename: Intent Builder Overview
-          - subpagename: Knowledge Base Overview
+          - subpagename: Component Breakdown
+          - subpagename: User Interactions
+          - subpagename: Conditions
+          - subpagename: Assist
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
+          - subpagename: Entities
+      - pagename: Knowledge Base Overview
 
 
 - categoryname: Client Side Configuration
