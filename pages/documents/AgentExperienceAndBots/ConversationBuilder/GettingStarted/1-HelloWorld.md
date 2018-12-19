@@ -10,7 +10,7 @@ permalink: conversation-builder-getting-started-hello-conversation-builder.html
 indicator: both
 ---
 
-### Hello Dialog
+### Welcome Dialog
 
 After logging in to the Conversation Builder Platform, click on Conversation Builder to get started. Click on New Automation to create a new bot/automation.
 
@@ -91,3 +91,29 @@ Click on the Messaging Client in the Settings Toolbar again to test out the new 
 <img src="img/ConvoBuilder/helloWorldFullTest.png" style="width:400px">
 
 This concludes your first bot/automation created with the Conversation Builder. Next, you will learn about Intents.
+
+### Advanced Pattern Matching
+
+Patterns are exact and precise. Right now, the Welcome and Goodbye dialogs only match the exact words that are in the pattern fields. For example, say "hello, how are you?" in the Messaging Client test area. You will notice that the Welcome dialog does not work because it only matches "hello" exactly. 
+
+#### Improved Goodbye Dialog
+
+Click on the Goodbye Dialog. Click on the first User Says interaction and go to the Interaction Details to see the patterns that you entered before.
+
+Instead of two patterns of `goodbye` and `bye`, change this to `*(good)bye*`.
+
+Wrapping text in parenthesis means that the text is optional. This is so a user can type "goodbye" or just "bye". 
+
+An asterisk is a wildcard that matches on any number of any characters. This is so a user can type "okay goodbye" or "bye, bot".
+
+Save your pattern changes and test them out in the Messaging Client.
+
+#### Improved Welcome Dialog
+
+Move to the Welcome dialog and look at the Interaction Details. Notice that there are multiple built in pattern matches that are included by default. Add some asterisk symbols after "hi" and "hello", etc. 
+
+For something more advanced, add a time of day greeting to your patterns. Enter `good (morning|afternoon|evening)*`.
+
+Save your pattern changes and test them out in the Messaging Client.
+
+* and (this|that)
