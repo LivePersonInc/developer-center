@@ -34,7 +34,7 @@ In the Interactions Toolbar on the lefthand side, you will see a User interactio
 
 <!--<img src="img/ConvoBuilder/interactionsToolbar.png" style="width:300px">-->
 
-Click on the first User interaction in your Dialog Workspace (center area) and rename it to say "Hello!" Click on the next bot/automation Text interaction and rename that to say "Hello World!" in reply.
+Click on the first User interaction in your Dialog Workspace (center area) and rename it to say "Hello!" Click on the next bot/automation Statement Text interaction and rename that to say "Hello World!" in reply.
 
 <img src="img/ConvoBuilder/helloRenames.png" style="width:400px">
 
@@ -84,7 +84,7 @@ If you try to type in something other that "hi", "hello", or "goodbye", the bot 
 
 <img src="img/ConvoBuilder/fallbackDialogName.png" style="width:300px">
 
-Add only one Bot Text interaction to your Dialog Workspace. Make this text say "I only say 'Hello World' and 'Goodbye'".
+Add only one Bot Statement Text interaction to your Dialog Workspace. Make this text say "I only say 'Hello World' and 'Goodbye'".
 
 Click on the Messaging Client in the Settings Toolbar again to test out the new fallback dialog.
 
@@ -100,9 +100,7 @@ Patterns are exact and precise. Right now, the Welcome and Goodbye dialogs only 
 
 Click on the Goodbye Dialog. Click on the first User Says interaction and go to the Interaction Details to see the patterns that you entered before.
 
-Instead of two patterns of `goodbye` and `bye`, change this to `*(good)bye*`.
-
-Wrapping text in parenthesis means that the text is optional. This is so a user can type "goodbye" or just "bye". 
+Instead of `goodbye` and `bye`, change this to `*goodbye*` and `*bye*`.
 
 An asterisk is a wildcard that matches on any number of any characters. This is so a user can type "okay goodbye" or "bye, bot".
 
@@ -112,6 +110,8 @@ Save your pattern changes and test them out in the Messaging Client.
 
 Move to the Welcome dialog and look at the Interaction Details. Notice that there are multiple built in pattern matches that are included by default. Add some asterisk symbols after "hi" and "hello", etc. 
 
-For something more advanced, add a time of day greeting to your patterns. Enter `good (morning|afternoon|evening)*`.
+For something more advanced, add a time of day greeting pattern. 
+
+Enter `good (morning|afternoon|evening)*`. This pattern will match on "good morning", "good afternoon", or even "good evening, bot!".
 
 Save your pattern changes and test them out in the Messaging Client.
