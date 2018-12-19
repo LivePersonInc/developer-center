@@ -16,6 +16,8 @@ On the left-hand side of the window, you can find the **Interactions Toolbar**. 
 
 On the right-hand side of the window, you can find the **Settings Toolbar**. This toolbar contains additional information regarding your bot/automation and various configuration options.
 
+<div class="important">The conversation builder supports the creation of automation for all the LiveEngage channels. Because an automation simply listens to a piece of text from a user, any channel that provides text to LiveEngage can potentially trigger an automation. However, there are channel specific formats, features, and conventions that may not be available for all channels.</div>
+
 ### The Dialog Workspace
 
 The Dialog Workspace is the main panel of the Conversation Builder. It lists the different interactions which make up this specific Dialog. A Dialog is composed of a series of interactions which together make up a back and forth conversation between the user and the bot/automation.
@@ -76,7 +78,7 @@ The **Bot** section of the Interactions Toolbar is made up of three different ty
 
 #### Conditions
 
-When adding a question interaction to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities can deliver a powerful decision making engine for the bot/automation.
+When adding a question interaction to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities can deliver a powerful flow control engine for the bot/automation.
 
 When you add a question interaction to the dialog, you can select it and choose the Interaction Details from the Settings Toolbar on the right hand side (the second icon on the toolbar). From there, click on "User Response" in the middle of the Interactions Details panel which opens. At the bottom of this menu, you'll find the "Next Step" dropdown.
 
@@ -89,6 +91,8 @@ When a condition is met, the action defined under the Next Step dropdown menu wi
 * Pattern Matching - the bot/automation will trigger the Next Step action when the user input matches the pattern you define. See below for more information on pattern matching.
 
 * Exact Value - the bot/automation will trigger the Next Step action when the user input matches an exact value you define. This is useful for questions where you present the user a set or predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
+
+<div class="important">You can add more than one condition to an interaction for more complex flow control. You can do so by clicking on the "+ Response Match & Actions" button below the condition box</div>
 
 ##### Pattern Matching
 
@@ -116,19 +120,31 @@ If you need more advanced operators, you can also use [Regular Expressions](http
 
 #### Slots
 
-Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](placeholder.com) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an [integration](placeholder.com) to query an API with the slot and retrieve specific information about a product the user was looking for.
+Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](placeholder.com) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an [integration](placeholder.com) to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
 
-To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. 
+To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. From there, click the blue **+** icon right to the right of Slot.
+
+In the menu which opens, first assign the slot a name by filling in the "Name" input field. **We recommend using standard naming conventions for slots. The slot name is later used to refer to and access the data which the slot contains**. Then, look for a pre-configured entity (which you should have set up for your domain previously) by typing in first the "@" character and then the name of your desired entity in the "Value" input field to the right of the Name input field.
+
+Lastly, decide how long you'd like the slot's data to be kept for. You can set this by using the "Scope" dropdown menu on the right hand side. The dropdown provides four options:
+
+* Request - the slot's data will only be saved for that particular use of the slot. Only useful if the next question in the tree depends on the slot's data.
+
+* Dialog - the slot's data will only be stored for this specific dialog. Once this dialog ends (either by the user closing the conversation or the bot/automation moving on to a different dialog), the slot's data will be cleared.
+
+* Session - the slot's data will be saved for the entirety of the user's browser session. This is useful when using the data to query APIs and retrieve information which might be useful for multiple sessions.
+
+* Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
 ##### Change Response
 
-##### Cancel Response
+Below the condition configuration box, you will find three check boxes. These control three different responses to the interaction you can use when using conditions:
 
-##### Fallback Response
+* Change response. The bot/automation can change a slot's data if the user requests to. Common phrases like "what about sandals" or "show me sandals" will cause the bot/automation to clear the data currently in the slot, look for an entity in the user's change request, repopulate the slot with the new information, and perform the Next Step configuration again. When this occurs, you can have the bot/automation send a message to the user letting them know it is doing so, for example "Let me look for your new selection".
 
-#### Supported incoming channels
+* Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The bot will then clear the data in the slot and send the cancelled message to the user, as defined by you.
 
-The platform supports the creation of automation for all the LiveEngage channels. Because an automation simply listens to a piece of text from a user, any channel that provides text to LiveEngage can potentially trigger an automation. However, there are channel specific formats, features, and conventions that may not be available for all channels.
+* Fallback response. If a user asks for a slot to be changed but the bot/automation couldn't recognize the phrase the user used ("give me a different color" for example), it will send a fallback response. This could be something like "I'm sorry, I didn't understand. Can you try again?" for example.
 
 #### The Dialog List
 
@@ -140,16 +156,12 @@ At the bottom of the Dialog Viewer, you'll find a view listing all your differen
 
 You can use the hamburger icon right next to the **+** icon to see a list of your different dialogs. Otherwise, they are displayed horizontally, in chronological order.
 
+#### Code
+
+TODO
+
 ### The Settings Toolbar
 
 The Settings Toolbar contains various menus and panels which allow you to configure your bot/automation further. It also includes the **Assist** tool, which actively "listens" to your dialogue as you build it and recommends intents, entities and more for your use, and the **Messaging Client**, which allows you to test your various dialogs.
 
 Once you have populated the Dialog View with interactions, you can select any interaction and click on the Interaction Details icon (it will be selected by default). Inside this panel, you can configure further actions for the bot/automation dependent on the same methods we described above such as pattern matching, intents, and so on. You can achieve this by selecting User Response, configuring the conditions the bot/automation will look for and the resulting action (like sending a specific interaction, ending the dialog, and so on).
-
-
-
-
-
-#### Next Step
-
-#### Code
