@@ -14,7 +14,7 @@ indicator: both
 
 The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](placeholder.com) to associate one domain to each dialog.
 
-An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to bot/automation dialogs that do various shipping tasks. 
+An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to bot/automation dialogs that do various shipping tasks.
 
 This directs your bot/automation to be more flexible and respond to a wider variety of user input; instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured in response to this intent. Therefore, once you configure your intents with robust **Training Phrases**, expressions like "I have a question about billing", "Looking to check my account" yield the same intent and the same response from the bot/automation.
 
@@ -36,7 +36,9 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 ### What is an Intent?
 
-[TODO]
+Instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured in response to this intent. Intents are great for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match for your defined expression, it might "miss" different synonyms, phrasings, formats, and so on.
+
+Intents match an entire sentence against a set of training sentences or KB articles and the results are scored based on level of confidence (VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR). From this sentence, the NLU engine derives an intent to which the bot/automation responds.
 
 ### Adding an Intent
 
@@ -48,4 +50,14 @@ Once you've selected a name for your Intent, you should add as many training phr
 
 #### Training Phrases
 
-[TODO]
+The NLU uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
+
+Let's say that I have an intent which I label "check_bill". I could associate it with the following training phrases:
+
+* I want to check the status of my bill
+
+* Tell me what my bill is
+
+* I need to look into what's going with my bill
+
+The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the bot/automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the bot/automation and the corresponding action (configured by you in the Conversation Builder) to be triggered. 

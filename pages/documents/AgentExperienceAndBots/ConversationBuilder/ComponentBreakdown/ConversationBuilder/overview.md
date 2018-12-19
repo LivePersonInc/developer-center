@@ -18,7 +18,6 @@ On the left-hand side of the window, you can find the **Interactions Toolbar**. 
 
 On the right-hand side of the window, you can find the **Settings Toolbar**. This toolbar contains additional information regarding your bot/automation and various configuration options.
 
-
 ### The Interactions Toolbar
 
 The Interactions Toolbar is divided into two parts:
@@ -31,13 +30,35 @@ Using the Interactions Toolbar is simple; simply select the interaction you'd li
 
 #### User Interactions
 
-The User interactions section is made up of only one type of interaction, "User Says". This interaction is the textual prompt to which the bot/automation responds, whether it is the first message which starts the Dialog or some sort of input during it. You can direct the bot/automation to look for a specific pattern (a method called **pattern matching**) or to look for more broad and flexible **intents**, by using our NLU engine.
+The User interactions section is made up of only one type of interaction, "User Says". This interaction is the textual prompt to which the bot/automation responds, whether it is the first message which starts the Dialog or some sort of input during it. When you add a "User Says" interaction, you give an example of a question the user might ask at the start of a conversation.
+
+Instead of just looking for the specific phrase you originally defined (which would result in the bot/automation not recognizing many of your user's inputs), you can direct the bot/automation to look for a specific pattern (a method called **pattern matching**) or to look for more broad and flexible **intents** in the user's input, by using our NLU engine.
 
 For more information on Pattern Matching, see the section below. For more information on setting up and using intents, see either [this tutorial](placeholder.com) or a more in-depth [breakdown of the Intent Builder](placeholder.com).
 
 ##### Pattern Matching
 
-[TODO]
+Patters are templates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g.: "I want a pair of (headphones|head phones|earbuds|earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can include wildcards for looser matches, e.g.: "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
+
+You can use wildcards and alternates together like this:
+
+* "&#42; (some|a pair of) (headphones|earbuds)&#42;"
+
+* "(thank(|s)|thank you)&#42;"
+
+* "&#42;headphones&#42;"
+
+Once the bot/automation detects a match to the pattern which you defined, the dialog configured with that pattern kicks in and the conversation begins. If the pattern is configured for a user input in the middle of the conversation (like an answer to a question), the appropriate response will be triggered.
+
+The basic operators available for use with pattern matching are:
+
+* Asterisk, otherwise known as a wildcard which matches any character.
+
+* Parentheses, which enclose a group of alternates.
+
+* Pipe, which denotes alternates.
+
+If you need more advanced operators, you can also use [Regular Expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching,
 
 #### Bot/Automation Interactions
 
@@ -55,19 +76,19 @@ The **Bot** section of the Interactions Toolbar is made up of three different ty
 
 * **Questions**. This type of interaction is interactive and meant to be answered by the user. It can also be used to fill [slots](placeholder.com) with key information based on the user's answer, making it available for future use. The different types of question interactions available to you are:
 
-  * Multiple Choice
+  * Multiple Choice. A simple and standard multiple choice questions allowing the user to select from a list of predefined answers.
 
-  * Text
+  * Text. A simple textual question.
 
-  * Structured [TODO: short explanation + link to docs]
+  * Structured Content. Most conversations involve plain text like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, quick replies, etc) to a consumer in a more rich, interactive, and structured format. **You can show up to 10 of these items in a horizontally scrolling carousel**.
 
-  * Button
+  * Button. An object that allows you to show a simple text question with an associated button actions. A click on the button would result in an action pre-configured by you (like navigation to a link, for example).
 
-  * Quick Reply [TODO: short explanation + link to docs]
+  * Quick Reply. A question with a series of pre-configured replies that appear as a list of chips at the bottom of the interaction and disappear once the user has selected one.
 
-  * Listpicker [TODO: short explanation + link to docs]
+  * Listpicker. **Note: list picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of items.
 
-  * Time Picker [TODO: short explanation + link to docs]
+  * Time Picker. **Note: time picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
 
 * **Integrations**. This type of interaction involves the bot/automation querying an outside API or service and retrieving information from it. For example, you could have your bot/automation search for a certain [entity](placeholer.com) and retrieve the matching product's catalogue item from your own API, populating the bot/automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the bot/automation to prompt the user to use Apply Pay to submit a payment.
 
@@ -79,7 +100,9 @@ A Dialog is always triggered by a user statement, either via simple [pattern mat
 
 Clicking on any interaction will allow you to configure it. See above for the different configuration options and requirements for each interaction type.
 
-#### TODO: supported incoming channels
+#### Supported incoming channels
+
+The platform supports the creation of automation for all the LiveEngage channels. Because an automation simply listens to a piece of text from a user, any channel that provides text to LiveEngage can potentially trigger an automation. However, there are channel specific formats, features, and conventions that may not be available for all channels.
 
 #### The Dialog List
 
@@ -94,3 +117,19 @@ You can use the hamburger icon right next to the **+** icon to see a list of you
 ### The Settings Toolbar
 
 The Settings Toolbar contains various menus and panels which allow you to configure your bot/automation further. It also includes the **Assist** tool, which actively "listens" to your dialogue as you build it and recommends intents, entities and more for your use, and the **Messaging Client**, which allows you to test your various dialogs.
+
+Once you have populated the Dialog View with interactions, you can select any interaction and click on the Interaction Details icon (it will be selected by default). Inside this panel, you can configure further actions for the bot/automation dependent on the same methods we described above such as pattern matching, intents, and so on. You can achieve this by selected User Response, configured the conditions the bot/automation will look for and the resulting action (like sending a specific interaction, ending the dialog, and so on).
+
+#### Conditions
+
+#### Slots
+
+##### Change Response
+
+##### Cancel Response
+
+##### Fallback Response
+
+#### Next Step
+
+#### Code
