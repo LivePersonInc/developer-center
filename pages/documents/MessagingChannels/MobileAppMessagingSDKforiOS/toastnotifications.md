@@ -15,7 +15,7 @@ indicator: messaging
 
 This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
-_**Note**: once your app is capable of receivinging Push Notifications, you can customize the way In-App notifications are displayed, and their behavior._
+_**Note**: once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior._
 
 ### Step 0: Adding Push Notifications (Optional)
 

@@ -121,7 +121,6 @@
       - pagename: Prerequisites
       - pagename: Getting Started
       - pagename: Considerations
-      - pagename: Limitations
       - pagename: Deploying Bots on Live Chat
       - pagename: Deploying Bots on Messaging
   - documentname: Messaging Agent SDK
@@ -130,6 +129,23 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Conversation Builder
+    pages:
+      - pagename: Getting Started
+        subpages:
+          - subpagename: Hello Conversation Builder
+          - subpagename: Building Your First Intent
+      - pagename: Overview
+        subpages:
+          - subpagename: Component Breakdown
+          - subpagename: User Interactions
+          - subpagename: Conditions
+          - subpagename: Assist
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
+          - subpagename: Entities
+      - pagename: Knowledge Base Overview
 
 
 - categoryname: Client Side Configuration
@@ -561,7 +577,7 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Quick Start - Manual
+    - pagename: Quick Start - Manual Installation
     - pagename: Configuration
       subpages:
       - subpagename: Initialization
@@ -901,12 +917,6 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: LiveEngage MMS Viewer
-      pages:
-        - pagename: Overview
-        - pagename: Technical Description
-        - pagename: Deployment Steps
-        - pagename: Additional Options
     - documentname: MCS Toolkit
       pages:
         - pagename: Overview
