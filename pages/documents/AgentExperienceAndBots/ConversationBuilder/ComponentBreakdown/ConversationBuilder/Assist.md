@@ -20,4 +20,8 @@ Select one of your domains from the list and click on it. From then on, for this
 
 ### Assigning an Intent to An Interaction
 
+TODO
+
 ### Assigning an Entity to An Interaction
+
+TODO

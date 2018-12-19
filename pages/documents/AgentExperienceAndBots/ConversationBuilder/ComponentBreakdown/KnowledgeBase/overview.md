@@ -10,7 +10,7 @@ permalink: conversation-builder-component-breakdown-knowledge-base-Overview.html
 indicator: both
 ---
 
-The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your bot/automation to leverage [intents](placeholder.com) and [entities](placeholder.com) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
+The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your bot/automation to leverage [intents](conversation-builder-component-breakdown-intent-builder-overview.html) and [entities](conversation-builder-component-breakdown-entities-overview.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
 
 ### Adding a Knowledge Base
 
@@ -38,7 +38,7 @@ To increase the quality of your content matches, please take a moment to review 
 
 * The key attributes which the NLU uses for matching are the article Title, Intent Qualifiers, Summary, Tags and any Positive or Negative learnings an article may have acquired.
 
-* The Title and the Intent Qualifiers are [intents](placeholder.com) and should be full sentences eg: “How do I reset my password?”
+* The Title and the Intent Qualifiers are [intents](conversation-builder-component-breakdown-entities-overview.html) and should be full sentences eg: “How do I reset my password?”
 
 * As a rule you should have at *LEAST* 5 to 8 Intent Qualifiers per article which provide different ways people ask for this article.
 
@@ -82,7 +82,7 @@ What about thumbs-down? This should be used sparingly to differentiate between t
 
 ### Using Entities With Your Knowledge Base
 
-[Entities](placeholder.com) are keywords that refer to a number of synonyms. For example the entity “sports” may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
+[Entities](conversation-builder-component-breakdown-entities-overview.html) are keywords that refer to a number of synonyms. For example the entity “sports” may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
 
 Leveraging entities within your Knowledge Base provides the same benefits that doing so affords you elsewhere: they are great ways to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
 

@@ -10,9 +10,9 @@ permalink: conversation-builder-getting-started-building-your-first-intent.html
 indicator: both
 ---
 
-In the [Hello Conversation Builder](conversation-builder-getting-started-hello-conversation-builder.html) tutorial, you matched User input to dialogs using Patterns. 
+In the [Hello Conversation Builder](conversation-builder-getting-started-hello-conversation-builder.html) tutorial, you matched User input to dialogs using Patterns.
 
-Intents are more flexible and less exact than pattern matching. However, Intents can often be prefered because they leverage Natural Langauge Understanding and Entities. 
+Intents are more flexible and less exact than pattern matching. However, Intents can often be preferred because they leverage Natural Language Understanding and Entities. 
 
 In this tutorial, you will create a new dialog that asks the user what major city they live near or in.
 
@@ -88,11 +88,11 @@ If the interactions are out of order, you can rearrange them by hovering over th
 
 The next step is to link the intent and entity to the interactions.
 
-**Note:** if the Assist tool is not already open in the Settings Toolbar, open it by clicking on the Assist icon in the Settings Toolbar. 
+**Note:** if the Assist tool is not already open in the Settings Toolbar, open it by clicking on the Assist icon in the Settings Toolbar.
 
 <img src="img/ConvoBuilder/assistIcon.png" style="width:70px">
 
-Link your Hello World intent domain via the prompt from the Assist tool. 
+Link your Hello World intent domain via the prompt from the Assist tool.
 
 <img src="img/ConvoBuilder/domainLinked.png" style="width:400px">
 
