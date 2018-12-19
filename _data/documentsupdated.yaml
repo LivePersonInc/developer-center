@@ -133,7 +133,7 @@
     pages:
       - pagename: Getting Started
         subpages:
-          - subpagename: Hello World
+          - subpagename: Hello Conversation Builder
           - subpagename: Building Your First Intent
       - pagename: Component Breakdown
         subpages:

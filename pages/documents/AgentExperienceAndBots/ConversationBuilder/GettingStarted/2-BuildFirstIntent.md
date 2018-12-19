@@ -6,11 +6,32 @@ sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Getting Started
-permalink: conversation-builder-getting-started-building-your-first-intent
+permalink: conversation-builder-getting-started-building-your-first-intent.html
 indicator: both
 ---
 
-### Create Intents
+In the [Hello Conversation Builder](conversation-builder-getting-started-hello-conversation-builder.html) tutorial, you matched User input to dialogs using Patterns. 
+
+Intents are more flexible and less exact than pattern matching. However, Intents can often be prefered because they leverage Natural Langauge Understanding and Entities. 
+
+We will now look at how to create a basic Intent and Entity.
+
+### Create an Intent and Entity
+
+The first step is to create a new dialog that asks the user what major city they are near.
+
+In order to do this, the User Says interaction needs to understand phrases like:
+
+- "I'm near Seattle"
+- "I live in Seattle"
+- "Seattle"
+
+In the above examples, the whole phrases are Intents and "Seattle" is an Entity of location.
+
+
+
+
+
 
 In the Hello World bot/automation tutorial, you used Patterns to match the User Says input of `goodbye`, `bye`, etc.
 
@@ -24,43 +45,43 @@ To get to the Intent Builder, click on the Home button in the Conversation Build
 
 <img src="img/ConvoBuilder/getHome.png" style="width:300px">
 
-Create a new Intent Builder domain called Hello World. This domain will hold all of your Intents for these tutorials.
+Create a new Intent Builder domain called "Hello World". This domain will hold all of your Intents for these tutorials.
 
 Create two new Intents. Call the first Greeting, call the other Goodbye. Enter the following Training Phrases manually:
 
 1. Greeting
 
-  * Hey
+    * Hey
 
-  * Hello
+    * Hello
 
-  * Hi
+    * Hi
 
-  * What's up
+    * What's up
 
-  * Howdy
+    * Howdy
 
-  * Salutations
+    * Salutations
 
 2. Goodbye
 
-  * Goodbye
+    * Goodbye
 
-  * Bye
+    * Bye
 
-  * Later
+    * Later
 
-  * So long
+    * So long
 
-  * Farewell
+    * Farewell
 
-  * See you
+    * See you
 
 You should now have two Intents that you can see on the left sidebar.
 
 <img src="img/ConvoBuilder/twoIntents.png" style="width:500px">
 
-### Link Intents to Dialog Interactions
+### Link Intent to Dialog Interaction
 
 The next step is to leverage your Intents in the Hello World bot/automation from the previous tutorial. These two intents will replace the Patterns in the Interaction Details Settings for the User Says text interactions.
 
