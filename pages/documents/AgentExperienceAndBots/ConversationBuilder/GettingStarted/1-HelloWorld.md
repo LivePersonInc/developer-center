@@ -115,5 +115,3 @@ Move to the Welcome dialog and look at the Interaction Details. Notice that ther
 For something more advanced, add a time of day greeting to your patterns. Enter `good (morning|afternoon|evening)*`.
 
 Save your pattern changes and test them out in the Messaging Client.
-
-* and (this|that)
