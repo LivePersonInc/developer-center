@@ -14,7 +14,7 @@ indicator: both
 
 **Interactions** - user or bot/automation prompts, which can be simple, textual statements, questions or more complex entities like structured content, list picker objects, API integrations and so on. All the interactions together make up a Dialog.
 
-**Interaction Toolbar** - the leftmost area of the Conversation Builder, containing the different types of interactions.\
+**Interaction Toolbar** - the leftmost area of the Conversation Builder, containing the different types of interactions.
 
 **Settings Toolbar** - the rightmost area of the Conversation Builder, containing contextual menus to assist in the customization of Dialogs.
 
@@ -22,5 +22,4 @@ indicator: both
 
 **A Dialog** - a set of user input prompts, responses, and integrations (otherwise known as interactions) which make up a conversation.
 
-**An Intent** - a re-usable set of patterns to match on User Says interaction 
-
+**An Intent** - a re-usable set of patterns to match on User Says interaction

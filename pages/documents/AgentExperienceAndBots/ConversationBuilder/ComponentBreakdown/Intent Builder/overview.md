@@ -60,4 +60,4 @@ Let's say that I have an intent which I label "check_bill". I could associate it
 
 * I need to look into what's going with my bill
 
-The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the bot/automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the bot/automation and the corresponding action (configured by you in the Conversation Builder) to be triggered. 
+The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the bot/automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the bot/automation and the corresponding action (configured by you in the Conversation Builder) to be triggered.
