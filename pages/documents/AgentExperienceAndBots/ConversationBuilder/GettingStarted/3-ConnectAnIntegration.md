@@ -1,13 +1,13 @@
 ---
-pagename: Building Your First Entity
+pagename: Connect an Integration
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Getting Started
-permalink: conversation-builder-getting-started-building-your-first-entity
+permalink: conversation-builder-getting-started-connect-an-integration.html
 indicator: both
 ---
 
-1. Associate Entities with the Hello intent
+coming soon

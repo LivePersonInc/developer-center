@@ -104,14 +104,8 @@ Now click on the Bot Question Text interaction. Use the Assist tool to link the 
 
 <img src="img/ConvoBuilder/intentAdded.png" style="width:500px">
 
+The assist tool automatically linked the city entity and assigned the user answer to be stored in a Slot.
 
+Add a new Bot Statement Text interaction and make the text say "I love {$botContext.slot.city}!".
 
----
-
-
-
-Click on the Messaging Client in the Settings Toolbar and test your bot/automation. Type "reset" to create a new session. Say "hello", "goodbye", and gibberish and notice that the bot/automation works just as before.
-
-Moving forward, you can re-use these intents to more quickly create common dialogs.
-
-Currently, the bot/automation requires the User to know what they can/cannot say. You need a way to guide the user through the conversation. You can do this with Entities!
+Click on the Messaging Client in the Settings Toolbar and test your bot/automation. Type "reset" to create a new session. Say "hello", followed by "ask me something". Respond with something like "I live in San Fransisco". The bot/automation should say "I love San Fransisco!"
