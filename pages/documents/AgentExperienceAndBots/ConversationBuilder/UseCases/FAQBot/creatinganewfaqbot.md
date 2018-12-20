@@ -34,23 +34,24 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
 
 * In the left integration list, tap on the "FAQs" integration and verify the following:
 
-* The Integration Name: FAQs
+  * The Integration Name: FAQs
 
-* The Response Data Variable Name: FAQs
+  * The Response Data Variable Name: FAQs
 
-* The Method: GET
+  * The Method: GET
 
-* The URL: https://botbuilder2-dataservice.botcentralapi.com/knowledge-0.1/articles/phraseSearch
+  * The URL: https://botbuilder2-dataservice.botcentralapi.com/knowledge-0.1/articles/phraseSearch
 
 * **Request Parameters:**
 
-
-
 <table>
+<thead>
   <tr>
-    <td>Key</td>
-    <td>Value</td>
+    <th>Key</th>
+    <th>Value</th>
   </tr>
+</thead>
+<tbody>
   <tr>
     <td>source</td>
     <td>Paste in your KB source id</td>
@@ -67,24 +68,29 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
     <td>threshold</td>
     <td>good</td>
   </tr>
+</tbody>
 </table>
 
 
 * **Custom Data Fields:**
 
 <table>
+<thead>
   <tr>
-    <td>Key</td>
-    <td>Value</td>
+    <th>Key</th>
+    <th>Value</th>
+</thead>
+<tbody>
   </tr>
   <tr>
     <td>article</td>
     <td>{$.api_FAQs.successResult.success[i].summary}</td>
   </tr>
+</tbody>
 </table>
 
 
-* After you have reviewed, and tweaked, hit Save
+After you have reviewed, and tweaked, hit Save
 
 ### Testing Your Bot
 
