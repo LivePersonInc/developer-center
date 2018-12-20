@@ -22,7 +22,13 @@ Since the bot/automation asks the user if they prefer dog/cat/bird, you will use
 
 First, you will set up an integration.
 
-Name the API integration RandomAnimalImage. Set the GET url the `http://shibe.online/api/{$botContext.slot.animal}?count=1&urls=true&httpsUrls=true`. The user answer is accessed from the slot and placed in the URL.
+Name the API integration "RandomAnimalImage". Set the GET url the `http://shibe.online/api/{$botContext.slot.animal}?count=1&urls=true&httpsUrls=true`. The user answer is accessed from the slot and placed in the URL.
+
+In the custom data fields area, add:
+
+| key | value |
+| --- | --- |
+| imageURL | {$.api_RandomAnimalImage.data} |
 
 **Reference:**
 
@@ -37,7 +43,7 @@ Name the API integration RandomAnimalImage. Set the GET url the `http://shibe.on
 
 In the "ask a question" dialog, add a Bot Integration interaction after the last Bot Statement Text. Link the RandomAnimalImage integration in the interaction.
 
-Then add a Bot Statement Image. Add the following in the Image URL field of the interaction `{$botContext.api_RandomAnimalImage.Result}`.
+Then add a Bot Statement Image. Add the following in the Image URL field of the interaction `{$api_RandomAnimalImage.imageURL}`.
 
 The integration interaction will query the API, store the result in a variable, then the image will access to the result variable to display the random image.
 
