@@ -14,9 +14,7 @@ indicator: both
 
 After logging in to the Conversation Builder Platform, click on Conversation Builder to get started. Click on New Automation to create a new bot/automation.
 
-
 <!--<img src="img/ConvoBuilder/welcomeScreen.png" style="width:500px">
-
 
 <img src="img/ConvoBuilder/newAutomation.png" style="width:500px">-->
 

@@ -108,4 +108,6 @@ The assist tool automatically linked the city entity and assigned the user answe
 
 Add a new Bot Statement Text interaction and make the text say "I love {$botContext.slot.city}!".
 
+`{$botContext.slot.entityName}` is how you can access values in slots and use them in other ways.
+
 Click on the Messaging Client in the Settings Toolbar and test your bot/automation. Type "reset" to create a new session. Say "hello", followed by "ask me something". Respond with something like "I live in San Fransisco". The bot/automation should say "I love San Fransisco!"
