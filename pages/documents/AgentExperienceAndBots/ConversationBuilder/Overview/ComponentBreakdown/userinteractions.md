@@ -1,12 +1,12 @@
 ---
-pagename: User Interactions
+pagename: Interactions
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Overview
-permalink: conversation-builder-overview-user-interactions.html
+permalink: conversation-builder-overview-interactions.html
 indicator: both
 ---
 

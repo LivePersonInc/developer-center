@@ -138,7 +138,7 @@
       - pagename: Overview
         subpages:
           - subpagename: Component Breakdown
-          - subpagename: User Interactions
+          - subpagename: Interactions
           - subpagename: Conditions
           - subpagename: Assist
       - pagename: Intent Builder
@@ -146,6 +146,13 @@
           - subpagename: Overview
           - subpagename: Entities
       - pagename: Knowledge Base Overview
+      - pagename: Routing Bot Use Case
+        subpages:
+          - subpagename: Overview
+          - subpagename: Step 1 - Create a New Router Bot
+          - subpagename: Step 2 - Modifying the Template
+          - subpagename: Step 3 - Intents
+          - subpagename: Step 4 - Escalation
 
 
 - categoryname: Client Side Configuration
@@ -790,7 +797,7 @@
         - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
-    #    - pagename: Introduction to Quick Replies   
+    #    - pagename: Introduction to Quick Replies
 
 - categoryname: 'Security & Authentication'
   image: security-authentication
