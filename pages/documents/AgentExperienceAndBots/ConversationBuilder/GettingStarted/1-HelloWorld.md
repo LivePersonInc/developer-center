@@ -22,13 +22,13 @@ Set up a new bot/automation with the following settings:
 
 <img src="img/ConvoBuilder/createBot.png" style="width:600px">
 
-After creating the Hello World bot/automation, you will be brought into the Conversation Builder. A bot/automation consists of one or many dialogs. A dialog is a set of interactions (user input prompts, responses, and integrations which make up a conversation).
+After creating the Hello World bot/automation, you will be brought into the Conversation Builder. A bot/automation consists of one or many dialogs. A [dialog](conversation-builder-overview-component-breakdown.html#the-dialog-workspace) is a set of [interactions](conversation-builder-overview-interactions.html) (user input prompts, responses, and integrations which make up a conversation).
 
 When you first open the Hello World bot/automation, you will see two interactions in a Welcome dialog.
 
 <img src="img/ConvoBuilder/dialogMainScreen.png" style="width:700px">
 
-In the Interactions Toolbar on the lefthand side, you will see a User interaction, and many different types of bot/automation interactions.
+In the [Interactions Toolbar](conversation-builder-overview-component-breakdown.html#the-interactions-toolbar) on the lefthand side, you will see a User interaction, and many different types of bot/automation interactions.
 
 <!--<img src="img/ConvoBuilder/interactionsToolbar.png" style="width:300px">-->
 
@@ -36,11 +36,11 @@ Click on the first User interaction in your Dialog Workspace (center area) and r
 
 <img src="img/ConvoBuilder/helloRenames.png" style="width:400px">
 
-In the Settings Toolbar on the righthand side, click on the Messaging Client to test your bot/automation.
+In the [Settings Toolbar](conversation-builder-overview-component-breakdown.html#the-settings-toolbar) on the righthand side, click on the Messaging Client to test your bot/automation.
 
 <img src="img/ConvoBuilder/messagingClientIcon.png" style="width:400px">
 
-Type in "reset" to reset the bot/automation session. Then try to type in "hello" or "hi". Your bot/automation should respond with "Hello World!". It can recognize both "hello" and "hi" because it comes with a pre-set pattern match. We'll address how to edit and create pattern matching in the next step of this tutorial.
+Type in "reset" to reset the bot/automation session. Then try to type in "hello" or "hi". Your bot/automation should respond with "Hello World!". It can recognize both "hello" and "hi" because it comes with a pre-set [pattern match](conversation-builder-overview-conditions.html#pattern-matching). We'll address how to edit and create pattern matching in the next step of this tutorial.
 
 ### Goodbye Dialog
 
@@ -88,11 +88,9 @@ Click on the Messaging Client in the Settings Toolbar again to test out the new 
 
 <img src="img/ConvoBuilder/helloWorldFullTest.png" style="width:400px">
 
-This concludes your first bot/automation created with the Conversation Builder. Next, you will learn about Intents.
-
 ### Advanced Pattern Matching
 
-Patterns are exact and precise. Right now, the Welcome and Goodbye dialogs only match the exact words that are in the pattern fields. For example, say "hello, how are you?" in the Messaging Client test area. You will notice that the Welcome dialog does not work because it only matches "hello" exactly. 
+Patterns are exact and precise. Right now, the Welcome and Goodbye dialogs only match the exact words that are in the pattern fields. For example, say "hello, how are you?" in the Messaging Client test area. You will notice that the Welcome dialog does not work because it only matches "hello" exactly.
 
 #### Improved Goodbye Dialog
 
@@ -106,10 +104,12 @@ Save your pattern changes and test them out in the Messaging Client.
 
 #### Improved Welcome Dialog
 
-Move to the Welcome dialog and look at the Interaction Details. Notice that there are multiple built in pattern matches that are included by default. Add some asterisk symbols after "hi" and "hello", etc. 
+Move to the Welcome dialog and look at the Interaction Details. Notice that there are multiple built in pattern matches that are included by default. Add some asterisk symbols after "hi" and "hello", etc.
 
-For something more advanced, add a time of day greeting pattern. 
+For something more advanced, add a time of day greeting pattern.
 
 Enter `good (morning|afternoon|evening)*`. This pattern will match on "good morning", "good afternoon", or even "good evening, bot!".
 
 Save your pattern changes and test them out in the Messaging Client.
+
+<div class="important">This concludes your first bot/automation created with the Conversation Builder. Next, you will learn about Intents.</div>
