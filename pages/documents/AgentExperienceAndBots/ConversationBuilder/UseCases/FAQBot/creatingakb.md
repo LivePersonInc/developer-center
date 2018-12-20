@@ -89,7 +89,7 @@ What about thumbs-down? This should be used sparingly to differentiate between t
 
 ### Using Entities with your KB
 
-As you may recall from the Router Bot tutorial, entities are keywords that refer to a number of synonyms. For example the entity "sports" may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
+As you may recall from the Router Bot tutorial or from elsewhere in our documentation, entities are keywords that refer to a number of synonyms. For example the entity "sports" may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
 
 Previously, we had created a domain and an entity for some of our options (eg: billing). We can use this or you can feel free to create another entity. For my password/username article I will create an entity called "credentials". Note the addition of various spellings (or misspellings) of words. Entities can be very helpful for catching those.
 
