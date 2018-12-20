@@ -22,9 +22,7 @@ Entities are usually one or two words as they represent groups of simple objects
 
 ### Built In entities
 
-TODO
-
-The platform automatically detects the following entities:
+The platform automatically detects the entities listed below. Using the Assist tool, you can assign these default entities to User Interactions and have the bot/automation populate a Slot with the user's input to the question to which the entity was assigned.
 
 PERSON - Names of people, persons.
 ORGANIZATION - Names of institutions

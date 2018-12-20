@@ -12,19 +12,19 @@ indicator: both
 
 In the [Hello Conversation Builder](conversation-builder-getting-started-hello-conversation-builder.html) tutorial, you matched User input to dialogs using Patterns.
 
-Intents are more flexible and less exact than pattern matching. However, Intents can often be preferred because they leverage Natural Language Understanding and Entities. 
+[Intents](conversation-builder-intent-builder-overview.html) are more flexible and less exact than pattern matching. However, Intents should often be preferred because they leverage Natural Language Understanding and [Entities](conversation-builder-intent-builder-entities.html).
 
 In this tutorial, you will create a new dialog that asks the user which animal they like.
 
-The user will prompt the dialog with a phrase like "Ask me a question" and the bot/automation will reply with "Which animal do you like?".
+The user will prompt the dialog with a phrase like "Ask me a question" and the bot/automation will reply with "Which animal do you like?"
 
-In the example of "I like birds", the whole phrase is an Intent and "birds" is an Entity. From this, you may be able to determine that Entities are categories of nouns for which there can be many different options. For example, "bird" is an Entity of Animal, of which there can be other options like "dog", "cat", etc.
+In the example user answer of "I like birds", the whole phrase is an Intent and "birds" is an Entity. From this, you may be able to determine that Entities are categories of nouns for which there can be many different options. For example, "bird" is an Entity of Animal, of which there can be other options like "dog", "cat", etc.
 
 ### Create an Intent and Entity
 
 We will now look at how to create a basic Intent and Entity.
 
-The Intent Builder is a workspace for managing these Intents. Upon creation of Intents, these can be linked to your bot/automation Dialogs in the Conversation Builder.
+The [Intent Builder](conversation-builder-intent-builder-overview.html) is a workspace for creating and managing these Intents. Upon creation of Intents, these can be linked to your bot/automation Dialogs in the Conversation Builder via different [Domains](conversation-builder-overview-assist.html#adding-a-domain).
 
 To get to the Intent Builder, click on the Home button in the Conversation Builder Settings Toolbar. Then click either the top-leftmost logo or the dropdown and go to Intent Builder.
 
@@ -34,7 +34,7 @@ To get to the Intent Builder, click on the Home button in the Conversation Build
 
 Create a new Intent Builder domain called "Hello World". This domain will hold all of your Intents and Entities for these tutorials.
 
-Create a new Intent. Name it "ask me". Enter the following Training Phrases manually:
+Create a new Intent. Name it `ask me`. Enter the following Training Phrases manually:
 
 * ask me
 
@@ -50,9 +50,9 @@ Create a new Intent. Name it "ask me". Enter the following Training Phrases manu
 
     * ask something
 
-Now create a new Entity for animal with the following options:
+Now create a new Entity for `animal` with the following options:
 
-* city
+* animal
 
     * cat
 
@@ -70,7 +70,7 @@ The next step is to create a new dialog that leverages this new intent and entit
 
 Go back to the Conversation Builder by, again, using the top-leftmost part of the screen. Click on your previous Hello World bot/automation.
 
-On the bottom of the Dialog Workspace, you can see your three previous Dialogs (Welcome, Goodbye, What?).
+[On the bottom of the Dialog Workspace](conversation-builder-overview-component-breakdown.html#the-dialog-workspace), you can see your three previous Dialogs (Welcome, Goodbye, What?) in the Dialog List.
 
 Click the **+** to create a new standard dialog called "Ask a Question".
 
@@ -84,7 +84,7 @@ If the interactions are out of order, you can rearrange them by hovering over th
 
 The next step is to link the intent and entity to the interactions.
 
-**Note:** if the Assist tool is not already open in the Settings Toolbar, open it by clicking on the Assist icon in the Settings Toolbar.
+<div class="important">Linking intents and entities is most easily done by using the <a href="conversation-builder-overview-assist.html">Assist tool</a>. If the Assist tool is not already open in the Settings Toolbar, open it by clicking on the Assist icon in the Settings Toolbar.</div>
 
 <img src="img/ConvoBuilder/assistIcon.png" style="width:70px">
 
@@ -92,15 +92,15 @@ Link your Hello World intent domain via the prompt from the Assist tool.
 
 <img src="img/ConvoBuilder/domainLinked.png" style="width:400px">
 
-Once the domain is linked, the Assist tool will know to recommend related intents and entities to interactions within this dialog.
+Once the domain is linked, the Assist tool will know to recommend related intents and entities to interactions within this dialog by using our NLU engine.
 
-Click on the User Says interaction and you will see the Assist tool finds a good match with the "ask me" intent. Link the intent to the User Says interaction via the Assist tool.
+Click on the User Says interaction and you will see the Assist tool finds a good match with the `ask me` intent. Link the intent to the User Says interaction via the Assist tool.
 
-Now click on the Bot Question Text interaction. Use the Assist tool to link the "animal" entity to the question.
+Now click on the Bot Question Text interaction. Use the Assist tool to link the `animal` entity to the question.
 
 <img src="img/ConvoBuilder/intentAdded.png" style="width:500px">
 
-The assist tool automatically assigned the user answer to be stored in a Slot when you linked the animal entity.
+The assist tool automatically assigned the user answer to be stored in a [Slot](conversation-builder-overview-conditions.html#slot) when you linked the `animal` entity.
 
 Add a new Bot Statement Text interaction and make the text say "You answered: {$botContext.slot.animal}!".
 
