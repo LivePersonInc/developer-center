@@ -153,6 +153,11 @@
           - subpagename: Step 2 - Modifying the Template
           - subpagename: Step 3 - Intents
           - subpagename: Step 4 - Escalation
+      - pagename: FAQ Bot Use Case
+        subpages:
+          - subpagename: Overview
+          - subpagename: Creating a New Knowledge Base
+          - subpagename: Creating a New FAQ Bot
 
 
 - categoryname: Client Side Configuration
