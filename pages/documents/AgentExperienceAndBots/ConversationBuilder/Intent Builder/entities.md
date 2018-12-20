@@ -19,3 +19,18 @@ Therefore, when you're creating training phrase for an intent, instead of typing
 Entities can be used both in the context of intents as well as in the Knowledge Base. Just like with training phrases for intents, entities can be used in training phrases for Knowledge Base articles.
 
 Entities are usually one or two words as they represent groups of simple objects.
+
+### Built In entities
+
+TODO
+
+The platform automatically detects the following entities:
+
+PERSON - Names of people, persons.
+ORGANIZATION - Names of institutions
+NUMBER - numbers in a sentence (pure number)
+MONEY -  Numbers with currency ($2000)
+DURATION - time periods
+SET - Group  (example month, week)
+ORDINAL - it is a number used in the context of order. 15th, 10th etc are examples
+DATE - date related, Today, Tomorrow  or explicit dates such as 03/01/2017
