@@ -68,6 +68,12 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 * Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
+`{$botContext.slot.entityName}` is how you can access values in slots and use them in other ways. For example, to have the bot/automation respond with a user's previously stored answer with the assigned entity `animal`, you'd set up a text interaction like so:
+
+"You answered: {$botContext.slot.animal}!"
+
+If your bot/automation asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The bot/automation would then respond with "You answered: dogs!" populating the code above with the user's reply.
+
 #### Change Response
 
 Below the condition configuration box, you will find three check boxes. These control three different responses to the interaction you can use when using conditions:
@@ -80,4 +86,4 @@ Below the condition configuration box, you will find three check boxes. These co
 
 #### Code
 
-TODO
+Coming soon!
