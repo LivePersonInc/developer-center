@@ -135,6 +135,7 @@
         subpages:
           - subpagename: Hello Conversation Builder
           - subpagename: Building Your First Intent
+          - subpagename: Connect an Integration
       - pagename: Overview
         subpages:
           - subpagename: Component Breakdown
