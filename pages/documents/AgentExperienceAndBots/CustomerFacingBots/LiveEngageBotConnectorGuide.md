@@ -1,5 +1,5 @@
 ---
-pagename: Integrating Bots with LivePerson
+pagename: Deploying Bots to LivePerson
 redirect_from:
 sitesection: Solutions
 categoryname: "Agent Experience & Bot"
@@ -26,7 +26,7 @@ This guide helps you with steps required to deploy bots developed via such third
 
 This document covers the following different scenarios with regards to deploying bots in LiveEngage:
 
-1. IBM Watson (Watson Conversation)
+1. IBM Watson (Watson Assistant)
 
 2. Google Dialog Flow 1.0 (support for more recent versions coming soon)
 
@@ -282,7 +282,7 @@ Customers can always write their own custom Bot connector using our Messaging Ag
 
   * LivePerson GitHub [Sample App](https://github.com/LivePersonInc/chat-js-sdk-sample-app)
 
-{:start"2"}
+{:start="2"}
 2. Messaging Bots    
 
 **Features**: create a Conversational Bot, Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.

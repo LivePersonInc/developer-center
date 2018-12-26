@@ -121,7 +121,6 @@
       - pagename: Prerequisites
       - pagename: Getting Started
       - pagename: Considerations
-      - pagename: Limitations
       - pagename: Deploying Bots on Live Chat
       - pagename: Deploying Bots on Messaging
   - documentname: Messaging Agent SDK
@@ -130,6 +129,36 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Conversation Builder
+    pages:
+      - pagename: Getting Started
+        subpages:
+          - subpagename: Hello Conversation Builder
+          - subpagename: Building Your First Intent
+          - subpagename: Connect an Integration
+      - pagename: Overview
+        subpages:
+          - subpagename: Component Breakdown
+          - subpagename: Interactions
+          - subpagename: Conditions
+          - subpagename: Assist
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
+          - subpagename: Entities
+      - pagename: Knowledge Base Overview
+      - pagename: Routing Bot Use Case
+        subpages:
+          - subpagename: Overview
+          - subpagename: Step 1 - Create a New Router Bot
+          - subpagename: Step 2 - Modifying the Template
+          - subpagename: Step 3 - Intents
+          - subpagename: Step 4 - Escalation
+      - pagename: FAQ Bot Use Case
+        subpages:
+          - subpagename: Overview
+          - subpagename: Creating a New Knowledge Base
+          - subpagename: Creating a New FAQ Bot
 
 
 - categoryname: Client Side Configuration
@@ -561,7 +590,7 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Quick Start - Manual
+    - pagename: Quick Start - Manual Installation
     - pagename: Configuration
       subpages:
       - subpagename: Initialization
@@ -736,59 +765,45 @@
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
-    - documentname: Structured Content
-      pages:
-        - pagename: Introduction to Structured Content
-        - pagename: Mobile SDK and Web Templates
-          subpages:
-            - subpagename: Introduction
-            - subpagename: Card Template
-            - subpagename: Carousel Template
-            - subpagename: Best Practices
-            - subpagename: Complex Layout
-            - subpagename: Limitations
-            - subpagename: Structured Content Rendering Tool
-        - pagename: Apple Business Chat Templates
-          subpages:
-            - subpagename: Introduction
-            - subpagename: List Picker Template
-            - subpagename: Time Picker Template
-            - subpagename: Guidelines and Limitations
-        - pagename: Facebook Messenger Templates
-          subpages:
-            - subpagename: Introduction
-            - subpagename: Generic Template
-            - subpagename: Button Template
-            - subpagename: List Template
-            - subpagename: Carousel Template
-            - subpagename: Best Practices
-            - subpagename: Limitations
-        - pagename: RCS Business Messaging Templates
-          subpages:
-            - subpagename: Introduction
-            - subpagename: Card Template
-            - subpagename: Carousel Template
-            - subpagename: Limitations
-    - documentname: Quick Replies
-      pages:
-        - pagename: Introduction to Quick Replies
-        - pagename: Mobile SDK & Web Template
-        - pagename: Facebook Messenger Template
-        - pagename: RCS Business Messaging Template
-    # - documentname: Payment
-    #   pages:
-    #     - pagename: Apple Business Chat - Apple Pay
-    #     - pagename: Google RCS Business Messaging Template
-    - documentname: File Sharing
+        - pagename: Rich Messaging Channel Capabilities
+    - documentname: Mobile SDK and Web Templates
       pages:
         - pagename: Introduction
-        - pagename: Enable File Sharing
-        - pagename: Create a Conversation
-        - pagename: Request Upload URL
-        - pagename: Upload File to Storage
-        - pagename: Publish Message
-        - pagename: Request Download URL
-        - pagename: Download File From Storage
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Best Practices
+        - pagename: Complex Layout
+        - pagename: Limitations
+        - pagename: Structured Content Rendering Tool
+    - documentname: Apple Business Chat Templates
+      pages:
+        - pagename: Introduction
+        - pagename: List Picker Template
+        - pagename: Time Picker Template
+        - pagename: Apple Pay Template
+        - pagename: Guidelines and Limitations
+    - documentname: Facebook Messenger Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Generic Template
+        - pagename: Button Template
+        - pagename: List Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Best Practices
+        - pagename: Limitations
+    - documentname: Google RCS Business Messaging Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Google Pay Template
+        - pagename: Limitations
+    #- documentname: Quick Replies
+    #  pages:
+    #    - pagename: Introduction to Quick Replies
 
 - categoryname: 'Security & Authentication'
   image: security-authentication
@@ -915,12 +930,6 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: LiveEngage MMS Viewer
-      pages:
-        - pagename: Overview
-        - pagename: Technical Description
-        - pagename: Deployment Steps
-        - pagename: Additional Options
     - documentname: MCS Toolkit
       pages:
         - pagename: Overview

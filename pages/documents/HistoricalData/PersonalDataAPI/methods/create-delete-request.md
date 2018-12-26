@@ -33,6 +33,7 @@ By ticketId - deletion of personal data that is related to a specific consumer's
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|  Contains oAuth string to allow request authentication and authorization.  |
+ |content-type| application/json|
 
  **Path Parameters**
 

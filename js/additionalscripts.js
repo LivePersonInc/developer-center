@@ -211,7 +211,7 @@ $(window).on('popstate', function (e) {
 //a simple dropdown behavior for the anchorlinks box
 function menuDrop() {
 	//begin by setting the list's data to reflect that it's closed
-	$(".anchorlist > a").data("expanded", "false");
+	$(".anchorlist > a").data("expanded", "true");
 	//when a click on the list occurs
 	$(".anchorlist").on("click", ".anchormain", function (event) {
 		event.preventDefault();
