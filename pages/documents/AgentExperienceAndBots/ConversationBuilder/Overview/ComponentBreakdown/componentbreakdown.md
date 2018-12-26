@@ -48,6 +48,6 @@ Using the Interactions Toolbar is simple; simply select the interaction you'd li
 
 ### The Settings Toolbar
 
-The Settings Toolbar contains various menus and panels which allow you to configure your bot/automation further. It also includes the **Assist** tool, which actively "listens" to your dialogue as you build it and recommends intents, entities and more for your use, and the **Messaging Client**, which allows you to test your various dialogs.
+The Settings Toolbar contains various menus and panels which allow you to configure your bot/automation further. It also includes the **Assistant** tool, which actively "listens" to your dialogue as you build it and recommends intents, entities and more for your use, and the **Messaging Client**, which allows you to test your various dialogs.
 
 Once you have populated the Dialog View with interactions, you can select any interaction and click on the Interaction Details icon (it will be selected by default). Inside this panel, you can configure further actions for the bot/automation dependent on the same methods we described above such as pattern matching, intents, and so on. You can achieve this by selecting User Response, configuring the conditions the bot/automation will look for and the resulting action (like sending a specific interaction, ending the dialog, and so on).

@@ -44,13 +44,11 @@ Type in "reset" to reset the bot/automation session. Then try to type in "hello"
 
 ### Goodbye Dialog
 
-There is already a Welcome dialog. To create a "Goodbye" dialog, click the **+** on the bottom of the Dialog View.
+There is already a Welcome dialog. To create a "Goodbye" dialog, click the **+** on the bottom of the Dialog View and name the new dialog "Goodbye".
 
 <img src="img/ConvoBuilder/createNewDialog.png" style="width:500px">
 
-<img src="img/ConvoBuilder/nameYourDialog.png" style="width:300px">
-
-From the Interaction Toolbar on the left, select the User Says interaction. Name this "Goodbye".
+From the Interaction Toolbar on the left, select the User Says interaction. Replace the standard User input text with "Goodbye".
 
 <!--<img src="img/ConvoBuilder/userSaysGoodbyeInteraction.png" style="width:500px">-->
 
@@ -112,4 +110,4 @@ Enter `good (morning|afternoon|evening)*`. This pattern will match on "good morn
 
 Save your pattern changes and test them out in the Messaging Client.
 
-<div class="important">This concludes your first bot/automation created with the Conversation Builder. Next, you will learn about Intents.</div>
+<div class="important">This concludes your first bot/automation created with the Conversation Builder. Next, you will learn about <a href="conversation-builder-getting-started-building-your-first-intent.html">Intents</a>.</div>

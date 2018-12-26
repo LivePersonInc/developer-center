@@ -86,4 +86,4 @@ Below the condition configuration box, you will find three check boxes. These co
 
 #### Code
 
-Coming soon!
+Coming soon! This will enable you to write JavaScript code directly into your bot/automation, further defining and controlling the flow of the dialog with even more advanced configurations.

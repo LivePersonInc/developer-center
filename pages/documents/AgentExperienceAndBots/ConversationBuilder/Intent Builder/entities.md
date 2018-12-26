@@ -22,13 +22,20 @@ Entities are usually one or two words as they represent groups of simple objects
 
 ### Built In entities
 
-The platform automatically detects the entities listed below. Using the Assist tool, you can assign these default entities to User Interactions and have the bot/automation populate a Slot with the user's input to the question to which the entity was assigned.
+The platform automatically detects the entities listed below. Using the Assistant tool, you can assign these default entities to User Interactions and have the bot/automation populate a Slot with the user's input to the question to which the entity was assigned.
 
-PERSON - Names of people, persons.
-ORGANIZATION - Names of institutions
-NUMBER - numbers in a sentence (pure number)
-MONEY -  Numbers with currency ($2000)
-DURATION - time periods
-SET - Group  (example month, week)
-ORDINAL - it is a number used in the context of order. 15th, 10th etc are examples
-DATE - date related, Today, Tomorrow  or explicit dates such as 03/01/2017
+* PERSON - Names of people, persons.
+
+* ORGANIZATION - Names of institutions.
+
+* NUMBER - numbers in a sentence (pure number).
+
+* MONEY -  Numbers with currency ($2000).
+
+* DURATION - time periods.
+
+* SET - Group  (example month, week).
+
+* ORDINAL - it is a number used in the context of order. 15th, 10th etc are examples.
+
+* DATE - date related, Today, Tomorrow  or explicit dates such as 03/01/2017.
