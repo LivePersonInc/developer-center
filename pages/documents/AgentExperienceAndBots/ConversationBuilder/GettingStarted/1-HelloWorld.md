@@ -14,9 +14,9 @@ indicator: both
 
 After logging in to the Conversation Builder Platform, click on Conversation Builder to get started. Click on New Automation to create a new bot/automation.
 
-<!--<img src="img/ConvoBuilder/welcomeScreen.png" style="width:500px">
+<img src="img/ConvoBuilder/conversationbuilderintro.png" style="width:700px">
 
-<img src="img/ConvoBuilder/newAutomation.png" style="width:500px">-->
+<!--<img src="img/ConvoBuilder/newAutomation.png" style="width:500px">-->
 
 Set up a new bot/automation with the following settings:
 
@@ -28,11 +28,11 @@ When you first open the Hello World bot/automation, you will see two interaction
 
 <img src="img/ConvoBuilder/dialogMainScreen.png" style="width:700px">
 
-In the [Interactions Toolbar](conversation-builder-overview-component-breakdown.html#the-interactions-toolbar) on the lefthand side, you will see a User interaction, and many different types of bot/automation interactions.
+In the [Interactions Toolbar](conversation-builder-overview-component-breakdown.html#the-interactions-toolbar) on the lefthand side, you will see a [User Says interaction](conversation-builder-overview-interactions.html), and many different types of bot/automation interactions.
 
 <!--<img src="img/ConvoBuilder/interactionsToolbar.png" style="width:300px">-->
 
-Click on the first User interaction in your Dialog Workspace (center area) and rename it to say "Hello!" Click on the next bot/automation Statement Text interaction and rename that to say "Hello World!" in reply.
+Click on the first User Says interaction in your Dialog Workspace (center area) and provide a sample phrase that might trigger the dialog by typing in "Hello!" Click on the next bot/automation Statement Text interaction and fill that with "Hello World!" in reply.
 
 <img src="img/ConvoBuilder/helloRenames.png" style="width:400px">
 
