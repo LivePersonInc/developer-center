@@ -141,7 +141,7 @@
           - subpagename: Component Breakdown
           - subpagename: Interactions
           - subpagename: Conditions
-          - subpagename: Assist
+          - subpagename: Conversation Builder Assistant
       - pagename: Intent Builder
         subpages:
           - subpagename: Overview

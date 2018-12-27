@@ -1,5 +1,5 @@
 ---
-pagename: Conversation Builder Overview
+pagename: Conditions
 redirect_from:
 Keywords:
 sitesection: Documents
@@ -10,13 +10,13 @@ permalink: conversation-builder-overview-conditions.html
 indicator: both
 ---
 
-When adding a question interaction to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities can deliver a powerful flow control engine for the bot/automation.
+When adding a [question interaction](conversation-builder-overview-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the bot/automation.
 
 When you add a question interaction to the dialog, you can select it and choose the Interaction Details from the Settings Toolbar on the right hand side (the second icon on the toolbar). From there, click on "User Response" in the middle of the Interactions Details panel which opens. At the bottom of this menu, you'll find the "Next Step" dropdown.
 
 When a condition is met, the action defined under the Next Step dropdown menu will occur. The bot/automation can close the dialog, move on to the next interaction, perform an Integration call, and more based on how you configure the Next Step dropdown menu. Conditions can be set to trigger using the following:
 
-* Response intent - the bot/automation will trigger the Next Step action when a specific intent is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents so that they'll be available for conditions.
+* Response [intent](conversation-builder-intent-builder-overview.html) - the bot/automation will trigger the Next Step action when a specific intent is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents so that they'll be available for conditions.
 
 * Regular Expression - the bot/automation will trigger the Next Step action when user input matches the RegEx you define. All standard RegEx rules apply.
 
@@ -24,11 +24,11 @@ When a condition is met, the action defined under the Next Step dropdown menu wi
 
 * Exact Value - the bot/automation will trigger the Next Step action when the user input matches an exact value you define. This is useful for questions where you present the user a set or predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 
-<div class="important">You can add more than one condition to an interaction for more complex flow control. You can do so by clicking on the "+ Response Match & Actions" button below the condition box</div>
+<div class="important">You can add more than one condition to an interaction for more complex flow control. You can do so by clicking on the "+ Response Match & Actions" button below the condition box.</div>
 
 ### Pattern Matching
 
-Patterns are templates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g.: "I want a pair of (headphones&#124;head phones&#124;earbuds&#124;earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can include wildcards for looser matches, e.g.: "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
+Patterns are templates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g., "I want a pair of (headphones&#124;head phones&#124;earbuds&#124;earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can also include wildcards for looser matches, e.g., "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
 
 You can use wildcards and alternates together like this:
 
@@ -48,7 +48,7 @@ The basic operators available for use with pattern matching are:
 
 * Pipe, which denotes alternates.
 
-If you need more advanced operators, you can also use [Regular Expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching,
+If you need more advanced operators, you can also use [Regular Expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching.
 
 ### Slots
 
@@ -64,11 +64,11 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 * Dialog - the slot's data will only be stored for this specific dialog. Once this dialog ends (either by the user closing the conversation or the bot/automation moving on to a different dialog), the slot's data will be cleared.
 
-* Session - the slot's data will be saved for the entirety of the user's browser session. This is useful when using the data to query APIs and retrieve information which might be useful for multiple sessions.
+* Session - the slot's data will be saved for the entirety of the user's browser session. This is useful when using the data to query APIs and retrieve information which might be useful for multiple dialogs.
 
 * Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
-`{$botContext.slot.entityName}` is how you can access values in slots and use them in other ways. For example, to have the bot/automation respond with a user's previously stored answer with the assigned entity `animal`, you'd set up a text interaction like so:
+`{$botContext.slot.entityName}` is how you can access values in slots and use them in other ways. For example, to have the bot/automation respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
 
 "You answered: {$botContext.slot.animal}!"
 
@@ -78,7 +78,7 @@ If your bot/automation asked the user "which animal do you like?" and the user a
 
 Below the condition configuration box, you will find three check boxes. These control three different responses to the interaction you can use when using conditions:
 
-* Change response. The bot/automation can change a slot's data if the user requests to. Common phrases like "what about sandals" or "show me sandals" will cause the bot/automation to clear the data currently in the slot, look for an entity in the user's change request, repopulate the slot with the new information, and perform the Next Step configuration again. When this occurs, you can have the bot/automation send a message to the user letting them know it is doing so, for example "Let me look for your new selection".
+* Change response. The bot/automation can change a slot's data if the user requests to. Common phrases like "what about sandals" or "show me sandals" will cause the bot/automation to clear the data currently in the slot, look for an entity in the user's change request, repopulate the slot with the new information, and perform the configured Next Step again. When this occurs, you can have the bot/automation send a message to the user letting them know it is doing so, for example "Let me look for your new selection".
 
 * Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The bot will then clear the data in the slot and send the cancelled message to the user, as defined by you.
 

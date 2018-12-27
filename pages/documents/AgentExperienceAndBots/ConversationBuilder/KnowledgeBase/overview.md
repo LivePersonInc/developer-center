@@ -14,19 +14,19 @@ The Conversation Builder Platform's Knowledge Base tool allows you to export an 
 
 ### Adding a Knowledge Base
 
-The first step to using Knowledge Center tool is to add a knowledge center entity by clicking the **ADD KNOWLEDGE CENTER** panel on the left side of your screen, once you've selected Knowledge Center from the main Conversation Builder Platform page. You will then be prompted to choose a name for the Knowledge Center and to select whether you'd like to import a pre-configured knowledge center from a CSV file or a Google Spreadsheet. **Importing a knowledge center from a file is not mandatory. Simply click "next" without selecting a file if you'd like to start with a blank one**.
+The first step to using the Knowledge Center tool is to add a knowledge center entity by clicking the **ADD KNOWLEDGE CENTER** panel on the left side of your screen, once you've selected Knowledge Center from the main Conversation Builder Platform page. You will then be prompted to choose a name for the Knowledge Center and to select whether you'd like to import a pre-configured knowledge center from a CSV file or a Google Spreadsheet. **Importing a knowledge center from a file is not mandatory. Simply click "next" without selecting a file if you'd like to start with a blank one**.
 
-Once you've created a Knowledge Base, select it to enter it's search view. In this default view, you can search the title, intent qualifiers and content of your different articles. On the right hand side, you'll find a Setting Toolbar which includes the following panels:
+Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. On the right hand side, you'll find a Setting Toolbar which includes the following panels:
 
-* The Bot/Automation Test panel. This panel allows you to select a bot/automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](placeholder.com) for more information on how to do that) and feed it test user input's to see if it matches content as you'd expect.
+* The Bot/Automation Test panel. This panel allows you to select a bot/automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](placeholder.com) for more information on how to do that) and feed it test user input to see if it matches content as you'd expect.
 
 * The Tags panel. This panel displays all tags which you've previously used, so you can review all of them in one place and reuse them in any future articles.
 
-* Categories. TODO
+* Categories. This panel displays all categories which you've previously used, so you can review all of them in one place and reuse them in any future articles.
 
-* The Test User Input panel. This panel is similar to the first panel but is divorced from a specific bot/automation. You can use it to feed user input directly into your Knowledge Base and test your content matching with the context of an actual pre-created dialog.
+* The Test User Input panel. This panel is similar to the first panel but is divorced from a specific bot/automation. You can use it to feed user input directly into your Knowledge Base and test your content matching without the context of an actual pre-created dialog.
 
-* The Intents Data panel. This panel shows you more historical information on which intents were and weren't match to your Knowledge Base.
+* The Intents Data panel. This panel shows you more historical information on which intents were and weren't matched to your Knowledge Base articles by bots/automations.
 
 * The Settings panel. Includes various Knowledge Base settings, like its name.
 
@@ -38,11 +38,11 @@ To increase the quality of your content matches, please take a moment to review 
 
 * The key attributes which the NLU uses for matching are the article Title, Intent Qualifiers, Summary, Tags and any Positive or Negative learnings an article may have acquired.
 
-* The Title and the Intent Qualifiers are [intents](conversation-builder-overview-entities-overview.html) and should be full sentences eg: “How do I reset my password?”
+* The Title and the Intent Qualifiers are [intents](conversation-builder-overview-entities-overview.html) and should be full sentences e.g., “How do I reset my password?”
 
 * As a rule you should have at *LEAST* 5 to 8 Intent Qualifiers per article which provide different ways people ask for this article.
 
-* Tags are used to highlight the key noun in the intent and title. For instance “How do I reset my password?” would have a tag of “password” and perhaps “reset”.
+* Tags are used to highlight the key nouns in the intent and title. For instance “How do I reset my password?” would have a tag of “password” and perhaps “reset”.
 
 * When you add training intents to an article, they should be relatively generic. If they are too specific the likelihood they will match another user’s utterance is slim. Since users can phrase their questions in many ways, we need to make that our intents are broad, to allow the NLU a chance to match as many possible versions of the sentence as possible.
 
@@ -50,13 +50,13 @@ To increase the quality of your content matches, please take a moment to review 
 
 ### Adding Your First Article
 
-Now, with these best practices in mind, tap on the Add New button at the top right corner to add your first article. Give you article a title that is a complete sentence and try to provide at least 5 intent qualifiers which our NLU engine will use to match the article to user input.
+Now, with these best practices in mind, tap on the Add New button at the top right corner to add your first article. Give your article a title that is a complete sentence and try to provide at least 5 intent qualifiers which our NLU engine will use to match the article to user input.
 
-The next step is to enter a brief message to be sent to the user in the summary field. You can include web links in the summary though depending on the channel they may not display correctly. For SMS/Messaging, you may need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text other these channels.
+The next step is to enter a brief message to be sent to the user in the summary field. You can include web links in the summary though depending on the channel they may not display correctly. For SMS/Messaging, you may need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
 
 <div class="important">The detail field can be used to include longer messages to the user but for messaging, it is recommended to keep your responses as brief as possible.</div>
 
-Next, add some tags that highlight the key noun in your intent qualifiers and title. As mentioned above, these tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents which you created.
+Next, add some tags that highlight the key nouns in your intent qualifiers and title. As mentioned above, these tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents which you created.
 
 Your finished article should look something like this:
 
@@ -74,19 +74,33 @@ Before we add more articles, let’s test our Knowledge Base and see how our NLU
 
 Even though this utterance was not exactly the same as what was added, it still matched the article with a VERY GOOD confidence.
 
-If we try something like “my password is not letting me into my account” this is different enough that the NLU engine will return as FAIR PLUS. Generally, we set the threshold to GOOD so this match not be shown to a user. However, we can easily “train” the article by tapping on the thumbs-up icon right beneath the result. This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
+If we try a different user input, like “my password is not letting me into my account”, this is different enough that the NLU engine will return as FAIR PLUS. Generally, we set the threshold to GOOD so in this new example, the article won't be shown to a user. However, we can easily “train” the article to respond to this input regardless, by tapping on the thumbs-up icon right beneath the result. This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
 
-<div class="important">Keep in mind that when you are training your articles, it is <em>very</em> easy to use the thumbs up button. So easy, that you might <em>over</em> train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one.</div>
+<div class="important">Keep in mind that when you are training your articles, it is <em>very</em> easy to use the thumbs up button. So easy, that you might <em>over</em> train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one and use the training feature sparingly.</div>
 
-What about thumbs-down? This should be used sparingly to differentiate between two articles that may have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match.
+What about thumbs-down? This should be used sparingly to differentiate between two articles that may have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
 
 ### Using Entities With Your Knowledge Base
 
-[Entities](conversation-builder-overview-entities-overview.html) are keywords that refer to a number of synonyms. For example the entity “sports” may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
+[Entities](conversation-builder-overview-entities-overview.html) are keywords that refer to a number of synonyms. For example the entity `sports` may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
 
-Leveraging entities within your Knowledge Base provides the same benefits that doing so affords you elsewhere: they are great ways to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
+Leveraging entities within your Knowledge Base provides the same benefits that doing so affords you elsewhere: they are a great way to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
 
-Tp use entities within your Knowledge Base, you'll need to connect your domain by going to the Knowledge Base Settings (the bottom icon in the Settings Toolbar), clicking on "KB Settings", then on More Settings, and selecting your domain from the Entity drop down list, Lastly, hit Update.
+To use entities within your Knowledge Base, you'll need to connect your domain by going to the Knowledge Base Settings (the bottom icon in the Settings Toolbar), clicking on "KB Settings", then on More Settings, and selecting your domain from the Entity drop down list. Lastly, hit Update.
+
+Let's assume that we have pre-created an entity called `credentials`. It contains the following values:
+
+* log in
+
+* login
+
+* pass word
+
+* password
+
+* user name
+
+* username
 
 Now in our article, we are going to replace any word where we want our credentials entity to be substituted in, INCLUDING the tags. Like this:
 

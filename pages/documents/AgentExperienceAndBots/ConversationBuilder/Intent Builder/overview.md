@@ -14,7 +14,7 @@ The Conversation Builder Platform's Intent Builder allows you to build multiple 
 
 An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to bot/automation dialogs that do various shipping tasks.
 
-This directs your bot/automation to be more flexible and respond to a wider variety of user input; instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured in response to this intent. Therefore, once you configure your intents with robust **Training Phrases**, expressions like "I have a question about billing", "Looking to check my account" yield the same intent and the same response from the bot/automation.
+This directs your bot/automation to be more flexible and respond to a wider variety of user input; instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured to respond to this intent. Therefore, once you configure your intents with robust **Training Phrases**, expressions like "I have a question about billing", "Looking to check my account" or "What's my billing status?" yield the same intent and, thus, the same response from the bot/automation.
 
 ### Adding a Domain
 
@@ -34,15 +34,15 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 ### What is an Intent?
 
-Instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured in response to this intent. Intents are great for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match for your defined expression, it might "miss" different synonyms, phrasings, formats, and so on.
+Instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot/automation will use our NLU engine to look for the intent specified and trigger the interaction you configured to respond to this intent. Intents are great for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match for your defined expression, it might "miss" different synonyms, phrasings, formats, and so on.
 
-Intents match an entire sentence against a set of training sentences or KB articles and the results are scored based on level of confidence (VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR). From this sentence, the NLU engine derives an intent to which the bot/automation responds.
+Intents match an entire sentence against a set of training sentences or KB articles and the results are scored based on level of confidence (VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR). From this sentence, the NLU engine derives an intent to which the bot/automation responds. For example, if you configured your bot/automation to respond to a "billing" intent, the NLU engine doesn't just look for the word "billing"; it analyzes any sentence the user might input and tries to understand if the "billing" intent is present. If the intent is present, the NLU "tells" the bot/automation that it is and the relevant dialog triggers.
 
 ### Adding an Intent
 
 The default panel of the Domain View is the Add Intent panel. It will be the panel opened by default when you enter the Domain View. To add an intent, first use the topmost input area to enter its name.
 
-<div class="important">Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot/automation runs efficienty and smoothly</div>
+<div class="important">Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot/automation runs efficiently and smoothly.</div>
 
 Once you've selected a name for your Intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click on the blue **+** sign to the right of the input area.
 

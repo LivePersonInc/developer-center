@@ -10,13 +10,13 @@ permalink: conversation-builder-getting-started-connect-an-integration.html
 indicator: both
 ---
 
-In the previous tutorial, you used an intent to match user input and an entity to match a user answer to a question. The user answer entity was stored in a Slot. The bot/automation then accessed the value in the Slot and repeated the user's answer back to them. 
+In the [previous tutorial](conversation-builder-getting-started-building-your-first-intent.html), you used an [intent](conversation-builder-intent-builder-overview.html) to match user input and an [entity](conversation-builder-intent-builder-entities.html) to match a user answer to a question. The user answer entity was stored in a Slot. The bot/automation then accessed the value in the Slot and repeated the user's answer back to them. 
 
 Now, you will use the user answer to query an API and reply back with a relevant image.
 
 ### Creating an Integration
 
-Now that you have stored the user answer in a Slot, we can use it in communicating with an API. 
+Now that you have stored the user answer in a Slot, we can use it in communicating with an API.
 
 Since the bot/automation asks the user if they prefer dog/cat/bird, you will use the https://shibe.online/ API to present an image for the user.
 
