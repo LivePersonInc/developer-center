@@ -773,7 +773,7 @@
         - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
-    #    - pagename: Introduction to Quick Replies   
+    #    - pagename: Introduction to Quick Replies
 
 - categoryname: 'Security & Authentication'
   image: security-authentication
@@ -905,6 +905,11 @@
         - pagename: Overview
         - pagename: Getting Started
         - pagename: Using API to Build the Toolkit
+    - documentname: Transporter
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Creating Report Tasks
     - documentname: SMS with LiveEngage
       pages:
         - pagename: Overview
