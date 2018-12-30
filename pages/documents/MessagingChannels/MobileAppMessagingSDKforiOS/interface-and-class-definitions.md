@@ -160,8 +160,8 @@ enum LPConversationCloseReason: Int {
 class LPCampaignInfo: NSObject {
     var campaignId: Int
     var engagementId: Int
-    var sessionId: String?
-    var visitorId: String?
+    var sessionId: String? // if 'nil' SDE will not be sent to Agent
+    var visitorId: String? // if 'nil' SDE will not be sent to Agent
     var contextId: String
 }
 ```
