@@ -14,3 +14,13 @@ In order to retrieve the Agent's public profile during a conversation (which is 
 ```sh
 curl https://$LP_ACCDNDOMAIN/api/account/$LP_ACCOUNT/configuration/le-users/users/$LP_AGENT_PID
 ```
+
+The Agent's public profile will look like this when retrieved:
+
+```JSON
+{"employeeId":"XXX",
+  "nickname":"ZZZ",
+  "fullName":"YYYY"
+}
+
+<div class="important"><code>employeeId</code> is determined within LiveEngage. Please note that this is an external facing parameter, retrievable with this API, and thus should not contain any sensitive information</div>
