@@ -225,6 +225,7 @@
       - pagename: API Reference
         subpages:
         - subpagename: Overview
+        - subpagename: Get Agent Public Profile
         - subpagename: Request Builder
         - subpagename: Response Builder
         - subpagename: Notification Builder
