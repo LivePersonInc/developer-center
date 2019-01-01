@@ -324,7 +324,7 @@
             - subpagename: Update LOB
             - subpagename: Delete LOBs
             - subpagename: Delete LOB
-        - pagenme: Appendix
+        - pagename: Appendix
     - documentname: Predefined Content API
       basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/canned-responses
       pages:

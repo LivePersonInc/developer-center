@@ -1201,6 +1201,32 @@ a.anchoritem {
   cursor: pointer;
 }
 
+.alldocumentscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160%;
+  flex-direction: column;
+}
+
+.alldocumentscategoryname {
+  margin-right: 50px;
+  width: 30%;
+}
+
+.alldocumentsdocumentname {
+  font-size: 15px;
+}
+
+.listheader {
+  cursor: pointer;
+}
+
+.alldocumentshr {
+  border-top: 1px solid #dddddd;
+  width: 80%;
+}
+
+
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){
