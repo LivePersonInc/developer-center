@@ -369,13 +369,7 @@ try {
 JSONArray engagementAttributes = null;
 try {
   // Try to Create JSON Array
-  jsonArray = new JSONArray("[\n" +
-    "[\"type\": \"purchase\", \"total\": 20.0],\n" +
-    "[\"type\": \"lead\",\n" +
-    "\"lead\": [\"topic\": \"luxury car test drive 2015\",\n" +
-    "\"value\": 22.22,\n" +
-    "\"leadId\": \"xyz123\"]]\n" +
-    "]");
+jsonArray = new JSONArray("[{"type": "purchase", "total": "20.0"},{"type": "lead","lead": {"topic": "luxury car test drive 2015","value": "22.22","leadId": "xyz123"}}]"");
 } catch (JSONException e) {
   // Log Error
   Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());
