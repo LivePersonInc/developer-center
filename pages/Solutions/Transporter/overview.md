@@ -9,8 +9,6 @@ indicator: Both
 
 The Transporter 2.0 enable brands and internal users alike to schedule raw and formatted data report exports from LiveEngage Data APIs - each report can be setup on a recurring frequency, including but not limited to weekly, daily, and hourly, and the report will be delivered to a destination of the users choice, including internal LiveEngage storage, Amazon S3, Google Cloud, or SFTP.
 
-<div class="important"> The Google Cloud and SFTP destinations will be made available later in the year.</div>
-
 ### Why Should I Use the Transporter?
 
 Many brands seek to regularly receive data from and integrate with our Data APIs, especially raw non-aggregated data such as messaging interactions or chat engagement history.  However, often these types of API integration projects can be costly, difficult and time consuming since the Data APIs retrieve large and varied amounts of information. In addition, security is paramount when making these API calls and developing encryption or working with our out of the box solutions can be challenging.
@@ -45,7 +43,7 @@ Transporter 2.0 solves this problem by providing the connection to the Data APIs
 
 * Google Cloud
 
-* SFTP (available later in 2018)
+* SFTP
 
 **Mandatory encryption to ensure the security of your data**:
 
