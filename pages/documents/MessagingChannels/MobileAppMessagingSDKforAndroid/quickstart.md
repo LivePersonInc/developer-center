@@ -333,7 +333,7 @@ try {
 JSONArray engagementAttributes = null;
 try {
   // Try to Create JSON Array
-jsonArray = new JSONArray("[{\"type\": \"purchase\", \"total\": \"20.0\"},{\"type\": \"lead\",\"lead\": {\"topic\": \"luxury car test drive 2015\",\"value\": \"22.22\",\"leadId\": \"xyz123\"}}]");
+jsonArray = new JSONArray("[{\"type\": \"purchase\", \"total\": \"20.0\"},{\"type\": \"lead\",\"lead\": {\"topic\": \"luxury car test drive 2015\",\"value\": \"22.22\",\"leadId\": \"xyz123\"}}]")
 } catch (JSONException e) {
   // Log Error
   Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());
