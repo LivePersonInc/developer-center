@@ -754,6 +754,8 @@
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
         - pagename: Apple Auth Template
+        - pagename: App Extensions Template
+        - pagename: Rich Links Template
         - pagename: Guidelines and Limitations
     - documentname: Facebook Messenger Templates
       pages:
