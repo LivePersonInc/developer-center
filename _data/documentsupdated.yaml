@@ -753,6 +753,7 @@
         - pagename: List Picker Template
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
+        - pagename: Apple Auth Template
         - pagename: Guidelines and Limitations
     - documentname: Facebook Messenger Templates
       pages:
