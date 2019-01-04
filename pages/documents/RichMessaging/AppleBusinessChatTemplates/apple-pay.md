@@ -37,6 +37,7 @@ You will use your Merchant ID in the `merchantIdentifier` properties of the Appl
 
 ### Sending an Apple Pay Request to a Consumer
 
+
 You will send a metadata template and a body template for the Apple Pay request to the consumer.
 
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information on how to send these.
