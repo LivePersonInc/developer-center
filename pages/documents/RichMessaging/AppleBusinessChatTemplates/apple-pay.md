@@ -37,11 +37,11 @@ You will use your Merchant ID in the `merchantIdentifier` properties of the Appl
 
 ### Sending an Apple Pay Request to a Consumer
 
-Similar to [Apple structured content templates](structured-content-apple-business-chat-templates-introduction.html), you will send a metadata template and a body template for the Apple Pay request to the consumer.
+You will send a metadata template and a body template for the Apple Pay request to the consumer.
 
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information on how to send these.
 
-Different from Apple structured content templates, the **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+The **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
 **Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on LiveEngage)**
 
