@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-ios-string-localization-string-localizat
 indicator: messaging
 ---
 
-TThe SDK contains language folders for each language supported. For a list of supported languages, see [LiveEngage System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf). Each folder contains LPLocalizable.strings file, where all strings are located for a specific language.
+The SDK contains language folders for each language supported. For a list of supported languages, see [LiveEngage System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf). Each folder contains LPLocalizable.strings file, where all strings are located for a specific language.
 
 The example below contains four language folders:
 

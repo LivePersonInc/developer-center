@@ -30,24 +30,24 @@ indicator:
 
 Our Messaging Agent SDK can be found at [this location](messaging-agent-sdk-overview.html).
 
-Based on the use cases identified for your bot, you can create a simple bot for specific tasks or operations, or a more complex bot that acts as a virtual agent. 
+Based on the use cases identified for your bot, you can create a simple bot for specific tasks or operations, or a more complex bot that acts as a virtual agent.
 
 #### Creating a simple bot
 
-A simple bot within LiveEngage is one that handles a simple task and does not have any backend integrations. 
+A simple bot within LiveEngage is one that handles a simple task and does not have any backend integrations.
 
-The following example and sample code demonstrate an 'automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message. 
+The following example and sample code demonstrate an 'automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message.
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) for sample code and instructions. 
+[Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) for sample code and instructions.
 ​
 
 #### Creating an advanced bot
 
-Utilize the methods provided by LivePerson’s Messaging Agent SDK to automate your bot agent activities. 
+Utilize the methods provided by LivePerson’s Messaging Agent SDK to automate your bot agent activities.
 
 The following example demonstrating running a bot using the major API calls.
 
-[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github. 
+[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github.
 
 You can also watch this demo video, which will guide you on how to run this example bot:
 
@@ -55,7 +55,7 @@ You can also watch this demo video, which will guide you on how to run this exam
 
 ### Step 3 - Create backup systems for your bot with Clusters (optional)
 
-For enterprise brands, take additional measure to ensure the scalability of your bot to handle large volumes through setting up bot clusters that enable: 
+For enterprise brands, take additional measure to ensure the scalability of your bot to handle large volumes through setting up bot clusters that enable:
 
 
 * Bot Resiliency - If one node crashes, one ​of the other ​clusters ​will reconnect the bot.
@@ -65,17 +65,17 @@ For enterprise brands, take additional measure to ensure the scalability of your
 
 This example demonstrates running a bot on a ​horizontal scalable cluster. It can be used for a few use cases:
 
-[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github. 
+[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github.
 ​
 You can also watch the demo video which will guide you through this example bot:
 [https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho)
 
-​As well as a code review video: 
+​As well as a code review video:
 [https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk)
 
 ### Step 4 - Assign your bot to engagements and manage bot escalations
 
-With LiveEngage your can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your Mobile App Messaging conversations. 
+With LiveEngage your can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your Mobile App Messaging conversations.
 
 Furthermore, you can decide within each entrypoint on different routing rules, for example you can route messages from your Facebook service page to your service bot skill, and messages from your Facebook store page to your sales bot (or decide on a mix routing between the human skill and the bot skill).
 
@@ -95,7 +95,7 @@ Once your bot is assigned to an engagement, you can begin to test the bot and se
 
 ### Step 6 - Monitor the performance of your bot
 
-The LivePerson report builder will have detailed data and analysis on the performance of your bot.  [add link to report builder document from sarah]
+The LivePerson report builder will have detailed data and analysis on the performance of your bot.
 
 Best practice - monitor the following statistics on your bot agents:
 

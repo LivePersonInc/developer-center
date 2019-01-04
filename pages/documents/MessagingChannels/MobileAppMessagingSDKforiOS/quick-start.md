@@ -21,14 +21,20 @@ This Quick Start will quickly get you up and running with a project powered by L
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
-#### Version 3.1.1 and above
+#### Version 3.3 and above 
 
-* XCode 9.3 or later
+* Xcode 10.0 or later
+* Swift 4.2 or later or Objective-C
+
+
+#### Version 3.1.1
+
+* Xcode 9.3 or later
 * Swift 4.1 or later, or Objective-C
 
 #### Version 3.1 and below
 
-* XCode 9.2 or lower
+* Xcode 9.2 or lower
 * Swift 4.0 or lower, or Objective-C
 
 
@@ -140,8 +146,8 @@ In Xcode info.plist of the project, add two new privacy keys and values:
 
 _**Note: Due to Apple policy, this step is mandatory even if the photo sharing feature is disabled in the SDK.**_
 
-5. Some XCode Project's Capabilities need to be switched on in order to support SDK specific features.
-In XCode, navigate to project's Targets settings and select the relevant target of your app, then navigate to 'Capabilities' tab.
+5. Some Xcode Project's Capabilities need to be switched on in order to support SDK specific features.
+In Xcode, navigate to project's Targets settings and select the relevant target of your app, then navigate to 'Capabilities' tab.
  * **Push Notifications**: SDK uses remote push notification to notify the user whenever a new message from remote user has been received. To use remote push notifications, switch on 'Push Notifications' toggle.  
  * **Structured Content**: map items require MapKit framework to show location in map. To use map items, switch on 'Maps' toggle.  
 

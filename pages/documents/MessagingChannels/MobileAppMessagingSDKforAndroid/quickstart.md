@@ -12,6 +12,8 @@ permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 
 ---
 
+<div class="important"> The Quick Start guide for the Android Mobile App Messaging SDK includes an automatic installation of the SDK via a Gradle file. If you'd rather install the SDK manually, please use <a href="mobile-app-messaging-sdk-for-android-quick-start-manual-installation.html">this guide</a> instead</div>
+
 ###  Prerequisites
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
@@ -70,7 +72,7 @@ dependencies {
   androidTestImplementation 'com.android.support.test:runner:1.0.1'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
   // LivePerson SDK
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+  implementation  'com.liveperson.android:lp_messaging_sdk:3.5.0'
 }
 ```
 
@@ -331,13 +333,7 @@ try {
 JSONArray engagementAttributes = null;
 try {
   // Try to Create JSON Array
-  jsonArray = new JSONArray("[\n" +
-    "[\"type\": \"purchase\", \"total\": 20.0],\n" +
-    "[\"type\": \"lead\",\n" +
-    "\"lead\": [\"topic\": \"luxury car test drive 2015\",\n" +
-    "\"value\": 22.22,\n" +
-    "\"leadId\": \"xyz123\"]]\n" +
-    "]");
+jsonArray = new JSONArray("[{\"type\": \"purchase\", \"total\": \"20.0\"},{\"type\": \"lead\",\"lead\": {\"topic\": \"luxury car test drive 2015\",\"value\": \"22.22\",\"leadId\": \"xyz123\"}}]")
 } catch (JSONException e) {
   // Log Error
   Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());

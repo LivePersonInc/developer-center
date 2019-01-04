@@ -22,35 +22,35 @@ Download the Sample App from the following [Github repository](https://github.co
 
 ### Unmonitored Flow
 
-###  Prerequisites for un-monitored flow
+####  Prerequisites for un-monitored flow
 
 - An existing LiveEngage site - [click here](https://register.liveperson.com/) to create a site.      
 - An existing API-based engagement window configured in LiveEngage.
-- An existing External engagement configured in LiveEngage, which refers to the above API-based engagement window. 
+- An existing External engagement configured in LiveEngage, which refers to the above API-based engagement window.
 - An available user (agent) who is logged into LiveEngage.
 
 *Note: Please contact your LivePerson representative in order to create your API-based engagement window and External engagement.*
 
-###  Launch your API-based Window in an Unmonitored Flow
+#### Launch your API-based Window in an Unmonitored Flow
 
 1. From the Sample App project, open the "index.html" file in the browser.
-2. Once open in the browser add the following query params `/index.html?site={siteId}&lptag=false`. 
+2. Once open in the browser add the following query params `/index.html?site={siteId}&lptag=false`.
 3. An engagement button should be displayed on this page.
 4. Click the chat button to start a chat.
 
 ### Monitored Flow
 
-###  Prerequisites for monitored flow
+#### Prerequisites for monitored flow
 
 - An existing LiveEngage site - [click here](https://register.liveperson.com/) to create a site.
 - An existing API-based engagement window configured in LiveEngage, with the context:`window` and methodName: `externalJsMethodName`. <br> *Note: Please contact your LivePerson representative in order to create your API-based engagement window.*
 - An existing Website engagement configured in LiveEngage, which refers to the above API-based engagement window.  <br> *Note: This is configured in the Engagement template gallery.*
 - An available user (agent) who is logged into LiveEngage.
 
-###  Launch your API-based Window in a Monitored Flow
+####  Launch your API-based Window in a Monitored Flow
 
 1. From the Sample App project, open the "index.html" file in the browser.
-2. Once open in the browser add the following query params `/index.html?site={siteId}&lptag=true`. 
+2. Once open in the browser add the following query params `/index.html?site={siteId}&lptag=true`.
 3. An engagement button should be displayed on this page.
 4. Click the chat button to start a chat.
 

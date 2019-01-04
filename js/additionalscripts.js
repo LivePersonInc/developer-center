@@ -12,6 +12,7 @@ $(document).ready(function () {
 	searchFunction();
 	capabilitiesSearch();
 	searchHighlight();
+	allArticlesClick()
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -54,7 +55,7 @@ function navigateContent(url) {
 				url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1];
 				navigateContent(url);
 			} else {
-				//if we're not being redirected, grab the various part of the target page
+				//if we're not being redirected, grab the various parts of the target page
 				var $newData = $(content);
 				var $content = $('#defaultcontent');
 				var $titlecontainer = $('.documenttitle');
@@ -63,7 +64,7 @@ function navigateContent(url) {
 				$breadcrumbs.html($newData.find('.breadcrumbs').html());
 				$titlecontainer.html($newData.find('.documenttitle').html());
 				$content.html($newData.find('#defaultcontent').html());
-				//hide/display title if on welcome page or not
+				//hide/display breadcrumbs if on welcome page or not
 				var $title = $('.h1').text();
 				if ($title.indexOf('Welcome') != -1) {
 					$('.breadcrumbs').addClass('breadhidden');
@@ -81,6 +82,7 @@ function navigateContent(url) {
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
+			allArticlesClick()
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -109,7 +111,7 @@ function navigateContent(url) {
 			};
 		})
 		.fail(function () {
-			url = "http://localhost:4000/404.html";
+			url = "http://developers.liveperson.com/404.html";
 			navigateContent(url);
 		});
 }
@@ -210,19 +212,19 @@ $(window).on('popstate', function (e) {
 
 //a simple dropdown behavior for the anchorlinks box
 function menuDrop() {
-	//begin by setting the list's data to reflect that it's closed
-	$(".anchorlist > a").data("expanded", "false");
+	//begin by setting the list's data to reflect that it's open
+	$(".anchorlist > a").data("expanded", "true");
 	//when a click on the list occurs
 	$(".anchorlist").on("click", ".anchormain", function (event) {
 		event.preventDefault();
 		//set data to true for toggle behavior
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
-			//if it has been clicked before, close it
+			//if it is open, close it
 			$(this).next().slideUp(400);
 			$(this).data("expanded", "false");
 		} else {
-			//if it hasn't been clicked before, open it
+			//if it is closed, open it
 			$(this).next().slideDown(400);
 			$(this).data("expanded", "true");
 		}
@@ -276,14 +278,16 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
 	//if this isn't the homepage
-	if (currentPageTitle == undefined){
+	if (currentPageTitle == "WELCOME"){
 		//make sure no other links are set to active
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
 		$(".folder > a").data("expanded", "false");
 		$('a').removeClass("active");
+		currentPage = currentPage.parent().addClass("active");
 	};
 	$('a').removeClass("activepage");
+	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
 	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
@@ -323,6 +327,20 @@ function sidebarCollapse(url) {
 	};
 	};
 };
+
+function allArticlesClick() {
+	$(".listheader").data("expanded", "true");
+	$(".alldocumentscontainer").on("click", ".listheader", function (){
+		var hasExpanded = $(this).data("expanded") == "true";
+		if (hasExpanded) {
+			$(this).children('.alldocumentspagelist').slideUp(400);
+			$(this).data("expanded", "false");
+		} else {
+			$(this).children('.alldocumentspagelist').slideDown(400);
+			$(this).data("expanded", "true");
+		}
+	});
+}
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
