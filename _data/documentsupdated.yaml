@@ -130,6 +130,12 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Bot Connectors
+    pages:
+      - pagename: Dialog Flow
+      - pagename: Dialog Flow Version 2
+      - pagename: Watson Assistant
+      - pagename: Lex
 
 
 - categoryname: Client Side Configuration
