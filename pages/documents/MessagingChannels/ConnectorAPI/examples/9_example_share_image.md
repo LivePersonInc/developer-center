@@ -1,5 +1,5 @@
 ---
-pagename: Share Image File
+pagename: File Sharing
 redirect_from:
   - share-image-example.html
 sitesection: Documents
@@ -8,7 +8,7 @@ documentname: Connector API
 subfoldername: Examples
 order: 68
 indicator: messaging
-permalink: connector-api-examples-share-image-file.html
+permalink: connector-api-examples-file-sharing.html
 
 ---
 

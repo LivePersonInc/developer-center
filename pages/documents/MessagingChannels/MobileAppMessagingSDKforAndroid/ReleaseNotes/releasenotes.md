@@ -13,6 +13,34 @@ indicator: messaging
 <br>
 <br>
 
+### Android Messaging SDK - Version 3.5
+
+### Overview
+
+Android Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+The SDK’s minimum API is 19 and the target API is 27.
+
+### Bugs
+
+#### Bug Fixes
+
+* When using unauthenticated messaging and setting the history flag to false, in case the conversation was resolved while the SDK was in the background, the conversation screen will be stuck and the consumer will not be able to start a new conversation.
+
+* SDK uses an old authentication token, even when the consumer is passed a new auth token.
+
+* User conversation system info (OS Type & Device) is not updated in LiveEngage when a consumer switches between IOS and Android.
+
+* Unauthenticated consumers passing campaign info cannot connect successfully.
+
+* Conversation close event has been added to be triggered when hideConversation() is called.
+
+* Accessibility - When Voiceover was turned on, opened Secure form can read hidden message.
+
+* Multiple "Missing current dialog" appear in the logs after a consumer clears history resulting a slow connection establishment.
+
 
 ### Android Messaging SDK - Version 3.4
 

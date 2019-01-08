@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start-Manual
+pagename: Quick Start - Manual Installation
 redirect_from:
   - android-quickstart-manual.html
 Keywords:
@@ -8,9 +8,11 @@ categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 
 order: 11
-permalink: mobile-app-messaging-sdk-for-android-quick-start-manual.html
+permalink: mobile-app-messaging-sdk-for-android-quick-start-manual-installation.html
 
 ---
+
+<div class="important"> The Quick Start guide for the Android Mobile App Messaging SDK (which be found <a href="mobile-app-messaging-sdk-for-android-quick-start.html">here</a>) includes an automatic installation of the SDK via a Gradle file. If you'd rather install the SDK manually, please use this guide instead</div>
 
 ###  Prerequisites
 
@@ -367,13 +369,7 @@ try {
 JSONArray engagementAttributes = null;
 try {
   // Try to Create JSON Array
-  jsonArray = new JSONArray("[\n" +
-    "[\"type\": \"purchase\", \"total\": 20.0],\n" +
-    "[\"type\": \"lead\",\n" +
-    "\"lead\": [\"topic\": \"luxury car test drive 2015\",\n" +
-    "\"value\": 22.22,\n" +
-    "\"leadId\": \"xyz123\"]]\n" +
-    "]");
+jsonArray = new JSONArray("[{\"type\": \"purchase\", \"total\": \"20.0\"},{\"type\": \"lead\",\"lead\": {\"topic\": \"luxury car test drive 2015\",\"value\": \"22.22\",\"leadId\": \"xyz123\"}}]");
 } catch (JSONException e) {
   // Log Error
   Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());

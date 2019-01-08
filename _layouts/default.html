@@ -44,7 +44,7 @@
     <div class="suggestbutton"><a href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}" target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
   </div>
   <hr class="pagehr" />
-  <div id="anchorlist" class="anchorlist folder">
+  <div id="anchorlist" class="anchorlist">
     <a class="anchormain" href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
     <ul></ul>
   </div>
@@ -67,7 +67,7 @@ const search = docsearch({
 apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
 indexName: 'liveperson',
 inputSelector: '.aa-input-search',
-debug: true,
+debug: false,
 algoliaOptions: {
   hitsPerPage: 50
 },
