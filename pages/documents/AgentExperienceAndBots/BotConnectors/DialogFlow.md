@@ -71,10 +71,13 @@ The following information should be provided to LivePerson.
  
 
 <table>
+  <thead>
   <tr>
-    <td>Item</td>
-    <td>Description</td>
+    <th>Item</th>
+    <th>Description</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>AccountID</td>
     <td>LiveEngage Account ID</td>
@@ -119,6 +122,7 @@ End time</td>
     <td>transferMessage</td>
     <td>Default transfer message</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -149,11 +153,14 @@ A Messaging interaction qualifies as "initiated" from a LiveEngage perspective o
 These docs cover where to configure the initial message on a given platform
 
 <table>
+  <thead>
   <tr>
-    <td>Platform</td>
-    <td>Docs</td>
-    <td>Attribute</td>
+    <th>Platform</th>
+    <th>Docs</th>
+    <th>Attribute</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>iOS</td>
     <td>https://developers.liveperson...</td>
@@ -164,6 +171,7 @@ These docs cover where to configure the initial message on a given platform
     <td>https://developers.liveperson...</td>
     <td>lp_first_message</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -181,27 +189,22 @@ The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/
 
 **Sample Syntax : Dialogflow Request Object**
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "contexts":[] ,
     "lang": "en",
     "query":"user-query-goes -here”,
     "sessionId": "12355",
     "timezone": "America/New_York"   
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 2.1 DialogFlow Response JSON with action</td>
-  </tr>
-</table>
+}
+```
+Figure 2.1 DialogFlow Response JSON with action
 
 
 **Sample Dialogflow Error Response**** **
 
-<table>
-  <tr>
-    <td>{
+```json
+{
      "id": "df6573be-2c70-4f63-8fdd-93f56af0b4b4",
     "timestamp": "2018-09-06T05:20:56.224Z",
     "lang": "en",
@@ -210,12 +213,9 @@ The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/
         "errorType": "bad_request",
         "errorDetails": "All queries should be less than 255 symbols."
     }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 2.2 DialogFlow Response JSON with action</td>
-  </tr>
-</table>
+}
+```
+Figure 2.2 DialogFlow Response JSON with action
 
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
@@ -238,9 +238,8 @@ Change the TTR of a conversation based on the **_action_** value in the response
 
 Fig 3.1
 
-<table>
-  <tr>
-    <td>{
+```json
+{
   "id": "e599031e-cd19-4c77-a497-cfc6b1f9ec8c",
   "timestamp": "2018-10-16T08:48:35.821Z",
   "lang": "en",
@@ -278,12 +277,8 @@ Fig 3.1
   },
   "sessionId": "afce013a-addd-63d6-aea0-d561bdf382db"
 }
-</td>
-  </tr>
-  <tr>
-    <td>Figure 3.1 JSON response for changing TTR</td>
-  </tr>
-</table>
+```
+Figure 3.1 JSON response for changing TTR
 
 
 #### Transfer / Escalations
@@ -320,9 +315,8 @@ fig.4.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a transfer action.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "id": "745cca4d-64f2-4008-9bbb-ccd5b0f23bec",
     "timestamp": "2018-06-25T23:51:01.774Z",
     "lang": "en",
@@ -353,12 +347,9 @@ Below is an example of what the response JSON from Dialogflow will look like, an
         "errorType": "success"
     },
     "sessionId": "424a204941d6849819ab4b8a6389K8390791"
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 4.2 DialogFlow Response JSON with action</td>
-  </tr>
-</table>
+}
+```
+Figure 4.2 DialogFlow Response JSON with action
 
 
 #### Send Rich Content (Structured content)
@@ -369,9 +360,8 @@ Structured content/Rich Content is supported by the core LivePerson platform. Do
 
 fig.5.1
 
-<table>
-  <tr>
-    <td>{
+```json
+{
    "metadata": {                                                                              //Mandatory
       "type": "ExternalId",                                                                //Mandatory
       "id": "ABCD1234"                                                                    //Mandatory
@@ -401,15 +391,9 @@ fig.5.1
          }
       ]
    }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 5.2 Dialogflow Example Custom Payload</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-</table>
+}
+```
+Figure 5.2 Dialogflow Example Custom Payload
 
 
 #### Close Chat/Conversation
@@ -426,9 +410,8 @@ fig.6.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a closeConversation action.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "id": "c55c8b3f-70c7-4ab3-857f-881c6c7ece82"
     "timestamp": "2018-06-26T00:19:02.249Z",
     "lang": "en",
@@ -460,11 +443,5 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     },
     "sessionId": "38732e1449b1a34a50ec85dde16bK8390792"
 }
-</td>
-  </tr>
-  <tr>
-    <td>Figure 6.2 DialogFlow JSON response for closing conversation</td>
-  </tr>
-</table>
-
-
+```
+Figure 6.2 DialogFlow JSON response for closing conversation

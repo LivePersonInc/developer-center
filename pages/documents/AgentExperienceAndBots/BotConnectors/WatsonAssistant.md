@@ -67,10 +67,13 @@ The following information should be provided to LivePerson.
  
 
 <table>
+  <thead>
   <tr>
-    <td>Item</td>
-    <td>Description</td>
+    <th>Item</th>
+    <th>Description</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>AccountID</td>
     <td>LiveEngage Account ID</td>
@@ -136,6 +139,7 @@ End time</td>
     <td>transferMessage</td>
     <td>Default transfer message</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -197,9 +201,8 @@ In the JSON Editor you will need to add your custom JSON response (Figure 2.3).
 
 There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 2.4** with a sample JSON example that uses a standard Structured Content card with a button option in **Figure 2.5**.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
   "output": {
     "text": {
       "values": [
@@ -215,17 +218,12 @@ There is a strict JSON structure for the response that must be used. The JSON st
     }
   }
 }
-</td>
-  </tr>
-  <tr>
-    <td>Figure 2.4 Structured Content Watson JSON Structure</td>
-  </tr>
-</table>
+```
+Figure 2.4 Structured Content Watson JSON Structure
 
 
-<table>
-  <tr>
-    <td>{
+```json
+{
   "output": {
     "text": {
       "values": [
@@ -257,13 +255,8 @@ There is a strict JSON structure for the response that must be used. The JSON st
     }
   }
 }
-
-</td>
-  </tr>
-  <tr>
-    <td>Figure 2.4 Structured Content Watson JSON Example</td>
-  </tr>
-</table>
+```
+Figure 2.4 Structured Content Watson JSON Example
 
 
 For new IAM workspaces that have a new Watson response, *Then respond with* text:
@@ -272,9 +265,8 @@ For new IAM workspaces that have a new Watson response, *Then respond with* text
 
 Put the structured content objects with the metadata in the text field for the response.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
   "output": {
     "generic": [
       {
@@ -289,21 +281,16 @@ Put the structured content objects with the metadata in the text field for the r
     ]
   }
 }
-</td>
-  </tr>
-  <tr>
-    <td>Figure 2.5 Structured Content Watson JSON Example (IAM)</td>
-  </tr>
-</table>
+```
+Figure 2.5 Structured Content Watson JSON Example (IAM)
 
 
 #### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "output" : {
           “text” : {
                  “values” : [
@@ -323,12 +310,9 @@ Change the TTR of a conversation based on the action response of Watson. There h
                  }   
            ]
      }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 2.6 Watson JSON response for changing TTR</td>
-  </tr>
-</table>
+}
+```
+Figure 2.6 Watson JSON response for changing TTR
 
 
 #### Transfer/Escalations
@@ -339,9 +323,8 @@ Transfers and escalations are straightforward in both chat and messaging. At the
 
 In the *Then respond with: *JSON editor block, we see the following:
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "output" : {
           “text” : {
                  “values” : [
@@ -360,12 +343,9 @@ In the *Then respond with: *JSON editor block, we see the following:
                  }   
            ]
      }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 2.7 Watson JSON response for escalation</td>
-  </tr>
-</table>
+}
+```
+Figure 2.7 Watson JSON response for escalation
 
 
 Above is the *actions *array. Here, we have a escalation skill name in the *skill* parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
@@ -374,9 +354,8 @@ Above is the *actions *array. Here, we have a escalation skill name in the *skil
 
 To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 2.6**). In **Figure 2.7** below, the **Watson Assistant** JSON response should be mirrored as follows:
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "output" : {
           “text” : {
                  “values” : [
@@ -392,11 +371,6 @@ To close a chat or messaging conversation, we utilize the action object as we di
                  }
            ],
      }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 2.8 Watson Assistant JSON response for closing chat/conversation</td>
-  </tr>
-</table>
-
-
+}
+```
+Figure 2.8 Watson Assistant JSON response for closing chat/conversation

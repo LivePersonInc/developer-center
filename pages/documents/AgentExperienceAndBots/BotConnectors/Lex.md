@@ -65,10 +65,13 @@ The following information should be provided to LivePerson.
  
 
 <table>
-  <tr>
-    <td>Item</td>
-    <td>Description</td>
-  </tr>
+  <thead>
+    <tr>
+    <th>Item</th>
+    <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>AccountID</td>
     <td>LiveEngage Account ID</td>
@@ -119,6 +122,7 @@ End time</td>
     <td>transferMessage</td>
     <td>Default transfer message</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -165,11 +169,14 @@ A Messaging conversation qualifies as "initiated" from a LiveEngage perspective 
 The below documents cover where to configure the initial message on a given platform.
 
 <table>
+  <thead>
   <tr>
-    <td>Platform</td>
-    <td>Docs</td>
-    <td>Attribute</td>
+    <th>Platform</th>
+    <th>Docs</th>
+    <th>Attribute</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>iOS</td>
     <td>https://developers.liveperson...</td>
@@ -190,6 +197,7 @@ The below documents cover where to configure the initial message on a given plat
     <td>N/A</td>
     <td>N/A</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -214,9 +222,8 @@ LivePerson Messaging uses 4 different types of priorities:
 
 Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "type": "ACTION",
     "params": {
         "action": "CHANGE_TTR",
@@ -225,12 +232,10 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
             "value": 500,
         }
     }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 3.1 Lex Example Change TTR Payload</td>
-  </tr>
-</table>
+}
+```
+Figure 3.1 Lex Example Change TTR Payload
+
 
 
 <img style="width:600px" src="img/lex/image_7.png">
@@ -254,9 +259,8 @@ Depending on the connector configuration or the decision making capacity of the 
 
 Transfers and escalations rely on the *action* item in the response object.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "type": "ACTION",
     "params": {
         "action": "TRANSFER",
@@ -265,12 +269,9 @@ Transfers and escalations rely on the *action* item in the response object.
             "skillId": "775459351"
         }
     }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 4.1 Lex Example Transfer Payload</td>
-  </tr>
-</table>
+}
+```
+Figure 4.1 Lex Example Transfer Payload
 
 
 <img style="width:600px" src="img/lex/image_8.png">
@@ -289,9 +290,8 @@ Structured content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content via Lex, send a *custom payload* option via an intent.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
   "metadata": {
     "type": "ExternalId",
     "id": "ABCD1234"
@@ -335,13 +335,9 @@ To send structured content via Lex, send a *custom payload* option via an intent
       }
     ]
   }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 5.1 Lex Example Rich Content Payload</td>
-  </tr>
-</table>
-
+}
+```
+Figure 5.1 Lex Example Rich Content Payload
 
 <img style="width:600px" src="img/lex/image_10.png">
 
@@ -362,21 +358,15 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The action field needs to be set to **CLOSE_CONVERSATION **to instruct the connector to to close the conversation.
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "type": "ACTION",
     "params": {
         "action": "CLOSE_CONVERSATION"
     }
 }
-</td>
-  </tr>
-  <tr>
-    <td>Figure 6.1 Lex Example Close Conversation Payload</td>
-  </tr>
-</table>
-
+```
+Figure 6.1 Lex Example Close Conversation Payload
 
 <img style="width:600px" src="img/lex/image_11.png">
 

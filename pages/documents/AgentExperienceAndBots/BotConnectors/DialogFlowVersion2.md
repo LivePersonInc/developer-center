@@ -65,10 +65,13 @@ The following information should be provided to LivePerson.
  
 
 <table>
+  <thead>
   <tr>
-    <td>Item</td>
-    <td>Description</td>
+    <th>Item</th>
+    <th>Description</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>AccountID</td>
     <td>LiveEngage Account ID</td>
@@ -116,6 +119,7 @@ End time</td>
     <td>transferMessage</td>
     <td>Default transfer message</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -130,9 +134,8 @@ The expected output of a service account setup is a JSON file, example below:
 
 **Format of JSON file containing credentials **
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "type": "service_account",
     "project_id": "[PROJECT-ID]",
     "private_key_id": "[KEY-ID]"
@@ -143,12 +146,9 @@ The expected output of a service account setup is a JSON file, example below:
     "token_uri": "https://accounts.google.com/o/oauth2/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
     "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 1.1 </td>
-  </tr>
-</table>
+}
+```
+Figure 1.1
 
 
 The Bot-platform connector uses the below fields from the JSON content above.
@@ -179,11 +179,14 @@ A Messaging conversation qualifies as "initiated" from a LiveEngage perspective 
 The below documents cover where to configure the initial message on a given platform.
 
 <table>
+  <thead>
   <tr>
-    <td>Platform</td>
-    <td>Docs</td>
-    <td>Attribute</td>
+    <th>Platform</th>
+    <th>Docs</th>
+    <th>Attribute</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>iOS</td>
     <td>https://developers.liveperson...</td>
@@ -204,6 +207,7 @@ The below documents cover where to configure the initial message on a given plat
     <td>N/A</td>
     <td>N/A</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -293,9 +297,8 @@ fig.5.1
 
 Example Metadata
 
-<table>
-  <tr>
-    <td>{
+```json
+{
    "metadata": {                                                                              //Mandatory
       "type": "ExternalId",                                                                //Mandatory
       "id": "ABCD1234"                                                                    //Mandatory
@@ -325,15 +328,9 @@ Example Metadata
          }
       ]
    }
-}</td>
-  </tr>
-  <tr>
-    <td>Figure 5.2 Dialogflow Example Custom Payload</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-</table>
+}
+```
+Figure 5.2 Dialogflow Example Custom Payload
 
 
 #### Close Chat/Conversation
