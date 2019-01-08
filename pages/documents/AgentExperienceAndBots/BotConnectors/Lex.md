@@ -35,7 +35,7 @@ Create User type “bot” with a role of Agent
 
     1. If Chat in the drop down select  - Value > 1.
 
-    2. If Messaging Max No of Live Chats -> **No Chats **and Max No of Messaging Converversations to **Custom Setting **and enter a value greater than **0** 
+    2. If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to **Custom Setting and enter a value greater than 0** 
 
 3. Add other required APIs to the bot api key:
 
@@ -126,9 +126,6 @@ End time</td>
 </table>
 
 
-**
-**
-
 **NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
 Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
 A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
@@ -190,7 +187,7 @@ The below documents cover where to configure the initial message on a given plat
   <tr>
     <td>Web</td>
     <td>N/A</td>
-    <td><Default LP Message></td>
+    <td>Default LP Message</td>
   </tr>
   <tr>
     <td>Other</td>
@@ -212,7 +209,7 @@ Fig 1.1
 
 #### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **_action_** value in the response object.
+Change the TTR of a conversation based on the **action** value in the response object.
 
 LivePerson Messaging uses 4 different types of priorities:
 "URGENT",
@@ -346,8 +343,8 @@ Fig.5.2 - Example in Lex console
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Lex console.
 
-**
-****NOTE****:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
+
+**NOTE:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
 
 #### Close Chat/Conversation
 

@@ -47,11 +47,11 @@ Create User type “bot” with a role of Agent
 
         2. Administration API
 
-<img style="width:600px" src="img/watsonassistant/image_3.png">
+          <img style="width:600px" src="img/watsonassistant/image_3.png">
 
         3. Administration (Skills) - **Read ONLY**
 
-<img style="width:600px" src="img/watsonassistant/image_4.png">
+          <img style="width:600px" src="img/watsonassistant/image_4.png">
 
 
 
@@ -175,7 +175,7 @@ To send structured content via Watson Assistant you will need send custom JSON. 
 </table>
 
 
-From there, under the section **Then respond with: **Click the three vertical dots and select **Open JSON Editor **(Figure 2.2)
+From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.2)
 
 <table>
   <tr>
@@ -321,34 +321,34 @@ Transfers and escalations are straightforward in both chat and messaging. At the
 
 <img style="width:600px" src="img/watsonassistant/image_6.png">
 
-In the *Then respond with: *JSON editor block, we see the following:
+In the *Then respond with:* JSON editor block, we see the following:
 
 ```json
 {
-    "output" : {
-          “text” : {
-                 “values” : [
-                        “Sure thing! Escalating you to a live agent now.”
-                  ],
-                  “selection_policy” : “sequential”
-           },
-          “actions” : [
-                 {
-                     “name” : “TRANSFER”,
-                     “type” : “CLIENT”,               
-                     “parameters” : {
-                        “skill” : “BOT-TRANSFER-OUT”
-                     },
-                     “result_variable” : “none”
-                 }   
-           ]
-     }
+  "output" : {
+    “text” : {
+      “values” : [
+            “Sure thing! Escalating you to a live agent now.”
+      ],
+      “selection_policy” : “sequential”
+    },
+    “actions” : [
+      {
+        “name” : “TRANSFER”,
+        “type” : “CLIENT”,               
+        “parameters” : {
+          “skill” : “BOT-TRANSFER-OUT”
+        },
+        “result_variable” : “none”
+      }   
+    ]
+  }
 }
 ```
 Figure 2.7 Watson JSON response for escalation
 
 
-Above is the *actions *array. Here, we have a escalation skill name in the *skill* parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
+Above is the *actions* array. Here, we have a escalation skill name in the *skill* parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
 
 #### Close Chat/Conversation
 

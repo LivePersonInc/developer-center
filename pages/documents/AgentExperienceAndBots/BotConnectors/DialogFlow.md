@@ -37,7 +37,7 @@ Create User type “bot” with a role of Agent
 
     1. If Chat in the drop down select  - Value > 1.
 
-    2. If Messaging Max No of Live Chats -> **No Chats **and Max No of Messaging Converversations to **Custom Setting **and enter a value greater than **0** 
+    2. If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0** 
 
 3. Add other required APIs to the bot api key:
 
@@ -201,7 +201,7 @@ The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/
 Figure 2.1 DialogFlow Response JSON with action
 
 
-**Sample Dialogflow Error Response**** **
+**Sample Dialogflow Error Response**
 
 ```json
 {
@@ -224,7 +224,7 @@ Figure 2.2 DialogFlow Response JSON with action
 
 fig.2.3
 
-2. Do not forget to add a custom response in the **Text response **section. 
+2. Do not forget to add a custom response in the **Text response** section. 
 
 <img style="width:600px" src="img/dialogflow/image_7.png">
 
@@ -232,7 +232,7 @@ fig.2.4
 
 #### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **_action_** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Change the TTR of a conversation based on the **action** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
 
 <img style="width:600px" src="img/dialogflow/image_8.png">
 
@@ -297,7 +297,7 @@ Multiple scenarios for transfer/escalations exist triggered by the action object
 
 Transfers and escalations rely on the *action* item in the response object.
 
-1. Action:      transfer.<skill-name> 
+1. Action:      `transfer.<skill-name>`
 
 (e.g. transfer.bot-escalation where ‘bot-escalation’ is the skill name)
 
@@ -402,7 +402,7 @@ In the bot’s flow, there will be times when it is appropriate to end the conve
 
 The method for closing a conversation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
 
-The field needs to be set to **closeConversation **to instruct the connector to to close the conversation.
+The field needs to be set to **closeConversation** to instruct the connector to to close the conversation.
 
 <img style="width:600px" src="img/dialogflow/image_11.png">
 

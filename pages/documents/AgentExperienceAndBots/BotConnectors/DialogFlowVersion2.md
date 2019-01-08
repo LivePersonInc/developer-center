@@ -35,7 +35,7 @@ Create User type “bot” with a role of Agent
 
     1. If Chat in the drop down select  - Value > 1.
 
-    2. If Messaging Max No of Live Chats -> **No Chats **and Max No of Messaging Converversations to **Custom Setting **and enter a value greater than **0** 
+    2. If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0** 
 
 3. Add other required APIs to the bot api key:
 
@@ -43,17 +43,19 @@ Create User type “bot” with a role of Agent
     
       <img style="width:600px" src="img/dialogflowversion2/image_2.png">
 
-    4. **Below is Messaging ONLY!!!
-**Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
+    4. Below is Messaging ONLY!!! 
+    
+      Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
 
         1. Engagement History API
 
         2. Operational API
 
-<img style="width:600px" src="img/dialogflowversion2/image_3.png">
+          <img style="width:600px" src="img/dialogflowversion2/image_3.png">
 
         3. Administration (Skills) - **Read ONLY**
-<img style="width:600px" src="img/dialogflowversion2/image_4.png">
+
+          <img style="width:600px" src="img/dialogflowversion2/image_4.png">
 
 
 #### Bot Configuration
@@ -123,16 +125,13 @@ End time</td>
 </table>
 
 
-**
-**
-
 **NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation.
 Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*.
 A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
 
 The expected output of a service account setup is a JSON file, example below:
 
-**Format of JSON file containing credentials **
+**Format of JSON file containing credentials**
 
 ```json
 {
@@ -239,7 +238,7 @@ fig.2.2
 
 #### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **_action_** value in the response object.
+Change the TTR of a conversation based on the **action** value in the response object.
 
 LivePerson Messaging uses 4 different types of priorities:
 "URGENT",
@@ -259,7 +258,7 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
 
-**NOTE****: **This implementation branches from the V1 implementation and contains substantial changes.
+**NOTE**: This implementation branches from the V1 implementation and contains substantial changes.
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
 
@@ -272,9 +271,9 @@ Depending on the connector configuration or the decision making capacity of the 
 
 Transfers and escalations rely on the *action* item in the response object.
 
-Action: **TRANSFER (**Case sensitive**)**
+Action: **TRANSFER (Case sensitive)**
 
-Parameters: ‘skill’ **(**Case sensitive**) **with ‘value’ of skill name (case sensitive) in LiveEngage.
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
 
 <img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
@@ -290,8 +289,8 @@ To send structured content via Dialogflow V2, send a *custom payload* option via
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
-**
-****NOTE****:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload. 
+
+**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload. 
 
 fig.5.1
 
