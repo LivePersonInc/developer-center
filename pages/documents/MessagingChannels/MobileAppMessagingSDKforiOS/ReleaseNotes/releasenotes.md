@@ -14,6 +14,41 @@ indicator: messaging
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+### iOS Messaging SDK - Version 3.5
+
+### Overview
+
+iOS Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.5 is compatible with Xcode 10, Swift 4.2 and iOS versions 10 through 12
+
+### Bugs
+
+There is a known issue related to entering the conversation view controller with an expired token.  The consumer observes a "still connecting" message which can be resolved by exiting and re-entering the conversation view controller.
+
+#### Bug Fixes
+
+* When an unauthenticated consumer attempts to reconnect after their session expires (when using JSON Web Tokens) the connection fails.
+
+* Push notifications are not being received when going to background (minimizing app) due to issues with network.
+
+* When a consumer is in active conversation and an agent resolves the conversation, the unread message indicator appears but there are new messages visible and the consumer can not scroll down.
+
+* Consumer can not scroll to the latest message when there is no assigned agent and the conversation is closed.
+
+* Conversation does not automatically scrolls to the bottom when survey starts/ends.
+
+* When returning from background banner indicating the count of unread messages is incorrect.
+
+* App freezes (experiences recursive cycles) on phones which the time has been set in the future. Interim solution: Retry attempts have been limited for consumers with expired JSON Web Tokens trying to authenticate.  Once this limit is hit, LP Messaging SDK will post the SDK_AUTHENTICATION_FAILED notification which will trigger the LPMessagingSDKAuthenticationFailed delegate method.  A client app can use either of these mechanisms to stop the authorization attempt and notify the consumer they need to obtain a valid token.  After the notification has been posted the authentication retries will be reset.  
+
+*  In the Agent Console, the consumer conversation information (OS Type & Device) is not updated while switching platforms IOS/Android or OS versions.  Update: Update: The current design of LiveEngage platform cannot currently accommodate this request.  This can be implemented in a future LiveEngage platform update.
+
+### API Update 
+
+* The LPInfraFacad method registerPusherWithLoginFlow(brand) has been updated to registerPusherWithLoginFlow(brand: Brand, authenticationParams: LPAuthenticationParams?) allowing for an optional 'Authentication Parameters' dictionary to be passed to aid in determining the status and routing of authentication for the current consumer.  
 
 ### iOS Messaging SDK - Version 3.4
 
@@ -23,7 +58,7 @@ iOS Mobile App SDK v3.4 contains bug fixes for high priority bugs reported by cu
 
 #### Environment Requirements
 
-iOS Mobile App SDK v3.4 is compatible with XCode 10, Swift 4.2 and iOS versions 9 through 12.
+iOS Mobile App SDK v3.4 is compatible with Xcode 10, Swift 4.2 and iOS versions 9 through 12.
 
 ### Bugs
 
@@ -50,11 +85,11 @@ iOS Mobile App SDK v3.4 is compatible with XCode 10, Swift 4.2 and iOS versions 
 
 ### iOS Messaging SDK - Version 3.3.0
 
-iOS Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, support for iOS 12, XCode 10 and Swift 4.2 and addresses several bugs reported by customers.
+iOS Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, support for iOS 12, Xcode 10 and Swift 4.2 and addresses several bugs reported by customers.
 
 #### Environment Requirements
 
-iOS Mobile App SDK v3.3 is compatible with XCode 10, Swift 4.2 and iOS versions 9 through 12.
+iOS Mobile App SDK v3.3 is compatible with Xcode 10, Swift 4.2 and iOS versions 9 through 12.
 
 #### Main Features
 
@@ -70,13 +105,13 @@ Brands can customize the survey to their needs, including predefined questions (
 
 This enables brands to prove the success of messaging and compare their KPIs across different channels. Additional information about Post Conversation Survey can be found [here](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) .
 
-##### Support for iOS 12, XCode 10 & Swift 4.2
+##### Support for iOS 12, Xcode 10 & Swift 4.2
 
 **Available to all customers?** Yes.
 
 **Description**
 
-Mobile App SDK v3.3 supports iOS 12, XCode 10 & Swift 4.2.
+Mobile App SDK v3.3 supports iOS 12, Xcode 10 & Swift 4.2.
 
 #### Bugs
 
@@ -802,7 +837,7 @@ A new way for Brands to set their own background in conversations to add a more 
 
 ### iOS Messaging SDK - Version 3.1.5
 
-Version 3.1.5 supports XCode 9.3 & XCode 9.4
+Version 3.1.5 supports Xcode 9.3 & Xcode 9.4
 
 #### Symptom:
 
@@ -822,9 +857,9 @@ LPMessagingSDKCSATScoreSubmissionDidFinish is now called only after the CSAT is 
 
 
 ### iOS Messaging SDK - Version 3.1.4 (identical to 3.1.0.24)
-Version 3.1.0.24 - Supports XCode 9.2
+Version 3.1.0.24 - Supports Xcode 9.2
 
-Version 3.1.4 - Supports XCode 9.3
+Version 3.1.4 - Supports Xcode 9.3
 
 #### Symptom:
 
@@ -861,9 +896,9 @@ In some cases, when the SDK is trying to connect to LivePerson’s servers, ther
 An indication will be presented while the SDK attempts to connect to the server.
 
 ### iOS Messaging SDK - Version 3.1.3 (identical to 3.1.0.23)
-Version 3.1.0.23 - Supports XCode 9.2
+Version 3.1.0.23 - Supports Xcode 9.2
 
-Version 3.1.3 - Supports XCode 9.3
+Version 3.1.3 - Supports Xcode 9.3
 
 The version contains the following bug fixes:
 
@@ -893,9 +928,9 @@ The socket will not be closed while the CSAT is being presented.
 
 
 ### iOS Messaging SDK - Version 3.1.2 (identical to 3.1.0.22)
-Version 3.1.0.22 - Supports XCode 9.2
+Version 3.1.0.22 - Supports Xcode 9.2
 
-Version 3.1.2 - Supports XCode 9.3
+Version 3.1.2 - Supports Xcode 9.3
 
 The version contains the following bug fixes:
 
@@ -920,7 +955,7 @@ Added the nickname of the agent instead of the first name.
 
 ### iOS Messaging SDK - Version 3.1.1
 
-#### Added support for XCode 9.3 and Swift 4.1
+#### Added support for Xcode 9.3 and Swift 4.1
 
 
 
@@ -1255,13 +1290,13 @@ The following additional conditions and configurations are required:
 | Yes | Yes | Yes | Yes | Yes |
 
 
-##### XCode 9.2 and Swift 4.0.2 Support
+##### Xcode 9.2 and Swift 4.0.2 Support
 
 **Type:** Developer Experience Feature
 
 **Available to all customers?** Yes
 
-The Mobile App Messaging SDK v3.0 was built and certified with XCode 9.2 in Swift 4.0.2 and also supports XCode 9.1.
+The Mobile App Messaging SDK v3.0 was built and certified with Xcode 9.2 in Swift 4.0.2 and also supports Xcode 9.1.
 
 #### List of certified and supported devices extended
 
@@ -1329,7 +1364,7 @@ For iOS 11, the app might crash when closing the conversation screen while recei
 #### Fix:
 Improved memory allocation for conversation screen
 
-#### XCode 9.2 and Swift 4.0.2 Support
+#### Xcode 9.2 and Swift 4.0.2 Support
 
 **Type:** Developer Experience Feature
 
@@ -1378,15 +1413,15 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 #### New functionalities
 
-##### XCode 9.1 and Swift 4.0.2 Support
+##### Xcode 9.1 and Swift 4.0.2 Support
 
 **Type:** Developer Experience Feature
 
 **Available to all customers?** Yes
 
-The Mobile App Messaging SDK v2.9 was built and certified with XCode 9.1 in Swift 4.0.2.
+The Mobile App Messaging SDK v2.9 was built and certified with Xcode 9.1 in Swift 4.0.2.
 
-Customers wishing to use the Mobile App Messaging SDK v2.9 must upgrade their XCode to 9.1 and their Swift version to 4.0.2.
+Customers wishing to use the Mobile App Messaging SDK v2.9 must upgrade their Xcode to 9.1 and their Swift version to 4.0.2.
 
 ##### iPhone X Device Support
 
@@ -1784,9 +1819,9 @@ The following additional conditions and configurations are required*:
 </table>
 
 
-#### iOS11, XCode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
+#### iOS11, Xcode 9 and Swift 4/Swift 3.2 Certification, and removal of iOS8 from supported list
 
-The Mobile App Messaging SDK v.28 was built and certified with XCode 9 in Swift 4/ Swift 3.2 for iOS11.
+The Mobile App Messaging SDK v.28 was built and certified with Xcode 9 in Swift 4/ Swift 3.2 for iOS11.
 
 The following devices were certified with iOS11:
 
@@ -2622,7 +2657,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 ##### iOS Developer Enhancements
 
-The LiveEngage in-app SDK is fully compatible with the most recent versions of Apple’s developer tools, XCode 8.3 and Swift 3.1.
+The LiveEngage in-app SDK is fully compatible with the most recent versions of Apple’s developer tools, Xcode 8.3 and Swift 3.1.
 
 The SDK is also compatible with [CocoaPods](https://cocoapods.org/), a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
 

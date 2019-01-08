@@ -455,6 +455,8 @@ Structure example:
 | gender           | The gender of the customer                            | string |
 | language         | The language the customer speaks                      | string |
 | name             | The name of the customer                              | string |
+| firstname        | The first name of the customer                        | string |
+| lastname         | The last name of the customer                         | string |
 
 Structure example:
 
@@ -466,7 +468,9 @@ Structure example:
     "contactInfo": [],
     "gender": "",
     "language": "",
-    "name": ""
+    "name": "",
+    "firstname": "",
+    "lastname": ""
 }
 ```
 

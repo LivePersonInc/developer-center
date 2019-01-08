@@ -138,12 +138,8 @@ Request Body Example
 
   | Code | Description |
   | :--- | :--- |
-  | 200 | Successful |
+  | 201 | Created |
 
-JSON Example:
+<div class="important">This method returns an empty response body. Instead, all the info you require is received via the response headers. Most crucially, the "Location" header contains the <code>chatId</code> (sometimes known as "chat key") as part of its URL. See example screenshot below.</div>
 
-```json
-    {
-      "participantId":"6f22cb2d-7e87-41dd-bc1f-d9b740f1f09f","conversationId":"ff0ff4f4-29ec-4eff-82d0-4f047cdc01a0"
-    }
-```
+![Start Chat Location](img/startchatlocation.png)
