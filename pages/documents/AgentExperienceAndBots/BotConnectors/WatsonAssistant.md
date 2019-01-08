@@ -8,32 +8,37 @@ permalink: bot-connectors-watson-assistant.html
 indicator:
 ---
 
-# Overview
+### Overview
 
 The following documentation outlines the pre-requirements to use the Bot Platform specifically for **IBM Watson Assistant**.
 
-# Base Requirements
+### Base Requirements
 
-## LiveEngage Configuration
+#### LiveEngage Configuration
 
-### Bot User Account Configuration
+##### Bot User Account Configuration
 
 Outlined below is the steps required to create an appropriate Bot Type agent in LiveEngage.
 The result of which is fed into the "Bot Configuration" Below.
 
 Create User type “bot” with a role of Agent
 
-1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, relevant AC feature needs to be turned on.	![image alt text](image_0.png)
+1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, relevant AC feature needs to be turned on.	
+
+  <img style="width:600px" src="img/watsonassistant/image_0.png">
 
 1. Add login method as "API key" and generate new API key for the new user
 
-![image alt text](image_1.png)
+  <img style="width:600px" src="img/watsonassistant/image_1.png">
 
 1. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
 2. Add other required APIs to the bot api key:
 
-    1. Find api key name in bot user profile![image alt text](image_2.png)
+    1. Find api key name in bot user profile
+    
+      <img style="width:600px" src="img/watsonassistant/image_2.png">
+
 **Below is Messaging ONLY!!!**
 
     2. Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
@@ -42,19 +47,20 @@ Create User type “bot” with a role of Agent
 
         2. Administration API
 
-![image alt text](image_3.png)
+<img style="width:600px" src="img/watsonassistant/image_3.png">
 
         3. Administration (Skills) - **Read ONLY**
-![image alt text](image_4.png)
+
+<img style="width:600px" src="img/watsonassistant/image_4.png">
 
 
 
 
-## Bot Configuration
+#### Bot Configuration
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
-### Watson Assistant
+##### Watson Assistant
 
 The following information should be provided to LivePerson.
 
@@ -133,7 +139,7 @@ End time</td>
 </table>
 
 
-## Naming Conventions
+#### Naming Conventions
 
 One thing to note before going into *actions* and *skills* is the naming convention between each. 
 
@@ -141,15 +147,15 @@ All non-escalation actions are defined by using underscores. For example, in the
 
 For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.
 
-# IBM Watson Assistant
+### IBM Watson Assistant
 
-## Functions of the Bot Platform 
+#### Functions of the Bot Platform 
 
-The Bot Platform provides the base functionality to send and receive text messages between LiveEngage and Watson Assistant. The integration between the Bot Platform and Watson Assistant also supports the sending [structured content](https://developers.liveperson.com/structured-content-templates.html#overview). The Bot Platform also provides further functionality such as the ability to transfer the conversation to other skills, changing the TTR of a conversation as well as the ability close a conversation. These actions are sent in the action array of Watson Assistant’s JSON response.
+The Bot Platform provides the base functionality to send and receive text messages between LiveEngage and Watson Assistant. The integration between the Bot Platform and Watson Assistant also supports the sending [structured content](https://developers.liveperson.com/structured-content-templates.html###overview). The Bot Platform also provides further functionality such as the ability to transfer the conversation to other skills, changing the TTR of a conversation as well as the ability close a conversation. These actions are sent in the action array of Watson Assistant’s JSON response.
 
 The following provides a detailed look at how to implement the supported functionality.
 
-## Sending Rich Content (Structured Content)
+#### Sending Rich Content (Structured Content)
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](https://developers.liveperson.com/structured-content-introduction-to-structured-content.html). As a result, the Bot Platform also supports this.
 
@@ -262,7 +268,7 @@ There is a strict JSON structure for the response that must be used. The JSON st
 
 For new IAM workspaces that have a new Watson response, *Then respond with* text:
 
-![image alt text](image_5.png)
+<img style="width:600px" src="img/watsonassistant/image_5.png">
 
 Put the structured content objects with the metadata in the text field for the response.
 
@@ -291,7 +297,7 @@ Put the structured content objects with the metadata in the text field for the r
 </table>
 
 
-## Change Time To Response of Conversation
+#### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
 
@@ -325,11 +331,11 @@ Change the TTR of a conversation based on the action response of Watson. There h
 </table>
 
 
-## Transfer/Escalations
+#### Transfer/Escalations
 
 Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
-![image alt text](image_6.png)
+<img style="width:600px" src="img/watsonassistant/image_6.png">
 
 In the *Then respond with: *JSON editor block, we see the following:
 
@@ -364,7 +370,7 @@ In the *Then respond with: *JSON editor block, we see the following:
 
 Above is the *actions *array. Here, we have a escalation skill name in the *skill* parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
 
-## Close Chat/Conversation
+#### Close Chat/Conversation
 
 To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 2.6**). In **Figure 2.7** below, the **Watson Assistant** JSON response should be mirrored as follows:
 

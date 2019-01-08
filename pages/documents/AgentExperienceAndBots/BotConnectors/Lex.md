@@ -8,24 +8,26 @@ permalink: bot-connectors-lex.html
 indicator:
 ---
 
-# Overview
+### Overview
 
 The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Platform specifically for Amazon Lex.
 
-# LiveEngage Requirements
+### LiveEngage Requirements
 
-## Bot User Account Configuration
+#### Bot User Account Configuration
 
 Outlined below is the steps required to create an appropriate Bot Type agent in LiveEngage.
 The result of which is fed into the "Bot Configuration" Below.
 
 Create User type “bot” with a role of Agent
 
-1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, relevant AC feature needs to be turned on.	![image alt text](image_0.png)
+1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, relevant AC feature needs to be turned on.	
+
+<img style="width:600px" src="img/lex/image_0.png">
 
 1. Add login method as "API key" and generate new API key for the new user
 
-![image alt text](image_1.png)
+<img style="width:600px" src="img/lex/image_1.png">
 
 1. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
@@ -37,7 +39,9 @@ Create User type “bot” with a role of Agent
 
 3. Add other required APIs to the bot api key:
 
-    3. Find api key name in bot user profile![image alt text](image_2.png)
+    3. Find api key name in bot user profile
+      
+      <img style="width:600px" src="img/lex/image_2.png">
 
     4. **Below is Messaging ONLY!!!
 **Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
@@ -46,13 +50,13 @@ Create User type “bot” with a role of Agent
 
         2. Operational API
 
-![image alt text](image_3.png)
+<img style="width:600px" src="img/lex/image_3.png">
 
         3. Administration (Skills) - **Read ONLY**
-![image alt text](image_4.png)
+<img style="width:600px" src="img/lex/image_4.png">
 
 
-## Bot Configuration
+#### Bot Configuration
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
@@ -139,20 +143,20 @@ The Bot-platform connector uses the below fields from the AWS Environment.
 
 * Bot Name
 
-![image alt text](image_5.png)
+<img style="width:600px" src="img/lex/image_5.png">
 
-# Amazon Lex
+### Amazon Lex
 
-## Functions of the Bot Connector 
+#### Functions of the Bot Connector 
 
 The Bot Platform provides the basic functionality to send/receive messages between LiveEngage and Amazon Lex.
 
 
-The integration between the Bot Platform and Amazon Lex also supports the sending of [structured content](https://developers.liveperson.com/structured-content-templates.html#overview). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
+The integration between the Bot Platform and Amazon Lex also supports the sending of [structured content](https://developers.liveperson.com/structured-content-templates.html###overview). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
 
 **NOTE**: At this time Lex response cards & audio messages are not supported.
 
-## Welcome Event
+#### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
@@ -194,11 +198,11 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME-INTENT’ event.
 
-![image alt text](image_6.png)
+<img style="width:600px" src="img/lex/image_6.png">
 
 Fig 1.1
 
-## Change Time To Response of Conversation
+#### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **_action_** value in the response object.
 
@@ -229,11 +233,11 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
 </table>
 
 
-![image alt text](image_7.png)
+<img style="width:600px" src="img/lex/image_7.png">
 
 Fig 3.1 - Example in Lex console
 
-## Transfer / Escalations
+#### Transfer / Escalations
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
@@ -269,17 +273,17 @@ Transfers and escalations rely on the *action* item in the response object.
 </table>
 
 
-![image alt text](image_8.png)
+<img style="width:600px" src="img/lex/image_8.png">
 
 Fig.4.2 - Example in Lex console
 
 **NOTE**: Additionally, if the Lex error handling "maximum number of retries" is reached the bot connector will also initiate a “default escalation” transfer action.
 
-![image alt text](image_9.png)
+<img style="width:600px" src="img/lex/image_9.png">
 
 fig.4.2
 
-## Send Rich Content (Structured Content)
+#### Send Rich Content (Structured Content)
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](https://developers.liveperson.com/structured-content-introduction-to-structured-content.html).
 
@@ -339,7 +343,7 @@ To send structured content via Lex, send a *custom payload* option via an intent
 </table>
 
 
-![image alt text](image_10.png)
+<img style="width:600px" src="img/lex/image_10.png">
 
 Fig.5.2 - Example in Lex console
 
@@ -349,7 +353,7 @@ This should contain valid structured content, along with any optional metadata r
 **
 ****NOTE****:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
 
-## Close Chat/Conversation
+#### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
 If a query has been answered, or the brand has determined that no escalation is required for a given query, then it is best practice to have the bot end the conversation.
@@ -374,7 +378,7 @@ The action field needs to be set to **CLOSE_CONVERSATION **to instruct the conne
 </table>
 
 
-![image alt text](image_11.png)
+<img style="width:600px" src="img/lex/image_11.png">
 
 Fig.6.2 - Example in Lex console
 

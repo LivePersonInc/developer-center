@@ -8,15 +8,15 @@ permalink: bot-connectors-dialog-flow.html
 indicator:
 ---
 
-# Overview
+### Overview
 
 The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Platform specifically for Google Dialogflow v1.
 
-# Base Requirements
+### Base Requirements
 
-## LiveEngage Configuration
+#### LiveEngage Configuration
 
-### Bot User Account Configuration
+##### Bot User Account Configuration
 
 Outlined below is the steps required to create an appropriate Bot Type agent in LiveEngage.
 The result of which is fed into the "Bot Configuration" Below.
@@ -29,7 +29,7 @@ Create User type “bot” with a role of Agent
 
 1. Add login method as "API key" and generate new API key for the new user
 
-![image alt text](image_1.png)
+  <img style="width:600px" src="img/dialogflow/image_1.png">
 
 1. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
@@ -41,7 +41,10 @@ Create User type “bot” with a role of Agent
 
 3. Add other required APIs to the bot api key:
 
-    3. Find api key name in bot user profile![image alt text](image_2.png)
+    3. Find api key name in bot user profile
+    
+      <img style="width:600px" src="img/dialogflow/image_2.png">
+
 **Below is Messaging ONLY!!!**
 
     4. Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
@@ -50,17 +53,18 @@ Create User type “bot” with a role of Agent
 
         2. Administration API
 
-![image alt text](image_3.png)
+          <img style="width:600px" src="img/dialogflow/image_3.png">
 
         3. Administration (Skills) - **Read ONLY**
-![image alt text](image_4.png)
+
+          <img style="width:600px" src="img/dialogflow/image_4.png">
 
 
-## Bot Configuration
+#### Bot Configuration
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
-### Dialogflow
+##### Dialogflow
 
 The following information should be provided to LivePerson.
 
@@ -118,7 +122,7 @@ End time</td>
 </table>
 
 
-## Naming Conventions
+#### Naming Conventions
 
 Few things to note before going into *actions* and *skills* is the naming convention between each. 
 
@@ -126,17 +130,17 @@ Few things to note before going into *actions* and *skills* is the naming conven
 
 * We use the character ‘.’ as a delimiter in the ‘action’ object. We recommend that you do **NOT** use  ‘.’ in a skill name in LiveEngage. Refer page 11, section: *Transfer/Escalations* for an example.
 
-# Google Dialogflow
+### Google Dialogflow
 
-## Functions of the Bot Platform 
+#### Functions of the Bot Platform 
 
-The Bot Platform provides the basic functionality to send/receive text messages between LiveEngage and Google Dialogflow. The integration between the Bot Platform and Dialogflow also supports the sending of [structured content](https://developers.liveperson.com/structured-content-templates.html#overview). Additionally, it also provides the ability to transfer the conversation to other skills, using the actions functionality. The following are the functions we support today.
+The Bot Platform provides the basic functionality to send/receive text messages between LiveEngage and Google Dialogflow. The integration between the Bot Platform and Dialogflow also supports the sending of [structured content](https://developers.liveperson.com/structured-content-templates.html###overview). Additionally, it also provides the ability to transfer the conversation to other skills, using the actions functionality. The following are the functions we support today.
 
-## Supported Versions
+#### Supported Versions
 
 This document outlines the functions of the integration between LiveEngage and Google Dialogflow **API V1** only.
 
-## Welcome Event
+#### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works and how it is framed with the consumer.
 
@@ -167,11 +171,11 @@ A Chat interaction on the other hand is considered started when the chat is rout
 
 As such, ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event, so the event fired is utilised.
 
-![image alt text](image_5.png)
+<img style="width:600px" src="img/dialogflow/image_5.png">
 
 Fig 1.1
 
-## Dialogflow Query length Limit 
+#### Dialogflow Query length Limit 
 
 The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*. 
 
@@ -216,21 +220,21 @@ The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
 
-![image alt text](image_6.png)
+<img style="width:600px" src="img/dialogflow/image_6.png">
 
 fig.2.3
 
 2. Do not forget to add a custom response in the **Text response **section. 
 
-![image alt text](image_7.png)
+<img style="width:600px" src="img/dialogflow/image_7.png">
 
 fig.2.4
 
-## Change Time To Response of Conversation
+#### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **_action_** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
 
-![image alt text](image_8.png)
+<img style="width:600px" src="img/dialogflow/image_8.png">
 
 Fig 3.1
 
@@ -282,7 +286,7 @@ Fig 3.1
 </table>
 
 
-## Transfer / Escalations
+#### Transfer / Escalations
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
@@ -310,7 +314,7 @@ If my skill is named - **BOT-default-escalation**
 
 Then my action will be - **transfer.BOT-default-escalation**
 
-![image alt text](image_9.png)
+<img style="width:600px" src="img/dialogflow/image_9.png">
 
 fig.4.1
 
@@ -357,11 +361,11 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 </table>
 
 
-## Send Rich Content (Structured content)
+#### Send Rich Content (Structured content)
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](https://developers.liveperson.com/structured-content-introduction-to-structured-content.html). To send structured content via Dialogflow, use the Dialogflow option to send a *custom payload* via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the DialogFlow console.
 
-![image alt text](image_10.png)
+<img style="width:600px" src="img/dialogflow/image_10.png">
 
 fig.5.1
 
@@ -408,7 +412,7 @@ fig.5.1
 </table>
 
 
-## Close Chat/Conversation
+#### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation with the consumer without escalating to a live agent. If a query has been answered, or the brand has determined that no escalation is available for a given query, then you will need to have the bot end the conversation.
 
@@ -416,7 +420,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The field needs to be set to **closeConversation **to instruct the connector to to close the conversation.
 
-![image alt text](image_11.png)
+<img style="width:600px" src="img/dialogflow/image_11.png">
 
 fig.6.1
 
