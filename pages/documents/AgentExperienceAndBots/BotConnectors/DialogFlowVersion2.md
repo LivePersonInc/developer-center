@@ -1,70 +1,24 @@
 ---
-pagename: Dialog Flow Version 2
+pagename: Google Dialog Flow Version 2
 redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
-permalink: bot-connectors-dialog-flow-version-2.html
+permalink: bot-connectors-google-dialog-flow-version-2.html
 indicator:
 ---
 
 ### Overview
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Platform specifically for Google Dialogflow v2.
+The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector Manager specifically for Google Dialogflow v2.
 
-### LiveEngage Requirements
+### Bot Configuration
 
-#### Bot User Account Configuration
-
-Outlined below is the steps required to create an appropriate Bot Type agent in LiveEngage.
-The result of which is fed into the "Bot Configuration" Below.
-
-Create User type “bot” with a role of Agent
-
-1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, relevant AC feature needs to be turned on.	
-
-  <img style="width:600px" src="img/dialogflowversion2/image_0.png">
-
-1. Add login method as "API key" and generate new API key for the new user
-
-<img style="width:600px" src="img/dialogflowversion2/image_1.png">
-
-1. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
-
-2. Set Max No of Live Chats 
-
-    1. If Chat in the drop down select  - Value > 1.
-
-    2. If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0** 
-
-3. Add other required APIs to the bot api key:
-
-    3. Find api key name in bot user profile
-    
-      <img style="width:600px" src="img/dialogflowversion2/image_2.png">
-
-    4. Below is Messaging ONLY!!! 
-    
-      Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
-
-        1. Engagement History API
-
-        2. Operational API
-
-          <img style="width:600px" src="img/dialogflowversion2/image_3.png">
-
-        3. Administration (Skills) - **Read ONLY**
-
-          <img style="width:600px" src="img/dialogflowversion2/image_4.png">
-
-
-#### Bot Configuration
+Make sure you have your Bot agent created from the [Getting Started](bot-connectors-getting-started.html) guide.
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
 The following information should be provided to LivePerson.
-
- 
 
 <table>
   <thead>
@@ -124,7 +78,6 @@ End time</td>
   </tbody>
 </table>
 
-
 **NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation.
 Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*.
 A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
@@ -162,14 +115,12 @@ The Bot-platform connector uses the below fields from the JSON content above.
 
 <img style="width:600px" src="img/dialogflowversion2/image_5.png">
 
-### Google Dialogflow V2
+### Functions of the Bot Connector 
 
-#### Functions of the Bot Connector 
+The Bot Connector Manager provides the basic functionality to send/receive messages between LiveEngage and Google Dialogflow V2.
+The integration between the Bot Connector Manager and Dialogflow V2 also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
 
-The Bot Platform provides the basic functionality to send/receive messages between LiveEngage and Google Dialogflow V2.
-The integration between the Bot Platform and Dialogflow V2 also supports the sending of [structured content](https://developers.liveperson.com/structured-content-templates.html###overview). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
-
-#### Welcome Event
+### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
@@ -179,33 +130,33 @@ The below documents cover where to configure the initial message on a given plat
 
 <table>
   <thead>
-  <tr>
-    <th>Platform</th>
-    <th>Docs</th>
-    <th>Attribute</th>
-  </tr>
+    <tr>
+      <th>Platform</th>
+      <th>Docs</th>
+      <th>Attribute</th>
+    </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>iOS</td>
-    <td>https://developers.liveperson...</td>
-    <td>hiMessage</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>https://developers.liveperson...</td>
-    <td>lp_first_message</td>
-  </tr>
-  <tr>
-    <td>Web</td>
-    <td>N/A</td>
-    <td><Default LP Message></td>
-  </tr>
-  <tr>
-    <td>Other</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
+    <tr>
+      <td>iOS</td>
+      <td>https://developers.liveperson...</td>
+      <td>hiMessage</td>
+    </tr>
+    <tr>
+      <td>Android</td>
+      <td>https://developers.liveperson...</td>
+      <td>lp_first_message</td>
+    </tr>
+    <tr>
+      <td>Web</td>
+      <td>N/A</td>
+      <td>Default LP Message</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
   </tbody>
 </table>
 
@@ -219,7 +170,7 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
 Fig 1.1
 
-#### Dialogflow Query length Limit 
+### Dialogflow Query length Limit 
 
 The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
@@ -236,7 +187,7 @@ fig.2.1
 
 fig.2.2
 
-#### Change Time To Response of Conversation
+### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **action** value in the response object.
 
@@ -252,7 +203,7 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
 
 Fig 3.1
 
-#### Transfer / Escalations
+### Transfer / Escalations
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
@@ -279,9 +230,9 @@ Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (cas
 
 fig.4.1
 
-#### Send Rich Content (Structured Content)
+### Send Rich Content (Structured Content)
 
-Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](https://developers.liveperson.com/structured-content-introduction-to-structured-content.html).
+Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
 To send structured content via Dialogflow V2, send a *custom payload* option via an intent.
 
@@ -331,8 +282,7 @@ Example Metadata
 ```
 Figure 5.2 Dialogflow Example Custom Payload
 
-
-#### Close Chat/Conversation
+### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
 If a query has been answered, or the brand has determined that no escalation is required for a given query, then it is best practice to have the bot end the conversation.

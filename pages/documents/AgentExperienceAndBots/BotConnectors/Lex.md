@@ -1,68 +1,24 @@
 ---
-pagename: Lex
+pagename: Amazon Lex
 redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
-permalink: bot-connectors-lex.html
+permalink: bot-connectors-amazon-lex.html
 indicator:
 ---
 
 ### Overview
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Platform specifically for Amazon Lex.
+The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector Manager specifically for Amazon Lex.
 
-### LiveEngage Requirements
+### Bot Configuration
 
-#### Bot User Account Configuration
-
-Outlined below is the steps required to create an appropriate Bot Type agent in LiveEngage.
-The result of which is fed into the "Bot Configuration" Below.
-
-Create User type “bot” with a role of Agent
-
-1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, relevant AC feature needs to be turned on.	
-
-<img style="width:600px" src="img/lex/image_0.png">
-
-1. Add login method as "API key" and generate new API key for the new user
-
-<img style="width:600px" src="img/lex/image_1.png">
-
-1. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
-
-2. Set Max No of Live Chats 
-
-    1. If Chat in the drop down select  - Value > 1.
-
-    2. If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to **Custom Setting and enter a value greater than 0** 
-
-3. Add other required APIs to the bot api key:
-
-    3. Find api key name in bot user profile
-      
-      <img style="width:600px" src="img/lex/image_2.png">
-
-    4. **Below is Messaging ONLY!!!
-**Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
-
-        1. Engagement History API
-
-        2. Operational API
-
-<img style="width:600px" src="img/lex/image_3.png">
-
-        3. Administration (Skills) - **Read ONLY**
-<img style="width:600px" src="img/lex/image_4.png">
-
-
-#### Bot Configuration
+Make sure you have your Bot agent created from the [Getting Started](bot-connectors-getting-started.html) guide.
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
 The following information should be provided to LivePerson.
-
- 
 
 <table>
   <thead>
@@ -125,7 +81,6 @@ End time</td>
   </tbody>
 </table>
 
-
 **NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
 Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
 A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
@@ -146,18 +101,16 @@ The Bot-platform connector uses the below fields from the AWS Environment.
 
 <img style="width:600px" src="img/lex/image_5.png">
 
-### Amazon Lex
+### Functions of the Bot Connector 
 
-#### Functions of the Bot Connector 
-
-The Bot Platform provides the basic functionality to send/receive messages between LiveEngage and Amazon Lex.
+The Bot Connector Manager provides the basic functionality to send/receive messages between LiveEngage and Amazon Lex.
 
 
-The integration between the Bot Platform and Amazon Lex also supports the sending of [structured content](https://developers.liveperson.com/structured-content-templates.html###overview). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
+The integration between the Bot Connector Manager and Amazon Lex also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
 
 **NOTE**: At this time Lex response cards & audio messages are not supported.
 
-#### Welcome Event
+### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
@@ -207,7 +160,7 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
 Fig 1.1
 
-#### Change Time To Response of Conversation
+### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **action** value in the response object.
 
@@ -239,7 +192,7 @@ Figure 3.1 Lex Example Change TTR Payload
 
 Fig 3.1 - Example in Lex console
 
-#### Transfer / Escalations
+### Transfer / Escalations
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
@@ -281,9 +234,9 @@ Fig.4.2 - Example in Lex console
 
 fig.4.2
 
-#### Send Rich Content (Structured Content)
+### Send Rich Content (Structured Content)
 
-Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](https://developers.liveperson.com/structured-content-introduction-to-structured-content.html).
+Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
 To send structured content via Lex, send a *custom payload* option via an intent.
 
@@ -346,7 +299,7 @@ This should contain valid structured content, along with any optional metadata r
 
 **NOTE:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
 
-#### Close Chat/Conversation
+### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
 If a query has been answered, or the brand has determined that no escalation is required for a given query, then it is best practice to have the bot end the conversation.
