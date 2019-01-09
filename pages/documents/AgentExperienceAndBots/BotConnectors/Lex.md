@@ -10,11 +10,12 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector Manager specifically for Amazon Lex.
+The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector specifically for Amazon Lex.
 
 ### Bot Configuration
 
-Make sure you have your Bot agent created from the [Getting Started](bot-connectors-getting-started.html) guide.
+{: .important}
+See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
@@ -103,10 +104,10 @@ The Bot-platform connector uses the below fields from the AWS Environment.
 
 ### Functions of the Bot Connector 
 
-The Bot Connector Manager provides the basic functionality to send/receive messages between LiveEngage and Amazon Lex.
+The Bot Connector provides the basic functionality to send/receive messages between LiveEngage and Amazon Lex.
 
 
-The integration between the Bot Connector Manager and Amazon Lex also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
+The integration between the Bot Connector and Amazon Lex also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
 
 **NOTE**: At this time Lex response cards & audio messages are not supported.
 

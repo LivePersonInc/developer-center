@@ -8,11 +8,12 @@ permalink: bot-connectors-google-dialog-flow.html
 indicator:
 ---
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector Manager specifically for Google Dialogflow v1.
+The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector specifically for Google Dialogflow v1.
 
 ### Bot Configuration
 
-Make sure you have your Bot agent created from the [Getting Started](bot-connectors-getting-started.html) guide.
+{: .important}
+See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
@@ -82,9 +83,9 @@ Few things to note before going into *actions* and *skills* is the naming conven
 
 * We use the character ‘.’ as a delimiter in the ‘action’ object. We recommend that you do **NOT** use  ‘.’ in a skill name in LiveEngage. Refer page 11, section: *Transfer/Escalations* for an example.
 
-### Functions of the Bot Connector Manager 
+### Functions of the Bot Connector 
 
-The Bot Connector Manager provides the basic functionality to send/receive text messages between LiveEngage and Google Dialogflow. The integration between the Bot Connector Manager and Dialogflow also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to other skills, using the actions functionality. The following are the functions we support today.
+The Bot Connector provides the basic functionality to send/receive text messages between LiveEngage and Google Dialogflow. The integration between the Bot Connector and Dialogflow also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to other skills, using the actions functionality. The following are the functions we support today.
 
 ### Supported Versions
 

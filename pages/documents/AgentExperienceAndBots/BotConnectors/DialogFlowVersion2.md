@@ -10,11 +10,12 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector Manager specifically for Google Dialogflow v2.
+The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector specifically for Google Dialogflow v2.
 
 ### Bot Configuration
 
-Make sure you have your Bot agent created from the [Getting Started](bot-connectors-getting-started.html) guide.
+{: .important}
+See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
@@ -117,8 +118,8 @@ The Bot-platform connector uses the below fields from the JSON content above.
 
 ### Functions of the Bot Connector 
 
-The Bot Connector Manager provides the basic functionality to send/receive messages between LiveEngage and Google Dialogflow V2.
-The integration between the Bot Connector Manager and Dialogflow V2 also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
+The Bot Connector provides the basic functionality to send/receive messages between LiveEngage and Google Dialogflow V2.
+The integration between the Bot Connector and Dialogflow V2 also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
 
 ### Welcome Event
 

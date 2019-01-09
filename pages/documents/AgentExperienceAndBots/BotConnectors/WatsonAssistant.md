@@ -10,11 +10,12 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the pre-requirements to use the Bot Connector Manager specifically for **IBM Watson Assistant**.
+The following documentation outlines the pre-requirements to use the Bot Connector specifically for **IBM Watson Assistant**.
 
 ### Bot Configuration
 
-Make sure you have your Bot agent created from the [Getting Started](bot-connectors-getting-started.html) guide.
+{: .important}
+See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
 Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
 
@@ -105,15 +106,15 @@ All non-escalation actions are defined by using underscores. For example, in the
 
 For escalations, the naming convention for these skills should use a "-" instead of "_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
 
-### Functions of the Bot Connector Manager 
+### Functions of the Bot Connector 
 
-The Bot Connector Manager provides the base functionality to send and receive text messages between LiveEngage and Watson Assistant. The integration between the Bot Connector Manager and Watson Assistant also supports the sending [structured content](getting-started-with-rich-messaging-introduction.html). The Bot Connector Manager also provides further functionality such as the ability to transfer the conversation to other skills, changing the TTR of a conversation as well as the ability close a conversation. These actions are sent in the action array of Watson Assistant’s JSON response.
+The Bot Connector provides the base functionality to send and receive text messages between LiveEngage and Watson Assistant. The integration between the Bot Connector and Watson Assistant also supports the sending [structured content](getting-started-with-rich-messaging-introduction.html). The Bot Connector also provides further functionality such as the ability to transfer the conversation to other skills, changing the TTR of a conversation as well as the ability close a conversation. These actions are sent in the action array of Watson Assistant’s JSON response.
 
 The following provides a detailed look at how to implement the supported functionality.
 
 ### Sending Rich Content (Structured Content)
 
-The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector Manager also supports this.
+The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
 To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 2.1).
 

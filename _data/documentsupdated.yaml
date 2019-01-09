@@ -136,8 +136,6 @@
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
-      - pagename: Connector Manager Overview
-
 
 - categoryname: Client Side Configuration
   image: client-side
