@@ -136,6 +136,38 @@
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
+  - documentname: Conversation Builder
+    pages:
+      - pagename: Getting Started
+        subpages:
+          - subpagename: Hello Conversation Builder
+          - subpagename: Building Your First Intent
+          - subpagename: Connect an Integration
+      - pagename: Overview
+        subpages:
+          - subpagename: Component Breakdown
+          - subpagename: Interactions
+          - subpagename: Conditions
+          - subpagename: Conversation Builder Assistant
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
+          - subpagename: Entities
+      - pagename: Knowledge Base Overview
+      - pagename: Routing Bot Use Case
+        subpages:
+          - subpagename: Overview
+          - subpagename: Step 1 - Create a New Router Bot
+          - subpagename: Step 2 - Modifying the Template
+          - subpagename: Step 3 - Intents
+          - subpagename: Step 4 - Escalation
+      - pagename: FAQ Bot Use Case
+        subpages:
+          - subpagename: Overview
+          - subpagename: Creating a New Knowledge Base
+          - subpagename: Creating a New FAQ Bot
+
+
 
 - categoryname: Client Side Configuration
   image: client-side
@@ -759,6 +791,9 @@
         - pagename: List Picker Template
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
+        - pagename: Apple Auth Template
+        - pagename: App Extensions Template
+        - pagename: Rich Links Template
         - pagename: Guidelines and Limitations
     - documentname: Facebook Messenger Templates
       pages:
