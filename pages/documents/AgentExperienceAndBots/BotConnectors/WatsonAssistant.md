@@ -45,11 +45,11 @@ LiveEngage Token Secret</td>
   </tr>
   <tr>
     <td>Type</td>
-    <td>Using "Chat" or “Messaging”</td>
+    <td>Using "Chat" or "Messaging"</td>
   </tr>
   <tr>
     <td>vendor</td>
-    <td>Name of the AI engine. “WatsonAssistant”</td>
+    <td>Name of the AI engine. "WatsonAssistant"</td>
   </tr>
   <tr>
     <td>BotAuth</td>
@@ -103,7 +103,7 @@ One thing to note before going into *actions* and *skills* is the naming convent
 
 All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by **Watson** needs to be *CLOSE_CONVERSATION*. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
 
-For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.
+For escalations, the naming convention for these skills should use a "-" instead of "_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
 
 ### Functions of the Bot Connector Manager 
 
@@ -213,7 +213,7 @@ Figure 2.4 Structured Content Watson JSON Example
 
 For new IAM workspaces that have a new Watson response, *Then respond with* text:
 
-<img style="width:600px" src="img/watsonassistant/image_5.png">
+<img style="width:400px" src="img/watsonassistant/image_5.png">
 
 Put the structured content objects with the metadata in the text field for the response.
 
@@ -238,26 +238,26 @@ Figure 2.5 Structured Content Watson JSON Example (IAM)
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
 
 ```json
 {
     "output" : {
-          “text” : {
-                 “values” : [
-                        “Sure thing! Change the TTR to 50 minutes.”
+          "text" : {
+                 "values" : [
+                        "Sure thing! Change the TTR to 50 minutes."
                   ],
-                  “selection_policy” : “sequential”
+                  "selection_policy" : "sequential"
            },
-          “actions” : [
+          "actions" : [
                  {
-                     “name” : “CHANGE_TTR”,
-                     “type” : “CLIENT”,               
-                     “parameters” : {
-                        “ttrType” : “CUSTOM”,
-                        “value” : 3000  
+                     "name" : "CHANGE_TTR",
+                     "type" : "CLIENT",               
+                     "parameters" : {
+                        "ttrType" : "CUSTOM",
+                        "value" : 3000  
                      },
-                     “result_variable” : “none”
+                     "result_variable" : "none"
                  }   
            ]
      }
@@ -269,27 +269,27 @@ Figure 2.6 Watson JSON response for changing TTR
 
 Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
-<img style="width:600px" src="img/watsonassistant/image_6.png">
+<img style="width:850px" src="img/watsonassistant/image_6.png">
 
 In the *Then respond with:* JSON editor block, we see the following:
 
 ```json
 {
   "output" : {
-    “text” : {
-      “values” : [
-            “Sure thing! Escalating you to a live agent now.”
+    "text" : {
+      "values" : [
+            "Sure thing! Escalating you to a live agent now."
       ],
-      “selection_policy” : “sequential”
+      "selection_policy" : "sequential"
     },
-    “actions” : [
+    "actions" : [
       {
-        “name” : “TRANSFER”,
-        “type” : “CLIENT”,               
-        “parameters” : {
-          “skill” : “BOT-TRANSFER-OUT”
+        "name" : "TRANSFER",
+        "type" : "CLIENT",               
+        "parameters" : {
+          "skill" : "BOT-TRANSFER-OUT"
         },
-        “result_variable” : “none”
+        "result_variable" : "none"
       }   
     ]
   }
@@ -307,17 +307,17 @@ To close a chat or messaging conversation, we utilize the action object as we di
 ```json
 {
     "output" : {
-          “text” : {
-                 “values” : [
-                        “Thank you for speaking with us today!”
+          "text" : {
+                 "values" : [
+                        "Thank you for speaking with us today!"
                   ],
-                  “selection_policy” : “sequential”
+                  "selection_policy" : "sequential"
            },
-          “actions” : [
+          "actions" : [
                  {
-                        “name” : “CLOSE_CONVERSATION”,
-                        “type” : “client”,
-                        “result_variable” : “none”
+                        "name" : "CLOSE_CONVERSATION",
+                        "type" : "client",
+                        "result_variable" : "none"
                  }
            ],
      }

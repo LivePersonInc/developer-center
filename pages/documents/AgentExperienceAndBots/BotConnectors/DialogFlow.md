@@ -139,7 +139,7 @@ The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/
 {
     "contexts":[] ,
     "lang": "en",
-    "query":"user-query-goes -here”,
+    "query": "user-query-goes -here",
     "sessionId": "12355",
     "timezone": "America/New_York"   
 }
@@ -192,11 +192,11 @@ Fig 3.1
   "result": {
     "source": "agent",
     "resolvedQuery": "set priority",
-    "action": "CHANGE_TTR",                                                            //Mandatory
+    "action": "CHANGE_TTR",   //Mandatory
     "actionIncomplete": false, 
     "parameters": {
-      "ttrType": "CUSTOM",                                                                //Mandatory
-      "value": "120"                                                                             //Mandatory for CUSTOM only          
+      "ttrType": "CUSTOM",    //Mandatory
+      "value": "120"     //Mandatory for CUSTOM only          
     },
     "contexts": [],
     "metadata": {
@@ -308,11 +308,11 @@ fig.5.1
 
 ```json
 {
-   "metadata": {                                                                              //Mandatory
-      "type": "ExternalId",                                                                //Mandatory
-      "id": "ABCD1234"                                                                    //Mandatory
+   "metadata": {   //Mandatory
+      "type": "ExternalId",    //Mandatory
+      "id": "ABCD1234"   //Mandatory
    },
-   "structuredContent": {                                                             //Mandatory
+   "structuredContent": {       //Mandatory
       "type": "vertical",
       "elements": [
          {

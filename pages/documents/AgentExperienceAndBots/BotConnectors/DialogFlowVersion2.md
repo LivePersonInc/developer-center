@@ -166,9 +166,9 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event.
 
-<img style="width:600px" src="img/dialogflowversion2/image_6.png">
+  <img style="width:550px" src="img/dialogflowversion2/image_6.png">
 
-Fig 1.1
+  Fig 1.1
 
 ### Dialogflow Query length Limit 
 
@@ -177,15 +177,15 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
 
-<img style="width:600px" src="img/dialogflowversion2/image_7.png">
+  <img style="width:600px" src="img/dialogflowversion2/image_7.png">
 
-fig.2.1
+  fig.2.1
 
-2. Do not forget to add a custom response in the **Text response **section. 
+2. Do not forget to add a custom response in the **Text response** section. 
 
-<img style="width:600px" src="img/dialogflowversion2/image_8.png">
+  <img style="width:700px" src="img/dialogflowversion2/image_8.png">
 
-fig.2.2
+  fig.2.2
 
 ### Change Time To Response of Conversation
 
@@ -236,7 +236,7 @@ Structured content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content via Dialogflow V2, send a *custom payload* option via an intent.
 
-<img style="width:600px" src="img/dialogflowversion2/image_11.png">
+<img style="width:800px" src="img/dialogflowversion2/image_11.png">
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
@@ -249,11 +249,11 @@ Example Metadata
 
 ```json
 {
-   "metadata": {                                                                              //Mandatory
-      "type": "ExternalId",                                                                //Mandatory
-      "id": "ABCD1234"                                                                    //Mandatory
+   "metadata": {      //Mandatory
+      "type": "ExternalId",    //Mandatory
+      "id": "ABCD1234"      //Mandatory
    },
-   "structuredContent": {                                                             //Mandatory
+   "structuredContent": {     //Mandatory
       "type": "vertical",
       "elements": [
          {
@@ -289,9 +289,9 @@ If a query has been answered, or the brand has determined that no escalation is 
 
 The method for closing a conversation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
 
-The action field needs to be set to **CLOSE_CONVERSATION **to instruct the connector to to close the conversation.
+The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
 
-<img style="width:600px" src="img/dialogflowversion2/image_12.png">
+<img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 fig.6.1
 

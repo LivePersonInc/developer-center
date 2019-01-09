@@ -188,7 +188,7 @@ Figure 3.1 Lex Example Change TTR Payload
 
 
 
-<img style="width:600px" src="img/lex/image_7.png">
+<img style="width:500px" src="img/lex/image_7.png">
 
 Fig 3.1 - Example in Lex console
 
@@ -224,13 +224,13 @@ Transfers and escalations rely on the *action* item in the response object.
 Figure 4.1 Lex Example Transfer Payload
 
 
-<img style="width:600px" src="img/lex/image_8.png">
+<img style="width:500px" src="img/lex/image_8.png">
 
 Fig.4.2 - Example in Lex console
 
 **NOTE**: Additionally, if the Lex error handling "maximum number of retries" is reached the bot connector will also initiate a “default escalation” transfer action.
 
-<img style="width:600px" src="img/lex/image_9.png">
+<img style="width:550px" src="img/lex/image_9.png">
 
 fig.4.2
 
@@ -289,7 +289,7 @@ To send structured content via Lex, send a *custom payload* option via an intent
 ```
 Figure 5.1 Lex Example Rich Content Payload
 
-<img style="width:600px" src="img/lex/image_10.png">
+<img style="width:500px" src="img/lex/image_10.png">
 
 Fig.5.2 - Example in Lex console
 
@@ -318,7 +318,7 @@ The action field needs to be set to **CLOSE_CONVERSATION **to instruct the conne
 ```
 Figure 6.1 Lex Example Close Conversation Payload
 
-<img style="width:600px" src="img/lex/image_11.png">
+<img style="width:500px" src="img/lex/image_11.png">
 
 Fig.6.2 - Example in Lex console
 

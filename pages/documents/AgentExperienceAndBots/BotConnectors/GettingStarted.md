@@ -44,7 +44,7 @@ The result of this is fed into the "Bot Configuration" outlined in each product 
 
 5. Find api key name in bot user profile
     
-    <img style="width:600px" src="img/dialogflowversion2/image_2.png">
+    <img style="width:400px" src="img/dialogflowversion2/image_2.png">
 
 --- 
 
