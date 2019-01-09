@@ -39,7 +39,7 @@ Create User type “bot” with a role of Agent
     
       <img style="width:600px" src="img/watsonassistant/image_2.png">
 
-**Below is Messaging ONLY!!!**
+      **Below is Messaging ONLY!!!**
 
     2. Go to API management page (campaign list > data source) and add following APIs to the bot’s API key:
 

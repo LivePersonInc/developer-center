@@ -131,10 +131,12 @@
       - pagename: Release Notes
   - documentname: Bot Connectors
     pages:
-      - pagename: Dialog Flow
-      - pagename: Dialog Flow Version 2
-      - pagename: Watson Assistant
-      - pagename: Lex
+      - pagename: Getting Started 
+      - pagename: Google Dialog Flow
+      - pagename: Google Dialog Flow Version 2
+      - pagename: IBM Watson Assistant
+      - pagename: Amazon Lex
+      - pagename: Connector Manager Overview
 
 
 - categoryname: Client Side Configuration
