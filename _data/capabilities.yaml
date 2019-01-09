@@ -349,7 +349,7 @@
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
-    - appleBusinessChat: December
+    - appleBusinessChat: "Supported"
     - sms: Q1, 2019
     - facebook: Q1, 2019
     - whatsapp: Q1, 2019

@@ -146,7 +146,7 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
 
-<!-- ### Google Dialog V2.0 Flow
+### Google Dialog V2.0 Flow
 
 The Google Dialog Flow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
 
@@ -189,7 +189,7 @@ The Google Dialog Flow v2.0 connector will be available by mid December. Below a
 
     6. Leave API Version unchanged as V2
 
-![image alt text](img/bot-guide-dialogflow1.png) -->
+![image alt text](img/bot-guide-dialogflow1.png)
 
 
 ### Microsoft Bot Framework (LUIS)

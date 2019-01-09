@@ -129,6 +129,13 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Bot Connectors
+    pages:
+      - pagename: Getting Started 
+      - pagename: Google Dialog Flow
+      - pagename: Google Dialog Flow Version 2
+      - pagename: IBM Watson Assistant
+      - pagename: Amazon Lex
   - documentname: Conversation Builder
     pages:
       - pagename: Getting Started
@@ -159,6 +166,7 @@
           - subpagename: Overview
           - subpagename: Creating a New Knowledge Base
           - subpagename: Creating a New FAQ Bot
+
 
 
 - categoryname: Client Side Configuration
