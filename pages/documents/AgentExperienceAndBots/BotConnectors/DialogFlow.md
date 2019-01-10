@@ -83,6 +83,55 @@ Few things to note before going into *actions* and *skills* is the naming conven
 
 * We use the character ‘.’ as a delimiter in the ‘action’ object. We recommend that you do **NOT** use  ‘.’ in a skill name in LiveEngage. Refer page 11, section: *Transfer/Escalations* for an example.
 
+### Limitations
+
+#### Dialogflow Query length Limit 
+
+The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*. 
+
+**Sample Syntax : Dialogflow Request Object**
+
+```json
+{
+    "contexts":[] ,
+    "lang": "en",
+    "query": "user-query-goes -here",
+    "sessionId": "12355",
+    "timezone": "America/New_York"   
+}
+```
+Figure 2.1 DialogFlow Response JSON with action
+
+
+**Sample Dialogflow Error Response**
+
+```json
+{
+     "id": "df6573be-2c70-4f63-8fdd-93f56af0b4b4",
+    "timestamp": "2018-09-06T05:20:56.224Z",
+    "lang": "en",
+    "status": {
+        "code": 400,
+        "errorType": "bad_request",
+        "errorDetails": "All queries should be less than 255 symbols."
+    }
+}
+```
+Figure 2.2 DialogFlow Response JSON with action
+
+
+1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
+
+  <img style="width:600px" src="img/dialogflow/image_6.png">
+
+fig.2.3
+
+2. Do not forget to add a custom response in the **Text response** section. 
+
+  <img style="width:600px" src="img/dialogflow/image_7.png">
+
+fig.2.4
+
 ### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works and how it is framed with the consumer.
@@ -337,52 +386,3 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 }
 ```
 Figure 6.2 DialogFlow JSON response for closing conversation
-
-### Limitations
-
-#### Dialogflow Query length Limit 
-
-The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*. 
-
-**Sample Syntax : Dialogflow Request Object**
-
-```json
-{
-    "contexts":[] ,
-    "lang": "en",
-    "query": "user-query-goes -here",
-    "sessionId": "12355",
-    "timezone": "America/New_York"   
-}
-```
-Figure 2.1 DialogFlow Response JSON with action
-
-
-**Sample Dialogflow Error Response**
-
-```json
-{
-     "id": "df6573be-2c70-4f63-8fdd-93f56af0b4b4",
-    "timestamp": "2018-09-06T05:20:56.224Z",
-    "lang": "en",
-    "status": {
-        "code": 400,
-        "errorType": "bad_request",
-        "errorDetails": "All queries should be less than 255 symbols."
-    }
-}
-```
-Figure 2.2 DialogFlow Response JSON with action
-
-
-1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
-
-  <img style="width:600px" src="img/dialogflow/image_6.png">
-
-fig.2.3
-
-2. Do not forget to add a custom response in the **Text response** section. 
-
-  <img style="width:600px" src="img/dialogflow/image_7.png">
-
-fig.2.4

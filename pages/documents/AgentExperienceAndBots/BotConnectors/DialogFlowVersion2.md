@@ -112,6 +112,25 @@ The Bot-platform connector uses the below fields from the JSON content above.
 
 <img style="width:600px" src="img/dialogflowversion2/image_5.png">
 
+### Limitations
+
+#### Dialogflow Query length Limit 
+
+The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
+To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
+
+1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
+
+  <img style="width:600px" src="img/dialogflowversion2/image_7.png">
+
+  fig.2.1
+
+2. Do not forget to add a custom response in the **Text response** section. 
+
+  <img style="width:700px" src="img/dialogflowversion2/image_8.png">
+
+  fig.2.2
+
 ### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
@@ -271,22 +290,3 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 <img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 fig.6.1
-
-### Limitations
-
-#### Dialogflow Query length Limit 
-
-The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
-To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
-
-1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
-
-  <img style="width:600px" src="img/dialogflowversion2/image_7.png">
-
-  fig.2.1
-
-2. Do not forget to add a custom response in the **Text response** section. 
-
-  <img style="width:700px" src="img/dialogflowversion2/image_8.png">
-
-  fig.2.2
