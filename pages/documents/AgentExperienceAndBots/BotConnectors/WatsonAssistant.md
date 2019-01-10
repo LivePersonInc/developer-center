@@ -10,7 +10,7 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the pre-requirements to use the Bot Connector specifically for **IBM Watson Assistant**.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson**.
 
 ### Bot Configuration
 
@@ -39,9 +39,9 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>Password</td>
-    <td>LiveEngage App Key
-LiveEngage App Secret
-LiveEngage Token
+    <td>LiveEngage App Key<br>
+LiveEngage App Secret<br>
+LiveEngage Token<br>
 LiveEngage Token Secret</td>
   </tr>
   <tr>
@@ -54,28 +54,28 @@ LiveEngage Token Secret</td>
   </tr>
   <tr>
     <td>BotAuth</td>
-    <td>User/Pass
-Authentication info for Watson, following is example:
-WORKSPACE_URL: https://gateway.watsonplatform.net/conversation/api
-WORKSPACE_ID: 8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74
-CONVERSATION_USERNAME: de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751
-CONVERSATION_PASSWORD: Dxxxxxxxxxx1
-VERSION_DATE: 201X-xx-xx
+    <td><em>User/Pass</em><br>
+Authentication info for Watson, following is example:<br>
+WORKSPACE_URL: https://gateway.watsonplatform.net/conversation/api<br>
+WORKSPACE_ID: 8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74<br>
+CONVERSATION_USERNAME: de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751<br>
+CONVERSATION_PASSWORD: Dxxxxxxxxxx1<br>
+VERSION_DATE: 201X-xx-xx<br><br><br>
 
-IAM
-WORKSPACE_URL: https://gateway.watsonplatform.net/conversation/api
-WORKSPACE_ID: 8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74
-VERSION_DATE: 201X-xx-xx
-API_KEY: xxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxxxxZG
-TOKEN_ENDPOINT_URL: https://iam.bluemix.net/identity/token
-DEFAULT_REFRESH_TIME: 300000
-MAX_RETRIES: 0
+<em>IAM</em><br>
+WORKSPACE_URL: https://gateway.watsonplatform.net/conversation/api<br>
+WORKSPACE_ID: 8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74<br>
+VERSION_DATE: 201X-xx-xx<br>
+API_KEY: xxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxxxxZG<br>
+TOKEN_ENDPOINT_URL: https://iam.bluemix.net/identity/token<br>
+DEFAULT_REFRESH_TIME: 300000<br>
+MAX_RETRIES: 0<br>
 AUTH_HEADER: Basic Yng6Yng=</td>
   </tr>
   <tr>
     <td>operatingHours</td>
-    <td>On/Off
-Start time
+    <td>On/Off<br>
+Start time<br>
 End time</td>
   </tr>
   <tr>
@@ -85,10 +85,6 @@ End time</td>
   <tr>
     <td>transferSkill</td>
     <td>Default transfer skill</td>
-  </tr>
-  <tr>
-    <td>transferSkillId</td>
-    <td>Default transfer skill ID</td>
   </tr>
   <tr>
     <td>transferMessage</td>
@@ -106,50 +102,30 @@ All non-escalation actions are defined by using underscores. For example, in the
 
 For escalations, the naming convention for these skills should use a "-" instead of "_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
 
-### Functions of the Bot Connector 
-
-The Bot Connector provides the base functionality to send and receive text messages between LiveEngage and Watson Assistant. The integration between the Bot Connector and Watson Assistant also supports the sending [structured content](getting-started-with-rich-messaging-introduction.html). The Bot Connector also provides further functionality such as the ability to transfer the conversation to other skills, changing the TTR of a conversation as well as the ability close a conversation. These actions are sent in the action array of Watson Assistant’s JSON response.
-
-The following provides a detailed look at how to implement the supported functionality.
-
 ### Sending Rich Content (Structured Content)
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
 To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 2.1).
 
-<table>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Figure 2.1 Watson Dialog Node</td>
-  </tr>
-</table>
+
+<img style="width:850px" src="img/watsonassistant/dialognode.png">
+
+Figure 2.1 Watson Dialog Node
 
 
 From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.2)
 
-<table>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Figure 2.2 Watson Assistant Dialog JSON Editor</td>
-  </tr>
-</table>
+<img style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
+
+Figure 2.2 Watson Assistant Dialog JSON Editor
 
 
 In the JSON Editor you will need to add your custom JSON response (Figure 2.3).
 
-<table>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Figure 2.3 Watson Assistant JSON Editor</td>
-  </tr>
-</table>
+<img style="width:500px" src="img/watsonassistant/jsoneditor.png">
+
+Figure 2.3 Watson Assistant JSON Editor
 
 
 There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 2.4** with a sample JSON example that uses a standard Structured Content card with a button option in **Figure 2.5**.
