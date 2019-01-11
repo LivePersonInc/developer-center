@@ -123,10 +123,13 @@ From here we will create a new API with the following parameters.
 * Request Parameters: Be sure to add to Parameters, NOT Headers
 
   <table>
+    <thead>
     <tr>
-      <td>Key</td>
-      <td>Value (hit Enter after each field is added)</td>
+      <th>Key</th>
+      <th>Value (hit Enter after each field is added)</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
       <td>accountNumber</td>
       <td>{$botContext.slot.accountNumber} </td>
@@ -135,16 +138,19 @@ From here we will create a new API with the following parameters.
       <td>email</td>
       <td>{$botContext.slot.userEmail}</td>
     </tr>
+    </tbody>
   </table>
 
 
 * Custom Data Fields: these provide a simple method of displaying the results in your dialog interactions.
 
   <table>
+    <thead>
     <tr>
-      <td>Key</td>
-      <td>Value (hit Enter after each field is added)</td>
+      <th>Key</th>
+      <th>Value (hit Enter after each field is added)</th>
     </tr>
+    </thead><tbody>
     <tr>
       <td>accountId</td>
       <td>{$.api_Balance.accountId}</td>
@@ -153,6 +159,7 @@ From here we will create a new API with the following parameters.
       <td>balance</td>
       <td>{$.api_Balance.accountBalance}</td>
     </tr>
+    </tbody>
   </table>
 
 **Save** the API settings.

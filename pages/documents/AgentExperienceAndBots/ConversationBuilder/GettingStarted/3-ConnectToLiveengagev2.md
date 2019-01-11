@@ -37,10 +37,12 @@ From here we will create a new API with the following parameters.
 * Request Headers:
 
   <table>
+    <thead>
     <tr>
-      <td>Key</td>
-      <td>Value (hit Enter after each field is added)</td>
+      <th>Key</th>
+      <th>Value (hit Enter after each field is added)</th>
     </tr>
+    </thead><tbody>
     <tr>
       <td>Authorization</td>
       <td>YOUR PERMANENT API ACCESS KEY<br>
@@ -50,6 +52,7 @@ From here we will create a new API with the following parameters.
         <img style="width:300px" src="img/ConvoBuilder/helloworld/permapikey.png">
       </td>
     </tr>
+    </tbody>
   </table>
 
 
