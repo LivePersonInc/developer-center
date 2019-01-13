@@ -1,12 +1,12 @@
 ---
-pagename: Component Breakdown
+pagename: Conversation Builder Overview
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Overview
-permalink: conversation-builder-overview-component-breakdown.html
+subfoldername: Components
+permalink: conversation-builder-components-conversation-builder-overview.html
 indicator: both
 ---
 
@@ -22,7 +22,7 @@ On the right-hand side of the window, you can find the **Settings Toolbar**. Thi
 
 The Dialog Workspace is the main panel of the Conversation Builder. It lists the different interactions which make up this specific Dialog. A Dialog is composed of a series of interactions which together make up a back and forth conversation between the user and the bot/automation.
 
-A Dialog is always triggered by a user statement, either via simple [pattern matching](conversation-builder-overview-conditions.html#pattern-matching) or via [intents](conversation-builder-overview-intent-builder-overview.html). Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
+A Dialog is always triggered by a user statement, either via simple [pattern matching](conversation-builder-components-conditions.html#pattern-matching) or via [intents](conversation-builder-components-intent-builder-overview.html). Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
 
 Clicking on any of the interactions in the Dialog will allow you to configure them. See below for the different configuration options and requirements for each interaction type.
 
@@ -44,10 +44,10 @@ The Interactions Toolbar is divided into two parts:
 
 2) The **Bot/Automation** section.
 
-Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace (see above for more information on the Dialog Workspace) and click on it. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the bot/automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-overview-interactions.html).
+Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace (see above for more information on the Dialog Workspace) and click on it. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the bot/automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-components-interactions.html).
 
 ### The Settings Toolbar
 
 The Settings Toolbar contains various menus and panels which allow you to further configure your bot/automation. It also includes the **Assistant** tool, which actively "listens" to your dialog as you build it and recommends intents, entities and more for your use, and the **Messaging Client**, which allows you to test your various dialogs.
 
-Once you have populated the Dialog View with interactions, you can select any interaction and click on the Interaction Details icon (it will be selected by default) in the Settings Toolbar. Inside this panel, you can configure further actions for the bot/automation dependent on the same methods we described above such as pattern matching, intents, and so on. You can achieve this by selecting User Response, configuring the [conditions](conversation-builder-overview-conditions.html) the bot/automation will look for and then configuring the resulting action (like sending a specific interaction, ending the dialog, and so on).
+Once you have populated the Dialog View with interactions, you can select any interaction and click on the Interaction Details icon (it will be selected by default) in the Settings Toolbar. Inside this panel, you can configure further actions for the bot/automation dependent on the same methods we described above such as pattern matching, intents, and so on. You can achieve this by selecting User Response, configuring the [conditions](conversation-builder-components-conditions.html) the bot/automation will look for and then configuring the resulting action (like sending a specific interaction, ending the dialog, and so on).

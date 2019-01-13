@@ -3,8 +3,8 @@ pagename: Creating a New FAQ Bot
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
-subfoldername: FAQ Bot Use Case
-permalink: conversation-builder-faq-bot-use-case-creating-a-new-faq-bot.html
+subfoldername: FAQ Bot Tutorial
+permalink: conversation-builder-faq-bot-tutorial-creating-a-new-faq-bot.html
 indicator: both
 ---
 

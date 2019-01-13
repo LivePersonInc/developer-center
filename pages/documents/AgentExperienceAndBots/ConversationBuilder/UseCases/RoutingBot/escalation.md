@@ -3,8 +3,8 @@ pagename: Step 4 - Escalation
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
-subfoldername: Routing Bot Use Case
-permalink: conversation-builder-routing-bot-use-case-step-4-escalation.html
+subfoldername: Routing Bot Tutorial
+permalink: conversation-builder-routing-bot-tutorial-step-4-escalation.html
 indicator: both
 ---
 

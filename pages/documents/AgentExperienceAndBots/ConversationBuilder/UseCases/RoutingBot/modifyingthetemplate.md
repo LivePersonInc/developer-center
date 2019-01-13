@@ -3,8 +3,8 @@ pagename: Step 2 - Modifying the Template
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
-subfoldername: Routing Bot Use Case
-permalink: conversation-builder-routing-bot-use-case-step-2-modifying-the-template.html
+subfoldername: Routing Bot Tutorial
+permalink: conversation-builder-routing-bot-tutorial-step-2-modifying-the-template.html
 indicator: both
 ---
 

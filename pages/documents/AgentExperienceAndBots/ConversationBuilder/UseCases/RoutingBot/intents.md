@@ -3,8 +3,8 @@ pagename: Step 3 - Intents
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
-subfoldername: Routing Bot Use Case
-permalink: conversation-builder-routing-bot-use-case-step-3-intents.html
+subfoldername: Routing Bot Tutorial
+permalink: conversation-builder-routing-bot-tutorial-step-3-intents.html
 indicator: both
 ---
 

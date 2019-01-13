@@ -131,7 +131,7 @@
       - pagename: Release Notes
   - documentname: Bot Connectors
     pages:
-      - pagename: Getting Started 
+      - pagename: Getting Started
       - pagename: Google Dialog Flow
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
@@ -143,25 +143,23 @@
           - subpagename: Hello World
           - subpagename: Intents and Integrations
           - subpagename: Connect to LiveEngage
-      - pagename: Overview
+      - pagename: Components
         subpages:
-          - subpagename: Component Breakdown
+          - subpagename: Conversation Builder Overview
           - subpagename: Interactions
           - subpagename: Conditions
           - subpagename: Conversation Builder Assistant
-      - pagename: Intent Builder
-        subpages:
-          - subpagename: Overview
+          - subpagename: Intent Builder Overview
           - subpagename: Entities
-      - pagename: Knowledge Base Overview
-      - pagename: Routing Bot Use Case
+          - subpagename: Knowledge Base Overview
+      - pagename: Routing Bot Tutorial
         subpages:
           - subpagename: Overview
           - subpagename: Step 1 - Create a New Router Bot
           - subpagename: Step 2 - Modifying the Template
           - subpagename: Step 3 - Intents
           - subpagename: Step 4 - Escalation
-      - pagename: FAQ Bot Use Case
+      - pagename: FAQ Bot Tutorial
         subpages:
           - subpagename: Overview
           - subpagename: Creating a New Knowledge Base

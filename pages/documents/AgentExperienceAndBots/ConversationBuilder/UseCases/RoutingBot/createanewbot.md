@@ -3,8 +3,8 @@ pagename: Step 1 - Create a New Router Bot
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
-subfoldername: Routing Bot Use Case
-permalink: conversation-builder-routing-bot-use-case-step-1-create-a-new-router-bot.html
+subfoldername: Routing Bot Tutorial
+permalink: conversation-builder-routing-bot-tutorial-step-1-create-a-new-router-bot.html
 indicator: both
 ---
 

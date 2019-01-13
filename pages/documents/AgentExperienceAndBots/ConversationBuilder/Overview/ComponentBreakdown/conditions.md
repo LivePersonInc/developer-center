@@ -5,12 +5,12 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Overview
-permalink: conversation-builder-overview-conditions.html
+subfoldername: Components
+permalink: conversation-builder-components-conditions.html
 indicator: both
 ---
 
-When adding a [question interaction](conversation-builder-overview-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the bot/automation.
+When adding a [question interaction](conversation-builder-components-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the bot/automation.
 
 When you add a question interaction to the dialog, you can select it and choose the Interaction Details from the Settings Toolbar on the right hand side (the second icon on the toolbar). From there, click on "User Response" in the middle of the Interactions Details panel which opens. At the bottom of this menu, you'll find the "Next Step" dropdown.
 
@@ -52,7 +52,7 @@ If you need more advanced operators, you can also use [Regular Expressions](http
 
 ### Slots
 
-Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-overview-entities-overview.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
+Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-components-entities-overview.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
 
 To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. From there, click the blue **+** icon right to the right of Slot.
 

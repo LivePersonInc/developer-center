@@ -5,8 +5,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Intent Builder
-permalink: conversation-builder-intent-builder-entities.html
+subfoldername: Components
+permalink: conversation-builder-components-entities.html
 indicator: both
 ---
 
