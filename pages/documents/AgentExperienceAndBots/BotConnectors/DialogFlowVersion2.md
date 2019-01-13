@@ -10,7 +10,7 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector specifically for Google Dialogflow v2.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **Google Dialogflow Version 2**.
 
 ### Bot Configuration
 
@@ -47,16 +47,16 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>BotAuth</td>
-    <td>Authentication info for Dialogflow V2:
-1. private_key
-2. client_email
+    <td><em>Authentication info for Dialogflow V2:</em><br>
+1. private_key<br>
+2. client_email<br>
 3. project_id</td>
   </tr>
   <tr>
     <td>operatingHours
 (messaging only)</td>
-    <td>On/Off
-Start time
+    <td>On/Off<br>
+Start time<br>
 End time</td>
   </tr>
   <tr>
@@ -67,10 +67,6 @@ End time</td>
   <tr>
     <td>transferSkill</td>
     <td>Default transfer skill name</td>
-  </tr>
-  <tr>
-    <td>transferSkillId</td>
-    <td>Default transfer skill ID</td>
   </tr>
   <tr>
     <td>transferMessage</td>
@@ -116,10 +112,24 @@ The Bot-platform connector uses the below fields from the JSON content above.
 
 <img style="width:600px" src="img/dialogflowversion2/image_5.png">
 
-### Functions of the Bot Connector 
+### Limitations
 
-The Bot Connector provides the basic functionality to send/receive messages between LiveEngage and Google Dialogflow V2.
-The integration between the Bot Connector and Dialogflow V2 also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
+#### Dialogflow Query length Limit 
+
+The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
+To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
+
+1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
+
+  <img style="width:600px" src="img/dialogflowversion2/image_7.png">
+
+  fig.2.1
+
+2. Do not forget to add a custom response in the **Text response** section. 
+
+  <img style="width:700px" src="img/dialogflowversion2/image_8.png">
+
+  fig.2.2
 
 ### Welcome Event
 
@@ -140,12 +150,12 @@ The below documents cover where to configure the initial message on a given plat
   <tbody>
     <tr>
       <td>iOS</td>
-      <td>https://developers.liveperson...</td>
+      <td>https://developers.liveperson.com/consumer-experience-ios-sdk-localizationkeys.html</td>
       <td>hiMessage</td>
     </tr>
     <tr>
       <td>Android</td>
-      <td>https://developers.liveperson...</td>
+      <td>https://developers.liveperson.com/android-modifying-string.html#resultOverlayRecordTemplate</td>
       <td>lp_first_message</td>
     </tr>
     <tr>
@@ -171,22 +181,7 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
   Fig 1.1
 
-### Dialogflow Query length Limit 
 
-The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
-To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
-
-1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
-
-  <img style="width:600px" src="img/dialogflowversion2/image_7.png">
-
-  fig.2.1
-
-2. Do not forget to add a custom response in the **Text response** section. 
-
-  <img style="width:700px" src="img/dialogflowversion2/image_8.png">
-
-  fig.2.2
 
 ### Change Time To Response of Conversation
 
@@ -295,4 +290,3 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 <img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 fig.6.1
-

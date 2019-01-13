@@ -10,7 +10,11 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector specifically for Amazon Lex.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
+
+{: .important}
+At this time, Lex response cards & audio messages are not supported.
+
 
 ### Bot Configuration
 
@@ -47,19 +51,19 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>BotAuth</td>
-    <td>Authentication info for Lex:
-API Version
-AWS Region
-Access Key ID
-Secret Access Key
-Bot Alias
+    <td><em>Authentication info for Lex:</em><br>
+API Version<br>
+AWS Region<br>
+Access Key ID<br>
+Secret Access Key<br>
+Bot Alias<br>
 Bot Name</td>
   </tr>
   <tr>
     <td>operatingHours
 (messaging only)</td>
-    <td>On/Off
-Start time
+    <td>On/Off<br>
+Start time<br>
 End time</td>
   </tr>
   <tr>
@@ -70,10 +74,6 @@ End time</td>
   <tr>
     <td>transferSkill</td>
     <td>Default transfer skill name</td>
-  </tr>
-  <tr>
-    <td>transferSkillId</td>
-    <td>Default transfer skill ID</td>
   </tr>
   <tr>
     <td>transferMessage</td>
@@ -102,15 +102,6 @@ The Bot-platform connector uses the below fields from the AWS Environment.
 
 <img style="width:600px" src="img/lex/image_5.png">
 
-### Functions of the Bot Connector 
-
-The Bot Connector provides the basic functionality to send/receive messages between LiveEngage and Amazon Lex.
-
-
-The integration between the Bot Connector and Amazon Lex also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to a specific skill, using the actions functionality.
-
-**NOTE**: At this time Lex response cards & audio messages are not supported.
-
 ### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
@@ -130,12 +121,12 @@ The below documents cover where to configure the initial message on a given plat
   <tbody>
   <tr>
     <td>iOS</td>
-    <td>https://developers.liveperson...</td>
+    <td>https://developers.liveperson.com/consumer-experience-ios-sdk-localizationkeys.html</td>
     <td>hiMessage</td>
   </tr>
   <tr>
     <td>Android</td>
-    <td>https://developers.liveperson...</td>
+    <td>https://developers.liveperson.com/android-modifying-string.html#resultOverlayRecordTemplate</td>
     <td>lp_first_message</td>
   </tr>
   <tr>

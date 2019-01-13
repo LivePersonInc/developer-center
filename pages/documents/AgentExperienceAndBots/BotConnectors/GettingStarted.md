@@ -12,15 +12,29 @@ indicator:
 
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
-Using the Bot Connector Manager, you can provision a bot connector for IBM Watson, Google Dialog Flow, Amazon Lex, etc.
+Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialog Flow, Amazon Lex, etc.
+
+Each connector provides the functionality to
+
+* send/receive text messages
+
+* send [structured content](getting-started-with-rich-messaging-introduction.html)
+
+* transfer the conversation to other skills
+
+* change Time To Response for a messaging conversation
+
+* close a conversation
+
+Some connectors may provide more or less functionality depending on the specifics of the product to which it is connecting.
 
 There are two steps to setting up a new bot connector. 
 
-1. Set up Bot user in LiveEngage
+1. Create Bot user in LiveEngage
 
-2. Provision connector in the Bot Connector Management dashboard
+2. Provision connector in the Bot Connector dashboard
 
-### Set Up Bot User in LiveEngage
+### Create Bot User in LiveEngage
 
 1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
 
@@ -58,7 +72,7 @@ Go to API management page (Campaigns tab > Data Sources > APIs) and add the foll
 
     <img style="width:600px" src="img/dialogflowversion2/image_4.png">
 
-### Provision Bot Connector
+### Provision connector in the Bot Connector dashboard
 
 To access the Bot Connector dashboard navigate to your appropriate URL:
 
@@ -96,6 +110,6 @@ Follow the steps below to add a new bot connector.
 
 ### Next Steps
 
-Move on to the product guides to learn how to connect and configure your specific product.
+Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
 
 

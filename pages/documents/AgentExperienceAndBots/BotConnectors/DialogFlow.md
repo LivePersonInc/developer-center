@@ -8,7 +8,10 @@ permalink: bot-connectors-google-dialog-flow.html
 indicator:
 ---
 
-The following documentation outlines the specific bot related config needed to meet the standards used in the Bot Connector specifically for Google Dialogflow v1.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **Google Dialogflow Version 1**.
+
+{: .important}
+Google has deprecated Dialogflow **Version 1** and customers should move to Version 2 if they have not already planned to do so by October 2019
 
 ### Bot Configuration
 
@@ -45,14 +48,14 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>BotAuth</td>
-    <td>Authentication info for Dialogflow:
-CLIENT_ACCESS_TOKEN
+    <td>Authentication info for Dialogflow:<br>
+CLIENT_ACCESS_TOKEN<br>
     EG: “a1b2c3d4e5f6g8h9j0”</td>
   </tr>
   <tr>
     <td>operatingHours</td>
-    <td>On/Off
-Start time
+    <td>On/Off<br>
+Start time<br>
 End time</td>
   </tr>
   <tr>
@@ -63,10 +66,7 @@ End time</td>
     <td>transferSkill</td>
     <td>Default transfer skill</td>
   </tr>
-  <tr>
-    <td>transferSkillId</td>
-    <td>Default transfer skill ID</td>
-  </tr>
+
   <tr>
     <td>transferMessage</td>
     <td>Default transfer message</td>
@@ -83,54 +83,9 @@ Few things to note before going into *actions* and *skills* is the naming conven
 
 * We use the character ‘.’ as a delimiter in the ‘action’ object. We recommend that you do **NOT** use  ‘.’ in a skill name in LiveEngage. Refer page 11, section: *Transfer/Escalations* for an example.
 
-### Functions of the Bot Connector 
+### Limitations
 
-The Bot Connector provides the basic functionality to send/receive text messages between LiveEngage and Google Dialogflow. The integration between the Bot Connector and Dialogflow also supports the sending of [structured content](getting-started-with-rich-messaging-introduction.html). Additionally, it also provides the ability to transfer the conversation to other skills, using the actions functionality. The following are the functions we support today.
-
-### Supported Versions
-
-This document outlines the functions of the integration between LiveEngage and Google Dialogflow **API V1** only.
-
-### Welcome Event
-
-The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works and how it is framed with the consumer.
-
-A Messaging interaction qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow and an intent determined . 
-
-These docs cover where to configure the initial message on a given platform
-
-<table>
-  <thead>
-  <tr>
-    <th>Platform</th>
-    <th>Docs</th>
-    <th>Attribute</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>iOS</td>
-    <td>https://developers.liveperson...</td>
-    <td>hiMessage</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>https://developers.liveperson...</td>
-    <td>lp_first_message</td>
-  </tr>
-  </tbody>
-</table>
-
-
-A Chat interaction on the other hand is considered started when the chat is routed to an agent, and best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
-
-As such, ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event, so the event fired is utilised.
-
-<img style="width:600px" src="img/dialogflow/image_5.png">
-
-Fig 1.1
-
-### Dialogflow Query length Limit 
+#### Dialogflow Query length Limit 
 
 The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*. 
 
@@ -176,6 +131,45 @@ fig.2.3
   <img style="width:600px" src="img/dialogflow/image_7.png">
 
 fig.2.4
+
+### Welcome Event
+
+The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works and how it is framed with the consumer.
+
+A Messaging interaction qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow and an intent determined . 
+
+These docs cover where to configure the initial message on a given platform
+
+<table>
+  <thead>
+  <tr>
+    <th>Platform</th>
+    <th>Docs</th>
+    <th>Attribute</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>iOS</td>
+    <td>https://developers.liveperson.com/consumer-experience-ios-sdk-localizationkeys.html</td>
+    <td>hiMessage</td>
+  </tr>
+  <tr>
+    <td>Android</td>
+    <td>https://developers.liveperson.com/android-modifying-string.html#resultOverlayRecordTemplate</td>
+    <td>lp_first_message</td>
+  </tr>
+  </tbody>
+</table>
+
+
+A Chat interaction on the other hand is considered started when the chat is routed to an agent, and best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
+
+As such, ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event, so the event fired is utilised.
+
+<img style="width:600px" src="img/dialogflow/image_5.png">
+
+Fig 1.1
 
 ### Change Time To Response of Conversation
 
