@@ -140,7 +140,7 @@
     pages:
       - pagename: Getting Started
         subpages:
-          - subpagename: Hello World
+          - subpagename: Create a New Bot
           - subpagename: Intents and Integrations
           - subpagename: Connect to LiveEngage
       - pagename: Components
