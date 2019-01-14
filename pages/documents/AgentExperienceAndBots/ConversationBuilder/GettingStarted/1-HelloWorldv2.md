@@ -20,6 +20,8 @@ This step requires that you have a user account for the Conversation Builder pla
   <img style="width:600px" src="img/ConvoBuilder/helloworld/image_1.png">
 
 2. Click on the Conversation Builder icon.
+
+  {: .showcase}
   <img style="width:600px" src="img/ConvoBuilder/helloworld/image_2.png">
 
 3. Tap on the **New Automation** icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Basic Automation** from the template area below and hit Save.
