@@ -47,12 +47,24 @@ If you want to change the Brand name, when using the SDK on Activity Mode, you'l
 
 * **Step 1:** Using **Android View**, right-click over the **res** folder, select **new**, then **Android Resource Directory**
 
+![Authentication Setup](img/android_string_locale_step1.png)
+    
 * **Step 2:** On the **New Resouce Directory**Screen, select **Locale** ,and click on the **>>**:
+
+![Authentication Setup](img/android_string_locale_step2.png)
 
 * **Step 3:** Now select the Language or Region you're trying to create:
 
+![Authentication Setup](img/android_string_locale_step3.png)
+
 _**Note:** Now that you have a new **Resource Directory**, you'll have to create a new **strings.xml** file to define the new strings_
+
+![Authentication Setup](img/android_string_locale_step4.png)
 
 * **Step 4:** Using **Project View**, right-click over the values folder you just created, select **new**, then **Values Resource File**
 
+![Authentication Setup](img/android_string_locale_step5.png)
+
 * **Step 5:** On the pop up window, type: **strings.xml**, this file will define all the strings for that Locale:
+
+![Authentication Setup](img/android_string_locale_step6.png)

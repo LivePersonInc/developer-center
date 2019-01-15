@@ -93,40 +93,52 @@ The Customer web page method name can be either the default LivePerson method na
 
 * The interface is implemented as REST/JSON.  In keeping with the REST specification, the verb is POST, since accessing this API changes the state on the server (is not idempotent).
 
-*	LivePerson will POST the following data using the "application/x-www-form-urlencoded" format:
+*	LivePerson will POST the following data using the "application/json" format:
 
-  code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
-  grant_type=authorization_code
-  redirect_uri=https://liveperson.net
+```json
+{
+ "code": "b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c",
+ "grant_type" : "authorization_code",
+ "redirect_uri" : "https://liveperson.net"
+}
+```
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
 
-*	The following HTTP headers are required: header name: “Authorization" The value contains the standard basic authorization header [RFC2617], based on client_id:client_secret provided by the team to identify.
+*	The following HTTP headers are required: header name: “Authorization" The value contains the standard basic authorization header [RFC2617], based on **client_id:client_secret** provided by the team to identify.
 
 _Example: Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW_
 
 ```
-POST /token HTTP/1.1   
-
-Host: server.example.com   
-Content-Type: application/x-www-form-urlencoded   
-Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW    
-grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fliveperson.net%2Fcb
+HTTP/1.1   
+Host: server.example.com
+Path: /token  
+Method: POST
+Content-Type: application/json  
+Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
+Body:    
+{
+ "code": "b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c",
+ "grant_type" : "authorization_code",
+ "redirect_uri" : "https://liveperson.net"
+}
 ```
 
 **API Response**
 
 If the transaction is successful, then the response will be an HTTP 200, and the following payload:
 
-```http
+```
 HTTP/1.1 200 OK
 Content-Type: application/json
 Cache-Control: no-store   
 Pragma: no-cache    
+Response:
 {    
 	"access_token"	: "NotApplicabale",
   	"token_type"		: "Bearer",
 	"id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjU1NTUxMjEyIiwiY29uc3VtZXJfdHlwZSI6ImNvcHBlciIsImlzcyI6Imh0dHBzOi8vd3d3LnQtbW9iaWxlLmNvbSIsImV4cCI6MTQ0NjExNTM1MjAwMCwiaWF0IjoxNDQ2MTExNzUyMDAwfQ.mMERThLDcoW51434sJyOtRUOZZVOVmB_evxTwduJ1Ht1Q78ZZ6ZLqH3tN3idXI7-Qn7WOwej2OI-8vsAENB_7gxxpZFUlQ8dCZFM1o7ZJd5gsXvjHbHgIlnRn1zxonZ5L8pIO8TByTNOgwDp847JyGStyzEZTYKkyOwxB5p96Z8"
+}
 ```
 
 The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with the following data:
@@ -156,11 +168,15 @@ The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and 
 If an error is encountered during processing, an error message will be returned:
 
 ```
-HTTP/1.1 400 Bad Request
+HTTP/1.1 
+Status: 400 - Bad Request
 Content-Type: application/json   
 Cache-Control: no-store   
 Pragma: no-cache    
-{    "error": "invalid_code"   }
+Response:
+{
+    "error": "invalid_code"
+}
 ```
 
 One of the following errors will be returned:

@@ -14,6 +14,41 @@ indicator: messaging
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+### iOS Messaging SDK - Version 3.5
+
+### Overview
+
+iOS Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.5 is compatible with Xcode 10, Swift 4.2 and iOS versions 10 through 12
+
+### Bugs
+
+There is a known issue related to entering the conversation view controller with an expired token.  The consumer observes a "still connecting" message which can be resolved by exiting and re-entering the conversation view controller.
+
+#### Bug Fixes
+
+* When an unauthenticated consumer attempts to reconnect after their session expires (when using JSON Web Tokens) the connection fails.
+
+* Push notifications are not being received when going to background (minimizing app) due to issues with network.
+
+* When a consumer is in active conversation and an agent resolves the conversation, the unread message indicator appears but there are new messages visible and the consumer can not scroll down.
+
+* Consumer can not scroll to the latest message when there is no assigned agent and the conversation is closed.
+
+* Conversation does not automatically scrolls to the bottom when survey starts/ends.
+
+* When returning from background banner indicating the count of unread messages is incorrect.
+
+* App freezes (experiences recursive cycles) on phones which the time has been set in the future. Interim solution: Retry attempts have been limited for consumers with expired JSON Web Tokens trying to authenticate.  Once this limit is hit, LP Messaging SDK will post the SDK_AUTHENTICATION_FAILED notification which will trigger the LPMessagingSDKAuthenticationFailed delegate method.  A client app can use either of these mechanisms to stop the authorization attempt and notify the consumer they need to obtain a valid token.  After the notification has been posted the authentication retries will be reset.  
+
+*  In the Agent Console, the consumer conversation information (OS Type & Device) is not updated while switching platforms IOS/Android or OS versions.  Update: Update: The current design of LiveEngage platform cannot currently accommodate this request.  This can be implemented in a future LiveEngage platform update.
+
+### API Update 
+
+* The LPInfraFacad method registerPusherWithLoginFlow(brand) has been updated to registerPusherWithLoginFlow(brand: Brand, authenticationParams: LPAuthenticationParams?) allowing for an optional 'Authentication Parameters' dictionary to be passed to aid in determining the status and routing of authentication for the current consumer.  
 
 ### iOS Messaging SDK - Version 3.4
 
