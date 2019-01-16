@@ -1,20 +1,20 @@
 ---
-pagename: App Extensions Template
+pagename: Custom Interactive Message Template
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-app-extensions-template.html
+permalink: apple-business-chat-templates-custom-interactive-message-template.html
 indicator: messaging
 ---
 
 ### Overview
 
-The App Extensions Template for App Business Chat allows you to send an iOS app extension to the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
+The Custom Interactive Message Template for App Business Chat allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
-Sending the structured content templates (body and metadata) explained in this document will allow you to send the app extension to the consumer device. 
+Sending the structured content templates (body and metadata) explained in this document will allow you to send the iMessage app / extension to the consumer device. 
 
-For how to create an app extension, see the Apple documentation [here](https://developer.apple.com/imessage/).
+For how to create an iMessage app / extension, see the Apple documentation [here](https://developer.apple.com/imessage/).
 
 ### Body Template
 
@@ -28,7 +28,7 @@ For the structured content body fields descriptions and different layout options
 
 ### Metadata Template
 
-The structured content metadata will allow you to define which app extension should be sent to the consumer and which custom data to pass into the app extension when it loads.
+The structured content metadata will allow you to define which iMessage app / extension should be sent to the consumer and which custom data to pass into the iMessage app / extension when it loads.
 
 Using Metadata, you can also control the visual appearance of the bubble that displays to the consumer. This is done with the `receivedMessage` object within the metadata.
 
@@ -142,7 +142,7 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tr>
   <tr>
     <td>imageURL</td>
-    <td>Image to be placed in the iMessage app bubble layout. Will be presented when LiveLayout is disabled or when consumer does not have your app installed on iPhone / latest version is not updated with app extension</td>
+    <td>Image to be placed in the iMessage app bubble layout. Will be presented when LiveLayout is disabled or when consumer does not have your app installed on iPhone / latest version is not updated with iMessage app / extension</td>
     <td>String</td>
     <td>N</td>
   </tr>
@@ -176,7 +176,7 @@ Using Metadata, you can also control the visual appearance of the bubble that di
 
 #### Sending Custom Data to App Extension
 
-The value of the `URL` metadata property will be passed to Apple's [MsMessage](https://developer.apple.com/documentation/messages/msmessage) object in the `url` property. When recieved in your app extension, you can parse the URL and do anything with it.
+The value of the `URL` metadata property will be passed to Apple's [MSMessage](https://developer.apple.com/documentation/messages/msmessage) object in the [`url`](https://developer.apple.com/documentation/messages/msmessage/1649739-url) property. When recieved in your iMessage app / extension, you can parse the URL and do anything with it.
 
 #### Metadata Guidelines
 
@@ -207,19 +207,34 @@ The value of the `URL` metadata property will be passed to Apple's [MsMessage](h
 
 ### Reply Message from Consumer to Agent
 
-You can send text messages *to* the LiveEngage conversation *from* the app extension that you sent to the consumer.
+You can send text messages *to* the LiveEngage conversation *from* the iMessage app / extension that you sent to the consumer.
 
-In order to do this, all code is handled from within your Apple app extension code.
+In order to do this, all code is handled from within your Apple iMessage app / extension code.
 
-1. Create the message you want to display by replacing `YOUR_ID` and `YOUR_CUSTOM_TEXT` in the below encoded URL string:
+1. Create the message you want to display by replacing `YOUR_CUSTOM_TEXT` in the below JSON:
+    ```json
+    {
+        "lpData": {
+          "interactive" : {
+            "response" : {
+              "text": "YOUR_CUSTOM_TEXT" 
+            }
+          }
+        }
+    }
+    ```
 
-  `?data=%7B%0A%20%20%20%20%22lpData%3CYOUR_ID%3E%22%3A%20%7B%0A%20%20%20%20%20%20%22interactive%22%20%3A%20%7B%0A%20%20%20%20%20%20%20%20%22response%22%20%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22text%22%3A%20%22%3CYOUR_CUSTOM_TEXT%3E%22%20%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D`
+2. Encode the JSON
 
-2. Set the `url` property of the [MsMessage](https://developer.apple.com/documentation/messages/msmessage) object to the encoded URL string. 
+3. Create a URL by adding the encoded JSON as a query parameter `data` like the following:
+    `?data=`
 
-3. Send the MsMessage object from your app extension.
 
-LiveEngage will recieve this message and display the text in the LiveEngage conversation
+4. Set the [`url`](https://developer.apple.com/documentation/messages/msmessage/1649739-url) property of the [MSMessage](https://developer.apple.com/documentation/messages/msmessage) object to the URL that you constructed. 
+
+5. [Send](https://developer.apple.com/documentation/messages/msconversation/2909036-send) the MSMessage object from your iMessage app / extension.
+
+LiveEngage will recieve this message and display the text in the LiveEngage conversation.
 
 ### Some Notes About Custom iMessage App Support
 
