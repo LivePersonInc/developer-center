@@ -15,7 +15,7 @@ indicator: messaging
 ---
 
 
-`public static void registerLPPusher(String brandId, String appId, String gcmToken)`
+`public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)`
 
 | Parameter | Description |
 | :--- | :--- |
