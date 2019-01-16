@@ -135,13 +135,14 @@
       - pagename: Google Dialog Flow
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
-      - pagename: Amazon Lex
+      #- pagename: Amazon Lex
   - documentname: Conversation Builder
     pages:
       - pagename: Getting Started
         subpages:
           - subpagename: Create a New Bot
-          - subpagename: Intents and Integrations
+          - subpagename: Intents
+          - subpagename: Integrations
           - subpagename: Connect to LiveEngage
       - pagename: Components
         subpages:

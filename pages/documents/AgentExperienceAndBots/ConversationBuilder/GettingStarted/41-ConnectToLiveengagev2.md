@@ -114,7 +114,7 @@ if(channel == "web"){
 
 ### Step 8: Configure LiveEngage
 
-Now, we need to connect to LiveEngage, we need to configure a User Agent. 
+To connect to LiveEngage, we need to configure a User Agent. 
 
 #### Setup a New LiveEngage Account:
 
