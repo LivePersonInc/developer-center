@@ -226,11 +226,9 @@ In order to do this, all code is handled from within your Apple iMessage app / e
 
 2. Encode the JSON
 
-3. Create a URL by adding the encoded JSON as a query parameter `data` like the following:
-    `?data=`
+3. Create a URL by adding the encoded JSON on a query parameter `data` like the following: `?data=`
 
-
-4. Set the [`url`](https://developer.apple.com/documentation/messages/msmessage/1649739-url) property of the [MSMessage](https://developer.apple.com/documentation/messages/msmessage) object to the URL that you constructed. 
+4. Set the [url](https://developer.apple.com/documentation/messages/msmessage/1649739-url) property of the [MSMessage](https://developer.apple.com/documentation/messages/msmessage) object to the URL that you constructed. 
 
 5. [Send](https://developer.apple.com/documentation/messages/msconversation/2909036-send) the MSMessage object from your iMessage app / extension.
 

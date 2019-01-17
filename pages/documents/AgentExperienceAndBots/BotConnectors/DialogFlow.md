@@ -122,15 +122,15 @@ Figure 2.2 DialogFlow Response JSON with action
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
 
-  <img style="width:600px" src="img/dialogflow/image_6.png">
+    <img style="width:600px" src="img/dialogflow/image_6.png">
 
-fig.2.3
+    fig.2.3
 
 2. Do not forget to add a custom response in the **Text response** section. 
 
-  <img style="width:600px" src="img/dialogflow/image_7.png">
+    <img style="width:600px" src="img/dialogflow/image_7.png">
 
-fig.2.4
+    fig.2.4
 
 ### Welcome Event
 
@@ -239,8 +239,7 @@ Multiple scenarios for transfer/escalations exist triggered by the action object
 Transfers and escalations rely on the *action* item in the response object.
 
 1. Action:      `transfer.<skill-name>`
-
-(e.g. transfer.bot-escalation where ‘bot-escalation’ is the skill name)
+    (e.g. transfer.bot-escalation where ‘bot-escalation’ is the skill name)
 
 2. Action:	     Input.unknown
 

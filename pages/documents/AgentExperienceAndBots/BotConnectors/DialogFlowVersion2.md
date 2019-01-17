@@ -121,15 +121,15 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
 
-  <img style="width:600px" src="img/dialogflowversion2/image_7.png">
+    <img style="width:600px" src="img/dialogflowversion2/image_7.png">
 
-  fig.2.1
+    fig.2.1
 
 2. Do not forget to add a custom response in the **Text response** section. 
 
-  <img style="width:700px" src="img/dialogflowversion2/image_8.png">
+    <img style="width:700px" src="img/dialogflowversion2/image_8.png">
 
-  fig.2.2
+    fig.2.2
 
 ### Welcome Event
 
