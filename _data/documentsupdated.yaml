@@ -153,6 +153,7 @@
           - subpagename: Intent Builder Overview
           - subpagename: Entities
           - subpagename: Knowledge Base Overview
+          - subpagename: Scripting Functions
       - pagename: Routing Bot Tutorial
         subpages:
           - subpagename: Overview
