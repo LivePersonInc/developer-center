@@ -10,32 +10,34 @@ permalink: conversation-builder-getting-started-create-a-new-bot.html
 indicator: both
 ---
 
-This guide will help step you through setting up a simple Hello World bot with Conversation Builder. Connection to a LiveEngage account is not covered.  
+This guide will help step you through setting up a simple Hello World bot with Conversation Builder. 
 
 ### Step 1: Create a New Bot
 
 This step requires that you have a user account for the Conversation Builder platform. If you do not, your team should have an Administrator assigned who can create one for you.
 
 1. Once provided a Conversation Builder account, select your region and login at [https://platform.botcentralai.com](https://platform.botcentralai.com)
-  <img style="width:600px" src="img/ConvoBuilder/helloworld/image_1.png">
+
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_1.png">
 
 2. Click on the Conversation Builder icon.
 
-  {: .showcase}
-  <img style="width:600px" src="img/ConvoBuilder/helloworld/image_2.png">
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_2.png">
 
 3. Tap on the **New Automation** icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Basic Automation** from the template area below and hit Save.
-  <img style="width:200px" src="img/ConvoBuilder/helloworld/newAutomation.png">
-  <img style="width:500px" src="img/ConvoBuilder/helloworld/createAutomation.png">
+
+    <img style="width:200px" src="img/ConvoBuilder/helloworld/newAutomation.png">
+
+    <img style="width:500px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
 4. You will be taken to your new automation in the Conversation Builder.
-  <img style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
 
 5. **Before you do anything else**, we need to "Publish" the bot to your Organization. (For those with multiple Org access, the bot will default to Private, which is why we want to change it.)
   * Tap the gear <img style="width:40px" src="img/ConvoBuilder/helloworld/image_4.png"> icon on the right sidebar and then Automation Settings. Scroll down and tap "More Settings".
   * Where it says "Publish Automation", change to the appropriate Org and hit Save.
-
-  <img style="width:600px" src="img/ConvoBuilder/helloworld/image_5.png">
+    
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_5.png">
 
 ### Step 2: Hello World
 
@@ -54,6 +56,7 @@ Let’s see them in action! Tap on the Chat Preview icon <img style="width:40px"
 Now type "reset" to start fresh and then type “hello” or “hello there” and you should get the welcome again.
 
 So how does the Welcome dialog get triggered? Tap on the **User Says** interaction and then on the right side bar, tap on the Interaction Details <img style="width:40px" src="img/ConvoBuilder/helloworld/image_7.png"> icon and then tap Settings.  Under Patterns you should see the different patterns used to match this particular dialog. You can ALSO use Intents to trigger a dialog, but for this exercise, we’ll focus on patterns.
+
 
 <img style="width:400px" src="img/ConvoBuilder/helloworld/usersays.png">
 

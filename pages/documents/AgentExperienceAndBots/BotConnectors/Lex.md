@@ -8,6 +8,9 @@ permalink: bot-connectors-amazon-lex.html
 indicator:
 ---
 
+{: .important}
+This bot connector is not yet available.
+
 ### Overview
 
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
