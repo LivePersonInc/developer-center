@@ -22,7 +22,7 @@ On the right-hand side of the window, you can find the **Settings Toolbar**. Thi
 
 The Dialog Workspace is the main panel of the Conversation Builder. It lists the different interactions which make up this specific Dialog. A Dialog is composed of a series of interactions which together make up a back and forth conversation between the user and the bot/automation.
 
-A Dialog is always triggered by a user statement, either via simple [pattern matching](conversation-builder-components-conditions.html#pattern-matching) or via [intents](conversation-builder-components-intent-builder-overview.html). Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
+A Dialog may be triggered by a user statement, either via simple [pattern matching](conversation-builder-components-conditions.html#pattern-matching) or via [intents](conversation-builder-components-intent-builder-overview.html). It may also be triggered by an Interaction via a Next Step action. Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
 
 Clicking on any of the interactions in the Dialog will allow you to configure them. See below for the different configuration options and requirements for each interaction type.
 

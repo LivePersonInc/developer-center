@@ -28,7 +28,7 @@ When a condition is met, the action defined under the Next Step dropdown menu wi
 
 ### Pattern Matching
 
-Patterns are templates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g., "I want a pair of (headphones&#124;head phones&#124;earbuds&#124;earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can also include wildcards for looser matches, e.g., "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
+Patterns are combinations of keywords, wildcards and alternates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g., "I want a pair of (headphones&#124;head phones&#124;earbuds&#124;earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can also include wildcards for looser matches, e.g., "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
 
 You can use wildcards and alternates together like this:
 
@@ -52,7 +52,7 @@ If you need more advanced operators, you can also use [Regular Expressions](http
 
 ### Slots
 
-Slots are a useful way to store user responses and their entities. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-components-entities-overview.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
+First paragraph: Slots are a useful way to store user responses for usage in an API Integration or other interactions. Slots can be set to a simple value based on a condition or they can be associated with entities, which give them additional capability. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-components-entities-overview.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the bot/automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the bot/automation (like in the case of an email address).
 
 To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. From there, click the blue **+** icon right to the right of Slot.
 
@@ -68,7 +68,7 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 * Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
-`{$botContext.slot.entityName}` is how you can access values in slots and use them in other ways. For example, to have the bot/automation respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
+`{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, to have the bot/automation respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
 
 "You answered: {$botContext.slot.animal}!"
 

@@ -104,7 +104,7 @@ The assist tool automatically assigned the user answer to be stored in a [Slot](
 
 Add a new Bot Statement Text interaction and make the text say "You answered: {$botContext.slot.animal}!".
 
-`{$botContext.slot.entityName}` is how you can access values in slots and use them in other ways.
+`{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways.
 
 Click on the Messaging Client in the Settings Toolbar and test your bot/automation. Type "reset" to create a new session. Say "hello", followed by "ask me something". Respond with something like "I like dogs". The bot/automation should say "You answered: dogs!"
 
