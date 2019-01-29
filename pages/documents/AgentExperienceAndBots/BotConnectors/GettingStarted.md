@@ -12,7 +12,10 @@ indicator:
 
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
-Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialog Flow, Amazon Lex, etc.
+Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialog Flow, and more.
+
+{: .important}
+If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.
 
 Each connector provides the functionality to
 
