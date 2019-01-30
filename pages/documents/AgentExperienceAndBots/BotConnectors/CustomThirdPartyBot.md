@@ -10,7 +10,7 @@ indicator: both
 
 This document explains how to connect external bots to LivePerson if there is not already a pre-built and supported Connector.
 
-### For Small / Medium niche Bot Platforms
+### Small / Medium niche Bot Platforms
 
 1. Login to Liveperson Bots & Automation Platform by using
 
@@ -43,7 +43,7 @@ This document explains how to connect external bots to LivePerson if there is no
 
 6. Example of the post body:
 
-### Custom Connectors
+### Custom Bot Connectors
 
 Customers can always write their own custom Bot connector using our Messaging Agent SDK and Chat Agent API.  This is mainly for the small, medium niche platforms who want to build connectivity to LiveEngage.
 

@@ -27,7 +27,7 @@ The following use cases are available for the Retail industry vertical:
 
 Helps reduce time to first interaction and route the shopper to the bot/agent best suited to help with their most important needs.
 
-Configure:
+Configuration:
 
 - Bot Name/Brand
 - Links to Bots/Agents to Route to
