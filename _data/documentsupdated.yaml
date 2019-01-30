@@ -136,6 +136,7 @@
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex
+      - pagename: Custom Third Party Bots
   - documentname: Conversation Builder
     pages:
       - pagename: Getting Started
@@ -144,6 +145,11 @@
           - subpagename: Intents
           - subpagename: Integrations
           - subpagename: Connect to LiveEngage
+      - pagename: Conversation Libraries
+        subpages:
+          - subpagename: Overview
+          - subpagename: Getting Started Tutorial
+          - subpagename: Retail Libraries 
       - pagename: Components
         subpages:
           - subpagename: Conversation Builder Overview
@@ -154,18 +160,18 @@
           - subpagename: Entities
           - subpagename: Knowledge Base Overview
           - subpagename: Scripting Functions
-      - pagename: Routing Bot Tutorial
-        subpages:
-          - subpagename: Overview
-          - subpagename: Step 1 - Create a New Router Bot
-          - subpagename: Step 2 - Modifying the Template
-          - subpagename: Step 3 - Intents
-          - subpagename: Step 4 - Escalation
-      - pagename: FAQ Bot Tutorial
-        subpages:
-          - subpagename: Overview
-          - subpagename: Creating a New Knowledge Base
-          - subpagename: Creating a New FAQ Bot
+#      - pagename: Routing Bot Tutorial
+#        subpages:
+#          - subpagename: Overview
+#          - subpagename: Step 1 - Create a New Router Bot
+#          - subpagename: Step 2 - Modifying the Template
+#          - subpagename: Step 3 - Intents
+#          - subpagename: Step 4 - Escalation
+#      - pagename: FAQ Bot Tutorial
+#        subpages:
+#          - subpagename: Overview
+#          - subpagename: Creating a New Knowledge Base
+#          - subpagename: Creating a New FAQ Bot
 
 
 
