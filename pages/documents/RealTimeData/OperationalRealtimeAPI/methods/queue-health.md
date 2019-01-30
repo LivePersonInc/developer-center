@@ -34,7 +34,7 @@ Retrieves queue-related metrics at the account or skill level.
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, metrics on the response will be calculated at the account level. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all. | numeric, comma separated | optional |
 | interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
-| chatCenterId | When provided, metrics on the response will be filtered to show only data of the relevant chat center id. For example, chatCenterId=37288452 | numeric | optional |
+| chatCenterId | When provided, metrics in the response will be filtered to show only data for the provided chat center id. For example, chatCenterId=37288452 | numeric | optional |
 
 ### Response
 
