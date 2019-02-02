@@ -33,41 +33,6 @@ var response = botContext.getCurrentUserMessage();
 botContext.setBotVariable('newsSource',response,true,false);
 ```
 
-### Get Quick Reply Payload
-
-Used to get access to the Quick Reply buttons that are selected by the user. These buttons have a hidden payload that may be different than the text shown to the user. For instance, Quick Replies asking you to select your favorite color might show: Red, Blue, Green, Purple, etc. but the payloads could be color01, color02, color03, etc.
-
-This function is used in Process User Response (where the code for assessing user interaction resides).
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getQuickReplyPayload()` | None | string: The payload associated with the user-selected Quick Reply option. | 
-
-#### Example
-```javascript
-//get what the user just said
-var response = botContext.getCurrentUserMessage();
-//accessing the user selected payload
-var payload = botContext.getQuickReplyPayload();
-//sending an Immediate reply to the user with the desired output
-botContext.sendImmediateReply('Hey you picked option ' + response  +' with a payload of '+ payload);
-```
-
-### Print Debug Message
-
-The Print Debug Message is used to log what user said in the debug console of the bot. For instance, the `response` variable stores the most recent messages from the user, which we print to the debugger using `printDebugMessage`.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `printDebugMessage(message)` | message (string) – A message to print to the debug logs. | None | 
-
-#### Example
-```javascript
-// get what the user just said
-var response = botContext.getCurrentUserMessage();
-botContext.printDebugMessage('User said ' + response);
-```
-
 ### Get and Set Bot Variable
 
 The **Set** Bot Variable function is used for setting a value to the botVariable so that it can be used in further code and it returns a string data types to the results. These botVariables are available throughout the entire bot.
@@ -98,6 +63,21 @@ if (count > 10) {
 }
 ```
 
+### Print Debug Message
+
+The Print Debug Message is used to log what user said in the debug console of the bot. For instance, the `response` variable stores the most recent messages from the user, which we print to the debugger using `printDebugMessage`.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `printDebugMessage(message)` | message (string) – A message to print to the debug logs. | None | 
+
+#### Example
+```javascript
+// get what the user just said
+var response = botContext.getCurrentUserMessage();
+botContext.printDebugMessage('User said ' + response);
+```
+
 ### Set Trigger Next Message
 
 Used for triggering the message flow to selected segment of the bot. 
@@ -117,6 +97,92 @@ if (company == 'BotCentral') {
 }else{
       botContext.setTriggerNextMessage('Welcome Other');
 }
+```
+
+### Get Channel
+
+Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp | 
+
+#### Example
+
+```javascript
+var channel = botContext.getChannel();
+botContext.printDebugMessage("channel used by the user is: " + channel);
+```
+
+### Evaluating Options
+
+Used for matching the user’s input against an array of options. 
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. | 
+
+#### Example
+
+In the below example, we create an array of possible options. Then we test for a response using the evaluateOptions() function by including the userResponse and the array of options. If the user types “A” or “A)” or “Yes” the result returned will be “A) Yes”.
+
+```javascript
+var userResponse = (botContext.getCurrentUserMessage()).toLowerCase();
+// match options
+var options = ["A)Yes", "B)No"];
+var result = botContext.evaluateOptions(userResponse, options);
+// what was user's response?
+botContext.printDebugMessage('====> User Said: ' + userResponse + ' and MATCH result = '+ result);
+```
+
+### Log Custom Event
+
+Used for tracking specific bot events for the purposes of analytics. This function requires some type of user message and event name. The event detail is optional. In the example, we are setting the user message to the currentUserMessage and naming the event “Invoice API”.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `logCustomEvent(user_message, event_name[, event_detail])` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string | Void | 
+
+#### Example
+
+```javascript
+botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API','');
+```
+
+### Log Escalation Event
+
+Used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `logEscalationEvent(user_message, escalation_type)` | <em>user_message - </em>the user's message text<br><br><em>escalation_type - </em>'LivePerson' | void | 
+
+#### Example
+
+```javascript
+botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
+```
+
+### Set Message Delay Value
+
+Used to set a delay for a group of messages such that they appear like a real conversation. 
+
+{: .important}
+The setMessageDelay() function should be used within the preProcess Code JavaScript.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `setMessageDelay(delay_value)` | delay_value (integer) | None | 
+
+#### Example
+
+In the below example, we send three messages to the user with a delay of 2000 milliseconds between them.
+
+```javascript
+// setting a delay of 2000 for each message……
+botContext.setMessageDelay(2000);
+//  sending message to user...
+botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just put the stop on your credit card', 'If you find any unauthorized transaction please let us know as soon as possible so we can remove them from your bill']);
 ```
 
 ### Send Immediate Reply
@@ -156,6 +222,23 @@ if(count > 10){
 }
 ```
 
+### Send Messages
+
+Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
+
+{: .important}
+To send a single message use the [sendMessage()](#send-message) function.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `sendMessages(messages)` | array | None | 
+
+#### Example
+```javascript
+botContext.setMessageDelay(2500);
+botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If you had been using our AcmeBank Exclusive Cash Rewards Card your current rewards balance would have been $103.50.']);
+```
+
 ### Send Message With Quick Reply
 
 Used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number). 
@@ -178,45 +261,6 @@ In the example below, we create a message to select your favorite dipping sauce.
 botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sauce?', ['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
 
-### Send Messages
-
-Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
-
-{: .important}
-To send a single message use the [sendMessage()](#send-message) function.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `sendMessages(messages)` | array | None | 
-
-#### Example
-```javascript
-botContext.setMessageDelay(2500);
-botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If you had been using our AcmeBank Exclusive Cash Rewards Card your current rewards balance would have been $103.50.']);
-```
-
-### Set Message Delay Value
-
-Used to set a delay for a group of messages such that they appear like a real conversation. 
-
-{: .important}
-The setMessageDelay() function should be used within the preProcess Code JavaScript.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `setMessageDelay(delay_value)` | delay_value (integer) | None | 
-
-#### Example
-
-In the below example, we send three messages to the user with a delay of 2000 milliseconds between them.
-
-```javascript
-// setting a delay of 2000 for each message……
-botContext.setMessageDelay(2000);
-//  sending message to user...
-botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just put the stop on your credit card', 'If you find any unauthorized transaction please let us know as soon as possible so we can remove them from your bill']);
-```
-
 ### Add Quick Replies
 
 The Add Quick Replies function is used for adding quick replies to a message in JavaScript rather than defining in Bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios. 
@@ -234,21 +278,39 @@ The example below shows how quick replies can be added easily to your message.
 botContext.addQuickReples(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
 
+### Get Quick Reply Payload
+
+Used to get access to the Quick Reply buttons that are selected by the user. These buttons have a hidden payload that may be different than the text shown to the user. For instance, Quick Replies asking you to select your favorite color might show: Red, Blue, Green, Purple, etc. but the payloads could be color01, color02, color03, etc.
+
+This function is used in Process User Response (where the code for assessing user interaction resides).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getQuickReplyPayload()` | None | string: The payload associated with the user-selected Quick Reply option. | 
+
+#### Example
+```javascript
+//get what the user just said
+var response = botContext.getCurrentUserMessage();
+//accessing the user selected payload
+var payload = botContext.getQuickReplyPayload();
+//sending an Immediate reply to the user with the desired output
+botContext.sendImmediateReply('Hey you picked option ' + response  +' with a payload of '+ payload);
+```
+
 ### Get Responder Results Count
 
 Most commonly used to check whether a responder returned any results at all. If no results are returned, you should display an error message or redirect to a failover message.
 
 For example, imagine you are using the KnowledgeBase feature to create an FAQ bot. If the user’s query doesn’t return any results, you may want to respond with another message that provides some guidance.
 
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getResponderResultsCount()` | None | integer: The number of results returned by the most recent Responder. | 
-
 #### Example
 
+In the below example, `apiName` is the name of the API integration, `fieldName` is the custom data field mapping name, and `count` is the parameter that gives you the actual count.
+
 ```javascript
-var results = botContext.getResponderResultsCount();
-if (resultsCount < 1) {
+var results = botContext.getBotVariable(apiName.fieldName.count);
+if (results < 1) {
       botContext.sendMessage('Sorry, I was not able to find any notes for this contact.');
 }
 ```
@@ -350,6 +412,28 @@ var nlpTokens = nlpResponse.tokens;
 botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: '+ nlpVerbs + ' and phrases: ' + nlpPhrases + ' and tokens: ' + nlpTokens);
 ```
 
+### Get Named Entities
+
+Used to access user utterances that are recognized as entities.
+
+To access the actual phrases used, call `getPhrase()` on the entity objects.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getNamedEntities(entity_name)` | entity_name (string) | array of `namedEntity()` objects | 
+
+#### Example
+
+```javascript
+var toppingObjects = botContext.getNamedEntities('toppings');
+var toppings = [];
+if (toppingObjects != null && toppingObjects.length > 0) {
+    for (j = 0; j < toppingObjects.length; j++) {
+        toppings.push(toppingObjects[j].getPhrase)
+    }
+}
+```
+
 ### Get Sentiment
 
 Used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmably checking the sentiment of the user.
@@ -388,90 +472,4 @@ var userId = botContext.getUserPlatformId();
 var platformType = botContext.getUserPlatformType();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPlatformType = ' + platformType);
-```
-
-### Evaluating Options
-
-Used for matching the user’s input against an array of options. 
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. | 
-
-#### Example
-
-In the below example, we create an array of possible options. Then we test for a response using the evaluateOptions() function by including the userResponse and the array of options. If the user types “A” or “A)” or “Yes” the result returned will be “A) Yes”.
-
-```javascript
-var userResponse = (botContext.getCurrentUserMessage()).toLowerCase();
-// match options
-var options = ["A)Yes", "B)No"];
-var result = botContext.evaluateOptions(userResponse, options);
-// what was user's response?
-botContext.printDebugMessage('====> User Said: ' + userResponse + ' and MATCH result = '+ result);
-```
-
-### Log Custom Event
-
-Used for tracking specific bot events for the purposes of analytics. This function requires some type of user message and event name. The event detail is optional. In the example, we are setting the user message to the currentUserMessage and naming the event “Invoice API”.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `logCustomEvent(user_message, event_name[, event_detail])` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string | Void | 
-
-#### Example
-
-```javascript
-botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API','');
-```
-
-### Log Escalation Event
-
-Used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `logEscalationEvent(user_message, escalation_type)` | <em>user_message - </em>the user's message text<br><br><em>escalation_type - </em>'LivePerson' | void | 
-
-#### Example
-
-```javascript
-botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
-```
-
-### Get Channel
-
-Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp | 
-
-#### Example
-
-```javascript
-var channel = botContext.getChannel();
-botContext.printDebugMessage("channel used by the user is: " + channel);
-```
-
-### Get Named Entities
-
-Used to access user utterances that are recognized as entities.
-
-To access the actual phrases used, call `getPhrase()` on the entity objects.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getNamedEntities(entity_name)` | entity_name (string) | array of `namedEntity()` objects | 
-
-#### Example
-
-```javascript
-var toppingObjects = botContext.getNamedEntities('toppings');
-var toppings = [];
-if (toppingObjects != null && toppingObjects.length > 0) {
-    for (j = 0; j < toppingObjects.length; j++) {
-        toppings.push(toppingObjects[j].getPhrase)
-    }
-}
 ```

@@ -87,28 +87,26 @@ Let’s add a new dialog and name it "Account Balance". Go to the Interaction De
 
 Now we can add a text statement <img style="width:40px" src="img/ConvoBuilder/helloworld/image_16.png"> to tell people we can help them with their account balance.
 
-In order to get the user’s account balance, we need to ask for their account number. Add a Text Question <img style="width:40px" src="img/ConvoBuilder/helloworld/image_17.png"> interaction and enter the following text "Please enter your 6-digit account number? (eg: 123456)". Then tap on the Interaction Details and under the User Response add the following pattern to match 6-digit numbers: `*(\b\d{6}\b)*`.
+In order to get the user’s account balance, we need to ask for their account number. Add a Text Question <img style="width:40px" src="img/ConvoBuilder/helloworld/image_17.png"> interaction and enter the following text "Please enter your 6-digit account number? (eg: 123456)". Then tap on the Interaction Details and under the User Response tab, add a Condition, select Regular Expression and add the following regex to match 6-digit numbers: `^\b\d{6}\b`.
 
-<img style="width:400px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
+<img style="width:500px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
 
 <img style="width:400px" src="img/ConvoBuilder/helloworld/accountnumberpattern.png">
 
 <img style="width:400px" src="img/ConvoBuilder/helloworld/accountnumberstarvar.png">
 
 
-Next, we want to capture the user’s account number as a slot variable. Under Slot, enter a Slot Name of "accountNumber", for Value, enter “starVar2” and for Scope, change to Session. 
+Next, we want to capture the user’s account number as a slot variable. Under Slot, enter a Slot Name of "accountNumber", for Value, enter `{$query}` and for Scope, make sure its set to Dialog. 
 
-NOTE: A starVar is a value that is derived from a pattern that uses wildcards. The starVar index matches the positions of wildcards and alternates, in our case the 1st position matches the first wildcard, the 2nd position matches the RegEx value, the 3rd position matches the final wildcard. 
-
-<img style="width:400px" src="img/ConvoBuilder/helloworld/askemail.png">
+<img style="width:450px" src="img/ConvoBuilder/helloworld/askemail.png">
 
 <img style="width:400px" src="img/ConvoBuilder/helloworld/emailpattern.png">
 
 <img style="width:400px" src="img/ConvoBuilder/helloworld/emailstarvar.png">
 
-We want to capture the user’s email address as well. Add another Text Question interaction and add the following copy: "Please give me your email address (eg: fred@home.com)". Then tap on the Interaction Details and under the User Response add the following pattern to match email addresses: `*(^\S+@\S+$)*`. NOTE: this is a VERY simple RegEx, for example only.
+We want to capture the user’s email address as well. Add another Text Question interaction and add the following copy: “Please give me your email address (eg: fred@home.com)”. Then tap on the Interaction Details and under the User Response add a Condition and the following Regular Expression to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`
 
-Under Slot, enter a Slot Name of "userEmail", for Value, enter “starVar2” and for Scope, change to Session. 
+Under Slot, enter a Slot Name of “userEmail”, for Value, enter `{$query}` and for Scope, make sure it’s set to Dialog. 
 
 Now that we have our account number and email address configured, we can call the API Integration. From the Interaction palette, tap on the Integration <img style="width:40px" src="img/ConvoBuilder/helloworld/image_18.png"> icon to add an Integration to your dialog. Tap on the interaction and select "Balance" from the drop down selector.
 
