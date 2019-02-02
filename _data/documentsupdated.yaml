@@ -172,6 +172,10 @@
 #          - subpagename: Overview
 #          - subpagename: Creating a New Knowledge Base
 #          - subpagename: Creating a New FAQ Bot
+      - pagename: Use Case Tutorials
+        subpages:
+          - subpagename: FAQ Bot Tutorial
+          - subpagename: Routing Bot Tutorial
 
 
 
