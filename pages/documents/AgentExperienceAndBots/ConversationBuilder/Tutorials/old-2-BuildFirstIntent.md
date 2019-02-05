@@ -22,7 +22,7 @@ In the example user answer of "I like birds", the whole phrase is an Intent and 
 
 We will now look at how to create a basic Intent and Entity.
 
-The [Intent Builder](conversation-builder-intent-builder-overview.html) is a workspace for creating and managing these Intents and entities. Upon creation of Intents, these can be linked to your bot/automation Dialogs in the Conversation Builder via different [Domains](conversation-builder-overview-conversation-builder-assistant.html#adding-a-domain).
+The [Intent Builder](conversation-builder-intent-builder-overview.html) is a workspace for creating and managing these Intents and entities. Upon creation of Intents, these can be linked to your bot/automation Dialogs in the Conversation Builder via different [Domains](conversation-builder-intent-builder-overview.html#adding-a-domain).
 
 To get to the Intent Builder, click on the Home button in the Conversation Builder Settings Toolbar. Then click either the top-leftmost logo or the dropdown and go to Intent Builder.
 
@@ -84,7 +84,7 @@ If the interactions are out of order, you can rearrange them by hovering over th
 
 The next step is to link the intent and entity to the interactions.
 
-<div class="important">Linking intents and entities is most easily done by using the <a href="conversation-builder-overview-conversation-builder-assistant.html">Assistant tool</a>. If the Assistant tool is not already open in the Settings Toolbar, open it by clicking on the Assistant icon in the Settings Toolbar.</div>
+<div class="important">Linking intents and entities is most easily done by using the <a href="conversation-builder-conversation-builder-assistant.html">Assistant tool</a>. If the Assistant tool is not already open in the Settings Toolbar, open it by clicking on the Assistant icon in the Settings Toolbar.</div>
 
 <img src="img/ConvoBuilder/assistIcon.png" style="width:70px">
 

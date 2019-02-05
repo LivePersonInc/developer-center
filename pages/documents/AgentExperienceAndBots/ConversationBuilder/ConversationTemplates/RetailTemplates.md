@@ -1,12 +1,12 @@
 ---
-pagename: Retail Libraries
+pagename: Retail Templates
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Conversation Libraries
-permalink: conversation-builder-conversation-libraries-retail-libraries.html
+subfoldername: Templates
+permalink: conversation-builder-templates-retail-templates.html
 indicator: both
 ---
 
@@ -27,13 +27,13 @@ The following use cases are available for the Retail industry vertical:
 
 Helps reduce time to first interaction and route the shopper to the bot/agent best suited to help with their most important needs.
 
-Configuration:
+Items to Configure:
 
 - Bot Name/Brand
 - Links to Bots/Agents to Route to
 - Shopify Credentials
 
-Conversations to Review:
+Included Conversations:
 
 - Welcome Dialog - Top shopper needs to route to.
 - Fallback Message
@@ -43,13 +43,13 @@ Conversations to Review:
 
 Helps shoppers login with an existing account or easily create a new account using an email ID.
 
-Configuration:
+Items to Configure:
 
 - Check Email
 - Send Confirmation
 - Shopify Credentials
 
-Conversations to Review:
+Included Conversations:
 
 - Fallback
 - Escalation
@@ -58,14 +58,14 @@ Conversations to Review:
 
 Helps a potential customer to provide their contact info for follow up during acquisition or off hours.
 
-Configuration:
+Items to Configure:
 
 - Check Email
 - Send Confirmation
 - Inbox for Leads
 - Shopify Credentials
 
-Conversations to Review:
+Included Conversations:
 
 - Fallback
 - Escalation

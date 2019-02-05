@@ -1,12 +1,12 @@
 ---
-pagename: Integrations
+pagename: Getting Started - 3
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Getting Started
-permalink: conversation-builder-getting-started-integrations.html
+subfoldername: Tutorials
+permalink: conversation-builder-tutorials-getting-started-part-3.html
 indicator: both
 ---
 

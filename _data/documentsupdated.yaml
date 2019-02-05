@@ -139,43 +139,38 @@
       - pagename: Custom Third Party Bots
   - documentname: Conversation Builder
     pages:
-      - pagename: Getting Started
+      - pagename: Platform Overview
+      - pagename: Tutorials
         subpages:
-          - subpagename: Create a New Bot
-          - subpagename: Intents
-          - subpagename: Integrations
-          - subpagename: Connect to LiveEngage
-      - pagename: Conversation Libraries
-        subpages:
-          - subpagename: Overview
-          - subpagename: Getting Started Tutorial
-          - subpagename: Retail Libraries 
-      - pagename: Components
-        subpages:
-          - subpagename: Conversation Builder Overview
-          - subpagename: Interactions
-          - subpagename: Conditions
-          - subpagename: Conversation Builder Assistant
-          - subpagename: Intent Builder Overview
-          - subpagename: Entities
-          - subpagename: Knowledge Base Overview
-          - subpagename: Scripting Functions
-#      - pagename: Routing Bot Tutorial
-#        subpages:
-#          - subpagename: Overview
-#          - subpagename: Step 1 - Create a New Router Bot
-#          - subpagename: Step 2 - Modifying the Template
-#          - subpagename: Step 3 - Intents
-#          - subpagename: Step 4 - Escalation
-#      - pagename: FAQ Bot Tutorial
-#        subpages:
-#          - subpagename: Overview
-#          - subpagename: Creating a New Knowledge Base
-#          - subpagename: Creating a New FAQ Bot
-      - pagename: Use Case Tutorials
-        subpages:
+          - subpagename: Getting Started - Part 1
+          - subpagename: Getting Started - Part 2
+          - subpagename: Getting Started - Part 3
+          - subpagename: Getting Started - Part 4
+          - subpagename: Templates Tutorial
           - subpagename: FAQ Bot Tutorial
           - subpagename: Routing Bot Tutorial
+      - pagename: Templates
+        subpages:
+          - subpagename: Overview
+          - subpagename: Retail Templates
+      - pagename: Conversation Builder
+        subpages:
+            - subpagename: Overview
+            - subpagename: Interactions
+            - subpagename: Conditions
+            - subpagename: Assistant
+            - subpagename: Scripting Functions
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
+          - subpagename: Entities
+      - pagename: Knowledge Base
+        subpages:
+          - subpagename: Overview
+      - pagename: Analytics
+        subpages:
+          - subpagename: Overview
+      
 
 
 

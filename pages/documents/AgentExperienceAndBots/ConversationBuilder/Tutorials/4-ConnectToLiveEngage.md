@@ -1,12 +1,12 @@
 ---
-pagename: Connect to LiveEngage
+pagename: Getting Started - 4
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Getting Started
-permalink: conversation-builder-getting-started-connect-to-liveengage.html
+subfoldername: Tutorials
+permalink: conversation-builder-tutorials-getting-started-part-4.html
 indicator: both
 ---
 

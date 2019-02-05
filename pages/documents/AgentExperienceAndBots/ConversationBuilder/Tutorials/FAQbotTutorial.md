@@ -4,7 +4,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
 subfoldername: Use Case Tutorials
-permalink: conversation-builder-use-case-tutorials-faq-bot-tutorial.html
+permalink: conversation-builder-tutorials-faq-bot-tutorial.html
 indicator: both
 ---
 
@@ -14,7 +14,7 @@ This guide will help step you through setting up a Knowledge Base (KB), and an F
 
 A good place to start with Conversation Builder is the [getting started tutorial](conversation-builder-getting-started-create-a-new-bot.html) and [conversation libraries tutorial](conversation-builder-conversation-libraries-getting-started-tutorial.html).
 
-For more in-depth information on the various parts of the product covered here see the Conversation Builder [component breakdown](conversation-builder-components-conversation-builder-overview.html).
+For more in-depth information on the various parts of the product covered here see the Conversation Builder [component breakdown](conversation-builder-conversation-builder-overview.html).
 
 ### What is an FAQ Bot?
 
@@ -142,17 +142,17 @@ In the Conversation Builder, tap on the NEW BOT icon and give your bot a unique 
 
 * Where it says "Publish Bot" change to the appropriate Org and hit Save.
 
-![image alt text](img/faqbot/image_12.png)
+<img src="img/faqbot/image_12.png" style="width:700px">
 
 ### Connecting to the Knowledge Base
 
 Your automation will use an API integration to connect to the Knowledge Base. Setting up the API is straight forward.
 
-![image alt text](img/faqbot/image_13.png)
+<img src="img/faqbot/image_13.png" style="width:600px">
 
 You will need the source id for the Knowledge Base you’re using. Navigate to your KB and launch it. In the browser address bar, select the source id (see above) and copy it. We’ll be using it shortly.
 
-Return to the Conversation Builder and in the upper left corner of the Conversation Builder, tap on the API Integration ![image alt text](img/faqbot/image_14.png) icon.
+Return to the Conversation Builder and in the upper left corner of the Conversation Builder, tap on the API Integration <img src="img/faqbot/image_14.png" style="width:40px"> icon.
 
 * In the left integration list, tap on the "FAQs" integration and verify the following:
 
@@ -216,9 +216,9 @@ After you have reviewed, and tweaked, hit Save
 
 ### Testing Your Bot
 
-Let’s test our connection to the Knowledge Base. Return to the dialog editor by tapping on the ![image alt text](img/faqbot/image_15.png)icon in the upper left. Tap on the Chat preview on the right sidebar
+Let’s test our connection to the Knowledge Base. Return to the dialog editor by tapping on the <img src="img/faqbot/image_15.png" style="width:40px"> icon in the upper left. Tap on the Chat preview on the right sidebar
 
-![image alt text](img/faqbot/image_16.png)
+<img src="img/faqbot/image_16.png" style="width:400px">
 
 Type "**restart**", hit enter. Then type “hi” to trigger the initial Welcome message. Restart clears all variables to start fresh.
 

@@ -5,8 +5,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Components
-permalink: conversation-builder-components-entities.html
+subfoldername: Intent Builder
+permalink: conversation-builder-intent-builder-entities.html
 indicator: both
 ---
 
@@ -16,7 +16,7 @@ Therefore, when you're creating training phrases for an intent, instead of typin
 
 "I'm interested in `sports`".
 
-Entities can be used both in the context of intents as well as in a [Knowledge Base](http://localhost:4000/conversation-builder-knowledge-base-overview.html). Just like with training phrases for intents, entities can be used in training phrases for Knowledge Base articles.
+Entities can be used both in the context of intents as well as in a [Knowledge Base](conversation-builder-knowledge-base-overview.html). Just like with training phrases for intents, entities can be used in training phrases for Knowledge Base articles.
 
 Entities are usually one or two words as they represent groups of simple objects.
 

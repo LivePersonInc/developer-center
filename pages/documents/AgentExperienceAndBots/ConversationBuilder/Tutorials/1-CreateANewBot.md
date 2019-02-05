@@ -1,12 +1,12 @@
 ---
-pagename: Create a New Bot
+pagename: Getting Started - 1
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Getting Started
-permalink: conversation-builder-getting-started-create-a-new-bot.html
+subfoldername: Tutorials
+permalink: conversation-builder-tutorials-getting-started-part-1.html
 indicator: both
 ---
 

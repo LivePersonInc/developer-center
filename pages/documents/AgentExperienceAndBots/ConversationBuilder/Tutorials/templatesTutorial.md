@@ -1,16 +1,20 @@
 ---
-pagename: Getting Started Tutorial
+pagename: Templates Tutorial
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Conversation Libraries
-permalink: conversation-builder-conversation-libraries-getting-started-tutorial.html
+subfoldername: Tutorials
+permalink: conversation-builder-tutorials-templates-tutorial.html
 indicator: both
 ---
 
-### Creating a Bot from a Library
+In this tutorial, you will see the steps involved in using pre-made automation templates with Conversation Builder.
+
+You will choose a template, review what the template includes, configure the items that must be unique to your own deployment, and connect to LiveEngage.
+
+### Create a Bot from a Template
 
 1. Create a new automation
 
@@ -23,9 +27,11 @@ indicator: both
 
     <img style="width:700px" src="img/ConvoBuilder/libraries/createsettings.png">
 
-3. Choose a library and click SAVE.
+3. Choose a template and click SAVE.
 
     <img style="width:700px" src="img/ConvoBuilder/libraries/choosetemplate.png">
+
+### Review What Has Been Created
 
 4. Select the newly created Bot from the Dashboard.
 
@@ -34,6 +40,8 @@ indicator: both
 5. Navigate to Automation Settings and Select the appropriate DOMAIN from the drop down for Entity.
 
     <img style="width:700px" src="img/ConvoBuilder/libraries/selectdomain.png">
+
+### Configure
 
 6. In order to configure Bot integration with services (e.g. Shopify), Click on Integration Settings. <img style="width:200px" src="img/ConvoBuilder/libraries/integrationsettings.png">
 
@@ -63,7 +71,7 @@ indicator: both
 
     <img style="width:700px" src="img/ConvoBuilder/libraries/test.png">
 
-### Integrating the Bot with a Skill on LiveEngage
+### Connect the Bot with a Skill on LiveEngage
 
 1. Create a skill.
 

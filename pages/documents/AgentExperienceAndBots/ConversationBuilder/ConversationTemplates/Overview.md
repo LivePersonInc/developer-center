@@ -5,18 +5,18 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Conversation Libraries
-permalink: conversation-builder-conversation-libraries-overview.html
+subfoldername: Templates
+permalink: conversation-builder-templates-overview.html
 indicator: both
 ---
 
 ### Introduction
 
-Conversation Libraries are a predefined set of industry vertical bots and their integration points that enable rapid adoption of automation.
+Conversation Templates are a predefined set of industry vertical bots and their integration points that enable rapid adoption of automation.
 
-Liveperson offers high quality, generic and end-to-end conversation Libraries for each vertical. This capability is extensible so you can refine the content & flows to match your conversational design needs & brand voice.
+Liveperson offers high quality, generic and end-to-end conversation templates for each vertical. This capability is extensible so you can refine the content & flows to match your conversational design needs & brand voice.
 
-Each conversational library consists of the following capabilities:
+Each conversational template consists of the following capabilities:
 
 * Intents associated with the use case
 
@@ -24,7 +24,7 @@ Each conversational library consists of the following capabilities:
 
 * API integrations with respective services, both industry leading services (e.g. Shopify in Retail) as well as brand-specific services
 
-### Library Use Cases
+### Template Use Cases
 
 The following Use Cases will be provided for multiple different industry verticals. 
 
@@ -49,7 +49,7 @@ The following Use Cases will be provided for multiple different industry vertica
  </tr>
  <tr>
  <td>Retail</td>
- <td>E2E Retail Conversation Libraries</td>
+ <td>E2E Retail Conversation Templates</td>
  </tr>
  <tr>
  <td>Concierge</td>

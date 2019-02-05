@@ -5,8 +5,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Components
-permalink: conversation-builder-components-scripting-functions.html
+subfoldername: Conversation Builder
+permalink: conversation-builder-conversation-builder-scripting-functions.html
 indicator: both
 ---
 
@@ -298,18 +298,18 @@ var payload = botContext.getQuickReplyPayload();
 botContext.sendImmediateReply('Hey you picked option ' + response  +' with a payload of '+ payload);
 ```
 
-### Get Responder Results Count
+### Get API Integration Results Count
 
-Most commonly used to check whether a responder returned any results at all. If no results are returned, you should display an error message or redirect to a failover message.
+Most commonly used to check whether an API integration returned any results at all, and how many. If no results are returned, you should display an error message or redirect to a failover message.
 
 For example, imagine you are using the KnowledgeBase feature to create an FAQ bot. If the user’s query doesn’t return any results, you may want to respond with another message that provides some guidance.
 
 #### Example
 
-In the below example, `apiName` is the name of the API integration, `fieldName` is the custom data field mapping name, and `count` is the parameter that gives you the actual count.
+In the below example, `faqIntegration` is the name of the API integration, `title` is the custom data field mapping name, and `count` is the parameter that gives you the actual count.
 
 ```javascript
-var results = botContext.getBotVariable(apiName.fieldName.count);
+var results = botContext.getBotVariable(faqIntegration.title.count);
 if (results < 1) {
       botContext.sendMessage('Sorry, I was not able to find any notes for this contact.');
 }

@@ -5,12 +5,12 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername:
-permalink: conversation-builder-components-knowledge-base-overview.html
+subfoldername: Knowledge Base
+permalink: conversation-builder-knowledge-base-overview.html
 indicator: both
 ---
 
-The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your bot/automation to leverage [intents](conversation-builder-overview-intent-builder-overview.html) and [entities](conversation-builder-overview-entities-overview.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
+The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your bot/automation to leverage [intents](conversation-builder-intent-builder-overview.html) and [entities](conversation-builder-intent-builder-entities.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
 
 ### Adding a Knowledge Base
 
@@ -18,7 +18,7 @@ The first step to using the Knowledge Center tool is to add a knowledge center e
 
 Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. On the right hand side, you'll find a Setting Toolbar which includes the following panels:
 
-* The Bot/Automation Test panel. This panel allows you to select a bot/automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](placeholder.com) for more information on how to do that) and feed it test user input to see if it matches content as you'd expect.
+* The Bot/Automation Test panel. This panel allows you to select a bot/automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](conversation-builder-tutorials-faq-bot-tutorial.html) for more information on how to do that) and feed it test user input to see if it matches content as you'd expect.
 
 * The Tags panel. This panel displays all tags which you've previously used, so you can review all of them in one place and reuse them in any future articles.
 
@@ -38,7 +38,7 @@ To increase the quality of your content matches, please take a moment to review 
 
 * The key attributes which the NLU uses for matching are the article Title, Intent Qualifiers, Summary, Tags and any Positive or Negative learnings an article may have acquired.
 
-* The Title and the Intent Qualifiers are [intents](conversation-builder-overview-entities-overview.html) and should be full sentences e.g., “How do I reset my password?”
+* The Title and the Intent Qualifiers are [intents](conversation-builder-intent-builder-overview.html) and should be full sentences e.g., “How do I reset my password?”
 
 * As a rule you should have at *LEAST* 5 to 8 Intent Qualifiers per article which provide different ways people ask for this article.
 
@@ -82,7 +82,7 @@ What about thumbs-down? This should be used sparingly to differentiate between t
 
 ### Using Entities With Your Knowledge Base
 
-[Entities](conversation-builder-overview-entities-overview.html) are keywords that refer to a number of synonyms. For example the entity `sports` may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
+[Entities](conversation-builder-intent-builder-entities.html) are keywords that refer to a number of synonyms. For example the entity `sports` may have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
 
 Leveraging entities within your Knowledge Base provides the same benefits that doing so affords you elsewhere: they are a great way to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
 
