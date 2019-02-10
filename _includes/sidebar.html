@@ -1,4 +1,4 @@
-<div class="sidebartop"><img class="sitelogo" src="img/desktop.png" />
+<div class="sidebartop"><a href="https://developers.liveperson.com/"><img class="sitelogo" src="img/desktop.png" /></a>
 <div class="sidebarbuttons">
   <div class="documentsbutton underline lined"><img class="documentsbuttonimage" src="img/documents.svg" /><a onclick='sidebarbuttonclick(event)' href="">Documents</a></div>
   <div id="solutionsbutton" class="solutionsbutton solutionsunderline"><img class="solutionsbuttonimage" src="img/solutions.svg" /><a onclick='solutionsbuttonclick(event)' href="">Solutions</a></div>
@@ -17,11 +17,12 @@
   <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder">
     <img src="img/{{ category.image }}.svg" />
-    <a href="">{{ category.categoryname }}</a>
+    <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
+      {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
+        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
@@ -30,60 +31,76 @@
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  onclick="linkclick(event,this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  onclick="linkclick(event,this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
-          <li class="pageitem">
-            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
-          </li>
+            <li class="pageitem">
+              <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            </li>
           {% endif %}
           {% endfor %}
         </ul>
       </li>
+      {% else %}
+    <li class="folder innerfolder sidebarcategory sololink">
+      <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+    </li>
+    {% endif %}
       {% endfor %}
     </ul>
   </li>
   {% else %}
   <li class="folder topfolder">
     <img src="img/{{ category.image }}.svg" />
-    <a href="">{{ category.categoryname }}</a>
+    <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
+      {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
+        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
-            <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+            <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
             <ul>
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
             {% else %}
           <li class="pageitem">
-            <a  onclick="linkclick(event, this)" class="innerlink" id="innerlink" href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}
         </ul>
       </li>
+      {% else %}
+      <li class="folder innerfolder sidebarcategory sololink">
+        <a onclick="linkclick(event, this)" class="innerlink "  href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+      </li>
+      {% endif %}
       {% endfor %}
     </ul>
   </li>
 {% endif %}
 {% endfor %}
     <hr class="sidebarhr lesstop" />
-    <a href="https://support.liveperson.com/ask-question/" target="_blank">
-    <div class="supportbutton">
-      <span>Looking for Support?</span>
-    </div>
-  </a>
+    <div class="sidebarbuttoncontainer">
+      <li class="folder topfolder ">
+        <img src="img/support-icon.png" />
+        <a target="_blank" class="bottombuttons" href="https://support.liveperson.com/ask-question/">Looking for Support?</a>
+      </li>
+    <li class="folder topfolder bottombuttons">
+      <img src="img/create-account-icon.png" />
+      <a target="_blank" class="bottombuttons" href="http://register.liveperson.com/developer/signup">Create Your Account</a>
+    </li>
+  </div>
 </ul>

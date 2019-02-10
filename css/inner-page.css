@@ -37,17 +37,23 @@ h2[id] {
 h3[id]{
   font-family: "Roboto", Arial;
   color:#4a4a4a;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
 }
 
 h4[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 1em;
+  font-size: 15px;
   font-weight: 600;
   font-style: inherit;
   margin-top: 15px;
+}
+
+h5[id] {
+  font-family: "Roboto", Arial;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 h4 code.highlighter-rouge {
@@ -60,11 +66,10 @@ h4 code.highlighter-rouge {
   font-family: "Roboto",Arial;
   font-size: 22px;
   font-weight: 400;
-  text-transform: capitalize;
 }
 
 .h2 {
-  color: #172136;
+  color: #162036;
   font-family: "Roboto",Arial;
   font-size: 18px;
   margin-bottom: 30px;
@@ -86,7 +91,8 @@ h4 code.highlighter-rouge {
   margin-top: 7px;
 }
 .post-content table{
-  width: 125%;
+  width: 130%;
+  max-width: 130%;
 }
 
 .post-content table tbody tr td ul {
@@ -121,7 +127,7 @@ pre code {
    hyphens: none;
    border-right: solid 1px #fff;
    padding: 21px 25.5px 21px 23px;
-   vertical-align: initial;
+   vertical-align: inherit;
 }
 
 .post-content table > thead > tr > th {
@@ -137,7 +143,8 @@ pre code {
 
 @media screen and (max-width:425px){
   .post-content table{
-    max-width: 90%;
+    max-width: unset;
+    width: auto;
   }
 }
 /*
@@ -151,24 +158,29 @@ table > thead > tr > th {
 }
 
 table > tbody > tr:nth-of-type(even) {
-    background-color: #f7f7f7;
+    background-color: #f8f8f8;
 }
 
 
 .designsheet table tr td {
-  font-size: 0.9em;
   line-height: 2.4em !important;
   text-align: center;
   font-weight: bold;
   vertical-align: inherit;
+  font-size: 12px;
+  font-family: "Open Sans";
+  color: #666666;
+  hyphens: none;
+  border-right: solid 1px black;
 }
 
 .designsheet table tr th {
-  background-color: #162036;
   font-family: "Open Sans";
-  font-size: 0.8888em;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 14px;
+  padding: 14px 22px;
+  border-bottom: 2.5px solid #5879DA;
 }
 
 .designsheet img {
@@ -177,18 +189,20 @@ table > tbody > tr:nth-of-type(even) {
 }
 
 .designsheetnumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50px;
   font-size: 2.5em;
-  margin-bottom: 7%;
-  padding-top: 1.5%;
-  margin-left: 40%;
+  color: #fff;
+    background-color: orange;
   border: 3px solid darkorange;
   height: 50px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 50px;
-  background-color: orange;
-  color: #fff;
+
 }
 
 code {
@@ -214,7 +228,7 @@ td .darken {
 
 /*toc nav bar */
 div#toc {
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   display: none;
   margin-top: 14px;
   /*min-width: 300px;*/
@@ -353,6 +367,10 @@ ul#mysiderbar li{
 
 }
 
+.innerfolder > a{
+  color: #f2f1f2;
+}
+
 .pageitem {
   padding-left: 48px !important;
 }
@@ -404,7 +422,7 @@ ul.mysidebar.nav li.activepage{
 ul.mysidebar.nav li.activepage a{
   background-color: inherit;
   font-weight: bold;
-  color: #172136;
+  color: #162036;
 }
 .mysidebar.nav li.folder > a{
  font-size: 14px;
@@ -435,11 +453,6 @@ ul.mysidebar.nav li ul li {
   border-top: none;
   padding-left: 0px;
 
-}
-
-.activepage {
-  color: #90a6e6 !important;
-  font-weight: 500;
 }
 
 
@@ -478,7 +491,7 @@ div.sidebarTitle-holder {
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator{
   color: #8b8b8b;
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   font-size: 12px;
   padding: 2px 4px;
   margin-bottom: -2px;
@@ -718,6 +731,12 @@ pre code {
 
 .hide {
   visibility: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .post-content table {
+    width: 130%;
+  }
 }
 
 @media screen and (max-width:768px){

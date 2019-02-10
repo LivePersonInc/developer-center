@@ -12,23 +12,23 @@ All pages on the site correspond to a Markdown file (.md) which can be found ins
 
 Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply to it. Our headers are usually comprised of the following key/value pairs:
 
-* `title`: this is the name of the page that will appear at the top of the document. **DEPRECATED, use `pagename` instead. All other rules above apply.**
+* `pagename`: This is the name of the page that will appear at the top of the document.
 
-* `keywords`: this replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
+* `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `level1`: this key can have either "Documents" or "Solutions". This designates which part of the site the document is under. **DEPRECATED, use `documentname` instead. All other rules above apply.**
+* `documentname`: This key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
 
-* `level2`: this is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management". **DEPRECATED, use `categoryname` instead. All other rules above apply.**
+* `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
 
-* `level3`: this is the API to which the document belongs. **DEPRECATED, use `documentname` instead. All other rules above apply.**
+* `documentname`: This is the API to which the document belongs.
 
-* `level4`: this is a sub-folder to which the document belongs, if there is one. **DEPRECATED, use `subfoldername` instead. All other rules above apply.**
+* `subfoldername`: This is a sub-folder to which the document belongs, if there is one.
 
-* `root-link`: this key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it. **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and displays all document links.**
+* `root-link`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and displays all document links**. This key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it.
 
-* `level-order`: this key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Contact Center Management) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appear before the Skills API (which is also under Contact Center Management) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`. **DEPRECATED. No longer needed as the sidebar is now alphabetically organized.**
+* `level-order`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized**. This key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Contact Center Management) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appear before the Skills API (which is also under Contact Center Management) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`.
 
-* `order`: this value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents. **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and the site hierarchy is determined by a manually updated YAML file. See below for more info.**
+* `order`:  **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and the site hierarchy is determined by a manually updated YAML file. See below for more info**. This value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents.
 
 * `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
 

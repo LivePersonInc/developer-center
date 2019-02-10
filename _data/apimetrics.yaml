@@ -1,0 +1,744 @@
+- metricitem:
+  Metric: currentStatusDuration
+  analysisType: Agent Status
+  Channel: Messaging
+  formulaOptional:
+  Description: The duration of the current status (in Milliseconds).
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: currentStatusReasonDuration
+  analysisType: Agent Status
+  Channel: Messaging
+  formulaOptional:
+  Description: The duration of the reason for the "AWAY" status (in Milliseconds).
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: load
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: Indication for the agent’s efficiency (i.e. the amount of work the agent needs to handle, relative to the maximum capacity). It is the total weight of the assigned conversations divided by the agent’s maximum capacity. This is represented in percentage value.
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: ringingSlots
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of ringing slots.
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: busySlots
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of busy slots.
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: openAssignedConversations
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The agent’s number of open assigned conversations.
+  apiMethod: Agent Metrics - Agent Status,Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: intenseConversations
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The agent’s number of intense conversations.
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: configuredMaxSlots
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The agent’s number of configured maximum slots.
+  apiMethod: Agent Metrics - Agent Status
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: weightedAvgLoad
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: Weighted average load of logged in agents, this is represented in percentage value.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: minLoad
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: Agent’s minimum load.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: maxLoad
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: Agent’s maximum load.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: minConfiguredMaxSlots
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The minimum number of configured maximum slots among agents.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: maxConfiguredMaxSlots
+  analysisType: Agent Utilization
+  Channel: Messaging
+  formulaOptional:
+  Description: The maximum number of configured maximum slots among agents.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: numAwayAgents
+  analysisType: Agent Status
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of agents in AWAY status.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: numBackSoonAgents
+  analysisType: Agent Status
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of agents in BACK SOON status.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: numOnlineAgents
+  analysisType: Agent Status
+  Channel: Messaging
+  formulaOptional:
+  Description: Number of agents in ONLINE status.
+  apiMethod: Agent Metrics - Summary
+  filteredBy: Agent, Group,Skill
+- metricitem:
+  Metric: resolvedConversations_byCCP
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of conversations that were marked as resolved by the CCP in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: resolvedConversations_byConsumer
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of conversations that were marked as resolved by the consumer in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: resolvedConversations_bySystem
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of conversations that were marked as resolved by the system (that is, by timeout) in the current interval/timeframe.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalResolvedConversations
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The total number of conversations that were marked as resolved in the current interval/timeframe.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalHandlingTime_resolvedConversationsThetotalbyCCP
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Handling time of conversations that were marked as resolved by the CCP in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalHandlingTime_resolvedConversationsThetotalbyConsumer
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Handling time of conversations that were marked as resolved by the consumer in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalHandlingTime_resolvedConversationsThetotalbySystem
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: Handling time of conversations that were marked as resolved by the system (that is, by timeout) in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalHandlingTime_resolvedConversations
+  analysisType: Agent Productivity
+  Channel: Messaging
+  formulaOptional:
+  Description: The total handling time of conversations that were marked as resolved in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: avgTime_resolvedConversations_byCCP
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional:
+  Description: The average handling time of conversations that were marked as resolved by the CCP in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: avgTime_resolvedConversations_byConsumer
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional:
+  Description: The average handling time of conversations that were marked as resolved by the consumer in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: avgTime_resolvedConversations_bySystem
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional:
+  Description: The average handling time of conversations that were marked as resolved by the system (that is, by timeout) in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: avgTime_resolvedConversations
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional:
+  Description: The average handling time of conversations that were marked as resolved in the current interval/time frame.
+  apiMethod: Messaging Operations - Messaging Conversation
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: unassignedConversations
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of unassigned conversations. Equal to the number of actionable conversation + not actionable conversation.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: actionableConversations
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of actionable conversations.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: notActionableConversations
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of not actionable conversations.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: actionableAndManualSla
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of actionable conversations that have a manual SLA on them.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: actionableAndDuringTransfer
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of actionable conversations that were transferred.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: actionableAndConsumerLastMessage
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of actionable conversations in which the consumer wrote the last message.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: notActionableDuringTransfer
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of not actionable conversations that were transferred.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: notActionableAndManualSla
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of not actionable conversations that have a manual SLA on them.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: unassignedConversationsAndFirstTimeConsumer
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of unassigned conversations where the consumer has started for the first time.
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: avgWaitTimeForAgentAssignment_NewConversation
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: "The time on average a new conversation remains in queue until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation was opened until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation was opened until the time is was assigned to an agent."
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: avgWaitTimeForAgentAssignment_AfterTransfer
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: "The time on average a conversation remains in queue after being transferred until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation was opened until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation was opened until the time is was assigned to an agent."
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: waitTimeForAgentAssignment_50thPercentile
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: "The median time a conversation remains in queue until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: maxWaitTimeForAgentAssignment
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: "The maximum time a conversation remains in queue until assigned to an agent. Measured in two separate ways:For current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: waitTimeForAgentAssignment_90thPercentile
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: "The maximum time a conversation remains in queue until assigned to an agent. Measured in two separate ways on the 90th percentile of conversation wait times:For current Queue state: for all conversations currently in queue, from the time the conversation entered the queue until the time of analysis (“now”). For aggregated past 24 hours analysis: for all conversations that left the queue, from the time the conversation entered the queue until the time is was assigned to an agent."
+  apiMethod: Messaging Operations - Messaging Queue Health,Messaging Operations - Messaging Current Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: estimatedWaitTime
+  analysisType: Queue Health
+  Channel: Messaging
+  formulaOptional:
+  Description: 'The time from a consumer''s first message until an agent is assigned to the conversation, averaged on the conversations in queue (in seconds).'
+  apiMethod: Messaging Operations - Messaging Estimated Wait Time
+  filteredBy: Skill
+- metricitem:
+  Metric: csat_score1_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of times CSAT answer 1 was submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: csat_score2_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of times CSAT answer 2 was submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: csat_score3_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of times CSAT answer 3 was submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: csat_score4_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of times CSAT answer 4 was submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: csat_score5_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of times CSAT answer 5 was submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: total_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The total number of answers which were submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: positive_answers
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The total number of CSAT 4 and 5 answers which were submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: csat_score
+  analysisType: Surveys
+  Channel: Messaging
+  formulaOptional:
+  Description: The percentage of the total answers which were positive (scores 4 and 5) which were submitted in the current time frame.
+  apiMethod: Messaging Operations - Messaging CSAT Distribution
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalSkillConversationSegments
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of times conversations were completed by a skill. Measured for conversations that were closed or transferred to another skill. A conversation may be assigned more than once to a given skill. "
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: skillSegmentsAbandonedByConsumers
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of conversations closed by a consumer which included no agent message. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.For example:Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill BSkill B has an abandoned segment while Skill A does not."
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: skillSegmentsAbandonedByConsumersInQueue
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of conversations closed by a consumer which included no agent message since no agent was assigned. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.For example:Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill B before an Agent is assigned to itSkill B has an abandoned segment while Skill A does not."
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: skillSegmentsWithNonresponsiveConsumers
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of skill-segments which ended in a transfer to another skill or closed with no response from the consumer to an agent’s message.
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: skillSegmentsWithNonresponsiveAgents
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: The number of skill-segments which ended in a transfer to another skill or closed by agent/system with no message from an agent.
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: interactiveSkillSegments
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: "The number of skill-segments which ended in a transfer to another skill or closed with at least one response from a consumer to a skilled-agent’s message. Measured from the first message sent by an agent in a new skill-segment."
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: avgTimetoFirstAgentMessageFromAgentAssignment
+  analysisType: Skill Performance
+  Channel: Messaging
+  formulaOptional:
+  Description: "The time on average taken by an agent to respond to a consumer from the time the agent is assigned to the conversation. Calculated only for the first agent message sent after a skill-segment starts."
+  apiMethod: Messaging Operations - Messaging Skill Segments
+  filteredBy: Skill
+- metricitem:
+  Metric: totalTimeToAnswer
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The total time, in seconds, that the visitors spent in the queue before being connected to an agent.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: enteredQEng
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The number of visitors that entered the queue.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: avgTimeToAnswer
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional: totalTimeToAnswer / connectedEng
+  Description: The average time, in seconds, that a visitor spent in the queue before being connected to an agent.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: abandonmentRate
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional: abandonedEng / (abandonedEng + connectedEng)
+  Description: The number of visitors that abandoned the queue out of the total visitors that started an engagement.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: abandonedEng
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The number of visitors that abandoned the queue before being connected to an agent.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: connectedEng
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The number of visitors that were connected to an agent.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: totalTimeToAbandon
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Total time visitors spend in queue before abandon.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: avgTimeToAbandon
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional: totalTimeToAbandon / abandonedEng
+  Description: The average time visitors spend in queue before abandon.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: maxQueueSize
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The maximum queue size within the given time frame. Default value if no such data exists is -1.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: minQueueSize
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The minimum queue size within the given time frame. Default value if no such data exists is -1.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: averageQueueSize
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The average queue size within the given time frame (rounded). Default value if no such data exists is -1. Calculated as queueSizeSum / queueSizeCount
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: maxAvailableSlots
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The maximum available slots within the given time frame. Default value if no such data exists is -1.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: maxAvailableSlots
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The maximum available slots within the given time frame. Default value if no such data exists is -1.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: minAvailableSlots
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The minimum available slots within the given time frame. Default value if no such data exists is -1.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: averageAvailableSlots
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The average available slots within the given time frame (rounded). Default value if no such data exists is -1. Calculated as availableSlotsSum / availableSlotsCount
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: currentQueueState
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The current queue size. Default value if no such data exists is -1.
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: currentAvailableSlots
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: "The current available slots. Default value if no such data exists is -1. Note: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1."
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: queueSizeSum
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Sum of all queue sizes received (queue size sum is calculated as sum of all [queue size] * [counter column value])
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: queueSizeCount
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Total number of queue size measures made
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: availableSlotsSum
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Sum of all available slots received (queue size sum is calculated as sum of all [queue size] * [counter column value])
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: availableSlotsCount
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: Total number of available slots measures made
+  apiMethod: Operational Realtime - Queue Health
+  filteredBy: Skill
+- metricitem:
+  Metric: totalInteractiveChats
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: The number of interactive chats that were closed in the current interval/time frame.
+  apiMethod: Operational Realtime - Engagement Activity
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalNonInteractiveChats
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: The number of non-interactive chats were closed in the current interval/time frame (this also includes chats that were abandoned by the visitor).
+  apiMethod: Operational Realtime - Engagement Activity
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: totalHandlingTime
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: The total time in seconds that was spent handing the interactive chats in the current interval/time frame.
+  apiMethod: Operational Realtime - Engagement Activity
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: nonInteractiveTotalHandlingTime
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: The total time in seconds that was spent handing the non-interactive chats in the current interval/time frame.
+  apiMethod: Operational Realtime - Engagement Activity
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: connectedEngagements
+  analysisType: Agent Productivity
+  Channel: Chat
+  formulaOptional:
+  Description: The number of chats connected to an agent in the current interval/time frame.
+  apiMethod: Operational Realtime - Engagement Activity
+  filteredBy: Agent, Skill
+- metricitem:
+  Metric: total
+  analysisType: Agent Status
+  Channel: Chat
+  formulaOptional:
+  Description: "The total time the agent was in this state (seconds). Note the filters available for this metric."
+  apiMethod: Operational Realtime - Agent Activity
+  filteredBy: Agent,Status,Reason (Away Reason)
+- metricitem:
+  Metric: chatting
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: "The total time the agent was chatting in this state (seconds). Note the filters available for this metric."
+  apiMethod: Operational Realtime - Agent Activity
+  filteredBy: Agent,Status,Reason (Away Reason)
+- metricitem:
+  Metric: notChatting
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: "The total time the agent was not chatting in this state (seconds). Note the filters available for this metric."
+  apiMethod: Operational Realtime - Agent Activity
+  filteredBy: Agent,Status,Reason (Away Reason)
+- metricitem:
+  Metric: chattingInMaxConcurrency
+  analysisType: Agent Utilization
+  Channel: Chat
+  formulaOptional:
+  Description: "The amount of time the agent was chatting concurrently with the maximum allowed chats in this state (seconds). Note the filters available for this metric."
+  apiMethod: Operational Realtime - Agent Activity
+  filteredBy: Agent,Status,Reason (Away Reason)
+- metricitem:
+  Metric: currentAvailableSlots
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: "The current queue number of available slots. Note: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1."
+  apiMethod: Operational Realtime - Current Queue State
+  filteredBy: Skill
+- metricitem:
+  Metric: currentQueueSize
+  analysisType: Queue Health
+  Channel: Chat
+  formulaOptional:
+  Description: The current queue size
+  apiMethod: Operational Realtime - Current Queue State
+  filteredBy: Skill
+- metricitem:
+  Metric: accumulated
+  analysisType: Service Level
+  Channel: Chat
+  formulaOptional:
+  Description: "The percentage of chats that fall in this bucket or in earlier buckets (buckets for shorter queue wait periods). Note the histogram filter available for this metric."
+  apiMethod: Operational Realtime - SLA Histogram
+  filteredBy: Group,Skill,Histogram (bucket range in sec.)
+- metricitem:
+  Metric: percentageFromTotal
+  analysisType: Service Level
+  Channel: Chat
+  formulaOptional:
+  Description: "The percentage of chats that fall in this bucket. Note the histogram filter available for this metric."
+  apiMethod: Operational Realtime - SLA Histogram
+  filteredBy: Group,Skill,Histogram (bucket range in sec.)
+- metricitem:
+  Metric: chats
+  analysisType: Service Level
+  Channel: Chat
+  formulaOptional:
+  Description: "The number of chats with wait time that falls in this bucket. Note the histogram filter available for this metric."
+  apiMethod: Operational Realtime - SLA Histogram
+  filteredBy: Group,Skill,Histogram (bucket range in sec.)

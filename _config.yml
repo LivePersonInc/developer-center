@@ -65,7 +65,7 @@ defaults:
       comments: true
       search: true
 
-description: "LivePerson Developera is the main repository for documentation of LivePerson APIs and SDKs."
+description: "LivePerson Developers is the main repository for documentation of LivePerson APIs and SDKs."
 # the description is used in the feed.xml file
 
 
