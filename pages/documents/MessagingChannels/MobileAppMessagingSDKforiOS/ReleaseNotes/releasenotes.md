@@ -44,13 +44,13 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 
 |Error Code | Error|
 |-----------|------|
-|1| non supported Device (ie simulator)|
-|2| network unreachable|
-|4| no response from server|
-|5| token expired|
-|10| failed to register|
-|20| failed to unregister|
-|30| failed to get unread message count|
+|-1| non supported Device (ie simulator)|
+|-2| network unreachable|
+|-4| no response from server|
+|-5| token expired|
+|-10| failed to register|
+|-20| failed to unregister|
+|-30| failed to get unread message count|
 
 
 ### Bugs
