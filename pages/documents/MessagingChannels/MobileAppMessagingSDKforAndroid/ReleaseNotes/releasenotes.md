@@ -12,8 +12,43 @@ indicator: messaging
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+### Android Messaging SDK - Version 3.6.0
 
-### Android Messaging SDK - Version 3.5
+
+### Overview
+
+Android Mobile App SDK v3.6.0 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+Android Mobile App SDK v3.6 requires the minimum Android API version 19 and targeted API is 27.
+
+### Bugs
+
+#### Bug Fixes
+
+* Unauthenticated user is failed to connect when passing campaign information.
+
+* Loading spinner is stuck even when conversation History is loaded.
+
+* Fixed: Failed to establish conversation when enable/disable airplane mode multiple times under low network connection.
+
+* TalkBack does not read agent name when clicked on the message.
+
+* Resumed conversation with unauthenticated user does not show campaign info on agent side when contextId is null.
+
+* "http://" appended as prefix for customized links (Deep Links)
+
+* Wrong value for unread message count on scroll down indicator.
+
+* Entire structure content component receives focus when tapped.
+
+* Released SDK build displays debug, info and warning logs.
+
+* Links and text in agent message truncated on changing chat_bubble_padding to non-default values.
+
+
+### Android Messaging SDK - Version 3.5.0
 
 ### Overview
 
@@ -42,7 +77,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 * Multiple "Missing current dialog" appear in the logs after a consumer clears history resulting a slow connection establishment.
 
 
-### Android Messaging SDK - Version 3.4
+### Android Messaging SDK - Version 3.4.0
 
 ### Overview
 
@@ -116,7 +151,7 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 ### Android Messaging SDK -  Version 3.3.0
 
-Android Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
+Android Mobile App SDK v3.3.0 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
 
 #### Environment Requirements
 
