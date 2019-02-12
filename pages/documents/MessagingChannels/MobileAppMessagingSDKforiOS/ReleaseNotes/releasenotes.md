@@ -14,6 +14,7 @@ indicator: messaging
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+
 ### iOS Messaging SDK - Version 3.6
 ### Overview
 
@@ -23,31 +24,33 @@ iOS Mobile App SDK v3.6 contains fixes for high priority bugs reported by custom
 
 iOS Mobile App SDK v3.6 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
-#### API Updates
+### API Updates
 
-## Infra/LPInfraFacade.swift
-## NEW:
+#### Infra/LPInfraFacade.swift
+
+**New method**:
+
 ```swift
 public class func unregisterPusherFor( brandId: String, completion: @escaping ()->(), failure: @escaping ( error: Error)->())
 ```
-## Deprecated:
+
+**Deprecated method**:
+
 ```swift
 public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), failure: @escaping ( error: Error)->())
 ```
+
 #### Updated Pusher Errors:
--1 non supported Device (ie simulator)
 
--2 network unreachable
-
--4 no response from server
-
--5 token expired
-
--10 failed to register
-
--20 failed to unregister
-
--30 failed to get unread message count
+|Error Code | Error|
+|-----------|------|
+|1| non supported Device (ie simulator)|
+|2| network unreachable|
+|4| no response from server|
+|5| token expired|
+|10| failed to register|
+|20| failed to unregister|
+|30| failed to get unread message count|
 
 
 ### Bugs
@@ -60,11 +63,11 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 
 * Multiple apps on device each sharing user cannot deregister from pusher.
 
-* LPTMesssagingSDKTokenExpired delegate call not being triggered.
+* `LPTMesssagingSDKTokenExpired` delegate call not being triggered.
 
 * Reconnecting in unauthenticated fails after JWT expires.
 
-* System messages do not change to Chinese when while device is language is Chinese and the region is in China. Currently SDK system messages do not support the scenario which language and region are not in sync (For example, device language is in Chinese while the region is in the US).
+* System messages do not change to Chinese while device is language is Chinese and the region is in China. Currently SDK system messages do not support the scenario in which language and region are not in sync (For example, device language is in Chinese while the region is in the US).
 
 * “Still Connecting…” error when app is brought to foreground using springboard.
 
@@ -76,7 +79,7 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 
 * Customers can get stuck in signup flow.
 
-* Protocol sniffing appear to not be compatible with iOS 12.
+* Protocol sniffing appears to not be compatible with iOS 12.
 
 * Constant “Loading…” message in unauthenticated flow after opening Notifications Center.
 
@@ -88,9 +91,9 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 
 * Socket connectivity for active conversation without network connection.
 
-### Known Bugs
+#### Known Bugs
 
-Through a series of changing application state, extended backgrounding, and intermittent messaging occasionally (4%) the user can produce a state where some messages do not appear.  Workaround for consumer is reloading the conversation view.
+Through a series of changing application state, extended backgrounding, and intermittent messaging, occasionally (4%) the user can produce a state where some messages do not appear.  Work-around for consumer is reloading the conversation view.
 
 ### iOS Messaging SDK - Version 3.5
 
@@ -124,7 +127,7 @@ There is a known issue related to entering the conversation view controller with
 
 *  In the Agent Console, the consumer conversation information (OS Type & Device) is not updated while switching platforms IOS/Android or OS versions.  Update: Update: The current design of LiveEngage platform cannot currently accommodate this request.  This can be implemented in a future LiveEngage platform update.
 
-### API Update 
+### API Update
 
 * The LPInfraFacad method registerPusherWithLoginFlow(brand) has been updated to registerPusherWithLoginFlow(brand: Brand, authenticationParams: LPAuthenticationParams?) allowing for an optional 'Authentication Parameters' dictionary to be passed to aid in determining the status and routing of authentication for the current consumer.  
 
