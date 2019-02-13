@@ -1,12 +1,12 @@
 ---
-pagename: Getting Started - 2
-redirect_from:
+pagename: 2 - Intents
+redirect_from: conversation-builder-tutorials-getting-started-part-2.html
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Tutorials
-permalink: conversation-builder-tutorials-getting-started-part-2.html
+permalink: conversation-builder-tutorials-2-intents.html
 indicator: both
 ---
 
@@ -100,3 +100,4 @@ Type in an utterance that should match for your billing intent like "I have a qu
 <img style="width:300px" src="img/ConvoBuilder/helloworld/yestest.png">
 
 <img style="width:300px" src="img/ConvoBuilder/helloworld/notest.png">
+

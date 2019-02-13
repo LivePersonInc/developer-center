@@ -142,13 +142,13 @@
       - pagename: Platform Overview
       - pagename: Tutorials
         subpages:
-          - subpagename: Getting Started - Part 1
-          - subpagename: Getting Started - Part 2
-          - subpagename: Getting Started - Part 3
-          - subpagename: Getting Started - Part 4
-          - subpagename: Templates Tutorial
-          - subpagename: FAQ Bot Tutorial
-          - subpagename: Routing Bot Tutorial
+          - subpagename: 1 - Dialogues and Patterns
+          - subpagename: 2 - Intents 
+          - subpagename: 3 - Integrations
+          - subpagename: 4 - Connect to LiveEngage
+          - subpagename: 5 - Releases and Versioning
+          #- subpagename: Basic - FAQ Bot Tutorial
+          #- subpagename: Basic - Routing Bot Tutorial
       - pagename: Templates
         subpages:
           - subpagename: Overview
@@ -159,6 +159,7 @@
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assistant
+            - subpagename: Settings
             - subpagename: Scripting Functions
       - pagename: Intent Builder
         subpages:

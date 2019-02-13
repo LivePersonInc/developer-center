@@ -1,12 +1,12 @@
 ---
-pagename: Getting Started - 1
-redirect_from:
+pagename: 1 - Dialogues and Patterns
+redirect_from: conversation-builder-tutorials-getting-started-part-1.html
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Tutorials
-permalink: conversation-builder-tutorials-getting-started-part-1.html
+permalink: conversation-builder-tutorials-1-dialogues-and-patterns.html
 indicator: both
 ---
 
@@ -18,26 +18,28 @@ This step requires that you have a user account for the Conversation Builder pla
 
 1. Once provided a Conversation Builder account, select your region and login at [https://platform.botcentralai.com](https://platform.botcentralai.com)
 
-    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_1.png">
+    <img style="width:750px" src="img/ConvoBuilder/helloworld/image_1.png">
 
 2. Click on the Conversation Builder icon.
 
-    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_2.png">
+    <img style="width:750px" src="img/ConvoBuilder/helloworld/image_2.png">
 
-3. Tap on the **New Automation** icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Basic Automation** from the template area below and hit Save.
+3. Tap on the **New Automation** icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. 
 
-    <img style="width:200px" src="img/ConvoBuilder/helloworld/newAutomation.png">
+    Then select **Basic Automation** from the template area below and hit Save.
 
-    <img style="width:500px" src="img/ConvoBuilder/helloworld/createAutomation.png">
+    <img style="width:750px" src="img/ConvoBuilder/helloworld/newAutomation.png">
+
+    <img style="width:750px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
 4. You will be taken to your new automation in the Conversation Builder.
-    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
+    <img style="width:750px" src="img/ConvoBuilder/helloworld/image_3.png">
 
 5. **Before you do anything else**, we need to "Publish" the bot to your Organization. (For those with multiple Org access, the bot will default to Private, which is why we want to change it.)
   * Tap the gear <img style="width:40px" src="img/ConvoBuilder/helloworld/image_4.png"> icon on the right sidebar and then Automation Settings. Scroll down and tap "More Settings".
   * Where it says "Publish Automation", change to the appropriate Org and hit Save.
     
-    <img style="width:600px" src="img/ConvoBuilder/helloworld/image_5.png">
+    <img  src="img/ConvoBuilder/helloworld/image_5.png">
 
 ### Step 2: Hello World
 

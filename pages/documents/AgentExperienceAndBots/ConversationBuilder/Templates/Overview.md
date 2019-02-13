@@ -105,3 +105,11 @@ The following Use Cases will be provided for multiple different industry vertica
  </tr>
  </tbody>
 </table>
+
+### How to Create an Automation from a Template
+
+1. Choose the Template industry vertical and use case.
+
+2. Review what the Template includes.
+
+3. Configure the parts that need to be customized.
