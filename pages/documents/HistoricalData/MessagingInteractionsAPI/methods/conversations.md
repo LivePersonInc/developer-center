@@ -56,7 +56,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
 |alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
 |csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively).
-|source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK,Apple Business Chat
+|source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK, Apple Business Chat, WhatsApp Business
 |device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
@@ -175,7 +175,7 @@ integrationVersion | The version of the integration | string |
 appId | The name of the application | string | We have a few internal application names: ConsumerApp, WebAgent, BrandAgent |
 appVersion | The hosted application version. | string |
 ipAddress | Current connection user IP | string |
-isTruncated | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean | 
+isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean | 
 
 _Campaign info_
 
