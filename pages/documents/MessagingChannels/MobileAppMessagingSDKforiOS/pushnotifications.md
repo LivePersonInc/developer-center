@@ -27,7 +27,7 @@ public func handlePush(userInfo: [NSObject : AnyObject])
 2. Register device token on LPMesssagingSDK instance:
 
 ```swift
-public func registerPushNotifications(token token: NSData, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil)
+func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)
 ```
 
 _**Note: this method passes the Device Token to the SDK, the actual registration occurs only after showConversation method is called.**_

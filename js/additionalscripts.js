@@ -513,7 +513,7 @@ function capabilitiesSearch() {
 };
 
 function searchHighlight() {
-	//grab the filter element from local storage. We define this element in the inline script on the default oage.
+	//grab the filter element from local storage. We define this element in the inline script on the default page.
 	var toHighlight = localStorage.getItem('filter');
 	//if the element has been created
 	if (toHighlight) {
