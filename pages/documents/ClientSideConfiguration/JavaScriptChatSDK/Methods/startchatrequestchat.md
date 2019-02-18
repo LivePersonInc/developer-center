@@ -31,18 +31,26 @@ The parameters in question are `conversationId`, `participantId`. You will need 
 | Element | Description | Type | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | skill |   A specific skill requested for this chat. | string | |
+| serviceQueue | A ServiceQueue for this chat. | string | Will be ignored if a skill property is passed. Must be supplied with the maxWaitTime property. **LEGACY ONLY**|
+| maxWaitTime   | The number of seconds the visitor can wait for a chat. | number | Must be supplied in conjunction with the serviceQueue property. **LEGACY ONLY**|
 | referrer  | The referrer for this chat. | string | If not supplied, will default to the document.referrer property of the browser. |
 | preChatLines  | An array of strings that should be received by the agent immediately when the chat starts. | array |  |
 | survey |  The result of the Pre-chat survey. | object | |
+| buttonName    | The name of the button clicked. This is used to create a pipeline report. **LEGACY ONLY**| string | Takes preference over invitation. |
 | invitation    | Indication if this was a result of an invitation. | Boolean   |  |
+| siteContainer | In case of a federated site, you need to pass this in to locate the visitor in the secondary servers. **LEGACY ONLY**| string | Exists in the Global variable on the parent page: window.lpMTagConfig.FPC_CONT. Required in case of federation. This is for the first chat only. |
+| runWithRules  | Specifies if you want rules to be evaluated on the Pre-chat survey and applied to the chat. **LEGACY ONLY**| Boolean | Example: have a skill question change the chat skill. <br> Default: off |
 | interactionTimeout	| The number of seconds that have passed since the last request was sent to the server until the server disconnects the chat. | number | <br> Default: 40 |
-| visitorSession | The monitored visitors session on the page. | string | Used to create pipeline reports from the page monitoring to the chat. |
+| visitorSession | The monitored visitors session on the page. **LEGACY ONLY**| string | Used to create pipeline reports from the page monitoring to the chat. |
 | visitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
 | sessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
 | contextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
 | engagementId  | The engagement ID in case of a LiveEngage account. | string   | |
 | campaignId    | The campaign ID in case of a LiveEngage account. | string | |
 | language  | The language set in the engagement in case of a LiveEngage account (sets the system messages language for the chat). | string | |
+| a2aSourceSiteId   | The source site for the account to account transfer **LEGACY ONLY**| string  | Supplied on the account to account event. You must have a valid API key for the new account. |
+| a2aSourceSessionId | The originating session ID for the account to account transfer **LEGACY ONLY**| string | Supplied on the account to account event. You must have a valid API key for the new account |
+| a2aEventId | The event ID of the account to account transfer **LEGACY ONLY**| string | Supplied on the account to account event. You must have a valid API key for the new account |
 | conversationId | The conversation ID required for authentication flow. | string | optional |
 | participantId | The participant ID required for authentication flow. | string | optional |
 
