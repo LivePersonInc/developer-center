@@ -146,7 +146,7 @@
           - subpagename: 2 - Intents 
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
-          - subpagename: 5 - Releases and Versioning
+          #- subpagename: 5 - Releases and Versioning
           #- subpagename: Basic - FAQ Bot Tutorial
           #- subpagename: Basic - Routing Bot Tutorial
       - pagename: Templates
