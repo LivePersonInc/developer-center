@@ -239,7 +239,7 @@ function parseToHtml(obj){
         body {
             font-family: "Myriad pro", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
             font-size: 13px;
-            background-color: #F0F0F0;
+            background-color: #f2f1f2;
             line-height: 25px;
             color: #767678;
             margin: 0;

@@ -18,6 +18,8 @@
     - pagename: Getting Started with Authentication
     - pagename: Getting Started with Data APIs
     - pagename: Getting Started with Engagement Attributes
+    - pagename: API Data Metrics
+    - pagename: Report Builder Data Metrics
 
 - categoryname: Agent Experience & Bots
   image: agent-experience
@@ -33,35 +35,83 @@
       - pagename: Methods
       - pagename: Public Model Structure
       - pagename: Public Properties
+      - pagename: Best Practices and Troubleshooting
       - pagename: Release Notes
   - documentname: Chat Agent API
+    basedomain: https://{domain}/api/account/{accountId}/agentSession
     pages:
       - pagename: Overview
       - pagename: Methods
         subpages:
           - subpagename: Start Agent Session
+            methodurl:
+            httpmethod: POST
           - subpagename: Retrieve Current Availability
+            methodurl: /{agentSessionId}/availability
+            httpmethod: GET
           - subpagename: Set Agent Availability
+            methodurl: /{agentSessionId}/availability
+            httpmethod: POST
           - subpagename: Retrieve Available Agents
+            methodurl: /{agentSessionId}/availableAgents
+            httpmethod: GET
           - subpagename: Retrieve Available Slots
+            methodurl: /{agentSessionId}/chat/availableSlots
+            httpmethod: GET
           - subpagename: Retrieve Agent Information
+            methodurl: /{agentSessionId}/info
+            httpmethod: GET
           - subpagename: Determine Incoming Chat Request
+            methodurl: /{agentSessionId}/incomingRequests
+            httpmethod: GET
           - subpagename: Accept a Chat
+            methodurl: /{agentSessionId}/incomingRequests
+            httpmethod: POST
           - subpagename: Retrieve Chat Sessions
+            methodurl: /{agentSessionId}/chatSessions
+            httpmethod: GET
           - subpagename: Retrieve Chat Resources, Events and Information
+            methodurl: /chat/{chatId}
+            httpmethod: GET
           - subpagename: Retrieve Data for Multiple Chats
+            methodurl: See document for more info.
+            httpmethod: GET
           - subpagename: Retrieve Chat Events
+            methodurl: /chat/{chatId}/events
+            httpmethod: GET
           - subpagename: Send Lines and Structured Content
+            methodurl: /chat/{chatId}/events
+            httpmethod: POST
           - subpagename: End Chat
+            methodurl: /chat/{chatId}/events
+            httpmethod: POST
           - subpagename: Retrieve Chat Information
+            methodurl: /chat/{chatId}/info
+            httpmethod: GET
           - subpagename: Retrieve Visitor's Name
+            methodurl: /chat/{chatId}/info/visitorName
+            httpmethod: GET
           - subpagename: Retrieve Agent's Typing Status
+            methodurl: /chat/{chatId}/info/agentTyping
+            httpmethod: GET
           - subpagename: Set Agent's Typing Status
+            methodurl: /chat/{chatId}/info/agentTyping
+            httpmethod: POST
           - subpagename: Retrieve Visitor's Typing Status
+            methodurl: /chat/{chatId}/info/visitorTyping
+            httpmethod: GET
           - subpagename: Retrieve Available Skills
+            methodurl: /chat/{chatId}/transfer
+            httpmethod: GET
           - subpagename: Transfer a Chat
+            methodurl: /chat/{chatId}/transfer
+            httpmethod: POST
           - subpagename: Retrieve Agent Survey Structure
+            methodurl: /chat/{chatId}/survey
+            httpmethod: GET
           - subpagename: Submit Survey Data
+            methodurl: /chat/{chatId}/survey
+            httpmethod: PUT
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
@@ -71,7 +121,6 @@
       - pagename: Prerequisites
       - pagename: Getting Started
       - pagename: Considerations
-      - pagename: Limitations
       - pagename: Deploying Bots on Live Chat
       - pagename: Deploying Bots on Messaging
   - documentname: Messaging Agent SDK
@@ -164,16 +213,19 @@
         - subpagename: Conversation Metadata
         - subpagename: Read and Accept Events
         - subpagename: Authentication
-        - subpagename: Post Conversation Survey
+        - subpagename: Post Conversation Survey (PCS)
+        - subpagename: Post Conversation Survey (CSAT)
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
+        - subpagename: File Sharing
       - pagename: Samples
         subpages:
         - subpagename: JavaScript Sample
       - pagename: API Reference
         subpages:
         - subpagename: Overview
+        - subpagename: Get Agent Public Profile
         - subpagename: Request Builder
         - subpagename: Response Builder
         - subpagename: Notification Builder
@@ -189,6 +241,7 @@
         - subpagename: Generate Upload URL
         - subpagename: Generate Download URL
     - documentname: Server Chat API
+      basedomain: https://{domain}/api/account/{accountId}/chat
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -217,6 +270,7 @@
   image: contact-center
   documents:
     - documentname: Agent Groups API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/agentGroups
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -230,6 +284,7 @@
             - subpagename: Delete Agent Group
         - pagename: Appendix
     - documentname: Agent Status Reason API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -240,6 +295,7 @@
             - subpagename: Update Status Reason
             - subpagename: Delete Status Reason
     - documentname: Automatic Messages API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/auto-messages
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -248,6 +304,7 @@
           - subpagename: Get Automatic Message by ID
           - subpagename: Update an Automatic Message
     - documentname: Audit Trail API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/metadata/audit
       pages:
         - pagename: Introduction
         - pagename: Methods
@@ -255,6 +312,7 @@
             - subpagename: Retrieve Audit Trail Records
             - subpagename: Export Audit Trail to CSV File
     - documentname: LOBs API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/lobs
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -266,8 +324,9 @@
             - subpagename: Update LOB
             - subpagename: Delete LOBs
             - subpagename: Delete LOB
-        - pagenme: Appendix
+        - pagename: Appendix
     - documentname: Predefined Content API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/canned-responses
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -283,6 +342,7 @@
             - subpagename: Get Default Predefined Content Items
         - pagename: Appendix
     - documentname: Predefined Categories API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-categories/categories/
       pages:
         - pagename: Introduction
         - pagename: Methods
@@ -300,6 +360,7 @@
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
     - documentname: Profiles API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
       - pagename: Overview
       - pagename: Methods
@@ -312,7 +373,16 @@
           - subpagename: Delete Profiles
           - subpagename: Delete Profile
       - pagename: Appendix
+    - documentname: Shift Status API
+      basedomain: https://{domain}/api/account/{accountId}/shift-status
+      pages:
+          - pagename: Overview
+          - pagename: Methods
+            subpages:
+              - subpagename: Get Shift Status by Account
+              - subpagename: Get Shift Status by Skill
     - documentname: Skills API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/skills
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -326,6 +396,7 @@
             - subpagename: Delete Skill
         - pagename: Appendix
     - documentname: Users API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/users
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -340,6 +411,7 @@
             - subpagename: Reset User's Password
         - pagename: Appendix
     - documentname: Unified Automatic Messages API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/engagement-window/unified-auto-messages
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -349,6 +421,7 @@
             - subpagename: Update an Unified Automatic Message
             - subpagename: Delete an Unified Automatic Message
     - documentname: Special Occasions API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/ac-common/specialoccasion
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -360,6 +433,7 @@
             - subpagename: Retrieve Special Occasions by List
         - pagename: Appendix
     - documentname: Workdays API
+      basedomain: https://{domain}/api/account/{accountId}/configuration/ac-common/workinghours
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -375,6 +449,7 @@
   image: historical-data
   documents:
   - documentname: Consumer Messaging History API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/conversations
     pages:
         - pagename: Overview
         - pagename: Methods
@@ -382,6 +457,7 @@
             - subpagename: Conversations - Content
             - subpagename: Conversations - Metadata
   - documentname: Data Access API
+    basedomain: https://{domain}/data_access_le/account/{accountID}/le
     pages:
       - pagename: Overview
       - pagename: Architecture
@@ -397,12 +473,14 @@
       - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
+    basedomain: https://{domain}/interaction_history/api/account/{accountID}/interactions
     pages:
       - pagename: Overview
       - pagename: Methods
       - pagename: Sample Code
       - pagename: Engagement Attributes
   - documentname: Messaging Interactions API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/conversations
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -412,6 +490,7 @@
           - subpagename: Get Conversations by Consumer ID
       - pagename: Engagement Attributes
   - documentname: Personal Data Deletion API
+    basedomain: https://{domain}/api/account/{site_id}/personal-data-deletion
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -428,7 +507,9 @@
   #   - pagename: Overview
   #   - pagename: contextAndInvite
   #   - pagename: getLiveDeflectData
+  - documentname: Messaging Channels Capabilities Comparison
   - documentname: Connector API
+    basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
     - pagename: First Steps
       subpages:
@@ -439,6 +520,7 @@
       subpages:
       - subpagename: Get AppJWT
       - subpagename: Get ConsumerJWS
+      - subpagename: Authorization Error Responses
     - pagename: API Reference
       subpages:
       - subpagename: Overview
@@ -463,11 +545,12 @@
       - subpagename: Send Chat State Events
       - subpagename: How to Enable a Feature
       - subpagename: Campaign for Messaging Routing
-      - subpagename: Share Image File
+      - subpagename: File Sharing
     - pagename: Sample Code
       subpages:
       - subpagename: Connector Sample App
   - documentname: IVR Engagement API
+    basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:
     - pagename: Overview
     - pagename: Methods
@@ -478,7 +561,7 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Quick Start - Manual
+    - pagename: Quick Start - Manual Installation
     - pagename: Configuration
       subpages:
       - subpagename: Initialization
@@ -524,6 +607,15 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Voice and Video for Android SDK (BETA)
+      subpages:
+      - subpagename: Overview
+      - subpagename: Getting Started
+      - subpagename: LiveEngage Configuration
+      - subpagename: Customizing
+      - subpagename: Sample Apps
+      - subpagename: FAQ
+      - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Appendix
@@ -575,6 +667,15 @@
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Control History APIs
+    - pagename: Voice and Video for iOS SDK (BETA)
+      subpages:
+      - subpagename: Overview
+      - subpagename: Getting Started
+      - subpagename: Customizing
+      - subpagename: LiveEngage Configuration
+      - subpagename: Sample App
+      - subpagename: Changelog
+      - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Appendix
@@ -596,6 +697,7 @@
   image: rt-data
   documents:
   - documentname: Agent Metrics API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -603,6 +705,7 @@
           - subpagename: Agent Status
           - subpagename: Summary
   - documentname: Messaging Operations API
+    basedomain: https://{domain}/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -612,8 +715,11 @@
           - subpagename: Messaging Current Queue Health
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
+          - subpagename: Messaging Skill Segment
+
       - pagename: Appendix
   - documentname: Operational Realtime API
+    basedomain: https://{domain}/operations/api/account/{accountID}
     pages:
       - pagename: Overview
       - pagename: Methods
@@ -627,110 +733,48 @@
 - categoryname: Rich Messaging
   image: rich-media
   documents:
-    - documentname: Apple Business Chat Templates
-      pages:
-        - pagename: Introduction
-        - pagename: List Picker
-          subpages:
-            - subpagename: Overview
-            - subpagename: Basic Layout JSON Template
-            - subpagename: Basic Layout Metadata
-            - subpagename: Basic Layout Body
-            - subpagename: Basic Layout Body - Header Section
-            - subpagename: Basic Layout Body - Item Section
-        - pagename: Time Picker
-          subpages:
-            - subpagename: Overview
-            - subpagename: Basic Layout JSON Template
-            - subpagename: Business Event Section
-            - subpagename: Business Chat Messaging Section
-            - subpagename: Time Picker Item
-            - subpagename: Time Picker Examples
-        - pagename: Guidelines and Limitations
-    - documentname: File Sharing
-      pages:
-        - pagename: Introduction
-        - pagename: Enable File Sharing
-        - pagename: Create a Conversation
-        - pagename: Request Upload URL
-        - pagename: Upload File to Storage
-        - pagename: Publish Message
-        - pagename: Request Download URL
-        - pagename: Download File From Storage
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
-        - pagename: Basic Elements
-          subpages:
-            - subpagename: Text
-            - subpagename: Button
-            - subpagename: Image
-            - subpagename: Map
-        - pagename: Click Operations
-          subpages:
-            - subpagename: Overview
-            - subpagename: Actions
-            - subpagename: Metadata
-        - pagename: Styling
-    - documentname: Quick Replies
+        - pagename: Rich Messaging Channel Capabilities
+    - documentname: Mobile SDK and Web Templates
       pages:
-        - pagename: Overview
-        - pagename: Styling
-        - pagename: Limitations
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
         - pagename: Best Practices
-    - documentname: Structured Content
-      pages:
         - pagename: Complex Layout
-        - pagename: Templates
-          subpages:
-            - subpagename: Card
-            - subpagename: Carousel
-        - pagename: Best Practices
         - pagename: Limitations
         - pagename: Structured Content Rendering Tool
-    - documentname: Voice and Video for iOS SDK (BETA)
+    - documentname: Apple Business Chat Templates
       pages:
-      - pagename: Overview
-      - pagename: Getting Started
-        subpages:
-        - subpagename: Prerequisites
-        - subpagename: Installing the SDK with CocoaPods
-        - subpagename: Installing the SDK Manually
-        - subpagename: Project Settings
-        - subpagename: Integration Guide
-      - pagename: Customizing
-        subpages:
-        - subpagename: Appearance and Behavior
-        - subpagename: Wording
-      - pagename: LiveEngage Configuration
-        subpages:
-        - subpagename: Agent Workspace Requirements
-        - subpagename: Account Settings
-        - subpagename: VoIP Configuration
-        - subpagename: Register Your App
-      - pagename: Sample App
-      - pagename: Changelog
-      - pagename: Appendix
-    - documentname: Voice and Video for Android SDK (BETA)
+        - pagename: Introduction
+        - pagename: List Picker Template
+        - pagename: Time Picker Template
+        - pagename: Apple Pay Template
+        - pagename: Guidelines and Limitations
+    - documentname: Facebook Messenger Templates
       pages:
-      - pagename: Overview
-      - pagename: Getting Started
-        subpages:
-        - subpagename: Prerequisites
-        - subpagename: Installing the SDK
-        - subpagename: Integration Guide
-      - pagename: LiveEngage Configuration
-        subpages:
-        - subpagename: Agent Workspace Requirements
-        - subpagename: Account Settings
-        - subpagename: Register Your App
-      - pagename: Customizing
-        subpages:
-        - subpagename: Appearance and Behavior
-        - subpagename: Account Settings
-      - pagename: Sample Apps
-      - pagename: FAQ
-      - pagename: Release Notes
+        - pagename: Introduction
+        - pagename: Generic Template
+        - pagename: Button Template
+        - pagename: List Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Best Practices
+        - pagename: Limitations
+    - documentname: Google RCS Business Messaging Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Google Pay Template
+        - pagename: Limitations
+    #- documentname: Quick Replies
+    #  pages:
+    #    - pagename: Introduction to Quick Replies
 
 - categoryname: 'Security & Authentication'
   image: security-authentication
@@ -738,7 +782,10 @@
     - documentname: Cookies and LiveEngage
       pages:
         - pagename: Overview
-    - documentname: Authentication
+    - documentname: Apple Business Chat Authentication
+      pages:
+        - pagename: Overview
+    - documentname: Mobile SDK and Web Authentication
       pages:
       - pagename: Introduction
       - pagename: Major Components
@@ -761,6 +808,7 @@
           subpages:
             - subpagename: Application Login Sample App
     - documentname: Login Service API
+      basedomain: https://{domain}/api/account/{accountId}
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -774,6 +822,7 @@
   image: website-monitoring
   documents:
     - documentname: App Engagement API
+      basedomain: https://{domain}/api/account/{accountId}/app/engagement/visitors/{visitor-id}
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -814,6 +863,7 @@
             - subpagename: Engagement Window Events
         - pagename: Changelog
     - documentname: Monitoring API
+      basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
         - pagename: Overview
         - pagename: Getting Started
@@ -851,17 +901,16 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: LiveEngage MMS Viewer
-      pages:
-        - pagename: Overview
-        - pagename: Technical Description
-        - pagename: Deployment Steps
-        - pagename: Additional Options
     - documentname: MCS Toolkit
       pages:
         - pagename: Overview
         - pagename: Getting Started
         - pagename: Using API to Build the Toolkit
+    - documentname: Transporter
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Creating Report Tasks
     - documentname: SMS with LiveEngage
       pages:
         - pagename: Overview

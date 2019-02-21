@@ -32,32 +32,30 @@
   <div class="documenttitlecontainer" id="documenttitlecontainer">
     {% include nav-breadcrumbs.html %}
   <div class="documenttitle">
-    <div class='h1'>{{ page.pagename }}</div>
-    {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
-    <div class="indicator chat">Chat</div>
-    {% endif %}
-    {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
-    <div class="indicator messaging">Messaging</div>
-    {% endif %}
+    <div class="titlecontainer">
+      <div class='h1'>{{ page.pagename }}</div>
+      {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
+      <div class="indicator chat">Chat</div>
+      {% endif %}
+      {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
+      <div class="indicator messaging">Messaging</div>
+      {% endif %}
+    </div>
+    <div class="suggestbutton"><a href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}" target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
   </div>
   <hr class="pagehr" />
-  <div id="anchorlist" class="anchorlist folder">
-    <a href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+  <div id="anchorlist" class="anchorlist">
+    <a class="anchormain" href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
     <ul></ul>
   </div>
   </div>
 
   {% endif %}
-  <div id="defaultcontent" class="defaultcontent" id="defaultcontent">
+  <div id="defaultcontent" class="defaultcontent">
     {{ content | extlinks }}
   </div>
-  <a class="defaultbutton" href="http://register.liveperson.com/developer/signup">
-    <div>
-      <span>Create Your Account</span>
-    </div>
-  </a>
   <div id="defaultfooter" class="defaultfooter">
-    <span>LivePerson Inc 2018 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
+    <span>LivePerson Inc 2019 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
     </span>
   </div>
 <!-- /.container -->
@@ -99,9 +97,9 @@ search.autocomplete.on({
     var content = document.getElementById('defaultcontent');
     var sidebar = document.getElementById('defaultsidebar');
     var footer = document.getElementById('defaultfooter');
-    content.classList.add('overlayvisible');
-    sidebar.classList.add('overlayvisible');
-    footer.classList.add('overlayvisible');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+    footer.classList.remove('overlayvisible');
 },
   'autocomplete:empty': function () {
     var content = document.getElementById('defaultcontent');
@@ -112,7 +110,11 @@ search.autocomplete.on({
     footer.classList.add('overlayvisible');
 },
   'autocomplete:updated': function () {
-    if (this.value === '') {
+    if (this.value != '') {
+    var input = document.getElementById('aa-search-input');
+    var filter = input.value.toUpperCase();
+    localStorage.setItem('filter', filter);
+    }else {
       var content = document.getElementById('defaultcontent');
       var sidebar = document.getElementById('defaultsidebar');
       var footer = document.getElementById('defaultfooter');

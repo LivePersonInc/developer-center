@@ -49,7 +49,7 @@
 .highlight .sc { color: #0040D0 } /* Literal.String.Char */
 .highlight .sd { color: #D04020 } /* Literal.String.Doc */
 .highlight .s2 { color: purple; } /* Literal.String.Double */
-.highlight .se { color: #606060; ; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .se { color: #606060; } /* Literal.String.Escape */
 .highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
 .highlight .si { background-color: #e0e0e0 } /* Literal.String.Interpol */
 .highlight .sx { color: #D02000; background-color: #fff0f0 } /* Literal.String.Other */

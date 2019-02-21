@@ -23,8 +23,16 @@ a:hover, a:focus {
   flex-wrap: wrap;
 }
 
+a:-webkit-any-link{
+  color: #5879da;
+}
+
 code pre {
   font-family: "Roboto Mono", Monaco, courier, monospace !important;
+}
+
+.far {
+  font-size: 15px;
 }
 
 .mobileheader {
@@ -46,6 +54,33 @@ code pre {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
+}
+
+.titlecontainer {
+  display: flex;
+  flex: 1;
+}
+
+.fa-pencil-alt {
+  margin-right: 5px;
+  color: #5879da;
+}
+
+.suggestbutton {
+  align-self: center;
+}
+
+.suggestbutton a{
+  color: #5879da;
+}
+
+.suggestbutton i {
+  color: #5879da;
+  margin-right: 8px;
+}
+
+.suggesthidden {
+  display: none;
 }
 
 .defaultsidebar {
@@ -77,6 +112,10 @@ code pre {
   color: #8b8b8b;
 }
 
+
+
+
+
 /* CSS-Grid Begins */
 
 @supports (display: grid) {
@@ -96,12 +135,12 @@ code pre {
   }
 
   .documenttitlecontainer {
-    grid-column: 4 / span 2;
+    grid-column: 4 / span 3;
     grid-row: 2 / span 1;
   }
 
   .searchimage {
-    background-color: #f2f2f2;
+    background-color: #f2f1f2;
     grid-column: 1;
     grid-row: 1 / span 1;
     z-index: 1;
@@ -138,7 +177,7 @@ code pre {
   }
 
   .defaultcontent {
-    grid-column: 4 / span 1;
+    grid-column: 4 / span 3;
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
@@ -146,27 +185,8 @@ code pre {
     margin-top: 16px;
   }
 
-  .defaultbutton {
-    grid-column: 6 / span 1;
-    grid-row: 2;
-    height: 44px;
-    background-color: #162036;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    margin-top: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: end;
-  }
-
-  .defaultbutton a {
-    color: #5879DA;
-  }
-
-  .defaultbutton div {
-    padding: 10px;
-    color: #fff;
+  #post-content {
+    width: 60%;
   }
 
   .defaultfooter {
@@ -179,13 +199,26 @@ code pre {
 
 /* CSS-Grid Ends */
 
+.searchHighlight {
+  background: rgba(0, 119, 255, 0.1);
+}
+
+.metricHighlight {
+  background: rgba(0, 119, 255, 0.1);
+}
+
 .defaultheader img {
     width: 22px;
     min-width: 22px;
 }
 
+.activepage {
+  color: #90a6e6!important;
+  font-weight: 500;
+}
+
 .searchimage {
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
 }
 
 .codebtn {
@@ -287,12 +320,12 @@ code pre {
 /* Algolia Styling Begins */
 
 #aa-search-input {
-  background-color: none !important;
+  background-color: transparent !important;
   border: none;
   width: 100%;
   font-size: 18px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  background-color: #f2f2f2 !important;
+  background-color: #f2f1f2 !important;
   padding-top: 14px;
   padding-bottom: 13px;
   padding-left: 25px;
@@ -358,6 +391,114 @@ table tbody td img {
   width: 100%;
 }
 
+.mobilefeaturestable {
+  display: none;
+}
+
+#featurestable {
+  width: 180%;
+  max-width: none;
+}
+
+#featurestable thead > tr > th {
+  padding: 14px 10px;
+  text-align: center;
+}
+
+#featurestable thead > tr > th:first-child {
+  width: 13%;
+}
+
+#featurestable tr td {
+  vertical-align: middle;
+}
+
+#featurestable .green {
+  color: green;
+}
+
+#featurestable .yellow {
+  color: yellow;
+}
+
+#featurestable .red {
+  color: red;
+}
+
+.tooltipicon {
+  font-size: 8px;
+  color: #666;
+  position: absolute;
+  margin-left: 2px;
+}
+
+.tooltipicon:hover .tooltipinfo {
+  display: flex;
+}
+
+.tooltipinfo {
+  display: none;
+  background-color: #162036;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin-top: 9px;
+  margin-left: -8.1px;
+}
+
+.tooltipinfo::before {
+  content: " ";
+  position: absolute;
+  bottom: 65%;
+  left: -9px;
+  margin-left: 5.4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+#capabilitiesSearch {
+  width: 25.5%;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.categoryrow {
+  background-color: #162036 !important;
+}
+
+.categoryrow td {
+  border-right:solid 0px #fff !important;
+  color: #fff !important;
+}
+
+.categoryrow td:first-child {
+  padding: 12px 25.5px 10px 23px;
+}
+
+.tableIcon {
+  width: 24px;
+  margin: 0 20px 0 24px;
+}
+
+
+.metricstable {
+  width: 150% !important;
+  max-width: none !important;
+}
+
+#metrics {
+  width: 109%;
+}
+
+#metricsSearch {
+  width: 30.5%;
+  padding: 5px;
+  padding-left: 10px;
+}
+
 .important {
   border-left-color: #f66;
   padding: 12px 24px 12px 30px;
@@ -375,6 +516,66 @@ table tbody td img {
 .important::before {
   content: "\f06a";
   color: #f88181;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.important p:not(:first-child) {
+  margin-left: -25px;
+}
+
+.notice {
+  border-left-color: #5879DA;
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+.notice::before {
+  content: "\f06e";
+  color: #3d5498;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.notice p:not(:first-child) {
+  margin-left: -25px;
+}
+
+.deprecated {
+  border-left-color: #000000;
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+.deprecated::before {
+  content: "\f071";
+  color: #000000;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 18px;
@@ -509,7 +710,6 @@ table tbody td img {
 }
 
 .innerfolder > a {
-  color: #f2f1f2 !important;
   font-size: 13px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   display: flex;
@@ -552,6 +752,10 @@ table tbody td img {
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   padding-left: 19px;
   margin-bottom: 2px;
+}
+
+.sololink {
+  margin-left: 34px;
 }
 
 .topfolder img {
@@ -682,7 +886,7 @@ table tbody td img {
 
 .pagehr {
   border: 0;
-  border-top: 1px solid #dedddd;;
+  border-top: 1px solid #dddddd;;
   margin-top: 20px;
 }
 
@@ -694,11 +898,22 @@ table tbody td img {
   border-top: none;
 }
 
+.sidebarbuttoncontainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .supportbutton {
-  padding: 10px 41px;
+  padding: 10px;
+  margin-left: 39px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  margin-right: 39px;
   border: solid 1px #f2f1f2;
-  margin-right: 67px;
-  margin-left: 67px;
   text-align: center;
 }
 
@@ -708,8 +923,40 @@ table tbody td img {
   color: #f2f1f2;
 }
 
+.defaultbutton {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  margin-left: 39px;
+  margin-right: 39px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #A9ACB4;
+}
+
+.defaultbutton:hover{
+  background-color: #162036;
+}
+
+.defaultbutton a {
+  color: #5879DA;
+}
+
+.defaultbutton div {
+  padding: 10px;
+  color: #3D4558;
+  width: 100%;
+}
+
+.defaultbutton div:hover {
+    color: #fff;
+}
+
 .anchorlist {
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   padding: 6px 10px 6px 10px;
   align-self: flex-end;
   width: 20%;
@@ -721,9 +968,9 @@ table tbody td img {
 
 .anchorlist ul {
   list-style: none;
-  display: none;
+  display: block;
   padding-left: 0;
-  background-color: #f2f2f2;
+  background-color: #f2f1f2;
   margin-left: -10px;
   padding: 10px;
   margin-bottom: 0px;
@@ -766,7 +1013,7 @@ a.anchoritem {
 }
 
 .sidebarbutton {
-  color: #f2f2f2;
+  color: #f2f1f2;
   background: #3d4558;
   width: 20px;
   height: 20px;
@@ -906,12 +1153,113 @@ a.anchoritem {
  margin-left: 400px;
 }
 
+#apiList {
+  display: none;
+  height: 165px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#apiList::-webkit-scrollbar-track {
+	background-color: grey;
+}
+
+#apiList::-webkit-scrollbar{
+	width: 10px;
+	background-color: grey;
+}
+
+#apiList::-webkit-scrollbar-thumb {
+	background-color: #53576E;
+}
+
+.apinamecontainer {
+  display: flex;
+}
+
+.apilistcontainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputcontainer {
+  flex: 1;
+}
+
+#apiNameInput {
+  width: 100%;
+}
+
+#methodList {
+  visibility: hidden;
+}
+
+.methodlinks {
+  height: 165px;
+  overflow-y: scroll;
+}
+
+.methodlinks::-webkit-scrollbar-track {
+	background-color: grey;
+}
+
+.methodlinks::-webkit-scrollbar{
+	width: 10px;
+	background-color: grey;
+}
+
+.methodlinks::-webkit-scrollbar-thumb {
+	background-color: #53576E;
+}
+
+.methodLink {
+  list-style: none;
+}
+
+.methodcategory {
+  display: none;
+}
+
+.apiLink {
+  cursor: pointer;
+  list-style: none;
+}
+
+.methodLink {
+  cursor: pointer;
+}
+
+.alldocumentscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160%;
+  flex-direction: column;
+}
+
+.alldocumentscategoryname {
+  margin-right: 50px;
+  width: 30%;
+}
+
+.alldocumentsdocumentname {
+  font-size: 15px;
+}
+
+.listheader {
+  cursor: pointer;
+}
+
+.alldocumentshr {
+  border-top: 1px solid #dddddd;
+  width: 80%;
+}
+
+
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){
-  .defaultbutton div {
-    text-align: center;
-  }
 
   .anchorlist {
     margin-right: initial;
@@ -936,24 +1284,23 @@ a.anchoritem {
     grid-column: 4 / span 6;
   }
 
+  #post-content {
+    width: 100%;
+  }
+
   ul.mysidebar {
     margin-left: 0px;
   }
 
   .documenttitlecontainer {
     margin-left: 70px;
+    grid-column: 4 / span 4;
+    margin-right: 10px;
   }
 
   .defaultcontent {
     margin-left: 70px;
     grid-column: 4 / span 2;
-  }
-
-  .defaultbutton {
-    padding: 12px 13px;
-    margin-top: 12px;
-    grid-column: 7 / span 1;
-    margin-right: 10px;
   }
 
   .sidebarbuttons {
@@ -982,9 +1329,6 @@ a.anchoritem {
     margin-bottom: 20px;
   }
 
-  .anchorlist {
-    margin-right: -220px;
-  }
 /*
   .daybtn {
     margin-left: -2.1%
@@ -993,6 +1337,27 @@ a.anchoritem {
   .nightbtn {
     margin-left: -3.3%;
   }*/
+
+  .metricstable {
+    width: 104% !important
+  }
+
+  .metricstable {
+    table-layout: inherit !important;
+  }
+
+
+  #featurestable {
+    width: 133%;
+  }
+
+  #featurestable thead>tr>th {
+    font-size: 12px;
+  }
+
+  #featurestable tr td {
+    padding: 21px 5.5px 21px 13.5px;
+  }
 }
 
 @media screen and (max-width:1260px){
@@ -1076,19 +1441,44 @@ a.anchoritem {
     grid-template-columns: 2fr 0.5fr 0.5fr 5fr 3fr 1fr 2fr;
   }
 
+  .metricstable .formula {
+    display: none;
+  }
+
+  #featurestable {
+    display: none;
+  }
+
+  .mobilefeaturestable {
+    display: block;
+  }
+
+  #capabilitiesSearch {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .defaultwrapper {
     grid-template-columns: 3fr 0.5fr 0.5fr 5fr 3fr 1fr 2fr;
+  }
+
+  #featurestable {
+    display: none;
+  }
+
+  .mobilefeaturestable {
+    display: block;
+  }
+
+  #capabilitiesSearch {
+    display: none;
   }
 }
 
 @media screen and (max-width:768px) {
   .anchorlist {
     display: none !important;
-  }
-
-  .defaultbutton {
-    display:none;
   }
 
   .defaultcontent {
@@ -1110,6 +1500,22 @@ a.anchoritem {
   .nightbtn {
     margin-left: -5%;
   }*/
+
+  .suggestbutton {
+    display: none;
+  }
+
+  #featurestable {
+    display: none;
+  }
+
+  .mobilefeaturestable {
+    display: block;
+  }
+
+  #capabilitiesSearch {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1243,4 +1649,45 @@ a.anchoritem {
   .daybtn {
     margin-left: 4%;
   }
+
+  #metricsSearch {
+    width: 90.5%;
+  }
+
+  .metricstable .description{
+    display: none;
+  }
+
+  .metricstable .analysis {
+    display: none;
+  }
+
+  .metricstable .filtered {
+    display: none;
+  }
+
+  .metricstable .formula {
+    display: none;
+  }
+
+  .metricstable .dashboard {
+    display: none;
+  }
+
+  #datametricstable .description {
+    display: table-cell !important;
+  }
+
+  #featurestable {
+    display: none;
+  }
+
+  .mobilefeaturestable {
+    display: block;
+  }
+
+  #capabilitiesSearch {
+    display: none;
+  }
+
 }
