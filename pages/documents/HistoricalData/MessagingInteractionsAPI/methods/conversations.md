@@ -64,6 +64,14 @@ Filter is sent in the POST data (body) with the following JSON structure.
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
 |contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
+|nps {from,to}       | Range of NPS assigned to the conversation.                                                    | numeric, numeric                  | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
+|questionBrick       | Specific word or phrase of PCS question name or question ID.                                  | alphanumeric                       | Optional |
+|invalidFreeTextAnswer | Search only for PCS that contain invalid free text answer.                                  | String                             | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
+|surveyBotConversations | Search only for conversations with PCS.                                                    | String                             | Optional | Valid values: SURVEY_BOT. |
+|surveyIds           | An array of PCS IDs, represented as numbers.                                                  | Array `<surveyID>`                 | Optional |
+|fcr                 | Values of FCR assigned to the conversation.                                                   | Array `<String>`                   | Optional | Possible values: yes, no. |
+|questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve                            | String, String                     | Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
+|answerText          | Specific words or phrases from PCS open text question answer                                  | Array `<String>`                   | Optional |
 
 Filters examples:
 
@@ -91,6 +99,14 @@ Filters examples:
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
 |contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
 |latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} | 
+|nps                 | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
+|questionBrick       | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
+|invalidFreeTextAnswer | {"start": {"from": "1484830093231", "to": "1485447764498"}, "invalidFreeTextAnswer": "INVALID_FREE_TEXT_ANSWER"}|
+|surveyBotConversations | {"start": {"from": "1484830093231", "to": "1485447764498"}, "surveyBotConversations": "SURVEY_BOT"}|
+|surveyIds           | {"start":{"from":1470037448000,"to":1472543048000},"surveyIds":["545511613","489785213","481777913"]}|
+|fcr                 | {"start":{"from":1470037448000,"to":1472543048000},"fcr":["yes","no"]}|
+|questionTypeAndFormatToRetrieve | {"start":{"from":1470037448000,"to":1472543048000}, "questionTypeAndFormatToRetrieve":{"type":"custom","format":"open}}|
+|answerText           | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
 
 **Note: search by keywords, summary or engagement attributes**
 
@@ -434,17 +450,24 @@ _Survey info_
 
 Name         | Description                                     | Type/Value | Notes
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
-surveyType   | Type of the survey.                             | string     | Currently always "Resolution"
+surveyType   | Type of the survey.                             | string     | Satisfaction or PostSurvey
 surveyStatus | Status of the submission of the survey.         | string     |
 dialogId     | The ID of the dialog of the survey.             | string     |
+surveyId     | The ID of the survey.                           | string     | 
 surveyData   | List of the question and answers in the survey. | container  |
 
 _SurveyData info_
 
-Name     | Description           | Type/Value
-:------- | :-------------------- | :---------
-question | Survey question text. | string
-answer   | Survey answer text,   | string
+Name     | Description           | Type/Value | Notes
+:------- | :-------------------- | :--------- | :----------------------------
+question | Survey question text. | string     | 
+answer   | Survey answer text,   | string     |
+questionId | Survey question ID  | string     |
+answerId   | Survey answer ID,   | string     | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
+questionType | Survey question type | string  |
+questionFormat | Survey question format | string |
+
+
 
 _Summary info_
 
@@ -856,6 +879,54 @@ skillName    | The name of the skill associated with the dialog.| string     |
               "answer": "Yes"
             }
           ]
+        },
+        {
+            "surveyType": "PostSurvey",
+            "surveyStatus": "Completed",
+            "dialogId": "04e249fb-2f39-4957-8bcc-b27e32c830a2",
+            "surveyId": "3164909812",
+            "surveyData": [
+                {
+                    "question": "How would you rate your overall experience?",
+                    "answer": "3",
+                    "questionId": "a409bad5-01ce-47bd-be91-c37768038291",
+                    "answerId": "863fd171-22c7-4dc5-b0c7-a4e598080e85",
+                    "questionType": "csat",
+                    "questionFormat": "single"
+                },
+                {
+                    "question": "Based on your experience today, how likely are you to recommend us to a friend or colleague? (0 Not at all likely - 10 extremely likely)",
+                    "answer": "0",
+                    "questionId": "0b9e1a1a-aa04-4d36-9662-c5fb417d68f8",
+                    "answerId": "InvalidAnswer",
+                    "questionType": "nps",
+                    "questionFormat": "single"
+                },
+                {
+                    "question": "Based on your experience today, how likely are you to recommend us to a friend or colleague? (0 Not at all likely - 10 extremely likely)",
+                    "answer": "8",
+                    "questionId": "0b9e1a1a-aa04-4d36-9662-c5fb417d68f8",
+                    "answerId": "0e7aecdd-f9ec-49c4-bdcb-da15198c1a2c",
+                    "questionType": "nps",
+                    "questionFormat": "single"
+                },
+                {
+                    "question": "What would you have done had you not messaged us today?",
+                    "answer": "0",
+                    "questionId": "9d1eec83-47ef-4399-8217-cd0a6e863bb7",
+                    "answerId": "0894f479-124d-4209-b275-d23e935e5370",
+                    "questionType": "custom",
+                    "questionFormat": "single"
+                },
+                {
+                    "question": "Was the issue you contacted us about resolved during this engagement?",
+                    "answer": "1",
+                    "questionId": "97266478-4848-4d28-abb1-2ec7b8a4b95e",
+                    "answerId": "a8440e1f-366a-48d9-bd91-3654fed5b46b",
+                    "questionType": "fcr",
+                    "questionFormat": "single"
+                }
+            ]
         }
       ],
       "coBrowseSessions": {
