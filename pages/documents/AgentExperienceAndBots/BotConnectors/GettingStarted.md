@@ -71,10 +71,6 @@ Go to API management page (Campaigns tab > Data Sources > APIs) and add the foll
 
     <img style="width:600px" src="img/dialogflowversion2/image_3.png">
 
-* Administration (Skills) - **Read ONLY**
-
-    <img style="width:600px" src="img/dialogflowversion2/image_4.png">
-
 ### Provision connector in the Bot Connector dashboard
 
 To access the Bot Connector dashboard navigate to your appropriate URL:
@@ -114,5 +110,9 @@ Follow the steps below to add a new bot connector.
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
+* [Watson Assistant](WatsonAssistant.html)
+* [Dialogflow V1](DialogFlow.html)
+* [Dialogflow V2](DialogFlowVersion2.html)
+* [Lex](lex.html)
 
 
