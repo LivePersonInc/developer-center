@@ -288,7 +288,8 @@ Name         | Description                        | Type/Value | Notes
 :----------- | :--------------------------------- | :--------- | :----------------------------------------------
 relativePath | Relative path of the file.         | string     |
 fileType     | Type of the file.                  | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
-caption      | The caption (heading) of the file. | string
+caption      | The caption (heading) of the file. | string     |
+preview      | Preview of the sent image (thumbnail).| string     | Encoded in base64 format
 
 _Message Link_
 
@@ -296,6 +297,18 @@ Name             | Description            | Type/Value | Notes
 :--------------- | :--------------------- | :--------- | :----------------------------------------------
 externalFileLink | Link to external file. | string     |
 fileType         | Type of the file.      | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
+caption          | Description of the file. | string   |
+
+_Message Secure Form_
+
+Name             | Description              | Type/Value | Notes
+:--------------- | :----------------------- | :--------- | :----------------------------------------------
+formId           | The Id of the form.      | string     | Returns in case agent sends form invitation.
+formName         | The name of the from.    | string     | Returns in case agent sends form invitation.
+submissionId     | The Id of the submission.| string     | Returns in case agent sends form invitation.
+invitationId     | The Id of the invitation.| string     |
+
+
 
 _Message Rich Content_
 
