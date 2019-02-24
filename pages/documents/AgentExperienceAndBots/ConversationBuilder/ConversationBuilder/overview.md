@@ -10,21 +10,30 @@ permalink: conversation-builder-conversation-builder-overview.html
 indicator: both
 ---
 
+<img style="width:750px" src="img/ConvoBuilder/helloworld/image_3.png">
+
 The Conversation Builder app is the primary workspace for designing an automation. It is what ties together all of the other aspects of the Platform.
 
-An automation consists of one or more Dialogs that each have one or more interactions within them.
+An automation consists of one or more Dialogs that each have one or more [interactions](conversation-builder-conversation-builder-interactions.html) within them.
 
-In the center of the screen, you will find the **Dialog Workspace**. This contains the different interactions of which the bot/automation consists; it represents the flow of the conversation (also called **a Dialog**) you are building, including user messages the automation will respond to, the responses it will provide, and the different integrations you might use during the conversation.
+At the top of the screen, you will see:
+
+* **Dialogs** - Create and edit dialogs.
+
+* **Integrations** - Create and edit Integrations.
+
+* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) for built-in methods.
+
+* **Visualize** - View each dialog at a high level.
+
+{: .important}
+The conversation builder supports the creation of automations for all the LiveEngage channels. Because an automation simply listens to a piece of text sent from a user, any channel that provides text to LiveEngage can potentially trigger an automation. However, there are channel specific formats, features, and conventions that may not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
+
+### Dialogs
+
+When you first open an automation, you will be in the **Dialogs** view.
 
 On the left-hand side of the window, you can find the **Interactions Toolbar**. This toolbar contains the different types of interactions which can be used in a dialog.
-
-On the right-hand side of the window, you can find the **Settings Toolbar**. This toolbar contains additional information regarding your bot/automation and various configuration options.
-
-<div class="important">The conversation builder supports the creation of automations for all the LiveEngage channels. Because an automation simply listens to a piece of text snet from a user, any channel that provides text to LiveEngage can potentially trigger an automation. However, there are channel specific formats, features, and conventions that may not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.</div>
-
-### The Dialog Workspace
-
-The Dialog Workspace is the main panel of the Conversation Builder. It lists the different interactions which make up this specific Dialog. A Dialog is composed of a series of interactions which together make up a back and forth conversation between the user and the bot/automation.
 
 A Dialog may be triggered by a user statement, either via simple [pattern matching](conversation-builder-conversation-builder-conditions.html#pattern-matching) or via [intents](conversation-builder-intent-builder-overview.html). It may also be triggered by an Interaction via a Next Step action. Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
 
@@ -42,16 +51,36 @@ You can use the hamburger icon right next to the **+** icon to see a list of you
 
 ### The Interactions Toolbar
 
-The Interactions Toolbar is divided into two parts:
+The Interactions Toolbar is divided into four parts:
 
-1) The **User** section.
+* **User Says** - Usually the starting point of any dialog. Contains the logic to match user input.
 
-2) The **Bot/Automation** section.
+* **Statements** - Displays information to the user.
 
-Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace (see above for more information on the Dialog Workspace) and click on it. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the bot/automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-conversation-builder-interactions.html).
+* **Questions** - Prompts the user for a response. The user response is often stored in a slot and referenced later in an Integration.
 
-### The Settings Toolbar
+* **Integration** - Activates an integration that you've configured in the Integrations tab.
 
-The Settings Toolbar contains various menus and panels which allow you to further configure your bot/automation. It also includes the **Assistant** tool, which actively "listens" to your dialog as you build it and recommends intents, entities and more for your use, and the **Messaging Client**, which allows you to test your various dialogs.
+Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the bot/automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-conversation-builder-interactions.html).
 
-Once you have populated the Dialog View with interactions, you can select any interaction and click on the Interaction Details icon (it will be selected by default) in the Settings Toolbar. Inside this panel, you can configure further actions for the bot/automation dependent on the same methods we described above such as pattern matching, intents, and so on. You can achieve this by selecting User Response, configuring the [conditions](conversation-builder-conversation-builder-conditions.html) the bot/automation will look for and then configuring the resulting action (like sending a specific interaction, ending the dialog, and so on).
+### Settings and Other
+
+On the top-left of the screen, you will find the **Bot Menu** gear icon which includes:
+
+* **Automation Settings** - Includes settings that you selected during automation creation. Includes more advanced settings like public/private visibility, delete automation, etc.
+
+* **Enterprise Integrations** - Settings for connecting to LiveEngage.
+
+* **Automation Change History** - View all of the changes made to the automation by time/date. Useful when automations are managed by teams.
+
+* **Automation Diff** - View differences between two automations.
+
+On the bottom-right of the screen, you will find:
+
+* **Messaging Client** - Automation test conversation. Start a new session by sending "reset".
+
+* **Debugger** - View logs for a certain User ID.
+
+* **Releases** - Save or select between major releases of automation.
+
+* **Versions** - Save or select between different versions of automation.

@@ -10,9 +10,11 @@ permalink: conversation-builder-conversation-builder-conditions.html
 indicator: both
 ---
 
+### User Response Match & Actions
+
 When adding a [question interaction](conversation-builder-conversation-builder-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the bot/automation.
 
-When you add a question interaction to the dialog, you can select it and choose the Interaction Details from the Settings Toolbar on the right hand side (the second icon on the toolbar). From there, click on "User Response" in the middle of the Interactions Details panel which opens. At the bottom of this menu, you'll find the "Next Step" dropdown.
+When you add a question interaction to the dialog, you can select it and choose the Interaction Details icon on the right side of the interaction. From there, click on "User Response" in the middle of the Interactions Details panel which opens. At the bottom of this menu, you'll find the "Next Step" dropdown.
 
 When a condition is met, the action defined under the Next Step dropdown menu will occur. The bot/automation can close the dialog, move on to the next interaction, perform an Integration call, and more based on how you configure the Next Step dropdown menu. Conditions can be set to trigger using the following:
 
@@ -78,12 +80,15 @@ If your bot/automation asked the user "which animal do you like?" and the user a
 
 Below the condition configuration box, you will find three check boxes. These control three different responses to the interaction you can use when using conditions:
 
+* Fallback response. If a user asks for a slot to be changed but the bot/automation couldn't recognize the phrase the user used ("give me a different color" for example), it will send a fallback response. This could be something like "I'm sorry, I didn't understand. Can you try again?" for example.
+
+<!-- These two are gone for some reason.
+
 * Change response. The bot/automation can change a slot's data if the user requests to. Common phrases like "what about sandals" or "show me sandals" will cause the bot/automation to clear the data currently in the slot, look for an entity in the user's change request, repopulate the slot with the new information, and perform the configured Next Step again. When this occurs, you can have the bot/automation send a message to the user letting them know it is doing so, for example "Let me look for your new selection".
 
 * Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The bot will then clear the data in the slot and send the cancelled message to the user, as defined by you.
-
-* Fallback response. If a user asks for a slot to be changed but the bot/automation couldn't recognize the phrase the user used ("give me a different color" for example), it will send a fallback response. This could be something like "I'm sorry, I didn't understand. Can you try again?" for example.
+-->
 
 #### Code
 
-Coming soon! This will enable you to write JavaScript code directly into your bot/automation, further defining and controlling the flow of the dialog with even more advanced configurations.
+This will enable you to write JavaScript code directly into your bot/automation, further defining and controlling the flow of the dialog with even more advanced configurations. See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) for the available built-in functions.

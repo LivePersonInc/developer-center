@@ -3,8 +3,8 @@ pagename: Routing Bot Tutorial
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
-subfoldername: Tutorials
-permalink: conversation-builder-tutorials-routing-bot-tutorial.html
+subfoldername: Getting Started
+permalink: conversation-builder-getting-started-routing-bot-tutorial.html
 indicator: both
 ---
 

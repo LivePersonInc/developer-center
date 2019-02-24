@@ -1,12 +1,12 @@
 ---
-pagename: 1 - Dialogues and Patterns
-redirect_from: conversation-builder-tutorials-getting-started-part-1.html
+pagename: 1 - Dialogs and Patterns
+redirect_from: conversation-builder-getting-started-getting-started-part-1.html
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Tutorials
-permalink: conversation-builder-tutorials-1-dialogues-and-patterns.html
+subfoldername: Getting Started
+permalink: conversation-builder-getting-started-1-dialogs-and-patterns.html
 indicator: both
 ---
 
@@ -20,21 +20,20 @@ This step requires that you have a user account for the Conversation Builder pla
 
     <!--<img style="width:750px" src="img/ConvoBuilder/helloworld/image_1.png">-->
 
-2. From the list of app icons, click on Conversation Builder in the upper left. 
+2. From the list of app icons, click on Conversation Builder in the upper left.
 
-    * Learn about the different parts of the Conversation Builder app [here](conversation-builder-conversation-builder-overview.html).
+    Learn about 
 
     <!--<img style="width:750px" src="img/ConvoBuilder/helloworld/image_2.png">-->
 
-3. Tap on the **New Automation** icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. 
-
-    All automations are created from templates. For this tutorial, select the **Basic Automation** template and hit Save.
-
+3. Click **New Automation**, select the Basic Automation template, give your bot a unique name and description, and be sure to select Consumer Facing Bot. 
     <!--<img style="width:750px" src="img/ConvoBuilder/helloworld/newAutomation.png">-->
 
     <img style="width:750px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
 4. You will be taken to your new automation in the Conversation Builder.
+
+    Learn about the different parts of the Conversation Builder app [here](conversation-builder-conversation-builder-overview.html).
     <img style="width:750px" src="img/ConvoBuilder/helloworld/image_3.png">
 
 5. **Before you do anything else**, we need to "Publish" the bot (make it Publicly accessible) to your Organization. (For those with multiple Org access, the bot will default to Private, which is why we want to change it.)

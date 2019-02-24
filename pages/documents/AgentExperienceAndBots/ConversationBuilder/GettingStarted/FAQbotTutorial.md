@@ -4,7 +4,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Conversation Builder
 subfoldername: Use Case Tutorials
-permalink: conversation-builder-tutorials-faq-bot-tutorial.html
+permalink: conversation-builder-getting-started-faq-bot-tutorial.html
 indicator: both
 ---
 

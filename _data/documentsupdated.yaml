@@ -140,37 +140,33 @@
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
-      - pagename: Tutorials
+      - pagename: Getting Started
         subpages:
-          - subpagename: 1 - Dialogues and Patterns
+          - subpagename: 1 - Dialogs and Patterns
           - subpagename: 2 - Intents 
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
           #- subpagename: 5 - Releases and Versioning
           #- subpagename: Basic - FAQ Bot Tutorial
           #- subpagename: Basic - Routing Bot Tutorial
-      - pagename: Templates
-        subpages:
-          - subpagename: Overview
-          - subpagename: Retail Templates
+      #- pagename: Templates
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Retail Templates
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
             - subpagename: Interactions
             - subpagename: Conditions
-            - subpagename: Assistant
-            - subpagename: Settings
+            - subpagename: Assist
             - subpagename: Scripting Functions
       - pagename: Intent Builder
         subpages:
           - subpagename: Overview
           - subpagename: Entities
       - pagename: Knowledge Base
-        subpages:
-          - subpagename: Overview
       - pagename: Analytics
-        subpages:
-          - subpagename: Overview
+      #- pagename: Operations 
       
 
 

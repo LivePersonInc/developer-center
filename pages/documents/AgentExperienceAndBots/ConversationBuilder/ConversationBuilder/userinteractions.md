@@ -14,7 +14,7 @@ The User Interactions section of the [Interactions Toolbar](conversation-builder
 
 Instead of just looking for the specific phrase you originally defined (which would result in the bot/automation not recognizing many of your user's inputs), you can direct the bot/automation to look for a specific pattern (a method called [pattern matching](conversation-builder-conversation-builder-conditions.html#pattern-matching)) or to look for more broad and flexible [intents](conversation-builder-intent-builder-overview.html) in the user's input, by using our NLU engine.
 
-For more information on Pattern Matching, see the link above. For more information on setting up and using intents, see either [part 2 of the Getting Started tutorial](conversation-builder-tutorials-getting-started-part-2.html) or a more in-depth [breakdown of the Intent Builder](conversation-builder-intent-builder-overview.html).
+For more information on Pattern Matching, see the link above. For more information on setting up and using intents, see either [part 2 of the Getting Started tutorial](conversation-builder-getting-started-2-intents.html) or a more in-depth [breakdown of the Intent Builder](conversation-builder-intent-builder-overview.html).
 
 ### Bot/Automation Interactions
 
@@ -48,4 +48,4 @@ The **Bot** section of the Interactions Toolbar is made up of three different ty
 
   * Time Picker. **Note: time picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
 
-* **Integrations**. This type of interaction involves the bot/automation querying an outside API or service and retrieving information from it. For example, you could have your bot/automation search for a certain [entity](conversation-builder-intent-builder-entities.html) and retrieve the matching product's catalogue item from your own API, populating the bot/automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the bot/automation to prompt the user to use Apply Pay to submit a payment. For more information on setting up an integration, see [part 3 of the Getting Started tutorial](conversation-builder-tutorials-getting-started-part-3.html).
+* **Integrations**. This type of interaction involves the bot/automation querying an outside API or service and retrieving information from it. For example, you could have your bot/automation search for a certain [entity](conversation-builder-intent-builder-entities.html) and retrieve the matching product's catalogue item from your own API, populating the bot/automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the bot/automation to prompt the user to use Apply Pay to submit a payment. For more information on setting up an integration, see [part 3 of the Getting Started tutorial](conversation-builder-getting-started-3-integrations.html).

@@ -1,12 +1,12 @@
 ---
 pagename: 2 - Intents
-redirect_from: conversation-builder-tutorials-getting-started-part-2.html
+redirect_from: conversation-builder-getting-started-getting-started-part-2.html
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Tutorials
-permalink: conversation-builder-tutorials-2-intents.html
+subfoldername: Getting Started
+permalink: conversation-builder-getting-started-2-intents.html
 indicator: both
 ---
 
@@ -76,7 +76,7 @@ Navigate to the Conversation Builder by clicking on the top-left dropdown menu. 
 
 Once opened, create a new regular dialog and name it "Billing".
 
-The [Assist tool](conversation-builder-conversation-builder-assistant.html) that automatically displays will help us to link the domain and intent to this User Says interaction.
+The [Assist tool](conversation-builder-conversation-builder-assist.html) that automatically displays will help us to link the domain and intent to this User Says interaction.
 
 From the Assist <img style="width:40px" src="img/ConvoBuilder/helloworld/image_13.png"> tool select the domain you created. This will enable the Assistant to use the platform’s NLU to match your User Says interaction against any available intents. 
 

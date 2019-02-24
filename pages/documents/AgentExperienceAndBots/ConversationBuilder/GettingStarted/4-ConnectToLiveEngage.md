@@ -1,12 +1,12 @@
 ---
 pagename: 4 - Connect to LiveEngage
-redirect_from: conversation-builder-tutorials-getting-started-part-4.html
+redirect_from: conversation-builder-getting-started-getting-started-part-4.html
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Tutorials
-permalink: conversation-builder-tutorials-4-connect-to-liveengage.html
+subfoldername: Getting Started
+permalink: conversation-builder-getting-started-4-connect-to-liveengage.html
 indicator: both
 ---
 
@@ -94,20 +94,22 @@ Fill out the agent information for the bot user you created.
 
 Click **Save** once everything is entered.
 
-<img style="width:500px" src="img/ConvoBuilder/helloworld/confLE_12.png">
+<img style="width:750px" src="img/ConvoBuilder/helloworld/confLE_12.png">
 
 #### Deploy the Bot Agent
 
-To finally connect your Bot User Agent with your LiveEngage account, you need to deploy your Bot Agent. To deploy to the Demo server environment (for testing), just hit the green play button to start.
+To finally connect your Bot User Agent with your LiveEngage account, you need to deploy your Bot Agent.
+
+To deploy to the Demo server environment (for testing), just hit the green play button to start. Skip to [testing](#step-13-testing-the-connection) if you do this.
 
 To deploy to Production, you will need Operations role access.
 
-<img style="width:300px" src="img/ConvoBuilder/helloworld/confLE_13.png">
+<img style="width:750px" src="img/ConvoBuilder/helloworld/confLE_13.png">
 
 1. From the drop down menu, select Operations. If you do not see the Operations module, contact your Administrator to provide access or to assist you with this.
 
 2. In the Operations module, find your bot agent. The filter defaults to bots in the "Production" environment. Switch it to “All”.
-    <img style="width:800px" src="img/ConvoBuilder/helloworld/confLE_14.png">
+    <!--<img style="width:800px" src="img/ConvoBuilder/helloworld/confLE_14.png">-->
 
 3. Tap on the menu (three dots) to the left of your bot’s name and select Deploy Agent.
     <img style="width:300px" src="img/ConvoBuilder/helloworld/confLE_15.png">
@@ -126,7 +128,7 @@ To deploy to Production, you will need Operations role access.
 
 Let's now set up an Integration to transfer the user to a human agent in LiveEngage. This is called an Escalation.
 
-From the Conversation Builder, navigate back to the Integrations area.
+Return to your bot in Conversation Builder. Navigate to the Integrations area.
 
 Click the **+** icon in the bottom-left corner to create a new API with the following parameters. 
 
@@ -182,7 +184,7 @@ Click the **+** icon in the bottom-left corner to create a new API with the foll
 
 **Save** the API settings.
 
-The `agentSkillName` and `agentSkillID` should be set to the Human skill that you created at the beginning of this tutorial.
+The `agentSkillName` and `agentSkillID` should be set to the Human skill that you created [at the beginning of this tutorial](#step-10-configure-liveengage).
 
 <img style="width:750px" src="img/ConvoBuilder/helloworld/createescalationapi.png">
 
@@ -221,13 +223,13 @@ See [scripting functions](conversation-builder-conversation-builder-scripting-fu
 
 <img style="width:750px" src="img/ConvoBuilder/helloworld/preprocesscode.png">
 
-#### Testing the Connection
+### Step 13: Testing the Connection
 
 If you are using Chat you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=[your account number]), adding your account number to the URL.  If you are using Messaging for Web, use [this test page](https://bigbag-retail-demo.herokuapp.com).
 
 1. Be sure you are online as a Human agent in LiveEngage.
 
-2. Click the Live Chat button on the test page.
+2. Click the Live Chat button on the test page and you should be connected to your bot in the Bot skill.
 
 3. Enter a message and hit Send.
     <img style="width:200px" src="img/ConvoBuilder/helloworld/userwindow1.png">

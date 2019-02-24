@@ -84,7 +84,7 @@ If the interactions are out of order, you can rearrange them by hovering over th
 
 The next step is to link the intent and entity to the interactions.
 
-<div class="important">Linking intents and entities is most easily done by using the <a href="conversation-builder-conversation-builder-assistant.html">Assistant tool</a>. If the Assistant tool is not already open in the Settings Toolbar, open it by clicking on the Assistant icon in the Settings Toolbar.</div>
+<div class="important">Linking intents and entities is most easily done by using the <a href="conversation-builder-conversation-builder-assist.html">Assistant tool</a>. If the Assistant tool is not already open in the Settings Toolbar, open it by clicking on the Assistant icon in the Settings Toolbar.</div>
 
 <img src="img/ConvoBuilder/assistIcon.png" style="width:70px">
 
