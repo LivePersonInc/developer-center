@@ -10,7 +10,7 @@ permalink: conversation-builder-getting-started-connect-an-integration.html
 indicator: both
 ---
 
-In the [previous tutorial](conversation-builder-getting-started-building-your-first-intent.html), you used an [intent](conversation-builder-intent-builder-overview.html) to match user input and an [entity](conversation-builder-intent-builder-entities.html) to match a user answer to a question. The user answer entity was stored in a Slot. The bot/automation then accessed the value in the Slot and repeated the user's answer back to them. 
+In the [previous tutorial](conversation-builder-getting-started-building-your-first-intent.html), you used an [intent](conversation-builder-intent-builder-overview.html) to match user input and an [entity](conversation-builder-intent-builder-entities.html) to match a user answer to a question. The user answer entity was stored in a Slot. The automation then accessed the value in the Slot and repeated the user's answer back to them. 
 
 Now, you will use the user answer to query an API and reply back with a relevant image.
 
@@ -18,7 +18,7 @@ Now, you will use the user answer to query an API and reply back with a relevant
 
 Now that you have stored the user answer in a Slot, we can use it in communicating with an API.
 
-Since the bot/automation asks the user if they prefer dog/cat/bird, you will use the https://shibe.online/ API to present an image for the user.
+Since the automation asks the user if they prefer dog/cat/bird, you will use the https://shibe.online/ API to present an image for the user.
 
 First, you will set up an integration.
 
@@ -47,4 +47,4 @@ Then add a Bot Statement Image. Add the following in the Image URL field of the 
 
 The integration interaction will query the API, store the result in a variable, then the image will access to the result variable to display the random image.
 
-Click on the Messaging Client in the Settings Toolbar and test your bot/automation. Type "reset" to create a new session. Say "hello", followed by "ask me something". Respond with something like "I prefer cats". The bot/automation should say "You answered: cats!" and then display a random cat image from the API.
+Click on the Messaging Client in the Settings Toolbar and test your automation. Type "reset" to create a new session. Say "hello", followed by "ask me something". Respond with something like "I prefer cats". The automation should say "You answered: cats!" and then display a random cat image from the API.

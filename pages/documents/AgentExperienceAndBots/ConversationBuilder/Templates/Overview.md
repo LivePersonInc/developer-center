@@ -35,10 +35,7 @@ The following Use Cases will be provided for multiple different industry vertica
 <th>Description</th>
 </tr>
 </thead>
- <tbody><tr>
- <td>Tamara Mellon </td>
- <td></td>
- </tr>
+ <tbody>
  <tr>
  <td>Concierge</td>
  <td></td>

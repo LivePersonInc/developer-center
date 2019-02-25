@@ -11,6 +11,8 @@ indicator: both
 
 Conversation Builder is a suite of integrated apps that work together to provide an all-in-one automation solution.
 
+<img style="width:750px" src="img/ConvoBuilder/appView.png">
+
 ### Apps
 
 - [Conversation Builder](conversation-builder-conversation-builder-overview.html) is the primary application that allows you to design new bots / automations. Leveraging all of the other apps, this is where the user configures and designs conversational flows, API integrations, etc.
@@ -23,8 +25,8 @@ Conversation Builder is a suite of integrated apps that work together to provide
 
 - Accounts is the administration area for managing permissions of Conversation Builder users.
 
+- Operations allows you to view and change the status of all of your automations in various environments.
+
 ### Learn
 
-In the [Getting Started](conversation-builder-tutorials-getting-started-part-1.html) tutorials, you will learn how to create a new automation from scratch. It will teach the basics of dialogs, interactions, intents, integrations, and connection to LiveEngage. It is recommended to start with this tutorial.
-
-In the [Templates](conversation-builder-tutorials-templates-tutorial.html) tutorial, you will learn how to create an automation that already includes most of the setup required for common use cases.
+In the [Getting Started](conversation-builder-getting-started-1-dialogs-and-patterns.html) guide, you will learn how to create a new automation from scratch. It will teach the basics of dialogs, interactions, intents, integrations, and connection to LiveEngage. It is recommended to start with this guide.

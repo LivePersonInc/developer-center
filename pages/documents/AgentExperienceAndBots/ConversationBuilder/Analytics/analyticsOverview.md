@@ -1,12 +1,11 @@
 ---
-pagename: Analytics Overview
+pagename: Analytics
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Analytics
-permalink: conversation-builder-analytics-overview.html
+permalink: conversation-builder-analytics.html
 indicator: both
 ---
 
@@ -20,6 +19,7 @@ In any view for an automation, you will be able to change the date range and tim
 
 In any view **other than the Overview**, you are able to download the results to a CSV file via the download button under the date filter.
 
+<!--
 #### Intents View
 
 Info about how to improve bots, what certain things mean to performance.
@@ -27,7 +27,7 @@ Info about how to improve bots, what certain things mean to performance.
 #### Custom Events View
 
 What are custom events? [Here](conversation-builder-conversation-builder-scripting-functions.html#log-custom-event)
-
+-->
 ### Metrics
 
 | Name | Description |

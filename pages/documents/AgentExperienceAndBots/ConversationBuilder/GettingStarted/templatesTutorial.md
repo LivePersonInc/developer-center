@@ -5,8 +5,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
-subfoldername: Tutorials
-permalink: conversation-builder-tutorials-templates-tutorial.html
+subfoldername: Getting Started
+permalink: conversation-builder-getting-started-templates-tutorial.html
 indicator: both
 ---
 
