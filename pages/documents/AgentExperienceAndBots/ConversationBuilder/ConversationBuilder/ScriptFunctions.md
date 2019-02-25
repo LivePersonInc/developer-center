@@ -12,10 +12,11 @@ indicator: both
 
 Functions are modules of code that are used for accomplishing a certain task programatically. With few exceptions, functions can be used in any of the preProcess Code, postProcess Code or the processUser Response JavaScript code panels.
 
-{: .important}
-- Function names are case-sensitive in the JavaScript
-- Functions require the `botContext.` prefix
-- Functions are scoped ONLY for the JavaScript panel in which they appear
+**Please note:**
+
+* Function names are case-sensitive in the JavaScript
+* Functions require the `botContext.` prefix
+* Functions are scoped ONLY for the JavaScript panel in which they appear
 
 ### Get Current User Message
 
@@ -23,7 +24,7 @@ Used for getting the most recent message from the user, whether typed or tapped 
 
 | Function Name | Arguments | Return Payload |
 | --- | --- | --- |
-| `getCurrentUserMessage()` | None | string: The full text of the most recent message from the user. | 
+| `getCurrentUserMessage()` | None | string: The full text of the most recent message from the user. |
 
 #### Example
 ```javascript
@@ -44,7 +45,7 @@ botVariables are strings. Whatever the data type of your input, it will be conve
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getBotVariable(name)` | name (string) – The name for the variable. | The object defined by `name` | 
+| `getBotVariable(name)` | name (string) – The name for the variable. | The object defined by `name` |
 | `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> – The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> – The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> – If true, the variable persists for the current user session. Otherwise, the variable expires at the end of the current session (approximately 10 minutes). <br><br> <em>persistForever (bool)</em> – If true, the variable persists for the user indefinitely.| None |
 
 #### Example
@@ -69,7 +70,7 @@ The Print Debug Message is used to log what user said in the debug console of th
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `printDebugMessage(message)` | message (string) – A message to print to the debug logs. | None | 
+| `printDebugMessage(message)` | message (string) – A message to print to the debug logs. | None |
 
 #### Example
 ```javascript
@@ -80,11 +81,11 @@ botContext.printDebugMessage('User said ' + response);
 
 ### Set Trigger Next Message
 
-Used for triggering the message flow to selected segment of the bot. 
+Used for triggering the message flow to selected segment of the bot.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setTriggerNextMessage(messagename)` | messagename (string) – The message to trigger, as identified by the Name of the message. | None | 
+| `setTriggerNextMessage(messagename)` | messagename (string) – The message to trigger, as identified by the Name of the message. | None |
 
 #### Example
 
@@ -105,7 +106,7 @@ Returns the platform channel the user is currently communicating on. This functi
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp | 
+| `getChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp |
 
 #### Example
 
@@ -116,11 +117,11 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 
 ### Evaluating Options
 
-Used for matching the user’s input against an array of options. 
+Used for matching the user’s input against an array of options.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. | 
+| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. |
 
 #### Example
 
@@ -141,7 +142,7 @@ Used for tracking specific bot events for the purposes of analytics. This functi
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `logCustomEvent(user_message, event_name[, event_detail])` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string | Void | 
+| `logCustomEvent(user_message, event_name[, event_detail])` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string | Void |
 
 #### Example
 
@@ -155,7 +156,7 @@ Used to count the number of times the user called a particular escalation type. 
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `logEscalationEvent(user_message, escalation_type)` | <em>user_message - </em>the user's message text<br><br><em>escalation_type - </em>'LivePerson' | void | 
+| `logEscalationEvent(user_message, escalation_type)` | <em>user_message - </em>the user's message text<br><br><em>escalation_type - </em>'LivePerson' | void |
 
 #### Example
 
@@ -165,14 +166,14 @@ botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
 
 ### Set Message Delay Value
 
-Used to set a delay for a group of messages such that they appear like a real conversation. 
+Used to set a delay for a group of messages such that they appear like a real conversation.
 
 {: .important}
 The setMessageDelay() function should be used within the preProcess Code JavaScript.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setMessageDelay(delay_value)` | delay_value (integer) | None | 
+| `setMessageDelay(delay_value)` | delay_value (integer) | None |
 
 #### Example
 
@@ -187,11 +188,11 @@ botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just
 
 ### Send Immediate Reply
 
-Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message. 
+Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None | 
+| `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
 
 #### Example
 
@@ -211,7 +212,7 @@ To send multiple messages use the [sendMessages()](#send-messages) function.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendMessage(message)` | message (string) | None | 
+| `sendMessage(message)` | message (string) | None |
 
 #### Example
 ```javascript
@@ -231,7 +232,7 @@ To send a single message use the [sendMessage()](#send-message) function.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendMessages(messages)` | array | None | 
+| `sendMessages(messages)` | array | None |
 
 #### Example
 ```javascript
@@ -241,7 +242,7 @@ botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If yo
 
 ### Send Message With Quick Reply
 
-Used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number). 
+Used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number).
 
 {: .important}
 - You can have up to 10 quick replies per message.
@@ -250,7 +251,7 @@ Used for programatically creating a message containing quick reply buttons. Quic
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendMessageWithQuickReplies()` | a message with quick reply buttons. | None | 
+| `sendMessageWithQuickReplies()` | a message with quick reply buttons. | None |
 
 #### Example
 
@@ -263,11 +264,11 @@ botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sa
 
 ### Add Quick Replies
 
-The Add Quick Replies function is used for adding quick replies to a message in JavaScript rather than defining in Bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios. 
+The Add Quick Replies function is used for adding quick replies to a message in JavaScript rather than defining in Bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `addQuickReples()` | array | None | 
+| `addQuickReples()` | array | None |
 
 #### Example
 
@@ -286,7 +287,7 @@ This function is used in Process User Response (where the code for assessing use
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getQuickReplyPayload()` | None | string: The payload associated with the user-selected Quick Reply option. | 
+| `getQuickReplyPayload()` | None | string: The payload associated with the user-selected Quick Reply option. |
 
 #### Example
 ```javascript
@@ -323,7 +324,7 @@ You can retrieve this object with `getUserLocation()`, and access the properties
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserLocation()` | None | location object | 
+| `getUserLocation()` | None | location object |
 
 #### Example
 
@@ -350,7 +351,7 @@ The get UserName and set UserName functions are used to get (and set) the value 
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserName()` | None | string | 
+| `getUserName()` | None | string |
 | `setUserName(name)` | name (string) | None |
 
 #### Example
@@ -373,7 +374,7 @@ The get Email and set Email functions are used to get (and set) the value of a p
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getEmail()` | None | string | 
+| `getEmail()` | None | string |
 | `setEmail(address)` | address (string) | None |
 
 #### Example
@@ -392,13 +393,13 @@ if (email != null) {
 
 ### Get NLP Responses
 
-Used to get an array of results derived from BotCentral’s Natural Language Processing algorithms. 
+Used to get an array of results derived from BotCentral’s Natural Language Processing algorithms.
 
 For instance, the sentence, “The quick brown fox jumped over the lazy dog” returns the following nouns [dog, fox], the verb [jumped], the phrases [the quick brown Fox, the lazy Dog] and tokens: [the, over, quick, lazy, jumped, brown, Dog, Fox].
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getNlpResponse()` | None | array of NLP results (nouns, verbs, phrases, sentences, tokens) | 
+| `getNlpResponse()` | None | array of NLP results (nouns, verbs, phrases, sentences, tokens) |
 
 #### Example
 ```javascript
@@ -420,7 +421,7 @@ To access the actual phrases used, call `getPhrase()` on the entity objects.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getNamedEntities(entity_name)` | entity_name (string) | array of `namedEntity()` objects | 
+| `getNamedEntities(entity_name)` | entity_name (string) | array of `namedEntity()` objects |
 
 #### Example
 
@@ -440,7 +441,7 @@ Used for having the sentiment conversation chatbox messages with the user. Inste
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getSentiment()` | None | returns a string (Positive, Neutral, Negative) based on the most recent user message | 
+| `getSentiment()` | None | returns a string (Positive, Neutral, Negative) based on the most recent user message |
 
 #### Example
 ```javascript
@@ -461,8 +462,8 @@ The Get User Platform Id and Get User Platform Type are the functions that are u
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserPlatformId()` | None | string: unique User platform ID | 
-| `getUserPlatformType()` | None | string: User platform type | 
+| `getUserPlatformId()` | None | string: unique User platform ID |
+| `getUserPlatformType()` | None | string: User platform type |
 
 #### Example
 ```javascript
