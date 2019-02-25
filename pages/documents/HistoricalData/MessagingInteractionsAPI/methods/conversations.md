@@ -90,7 +90,7 @@ Filters examples:
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
 |contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
-|latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} | 
+|latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 
 **Note: search by keywords, summary or engagement attributes**
 
@@ -175,7 +175,7 @@ integrationVersion | The version of the integration | string |
 appId | The name of the application | string | We have a few internal application names: ConsumerApp, WebAgent, BrandAgent |
 appVersion | The hosted application version. | string |
 ipAddress | Current connection user IP | string |
-isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean | 
+isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
 
 _Campaign info_
 
@@ -304,7 +304,7 @@ _Message Secure Form_
 Name             | Description              | Type/Value | Notes
 :--------------- | :----------------------- | :--------- | :----------------------------------------------
 formId           | The ID of the form.      | string     | Returns in case agent sends form invitation.
-formName         | The name of the foom.    | string     | Returns in case agent sends form invitation.
+formName         | The name of the form.    | string     | Returns in case agent sends form invitation.
 submissionId     | The ID of the submission.| string     | Returns in case agent sends form invitation.
 invitationId     | The ID of the invitation.| string     |
 
