@@ -22,7 +22,7 @@ A single conversation may include more than one segment for each participating s
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgskillsegments?timeframe=<timeframe in minutes>&skillIds=<skillIds>&interval=<interval size in minutes>&v=<version>` |
+| GET | `https://<domain>/operations/api/account/{accountID}/msgskillsegments?timeframe=<timeframe in minutes>&skillIds=<skillIds>&interval=<interval size in minutes>&userType=<segment user type>&v=<version>` |
 
 **URL Parameters**
 
@@ -32,6 +32,7 @@ A single conversation may include more than one segment for each participating s
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics in the response will be grouped by the requested skills. When not provided, metrics in the response will be calculated for all skills. You can provide one or more skillIds. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all, or do not specify this parameter at all. | numeric, comma separated | optional |
 | interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
+| userType | filter segments by user type (only human, only bot or all), both user types in segment will be calculated with all only. When provided, only segments with parameter user type will be aggregated. <br> Example: <br> timeframe=60&userType=human (correct) <br> timeframe=60&userType=bot (correct) <br> timeframe=60&userType=agent (bad request) | string | optional |
 
 #### Response
 
