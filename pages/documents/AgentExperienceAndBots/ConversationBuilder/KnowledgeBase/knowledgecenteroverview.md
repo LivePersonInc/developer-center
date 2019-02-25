@@ -11,7 +11,7 @@ indicator: both
 
 <img style="width:750px" src="img/ConvoBuilder/knowledge_center.png">
 
-The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your bot/automation to leverage [intents](conversation-builder-intent-builder-overview.html) and [entities](conversation-builder-intent-builder-entities.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
+The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your automation to leverage [intents](conversation-builder-intent-builder-overview.html) and [entities](conversation-builder-intent-builder-entities.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
 
 ### Adding a Knowledge Base
 
@@ -19,13 +19,13 @@ The first step to using the Knowledge Center tool is to add a knowledge center e
 
 Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. On the right hand side, you'll find a Setting Toolbar which includes the following panels:
 
-* The Bot/Automation Test panel. This panel allows you to select a bot/automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](conversation-builder-getting-started-faq-bot-tutorial.html) for more information on how to do that) and feed it test user input to see if it matches content as you'd expect.
+* The Automation Test panel. This panel allows you to select a automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](conversation-builder-getting-started-faq-bot-tutorial.html) for more information on how to do that) and feed it test user input to see if it matches content as you'd expect.
 
 * The Tags panel. This panel displays all tags which you've previously used, so you can review all of them in one place and reuse them in any future articles.
 
 * Categories. This panel displays all categories which you've previously used, so you can review all of them in one place and reuse them in any future articles.
 
-* The Test User Input panel. This panel is similar to the first panel but is divorced from a specific bot/automation. You can use it to feed user input directly into your Knowledge Base and test your content matching without the context of an actual pre-created dialog.
+* The Test User Input panel. This panel is similar to the first panel but is divorced from a specific automation. You can use it to feed user input directly into your Knowledge Base and test your content matching without the context of an actual pre-created dialog.
 
 * The Intents Data panel. This panel shows you more historical information on which intents were and weren't matched to your Knowledge Base articles by bots/automations.
 

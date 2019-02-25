@@ -18,7 +18,7 @@ For more in-depth information on the various parts of the product covered here s
 
 ### What is a Routing Bot?
 
-The Conversation Builder Platform's Knowledge Base feature is described in depth [elsewhere in these documents](conversation-builder-knowledge-base-overview.html). However, that is an FAQ Bot? An FAQ Bot is a bot/automation which listens to [intents](conversation-builder-intent-builder-overview.html) in user input and attempts to match these intents with Knowledge Base article. An FAQ Bot can thus help your customers who are looking to dive deeper into your product by finding the right content at the right time, analyzing their intent to serve them with the most relevant content instead of forcing them to search for it on their own.
+The Conversation Builder Platform's Knowledge Base feature is described in depth [elsewhere in these documents](conversation-builder-knowledge-base-overview.html). However, that is an FAQ Bot? An FAQ Bot is a automation which listens to [intents](conversation-builder-intent-builder-overview.html) in user input and attempts to match these intents with Knowledge Base article. An FAQ Bot can thus help your customers who are looking to dive deeper into your product by finding the right content at the right time, analyzing their intent to serve them with the most relevant content instead of forcing them to search for it on their own.
 
 ### Importing the Template
 

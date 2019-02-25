@@ -35,7 +35,7 @@ When you first open an automation, you will be in the **Dialogs** view.
 
 On the left-hand side of the window, you can find the **Interactions Toolbar**. This toolbar contains the different types of interactions which can be used in a dialog.
 
-A Dialog may be triggered by a user statement, either via simple [pattern matching](conversation-builder-conversation-builder-conditions.html#pattern-matching) or via [intents](conversation-builder-intent-builder-overview.html). It may also be triggered by an Interaction via a Next Step action. Once the bot/automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
+A Dialog may be triggered by a user statement, either via simple [pattern matching](conversation-builder-conversation-builder-conditions.html#pattern-matching) or via [intents](conversation-builder-intent-builder-overview.html). It may also be triggered by an Interaction via a Next Step action. Once the automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
 
 Clicking on any of the interactions in the Dialog will allow you to configure them. See below for the different configuration options and requirements for each interaction type.
 
@@ -45,7 +45,7 @@ At the bottom of the Dialog Viewer, you'll find a view listing all your differen
 
 * Dialog - the default choice is a standard dialog, as described above.
 
-* Fallback dialog - the second choice is a fallback dialog, which gets triggered when the bot/automation cannot recognize a user's input and has to fallback to an escalation/troubleshooting conversation (For example, "I didn't quite understand you. Let me transfer this conversation to a human agent").
+* Fallback dialog - the second choice is a fallback dialog, which gets triggered when the automation cannot recognize a user's input and has to fallback to an escalation/troubleshooting conversation (For example, "I didn't quite understand you. Let me transfer this conversation to a human agent").
 
 You can use the hamburger icon right next to the **+** icon to see a list of your different dialogs. Otherwise, they are displayed horizontally, in chronological order.
 
@@ -61,7 +61,7 @@ The Interactions Toolbar is divided into four parts:
 
 * **Integration** - Activates an integration that you've configured in the Integrations tab.
 
-Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the bot/automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-conversation-builder-interactions.html).
+Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-conversation-builder-interactions.html).
 
 ### Settings and Other
 

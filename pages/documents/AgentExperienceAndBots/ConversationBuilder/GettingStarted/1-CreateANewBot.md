@@ -112,7 +112,7 @@ Click on **+ Dialog** to add another dialog, name it "Fallback", and this time, 
 We do not need to add a User Says interaction to a Fallback dialog, because it has special properties that will cause it to display when there are no other matches available.
 
 {: .important}
-There can only be one Fallback Dialog Type per bot/automation.
+There can only be one Fallback Dialog Type per automation.
 
 We do, however, need to add some type of message to tell the user that we didn’t understand their query. Add a new Text statement and provide a message like `Sorry, I only know ‘hello’ and ‘goodbye’...` or similar and hit enter. 
 
