@@ -60,7 +60,7 @@ Type "reset" in the Messaging Client to start fresh and then type “hello” or
 
 So how does the Welcome dialog get triggered? 
 
-Click on the topmost **User Says** interaction if you haven't already done so. There are two small icons to the right of it. Click on the top Interaction Details icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> and then tap Settings.  Under Patterns you should see the different patterns used to match this particular dialog. You can ALSO use Intents to trigger a dialog, but for this exercise, we’ll focus on patterns.
+Click on the topmost **User Says** interaction if you haven't already done so. There are two small icons to the right of it. Click on the top Interaction Details icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> and then tap Settings.  Under Patterns you should see the different patterns used to match this particular dialog. You can *also* use Intents to trigger a dialog, but for this exercise, we’ll focus on patterns.
 
 <img style="width:750px" src="img/ConvoBuilder/helloworld/interactiondetails.png">
 
