@@ -560,6 +560,15 @@ div.sidebarTitle-holder {
 	cursor: pointer;
 }
 
+.post-content img {
+
+}
+
+.post-content img.inlineimage {
+  display: inline-block;
+  box-shadow: none;
+}
+
 .post-content .zoomimg {
   transition: transform .2s;
 }
@@ -575,6 +584,14 @@ div.sidebarTitle-holder {
   font-weight: normal;
   line-height: 1.71;
   color: #4a4a4a !important;
+}
+
+.post-content ol ol{
+  list-style-type: upper-latin;
+}
+
+.post-content ol ol ol {
+  list-style-type: upper-roman;
 }
 
 .post-content p strong {

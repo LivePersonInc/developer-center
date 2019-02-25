@@ -9891,7 +9891,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
   };
 
   function jsonpReq(url, callbackId, done) {
-    // we can't use jQuery/jqLite here because jQuery does crazy shit with script elements, e.g.:
+    // we can't use jQuery/jqLite here because jQuery does crazy shit with script elements, e.g.,
     // - fetches local scripts via XHR and evals them
     // - adds and immediately removes script elements from the document
     var script = rawDocument.createElement('script'), callback = null;
@@ -17797,7 +17797,7 @@ function ngDirective(directive) {
  * the href attribute is empty.
  *
  * This change permits the easy creation of action links with the `ngClick` directive
- * without changing the location or causing page reloads, e.g.:
+ * without changing the location or causing page reloads, e.g.,
  * `<a href="" ng-click="list.addItem()">Add Item</a>`
  */
 var htmlAnchorDirective = valueFn({
