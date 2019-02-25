@@ -303,10 +303,10 @@ _Message Secure Form_
 
 Name             | Description              | Type/Value | Notes
 :--------------- | :----------------------- | :--------- | :----------------------------------------------
-formId           | The Id of the form.      | string     | Returns in case agent sends form invitation.
-formName         | The name of the from.    | string     | Returns in case agent sends form invitation.
-submissionId     | The Id of the submission.| string     | Returns in case agent sends form invitation.
-invitationId     | The Id of the invitation.| string     |
+formId           | The ID of the form.      | string     | Returns in case agent sends form invitation.
+formName         | The name of the foom.    | string     | Returns in case agent sends form invitation.
+submissionId     | The ID of the submission.| string     | Returns in case agent sends form invitation.
+invitationId     | The ID of the invitation.| string     |
 
 
 
