@@ -31,7 +31,7 @@ Each connector provides the functionality to
 
 Some connectors may provide more or less functionality depending on the specifics of the product to which it is connecting.
 
-There are two steps to setting up a new bot connector. 
+There are two steps to setting up a new bot connector.
 
 1. Create Bot user in LiveEngage
 
@@ -49,20 +49,20 @@ There are two steps to setting up a new bot connector.
 
 3. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
-4. Set Max No of Live Chats 
+4. Set Max No of Live Chats
 
     * If Chat in the drop down select  - Value > 1.
 
-    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0** 
+    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0**
 
 5. Find api key name in bot user profile
-    
+
     <img style="width:400px" src="img/dialogflowversion2/image_2.png">
 
---- 
+---
 
 **Below is Messaging ONLY**
-    
+
 Go to API management page (Campaigns tab > Data Sources > APIs) and add the following APIs to the bot’s API key:
 
 * Engagement History API
@@ -76,7 +76,7 @@ Go to API management page (Campaigns tab > Data Sources > APIs) and add the foll
 To access the Bot Connector dashboard navigate to your appropriate URL:
 
 | Region | URL |
-| --- | --- | 
+| --- | --- |
 | NA | https://bot-console.fs.liveperson.com |
 | EMEA | https://bot-console.emea.fs.liveperson.com |
 | APAC | https://bot-console.apac.fs.liveperson.com |
@@ -110,9 +110,7 @@ Follow the steps below to add a new bot connector.
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
-* [Watson Assistant](WatsonAssistant.html)
-* [Dialogflow V1](DialogFlow.html)
-* [Dialogflow V2](DialogFlowVersion2.html)
-* [Lex](lex.html)
-
-
+* [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
+* [Dialogflow V1](bot-connectors-google-dialog-flow.html)
+* [Dialogflow V2](bot-connectors-google-dialog-flow-version-2.html)
+* [Lex](bot-connectors-custom-third-party-bots.html)
