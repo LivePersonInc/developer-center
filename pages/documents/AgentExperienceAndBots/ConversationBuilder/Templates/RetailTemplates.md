@@ -29,7 +29,7 @@ Helps reduce time to first interaction and route the shopper to the bot/agent be
 
 Items to Configure:
 
-- Bot Name/Brand
+- Automation Name/Brand
 - Links to Bots/Agents to Route to
 - Shopify Credentials
 
