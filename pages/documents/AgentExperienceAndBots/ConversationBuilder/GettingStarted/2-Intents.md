@@ -72,7 +72,7 @@ Your results should now be VERY GOOD and you can see that the entity @bill was d
 
 Now that our Billing intent is configured, let’s return to the Conversation Builder and use it to trigger a new dialog. 
 
-Navigate to the Conversation Builder by clicking on the top-left dropdown menu. Select the bot that you previously created.
+Navigate to the Conversation Builder by clicking on the top-left dropdown menu. Select the automation that you previously created.
 
 Once opened, create a new regular dialog and name it "Billing".
 

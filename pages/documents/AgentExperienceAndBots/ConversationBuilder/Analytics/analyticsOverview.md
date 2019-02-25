@@ -32,14 +32,14 @@ What are custom events? [Here](conversation-builder-conversation-builder-scripti
 
 | Name | Description |
 | --- | --- |
-| Users | Number of unique users connected to bot |
-| Conversations | Number of LiveEngage Conversations in which the bot is a participant |
-| Automation Sessions (Deprecated) | Number of times a bot connects to a conversation |
-| Average Session Length (Deprecated) | Average of the time lapse between bot connection/disconnection to a conversation |
-| Escalations | Number of times a bot transfers a user to a different skill/agent |
+| Users | Number of unique users connected to automation |
+| Conversations | Number of LiveEngage Conversations in which the automation is a participant |
+| Automation Sessions (Deprecated) | Number of times a automation connects to a conversation |
+| Average Session Length (Deprecated) | Average of the time lapse between automation connection/disconnection to a conversation |
+| Escalations | Number of times a automation transfers a user to a different skill/agent |
 | Conversation Escalation Rate | Percentage of Conversations that are transferred to a different skill/agent |
-| Messages | Number of messages sent or recieved by bot |
-| Questions Asked | Number of messages recieved by bot | 
+| Messages | Number of messages sent or recieved by automation |
+| Questions Asked | Number of messages recieved by automation | 
 | Matched Intents | Number of Questions Asked that are matched with Intents or Knowledge Base articles |
 | Unmatched Phrases | Number of Questions Asked that are not matched with Intents or Knowledge Base articles |
 | Intent Matched Rate | Percentage of Questions Asked that were matched | 

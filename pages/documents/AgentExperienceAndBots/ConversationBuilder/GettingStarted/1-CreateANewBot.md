@@ -10,7 +10,7 @@ permalink: conversation-builder-getting-started-1-dialogs-and-patterns.html
 indicator: both
 ---
 
-This guide will help step you through setting up a simple Hello World bot with Conversation Builder. 
+This guide will help step you through setting up a simple Hello World automation with Conversation Builder. 
 
 ### Step 1: Create a New Bot
 
@@ -22,11 +22,9 @@ This step requires that you have a user account for the Conversation Builder pla
 
 2. From the list of app icons, click on Conversation Builder in the upper left.
 
-    Learn about 
-
     <!--<img style="width:750px" src="img/ConvoBuilder/helloworld/image_2.png">-->
 
-3. Click **New Automation**, select the Basic Automation template, give your bot a unique name and description, and be sure to select Consumer Facing Bot. 
+3. Click **New Automation**, select the Basic Automation template, give your automation a unique name and description, and be sure to select Consumer Facing Bot. 
     <!--<img style="width:750px" src="img/ConvoBuilder/helloworld/newAutomation.png">-->
 
     <img style="width:750px" src="img/ConvoBuilder/helloworld/createAutomation.png">
@@ -36,7 +34,7 @@ This step requires that you have a user account for the Conversation Builder pla
     Learn about the different parts of the Conversation Builder app [here](conversation-builder-conversation-builder-overview.html).
     <img style="width:750px" src="img/ConvoBuilder/helloworld/image_3.png">
 
-5. **Before you do anything else**, we need to "Publish" the bot (make it Publicly accessible) to your Organization. (For those with multiple Org access, the bot will default to Private, which is why we want to change it.)
+5. **Before you do anything else**, we need to "Publish" the automation (make it Publicly accessible) to your Organization. (For those with multiple Org access, the automation will default to Private, which is why we want to change it.)
   * Click the gear <img style="width:40px" src="img/ConvoBuilder/helloworld/gearicon.png"> icon in the upper-left and then Automation Settings. Scroll down and tap "More Settings".
   * Make sure the Automation Account is set to the appropriate Org.
   * Set the Public slider to on.
@@ -62,7 +60,7 @@ Type "reset" in the Messaging Client to start fresh and then type “hello” or
 
 So how does the Welcome dialog get triggered? 
 
-Click on the topmost **User Says** interaction if you haven't already done so. There are two small icons to the right of it. Click on the top Interaction Details icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> and then tap Settings.  Under Patterns you should see the different patterns used to match this particular dialog. You can ALSO use Intents to trigger a dialog, but for this exercise, we’ll focus on patterns.
+Click on the topmost **User Says** interaction if you haven't already done so. There are two small icons to the right of it. Click on the top Interaction Details icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> and then tap Settings.  Under Patterns you should see the different patterns used to match this particular dialog. You can *also* use Intents to trigger a dialog, but for this exercise, we’ll focus on patterns.
 
 <img style="width:750px" src="img/ConvoBuilder/helloworld/interactiondetails.png">
 

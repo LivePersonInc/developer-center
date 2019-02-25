@@ -19,7 +19,7 @@ The first step to using the Knowledge Center tool is to add a knowledge center e
 
 Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. On the right hand side, you'll find a Setting Toolbar which includes the following panels:
 
-* The Automation Test panel. This panel allows you to select a automation which you've previously created and linked to the Knowledge Base (see the [FAQ Bot Tutorial](conversation-builder-getting-started-faq-bot-tutorial.html) for more information on how to do that) and feed it test user input to see if it matches content as you'd expect.
+* The Automation Test panel. This panel allows you to select a automation which you've previously created and linked to the Knowledge Base and feed it test user input to see if it matches content as you'd expect.
 
 * The Tags panel. This panel displays all tags which you've previously used, so you can review all of them in one place and reuse them in any future articles.
 
@@ -77,7 +77,7 @@ Even though this utterance was not exactly the same as what was added, it still 
 
 If we try a different user input, like “my password is not letting me into my account”, this is different enough that the NLU engine will return as FAIR PLUS. Generally, we set the threshold to GOOD so in this new example, the article won't be shown to a user. However, we can easily “train” the article to respond to this input regardless, by tapping on the thumbs-up icon right beneath the result. This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
 
-<div class="important">Keep in mind that when you are training your articles, it is <em>very</em> easy to use the thumbs up button. So easy, that you might <em>over</em> train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one and use the training feature sparingly.</div>
+<div class="important">Keep in mind that when you are training your articles, it is <em>very</em> easy to use the thumbs up button. So easy, that you might <em>over</em> train the automation using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one and use the training feature sparingly.</div>
 
 What about thumbs-down? This should be used sparingly to differentiate between two articles that may have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
 

@@ -17,7 +17,7 @@ This is an example API that will return random balance data for a given account 
 
 ### Step 8: Create Billing API Integration
 
-Go back to the bot you created in Conversation Builder. Along the top of the workspace, click on Integrations.
+Go back to the automation you created in Conversation Builder. Along the top of the workspace, click on Integrations.
 
 From here we will create a new API with the following parameters. 
 

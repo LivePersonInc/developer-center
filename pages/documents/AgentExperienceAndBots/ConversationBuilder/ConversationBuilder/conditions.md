@@ -86,7 +86,7 @@ Below the condition configuration box, you will find three check boxes. These co
 
 * Change response. The automation can change a slot's data if the user requests to. Common phrases like "what about sandals" or "show me sandals" will cause the automation to clear the data currently in the slot, look for an entity in the user's change request, repopulate the slot with the new information, and perform the configured Next Step again. When this occurs, you can have the automation send a message to the user letting them know it is doing so, for example "Let me look for your new selection".
 
-* Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The bot will then clear the data in the slot and send the cancelled message to the user, as defined by you.
+* Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The automation will then clear the data in the slot and send the cancelled message to the user, as defined by you.
 -->
 
 #### Code
