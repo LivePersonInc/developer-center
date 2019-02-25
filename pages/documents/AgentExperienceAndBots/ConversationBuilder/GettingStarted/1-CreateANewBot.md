@@ -22,8 +22,6 @@ This step requires that you have a user account for the Conversation Builder pla
 
 2. From the list of app icons, click on Conversation Builder in the upper left.
 
-    Learn about 
-
     <!--<img style="width:750px" src="img/ConvoBuilder/helloworld/image_2.png">-->
 
 3. Click **New Automation**, select the Basic Automation template, give your bot a unique name and description, and be sure to select Consumer Facing Bot. 
