@@ -35,12 +35,13 @@ Retrieves the information about the current messaging queue state (and all its r
 | :-----    | :--------------- | :-------------- | :--- |
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
+| overdueConversations | When provided, metrics on the response will also contain overdue conversations metrics, defaults to false. For example: overdueConversations=true | boolean | optional
 
 ### Response
 
 **JSON Example**
 
-Request by skillIds=12,13
+Request by skillIds=12,13 and overdueConversations=true
 
 ```json
     {
@@ -60,7 +61,10 @@ Request by skillIds=12,13
                 "avgWaitTimeForAgentAssignment_AfterTransfer": 171,
                 "maxWaitTimeForAgentAssignment": 274,
                 "waitTimeForAgentAssignment_50thPercentile": 160,
-                "waitTimeForAgentAssignment_90thPercentile": 150        
+                "waitTimeForAgentAssignment_90thPercentile": 150,
+                "overdueConversationsInQueue": 0,
+                "overdueConversationsAssigned": 2,
+                "overdueConversationsTotal": 2        
             },
             "13": {
                 "time": 1516277646515,
@@ -78,7 +82,10 @@ Request by skillIds=12,13
                 "avgWaitTimeForAgentAssignment_AfterTransfer": 245,
                 "maxWaitTimeForAgentAssignment": 370,
                 "waitTimeForAgentAssignment_50thPercentile": 220,
-                "waitTimeForAgentAssignment_90thPercentile": 240                
+                "waitTimeForAgentAssignment_90thPercentile": 240,
+                "overdueConversationsInQueue": 1,
+                "overdueConversationsAssigned": 0,
+                "overdueConversationsTotal": 1                
             }
         },
         "metricsTotal": {
@@ -95,7 +102,10 @@ Request by skillIds=12,13
             "avgWaitTimeForAgentAssignment_AfterTransfer": 233 ,
             "maxWaitTimeForAgentAssignment": 370,
             "waitTimeForAgentAssignment_50thPercentile":  170,
-            "waitTimeForAgentAssignment_90thPercentile": 224            
+            "waitTimeForAgentAssignment_90thPercentile": 224,
+            "overdueConversationsInQueue": 1,
+            "overdueConversationsAssigned": 2,
+            "overdueConversationsTotal": 3            
         }
     }
 ```
@@ -124,3 +134,6 @@ Request by skillIds=12,13
 | maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in the queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
+| overdueConversationsInQueue | The number of overdue conversations that are in queue. | long
+| overdueConversationsAssigned | The number of overdue conversations that are assigned to an agent. | long
+| overdueConversationsTotal | The total number of conversations that are overdue (sum of inQueue + assigned). | long
