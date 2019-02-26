@@ -23,6 +23,7 @@ Retrieves the information about the current messaging queue state (and all its r
 
 3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE.
 
+4. Overdue metrics will be calculated only for conversations that have started in the last four days. 
 ### Request
 
 | Method | URL |
