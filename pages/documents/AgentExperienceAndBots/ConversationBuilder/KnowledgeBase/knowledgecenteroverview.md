@@ -15,7 +15,7 @@ The Conversation Builder Platform's Knowledge Base tool allows you to export an 
 
 ### Adding a Knowledge Base
 
-The first step to using the Knowledge Center tool is to add a knowledge center entity by clicking the **ADD KNOWLEDGE CENTER** panel on the left side of your screen, once you've selected Knowledge Center from the main Conversation Builder Platform page. You will then be prompted to choose a name for the Knowledge Center and to select whether you'd like to import a pre-configured knowledge center from a CSV file or a Google Spreadsheet. **Importing a knowledge center from a file is not mandatory. Simply click "next" without selecting a file if you'd like to start with a blank one**.
+The first step to using the Knowledge Base tool is to add a knowledge base entity by clicking the **ADD KNOWLEDGE BASE** panel on the left side of your screen, once you've selected Knowledge Base from the main Conversation Builder Platform page. You will then be prompted to choose a name for the Knowledge Base and to select whether you'd like to import a pre-configured knowledge base from a CSV file or a Google Spreadsheet. **Importing a knowledge base from a file is not mandatory. Simply click "next" without selecting a file if you'd like to start with a blank one**.
 
 Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. On the right hand side, you'll find a Setting Toolbar which includes the following panels:
 
