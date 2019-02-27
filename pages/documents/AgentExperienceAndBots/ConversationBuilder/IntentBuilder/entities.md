@@ -16,7 +16,7 @@ Therefore, when you're creating training phrases for an intent, instead of typin
 
 "I'm interested in `sports`".
 
-Entities can be used both in the context of intents as well as in a [Knowledge Base](conversation-builder-knowledge-base-overview.html). Just like with training phrases for intents, entities can be used in training phrases for Knowledge Base articles.
+Entities can be used both in the context of intents as well as in a [Knowledge Base](conversation-builder-knowledge-base.html). Just like with training phrases for intents, entities can be used in training phrases for Knowledge Base articles.
 
 Entities are usually one or two words as they represent groups of simple objects.
 

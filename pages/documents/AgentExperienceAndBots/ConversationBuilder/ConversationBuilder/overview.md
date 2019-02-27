@@ -10,7 +10,7 @@ permalink: conversation-builder-conversation-builder-overview.html
 indicator: both
 ---
 
-<img style="width:750px" src="img/ConvoBuilder/helloworld/image_3.png">
+<img style="width:750px" src="img/ConvoBuilder/convobuilder_main.png">
 
 The Conversation Builder app is the primary workspace for designing an automation. It is what ties together all of the other aspects of the Platform.
 

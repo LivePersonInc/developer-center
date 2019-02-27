@@ -9,6 +9,8 @@ permalink: conversation-builder-analytics.html
 indicator: both
 ---
 
+<img style="width:750px" src="img/ConvoBuilder/analytics_main.png">
+
 The first screen that displays in the Analytics app is a list of all of your automations. Search or scroll through this list and click on the automation for which you want to see data.
 
 ### Views
