@@ -88,6 +88,7 @@
           - subpagename: Retrieve Chat Information
             methodurl: /chat/{chatId}/info
             httpmethod: GET
+          - subpagename: Retrieve Participant Info
           - subpagename: Retrieve Visitor's Name
             methodurl: /chat/{chatId}/info/visitorName
             httpmethod: GET
@@ -129,6 +130,46 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
+  - documentname: Bot Connectors
+    pages:
+      - pagename: Getting Started
+      - pagename: Google Dialog Flow
+      - pagename: Google Dialog Flow Version 2
+      - pagename: IBM Watson Assistant
+      #- pagename: Amazon Lex
+      - pagename: Custom Third Party Bots
+  - documentname: Conversation Builder
+    pages:
+      - pagename: Platform Overview
+      - pagename: Getting Started
+        subpages:
+          - subpagename: 1 - Dialogs and Patterns
+          - subpagename: 2 - Intents
+          - subpagename: 3 - Integrations
+          - subpagename: 4 - Connect to LiveEngage
+          #- subpagename: 5 - Releases and Versioning
+          #- subpagename: Basic - FAQ Bot Tutorial
+          #- subpagename: Basic - Routing Bot Tutorial
+      #- pagename: Templates
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Retail Templates
+      - pagename: Conversation Builder
+        subpages:
+            - subpagename: Overview
+            - subpagename: Interactions
+            - subpagename: Conditions
+            - subpagename: Assist
+            - subpagename: Scripting Functions
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
+          - subpagename: Entities
+      - pagename: Knowledge Base
+      - pagename: Analytics
+      #- pagename: Operations
+
+
 
 
 - categoryname: Client Side Configuration
@@ -753,6 +794,9 @@
         - pagename: List Picker Template
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
+        - pagename: Apple Auth Template
+        - pagename: Custom Interactive Message Template
+        - pagename: Rich Links Template
         - pagename: Guidelines and Limitations
     - documentname: Facebook Messenger Templates
       pages:

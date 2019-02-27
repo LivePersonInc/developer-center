@@ -108,6 +108,7 @@ Filters examples:
 |questionTypeAndFormatToRetrieve | {"start":{"from":1470037448000,"to":1472543048000}, "questionTypeAndFormatToRetrieve":{"type":"custom","format":"open}}|
 |answerText           | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
 
+
 **Note: search by keywords, summary or engagement attributes**
 
 In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
@@ -191,7 +192,7 @@ integrationVersion | The version of the integration | string |
 appId | The name of the application | string | We have a few internal application names: ConsumerApp, WebAgent, BrandAgent |
 appVersion | The hosted application version. | string |
 ipAddress | Current connection user IP | string |
-isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean | 
+isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
 
 _Campaign info_
 
@@ -304,7 +305,8 @@ Name         | Description                        | Type/Value | Notes
 :----------- | :--------------------------------- | :--------- | :----------------------------------------------
 relativePath | Relative path of the file.         | string     |
 fileType     | Type of the file.                  | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
-caption      | The caption (heading) of the file. | string
+caption      | The caption (heading) of the file. | string     |
+preview      | Preview of the sent image (thumbnail).| string     | Encoded in base64 format
 
 _Message Link_
 
@@ -312,6 +314,18 @@ Name             | Description            | Type/Value | Notes
 :--------------- | :--------------------- | :--------- | :----------------------------------------------
 externalFileLink | Link to external file. | string     |
 fileType         | Type of the file.      | string     | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
+caption          | Description of the file. | string   |
+
+_Message Secure Form_
+
+Name             | Description              | Type/Value | Notes
+:--------------- | :----------------------- | :--------- | :----------------------------------------------
+formId           | The ID of the form.      | string     | Returns in case agent sends form invitation.
+formName         | The name of the form.    | string     | Returns in case agent sends form invitation.
+submissionId     | The ID of the submission.| string     | Returns in case agent sends form invitation.
+invitationId     | The ID of the invitation.| string     |
+
+
 
 _Message Rich Content_
 
