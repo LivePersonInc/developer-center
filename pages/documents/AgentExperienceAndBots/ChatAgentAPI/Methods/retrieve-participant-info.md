@@ -1,7 +1,7 @@
 ---
-pagename: Retrieve Chat Information
+pagename: Retrieve Participant Info
 redirect_from:
-  - agent-retrieve-chat-info.html
+  - agent-retrieve-participant-info.html
 Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
@@ -9,18 +9,18 @@ documentname: Chat Agent API
 subfoldername: Methods
 
 order: 150
-permalink: chat-agent-api-methods-retrieve-chat-information.html
+permalink: chat-agent-api-methods-retrieve-participant-info.html
 
 indicator: chat
 ---
 
-This method retrieves information regarding the current status of the chat. The information section includes the agent's state, agent's name, start time of the chat, last update, visitor's ID, agent typing, visitor typing, and the visitor's name.
+This method retrieves information regarding the authenticated visitor within the chat. The information section includes the authentication state and the authenticated consumer SDEs.
 
 ### Request
 
 | Method | URL                                                                                       |
 |--------|-------------------------------------------------------------------------------------------|
-| GET    | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/info?v=1&NC=true |
+| GET    | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/participantExtendedInfo/{participantId}?v=1&NC=true |
 
 **Request Headers**
 
@@ -40,6 +40,43 @@ The body media type must have one of the following formats:
 ### Response
 
 **Elements in the response**
+
+{  
+   "authenticatedParticipantInfo":{  
+      "isUserAuthenticated":true,
+      "participantId":"55fc1779-83b0-4e8b-8eea-503a8eaf8822",
+      "balance":-400.99,
+      "registrationDate":{  
+         "year":2013,
+         "month":5,
+         "day":23
+      },
+      "lastPaymentDate":{  
+         "year":2014,
+         "month":10,
+         "day":15
+      },
+      "customerId":"auth0|57ac072a5d104506721f9ebf",
+      "customerStatus":"cancelled",
+      "customerType":"vip",
+      "socialId":"11256324780",
+      "imei":"3543546543545688",
+      "userName":"testuser",
+      "companySize":500,
+      "accountName":"bank corp",
+      "role":"broker"
+   },
+   "authenticatedPersonalInfo":{  
+      "name":"Test",
+      "surname":"User",
+      "contacts":[  
+         {  
+            "email":"testuser@liveperson.com",
+            "phone":"+1-10-344-3765333"
+         }
+      ]
+   }
+}
 
 | Name           | Description                                                                                                                  | Type              | Notes                                                                                                                                                                                                                                                      |
 |----------------|------------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
