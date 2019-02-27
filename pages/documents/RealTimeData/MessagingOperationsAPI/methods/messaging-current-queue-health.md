@@ -23,7 +23,8 @@ Retrieves the information about the current messaging queue state (and all its r
 
 3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE.
 
-4. Overdue metrics will be calculated only for conversations that have started in the last four days. 
+4. Overdue metrics (like `overdueConversationsInQueue` for example)  will be calculated only for conversations that have started in the last four days.
+
 ### Request
 
 | Method | URL |
@@ -36,7 +37,7 @@ Retrieves the information about the current messaging queue state (and all its r
 | :-----    | :--------------- | :-------------- | :--- |
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
-| overdueConversations | When provided, metrics on the response will also contain overdue conversations metrics, defaults to false. For example: overdueConversations=true | boolean | optional
+| overdueConversations | When set to true, metrics in the response will also contain overdue conversations metrics. Defaults to false. For example: overdueConversations=true | boolean | optional |
 
 ### Response
 
@@ -135,6 +136,6 @@ Request by skillIds=12,13 and overdueConversations=true
 | maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in the queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
-| overdueConversationsInQueue | The number of overdue conversations that are in queue. | long
-| overdueConversationsAssigned | The number of overdue conversations that are assigned to an agent. | long
-| overdueConversationsTotal | The total number of conversations that are overdue (sum of inQueue + assigned). | long
+| overdueConversationsInQueue | The number of overdue conversations that are in the queue. | long |
+| overdueConversationsAssigned | The number of overdue conversations that are assigned to an agent. | long |
+| overdueConversationsTotal | The total number of conversations that are overdue (sum of inQueue + assigned). | long |
