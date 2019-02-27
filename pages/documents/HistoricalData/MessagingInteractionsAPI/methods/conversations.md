@@ -55,7 +55,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |duration {from, to} | Range of conversation length (in seconds).                                                    | numeric, numeric                   | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
 |mcs {from,to}       | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
 |alertedMcsValues    | Alerted MCS of the conversation up until the most recent message.                             | Array `<alertedMCS>`               | Optional | Valid values: "-1", "0", "1"
-|csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively). Search by CSAT is unified, either for the old satisfaction survey CSAT question or for PCS that include a CSAT question
+|csat {from,to}      | Range of CSAT assigned to the conversation.                                                   | numeric, numeric                   | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively). For accounts that are using both the old CSAT method and the new PCS based CSAT, this field will return unified results.
 |source              | Source origin (Facebook, App etc.) from which the conversation was initially opened.          | Array `<String>`                   | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK, Apple Business Chat, WhatsApp Business
 |device              | Type of device from which the conversation was initially opened.                              | Array `<String>`                   | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message                                                                       | Array `<String>`                   | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
@@ -65,13 +65,13 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to}       | Range of NPS assigned to the conversation.                                                    | numeric, numeric                  | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
-|questionBrick       | Specific word or phrase of PCS question name or question ID.                                  | alphanumeric                       | Optional |
-|invalidFreeTextAnswer | Search only for PCS that contain invalid free text answer.                                  | String                             | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
+|questionBrick       | Match a specific word within a PCS question name or brick ID                                  | alphanumeric                       | Optional |
+|invalidFreeTextAnswer | Search only for conversations that contain invalid free text answer.                                  | String                             | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
 |surveyBotConversations | Search only for conversations with PCS.                                                    | String                             | Optional | Valid values: SURVEY_BOT. |
 |surveyIds           | An array of PCS IDs, represented as numbers.                                                  | Array `<surveyID>`                 | Optional |
-|fcr                 | Values of FCR assigned to the conversation.                                                   | Array `<String>`                   | Optional | Possible values: yes, no. |
+|fcr                 | Values of FCR (First Call Resolution) assigned to the conversation.                                                   | Array `<String>`                   | Optional | Possible values: yes, no. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve                            | String, String                     | Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
-|answerText          | Specific words or phrases from PCS open text question answer                                  | Array `<String>`                   | Optional |
+|answerText          | Specific words or phrases from PCS free text answers                                  | Array `<String>`                   | Optional |
 
 Filters examples:
 
@@ -450,7 +450,7 @@ _Survey info_
 
 Name         | Description                                     | Type/Value | Notes
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
-surveyType   | Type of the survey.                             | string     | Satisfaction or PostSurvey
+surveyType   | Type of the survey.                             | string     | CSAT or PostSurvey
 surveyStatus | Status of the submission of the survey.         | string     |
 dialogId     | The ID of the dialog of the survey.             | string     |
 surveyId     | The ID of the survey.                           | string     | 
