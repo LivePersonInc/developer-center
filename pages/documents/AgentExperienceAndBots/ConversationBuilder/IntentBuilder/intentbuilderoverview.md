@@ -9,8 +9,7 @@ subfoldername: Intent Builder
 permalink: conversation-builder-intent-builder-overview.html
 indicator: both
 ---
-
-<img style="width:750px" src="img/ConvoBuilder/helloworld/image_11.png">
+<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/intentbuilder_main.png">
 
 The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](conversation-builder-conversation-builder-overview.html) to associate one domain to each dialog.
 
