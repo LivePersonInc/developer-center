@@ -73,7 +73,7 @@ From here we will create a new API with the following parameters.
 
 **Save** the API settings.
 
-<img style="width:750px" src="img/ConvoBuilder/helloworld/image_15.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_15.png">
 
 ### Step 9: Use Integration in Dialog
 
@@ -83,7 +83,7 @@ Let’s add a new regular dialog and name it "Account Balance". For the first Us
 
 Go to the Interaction Details and select Settings. Here we can add a simple pattern to detect the word “balance” (or if you want to get fancy, you can create an intent). You can use the wildcards (`*balance*`) to match all instances.
 
-<img style="width:750px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
 
 <!--<img style="width:400px" src="img/ConvoBuilder/helloworld/balancepattern.png">-->
 
@@ -93,7 +93,7 @@ In order to get the user’s account balance, we need to ask for their account n
 
 Next, we want to capture the user’s account number as a slot variable. Under Slot, enter a Slot Name of "accountNumber", for Value, enter `{$query}` and for Scope, make sure its set to Dialog. 
 
-<img style="width:750px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
 
 <!--<img style="width:400px" src="img/ConvoBuilder/helloworld/accountnumberpattern.png">
 
@@ -107,7 +107,7 @@ We want to capture the user’s email address as well. Add another Text Question
 
 Under Slot, enter a Slot Name of “userEmail”, for Value, enter `{$query}` and for Scope, make sure it’s set to Dialog. 
 
-<img style="width:750px" src="img/ConvoBuilder/helloworld/askemail.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/askemail.png">
 
 When we created the Balance integration, we told it to use the following slots in the requests:
 
@@ -122,6 +122,6 @@ To finish, we just need to display the user’s balance results. Add a Text stat
 
 Go to the Messaging Client, type "reset" and type “account balance” or similar to start your dialog. *Any* 6 digit account number and *any* email address will work for this API.
 
-<img style="width:750px" src="img/ConvoBuilder/helloworld/integrationtest.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/integrationtest.png">
 
 You now understand the basics of integrations and slots.

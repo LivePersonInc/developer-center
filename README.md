@@ -59,6 +59,9 @@ Once you have installed Ruby, clone this repository to your machine. Once done, 
 3. Run `bundle exec jekyll serve`. This builds the site and serves it over localhost:4000 (by default, you can change the `port` parameter in `config.yml` to whatever port you'd prefer).
 4. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
 
+**OSX Installation**
+0. We recommend installing a standalone Ruby Installation and RVM
+1. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
 
 
 **Serving the site after the first install**

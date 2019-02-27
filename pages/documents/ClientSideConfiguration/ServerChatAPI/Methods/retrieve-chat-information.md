@@ -79,7 +79,8 @@ Response JSON Example
         "sharkContextId": "3",
         "engagementId": "27469613",
         "campaignId": "26948813",
-        "language": "en-US"
+        "language": "en-US",
+        "participantId": "55fc1779-83b0-4e8b-8eea-503a8eaf8822"
       }
     }
 ```
@@ -100,3 +101,4 @@ Response JSON Example
 | visitorTyping | Indicates if the visitor is currently typing a message. | string |  Valid values: "typing", "not-typing" |
 | visitorName | Is the name of the visitor that is chatting with the agent. | alphanumeric | |
 | rtSessionId | The real-time session ID that can be used to match the chat session on the agent side with the session on the visitor side. | numeric |
+| participantId | The unique ID of the Authenticated Visitor | GUID | Optional |

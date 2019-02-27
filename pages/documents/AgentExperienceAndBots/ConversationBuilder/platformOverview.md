@@ -11,7 +11,11 @@ indicator: both
 
 Conversation Builder is a suite of integrated apps that work together to provide an all-in-one automation solution.
 
+<<<<<<< HEAD
 <img style="width:750px" src="img/ConvoBuilder/platform_main.png">
+=======
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/appView.png">
+>>>>>>> 6ba9ae659da2e58af93feb66df19ddbc0f88fb10
 
 ### Apps
 
