@@ -60,8 +60,8 @@ Once you have installed Ruby, clone this repository to your machine. Once done, 
 4. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
 
 **OSX Installation**
-0. Suggest installing a standalone Ruby Installation and RVM
-1. Example [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
+0. We recommend installing a standalone Ruby Installation and RVM
+1. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
 
 
 **Serving the site after the first install**
