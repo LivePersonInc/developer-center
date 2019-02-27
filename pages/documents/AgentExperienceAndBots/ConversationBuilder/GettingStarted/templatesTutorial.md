@@ -130,7 +130,7 @@ You will choose a template, review what the template includes, configure the ite
     
     Additional info will be available in LiveEngage User settings.
 
-    <img style="width:750px" src="img/ConvoBuilder/libraries/orgdetails.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/libraries/orgdetails.png">
 
 8. Navigate back to User settings in LiveEngage. Copy and paste the following info into the respective fields: 
 
@@ -142,4 +142,4 @@ You will choose a template, review what the template includes, configure the ite
     <img style="width:500px" src="img/ConvoBuilder/libraries/apikeys.png">
 9. Upon filling all the fields, Click SAVE, followed by the Play button.
 
-    <img style="width:750px" src="img/ConvoBuilder/libraries/saveplay.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/libraries/saveplay.png">
