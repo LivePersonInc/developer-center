@@ -4,13 +4,10 @@ redirect_from:
   - agent-retrieve-participant-info.html
 Keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Agent Experience & Bots"
 documentname: Chat Agent API
 subfoldername: Methods
-
-order: 150
 permalink: chat-agent-api-methods-retrieve-participant-info.html
-
 indicator: chat
 ---
 
@@ -28,19 +25,20 @@ This method retrieves information regarding the authenticated visitor within the
 |------------------------------------------|------------------|
 | Authorization Bearer {bearer-from-login} |                  |
 | Content-Type                             | application/json |
-| Accept                                   | application/json | 
+| Accept                                   | application/json |
 
 **Formats**
 
 The body media type must have one of the following formats:
 
-- XML
-- JSON
+* XML
+* JSON
 
 ### Response
 
 **Elements in the response**
 
+```json
 {  
    "authenticatedParticipantInfo":{  
       "isUserAuthenticated":true,
@@ -77,10 +75,11 @@ The body media type must have one of the following formats:
       ]
    }
 }
+```
 
-| Name           | Description                                                                                                                  | Type              | Notes                                                                                                                                                                                                                                                      |
-|----------------|------------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| visitor-name   | The name that was set by the visitor.                                                                                        | link relationship |                                                                                                                                                                                                                                                            |
+| Name           | Description  | Type              | Notes   |
+|----------------|-------------|-------------------|-----------|
+| visitor-name   | The name that was set by the visitor.                                                                                        | link relationship|                                                                                                                                                                                                                                 |
 | visitor-typing | Visitor's typing status.                                                                                                     | link relationship |                                                                                                                                                                                                                                                            |
 | agent-typing   | Agent's typing status.                                                                                                       | link relationship |                                                                                                                                                                                                                                                            |
 | state          | The state of the chat session.                                                                                               | string            | Valid values: "waiting", "chatting", "ended"                                                                                                                                                                                                               |
@@ -100,5 +99,5 @@ The body media type must have one of the following formats:
 **Response Codes**
 
 | Code| Response|
-|------|------| 
+|------|------|
  |200  |OK |
