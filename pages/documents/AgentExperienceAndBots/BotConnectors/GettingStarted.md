@@ -77,7 +77,7 @@ To access the Bot Connector dashboard, contact your Account Manager to enable th
 
 Upon logging in to LiveEngage, you will see the Automation Tab:
 
-<img style="width:900px" src="img/botconnectordashboard/automation_tab.png">
+<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/automation_tab.png">
 
 Follow the steps below to add a new bot connector.
 
@@ -109,4 +109,4 @@ Move on to the product guides to learn how to connect and configure your specifi
 * [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
 * [Dialogflow V1](bot-connectors-google-dialog-flow.html)
 * [Dialogflow V2](bot-connectors-google-dialog-flow-version-2.html)
-* [Lex](bot-connectors-custom-third-party-bots.html)
+* [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
