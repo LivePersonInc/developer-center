@@ -73,15 +73,9 @@ Go to API management page (Campaigns tab > Data Sources > APIs) and add the foll
 
 ### Provision connector in the Bot Connector dashboard
 
-To access the Bot Connector dashboard navigate to your appropriate URL:
+To access the Bot Connector dashboard, contact your Account Manager to enable the Automation Area in LiveEngage for your account.
 
-| Region | URL |
-| --- | --- |
-| NA | https://bot-console.fs.liveperson.com |
-| EMEA | https://bot-console.emea.fs.liveperson.com |
-| APAC | https://bot-console.apac.fs.liveperson.com |
-
-Upon logging in, you will see the bot status screen.
+Upon logging in to LiveEngage, you will see the Automation Tab:
 
 <img style="width:900px" src="img/botconnectordashboard/overview.png">
 
