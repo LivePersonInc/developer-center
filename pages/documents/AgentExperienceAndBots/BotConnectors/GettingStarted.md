@@ -77,7 +77,7 @@ To access the Bot Connector dashboard, contact your Account Manager to enable th
 
 Upon logging in to LiveEngage, you will see the Automation Tab:
 
-<img style="width:900px" src="img/botconnectordashboard/overview.png">
+<img style="width:900px" src="img/botconnectordashboard/automation_tab.png">
 
 Follow the steps below to add a new bot connector.
 
