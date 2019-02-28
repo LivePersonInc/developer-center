@@ -81,6 +81,8 @@ Upon logging in to LiveEngage, you will see the Automation Tab:
 
 Follow the steps below to add a new bot connector.
 
+1. Navigate to the Automation Area Dashboard and click "Connect Bots" on the side menu.
+
 1. Navigate to the Config page and click “+ADD NEW BOT”
 
     <img style="width:800px" src="img/botconnectordashboard/addnew.png">
