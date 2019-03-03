@@ -32,11 +32,22 @@ v   | version of the API (1 or 2)                    | string     | Optional | d
 
 #### Note: New capability - partial retrieval of data
 
-The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the contentToRetrive parameter and specifying the types of content you would like to get in the response.
+The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the **`contentToRetrive`** parameter and specifying the types of content you would like to get in the response.
 
 <div class="important">Because this API retrieves <b>some</b> of the SDEs that are supported in LiveEngage by design, it is not suitable for brands looking for <b>all</b> of their data. The data retrieved by this API will be partial, usually limited to the last update LiveEngage performed to the SDEs. If you're looking into retrieving all of your data instead, the <a href="data-access-api-overview.html">Data Access API</a> is better suited to your needs. You can also refer to the <a href="messaging-interactions-api-methods-get-conversation-by-conversation-id.html">Get Conversation by ID method</a> of this API if you're looking for all SDEs for one specific conversation.</div>
 
-The default types that are returned (without using contentToRetrieve) are: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
+When calling the API **without** sending **'contentToRetrieve'** parameter at all, the following default types will be returned:
+
+**Default types:**
+
+```json
+campaign, messageRecords, agentParticipants, agentParticipantsLeave,
+agentParticipantsActive, consumerParticipants, transfers, interactions,
+messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
+```
+
+#### Note:
+Every content type must be passed in **'contentToRetrieve'** parameter in order to be retrieved, **including the default types**. List of **'contentToRetrieve'** valid data types are found under **'contentToRetrieve'** in the following filters part.
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
@@ -62,7 +73,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation                                                  | String   | Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, intents|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to}       | Range of NPS assigned to the conversation.                                                    | numeric, numeric                  | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick       | Match a specific word within a PCS question name or brick ID                                  | alphanumeric                       | Optional |
@@ -72,6 +83,9 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |fcr                 | Values of FCR (First Call Resolution) assigned to the conversation.                                                   | Array `<String>`                   | Optional | Possible values: yes, no. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve                            | String, String                     | Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
 |answerText          | Specific words or phrases from PCS free text answers                                  | Array `<String>`                   | Optional |
+|intentName | Intent names in the intentName parameter match the intentName field of any detected intent. Pass the intentName you'd like to filter by | Array `<String>` | Optional | Get only conversations that have at least one intent with a name from the specified list. Intent names must be accurate from  a character standpoint, and are not case sensitive. |
+|intentConfidenceScore | The intentConfidenceScore field is greater or equal to the confidenceScore parameter of any detected intent. | double - up to 3 decimal digits. | Optional | Get only conversations that have at least one intent with a confidenceScore field that is greater or equal to confidenceScore parameter. When using this filter together with the 'intentName' filter above, the score refers to the intents that were specified as part of the 'intentName' list. |
+|selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 
 Filters examples:
 
@@ -97,8 +111,8 @@ Filters examples:
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
-|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime"]}|
-|latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} | 
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents"]}|
+|latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 |nps                 | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
 |questionBrick       | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
 |invalidFreeTextAnswer | {"start": {"from": "1484830093231", "to": "1485447764498"}, "invalidFreeTextAnswer": "INVALID_FREE_TEXT_ANSWER"}|
@@ -107,6 +121,8 @@ Filters examples:
 |fcr                 | {"start":{"from":1470037448000,"to":1472543048000},"fcr":["yes","no"]}|
 |questionTypeAndFormatToRetrieve | {"start":{"from":1470037448000,"to":1472543048000}, "questionTypeAndFormatToRetrieve":{"type":"custom","format":"open}}|
 |answerText           | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
+|intentName | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["campaign","intents"],"intentName":["Plan_inquiry_46","Remove_Plan_46"]}|
+|intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
 
 
 **Note: search by keywords, summary or engagement attributes**
@@ -147,6 +163,7 @@ summary              | Contains information about the conversation's summary.   
 sdes                 | List of Engagement Attributes.                                                 | container
 responseTime         | Response time                                                                  | container
 dialogs              | Contains information about the different dialogs for the current conversation. | container
+intents              | Contains information about the intents that relate to the current conversation. | container
 
 _Conversation info_
 
@@ -467,14 +484,14 @@ Name         | Description                                     | Type/Value | No
 surveyType   | Type of the survey.                             | string     | CSAT or PostSurvey
 surveyStatus | Status of the submission of the survey.         | string     |
 dialogId     | The ID of the dialog of the survey.             | string     |
-surveyId     | The ID of the survey.                           | string     | 
+surveyId     | The ID of the survey.                           | string     |
 surveyData   | List of the question and answers in the survey. | container  |
 
 _SurveyData info_
 
 Name     | Description           | Type/Value | Notes
 :------- | :-------------------- | :--------- | :----------------------------
-question | Survey question text. | string     | 
+question | Survey question text. | string     |
 answer   | Survey answer text,   | string     |
 questionId | Survey question ID  | string     |
 answerId   | Survey answer ID,   | string     | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
@@ -526,11 +543,34 @@ skillId      | The skill ID associated with the dialog.        | string     |
 skillName    | The name of the skill associated with the dialog.| string     |
 
 
+_Intents info_
+
+Name            | Description                                 | Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+selectedClassification | The selected intent classification for a specific message. | LiveIntentClassification
+allClassifications | All intent classification results for the same message. | Array `<LiveIntentClassification>`
+messageId | The id of the message that triggered this intent. | string
+
+_LiveIntentClassification DTO_
+
+Name            | Description                                 | Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+intentName          | The name of this intent. | string
+confidenceScore | Intent confidence score. | double - up to 3 decimal digits
+versions         | Model versions used to generate this intent. |  Array `<LiveIntentVersionDTO>`
+
+_LiveIntentVersion DTO_
+
+Name            | Description                                 | Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+modelName          | The name of the model. | string
+modelVersion | The version of the model. | string
 
 
 **JSON Example**
 
 ```json
+
 {
   "_metadata": {
     "count": 1,
@@ -601,18 +641,18 @@ skillName    | The name of the skill associated with the dialog.| string     |
         "behaviorSystemDefault": false
       },
       "monitoring": {
-         "country": "United States",
-         "countryCode": "US",
-         "state": "Michigan",
-         "city": "Michigan",
-         "isp": "AT&T U-verse",
-         "org": "AT&T U-verse",
-         "device": "DESKTOP",
-         "ipAddress": "192.000.12.240",
-         "browser": "Chrome 66.0.3359.181",
-         "operatingSystem": "WINDOWS",
-         "conversationStartPage": "https://testPage",
-         "conversationStartPageTitle": "LivePerson Page"
+        "country": "United States",
+        "countryCode": "US",
+        "state": "Michigan",
+        "city": "Michigan",
+        "isp": "AT&T U-verse",
+        "org": "AT&T U-verse",
+        "device": "DESKTOP",
+        "ipAddress": "192.000.12.240",
+        "browser": "Chrome 66.0.3359.181",
+        "operatingSystem": "WINDOWS",
+        "conversationStartPage": "https://testPage",
+        "conversationStartPageTitle": "LivePerson Page"
       },
       "messageRecords": [
         {
@@ -769,7 +809,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "time": "2016-08-29 14:30:24.573+0000",
           "timeL": 1472481024573,
           "consumerName": "Visitor",
-	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "transfers": [
@@ -803,7 +843,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "sourceAgentFullName": "michal",
           "sourceAgentLoginName": "michal@lp.com",
           "sourceAgentNickname": "michal",
-	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "interactions": [
@@ -819,20 +859,20 @@ skillName    | The name of the skill associated with the dialog.| string     |
         }
       ],
       "dialogs": [
-      	{
-         "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
-	 "status": "OPEN",
-	 "dialogType": "MAIN",
-	 "dialogChannelType": "MESSAGING",
-	 "startTime": "2017-09-25 07:55:58.000+0000",
-	 "startTimeL": 1506326158000,
-	 "endTime": "2017-09-25 07:56:53.422+0000",
-	 "endTimeL": 1506326213422,
-	 "closeReason": “AGENT”,
-	 “closeReasonDescription”:”MANUAL_CLOSE”,
-	 “skillId”: 1234,
-	 “skillName”: “skill3”
-	}
+        {
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+          "status": "OPEN",
+          "dialogType": "MAIN",
+          "dialogChannelType": "MESSAGING",
+          "startTime": "2017-09-25 07:55:58.000+0000",
+          "startTimeL": 1506326158000,
+          "endTime": "2017-09-25 07:56:53.422+0000",
+          "endTimeL": 1506326213422,
+          "closeReason": "AGENT",
+          "closeReasonDescription": "MANUAL_CLOSE",
+          "skillId": 1234,
+          "skillName": "skill3"
+        }
       ],
       "messageScore": [
         {
@@ -869,7 +909,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "participantId": "3677470410",
           "participantType": "Agent",
           "messageDeliveryStatus": "ACCEPT",
-	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         },
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
@@ -879,7 +919,7 @@ skillName    | The name of the skill associated with the dialog.| string     |
           "participantId": "3677470410",
           "participantType": "Agent",
           "messageDeliveryStatus": "READ",
-	  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
         }
       ],
       "conversationSurveys": [
@@ -893,54 +933,6 @@ skillName    | The name of the skill associated with the dialog.| string     |
               "answer": "Yes"
             }
           ]
-        },
-        {
-            "surveyType": "PostSurvey",
-            "surveyStatus": "Completed",
-            "dialogId": "04e249fb-2f39-4957-8bcc-b27e32c830a2",
-            "surveyId": "3164909812",
-            "surveyData": [
-                {
-                    "question": "How would you rate your overall experience?",
-                    "answer": "3",
-                    "questionId": "a409bad5-01ce-47bd-be91-c37768038291",
-                    "answerId": "863fd171-22c7-4dc5-b0c7-a4e598080e85",
-                    "questionType": "csat",
-                    "questionFormat": "single"
-                },
-                {
-                    "question": "Based on your experience today, how likely are you to recommend us to a friend or colleague? (0 Not at all likely - 10 extremely likely)",
-                    "answer": "0",
-                    "questionId": "0b9e1a1a-aa04-4d36-9662-c5fb417d68f8",
-                    "answerId": "InvalidAnswer",
-                    "questionType": "nps",
-                    "questionFormat": "single"
-                },
-                {
-                    "question": "Based on your experience today, how likely are you to recommend us to a friend or colleague? (0 Not at all likely - 10 extremely likely)",
-                    "answer": "8",
-                    "questionId": "0b9e1a1a-aa04-4d36-9662-c5fb417d68f8",
-                    "answerId": "0e7aecdd-f9ec-49c4-bdcb-da15198c1a2c",
-                    "questionType": "nps",
-                    "questionFormat": "single"
-                },
-                {
-                    "question": "What would you have done had you not messaged us today?",
-                    "answer": "0",
-                    "questionId": "9d1eec83-47ef-4399-8217-cd0a6e863bb7",
-                    "answerId": "0894f479-124d-4209-b275-d23e935e5370",
-                    "questionType": "custom",
-                    "questionFormat": "single"
-                },
-                {
-                    "question": "Was the issue you contacted us about resolved during this engagement?",
-                    "answer": "1",
-                    "questionId": "97266478-4848-4d28-abb1-2ec7b8a4b95e",
-                    "answerId": "a8440e1f-366a-48d9-bd91-3654fed5b46b",
-                    "questionType": "fcr",
-                    "questionFormat": "single"
-                }
-            ]
         }
       ],
       "coBrowseSessions": {
@@ -1017,7 +1009,117 @@ skillName    | The name of the skill associated with the dialog.| string     |
       "summary": {
         "text": "summary",
         "lastUpdatedTime": 1482333795318
-      }
+      },
+      "intents": [
+        {
+          "selectedClassification": {
+            "intentName": "other--other--n_a",
+            "confidenceScore": 1,
+            "versions": [
+              {
+                "modelName": "sic",
+                "modelVersion": "1.0"
+              },
+              {
+                "modelName": "tmo_classifier",
+                "modelVersion": "1.0"
+              }
+            ]
+          },
+          "allClassifications": [
+            {
+              "intentName": "other--other--n_a",
+              "confidenceScore": 1,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            },
+            {
+              "intentName": "billing_and_payment--payment_arrangement--set-up_payment_arrangement",
+              "confidenceScore": 0,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            }
+          ],
+          "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:12"
+        },
+        {
+          "selectedClassification": {
+            "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+            "confidenceScore": 0.908,
+            "versions": [
+              {
+                "modelName": "sic",
+                "modelVersion": "1.0"
+              },
+              {
+                "modelName": "tmo_classifier",
+                "modelVersion": "1.0"
+              }
+            ]
+          },
+          "allClassifications": [
+            {
+              "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+              "confidenceScore": 0.908,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            },
+            {
+              "intentName": "other--other--n_a",
+              "confidenceScore": 0.265,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            },
+            {
+              "intentName": "billing_and_payment--billing_and_payment_support--dispute_or_fix_a_bill",
+              "confidenceScore": 0.224,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            }
+          ],
+          "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:16"
+        }
+      ]
     }
   ]
 }
