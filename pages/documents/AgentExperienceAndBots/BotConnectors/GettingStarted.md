@@ -73,19 +73,15 @@ Go to API management page (Campaigns tab > Data Sources > APIs) and add the foll
 
 ### Provision connector in the Bot Connector dashboard
 
-To access the Bot Connector dashboard navigate to your appropriate URL:
+To access the Bot Connector dashboard, contact your Account Manager to enable the Automation Area in LiveEngage for your account.
 
-| Region | URL |
-| --- | --- |
-| NA | https://bot-console.fs.liveperson.com |
-| EMEA | https://bot-console.emea.fs.liveperson.com |
-| APAC | https://bot-console.apac.fs.liveperson.com |
+Upon logging in to LiveEngage, you will see the Automation Tab:
 
-Upon logging in, you will see the bot status screen.
-
-<img style="width:900px" src="img/botconnectordashboard/overview.png">
+<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/automation_tab.png">
 
 Follow the steps below to add a new bot connector.
+
+1. Navigate to the Automation Area Dashboard and click "Connect Bots" on the side menu.
 
 1. Navigate to the Config page and click “+ADD NEW BOT”
 
@@ -113,4 +109,4 @@ Move on to the product guides to learn how to connect and configure your specifi
 * [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
 * [Dialogflow V1](bot-connectors-google-dialog-flow.html)
 * [Dialogflow V2](bot-connectors-google-dialog-flow-version-2.html)
-* [Lex](bot-connectors-custom-third-party-bots.html)
+* [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
