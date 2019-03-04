@@ -24,7 +24,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
     <!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_2.png">-->
 
-3. Click **New Automation**, select the Basic Automation template, give your automation a unique name and description, and be sure to select Consumer Facing Bot.
+3. Click **New Automation**, select the Basic Automation [template](conversation-builder-templates-overview.html), give your automation a unique name and description, and be sure to select Consumer Facing Bot.
     <!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/newAutomation.png">-->
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/createAutomation.png">

@@ -150,9 +150,9 @@
           #- subpagename: 5 - Releases and Versioning
           #- subpagename: Basic - FAQ Bot Tutorial
           #- subpagename: Basic - Routing Bot Tutorial
-      #- pagename: Templates
-        #subpages:
-          #- subpagename: Overview
+      - pagename: Templates
+        subpages:
+          - subpagename: Overview
           #- subpagename: Retail Templates
       - pagename: Conversation Builder
         subpages:
