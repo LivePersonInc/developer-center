@@ -503,7 +503,7 @@
     - appleBusinessChat: "Supported"
     - sms: "Supported"
     - facebook: "Supported"
-    - whatsapp: "Not Supported"
+    - whatsapp: "Supported"
     - googleRCS: "Supported"
     - line: "Not Supported"
     - messagingWindowAPI: "Supported"
