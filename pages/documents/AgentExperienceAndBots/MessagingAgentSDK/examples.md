@@ -86,13 +86,12 @@ In this example, you will:
 * The bot will then transfer the conversation to an agent.
 
 There are two parts to making this example work:
-
 1. In order to setup the agent-side code which achieves the Agent Bot example (routing bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) to review the Agent Bot (routing bot) example on Github.
 
 2. In order to generate a conversation with the account (and the Return To Same Agent Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
 
 
-<div class="important"><a href="https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot">Click here</a> to review the full code repository on Github for this example.</div>
+<div class="important"><a href="https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/transfer2same-agent-bot">Click here</a> to review the full code repository on Github for this example.</div>
 
 
 ### Bots Cluster Example
