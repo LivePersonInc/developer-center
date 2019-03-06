@@ -7,9 +7,6 @@ subfoldername: Authorization and Authentication
 indicator: messaging
 permalink: connector-api-authorization-and-authentication-authorization-error-responses.html
 ---
-
-<div class="important">The error response format described here will be available in the next release.</div>
-
 The SEND API returns an error response for every authorization or authentication failure. Such an error response contains a JSON payload which details the error, error title, details about the error and both an HTTP error code (401) and a specific code for the type of error encountered. For example, if the AppJWT is missing, then the Send API will return the following response:
 
 ```json
