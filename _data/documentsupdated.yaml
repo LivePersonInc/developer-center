@@ -135,6 +135,7 @@
       - pagename: Platform Overview
       - pagename: Getting Started
         subpages:
+          - subpagename: 0 - Video Tutorials
           - subpagename: 1 - Dialogs and Patterns
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
