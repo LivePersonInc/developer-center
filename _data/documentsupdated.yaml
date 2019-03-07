@@ -116,14 +116,6 @@
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
-  - documentname: Customer Facing Bots
-    pages:
-      - pagename: Overview
-      - pagename: Prerequisites
-      - pagename: Getting Started
-      - pagename: Considerations
-      - pagename: Deploying Bots on Live Chat
-      - pagename: Deploying Bots on Messaging
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
