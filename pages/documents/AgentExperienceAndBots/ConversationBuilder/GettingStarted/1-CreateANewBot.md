@@ -52,9 +52,9 @@ The statement interactions (Text, Image, Audio, Video) are for displaying conten
 
 Learn more about interactions [here](conversation-builder-conversation-builder-interactions.html).
 
-Let’s see them in action! Tap on the Messaging Client icon <img style="width:40px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> floating in the bottom-right and you should now see the Welcome dialog display.
+Let’s see them in action! Tap on the Preview icon <img style="width:40px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> floating in the bottom-right and you should now see the Welcome dialog display.
 
-Type "reset" in the Messaging Client to start fresh and then type “hello” or “hello there” and you should get the welcome again.
+Type "reset" in the Preview to start fresh and then type “hello” or “hello there” and you should get the welcome again.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/testConvo.png">
 
@@ -72,7 +72,7 @@ Now that you’ve seen how a dialog is triggered, let’s change the welcome **r
 
 Click on the Text interaction below the User Says interaction. Change the text from `Hi there! Thanks for coming!` to just `Hello World!` and hit enter. There is no need to open the Interaction Details panel to change simple output text.
 
-To see your change, open the Messaging Client in the bottom-right, type “reset” and then “hi”. You should now be seeing your “Hello World!” response.
+To see your change, open the Preview in the bottom-right, type “reset” and then “hi”. You should now be seeing your “Hello World!” response.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/helloworld.png">
 
@@ -93,11 +93,11 @@ To add the patterns for our Goodbye dialog, tap on the Interaction Details icon 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/addnewpattern.png">
 
-Before we test in the Messaging Client, we need to add some content to display once we’ve matched our patterns.
+Before we test in the Preview, we need to add some content to display once we’ve matched our patterns.
 
 Add a Text interaction after the User Says interaction, type your goodbye message (eg: "Bye, thanks for coming!") and hit enter.
 
-Now go to the Messaging Client, type “reset” and then type “hi” to see the Welcome dialog and then type “bye” to trigger the Goodbye dialog and to see your goodbye message.
+Now go to the Preview, type “reset” and then type “hi” to see the Welcome dialog and then type “bye” to trigger the Goodbye dialog and to see your goodbye message.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/byetest.png">
 
@@ -114,6 +114,6 @@ There can only be one Fallback Dialog Type per automation.
 
 We do, however, need to add some type of message to tell the user that we didn’t understand their query. Add a new Text statement and provide a message like `Sorry, I only know ‘hello’ and ‘goodbye’...` or similar and hit enter.
 
-Go to the Messaging Client, type “reset” and then type something other than your hello and goodbye patterns. You should now be getting your fallback message.
+Go to the Preview, type “reset” and then type something other than your hello and goodbye patterns. You should now be getting your fallback message.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/fallbacktext.png">

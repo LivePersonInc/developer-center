@@ -77,7 +77,7 @@ On the top-left of the screen, you will find the **Bot Menu** gear icon which in
 
 On the bottom-right of the screen, you will find:
 
-* **Messaging Client** - Automation test conversation. Start a new session by sending "reset".
+* **Preview** - Automation test conversation. Start a new session by sending "reset".
 
 * **Debugger** - View logs for a certain User ID.
 
