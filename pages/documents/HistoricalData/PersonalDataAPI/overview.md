@@ -19,7 +19,7 @@ Personal Data Deletion API allows brands to comply with the European Union's Rig
 Personal data may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request was made final (explanation regarding when requests are made final can be found below).
 
 {: .important}
-What this document refers to as "deletion" is actually the replacement of specific, personal data with the text: ** LP deleted data ** 
+What this document refers to as "deletion" is actually the replacement of specific, personal data with the text: ** LP deleted data **
 
 
 ### Getting Started
@@ -47,7 +47,7 @@ There is a limitation of the number of deletion requests that a brand can issue 
 
 ### Main flows
 
-** Note ** : Only closed chats / conversations can be deleted.
+**Note** : Only closed chats / conversations can be deleted.
 
 **Chat**
 
