@@ -12,6 +12,35 @@ indicator: messaging
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+### Android Messaging SDK - Version 3.6.1
+
+### Overview
+
+Android Mobile App SDK v3.6.1 contains a new API call to enable/disable SDK logs.
+
+#### Environmental Requirements
+
+Android Mobile App SDK v3.6.1 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+### Bugs
+
+#### Bug Fixes
+
+SDK logging information is not available while the host application is running in debug mode.
+
+### APIs
+
+#### New APIs
+
+|     API      | Description |
+| ------------ | ------------ |
+| public static void setIsDebuggable(boolean isDebuggable) | Use this api to enable/disable the SDK logs. |
+
+Note: SDK logging is disabled by default. To Enable it, use the above method.
+
+Example:
+`Liveperson.setIsDebuggable(BuildConfig.DEBUG)`
+
 ### Android Messaging SDK - Version 3.6.0
 
 
