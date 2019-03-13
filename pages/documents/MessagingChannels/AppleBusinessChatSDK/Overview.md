@@ -11,9 +11,9 @@ indicator: messaging
 
 ### What is the ABC SDK
 
-The Apple Business Chat SDK is an XCode library that allows developers to easily provide a more interactive experience to consumers by reacting to conversational context.
+The Apple Business Chat SDK is an iOS Swift framework allowing developers an easy integration in order to provide rich interactive conversational experience to consumers, by reacting to conversational context in real time.
 
-After sending a custom interactive message, this SDK allows you to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
+After recieveing a custom interactive message (CIM), this SDK allows you to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
 
 ### What does the SDK do?
 
