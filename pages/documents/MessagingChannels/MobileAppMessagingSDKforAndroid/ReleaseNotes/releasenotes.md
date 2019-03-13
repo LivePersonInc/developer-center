@@ -16,7 +16,7 @@ indicator: messaging
 
 ### Overview
 
-Android Mobile App SDK v3.6.1 contains new API call to enable/disable SDK logs.
+Android Mobile App SDK v3.6.1 contains a new API call to enable/disable SDK logs.
 
 #### Environmental Requirements
 
@@ -36,11 +36,10 @@ SDK logging information is not available while the host application is running i
 | ------------ | ------------ |
 | public static void setIsDebuggable(boolean isDebuggable) | Use this api to enable/disable the SDK logs. |
 
-Note: SDK logging is disabled by default. To Enable it, use above method.
+Note: SDK logging is disabled by default. To Enable it, use the above method.
 
 Example:
 `Liveperson.setIsDebuggable(BuildConfig.DEBUG)`
-
 
 ### Android Messaging SDK - Version 3.6.0
 
