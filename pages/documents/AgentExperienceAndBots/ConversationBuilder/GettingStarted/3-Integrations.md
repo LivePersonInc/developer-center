@@ -120,7 +120,7 @@ Add an Integration <img style="width:40px" src="img/ConvoBuilder/helloworld/imag
 
 To finish, we just need to display the user’s balance results. Add a Text statement interaction and enter the following copy: "Your current balance is {Balance.balance}". When the integration interaction runs, it stores the response data in the Custom Data Field that you configured. `Balance.balance` is the integration name followed by the Custom Data Field “balance” that you configured in the Integration.
 
-Go to the Messaging Client, type "reset" and type “account balance” or similar to start your dialog. *Any* 6 digit account number and *any* email address will work for this API.
+Go to the Preview, type "reset" and type “account balance” or similar to start your dialog. *Any* 6 digit account number and *any* email address will work for this API.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/integrationtest.png">
 

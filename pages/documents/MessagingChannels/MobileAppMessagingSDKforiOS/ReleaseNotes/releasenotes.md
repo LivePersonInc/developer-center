@@ -15,6 +15,22 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.6.1
+### Overview
+
+iOS Mobile App SDK v3.6.1 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.6.1 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
+
+### Bugs
+
+#### Bug Fixes
+
+* `LPMessagingSDKNotificationDelegate` delegate call not being triggered.
+
+
 ### iOS Messaging SDK - Version 3.6
 ### Overview
 

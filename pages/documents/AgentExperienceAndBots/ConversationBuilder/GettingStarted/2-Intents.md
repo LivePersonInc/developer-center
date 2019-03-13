@@ -120,7 +120,7 @@ Scroll up to Response Match & Actions and tap on the **+** to add another condit
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseno.png">
 
-Select the Messaging Client icon and lets see the complete dialog in action.
+Select the Preview icon and lets see the complete dialog in action.
 
 Type in an utterance that should match for your billing intent like "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or type “yes” or “no” and see what response you get.
 
