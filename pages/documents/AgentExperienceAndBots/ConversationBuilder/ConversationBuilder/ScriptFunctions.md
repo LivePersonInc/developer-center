@@ -245,9 +245,7 @@ botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If yo
 Used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number).
 
 {: .important}
-- You can have up to 10 quick replies per message.
-- The quick reply titles have a character limit of 20 chars.
-- The quick reply payload (delimited by `~`) is optional.
+A few limitations apply to quick replies. You can have up to 10 quick replies per message. The quick reply titles have a character limit of 20 chars. The quick reply payload (delimited by `~`) is optional.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
