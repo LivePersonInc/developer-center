@@ -9,27 +9,17 @@ permalink: apple-business-chat-sdk-installation.html
 indicator: messaging
 ---
 
-### Prerequisites
+### SDK Requirements
 
 - Xcode 9.3 and up
 - Minimum deployment target iOS 11.3
 - Swift 4.2 and up
 - An iMessage App / Extension target
 
-### LE Account Configuration/ Server side installation
+### Apple and LivePerson Configuration
  
-1.  Make sure you have an ABC biz ID.
-2. In houston, ‘App management' use template/custom to create a json stab:
-	- Make sure to populate a "client_name". The rest of the json is not needed and could be disposed. 
-	- Click “install”, The generated ‘appInstallId’ will show up in the 'Private installed Apps' tab, under the client_name you created.
-3. Enable ABC SDK via Houston:
-	- go to: Messaging Gateway- Apple
-	- Enable SDK enabled flag to ‘true’
-	- Paste the 'app install id' from previous step
-	- Paste in the 'biz id' from first step
-	
-4. Make sure site settings enabled with messaging.sdes (set flag to ‘true’)
-5. Make sure site setting file sharing is enabled (messaging.file.sharing.enabled) flag is set to ‘true’
+1. Make sure you have an Apple Business Chat business ID.
+2. Contact your LivePerson account representative to enable this SDK on the backend server. 
 
 ### SDK Installation in XCode
 
