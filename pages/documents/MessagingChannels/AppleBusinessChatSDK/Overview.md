@@ -11,52 +11,30 @@ indicator: messaging
 
 ### What is the ABC SDK
 
-The Apple Business Chat SDK is an iOS Swift framework allowing developers an easy integration in order to provide rich interactive conversational experience to consumers, by reacting to conversational context in real time.
+The Apple Business Chat SDK is an iOS Swift framework that allows developers to easily implement a rich, interactive experience for consumers, by reacting to conversational context in real time.
 
-After recieveing a custom interactive message (CIM), this SDK allows you to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
+The framework is very lightweight at ~450kb. It is designed to be an easy addition to any host app or iMessage app.
+
 
 ### What does the SDK do?
 
-- Allows you to measure incremental lift and ROI from ABC conversations and LiveEngage operational tools.  
-- Provides human and bot agents with context of the consumer’s iMessage app transactional and activity data, allowing them to have a more meaningful and effective conversation
-- Create data-driven integrations to external systems via the agent widget SDK
+After recieveing a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html), this SDK allows the developer to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
+
+- Report SDEs
+  - Allows you to measure incremental lift and ROI from ABC conversations and LiveEngage operational tools
+- More easily allows Agents to read Custom Interactive Messages from Consumers
+  - Provides human and bot agents with context of the consumer’s iMessage app transactional and activity data, allowing them to have a more meaningful and effective conversation
+- Notify the developer of conversational events so that they can take action with custom SDEs
+  - Create data-driven integrations to external systems via the agent widget SDK
 
 ### Who is the SDK for?
 
-Firstly, the Apple Business Chat SDK is for brands that are using or intend to use the Apple Business Chat channel to converse with their consumers.
+Firstly, the Apple Business Chat SDK is for brands that are using or intend to use the Apple Business Chat channel to connect with their consumers.
 
 The SDK has 2 distinctive contextual integration environments:
-  - iMessage app mode
-  - Host app mode
+  - iMessage app mode (required)
+  - Host app mode (optional)
 
-<!--
-
-
-Brands using Apple Business Chat to connect with their consumers can now gather more interactional and activity context on the consumer with the Apple Business Chat. Brands using Business Chat are using the native Custom Interactive Message (iMessage apps) to enrich the consumer experience with conversational apps to allow for more transactions to occur during the brand to consumer connection. To fully enrich the consumer conversational interactions, brands are also looking to pass the iMessage apps user transaction or activities events to LiveEngage, to allow bots and agents to gather the consumer information required to manage a contextual and knowledgeable conversation with the consumer, in run time conversation. Brands should also be able to look at historical data to analyze the business activities and transactions that lifts the conversions rates and business goals.    
-
-
-Liveperson ABC SDK goal is to provide integration solutions for iOS apps (Host & iMessage app/ Extension) with LiveEngage platform. 
-After sending a custom interactive message (CIM), this SDK will allows you to enhance the conversation by reporing any of the supported consumer behavior/SDEs, as [engagement attributes](engagement-attributes-types-of-engagement-attributes.html) to the Liveengage platform:  
-
-### What Problem does the SDK solve
-
-- **Real time transaction and activities events (SDEs)** - Bots and agents cannot react to real time activities or transactions of consumers they're conversing with. They are kept blind to the conversation context, and therefore cannot manage the conversation with the expected context and knowledge. 
-- **Historical transactions and activities analytics (SDEs)** -  Brands can’t report to LE on transaction or activities that happened during the Business Chat conversation, which creates a problem for brands that are looking to measure ROI, incremental lift and business conversation correlated to the ABC conversations. Brands can’t answer the basic  question of “did LE help me reach my business goals?”.
-
-### Benefits of using the SDK
-
-
-
-### Included Functionality
-
-By leveraging LivePerson's APIs ([Monitoring](monitoring-api-overview.html) and [Engagement Attribute API](engagement-attributes-api-overview.html) among others), this SDK is able to provide the following functionality:
-
-- Report Engagement Attributes back to the LiveEngage conversation
-- Notify human and bot agents whether an iMessage app is installed via an SDE, once a ‘Welcome bubble’ message type is sent to an iOS device.* (Auto triggered SDEs)
-- Enabling textual context for outgoing Interactive messages to be presented on Agent Console. * 
-- How to implement Custom Reply Message
-
--->
 
 ### Example Use Cases
 

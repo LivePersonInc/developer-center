@@ -11,18 +11,21 @@ indicator: messaging
 
 ### Initializing the SDK
 
+This method initializes the SDK. 
+
 ```swift
-LPABCSDK.initializeSDK() // default: log level will be .info, enable = true
-LPABCSDK.initializeSDK(minimumLogLevel: .trace, enableLog: true)
+LPABCSDK.initializeSDK() // default minimumLogLevel will be .info and enableLog will be true
+
+LPABCSDK.initializeSDK(minimumLogLevel: .trace, enableLog: false)
 ```
 
-### Update the SDK upon recieving a new CIM
+### Update the SDK with Incoming CIM 
+
+Upon an agent sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this method will update the SDK with a payload that will enable SDE reporting to LiveEngage.
 
 ```swift
 self.lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
 ```
-
-Updating SDK with an incoming CIM for caching SDE reporting ability relevant payload. 
 
 Should be implemented from both override functions:
 - `didBecomeActive(with conversation: MSConversation)`
@@ -30,11 +33,17 @@ Should be implemented from both override functions:
 
 in the iMessage extension `MSMessagesAppViewController`
 
+See [step 6 of Installation for more](apple-business-chat-sdk-installation.html#sdk-installation-in-xcode).
+
 ### Create SDEs
 
-**createSDE** function Generates an SDEBase object as a template reference to the relevant [SDE type](engagement-attributes-types-of-engagement-attributes.html) that passed in parameter, as a completion closure.
+When you create one or more SDEs, they get added to a Stack that the framework manages for you.
 
-A setup call on the callback sde is required in order to initiate the sde with all relevant params, and add it to a stack. 
+The `createSDE` function generates an SDEBase object.
+
+Pass in the [SDE type](engagement-attributes-types-of-engagement-attributes.html) that you want, and it will return an sdeBase object with reference to the relevant sde template.
+
+Inside of the completion callback, on the sde setup method, it is required to define the relevant params to initiate the sde.
 
 Example 1: 
 
@@ -55,38 +64,36 @@ Example 2:
 ```swift
 lpabcsdk.createSDE(sdeType: .cartUpdate) { (sdeBase) in
     //Create a product:
-    let product = SDEProduct.init(name: "<>", category: "<>", sku: "<>", price: 100, quantity: 3)
+    let product = SDEProduct.init(
+        name: "<>", 
+        category: "<>", 
+        sku: "<>", 
+        price: 100, 
+        quantity: 3
+    )
     
     //Setup the sde:
-    sdeBase.cartUpdate?.setup(total: 100, currency: "<>", numItems: 1, products: [product])
+    sdeBase.cartUpdate?.setup(
+        total: 100, 
+        currency: "<>", 
+        numItems: 1, 
+        products: [product]
+    )
 }
 ```
 
-
-Setup sde could be also be created with a **json** string or **Dictionary** object:
+The sde `.setup` could be also be created with a **json** string or **Dictionary** object:
 	  
 Example:
+
 ```swift
 sdeBase.setupWithJson("{\"type\":\"ctmrinfo\"}")
 sdeBase.setupWithJson(["type":"cart"])
 ```
 
-### Sending SDE
+#### Auto Send When Idle
 
-For sending SDE Stack,  use:
-
-```swift
-lpabcsdk.sendSDEStack()  
-
-//Using completion callbacks:
-lpabcsdk.sendSDEStack(onSuccess: { (success) in
-        
-}) { (error) in
-
-}
-```  
-
-* optional - autoSendWhenIdle, when set to true, the sde will be added to the idleStack which will get sent automatically once the stack idele timeout is met. Default is 5 sec but could be anything between 0-15 sec. see `setSDEStackIdleInterval(interval:)`
+The optional `autoSendWhenIdle` parameter, when set to true, will add the sde to the **idleStack** which will get sent automatically once the [stack idle timeout](#Idle-SDE-Stack-Timeout) is met. Default is 5 sec but could be anything between 0-15 sec. See `setSDEStackIdleInterval(interval:)`
 
 Example:
 
@@ -116,48 +123,86 @@ lpabcsdk.createSDE(sdeType: .customerInfo, autoSendWhenIdle: true) { (sdeBase) i
     )
 }
 ```
-	 
-### Setting auto idle SDE Stack Time Interval
 
-`setSDEStackIdleInterval(interval:15)`
+### Sending SDE
 
-This will setup an Idle timeout interval for auto sending the idle SDE stack (optional). Default is 5 seconds and Max is 15.
-
-### Closure Executed upon SDE Send Completion
-
-For getting idle stack sent completion callback, you can implement `idleSDEStackCompletion` closure:
+In order to **manually** send the SDE Stack, use the following:
 
 ```swift
-lpabcsdk.idleSDEStackCompletion = {  completion, error in
+lpabcsdk.sendSDEStack()
 
+// or using completion callbacks:
+lpabcsdk.sendSDEStack(onSuccess: { (success) in
+    // success block
+}) { (error) in
+    // error block
 }
 ```
 
-### Implicit Event Callback: 
+### Idle SDE Stack Timeout
 
-Some actions will trigger an implicit SDE flow. This will be in a form of a dedicated callback closure returning the type of flow - ImplicitSDEType)
+This will setup an Idle timeout interval for auto sending the idle SDE stack (optional). Default is 5 seconds and Max is 15.
 
-- `ImplicitEventCallbackType` - Indicates the type of implicit event that is being call back from the implicitSDEClosure. 
+```swift
+lpabcsdk.setSDEStackIdleInterval(interval:15)
+```
+
+See the [Auto Send When Idle](#Auto-Send-When-Idle) optional parameter in [Create SDEs](#create-sdes).
+
+### Idle SDE Stack Send Completion Closure
+
+If you want to execute code whenever the Idle SDE Stack send completes, implement the `idleSDEStackCompletion` closure:
+
+```swift
+lpabcsdk.idleSDEStackCompletion = {  completion, error in
+    // debug code
+}
+
+```
+
+### Implicit Event Callback
+
+Some consumer actions can trigger an implicit SDE flow (eg. a new conversation starts). If you would like to send an SDE upon one of these events triggering, you can do so by implenting the `implicitSDEClosure` method.
+
+```swift
+lpabcsdk.implicitSDEClosure = { implicitEventCallbackType in 
+    // implement 
+}
+```
+
+- `ImplicitEventCallbackType` - Indicates the type of implicit event that is being called back from the implicitSDEClosure. 
 
 - `implicitSDEClosure` - Invoked when a qualifying event is met, and callback the type of that event 
 
 
-Then you can set the desired SDEs to express your custom reporting for the  event triggered. 
-Currently the only event expressing this is upon receiving a new, first time CIM - per conversation.
+You can set the desired SDEs to express your custom reporting for the  event triggered. 
 
-The type will be called back as follow:
+**Supported Event Types**:
+    - `newConversation` - Receiving a new, first time CIM - per conversation.
+
+Example:
 
 ```swift
-lpabcsdk.implicitSDEClosure = { implicitType  in 
+lpabcsdk.implicitSDEClosure = { implicitType in 
     switch implicitType {
-        case  case .newConversation:
-            <YOUR CUSTOM CODE HERE i.e sendCustomerInfoSDE()>
+        case .newConversation:
+            // Create and send desired SDE
     }
 }
 ```
 
-### Textual context for an outgoing CIM (consumer to Agent) implement
+### Reply CIM from Consumer to Agent
 
-`appendReplayMessagePayload(message: MSMessage, textContext: String)`
+An agent can recieve back from the consumer a Custom Interactive Message with contextual text. This text can be displayed to the agent in the LiveEngage workspace.
 
-With the initiated MSMessage object, and the desired textual String. 
+For example, if the consumer selects a product inside of your iMessage app, the Agent can see which product they selected via the `textContent` of this method.
+
+```swift
+// create MSMessage object
+
+lpabcsdk.appendReplayMessagePayload(message: MSMessage, textContext: String)
+
+// send MSMessage object
+```
+
+Pass in the initiated MSMessage object, and the desired textual String. 

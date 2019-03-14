@@ -10,7 +10,7 @@ indicator: messaging
 
 ### Overview
 
-The Custom Interactive Message Template for App Business Chat allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
+The Custom Interactive Message (CIM) Template for App Business Chat allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
 Sending the structured content templates (body and metadata) explained in this document will allow you to send the iMessage app / extension to the consumer device. 
 
@@ -205,9 +205,14 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 * Character limit - The limitation is currently 5000 characters, you should recognize this limitation and build URLs to accommodate this limitation
 
 
-### Reply Message from Consumer to Agent
+### Reply CIM from Consumer to Agent
 
-You can send text messages *to* the LiveEngage conversation *from* the iMessage app / extension that you sent to the consumer.
+{: .important}
+For an easier way to recieve a reply message from the consumer, implement the [ABC SDK](apple-business-chat-sdk-overview.html) and follow the steps seen [here](apple-business-chat-sdk-implementation.html#reply-cim-from-consumer-to-agent)
+
+An agent can recieve back from the consumer a Custom Interactive Message with a textual context. This text can be displayed to the agent in the LiveEngage workspace.
+
+For example, if the consumer selects a product inside of your iMessage app, the Agent can see which product they selected via this contextual text.
 
 In order to do this, all code is handled from within your Apple iMessage app / extension code.
 
