@@ -13,111 +13,109 @@ permalink: mobile-app-messaging-sdk-for-ios-quick-start.html
 indicator: messaging
 ---
 
-The LivePerson SDK provides brands with a simple, yet enterprise-grade and secure Mobile App Messaging solution. Through Mobile App Messaging, brands will foster connections with their customers and increase app engagement and retention.
+The LivePerson SDK provides brands with a secure and straightforward Mobile App Messaging solution. Through Mobile App Messaging, brands foster connections with their customers and increase app engagement and retention.
 
-This Quick Start will quickly get you up and running with a project powered by LivePerson. When you're done, you'll be able to send messages between an iOS device and LiveEngage. To complete this Quick Start, you will need a LiveEngage account. You can get the number and login information from the LivePerson account team.
+This Quick Start gets you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage. 
 
-### Prerequisites
+<div class="important">
+To complete this Quick Start, you need a LiveEngage account. You can get the number and login information from the LivePerson account team.
+</div>
+
+## Prerequisites
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
-#### Version 3.3 and above 
-
+**Version 3.3 or above**
 * Xcode 10.0 or later
-* Swift 4.2 or later or Objective-C
+* Swift 4.2 or later, or Objective-C
 
-
-#### Version 3.1.1
-
+**Version 3.1.1**
 * Xcode 9.3 or later
 * Swift 4.1 or later, or Objective-C
 
-#### Version 3.1 and below
-
+**Version 3.1 or below**
 * Xcode 9.2 or lower
 * Swift 4.0 or lower, or Objective-C
 
 
 _Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf)._
 
-### Step 1: Installing the SDK into your project
-LiveEngage Mobile App Messaging SDK for iOS supports multiple methods of installations.
+## Step 1: Install the SDK into your project
+You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
-**_Option 1: Using CocoaPods_**
+* CocoaPods 
+* Libraries Copy to Xcode Project
+
+### *Option 1: Using CocoaPods*
 
 The SDK is also compatible with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
 
- 1. Install cocoapods using the following command:
+1. Install cocoapods:
 
-```bash
-$ gem install cocoapods
-```
+   ```bash
+   $ gem install cocoapods
+   ```
 
-{:start="2"}
- 2. Navigate to your project folder and init new pod using the following command:
+2. Navigate to your project folder and initiate new pod:
 
-```bash
-$ pod init
-```
+   ```bash
+   $ pod init
+   ```
 
-{:start="3"}
- 3. Podfile should be created under your project’s folder.
- To integrate Liveperson Messaging SDK into your Xcode project using CocoaPods, specify it in your Podfile:
+3. Podfile should be created under your project’s folder.<br><br> To integrate Liveperson Messaging SDK into your Xcode project using CocoaPods, specify it in your Podfile:
 
-```ruby
-source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-platform :ios, '9.0'
-use_frameworks!
+   ```ruby
+   source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
+   platform :ios, '9.0'
+   use_frameworks!
 
-target '<Your Target Name>' do
-  pod 'LPMessagingSDK'
-end
-```
+   target '<Your Target Name>' do
+      pod 'LPMessagingSDK'
+   end
+   ```
 
-{:start="4"}
- 4. Run the following command in the terminal under your project folder:
+4. Run the following command in the terminal under your project folder:
 
-```bash
-$ pod install
-```
+   ```bash
+   $ pod install
+   ```
 
-{:start="5"}
- 5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
+5. In case you wish to upgrade to the latest SDK version and you have already run 'pod install', run the following command:
 
-```bash
-$ pod update
-```
+   ```bash
+   $ pod update
+   ```
 
-{:start="6"}
- 6. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator).
+6. In project settings, navigate to the **Build Phases** tab, and click the + button to add the below script to loop through the frameworks embedded in the application and to remove unused architectures (used for simulator).
 
-<div class="important">
-This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.
-</div>
+    <div class="important">
+    This step is a workaround for known iOS issue and is necessary for archiving your app before publishing it to the App Store.
+    </div>
 
-```bash
-bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
-```
+    ```bash
+    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
+    ```
 
-**_Option 2: Using Libraries Copy to Xcode Project_**
+### *Option 2: Using Libraries Copy to Xcode Project*
 
-1. Click [here](https://github.com/LP-Messaging/iOS-Messaging-SDK) to download the SDK package.
+1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
 
-2. Once downloaded, extract the ZIP file to a folder on your Mac.
+2. Extract the file to a folder on your Mac.
 
 3. Copy (Drag and Drop) all framework and bundle files into the project.
 
-4. In project settings, navigate to the Build Phases tab, and make sure to have **LPMessagingSDKModels.bundle** under **Copy Bundle Resources**.
+4. In project settings, navigate to the **Build Phases** tab, and do the following:
 
-5. In project settings, navigate to the Build Phases tab, and click the + button to add a New Run Script Phase. Add the script below in order to loop through the frameworks embedded in the application and remove unused architectures (used for simulator).
+   1. Make sure to have **LPMessagingSDKModels.bundle** under **Copy Bundle Resources**.
+   2. Click the + button to add the below script to loop through the frameworks embedded in the application and to remove unused architectures (used for simulator).
 
-<div class="important">
-This step is a workaround for <a href="http://www.openradar.me/radar?id=6409498411401216">known iOS issue</a> and is necessary for archiving your app before publishing it to the App Store.
-</div>
+   <div class="important">
+   This step is a workaround for <a href="http://www.openradar.me/radar?id=6409498411401216">known iOS issue</a> and is necessary for archiving your app before publishing it to the App Store.
+   </div>
 
-```bash
-bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
-```
+   ```bash
+   bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
+   ```
 
 
 ### Step 2: Configure project settings to connect LiveEngage SDK

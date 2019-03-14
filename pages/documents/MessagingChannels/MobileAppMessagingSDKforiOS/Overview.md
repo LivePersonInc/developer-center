@@ -1,4 +1,4 @@
-****---
+---
 pagename: Overview
 redirect_from:
   - consumer-experience-ios-sdk-overview.html
@@ -16,7 +16,7 @@ indicator: messaging
 
 Over the past few years, mobile messaging has gained popularity and reached its potential, dominating smartphone usage.  Messaging and conversational experiences have transformed how businesses engage with their customers. 
 
-According to a report published by Nuance Communications, over 55% of consumers prefer to use a form of messaging to communicate with companies. As brands evolve their customer engagement strategies, meeting consumers where they are in their journey is critical.
+According to a report published by Nuance Communications, **over 55% of consumers prefer** to use a form of messaging to communicate with companies. As brands evolve their customer engagement strategies, meeting consumers where they are in their journey is critical.
 
 **When you add Mobile App Messaging directly within your app, you get the following benefits:**
 
@@ -32,4 +32,4 @@ According to a report published by Nuance Communications, over 55% of consumers 
 
 <img src="img/inappoverview1.png" alt="InAppOverview1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="max-width:230px;max-height:700px;">
 
-For guidance on considerations and how to get started with Mobile App Messaging, [click here](products-channels-inapp-messaging.html).
+For guidance on considerations and how to get started with Mobile App Messaging, see [Add Messaging to your app](products-channels-inapp-messaging.html) for more details.
