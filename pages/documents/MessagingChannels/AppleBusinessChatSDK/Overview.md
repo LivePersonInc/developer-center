@@ -74,8 +74,3 @@ Path B:
 8. Once payment is complete, the brand reports the transaction value and product info as SDEs, and the agent can view the purchase info in real time in the agent workspace 
     1. Or if the purchase was performed after the conversation, the SDE will be assigned to the conversation and will be reported in conversation reports. 
 9. The agent manager reviews the weekly LE report on agent conversations, and can review the agent’s conversion rates (in session or cross session). 
-
-
-### General Limitations
-
-**Cross devices** - If a consumer starts the conversation from an iPhone device, and after a while continues the conversation from an iPad while performing activity in the app ext or main app, SDEs will not be reported to the LE conversation.
