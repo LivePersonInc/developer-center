@@ -1,4 +1,4 @@
----
+****---
 pagename: Overview
 redirect_from:
   - consumer-experience-ios-sdk-overview.html
@@ -14,25 +14,21 @@ root-link: true
 indicator: messaging
 ---
 
-**Consumers worldwide have moved to messaging**; time-shifted messaging is more convenient than phone calls.
+Over the past few years, mobile messaging has gained popularity and reached its potential, dominating smartphone usage.  Messaging and conversational experiences have transformed how businesses engage with their customers. 
 
-"The typical **millennial** exchanges an average of **67 text messages per day**."  _- Business Insider_
+According to a report published by Nuance Communications, over 55% of consumers prefer to use a form of messaging to communicate with companies. As brands evolve their customer engagement strategies, meeting consumers where they are in their journey is critical.
 
-"Americans now spend around **5 times longer** in messaging apps each day than on voice calls". - Nielsen Social Media Report, 2016.
+**When you add Mobile App Messaging directly within your app, you get the following benefits:**
 
-"WhatsApp and Facebook Messenger alone carry **22 trillion messages per year**." -Facebook
+* Increased customer satisfaction with an ideal customer experience through an always connected, ongoing conversation.
 
-**Add messaging directly within your app to enjoy the following benefits:**
+* Increased customer retention and engagement (stickiness of your app).
 
-* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
-
-* Increase the stickiness of your app through the added value of Mobile App Messaging.
-
-* Push notifications ensure your consumers never miss a new message.
+* Consumers never miss a new message with push notifications.
 
 * Fully customizable customer experience including look and feel.
 
-* Optimized for the network bandwidth as well as battery usage.
+* Optimized for network bandwidth and battery usage.
 
 <img src="img/inappoverview1.png" alt="InAppOverview1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="max-width:230px;max-height:700px;">
 
