@@ -39,21 +39,17 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
 2. In project settings, navigate to the Build Phases tab, and click the + button to paste the following:
 
-```
- 	${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/LPABCSDKStrippingScript.sh
-```
+    `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/LPABCSDKStrippingScript.sh`
 
 3. For each implementing target, make sure to enable App groups in capabilities section in the info.plist: 
-	- create a dictionary with the key **‘LPABC_PARAMS’** and add a key: **lpabc_appgroup**  with the value of your app group (same across all targeta):  **lpabc_appgroup : <your_app_group_id>**
+	- create a dictionary with the key `LPABC_PARAMS` and add a key `lpabc_appgroup`  with the value of your app group (same across all targets):  `lpabc_appgroup : <your_app_group_id>`
 
 4. Import lpabcsdk and initialize the SDK  
 5. For enabling sde reporting ability, In the iMessage app/extension add the following code in the overrides of
 
-- **override func didBecomeActive(with conversation: MSConversation)**
-	 
-- **override func didReceive(_ message: MSMessage, conversation: MSConversation)  of MSMessagesAppViewController:**
+    - override `func didBecomeActive(with conversation: MSConversation)`	 
+    - override `func didReceive(_ message: MSMessage, conversation: MSConversation)`  of MSMessagesAppViewController:
 
-```
-	self.lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
-
-```
+    ```swift
+        self.lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
+    ```
