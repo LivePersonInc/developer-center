@@ -13,7 +13,7 @@ indicator: messaging
 
 The Apple Business Chat SDK is an iOS Swift framework that allows developers to easily implement a rich, interactive experience for consumers, by reacting to conversational context in real time.
 
-The framework is very lightweight at ~450kb. It is designed to be an easy addition to any host app or iMessage app.
+The framework is very lightweight at ~450kb (release binary). It is designed to be an easy addition to any host app or iMessage app.
 
 
 ### What does the SDK do?
