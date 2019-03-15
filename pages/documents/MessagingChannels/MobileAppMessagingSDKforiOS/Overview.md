@@ -33,3 +33,7 @@ According to a report published by Nuance Communications, **over 55% of consumer
 <img src="img/inappoverview1.png" alt="InAppOverview1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="max-width:230px;max-height:700px;">
 
 For guidance on considerations and how to get started with Mobile App Messaging, see [Add Messaging to your app](products-channels-inapp-messaging.html) for more details.
+
+
+as per sudha, she would like to see an architecture diagram (high leve) in this topic.
+

@@ -25,30 +25,30 @@ To complete this Quick Start, you need a LiveEngage account. You can get the num
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
-**Version 3.3 or above**
-* Xcode 10.0 or later
-* Swift 4.2 or later, or Objective-C
-
-**Version 3.1.1**
-* Xcode 9.3 or later
-* Swift 4.1 or later, or Objective-C
-
-**Version 3.1 or below**
-* Xcode 9.2 or lower
-* Swift 4.0 or lower, or Objective-C
+| LivePerson Mobile SDK | Xcode | Swift |
+| --- | --- | --- |
+| 3.3 and newer | 10.0 and older | 4.2 and older, or Objective-C |
+| 3.1.1 | 9.3 or older | 4.1 and older, or Objective-C |
+| 3.1 and older | 9.2 and older | 4.0 and older, or Objective-C |
 
 
-_Note: For information on supported operating systems and devices, refer to [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf)._
+For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
+
 
 ## Step 1: Install the SDK into your project
+
 You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
-* [CocoaPods](#option-1-using-cocoapods) 
+* [CocoaPods](#option-1-cocoapods) 
 * [Libraries Copy to Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
-### *Option 1: Using CocoaPods*
+<div class="important">
+For both methods, you are <b>Required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+</div>
 
-The SDK is also compatible with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
+#### *Option 1: CocoaPods*
+
+You can use CocoaPods, a dependency manager for Swift and Objective-C projects, to scale your projects elegantly. It provides a standard format for managing external libraries. 
 
 1. Install CocoaPods:
 
@@ -62,7 +62,7 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
    pod setup --verbose
    ```
    <div class="notice">
-   It may take a few minutes as it is clones the CocoaPods Master Specs repo into ~/.cocoapods/ on your computer.
+   It may take a few minutes to complete.
    </div>
 
 3. Navigate to your project folder and create a Podfile for your project:
@@ -105,24 +105,24 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
    $ pod update
    ```
 
-7. (Required) This step is a workaround for <a href="http://www.openradar.me/radar?id=6409498411401216">known iOS issue</a> and is necessary for archiving your app before publishing it to the App Store. <br>In project settings, navigate to the **Build Phases** tab, and click the + button to add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for simulator).
+7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
     ```bash
     bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
     ```
 
-### *Option 2: Libraries Copy to Xcode Project*
+#### *Option 2: Libraries Copy to Xcode Project*
 
 1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
 
 2. Extract the file to a folder on your Mac.
 
-3. Copy (Drag and Drop) all framework and bundle files into the project.
+3. Copy all framework and bundle files into the project folder.
 
-4. (Required) This step is a workaround for <a href="http://www.openradar.me/radar?id=6409498411401216">known iOS issue</a> and is necessary for archiving your app before publishing it to the App Store. <br>In project settings, navigate to the **Build Phases** tab, and do the following:
+4. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and do the following:
 
-   1. Make sure to have **LPMessagingSDKModels.bundle** under **Copy Bundle Resources**.
-   2. Click the + button to add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for simulator).
+   1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.  [what happens if they run the script and this bundle isn't in there?]
+   2. Click the + button and add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
    ```bash
    bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
@@ -133,11 +133,11 @@ The SDK is also compatible with CocoaPods, a dependency manager for Swift and Ob
 
 *If using CocoaPods open the Workspace created by CocoaPods rather than your Project and skip steps 1 and 2 below*
 
-1. In project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, and add all the Framework files.
+1. In your Xcode project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, add all the Framework files.
 
 2. In Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
-3. (Required for iOS 10 or later) In Xcode info.plist of the project, add two new privacy keys and values: 
+3. (Required for iOS 10 or newer) In Xcode info.plist of the project, add two new privacy keys and values: 
 
     * Key: `NSPhotoLibraryUsageDescription`, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
 
