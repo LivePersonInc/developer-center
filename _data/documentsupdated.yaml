@@ -719,6 +719,11 @@
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
+  - documentname: Apple Business Chat SDK
+    pages:
+    - pagename: Overview
+    - pagename: Installation
+    - pagename: Implementation
   - documentname: Push Notification Service
     pages:
     - pagename: Overview
