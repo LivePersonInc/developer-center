@@ -18,7 +18,7 @@ The framework is very lightweight at ~450kb (release binary). It is designed to 
 
 ### What does the SDK do?
 
-After recieveing a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html), this SDK allows the developer to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
+After sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this SDK allows the developer to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
 
 - Report SDEs
   - Allows you to measure incremental lift and ROI from ABC conversations and LiveEngage operational tools
