@@ -43,8 +43,8 @@ _Note: For information on supported operating systems and devices, refer to [Sys
 ## Step 1: Install the SDK into your project
 You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
-* CocoaPods 
-* Libraries Copy to Xcode Project
+* [CocoaPods](#option-1-using-cocoapods) 
+* [Libraries Copy to Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
 ### *Option 1: Using CocoaPods*
 
