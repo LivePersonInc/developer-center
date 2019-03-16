@@ -105,10 +105,12 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    $ pod update
    ```
 
-7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. 
+
+8. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
     ```bash
-    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
+   "${PODS ROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
     ```
 
 #### *Option 2: Libraries Copy to Xcode Project*
