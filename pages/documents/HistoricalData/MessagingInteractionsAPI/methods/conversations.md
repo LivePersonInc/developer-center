@@ -125,6 +125,7 @@ Filters examples:
 |answerText           | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
 |intentName | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["campaign","intents"],"intentName":["Plan_inquiry_46","Remove_Plan_46"]}|
 |intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
+|conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|
 
 
 **Note: search by keywords, summary or engagement attributes**
