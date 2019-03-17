@@ -95,7 +95,7 @@ This section contains API details that are common to every API’s resource and 
 | allowedAppKeys | The API user's application keys | string | Required (for API user) |  
 | lobIds | The user’s LOB IDs | array of numbers | Optional |
 | mfaSecret | The user’s multi-factor login secret | string | Optional |
-| isMfaSecretBinded | Indicating if user has scanned multi-factor login code | Boolean	 | Optional |
+| isMfaSecretBinded | Indicating if user has scanned multi-factor login code | Boolean	 | Required |
 ||
 
 
