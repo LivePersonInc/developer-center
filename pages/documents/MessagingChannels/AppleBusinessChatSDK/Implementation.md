@@ -94,14 +94,14 @@ sdeBase.setupWithJson("{\"type\":\"ctmrinfo\"}")
 sdeBase.setupWithJson(["type":"cart"])
 ```
 
-#### Auto Send When Idle
+#### Auto Send Aggregated Stack
 
-The optional `autoSendWhenIdle` parameter, when set to true, will add the sde to the **idleStack** which will get sent automatically once the [stack idle timeout](#Idle-SDE-Stack-Timeout) is met. Default is 5 sec but could be anything between 0-15 sec. See `setSDEStackIdleInterval(interval:)`
+The optional `aggregate` parameter, when set to true, will add the sde to the **aggregateStack** which will get **sent automatically** once the [aggregation stack timeout](#Aggregated-SDE-Stack-Timeout) is met. Default is 5 sec but could be anything between 1-15 sec. See `setAggregatedInterval(interval:)`
 
 Example:
 
 ```swift
-lpabcsdk.createSDE(sdeType: .customerInfo, autoSendWhenIdle: true) { (sdeBase) in
+lpabcsdk.createSDE(sdeType: .customerInfo, aggregate: true) { (sdeBase) in
     sdeBase.customerInfo?.setup(
         cstatus: "<cstatus>",
         ctype: "<ctype>",
@@ -142,22 +142,22 @@ lpabcsdk.sendSDEStack(onSuccess: { (success) in
 }
 ```
 
-### Idle SDE Stack Timeout
+### Aggregated SDE Stack Timeout
 
-This will setup an Idle timeout interval for auto sending the idle SDE stack (optional). Default is 5 seconds and Max is 15.
+This will setup a timeout interval for auto sending the aggregated SDE stack (optional). Default is 5 seconds and Max is 15.
 
 ```swift
-lpabcsdk.setSDEStackIdleInterval(interval:15)
+lpabcsdk.setAggregatedInterval(interval:15)
 ```
 
-See the [Auto Send When Idle](#Auto-Send-When-Idle) optional parameter in [Create SDEs](#create-sdes).
+See the [Auto Send aggregated](#Auto-Send-Aggregated) optional parameter in [Create SDEs](#create-sdes).
 
-### Idle SDE Stack Send Completion Closure
+### Aggregated SDE Stack Send Completion Closure
 
-If you want to execute code whenever the Idle SDE Stack send completes, implement the `idleSDEStackCompletion` closure:
+If you want to execute code whenever the Aggregated SDE Stack auto send completes, implement the `aggregatedSDEStackCompletion` closure:
 
 ```swift
-lpabcsdk.idleSDEStackCompletion = {  completion, error in
+lpabcsdk.aggregatedSDEStackCompletion = {  completion, error in
     // debug code
 }
 
