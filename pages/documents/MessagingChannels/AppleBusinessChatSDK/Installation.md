@@ -41,7 +41,7 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
 5. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
 
-6. In the iMessage app/extension's  `MessagesViewController` class,  please override these following two methods:
+6. In the iMessage app/extension's  `MessagesViewController` class,  please override the following two methods:
 
     - `override func didBecomeActive(with conversation: MSConversation)`	 
     - `override func didReceive(_ message: MSMessage, conversation: MSConversation)`
