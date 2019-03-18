@@ -24,7 +24,10 @@ LPABCSDK.initializeSDK(minimumLogLevel: .trace, enableLog: false)
 Upon an agent sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this method will update the SDK with a payload that will enable SDE reporting to LiveEngage.
 
 ```swift
-self.lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
+lpabcsdk.update(withIncomingInteractiveMessage: conversation)
+
+lpabcsdk.update(withIncomingInteractiveMessage: conversation, message: message)
+
 ```
 
 Should be implemented from both override functions:
