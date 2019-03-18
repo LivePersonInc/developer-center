@@ -85,7 +85,7 @@ lpabcsdk.createSDE(sdeType: .cartUpdate) { (sdeBase) in
 }
 ```
 
-The sde `.setup` could be also be created with a **json** string or **Dictionary** object:
+The SDE `setup` call could also be created using 'LPUnifiedLooseSDEProtocol', as **json** string or **Dictionary** object:
 	  
 Example:
 
