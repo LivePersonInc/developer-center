@@ -35,7 +35,7 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
 
-## Step 1: Install the SDK into your project
+### Step 1: Install the SDK into your project
 
 You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
@@ -166,7 +166,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 3: Initialization
 
-1. Inside **viewController** add the following imports:
+1. Inside **ViewController** add the following imports:
 
    ```swift
    import LPMessagingSDK
