@@ -56,7 +56,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    $ sudo gem install cocoapods
    ```
 
-2. Complete CocoaPods setup:
+2. Set up CocoaPods:
 
    ```bash
    pod setup --verbose
@@ -78,10 +78,10 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 4. Open your Podfile:
 
    ```bash
-   open -a Xcodee Podfile
+   open -a Xcode Podfile
    ```
 
-5. In your Podfile, add the **LPMessagingSDK** pod to integrate it into your Xcode project:
+5. Add the **LPMessagingSDK** pod to integrate it into your Xcode project:
 
    ```ruby
    source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
