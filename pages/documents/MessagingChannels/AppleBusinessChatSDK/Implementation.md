@@ -24,7 +24,10 @@ LPABCSDK.initializeSDK(minimumLogLevel: .trace, enableLog: false)
 Upon an agent sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this method will update the SDK with a payload that will enable SDE reporting to LiveEngage.
 
 ```swift
-self.lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
+lpabcsdk.update(withIncomingInteractiveMessage: conversation)
+
+lpabcsdk.update(withIncomingInteractiveMessage: conversation, message: message)
+
 ```
 
 Should be implemented from both override functions:
@@ -39,9 +42,11 @@ See [step 6 of Installation for more](apple-business-chat-sdk-installation.html#
 
 When you create one or more SDEs, they get added to a Stack that the framework manages for you.
 
-The `createSDE` function generates an SDEBase object.
+The `createSDE` function generates and calls back an SDEBase object with a template of the relevant SDE type as its property, which then needs to implement a 'setup' function.
 
-Pass in the [SDE type](engagement-attributes-types-of-engagement-attributes.html) that you want, and it will return an sdeBase object with reference to the relevant sde template.
+Pass in the [SDE type](engagement-attributes-types-of-engagement-attributes.html) that you want, and it will return an SDEBase object containing an instantiated property of the relevant SDE template object.
+
+All dependant schema objects could be initiated and passed in as arguments to the SDE setup 
 
 Inside of the completion callback, on the sde setup method, it is required to define the relevant params to initiate the sde.
 
@@ -82,7 +87,7 @@ lpabcsdk.createSDE(sdeType: .cartUpdate) { (sdeBase) in
 }
 ```
 
-The sde `.setup` could be also be created with a **json** string or **Dictionary** object:
+The SDE `setup` call could also be created using 'LPUnifiedLooseSDEProtocol', as **json** string or **Dictionary** object:
 	  
 Example:
 
@@ -91,14 +96,14 @@ sdeBase.setupWithJson("{\"type\":\"ctmrinfo\"}")
 sdeBase.setupWithJson(["type":"cart"])
 ```
 
-#### Auto Send When Idle
+#### Auto Send Aggregated Stack
 
-The optional `autoSendWhenIdle` parameter, when set to true, will add the sde to the **idleStack** which will get sent automatically once the [stack idle timeout](#Idle-SDE-Stack-Timeout) is met. Default is 5 sec but could be anything between 0-15 sec. See `setSDEStackIdleInterval(interval:)`
+The optional `aggregate` parameter, when set to true, will add the sde to the **aggregateStack** which will get **sent automatically** once the [aggregation stack timeout](#Aggregated-SDE-Stack-Timeout) is met. Default is 5 sec but could be anything between 1-15 sec. See `setAggregatedInterval(interval:)`
 
 Example:
 
 ```swift
-lpabcsdk.createSDE(sdeType: .customerInfo, autoSendWhenIdle: true) { (sdeBase) in
+lpabcsdk.createSDE(sdeType: .customerInfo, aggregate: true) { (sdeBase) in
     sdeBase.customerInfo?.setup(
         cstatus: "<cstatus>",
         ctype: "<ctype>",
@@ -139,22 +144,22 @@ lpabcsdk.sendSDEStack(onSuccess: { (success) in
 }
 ```
 
-### Idle SDE Stack Timeout
+### Aggregated SDE Stack Timeout
 
-This will setup an Idle timeout interval for auto sending the idle SDE stack (optional). Default is 5 seconds and Max is 15.
+This will setup a timeout interval for auto sending the aggregated SDE stack (optional). Default is 5 seconds and Max is 15.
 
 ```swift
-lpabcsdk.setSDEStackIdleInterval(interval:15)
+lpabcsdk.setAggregatedInterval(interval:15)
 ```
 
-See the [Auto Send When Idle](#Auto-Send-When-Idle) optional parameter in [Create SDEs](#create-sdes).
+See the [Auto Send aggregated](#Auto-Send-Aggregated) optional parameter in [Create SDEs](#create-sdes).
 
-### Idle SDE Stack Send Completion Closure
+### Aggregated SDE Stack Send Completion Closure
 
-If you want to execute code whenever the Idle SDE Stack send completes, implement the `idleSDEStackCompletion` closure:
+If you want to execute code whenever the Aggregated SDE Stack auto send completes, implement the `aggregatedSDEStackCompletion` closure:
 
 ```swift
-lpabcsdk.idleSDEStackCompletion = {  completion, error in
+lpabcsdk.aggregatedSDEStackCompletion = {  completion, error in
     // debug code
 }
 
@@ -178,7 +183,7 @@ lpabcsdk.implicitSDEClosure = { implicitEventCallbackType in
 You can set the desired SDEs to express your custom reporting for the  event triggered. 
 
 **Supported Event Types**:
-    - `newConversation` - Receiving a new, first time CIM - per conversation.
+    - `newConversation` - Receiving an **incoming (agent to consumer)**, new first time CIM - per conversation.
 
 Example:
 
