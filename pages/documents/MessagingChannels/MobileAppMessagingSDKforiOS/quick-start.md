@@ -255,7 +255,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
      let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAttributes: engagementAttributes)
    ```
 
-4. Using the **LPMonitoringParams**, get the Engagement for the User. This is needed to start a new conversation with a specific campaign.
+4. Use the **LPMonitoringParams** to get the Engagement for the User, which is needed to start a new conversation with a specific campaign.
 
    ```swift
    LPMonitoringAPI.instance.getEngagement(consumerID: self.consumerID, monitoringParams: monitoringParams, completion: {
@@ -282,7 +282,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    ```
 
 
-6. In order to remove the conversation view when your container is deallocated, run the following code:
+6. Remove the conversation view when your container is deallocated:
 
    ```swift
    let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
