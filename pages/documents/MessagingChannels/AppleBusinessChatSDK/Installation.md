@@ -55,12 +55,14 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
     class MessagesViewController : MSMessagesViewController {
 
+        var lpabcsdk = LPABCSDK.initializeSDK()
+
         override func didBecomeActive(with conversation: MSConversation) {
-            lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
+            lpabcsdk.update(withIncomingInteractiveMessage: conversation)
         }
 
         override func didReceive(_ message: MSMessage, conversation: MSConversation) {
-            lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)
+            lpabcsdk.update(withIncomingInteractiveMessage: conversation, message: message)
         }
 
     }
