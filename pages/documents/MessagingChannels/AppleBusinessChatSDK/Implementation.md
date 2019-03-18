@@ -183,7 +183,7 @@ lpabcsdk.implicitSDEClosure = { implicitEventCallbackType in
 You can set the desired SDEs to express your custom reporting for the  event triggered. 
 
 **Supported Event Types**:
-    - `newConversation` - Receiving a new, first time CIM - per conversation.
+    - `newConversation` - Receiving an **incoming (agent to consumer)**, new first time CIM - per conversation.
 
 Example:
 
