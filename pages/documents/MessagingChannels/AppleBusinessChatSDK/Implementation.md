@@ -42,9 +42,11 @@ See [step 6 of Installation for more](apple-business-chat-sdk-installation.html#
 
 When you create one or more SDEs, they get added to a Stack that the framework manages for you.
 
-The `createSDE` function generates an SDEBase object.
+The `createSDE` function generates and calls back an SDEBase object with a template of the relevant SDE type as its property, which then needs to implement a 'setup' function.
 
-Pass in the [SDE type](engagement-attributes-types-of-engagement-attributes.html) that you want, and it will return an sdeBase object with reference to the relevant sde template.
+Pass in the [SDE type](engagement-attributes-types-of-engagement-attributes.html) that you want, and it will return an SDEBase object containing an instantiated property of the relevant SDE template object.
+
+All dependant schema objects could be initiated and passed in as arguments to the SDE setup 
 
 Inside of the completion callback, on the sde setup method, it is required to define the relevant params to initiate the sde.
 
