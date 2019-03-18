@@ -209,7 +209,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    ```
 
    <div class="notice">
-   When using ViewController Mode, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+   When using ViewController Mode, on the Navigation Bar Back Button, you can simply call <b>LPMessagingSDK.instance.removeConversation(self.conversationQuery!)</b>.
    </div>
 
 ### Step 4 (Optional): Initialization with Monitoring Params
@@ -300,6 +300,6 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    ```
 
    <div class="notice">
-   When using ViewController Mode, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+   When using ViewController Mode, on the Navigation Bar Back Button, you can simply call <b>LPMessagingSDK.instance.removeConversation(self.conversationQuery!)</b>.
    </div>
   
