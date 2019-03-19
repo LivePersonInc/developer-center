@@ -15,7 +15,7 @@ indicator: messaging
 
 The LivePerson SDK provides brands with a secure and straightforward Mobile App Messaging solution. Through Mobile App Messaging, brands foster connections with their customers and increase app engagement and retention.
 
-This Quick Start gets you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage. 
+Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage. 
 
 <div class="important">
 To complete this Quick Start, you need a LiveEngage account. You can get the number and login information from the LivePerson account team.
@@ -25,11 +25,26 @@ To complete this Quick Start, you need a LiveEngage account. You can get the num
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
-| LivePerson Mobile SDK | Xcode | Swift |
-| --- | --- | --- |
-| 3.3 and newer | 10.0 and older | 4.2 and older, or Objective-C |
-| 3.1.1 | 9.3 or older | 4.1 and older, or Objective-C |
-| 3.1 and older | 9.2 and older | 4.0 and older, or Objective-C |
+#### Version 3.5.1 and above
+* XCode 10 or later
+* Swift 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1), or Objective-C
+
+#### Version ~3.4 
+* Xcode 10 or later
+* Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
+
+#### Version ~3.3
+* XCode 10 or later
+* Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
+
+
+#### Version 3.1.1 - 3.3.0
+* XCode 9.3 or later
+* Swift 4.1 or later, or Objective-C
+
+#### Version 3.1 and below
+* XCode 9.2 or lower
+* Swift 4.0 or lower, or Objective-C
 
 
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
@@ -128,8 +143,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 2: Configure project settings to connect LiveEngage SDK
 
-*If using CocoaPods open the Workspace created by CocoaPods rather than your Project and skip steps 1 and 2 below*
-
 1. In your Xcode project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, add all the Framework files.
 
 2. Under Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
@@ -161,7 +174,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
    * **Push Notifications**: SDK uses remote push notification to notify the user whenever a new message from the remote user is received. 
 
-   * **Maps**: map items require MapKit framework to show location in the map. 
+   * **Maps** (Structured content): map items require MapKit framework to show location in the map. 
 
 
 ### Step 3: Initialization
