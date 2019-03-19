@@ -93,7 +93,10 @@ This section contains API details that are common to every API’s resource and 
 | isApiUser | Indicates whether the user is an api user (not a real user/ bot)  | Boolean | Optional (Default: false) | It has the ability to login via API (instead of username and password) |
 | userType | The user's type  | integer number | Optional | 0 - system; 1 - human; 2 - bot; (Default: 1) |
 | allowedAppKeys | The API user's application keys | string | Required (for API user) |  
-| lobIds | The user’s LOB IDs | array of numbers | Optional |  ||
+| lobIds | The user’s LOB IDs | array of numbers | Optional |
+| mfaSecret | The user’s multi-factor login secret | string | Optional |
+| isMfaSecretBinded | Indicates if the user scanned a multi-factor login code | Boolean	 | Required |
+||
 
 
 
@@ -111,6 +114,8 @@ This section contains API details that are common to every API’s resource and 
        "maxChats": "4",
        "email": "myEmail@gmail.com",
        "disabledManually": false,
+       "mfaSecret": "qwertyuiopasdfg",
+       "isMfaSecretBinded": true,
        "skillIds": [
             2359235912,
             2359235922
