@@ -86,7 +86,7 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |intentName | Intent names in the intentName parameter match the intentName field of any detected intent. Pass the intentName you'd like to filter by | Array `<String>` | Optional | Get only conversations that have at least one intent with a name from the specified list. Intent names must be accurate from  a character standpoint, and are not case sensitive. |
 |intentConfidenceScore | The intentConfidenceScore field is greater or equal to the confidenceScore parameter of any detected intent. | double - up to 3 decimal digits. | Optional | Get only conversations that have at least one intent with a confidenceScore field that is greater or equal to confidenceScore parameter. When using this filter together with the 'intentName' filter above, the score refers to the intents that were specified as part of the 'intentName' list. |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
-|conversationsWithStepUpOnly | TRUE - if step up take a place during the conversation. | boolean. | Optional | Get only conversations that have step up  |
+|conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |
 
 
 Filters examples:
