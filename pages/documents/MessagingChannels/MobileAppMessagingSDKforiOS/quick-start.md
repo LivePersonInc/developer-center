@@ -17,34 +17,26 @@ The LivePerson SDK provides brands with a secure and straightforward Mobile App 
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage. 
 
-<div class="important">
-To complete this Quick Start, you need a LiveEngage account. You can get the number and login information from the LivePerson account team.
-</div>
-
-## Prerequisites
+### Prerequisites
 
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
-#### Version 3.5.1 and above
-* XCode 10 or later
-* Swift 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1), or Objective-C
-
-#### Version ~3.4 
-* Xcode 10 or later
-* Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
-
-#### Version ~3.3
-* XCode 10 or later
-* Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
-
-
-#### Version 3.1.1 - 3.3.0
-* XCode 9.3 or later
-* Swift 4.1 or later, or Objective-C
-
-#### Version 3.1 and below
-* XCode 9.2 or lower
-* Swift 4.0 or lower, or Objective-C
+* **LiveEngage account** (You can get the number and login information from the LivePerson account team.)
+* **Version 3.5.1 and above**
+  * XCode 10 or later
+  * Swift 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1), or Objective-C
+* **Version ~3.4** 
+  * Xcode 10 or later
+  * Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
+* **Version ~3.3**
+  * XCode 10 or later
+  * Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
+* **Version 3.1.1 - 3.3.0**
+  * XCode 9.3 or later
+  * Swift 4.1 or later, or Objective-C
+* **Version 3.1 and below**
+  * XCode 9.2 or lower
+  * Swift 4.0 or lower, or Objective-C
 
 
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
@@ -115,9 +107,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod update
    ```
 
-7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. 
-
-8. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
     ```bash
    ${PODS ROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh
@@ -129,11 +119,11 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 2. Extract the file to a folder on your Mac.
 
-3. Copy all framework and bundle files into the project folder.
+3. Copy all framework and bundle files into the project folder. [what is the best way to do this?]
 
 4. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and do the following:
 
-   1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.  [what happens if they run the script and this bundle isn't in there?]
+   1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.  
    2. Click the + button and add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
    ```bash
@@ -147,13 +137,13 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 2. Under Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
-3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add three new privacy keys and values: 
+3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values: 
 
-    * Key: `NSPhotoLibraryUsageDescription`, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+    * **NSPhotoLibraryUsageDescription**: Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
-    * Key: `NSCameraUsageDescription`, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
+    * **NSCameraUsageDescription**: Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
-    * Key: `NSMicrophoneUsageDescription`, Value: "Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
+    * **NSMicrophoneUsageDescription**: Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
     ```xml
     <key>NSPhotoLibraryUsageDescription</key>
@@ -165,14 +155,14 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
     ```
 
     <div class="important">
-    To upload your host app into the App Store, even if these features are disabled or not used, you must add these values to your project's Xcode Info.plist. <ul><li>SDK 2.0 lets you share photos from the camera or photo library.</li><li>SDK 3.2 lets you send audio messages.</li></ul>
+    To upload your host app into the App Store, even if these features are disabled or not used, you must add these values to your project's Xcode <b>Info.plist</b> file. <br><br><ul><li>SDK 2.0 lets you share photos from the camera or photo library.</li><li>SDK 3.2 lets you send audio messages.</li></ul><br>For more information, refer to <a href="https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html">Apple's website</a>.
     </div>
 
-    For more information, refer to [Apple’s website](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html).
+    
 
-4. Under Capabilities, in your project's Targets settings, turn on the following toggles to support SDK-specific features:
+4. Under **Capabilities**, in your project's Targets settings, turn on the following toggles to support SDK-specific features:
 
-   * **Push Notifications**: SDK uses remote push notification to notify the user whenever a new message from the remote user is received. 
+   * **Push Notifications**: Notifies the user whenever a new message from the remote user is received. 
 
    * **Maps** (Structured content): map items require MapKit framework to show location in the map. 
 
