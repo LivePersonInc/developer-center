@@ -118,21 +118,21 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * Enter timeout & expiration controls:
 
-            * sendingMessageTimeoutInMinutes (60)
+    * sendingMessageTimeoutInMinutes (60)
 
-            * csatSurveyExpirationInMinutes (1440)
+    * csatSurveyExpirationInMinutes (1440)
 
 * Disable shortcut to new messages feature:
 
-            * scrollToBottomButtonEnabled (false)
+    * scrollToBottomButtonEnabled (false)
 
-            * scrollToBottomButtonMessagePreviewEnabled (false)
+    * scrollToBottomButtonMessagePreviewEnabled (false)
 
-            * unreadMessagesDividerEnabled (false)
+    * unreadMessagesDividerEnabled (false)
 
 * Disable link preview
 
-            * enablelinkPreview (false)
+    * enablelinkPreview (false)
 
     * Android
 
