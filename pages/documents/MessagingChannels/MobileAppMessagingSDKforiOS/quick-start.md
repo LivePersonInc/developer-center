@@ -30,7 +30,31 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 | 3.3 and newer | 10.0 and older | 4.2 and older, or Objective-C |
 | 3.1.1 | 9.3 or older | 4.1 and older, or Objective-C |
 | 3.1 and older | 9.2 and older | 4.0 and older, or Objective-C |
-{:.scroll-table-small}
+
+<div width="100px">
+<table>
+  <tr>
+    <th width="75px">LivePerson Mobile SDK</th>
+    <th width="75px">Xcode</th>
+    <th width="75px">Swift </th>
+  </tr>
+  <tr>
+    <td>3.3 and newer</td>
+    <td>10.0 and older</td>
+    <td>4.2 and older, or Objective-C</td>
+  </tr>
+  <tr>
+    <td>3.1.1</td>
+    <td>9.3 or older</td>
+    <td>4.1 and older, or Objective-C</td>
+  </tr>
+  <tr>
+    <td>3.1 and older</td>
+    <td>9.2 and older</td>
+    <td>4.0 and older, or Objective-C</td>
+  </tr>
+</table>
+</div>
 
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
@@ -166,7 +190,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 3: Initialization
 
-1. Inside **ViewController** add the following imports:
+1. Inside **ViewController**, add the following imports:
 
    ```swift
    import LPMessagingSDK
