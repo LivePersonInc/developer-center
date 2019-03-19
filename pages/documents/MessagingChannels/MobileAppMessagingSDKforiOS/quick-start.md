@@ -164,7 +164,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
    * **Push Notifications**: Notifies the user whenever a new message from the remote user is received. 
 
-   * **Maps** (Structured content): map items require MapKit framework to show location in the map. 
+   * **Maps** (Structured content): Map items require MapKit framework to show location in the map. 
 
 
 ### Step 3: Initialization
