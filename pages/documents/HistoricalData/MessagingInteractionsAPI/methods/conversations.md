@@ -86,6 +86,8 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |intentName | Intent names in the intentName parameter match the intentName field of any detected intent. Pass the intentName you'd like to filter by | Array `<String>` | Optional | Get only conversations that have at least one intent with a name from the specified list. Intent names must be accurate from  a character standpoint, and are not case sensitive. |
 |intentConfidenceScore | The intentConfidenceScore field is greater or equal to the confidenceScore parameter of any detected intent. | double - up to 3 decimal digits. | Optional | Get only conversations that have at least one intent with a confidenceScore field that is greater or equal to confidenceScore parameter. When using this filter together with the 'intentName' filter above, the score refers to the intents that were specified as part of the 'intentName' list. |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
+|conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |
+
 
 Filters examples:
 
@@ -123,6 +125,7 @@ Filters examples:
 |answerText           | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
 |intentName | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["campaign","intents"],"intentName":["Plan_inquiry_46","Remove_Plan_46"]}|
 |intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
+|conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|
 
 
 **Note: search by keywords, summary or engagement attributes**
@@ -210,6 +213,7 @@ appId | The name of the application | string | We have a few internal applicatio
 appVersion | The hosted application version. | string |
 ipAddress | Current connection user IP | string |
 isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
+wasStepUp | Indicates if the conversation had a step up | Boolean |
 
 _Campaign info_
 
