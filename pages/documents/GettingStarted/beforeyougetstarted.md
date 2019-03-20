@@ -7,7 +7,6 @@ permalink: before-you-get-started-considerations-and-requirements.html
 indicator: both
 ---
 
-### Considerations and Requirements
 
 Each document has an overview with specific considerations for using the API/SDK listed. However, there are a few considerations and requirements that apply to all resources, which we'll cover here for quick reference. 
 
@@ -16,12 +15,16 @@ Each document has an overview with specific considerations for using the API/SDK
 Many of the APIs configure and manipulate LiveEngage features or capabilities. Therefore, to use these APIs, you must make sure you configure your account to access those features. For example, to use the Agent Messaging SDK to connect a bot, your account must be enabled to support bot users.  To check the enabled features for your account, contact your account team or LivePerson Support. 
 
 <div class="important">
-If you do not have a LivePerson account or you're looking for a different one to work on, create a [Developer's Account](http://register.liveperson.com/developer/signup) and contact your account team or LivePerson support to have features enabled. 
+If you do not have a LivePerson account or you're looking for a different one to work on, create a <a href="http://register.liveperson.com/developer/signup">Developer's Account</a> and then contact your account team or LivePerson support to have features enabled. 
 </div>
 
 #### Development languages
 
 Most of our APIs and SDKs require your developers to be fluent in JavaScript (and its iterations, like NodeJS). Since we use a REST model, fluency in the JSON format is also highly recommended (although most JSON payloads tend to be simple, there are exceptions to this rule, like with Structured Content). Our Mobile App Messaging SDKs have both an iOS and an Android version, which require knowledge of Swift and Java, respectively. General knowledge of HTTP calls and responses, REST APIs, server to server communication and web applications is also highly recommended. For our Data APIs, retrieving the information is only the first step and data analysis/research skills are highly recommended.
+
+<div class="important">
+To upload your host app into the App Store, even if these features are disabled or not used, you must add these values to your project's Xcode <b>Info.plist</b> file. <br><br><ul><li>SDK 2.0 lets you share photos from the camera or photo library.</li><li>SDK 3.2 lets you send audio messages.</li></ul><br>For more information, refer to <a href="https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html">Apple's website</a>.
+</div>
 
 
 #### Authentication

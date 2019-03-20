@@ -41,6 +41,10 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
+<details><summary><b>CocoaPods</b></summary><br><p>&nbsp;&nbsp;&nbsp;&nbsp;You can proceed to step 6.</p></details>
+<details><summary>Is the <b>Promised ship date</b> populated?</summary><br><p>&nbsp;&nbsp;&nbsp;&nbsp;You can proceed to step 6.</p></details>
+
+
 
 ### Step 1: Install the SDK into your project
 
@@ -63,15 +67,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    sudo gem install cocoapods
    ```
 
-2. Set up CocoaPods:
-
-   ```bash
-   pod setup --verbose
-   ```
-   <div class="notice">
-   It may take a few minutes to complete.
-   </div>
-
 3. Navigate to your project folder and create a Podfile for your project:
 
    ```bash
@@ -82,13 +77,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    The Podfile must be created under your project's folder.
    </div>
 
-4. Open your Podfile:
-
-   ```bash
-   open -a Xcode Podfile
-   ```
-
-5. Add the **LPMessagingSDK** pod to integrate it into your Xcode project:
+4. Open the Podfile and add the **LPMessagingSDK** pod to integrate it into your Xcode project:
 
    ```ruby
    source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
@@ -100,17 +89,17 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    end
    ```
 
-6. In your project folder, install the dependencies for your project and to upgrade to the latest SDK:
+5. In your project folder, install the dependencies for your project and to upgrade to the latest SDK:
 
    ```bash
    pod install
    pod update
    ```
 
-7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+6. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
     ```bash
-   ${PODS ROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh
+   bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
     ```
 
 #### *Option 2: Libraries Copy to Xcode Project*
@@ -127,7 +116,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    2. Click the + button and add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
    ```bash
-   ${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh
+   bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
    ```
 
 
@@ -137,7 +126,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 2. Under Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
-3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values: 
+3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values.  
 
     * **NSPhotoLibraryUsageDescription**: Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
@@ -145,29 +134,129 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
     * **NSMicrophoneUsageDescription**: Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
-    ```xml
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
-    <key>NSCameraUsageDescription</key>
-    <string>Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
-    ```
-
-    <div class="important">
-    To upload your host app into the App Store, even if these features are disabled or not used, you must add these values to your project's Xcode <b>Info.plist</b> file. <br><br><ul><li>SDK 2.0 lets you share photos from the camera or photo library.</li><li>SDK 3.2 lets you send audio messages.</li></ul><br>For more information, refer to <a href="https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html">Apple's website</a>.
-    </div>
-
-    
+   ```xml
+   <key>NSPhotoLibraryUsageDescription</key>
+   <string>hoto Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
+   <key>NSCameraUsageDescription</key>
+   <string>Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
+   <key>NSMicrophoneUsageDescription</key>
+   <string>Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
+   ```
 
 4. Under **Capabilities**, in your project's Targets settings, turn on the following toggles to support SDK-specific features:
 
    * **Push Notifications**: Notifies the user whenever a new message from the remote user is received. 
 
-   * **Maps** (Structured content): Map items require MapKit framework to show location in the map. 
+   * **Structured Content**: Map items require MapKit framework to show location in the map. 
 
 
-### Step 3: Initialization
+### Step 3: Initialize the LPMessagingSDK
+
+This step does the following:
+1. Initializes the SDK instance. You must provide your account number as a String. We have provided an example to use for the quickstart process in the 'accountID' constant. 
+2. Sets up and calls the conversation view. Your view controller calls our showConversation method and pushes on a new navigation stack containing the Conversation View Controller. You would use either a jwt or authentication code from your authentication server in the LPAuthenticationParams object. We have provided you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+3.  Releases the LPMessagingSDK view stack when client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
+
+We have provided code snippets for [Authenticated](#authenticated) and [Signup](#signup).
+
+#### Authenticated
+
+```swift
+import UIKit
+import LPMessagingSDK
+import LPAMS
+import LPInfra
+
+
+class DocumentationViewController: UIViewController {
+    
+    let accountID: String = "14800077"
+    let jwt: String = "eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdGFydF91c2VyIiwgICJpc3MiOiAiaHR0cHM6Ly9MUC1BdXRoLmNvbSIsICAiZXhwIjoxNTg0Njc0MDc3LCAgImlhdCI6MTU1MzExNjQ3N30.tFtanIwh8SrmJWM5iSUxmj7WaroA_WCtZfTS4KN9N8Q0Vy0O5rRdb7T7ZkFJxnGfwg0fsKfBuM3qTD8NHWNOKqaZX_bQKXQ-cnJHa4DtJX9Udv0MGfg_UHO0DBg5vaC_38beUlSaUPQ0rQAHb9sm0PE1tNOMfLzvPqM1kF3VMBq1dZNpNkDYaV8oleEcm0v8woRj45FYOv34etrgSsf0Pi-68AP8ckG3WJzS_y9dpZAxW3oDIv_XXHZ4TXQw_wPwMKu0UtZoMfctz-5ERk7uTQxeWP6TS9ce2YQ38FqUwIBN3ImAhA3vE2gLsYexFsPiO_I3hSEC272Ya-b-eJZ8vg"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // MARK: - Setup instance of LPMessagingSDK
+        
+        /*  Add the following code initializing the SDK instance. You must provide your account number as a String. We have provided an example to use for the quickstart process in the 'accountID' constant above.  */
+        do {
+            try LPMessagingSDK.instance.initialize(accountID)
+        } catch {
+            fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
+        }
+        
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        /*
+         Here your view controller calls our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         */
+        let authenticationParams: LPAuthenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: jwt, redirectURI: nil, certPinningPublicKeys: nil, authenticationType: .authenticated)
+        let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
+        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
+        LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+    }
+    
+    // MARK: - Release LPMessagingSDK View Stack when Client app is backgrounded or suspended
+    /*
+     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     */
+    override func viewWillDisappear(_ animated: Bool) {
+        let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
+        if (conversationQuery.getBrandID() == accountID) {
+            LPMessagingSDK.instance.removeConversation(conversationQuery)
+        }
+    }
+}
+
+```
+
+#### Signup
+
+
+
+```swift
+import UIKit
+import LPMessagingSDK
+import LPAMS
+import LPInfra
+
+
+class DocumentationViewController: UIViewController {
+    
+    let accountID: String = "14800077"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // MARK: - Setup instance of LPMessagingSDK
+        
+        /*  Add the following code initializing the SDK instance. You will need to provide your account number as a String. We have provided an example to use for the quickstart process in the 'accountID' constant above.  */
+        do {
+            try LPMessagingSDK.instance.initialize(accountID)
+        } catch {
+            fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
+        }
+        
+        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        /*
+         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         */
+        let authenticationParams: LPAuthenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: nil, redirectURI: nil, certPinningPublicKeys: nil, authenticationType: .signup)
+        let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
+        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
+        LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+    }
+    
+    // MARK: - Release LPMessagingSDK View Stack when Client app is backgrounded or suspended
+    /*
+     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     */
+    override func viewWillDisappear(_ animated: Bool) {
+        let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
+        if (conversationQuery.getBrandID() == accountID) {
+            LPMessagingSDK.instance.removeConversation(conversationQuery)
+        }
+    }
+}
+```
 
 1. Inside **ViewController**, add the following imports:
 
