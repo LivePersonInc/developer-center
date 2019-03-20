@@ -9,13 +9,15 @@ indicator: both
 
 ### Considerations and Requirements
 
-Because this site includes a host of diverse documents, encompassing the considerations and the requirements for all of them in this document is challenging. Therefore, each document has its own overview, where specific considerations for using the API/SDK are listed. However, there are a few considerations and requirements which are true for all resources on this sit and we'll cover them here for quick reference.
+Each document has an overview with specific considerations for using the API/SDK listed. However, there are a few considerations and requirements that apply to all resources, which we'll cover here for quick reference. 
 
 #### Account requirements
 
-Many of the APIs documented on this site configure and manipulate LiveEngage features or capabilities. Therefore, in order to use these APIs, you need to first make sure your account is configured to access those features. A good example would be using the Agent Messaging SDK to connect a bot as an agent to LiveEngage; if your account is not enabled to support bot users, you won't be able to use this SDK. **The best way to check if certain features are enabled for your account or not is to directly contact your account team or LivePerson Support**. Doing this before you start developing will save you more work and frustration down the line.
+Many of the APIs configure and manipulate LiveEngage features or capabilities. Therefore, to use these APIs, you must make sure you configure your account to access those features. For example, to use the Agent Messaging SDK to connect a bot, your account must be enabled to support bot users.  To check the enabled features for your account, contact your account team or LivePerson Support. 
 
-<div class="important">If you do not currently have a LivePerson account or you're looking for a different one to work on, you can simply create a Developer's Account by <a href="http://register.liveperson.com/developer/signup">clicking here</a>. Please note that in order to get all the relevant features enabled for this account, you'll need to contact your account management team or LivePerson Support.</div>
+<div class="important">
+If you do not have a LivePerson account or you're looking for a different one to work on, create a [Developer's Account](http://register.liveperson.com/developer/signup) and contact your account team or LivePerson support to have features enabled. 
+</div>
 
 #### Development languages
 
