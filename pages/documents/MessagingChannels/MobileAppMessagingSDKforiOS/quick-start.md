@@ -77,14 +77,14 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    The Podfile must be created under your project's folder.
    </div>
 
-4. Open the Podfile and add the **LPMessagingSDK** pod to integrate it into your Xcode project:
+4. Open the Podfile and add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name:
 
    ```ruby
    source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
    platform :ios, '9.0'
    use_frameworks!
 
-   target '<Your Target Name>' do
+   target '<Your Target Name>' do  #Remember to change the target name.
       pod 'LPMessagingSDK'
    end
    ```
