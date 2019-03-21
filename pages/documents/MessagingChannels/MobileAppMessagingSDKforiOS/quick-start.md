@@ -84,12 +84,12 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    platform :ios, '9.0'
    use_frameworks!
 
-   target '<Your Target Name>' do  #Remember to change the target name.
+   target '<Your Target Name>' do  #Remember to change <Your Target Name> to the name of YOUR target.
       pod 'LPMessagingSDK'
    end
    ```
 
-5. In your project folder, install the dependencies for your project and to upgrade to the latest SDK:
+5. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:
 
    ```bash
    pod install
@@ -124,7 +124,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 1. In your Xcode project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, add all the Framework files.
 
-2. Under Build settings, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
+2. Under **Build Settings**, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
 3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values.  
 
@@ -136,7 +136,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
    ```xml
    <key>NSPhotoLibraryUsageDescription</key>
-   <string>hoto Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
+   <string>Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
    <key>NSCameraUsageDescription</key>
    <string>Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
    <key>NSMicrophoneUsageDescription</key>
