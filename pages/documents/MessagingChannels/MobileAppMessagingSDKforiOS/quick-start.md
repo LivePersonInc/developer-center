@@ -153,9 +153,9 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 ### Step 3: Initialize the LPMessagingSDK
 
 This step does the following:
-1. Initializes the SDK instance. You must provide your account number as a String. We have provided an example to use for the quickstart process in the 'accountID' constant. 
-2. Sets up and calls the conversation view. Your view controller calls our showConversation method and pushes on a new navigation stack containing the Conversation View Controller. You would use either a jwt or authentication code from your authentication server in the LPAuthenticationParams object. We have provided you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
-3.  Releases the LPMessagingSDK view stack when client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
+- **Initializes the SDK instance.** You must provide your account number as a string. We have provided an example to use for the this quick start process in the `accountID` constant. 
+- **Sets up and calls the conversation view.** Your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server. We have provided you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+-  **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
 We have provided code snippets for [Authenticated](#authenticated) and [Signup](#signup).
 
@@ -177,7 +177,7 @@ class DocumentationViewController: UIViewController {
         
         // MARK: - Setup instance of LPMessagingSDK
         
-        /*  Add the following code initializing the SDK instance. You must provide your account number as a String. We have provided an example to use for the quickstart process in the 'accountID' constant above.  */
+        /*  Adds the following code to initialize the SDK instance. You must provide your account number as a string. We have provided an example to use for this quick start process in the 'accountID' constant above.  */
         do {
             try LPMessagingSDK.instance.initialize(accountID)
         } catch {
@@ -186,7 +186,7 @@ class DocumentationViewController: UIViewController {
         
         // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
-         Here your view controller calls our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         Here your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server. We have provided you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
         let authenticationParams: LPAuthenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: jwt, redirectURI: nil, certPinningPublicKeys: nil, authenticationType: .authenticated)
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
@@ -194,9 +194,9 @@ class DocumentationViewController: UIViewController {
         LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
     }
     
-    // MARK: - Release LPMessagingSDK View Stack when Client app is backgrounded or suspended
+    // MARK: - Removes the conversation view when deallocating the container.
     /*
-     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
      */
     override func viewWillDisappear(_ animated: Bool) {
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
@@ -228,7 +228,7 @@ class DocumentationViewController: UIViewController {
         
         // MARK: - Setup instance of LPMessagingSDK
         
-        /*  Add the following code initializing the SDK instance. You will need to provide your account number as a String. We have provided an example to use for the quickstart process in the 'accountID' constant above.  */
+        /*  Adds the following code to initialize the SDK instance. You must provide your account number as a string. We have provided an example to use for this quick start process in the 'accountID' constant above.  */
         do {
             try LPMessagingSDK.instance.initialize(accountID)
         } catch {
@@ -237,7 +237,7 @@ class DocumentationViewController: UIViewController {
         
         //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
-         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         Here Your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server. We have provided you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
         let authenticationParams: LPAuthenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: nil, redirectURI: nil, certPinningPublicKeys: nil, authenticationType: .signup)
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
@@ -245,9 +245,9 @@ class DocumentationViewController: UIViewController {
         LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
     }
     
-    // MARK: - Release LPMessagingSDK View Stack when Client app is backgrounded or suspended
+    // MARK: - Removes the conversation view when deallocating the container.
     /*
-     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
      */
     override func viewWillDisappear(_ animated: Bool) {
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
@@ -258,51 +258,16 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-1. Inside **ViewController**, add the following imports:
 
-   ```swift
-   import LPMessagingSDK
-   import LPInfra
-   ```
 
-2. Also inside **ViewController**, under **viewDidLoad**, add the following code:
+### Next Steps
 
-   ```swift
-   do {
-     try LPMessagingSDK.instance.initialize("Your account ID")
-   } catch {
-     return
-   }
-   ```
+Congratulations!  You're all set.  
 
-3. Set up and call the conversation view. You’ll need to provide your LivePerson account number and a container view controller.
+You can now do any of the following:
 
-   ```swift
-   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("Your account ID")
-   let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
-   LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: nil)
-   ```
-
-4. In order to remove the conversation view when your container is deallocated, run the following code:
-
-   ```swift
-   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
-   LPMessagingSDK.instance.removeConversation(conversationQuery)
-   ```
-
-   <div class="important">
-   When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-   </div>
-
-   ```swift
-   if (self.conversationQuery != nil && self.isMovingToParentViewController){
-     LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
-   }
-   ```
-
-   <div class="notice">
-   When using ViewController Mode, on the Navigation Bar Back Button, you can simply call <b>LPMessagingSDK.instance.removeConversation(self.conversationQuery!)</b>.
-   </div>
+- Initialization with monitoring params
+- 
 
 ### Step 4 (Optional): Initialization with Monitoring Params
 
