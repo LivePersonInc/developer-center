@@ -126,13 +126,15 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 2. Under **Build Settings**, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
 
-3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values.  
+3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values:  
 
     * **NSPhotoLibraryUsageDescription**: Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
     * **NSCameraUsageDescription**: Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
     * **NSMicrophoneUsageDescription**: Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
+
+   Alternatively, you can open the Info.plist file in a text editor and then paste the XML into the file:
 
    ```xml
    <key>NSPhotoLibraryUsageDescription</key>
@@ -266,7 +268,7 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Initialization with monitoring params
+- 
 - 
 
 ### Step 4 (Optional): Initialization with Monitoring Params
