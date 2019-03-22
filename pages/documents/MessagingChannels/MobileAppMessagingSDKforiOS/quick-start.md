@@ -41,10 +41,6 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
-<details><summary><b>CocoaPods</b></summary><br><p>&nbsp;&nbsp;&nbsp;&nbsp;You can proceed to step 6.</p></details>
-<details><summary>Is the <b>Promised ship date</b> populated?</summary><br><p>&nbsp;&nbsp;&nbsp;&nbsp;You can proceed to step 6.</p></details>
-
-
 
 ### Step 1: Install the SDK into your project
 
@@ -77,26 +73,32 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    The Podfile must be created under your project's folder.
    </div>
 
-4. Open the Podfile and add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name:
+4. Open the Podfile.
+
+   ```bash
+   open -a Xcode Podfile
+   ```
+
+5. In the Podfile, add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name to YOUR target name:
 
    ```ruby
    source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
    platform :ios, '9.0'
    use_frameworks!
 
-   target '<Your Target Name>' do  #Remember to change <Your Target Name> to the name of YOUR target.
+   target '<Your Target Name>' do  
       pod 'LPMessagingSDK'
    end
    ```
 
-5. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:
+6. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:
 
    ```bash
    pod install
    pod update
    ```
 
-6. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
     ```bash
    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
@@ -108,7 +110,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 2. Extract the file to a folder on your Mac.
 
-3. Copy all framework and bundle files into the project folder. [what is the best way to do this?]
+3. In your Xcode project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, add all the Framework files.
 
 4. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and do the following:
 
@@ -122,11 +124,9 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 2: Configure project settings to connect LiveEngage SDK
 
-1. In your Xcode project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, add all the Framework files.
+1. Under **Build Settings**, make sure you set **Always Embed Swift Standard Libraries** to **YES**.
 
-2. Under **Build Settings**, make sure **Always Embed Swift Standard Libraries** is set to **YES**.
-
-3. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values:  
+2. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values:  
 
     * **NSPhotoLibraryUsageDescription**: Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
@@ -134,7 +134,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
     * **NSMicrophoneUsageDescription**: Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS
 
-   Alternatively, you can open the Info.plist file in a text editor and then paste the XML into the file:
+   Alternatively, you can open the Info.plist file in an external text editor and then paste the XML into the file:
 
    ```xml
    <key>NSPhotoLibraryUsageDescription</key>
@@ -145,11 +145,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    <string>Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS</string>
    ```
 
-4. Under **Capabilities**, in your project's Targets settings, turn on the following toggles to support SDK-specific features:
-
-   * **Push Notifications**: Notifies the user whenever a new message from the remote user is received. 
-
-   * **Structured Content**: Map items require MapKit framework to show location in the map. 
 
 
 ### Step 3: Initialize the LPMessagingSDK
@@ -268,97 +263,8 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- 
-- 
+- Turn on the following toggles, under **Capabilities**, to support SDK-specific features:
+  - **Push**: Notifies the user when a new message from the remote user is received.
+  - **Maps**: Shows location in the map.
+- Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign.
 
-### Step 4 (Optional): Initialization with Monitoring Params
-
-<div class="important">
-To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage. For more details, contact your Account Team.
-</div>
-
-1. Inside **viewController** add the following imports:
-
-   ```swift
-   import LPMessagingSDK
-   import LPInfra
-   ```
-
-2. Also inside **ViewController**, under **viewDidLoad**, add the following code:
-
-   ```swift
-   do {
-     let monitoringParams = LPMonitoringInitParams(appInstallID: "appInstallationId")
-     try LPMessagingSDK.instance.initialize("Your account ID", monitoringInitParams: monitoringParams)
-   } catch {
-     return
-   }
-   ```
-
-3. Create **LPMonitoringParams**. The entry points and engagement attributes used here are dummies:
-
-   ```swift
-     let entryPoints = ["tel://972737004000",
-                       "http://www.liveperson.com",
-                       "sec://Sport",
-                       "lang://Eng"]
-
-     let engagementAttributes = [
-       ["type": "purchase", "total": 20.0],
-       ["type": "lead",
-       "lead": ["topic": "luxury car test drive 2015",
-             "value": 22.22,
-             "leadId": "xyz123"]]
-     ]
-
-     let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAttributes: engagementAttributes)
-   ```
-
-4. Use the **LPMonitoringParams** to get the Engagement for the User, which is needed to start a new conversation with a specific campaign.
-
-   ```swift
-   LPMonitoringAPI.instance.getEngagement(consumerID: self.consumerID, monitoringParams: monitoringParams, completion: {
-         if let first = engagement.engagementDetails?.first {
-           let campaign = first.campaignId
-           let id = first.engagementId
-           let context : String = first.contextId!
-           self.campaignInfo = LPCampaignInfo(campaignId: campaign, engagementId: id, contextId: context)
-         } else {
-           self.campaignInfo = nil
-         }
-       }) { (error) in
-         self.campaignInfo = nil
-       }
-     }
-   ```
-
-5. Set up and call the conversation view. You’ll need to provide your LivePerson account number, a container view controller and the campaign information.
-
-   ```swift
-   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("Your account ID", campaignInfo: campaignInfo)
-   let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
-   LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: nil)
-   ```
-
-
-6. Remove the conversation view when your container is deallocated:
-
-   ```swift
-   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
-   LPMessagingSDK.instance.removeConversation(conversationQuery)
-   ```
-
-   <div class="important">
-   When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-   </div>
-
-   ```swift
-   if (self.conversationQuery != nil && self.isMovingToParentViewController){
-     LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
-   }
-   ```
-
-   <div class="notice">
-   When using ViewController Mode, on the Navigation Bar Back Button, you can simply call <b>LPMessagingSDK.instance.removeConversation(self.conversationQuery!)</b>.
-   </div>
-  

@@ -14,8 +14,6 @@ permalink: mobile-app-messaging-sdk-for-ios-certificate-pinning-certificate-pinn
 indicator: messaging
 ---
 
-### Introduction
-
 Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
 In order to use Certificate Pinning , the brand will need to go through an on-boarding process. This process includes setting up the Vanity URL feature, which is a prerequisite to using Certificate Pinning. The on-boarding process includes the following steps:

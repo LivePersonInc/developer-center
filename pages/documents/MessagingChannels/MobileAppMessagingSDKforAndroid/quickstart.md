@@ -30,252 +30,217 @@ To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 1. In your project files in the left sidebar, locate Gradle Scripts > build.gradle (Module: app), then double-click the file to open it in the editor.
 
-![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)
+   ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)
 
-{:start="2"}
+
 2. In the dependencies section, insert the following line:
 
-```gradle
-dependencies {
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
-}
-```
+   ```gradle
+   dependencies {
+     implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+   }
+   ```
 
-**Example: Build.gradle (Module: app) file**
+   **Example: Build.gradle (Module: app) file**
 
-```gradle
-apply plugin: 'com.android.application'
+   ```gradle
+   apply plugin: 'com.android.application'
 
-android {
-  compileSdkVersion 26
-  defaultConfig {
-    applicationId "com.shaym.liveperson.androidsdk"
-    minSdkVersion 19
-    targetSdkVersion 26
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
-}
+   android {
+     compileSdkVersion 26
+     defaultConfig {
+       applicationId "com.shaym.liveperson.androidsdk"
+       minSdkVersion 19
+       targetSdkVersion 26
+       versionCode 1
+       versionName "1.0"
+       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+     }
+     buildTypes {
+       release {
+         minifyEnabled false
+         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+       }
+     }
+   }
 
-dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation 'com.android.support:appcompat-v7:26.1.0'
-  implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-  testImplementation 'junit:junit:4.12'
-  androidTestImplementation 'com.android.support.test:runner:1.0.1'
-  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-  // LivePerson SDK
-  implementation  'com.liveperson.android:lp_messaging_sdk:3.5.0'
-}
-```
+   dependencies {
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+     implementation 'com.android.support:appcompat-v7:26.1.0'
+     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'com.android.support.test:runner:1.0.1'
+     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+     // LivePerson SDK
+     implementation  'com.liveperson.android:lp_messaging_sdk:3.5.0' 
+   }
+   ```
 
 ### Step 2: Code integration for basic deployment
 
 1. Add the following permission to your app’s AndroidManifest.xml file:
 
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
+   ```xml
+   <uses-permission android:name="android.permission.INTERNET" />
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   ```
 
-* Vibrate on new incoming msg (required if enabled) :
+   Vibrate on new incoming msg (required if enabled):
 
-```xml
-<uses-permission android:name="android.permission.VIBRATE"/>
-```
+   ```xml
+   <uses-permission android:name="android.permission.VIBRATE"/>
+   ```
 
-* For Photo Sharing (required if enabled) :
+   Photo Sharing (required if enabled):
 
-```xml
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-```
+   ```xml
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+   ```
 
-* For Audio Messaging (required if enabled) :
+   Audio Messaging (required if enabled):
 
-```xml
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-```
+   ```xml
+   <uses-permission android:name="android.permission.RECORD_AUDIO" />
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+   ```
 
-{:start="2"}
 2. Add the following imports to your class imports section:
 
-```java
-import com.liveperson.api.LivePersonCallback;
-import com.liveperson.infra.InitLivePersonProperties;
-import com.liveperson.infra.callbacks.InitLivePersonCallBack;
-import com.liveperson.messaging.TaskType;
-import com.liveperson.messaging.model.AgentData;
-import com.liveperson.messaging.sdk.api.LivePerson;
-```
+   ```java
+   import com.liveperson.api.LivePersonCallback;
+   import com.liveperson.infra.InitLivePersonProperties;
+   import com.liveperson.infra.callbacks.InitLivePersonCallBack;
+   import com.liveperson.messaging.TaskType;
+   import com.liveperson.messaging.model.AgentData;
+   import com.liveperson.messaging.sdk.api.LivePerson;
+   ```
 
-{:start="3"}
-3. Initialize the Messaging SDK
+3. Initialize the Messaging SDK.
 
-  You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class.
+   You can initialize the SDK in your Activity before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK once, in your app's Application class.
 
-```java
-String brandID = "YourLivepersonAccountIdString";
-String appID = "your app package name"
-LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
-  @Override
-  public void onInitSucceed() {
-  }
+   ```java
+   String brandID = "YourLivepersonAccountIdString";
+   String appID = "your app package name"
+    LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
+     @Override
+     public void onInitSucceed() {
+     }
 
-  @Override
-  public void onInitFailed(Exception e) {
-  }
-}));
-```
-
-
-<table>
-<thead>
-  <tr>
-    <th>Element</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>brandID</td>
-    <td>Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.</td>
-  </tr>
-  <tr>
-    <td>appID</td>
-    <td>Your app id, used for registering LP pusher service.</td>
-  </tr>
-  <tr>
-    <td>onInitSuccess</td>
-    <td>Callback that indicates the init process has finished successfully. </td>
-  </tr>
-  <tr>
-    <td>onInitFailed</td>
-    <td>Callback that indicates the init process has failed.</td>
-  </tr>
-  </tbody>
-</table>
+     @Override
+     public void onInitFailed(Exception e) {
+     }
+   }));
+   ```
+   
+   |Element  |Description  |
+   |---------|---------|
+   |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
+   |appID     |Your app id, used for registering LP pusher service.         |
+   |onInitSuccess     |Callback that indicates the init process has finished successfully.         |
+   |onInitFailed     |Callback that indicates the init process has failed.         |
 
 
-_Example implementation:_
+   _Example implementation:_
 
 
-```java
-LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new  InitLivePersonCallBack() {
-  @Override
-  public void onInitSucceed() {
-    initFragment();
-    LivePerson.setUserProfile(appId, firstName, lastName, phone);
-  }
-  @Override
-  public void onInitFailed(Exception e) {
-    Toast.makeText(MainActivity.this, "Init Failed", Toast.LENGTH_SHORT).show();
-  }
-}));
-```
+   ```java
+   LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new  InitLivePersonCallBack() {
+     @Override
+     public void onInitSucceed() {
+       initFragment();
+       LivePerson.setUserProfile(appId, firstName, lastName, phone);
+     }
+     @Override
+     public void onInitFailed(Exception e) {
+       Toast.makeText(MainActivity.this, "Init Failed", Toast.LENGTH_SHORT).show();
+     }
+   }));
+   ```
+   
+   <div class="notice">Make sure that the init process, from the onInitSucceed callback, finished successfully.</div>
 
-{:start="4"}
-4. Show conversation screen.
-
-The SDK supports two operation modes:
-
-  * Activity mode
-
-  * Fragment mode
-
-**Activity mode**
-
-Activity mode implements the toolbar that displays the agent name the consumer is talking with. The **'Is Typing’** indicator displays when the agent is typing.
-
-To open conversation window in separate activity use the following. This will start a new conversation activity:
-
-```java
-LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-```
-
-Using this method, the SDK implements the controls on the action bar.
-
-**Fragment mode**
-
-In fragment mode the SDK returns the conversation fragment to the caller that needs to be placed inside a container. Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
-
-_**Note: Ensure that the init process finished successfully. These should be called from the onInitSucceed callback.**_
-
-To open conversation window in a fragment: This returns a conversation fragment to be placed in a container in your activity:
-
-```java
-LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-```
-
-When using fragment mode, you should use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
-
-**Fragment mode - Handle CSAT (feedback)**
-
-In Fragment mode, there is an option to get notified of the CSAT screen state (**visible**/**invisible**).
-**For example** - show different title on Toolbar, show a close csat button etc...
-
-The container Activity (the Activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
-
-```java
-public interface ConversationFragmentCallbacks {
-  void setFeedBackMode(boolean on, IFeedbackActions actions);
-
-  // boolean on - Notify whether feedback (csat) screen is visible or dismisses.
-  // IFeedbackActions actions - provides set of actions for the feedback screen.
-  void onSurveySubmitted(IFeedbackActions actions);
-  void setSecureFormMode(boolean on, String formTitle) {}
-}
-
-// IFeedbackActions actions - provides set of actions for the feedback screen.
-public interface IFeedbackActions {
-  void closeFeedBackScreen();
-
-  //close the screen, for example- after submitting the csat. When showing "thank you" screen.
-
-  void skipFeedBackScreen();
-
-  //skip and close the whole feedback process.
-}
-```
+4. Show conversation screen using **Activity mode** or **Fragment mode**:
 
 
-Once the CSAT screen is visible, **setFeedBackMode** will be called with **true** value, when the CSAT is not visible anymore (skip/submitted) - **setFeedBackMode** will be called with **false** value.
+   1. **Activity mode**
 
-Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+      Activity mode implements the toolbar that displays the agent name for the conversation. When the agent types, the *'Is Typing’* indicator displays.
 
-```java
-class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
-  @Override
-  public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
-    toolbar.setTitle("Csat mode: " + ( on ? "on!" : "off!" ));
-    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (actions != null){
-          actions.closeFeedBackScreen();
+      Add the following code to open a new conversation activity: 
+
+      ```java
+      LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+   2. **Fragment mode**
+
+      Fragment mode returns the conversation fragment to the caller to place inside a container. The caller is also responsible for initializing the SDK, and if needed, implementing a toolbar or other indicators according to the provided SDK callbacks. 
+
+      1. Open a conversation window in a fragment, placing it in a container in your activity, add the following code: 
+
+         ```java
+         LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+         ```
+
+         <div class="important">When using fragment mode, you must use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.</div>
+
+      2. Show CSAT notifications. For example, you can show a different title on the toolbar, show a button to close CSAT, and so on. 
+
+         The container Activity that hosts the fragment must implement  ConversationFragmentCallbacks:
+
+        ```java
+        public interface ConversationFragmentCallbacks {
+          void setFeedBackMode(boolean on, IFeedbackActions actions); 
+
+          // boolean on - Notify whether feedback (csat) screen is visible or dismisses.
+          // IFeedbackActions actions - provides set of actions for the feedback screen.
+          void onSurveySubmitted(IFeedbackActions actions);
+          void setSecureFormMode(boolean on, String formTitle) {}
         }
-      }
-     });
-    }
 
-  @Override
-  public void onSurveySubmitted(IFeedbackActions actions) {
-    toolbar.setTitle("survey submitted");
-  }
-}
-```
+        // IFeedbackActions actions - provides set of actions for the feedback screen.
+        public interface IFeedbackActions {
+          void closeFeedBackScreen();
 
+          //close the screen, for example- after submitting the csat. When showing "thank you" screen.
 
-### Screen Orientation
+          void skipFeedBackScreen();
+
+          //skip and close the whole feedback process.
+        }
+        ```
+
+        When visible, **setFeedbackMode** is called with the **true** value.  When not visible (skip/submitted), **setFeedBackMode** is called with the **false** value. 
+
+        Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+
+        ```java
+        class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
+          @Override
+          public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
+            toolbar.setTitle("Csat mode: " + ( on ? "on!" : "off!" ));
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                if (actions != null){
+                  actions.closeFeedBackScreen();
+                }
+              }
+            });
+            }
+
+          @Override
+          public void onSurveySubmitted(IFeedbackActions actions) {
+            toolbar.setTitle("survey submitted");
+          }
+        }
+        ```
+
+5. Set the screen orientation.
+
 
 **In case of Fragment mode** - set the desired orientation in your container Activity definition in AndroidManifest.xml
 
