@@ -5,11 +5,11 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
-documentname: Initialization with Monitoring Params
-subfoldername: Mobile App Messaging SDK for iOS
+documentname: Mobile App Messaging SDK for iOS
+subfolder: 
 
-order: 12
-permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-interface-and-class-definitions.html
+order: 4
+permalink: mobile-app-messaging-sdk-for-ios-initializing-with-monitoring-params.html
 
 indicator: messaging
 ---
@@ -58,50 +58,47 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
      let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAttributes: engagementAttributes)
    ```
 
-{:start="4"}
 4. Using the **LPMonitoringParams**, get the Engagement for the User. This is needed to start a new conversation with a specific campaign.
 
-```swift
- LPMonitoringAPI.instance.getEngagement(consumerID: self.consumerID, monitoringParams: monitoringParams, completion: {
-      if let first = engagement.engagementDetails?.first {
-        let campaign = first.campaignId
-        let id = first.engagementId
-        let context : String = first.contextId!
-        self.campaignInfo = LPCampaignInfo(campaignId: campaign, engagementId: id, contextId: context)
-      } else {
-        self.campaignInfo = nil
-      }
-    }) { (error) in
-      self.campaignInfo = nil
-    }
-  }
-```
+   ```swift
+   LPMonitoringAPI.instance.getEngagement(consumerID: self.consumerID, monitoringParams: monitoringParams, completion: {
+         if let first = engagement.engagementDetails?.first {
+           let campaign = first.campaignId
+           let id = first.engagementId
+           let context : String = first.contextId!
+           self.campaignInfo = LPCampaignInfo(campaignId: campaign, engagementId: id, contextId: context)
+         } else {
+           self.campaignInfo = nil
+         }
+       }) { (error) in
+         self.campaignInfo = nil
+       }
+     }
+   ```
 
-{:start="5"}
 5. Set up and call the conversation view. You’ll need to provide your LivePerson account number, a container view controller and the campaign information.
 
-```swift
-let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("Your account ID", campaignInfo: campaignInfo)
-let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
-LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: nil)
-```
+   ```swift
+   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("Your account ID", campaignInfo: campaignInfo)
+   let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
+   LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: nil)
+   ```
 
-{:start="6"}
 6. In order to remove the conversation view when your container is deallocated, run the following code:
 
-```swift
-let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
-LPMessagingSDK.instance.removeConversation(conversationQuery)
-```
+   ```swift
+   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
+   LPMessagingSDK.instance.removeConversation(conversationQuery)
+   ```
 
-<div class="important">
-When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-</div>
+   <div class="important">
+   When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+   </div>
 
-```swift
-if (self.conversationQuery != nil && self.isMovingToParentViewController){
-  LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
-}
-```
+   ```swift
+   if (self.conversationQuery != nil && self.isMovingToParentViewController){
+     LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+   }
+   ```
 
 **Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
