@@ -1,24 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.2)
+    activesupport (5.2.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (9.4.9)
+    autoprefixer-rails (9.5.0)
       execjs
     colorator (1.1.0)
-    concurrent-ruby (1.1.4)
+    concurrent-ruby (1.1.5)
     execjs (2.7.0)
     extras (0.3.0)
       forwardable-extended (~> 2.5)
     fastimage (2.1.5)
     ffi (1.10.0)
     forwardable-extended (2.6.0)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jekyll (3.6.3)
       addressable (~> 2.4)
@@ -55,7 +55,7 @@ GEM
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     kramdown (1.17.0)
-    liquid (4.0.1)
+    liquid (4.0.3)
     liquid-tag-parser (1.9.0)
       extras (~> 0.3)
       liquid (>= 3.0, < 5.0)
@@ -105,4 +105,4 @@ DEPENDENCIES
   sprockets (~> 4.00.beta8)
 
 BUNDLED WITH
-   1.17.3
+   2.0.1
