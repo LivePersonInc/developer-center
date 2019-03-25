@@ -547,5 +547,5 @@ You can now do any of the following:
 
     For details on configuring notifications, refer to [Notifications](pushnotifications.md). 
 
-- Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign.
+- Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign. For details on configuring monitoring, refer to [Initialization with Monitoring Params](initialization-with-monitoring-params.md).
 
