@@ -22,21 +22,21 @@ Use this Quick Start guide to get you up and running with a project powered by L
 To use the LivePerson Mobile App Messaging SDK, the following are required:
 
 * **LiveEngage account** (You can get the number and login information from the LivePerson account team.)
-* **Version 3.5.1 and above**
-  * XCode 10 or later
+* **Version 3.5.1 and newer**
+  * XCode 10 or newer
   * Swift 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1), or Objective-C
 * **Version ~3.4** 
-  * Xcode 10 or later
+  * Xcode 10 or newer
   * Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
 * **Version ~3.3**
-  * XCode 10 or later
+  * XCode 10 or newer
   * Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
 * **Version 3.1.1 - 3.3.0**
-  * XCode 9.3 or later
-  * Swift 4.1 or later, or Objective-C
-* **Version 3.1 and below**
-  * XCode 9.2 or lower
-  * Swift 4.0 or lower, or Objective-C
+  * XCode 9.3 or newer
+  * Swift 4.1 or newer, or Objective-C
+* **Version 3.1 and older**
+  * XCode 9.2 or older
+  * Swift 4.0 or older, or Objective-C
 
 
 For information on supported operating systems and devices, refer to the [System Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
@@ -545,7 +545,7 @@ You can now do any of the following:
   - **Push**: Notifies the user when a new message from the remote user is received.
   - **Maps**: Shows location in the map.
 
-    For details on configuring notifications, refer to [Notifications](pushnotifications.md). 
+    For details on configuring notifications, refer to ... [still working on the file to cross reference to]. 
 
-- Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign. For details on configuring monitoring, refer to [Initialization with Monitoring Params](initialization-with-monitoring-params.md).
+- Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign. For details on configuring monitoring, refer to [Initialization with Monitoring Params](initialization-with-monitoring-params.md).  [randy still needs to validate these steps...he rewrote code and needs to validate the new with the code in this topci]
 
