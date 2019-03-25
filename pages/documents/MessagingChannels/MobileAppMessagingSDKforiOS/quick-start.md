@@ -541,7 +541,7 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Turn on the following toggles, under **Capabilities**, to support SDK-specific features:
+- Turn on the following toggles, under **Capabilities**, to support push notifications and structured content:
   - **Push**: Notifies the user when a new message from the remote user is received.
   - **Maps**: Shows location in the map.
 
