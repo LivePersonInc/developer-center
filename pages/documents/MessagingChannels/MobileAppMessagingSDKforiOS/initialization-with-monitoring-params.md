@@ -1,4 +1,20 @@
-### Step 4 (Optional): Initialization with Monitoring Params
+---
+pagename: Initialization with Monitoring Params
+redirect_from:
+  - initialization-with-monitoring-params.html
+Keywords:
+sitesection: Documents
+categoryname: "Messaging Channels"
+documentname: Initialization with Monitoring Params
+subfoldername: Mobile App Messaging SDK for iOS
+
+order: 12
+permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-interface-and-class-definitions.html
+
+indicator: messaging
+---
+
+# Initialization with Monitoring Params
 
 <div class="important">
 To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team.
@@ -6,42 +22,41 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
 1. Inside **viewController** add the following imports:
 
-```swift
-import LPMessagingSDK
-import LPInfra
-```
+   ```swift
+   import LPMessagingSDK
+   import LPInfra
+   ```
 
-{:start="2"}
+
 2. Also inside **ViewController**, under **viewDidLoad**, add the following code:
 
-```swift
-do {
-  let monitoringParams = LPMonitoringInitParams(appInstallID: "appInstallationId")
-  try LPMessagingSDK.instance.initialize("Your account ID", monitoringInitParams: monitoringParams)
-} catch {
-  return
-}
-```
+   ```swift
+   do {
+     let monitoringParams = LPMonitoringInitParams(appInstallID: "appInstallationId")
+     try LPMessagingSDK.instance.initialize("Your account ID", monitoringInitParams: monitoringParams)
+   } catch {
+     return
+   }
+   ```
 
-{:start="3"}
 3. Create **LPMonitoringParams**. The entry points and engagement attributes used here are dummies:
 
-```swift
-  let entryPoints = ["tel://972737004000",
-                     "http://www.liveperson.com",
-                     "sec://Sport",
-                     "lang://Eng"]
+   ```swift
+     let entryPoints = ["tel://972737004000",
+                       "http://www.liveperson.com",
+                       "sec://Sport",
+                       "lang://Eng"]
 
-  let engagementAttributes = [
-    ["type": "purchase", "total": 20.0],
-    ["type": "lead",
-    "lead": ["topic": "luxury car test drive 2015",
-          "value": 22.22,
-          "leadId": "xyz123"]]
-  ]
+     let engagementAttributes = [
+       ["type": "purchase", "total": 20.0],
+       ["type": "lead",
+       "lead": ["topic": "luxury car test drive 2015",
+             "value": 22.22,
+             "leadId": "xyz123"]]
+     ]
 
-  let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAttributes: engagementAttributes)
-```
+     let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAttributes: engagementAttributes)
+   ```
 
 {:start="4"}
 4. Using the **LPMonitoringParams**, get the Engagement for the User. This is needed to start a new conversation with a specific campaign.
