@@ -212,7 +212,7 @@ class DocumentationViewController: UIViewController {
 
 ```
 
-```
+```objectivec
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
@@ -341,7 +341,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```
+```objectivec
 #import "DocumentationViewController.h"
 #import <LPInfra/LPInfra.h>
 #import <LPMessagingSDK/LPMessagingSDK.h>
@@ -466,7 +466,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```
+```objectivec
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
@@ -544,5 +544,8 @@ You can now do any of the following:
 - Turn on the following toggles, under **Capabilities**, to support SDK-specific features:
   - **Push**: Notifies the user when a new message from the remote user is received.
   - **Maps**: Shows location in the map.
+
+    For details on configuring notifications, refer to [Notifications](pushnotifications.md). 
+
 - Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign.
 
