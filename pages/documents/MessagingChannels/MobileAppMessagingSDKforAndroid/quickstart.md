@@ -239,11 +239,11 @@ You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-
 
 1. Open a conversation window in a fragment, placing it in a container in your activity, add: 
 
- ```java
- LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
- ```
+   ```java
+   LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+   ```
 
- <div class="important">When using fragment mode, you must use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.</div>
+   <div class="important">When using fragment mode, you must use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.</div>
 
 2. Show CSAT notifications. For example, you can show a different title on the toolbar, or show a button to close CSAT. 
 
@@ -299,7 +299,7 @@ You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-
 
 ### Step 5: Set the screen orientation.
 
-   **For Activity mode** - override in your application's AndroidManifest.xml the ConversationActivity definition and set the desired screen orientation:
+   **For Activity mode** - override the ConversationActivity definition and set the desired screen orientation in your app's AndroidManifest.xml file:
 
    ```xml
    <activity
@@ -307,9 +307,9 @@ You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-
      android:screenOrientation="your screen orientation"/>
    ```
 
-   **For Fragment mode** - set the desired orientation in your container Activity definition in AndroidManifest.xml
+   **For Fragment mode** - set the desired screen orientation in your container Activity definition in your app's AndroidManifest.xml file.
 
-   [Android Screen Orentations](https://developer.android.com/guide/topics/manifest/activity-element.html#screen)
+   For more details on the orientation of the activity's display on the device, refer to [android:screenOrientation](https://developer.android.com/guide/topics/manifest/activity-element.html#screen).
 
 
 
@@ -319,7 +319,7 @@ You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-
 To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team.
 </div>
 
-1. Initialize the Messaging SDK with Monitoring Params in your app's Application class.
+1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
 
    ```java
    String brandID = "YourLivepersonAccountIdString";
