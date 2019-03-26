@@ -20,9 +20,7 @@ In this guide, you have the option to install the Mobile App Messaging SDK autom
 
 - **LiveEngage account** with messaging enabled and the mobile app configured.  You can get the number and login information from your LivePerson account team. 
 - Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
-- **For manual installation only:** 
-   - **Embeddable library for AAR:** Binary distribution of an Android Library Project (included in the download)
-   - **Installers:** Gradle (included in the download)
+
 
 <div class="important">
 For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
@@ -41,7 +39,7 @@ You can use Gradle, to scale your projects effortlessly.
    
    ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
 
-2. In the dependencies section, insert:
+2. In the dependencies section, add:
    ```gradle
    dependencies {
      implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
@@ -84,16 +82,16 @@ You can use Gradle, to scale your projects effortlessly.
 #### Option 2: Manually 
 
 1. [Download](https://github.com/LP-Messaging/Android-Messaging-SDK) the latest SDK package.
-2. Extract the file to a folder on your computer. The package contains all the files you need to add to your project as well as a sample app that demonstrates how to use the SDK. 
+2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project.  Also in the package, you get a sample app that demonstrates how to use the SDK. 
 3. In your Android Studio project, go to **File > New > Import module**. 
-4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk** module, and click **Finish**. 
+4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk** module, and then click **Finish**. 
 5. Add the following to the build.gradle of your app:
    - **compileSdkVersion**
    - **buildToolsVersion**
    <div class="important">
    The version should be at least Version 23.
    </div>
-6. Under the Android section, add:  
+6. Under the **Android** section, add:  
    ```gradle
    repositories {
      flatDir {
@@ -101,7 +99,7 @@ You can use Gradle, to scale your projects effortlessly.
      }
    }
    ```  
-7. Under the Dependencies section, add:  
+7. Under the **Dependencies** section, add:  
    ```gradle
    compile project(':lp_messaging_sdk')
    ```  
@@ -183,7 +181,7 @@ You can use Gradle, to scale your projects effortlessly.
    ```
 
 ### Step 3: Initialize the Messaging SDK 
-Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code in your app's Application class:
+Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code to your app's Application class:
 
    ```java
    String brandID = "YourLivepersonAccountIdString";
