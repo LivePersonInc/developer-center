@@ -17,12 +17,7 @@ Push and local notifications are a key factor that make the experience better fo
 
 
 ### Prerequisites
-- **LiveEngage account** with messaging enabled and the mobile app configured.  
-- LiveEngage **login credentials**:
-  - Account number
-  - User ID with administrator permissions
-  - Password  
-  
+- **LiveEngage account** information, messaging enabled, and the mobile app configured. 
   <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
 - **Firebase Cloud Messaging (FCM) SDK** installed and set up. For more details, see [Google FCM](https://firebase.google.com/docs/cloud-messaging/android/client).
 - **Registration token for the client app instance**, which identifies your app in LiveEngage. On initial startup of your app, the FCM SDK generates a registration token.  
@@ -55,16 +50,16 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
    ![campaigns](img/campaigns.png)
 
-3. Select **Manage** under **Mobile App management**.
+5. Select **Manage** under **Mobile App management**.
 
    ![app](img/mobieAppManagement.png)
 
-4. Click **Add new** to associate your app with the LiveEngage account.
+6. Click **Add new** to associate your app with the LiveEngage account.
 
    ![keymanagement](img/keymanagement.png)
 
-5. Select your platform as Android, enter your app’s name and your push notification API key, and then click **Create app**.
+7. Select your platform as Android, enter your app’s name and your push notification API key, and then click **Create app**.
 
    ![addnewapp](img/addnewapp.png)
 
-6. Click **Close** to complete the process.
+8. Click **Close** to complete the process.
