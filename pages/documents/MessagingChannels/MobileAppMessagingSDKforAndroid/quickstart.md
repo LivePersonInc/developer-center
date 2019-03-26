@@ -1,4 +1,17 @@
-# Quick Start for Android
+---
+pagename: Quick Start
+redirect_from:
+  - android-quickstart.html
+Keywords:
+sitesection: Documents
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+
+order: 10
+permalink: mobile-app-messaging-sdk-for-android-quick-start.html
+
+---
+
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.  
 
 In this guide, you have the option to install the Mobile App Messaging SDK automatically via a Gradle file or manually. 
