@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-initialization.htm
 indicator: messaging
 ---
 
-Add the code below to initialize the SDK:
+### Initialize the Messaging SDK:
 
 ```java
 String brandID = "Your-Liveperson-Account-Id-String";
@@ -39,9 +39,126 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
 | onInitSuccess | Callback that indicates the init process has finished successfully. |
 | onInitFailed | Callback that indicates the init process has failed. <br> *Note: You can call initialize before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK in your app's Application class.* |
 
+>**NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](#initialize-the-messaging-sdk-with-monitoring-params). Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
+
+
+### Initialize the Messaging SDK with Monitoring Params
 <div class="important">
-In order tso use the Monitoring API, you need to initialize the SDK with MonitoringParams. For more information, click <a href="android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params">here</a>. Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
+To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage. For more information about it, contact your Account Team.
 </div>
+
+1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
+
+   ```java
+   String brandID = "YourLivepersonAccountIdString";
+   String appID = "your app package name"
+   MonitoringInitParams monitoringParams = new MonitoringInitParams("appInstallationId");
+
+   LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, monitoringParams, new InitLivePersonCallBack() {
+     @Override
+     public void onInitSucceed() {
+     }
+
+     @Override
+     public void onInitFailed(Exception e) {
+     }
+   }));
+   ```
+
+2. Create **MonitoringParams**. 
+
+   <div class="notice">The entry points and engagement attributes used here are dummies.</div>
+
+   ```java
+   // Create Entry Points JSON
+   JSONArray entryPoints = null;
+   try {
+     // Try to Create JSON Array
+     jsonArray = new JSONArray("[tel://972737004000, http://www.liveperson.com, sec://sport, lang://Eng]");
+   } catch (JSONException e) {
+     // Log Error
+     Log.d(TAG, "Error Creating Entry Points :: " + e.getLocalizedMessage());
+   }
+   // Create Engagement Attributes
+   JSONArray engagementAttributes = null;
+   try {
+     // Try to Create JSON Array
+   jsonArray = new JSONArray("[{\"type\": \"purchase\", \"total\": \"20.0\"},{\"type\": \"lead\",\"lead\": {\"topic\": \"luxury car test drive 2015\",\"value\": \"22.22\",\"leadId\": \"xyz123\"}}]")
+   } catch (JSONException e) {
+     // Log Error
+     Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());
+   }
+   // Create Monitoring Params
+   MonitoringParams params = new MonitoringParams(null, entryPoints, engagementAttributes);
+   ```
+
+3. Using **LivepersonMonitoring**, get the Engagement for the User, which is needed to start a new conversation with a specific campaign. This call uses the MonitoringParams created in the previous step.
+
+   ```java
+   // Get Engagement
+   LivepersonMonitoring.getEngagement(context, consumerID, params, new EngagementCallback() {
+     @Override
+     public void onSuccess(LPEngagementResponse lpEngagementResponse) {
+       List<EngagementDetails> engagementList = lpEngagementResponse.getEngagementDetailsList();
+       // Check if User qualifies for an Engagement
+       if (engagementList != null && !engagementList.isEmpty()) {
+         // Set Campaign ID
+         currentCampaignId = engagementList.get(0).getCampaignId();
+         // Set Engagement ID
+         currentEngagementId = engagementList.get(0).getEngagementId();
+         // Set Engagement Context Id
+         currentEngagementContextId = engagementList.get(0).getContextId();
+         // Set Session ID
+         currentSessionId = lpEngagementResponse.getSessionId();
+         // Set Visitor ID
+         currentVisitorId = lpEngagementResponse.getVisitorId();
+         // Try-Catch Block
+         try {
+           // Create Campaign Object
+           CampaignInfo campaign = new CampaignInfo(Long.valueOf(currentCampaignId), Long.valueOf(currentEngagementId), currentEngagementContextId, currentSessionId, currentVisitorId);
+           // Log
+           Log.d(TAG, "Campaign :: " + campaign);
+         } catch (BadArgumentException e){
+           // Log Error
+           Log.d(TAG, "Error Creating Campaign :: " + e.getLocalizedMessage());
+         }
+       } else {
+         // Log Error
+         Log.d(TAG, "No Engagement found");
+       }
+     }
+
+     @Override
+     public void onError(MonitoringErrorType monitoringErrorType, Exception e) {
+       // Log Error
+       Log.d(TAG, "Error Getting Engagement :: " + e.getLocalizedMessage());
+     }
+   });
+   ```
+
+4. Set up the **ConversationViewParams** with the Campaign Information.
+
+   ```java
+   // Create new ConversationViewParams
+   ConversationViewParams params = new ConversationViewParams();
+   // Set Campaign Info
+   params.setCampaignInfo(campaign);
+   // Set Mode
+   params.setReadOnlyMode(false);
+   ```
+
+5. Start a new Conversation:
+
+   ```java
+   // Show Conversation - Activity Mode
+   LivePerson.showConversation(MessagingActivity.this, authParams, params);
+   
+   // or when using a fragment
+
+   // Show Conversation - Fragment Mode
+   mConversationFragment = (ConversationFragment) LivePerson.getConversationFragment(authParams, params);
+   ```
+ 
 
 The SDK supports two operation modes:
 

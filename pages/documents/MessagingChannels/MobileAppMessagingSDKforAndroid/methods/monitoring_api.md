@@ -16,8 +16,8 @@ indicator: messaging
 **(LivepersonMonitoring.java class)**
 
 
+> **NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](#initialize-the-messaging-sdk-with-monitoring-params). Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
 
-**Note:** Monitoring API is enabled only when the SDK is initialized with [MonitoringInitParams](android-interface-definitions.html), for how to initialize the SDK with MonitoringParams, click [here](android-quickstart-manual.html#step-4-optional-initialization-with-monitoring-params).
 
 ### sendSde
 
