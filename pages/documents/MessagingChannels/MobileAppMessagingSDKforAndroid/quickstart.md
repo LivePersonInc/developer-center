@@ -312,11 +312,16 @@ You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-
    For more details on the orientation of the activity's display on the device, refer to [android:screenOrientation](https://developer.android.com/guide/topics/manifest/activity-element.html#screen).
 
 
+### Next Steps
 
-### Step 6 (Optional): Initialization with Monitoring Params
+Congratulations!  You're all set.  
+
+You can now do any of the following:
+- [Implement and enable push notifications](enable-push.md). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- Initialize the Messaging SDK with Monitoring Params.
 
 <div class="important">
-To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team.
+To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage. For more information about it, contact your Account Team.
 </div>
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
