@@ -159,7 +159,7 @@ _Note: The updateCallback must be the same callback provided for the bind._
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
 | "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {...//File or Blob}, name: "name_of_file.png"} |
 
-<div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. This API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system</div>
+<div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system</div>
 
 Example 1 - 'Write ChatLine':
 
