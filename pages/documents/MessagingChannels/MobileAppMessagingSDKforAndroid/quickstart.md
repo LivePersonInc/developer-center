@@ -31,14 +31,16 @@ For guidance on app configuration and SDK step-by-step usage, see the [Using Liv
 ### Step 1: Install the SDK into your project
 You can install LivePerson Mobile App Messaging SDK using a couple of different methods:
 
-- Automatically using Gradle
-- Manually 
+- [Automatically using Gradle](#option-1-automatically-using-gradle)
+- [Manually](#option-2-manually) 
 
 #### Option 1: Automatically using Gradle
 You can use Gradle, to scale your projects effortlessly. 
 
 1. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
-   [image]
+   
+   ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
+
 2. In the dependencies section, insert:
    ```gradle
    dependencies {
@@ -80,6 +82,7 @@ You can use Gradle, to scale your projects effortlessly.
    ```
    
 #### Option 2: Manually 
+
 1. [Download](https://github.com/LP-Messaging/Android-Messaging-SDK) the latest SDK package.
 2. Extract the file to a folder on your computer. The package contains all the files you need to add to your project as well as a sample app that demonstrates how to use the SDK. 
 3. In your Android Studio project, go to **File > New > Import module**. 
@@ -90,17 +93,18 @@ You can use Gradle, to scale your projects effortlessly.
    <div class="important">
    The version should be at least Version 23.
    </div>
-6. Under the Android section, add:
+6. Under the Android section, add:  
    ```gradle
    repositories {
      flatDir {
        dirs project(':lp_messaging_sdk').file('aars')
      }
    }
-7. Under the Dependencies section, add:
+   ```  
+7. Under the Dependencies section, add:  
    ```gradle
    compile project(':lp_messaging_sdk')
-   ```
+   ```  
    **Example of the build.gradle file**
    ```gradle
    apply plugin: 'com.android.application'
@@ -179,7 +183,7 @@ You can use Gradle, to scale your projects effortlessly.
    ```
 
 ### Step 3: Initialize the Messaging SDK 
-1. In your app's Application class, add:
+Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code in your app's Application class:
 
    ```java
    String brandID = "YourLivepersonAccountIdString";
@@ -223,7 +227,7 @@ You can use Gradle, to scale your projects effortlessly.
    <div class="notice">Make sure that the init process, from the onInitSucceed callback, finished successfully.</div>
 
 ### Step 4: Show conversation screen
-You can use either [Activity mode]() or [Fragment mode]() to show the conversation screen. 
+You can use either [[Activity mode]()](#activity-mode) or [[Fragment mode]()](#fragment-mode) to show the conversation screen. 
 
 #### Activity mode
 **Activity mode** implements the toolbar that displays the agent name for the conversation. When the agent types, the *'Is Typing’* indicator displays.
@@ -233,10 +237,9 @@ You can use either [Activity mode]() or [Fragment mode]() to show the conversati
    ```
    
 #### Fragment mode
+**Fragment mode** returns the conversation fragment to the caller to place inside a container. The caller is also responsible for initializing the SDK, and if needed, implementing a toolbar or other indicators according to the provided SDK callbacks. 
 
-Fragment mode returns the conversation fragment to the caller to place inside a container. The caller is also responsible for initializing the SDK, and if needed, implementing a toolbar or other indicators according to the provided SDK callbacks. 
-
-1. Open a conversation window in a fragment, placing it in a container in your activity, add the following code: 
+1. Open a conversation window in a fragment, placing it in a container in your activity, add: 
 
  ```java
  LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
@@ -244,7 +247,7 @@ Fragment mode returns the conversation fragment to the caller to place inside a 
 
  <div class="important">When using fragment mode, you must use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.</div>
 
-2. Show CSAT notifications. For example, you can show a different title on the toolbar, show a button to close CSAT, and so on. 
+2. Show CSAT notifications. For example, you can show a different title on the toolbar, or show a button to close CSAT. 
 
    <div class="important">The container Activity that hosts the fragment must implement ConversationFragmentCallbacks.</div>
 
