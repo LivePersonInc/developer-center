@@ -46,7 +46,7 @@ For information on supported operating systems and devices, refer to the [System
 
 You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
-* [CocoaPods](#option-1-cocoapods) 
+* [Automatically using CocoaPods](#option-1-cocoapods) 
 * [Libraries Copy to Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
 <div class="important">
@@ -108,7 +108,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
 
-2. Extract the file to a folder on your Mac.
+2. Extract the file to a folder on your computer.
 
 3. In your Xcode project settings, navigate to the **General** tab, and under the **Embedded Binaries** section, add all the Framework files.
 
