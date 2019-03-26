@@ -25,7 +25,7 @@ In this guide, you have the option to install the Mobile App Messaging SDK autom
    - **Installers:** Gradle (included in the download)
 
 <div class="important">
-For guidance on app configuration and SDK step-by-step usage, see the [Using LivePerson SDK - Android](https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html) guide.
+For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
 </div>
 
 ### Step 1: Install the SDK into your project
