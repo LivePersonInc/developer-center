@@ -11,7 +11,7 @@ order: 10
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 
 ---
-
+<br>
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.  
 
 In this guide, you have the option to install the Mobile App Messaging SDK automatically via a Gradle file or manually. 
@@ -225,7 +225,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.  To d
    <div class="notice">Make sure that the init process, from the onInitSucceed callback, finished successfully.</div>
 
 ### Step 4: Show conversation screen
-You can use either [[Activity mode]()](#activity-mode) or [[Fragment mode]()](#fragment-mode) to show the conversation screen. 
+You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-mode) to show the conversation screen. 
 
 #### Activity mode
 **Activity mode** implements the toolbar that displays the agent name for the conversation. When the agent types, the *'Is Typing’* indicator displays.
