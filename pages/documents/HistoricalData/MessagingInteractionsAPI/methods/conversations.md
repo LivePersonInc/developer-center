@@ -423,7 +423,7 @@ userType       | The id of the user type, can be one of the following:0, 1, 2   
 userTypeName   | The name of the user type,can be one of the following: System, Human or Bot            | String     |
 agentGroupId   | Agent's group ID.                                                  | long       |
 agentGroupName | The agent's group name.                                            | string     |
-permission     | Agent's permission in the conversation (READER, ASSIGNED, SUGGESTED_ASSIGNED_AGENT).         | string     | Valid values: "reader", "assigned"
+permission     | Agent's permission in the conversation (reader, assigned).         | string     | Valid values: "reader", "assigned"
 contextData    | Contains context information about the transfer, including raw and structured metadata.| container| |
 dialogId       | The ID of the dialog the agent is participating in.                   | string     |
 
@@ -463,21 +463,10 @@ sourceAgentId          | The source agent ID.                                   
 sourceAgentLoginName   | The source agent name.                                        | string
 sourceAgentNickname    | The source agent nickname.                                    | string
 sourceAgentFullName    | The source agent full name.                                   | string
-reason                 | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver)          | string
+reason                 | Reason for transfer (back2Q, Agent, Skill, TakeOver)          | string
 contextData            | Contains context information about the transfer, including raw and structured metadata.            | container| |
-dialogId               | The ID of the dialog being transferred.                        | string
+dialogId               | The ID of the dialog being transfered.                        | string
 
-**Note**: the `reason` property gives you insight into why the conversation was transferred:
-
-* back2Q - the agent transferred the conversation back to the queue.
-
-* Agent - the conversation was transferred to a specific agent.
-
-* SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue.
-
-* Skill - the conversation was transferred to a skill.
-
-* TakeOver - a manager has taken over the conversation.
 
 _Interaction info_
 
