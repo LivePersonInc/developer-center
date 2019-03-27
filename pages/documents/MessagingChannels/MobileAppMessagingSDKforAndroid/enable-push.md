@@ -17,8 +17,11 @@ Push and local notifications are a key factor that make the experience better fo
 
 
 ### Prerequisites
-- **LiveEngage account** information, messaging enabled, and the mobile app configured. 
+- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured. 
   <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+- [Latest version](https://developer.android.com/studio) of **Android Studio**. 
+- [Latest version](https://gradle.org/install/) of **Gradle**.
+- **Firebase** has been [added to your Android project](https://firebase.google.com/docs/android/setup). 
 - **Firebase Cloud Messaging (FCM) SDK** installed and set up. For more details, see [Google FCM](https://firebase.google.com/docs/cloud-messaging/android/client).
 - **Registration token for the client app instance**, which identifies your app in LiveEngage. On initial startup of your app, the FCM SDK generates a registration token.  
 

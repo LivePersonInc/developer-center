@@ -14,27 +14,8 @@ permalink: mobile-app-messaging-sdk-for-ios-appendix-using-liveperson-sdk-ios.ht
 indicator: messaging
 ---
 
-##### Table of Contents  
 
-### SDK 2.8.0, iOS 11.0, Swift 4
 
-[Installing the SDK](#2.8step1)  
-[Configure project settings](#2.8step2)  
-[Using the SDK](#2.8step3)  
-[Customizing the SDK](#2.8step4)  
-[Configuring App for Push Notifications](#2.8step5)  
-
-### SDK 2.5.3.0, iOS 10.3, Swift 3
-
-[Installing the SDK](#2.5step1)  
-[Configure project settings](#2.5step2)  
-[Using the SDK](#2.5step3)  
-[Customizing the SDK](#2.5step4)  
-[Configuring App for Push Notifications](#2.5step5)  
-
-<a name="2.8step1"/>
-
-## SDK 2.8.0, iOS 11.0, Swift 4
 
 #### Step 1: Installing the SDK
 
@@ -192,6 +173,12 @@ let conversationParamProtocol = LPMessagingSDK.instance.getConversationBrandQuer
 // Remove the Conversation
 LPMessagingSDK.instance.removeConversation(conversationParamProtocol!)
 ```
+
+
+
+
+
+>the above code block was rewritten by Randy, but the next code block isn't addressed in the quick start guide.  
 
 {:start="2"}
 2. Call the following code on your **@IBAction** to access LPMessagingSDK Menu, this will give you a couple more options like **Mark as urgent**, **Clear history**, and **Resolve the conversation**:

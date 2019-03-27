@@ -16,7 +16,7 @@ indicator: messaging
 
 ### Step 1 - Creating initial views
 
-* In order to get some basic data from the user, let’s create some initial views on our main activity / an activity of your choosing (more data can be used in order to initialize the SDK, during this guide, we’ll use some basic name features only).
+In order to get some basic data from the user, let’s create some initial views on our main activity / an activity of your choosing (more data can be used in order to initialize the SDK, during this guide, we’ll use some basic name features only).
 
 ![initialview](img/initialview.png)
 

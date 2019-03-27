@@ -18,7 +18,10 @@ In this guide, you have the option to install the Mobile App Messaging SDK autom
 
 ### Prerequisites
 
-- **LiveEngage account** with messaging enabled and the mobile app configured.  You can get the number and login information from your LivePerson account team. 
+- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured. 
+  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+- [Latest version](https://developer.android.com/studio) of **Android Studio**. 
+- [Latest version](https://gradle.org/install/) of **Gradle**.
 - Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
 
 
