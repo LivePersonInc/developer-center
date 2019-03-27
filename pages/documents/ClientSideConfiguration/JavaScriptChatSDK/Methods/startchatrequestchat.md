@@ -29,7 +29,7 @@ The parameters in question are `conversationId`, `participantId`. You will need 
 **Properties**
 
 | Element | Description | Type | Notes |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | skill |   A specific skill requested for this chat. | string | |
 | serviceQueue | A ServiceQueue for this chat. | string | Will be ignored if a skill property is passed. Must be supplied with the maxWaitTime property. **LEGACY ONLY**|
 | maxWaitTime   | The number of seconds the visitor can wait for a chat. | number | Must be supplied in conjunction with the serviceQueue property. **LEGACY ONLY**|
