@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-initialization.htm
 indicator: messaging
 ---
 
-### Initialize the Messaging SDK:
+### Initialize the Messaging SDK
 
 ```java
 String brandID = "Your-Liveperson-Account-Id-String";
