@@ -22,19 +22,19 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
   <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
 - **Version 3.5.1 and newer**
-    - XCode 10 or newer
+    - Xcode 10 or newer
     - Swift 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1), or Objective-C
 - **Version ~3.4**
     - Xcode 10 or newer
     - Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
 - **Version ~3.3**
-    - XCode 10 or newer
+    - Xcode 10 or newer
     - Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
 - **Version 3.1.1 - 3.3.0**
-    - XCode 9.3 or newer
+    - Xcode 9.3 or newer
     - Swift 4.1 or newer, or Objective-C
 - **Version 3.1 and older**
-    - XCode 9.2 or older
+    - Xcode 9.2 or older
     - Swift 4.0 or older, or Objective-C
 
 
@@ -46,13 +46,13 @@ For information on supported operating systems and devices, refer to the [System
 You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
 * [Automatically using CocoaPods](#option-1-cocoapods)
-* [Libraries Copy to Xcode Project](#option-2-libraries-copy-to-xcode-project)
+* [Manually coping the libraries to your Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
 <div class="important">
 For both methods, you are <b>Required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 </div>
 
-#### *Option 1: CocoaPods*
+#### *Option 1: Automatically using CocoaPods*
 
 You can use CocoaPods, a dependency manager for Swift and Objective-C projects, to scale your projects elegantly. It provides a standard format for managing external libraries.
 
@@ -103,7 +103,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
     ```
 
-#### *Option 2: Libraries Copy to Xcode Project*
+#### *Option 2: Manually coping the libraries to your Xcode Project*
 
 1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
 
@@ -114,7 +114,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 4. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and do the following:
 
    1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.  
-   2. Click the + button and add the script below.  The script loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+   2. Click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
    ```bash
    bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
