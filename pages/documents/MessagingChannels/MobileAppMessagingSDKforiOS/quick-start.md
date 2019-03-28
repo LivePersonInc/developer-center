@@ -23,15 +23,9 @@ You have the option to install the Mobile App Messaging SDK automatically via Gr
 
 - **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
   <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
-- **Version 3.5.1 and newer**
+- **Version 3.3 and newer**
     - Xcode 10 or newer
-    - Swift 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1), or Objective-C
-- **Version ~3.4**
-    - Xcode 10 or newer
-    - Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
-- **Version ~3.3**
-    - Xcode 10 or newer
-    - Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
+    - Swift version 4.2, or Objective-C
 - **Version 3.1.1 - 3.3.0**
     - Xcode 9.3 or newer
     - Swift 4.1 or newer, or Objective-C
@@ -67,7 +61,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    sudo gem install cocoapods
    ```
 
-3. Navigate to your project folder and create a Podfile for your project:
+2. Navigate to your project folder and create a Podfile for your project:
 
    ```bash
    pod init
@@ -77,7 +71,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    The Podfile must be created under your project's folder.
    </div>
 
-4. Open the Podfile.
+3. Open the Podfile.
 
    ```bash
    open -a Xcode Podfile
@@ -95,14 +89,14 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    end
    ```
 
-6. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:
+4. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:
 
    ```bash
    pod install
    pod update
    ```
 
-7. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
+5. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and click the + button and select **New Run Script Phase**. Add the following script, which loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
     ```bash
    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
@@ -165,7 +159,7 @@ We have provided code snippets for [Authenticated](#authenticated), [Unauthentic
 
 #### Authenticated
 
-```swift
+```swift 
 import UIKit
 import LPMessagingSDK
 import LPAMS
@@ -175,7 +169,7 @@ class DocumentationViewController: UIViewController {
 
     // MARK: - Setup Account information.
 
-    /// Account ID is your site ID for your LiveEngage Account.
+    /// Account ID is your LiveEngage Account Number.
     let accountID: String = "14800077"
     /// Unique JSON Web Token used for authentication of the consumer.  Enter unique JWT here.
     let jwt: String = "eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdGFydF91c2VyIiwgICJpc3MiOiAiaHR0cHM6Ly9MUC1BdXRoLmNvbSIsICAiZXhwIjoxNTg0Njc0MDc3LCAgImlhdCI6MTU1MzExNjQ3N30.tFtanIwh8SrmJWM5iSUxmj7WaroA_WCtZfTS4KN9N8Q0Vy0O5rRdb7T7ZkFJxnGfwg0fsKfBuM3qTD8NHWNOKqaZX_bQKXQ-cnJHa4DtJX9Udv0MGfg_UHO0DBg5vaC_38beUlSaUPQ0rQAHb9sm0PE1tNOMfLzvPqM1kF3VMBq1dZNpNkDYaV8oleEcm0v8woRj45FYOv34etrgSsf0Pi-68AP8ckG3WJzS_y9dpZAxW3oDIv_XXHZ4TXQw_wPwMKu0UtZoMfctz-5ERk7uTQxeWP6TS9ce2YQ38FqUwIBN3ImAhA3vE2gLsYexFsPiO_I3hSEC272Ya-b-eJZ8vg"

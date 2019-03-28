@@ -51,7 +51,7 @@ You can use Gradle, to scale your projects effortlessly.
    }
    ```
    **Example of the build.gradle (Module: app) file**
-   ```gradle
+   ```gradle 
    apply plugin: 'com.android.application'
 
    android { 
@@ -176,7 +176,7 @@ You can use Gradle, to scale your projects effortlessly.
 
 2. Add the following imports to your class imports section:
 
-   ```java
+   ```java {.line-numbers}
    import com.liveperson.api.LivePersonCallback;
    import com.liveperson.infra.InitLivePersonProperties;
    import com.liveperson.infra.callbacks.InitLivePersonCallBack;
