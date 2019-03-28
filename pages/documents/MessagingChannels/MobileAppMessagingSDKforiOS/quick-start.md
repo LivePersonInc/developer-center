@@ -27,13 +27,13 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - **Version ~3.4**
     - Xcode 10 or newer
     - Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1) or Objective-C
-- * **Version ~3.3**
+- **Version ~3.3**
     - XCode 10 or newer
     - Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1), or Objective-C
-- * **Version 3.1.1 - 3.3.0**
+- **Version 3.1.1 - 3.3.0**
     - XCode 9.3 or newer
     - Swift 4.1 or newer, or Objective-C
-- * **Version 3.1 and older**
+- **Version 3.1 and older**
     - XCode 9.2 or older
     - Swift 4.0 or older, or Objective-C
 
@@ -148,13 +148,13 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 3: Initialize the LPMessagingSDK
 
-This step does the following:
-1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the 'accountID' constant. We have provided an example to use for the this quick start process.  
-2. **Initializes the SDK instance.**
-3. **Sets up and calls the conversation view.** Your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server. We have provided you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+This step:
+1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the 'accountID' constant and a unique JSON Web Token (JWT) in the 'jwt' constant. We have provided an example to use for the this quick start process.  
+2. **Sets up and initializes the SDK instance** for the accountID provided.
+3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
-We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](), and [Signup](#signup).
+We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](#unauthenticated), and [Signup](#signup).
 
 #### Authenticated
 
@@ -189,7 +189,7 @@ class DocumentationViewController: UIViewController {
 
         //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
-         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
         let authenticationParams: LPAuthenticationParams = LPAuthenticationParams(jwt: jwt, authenticationType: .authenticated)
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
@@ -199,7 +199,7 @@ class DocumentationViewController: UIViewController {
 
     // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
     /*
-     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
      */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -267,7 +267,7 @@ NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdG
 
 // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
 /*
- The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+ The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
  */
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -329,7 +329,7 @@ class DocumentationViewController: UIViewController {
     // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
 
     /*
-     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
      */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -392,7 +392,7 @@ NSString * const appInstallID = @"62b50381-4532-42a9-98dd-2045975ce5d3";
 // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
 
 /*
- The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+ The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
  */
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -454,7 +454,7 @@ class DocumentationViewController: UIViewController {
     // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
 
     /*
-     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
      */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -518,7 +518,7 @@ NSString * const accountID = @"14800077";
 // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
 
 /*
- The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  A instance of the view stack will be added upon foregrounding the application.
+ The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
  */
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

@@ -14,95 +14,98 @@ level-order: 6
 
 indicator: both
 ---
-
+<br>
 The Login Service API provides endpoints to manage the User Session in LiveEngage, such as User Login, Application Login, Logout and Refresh.  Use this API to log into LiveEngage as a *user* with credentials or an *application* with an API key.   After logging in, you receive a session token (Bearer) to use for other related API calls.
 
 
 <div class="important">
-Refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou).
+Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, if you haven't already done so.<br>
 
-We recommend that you implement our [Retry Policy and KeepAlive Best Practices](https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html). 
+We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>. 
 </div>
 
 
-### Use Cases
+#### Let's get started!
 
-#### User Login
-Provides a way for users to access and manage a LiveEngage session. A session could be a customized workspace or hosting a LiveEngage user in an external app.
+### Step 1. Retrieve your domain
 
-<div class="notice">
-Logged in users are managed under the same restrictions as regular users in LiveEngage, including password expiration, concurrent conversation limits, skill groups and so on.  If your account has SSO enabled, this method is not standalone, and you must register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.
-</div>
-  
-#### Application Login
-Provides a way for applications to access and manage LiveEngage sessions, such as bots, virtual agents, or other apps that need to act as an agent.  
-
-<div class="notice">  
-The Application Login method overcomes both issues detailed in the User Login method (above), such as password expiration or SSO integration. </div>
-
-### Let's get started!
-
-#### Step 1. Retrieve your domain
 Before you can choose your login method, you must retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).  
 
 
 **TIP:** Use the `agentVep` service name to retrieve your domain.
 
-
-
-##### Request URL example
-
-`https://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0`
-
-##### Response example
-```json
-{
- "service": "agentVep",
- "account": "1234",
- "baseURI": "exampleDomain.liveperson.net"
-}
+```html
+http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0
 ```
 
-#### Step 2. Choose your method of login
+### Step 2. Choose your method of login
 
-A. **User Login**: Use the LiveEngage username and password, and refer to [User Login](https://developers.liveperson.com/login-service-api-methods-user-login.html) for more details.
+- **User Login** - Provides a way for **users** to access and manage a LiveEngage session. A session could be a customized workspace or hosting a LiveEngage user in an external app. Use the LiveEngage username and password, and refer to [User Login](https://developers.liveperson.com/login-service-api-methods-user-login.html) for more details.
 
-   -OR-
+   <div class="notice">Logged in users are managed under the same restrictions as regular users in LiveEngage, including password expiration, concurrent conversation limits, skill groups and so on.  If your account has SSO enabled, this method is not standalone, and you must register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.</div>
 
-B. **Application**: For more details, refer to [Application Login](https://developers.liveperson.com/login-service-api-methods-application-login.html).
+- **Application** - Provides a way for **applications** to access and manage LiveEngage sessions, such as bots, virtual agents, or other apps that need to act as an agent. The Application Login method overcomes both issues detailed in the User Login method (above), such as password expiration or SSO integration. For more details, refer to [Application Login](https://developers.liveperson.com/login-service-api-methods-application-login.html).
 
    <div class="important">
    To login as an application, you must have the <i>User Type - Bot</i> feature activated.  If you do not, contact your account team before proceeding.
    </div>
 
-#### Step 3. Create an API key
+### Step 3. Create an API key and new Bot
 
-1. Log into LiveEngage with Administrator or Campaign Manager permissions and open the campaign area.
+1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
+
 2. In the footnote, click **Data Sources**.
-3. Open the API tab and click **Add new API key**.<p>**TIP:** Alternatively, you can click on an existing key to edit its privileges.
-4. Complete the required fields, and then click **Save**.
-5. Select the **Agent Interactions** category, click the **User Login** check box to select it, and the click **Save**.<p>![APIKeyCreation.png](images/APIKeyCreation.png)<p>The four AUTH request values are provided for you to use in the request body of this API:<ul><li>App Key</li><li>App Secret</li><li>Access Token</li><li>Access Token Secret</li></ul>
-6. Copy the generated **App Key** to the clipboard.<p>![apikeycreation1.png](images/apikeycreation1.png)
 
-#### Step 4. Create a new Bot
-You use the username of the bot to log in. ![setbot.png](images/setbot.png)
+3. Open the API tab and click **Add new**.
 
-1. From within LiveEngage, create a new user and set the type to **Bot**.
-2. From the Login Method, select **App Key** from the drop-down menu.<p>![loginmethod.png](images/loginmethod.png)
-3.  Remember the App Key you copied earlier?  Paste it into the *App key* field.<p>![userwithkey.png](images/userwithkey.png)
-4. Complete the required fields to finish creating the user and then click **Save** at the top of the form.<p>You use the Username field in the request body of this API.
-5. Use the following to log into LiveEngage:<ul><li>App Key</li><li>App Secret</li><li>Access Token</li><li>Access Token Secret</li></ul>
+   **TIP:** Alternatively, you can click on an existing key to edit its privileges.
 
+4. Provide the name of the application and the developer name.  Optionally, you can provide a description of the app by clicking the **Add description** link below the Application name field.
 
-### Methods
+5. Select the **Agent Interactions** category, click the **User Login** check box to select it, and then click **Save**.  
 
-#### User Login 
+   ![APIKeyCreation](img/APIKeyCreation.png)  
 
-#### Application Login
+   Once the API key has been successfully created, the authentication details display for four AUTH request values, which you use in the request body of this API:
 
-#### Refresh
+   - App key
 
-#### Logout
+   - Secret
+
+   - Access token
+
+   - Access token secret
+
+6. Copy the generated **App key**.  
+
+   ![APIKeyCreation1](img/apikeycreation1.png)
+
+7. Along the top, open the **Users** area and click **Add user**. From the Login Method, select **App Key** from the drop-down menu.  
+   
+   ![LoginMethod](img/loginmethod.png)  
+
+8. Remember the App Key you copied earlier?  Paste it into the *App key* field.  
+   
+   ![UserWithKey](img/userwithkey.png)
+
+9. Complete the required fields to finish creating the user and then click **Save** at the top of the form.
+   
+   You use the Username field in the request body of this API.
+
+10. Log into LiveEngage with the following information:
+
+   - App Key
+
+   - App Secret
+
+   - Access Token
+
+   - Access Token Secret
+
+   - Username of the user created in the previous step
+
+### Next steps
+
 
 
 
