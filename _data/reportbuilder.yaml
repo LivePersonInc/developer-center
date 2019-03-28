@@ -3,7 +3,7 @@
   analysisType: Agent Status
   Channel: Messaging,Chat
   formulaOptional:
-  Description: 'Cumulative time ([h]:mm) in \\"Away\\" state. Can be viewed and filteredBy the \\"AWAY REASON\\" attribute.'
+  Description: 'Cumulative time ([h]:mm) in "Away" state. Can be viewed and filteredBy the "AWAY REASON" attribute.'
   Dashboard: Agent Activity ,Business Activity ,Operational and Staffing,Messaging Performance
   filteredBy: Agent,Group
 - metricitem:
