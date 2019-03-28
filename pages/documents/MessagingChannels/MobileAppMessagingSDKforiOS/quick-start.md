@@ -17,12 +17,10 @@ The LivePerson SDK provides brands with a secure way to foster connections with 
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage.
 
-You have the option to install the Mobile App Messaging SDK automatically via Gradle or manually copying the SDK files to your project. 
-
 ### Prerequisites
 
 - **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
-  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+  <div class="note">If you don't know your account information, you can get it from your LivePerson account team.</div>
 - **Version 3.3 and newer**
     - Xcode 10 or newer
     - Swift version 4.2, or Objective-C
@@ -47,9 +45,7 @@ You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of di
 * [Automatically using CocoaPods](#option-1-cocoapods)
 * [Manually coping the libraries to your Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
-<div class="important">
-For both methods, you are <b>Required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
-</div>
+<div class="important">For both methods, you are <b>Required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
 
 #### *Option 1: Automatically using CocoaPods*
 
@@ -214,6 +210,7 @@ class DocumentationViewController: UIViewController {
 ```
 
 ```objectivec
+
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
@@ -343,6 +340,7 @@ class DocumentationViewController: UIViewController {
 ```
 
 ```objectivec
+
 #import "DocumentationViewController.h"
 #import <LPInfra/LPInfra.h>
 #import <LPMessagingSDK/LPMessagingSDK.h>

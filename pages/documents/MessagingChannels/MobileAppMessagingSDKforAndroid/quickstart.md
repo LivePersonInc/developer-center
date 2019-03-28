@@ -16,7 +16,7 @@ The LivePerson SDK provides brands with a secure way to foster connections with 
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.
 
-You have the option to install the Mobile App Messaging SDK automatically via Gradle or manually copying the SDK files to your project. 
+
 
 ### Prerequisites
 
@@ -35,10 +35,10 @@ For guidance on app configuration and SDK step-by-step usage, see the <a href="h
 You can install LivePerson Mobile App Messaging SDK using a couple of different methods:
 
 - [Automatically using Gradle](#option-1-automatically-using-gradle)
-- [Manually](#option-2-manually) 
+- [Manually coping SDK files to your project](#option-2-manually) 
 
 #### Option 1: Automatically using Gradle
-You can use Gradle, to scale your projects effortlessly. 
+You can use Gradle, an automation tool, to scale your projects effortlessly. 
 
 1. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
    
@@ -51,6 +51,7 @@ You can use Gradle, to scale your projects effortlessly.
    }
    ```
    **Example of the build.gradle (Module: app) file**
+
    ```gradle 
    apply plugin: 'com.android.application'
 
@@ -176,7 +177,7 @@ You can use Gradle, to scale your projects effortlessly.
 
 2. Add the following imports to your class imports section:
 
-   ```java {.line-numbers}
+   ```java 
    import com.liveperson.api.LivePersonCallback;
    import com.liveperson.infra.InitLivePersonProperties;
    import com.liveperson.infra.callbacks.InitLivePersonCallBack;
