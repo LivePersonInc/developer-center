@@ -72,24 +72,46 @@ dependencies {
 
 ### Step 3 - Manifest modifications
 
-1. Add the following permission to your app’s AndroidManifest.xml file:
+1. Add the following permissions to your app’s AndroidManifest.xml file:
 
-```java
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
+   ```xml
+   <uses-permission android:name="android.permission.INTERNET" />
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   ```
 
-Vibrate on new incoming msg (required if enabled):
+   If you have any of these features enabled, you must add the following to your app's AndroidManifest.xml file:
 
-```java
-<uses-permission android:name="android.permission.VIBRATE"/>
-```
-For Photo Sharing (required if enabled):
+   * **Vibrate on new incoming msg**
 
-```java
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-```
+      ```xml
+      <uses-permission android:name="android.permission.VIBRATE"/>
+      ```
+
+   * **Photo Sharing**
+
+      ```xml
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      ```
+
+   * **Audio Messaging**
+
+      ```xml
+      <uses-permission android:name="android.permission.RECORD_AUDIO" />
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      ```
+
+2. Add the following imports to your class imports section:
+
+   ```java 
+   import com.liveperson.api.LivePersonCallback;
+   import com.liveperson.infra.InitLivePersonProperties;
+   import com.liveperson.infra.callbacks.InitLivePersonCallBack;
+   import com.liveperson.messaging.TaskType;
+   import com.liveperson.messaging.model.AgentData;
+   import com.liveperson.messaging.sdk.api.LivePerson;
+   ```
 
 ### Step 4- Liveperson Events
 

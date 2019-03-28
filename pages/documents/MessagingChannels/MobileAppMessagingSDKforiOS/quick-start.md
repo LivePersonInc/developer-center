@@ -15,7 +15,7 @@ indicator: messaging
 <br>
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
-Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage.
+Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage. 
 
 ### Prerequisites
 
@@ -31,11 +31,6 @@ Use this Quick Start guide to get you up and running with a project powered by L
     - Xcode 9.2 or older
     - Swift 4.0 or older, or Objective-C
 - Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
-
-
-<div class="important">
-For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-appendix-using-liveperson-sdk-ios.html">Using LivePerson SDK - iOS</a> guide.
-</div>
 
 
 ### Step 1: Install the SDK into your project
@@ -142,14 +137,13 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 
 ### Step 3: Initialize the LPMessagingSDK
-Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code to your app's Application class:
+Before you can show a conversation, you must initialize the Messaging SDK.  
 
-In this step, you [add the code to ?? in your Xcode project; where does the developer put the code snippet?]
-
-1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the 'accountID' constant and a unique JSON Web Token (JWT) in the 'jwt' constant. We have provided an example to use for the this quick start process.  
+1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the `accountID` constant and a unique JSON Web Token (JWT) in the `jwt` constant. We have provided an example to use for the this quick start process.  
 2. **Sets up and initializes the SDK instance** for the accountID provided.
 3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
+
 
 We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](#unauthenticated), and [Signup](#signup).
 
@@ -209,7 +203,7 @@ class DocumentationViewController: UIViewController {
 
 ```
 
-```objectivec
+```c
 
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
@@ -227,7 +221,7 @@ NSString * const accountID = @"14800077";
 NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdGFydF91c2VyIiwgICJpc3MiOiAiaHR0cHM6Ly9MUC1BdXRoLmNvbSIsICAiZXhwIjoxNTg0Njc0MDc3LCAgImlhdCI6MTU1MzExNjQ3N30.tFtanIwh8SrmJWM5iSUxmj7WaroA_WCtZfTS4KN9N8Q0Vy0O5rRdb7T7ZkFJxnGfwg0fsKfBuM3qTD8NHWNOKqaZX_bQKXQ-cnJHa4DtJX9Udv0MGfg_UHO0DBg5vaC_38beUlSaUPQ0rQAHb9sm0PE1tNOMfLzvPqM1kF3VMBq1dZNpNkDYaV8oleEcm0v8woRj45FYOv34etrgSsf0Pi-68AP8ckG3WJzS_y9dpZAxW3oDIv_XXHZ4TXQw_wPwMKu0UtZoMfctz-5ERk7uTQxeWP6TS9ce2YQ38FqUwIBN3ImAhA3vE2gLsYexFsPiO_I3hSEC272Ya-b-eJZ8vg";
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+   [super viewDidLoad];
 
     // MARK: - Setup instance of LPMessagingSDK
 
@@ -339,7 +333,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```objectivec
+```
 
 #import "DocumentationViewController.h"
 #import <LPInfra/LPInfra.h>
@@ -465,7 +459,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```objectivec
+```
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
@@ -540,10 +534,14 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Turn on the following toggles, under **Capabilities**, to support push notifications and structured content:
+- Turn on **push notifications** and **structured content**. In your Xcode project, under **Capabilities**, flip the toggle on for the following:
   - **Push**: Notifies the user when a new message from the remote user is received.
   - **Maps**: Shows location in the map.
 
-    For details on configuring notifications, refer to ... [still working on the file to cross reference to].
+    Go to [Notifications](mobile-app-messaging-sdk-for-ios-notifications.html) to finish configuring notifications.
 
-- Create the **LPMonitoringParams** to get the Engagement for the user, which is needed to start a new conversation with a specific campaign. For details on configuring monitoring, refer to [Initialization with Monitoring Params](initialization-with-monitoring-params.md).  [randy still needs to validate these steps...he rewrote code and needs to validate the new with the code in this topic]
+- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. Go to [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) to configure photo sharing. 
+
+- Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For details on configuring monitoring, refer to [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
+
+

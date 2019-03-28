@@ -88,15 +88,23 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 #### Option 2: Manually 
 
 1. [Download](https://github.com/LP-Messaging/Android-Messaging-SDK) the latest SDK package.
+
 2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project.  Also in the package, you get a sample app that demonstrates how to use the SDK. 
+
 3. In your Android Studio project, go to **File > New > Import module**. 
+
 4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk** module, and then click **Finish**. 
-5. Add the following to the build.gradle of your app:
-   - **compileSdkVersion**
-   - **buildToolsVersion**
-   <div class="important">
-   The version should be at least Version 23.
-   </div>
+
+5. In your build.gradle of your app, make sure that the following is at least version **23**:
+
+   ```gradle
+   android {
+      compileSdkVersion 23
+      buildToolsVersion "23.0.0"
+
+   }   
+   ```
+
 6. Under the **Android** section, add:  
    ```gradle
    repositories {
@@ -105,11 +113,16 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
      }
    }
    ```  
+
 7. Under the **Dependencies** section, add:  
+   
    ```gradle
    compile project(':lp_messaging_sdk')
    ```  
+   
+   
    **Example of the build.gradle file**
+   
    ```gradle
    apply plugin: 'com.android.application'
    android {
@@ -152,29 +165,6 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    ```
 
-   If you have any of these features enabled, you must add the following to your app's AndroidManifest.xml file:
-
-   * **Vibrate on new incoming msg**
-
-      ```xml
-      <uses-permission android:name="android.permission.VIBRATE"/>
-      ```
-
-   * **Photo Sharing**
-
-      ```xml
-      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-      ```
-
-   * **Audio Messaging**
-
-      ```xml
-      <uses-permission android:name="android.permission.RECORD_AUDIO" />
-      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-      ```
-
 2. Add the following imports to your class imports section:
 
    ```java 
@@ -208,8 +198,11 @@ Before you can show a conversation, you must initialize the Messaging SDK.  To d
    |---------|---------|
    |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
    |appID     |Your app id, used for registering LP pusher service.         |
+   |appInstallID | |
+   |accountID | |
    |onInitSuccess     |Callback that indicates the init process has finished successfully.         |
    |onInitFailed     |Callback that indicates the init process has failed.         |
+   |monitoringInitParams | |
 
 
    **Example implementation:**
