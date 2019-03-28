@@ -12,9 +12,11 @@ permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 
 ---
 <br>
-Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.  
+The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
-In this guide, you have the option to install the Mobile App Messaging SDK automatically via a Gradle file or manually. 
+Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.
+
+You have the option to install the Mobile App Messaging SDK automatically via Gradle or manually copying the SDK files to your project. 
 
 ### Prerequisites
 
@@ -184,6 +186,7 @@ You can use Gradle, to scale your projects effortlessly.
    ```
 
 ### Step 3: Initialize the Messaging SDK 
+
 Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code to your app's Application class:
 
    ```java

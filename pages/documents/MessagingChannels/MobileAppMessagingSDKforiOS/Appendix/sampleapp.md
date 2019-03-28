@@ -150,6 +150,8 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 3: Initialize the LPMessagingSDK
 
+Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code to your app's Application class:
+
 In this step, you [add the code to ?? in your Xcode project; where does the developer put the code snippet?]
 
 1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the 'accountID' constant and a unique JSON Web Token (JWT) in the 'jwt' constant. We have provided an example to use for the this quick start process.  
