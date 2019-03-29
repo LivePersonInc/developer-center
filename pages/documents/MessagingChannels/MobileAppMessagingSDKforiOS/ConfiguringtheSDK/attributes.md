@@ -17,7 +17,7 @@ indicator: messaging
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](consumer-experience-ios-sdk-attributes-design-sheet.html).
 
 
-### Users Bubble
+### User's Bubble
 
 <table class="bigtable">
 <thead>
@@ -33,7 +33,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">remoteUserBubbleBackgroundColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for the background of the remote user bubble.</td>
+    <td align="left">Color code for the background of the remote user's bubble.</td>
     <td align="left"><img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor"></td>
     <td align="left">#004DC9</td>
   </tr>
@@ -47,14 +47,14 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">remoteUserBubbleLinkColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for links in the text of the remote user bubble.</td>
+    <td align="left">Color code for links in the text of the remote user's bubble.</td>
     <td align="left"><img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
   <tr>
     <td align="left">remoteUserBubbleTextColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for the text of the remote user bubble.</td>
+    <td align="left">Color code for the text of the remote user's bubble.</td>
     <td align="left"><img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor"></td>
     <td align="left">UIColor.white</td>
   </tr>
@@ -68,7 +68,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">remoteUserBubbleTimestampColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color code for the timestamp of the remote user bubble.</td>
+    <td align="left">Color code for the timestamp of the remote user's bubble.</td>
     <td align="left"><img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor"></td>
     <td align="left">#5B5C5E</td>
   </tr>
@@ -191,7 +191,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">userBubbleLongPressOverlayColor</td>
     <td align="left">UIColor</td>
-    <td align="left">Color of the user bubble's overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
+    <td align="left">Color of the user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.</td>
     <td align="left"><img src="img/userBubbleOverlay.png" alt="userBubbleOverlay"></td>
     <td align="left">UIColor.black</td>
   </tr>
@@ -205,7 +205,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">userBubbleTopLeftCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left"> Top left Radius corner on the User bubble.
+    <td align="left"> Top left Radius corner on the user's bubble.
     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userTopLeft.png" alt="userTopLeft"></td>
     <td align="left">8</td>
@@ -213,7 +213,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">userBubbleTopRightCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left"> Top right Radius corner on the User bubble.
+    <td align="left"> Top right Radius corner on the user's bubble.
     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userTopRight.png" alt="userTopRight"></td>
     <td align="left">8</td>
@@ -221,7 +221,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">userBubbleBottomLeftCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left"> Bottom left Radius corner on the User bubble.
+    <td align="left"> Bottom left Radius corner on the user's bubble.
     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userBottomLeft.png" alt="userBottomLeft"></td>
     <td align="left">8</td>
@@ -229,7 +229,7 @@ The goal of the following document is to enumerate the different fields controll
   <tr>
     <td align="left">userBubbleBottomRightCornerRadius</td>
     <td align="left">Float</td>
-    <td align="left"> Bottom right Radius corner on the User bubble.
+    <td align="left"> Bottom right Radius corner on the user's bubble.
     Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.</td>
     <td align="left"><img src="img/userBottomRight.png" alt="userBottomRight"></td>
     <td align="left">8</td>
@@ -515,7 +515,7 @@ The goal of the following document is to enumerate the different fields controll
     <td align="left">UIColor.lightGray</td>
   </tr>
   <tr>
-  <td align="left" colspan="5">Note: Camera button, in the input text view, disabled/enabled color will change according to  sendButtonDisabledTextColor and sendButtonEnabledTextColor configurations.</td>
+  <td align="left" colspan="5">Note: The disabled/enabled color of the Camera button, which is in the input text view, will change according to the sendButtonDisabledTextColor and sendButtonEnabledTextColor parameters.</td>
   </tr>
 </tbody>
 </table>
@@ -665,7 +665,7 @@ When the button is pressed, a dedicated callback will be invoked. (See LPMessagi
     <td align="left">messageStatusNumericTimestampOnly</td>
     <td align="left">Bool</td>
     <td align="left">When false (default), time stamps will display information relative to when sent/distributed/read (e.g. 'sent 5 minutes ago'. When true, will show as numeric only (e.g. '11:32').</td>
-    <td align="left"><img src="messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly"></td>
+    <td align="left"><img src="img/messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly"></td>
     <td align="left">true</td>
   </tr>
 </tbody>
@@ -1256,7 +1256,7 @@ It will affect the following areas:
   <tr>
     <td align="left">retrieveAssignedAgentFromLastClosedConversation</td>
     <td align="left">Bool</td>
-    <td align="left">When using "getAssignedAgent" method, this option lets you decide whether to get assigned agents from active conversations only, or also from the last closed conversation in case there is no active conversation. If not assigned agent is available this method will return nil.</td>
+    <td align="left">When using "getAssignedAgent" method, this option lets you decide whether to get assigned agents from active conversations only, or also from the last closed conversation in case there is no active conversation. If no assigned agent is available this method will return nil.</td>
     <td align="left"></td>
     <td align="left">true</td>
   </tr>
@@ -1316,8 +1316,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">true</td>
   </tr>
   <tr>
-  </tr>
-  <tr>
     <td align="left">ttrFirstTimeDelay</td>
     <td align="left">Double</td>
     <td align="left">TTR - Time To Respond. Number of seconds before the first TTR notification appears.</td>
@@ -1332,15 +1330,11 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">false</td>
   </tr>
   <tr>
-  </tr>
-  <tr>
     <td align="left">ttrShowFrequencyInSeconds</td>
     <td align="left">UInt</td>
     <td align="left">Controls the TTR frequency: Don’t show the TTR more than once in X seconds.</td>
     <td align="left"></td>
     <td align="left">8</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
     <td align="left">showUrgentButtonInTTRNotification</td>
@@ -1350,15 +1344,11 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">false</td>
   </tr>
   <tr>
-  </tr>
-  <tr>
     <td align="left">showOffHoursBanner</td>
     <td align="left">Bool</td>
     <td align="left">Ability to disable/enable the off-hours toaster.</td>
     <td align="left"><img src="img/showoffhoursbanner.png" alt="showoffhoursbanner"></td>
     <td align="left">true</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
     <td align="left">ttrBannerBackgroundColor</td>
@@ -1368,15 +1358,11 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">#52A742</td>
   </tr>
   <tr>
-  </tr>
-  <tr>
     <td align="left">ttrBannerTextColor</td>
     <td align="left">UIColor</td>
     <td align="left">Text color of the banner.</td>
     <td align="left"><img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"></td>
     <td align="left">#52A742</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
     <td align="left">ttrBannerOpacityAlpha</td>
@@ -1390,7 +1376,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">String</td>
     <td align="left">Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time).</td>
     <td align="left"></td>
-    <td align="left">""</td>
+    <td align="left">"" (Empty String)</td>
   </tr>
 </tbody>
 </table>
@@ -1416,15 +1402,11 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">nil</td>
   </tr>
   <tr>
-  </tr>
-  <tr>
     <td align="left">lpTimeFormat</td>
     <td align="left">String?</td>
     <td align="left">Custom formatting for time string (hours, lpDateTimeFormat minutes..), for example: 'hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting).</td>
     <td align="left"></td>
     <td align="left">nil</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
     <td align="left">lpDateTimeFormat</td>
@@ -1456,8 +1438,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     False: Disable toast notifications.</td>
     <td align="left"></td>
     <td align="left">true</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
     <td align="left">csdsDomain</td>
@@ -1525,15 +1505,11 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">nil</td>
   </tr>
   <tr>
-  </tr>
-  <tr>
     <td align="left">csatAgentAvatarBackgroundColor</td>
     <td align="left">UIColor</td>
     <td align="left">Background color of agent's default avatar in CSAT.</td>
     <td align="left"><img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"></td>
     <td align="left">#004DC9</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
     <td align="left">csatAgentAvatarIconColor</td>
@@ -1578,14 +1554,14 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">String</td>
     <td align="left">Regular expression string to control which part of the text to mask, all masked data will appear as asterisks, will be saved to local db masked and will be sent to the server unmasked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
     <td align="left"></td>
-    <td align="left">""</td>
+    <td align="left">"" (Empty String)</td>
   </tr>
   <tr>
     <td align="left">realTimeMaskingRegex</td>
     <td align="left">String</td>
     <td align="left">Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server masked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. </td>
     <td align="left"></td>
-    <td align="left">""</td>
+    <td align="left">"" (Empty String)</td>
   </tr>
 </tbody>
 </table>
@@ -1815,7 +1791,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLatitudeDeltaDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1823,7 +1799,7 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">structuredContentMapLongitudeDeltaSpan</td>
     <td align="left">Double</td>
     <td align="left">Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan" target="_blank">click here</a>.</td>
+    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan">click here</a>.</td>
     <td align="left"></td>
     <td align="left">0.01</td>
   </tr>
@@ -1901,8 +1877,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
     <td align="left">#f5f5f5f2</td>
   </tr>
-</tbody>
-<tbody>
   <tr>
     <td align="left">connectionStatusConnectingTextColor</td>
     <td align="left">UIColor</td>
@@ -1910,8 +1884,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"><img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"></td>
     <td align="left">#46474a</td>
   </tr>
-</tbody>
-<tbody>
   <tr>
     <td align="left">connectionStatusFailedToConnectBackgroundColor</td>
     <td align="left">UIColor</td>
@@ -1919,8 +1891,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left"><img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"></td>
     <td align="left">#000000cc</td>
   </tr>
-</tbody>
-<tbody>
   <tr>
     <td align="left">connectionStatusFailedToConnectTextColor</td>
     <td align="left">UIColor</td>
@@ -1929,7 +1899,6 @@ Note: this parameter will be extended to 60sec when in VoiceOver mode.</td>
     <td align="left">UIColor.white</td>
   </tr>
 </tbody>
-
 </table>
 
 ### Controller message

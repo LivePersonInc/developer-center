@@ -37,14 +37,14 @@ h2[id] {
 h3[id]{
   font-family: "Roboto", Arial;
   color:#4a4a4a;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
 }
 
 h4[id]{
   font-family: "Roboto", Arial;
   color:#5879da;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   font-style: inherit;
   margin-top: 15px;
@@ -127,7 +127,7 @@ pre code {
    hyphens: none;
    border-right: solid 1px #fff;
    padding: 21px 25.5px 21px 23px;
-   vertical-align: initial;
+   vertical-align: inherit;
 }
 
 .post-content table > thead > tr > th {
@@ -552,12 +552,22 @@ div.sidebarTitle-holder {
     width:10px;
     height: 10px;
 }
-/*.breadcrumbs .active{
-  content: "∧";
-}*/
 
 .breadcrumb > .active {
 	cursor: pointer;
+}
+
+.fancyimage{
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.post-content img.inlineimage {
+  display: inline-block;
+  box-shadow: none;
 }
 
 .post-content .zoomimg {
@@ -575,6 +585,14 @@ div.sidebarTitle-holder {
   font-weight: normal;
   line-height: 1.71;
   color: #4a4a4a !important;
+}
+
+.post-content ol ol{
+  list-style-type: upper-latin;
+}
+
+.post-content ol ol ol {
+  list-style-type: upper-roman;
 }
 
 .post-content p strong {

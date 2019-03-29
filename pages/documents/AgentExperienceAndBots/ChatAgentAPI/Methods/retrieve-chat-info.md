@@ -58,6 +58,7 @@ The body media type must have one of the following formats:
 | visitorTyping  | Indicates if the visitor is currently typing a message.                                                                      | string            | Valid values: "typing", "not-typing"                                                                                                                                                                                                                       |
 | visitorName    | The name of the visitor that is chatting with the agent.                                                                     | alphanumeric      | Default value: visitor.                                                                                                                                                                                                                                    |
 | rtSessionId    | The identifier of this session which is shared across other APIs.                                                            | numeric           | This identifier can be used to correlate the session through the various API types. This identifier can also be retrieved in Operator Alerts using the macro {LPINFO!rt-session-id}. In order to make it unique, concatenate the account id to this value. |
+| participantId  | The identifier of the authenticated consumer.                                                            | GUID              | Optional. This identifier is only present when the consumer has started a chat VIA SSO. |
 
 **Response Codes**
 

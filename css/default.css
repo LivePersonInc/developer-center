@@ -382,6 +382,17 @@ code pre {
 
 /* Algolia Styling Ends */
 
+.sidebyside {
+  display: flex;
+  margin-right: 25px;
+}
+
+.showcase img {
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.1);
+}
+
 table {
   table-layout: fixed;
   margin-bottom: 20px;
@@ -516,6 +527,66 @@ table tbody td img {
 .important::before {
   content: "\f06a";
   color: #f88181;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.important p:not(:first-child) {
+  margin-left: -25px;
+}
+
+.notice {
+  border-left-color: #5879DA;
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+.notice::before {
+  content: "\f06e";
+  color: #3d5498;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.notice p:not(:first-child) {
+  margin-left: -25px;
+}
+
+.deprecated {
+  border-left-color: #000000;
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+.deprecated::before {
+  content: "\f071";
+  color: #000000;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 18px;
@@ -908,7 +979,7 @@ table tbody td img {
 
 .anchorlist ul {
   list-style: none;
-  display: none;
+  display: block;
   padding-left: 0;
   background-color: #f2f1f2;
   margin-left: -10px;
@@ -1170,6 +1241,32 @@ a.anchoritem {
 .methodLink {
   cursor: pointer;
 }
+
+.alldocumentscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160%;
+  flex-direction: column;
+}
+
+.alldocumentscategoryname {
+  margin-right: 50px;
+  width: 30%;
+}
+
+.alldocumentsdocumentname {
+  font-size: 15px;
+}
+
+.listheader {
+  cursor: pointer;
+}
+
+.alldocumentshr {
+  border-top: 1px solid #dddddd;
+  width: 80%;
+}
+
 
 /* Media Queries Begin */
 

@@ -160,8 +160,8 @@ enum LPConversationCloseReason: Int {
 class LPCampaignInfo: NSObject {
     var campaignId: Int
     var engagementId: Int
-    var sessionId: String?
-    var visitorId: String?
+    var sessionId: String? // if 'nil' SDE will not be sent to Agent
+    var visitorId: String? // if 'nil' SDE will not be sent to Agent
     var contextId: String
 }
 ```
@@ -178,7 +178,7 @@ class : NSObject {
 ```swift
 class : NSObject {
     var entryPoints: [String]? // Entry points array of the Mobile App
-    var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes
+    var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes.  SDE will not be sent to Agent if seesionID and visitorID are nil.
     var pageId: String? // PageID to send the SDEs for
 }
 ```

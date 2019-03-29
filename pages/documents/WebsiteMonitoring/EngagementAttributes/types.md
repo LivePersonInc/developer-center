@@ -301,7 +301,7 @@ Contact object:
 | email | Visitor's email address  | string | "john@doe.com" | false |yes |
 | phone | Visitor's phone number | string  | "5558982312" | false |yes |
 | phoneType |Phone type | string  | “HOME”,<br>“MOBILE”,<br>“WORK”,<br>“FAX”,<br>“MAIN”,<br>“HOME_FAX”,<br>“WORK_FAX”,<br>“PAGER”,<br>“OTHER” | false |yes |
-| address | Visitor's personal addresses | Address object  | {<br>"country":<br>STRING<br>(,<br>"region": STRING<br>}] | false |yes |
+| address | Visitor's personal addresses | Address object  | {<br>"country":<br>STRING<br>,<br>"region": STRING<br>} | false |yes |
 | country | Visitor's country | string. The value is 2 letter code in uppser case ISO3166-1 Alpha-2  | "US" | false |yes |
 | region | Visitor's region | string  | "North America" | false |yes |
 

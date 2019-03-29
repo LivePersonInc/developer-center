@@ -213,6 +213,9 @@ func resolveConversation(_ conversationQuery: ConversationParamProtocol)
 
 This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made.
 
+{: .important}
+Due to current product limitations, when the ```logout``` method find below is called in Authentication Mode, the user's history will show up when they return to the conversation, even if ```clearHistory``` was previously called.
+
 ```swift
 func clearHistory(_ conversationQuery: ConversationParamProtocol) throws
 ```

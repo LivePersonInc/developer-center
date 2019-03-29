@@ -62,7 +62,7 @@ This API exposes the current state of the messaging agents who are online, inclu
 
 ### Messaging Operations API
 
-[Documentation](data-messaging-agent-metrics-overview.html)
+[Documentation](messaging-operations-api-overview.html)
 
 This API exposes information about the contact center at the account, skill, and agent level. This data includes closed conversations and their associated attributes, such as customer satisfaction, average conversation length, resolved status and the current queue state.
 

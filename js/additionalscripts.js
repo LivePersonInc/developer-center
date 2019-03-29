@@ -12,6 +12,7 @@ $(document).ready(function () {
 	searchFunction();
 	capabilitiesSearch();
 	searchHighlight();
+	allArticlesClick()
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -81,6 +82,7 @@ function navigateContent(url) {
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
+			allArticlesClick()
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -210,19 +212,19 @@ $(window).on('popstate', function (e) {
 
 //a simple dropdown behavior for the anchorlinks box
 function menuDrop() {
-	//begin by setting the list's data to reflect that it's closed
-	$(".anchorlist > a").data("expanded", "false");
+	//begin by setting the list's data to reflect that it's open
+	$(".anchorlist > a").data("expanded", "true");
 	//when a click on the list occurs
 	$(".anchorlist").on("click", ".anchormain", function (event) {
 		event.preventDefault();
 		//set data to true for toggle behavior
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
-			//if it has been clicked before, close it
+			//if it is open, close it
 			$(this).next().slideUp(400);
 			$(this).data("expanded", "false");
 		} else {
-			//if it hasn't been clicked before, open it
+			//if it is closed, open it
 			$(this).next().slideDown(400);
 			$(this).data("expanded", "true");
 		}
@@ -325,6 +327,20 @@ function sidebarCollapse(url) {
 	};
 	};
 };
+
+function allArticlesClick() {
+	$(".listheader").data("expanded", "true");
+	$(".alldocumentscontainer").on("click", ".listheader", function (){
+		var hasExpanded = $(this).data("expanded") == "true";
+		if (hasExpanded) {
+			$(this).children('.alldocumentspagelist').slideUp(400);
+			$(this).data("expanded", "false");
+		} else {
+			$(this).children('.alldocumentspagelist').slideDown(400);
+			$(this).data("expanded", "true");
+		}
+	});
+}
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
 function sidebarClick() {
@@ -497,7 +513,7 @@ function capabilitiesSearch() {
 };
 
 function searchHighlight() {
-	//grab the filter element from local storage. We define this element in the inline script on the default oage.
+	//grab the filter element from local storage. We define this element in the inline script on the default page.
 	var toHighlight = localStorage.getItem('filter');
 	//if the element has been created
 	if (toHighlight) {

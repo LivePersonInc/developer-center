@@ -12,17 +12,17 @@ All pages on the site correspond to a Markdown file (.md) which can be found ins
 
 Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply to it. Our headers are usually comprised of the following key/value pairs:
 
-* `title`: **DEPRECATED, use `pagename` instead. All other rules apply**. This is the name of the page that will appear at the top of the document. **DEPRECATED, use `pagename` instead. All other rules apply.**
+* `pagename`: This is the name of the page that will appear at the top of the document.
 
-* `keywords`: this replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
+* `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `level1`: **DEPRECATED, use `documentname` instead. All other rules apply**. This key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
+* `documentname`: This key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
 
-* `level2`: **DEPRECATED, use `categoryname` instead. All other rules apply**. This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
+* `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
 
-* `level3`: **DEPRECATED, use `documentname` instead. All other rules apply**. This is the API to which the document belongs.
+* `documentname`: This is the API to which the document belongs.
 
-* `level4`: **DEPRECATED, use `subfoldername` instead. All other rules apply**. This is a sub-folder to which the document belongs, if there is one.
+* `subfoldername`: This is a sub-folder to which the document belongs, if there is one.
 
 * `root-link`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and displays all document links**. This key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it.
 
@@ -59,6 +59,9 @@ Once you have installed Ruby, clone this repository to your machine. Once done, 
 3. Run `bundle exec jekyll serve`. This builds the site and serves it over localhost:4000 (by default, you can change the `port` parameter in `config.yml` to whatever port you'd prefer).
 4. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
 
+**OSX Installation**
+0. We recommend installing a standalone Ruby Installation and RVM
+1. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
 
 
 **Serving the site after the first install**

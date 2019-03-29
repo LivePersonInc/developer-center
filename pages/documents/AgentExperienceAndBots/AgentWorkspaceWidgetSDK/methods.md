@@ -511,7 +511,9 @@ lpTag.agentSDK.get('city', onSuccess, onError);
 
 ### setConsumerProfile
 
-**Note**: before using this method, you need to make sure that the "AgentSetConsumerProfile" feature is enabled for your account. Once it is, you will be able to grant the necessary permission to one of your agent/agent manager users (the necessary permission is "update consumer profile via API").
+<div class="important">If you set any of the values in the consumerData object to null the SDK will throw an error. We recommend setting values that you want left blank with an empty string instead.</div>
+
+Before using this method, you need to make sure that the "AgentSetConsumerProfile" feature is enabled for your account. Once it is, you will be able to grant the necessary permission to one of your agent/agent manager users (the necessary permission is "update consumer profile via API").
 
 |Method|  Description|  Notes
 |:---  |:---  |:---  |:--- |

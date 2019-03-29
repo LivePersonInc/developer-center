@@ -15,6 +15,138 @@ indicator: messaging
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.6.1
+### Overview
+
+iOS Mobile App SDK v3.6.1 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.6.1 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
+
+### Bugs
+
+#### Bug Fixes
+
+* `LPMessagingSDKNotificationDelegate` delegate call not being triggered.
+
+
+### iOS Messaging SDK - Version 3.6
+### Overview
+
+iOS Mobile App SDK v3.6 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.6 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
+
+### API Updates
+
+#### Infra/LPInfraFacade.swift
+
+**New method**:
+
+```swift
+public class func unregisterPusherFor( brandId: String, completion: @escaping ()->(), failure: @escaping ( error: Error)->())
+```
+
+**Deprecated method**:
+
+```swift
+public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), failure: @escaping ( error: Error)->())
+```
+
+#### Updated Pusher Errors:
+
+|Error Code | Error|
+|-----------|------|
+|-1| non supported Device (ie simulator)|
+|-2| network unreachable|
+|-4| no response from server|
+|-5| token expired|
+|-10| failed to register|
+|-20| failed to unregister|
+|-30| failed to get unread message count|
+
+
+### Bugs
+
+#### Bug Fixes
+
+* QR button visibility issues when toggling application state.
+
+* Application instability caused by future time set on device.
+
+* Multiple apps on device each sharing user cannot deregister from pusher.
+
+* `LPTMesssagingSDKTokenExpired` delegate call not being triggered.
+
+* Reconnecting in unauthenticated fails after JWT expires.
+
+* System messages do not change to Chinese while device is language is Chinese and the region is in China. Currently SDK system messages do not support the scenario in which language and region are not in sync (For example, device language is in Chinese while the region is in the US).
+
+* “Still Connecting…” error when app is brought to foreground using springboard.
+
+* Connection issues after establishing network connection in background and returning to conversation.
+
+* Cannot resume unauthenticated conversation when toggling between app states.
+
+* Cannot continue typing in an authenticated conversation if app is placed into the background before sending 1st message.
+
+* Customers can get stuck in signup flow.
+
+* Protocol sniffing appears to not be compatible with iOS 12.
+
+* Constant “Loading…” message in unauthenticated flow after opening Notifications Center.
+
+* Optimization of determining application state during UI transitions.
+
+* For 1st unread message, no indication of “Unread Messages” is set within the conversation window.
+
+* Automatic messages no longer appear outside of conversation window while in background state.
+
+* Socket connectivity for active conversation without network connection.
+
+#### Known Bugs
+
+Through a series of changing application state, extended backgrounding, and intermittent messaging, occasionally (4%) the user can produce a state where some messages do not appear.  Work-around for consumer is reloading the conversation view.
+
+### iOS Messaging SDK - Version 3.5
+
+### Overview
+
+iOS Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.5 is compatible with Xcode 10, Swift 4.2 and iOS versions 10 through 12
+
+### Bugs
+
+There is a known issue related to entering the conversation view controller with an expired token.  The consumer observes a "still connecting" message which can be resolved by exiting and re-entering the conversation view controller.
+
+#### Bug Fixes
+
+* When an unauthenticated consumer attempts to reconnect after their session expires (when using JSON Web Tokens) the connection fails.
+
+* Push notifications are not being received when going to background (minimizing app) due to issues with network.
+
+* When a consumer is in active conversation and an agent resolves the conversation, the unread message indicator appears but there are new messages visible and the consumer can not scroll down.
+
+* Consumer can not scroll to the latest message when there is no assigned agent and the conversation is closed.
+
+* Conversation does not automatically scrolls to the bottom when survey starts/ends.
+
+* When returning from background banner indicating the count of unread messages is incorrect.
+
+* App freezes (experiences recursive cycles) on phones which the time has been set in the future. Interim solution: Retry attempts have been limited for consumers with expired JSON Web Tokens trying to authenticate.  Once this limit is hit, LP Messaging SDK will post the SDK_AUTHENTICATION_FAILED notification which will trigger the LPMessagingSDKAuthenticationFailed delegate method.  A client app can use either of these mechanisms to stop the authorization attempt and notify the consumer they need to obtain a valid token.  After the notification has been posted the authentication retries will be reset.  
+
+*  In the Agent Console, the consumer conversation information (OS Type & Device) is not updated while switching platforms IOS/Android or OS versions.  Update: Update: The current design of LiveEngage platform cannot currently accommodate this request.  This can be implemented in a future LiveEngage platform update.
+
+### API Update
+
+* The LPInfraFacad method registerPusherWithLoginFlow(brand) has been updated to registerPusherWithLoginFlow(brand: Brand, authenticationParams: LPAuthenticationParams?) allowing for an optional 'Authentication Parameters' dictionary to be passed to aid in determining the status and routing of authentication for the current consumer.  
+
 ### iOS Messaging SDK - Version 3.4
 
 ### Overview
