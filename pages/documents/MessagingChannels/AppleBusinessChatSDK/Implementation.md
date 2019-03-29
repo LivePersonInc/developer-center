@@ -14,9 +14,9 @@ indicator: messaging
 This method initializes the SDK. 
 
 ```swift
-LPABCSDK.initializeSDK() // default minimumLogLevel will be .info and enableLog will be true
+LPABCSDK.initialize() // default minimumLogLevel will be .info and enableLog will be true
 
-LPABCSDK.initializeSDK(minimumLogLevel: .trace, enableLog: false)
+LPABCSDK.initialize(minimumLogLevel: .trace, enableLog: false)
 ```
 
 ### Update the SDK with Incoming CIM 
@@ -211,3 +211,22 @@ lpabcsdk.appendReplayMessagePayload(message: MSMessage, textContext: String)
 ```
 
 Pass in the initiated MSMessage object, and the desired textual String. 
+
+
+### Synchronize SDK (Host app target feature)
+
+When called, the SDK will explicitly synch with latest chache version.
+
+Best practice will be adding this to your AppDelegate/ applicationWillEnterForeground, in order to use monitoring ability when host app enters forground.
+
+iMesssage extension target will have no effect calling this function.
+
+```swift
+func applicationWillEnterForeground(_ application: UIApplication) {
+        LPABCSDK.synchronize()
+    }
+```
+
+
+
+
