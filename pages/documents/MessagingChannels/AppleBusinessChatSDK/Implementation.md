@@ -215,16 +215,16 @@ Pass in the initiated MSMessage object, and the desired textual String.
 
 ### Synchronize SDK (Host app target feature)
 
-When called, the SDK will explicitly synch with latest chache version.
+When called, the SDK will explicitly sync with the latest cache version.
 
-Best practice will be adding this to your AppDelegate/ applicationWillEnterForeground, in order to use monitoring ability when host app enters forground.
+The best practice will be to add this to your AppDelegate/ applicationWillEnterForeground, in order to use the monitoring ability when the host app enters the foreground.
 
-iMesssage extension target will have no effect calling this function.
+An iMesssage extension target will have no effect calling this function.
 
 ```swift
 func applicationWillEnterForeground(_ application: UIApplication) {
-        LPABCSDK.synchronize()
-    }
+    LPABCSDK.synchronize()
+}
 ```
 
 
