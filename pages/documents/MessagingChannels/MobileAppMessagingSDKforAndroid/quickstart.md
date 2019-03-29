@@ -27,11 +27,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
 
 
-<div class="important">
-For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
-</div>
-
-### Step 1: Install the SDK into your project
+### Step 1: Install the Messaging SDK into your project
 You can install LivePerson Mobile App Messaging SDK using a couple of different methods:
 
 - [Automatically using Gradle](#option-1-automatically-using-gradle)
@@ -106,6 +102,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    ```
 
 6. Under the **Android** section, add:  
+
    ```gradle
    repositories {
      flatDir {
@@ -156,7 +153,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 
    ```
 
-### Step 2: Code integration for basic deployment
+### Step 2: Integrate code for basic deployment
 
 1. Add the following permissions to your app’s AndroidManifest.xml file:
 
@@ -178,136 +175,153 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 
 ### Step 3: Initialize the Messaging SDK 
 
-Before you can show a conversation, you must initialize the Messaging SDK.  To do that, add the following code to your app's Application class:
+Before you can show a conversation, you must initialize the Messaging SDK.  
 
+1. **Set your app ID and view controller.** Provide your `APP_ID` as a string your application's class.
+   
    ```java
-   String brandID = "YourLivepersonAccountIdString";
-   String appID = "your app package name"
-    LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
-     @Override
-     public void onInitSucceed() {
-     }
+   private static final String APP_ID = "com.mybrand.app";
 
-     @Override
-     public void onInitFailed(Exception e) {
-     }
-   }));
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+   }
    ```
+
+2. **Initialize your application and show the conversation.**  Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
+   1. Select your chose of authentication using either **CodeFlow**, **ImplicitFlow**, **UnauthFlow**, or **SignupFlow** for initializing the SDK instance. For details, see [Authentication](mobile-app-messaging-sdk-for-android-authentication.html).
+   2. Provide your LivePerson account number as a string in the `brandID` constant. 
+   3. Depending on the authentication method you chose, you must provide your `authCode`, `jwt`, or `appInstallID`.  If you chose **SignupFlow**, you only need to provide the `brandID`.  We have provided examples to use to help you get started. 
+
+   <div class="important">The demo account that we have provided has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.</div>
+
+
+   - **CodeFlow (authenticated)**
+     ```java
+     public void startCodeFlow(View v) {
+         String brandID = "62219232";
+         final String authCode = "k16336";
+         LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
+             @Override
+             public void onInitSucceed() {
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+                 lpAuthenticationParams.setAuthKey(authCode);
+                 LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
+             }
+
+             @Override
+             public void onInitFailed(Exception e) {
+             }
+         }));
+     }
+     ```
+   - **ImplicitFlow (authenticated)**
+   
+     ```java
+     public void startImplicitFlow(View v) {
+         String brandID = "42391995";
+         final String jwt = "eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJoZWxsbyIsICAiaXNzIjogImh0dHBzOi8vTFAtQXV0aC5jb20iLCAgImV4cCI6MTU1Mzc5NDAyMSwgICJpYXQiOjE1NTM3OTM0MjF9.GP0iCe1k3aQbWHp-FYKhpfK-MZqktQ8pByTTF5lAHTelCyDAxhgHyMIq5J9mJnSoIdTlUbmscRHpy2MCop-AlYx5Sz66y1aX38AD8Rat1k_SnbPNbvbEysomb_SjxZ3uleN_OCzrSqGJrLXP6yIN2UiuuvKM62i-e-aQVIWzIXWMxjgmH9n_ZUOkgq_0jY3Me8r78dKsitc-jvzGzbasv81u40fR-7Y-ViOZliFOLjVBl2VWCbgcrGerLUyWVJQW69Hn3TlvvVpSVZk-IUU8hpYorcItIb-XNV2mOVkuZmzlGo7a1nIhJCCWzP5qaQvCCecSHTTHbcROwwE7dk6vKg";
+         LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
+             @Override
+             public void onInitSucceed() {
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+                 lpAuthenticationParams.setHostAppJWT(jwt);
+                 LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
+             }
+
+             @Override
+             public void onInitFailed(Exception e) {
+             }
+         }));
+     }
+     ```
+
+   - **UnauthFlow**
+
+     ```java
+     public void startUnauthFlow(View v) {
+         String brandID = "53949244";
+         String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
+         final MonitoringInitParams monitoringInitParams = new MonitoringInitParams(appInstallID);
+         LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, monitoringInitParams, new InitLivePersonCallBack() {
+             @Override
+             public void onInitSucceed() {
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.UN_AUTH);
+                 LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
+             }
+
+             @Override
+             public void onInitFailed(Exception e) {
+             }
+         }));
+     }
+     ```
+
+   - **SignupFlow**
+
+     ```java
+     public void startSignupFlow(View v) {
+         String brandID = "62219232";
+         LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
+             @Override
+             public void onInitSucceed() {
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.SIGN_UP);
+                 LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
+             }
+
+             @Override
+             public void onInitFailed(Exception e) {
+             }
+         }));
+     }
+     ```
+
    
    |Element  |Description  |
    |---------|---------|
    |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
-   |appID     |Your app id, used for registering LP pusher service.         |
-   |appInstallID | |
+   |APP_ID     |Your application ID (`com.mybrand.app`), which is used in the [registerLPPusher](android-registerlppusher.html) method.     |
    |accountID | |
    |onInitSuccess     |Callback that indicates the init process has finished successfully.         |
    |onInitFailed     |Callback that indicates the init process has failed.         |
    |monitoringInitParams | |
+   |authCode | |
+   |jwt | |
+   |appInstallID | |
 
 
    **Example implementation:**
 
 
    ```java
-   LivePerson.initialize(context, new InitLivePersonProperties(brandID, appID, new  InitLivePersonCallBack() {
-     @Override
-     public void onInitSucceed() {
-       initFragment();
-       LivePerson.setUserProfile(appId, firstName, lastName, phone);
-     }
-     @Override
-     public void onInitFailed(Exception e) {
-       Toast.makeText(MainActivity.this, "Init Failed", Toast.LENGTH_SHORT).show();
-     }
-   }));
+   private static final String APP_ID = "com.mybrand.app";
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+   }
+
+   public void startCodeFlow(View v) {
+       String brandID = "62219232";
+       final String authCode = "k16336";
+       LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
+           @Override
+           public void onInitSucceed() {
+               LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+               lpAuthenticationParams.setAuthKey(authCode);
+               LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
+           }
+
+           @Override
+           public void onInitFailed(Exception e) {
+           }
+       }));
+   }
    ```
    
    <div class="notice">Make sure that the init process, from the onInitSucceed callback, finished successfully.</div>
-
-### Step 4: Show conversation screen
-You can use either [Activity mode](#activity-mode) or [Fragment mode](#fragment-mode) to show the conversation screen. 
-
-#### Activity mode
-**Activity mode** implements the toolbar that displays the agent name for the conversation. When the agent types, the *'Is Typing’* indicator displays.
-
-   ```java
-   LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-   ```
-   
-#### Fragment mode
-**Fragment mode** returns the conversation fragment to the caller to place inside a container. The caller is also responsible for initializing the SDK, and if needed, implementing a toolbar or other indicators according to the provided SDK callbacks. 
-
-1. Open a conversation window in a fragment, placing it in a container in your activity, add: 
-
-   ```java
-   LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-   ```
-
-   <div class="important">When using fragment mode, you must use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.</div>
-
-2. Show CSAT notifications. For example, you can show a different title on the toolbar, or show a button to close CSAT. 
-
-   <div class="important">The container Activity that hosts the fragment must implement ConversationFragmentCallbacks.</div>
-
-   ```java
-   public interface ConversationFragmentCallbacks {
-     void setFeedBackMode(boolean on, IFeedbackActions actions); 
-
-     // boolean on - Notify whether feedback (csat) screen is visible or dismisses.
-     // IFeedbackActions actions - provides set of actions for the feedback screen.
-     void onSurveySubmitted(IFeedbackActions actions);
-     void setSecureFormMode(boolean on, String formTitle) {}
-   }
-
-   // IFeedbackActions actions - provides set of actions for the feedback screen.
-   public interface IFeedbackActions {
-     void closeFeedBackScreen();
-
-     //close the screen, for example- after submitting the csat. When showing "thank you" screen.
-
-     void skipFeedBackScreen();
-
-     //skip and close the whole feedback process.
-   }
-   ```
-
-   When visible, **setFeedbackMode** is called with the **true** value.  When not visible (skip/submitted), **setFeedBackMode** is called with the **false** value. 
-
-   Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
-
-   ```java
-   class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
-     @Override
-     public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
-       toolbar.setTitle("Csat mode: " + ( on ? "on!" : "off!" ));
-       toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-           if (actions != null){
-             actions.closeFeedBackScreen();
-           }
-         }
-       });
-       }
-
-     @Override
-     public void onSurveySubmitted(IFeedbackActions actions) {
-       toolbar.setTitle("survey submitted");
-     }
-   }
-   ```
-
-### Step 5: Set the screen orientation.
-
-   **For Activity mode** - override the ConversationActivity definition and set the desired screen orientation in your app's AndroidManifest.xml file:
-
-   ```xml
-   <activity
-     android:name="com.liveperson.infra.messaging_ui.ConversationActivity"
-     android:screenOrientation="your screen orientation"/>
-   ```
-
-   **For Fragment mode** - set the desired screen orientation in your container Activity definition in your app's AndroidManifest.xml file. For more details, refer to [android:screenOrientation](https://developer.android.com/guide/topics/manifest/activity-element.html#screen).
 
 
 ### Next Steps
@@ -319,3 +333,6 @@ You can now do any of the following:
 - If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
 
 
+<div class="important">
+For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
+</div>
