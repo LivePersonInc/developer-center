@@ -77,7 +77,7 @@ Use the Agent Bot example when you are looking to review and develop with the va
 
 ### Return To Same Agent Bot Example
 
-This example demonstrates running an Agent Bot, which serves as a routing bot for an account, and transfers incoming conversations to the agent that consumer was most satisfied with (according to MCS). This example is meant to help you understand to flow for this scenario. 
+This example demonstrates running an Agent Bot, which serves as a routing bot for an account, and transfers incoming conversations to the agent that consumer was most satisfied with (according to MCS). This example is meant to help you understand to flow for this scenario.
 
 In this example, you will:
 
@@ -91,7 +91,7 @@ In this example, you will:
 
 There are two parts to making this example work:
 
-1. In order to setup the agent-side code which achieves the Agent Bot example (routing bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) to review the Agent Bot (routing bot) example on Github.
+1. In order to setup the agent-side code which achieves the Agent Bot example (routing bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples#return-to-same-agent-bot) to review the Agent Bot (routing bot) example on Github.
 
 2. In order to generate a conversation with the account (and the Return To Same Agent Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
 

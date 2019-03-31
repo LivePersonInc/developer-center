@@ -15,7 +15,7 @@ indicator: messaging
 <br>
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
-Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage. 
+Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage.
 
 ### Prerequisites
 
@@ -30,7 +30,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - **Version 3.1 and older**
     - Xcode 9.2 or older
     - Swift 4.0 or older, or Objective-C
-- Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
+- Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
 
 ### Step 1: Install the SDK into your project
@@ -38,9 +38,9 @@ Use this Quick Start guide to get you up and running with a project powered by L
 You can install LiveEngage Mobile App Messaging SDK for iOS using a couple of different methods:
 
 * [Automatically using CocoaPods](#option-1-cocoapods)
-* [Manually coping the libraries to your Xcode Project](#option-2-libraries-copy-to-xcode-project)
+* [Manually copying the libraries to your Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
-<div class="important">For both methods, you are <b>Required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
+<div class="important">For both methods, you are <b>required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
 
 #### *Option 1: Automatically using CocoaPods*
 
@@ -93,7 +93,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    bash "${SRCROOT}/Pods/LPMessagingSDK/LPMessagingSDK/LPInfra.framework/frameworks-strip.sh"
     ```
 
-#### *Option 2: Manually coping the libraries to your Xcode Project*
+#### *Option 2: Manually copying the libraries to your Xcode Project*
 
 1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
 
@@ -142,14 +142,14 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the `accountID` constant and a unique JSON Web Token (JWT) in the `jwt` constant. We have provided an example to use for the this quick start process.  
 2. **Sets up and initializes the SDK instance** for the accountID provided.
 3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
-4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
+4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
 
 
 We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](#unauthenticated), and [Signup](#signup).
 
 #### Authenticated
 
-```swift 
+```swift
 import UIKit
 import LPMessagingSDK
 import LPAMS
@@ -540,8 +540,6 @@ You can now do any of the following:
 
     Go to [Notifications](mobile-app-messaging-sdk-for-ios-notifications.html) to finish configuring notifications.
 
-- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. Go to [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) to configure photo sharing. 
+- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. Go to [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) to configure photo sharing.
 
 - Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For details on configuring monitoring, refer to [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
-
-
