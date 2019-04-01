@@ -595,7 +595,6 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Quick Start - Manual Installation
     - pagename: Configuration
       subpages:
       - subpagename: Initialization
