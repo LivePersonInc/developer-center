@@ -12,6 +12,42 @@ indicator: messaging
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
+### Android Messaging SDK - Version 3.7.0
+### Overview
+
+Android Mobile App SDK v3.7.0 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+### Bugs
+
+#### Bug Fixes
+
+* Android SDK crash with ClassCastException.
+
+* Client Masking Ignored when Logged out from Authenticated conversation and Logged back in as UnAuthenticated user.
+
+* Conversation bubble is empty if agent sends empty structured content.
+
+* TalkBack is reading hidden conversation content behind a Secure Form.
+
+* Secure Form is not announced to consumer in TalkBack.
+
+* TalkBack does not announce out of view contents from Structured Content.
+
+* CSAT question sent via PCS is not visible in conversation info widget in LiveEngage UI.
+
+* Android SDK crash with IllegalArgumentException.
+
+* Android SDK failed while trying to send image via photo sharing.
+
+* TLSv1.2 was not supported for Android KitKat.
+
+* TalkBack does not announces all elements in Secure Form upon arrival.
+
+
 ### Android Messaging SDK - Version 3.6.1
 
 ### Overview
