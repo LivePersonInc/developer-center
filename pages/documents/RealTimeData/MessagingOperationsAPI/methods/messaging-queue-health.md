@@ -365,7 +365,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
 | avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation is waiting in the queue (unassigned) for the first agent to be assigned to it.|long|
 | avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation is waiting in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
-| avgWaitTimeForAgentAssignment_AfterTransferFromBot | The average number of milliseconds a transferred conversation is waiting in the queue (unassigned), after been transferred by a bot, for the next agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_AfterTransferFromBot | The average number of milliseconds a transferred conversation waited in the queue (unassigned), after it was transferred by a bot, for the next agent to be assigned to it.|long|
 | maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in the queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
