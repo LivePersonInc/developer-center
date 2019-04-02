@@ -73,6 +73,10 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 
 #### Bug Fixes
 
+* Socket won't close with non-custom back button.
+
+* CSAT submit button is disabled in window mode.
+
 * QR button visibility issues when toggling application state.
 
 * Application instability caused by future time set on device.

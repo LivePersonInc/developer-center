@@ -1,5 +1,5 @@
 ---
-pagename: Using LivePerson SDK - iOS
+pagename: Using LivePerson SDK - iOS #Implement the iOS MobileSDK
 redirect_from:
   - consumer-experience-ios-sdk-sampleapp.html
 Keywords:
