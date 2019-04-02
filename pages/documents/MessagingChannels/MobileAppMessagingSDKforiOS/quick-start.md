@@ -20,7 +20,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 ### Prerequisites
 
 - **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
-  <div class="note">If you don't know your account information, you can get it from your LivePerson account team.</div>
+  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
 - **Version 3.3 and newer**
     - Xcode 10 or newer
     - Swift version 4.2, or Objective-C
