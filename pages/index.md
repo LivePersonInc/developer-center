@@ -4,13 +4,13 @@ permalink: index.html
 ---
 
 {: .important}
-By the end of Q1 2019, **LivePerson is deprecating all support for TLS 1.0 and 1.1**. If you are still using these protocols, an upgrade to TLS 1.2 or higher on your end is required in order to ensure continued support of all LivePerson services.
+At the end of Q1 2019, **LivePerson plans to deprecate all support for TLS 1.0 and 1.1**. If you still use these protocols, an upgrade to TLS 1.2 or higher on your end is required to ensure continued support of all LivePerson services.
 
-Welcome to the LivePerson Developer Documentation. Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third party apps into our Agent Workspace, you’ll find the documentation here.
+Welcome to the LivePerson Developer Documentation. Whether you're looking to use our REST APIs or SDKs, integrate LiveEngage into your native app, customize our messaging windows or integrate third-party apps into our Agent Workspace, you’ll find the documentation here.
 
 Keep reading to learn what you need to get started, [how to read our documents](getting-started-with-liveengage-apis-how-to-read-our-documents.html), common use cases for our APIs, the basic components of our platform, and more.
 
-If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly via the "Looking for Support?" button on the left hand side.
+If you're looking for support with any of the documents or APIs on the site, please don't hesitate to contact our Dev Support team directly via the "Looking for Support?" button on the left-hand side.
 
 ### Getting Started with LivePerson APIs
 

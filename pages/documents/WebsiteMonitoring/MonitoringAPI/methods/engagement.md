@@ -43,7 +43,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| v | API version number | double | Required | Supported Value: 1.0  |
+| v | API version number | double | Required | Supported Value: 1.0, 1.1  |
 | vid | Visitor Id | String | Optional | Must be saved in order to reuse for future requests in the same visit |
 | sid | Session Id | String | Optional on first request, otherwise required | Will be provided by the server-side in a 201 (CREATED) response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
 
@@ -194,13 +194,21 @@ Status code: 200/201 OK - Engagement is unavailable. **Note**: because the engag
 }
 ```
 
-Status code: 500 Server Error - Loading account:
-
+Loading Account:
+API version 1.0, Status code 500 Server Error -
 ```json
 {
     "time":1501074704502,
     "message":"Loading account: ta3hWd4IgG, vid: myVisitorId",
     "internalCode":20
+}
+```
+API version 1.1, Status code 202 Accepted -
+```json
+{
+    "time":1501074704502,
+    "message":"Loading account: ta3hWd4IgG, vid: myVisitorId",
+    "internalCode":38
 }
 ```
 
@@ -227,6 +235,7 @@ Status code: 500 Server Error - Loading account:
 |:----|:-----|
 |200 | OK|
 |201 |Created|
+|202 |Accepted|
 |400 |Validation error|
 |404 |Data not found|
 |500 |Internal server error|
@@ -238,5 +247,6 @@ Status code: 500 Server Error - Loading account:
 | :--- | :--- | :--- |
 | 4xx | Client side error | Do not retry, fix problems in code |
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
+| 202 | Loading account | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="important"> Specifically in the case of a "500 - Loading account" response (as shown in the response entity examples above), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
+<div class="important"> Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>

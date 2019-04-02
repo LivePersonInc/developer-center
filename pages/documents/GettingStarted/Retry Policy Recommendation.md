@@ -14,20 +14,18 @@ root-link: true
 indicator: both
 ---
 
-Each component in a network can return an error; whether it’s your local environment or in the cloud, applications can and will fail. These failures can result from a maintenance activity, a service incident or just a random network hiccup on the server or client side.
+Each component in a network can return an error; whether it’s your local environment or in the cloud, applications can fail. These failures can result from a maintenance activity, a service incident, or a random network hiccup on the server or client side.
 
-To increase the reliability and stability of an application, the industry best practice is to add a retry mechanism for API calls.
-
-This will make sure that if for any reason an error is returned, the application will make another attempt to retrieve the relevant information.
+For increased reliability and stability of an application, add a retry mechanism for API calls.  If an error returns, the mechanism makes sure that the application makes another attempt to retrieve the relevant information. 
 
 Below you can find LivePerson best practices to handle errors:
 
 ### API error codes and retry recommendation
 
 | Error code   |      Meaning      |  Recommendation |
-|:----------|:-------------|:------|
-| 4xx | Client side error | Do not retry, need to fix the problem in the code |
-| 5xx |    Error on server side   |   Retry 3 times with 5, 10, 15 second pause between retries |
+|:-------------|:------------------|:----------------|
+| 4xx          | Client side error | Do not retry, need to fix the problem in the code |
+| 5xx          | Error on server side  | Retry 3 times with 5, 10, 15 second pause between retries |
 
 
 In addition to the table above, in order to make sure the application can recover from more than 3 consecutive failed requests, as in the case of a service incident or a maintenance activity with a few minutes of downtime, another retry should be introduced for login/socket close/etc.
