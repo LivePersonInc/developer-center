@@ -135,7 +135,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    ```
 
 
-
 ### Step 3: Initialize the LPMessagingSDK
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
