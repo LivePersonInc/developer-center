@@ -51,8 +51,13 @@ public func dismissUrgent(conversationQuery: ConversationParamProtocol)
 5. This method resolves the current conversation.
 
 ```swift
-public func resolveConversation(conversationQuery: ConversationParamProtocol)
+public class func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})
 ```
+
+```swift
+public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol, completion: (() -> Void)? = {()})
+```
+
 
 {:start="6"}
 6. This method clears the conversation history.

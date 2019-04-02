@@ -11,12 +11,88 @@ documentname: Mobile App Messaging SDK for iOS
 permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
 indicator: messaging
 ---
+<br>
+
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
 <br>
 <br>
 
+### iOS Messaging SDK - Version 3.7
+
+iOS Mobile App SDK v3.7 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+iOS Mobile App SDK v3.7 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
+
+{: .notice}
+iOS SDK 3.7 compatibility with XCode 10.2, Swift 5 will be released as 3.7.1 on or before April 5 2019. 
+
+
+#### API Updates
+
+##### LPAMSFacade.swift
+
+**Updated method for 3.7**:
+
+```swift
+public class func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})
+```
+
+```swift
+public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol, completion: (() -> Void)? = {()})
+```
+
+**Deprecated method (3.6.1)**:
+
+```swift
+public class func resolveConversation(_ conversation: Conversation)
+```
+
+```swift
+public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol)
+
+```
+##### LPConversationViewParams.swift
+
+**New for 3.7**
+
+LPConversationViewParams **initializer requires** LPConversationHistoryControlParam
+
+**Changes for 3.6.1** 
+
+LPConversationViewParams **initializer takes optional** LPConversationHistoryControlParam
+
+
+##### LPConversationHistoryControlParam.swift
+
+**New for 3.7**
+
+LPConversationHistoryControlParam **can no longer be nil for** ConversationViewController
+
+**Changes for 3.6.1** 
+
+LPConversationHistoryControlParam **can be nil for** ConversationViewController
+
+
+##### SocketRocket
+
+**New for 3.7** 
+Namespacing for SR dependency. 
+
+#### Bug Fixes
+
+- Signup/Unauthenticated Users were unable to start a new Conversation after PCS.
+- Web socket Handler crashed the host-app in production.
+- SDK crashes when receiving an empty Structured Content Card.
+- When clicking the default back button, the socket wouldn't close.
+- PCS would not show when the user resolved a conversation using a Custom View.
+- In-app push sometimes showed the real message instead of the masking message.
+- Memory Leaks found in SDK.
+- Local Notification were displayed on alert rather than on top of the screen. 
+- Namespacing internal 3rd party libraries to prevent a collision. 
+
 ### iOS Messaging SDK - Version 3.6.1
-### Overview
 
 iOS Mobile App SDK v3.6.1 contains fixes for high priority bugs reported by customers.
 
@@ -24,7 +100,6 @@ iOS Mobile App SDK v3.6.1 contains fixes for high priority bugs reported by cust
 
 iOS Mobile App SDK v3.6.1 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
-### Bugs
 
 #### Bug Fixes
 
@@ -32,7 +107,6 @@ iOS Mobile App SDK v3.6.1 is compatible with XCode 10, Swift version 4.2.1 (swif
 
 
 ### iOS Messaging SDK - Version 3.6
-### Overview
 
 iOS Mobile App SDK v3.6 contains fixes for high priority bugs reported by customers.
 
@@ -40,9 +114,9 @@ iOS Mobile App SDK v3.6 contains fixes for high priority bugs reported by custom
 
 iOS Mobile App SDK v3.6 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
-### API Updates
+#### API Updates
 
-#### Infra/LPInfraFacade.swift
+##### Infra/LPInfraFacade.swift
 
 **New method**:
 
@@ -69,7 +143,6 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 |-30| failed to get unread message count|
 
 
-### Bugs
 
 #### Bug Fixes
 
@@ -111,13 +184,11 @@ public class func unregisterPusher( brand: Brand, completion: @escaping ()->(), 
 
 * Socket connectivity for active conversation without network connection.
 
-#### Known Bugs
+#### Known Issue
 
 Through a series of changing application state, extended backgrounding, and intermittent messaging, occasionally (4%) the user can produce a state where some messages do not appear.  Work-around for consumer is reloading the conversation view.
 
 ### iOS Messaging SDK - Version 3.5
-
-### Overview
 
 iOS Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
 
@@ -125,7 +196,7 @@ iOS Mobile App SDK v3.5 contains fixes for high priority bugs reported by custom
 
 iOS Mobile App SDK v3.5 is compatible with Xcode 10, Swift 4.2 and iOS versions 10 through 12
 
-### Bugs
+#### Known Issue
 
 There is a known issue related to entering the conversation view controller with an expired token.  The consumer observes a "still connecting" message which can be resolved by exiting and re-entering the conversation view controller.
 
@@ -147,13 +218,11 @@ There is a known issue related to entering the conversation view controller with
 
 *  In the Agent Console, the consumer conversation information (OS Type & Device) is not updated while switching platforms IOS/Android or OS versions.  Update: Update: The current design of LiveEngage platform cannot currently accommodate this request.  This can be implemented in a future LiveEngage platform update.
 
-### API Update
+#### API Update
 
 * The LPInfraFacad method registerPusherWithLoginFlow(brand) has been updated to registerPusherWithLoginFlow(brand: Brand, authenticationParams: LPAuthenticationParams?) allowing for an optional 'Authentication Parameters' dictionary to be passed to aid in determining the status and routing of authentication for the current consumer.  
 
 ### iOS Messaging SDK - Version 3.4
-
-### Overview
 
 iOS Mobile App SDK v3.4 contains bug fixes for high priority bugs reported by customers. The version does not include new features and there are no API changes.
 
@@ -161,7 +230,6 @@ iOS Mobile App SDK v3.4 contains bug fixes for high priority bugs reported by cu
 
 iOS Mobile App SDK v3.4 is compatible with Xcode 10, Swift 4.2 and iOS versions 9 through 12.
 
-### Bugs
 
 #### Bug Fixes
 
@@ -214,9 +282,7 @@ This enables brands to prove the success of messaging and compare their KPIs acr
 
 Mobile App SDK v3.3 supports iOS 12, Xcode 10 & Swift 4.2.
 
-#### Bugs
-
-**Fixed Bugs**
+#### Bug Fixes
 
 * In some cases, when consumers would go into the conversation screen, the loading progress bar would get stuck.
 
@@ -242,7 +308,7 @@ Mobile App SDK v3.3 supports iOS 12, Xcode 10 & Swift 4.2.
 
 * When Voiceover is turned on, when reading messages, agent reads as “agent” instead of the agent’s nickname.
 
-**Known Issues**
+#### Known Issues
 
 * Resolving unauthenticated conversations fails when setting the flag ‘show history for closed messaging conversations’ to no. The feature works as expected when the flag is set to yes.
 
@@ -354,9 +420,9 @@ When trying to get the number of unread messages and the token expired, a token 
 
 **Version 3.2 roll-out: July 1st 2018**
 
-### Main Features
+#### Main Features
 
-#### Audio Messaging
+##### Audio Messaging
 
 **Type**: Consumer Experience Feature
 **Available to all customers?** No. Please contact your account team.
@@ -370,7 +436,7 @@ In Audio messages, the Brands can configure:
 3. Max stored audio messages on device
 4. Tooltips text
 
-#### Unauthenticated In-App Messaging
+##### Unauthenticated In-App Messaging
 
 **Type:** Developer Experience Feature
 
@@ -386,7 +452,7 @@ Unauthenticated messaging allows brands to:
 
 3. The ability to use Campaigns for Messaging while having unauthenticated conversations
 
-#### Quick Replies
+##### Quick Replies
 
 **Type:** Consumer Experience Feature
 
@@ -404,7 +470,7 @@ The Quick Replies can contain the same actions as Structured Content buttons:
 
 As Quick Replies contain predefined values, the feature can dramatically improvie communication with Bots and improve both consumer experience and operational efficiency.
 
-#### Structured Content Carousel
+##### Structured Content Carousel
 
 **Type:** Consumer Experience Feature
 
@@ -414,7 +480,7 @@ Structured Content experience is enriched with the Carousel allowing more capabi
 
 The Carousel consists of more than one card at a time, side by side and the consumer can swipe between cards.
 
-#### Experience and Branding Enhancements
+##### Experience and Branding Enhancements
 
 **Type:** Consumer Experience Feature
 
@@ -436,9 +502,9 @@ When using Emojis in a conversation:
 
 A new way for Brands to set their own background in conversations to add a more personal touch.
 
-### APIs
+#### APIs
 
-#### New APIs
+##### New APIs
 
 <table>
   <thead>
@@ -530,7 +596,7 @@ A new way for Brands to set their own background in conversations to add a more 
         </tbody>
       </table>
 
-#### Deprecated APIs
+##### Deprecated APIs
 
 <table>
   <thead>
@@ -578,7 +644,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </tbody>
   </table>
 
-#### Configurations
+##### Configurations
 
 **General Configurations**
 
@@ -609,7 +675,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </tbody>
   </table>
 
-#### Experience and Branding Enhancements
+##### Experience and Branding Enhancements
 
 <table>
   <thead>
@@ -644,7 +710,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Structured Content
+##### Structured Content
 
   <table>
   <thead>
@@ -679,7 +745,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Audio Messaging
+##### Audio Messaging
 
   <table>
   <thead>
@@ -709,7 +775,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Quick Replies
+##### Quick Replies
 
   <table>
   <thead>
@@ -749,7 +815,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Updated Configurations
+##### Updated Configurations
 
   <table>
   <thead>
@@ -771,9 +837,9 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-### Strings Localization
+#### Strings Localization
 
-#### General Strings
+##### General Strings
 
   <table>
   <thead>
@@ -795,7 +861,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Quick Replies
+##### Quick Replies
 
   <table>
   <thead>
@@ -821,7 +887,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Unauthenticated Messaging
+##### Unauthenticated Messaging
 
   <table>
   <thead>
@@ -848,7 +914,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-#### Audio Messaging
+##### Audio Messaging
 
   <table>
   <thead>
@@ -878,7 +944,7 @@ A new way for Brands to set their own background in conversations to add a more 
   </table>
 
 
-### Features Enablement Chart
+#### Features Enablement Chart
 
   <table>
   <thead>
