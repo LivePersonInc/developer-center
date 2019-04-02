@@ -142,15 +142,10 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the `accountID` constant and a unique JSON Web Token (JWT) in the `jwt` constant. We have provided an example to use for the this quick start process.  
 
 2. **Sets up and initializes the SDK instance** for the accountID provided.
-<<<<<<< HEAD
 
 3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this demo account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
 4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
-=======
-3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
-4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
->>>>>>> 9ccc31d75fc322b24eee58facf8579e74674159e
 
 
 We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](#unauthenticated), and [Signup](#signup).
