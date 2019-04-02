@@ -297,6 +297,58 @@ Structure example:
 
 *Note: Unlike other arrays/objects, binding to the chat transcript lines will give you updates which only include the recently added lines, not the entire array with all the lines from the beginning.*
 
+### metadata.connectorAuthResponse
+
+<table>
+  <thead>
+    <th>Property</th>
+    <th>Description</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>encrypted</td>
+    <td>True if you have provided the responseEncryptionKey, False if you have not</td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>token</td>
+    <td>Token string - will be available only when authentication was successful </td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>requestIdentifier</td>
+    <td>Matches the authentication request that you sent.</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>errors</td>
+    <td>Type of authentication error as received from Apple - will be available only when authentication failed </td>
+    <td>Array</td>
+  </tr>
+  </tbody>
+</table>
+
+Structure example:
+
+```json
+{
+    "encrypted"         : true,
+    "status"            : true, 
+    "token"             : "token encrypted string",
+    "requestIdentifier" : "Request Identifier Unique Key",
+    "errors"            : [{
+        "message" : "Optional Error Message"    
+    }]
+}
+```
+
+
 ### surveyQuestions.preChat.customizedQuestions, surveyQuestions.postChat, surveyQuestions.agentSurvey, customVariables, splitSession.customVariables
 
 | Property    | Description                                                                        | Type   | Notes                                                                                                                       |
