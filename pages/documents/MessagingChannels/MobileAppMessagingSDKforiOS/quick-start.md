@@ -135,7 +135,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    ```
 
 
-
 ### Step 3: Initialize the LPMessagingSDK
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
@@ -143,7 +142,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 
 2. **Sets up and initializes the SDK instance** for the accountID provided.
 
-3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this demo account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
 4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
