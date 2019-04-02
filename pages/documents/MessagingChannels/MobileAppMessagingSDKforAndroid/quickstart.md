@@ -43,7 +43,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the dependencies section, add:
    ```gradle
    dependencies {
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+     implementation  'com.liveperson.android:lp_messaging_sdk:3.7'
    }
    ```
    **Example of the build.gradle (Module: app) file**
