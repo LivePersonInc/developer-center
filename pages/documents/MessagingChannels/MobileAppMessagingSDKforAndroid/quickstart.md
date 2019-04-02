@@ -282,13 +282,9 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    |---------|---------|
    |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
    |APP_ID     |Your application ID (`com.mybrand.app`), which is used in the [registerLPPusher](android-registerlppusher.html) method.     |
-   |accountID | |
    |onInitSuccess     |Callback that indicates the init process has finished successfully.         |
    |onInitFailed     |Callback that indicates the init process has failed.         |
-   |monitoringInitParams | |
-   |authCode | |
-   |jwt | |
-   |appInstallID | |
+
 
 
    **Example implementation:**
