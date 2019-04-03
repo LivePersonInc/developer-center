@@ -8,7 +8,7 @@ permalink: mobile-app-messaging-sdk-for-android-latest-release-notes.html
 indicator: messaging
 ---
 
-
+<br>
 {% for operatingsystem in site.data.releasenotesandroid %}
 {% for release in operatingsystem.releases %}
 {% if forloop.first == true %}
