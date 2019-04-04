@@ -201,7 +201,7 @@ func dismissUrgent(_ conversationQuery: ConversationParamProtocol)
 This API enables a conversation to be resolved. The API will request the server to mark the active conversation as resolved. If there is no active conversation, an alert will be displayed.
 
 ```swift
-func resolveConversation(_ conversationQuery: ConversationParamProtocol)
+func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})
 ```
 
 

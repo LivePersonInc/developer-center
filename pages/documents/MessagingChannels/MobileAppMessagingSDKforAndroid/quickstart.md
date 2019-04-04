@@ -43,7 +43,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the dependencies section, add:
    ```gradle
    dependencies {
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.2.1'
+     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.0'
    }
    ```
    **Example of the build.gradle (Module: app) file**
@@ -77,7 +77,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
      androidTestImplementation 'com.android.support.test:runner:1.0.1'
      androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
      // LivePerson SDK
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.5.0'
+     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.0'
    }
    ```
    
@@ -282,13 +282,9 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    |---------|---------|
    |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
    |APP_ID     |Your application ID (`com.mybrand.app`), which is used in the [registerLPPusher](android-registerlppusher.html) method.     |
-   |accountID | |
    |onInitSuccess     |Callback that indicates the init process has finished successfully.         |
    |onInitFailed     |Callback that indicates the init process has failed.         |
-   |monitoringInitParams | |
-   |authCode | |
-   |jwt | |
-   |appInstallID | |
+
 
 
    **Example implementation:**
