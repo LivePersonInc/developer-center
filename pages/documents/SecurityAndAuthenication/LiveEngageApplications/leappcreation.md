@@ -44,7 +44,7 @@ Once the application has been installed, the LivePerson resource will send you y
 #### webhook (optional object within webhooks object)
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---| --_| ---|
+|--- | --- | ---| --- | ---|
 |endpoint | The url to send the notification to, including query parameters | string| Yes |Starts by "https://"|
 |max_retries | The max number of retry attempts to send the notification if it fails | integer| No| minimum value: 0, maximum value: 5|
 |headers | List of http headers to add to the notification request | array of headers | No| Example value:  [{"header_name": "NAME1", "header_value": "VALUE1"},{"header_name": "NAME2", "header_value": "VALUE2"}]|
