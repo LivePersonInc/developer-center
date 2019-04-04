@@ -541,7 +541,6 @@
   #   - pagename: Overview
   #   - pagename: contextAndInvite
   #   - pagename: getLiveDeflectData
-  - documentname: Messaging Channels Capabilities Comparison
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
