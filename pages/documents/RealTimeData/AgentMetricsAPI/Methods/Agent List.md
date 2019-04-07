@@ -1,19 +1,14 @@
 ---
 pagename: Agent List
-redirect_from:
-  - data-messaging-interactions-methods-agent-list.html
 sitesection: Documents
 categoryname: "Real Time Data"
 documentname: Agent Metrics API
 subfoldername: Methods
-order: 11
 permalink: agent-metrics-api-methods-agent-list.html
-
 indicator: messaging
 ---
 
-Returns the list of eligible agents to transfer conversation to and their state.
-List of eligible agents depends on the conversation skill id and the privileges that the agent has (see offline users or not, etc.)
+This method returns the list of  agents which are eligible to receive conversations and their state. This list of eligible agents depends on the transferred conversation's skill id and the privileges and permissions that the agent has (see offline users or not, take messages from the specific skill, etc.)
 
 **Request**
 
