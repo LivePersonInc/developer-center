@@ -16,11 +16,13 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
-### iOS Messaging SDK - Version 3.7
+### iOS Messaging SDK - Version 3.7.1
 
-iOS Mobile App SDK v3.7 contains fixes for high priority bugs reported by customers.
 
-#### Environmental Requirements
+Supports Xcode 10.2 and Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C.
+
+
+### iOS Messaging SDK - Version 3.7.0
 
 iOS Mobile App SDK v3.7 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
@@ -32,7 +34,7 @@ iOS SDK 3.7 compatibility with XCode 10.2, Swift 5 will be released as 3.7.1 on 
 
 ##### LPAMSFacade.swift
 
-**Updated method for 3.7**:
+**Updated method for 3.7.0**:
 
 ```swift
 public class func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})

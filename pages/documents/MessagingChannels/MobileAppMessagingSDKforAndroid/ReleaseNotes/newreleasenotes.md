@@ -8,12 +8,12 @@ permalink: mobile-app-messaging-sdk-for-android-latest-release-notes.html
 indicator: messaging
 ---
 
-
+<br>
 {% for operatingsystem in site.data.releasenotesandroid %}
 {% for release in operatingsystem.releases %}
 {% if forloop.first == true %}
 <h3>Latest Android Messaging SDK version - {{ release.releasename }}</h3>
-This is the latest version of the Android Messaging SDK release notes. To view all release notes for previous versions, <a href="/mobile-app-messaging-sdk-for-android-all-release-notes.html">please click here</a>.
+This is the latest version of the Android Messaging SDK release notes. If you want to view all release notes for previous versions, see <a href="/mobile-app-messaging-sdk-for-android-all-release-notes.html">All Android Messaging SDK Release Notes</a>.
 {% capture my_include %}{% include_relative {{ release.releasename }}.md %}{% endcapture %}
 {{ my_include | markdownify }}
 {% endif %}
