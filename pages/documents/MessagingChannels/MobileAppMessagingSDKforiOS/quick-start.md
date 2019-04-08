@@ -21,7 +21,10 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 - **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
   <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
-- **Version 3.3 and newer**
+- **Version 3.7.1 or newer**
+  - Xcode 10.2 or newer
+  - Swift version 5, or Objective-C
+- **Version 3.3 and 3.7.0**
     - Xcode 10 or newer
     - Swift version 4.2, or Objective-C
 - **Version 3.1.1 - 3.3.0**
