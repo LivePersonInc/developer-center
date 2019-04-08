@@ -1,6 +1,14 @@
 ---
 pagename: Getting Started
 redirect_from:
+  - customer-facing-bots-deploying-bots-to-liveengage.html
+  - customer-facing-bots-considerations.html
+  - customer-facing-bots-deploying-bots-on-live-chat.html
+  - customer-facing-bots-deploying-bots-on-messaging.html
+  - customer-facing-bots-getting-started.html
+  - customer-facing-bots-limitations.html
+  - customer-facing-bots-overview.html
+  - customer-facing-bots-prerequisites.html
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
