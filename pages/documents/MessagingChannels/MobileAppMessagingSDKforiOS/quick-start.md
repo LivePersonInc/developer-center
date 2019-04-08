@@ -208,7 +208,7 @@ class DocumentationViewController: UIViewController {
 
 ```
 
-```c
+```objc
 
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
@@ -338,7 +338,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```c
+```objc
 
 #import "DocumentationViewController.h"
 #import <LPInfra/LPInfra.h>
@@ -464,7 +464,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```c
+```objc
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
