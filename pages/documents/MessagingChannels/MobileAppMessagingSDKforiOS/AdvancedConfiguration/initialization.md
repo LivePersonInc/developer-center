@@ -73,6 +73,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    ```swift
    import LPMessagingSDK
    import LPInfra
+   import LPMonitoring
    ```
 
 2. Also inside **ViewController**, under **viewDidLoad**, add the following code:
