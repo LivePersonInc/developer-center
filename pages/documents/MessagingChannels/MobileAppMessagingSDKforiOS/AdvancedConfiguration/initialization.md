@@ -20,24 +20,46 @@ indicator: messaging
 1. Initialize the SDK and all of its components. You can initialize the SDK with or without a brandID.
 
    ```swift
-   public func initialize(brandID: String? = nil) throws
+   public func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInitParams? = nil) throws
    ```
    
-2. Add the ContainerViewController parameter to show the Conversation Window. 
-
-   <div class="important">If you do not pass ContainerViewController, the SDK provides a ViewController called <b>Window Mode</b>. If you pass the  ContainerViewController, the SDK uses it to Host the Conversation Window  called <b>ViewController Mode</b>.</div>
-
+2. Initialize conversationViewParams for show conversation. 
+   
+   {: .important}
+   If you do not pass containerViewController in containerViewController, the SDK provides a ViewController called <b>Window Mode</b>. If you pass the  containerViewController, the SDK uses it to Host the Conversation Window  called <b>ViewController Mode</b>.
+   
    ```swift
-   public func showConversation(conversationQuery: ConversationParamProtocol, authenticationCode: String? = nil, containerViewController: UIViewController? = nil)
+   public init(conversationQuery: ConversationParamProtocol,
+                   containerViewController: UIViewController? = nil,
+                   isViewOnly: Bool = false,
+                   conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none))
+   ```
+3. Initialize authenticationParams for show conversation.
+
+   {: .important}
+   Pass authenticationCode for <b>'Code Flow'</b>, pass jwt for <b>Implicit Flow'</b>. 
+
+4. Set authenticationType to <b>.authenticated</b> for Code Flow or Implicit, <b>.unauthenticated</b> for Unauthenticated.  If left as nil will default to <b>.signup</b> flow.
+   
+   ```swift
+   public init(authenticationCode: String? = nil, jwt: String? = nil, redirectURI: String? = nil, certPinningPublicKeys: [String]? = nil, authenticationType: LPAuthenticationType = .signup)
    ```
 
-3. Dismiss the Conversation Window from the host ViewController.  
+5. Show conversation with two parameters above.
+
+   ```swift
+   public func showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)
+   ```
+
+6. Dismiss the Conversation Window from the host ViewController.  
 
    ```swift
    public func removeConversation(conversationQuery: ConversationParamProtocol)
    ```
 
-   <div class="important">When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, example <a href="consumer-experience-ios-sdk-messaging-methods.html#removeconversation">here</a>.</div>
+   {: .important}
+   When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, example <a href="consumer-experience-ios-sdk-messaging-methods.html#removeconversation">here</a>.
+
 
 
 
