@@ -454,7 +454,7 @@ with body (content type: application/json):
 
         2. **Grant Type**: **Authorization Code**
 
-        3. **Callback URL**: the redirect-uri you set in the JSON of the App Installation (**[http://localhost/callbac**k](http://localhost/callback))
+        3. **Callback URL**: the redirect-uri you set in the JSON of the App Installation ([http://localhost/callback](http://localhost/callback))
 
         4. **Auth URL**: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
 
@@ -600,9 +600,9 @@ As **FaaS-Invoker** you are only allowed to invoke lambdas externally.
 
 You can configure these permission in LiveEngage:
 
-    * Click on USERS and then Profiles
+* Click on USERS and then Profiles
 
-    * Create/Edit a profile and add the permission you want for this profile:
+* Create/Edit a profile and add the permission you want for this profile:
 
 ### FaaS template integrations
 
