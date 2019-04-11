@@ -102,4 +102,3 @@ http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?ver
 
    - Username of the user created in the previous step
 
-### Next steps
