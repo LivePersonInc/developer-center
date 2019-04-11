@@ -1,20 +1,11 @@
 - categoryname: Getting Started
   image: getting-started
   documents:
-  - documentname: Before You Get Started
-    pages:
-    - pagename: Considerations and Requirements
-  - documentname: Retrieve API Keys
-    pages:
-    - pagename: Create a New API Key
-  - documentname: Retrieve API Domains
-    pages:
-    - pagename: Using the Domain API
-  - documentname: Retry and KeepAlive Best Practices
-    pages:
-    - pagename: Overview
   - documentname: Essential Resources
     pages:
+    - pagename: Create a New API Key
+    - pagename: Using the Domain API
+    - pagename: Retry and KeepAlive Best Practices
     - pagename: Getting Started with Authentication
     - pagename: Getting Started with Data APIs
     - pagename: Getting Started with Engagement Attributes
