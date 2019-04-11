@@ -53,7 +53,7 @@ Also, make sure to read the API Terms of Use and the Systems Requirements and La
 
 
 
-[Let’s Get Started >](documents/GettingStarted/getting-started.md)
+[Let’s Get Started >](lets-get-started.html)
 
 ---  
 
