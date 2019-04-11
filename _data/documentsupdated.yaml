@@ -928,7 +928,7 @@
   documents:
     - documentname: CRM Integrations
       pages:
-        - pagename: SalesForce
+        - pagename: Salesforce
         - pagename: Microsoft Dynamics
         - pagename: NetSuite
         - pagename: SugarCRM
