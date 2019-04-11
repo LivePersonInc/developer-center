@@ -154,12 +154,12 @@ The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with t
 ```
 The following table describes the response fields:
 
-|    Field    |    Description                                                                                                                             |
-|-------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-|    sub      |    The consumer ID of the authenticated subscriber.                                                                                      |
-|    iss      |    The name of the Authorization   Service as configured in LivePerson.                                                                    |
-|    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. see [RFC3339]     |
-|    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]                                                                       |
+|    Field    |    Description   |
+|-------------|------------------|
+|    sub      |    The consumer ID of the authenticated subscriber.       |
+|    iss      |    The name of the Authorization   Service as configured in LivePerson.      |
+|    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC3339]     |
+|    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]      |
 
 The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
 
@@ -203,7 +203,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 
 
 |    Name    |    Description | type   |    Appearance in LiveEngage   |    Mapping in SDEs    |
-|------------|-------------------|-------------------------------|-----------------------|
+|------------|----------------|--------|-------------------------------|-----------------------|
 |sub         |Subject - Identifier for the end-user at the Issuer.|string| Consumer info (including Customer ID)| ConsumerInfo.customerID|
 |given_name      |Given name(s) or first name(s) of the end-user. Note that some people may have multiple given names; all can be present, with the names being separated by space characters.|string| Personal info (including Name) | Personalinfo.firstname|
 |family_name        |Surname(s) or last name(s) of the end-user. Note that some people may have multiple family names or no family name; all can be present, with the names being separated by space characters.|string| Personal info (including Name)| Personalinfo.lastname|

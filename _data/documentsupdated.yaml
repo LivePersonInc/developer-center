@@ -88,6 +88,7 @@
           - subpagename: Retrieve Chat Information
             methodurl: /chat/{chatId}/info
             httpmethod: GET
+          - subpagename: Retrieve Participant Info
           - subpagename: Retrieve Visitor's Name
             methodurl: /chat/{chatId}/info/visitorName
             httpmethod: GET
@@ -115,14 +116,6 @@
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
-  - documentname: Customer Facing Bots
-    pages:
-      - pagename: Overview
-      - pagename: Prerequisites
-      - pagename: Getting Started
-      - pagename: Considerations
-      - pagename: Deploying Bots on Live Chat
-      - pagename: Deploying Bots on Messaging
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -136,36 +129,39 @@
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex
+      - pagename: Custom Third Party Bots
   - documentname: Conversation Builder
     pages:
+      - pagename: Platform Overview
       - pagename: Getting Started
         subpages:
-          - subpagename: Create a New Bot
-          - subpagename: Intents
-          - subpagename: Integrations
-          - subpagename: Connect to LiveEngage
-      - pagename: Components
+          - subpagename: 0 - Video Tutorials
+          - subpagename: 1 - Dialogs and Patterns
+          - subpagename: 2 - Intents
+          - subpagename: 3 - Integrations
+          - subpagename: 4 - Connect to LiveEngage
+          #- subpagename: 5 - Releases and Versioning
+          #- subpagename: Basic - FAQ Bot Tutorial
+          #- subpagename: Basic - Routing Bot Tutorial
+      - pagename: Templates
         subpages:
-          - subpagename: Conversation Builder Overview
-          - subpagename: Interactions
-          - subpagename: Conditions
-          - subpagename: Conversation Builder Assistant
-          - subpagename: Intent Builder Overview
+          - subpagename: Overview
+          #- subpagename: Retail Templates
+      - pagename: Conversation Builder
+        subpages:
+            - subpagename: Overview
+            - subpagename: Interactions
+            - subpagename: Conditions
+            - subpagename: Assist
+            - subpagename: Scripting Functions
+      - pagename: Intent Builder
+        subpages:
+          - subpagename: Overview
           - subpagename: Entities
-          - subpagename: Knowledge Base Overview
-          - subpagename: Scripting Functions
-      - pagename: Routing Bot Tutorial
-        subpages:
-          - subpagename: Overview
-          - subpagename: Step 1 - Create a New Router Bot
-          - subpagename: Step 2 - Modifying the Template
-          - subpagename: Step 3 - Intents
-          - subpagename: Step 4 - Escalation
-      - pagename: FAQ Bot Tutorial
-        subpages:
-          - subpagename: Overview
-          - subpagename: Creating a New Knowledge Base
-          - subpagename: Creating a New FAQ Bot
+      - pagename: Knowledge Base
+      - pagename: Analytics
+      #- pagename: Operations
+
 
 
 
@@ -545,7 +541,6 @@
   #   - pagename: Overview
   #   - pagename: contextAndInvite
   #   - pagename: getLiveDeflectData
-  - documentname: Messaging Channels Capabilities Comparison
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
@@ -599,7 +594,6 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Quick Start - Manual Installation
     - pagename: Configuration
       subpages:
       - subpagename: Initialization
@@ -723,6 +717,11 @@
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
+  - documentname: Apple Business Chat SDK
+    pages:
+    - pagename: Overview
+    - pagename: Installation
+    - pagename: Implementation
   - documentname: Push Notification Service
     pages:
     - pagename: Overview

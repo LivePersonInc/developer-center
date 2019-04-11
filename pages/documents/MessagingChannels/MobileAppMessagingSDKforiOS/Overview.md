@@ -14,26 +14,23 @@ root-link: true
 indicator: messaging
 ---
 
-**Consumers worldwide have moved to messaging**; time-shifted messaging is more convenient than phone calls.
 
-"The typical **millennial** exchanges an average of **67 text messages per day**."  _- Business Insider_
+# Hello Developers!
+Messaging and conversational experiences have transformed how businesses engage with their customers. When you add Mobile App Messaging directly within your app, you get:
 
-"Americans now spend around **5 times longer** in messaging apps each day than on voice calls". - Nielsen Social Media Report, 2016.
+* Increased customer satisfaction with an ideal customer experience through an always connected, ongoing conversation.
 
-"WhatsApp and Facebook Messenger alone carry **22 trillion messages per year**." -Facebook
+* Increased customer retention and engagement (stickiness of your app).
 
-**Add messaging directly within your app to enjoy the following benefits:**
-
-* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
-
-* Increase the stickiness of your app through the added value of Mobile App Messaging.
-
-* Push notifications ensure your consumers never miss a new message.
+* Consumers never miss a new message with push notifications.
 
 * Fully customizable customer experience including look and feel.
 
-* Optimized for the network bandwidth as well as battery usage.
+* Optimized for network bandwidth and battery usage.
 
 <img src="img/inappoverview1.png" alt="InAppOverview1" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="max-width:230px;max-height:700px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="max-width:230px;max-height:700px;">
 
-For guidance on considerations and how to get started with Mobile App Messaging, [click here](products-channels-inapp-messaging.html).
+For guidance on considerations and how to get started with Mobile App Messaging, see [Add Messaging to your app](products-channels-inapp-messaging.html) for more details.
+
+
+

@@ -1,6 +1,14 @@
 ---
 pagename: Getting Started
 redirect_from:
+  - customer-facing-bots-deploying-bots-to-liveengage.html
+  - customer-facing-bots-considerations.html
+  - customer-facing-bots-deploying-bots-on-live-chat.html
+  - customer-facing-bots-deploying-bots-on-messaging.html
+  - customer-facing-bots-getting-started.html
+  - customer-facing-bots-limitations.html
+  - customer-facing-bots-overview.html
+  - customer-facing-bots-prerequisites.html
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
@@ -12,7 +20,10 @@ indicator:
 
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
-Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialog Flow, Amazon Lex, etc.
+Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialog Flow, and more.
+
+{: .important}
+If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.
 
 Each connector provides the functionality to
 
@@ -28,7 +39,7 @@ Each connector provides the functionality to
 
 Some connectors may provide more or less functionality depending on the specifics of the product to which it is connecting.
 
-There are two steps to setting up a new bot connector. 
+There are two steps to setting up a new bot connector.
 
 1. Create Bot user in LiveEngage
 
@@ -46,20 +57,20 @@ There are two steps to setting up a new bot connector.
 
 3. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
-4. Set Max No of Live Chats 
+4. Set Max No of Live Chats
 
     * If Chat in the drop down select  - Value > 1.
 
-    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0** 
+    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0**
 
 5. Find api key name in bot user profile
-    
+
     <img style="width:400px" src="img/dialogflowversion2/image_2.png">
 
---- 
+---
 
 **Below is Messaging ONLY**
-    
+
 Go to API management page (Campaigns tab > Data Sources > APIs) and add the following APIs to the bot’s API key:
 
 * Engagement History API
@@ -68,25 +79,17 @@ Go to API management page (Campaigns tab > Data Sources > APIs) and add the foll
 
     <img style="width:600px" src="img/dialogflowversion2/image_3.png">
 
-* Administration (Skills) - **Read ONLY**
-
-    <img style="width:600px" src="img/dialogflowversion2/image_4.png">
-
 ### Provision connector in the Bot Connector dashboard
 
-To access the Bot Connector dashboard navigate to your appropriate URL:
+To access the Bot Connector dashboard, contact your Account Manager to enable the Automation Area in LiveEngage for your account.
 
-| Region | URL |
-| --- | --- | 
-| NA | https://bot-console.fs.liveperson.com |
-| EMEA | https://bot-console.emea.fs.liveperson.com |
-| APAC | https://bot-console.apac.fs.liveperson.com |
+Upon logging in to LiveEngage, you will see the Automation Tab:
 
-Upon logging in, you will see the bot status screen.
-
-<img style="width:900px" src="img/botconnectordashboard/overview.png">
+<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/automation_tab.png">
 
 Follow the steps below to add a new bot connector.
+
+1. Navigate to the Automation Area Dashboard and click "Connect Bots" on the side menu.
 
 1. Navigate to the Config page and click “+ADD NEW BOT”
 
@@ -111,5 +114,7 @@ Follow the steps below to add a new bot connector.
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
-
-
+* [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
+* [Dialogflow V1](bot-connectors-google-dialog-flow.html)
+* [Dialogflow V2](bot-connectors-google-dialog-flow-version-2.html)
+* [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)

@@ -451,6 +451,7 @@ Each environment can override the URI for their specific needs.
 | :------------ | :--------------------------- | :----- | :------- | :--------- |
 | type          | Type of action. Must be link | Enum   | Y        |            |
 | uri           | The url to open              | String | Y        | 2048 chars |
+| target        | The target attribute specifies where to open the link. Supported by Web Messaging. Default is "blank" | Enum - blank/self | N |  |
 
 ###### Example
 
@@ -466,7 +467,8 @@ Each environment can override the URI for their specific needs.
 	},
 	"web": {
 		"uri": "specific uri for Web"
-	}
+	},
+  "target": "self"
 }
 ```
 

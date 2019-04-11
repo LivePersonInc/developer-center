@@ -90,7 +90,7 @@ Open the Agent Workspace (from Step 1), and accept the incoming request by click
 
 ### Step 5 - Publish a Text Message
 
-In order to publish content to a conversation, substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``consersationId`` you got in the response of Step 4, and paste it into the opened WebSocket.
+In order to publish content to a conversation, substitute the ``__YOUR_CONVERSATION_ID__`` with the the ``conversationId`` you got in the response of Step 4, and paste it into the opened WebSocket.
 
 ```json
 {"kind":"req","id":2,"type":"ms.PublishEvent","body":{"dialogId":"__YOUR_CONVERSATION_ID__","event":{"type":"ContentEvent","contentType":"text/plain","message":"hi there"}}}

@@ -201,7 +201,7 @@ func dismissUrgent(_ conversationQuery: ConversationParamProtocol)
 This API enables a conversation to be resolved. The API will request the server to mark the active conversation as resolved. If there is no active conversation, an alert will be displayed.
 
 ```swift
-func resolveConversation(_ conversationQuery: ConversationParamProtocol)
+func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})
 ```
 
 
@@ -212,6 +212,9 @@ func resolveConversation(_ conversationQuery: ConversationParamProtocol)
 ### clearHistory
 
 This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made.
+
+{: .important}
+Due to current product limitations, when the ```logout``` method find below is called in Authentication Mode, the user's history will show up when they return to the conversation, even if ```clearHistory``` was previously called.
 
 ```swift
 func clearHistory(_ conversationQuery: ConversationParamProtocol) throws

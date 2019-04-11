@@ -814,12 +814,12 @@ table tbody td img {
 
 /* Sidebar Styling Ends */
 
-.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle, .language-css {
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle, .language-css, .language-objc {
   display: flex;
   flex-direction: column;
 }
 
-.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before, .language-css:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before, .language-css:before, .language-objc:before {
   color: #a2a2a2;
   text-align: right;
   font-size: 14px;
@@ -836,6 +836,10 @@ table tbody td img {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
+}
+
+.language-objc:before{
+  content: "OBJECTIVE-C";
 }
 
 .language-swift:before{

@@ -75,6 +75,29 @@ Use the Agent Bot example when you are looking to review and develop with the va
 <div class="important"><a href="https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot">Click here</a> to review the full code repository on Github for this example. You can also watch <a href="https://www.youtube.com/embed/7PVj6nhjG5o">this demo video</a>, which will guide you on how to run this example bot.</div>
 
 
+### Return To Same Agent Bot Example
+
+This example demonstrates running an Agent Bot, which serves as a routing bot for an account, and transfers incoming conversations to the agent that consumer was most satisfied with (according to MCS). This example is meant to help you understand to flow for this scenario.
+
+In this example, you will:
+
+* Run a bot on your account that transfers a conversation.
+
+* This bot will check the interaction history for an incoming conversation's consumer.
+
+* The bot will find the best agent (according to MCS) to accept the conversation and check that agent's availability.
+
+* The bot will then transfer the conversation to the agent.
+
+There are two parts to making this example work:
+
+1. In order to setup the agent-side code which achieves the Agent Bot example (routing bot), [follow this link:](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples#return-to-same-agent-bot) to review the Agent Bot (routing bot) example on Github.
+
+2. In order to generate a conversation with the account (and the Return To Same Agent Bot by extension), [follow the steps included in this guide inside the Messaging Window API](consumer-int-js-sample.html).
+
+
+<div class="important"><a href="https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/transfer2same-agent-bot">Click here</a> to review the full code repository on Github for this example.</div>
+
 
 ### Bots Cluster Example
 

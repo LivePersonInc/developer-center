@@ -70,9 +70,10 @@ let identity = LPMonitoringIdentity(consumerID: "consumerID", issuer: "BrandIssu
 // SendSDE
 LPMonitoringAPI.instance.sendSDE(identities: [identity], monitoringParams: monitoringParams, completion: { (sendSdeResponse) in
     print("received send sde response: \(String(describing: sendSdeResponse))")
-}) { [weak self] (error) in
+    })
+    { [weak self] (error) in
     print("send sde error: \(error.userInfo.description)")
-}
+    }
 
 // GetEngagement
 LPMonitoringAPI.instance.getEngagement(identities: [identity], monitoringParams: monitoringParams, completion: { (getEngagementResponse) in

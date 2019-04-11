@@ -165,7 +165,7 @@
     tooltip: 'Both directions, agent to consumer and consumer to agent.'
     channels:
     - mobileAppMessaging: "Supported"
-    - webMessaging: "Supported"
+    - webMessaging: "Not Supported"
     - appleBusinessChat: "Supported"
     - sms: "Supported"
     - facebook: "Supported"
@@ -435,7 +435,7 @@
     tooltip: 'Channel natively supports a way to verify that the consumer is "trusted."'
     channels:
     - mobileAppMessaging: "Supported"
-    - webMessaging: "Not Supported"
+    - webMessaging: "March 2019"
     - appleBusinessChat: "Supported"
     - sms: "Not Supported"
     - facebook: "Not Supported"
@@ -473,11 +473,11 @@
     channels:
     - mobileAppMessaging: "Supported"
     - webMessaging: "Supported"
-    - appleBusinessChat: "Coming Soon"
+    - appleBusinessChat: "Supported"
     - sms: "Supported"
-    - facebook: "Coming Soon"
+    - facebook: "Supported"
     - whatsapp: "Supported"
-    - googleRCS: "Coming Soon"
+    - googleRCS: "Supported"
     - line: "Not Supported"
     - messagingWindowAPI: "Supported"
     - connectorAPI: "Supported"
@@ -503,7 +503,7 @@
     - appleBusinessChat: "Supported"
     - sms: "Supported"
     - facebook: "Supported"
-    - whatsapp: "Not Supported"
+    - whatsapp: "Supported"
     - googleRCS: "Supported"
     - line: "Not Supported"
     - messagingWindowAPI: "Supported"

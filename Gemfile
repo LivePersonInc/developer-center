@@ -11,4 +11,5 @@ group :jekyll_plugins do
    gem 'jekyll-assets'
    gem 'sprockets', '~> 4.00.beta8'
    gem "rack", ">= 2.0.6"
+   gem "nokogiri", ">= 1.8.5"
 end
