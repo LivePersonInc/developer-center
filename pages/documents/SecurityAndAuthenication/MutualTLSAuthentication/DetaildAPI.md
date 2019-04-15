@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
 permalink: mutual-tls-authentication-detailed-api.html
-order: 7
 indicator: both
 ---
 
