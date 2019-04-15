@@ -8,8 +8,6 @@ categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
 permalink: mutual-tls-authentication-detailed-api.html
 root-link: true
-level-order: 6
-order: 1
 indicator: both
 ---
 
