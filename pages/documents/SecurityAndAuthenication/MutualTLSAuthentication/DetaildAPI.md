@@ -1,4 +1,3 @@
-
 ---
 pagename: Detailed API
 redirect_from:
@@ -11,7 +10,6 @@ permalink: mutual-tls-authentication-detailed-api.html
 order: 7
 indicator: both
 ---
-
 
 **API Request**
 
