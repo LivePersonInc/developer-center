@@ -2862,3 +2862,78 @@
   Description: The percentage (%) of active conversations assigned to agents out of the total number of assigned conversations.
   Dashboard: Messaging Performance
   filteredBy: Agent,Group
+  - metricitem:
+  Metric: AVG. Time to Response from agent assignment
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional: 
+  Description: The average time taken by an agent to send a message to the consumer from the time the agent was assigned to a conversation. Measured for the all agent message sent in a conversation
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Time to First Response from agent assignment
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional: 
+  Description: The average time taken by an agent to respond for the first time to a consumer's message, from the time the agent was assigned to the conversation.
+  Measured for the first agent message sent after each assignemnt - including assignemnt to a new conversation and after transfer.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Time to First Response from agent assignment - after Transfer
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional: 
+  Description: The average time taken by an agent to respond for the first time after the conversation was transferred. Measured from the time the agent was assigned after the transfer. 
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Time to First Response from agent assignment - for New Conversation
+  analysisType: Agent Responsiveness
+  Channel: Messaging
+  formulaOptional: 
+  Description: The average time taken by an agent to respond to the first message a consumer sent in a conversation from the time the agent was assigned to the conversation.
+  Measured only for the first agent message sent in a new conversation.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Wait Time for First Agent Response - First Time Conversations
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional: 
+  Description: The time on average a consumer who messaged the brand for the first time waits for a response from the brand. Measured from the time the first message was sent by the consumer, to the first response provided by an agent in the conversation.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Wait Time for First Agent Response
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional: 
+  Description: The time on average a consumer waits for a response to the first message the consumer sent in a conversation. Measured from the time the first message was sent by the consumer, to the first response provided by an agent in the conversation.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Wait Time for First Human Agent Response
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional: 
+  Description: The time on average a consumer waits for a response from the first human agent assigned to the conversation. If a bot was the first assigned agent, the responses from the bot are omitted from this metric's calculation. Measured from the first message sent by the consumer in the conversation, to the first response provided by a human agent.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Wait Time for First Human Agent Response - from Bot Escalation
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional: 
+  Description: The time on average a consumer waits for the first response in a conversation by a human agent. Measured from the time a bot escalates a conversation to another skill-queue to the first response give by the human agent.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
+- metricitem:
+  Metric: AVG. Wait Time to First Human Agent Response - after Transfer
+  analysisType: Consumer Experience
+  Channel: Messaging
+  formulaOptional: 
+  Description: The time on average a consumer waits for a response from the first agent assigned to the conversation after it was transferred. 
+  Measured from the time the conversation was transfered (including skill-to-skill transfer, agent-to-agent transfer or takeover) until a response is given by the agent.
+  Dashboard: Messaging Performance
+  filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)
