@@ -1,5 +1,5 @@
 ---
-pagename: Google Dialog Flow Version 2
+pagename: Google Dialogflow Version 2
 redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
@@ -43,11 +43,11 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>vendor</td>
-    <td>Name of the AI engine. “DialogFlowV2”</td>
+    <td>Name of the AI engine. “Dialogflow v2”</td>
   </tr>
   <tr>
     <td>BotAuth</td>
-    <td><em>Authentication info for Dialogflow V2:</em><br>
+    <td><em>Authentication info for Dialogflow v2:</em><br>
 1. private_key<br>
 2. client_email<br>
 3. project_id</td>
@@ -116,7 +116,7 @@ The Bot-platform connector uses the below fields from the JSON content above.
 
 #### Dialogflow Query length Limit 
 
-The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
+The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
