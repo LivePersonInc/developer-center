@@ -2,7 +2,7 @@
 pagename: Let's Get Started
 sitesection: Documents
 categoryname: "Welcome"
-documentname: Getting Started
+
 permalink: lets-get-started.html
 indicator: both
 ---
