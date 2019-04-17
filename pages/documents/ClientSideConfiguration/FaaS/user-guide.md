@@ -58,7 +58,9 @@ In order for your function to work with FaaS seamlessly, it has to follow a cert
 <div class="important>Make sure that this declaration stays like shown and is in the first line. Otherwise, the backend will reject the function.</div>
 
 ```javascript
-function lambda(input, callback) {   callback(null,`Hello World`);}
+function lambda(input, callback) {
+   callback(null,`Hello World`);
+}
 ```
 
 Our runtime is built using NodeJS LTS, which is currently NodeJs 10. The function developer has access to functionality offered by NodeJS. However be aware that the overall user rights are limited. We also provide access to the following dependencies, which can be `required` on demand:
@@ -604,7 +606,7 @@ You can configure these permission in LiveEngage:
 
 * Create/Edit a profile and add the permission you want for this profile:
 
-### FaaS template integrations
+### FaaS integration
 
 [Conditioned-Based Email Transcript via LiveEngage Chat](https://docs.google.com/document/d/17XAu-iF38U_Tr3eW9Pm1NdntTUZZo5YgHAeNMgkX0O0/edit#heading=h.6nowu7h8lkfe)
 
