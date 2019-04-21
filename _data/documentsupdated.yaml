@@ -173,6 +173,9 @@
         - pagename: Deploying Functions
         - pagename: External Invocations
         - pagename: Templates
+          subpages:
+            - subpagename: Post Conversation Survey Transcripts
+            - subpagename: Messaging Conversations with FaaS
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview

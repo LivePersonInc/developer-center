@@ -10,6 +10,24 @@ indicator: both
 
 <div class="important">FaaS is currently enabled by LivePerson account team's only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
 
+### Using the External UI
+
+To grant external developers access to FaaS, we created an External UI with the same capabilities that we allow internal LivePerosn developers.
+
+You can access this UI via (the base domain is: `faasUI`):
+
+* **Alpha**: [https://va-a.faasui.liveperson.net](https://va-a.faasui.liveperson.net)
+
+* **APAC**: [https://sy.faasui.liveperson.net](https://sy.faasui.liveperson.net)
+
+* **EMEA**: [https://lo.faasui.liveperson.net](https://lo.faasui.liveperson.net)
+
+* **US**: [https://va.faasui.liveperson.net](https://va.faasui.liveperson.net)
+
+However, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `faasUI` **dynamically**
+
+To get access to this page, you need at least one of these permissions enabled on your user: **LPA**, **FaaS-Admin**, **FaaS-Developer**. These permissions are described in detail below.
+
 FaaS's UI is divided into three main components. [Please see this document](function-as-a-service-using-the-external-ui.html) to learn more about how to access it as an external developer. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
 
 The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions.
@@ -23,6 +41,102 @@ The **Settings** tab provides access to the available settings for FaaS. Current
 Once you've familiarized yourself with the different sections of the UI, it's time to create your first function!
 
 ### Before getting started
+
+#### Set FaaS Permissions
+
+There are 3 permissions pertaining to FaaS:
+
+* FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets.
+
+* FaaS-Developer - allowed to manage `lambdas`, read whitelisted domains and read encrypted secrets.
+
+* FaaS-Invocation - only allowed to invoke lambdas externally.
+
+<table>
+<thead>
+  <tr>
+    <th>Component</th>
+    <th>Action</th>
+    <th>FaaS-Admin</th>
+    <th>FaaS-Developer</th>
+    <th>FaaS-Invocation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>lambda</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>lambda</td>
+    <td>create/edit/delete</td>
+    <td>-</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>lambda</td>
+    <td>deploy</td>
+    <td>-</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>lambda</td>
+    <td>invoke</td>
+    <td>-</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>whitelist</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>whitelist</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>secret</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>secret</td>
+    <td>read plain</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>secret</td>
+    <td>read crypted</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+<tbody>
+</table>
+
+You can configure these permission in LiveEngage:
+
+* Click on the Users at the top of the LiveEngage UI and then Profiles
+
+* Create/Edit a profile and add the permission you want for this profile:
+
+
+#### Function Layout and Framework
 
 In order for your function to work with FaaS seamlessly, it has to follow a certain pattern. This pattern can be viewed below.
 
