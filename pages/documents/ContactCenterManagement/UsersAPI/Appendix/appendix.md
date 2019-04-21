@@ -65,7 +65,7 @@ This section contains API details that are common to every API’s resource and 
 | pid | A user's process id. | unique string | Optional | |
 | deleted   | Indicates whether or not the item is deleted. | Boolean | Read only | |
 | loginName | A user's unique login name. | unique string | Required | |
-| fullName    | A user's full name.  | unique string | Required | |
+| fullName    | A user's full name.  | unique string | Required | In order to avoid exposing potentially personal information, this field will return an empty value|
 | nickname | A user’s nickname. | string | Required | |
 | isEnabled  | Indicates whether the user is enabled or not.  | Boolean | Required | |
 | maxChats | The maximum number of chats a user can take. | number | Required | |
@@ -85,7 +85,7 @@ This section contains API details that are common to every API’s resource and 
 | disabledManually | Indicates whether or not the user was disabled by an administrator. | Boolean | Optional | If isEnabled is changed and disabledManually is not provided, disabledManually will automatically be set to the opposite of isEnabled. |
 | description | The description of the user. | string| Optional | |
 | mobileNumber | The mobile phone number of the user. | string | Optional | |
-| employeeId | The external employee ID of the user. | string| Optional, in order to avoid exposing potentially personal information, this field will return an empty value | |
+| employeeId | The external employee ID of the user. | string| Optional | In order to avoid exposing potentially personal information, this field will return an empty value |
 | backgndImgUri | The background image URI. | string| Optional | |
 | pnCertName | The mobile app ID. | string | Optional | |
 | maxAsyncChats | The maximum number of open messaging conversations a user can take. | number | Optional | If null, the user will inherit the account’s default value.  |
@@ -104,7 +104,7 @@ This section contains API details that are common to every API’s resource and 
        "id": "987654321",
        "deleted": "false",
        "loginName": "unique@gmail.com",
-       "fullName": "first last name",
+       "fullName": "",
        "nickname": "agent1",
        "passwordSh": "pppppp",
        "isEnabled": "true",
@@ -128,7 +128,7 @@ This section contains API details that are common to every API’s resource and 
        "permissionGroups": ["1"],
        "description": "user’s description",
        "mobileNumber": "0542-123456",
-       "employeeId": "EXT-123456789",
+       "employeeId": "",
        "maxAsyncChats": "10",
        "backgndImgUri": "/pictures/image.jpg",
        "pnCertName": "lpMobileApp-123",
