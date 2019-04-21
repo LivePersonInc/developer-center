@@ -85,7 +85,7 @@ This section contains API details that are common to every API’s resource and 
 | disabledManually | Indicates whether or not the user was disabled by an administrator. | Boolean | Optional | If isEnabled is changed and disabledManually is not provided, disabledManually will automatically be set to the opposite of isEnabled. |
 | description | The description of the user. | string| Optional | |
 | mobileNumber | The mobile phone number of the user. | string | Optional | |
-| employeeId | The external employee ID of the user. | string| Optional | |
+| employeeId | The external employee ID of the user. | string| Optional, in order to avoid exposing potentially personal information, this field will return an empty value | |
 | backgndImgUri | The background image URI. | string| Optional | |
 | pnCertName | The mobile app ID. | string | Optional | |
 | maxAsyncChats | The maximum number of open messaging conversations a user can take. | number | Optional | If null, the user will inherit the account’s default value.  |
