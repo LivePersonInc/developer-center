@@ -3,125 +3,13 @@ pagename: Function as a Service User Guide
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Agent Groups API
+documentname: Function as a Service
 permalink: function-as-a-service-user-guide.html
 indicator: both
 ---
-### Overview
 
-Function as a Service (FaaS) is an internal LivePerson project enabling brands to develop custom behaviors within the LiveEngage platform. It enables integrations of services and hosting these services on LivePerson’s infrastructure. It’s simple, automatically deployed and integrated into LivePerson services. By doing so, FaaS enables you to just write a simple function (otherwise known as ‘Lambda’), deploy it and your solution will be available in minutes.
 
-When using FaaS, there are three main components that a developer should consider:
 
-#### Function
-
-Functions (‘Lambdas’) are code snippets that are responsible for performing certain needed tasks. Using Javascript, a developer can write custom code that will run upon being triggered by the invoker (see below for more information on invocations). The payload that is passed into the function can also be used within the function. Developers can use the data from the payload as part of the function logic.
-
-#### Invocation
-
-Functions are triggered by services that have integrations with the FaaS infrastructure. Depending on the type of function that is used, different triggers will be needed. These triggers can be an internal LivePerson event for example, such as a conversation state change, or an external service action (for example, when a message is received on an external platform, trigger a LiveEngage conversation as well). As part of the invocation, the integrated invokers can pass a payload into the function when the invocation occurs. This payload is specific to the invocation method. This means that depending on the invoker, the function will have different available data in the payload.
-
-To see the available invocation methods and integrations with FaaS, please review the FaaS Integrations Section of this document.
-
-#### Response / Action
-
-Functions also have the ability to respond back to the invoker if needed. The invoker can then perform an action based on the response of the function. For example, if Denver invokes a function which triggers a chat, the response from the function could tell Denver to send out an email transcript of the chat.
-
-Functions also have the ability to leverage both LivePerson APIs as well as external ones. This allows developers to extend the brand’s LiveEngage platform with custom integrations. Because the FaaS infrastructure resides inside the LivePerson cloud and adheres to the security, stability and scalability measures as offered by the LP private cloud, these custom integrations will enjoy the same robustness as other LiveEngage services. For example, the platform self-monitors the activity and scales in a self-sufficient manner based on resource demand. This means that if a certain function is experiencing high load during peak hours, the infrastructure scales automatically to provide it with more resources and to ensure performance.
-
-For further technical details about the FaaS platform, see also [https://docs.dev.lprnd.net/display/MPE/Architecture+Overview](https://docs.dev.lprnd.net/display/MPE/Architecture+Overview).
-
-### Getting Started
-
-<div class="important">FaaS is currently enabled via LivePerson account team's only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
-
-FaaS's UI is divided into three main components. At the top of the UI you can find a tab-based navigation bar which will allow you to navigate these components. The **Develop** space (see below) is the default page that will be visible.
-
-**Develop** contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows quick access to features surrounding the management of functions. **Note**: the develop page will show a special message when there are no functions available in the account.
-
-A detailed guide on how to create a new function can be found in the section Create a Javascript Function.
-
-**Deploy** provides the overview of functions that are currently deployed. It allows quick access to deployment features. Furthermore, it also allows access to a test page, where you can test the function with known, static input. **Note**: that if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure.
-
-Detailed information on the deployment process/flow can be found in the section Deployment Process. A guide on testing using the provided test page can be found in the section Testing your Function.
-
-**Settings** provides access to available settings. Currently, this is limited to the whitelisting of domains. A detailed explanation of the Whitelisting Process can be found at Whitelisting Domains.
-
-Once you've familiarized yourself with the different sections of the UI, it's time to create your first function!
-
-### Create a JavaScript Function
-
-#### General
-
-In order for your function to work with FaaS seamlessly, it has to follow a certain pattern. This template can be viewed below.
-
-<div class="important>Make sure that this declaration stays like shown and is in the first line. Otherwise, the backend will reject the function.</div>
-
-```javascript
-function lambda(input, callback) {   callback(null,`Hello World`);}
-```
-
-Our runtime is built using NodeJS LTS, which is currently NodeJs 10. The function developer has access to functionality offered by NodeJS. However be aware that the overall user rights are limited. We also provide access to the following dependencies, which can be `required` on demand:
-
-* [Request](https://www.npmjs.com/package/request/v/2.87.0): HTTP Library (Callback based API)
-
-* [Request-promise-native](https://www.npmjs.com/package/request-promise-native/v/1.0.5): HTTP Library (Promise based API)
-
-* Lp-faas-toolbelt: Utility Library which provides access to convenience functions
-
-During an invocation, the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
-
-```javascript
-function callback(error, result){}
-```
-
-If during your application no error has occurred you can provide a **null** value as error. After 30 Seconds your function will be killed immediately.
-
-<div class="important">When creating a function, you can choose from templated functions that are associated with available invocation events. In order to avoid unwanted side effects, we do allow updating the selected event after creation. Within the platform we use some environment variables for configuration, these are reserved and can not be used by the function developer. The UI will notify you if your chosen variable is reserved.</div>
-
-#### Creation Process
-
-Now we will have a look at the actual process of creating a new function.
-
-You can start the creation process using the **Create a Function** button that can be found under the **Develop** section. This opens the Creation Window which is currently a 3 Step process:
-
-1. Choose a template
-
-2. *Optional* whitelist a domain
-
-3. Function Description
-
-##### Step 1: Choose a template
-
-We provide developer templates, which are bound to a specific event. The templates are by default runnable out of the box, allowing you to directly deploy them and see the response. You can see a preview of the template on the right-hand side.
-
-**Further notes on the events**:
-
-* Each Event also has an event specific payload associated with it. This will be used during the testing but is also visible during development in the "Payload" tab.
-
-* Other Systems might invoke functions based on events, e.g. Denver will invoke functions that have the Event: "Chat Post Survey E-Mail Transcript"
-
-After choosing the desired template, you might want to whitelist a domain in order to perform an HTTP call to an external system. If this is not required, just deactivate the toggle and skip the next step.
-
-##### Step 2: Whitelist a domain
-
-You are able to whitelist the domains you want to leverage inside your function(s). This can also be done in the **Settings** section. We have a proxy in place which will check incoming requests from functions and see if the requested URL is whitelisted.
-
-Within the `Lp-faas-toolbelt`, we provide a method that generates the required headers for the communication with the proxy. A detailed explanation on the usage is shown here.
-
-Please make sure to whitelist the **fully qualified domain name**. E.g. If you visit [https://liveperson.com](https://liveperson.com) the server will actually redirect to [https://www.liveperson.com](https://www.liveperson.com), which means the domains you need to whitelist would be **www.liveperson.com**** **and** **liveperson.com**. [As shown in the screenshot below]
-
-Generally, we will prevent the double whitelisting of a domain. The UI will also indicate this using a dedicated error message.
-
-We also perform validation on the provided domain in order to ensure it is a valid domain name. For now, we do not support the whitelisting of subdomains in the format **.example.com**.
-
-**Please be aware** that it might take up to **5 minutes** until the whitelisted domain becomes active on the Proxy.
-
-##### Step 3: Function description
-
-Finally, you are able to name your function and also provide a short description. It will be useful to provide some context to another developer who might work with the function in the future. After creation, you are automatically forwarded to the Editor. More details on the Editor and it’s functionality can be found here.
-
-**Please be aware** that a function name has to be unique within a brand in order to avoid naming conflicts under one account.
 
 ### Development
 

@@ -162,12 +162,17 @@
       - pagename: Analytics
       #- pagename: Operations
 
-
-
-
 - categoryname: Client Side Configuration
   image: client-side
   documents:
+    - documentname: Function as a Service
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Developing with FaaS
+        - pagename: Deploying Functions
+        - pagename: External Invocations
+        - pagename: Templates
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
