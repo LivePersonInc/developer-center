@@ -106,6 +106,8 @@ Once you have your token and your `client-id` and `client-secret`, you can input
 
 To show how the invocation API can be called, we will use the same Postman collection which was linked above. This collection **first** uses the oAuth2.0 flow to retrieve a valid **access-token** and **second** executes the FaaS **invocation**, providing the retrieved access-token within the headers.
 
+**Please Note** that the system-user that is created for invocation purposes is a dedicated user for this purpose and is not an active user on the account. Also make sure that the permissions for this user are configured to **FaaS Invoker**.
+
 #### Following the example
 
 1. Download the [Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)
