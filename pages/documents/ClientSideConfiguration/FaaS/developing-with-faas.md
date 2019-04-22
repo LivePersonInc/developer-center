@@ -10,7 +10,7 @@ indicator: both
 
 After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the Editor, the heart of the FaaS UI. Here you can develop the function itself. The Editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html) (which is the code editor that powers VS Code) and provides you with a similar experience.
 
-**Note:** When choosing a template function linked to events, you can only develop a function with an unused event, that is an event not already bound to a different function. If you require to re-use an invocation event that is already in use by a templated function, we recommend to enhance that exisitng function with the needed requirments. 
+**Note:** When choosing a template function linked to events, you can only develop a function with an unused event, that is an event not already bound to a different function. If you need to use an invocation event that is already in use by a templated function, we recommend to edit that template and your needed functionality to it, leveraging the same event. 
 
 ![](img/faas-editor.png)
 
