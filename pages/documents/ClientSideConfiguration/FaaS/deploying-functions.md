@@ -39,7 +39,7 @@ If an error occurs, you can hover over the Build State to receive insight on the
 
 ### Toolbelt
 
-As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our Toolbelt, which is a language-specific utility library. The toolbelt offers access to a preconfigured capabilities such as a Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP Client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API Documentations for the different functions offered.
+As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our Toolbelt, which is a language-specific utility library. The toolbelt offers access to a preconfigured set of capabilities such as a Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP Client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API Documentations for the different functions offered.
 
 ```javascript
 export declare class Toolbelt {
