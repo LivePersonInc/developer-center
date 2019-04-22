@@ -166,7 +166,7 @@ function callback(error, result){}
 
 If during the runtime of your application no error has occurred, you can provide a **null** value as error. After 30 Seconds your function will be killed immediately, regardless of its error state.
 
-<div class="important">When creating a function, you can choose from templated functions that are associated with available invocation events. In order to avoid unwanted side effects, we do allow updating the selected template. However, we also use some environment variables for configuration. As a result, these variables reserved and can not be used by the function developer. The UI will notify you if your chosen variable is reserved.</div>
+<div class="important">When creating a function, you can choose from templated functions that are associated with available invocation events. In order to avoid unwanted side effects, we do allow updating the selected template. However, we also use some environment variables for configuration. As a result, these variables are reserved and can not be used by the function developer. The UI will notify you if your chosen variable is reserved.</div>
 
 In order to get started with  a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
 
