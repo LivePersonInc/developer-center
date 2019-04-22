@@ -12,6 +12,8 @@ After successfully creating a `lambda` (using the [Getting Started guide](functi
 
 **Note:** When choosing a template function linked to events, you can only develop a function with an unused event, that is an event not already bound to a different function.
 
+![](img/faas-editor.png)
+
 ### Code Completion / Context Menu
 
 While typing, the editor will offer you suggestions based on types, if inferable. You can also utilize this feature when using `require` to import dependencies to your `lambda`. Requiring `lp-faas-toolbelt`, for example, will give you type suggestions for the FaaS Toolbelt. This works for all dependencies which are listed in the “environment” section of the Editor sidebar (see below for more information).

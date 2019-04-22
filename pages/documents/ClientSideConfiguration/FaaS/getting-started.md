@@ -26,9 +26,11 @@ You can access this UI via (the base domain is: `faasUI`):
 
 However, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `faasUI` **dynamically**
 
-To get access to this page, you need at least one of these permissions enabled on your user: **LPA**, **FaaS-Admin**, **FaaS-Developer**. These permissions are described in detail below.
+To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions on your account. Please contact them to do so.
 
-FaaS's UI is divided into three main components. [Please see this document](function-as-a-service-using-the-external-ui.html) to learn more about how to access it as an external developer. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
+FaaS's UI is divided into three main components. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
+
+![](img/faas-menus.png)
 
 The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions.
 
@@ -126,14 +128,14 @@ There are 3 permissions pertaining to FaaS:
     <td>✅</td>
     <td>-</td>
   </tr>
-<tbody>
+</tbody>
 </table>
 
-You can configure these permission in LiveEngage:
+You can configure these permission in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html) but the process is simple:
 
 * Click on the Users at the top of the LiveEngage UI and then Profiles
 
-* Create/Edit a profile and add the permission you want for this profile:
+* Create/Edit a profile and add the permission you want for this profile
 
 
 #### Function Layout and Framework
@@ -166,7 +168,11 @@ If during the runtime of your application no error has occurred, you can provide
 
 <div class="important">When creating a function, you can choose from templated functions that are associated with available invocation events. In order to avoid unwanted side effects, we do allow updating the selected template. However, we also use some environment variables for configuration. As a result, these variables reserved and can not be used by the function developer. The UI will notify you if your chosen variable is reserved.</div>
 
-In order to get started with  a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab. This opens the Creation Window which currently includes a 3 Step process:
+In order to get started with  a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
+
+![](img/faas-function.png)
+
+This opens the Creation Window which currently includes a 3 Step process:
 
 1. Choose a template
 
@@ -177,6 +183,8 @@ In order to get started with  a function, start the creation process using the *
 ### Step 1: Choose a template
 
 We provide developer templates out of the box. These are pre-made functions which are bound to a specific event. The templates are by default runnable out of the box, allowing you to directly deploy them and see the response. You can see a preview of the template on the right-hand side.
+
+![](img/faas-templates.png)
 
 * Each of these pre-bound events also has an event specific payload associated with it. This will be used during the testing but is also visible during development in the "Payload" tab.
 
