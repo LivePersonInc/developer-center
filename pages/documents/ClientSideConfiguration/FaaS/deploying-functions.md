@@ -39,7 +39,7 @@ If an error occurs, you can hover over the Build State to receive insight on the
 
 ### Toolbelt
 
-As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our Toolbelt, which is a language-specific utility library. Right now it offers access to a preconfigured Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP Client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API Documentations for the different functions offered.
+As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our Toolbelt, which is a language-specific utility library. The toolbelt offers access to a preconfigured set of capabilities such as a Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP Client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API Documentations for the different functions offered.
 
 ```javascript
 export declare class Toolbelt {
@@ -105,17 +105,17 @@ To the right of the "Deployment state" field, you will find the “Actions” fi
 
 ![](img/faas-actions.png)
 
-However, please note that you can only invoke functions that have been successfully deployed. When you’re in the "Develop" tab, this is indicated by the status of the function displaying as “Productive”. When in the “Deploy” tab, this will be indicated by the deployment state showing “Deployment successful”.
+**Please note** that you can only invoke functions that have been successfully deployed. When you’re in the "Develop" tab, this is indicated by the status of the function displaying as “Productive”. When in the “Deploy” tab, this will be indicated by the deployment state showing “Deployment successful”.
 
-Pressing the Invoke button will lunch the Invoke your Fuction screen (IyF).
+Pressing the Invoke button will launch the 'Invoke your Fuction' (IyF) screen.
 
-The IyF screen contains three major items:
+The IyF screen contains three main items:
 
 The **Input** item contains the parameters with which your function will be called. By default it uses a payload appropriate for your function’s event. It can be manually edited to suit your testing scenario. These changes are not permanent and will be removed when reloading the FaaS website.
 
 The **Output** renders whatever your function produces during an invocation, be it a String, JSON or an exception. Like the Input, the Output is not permanently saved.
 
-The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example) as well as additional information declared by the user. Once a function has been invoked, any logs will displayed corresponding to their log-level declared inside the functions source code.
+The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example) as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the functions source code.
 
 ![](img/faas-invoke.png)
 
