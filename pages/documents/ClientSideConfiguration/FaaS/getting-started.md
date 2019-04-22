@@ -46,7 +46,7 @@ Once you've familiarized yourself with the different sections of the UI, it's ti
 
 #### Set FaaS Permissions
 
-There are 3 permissions pertaining to FaaS:
+There are 3 user permissions pertaining to FaaS:
 
 * FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets.
 
