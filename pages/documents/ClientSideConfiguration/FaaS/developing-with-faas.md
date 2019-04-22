@@ -24,6 +24,8 @@ By right-clicking inside the editor area, you're able to open the context menu, 
 
 By pressing the marked button you are able to hide or show the sidebar. This sidebar offers you access to two tabs (Settings and Payload, see below for more information). On smaller screens it will be hidden by default. On larger screens, it is shown by default.
 
+![](img/faas-sidebar.png)
+
 #### Settings Tab
 
 The Settings Tab shows you general information, including the date of the last change made to the function, but also things like **Event** (which shows the event to which the function is bound) and **Description** (which shows the function description). Furthermore, it provides an up to date list of the available dependencies and the versions. You can click on the Info Icon to see the official documentation for reach dependency over at `npm`.
