@@ -11,6 +11,8 @@ permalink: mcs-toolkit-getting-started.html
 indicator:
 ---
 
+<div class="important">Please <a href="https://knowledge.liveperson.com/data-reporting-meaningful-connection-score-(mcs)-accessing-the-toolkit.html">see this page</a> for updated information on how to access the MCS Toolkit</div>
+
 ### Authentication
 
 Security and privacy are important considerations when developing any solution - to ensure the MCS Toolkit complied with the necessary standards, we took advantage of the Login Service API that enables users to:

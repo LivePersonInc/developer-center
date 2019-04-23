@@ -15,4 +15,4 @@ In order to retrieve the Agent's public profile during a conversation (which is 
 curl https://$domain/api/account/$accountId/configuration/le-users/users/$userId
 ```
 
-Please see the Users API for more information on the response this call will receive.
+Please see [the Users API](users-api-appendix.html) for more information on the response this call will receive.
