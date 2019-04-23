@@ -214,6 +214,7 @@ This information can be used to segment visitors and tailor an experience based 
     "imei": "3543546543545688", //UNIQUE DEVICE OR PHONE IDENTIFIER
     "userName": "user000", //CONSUMER NICKNAME OR USERNAME
     "companySize": 500, //COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES
+    "companyBranch": "East Village", //THE CUSTOMER'S COMPANY BRANCH NAME
     "accountName": "bank corp", //THE CUSTOMER'S COMPANY NAME
     "role": "broker", //CONSUMER ROLE TITLE
     "lastPaymentDate": {
