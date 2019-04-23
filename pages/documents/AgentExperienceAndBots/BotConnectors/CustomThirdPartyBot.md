@@ -8,11 +8,11 @@ permalink: bot-connectors-custom-third-party-bots.html
 indicator: both
 ---
 
-This document explains how to connect external bots to LivePerson if there is not already a pre-built and supported Connector.
+<div class="important">This document explains how to connect external bots to LivePerson if there is not an already pre-built and supported Connector. However, several configurations will need to be enabled on your account before you can use the below solutions. Please check with your LivePerson account team before using this document.</div>
 
 ### Small / Medium niche Bot Platforms
 
-1. Login to Liveperson Bots & Automation Platform by using
+1. Login to the LivePerson Conversation Builder by using
 
     * Use [https://platform.botcentralai.com](https://platform.botcentralai.com) for deploying on AWS.
 
@@ -22,17 +22,17 @@ This document explains how to connect external bots to LivePerson if there is no
 
 3. Go to Enterprise Integrations.
 
-    1. Add LivePerson integratIon
+    1. Add an integration of type "LivePerson"
 
     2. Add a new Agent
 
     3. Select Chat or Messaging Channel
 
-    4. Configure Account Number, Bot User Login created on LiveEngage
+    4. Fill in your account number, and the bot user login details created in LiveEngage
 
-    5. Configure OAuth Keys.
+    5. Configure OAuth Keys (also retrieved from LiveEngage user creation)
 
-    6. Configure an end point for the bot you want to connect. This URL will be used by the connector to post the data. This is where customer bot implemented using 3rd party bot platform is listening on.
+    6. Configure an end point for the bot you want to connect. This URL will be used by the connector to post the data. This is where your 3rd Party Bot should also be listening to, to receive information from LiveEngage.
 
 ![image alt text](img/bot-guide-niche0.png)
 
@@ -41,36 +41,17 @@ This document explains how to connect external bots to LivePerson if there is no
 
 5. Configure the following URL `https://external.botcentralapi.com/connector/{{consumerId}}`  on the customer bot implementation side to post bot responses to LiveEngage.
 
-6. Example of the post body:
-
 ### Custom Bot Connectors
 
 Customers can always write their own custom Bot connector using our Messaging Agent SDK and Chat Agent API.  This is mainly for the small, medium niche platforms who want to build connectivity to LiveEngage.
 
-1. Chat Bots
+#### Integrating Custom Bots via Chat
 
-**Features**: create a chat Agent Bot to leverage LivePerson Structured Content capabilities.
+There are two options available to you if you're looking to integrate bots into chat. The first is to use the Chat Agent API directly. Its [documentation can be found here](chat-agent-api-overview.html). You can also utilize the JavaScript SDK which LivePerson wrote on top of that API. Starting with the [Sample App](https://github.com/LivePersonInc/chat-js-sdk-sample-app) is a good idea, to get a handle on how it works.
 
-  * LivePerson Developer [Documentation](chat-agent-api-overview.html)
-
-  * LivePerson GitHub [Sample App](https://github.com/LivePersonInc/chat-js-sdk-sample-app)
-
-{:start="2"}
-2. Messaging Bots    
-
-**Features**: create a Conversational Bot, Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.
-
-  * LivePerson Developer [Documentation](messaging-agent-sdk-overview.html)
-
-  * Live GitHub [Messaging SDK & Sample Apps](https://github.com/LivePersonInc/node-agent-sdk)
+In both cases, generally speaking, you will need to use JavaScript from your bot to [post lines to LiveEngage](chat-agent-api-methods-send-lines-and-structured-content.html) and to [listen to new events](chat-agent-api-methods-retrieve-chat-events.html) in the chat (such as consumer text) and react accordingly.
 
 
-### FAQS
+#### Integrating Custom Bots via Messaging  
 
-**What should we do if our Infrastructure team does not allow Websocket based integrations into LiveEngage?**
-
-Connectors deployed using BotCentral platform are Http Proxy connectors, which can be used in this case.
-
-**How do I get started?**
-
-Contact your client partner and they will initiate the process with the Technical Services team.
+There is one option available to you if you're looking to integrate bots with messaging conversations and that is the [Messaging Agent SDK]((messaging-agent-sdk-overview.html). This allows you to create a Conversational Bot, a Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.
