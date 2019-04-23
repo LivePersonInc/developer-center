@@ -18,7 +18,7 @@ This method exposes a short-term, one-time, non-cacheable URL for starting the e
 
 | Method | URL |
 | :--- | :--- |
-| POST | https://<domain>/api/account/{accountId}/external/engagement?v=1.0 |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/external/engagement?v=1.0 |
 
 **URL Parameters**
 
