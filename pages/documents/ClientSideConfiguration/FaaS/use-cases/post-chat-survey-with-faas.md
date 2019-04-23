@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Use Cases
-permalink: function-as-a-service-use-cases-post-conversation-survey-with-faas.html
+permalink: function-as-a-service-use-cases-post-conversation-survey-transcripts.html
 indicator: both
 ---
 
@@ -29,7 +29,7 @@ The integration between LiveEngage and FaaS in this case is done based on an eve
 
 The following is an example of the payload that LiveEngage Chat sends to FaaS in a JSON format:
 
-```JSON
+```json
 {
   "timestamp": 2342343242,
   "headers": [],

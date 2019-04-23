@@ -172,7 +172,7 @@
         - pagename: Developing with FaaS
         - pagename: Deploying Functions
         - pagename: External Invocations
-        - pagename: Templates
+        - pagename: Use Cases
           subpages:
             - subpagename: Post Conversation Survey Transcripts
             - subpagename: Messaging Conversations with FaaS
