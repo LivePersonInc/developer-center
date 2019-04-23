@@ -1,14 +1,14 @@
-- categoryname: Getting Started
+- categoryname: Welcome
   image: getting-started
   documents:
+  - documentname: Get Started
+    pages:
+    - pagename: Let's Get Started
   - documentname: Essential Resources
     pages:
-    - pagename: Create a New API Key
-    - pagename: Using the Domain API
-    - pagename: Retry and KeepAlive Best Practices
-    - pagename: Getting Started with Authentication
-    - pagename: Getting Started with Data APIs
-    - pagename: Getting Started with Engagement Attributes
+    - pagename: Authentication
+    - pagename: Data APIs
+    - pagename: Engagement Attributes
     - pagename: API Data Metrics
     - pagename: Report Builder Data Metrics
 

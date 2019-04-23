@@ -2,8 +2,8 @@
 pagename: Let's Get Started
 sitesection: Documents
 categoryname: "Welcome"
-
-permalink: lets-get-started.html
+documentname: Get Started
+permalink: get-started-let-s-get-started.html
 indicator: both
 ---
 <br>
