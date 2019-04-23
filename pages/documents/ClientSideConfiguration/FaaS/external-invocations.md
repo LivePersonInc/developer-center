@@ -88,7 +88,7 @@ Once you have your token and your `client-id` and `client-secret`, you can input
 
 ### Step 3: Calling the invocation API
 
-1. First, check that all prerequisites have been performed and you have all the following information:
+First, check that all prerequisites have been performed and you have all the following information:
 
     * **AccountId** is available.
 

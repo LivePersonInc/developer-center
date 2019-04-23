@@ -178,3 +178,4 @@ function lambda(input, callback) {
 
 	callback(null, 'Function has finished...');
 	}
+```
