@@ -158,3 +158,23 @@ console.debug(), console.info(), console.warn() and console.error()</td>
   </tr>
 </tbody>
 </table>
+
+**Example code for logging a function**:
+
+```javascript
+function lambda(input, callback) {
+	console.debug('This is a simple debug message', {
+		'bugs': 'none!'
+	});
+
+	console.info('Informing you about important news', new Date(), Number.MAX_SAFE_INTEGER);
+
+	try {
+		console.warn('Starting a non-existent function');
+		nonExistentFunction();
+	} catch (e) {
+		console.error('You cannot call what you did not create');
+	}
+
+	callback(null, 'Function has finished...');
+	}
