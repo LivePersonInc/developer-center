@@ -32,17 +32,20 @@ Most user actions within LiveEngage can be performed programmatically using the 
 <p style="text-align: right">
 <a href="before-you-get-started-let-s-get-started.html"><img src="../img/btn-lets-get-started.png"></a></p>
 
-
----  
+<p><br></p>
+---
+<p></p>
 
 ### Common use cases
 To better understand our documentation, APIs, and LiveEngage platform, we’ve listed our common use cases with entry points into the documentation to help you start building an API client. If, however, you can’t find the project you had in mind, reach out to Dev Support for guidance. 
 
+<p><br></p>
 
 #### Integrate LiveEngage with your native app
 
 You can integrate your native iOS or Android app with LiveEnage using the Mobile Messaging SDK.  When you implement SDK this and it's APIs, brands can create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
 
+<p><br></p>
 
 #### Customize LiveEngage reports or create new ones
 
@@ -59,17 +62,20 @@ Some of the key use cases are:
 
 - **Comply with the GDPR** and permanently delete any personal data that the consumer requests to be deleted using the [Personal Data Deletion API](https://developers.liveperson.com/personal-data-deletion-api-overview.html). Once the data has been deleted there is no way to restore it. This API is not meant for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
 
+<p><br></p>
 
 #### Build or integrate workspace widgets
 
-You can integrate your application with the LiveEngage Agent Workspace using the [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html), which is a lightweight, client-side communication package. The Agent Workspace Widget connects with visitors and handles multiple concurrent connections from one central console, by opening applications directly within the Agent Workspace. 
+You can integrate your application with the LiveEngage Agent Workspace using the [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html), which is a lightweight, client-side communication package. The Agent Workspace Widget connects with visitors and handles multiple concurrent connections from one central console, by opening applications directly within the Agent Workspace.
 
-When you implement this SDK and it’s APIs, brands have two-way communication between LiveEngage and external applications and they receive more in-depth information about their visitors so they can assist them more effectively and efficiently. Brands also have the ability to send conversation lines directly from the application, and the ability to transfer the conversation transcript automatically to the external application. 
+When you implement this SDK, and it’s APIs, brands have two-way communication between LiveEngage and external applications, and they receive more in-depth information about their visitors, so they can assist them more effectively and efficiently. Brands can also send conversation lines directly from the application, and the ability to transfer the conversation transcript automatically to the external application.
 
-You can also use the [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) with the Agent Workspace Widget SDK that allows rich media to be shared between the customer and the agent. Using unique session IDs, an external platform facilitates a direct connection between the two SDKs, providing a seamless widget integration framework.
+You can also use the [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) with the Agent Workspace Widget SDK that allows sharing of rich media between the customer and the agent. An external platform facilitates a direct connection between the two SDKs using unique session IDs, providing a seamless widget integration framework.
 
 
----  
+<p><br></p>
+---
+<p></p>
 
 ### Major Flows
 
@@ -79,6 +85,7 @@ The Login Service API provides endpoints to manage the User Session in LiveEngag
 <p style="text-align: right">
 <a href="login-service-api-overview.html" center><img src="../img/btn-view-login-service-api.png" class="center"></a></p>
 
+<p><br></p>
 
 #### Authentication
 All authenticated information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token.  Encryption ensures that your customer's data stays safe and unable to be manipulated.
@@ -86,10 +93,11 @@ All authenticated information is encrypted and transferred over SSL, using the O
 <p style="text-align: right">
 <a href="essential-resources-authentication.html" center><img src="../img/btn-view-auth-docs.png"></a></p>
 
+<p><br></p>
+
 #### Monitoring
 
-[in progress]
+The Monitoring API enables consumer monitoring and engagement flows.  When you combine monitoring capabilities with our Campaigns feature, you display tailored engagements to the right consumer at the right time.   If you're looking to build your own customized mobile experience in conjunction with our other APIs, you can enrich those APIs with monitoring. If you're already using other LivePerson APIs to build custom solutions, you'd need to work with this API directly to enable communication with those custom solutions.
 
-#### Analytics
-
-[in progress]
+<p style="text-align: right">
+<a href="monitoring-api-overview.html" center><img src="../img/btn-view-monitoring-api-docs.png"></a></p>

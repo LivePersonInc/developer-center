@@ -22,7 +22,9 @@ Also, if you have not already done so:
 
 And before you can do anything, you must do a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
 
+<p><br></p>
 ---
+<p></p>
 
 ### Step 1. Create a LiveEngage account
 
@@ -34,7 +36,9 @@ Some features to get started with include:
 - Bot for User type
 - Authenticated chat
 
+<p><br></p>
 ---
+<p></p>
 
 ### Step 2. Retrieve your domain
 
@@ -88,7 +92,9 @@ URL Parameters
 | 400 Bad Request | Problem with body or query parameters. |
 | 401 Unauthorized | Bad Authentication (invalid site or agent). |
 
+<p><br></p>
 ---
+<p></p>
 
 ### Step 3. Add Retry and KeepAlive mechanisms
 
@@ -125,7 +131,9 @@ Some of our services require you to send periodic requests to keep your session 
 | Messaging Window API | getClock | Every 30 seconds |
 | Server Chat API | [Retrieve Chat Information](https://developers.liveperson.com/consumer-experience-server-chat-retrieve-chat-information.html) | Every 30 seconds |
 
+<p><br></p>
 ---
+<p></p>
 
 ### Step 4. Select the login method
 
@@ -148,7 +156,9 @@ To log in as an application, you must have the _User Type - Bot_ feature activat
 <p style="text-align: right">
 <a href="essential-resources-authentication.html" center><img src="../../img/btn-view-auth-docs.png"></a></p>
 
---- 
+<p><br></p>
+---
+<p></p>
 
 ### Step 5. Authorize API Calls
 
@@ -164,7 +174,9 @@ In this step, now that you've chosen your login method, you use the [Login Servi
    
    - [Domain API](retrieve-api-domains-using-the-domain-api.html) - retrieves the base domain of LivePerson
 
+<p><br></p>
 ---
+<p></p>
 
 ### Step 6. Authenticate with LiveEngage
 
@@ -214,7 +226,9 @@ For unauthenticated engagements to work, contact your LivePerson account team wh
 <p style="text-align: right">
 <a href="essential-resources-authentication.html" center><img src="../../img/btn-view-auth-docs.png"></a></p>
 
+<p><br></p>
 ---
+<p></p>
 
 ### Step 7. Create an API key
 
@@ -258,7 +272,9 @@ If you are Application keys are security tokens that you use to log into LiveEng
 | --- | --- |
 | Header Value | OAuth<br>oauth_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D", <br>oauth_version="1.0",<br>oauth_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", <br>oauth_consumer_key="d392e7ff2e204d6c802e38fd775563d1", <br>oauth_signature_method="HMAC-SHA1", <br>oauth_token="61adad31204a4e6fab68d560f1ffb594", <br>oauth_timestamp="1261039670" <br><br>**Note:** The authorization should be contained on a single line. New lines have been inserted for clarity. |
 
---- 
+<p><br></p>
+---
+<p></p>
 
 ### Next steps
 
