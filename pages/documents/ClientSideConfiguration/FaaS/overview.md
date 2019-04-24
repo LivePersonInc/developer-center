@@ -24,6 +24,6 @@ Functions are triggered by services that have integrations with the FaaS platfor
 
 ### Response / Action
 
-Functions also have the ability to respond back to the invoker if needed. The invoker can then perform an action based on the response of the function. For example, if a function is triggered when a new conversation starts, then the function could tell the triggering service to send a auto-message back into the conversation.
+Functions also have the ability to respond back to the invoker if needed. The invoker can then perform an action based on the response of the function. For example, if a function is triggered when a new conversation starts, then the function could tell the triggering service to send an auto-message back into the conversation.
 
 Functions also have the ability to leverage both LivePerson APIs as well as external ones. This allows developers to extend the brand’s LiveEngage platform with custom integrations. Because the FaaS infrastructure resides inside the LivePerson cloud and adheres to the security, stability and scalability measures as offered by the LP private cloud, these custom integrations will enjoy the same robustness as other LiveEngage services. For example, the platform self-monitors the activity and scales in a self-sufficient manner based on resource demand. This means that if a certain function is experiencing high load during peak hours, the infrastructure scales automatically to provide it with more resources and to ensure performance.
