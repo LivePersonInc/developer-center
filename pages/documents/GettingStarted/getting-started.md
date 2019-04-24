@@ -120,7 +120,7 @@ Keep alive connections allow the client and server to use the same connection to
 - 3-way handshake for new connections— a full roundtrip of latency
 - slow-start
 
-Keep-alive connections are enabled by default in HTTP/1.1 while not in HTTP/1.0. HTTP/1.0 was designed to close the connection after every request between the client and the server.
+Keep-alive connections are enabled by default in HTTP/1.1 while not in HTTP/1.0, which was designed to close the connection after every request between the client and the server.
 
 Some of our services require you to send periodic requests to keep your session alive. We've provided the recommended intervals per product:
 
@@ -283,10 +283,10 @@ You use the API key when you create bots.
 
 Congratulations!  You are now ready to customize and implement features in LiveEngage.
 
-- **Integrate LiveEngage with iOS and Android apps**.  When you implement the Mobile Messaging SDK and it's Monitoring APIs, brands can create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
+- **Integrate LiveEngage with iOS and Android apps** to create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
 
 - **Enable consumer monitoring and engagement flows** to gather reporting data about the consumer, engagements, and campaigns. By combining monitoring capabilities with our Campaigns feature, you can display tailored engagements to the right consumer at the right time. For more information, refer to the [Monitoring API](monitoring-api-overview.html).
 
-- **Integrate a messaging bot** i **nto LiveEngage** using the [Agent Messaging SDK](messaging-agent-sdk-overview.html). Bots send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. To use the Agent Messaging SDK to connect a bot, your account must be enabled to support bot users. To check the enabled features for your account, contact your account team or LivePerson Support.
+- **Integrate a messaging bot into LiveEngage** to send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. You use the [Agent Messaging SDK](messaging-agent-sdk-overview.html) to connect a bot, but your account must be enabled to support bot users. To check the enabled features for your account, contact your account team or LivePerson Support.
 
-- **Manage users in LiveEngage.** For brands with a large number of agents, the user list may need to be updated on a regular basis. The user entity includes name, picture URL, password, skill, and other important user information. For more information, refer to the [Users API](users-api-overview.html).
+- **Manage users in LiveEngage** to update user lists that may need updating on a regular basis. You use the [Users API](users-api-overview.html) to make updates such as profile pictures, login names, passwords, or user assignments. You can also synchronize any HR or staffing system with LiveEngage.
