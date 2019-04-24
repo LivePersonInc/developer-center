@@ -40,9 +40,8 @@ Some features to get started with include:
 
 Before you get started with any LivePerson API, you must retrieve the base domain of LivePerson using the **Domain API** (a read-only API).
 
-**IMPORTANT:**
-
-The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are *case sensitive*. Please make sure to input serviceName as it is provided in each document's overview.
+{:.important}
+The different service names can be found in the relevant documentation for the API you're looking to use. 
 
 #### Request
 
@@ -93,7 +92,7 @@ URL Parameters
 
 ### Step 3. Add Retry and KeepAlive mechanisms
 
-In this step, which is optional but recommended, you add a mechanism to your API call to increase reliability and stability. Each component in a network can return an error, which can cause your application to fail.  If an error returns, the mechanism makes sure that your application attempts to retrieve the relevant information.
+In this step, you add a mechanism to your API call to increase reliability and stability. Each component in a network can return an error, which can cause your application to fail.  If an error returns, the mechanism makes sure that your application attempts to retrieve the relevant information.
 
 #### API error codes and retry recommendations
 
@@ -110,8 +109,14 @@ To make sure your application recovers from more than 3 consecutive failed reque
 - Make sure your application logs the details of faults and failing operations.  It is useful for troubleshooting the cause of a failure.
 
 #### KeepAlive
+Keep alive connections allow the client and server to use the same connection to send and receive multiple HTTP requests and responses, which helps avoid:
 
-Some services require you to send periodic requests to keep your session alive. We've provided the recommended intervals per product:
+- 3-way handshake for new connections— a full roundtrip of latency
+- slow-start
+
+Keep-alive connections are enabled by default in HTTP/1.1 while not in HTTP/1.0. HTTP/1.0 was designed to close the connection after every request between the client and server.
+
+Some of our services require you to send periodic requests to keep your session alive. We've provided the recommended intervals per product:
 
 | **Product** | **Method name** | **KeepAlive interval** |
 | --- | --- | --- |

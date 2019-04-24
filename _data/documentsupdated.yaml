@@ -7,10 +7,11 @@
     - pagename: Let's Get Started
   - documentname: Essential Resources
     pages:
+    - pagename: API Data Metrics
     - pagename: Authentication
     - pagename: Data APIs
+    - pagename: Domain API
     - pagename: Engagement Attributes
-    - pagename: API Data Metrics
     - pagename: Report Builder Data Metrics
 
 - categoryname: Agent Experience & Bots
