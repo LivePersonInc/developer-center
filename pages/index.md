@@ -41,17 +41,7 @@ To better understand our documentation, APIs, and LiveEngage platform, we’ve l
 
 #### Integrate LiveEngage with your native app
 
-You can integrate LiveEnage with iOS and Android apps.  When you implement the Mobile Messaging SDK and it’s Monitoring APIs, brands can create and manage digital engagements.  Additionally, customers can communicate with the brand’s agents through their channel of choice.  
-
-With mobile messaging integrated into your app, customer satisfaction increases because of the ideal customer experience through an always connected, ongoing conversation. 
-
-To integrate LiveEngage with your native app, you must implement several main components:
-
-1. Deploy all required customization, which you can find in the …
-2. Configure push notifications
-3. Configure authentication. LivePerson only supports OAuth 2.0 and OpenID Connect standards, via a JSON Web Token (JWT).  
-
-[I need a new overview topic for the Mobile SDK, currently, it’s marketing material.]
+You can integrate your native iOS or Android app with LiveEnage using the Mobile Messaging SDK.  When you implement SDK this and it's APIs, brands can create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
 
 
 #### Customize LiveEngage reports or create new ones
@@ -72,7 +62,12 @@ Some of the key use cases are:
 
 #### Build or integrate workspace widgets
 
-[in progress]
+You can integrate your application with the LiveEngage Agent Workspace using the [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html), which is a lightweight, client-side communication package. The Agent Workspace Widget connects with visitors and handles multiple concurrent connections from one central console, by opening applications directly within the Agent Workspace. 
+
+When you implement this SDK and it’s APIs, brands have two-way communication between LiveEngage and external applications and they receive more in-depth information about their visitors so they can assist them more effectively and efficiently. Brands also have the ability to send conversation lines directly from the application, and the ability to transfer the conversation transcript automatically to the external application. 
+
+You can also use the [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) with the Agent Workspace Widget SDK that allows rich media to be shared between the customer and the agent. Using unique session IDs, an external platform facilitates a direct connection between the two SDKs, providing a seamless widget integration framework.
+
 
 ---  
 

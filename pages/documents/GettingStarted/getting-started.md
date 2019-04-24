@@ -193,6 +193,9 @@ For unauthenticated engagements to work, contact your LivePerson account team wh
 
 5.  Configure the following parameters:
 
+   {:.important}
+   You can only have one authentication type for both web and in-app messaging.
+
    - Implicit or Code Flow
 
    - OAuth 2.0 Authentication Endpoint (when using a separate browser window)
@@ -207,8 +210,6 @@ For unauthenticated engagements to work, contact your LivePerson account team wh
 
    - JS method name and context (when using LiveEngage embedded window in Web)
 
-{:.important}
-You can only have one authentication type for both web and in-app messaging.
 
 <p style="text-align: right">
 <a href="essential-resources-authentication.html" center><img src="../../img/btn-view-auth-docs.png"></a></p>
