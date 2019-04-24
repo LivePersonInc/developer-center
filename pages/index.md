@@ -16,17 +16,15 @@ Our APIs configure and manipulate LiveEngage features and capabilities. To use t
 
 Most user actions within LiveEngage can be performed programmatically using the REST API; some of the key categories are:
 
-- **Login Service API** for logging into LiveEngage as a user with credentials or an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
+- **[Login Service API](login-service-api-overview.html)** for logging into LiveEngage as a user with credentials or an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
   
-- **Domain API** for returning the base domain of LivePerson, which is used in the APIs outlined in the documentation.
+- **[Domain API](essential-resources-domain-api.html)** for returning the base domain of LivePerson, which is used in the APIs outlined in the documentation.
 
-- **Retry and KeepAlive** for sending period requests to keep your session alive. When you add a retry mechanism for API calls, you increase the reliability and stability of your application. 
+- **[Engagement attributes](essential-resources-engagement-attributes.html)** for collecting specific information such as product viewed, purchase information, errors the visitor encountered, and search results. LiveEngage provides out-of-the-box information for the visitor’s geolocation, the amount of time spent on a page, and the pages they viewed. 
 
-- **Engagement attributes** for collecting specific information such as product viewed, purchase information, errors the visitor encountered, and search results. LiveEngage provides out-of-the-box information for the visitor’s geolocation, the amount of time spent on a page, and the pages they viewed. 
+- **[Data APIs](essential-resources-data-apis.html)** for retrieving your contact center’s information, types of conversations, and messaging transcripts. 
 
-- **Data APIs** for retrieving your contact center’s information, types of conversations, and messaging transcripts. 
-
-- **Bot connectors** for integrating third-party messaging platforms and LiveEngage.  Bot connectors send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. 
+- **[Bot connectors](bot-connectors-getting-started.html)** for integrating third-party messaging platforms and LiveEngage.  Bot connectors send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. 
 
 
 <p style="text-align: right">

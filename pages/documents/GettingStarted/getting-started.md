@@ -120,7 +120,7 @@ Keep alive connections allow the client and server to use the same connection to
 - 3-way handshake for new connections— a full roundtrip of latency
 - slow-start
 
-Keep-alive connections are enabled by default in HTTP/1.1 while not in HTTP/1.0. HTTP/1.0 was designed to close the connection after every request between the client and server.
+Keep-alive connections are enabled by default in HTTP/1.1 while not in HTTP/1.0. HTTP/1.0 was designed to close the connection after every request between the client and the server.
 
 Some of our services require you to send periodic requests to keep your session alive. We've provided the recommended intervals per product:
 
@@ -206,7 +206,7 @@ For unauthenticated engagements to work, contact your LivePerson account team wh
 5.  Configure the following parameters:
 
    {:.important}
-   You can only have one authentication type for both web and in-app messaging.
+   You can only have one authentication type for both web and in-app messaging. For example, if you use the implicit flow for web messaging, then you must also use implicit flow for in-app message.
 
    - Implicit or Code Flow
 
@@ -232,7 +232,10 @@ For unauthenticated engagements to work, contact your LivePerson account team wh
 
 ### Step 7. Create an API key
 
-If you are Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
+Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
+
+{:.notice}
+You use the API key when you create bots.
 
 1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
 
