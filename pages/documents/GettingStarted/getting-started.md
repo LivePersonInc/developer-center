@@ -42,7 +42,7 @@ Before you get started with any LivePerson API, you must retrieve the base domai
 
 **IMPORTANT:**
 
-The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are \*case sensitive\*. Please make sure to input serviceName as it is provided in each document's overview.
+The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are *case sensitive*. Please make sure to input serviceName as it is provided in each document's overview.
 
 #### Request
 
@@ -61,41 +61,23 @@ URL Parameters
 #### Response
 
 ```json
-
 {
-
     "baseURIs": [
-
         {
-
             "service": "liveEngageUI",
-
             "account": "44661254",
-
             "baseURI": "lo.le1.liveperson.net"
-
         },
-
         {
-
             "service": "visitorFeed",
-
             "account": "44661254",
-
             "baseURI": "lo.v-feed.liveperson.net"
-
         },
-
         {
-
             "service": "etool",
-
             "account": "44661254",
-
             "baseURI": "z2.etool.liveperson.net"
-
         },
-
 ```
 
 
@@ -268,8 +250,7 @@ If you are Application keys are security tokens that you use to log into LiveEng
 
 | **Header Name** | **Authorization** |
 | --- | --- |
-| Header Value | OAuth   oauth\_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D",
-oauth\_version="1.0",  oauth\_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", oauth\_consumer\_key="d392e7ff2e204d6c802e38fd775563d1", oauth\_signature\_method="HMAC-SHA1", oauth\_token="61adad31204a4e6fab68d560f1ffb594", oauth\_timestamp="1261039670"   **Note:** The authorization should be contained on a single line. New lines have been inserted for clarity. |
+| Header Value | OAuth<br>oauth_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D", <br>oauth_version="1.0",<br>oauth_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", <br>oauth_consumer_key="d392e7ff2e204d6c802e38fd775563d1", <br>oauth_signature_method="HMAC-SHA1", <br>oauth_token="61adad31204a4e6fab68d560f1ffb594", <br>oauth_timestamp="1261039670" <br><br>**Note:** The authorization should be contained on a single line. New lines have been inserted for clarity. |
 
 --- 
 
