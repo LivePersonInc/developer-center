@@ -1,8 +1,11 @@
 ---
-pagename: Welcome!
-
+pagename: Welcome Developers!
+sitesection: Documents
+categoryname: "Welcome"
 permalink: index.html
+indicator: both
 ---
+
 
 {: .important}
 At the end of Q1 2019, **LivePerson plans to deprecate all support for TLS 1.0 and 1.1**. If you still use these protocols, an upgrade to TLS 1.2 or higher on your end is required to ensure continued support of all LivePerson services.
@@ -25,37 +28,16 @@ Most user actions within LiveEngage can be performed programmatically using the 
 
 - **Bot connectors** for integrating third-party messaging platforms and LiveEngage.  Bot connectors send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. 
 
-<a href="https://developers.liveperson.com/get-started.html" style="align: right;"><img src="../img/btn-lets-get-started.png"></a>
 
+<p style="text-align: right">
+<a href="before-you-get-started-let-s-get-started.html"><img src="../img/btn-lets-get-started.png"></a></p>
 
----  
-
-### Prerequisites before you build an API client
-
-Before you can use our APIs, you must do a few things first: 
-
-1. Create a [LiveEngage account](https://register.liveperson.com/checkout/104139/order_information).  
-2. Retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).
-3. Create an application key in LiveEngage. For details, refer to [Create a new API key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html). 
-4. Create a Bot user in LiveEngage. 
-5. (Optional, but recommended) Add the [Retry and KeepAlive mechanism](https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html). 
-6. Select either the User Login or Application Login method from the [Login Service API](https://developers.liveperson.com/login-getting-started.html).
-
-{:.important}
-Also, make sure to read the API Terms of Use and the Systems Requirements and Language Support guide, if you have not already done so. 
-
-
-
-[Let’s Get Started >](l)
 
 ---  
 
 ### Common use cases
 To better understand our documentation, APIs, and LiveEngage platform, we’ve listed our common use cases with entry points into the documentation to help you start building an API client. If, however, you can’t find the project you had in mind, reach out to Dev Support for guidance. 
 
-- Integrate LiveEnage with your native app 
-- Customize LiveEngage reports or create new ones
-- Build or integrate workspace widgets
 
 #### Integrate LiveEngage with your native app
 
@@ -90,25 +72,29 @@ Some of the key use cases are:
 
 #### Build or integrate workspace widgets
 
-
+[in progress]
 
 ---  
 
 ### Major Flows
 
 #### Login 
-The Login Service API provides endpoints to manage the User Session in LiveEngage, such as [User Login](), [Application Login](), [Logout]() and [Refresh](). Use this API to log into LiveEngage as a user with credentials or an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
+The Login Service API provides endpoints to manage the User Session in LiveEngage, such as User Login, Application Login, Logout and Refresh. Use this API to log into LiveEngage as a user with credentials or an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
 
-[VIEW LOGIN SERVICE API DOCUMENTATION >](https://developers.liveperson.com/login-service-api-overview.html)
+<p style="text-align: right">
+<a href="login-service-api-overview.html" center><img src="../img/btn-view-login-service-api.png" class="center"></a></p>
+
 
 #### Authentication
 All authenticated information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token.  Encryption ensures that your customer's data stays safe and unable to be manipulated.
 
-[VIEW AUTHENTICATION DOCUMENTATION >]()
+<p style="text-align: right">
+<a href="essential-resources-authentication.html" center><img src="../img/btn-view-auth-docs.png"></a></p>
 
 #### Monitoring
 
+[in progress]
 
 #### Analytics
 
-
+[in progress]
