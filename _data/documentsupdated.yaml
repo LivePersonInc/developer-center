@@ -170,6 +170,12 @@
         - pagename: Overview
         - pagename: Getting Started
         - pagename: Developing with FaaS
+          subpages:
+            - subpagename: Overview
+            - subpagename: "Events & Templates"
+            - subpagename: Whitelisting Domains
+            - subpagename: Toolbelt
+            - subpagename: Storing Secrets
         - pagename: Deploying Functions
         - pagename: External Invocations
         - pagename: Use Cases

@@ -1,16 +1,17 @@
 ---
-pagename: Developing with FaaS
+pagename: Overview
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-developing-with-faas.html
+subfoldername: Developing with FaaS
+permalink: function-as-a-service-developing-with-faas-overview.html
 indicator: both
 ---
 
 After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the Editor, the heart of the FaaS UI. Here you can develop the function itself. The Editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html) (which is the code editor that powers VS Code) and provides you with a similar experience.
 
-**Note:** When choosing a template function linked to events, you can only develop a function with an unused event, that is an event not already bound to a different function. If you need to use an invocation event that is already in use by a templated function, we recommend to edit that template and your needed functionality to it, leveraging the same event. 
+**Note:** When choosing a template function linked to events, you can only develop a function with an unused event, that is an event not already bound to a different function. If you need to use an invocation event that is already in use by a templated function, we recommend to edit that template and your needed functionality to it, leveraging the same event.
 
 ![](img/faas-editor.png)
 
@@ -36,7 +37,7 @@ In the bottom section you can manage the environment variables. As mentioned [he
 
 The Payload Tab shows the example payload, which highlights the structure of the event-specific payload sent to the function. If the payload is larger than the view window, it will be collapsed automatically. It is also generally possible to collapse and expand the payload manually.
 
-**Please be aware** that the payload is read-only, you are not able to modify it. We have put it there to help you in the development process by understanding what you can use/make reference to as part of the function code. 
+**Please be aware** that the payload is read-only, you are not able to modify it. We have put it there to help you in the development process by understanding what you can use/make reference to as part of the function code.
 
 ### Environment Variables
 
