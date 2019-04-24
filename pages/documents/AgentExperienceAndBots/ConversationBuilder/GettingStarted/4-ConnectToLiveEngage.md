@@ -140,11 +140,14 @@ Click the **+** icon in the bottom-left corner to create a new API with the foll
 
 * **URL**: 
 
-  1. For US: https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent
+  1. For Production US: https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent
 
-  2. For EU: https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent
+  2. For LiveEngage SSO US (United States (LP)): https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent 
 
-  3. For APAC: https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent
+  3. For Europe: https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent
+
+  4. For APAC: https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent
+
 
 * **Request Headers**:
 
