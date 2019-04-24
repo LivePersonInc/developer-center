@@ -8,9 +8,7 @@ permalink: function-as-a-service-developing-with-faas.html
 indicator: both
 ---
 
-After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the Editor, the heart of the FaaS UI. Here you can develop the function itself. The Editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html) (which is the code editor that powers VS Code) and provides you with a similar experience.
-
-**Note:** When choosing a template function linked to events, you can only develop a function with an unused event, that is an event not already bound to a different function. If you need to use an invocation event that is already in use by a templated function, we recommend to edit that template and your needed functionality to it, leveraging the same event. 
+After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the Editor, the heart of the FaaS UI. Here you can develop the function itself.
 
 ![](img/faas-editor.png)
 
@@ -28,9 +26,10 @@ By pressing the marked button you are able to hide or show the sidebar. This sid
 
 #### Settings Tab
 
-The Settings Tab shows you general information, including the date of the last change made to the function, but also things like **Event** (which shows the event to which the function is bound) and **Description** (which shows the function description). Furthermore, it provides an up to date list of the available dependencies and the versions. You can click on the Info Icon to see the official documentation for each dependency over at `npm`.
+The Settings Tab shows you general information, including the date of the last change made to the function, but also things like **Event** (which shows the event to which the function is bound) and **Description** (which shows the function description). Furthermore, it provides an up to date list of the available dependencies and the versions. You can click on the Info Icon to see the official documentation for each dependency.
 
-In the bottom section you can manage the environment variables. As mentioned [here](function-as-a-service-getting-started.html#before-getting-started), we have a set of reserved environment variables. The UI will inform you if you attempt to use them.
+In the bottom section you can manage the environment variables. 
+**Please be aware** that we have a set of reserved environment variables. The UI will inform you if you attempt to use them.
 
 #### Payload Tab
 
@@ -44,7 +43,7 @@ Using the relevant button from the Settings tab, you are able to add new Environ
 
 You can access the variable during runtime by using `process.env['YOUR_ENV']`. **Please be aware** that the value will be available in form of a string. If the value is a number, you will have to parse it prior to using it. By using the trash icon, you can delete unwanted variables.
 
-**Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. FaaS has a secret storage facility that can be leveraged for this purpose. Click [here](FaaS.XXXX.html) for further details on using Vault Secret Storage with FaaS.
+**Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. FaaS has a secret storage facility that can be leveraged for this purpose.
 
 ### Next steps
 
