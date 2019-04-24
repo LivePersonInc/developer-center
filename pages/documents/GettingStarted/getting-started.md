@@ -223,9 +223,6 @@ For unauthenticated engagements to work, contact your LivePerson account team wh
    - JS method name and context (when using LiveEngage embedded window in Web)
 
 
-<p style="text-align: right">
-<a href="essential-resources-authentication.html" center><img src="../../img/btn-view-auth-docs.png"></a></p>
-
 <p><br></p>
 ---
 <p></p>
