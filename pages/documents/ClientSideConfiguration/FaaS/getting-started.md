@@ -10,21 +10,13 @@ indicator: both
 
 <div class="important">FaaS is currently enabled by LivePerson account team's only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
 
-### Using the External UI
+### Accessing the FaaS User Interface
 
-To grant external developers access to FaaS, we created an External UI with the same capabilities that we allow internal LivePerosn developers.
+Our FaaS UI allows developers to directly develop, deploy & test new functions.
 
-You can access this UI via (the base domain is: `faasUI`):
-
-* **Alpha**: [https://va-a.faasui.liveperson.net](https://va-a.faasui.liveperson.net)
-
-* **APAC**: [https://sy.faasui.liveperson.net](https://sy.faasui.liveperson.net)
-
-* **EMEA**: [https://lo.faasui.liveperson.net](https://lo.faasui.liveperson.net)
-
-* **US**: [https://va.faasui.liveperson.net](https://va.faasui.liveperson.net)
-
-However, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `faasUI` **dynamically**
+You can either access this UI via [https://faas.liveperson.net](https://faas.liveperson.net) or
+by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain of service:
+* `faasUI`
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions on your account. Please contact them to do so.
 
@@ -32,13 +24,12 @@ FaaS's UI is divided into three main components. At the top of the UI you can fi
 
 ![](img/faas-menus.png)
 
-The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions.
 
-A detailed guide on how to create a new function can be found in the section Create a Javascript Function, below.
+The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas.html).
 
 The **Deploy** tab provides an overview of the functions that are currently deployed. It also allows quick access to deployment features. Furthermore, it also allows access to a test page, where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
 
-The **Settings** tab provides access to the available settings for FaaS. Currently, this is limited to the whitelisting of domains. A detailed explanation of the Whitelisting Process can be in the document below.
+The **Settings** tab provides access to the available settings of FaaS. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
 
 Once you've familiarized yourself with the different sections of the UI, it's time to create your first function!
 
@@ -150,13 +141,7 @@ function lambda(input, callback) {
 }
 ```
 
-Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 10. Therefore, you have access to all functionality offered by NodeJS. However be aware that the overall user rights are limited. We also provide access to the following dependencies, which can be `required` on demand:
-
-* [Request](https://www.npmjs.com/package/request/v/2.87.0): HTTP Library (Callback based API)
-
-* [Request-promise-native](https://www.npmjs.com/package/request-promise-native/v/1.0.5): HTTP Library (Promise based API)
-
-* Lp-faas-toolbelt: Utility Library which provides access to convenience functions, developed by LivePerson
+Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 10. Therefore, you have access to all functionality offered by NodeJS.
 
 As you can see from the example above, during an invocation the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
 
@@ -164,11 +149,9 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After 30 Seconds your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** Seconds your function will be killed immediately, regardless of its error state.
 
-<div class="important">When creating a function, you can choose from templated functions that are associated with available invocation events. In order to avoid unwanted side effects, we do allow updating the selected template. However, we also use some environment variables for configuration. As a result, these variables are reserved and can not be used by the function developer. The UI will notify you if your chosen variable is reserved.</div>
-
-In order to get started with  a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
+In order to get started with a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
 
 ![](img/faas-function.png)
 
@@ -186,11 +169,9 @@ We provide developer templates out of the box. These are pre-made functions whic
 
 ![](img/faas-templates.png)
 
-* Each of these pre-bound events also has an event specific payload associated with it. This will be used during the testing but is also visible during development in the "Payload" tab.
+* Each of these pre-bound events also have an event specific payload associated with it that the triggering system will provide. However, this will also be used during testing and visible during development in the "Payload" tab.
 
-* Other systems might invoke functions based on events, not only function, e.g. a LivePerson internal server will invoke functions that have the Event: "Chat Post Survey E-Mail Transcript"
-
-After choosing the desired template, you'll need to whitelist any external domains you might want to use in order to perform an HTTP call to an external system. If this is not required, just deactivate the toggle and skip the next step.
+* Other systems might invoke functions based on events, not only function, e.g. LiveEngage services will invoke functions that have the Event: "Chat Post Survey E-Mail Transcript".
 
 ### Step 2: Whitelist a domain
 
