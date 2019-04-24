@@ -162,9 +162,9 @@ To log in as an application, you must have the _User Type - Bot_ feature activat
 
 ### Step 5. Authorize API Calls
 
-In this step, now that you've chosen your login method, you use the [Login Service API] to log into LiveEngage to get a session token (Bearer) to use for other related API calls.
+In this step, now that you’ve chosen your login method.  Some of our APIs require authorization before you can use them.  Every API uses either user login credentials or an API key, or both, which you can find in the overview of the API itself. 
 
-1. Login into LiveEngage as a _user_ with credentials or an _application_ with an API key.
+1. Use the [Login Service API](login-service-api-overview.html) to log into LiveEngage to get a session token (Bearer) to use for other related API calls.  You can log in as a user with credentials or an application with an API key. 
 
 2. Use this token in your authentication header in the following API calls:
 
