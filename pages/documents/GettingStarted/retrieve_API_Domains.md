@@ -41,20 +41,9 @@ JSON Example:
     "baseURIs": [
         {
             "service": "liveEngageUI",
-            "account": "44661254",
+            "account": "EXAMPLE123",
             "baseURI": "lo.le1.liveperson.net"
         },
-        {
-            "service": "visitorFeed",
-            "account": "44661254",
-            "baseURI": "lo.v-feed.liveperson.net"
-        },
-        {
-            "service": "etool",
-            "account": "44661254",
-            "baseURI": "z2.etool.liveperson.net"
-        },
-
 ```
 
 
