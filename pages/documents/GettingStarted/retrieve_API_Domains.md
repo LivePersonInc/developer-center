@@ -39,10 +39,22 @@ JSON Example:
 
 ```json
 {
- "service": "agentVep",
- "account": "1234",
- "baseURI": "exampleDomain.liveperson.net"
-}
+    "baseURIs": [
+        {
+            "service": "liveEngageUI",
+            "account": "EXAMPLE123",
+            "baseURI": "lo.le1.liveperson.net"
+        },
+        {
+            "service": "visitorFeed",
+            "account": "EXAMPLE123",
+            "baseURI": "lo.v-feed.liveperson.net"
+        },
+        {
+            "service": "etool",
+            "account": "EXAMPLE123",
+            "baseURI": "z2.etool.liveperson.net"
+        },
 ```
 
 **Elements in the Response**
