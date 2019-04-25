@@ -118,7 +118,7 @@
   - documentname: Bot Connectors
     pages:
       - pagename: Getting Started
-      - pagename: Google Dialog Flow
+      - pagename: Google Dialogflow
       - pagename: Google Dialog Flow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex

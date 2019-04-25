@@ -1,10 +1,10 @@
 ---
-title: Refresh Request
+pagename: Refresh Request
 Keywords:
-level1: Documents
-level2: Agent Interactions
-level3: LE Applications Authorization
-level4: Methods
+sitesection: Documents
+categoryname: "Security & Authentication"
+documentname: Authorizing LiveEngage Applications
+subfoldername: Methods
 order: 11
 permalink: authorizing-liveengage-applications-methods-refresh-request.html
 indicator: both
