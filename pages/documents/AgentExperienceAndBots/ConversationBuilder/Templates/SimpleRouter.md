@@ -59,8 +59,14 @@ Customize the text response to match your brand voice.
 Click on Integrations at the top of Conversation Builder and click on Escalation.
 
 Confirm that the POST url endpoint is using the right url for your server environment.
-- US, US LP, EU, EU LP, APAC
-- `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
+
+- For Production US: `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
+
+- For LiveEngage SSO US (United States (LP)): `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` 
+
+- For Europe: `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
+
+- For APAC: `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
 
 #### Global Functions
 
@@ -72,17 +78,17 @@ When you click on Global Functions at the top of Conversation Builder, you shoul
 switch(intent){
 case "billing":
     transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
-    skillId = '1558543114';
+    skillId = '1234567890';
     skillName = intent;
     break;
 case "account":
     transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
-    skillId = '1558543314';
+    skillId = '2345678901';
     skillName = intent;
     break;
 case "help":
     transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
-    skillId = '1558542714';
+    skillId = '3456789012';
     skillName = intent;
     break;  
 }      
