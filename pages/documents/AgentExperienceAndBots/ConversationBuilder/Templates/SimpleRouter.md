@@ -60,13 +60,12 @@ Click on Integrations at the top of Conversation Builder and click on Escalation
 
 Confirm that the POST url endpoint is using the right url for your server environment.
 
-- For Production US: `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
-
-- For LiveEngage SSO US (United States (LP)): `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` 
-
-- For Europe: `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
-
-- For APAC: `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent`
+| Server Environment | URL endpoint |
+| --- | --- |
+| Production US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
+| LiveEngage SSO US (United States (LP)) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
+| Europe | `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
+| APAC | `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
 
 #### Global Functions
 
