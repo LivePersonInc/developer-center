@@ -44,6 +44,19 @@ JSON Example:
             "account": "EXAMPLE123",
             "baseURI": "lo.le1.liveperson.net"
         },
+<<<<<<< HEAD
+        {
+            "service": "visitorFeed",
+            "account": "EXAMPLE123",
+            "baseURI": "lo.v-feed.liveperson.net"
+        },
+        {
+            "service": "etool",
+            "account": "EXAMPLE123",
+            "baseURI": "z2.etool.liveperson.net"
+        },
+=======
+>>>>>>> 36de08a5835289aeae6e1fb45fdafb8d1a729fd8
 ```
 
 
