@@ -119,7 +119,7 @@
     pages:
       - pagename: Getting Started
       - pagename: Google Dialogflow
-      - pagename: Google Dialog Flow Version 2
+      - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex
       - pagename: Custom Third Party Bots
