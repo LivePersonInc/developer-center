@@ -8,30 +8,30 @@ permalink: function-as-a-service-getting-started.html
 indicator: both
 ---
 
-<div class="important">FaaS is currently enabled by LivePerson account team's only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
+<div class="important">FaaS is currently enabled by LivePerson account teams only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
 
 ### Accessing the FaaS User Interface
 
-Our FaaS UI allows developers to directly develop, deploy & test new functions.
+Our FaaS UI allows developers to directly develop, deploy and test new functions.
 
 You can either access this UI via [https://faas.liveperson.net](https://faas.liveperson.net) or
 by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain of service:
 * faasUI
 
-To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions on your account. Please contact them to do so.
+To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
-FaaS's UI is divided into three main components. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
+The FaaS UI is divided into three main components. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
 
 ![](img/faas-menus.png)
 
 
 The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas.html).
 
-The **Deploy** tab provides an overview of the functions that are currently deployed. It also allows quick access to deployment features. Furthermore, it also allows access to a test page, where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
+The **Deploy** tab provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
 
 The **Settings** tab provides access to the available settings of FaaS. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
 
-Once you've familiarized yourself with the different sections of the UI, it's time to create your first function!
+Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
 
 ### Before getting started
 
