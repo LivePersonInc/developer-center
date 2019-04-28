@@ -16,7 +16,7 @@ Our FaaS UI allows developers to directly develop, deploy & test new functions.
 
 You can either access this UI via [https://faas.liveperson.net](https://faas.liveperson.net) or
 by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain of service:
-* `faasUI`
+* faasUI
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions on your account. Please contact them to do so.
 
