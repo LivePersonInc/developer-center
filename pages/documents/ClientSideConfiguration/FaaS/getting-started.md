@@ -122,7 +122,8 @@ There are 3 user permissions pertaining to FaaS:
 </tbody>
 </table>
 
-You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html) but the process is simple:
+
+You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
 
 * Click on the users at the top of the LiveEngage UI and then profiles
 
