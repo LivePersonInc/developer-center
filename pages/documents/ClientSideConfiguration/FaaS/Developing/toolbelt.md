@@ -15,9 +15,9 @@ Currently, the Toolbelt offers the following methods:
 
 | Method | Description |
 | :------- | :----- |
-| Toolbelt.SFClient() | Returns an Salesforce Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.HTTPClient() | Returns an HTTP CLient, that is configured to work with the FaaS Proxy. |
-| Toolbelt.SecretClient() | Returns an Secret Storage CLient, that is configured to work with the FaaS Secret Storage. |
+| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -65,7 +65,7 @@ httpClient(URL, {
 
 ### Secret Storage Client:
 
-Storage Client that is able to read & update secret values. The following methods exist.
+Storage Client that is able to read & update secret values. The following methods exist:
 
 **SecretClient.readSecret**
 
@@ -77,7 +77,7 @@ Searches the secret that belongs to the provided key. Will raise an error if the
 
 | Returns | Description |
 | :------- | :----- |
-| secretEntry | Object with properties ```key``` & ```value``` |
+| secretEntry | Object with properties `key` & `value` |
 
 **SecretClient.updateSecret**
 
@@ -85,7 +85,7 @@ Updates the secret with the provided update entry.
 
 | Parameter | Description |
 | :------- | :----- |
-| secretEntry |  Object with properties ```key``` & ```value``` |
+| secretEntry |  Object with properties `key` & `value` |
 
 | Returns | Description |
 | :------- | :----- |
@@ -98,13 +98,11 @@ Updates the secret with the provided update entry.
 const { Toolbelt } = require('lp-faas-toolbelt');
 // obtain SecretClient from Toolbelt
 const secretClient = Toolbelt.SecretClient();
-
 // this is how you can access your stored secret
 secretClient.readSecret('my_Secret-Key')
 .then(mySecret => {
   // Fetching the secret value
   const value = mySecret.value
-
   // you can also update your secret e.g. if you received a new OAuth2 token
   mySecret.value = 'nEw.oaUtH2-tOKeN!!11!';
   return secretClient.updateSecret(mySecret)

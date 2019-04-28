@@ -10,9 +10,9 @@ indicator: both
 ---
 In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. We have a proxy in place which will check incoming requests from functions and see if the requested URL is whitelisted.
 
-[Missing Screenshot]: <> (Let's add a screenshot of the Setting-Whitelist screen here.)
+![](img/faas-whitelisting.png)
 
-Within the `lp-faas-toolbelt`, we provide a method that generates the required headers for the communication with the proxy. A detailed explanation on the usage is shown [here](function-as-a-service-deploying-functions.html#toolbelt).
+Within the `lp-faas-toolbelt`, we provide a method that generates the required headers for communication with the proxy. A detailed explanation on how to use this feature is shown [here](function-as-a-service-deploying-functions.html#toolbelt).
 
 Please make sure to whitelist the **fully qualified domain name**. E.g. If you visit [https://liveperson.com](https://liveperson.com) the server will actually redirect to [https://www.liveperson.com](https://www.liveperson.com), which means the domains you need to whitelist would be **www.liveperson.com**** **and** **liveperson.com**.
 
