@@ -9,13 +9,13 @@ indicator: both
 ---
 Now that you have created and edited the function, let's talk about how you can deploy it. We offer two deployment methods, although the second is simply a shortcut for the first.
 
-1. Using the "Create deployment" button in the **Deployment** tab allows you to start deployment. Proceed by selecting a function you'd like to deploy. If you start typing the function's name, you'll leverage the filter functionality which will automatically search the available functions and find the one you need.
+1. Using the "Create deployment" button in the **Deployment** tab allows you to start deployment. Proceed by selecting a function you'd like to deploy. If you start typing the function's name, the filter functionality will automatically search the available functions and find the one you need.
 
 2. The shortcut alternative to this process is to deploy from the context menu in the `lambda` itself, in the **Develop** tab (more info on this menu can be found [here](function-as-a-service-developing-with-faas.html#code-completion--context-menu)). The `lambda` will directly forward you to the deployment menu.
 
 ![](img/faas-deploy.png)
 
-After choosing a function for deployment, you will have a final chance to review the code which will be deployed and also see information on Environment Variables and Runtime. If the displayed information is correct, you can start the deployment by pressing the button "Approve & Deploy".
+After choosing a function for deployment, you will have a final chance to review the code, which will be deployed, and also see information on Environment Variables and Runtime. If the displayed information is correct, you can start the deployment by pressing the button "Approve & Deploy".
 
 ### Deployment States
 
@@ -53,15 +53,15 @@ The **Input** item contains the parameters with which your function will be call
 
 The **Output** renders whatever your function produces during an invocation, be it a String, JSON or an exception. Like the Input, the Output is not permanently saved.
 
-The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example) as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the functions source code.
+The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example), as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the function's source code.
 
 ![](img/faas-invoke.png)
 
 ### Logging Function behavior
 
-The different log-levels are: debug, info, warn and error. All functions take a String as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log-item. An example for a function which is logged can be found at the [FaaS Templates](function-as-a-service-templates.html) (under "*Logging Template*").
+The different log-levels are: debug, info, warn and error. All functions take a string as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log item. An example for a function which is logged can be found in the [FaaS Templates](function-as-a-service-templates.html) (under "*Logging Template*").
 
-<div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please considerate with what is logged and don't pass any sensitive information to this function, e.g a vault secret or password!</div>
+<div class="important">This function allows you to log sensitive information, since there's no sanitation or limitations on the string you pass to the method. Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a vault secret or password.</div>
 
 The template for the logging functions is as follows:
 
@@ -87,7 +87,7 @@ console.debug(), console.info(), console.warn() and console.error()</td>
   <tr>
     <td>message</td>
     <td>String</td>
-    <td>message defines the message to be displayed in the logs.</td>
+    <td>Message defines the message to be displayed in the logs.</td>
   </tr>
   <tr>
     <td>extras</td>
