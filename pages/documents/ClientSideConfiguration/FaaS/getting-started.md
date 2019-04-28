@@ -155,7 +155,7 @@ In order to get started with a function, start the creation process using the **
 
 ![](img/faas-function.png)
 
-This opens the Creation Window. The Creation Window currently includes a 3 Step process:
+This opens the Creation Window. The Creation Window includes a 3 Step process:
 
 1. Choose a template
 
