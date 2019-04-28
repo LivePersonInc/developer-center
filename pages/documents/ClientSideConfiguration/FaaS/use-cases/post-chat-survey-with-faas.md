@@ -9,17 +9,17 @@ permalink: function-as-a-service-use-cases-post-conversation-survey-transcripts.
 indicator: both
 ---
 
-This use case showcases how the FaaS platform can help extend LivePerson platform functionallity. In this case, we will use FaaS to re-create one of our Legacy features, the ability to conditionally send out transcripts after the conversation ended (e.g, send a transcript only if the user requested it).
+This use case showcases how the FaaS platform can help extend LivePerson's platform functionallity. In this case, we will use FaaS to re-create one of our Legacy features, the ability to conditionally send out transcripts after the conversation ended (e.g, send a transcript only if the user requested it).
 
 ### Post-Survey Integration Outline
 
-The integration between LiveEngage and FaaS in this case is done based on an event that LiveEngage sends to the FaaS platform once a post-survey has been submitted. This event invokes the FaaS function we will use. This event sends the following data to the function:
+The integration between LiveEngage and FaaS in this case is done based on an event that LiveEngage sends to the FaaS platform once a Post Conversation Survey has been submitted. This event invokes the FaaS function we will use. This event sends the following data to the function:
 
 * CSAT Rank: Numeric value between 1 (Very Dissatisfied) - 5 (Very Satisfied).
 
 * Skill name: Name of the skill the chat was assigned to.
 
-* Agent name: Full name of the agent in the format "forename surname"
+* Agent name: Full name of the agent in the format "first name surname"
 
 * List of all survey questions which were answered. Each list entry is an entity containing the following properties:
 

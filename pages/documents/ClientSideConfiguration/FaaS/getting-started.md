@@ -24,7 +24,6 @@ The FaaS UI is divided into three main components. At the top of the UI you can 
 
 ![](img/faas-menus.png)
 
-
 The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas.html).
 
 The **Deploy** tab provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
@@ -122,9 +121,10 @@ There are 3 user permissions pertaining to FaaS:
 </tbody>
 </table>
 
-You can configure these permission in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html) but the process is simple:
 
-* Click on the Users at the top of the LiveEngage UI and then Profiles
+You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
+
+* Click on the users at the top of the LiveEngage UI and then profiles
 
 * Create/Edit a profile and add the permission you want for this profile
 
@@ -149,19 +149,19 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** Seconds your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds your function will be killed immediately, regardless of its error state.
 
 In order to get started with a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
 
 ![](img/faas-function.png)
 
-This opens the Creation Window which currently includes a 3 Step process:
+This opens the Creation Window. The Creation Window includes a 3 Step process:
 
 1. Choose a template
 
-2. *Optional* whitelist a domain
+2. Whitelist a domain (optional)
 
-3. Function Description
+3. Add function Description
 
 ### Step 1: Choose a template
 
@@ -175,15 +175,15 @@ Please see this document for more information about templates and their associat
 
 In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. Please see [this document](function-as-a-service-developing-with-faas-whitelisting-domains.html) for more information on whistelisting domains.
 
-### Step 3: Function description
+### Step 3: Add function description
 
-Finally, you are able to name your function and also provide a short description. It will be useful to provide some context to another developer who might work with the function in the future. After creation, you are automatically forwarded to the Editor.
+Finally, you are able to name your function and also provide a short description. It will be useful to provide some context to another developer who might work with the function in the future. After creation, you are automatically forwarded to the editor.
 
 <div class="important">A function name has to be unique in order to avoid naming conflicts under one account.</div>
 
 ### Step 4: Develop your function
 
-Once you've reached the Editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with FaaS document](function-as-a-service-developing-with-faas.html) for more information on this step.
+Once you've reached the editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with FaaS document](function-as-a-service-developing-with-faas.html) for more information on this step.
 
 ### Step 5: Deploy your function
 
