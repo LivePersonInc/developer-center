@@ -9,9 +9,9 @@ permalink: function-as-a-service-use-cases-messaging-conversations-with-faas.htm
 indicator: both
 ---
 
-This guide explains how to enable FaaS for Messaging.
+This guide explains how to enable FaaS for messaging.
 
-With **FaaS for Messaging** you are able to invoke FaaS functions from standard messaging events. For example, a new conversation start event could be chosen as the trigger to invoke a pre-created function.
+With **FaaS for messaging** you are able to invoke FaaS functions from standard messaging events. For example, a new conversation start event could be chosen as the trigger to invoke a pre-created function.
 
 Along with the invocation, the function is sent a payload containing metadata related to the conversation which invoked the function. This payload can then be used in the function for further processing and referencing.
 
@@ -27,15 +27,15 @@ This event is fired when a consumer initiates a new conversation.
 
 #### TTR (Time to Respond) changed
 
-This event is fired with by the consumer or by the agent. This event is fired by the consumer when they mark the conversation as urgent or unmark it as such. This even is fired by the agent when they change the TTR.
+This event is fired with by the consumer or by the agent. This event is fired by the consumer when they mark the conversation as urgent or unmark it as such. This event is fired by the agent when they change the TTR.
 
 #### Participants Change
 
-This event is fired if an agent or a consumer join or leave the conversation.
+This event is fired if an agent or a consumer joins or leaves the conversation.
 
 #### Conversation Idle
 
-This event is fired if a consumer or agent did not respond within the configured idle-time for the account.
+This event is fired if a consumer or agent did not respond within the configured idle time for the account.
 
 #### Conversation Routing
 
@@ -43,7 +43,7 @@ This event is fired if the conversation is routed to a different skill
 
 #### Messaging Line in Off-Hours
 
-This event is fired if a conversation was *opened* during office-hours but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).
+This event is fired if a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).
 
 #### Conversation End
 
@@ -71,7 +71,7 @@ If you add more than one command of a certain type (e.g. 2 System-Messages) **on
 
 **TBA**
 
-<div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the sever. For example, if you create a function based on the **Participants Change** event and aa agent joins the conversation, the consumer may see the resulting `systemMessage` **after the agent already responded to the consumer themselves**.
+<div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the sever. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
 
 ### Step-by-Step implementation guide
 
@@ -87,13 +87,13 @@ This step will be performed by your LivePerson account team.
 
 #### Step 3 - Create function
 
-Create a new function via the FaaS Houston UI using one of the Messaging templates.
+Create a new function via the FaaS Houston UI using one of the messaging templates.
 
 Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
 #### Step 4 - Edit the Function
 
-Adjust the coding from the template according to your needs by modifying the function.On the right side you can see an example of the payload (in the sidebar, which you might need to open):
+Adjust the coding from the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open):
 
 As mentioned above, the function can return a series of commands back to the invoker. In the template code you can see the current available commands.
 
