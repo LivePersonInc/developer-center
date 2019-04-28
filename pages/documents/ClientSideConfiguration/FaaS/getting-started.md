@@ -122,6 +122,7 @@ There are 3 user permissions pertaining to FaaS:
 </tbody>
 </table>
 
+
 You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
 
 * Click on the users at the top of the LiveEngage UI and then profiles
@@ -149,19 +150,19 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** Seconds your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds your function will be killed immediately, regardless of its error state.
 
 In order to get started with a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
 
 ![](img/faas-function.png)
 
-This opens the Creation Window which currently includes a 3 step process:
+This opens the Creation Window. The Creation Window includes a 3 Step process:
 
 1. Choose a template
 
 2. Whitelist a domain (optional)
 
-3.  Add function description
+3. Add function Description
 
 ### Step 1: Choose a template
 
