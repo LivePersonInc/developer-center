@@ -10,7 +10,7 @@ permalink: mutual-tls-authentication-detailed-api.html
 indicator: both
 ---
 
-This API forwards any request with the requried certificate wrap the request with SSL context if the certificate exists and if not - it forwards the non-mtls request to the required endpont.
+This API wraps and forwards any request according to specified parameters in the request headers with the requried certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpont).
 
 ### Request
 
