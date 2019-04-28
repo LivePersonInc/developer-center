@@ -10,8 +10,48 @@ permalink: mutual-tls-authentication-detailed-api.html
 indicator: both
 ---
 
-**API Request**
+This API forwards any request with the requried certificate wrap the request with SSL context if the certificate exists and if not - it forwards the non-mtls request to the required endpont.
 
-* The interface is implemented as REST/JSON.
+### Request
 
-*	LivePerson will POST the following data using the "application/json" format:
+ |Method|      URL|  
+ |:--------  |:---  |
+ |GET|  https://[{domain}]/mtls/account/{accountId}  |
+ |POST|  https://[{domain}]/mtls/account/{accountId}  |
+ |DELETE|  https://[{domain}]/mtls/account/{accountId}  |
+ |PUT|  https://[{domain}]/mtls/account/{accountId}  |
+
+**Request Headers**
+
+ |Header         |Description  |
+ |:------|        :--------  |
+ |Authorization|    Contains token string to allow request authentication and authorization.  |
+ |LP-service-name|  Contains the service name which has the certificate in Hashicorp-Vault.  |
+ |LP-forward-url|   Contains the desired endpoint url of the client.  |
+
+**Request Body**
+
+same body as the client sends.
+
+**Path Parameters**
+
+ |Parameter|  Description|  Type/Value |
+ |:------    |:--------    |:--------|
+ |accountId|  LP site ID|   String |
+
+### Response
+
+**Response Codes** 
+
+| Code | Description           |
+|------|-----------------------|
+| 201  | Created               |
+| 401  | Not Authenticated     |
+| 403  | Not Authorized        |
+| 500  | Internal Server Error |
+
+**Response Headers**
+
+**Response Body**
+
+same body as the server responses.
