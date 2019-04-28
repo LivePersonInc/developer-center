@@ -69,7 +69,7 @@ Android (GCM) only:
 **iOS JSON:**
 ```json
     {
-      "aps":	{
+      "aps": {
         "alert": "My	Test:	123\\n",
         "sound": "default"
       },
@@ -89,9 +89,9 @@ Android (GCM) only:
 
 ```json
     {
-      "data":	{
+      "data": {
         "message":	"My	Test:	111\\n",
-        "payload":	{
+        "payload": {
           "backendService":	"ams",
           "conversationId":	"ff816d0d-3572-4430-956f-cab638d18826",
           "dialogId": "13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
