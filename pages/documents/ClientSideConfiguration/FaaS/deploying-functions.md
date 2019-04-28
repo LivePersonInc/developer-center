@@ -59,14 +59,19 @@ The **Logs** display any logging you have included in your function. It can disp
 
 ### Logging Function behavior
 
+[Missing Screenshot]: <> (Let's add a screenshot of the IyF log result screen here.)
+
 The different log-levels are: debug, info, warn and error. All functions take a String as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log-item. An example for a function which is logged can be found at the [FaaS Templates](function-as-a-service-templates.html) (under "*Logging Template*").
 
-<div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please considerate with what is logged and don't pass any sensitive information to this function, e.g a vault secret or password!</div>
+<div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please considerate with what is logged and don't pass any sensitive information to this function, e.g a vault secret or password!
+
+**Note:** Currently logs will not be persisted and are therefore only for debugging purpose on the FaaS UI. It is already planned to provide a log-storage with a analysis screen in the near future.
+</div>
 
 The template for the logging functions is as follows:
 
 ```javascript
-console.<log-level>(<message> [, extras])
+console.<info/debug/warn/error>(<message> [, extras])
 ```
 
 <table>
@@ -115,5 +120,5 @@ function lambda(input, callback) {
 	}
 
 	callback(null, 'Function has finished...');
-	}
+}
 ```
