@@ -9,32 +9,24 @@ permalink: function-as-a-service-developing-with-faas-toolbelt.html
 indicator: both
 ---
 
-As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our Toolbelt, which is a language-specific utility library. The toolbelt offers access to a preconfigured set of capabilities such as a Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP Client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API Documentations for the different functions offered.
+As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our `lp-faas-toolbelt` Node.js module, which is a language-specific utility library for lambdas.
 
-```javascript
-export declare class Toolbelt {
-	/*
-	* Returns a Salesforce Client, that is configured to work with the proxy.
-	*/
-	0 references | Complexity is 1 Everything is cool!
-	static SFClient(): {
-		connectToSalesforce: typeof connectToSalesforce;
-	};
-	/*
-	* Returns an HTTP Client, that is configured to work with the proxy.
-	* It is based on request-promise-native and shares the same interface.
-	*/
-	0 references | Complexity is 2 Everything is cool!
-	static HTTPClient(): any;
-}
-```
+Currently, the Toolbelt offers the following methods:
+
+| Method | Description |
+| :------- | :----- |
+| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 
 Here are usage example, which are taken out of the official templates:
 
-**Salesforce:**
+### Salesforce Client:
+
+Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting FaaS to any Salesforce system.
 
 ```javascript
-const { Toolbet } = require('lp-faas-toolbelt');
+const { Toolbelt } = require('lp-faas-toolbelt');
 const sfClient = Toolbelt.SFClient(); // for API docs look @ hhtps://jsforce.github.io/
 
 //This will establish a connection with SF. And leverage Access Token / Refresh Token to login
@@ -49,14 +41,16 @@ con.query(query, function(err, queryResult) {
 });
 ```
 
-**HTTP client:**
+### HTTP Client:
+
+HTTP Client that is based on [request-promise](https://www.npmjs.com/package/request-promise) for opening external HTTP connections.
 
 ```javascript
 const { Toolbelt } = require("lp-faas-toolbelt");
 //Obtain an HTTPClient instance from the Toolbelt
 const httpClient = Toolbelt.HTTPClient(); // For API Docs look @ https:/www.npmjs.com/package/request-promise
 
-const URL = "https://fancycssl.hbeock.de/";
+const URL = "https://www.liveperson.com/";
 
 httpClient(URL, {
 	method: "GET", //HTTP VERB
@@ -64,7 +58,60 @@ httpClient(URL, {
 	simple: false, //IF true => Status Code != 2xx & 3xx will throw
 	resolveWithFullResponse: true //IF true => Includes Status Code, Headers etc.
 })
-	.then(response ==> {
+.then(response ==> {
+	...
+})
+```
 
-	})
+### Secret Storage Client:
+
+Storage Client that is able to read & update secret values. The following methods exist:
+
+**SecretClient.readSecret**
+
+Searches the secret that belongs to the provided key. Will raise an error if there is no secret for the provided key.
+
+| Parameter | Description |
+| :------- | :----- |
+| key | Name of the secret |
+
+| Returns | Description |
+| :------- | :----- |
+| secretEntry | Object with properties `key` & `value` |
+
+**SecretClient.updateSecret**
+
+Updates the secret with the provided update entry.
+
+| Parameter | Description |
+| :------- | :----- |
+| secretEntry |  Object with properties `key` & `value` |
+
+| Returns | Description |
+| :------- | :----- |
+| secretEntry | Created entry |
+
+**Sample Usage**
+
+```javascript
+// import FaaS Toolbelt
+const { Toolbelt } = require('lp-faas-toolbelt');
+// obtain SecretClient from Toolbelt
+const secretClient = Toolbelt.SecretClient();
+// this is how you can access your stored secret
+secretClient.readSecret('my_Secret-Key')
+.then(mySecret => {
+  // Fetching the secret value
+  const value = mySecret.value
+  // you can also update your secret e.g. if you received a new OAuth2 token
+  mySecret.value = 'nEw.oaUtH2-tOKeN!!11!';
+  return secretClient.updateSecret(mySecret)
+})
+.then(_ => {
+  callback(null, { message: 'Successfully updated secret' });
+})
+.catch(err => {
+  console.error(`Failed during secret operation with ${err.message}`)
+  callback(err, null);
+});
 ```
