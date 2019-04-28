@@ -68,41 +68,41 @@ Android (GCM) only:
 
 **iOS JSON:**
 ```json
-    {
-      "aps": {
-        "alert": "My	Test:	123\\n",
-        "sound": "default"
-      },
-      "push-service":	1,
-      "device-token":	"01408800000259",
-      "backendService":	"ams",
-      "conversationId":	"13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
-      "dialogId": "13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
-      "originatorId":	"qa90588718.2333061110",
-      "brandId":"90588711",
-      "badge": 1,
-      "sequence": 8,
-      "notificationType":	"apn"
-    }
+{
+  "aps":{
+    "alert":"My Test: 123",
+    "sound":"default"
+  },
+  "push-service":1,
+  "device-token":"01408800000259",
+  "backendService":"ams",
+  "conversationId":"13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
+  "dialogId":"13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
+  "originatorId":"90588718.2333061110",
+  "brandId":"90588711",
+  "badge":1,
+  "sequence":8,
+  "notificationType":"apn"
+}
 ```
 **Android JSON:**
 
 ```json
-    {
-      "data": {
-        "message":	"My	Test:	111\\n",
-        "payload": {
-          "backendService":	"ams",
-          "conversationId":	"ff816d0d-3572-4430-956f-cab638d18826",
-          "dialogId": "13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
-          "originatorId":	"qa90588718.2333061110",
-          "brandId":	"90588711",
-          "badge": 4,
-          "sequence": 6
-        }
-      },
-      "push-service":	2,
-      "device-token":	"01408800000259",
-      "notificationType":	"gcm"
+{
+  "data":{
+    "message":"My Test: 456",
+    "payload":{
+      "backendService":"ams",
+      "conversationId":"ff816d0d-3572-4430-956f-cab638d18826",
+      "dialogId":"13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
+      "originatorId":"90588718.2333061110",
+      "brandId":"90588711",
+      "badge":4,
+      "sequence":6
     }
+  },
+  "push-service":2,
+  "device-token":"01408800000259",
+  "notificationType":"gcm"
+}
 ```
