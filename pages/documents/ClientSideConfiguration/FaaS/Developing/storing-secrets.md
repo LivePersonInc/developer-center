@@ -9,17 +9,18 @@ permalink: function-as-a-service-developing-with-faas-storing-secrets.html
 indicator: both
 ---
 
-The FaaS Secrets Storage allows you to centrally store, access and distribute secrets across your lambdas. Thereby lambdas can use available access tokens, certificates & encryption keys to establish a connection to external systems.
+The FaaS Secrets Storage allows you to centrally store, access and distribute secrets across your lambdas. Thereby, lambdas can use available access tokens, certificates and encryption keys to establish a connection to external systems.
 
 **Note:** It is recommended to always use access tokens for authentication to external services. Never store **user-credentials** within the FaaS Secrets Storage.
 
 Internally, FaaS uses [HashiCorp Vault](https://www.hashicorp.com/products/vault/) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
 
-Secrets can be maintain via the **Settings** tab as a key/value storage. Each value can be of type number, string or JSON.
+Secrets can be maintained via the **Settings** tab as a key/value storage. Each value can be of type number, string or JSON.
 
 ![](img/faas-secret.png)
 
 Based on the [permission concept](function-as-a-service-getting-started.html#set-faas-permissions) for FaaS, the following permissions for managing and using secrets can be configured across different users.
+
 
 <table>
 <thead>
