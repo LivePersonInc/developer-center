@@ -9,7 +9,8 @@ permalink: function-as-a-service-developing-with-faas-events-templates.html
 indicator: both
 ---
 
-FaaS functions can be connected to LiveEngage events at [creation](function-as-a-service-getting-started.html#step-1-choose-a-template) time. Once those lambdas are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as a initial scaffolding of the lambda development. **Note** that the amount of lambdas connected to a specific event is restricted and visible in the table below.
+FaaS functions can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`. **Note** that the amount of lambdas connected to a specific event is restricted and can be seen in the table below.
+
 
 Currently the following events are supported:
 
@@ -24,7 +25,7 @@ Currently the following events are supported:
 <tbody>
   <tr>
     <td>Chat Post Survey E-Mail Transcript</td>
-    <td>Triggered after a chat conversation is finished and CSAT survey has been collected.</td>
+    <td>Triggered after a chat conversation is finished and CSAT survey has been submitted.</td>
     <td>10</td>
   </tr>
   <tr>
@@ -39,7 +40,7 @@ Currently the following events are supported:
   </tr>
   <tr>
     <td>Messaging TTR</td>
-    <td>Triggered when the consumer is asking/canceling an urgent response or the agent manually updates the response time</td>
+    <td>Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time</td>
     <td>1</td>
   </tr>
   <tr>
@@ -54,7 +55,7 @@ Currently the following events are supported:
   </tr>
   <tr>
     <td>Messaging Line in Off-Hours</td>
-    <td>Triggered when a consumer writes a message to a conversation that started in working hours, but in meantime the contact center switched to off hours.</td>
+    <td>Triggered when a consumer writes a message to a conversation that started in working hours, but is now in off-hours.</td>
     <td>1</td>
   </tr>
   <tr>
@@ -75,9 +76,9 @@ Currently the following events are supported:
 </tbody>
 </table>
 
-Each of those events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the lambda is visible on the right-hand side at the sidebar-tab [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar).
+Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
 
-Additionally, FaaS offers a bunch of templates that are not connected to events and can be used as a sample to faster kick-start the development of dedicated scenarios:
+Additionally, FaaS offers a number of templates that are not connected to events and can be used as a sample to kick-start the development of custom scenarios:
 
 <table>
 <thead>
