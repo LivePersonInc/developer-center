@@ -8,7 +8,7 @@ permalink: function-as-a-service-external-invocations.html
 indicator: both
 ---
 
-To provide brands the possibility to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth2.
+To give brands the option to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth2.
 
 Further information about OAuth2 and how we use it:
 
@@ -18,7 +18,7 @@ Further information about OAuth2 and how we use it:
 
 ### Prerequisites for using external invocations:
 
-* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the oAuth2.0 flow. This can be done by your LivePerson account team so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
+* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the oAuth2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
 
 Once you have secured your `client-id` and `client-secret`, and depending on your account, you can use the following hosts for external invocations (the base domain is: `faasGW`):
 
@@ -66,7 +66,7 @@ Once you have your token and your `client-id` and `client-secret`, you can input
 
     3. **Callback URL**: the redirect-uri you set during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html)
 
-    4. **Auth URL**: the relevant LivePerson oAuth host for your account (see above for more information). For example, https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
+    4. **Auth URL**: the relevant LivePerson oAuth host for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
 
     5. **Access Token URL**: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0
 
@@ -78,9 +78,9 @@ Once you have your token and your `client-id` and `client-secret`, you can input
 
 5. Click on **Request Token** to send the request and retrieve your token.
 
-6. Now the oAuth2.0 flow is triggered and you will first be forwarded to the LiveEngage Login page. There you need to provide the credentials of the system-user that will be used for invocation.
+6. Now the oAuth2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the system-user that will be used for invocation.
 
-7. In the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation The access-token will be sent with every FaaS invocation.
+7. On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every FaaS invocation.
 
 8. Below is also the **refresh_token** you need for refreshing your Access Token
 
@@ -104,7 +104,7 @@ First, check that all prerequisites have been performed and you have all the fol
 
     * **Sentinel + FaaS - domain** is available.
 
-To show how the invocation API can be called, we will use the same Postman collection which was linked above. This collection **first** uses the oAuth2.0 flow to retrieve a valid **access-token** and **second** executes the FaaS **invocation**, providing the retrieved access-token within the headers.
+To show how the invocation API can be called, we will use the same Postman collection which was linked above. This collection **first** uses the oAuth2.0 flow to retrieve a valid **access-token,** and **second** executes the FaaS **invocation**, providing the retrieved access-token within the headers.
 
 **Please Note** that the system-user that is created for invocation purposes is a dedicated user for this purpose and is not an active user on the account. Also make sure that the permissions for this user are configured to **FaaS Invoker**.
 
@@ -112,7 +112,7 @@ To show how the invocation API can be called, we will use the same Postman colle
 
 1. Download the [Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)
 
-2. Import the collection into your local postman
+2. Import the collection into your local Postman
 
 This collection contains one POST-request. The main call within this collection is to our invocation endpoint and has the following structure:
 
@@ -145,9 +145,9 @@ The body is as follows (content type: application/json):
 
 The body is similar to the values sent via the FaaS invocation UI. Additionally, each invocation needs to provide a timestamp in unix-epoch time format.
 
-However, before the main call can be executed we need to retrieve the access-token. This is done via the oAuth host. Therefore some additional configuration needs to be done in Postman, to comply with the authorization process detailed above. **Please follow Step 2 above and provide the necessary details listed there to the Postman collection**.
+However, before the main call can be executed we need to retrieve the access-token. This is done via the oAuth host. Therefore, some additional configuration needs to be done in Postman to comply with the authorization process detailed above. **Please follow Step 2 above and provide the necessary details listed there to the Postman collection**.
 
-As before, please refer to [this](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html) guide, for deeper insights about how the oAuth host and its APIs work.
+As before, please refer to [this](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html) guide for deeper insights about how the oAuth host and its APIs work.
 
 3. Once you have retrieved the access token, add it to your call. Now the main call can be executed with the retrieved access-token.
 
