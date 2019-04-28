@@ -9,7 +9,7 @@ permalink: function-as-a-service-developing-with-faas-events-templates.html
 indicator: both
 ---
 
-FaaS functions can be connected to LiveEngage events at [creation](function-as-a-service-getting-started.html#step-1-choose-a-template) time. Once those lambdas are deployed, they will be executed whenever this events are triggered. Each event comes with a set of connected templates, that can be used as a initial scaffolding of the lambda development. **Note** that the amount of lambdas connected to a specific event is restricted and visible in the table below.
+FaaS functions can be connected to LiveEngage events at [creation](function-as-a-service-getting-started.html#step-1-choose-a-template) time. Once those lambdas are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as a initial scaffolding of the lambda development. **Note** that the amount of lambdas connected to a specific event is restricted and visible in the table below.
 
 Currently the following events are supported:
 
