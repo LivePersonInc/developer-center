@@ -9,7 +9,7 @@ permalink: function-as-a-service-developing-with-faas-toolbelt.html
 indicator: both
 ---
 
-As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our Toolbelt, which is a language-specific utility library. The toolbelt offers access to a preconfigured set of capabilities such as a Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP Client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API Documentations for the different functions offered.
+As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our toolbelt, which is a language-specific utility library. The toolbelt offers access to a preconfigured set of capabilities such as a Salesforce client, based on [JSForce](https://jsforce.github.io/), and an HTTP client based on [request-promise](https://www.npmjs.com/package/request-promise). Please click on the links to see the API documentation for the different functions offered.
 
 ```javascript
 export declare class Toolbelt {
