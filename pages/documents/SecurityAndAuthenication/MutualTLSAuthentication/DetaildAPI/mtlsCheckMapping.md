@@ -17,8 +17,8 @@ This API have a GET method for a single entity and a POST method for multiple en
 
  |Method|      URL|  
  |:--------  |:---  |
- |GET|  https://[{domain}]/mtls/mapping/account/{accountId}  |
- |POST|  https://[{domain}]/mtls/mapping/account/{accountId}  |
+ |GET|  https://[{domain}]/mtls/mapping  |
+ |POST|  https://[{domain}]/mtls/mapping  |
 
 **Request Headers**
 
@@ -41,7 +41,6 @@ This API have a GET method for a single entity and a POST method for multiple en
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
- |accountId|  LP site ID|   String |
 
 ### Response
 
