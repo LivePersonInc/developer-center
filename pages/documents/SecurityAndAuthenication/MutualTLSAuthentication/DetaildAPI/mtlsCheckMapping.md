@@ -17,7 +17,7 @@ This API have a GET method for a single entity and a POST method for multiple en
 
  |Method|      URL|  
  |:--------  |:---  |
- |GET|  https://[{domain}]/mtls/mapping  |
+ |GET|  https://[{domain}]/mtls/mapping/account/{accountId}  |
  |POST|  https://[{domain}]/mtls/mapping  |
 
 **Request Headers**
@@ -28,7 +28,7 @@ This API have a GET method for a single entity and a POST method for multiple en
  |LP-service-name|  Contains the service name which has the certificate in Hashicorp-Vault.  |
  |LP-forward-url|   Contains the desired endpoint url of the client.  |
 
-**Request Body**
+**Request Body** 
 
 [
 {"accountId":"test1","serviceName":"test1","url":"https://test.com"},
@@ -41,6 +41,7 @@ This API have a GET method for a single entity and a POST method for multiple en
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
+ |accountId|  LP site ID|   String |
 
 ### Response
 
