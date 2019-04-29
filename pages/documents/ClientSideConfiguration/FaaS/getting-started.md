@@ -8,7 +8,7 @@ permalink: function-as-a-service-getting-started.html
 indicator: both
 ---
 
-<div class="important">FaaS is currently enabled by LivePerson account teams only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
+<div class="important">FaaS is currently <strong>enabled</strong> by LivePerson account teams only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
 
 ### Accessing the FaaS User Interface
 
@@ -36,7 +36,7 @@ Once you've familiarized yourself with the different sections of the UI, it's ti
 
 #### Set FaaS Permissions
 
-Access to the FaaS platform on your account requires it first to be enabled as a Feature on the account. Please contact your LivePerson Account Manager to have FaaS enabled on your account. Once enabled, Access to the interface is restricted to users with the right permission. Managing the permissions is to ensure that only autherized users on your account will have the ability to view, or make changes to the functions you deploy.
+Access to the FaaS platform on your account requires it first to be <strong>enabled</strong> as a Feature on the account. Please contact your LivePerson Account Manager to have FaaS <strong>enabled</strong> on your account. Once <strong>enabled</strong>, Access to the interface is restricted to users with the right permission. Managing the permissions is to ensure that only autherized users on your account will have the ability to view, or make changes to the functions you deploy.
 
 There are 3 user permissions pertaining to FaaS:
 
@@ -44,9 +44,9 @@ There are 3 user permissions pertaining to FaaS:
 
 * FaaS-Developer - allowed to manage `lambdas`, read whitelisted domains and read encrypted secrets.
 
-* FaaS-Invocation - only allowed to invoke lambdas externally. This permission is granted to a system user dedicated to external invocations. When an external system needs to invoke a FaaS `lambda`, the external system needs to use an account user with this permission enabled to access the LivePerson platform.
+* FaaS-Invocation - only allowed to invoke lambdas externally. This permission is granted to a system user dedicated to external invocations. When an external system needs to invoke a FaaS `lambda`, the external system needs to use an account user with this permission <strong>enabled</strong> to access the LivePerson platform.
 
-<table>
+<table class="thinner">
 <thead>
   <tr>
     <th>Component</th>
@@ -60,65 +60,65 @@ There are 3 user permissions pertaining to FaaS:
   <tr>
     <td>lambda</td>
     <td>read</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>-</td>
+    <td><strong>enabled</strong></td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>lambda</td>
     <td>create/edit/delete</td>
-    <td>-</td>
-    <td>✅</td>
-    <td>-</td>
+    <td>disabled</td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>lambda</td>
     <td>deploy</td>
-    <td>-</td>
-    <td>✅</td>
-    <td>-</td>
+    <td>disabled</td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>lambda</td>
     <td>invoke</td>
-    <td>-</td>
-    <td>✅</td>
-    <td>✅</td>
+    <td>disabled</td>
+    <td><strong>enabled</strong></td>
+    <td><strong>enabled</strong></td>
   </tr>
   <tr>
     <td>whitelist</td>
     <td>create/edit/delete</td>
-    <td>✅</td>
-    <td>-</td>
-    <td>-</td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>whitelist</td>
     <td>read</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>-</td>
+    <td><strong>enabled</strong></td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>secret</td>
     <td>create/edit/delete</td>
-    <td>✅</td>
-    <td>-</td>
-    <td>-</td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>secret</td>
     <td>read plain</td>
-    <td>✅</td>
-    <td>-</td>
-    <td>-</td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
+    <td>disabled</td>
   </tr>
   <tr>
     <td>secret</td>
     <td>read crypted</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>-</td>
+    <td><strong>enabled</strong></td>
+    <td><strong>enabled</strong></td>
+    <td>disabled</td>
   </tr>
 </tbody>
 </table>

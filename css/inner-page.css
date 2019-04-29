@@ -755,6 +755,10 @@ pre code {
   .post-content table {
     width: 130%;
   }
+
+  .post-content table.thinner {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:768px){
