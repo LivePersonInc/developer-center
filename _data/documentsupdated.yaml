@@ -24,7 +24,6 @@
     pages:
       - pagename: Overview
       - pagename: Limitations
-      - pagename: How to Use the SDK
       - pagename: Methods
       - pagename: Public Model Structure
       - pagename: Public Properties
