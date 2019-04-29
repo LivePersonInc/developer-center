@@ -54,7 +54,7 @@ In order to use this example, you'll need to have the Function as a Service feat
 
 ### Step 1 - Create a new Function
 
-Create a new lambda/function via the [External UI](function-as-a-service-using-the-external-ui.html). **Remember**: templates, once selected, cannot be changed due to risk of undesired side effects. For more information on how to create fuctions, [please see this document](function-as-a-service-getting-started.html).
+Create a new lambda/function. **Remember**: templates, once selected, cannot be changed due to risk of undesired side effects. For more information on how to create fuctions, [please see this document](function-as-a-service-getting-started.html).
 
 ### Step 2 - Edit the Function
 
