@@ -3,7 +3,6 @@ pagename: Welcome Developers!
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
-indicator: both
 ---
 
 {: .important}
