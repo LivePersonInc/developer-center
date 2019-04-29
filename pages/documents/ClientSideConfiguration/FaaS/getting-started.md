@@ -60,65 +60,65 @@ There are 3 user permissions pertaining to FaaS:
   <tr>
     <td>lambda</td>
     <td>read</td>
-    <td><strong>enabled</strong></td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>lambda</td>
     <td>create/edit/delete</td>
-    <td>disabled</td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
+    <td>-</td>
+    <td>✅</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>lambda</td>
     <td>deploy</td>
-    <td>disabled</td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
+    <td>-</td>
+    <td>✅</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>lambda</td>
     <td>invoke</td>
-    <td>disabled</td>
-    <td><strong>enabled</strong></td>
-    <td><strong>enabled</strong></td>
+    <td>-</td>
+    <td>✅</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>whitelist</td>
     <td>create/edit/delete</td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
-    <td>disabled</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>whitelist</td>
     <td>read</td>
-    <td><strong>enabled</strong></td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>secret</td>
     <td>create/edit/delete</td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
-    <td>disabled</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>secret</td>
     <td>read plain</td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
-    <td>disabled</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>secret</td>
     <td>read crypted</td>
-    <td><strong>enabled</strong></td>
-    <td><strong>enabled</strong></td>
-    <td>disabled</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
   </tr>
 </tbody>
 </table>
