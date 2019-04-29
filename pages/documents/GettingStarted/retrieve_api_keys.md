@@ -12,32 +12,51 @@ level-order: 1
 order: 1
 indicator:
 ---
+<br>
+Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
-If required by an API, create an Application Key. This Application Key will be installed automatically upon creation.
+If required by an API, create an Application Key and it will be installed automatically upon creation.
 
-To Create an Application Key:
 
-1.	Log into LiveEngage with Administrator or Campaign Manager permissions, and open the Campaigns area.
-2.	In the footnote, click on Data Sources. The Data Sources area is displayed.
+{:.notice}
+You use the API key when you create bots.
 
-![Campaigns](img/campaigns.png)
+1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
 
-{:start="3"}
-3.	Open the API tab, and then click Add new API key. Alternatively, click on an existing key to edit its privileges.
+2. In the footnote click **Data Sources**.
 
-![DataSourcesAPI](img/datasourcesapi.png)
+3. Open the API tab and click **Add new**.
 
-{:start="4"}
-4.	Complete the required fields, and then click Save.
-5.	The four values for an AUTH request are now displayed in the API keys management screen:
-	- App key
-	- Secret
-	- Access token
-	- Access token secret
-6.	With these four values, generate an OAuth Authorization header according to the [OAuth specification Section 9](https://oauth.net/core/1.0/#signing_process).
+   **TIP:** Alternatively, you can click on an existing key to edit its privileges.
 
-*Example:*
+4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 
-| Header Name | Authorization |
-| :--- | :--- |
-| Header Value | OAuth   oauth_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D", <br> oauth_version="1.0", <br> oauth_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", <br> oauth_consumer_key="d392e7ff2e204d6c802e38fd775563d1", <br> oauth_signature_method="HMAC-SHA1", <br> oauth_token="61adad31204a4e6fab68d560f1ffb594", <br> oauth_timestamp="1261039670" <br> *Note: The Authorization should be contained on a single line. New lines have been inserted for clarity.* |
+5. Select the **Agent Interactions** category, click the **User Login** checkbox to select it, and then click **Save**.
+
+   ![](../../../img/APIKeyCreation.png)
+
+6. Once the API key has been successfully created, the authentication details display for four AUTH request values, which you use in the request body of this API:
+
+   - App key
+
+   - Secret
+
+   - Access token
+
+   - Access token secret
+
+   ![](../../../img/apikeycreation1.png)
+
+7. If the window does not close automatically, click the **X** in the top right to close the window.
+
+   ![](../../../img/close-window.png)
+
+8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9]([https://oauth.net/core/1.0/#signing\_process](https://oauth.net/core/1.0/#signing_process)).
+
+**Example:**
+
+| **Header Name** | **Authorization** |
+| --- | --- |
+| Header Value | OAuth<br>oauth_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D", <br>oauth_version="1.0",<br>oauth_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", <br>oauth_consumer_key="d392e7ff2e204d6c802e38fd775563d1", <br>oauth_signature_method="HMAC-SHA1", <br>oauth_token="61adad31204a4e6fab68d560f1ffb594", <br>oauth_timestamp="1261039670" <br><br>**Note:** The authorization should be contained on a single line. New lines have been inserted for clarity. |
+
+

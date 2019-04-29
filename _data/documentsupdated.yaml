@@ -4,21 +4,14 @@
   - documentname: Before You Get Started
     pages:
     - pagename: Considerations and Requirements
-  - documentname: Retrieve API Keys
-    pages:
-    - pagename: Create a New API Key
-  - documentname: Retrieve API Domains
-    pages:
-    - pagename: Using the Domain API
-  - documentname: Retry and KeepAlive Best Practices
-    pages:
-    - pagename: Overview
+    - pagename: Let's Get Started
   - documentname: Essential Resources
     pages:
-    - pagename: Getting Started with Authentication
-    - pagename: Getting Started with Data APIs
-    - pagename: Getting Started with Engagement Attributes
     - pagename: API Data Metrics
+    - pagename: Authentication
+    - pagename: Data APIs
+    - pagename: Domain API
+    - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
 
 - categoryname: Agent Experience & Bots
@@ -126,7 +119,7 @@
     pages:
       - pagename: Getting Started
       - pagename: Google Dialogflow
-      - pagename: Google Dialog Flow Version 2
+      - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex
       - pagename: Custom Third Party Bots
