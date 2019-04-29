@@ -31,7 +31,7 @@ This API wraps and forwards any request according to specified parameters in the
 
 **Request Body**
 
-same body as the client sends.
+same body as the client sends to original endpoint.
 
 **Path Parameters**
 
@@ -49,6 +49,8 @@ same body as the client sends.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
+
+(In this resource we can return every status code the remote endpoint returns).
 
 **Response Headers**
 
