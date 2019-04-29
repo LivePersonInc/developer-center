@@ -90,19 +90,19 @@ Once you have your token and your `client-id` and `client-secret`, you can input
 
 First, check that all prerequisites have been performed and you have all the following information:
 
-    * **AccountId** is available.
+  * **AccountId** is available.
 
-    * **LambdaUUID** is available.
+  * **LambdaUUID** is available.
 
-    * **UserId** is available of the system-user invoking FaaS.
+  * **UserId** is available of the system-user invoking FaaS.
 
-    * **Username + password** of the system-user invoking FaaS.
+  * **Username + password** of the system-user invoking FaaS.
 
-    * **Client-Id + Client-Secret** is available after App-Installation.
+  * **Client-Id + Client-Secret** is available after App-Installation.
 
-    * **Callback-URL** of oAuth flow is available and accessible.
+  * **Callback-URL** of oAuth flow is available and accessible.
 
-    * **Sentinel + FaaS - domain** is available.
+  * **Sentinel + FaaS - domain** is available.
 
 To show how the invocation API can be called, we will use the same Postman collection which was linked above. This collection **first** uses the oAuth2.0 flow to retrieve a valid **access-token,** and **second** executes the FaaS **invocation**, providing the retrieved access-token within the headers.
 

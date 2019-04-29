@@ -24,7 +24,7 @@ The FaaS UI is divided into three main components. At the top of the UI you can 
 
 ![](img/faas-menus.png)
 
-The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas.html).
+The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 The **Deploy** tab provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
 
@@ -185,7 +185,7 @@ Finally, you are able to name your function and also provide a short description
 
 ### Step 4: Develop your function
 
-Once you've reached the editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with FaaS document](function-as-a-service-developing-with-faas.html) for more information on this step.
+Once you've reached the editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with FaaS document](function-as-a-service-developing-with-faas-overview.html) for more information on this step.
 
 ### Step 5: Deploy your function
 
