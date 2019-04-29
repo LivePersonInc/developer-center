@@ -36,13 +36,16 @@ Once you've familiarized yourself with the different sections of the UI, it's ti
 
 #### Set FaaS Permissions
 
+Access to the FaaS platform on your account requires it first to be enabled as a Feature on the account. Please contact your LivePerson Account Manager to have FaaS enabled on your account. 
+Once enabled, Access to the interface is restricted to users with the right permission. Managing the permissions is to ensure that only autherized users on your account will have the ability to view, or make changes to the functions you deploy. 
+
 There are 3 user permissions pertaining to FaaS:
 
-* FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets.
+* FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets. This permission is by default set to 'ON' for all admins on the account. It is however, possible to limit your admin's access as well. You can create a seperate permission group for your developers and assign them with the relevant permissions as needed.
 
 * FaaS-Developer - allowed to manage `lambdas`, read whitelisted domains and read encrypted secrets.
 
-* FaaS-Invocation - only allowed to invoke lambdas externally.
+* FaaS-Invocation - only allowed to invoke lambdas externally. This permission is granted to a system user dedicated for external invocation. When an external system needs to invoke a FaaS `lambdas`, a the external system needs to use an account user with this permission enabled. 
 
 <table>
 <thead>
