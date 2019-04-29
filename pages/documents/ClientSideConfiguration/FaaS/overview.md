@@ -16,7 +16,7 @@ This overview document will define the basic components of the FaaS platform, as
 
 ### Function
 
-Functions (or `Lambdas`) are code snippets that accomplish certain tasks. A developer can write custom code (i.e. in JavaScript) that will run upon being triggered by the invoker (essentially the source from which the function is triggered, see below for more information on invocations). The payload that is passed from the invoker into the function can also be used within the function. Developers can use the data from the payload as part of the function logic, allowing them to react to dynamic information passed when the function is triggered.
+Functions (or `lambdas`) are code snippets that accomplish certain tasks. A developer can write custom code (i.e. in JavaScript) that will run upon being triggered by the invoker (essentially the source from which the function is triggered, see below for more information on invocations). The payload that is passed from the invoker into the function can also be used within the function. Developers can use the data from the payload as part of the function logic, allowing them to react to dynamic information passed when the function is triggered.
 
 ### Invocation
 
