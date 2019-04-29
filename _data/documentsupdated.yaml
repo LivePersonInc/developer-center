@@ -138,7 +138,7 @@
       - pagename: Templates
         subpages:
           - subpagename: Overview
-          #- subpagename: Retail Templates
+          - subpagename: Simple Router
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
