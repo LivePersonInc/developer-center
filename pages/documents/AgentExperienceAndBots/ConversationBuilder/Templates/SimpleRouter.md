@@ -62,8 +62,8 @@ Confirm that the POST url endpoint is using the right url for your server enviro
 
 | Server Environment | URL endpoint |
 | --- | --- |
-| Production US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| LiveEngage SSO US (United States (LP)) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
+| US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
+| US (Conversation Builder from within the LiveEngage workspace) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
 | Europe | `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
 | APAC | `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
 
