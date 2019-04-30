@@ -11,13 +11,11 @@ indicator: both
 ---
 
 This API checks for configuration existence for the specified parameters in the request headers.
-This API have a GET method for a single entity and a POST method for multiple entities.
 
 ### Request
 
  |Method|      URL|  
  |:--------  |:---  |
- |GET|  https://[{domain}]/mtls/mapping/account/{accountId}  |
  |POST|  https://[{domain}]/mtls/mapping  |
 
 **Request Headers**
@@ -25,9 +23,7 @@ This API have a GET method for a single entity and a POST method for multiple en
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
- |LP-service-name|  Contains the service name which has the certificate in Hashicorp-Vault.  |
- |LP-forward-url|   Contains the desired endpoint url of the client.  |
-
+ 
 **Request Body** 
 
 [
@@ -41,7 +37,6 @@ This API have a GET method for a single entity and a POST method for multiple en
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
- |accountId|  LP site ID|   String |
 
 ### Response
 
