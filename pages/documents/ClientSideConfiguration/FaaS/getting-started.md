@@ -20,6 +20,8 @@ by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
+<div class="notice">FaaS currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
+
 The FaaS UI is divided into three main components. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
 
 ![](img/faas-menus.png)
