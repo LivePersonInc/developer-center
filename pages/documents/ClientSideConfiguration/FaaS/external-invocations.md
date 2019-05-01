@@ -24,14 +24,21 @@ Further information about OAuth2 and how we use it:
 
 ### Step 2: Create User
 
-Create a system-user with FaaS Invoke System User permission. This user will be used by the external system to authenticate while calling FaaS.
+Create a LiveEngage user with [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling FaaS.
 
-[Missing information]: <> (See INTERNAL User Guide. Also make sure that screenshots are added => Especially here it might be hard to follow without screenshots. It is important to mention how to retrieve the User-Id.)
+* Click on USERS and then Profiles.
+
+* Create a new profile and make sure it has the FaaS Invocation permission.
+
+* Then, add the profile you created to the user you'd like to use for the external invocation.
+
+* Lastly, note the `userId` of the created user from the URL of the user's page.
+
+![](img/faas-userid.png)
 
 ### Step 3: Retrieve domains of the FaaS Invocation Gateway
 
-The FaaS Invocation Gateway is the main entry-point for invoking `lambdas` in FaaS via its RESTful API.
-You can use the following hosts for external invocation (the base domain is: `faasGW`):
+The FaaS Invocation Gateway is the main entry-point for invoking `lambdas` in FaaS via its RESTful API. You can use the following hosts for external invocation (the base domain is: `faasGW`):
 
 * **APAC**: [sy.faasgw.liveperson.net](http://sy.faasgw.liveperson.net/)
 
@@ -55,19 +62,23 @@ However, instead of hardcoding the oAuth server, it is recommended to use the [L
 
 ### Step 5: Get the **lambda UUID** from FaaS
 
-Use the FaaS-UI to retrieve the lambda UUID of the function that should be invoke.
+Use the FaaS-UI to retrieve the lambda UUID of the function that should be invoked. Do so by navigating to the **Deploy** tab and opening the Invoke your Function screen by clicking "Invoke" on the function.
 
-[Missing information]: <> (See INTERNAL User Guide.)
+![](img/faas-invokeuuid.png)
+
+The function's UUID is then displayed at the top of the page which opens, beneath your function's name. Note it down.
+
+![](img/faas-uuid.png)
 
 ### Step 6: Generate oAuth2.0 token
 
-Together with the known domain of the oAuth server and the `client-id` + `client-secret` we can now generate an access-token to authenticate against our FaaS Invocation Gateway. 
+Together with the retrieved domain of the oAuth server and the `client-id` + `client-secret`, we can now generate an access-token to authenticate against our FaaS Invocation Gateway.
 
 Please follow the steps described [here](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html#getting-started) to better understand how to generate oAuth2.0 tokens via the oAuth server.
 
-In the following, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the oAuth server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
+In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the oAuth server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
-[Missing Screenshot]: <> (See INTERNAL User Guide).
+![](img/faas-postman.png)
 
 1. In your request-tab under your function click on **Authorization**
 
@@ -75,7 +86,7 @@ In the following, [Postman](https://www.getpostman.com/) will be used to better 
 
 3. Click on **Get New Access Token**
 
-[Missing Screenshot with Get New Access Token screen]: <> (See INTERNAL User Guide).
+![](img/faas-token.png)
 
 4. In the appearing dialog fill out the form:
 
@@ -99,11 +110,11 @@ In the following, [Postman](https://www.getpostman.com/) will be used to better 
 
 5. Click on **Request Token** to send the request and retrieve your token.
 
-6. Now the oAuth2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the system-user that will be used for invocation.
+6. Now the oAuth2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
 
 7. On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every FaaS invocation.
 
-[Missing Screenshot with generated Access Token]: <> (See INTERNAL User Guide).
+[Missing Screenshot with generated Access Token]: <> (See INTERNAL User Guide). EK - this screenshot is unnecessary. The screen is clearly labelled.
 
 8. Below is also the **refresh_token** you need for refreshing your Access Token
 
