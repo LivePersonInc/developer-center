@@ -77,9 +77,9 @@ You can also use the [Engagement Window Widget SDK](engagement-window-widget-sdk
 
 ### Major Flows
 
-These "flows" demonstrate how certain key APIs work with and inform other APIs. The three APIs listed below are essential for working with our platform. For example, if you're looking to use the Messaging Window API to rebuild our engagement window, you could also employ the Monitoring API listed below to track visitors, pass information about them to the agent and update their information depending on the conversation's result. Similarly, if you're looking to build custom applications, you'll need to authenticate them using our Authentication methods.
+These "flows" demonstrate how specific APIs work with and inform other APIs. The three APIs listed below are essential for working with our platform. For example, if you're looking to use the Messaging Window API to rebuild our engagement window, you could also employ the Monitoring API listed below to track visitors, pass information about them to the agent and update their information depending on the conversation's result. Similarly, if you're looking to build custom applications, you'll need to authenticate them using our Authentication methods.
 
-These are just same of the uses for these APIs. Since they provide entry points into our platform or the ability to more closely track and maintain visitor information, they have numerous use cases when used in conjunction with our other APIs.
+These are just some of the uses for these APIs. Since they provide entry points into our platform or the ability to more closely track and maintain visitor information, they have numerous use cases when used in conjunction with our other APIs.
 
 #### Login
 
