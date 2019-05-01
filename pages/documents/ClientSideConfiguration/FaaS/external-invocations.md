@@ -86,27 +86,25 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 3. Click on **Get New Access Token**
 
-![](img/faas-token.png)
-
 4. In the appearing dialog fill out the form:
 
-[Missing Screenshot with the dialog]: <> (See INTERNAL User Guide).
+![](img/faas-token.png)
 
-    1. **Token Name**: how you want this token to be named
+  1. **Token Name**: how you want this token to be named
 
-    2. **Grant Type**: **Authorization Code**
+  2. **Grant Type**: **Authorization Code**
 
-    3. **Callback URL**: the redirect-uri you set during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html)
+  3. **Callback URL**: the redirect-uri you set during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html)
 
-    4. **Auth URL**: the relevant LivePerson oAuth host for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
+  4. **Auth URL**: the relevant LivePerson oAuth host for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
 
-    5. **Access Token URL**: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0
+  5. **Access Token URL**: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0
 
-    6. **Client ID**: the generated `client_id` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
+  6. **Client ID**: the generated `client_id` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
 
-    7. **Client Secret**: the generated `client_secret` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
+  7. **Client Secret**: the generated `client_secret` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
 
-    8. **Client Authentication**: **Send client credentials in Body**
+  8. **Client Authentication**: **Send client credentials in Body**
 
 5. Click on **Request Token** to send the request and retrieve your token.
 
