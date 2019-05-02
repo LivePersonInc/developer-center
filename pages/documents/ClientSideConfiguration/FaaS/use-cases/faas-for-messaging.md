@@ -15,7 +15,7 @@ With **FaaS for messaging** you are able to invoke FaaS functions from standard 
 
 Along with the invocation, the function is sent a payload containing metadata related to the conversation which invoked the function. This payload can then be used in the function for further processing and referencing.
 
-<div class="important"> It is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
+<div class="important"> It is required that your account has the Controller Bot permissions enabled; please contact your account team in order to do this.</div>
 
 ### Messaging events for Function Invocation
 
@@ -69,7 +69,7 @@ With the controller bot as the invoker you have the option to execute the follow
 
 If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
 
-Please have a look at [this](https://developers.liveperson.com/function-as-a-service-developing-with-faas-events-templates.html) page to gain further insights about the available events & its related template. Also have a look at the related templates per messaging-event within the FaaS application.
+Please have a look at [this page](https://developers.liveperson.com/function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events & their related templates. You can also have a look at the related templates per messaging-event within the FaaS application itself
 
 ### Step-by-Step implementation guide
 
@@ -79,15 +79,13 @@ Create a new function using one of the messaging templates.
 
 Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
-[Missing screenshot]: <> (Let's add a screenshot here.)
-
 #### Step 2 - Edit the Function
 
 Adjust the coding from the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open):
 
 As mentioned above, the function can return a series of commands back to the invoker. In the template code you can see the current available commands.
 
-Here's an example of a response send back to the invoker using a few of those commands:
+Here's an example of a response sent back to the invoker using a few of those commands:
 
 ```javascript
 let result = [
