@@ -29,7 +29,7 @@ This event is fired when a consumer initiates a new conversation.
 
 #### TTR (Time to Respond) changed
 
-This event is fired with by the consumer or by the agent. This event is fired by the consumer when they mark the conversation as urgent or unmark it as such. This event is fired by the agent when they change the TTR.
+This event is fired by the consumer or by the agent. This event is fired by the consumer when they mark the conversation as urgent or unmark it as such. This event is fired by the agent when they change the TTR.
 
 #### Participants Change
 
@@ -55,9 +55,9 @@ This event is fired when a conversation is closed.
 
 ### Callback commands
 
-You have the option to send callback commands back to the invoker. You can add multiple commands to the response as the functions can return an array or a single object.
+You have the option to send callback commands back to the invoker. You can add multiple commands to the response as the functions itself can return an array or a single object.
 
-With the controller bot as the invoker you have the option to execute the following callback commands:
+With the controller bot as the invoker, as is the case for messaging events, you have the option to execute the following callback commands:
 
 * Send a message
 
@@ -69,7 +69,7 @@ With the controller bot as the invoker you have the option to execute the follow
 
 If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
 
-Please have a look at [this page](https://developers.liveperson.com/function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events & their related templates. You can also have a look at the related templates per messaging-event within the FaaS application itself
+Please have a look at [this page](https://developers.liveperson.com/function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the FaaS application itself.
 
 ### Step-by-Step implementation guide
 

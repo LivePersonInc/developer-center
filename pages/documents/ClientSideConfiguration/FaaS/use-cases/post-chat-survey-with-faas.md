@@ -9,7 +9,7 @@ permalink: function-as-a-service-use-cases-post-chat-survey-transcripts.html
 indicator: chat
 ---
 
-This use case showcases how the FaaS Platform can help extend LivePerson's platform functionality. In this case, we will use FaaS to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.
+This use case showcases how the FaaS Platform can help extend the LivePerson platform functionality. In this case, we will use FaaS to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.
 
 **Note:** Within this integration, the chat server will still take care of sending out emails. FaaS will only be used to write more sophisticated conditions.
 

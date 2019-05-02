@@ -12,7 +12,7 @@ To give brands the option to call their FaaS functions from outside of LivePerso
 
 Further information about OAuth 2.0 and how we use it:
 
-* OAuth2 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
+* OAuth 2.0 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
 
 * Official Liveperson OAuth 2.0 flow documentation: [link](authorizing-liveengage-applications-overview.html)
 
@@ -22,7 +22,7 @@ Further information about OAuth 2.0 and how we use it:
 
 ### Step 2: Create User
 
-Create a LiveEngage user with [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling FaaS.
+Create a LiveEngage user with the [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling FaaS.
 
 * Click on USERS and then Profiles.
 
@@ -62,11 +62,11 @@ However, instead of hardcoding the authorization server, it is recommended to us
 
 ### Step 5: Get the **lambda UUID** from FaaS
 
-Use the FaaS-UI to retrieve the lambda UUID of the function that should be invoked. Do so by navigating to the **Deploy** tab and opening the Invoke your Function screen by clicking "Invoke" on the function.
+Use the FaaS UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deploy** tab and opening the Invoke your Function screen by clicking "Invoke" on the function.
 
 ![](img/faas-invokeuuid.png)
 
-The function's UUID is then displayed at the top of the page which opens, beneath your function's name. Note it down.
+The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
 
 ![](img/faas-uuid.png)
 
@@ -74,7 +74,7 @@ The function's UUID is then displayed at the top of the page which opens, beneat
 
 Together with the retrieved domain of the authorization server and the `client-id` + `client-secret`, we can now generate an access-token to authenticate against our FaaS Invocation Gateway.
 
-Please follow the steps described [here](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html#getting-started) to better understand how to generate oAuth2.0 tokens via the authoriation server.
+Please follow the steps described [here](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html#getting-started) to better understand how to generate OAuth 2.0 tokens via the authorization server.
 
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
