@@ -10,6 +10,8 @@ indicator: both
 
 To give brands the option to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth2.
 
+[Missing picture]: <> (Please ensure to add the picture with the "clouds" here)
+
 Further information about OAuth2 and how we use it:
 
 * OAuth2 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
@@ -46,9 +48,9 @@ The FaaS Invocation Gateway is the main entry-point for invoking `lambdas` in Fa
 
 However, instead of hardcoding the domain, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `faasGW` and retrieving the domain **dynamically**.
 
-### Step 4: Retrieve the domain of the oAuth server.
+### Step 4: Retrieve the domain of the authorization server.
 
-You'll also need to pass your `client-id` and `client-secret` to one of our oAuth servers for authentication. Depending on your account, you can use the following oAuth servers (the base domain is: `sentinel`):
+You'll also need to pass your `client-id` and `client-secret` to one of our authorization servers for authentication. Depending on your account, you can use the following servers (the base domain is: `sentinel`):
 
 * **APAC:** sy.sentinel.liveperson.net
 
@@ -56,7 +58,7 @@ You'll also need to pass your `client-id` and `client-secret` to one of our oAut
 
 * **US:** va.sentinel.liveperson.net
 
-However, instead of hardcoding the oAuth server, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `sentinel` and retrieving the host address **dynamically**.
+However, instead of hardcoding the authorization server, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `sentinel` and retrieving the host address **dynamically**.
 
 ### Step 5: Get the **lambda UUID** from FaaS
 
@@ -70,11 +72,11 @@ The function's UUID is then displayed at the top of the page which opens, beneat
 
 ### Step 6: Generate oAuth2.0 token
 
-Together with the retrieved domain of the oAuth server and the `client-id` + `client-secret`, we can now generate an access-token to authenticate against our FaaS Invocation Gateway.
+Together with the retrieved domain of the authorization server and the `client-id` + `client-secret`, we can now generate an access-token to authenticate against our FaaS Invocation Gateway.
 
-Please follow the steps described [here](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html#getting-started) to better understand how to generate oAuth2.0 tokens via the oAuth server.
+Please follow the steps described [here](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html#getting-started) to better understand how to generate oAuth2.0 tokens via the authoriation server.
 
-In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the oAuth server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
+In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
 ![](img/faas-postman.png)
 
@@ -88,21 +90,21 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 ![](img/faas-token.png)
 
-  1. **Token Name**: how you want this token to be named
+  1. **Token Name**: The name of the token.
 
-  2. **Grant Type**: **Authorization Code**
+  2. **Grant Type**: Select grant type **Authorization Code**
 
-  3. **Callback URL**: the redirect-uri you set during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html)
+  3. **Callback URL**: 	The Application’s callback URL that was registered during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html)
 
-  4. **Auth URL**: the relevant LivePerson oAuth host for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
+  4. **Auth URL**: The relevant LivePerson authorization server for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
 
-  5. **Access Token URL**: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0
+  5. **Access Token URL**: The endpoint for the server, which exchanges the authorization code for an access token. For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0
 
   6. **Client ID**: the generated `client_id` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
 
   7. **Client Secret**: the generated `client_secret` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
 
-  8. **Client Authentication**: **Send client credentials in Body**
+  8. **Client Authentication**: Select **header** instead of **body**
 
 5. Click on **Request Token** to send the request and retrieve your token.
 
