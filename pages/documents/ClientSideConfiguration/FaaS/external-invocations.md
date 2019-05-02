@@ -28,11 +28,15 @@ Create a LiveEngage user with [FaaS-Invocation permission](function-as-a-service
 
 * Create a new profile and make sure it has the FaaS Invocation permission.
 
+![](img/faas-permission.png)
+
 * Then, add the profile you created to the user you'd like to use for the external invocation.
 
 * Lastly, note the `userId` of the created user from the URL of the user's page.
 
 ![](img/faas-userid.png)
+
+**Note**: FaaS is currently enabled by LivePerson account teams only. If FaaS has not been enabled, you will not be able to create a user with the above permission. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.
 
 ### Step 3: Retrieve domains of the FaaS Invocation Gateway
 
