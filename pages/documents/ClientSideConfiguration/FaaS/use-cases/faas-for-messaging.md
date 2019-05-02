@@ -15,6 +15,8 @@ With **FaaS for messaging** you are able to invoke FaaS functions from standard 
 
 Along with the invocation, the function is sent a payload containing metadata related to the conversation which invoked the function. This payload can then be used in the function for further processing and referencing.
 
+<div class="important"> It is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
+
 ### Messaging events for Function Invocation
 
 LiveEngage messaging uses a series of "Conversation State Change Events" which get fired when specific actions or events occur within the conversation. You are able to use theses events to trigger functions within FaaS.
@@ -49,55 +51,43 @@ This event is fired if a conversation was *opened* during office-hours, but a ne
 
 This event is fired when a conversation is closed.
 
-**Note**: If no systemMessage is set in the result of the function (which it returns to the invoker), the default automatic message for the account will be triggered.
+**Note**: If no message is set in the result of the function (which it returns to the invoker), the default automatic message for the account will be triggered.
 
 ### Callback commands
 
-You have the option to send callback commands back to the invoker. For a messaging event invocation such as the above events, the service that invokes the functions is the controller bot. This service is also responsible for sending system messages into the conversation. You can add multiple commands to the response as the functions can return an array or a single object.
+You have the option to send callback commands back to the invoker. You can add multiple commands to the response as the functions can return an array or a single object.
 
 With the controller bot as the invoker you have the option to execute the following callback commands:
 
-* Send a System-Message
+* Send a message
 
 * Transfer Conversation to a different Skill
 
 * Close the Conversation
 
-<div class="important">Using callback commands is <b>not</b> mandatory. If you only wish to use the events listed above to trigger functions and nothing else, there's no reason for you to pass callback commands back to the controller bot.</div>
+<div class="important">Using callback commands is <b>not</b> mandatory. If you only wish to use the events listed above to trigger functions and nothing else, there's no reason for you to pass callback commands back.</div>
 
-If you add more than one command of a certain type (e.g. 2 System-Messages) **only the first command** of this type will be processed.
+If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
 
-### Payload
-
-**TBA**
-
-<div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the sever. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
+Please have a look at [this](https://developers.liveperson.com/function-as-a-service-developing-with-faas-events-templates.html) page to gain further insights about the available events & its related template. Also have a look at the related templates per messaging-event within the FaaS application.
 
 ### Step-by-Step implementation guide
 
-Everything needed to implement a new function for LiveEngage Messaging can be found via Houston.
+#### Step 1 - Create function
 
-#### Step 1 - Setup Controller-Bot
-
-This step will be performed by your LivePerson account team.
-
-#### Step 2 - Enable FaaS
-
-This step will be performed by your LivePerson account team.
-
-#### Step 3 - Create function
-
-Create a new function via the FaaS Houston UI using one of the messaging templates.
+Create a new function using one of the messaging templates.
 
 Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
-#### Step 4 - Edit the Function
+[Missing screenshot]: <> (Let's add a screenshot here.)
+
+#### Step 2 - Edit the Function
 
 Adjust the coding from the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open):
 
 As mentioned above, the function can return a series of commands back to the invoker. In the template code you can see the current available commands.
 
-Here's an example of a response sent back to the invoker using a few of those commands:
+Here's an example of a response send back to the invoker using a few of those commands:
 
 ```javascript
 let result = [
@@ -119,3 +109,5 @@ callback(null, result);
 #### Step 4 - Deploy the function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
+
+<div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the sever. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
