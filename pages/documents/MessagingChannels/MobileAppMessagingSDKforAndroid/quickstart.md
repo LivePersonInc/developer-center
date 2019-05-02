@@ -34,6 +34,7 @@ You can install LivePerson Mobile App Messaging SDK using a couple of different 
 
 * [Manually copy the SDK files to your project](#option-2-manually-copy-the-sdk-files-to-your-project)
 
+<br/>
 #### Option 1: Automatically add the SDK files using Gradle
 
 You can use Gradle, an automation tool, to scale your projects effortlessly. 
@@ -344,7 +345,5 @@ You can now do any of the following:
 - [Implement and enable push notifications](enable-push.md). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 - If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
 
-
-<div class="important">
-For more details and guidance on app configuration and SDK step-by-step usage, see <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html">Use the LivePerson SDK - Android</a>.
-</div>
+{:.important}
+For more details and guidance on app configuration and SDK step-by-step usage, see [Use the LivePerson SDK - Android](/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html).
