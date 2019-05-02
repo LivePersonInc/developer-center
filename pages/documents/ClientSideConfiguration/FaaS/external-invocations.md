@@ -70,7 +70,7 @@ The function's UUID is then displayed at the top of the page which opens, beneat
 
 ![](img/faas-uuid.png)
 
-### Step 6: Generate oAuth2.0 token
+### Step 6: Generate OAuth 2.0 token
 
 Together with the retrieved domain of the authorization server and the `client-id` + `client-secret`, we can now generate an access-token to authenticate against our FaaS Invocation Gateway.
 
