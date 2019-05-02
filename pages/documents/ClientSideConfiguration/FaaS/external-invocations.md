@@ -28,6 +28,8 @@ Create a LiveEngage user with [FaaS-Invocation permission](function-as-a-service
 
 * Create a new profile and make sure it has the FaaS Invocation permission.
 
+![](img/faas-permission.png)
+
 * Then, add the profile you created to the user you'd like to use for the external invocation.
 
 * Lastly, note the `userId` of the created user from the URL of the user's page.
