@@ -134,7 +134,6 @@ Retrieved data:
 
   * **Authorization-Server + FaaS - domain** is available.
 
-**Note:** 
-When integrating FaaS into your own systems, **Step 6** should be something executed in advanced of the FaaS invocation request. It would be a one time action to retrieve the generated tokens and maintain them in your systems before executing the invocation against FaaS. Please make sure to use a seperate user/tokens for every system that is going to call FaaS. 
+**Note:** When integrating FaaS into your own systems, **Step 6** should be executed in advance of the FaaS invocation request. This is a one time operation which retrieves the generated tokens and maintains them in your systems. These tokens are required before executing the invocation against FaaS. Please make sure to use separate users/tokens for every system that is going to call FaaS, to maintain security.
 
-While calling FaaS with the access-token, also make sure to refresh the token before it expires. During **Step 6** you retrieved not only an access-token but also a refresh-token. Please follow [this](https://developers.liveperson.com/authorizing-liveengage-applications-methods-refresh-request.html) documentation to execute a refresh request for your token.
+While calling FaaS with the access-token, you should also make sure to refresh the token before it expires. During **Step 6** you retrieved not only an access-token but also a refresh-token. Please follow [this](https://developers.liveperson.com/authorizing-liveengage-applications-methods-refresh-request.html) guide to execute a refresh request for your token.
