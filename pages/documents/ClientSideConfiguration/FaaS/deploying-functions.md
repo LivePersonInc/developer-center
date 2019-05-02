@@ -15,7 +15,7 @@ Now that you have created and edited the function, let's talk about how you can 
 
 ![](img/faas-deploy.png)
 
-After choosing a function for deployment, you will have a final chance to review the code, which will be deployed, and also see information on Environment Variables and Runtime. If the displayed information is correct, you can start the deployment by pressing the button "Approve & Deploy".
+After choosing a function for deployment, you will have a final chance to review the code which will be deployed and also see information on Environment Variables and Runtime. If the displayed information is correct, you can start the deployment by pressing the button "Approve & Deploy".
 
 ### Deployment States
 
@@ -49,9 +49,9 @@ Pressing the Invoke button will launch the 'Invoke your Fuction' (IyF) screen.
 
 The IyF screen contains three main items:
 
-The **Input** item contains the parameters with which your function will be called. By default it uses a payload appropriate for your function’s event. It can be manually edited to suit your testing scenario. These changes are not permanent and will be removed when reloading the FaaS website.
+The **Input** item contains the parameters with which your function will be called. By default it uses a payload appropriate for your function’s event. This payload can be manually edited to suit your testing scenario. These changes are not permanent and will be removed when reloading the FaaS website.
 
-The **Output** renders whatever your function produces during an invocation, be it a String, JSON or an exception. Like the Input, the Output is not permanently saved.
+The **Output** renders whatever your function produces during an invocation, be it a string, JSON or an exception. Like the Input, the Output is not permanently saved.
 
 The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example), as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the function's source code.
 
@@ -63,9 +63,9 @@ The **Logs** display any logging you have included in your function. It can disp
 
 The different log-levels are: debug, info, warn and error. All functions take a string as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log item. An example for a function which is logged can be found in the [FaaS Templates](function-as-a-service-templates.html) (under "*Logging Template*").
 
-<div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a vault secret or password.
+<div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a token or password.
 
-In addition, logs are currently not persistent and are therefore only for debugging purpose in the FaaS UI. We're planning on adding log-storage with an analysis screen in the near future.</div>
+In addition, logs are currently not persistent and are therefore only for debugging purposes in the FaaS UI. We're planning on adding log-storage with an analysis screen in the near future.</div>
 
 The template for the logging functions is as follows:
 
