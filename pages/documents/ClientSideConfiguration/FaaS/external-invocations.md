@@ -8,17 +8,17 @@ permalink: function-as-a-service-external-invocations.html
 indicator: both
 ---
 
-To give brands the option to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth2.
+To give brands the option to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth 2.0.
 
-Further information about OAuth2 and how we use it:
+Further information about OAuth 2.0 and how we use it:
 
 * OAuth2 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
 
-* Official Liveperson OAuth2 flow documentation: [link](authorizing-liveengage-applications-overview.html)
+* Official Liveperson OAuth 2.0 flow documentation: [link](authorizing-liveengage-applications-overview.html)
 
 ### Step 1: Generate client-id & client-secret:
 
-* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the oAuth2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
+* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
 
 ### Step 2: Create User
 
@@ -28,15 +28,11 @@ Create a LiveEngage user with [FaaS-Invocation permission](function-as-a-service
 
 * Create a new profile and make sure it has the FaaS Invocation permission.
 
-![](img/faas-permission.png)
-
 * Then, add the profile you created to the user you'd like to use for the external invocation.
 
 * Lastly, note the `userId` of the created user from the URL of the user's page.
 
 ![](img/faas-userid.png)
-
-**Note**: FaaS is currently enabled by LivePerson account teams only. If FaaS has not been enabled, you will not be able to create a user with the above permission. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.
 
 ### Step 3: Retrieve domains of the FaaS Invocation Gateway
 
@@ -84,7 +80,7 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 1. In your request-tab under your function click on **Authorization**
 
-2. Select type oAuth 2.0
+2. Select type OAuth 2.0
 
 3. Click on **Get New Access Token**
 
@@ -94,37 +90,35 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
   1. **Token Name**: The name of the token.
 
-  2. **Grant Type**: Select grant type **Authorization Code**
+  2. **Grant Type**: Select grant type **Authorization Code**.
 
-  3. **Callback URL**: 	The Application’s callback URL that was registered during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html)
+  3. **Callback URL**: 	The Application’s callback URL that was registered during [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html).
 
-  4. **Auth URL**: The relevant LivePerson authorization server for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0
+  4. **Auth URL**: The relevant LivePerson authorization server for your account (see above for more information). For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/authorize?v=1.0.
 
-  5. **Access Token URL**: The endpoint for the server, which exchanges the authorization code for an access token. For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0
+  5. **Access Token URL**: The endpoint for the server, which exchanges the authorization code for an access token. For example: https://va-a.sentinel.liveperson.net/sentinel/api/account/2065377/token?v=2.0.
 
-  6. **Client ID**: the generated `client_id` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
+  6. **Client ID**: the generated `client_id` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team).
 
-  7. **Client Secret**: the generated `client_secret` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team)
+  7. **Client Secret**: the generated `client_secret` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team).
 
-  8. **Client Authentication**: Select **header** instead of **body**
+  8. **Client Authentication**: Select **header** instead of **body**.
 
-5. Click on **Request Token** to send the request and retrieve your token.
+  9. Click on **Request Token** to send the request and retrieve your token.
 
-6. Now the oAuth2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
+  10. Now the OAuth 2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
 
-7. On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every FaaS invocation.
+  11. On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every FaaS invocation.
 
-[Missing Screenshot with generated Access Token]: <> (See INTERNAL User Guide). EK - this screenshot is unnecessary. The screen is clearly labelled.
+  12. Below is also the **refresh_token** you need for refreshing your access token.
 
-8. Below is also the **refresh_token** you need for refreshing your Access Token
+  13. If you click **Use Token**, the Access Token will be used for your Postman call.
 
-9. If you click **Use Token**, the Access Token will be used for your Postman call
+### Step 7: Calling the invocation API directly from your systems
 
-[Missing information]: <> (See INTERNAL User Guide.)
+After executing the above steps you should have all data needed to execute calls against FaaS from your own systems.
 
-### Step 7: Calling the invocation API
-
-First, check that all prerequisites have been performed and you have all the following information:
+Retrieved data:
 
   * **AccountId** is available.
 
@@ -136,8 +130,11 @@ First, check that all prerequisites have been performed and you have all the fol
 
   * **Client-Id + Client-Secret** is available after App-Installation.
 
-  * **Callback-URL** of oAuth flow is available and accessible.
+  * **Callback-URL** Application’s callback URL is available and accessible.
 
-  * **Sentinel + FaaS - domain** is available.
+  * **Authorization-Server + FaaS - domain** is available.
 
-To show how the invocation API can be called, we will use the same Postman collection which was linked above. This collection **first** uses the oAuth2.0 flow to retrieve a valid **access-token,** and **second** executes the FaaS **invocation**, providing the retrieved access-token within the headers.
+**Note:** 
+When integrating FaaS into your own systems, **Step 6** should be something executed in advanced of the FaaS invocation request. It would be a one time action to retrieve the generated tokens and maintain them in your systems before executing the invocation against FaaS. Please make sure to use a seperate user/tokens for every system that is going to call FaaS. 
+
+While calling FaaS with the access-token, also make sure to refresh the token before it expires. During **Step 6** you retrieved not only an access-token but also a refresh-token. Please follow [this](https://developers.liveperson.com/authorizing-liveengage-applications-methods-refresh-request.html) documentation to execute a refresh request for your token.
