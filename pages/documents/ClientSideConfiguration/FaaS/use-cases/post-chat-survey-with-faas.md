@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Use Cases
-permalink: function-as-a-service-use-cases-post-conversation-survey-transcripts.html
+permalink: function-as-a-service-use-cases-post-chat-survey-transcripts.html
 indicator: chat
 ---
 

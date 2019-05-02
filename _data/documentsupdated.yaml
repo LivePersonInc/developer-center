@@ -175,7 +175,7 @@
         - pagename: External Invocations
         - pagename: Use Cases
           subpages:
-            - subpagename: Post Conversation Survey Transcripts
+            - subpagename: Post Chat Survey Transcripts
             - subpagename: Messaging Conversations with FaaS
     - documentname: Customized Chat Windows
       pages:
