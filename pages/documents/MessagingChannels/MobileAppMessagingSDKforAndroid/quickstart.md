@@ -45,14 +45,14 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the **dependencies** section, add:
    ```java
    dependencies {
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.1'
+     implementation  "com.liveperson.android:lp_messaging_sdk:3.7.1"
    }
    ```
 
    **Example: Build.gradle (Module: app) file**
 
    ```java
-   apply plugin: 'com.android.application'
+   apply plugin: "com.android.application"
 
    android {
        compileSdkVersion 23
@@ -66,20 +66,20 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        buildTypes {
            release {
                minifyEnabled false
-               proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+               proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
            }
        }
    }
 
    dependencies {
-       implementation fileTree(dir: 'libs', include: ['*.jar'])
-       implementation 'com.android.support:appcompat-v7:26.1.0'
-       implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-       testImplementation 'junit:junit:4.12'
-       androidTestImplementation 'com.android.support.test:runner:1.0.1'
-       androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+       implementation fileTree(dir: "libs", include: ["*.jar"])
+       implementation "com.android.support:appcompat-v7:26.1.0"
+       implementation "com.android.support.constraint:constraint-layout:1.0.2"
+       testImplementation "junit:junit:4.12"
+       androidTestImplementation "com.android.support.test:runner:1.0.1"
+       androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
        // LivePerson SDK
-       implementation  'com.liveperson.android:lp_messaging_sdk:3.7.1'
+       implementation  "com.liveperson.android:lp_messaging_sdk:3.7.1"
    }
    ```
 
@@ -96,7 +96,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
       buildToolsVersion "23.0.0"
    repositories {
      	flatDir {
-       	   dirs project(':lp_messaging_sdk').file('aars')
+       	   dirs project(":lp_messaging_sdk").file("aars")
       }
    }
    ```
@@ -113,7 +113,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    ```
 7. In the **dependencies** section, add:
    ```java
-   compile project(':lp_messaging_sdk')
+   compile project(":lp_messaging_sdk")
    ```
 
    **Build.gradle file example:**
@@ -171,14 +171,14 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 
 ### Step 2: Integrate code for basic deployment
 
-1. Add the following permissions to your app’s AndroidManifest.xml file:
+1. Add permissions to your app’s AndroidManifest.xml file:
 
    ```xml
    <uses-permission android:name="android.permission.INTERNET" />
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    ```
 
-2. Add the following imports to your class imports section:
+2. Add imports to your class imports section:
 
    ```java 
    import com.liveperson.api.LivePersonCallback;
@@ -342,9 +342,9 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 - [Implement and enable push notifications](enable-push.md). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
-- If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
+- If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
 
 
 <div class="important">
-For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
+For more details and guidance on app configuration and SDK step-by-step usage, see <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html">Use the LivePerson SDK - Android</a>.
 </div>

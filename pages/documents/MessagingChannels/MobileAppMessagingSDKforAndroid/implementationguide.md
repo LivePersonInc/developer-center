@@ -1,5 +1,5 @@
 ---
-pagename: Using LivePerson SDK - Android
+pagename: Use the LivePerson SDK - Android
 redirect_from:
   - android-integration-guide.html
 Keywords:
@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Appendix
 
 order: 341
-permalink: mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android.html
+permalink: mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html
 
 indicator: messaging
 ---
