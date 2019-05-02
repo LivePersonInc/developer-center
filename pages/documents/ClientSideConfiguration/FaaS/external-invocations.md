@@ -10,8 +10,6 @@ indicator: both
 
 To give brands the option to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth2.
 
-[Missing picture]: <> (Please ensure to add the picture with the "clouds" here)
-
 Further information about OAuth2 and how we use it:
 
 * OAuth2 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)

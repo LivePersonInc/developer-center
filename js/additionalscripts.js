@@ -13,7 +13,7 @@ $(document).ready(function () {
 	capabilitiesSearch();
 	searchHighlight();
 	allArticlesClick();
-	// scrollToHash();
+	scrollToHash();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
