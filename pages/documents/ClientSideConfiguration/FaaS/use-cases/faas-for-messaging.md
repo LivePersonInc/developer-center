@@ -1,11 +1,11 @@
 ---
-pagename: Messaging Conversations with FaaS
+pagename: Messaging Conversations
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Use Cases
-permalink: function-as-a-service-use-cases-messaging-conversations-with-faas.html
+permalink: function-as-a-service-use-cases-messaging-conversations.html
 indicator: both
 ---
 

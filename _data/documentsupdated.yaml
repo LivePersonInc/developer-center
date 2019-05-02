@@ -176,7 +176,7 @@
         - pagename: Use Cases
           subpages:
             - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations with FaaS
+            - subpagename: Messaging Conversations
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
