@@ -40,11 +40,11 @@ Create a LiveEngage user with [FaaS-Invocation permission](function-as-a-service
 
 The FaaS Invocation Gateway is the main entry-point for invoking `lambdas` in FaaS via its RESTful API. You can use the following hosts for external invocation (the base domain is: `faasGW`):
 
-* **APAC**: [sy.faasgw.liveperson.net](http://sy.faasgw.liveperson.net/)
+* **APAC**: sy.faasgw.liveperson.net
 
-* **EMEA**: [lo.faasgw.liveperson.net](http://lo.faasgw.liveperson.net/)
+* **EMEA**: lo.faasgw.liveperson.net
 
-* **US**: [va.faasgw.liveperson.net](http://va.faasgw.liveperson.net/)
+* **US**:   va.faasgw.liveperson.net
 
 However, instead of hardcoding the domain, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `faasGW` and retrieving the domain **dynamically**.
 
@@ -56,7 +56,7 @@ You'll also need to pass your `client-id` and `client-secret` to one of our auth
 
 * **EMEA:** lo.sentinel.liveperson.net
 
-* **US:** va.sentinel.liveperson.net
+* **US:**   va.sentinel.liveperson.net
 
 However, instead of hardcoding the authorization server, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `sentinel` and retrieving the host address **dynamically**.
 
