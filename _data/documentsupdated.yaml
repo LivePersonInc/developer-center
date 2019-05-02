@@ -152,6 +152,9 @@
           - subpagename: Entities
       - pagename: Knowledge Base
       - pagename: Analytics
+      - pagename: Best Practices
+        subpages:
+          - subpagename: Transfer to an Agent or Bot
       #- pagename: Operations
 
 - categoryname: Client Side Configuration
