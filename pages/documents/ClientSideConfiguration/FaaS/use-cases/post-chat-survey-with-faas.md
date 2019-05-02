@@ -1,15 +1,19 @@
 ---
-pagename: Post Conversation Survey Transcripts
+pagename: Post Chat Survey Transcripts
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Use Cases
 permalink: function-as-a-service-use-cases-post-conversation-survey-transcripts.html
-indicator: both
+indicator: chat
 ---
 
-This use case showcases how the FaaS platform can help extend LivePerson's platform functionallity. In this case, we will use FaaS to re-create one of our Legacy features, the ability to conditionally send out transcripts after the conversation ended (e.g, send a transcript only if the user requested it).
+This use case showcases how the FaaS Platform can help extend LivePerson's platform functionality. In this case, we will use FaaS to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.
+
+**Note:** Within this integration, the chat server will still take care of sending out emails. FaaS will only be used to write more sophisticated conditions.
+
+<div class="important">Once a FaaS lambda is implemented for this specific event, any old logic outside of FaaS will not be used anymore (i.e, any rules defined otherwise in LiveEngage). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
 
 ### Post-Survey Integration Outline
 
