@@ -14,9 +14,12 @@ permalink: mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-
 indicator: messaging
 ---
 
-### Step 1 - Creating initial views
+### Prerequisites
+It is important that you have followed the [Quick Start guide](/mobile-app-messaging-sdk-for-android-quick-start.html).  If not, make sure to install the LivePerson Mobile App Messaging SDK before proceeding. 
 
-In order to get some basic data from the user, let’s create some initial views on our main activity / an activity of your choosing (more data can be used in order to initialize the SDK, during this guide, we’ll use some basic name features only).
+### Step 1 - Create initial views
+
+In this step, you'll use some basic name features to create some initial views on our main activity / an activity of your choosing. 
 
 ![initialview](img/initialview.png)
 
@@ -46,7 +49,7 @@ If you have any of these features enabled, you must add the following to your ap
 ```
 
 ### Step 3 - Add Liveperson events
-To listen to LivePerson basic messaging events via BroadcastReceiver and respond via callback, you must add a class to handle those events.
+In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
 
 
 1. Create a class named **IntentsHandler**.  
