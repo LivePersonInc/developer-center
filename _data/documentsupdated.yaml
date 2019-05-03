@@ -155,6 +155,7 @@
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
+          - subpagename: Using Environment Variables
       #- pagename: Operations
 
 - categoryname: Client Side Configuration
