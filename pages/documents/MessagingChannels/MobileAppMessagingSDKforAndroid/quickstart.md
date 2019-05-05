@@ -30,139 +30,156 @@ Use this Quick Start guide to get you up and running with a project powered by L
 ### Step 1: Install the Messaging SDK into your project
 You can install LivePerson Mobile App Messaging SDK using a couple of different methods:
 
-- [Automatically using Gradle](#option-1-automatically-using-gradle)
-- [Manually coping SDK files to your project](#option-2-manually) 
+* [Automatically add the SDK files using Gradle](#option-1-automatically-add-the-sdk-files-using-gradle)
 
-#### Option 1: Automatically using Gradle
+* [Manually copy the SDK files to your project](#option-2-manually-copy-the-sdk-files-to-your-project)
+
+<br/>
+#### Option 1: Automatically add the SDK files using Gradle
+
 You can use Gradle, an automation tool, to scale your projects effortlessly. 
 
 1. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
    
    ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
 
-2. In the dependencies section, add:
-   ```gradle
+2. In the **dependencies** section, add:
+   ```java
    dependencies {
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.0'
+     implementation  "com.liveperson.android:lp_messaging_sdk:3.7.0"
    }
    ```
-   **Example of the build.gradle (Module: app) file**
 
-   ```gradle 
-   apply plugin: 'com.android.application'
+   **Example: Build.gradle (Module: app) file**
 
-   android { 
-     compileSdkVersion 26
-     defaultConfig {
-       applicationId "com.shaym.liveperson.androidsdk"
+   ```java
+   apply plugin: "com.android.application"
+
+   android {
+       compileSdkVersion 23
+       defaultConfig {
+       applicationId "com.mybrand.app"
        minSdkVersion 19
-       targetSdkVersion 26
+       targetSdkVersion 23
        versionCode 1
        versionName "1.0"
-       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-     }
-     buildTypes {
-       release {
-         minifyEnabled false
-         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
        }
-     } 
+       buildTypes {
+           release {
+               minifyEnabled false
+               proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+           }
+       }
    }
 
    dependencies {
-     implementation fileTree(dir: 'libs', include: ['*.jar'])
-     implementation 'com.android.support:appcompat-v7:26.1.0'
-     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-     testImplementation 'junit:junit:4.12'
-     androidTestImplementation 'com.android.support.test:runner:1.0.1'
-     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-     // LivePerson SDK
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.0'
+       implementation fileTree(dir: "libs", include: ["*.jar"])
+       implementation "com.android.support:appcompat-v7:26.1.0"
+       implementation "com.android.support.constraint:constraint-layout:1.0.2"
+       testImplementation "junit:junit:4.12"
+       androidTestImplementation "com.android.support.test:runner:1.0.1"
+       androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
+       // LivePerson SDK
+       implementation  "com.liveperson.android:lp_messaging_sdk:3.7.0"
    }
    ```
-   
-#### Option 2: Manually 
+
+#### Option 2: Manually copying the SDK files to your project
 
 1. [Download](https://github.com/LP-Messaging/Android-Messaging-SDK) the latest SDK package.
-
-2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project.  Also in the package, you get a sample app that demonstrates how to use the SDK. 
-
-3. In your Android Studio project, go to **File > New > Import module**. 
-
-4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk** module, and then click **Finish**. 
-
-5. In your build.gradle of your app, make sure that the following is at least version **23**:
-
-   ```gradle
+2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project. Also in the package, you get a sample app that demonstrates how to use the SDK.
+3. In your Android Studio project, go to **File > New > Import module**.
+4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk module**, and then click **Finish**. 
+5. In your build.gradle of your app, and in the android section, make sure the *compileSdkVersion* is at least version **23**:
+   ```java
    android {
       compileSdkVersion 23
       buildToolsVersion "23.0.0"
-
-   }   
-   ```
-
-6. Under the **Android** section, add:  
-
-   ```gradle
    repositories {
-     flatDir {
-       dirs project(':lp_messaging_sdk').file('aars')
-     }
+     	flatDir {
+       	   dirs project(":lp_messaging_sdk").file("aars")
+      }
    }
-   ```  
-
-7. Under the **Dependencies** section, add:  
-   
-   ```gradle
-   compile project(':lp_messaging_sdk')
-   ```  
-   
-   
-   **Example of the build.gradle file**
-   
-   ```gradle
-   apply plugin: 'com.android.application'
-   android {
-     compileSdkVersion 24
-     buildToolsVersion "24.0.3"
-
-     repositories {
-       flatDir {
-         dirs project(':lp_messaging_sdk').file('aars')
-       }
-     }
-
-     defaultConfig {
-       applicationId "xxx"
-       minSdkVersion xx
-       targetSdkVersion xx
+   ```
+6. In the **defaultConfig** section, make sure the *minSDKVersion* is set **19**:
+   ```java
+   defaultConfig {
+       applicationId "com.mybrand.app"
+       minSdkVersion 19
+       targetSdkVersion 23
        versionCode 1
        versionName "1.0"
-     }
-     buildTypes {
-       release {
-         minifyEnabled false
-         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+   testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+   }
+   ```
+7. In the **dependencies** section, add:
+   ```java
+   compile project(":lp_messaging_sdk")
+   ```
+
+   **Build.gradle file example:**
+   ```java
+   apply plugin: "com.android.application"
+
+   android {
+       repositories {
+           flatDir {
+               dirs project(":lp_messaging_sdk").file("aars")
+           }
        }
-     }
+      compileSdkVersion 23
+      buildToolsVersion "23.0.0"
+       defaultConfig {
+           applicationId "com.mybrand.app"
+           minSdkVersion 19
+           targetSdkVersion 23
+           versionCode 1
+           versionName "1.0"
+           testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+           multiDexEnabled true
+
+       }
+       buildTypes {
+           release {
+               minifyEnabled false
+               proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+           }
+       }
    }
 
-   dependencies {   
-     compile project(':lp_messaging_sdk')
+   dependencies {
+       compile fileTree(dir: "libs", include: ["*.jar"])
+       androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
+           exclude group: "com.android.support", module: "support-annotations"
+       })
+       compile "com.android.support.constraint:constraint-layout:1.0.2"
+       compile "com.google.firebase:firebase-messaging:11.6.0"
+       compile "com.google.firebase:firebase-core:11.6.0"
+
+
+       testCompile "junit:junit:4.12"
+       //Liveperson SDK
+       compile project(path: ":lp_messaging_sdk")
    }
 
+   apply plugin: "com.google.gms.google-services"
+   ```
+
+8. In your **settings.gradle** of your app, add:
+   ```java
+   include ":lp_messaging_sdk"
    ```
 
 ### Step 2: Integrate code for basic deployment
 
-1. Add the following permissions to your app’s AndroidManifest.xml file:
+1. Add permissions to your app’s AndroidManifest.xml file:
 
    ```xml
    <uses-permission android:name="android.permission.INTERNET" />
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    ```
 
-2. Add the following imports to your class imports section:
+2. Add imports to your class imports section:
 
    ```java 
    import com.liveperson.api.LivePersonCallback;
@@ -326,9 +343,7 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 - [Implement and enable push notifications](enable-push.md). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
-- If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
+- If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
 
-
-<div class="important">
-For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
-</div>
+{:.important}
+For more details and guidance on app configuration and SDK step-by-step usage, see [Use the LivePerson SDK - Android](/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html).

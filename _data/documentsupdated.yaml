@@ -155,6 +155,7 @@
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
+          - subpagename: Using Environment Variables
       #- pagename: Operations
 
 - categoryname: Client Side Configuration
@@ -664,9 +665,8 @@
       - subpagename: Security
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
-      - subpagename: Using LivePerson SDK - Android
+      - subpagename: Use the LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
-      - subpagename: Using LivePerson SDK - Android - Manual
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview

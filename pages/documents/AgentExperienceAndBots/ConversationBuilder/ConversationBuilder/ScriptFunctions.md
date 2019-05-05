@@ -64,6 +64,38 @@ if (count > 10) {
 }
 ```
 
+### Get Environment Variable
+
+Used for getting an environment variable. Environment Variables that are not set will return NULL.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getEnvVariable(name)` | name (string) – The name for the variable. | The object defined by `name` |
+
+#### Example
+
+In the below example, we are using `getEnvVariable` to retrieve a string which will provide for us the correct skillId for routing depending upon the environment that the bot is currently in.
+
+```javascript
+switch(intent){
+case "billing":
+    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
+    skillId = botContext.getEnvVariable('billing');
+    skillName = intent;
+    break;
+case "account":
+    transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
+    skillId = botContext.getEnvVariable('account');
+    skillName = intent;
+    break;
+case "help":
+    transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+    skillId = botContext.getEnvVariable('help');
+    skillName = intent;
+    break;  
+}      
+```
+
 ### Print Debug Message
 
 The Print Debug Message is used to log what user said in the debug console of the bot. For instance, the `response` variable stores the most recent messages from the user, which we print to the debugger using `printDebugMessage`.
