@@ -24,11 +24,11 @@ Use this Quick Start guide to get you up and running with a project powered by L
   <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
-- Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
+- Read or are familiar with the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
 
 
 ### Step 1: Install the Messaging SDK into your project
-You can install LivePerson Mobile App Messaging SDK using a couple of different methods:
+You can install the Mobile App Messaging SDK using a couple of different methods:
 
 * [Automatically add the SDK files using Gradle](#option-1-automatically-add-the-sdk-files-using-gradle)
 
@@ -56,11 +56,11 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    apply plugin: "com.android.application"
 
    android {
-       compileSdkVersion 23
+       compileSdkVersion 26
        defaultConfig {
        applicationId "com.mybrand.app"
        minSdkVersion 19
-       targetSdkVersion 23
+       targetSdkVersion 27
        versionCode 1
        versionName "1.0"
        }
@@ -90,11 +90,11 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project. Also in the package, you get a sample app that demonstrates how to use the SDK.
 3. In your Android Studio project, go to **File > New > Import module**.
 4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk module**, and then click **Finish**. 
-5. In your build.gradle of your app, and in the android section, make sure the *compileSdkVersion* is at least version **23**:
+5. In your build.gradle of your app, and in the android section, make sure the *compileSdkVersion* is at least version **26**:
    ```java
    android {
-      compileSdkVersion 23
-      buildToolsVersion "23.0.0"
+      compileSdkVersion 26
+      buildToolsVersion "26.0.0"
    repositories {
      	flatDir {
        	   dirs project(":lp_messaging_sdk").file("aars")
@@ -106,7 +106,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    defaultConfig {
        applicationId "com.mybrand.app"
        minSdkVersion 19
-       targetSdkVersion 23
+       targetSdkVersion 27
        versionCode 1
        versionName "1.0"
    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -127,12 +127,12 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
                dirs project(":lp_messaging_sdk").file("aars")
            }
        }
-      compileSdkVersion 23
-      buildToolsVersion "23.0.0"
+      compileSdkVersion 26
+      buildToolsVersion "26.0.0"
        defaultConfig {
            applicationId "com.mybrand.app"
            minSdkVersion 19
-           targetSdkVersion 23
+           targetSdkVersion 27
            versionCode 1
            versionName "1.0"
            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -346,4 +346,4 @@ You can now do any of the following:
 - If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
 
 {:.important}
-For more details and guidance on app configuration and SDK step-by-step usage, see [Use the LivePerson SDK - Android](/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html).
+For more details and guidance on app configuration and SDK step-by-step usage, see [Use the LivePerson SDK for Android](/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html).
