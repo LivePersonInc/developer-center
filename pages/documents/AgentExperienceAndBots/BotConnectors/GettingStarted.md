@@ -1,6 +1,14 @@
 ---
 pagename: Getting Started
 redirect_from:
+  - customer-facing-bots-deploying-bots-to-liveengage.html
+  - customer-facing-bots-considerations.html
+  - customer-facing-bots-deploying-bots-on-live-chat.html
+  - customer-facing-bots-deploying-bots-on-messaging.html
+  - customer-facing-bots-getting-started.html
+  - customer-facing-bots-limitations.html
+  - customer-facing-bots-overview.html
+  - customer-facing-bots-prerequisites.html
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
@@ -12,7 +20,7 @@ indicator:
 
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
-Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialog Flow, and more.
+Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialogflow, and more.
 
 {: .important}
 If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.

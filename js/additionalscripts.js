@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
-	anchors.add('h3');
+	anchors.add('h3, h4');
 	linkload();
 	sidebarClick();
 	populateAnchors();
@@ -12,7 +12,8 @@ $(document).ready(function () {
 	searchFunction();
 	capabilitiesSearch();
 	searchHighlight();
-	allArticlesClick()
+	allArticlesClick();
+	scrollToHash();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -75,14 +76,15 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
-			anchors.add('h3');
+			anchors.add('h3, h4');
 			populateAnchors();
 			codeButtons();
 			replaceTitle();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
-			allArticlesClick()
+			allArticlesClick();
+			scrollToHash();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -104,7 +106,10 @@ function navigateContent(url) {
 				$('.innerpageitem').removeClass("activeitem");
 			}
 			//jump to top when page loads
-			window.scrollTo(0, 0);
+			var hash = window.location.hash;
+			if (!hash) {
+				window.scrollTo(0, 0);
+			}
 			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
 				$('#mysidebar').slideUp(400);
 				$('#mysidebar').data("expanded", "false");
@@ -524,6 +529,27 @@ function searchHighlight() {
 	};
 	//set the filter element to empty so that filtering doesn't "carry over" to future navigation
 	localStorage.setItem('filter', '');
+}
+
+function scrollToHash () {
+	setTimeout(function () {
+		if (window.location.hash && window.location.hash != "#top") {
+		var hash = window.location.hash;
+		var linkScroll = $('a[href*="' + hash + '"]');
+		if (linkScroll.length > 1) {
+			var linkOffset = $(linkScroll[1]).offset().top;
+		} else {
+			var linkOffset = $(linkScroll).offset().top;
+		}
+		$("body, html").animate(
+			{
+				scrollTop: linkOffset,
+			},
+			1000,
+			"swing"
+		);
+		}
+	}, 1000);
 }
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special

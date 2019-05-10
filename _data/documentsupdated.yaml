@@ -4,21 +4,14 @@
   - documentname: Before You Get Started
     pages:
     - pagename: Considerations and Requirements
-  - documentname: Retrieve API Keys
-    pages:
-    - pagename: Create a New API Key
-  - documentname: Retrieve API Domains
-    pages:
-    - pagename: Using the Domain API
-  - documentname: Retry and KeepAlive Best Practices
-    pages:
-    - pagename: Overview
+    - pagename: Let's Get Started
   - documentname: Essential Resources
     pages:
-    - pagename: Getting Started with Authentication
-    - pagename: Getting Started with Data APIs
-    - pagename: Getting Started with Engagement Attributes
     - pagename: API Data Metrics
+    - pagename: Authentication
+    - pagename: Data APIs
+    - pagename: Domain API
+    - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
 
 - categoryname: Agent Experience & Bots
@@ -31,7 +24,6 @@
     pages:
       - pagename: Overview
       - pagename: Limitations
-      - pagename: How to Use the SDK
       - pagename: Methods
       - pagename: Public Model Structure
       - pagename: Public Properties
@@ -125,8 +117,8 @@
   - documentname: Bot Connectors
     pages:
       - pagename: Getting Started
-      - pagename: Google Dialog Flow
-      - pagename: Google Dialog Flow Version 2
+      - pagename: Google Dialogflow
+      - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex
       - pagename: Custom Third Party Bots
@@ -160,14 +152,32 @@
           - subpagename: Entities
       - pagename: Knowledge Base
       - pagename: Analytics
+      - pagename: Best Practices
+        subpages:
+          - subpagename: Transfer to an Agent or Bot
+          - subpagename: Using Environment Variables
       #- pagename: Operations
-
-
-
 
 - categoryname: Client Side Configuration
   image: client-side
   documents:
+    - documentname: Function as a Service
+      pages:
+        - pagename: Overview
+        - pagename: Getting Started
+        - pagename: Developing with FaaS
+          subpages:
+            - subpagename: Overview
+            - subpagename: "Events & Templates"
+            - subpagename: Whitelisting Domains
+            - subpagename: Toolbelt
+            - subpagename: Storing Secrets
+        - pagename: Deploying Functions
+        - pagename: External Invocations
+        - pagename: Use Cases
+          subpages:
+            - subpagename: Post Chat Survey Transcripts
+            - subpagename: Messaging Conversations
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
@@ -541,7 +551,6 @@
   #   - pagename: Overview
   #   - pagename: contextAndInvite
   #   - pagename: getLiveDeflectData
-  - documentname: Messaging Channels Capabilities Comparison
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
@@ -656,9 +665,8 @@
       - subpagename: Security
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
-      - subpagename: Using LivePerson SDK - Android
+      - subpagename: Use the LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
-      - subpagename: Using LivePerson SDK - Android - Manual
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
@@ -929,7 +937,7 @@
   documents:
     - documentname: CRM Integrations
       pages:
-        - pagename: SalesForce
+        - pagename: Salesforce
         - pagename: Microsoft Dynamics
         - pagename: NetSuite
         - pagename: SugarCRM

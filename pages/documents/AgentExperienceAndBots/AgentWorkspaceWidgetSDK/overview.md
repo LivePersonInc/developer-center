@@ -46,7 +46,9 @@ Follow the steps below to integrate the application you developed using the clie
 1. Reference the [Client SDK](https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js).
 2. In your LiveEngage account, define a new custom widget with the URL of your web application (which uses the client-SDK). [Learn more](guides-agent-workspace-widget.html).
 
+All public properties and methods can be found in the namespace `lpTag.agentSDK`.
 
+**Note**: The project is called the client-SDK as it is the client-side of our SDK. However, since you use it to communicate with the agent, the code you write acknowledges the fact that you are communicating with the Agent Workspace.
 
 ### Use Cases
 
