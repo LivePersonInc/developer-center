@@ -1,8 +1,14 @@
-Conversation Builder:
-
-Tips and Tricks
-
-[[TOC]]
+---
+pagename: Tips and Tricks
+redirect_from:
+Keywords:
+sitesection: Documents
+categoryname: "Agent Experience & Bots"
+documentname: Conversation Builder
+subfoldername: Best Practices
+permalink: conversation-builder-best-practices-tips-and-tricks.html
+indicator: both
+---
 
 # How do I show a variable inside a text interaction?
 
