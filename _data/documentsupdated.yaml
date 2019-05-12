@@ -24,7 +24,6 @@
     pages:
       - pagename: Overview
       - pagename: Limitations
-      - pagename: How to Use the SDK
       - pagename: Methods
       - pagename: Public Model Structure
       - pagename: Public Properties
@@ -139,7 +138,7 @@
       - pagename: Templates
         subpages:
           - subpagename: Overview
-          #- subpagename: Retail Templates
+          - subpagename: Simple Router
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
@@ -153,6 +152,10 @@
           - subpagename: Entities
       - pagename: Knowledge Base
       - pagename: Analytics
+      - pagename: Best Practices
+        subpages:
+          - subpagename: Transfer to an Agent or Bot
+          - subpagename: Using Environment Variables
       #- pagename: Operations
 
 - categoryname: Client Side Configuration
@@ -173,8 +176,8 @@
         - pagename: External Invocations
         - pagename: Use Cases
           subpages:
-            - subpagename: Post Conversation Survey Transcripts
-            - subpagename: Messaging Conversations with FaaS
+            - subpagename: Post Chat Survey Transcripts
+            - subpagename: Messaging Conversations
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
@@ -662,9 +665,8 @@
       - subpagename: Security
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
-      - subpagename: Using LivePerson SDK - Android
+      - subpagename: Use the LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
-      - subpagename: Using LivePerson SDK - Android - Manual
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview

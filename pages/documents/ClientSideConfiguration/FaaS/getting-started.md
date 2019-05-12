@@ -8,23 +8,24 @@ permalink: function-as-a-service-getting-started.html
 indicator: both
 ---
 
-<div class="important">FaaS is currently enabled by LivePerson account teams only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
+<div class="important">FaaS is currently <strong>enabled</strong> by LivePerson account teams only. Please contact your account team if you wish to enable the platform. Until you do so, you will not be able to utilize FaaS.</div>
 
 ### Accessing the FaaS User Interface
 
 Our FaaS UI allows developers to directly develop, deploy and test new functions.
 
 You can either access this UI via [https://faas.liveperson.net](https://faas.liveperson.net) or
-by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain of service:
-* faasUI
+by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain by providing the service `faasUI` to the Domain API.
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
-The FaaS UI is divided into three main components. At the top of the UI you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
+<div class="notice">FaaS currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
+
+The FaaS UI is divided into three main components. At the top of the UI, you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
 
 ![](img/faas-menus.png)
 
-The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas.html).
+The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 The **Deploy** tab provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
 
@@ -36,17 +37,17 @@ Once you've familiarized yourself with the different sections of the UI, it's ti
 
 #### Set FaaS Permissions
 
-Access to the FaaS platform on your account requires it first to be enabled as a Feature on the account. Please contact your LivePerson Account Manager to have FaaS enabled on your account. Once enabled, Access to the interface is restricted to users with the right permission. Managing the permissions is to ensure that only autherized users on your account will have the ability to view, or make changes to the functions you deploy.
+Access to the FaaS platform on your account requires that it be <strong>enabled</strong> as a feature. Please contact your LivePerson Account Team to have FaaS <strong>enabled</strong> on your account. Once <strong>enabled</strong>, access to the interface is restricted to users with the right permission.
 
 There are 3 user permissions pertaining to FaaS:
 
-* FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets. This permission is by default set to 'ON' for all admins on the account. It is however, possible to limit your admin's access as well. You can create a separate permission group for your developers and assign them with the relevant permissions as needed.
+* FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets. This permission is by default set to 'ON' for all admins on the account. It is however possible to limit your admin's access as well. You can create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the relevant permissions as needed, by creating a custom profile.
 
 * FaaS-Developer - allowed to manage `lambdas`, read whitelisted domains and read encrypted secrets.
 
-* FaaS-Invocation - only allowed to invoke lambdas externally. This permission is granted to a system user dedicated to external invocations. When an external system needs to invoke a FaaS `lambda`, the external system needs to use an account user with this permission enabled to access the LivePerson platform.
+* FaaS-Invocation - only allowed to invoke lambdas externally. This permission is granted to a user dedicated to external invocations. When an external system needs to invoke a FaaS `lambda`, the external system needs to use an account user with this permission <strong>enabled</strong> to access the LivePerson platform.
 
-<table>
+<table class="thinner">
 <thead>
   <tr>
     <th>Component</th>
@@ -126,16 +127,15 @@ There are 3 user permissions pertaining to FaaS:
 
 You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
 
-* Click on the users at the top of the LiveEngage UI and then profiles
+* Click on the users tab at the top of the LiveEngage UI and then click profiles
 
-* Create/Edit a profile and add the permission you want for this profile
-
+* Create/Edit a profile and add the relevant FaaS permission to it
 
 #### Function Layout and Framework
 
-In order for your function to work with FaaS seamlessly, it has to follow a certain pattern. This pattern can be viewed below.
+In order for your function to work with FaaS seamlessly it has to follow a certain pattern. This pattern can be viewed below.
 
-<div class="important">Make sure that this declaration stays as shown and is in the first line of your function. Otherwise, the FaaS backend will reject the function.</div>
+<div class="important">Make sure that the following declaration stays as shown and is in the first line of your function. Otherwise, the FaaS backend will reject the function.</div>
 
 ```javascript
 function lambda(input, callback) {
@@ -151,7 +151,7 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds, your function will be killed immediately, regardless of its error state.
 
 In order to get started with a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
 
@@ -163,7 +163,7 @@ This opens the Creation Window. The Creation Window includes a 3 Step process:
 
 2. Whitelist a domain (optional)
 
-3. Add function Description
+3. Add function description
 
 ### Step 1: Choose a template
 
@@ -171,22 +171,22 @@ We provide developer templates out of the box. These are pre-made functions whic
 
 ![](img/faas-templates.png)
 
-Please see this document for more information about templates and their associated events.
+Please see [this document](function-as-a-service-templates.html) for more information about templates and their associated events.
 
 ### Step 2: Whitelist a domain
 
-In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. Please see [this document](function-as-a-service-developing-with-faas-whitelisting-domains.html) for more information on whistelisting domains.
+In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. Please see [this document](function-as-a-service-developing-with-faas-whitelisting-domains.html) for more information on whitelisting domains.
 
 ### Step 3: Add function description
 
-Finally, you are able to name your function and also provide a short description. It will be useful to provide some context to another developer who might work with the function in the future. After creation, you are automatically forwarded to the editor.
+Finally, you are able to name your function and also provide a short description. It will be useful to provide some context for another developer who might work with the function in the future. After creation, you are automatically forwarded to the editor.
 
 <div class="important">A function name has to be unique in order to avoid naming conflicts under one account.</div>
 
 ### Step 4: Develop your function
 
-Once you've reached the editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with FaaS document](function-as-a-service-developing-with-faas.html) for more information on this step.
+Once you've reached the editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with FaaS document](function-as-a-service-developing-with-faas-overview.html) for more information on this step.
 
 ### Step 5: Deploy your function
 
-Once you've developed your function, the last step is to deploy your function to the LivePerson platform. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to do that.
+Once you've developed your function, the last step is to deploy it to the LivePerson platform. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to do that.

@@ -13,6 +13,7 @@ $(document).ready(function () {
 	capabilitiesSearch();
 	searchHighlight();
 	allArticlesClick();
+	scrollToHash();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -83,6 +84,7 @@ function navigateContent(url) {
 			capabilitiesSearch();
 			searchHighlight();
 			allArticlesClick();
+			scrollToHash();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -104,7 +106,10 @@ function navigateContent(url) {
 				$('.innerpageitem').removeClass("activeitem");
 			}
 			//jump to top when page loads
-			window.scrollTo(0, 0);
+			var hash = window.location.hash;
+			if (!hash) {
+				window.scrollTo(0, 0);
+			}
 			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
 				$('#mysidebar').slideUp(400);
 				$('#mysidebar').data("expanded", "false");
@@ -530,12 +535,19 @@ function scrollToHash () {
 	setTimeout(function () {
 		if (window.location.hash && window.location.hash != "#top") {
 		var hash = window.location.hash;
-		console.log(hash);
-		window.location.hash = "";
-		window.location.hash = hash;
 		var linkScroll = $('a[href*="' + hash + '"]');
-		var linkOffset = $(linkScroll).offset().top - 380;
-		window.scrollTo(0, linkOffset);
+		if (linkScroll.length > 1) {
+			var linkOffset = $(linkScroll[1]).offset().top;
+		} else {
+			var linkOffset = $(linkScroll).offset().top;
+		}
+		$("body, html").animate(
+			{
+				scrollTop: linkOffset,
+			},
+			1000,
+			"swing"
+		);
 		}
 	}, 1000);
 }
