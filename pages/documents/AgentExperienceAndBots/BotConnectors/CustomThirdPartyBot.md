@@ -54,4 +54,4 @@ In both cases, generally speaking, you will need to use JavaScript from your bot
 
 #### Integrating Custom Bots via Messaging  
 
-There is one option available to you if you're looking to integrate bots with messaging conversations and that is the [Messaging Agent SDK]((messaging-agent-sdk-overview.html). This allows you to create a Conversational Bot, a Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.
+There is one option available to you if you're looking to integrate bots with messaging conversations and that is the [Messaging Agent SDK](messaging-agent-sdk-overview.html). This allows you to create a Conversational Bot, a Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.
