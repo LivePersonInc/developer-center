@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start
+pagename: iOS Quick Start
 redirect_from:
   - consumer-experience-ios-sdk-quick-start.html
 Keywords:
@@ -20,6 +20,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 ### Prerequisites
 
 - Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
+- Bundle ID registered in an Apple developer account.
 - **Version 3.7.1 or newer**
   - Xcode 10.2 or newer
   - Swift version 5, or Objective-C

@@ -13,6 +13,60 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### Android Messaging SDK - Version 3.8.0
+
+Android Mobile App SDK v3.8.0 introduces a new feature.
+
+#### Environmental Requirements
+
+The Android Mobile Messaging SDK version 3.8 requires the minimum Android API version 19, SDK is compiled against API 26, and targeted API is 27.
+
+
+#### New Feature
+
+##### Welcome message with quick rely options
+
+Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+
+You can configure the Welcome message as a simple text message with or without quick replies. Quick replies run through a bot flow, allowing the bot to respond with relevant and accurate answers, reducing reply times for consumers, for example: 
+
+> *Welcome to our support! What can we help you with today?*   
+> 
+> *[Questions about existing account] [open a new account] [tech support]*
+
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
+
+**How to enable**
+
+```java
+LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
+List<MessageOption> optionItems = new ArrayList<MessageOption>();
+optionItems.add(new MessageOption("bill", "bill"));
+optionItems.add(new MessageOption("sales", "sales"));
+optionItems.add(new MessageOption("support", "support"));
+lpWelcomeMessage.setMessageOptions(optionItems);
+lpWelcomeMessage.setNumberOfItemsPerRow(8);
+conversationViewParams.setLpWelcomeMessage(lpWelcomeMessage);
+LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewParams);
+```
+
+**Limitations**
+- You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+- By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+- Quick reply messages do not get recorded in the conversation history.
+- The conversational metadata (ExternalId) does not get populated.
+   ```
+   "metadata": [
+   {
+   "type": "ExternalId",
+   "id": "Yes-1234"
+   }
+   ]
+   ```
+
+
+
 ### Android Messaging SDK - Version 3.7.0
 
 

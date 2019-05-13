@@ -36,7 +36,9 @@ Some features to get started with include:
 - Bot for User type
 - Authenticated chat
 
-<p><br></p>
+<p style="text-align: right">
+<a href="http://register.liveperson.com/developer/signup" center><img src="../../img/btn-create-dev-account.png" style="height: 30px; width: auto;"></a><br></p>
+<p></p>
 ---
 <p></p>
 

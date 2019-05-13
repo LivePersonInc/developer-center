@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start
+pagename: Android Quick Start
 redirect_from:
   - android-quickstart.html
 Keywords:
