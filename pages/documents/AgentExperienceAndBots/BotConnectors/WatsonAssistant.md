@@ -264,7 +264,7 @@ In the *Then respond with:* JSON editor block, we see the following:
         "name" : "TRANSFER",
         "type" : "CLIENT",               
         "parameters" : {
-          "skill" : "BOT-TRANSFER-OUT"
+          "skill" : "BOT-TRANSFER-OUT" // case sensitive, should be exact the same as in Liveengage
         },
         "result_variable" : "none"
       }   

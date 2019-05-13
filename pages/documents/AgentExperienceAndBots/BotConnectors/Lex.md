@@ -63,18 +63,6 @@ Bot Alias<br>
 Bot Name</td>
   </tr>
   <tr>
-    <td>operatingHours
-(messaging only)</td>
-    <td>On/Off<br>
-Start time<br>
-End time</td>
-  </tr>
-  <tr>
-    <td>offHoursMessage
-(messaging only)</td>
-    <td>message to display to customers when it is off hours</td>
-  </tr>
-  <tr>
     <td>transferSkill</td>
     <td>Default transfer skill name</td>
   </tr>
@@ -173,7 +161,7 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
     "params": {
         "action": "CHANGE_TTR",
         "data": {
-            "ttrType": "URGENT"
+            "ttrType": "URGENT",
             "value": 500,
         }
     }
@@ -210,8 +198,7 @@ Transfers and escalations rely on the *action* item in the response object.
     "params": {
         "action": "TRANSFER",
         "data": {
-            "skillName": "bot-transfer-out",
-            "skillId": "775459351"
+            "skill": "bot-transfer-out"
         }
     }
 }

@@ -53,16 +53,6 @@ CLIENT_ACCESS_TOKEN<br>
     EG: “a1b2c3d4e5f6g8h9j0”</td>
   </tr>
   <tr>
-    <td>operatingHours</td>
-    <td>On/Off<br>
-Start time<br>
-End time</td>
-  </tr>
-  <tr>
-    <td>offHoursMessage</td>
-    <td>message to display to customers when it is off hours</td>
-  </tr>
-  <tr>
     <td>transferSkill</td>
     <td>Default transfer skill</td>
   </tr>
@@ -228,28 +218,22 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
 
-Multiple scenarios for transfer/escalations exist triggered by the action object or the absence of a response. 
+Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
 
-1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer.bot-escalation)
+1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
 
-2. If the Bot does not have an appropriate answer, it will recognise this as a scenario for a transfer, depending on the connector configuration or the decision making capacity of the bot, the bot  will transfer to a particular skill or default skill  (if agents are available). (Eg, action: transfer.BOT-input-unknown)
+2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
+Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.
 
-3. If there is a internal error and the bot service cannot be reached the connector will transfer to a default skill .
+3. If there is a internal error or the bot service cannot be reached the connector will transfer to a default skill set up during configuration.
 
 Transfers and escalations rely on the *action* item in the response object.
 
-1. Action:      `transfer.<skill-name>`
-    (e.g. transfer.bot-escalation where ‘bot-escalation’ is the skill name)
+Action: **TRANSFER (Case sensitive)**
 
-2. Action:	     Input.unknown
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
 
-The connecter uses the ‘.’ as a delimiter to separate the transfer action and skill to transfer to.
-
-If my skill is named - **BOT-default-escalation**
-
-Then my action will be - **transfer.BOT-default-escalation**
-
-<img style="width:600px" src="img/dialogflow/image_9.png">
+<img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
 fig.4.1
 
@@ -263,9 +247,11 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "result": {
         "source": "agent",
         "resolvedQuery": "transfer",
-        "action": "transfer.BOT-default-escalation",  // Transfer Action 
+        "action": "TRANSFER", // Mandatory
         "actionIncomplete": false,
-        "parameters": {},
+        "parameters": {
+          "skill": "bot-escalation",
+         },
         "contexts": [],
         "metadata": {
             "intentId": "32f76a38-8ec3-4db5-8ab5-6d3bcba88540",
@@ -342,9 +328,9 @@ In the bot’s flow, there will be times when it is appropriate to end the conve
 
 The method for closing a conversation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
 
-The field needs to be set to **closeConversation** to instruct the connector to to close the conversation.
+The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
 
-<img style="width:600px" src="img/dialogflow/image_11.png">
+<img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 fig.6.1
 
@@ -358,7 +344,7 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "result": {
         "source": "agent",
         "resolvedQuery": "close conversation",
-        "action": "closeConversation",  // Transfer Action 
+        "action": "CLOSE_CONVERSATION",  // Transfer Action 
         "actionIncomplete": false,
         "parameters": {},
         "contexts": [],

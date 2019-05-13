@@ -69,16 +69,6 @@ There are two steps to setting up a new bot connector.
 
 ---
 
-**Below is Messaging ONLY**
-
-Go to API management page (Campaigns tab > Data Sources > APIs) and add the following APIs to the bot’s API key:
-
-* Engagement History API
-
-* Operational API
-
-    <img style="width:600px" src="img/dialogflowversion2/image_3.png">
-
 ### Provision connector in the Bot Connector dashboard
 
 To access the Bot Connector dashboard, contact your Account Manager to enable the Automation Area in LiveEngage for your account.
@@ -117,4 +107,5 @@ Move on to the product guides to learn how to connect and configure your specifi
 * [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
 * [Dialogflow V1](bot-connectors-google-dialog-flow.html)
 * [Dialogflow V2](bot-connectors-google-dialog-flow-version-2.html)
+* [Amazon Lex](bot-connectors-amazon-lex.html)
 * [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)

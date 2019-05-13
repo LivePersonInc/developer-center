@@ -205,8 +205,6 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
 
-**NOTE**: This implementation branches from the V1 implementation and contains substantial changes.
-
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
 
 1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
