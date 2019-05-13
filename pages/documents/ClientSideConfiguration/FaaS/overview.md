@@ -8,7 +8,7 @@ permalink: function-as-a-service-overview.html
 indicator: both
 ---
 
-<div class="important">Over the next few months we'll be gradually rolling out FaaS and can't let everyone in at the same time - [join the waitlist now](https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform) to secure your spot!</div>
+<div class="important">Over the next few months we'll be gradually rolling out FaaS and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform>join the waitlist now</a> to secure your spot!</div>
 
 Function as a Service (FaaS) is a LivePerson feature which enables brands to develop custom behaviors within the LiveEngage platform, to better tailor the system to their specific needs. By offering these capabilities, FaaS enables developers to write a simple function, deploy it to LivePerson's infrastructure and make it available to their LivePerson account in minutes. This allows you to create custom logic inside our conversational platform.
 
