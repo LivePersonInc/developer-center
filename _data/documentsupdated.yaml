@@ -648,6 +648,7 @@
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs
     - pagename: Voice and Video for Android SDK (BETA)
       subpages:
@@ -707,6 +708,7 @@
       - subpagename: Audio Messages
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:

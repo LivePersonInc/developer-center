@@ -1,11 +1,16 @@
-### Environmental Requirements
+---
+pagename: Welcome Message with Quick Replies
 
-The Android Mobile Messaging SDK version 3.8 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+Keywords:
+sitesection: Documents
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Advanced Features
 
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html
 
-### New Feature
-
-#### Welcome message with quick rely options
+indicator: messaging
+---
 
 Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
@@ -17,7 +22,7 @@ You can configure the Welcome message as a simple text message with or without q
 
 A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
 
-**How to enable**
+### How to enable
 
 ```java
 LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
@@ -31,11 +36,16 @@ conversationViewParams.setLpWelcomeMessage(lpWelcomeMessage);
 LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewParams);
 ```
 
-**Limitations**
+### Limitations  
+
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+
 - By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+
 - When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+
 - Quick reply messages do not get recorded in the conversation history.
+
 - The conversational metadata (ExternalId) does not get populated.
    ```
    "metadata": [
@@ -45,8 +55,3 @@ LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewPa
    }
    ]
    ```
-
-
-<br> 
-<p style="text-align: left">
-<a href="mobile-app-messaging-sdk-for-ios-all-release-notes.html" center><img src="../img/back-to-all-release-notes.png" style="height: 30px; width: auto;"></a></p>
