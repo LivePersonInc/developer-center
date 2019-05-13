@@ -121,7 +121,6 @@
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
       #- pagename: Amazon Lex
-      - pagename: Custom Third Party Bots
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
@@ -157,6 +156,7 @@
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
       #- pagename: Operations
+  - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
   image: client-side

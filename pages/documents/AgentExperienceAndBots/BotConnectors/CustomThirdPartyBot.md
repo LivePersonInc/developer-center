@@ -3,8 +3,8 @@ pagename: Custom Third Party Bots
 redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
-documentname: Bot Connectors
-permalink: bot-connectors-custom-third-party-bots.html
+documentname:
+permalink: custom-third-party-bots.html
 indicator: both
 ---
 
