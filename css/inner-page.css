@@ -605,6 +605,25 @@ div.sidebarTitle-holder {
   overflow-wrap: break-word;
 }
 
+.alert-warning {
+  background-color: #f8f8f8;
+  border-color: #5879DA;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.alert-warning hr {
+  border-top-color: #5879DA;
+}
+
+.alert-warning h2 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.btn-primary.active {
+  background-color: #162036;
+  border-color: #fff;
+}
 
 pre {
   border: none;
