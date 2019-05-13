@@ -620,6 +620,11 @@ div.sidebarTitle-holder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+.btn-primary.active {
+  background-color: #162036;
+  border-color: #fff;
+}
+
 pre {
   border: none;
   border-radius: 0px;
