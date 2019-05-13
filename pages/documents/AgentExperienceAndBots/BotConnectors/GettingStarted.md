@@ -45,6 +45,11 @@ There are two steps to setting up a new bot connector.
 
 2. Provision connector in the Bot Connector dashboard
 
+### Limitations
+
+Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the AgentManager role to create new Bots.
+However they are still able to start and stop existing Bots.
+
 ### Create Bot User in LiveEngage
 
 1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
@@ -83,21 +88,35 @@ Follow the steps below to add a new bot connector.
 
 1. Navigate to the Config page and click “+ADD NEW BOT”
 
-    <img style="width:800px" src="img/botconnectordashboard/addnew.png">
+    <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
 
 2. Assign agent:  Assign the bot agent that you just created
 
 3. Choose conversation type:  Chat or Messaging
 
     Settings for Chat:
-    <img style="width:900px" src="img/botconnectordashboard/chat.png">
-
+    <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
+    
+    * Time until warning: Set up the time span after when the consumer will get an inactivity warning.
+    * Warning message: The warning message the chat consumer gets if he reaches the threshold.
+    * Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
+    * Close message: The message which the consumer will receive prior to closing the conversation 
+    
     Settings for Messaging:
-    <img style="width:900px" src="img/botconnectordashboard/messaging.png">
+    <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
+    
+    * No special setting are needed for messaging bots
 
 4. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
 
-    <img style="width:900px" src="img/botconnectordashboard/escalation.png">
+    <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
+    
+    * Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
+    * Transfer message to Agent: Message to the Agent from the escalating Bot which will be provided together with the conversation
+    * Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
+    * Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
+    
+    (Note: if no other skills are configured, it might be that the bot will escalate the conversation to himself. However in this case only new messages will be processed.)
 
 5. Connect to A.I.: Choose an AI engine from a list. Add the configuration of AI. See [Next Steps](#next-steps).
 
