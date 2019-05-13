@@ -19,8 +19,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
-  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
 - **Version 3.7.1 or newer**
   - Xcode 10.2 or newer
   - Swift version 5, or Objective-C
@@ -33,7 +32,6 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - **Version 3.1 and older**
     - Xcode 9.2 or older
     - Swift 4.0 or older, or Objective-C
-- Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
 
 ### Step 1: Install the SDK into your project

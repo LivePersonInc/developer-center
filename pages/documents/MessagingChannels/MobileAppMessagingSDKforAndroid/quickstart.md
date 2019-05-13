@@ -20,11 +20,9 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured. 
-  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
-- Read or are familiar with the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
 
 
 ### Step 1: Install the Messaging SDK into your project
