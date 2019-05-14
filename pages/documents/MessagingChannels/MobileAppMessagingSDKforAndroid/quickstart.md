@@ -264,7 +264,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      ```
      When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
-4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.</p>
+4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.
 
 
    - **CodeFlow**
@@ -395,7 +395,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 Congratulations!  You're all set.  
 
 You can now do any of the following:
-- [Configure push notifications](mobile-app-messaging-sdk-for-android-configuration-notifications.html#configure-push-notifications). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- [Configure push notifications](mobile-app-messaging-sdk-for-android-configuration-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 - [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add the following to your app's AndroidManifest.xml file.  
 - [Add LivePerson events](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-3---add-liveperson-events) to handle basic messaging events via BroadcastReceiver and responds via callback.
 - [Add messaging activity](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-4---add-messaging-activity) that launches the activity session. 
