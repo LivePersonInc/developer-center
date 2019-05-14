@@ -15,7 +15,7 @@
 {% for category in site.data.documentsupdated %}
   {% if forloop.last == true %}
   <hr class="sidebarhr lessbottom" />
-  <li class="folder topfolder">
+  <li class="folder topfolder lowerimage">
     <img src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
@@ -53,7 +53,7 @@
     </ul>
   </li>
   {% else %}
-  <li class="folder topfolder">
+  <li class="folder topfolder lowerimage">
     <img src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
