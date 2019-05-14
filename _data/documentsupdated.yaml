@@ -621,7 +621,7 @@
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Authentication
+
     - pagename: Notifications
     - pagename: Customization and Branding
       subpages:
@@ -664,6 +664,7 @@
     - pagename: Appendix
       subpages:
       - subpagename: Security
+      - subpagename: Authentication
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
       - subpagename: Use the LivePerson SDK - Android

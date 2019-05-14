@@ -35,6 +35,9 @@ Some features to get started with include:
 - Messaging and push notifications
 - Bot for User type
 - Authenticated chat
+- Audio messaging
+- Vibrate on new incoming message
+- Photo sharing
 
 <p style="text-align: right">
 <a href="http://register.liveperson.com/developer/signup" center><img src="../../img/btn-create-dev-account.png" style="height: 30px; width: auto;"></a><br></p>
