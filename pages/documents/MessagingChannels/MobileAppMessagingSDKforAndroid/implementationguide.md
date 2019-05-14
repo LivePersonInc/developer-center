@@ -234,7 +234,10 @@ LivePerson.setUserProfile(consumerProfile);
 }
 ```
 
-### Step 5 - Configure push notifications
+### Step 5 - Configure push notifications  
+Push and local notifications are a critical factor that makes the experience better for consumers.  The customers never have to stay in your app or keep the window open as they receive a proactive notification as soon as a reply or notice is available.
+
+The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity. For a fully interactive notification, the host app needs to provide the implementation.
 
 
 #### Firebase Configuration
