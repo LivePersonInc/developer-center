@@ -74,7 +74,7 @@ A *service account* is a **prerequisite** for setting up the above config. Docum
 </table>
 
 
-<img style="width:600px" src="img/lex/image_5.png">
+<img style="width:600px" src="img/lex/lex-settings.png">
 
 ### Welcome Event
 
