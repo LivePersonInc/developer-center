@@ -18,9 +18,7 @@ Google has deprecated Dialogflow **Version 1** and customers should move to Vers
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
-
-The following information should be provided to LivePerson.
+The following Dialogflow information should be provided to LivePerson.
 
 <table>
   <thead>
@@ -31,35 +29,12 @@ The following information should be provided to LivePerson.
   </thead>
   <tbody>
   <tr>
-    <td>AccountID</td>
-    <td>LiveEngage Account ID</td>
+    <td>Client access token</td>
+    <td>Access token for the dialogflow API</td>
   </tr>
   <tr>
-    <td>Username</td>
-    <td>LiveEngage BOT Username</td>
-  </tr>
-  <tr>
-    <td>Type</td>
-    <td>Using "Chat" or “Messaging”</td>
-  </tr>
-  <tr>
-    <td>vendor</td>
-    <td>Name of the AI engine. “DialogFlow”</td>
-  </tr>
-  <tr>
-    <td>BotAuth</td>
-    <td>Authentication info for Dialogflow:<br>
-CLIENT_ACCESS_TOKEN<br>
-    EG: “a1b2c3d4e5f6g8h9j0”</td>
-  </tr>
-  <tr>
-    <td>transferSkill</td>
-    <td>Default transfer skill</td>
-  </tr>
-
-  <tr>
-    <td>transferMessage</td>
-    <td>Default transfer message</td>
+    <td>Dialogflow query url</td>
+    <td>Query url for sending Diealogflow querys</td>
   </tr>
   </tbody>
 </table>
@@ -71,7 +46,6 @@ Few things to note before going into *actions* and *skills* is the naming conven
 
 * For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.
 
-* We use the character ‘.’ as a delimiter in the ‘action’ object. We recommend that you do **NOT** use  ‘.’ in a skill name in LiveEngage. Refer page 11, section: *Transfer/Escalations* for an example.
 
 ### Limitations
 
@@ -338,13 +312,13 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 
 ```json
 {
-    "id": "c55c8b3f-70c7-4ab3-857f-881c6c7ece82"
+    "id": "c55c8b3f-70c7-4ab3-857f-881c6c7ece82",
     "timestamp": "2018-06-26T00:19:02.249Z",
     "lang": "en",
     "result": {
         "source": "agent",
         "resolvedQuery": "close conversation",
-        "action": "CLOSE_CONVERSATION",  // Transfer Action 
+        "action": "CLOSE_CONVERSATION",  // Close action
         "actionIncomplete": false,
         "parameters": {},
         "contexts": [],

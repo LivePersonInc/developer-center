@@ -24,72 +24,55 @@ At this time, Lex response cards & audio messages are not supported.
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
+The following Amazon Lex information should be provided to LivePerson.
 
-The following information should be provided to LivePerson.
+**NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
+Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
+A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
+
 
 <table>
   <thead>
     <tr>
     <th>Item</th>
     <th>Description</th>
+    <th>Example</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>AccountID</td>
-    <td>LiveEngage Account ID</td>
+    <td>API Version</td>
+    <td>Lex API version</td>
+    <td>2016-11-28</td>
   </tr>
   <tr>
-    <td>Username</td>
-    <td>LiveEngage BOT Username</td>
+    <td>AWS Region</td>
+    <td>AWS region of the lex bot</td>
+    <td>us-east-1</td>
   </tr>
   <tr>
-    <td>Type</td>
-    <td>Using "Chat" or “Messaging”</td>
+    <td>IAM Access Key</td>
+    <td>Access Key ID of the IAM role</td>
+    <td>AKIAXXXXXXXXXXXBWN3</td>
   </tr>
   <tr>
-    <td>vendor</td>
-    <td>Name of the AI engine. “Lex”</td>
+    <td>IAM Secret Key</td>
+    <td>IAM secret key of the IAM role</td>
+    <td>lwRQJUxxxxxxxxxxxxRQFpoxxxxxxxdE6JR</td>
   </tr>
   <tr>
-    <td>BotAuth</td>
-    <td><em>Authentication info for Lex:</em><br>
-API Version<br>
-AWS Region<br>
-Access Key ID<br>
-Secret Access Key<br>
-Bot Alias<br>
-Bot Name</td>
+    <td>Bot alias</td>
+    <td>Bots alias of the IAM role</td>
+    <td>botConnectors</td>
   </tr>
   <tr>
-    <td>transferSkill</td>
-    <td>Default transfer skill name</td>
+    <td>Bot name</td>
+    <td>The bots name in the IAM role</td>
+    <td>botConnectors</td>
   </tr>
-  <tr>
-    <td>transferMessage</td>
-    <td>Default transfer message</td>
-  </tr>
-  </tbody>
+ </tbody>
 </table>
 
-**NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
-Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
-A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
-
-The Bot-platform connector uses the below fields from the AWS Environment.
-
-* API Version
-
-* AWS Region
-
-* Access Key ID
-
-* Secret Access Key
-
-* Bot Alias
-
-* Bot Name
 
 <img style="width:600px" src="img/lex/image_5.png">
 
