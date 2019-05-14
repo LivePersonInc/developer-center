@@ -145,7 +145,7 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
         "action": "CHANGE_TTR",
         "data": {
             "ttrType": "URGENT",
-            "value": 500,
+            "value": 500
         }
     }
 }
