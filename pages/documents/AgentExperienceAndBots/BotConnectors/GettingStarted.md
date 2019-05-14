@@ -20,7 +20,7 @@ indicator:
 
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
-Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialogflow, and more.
+Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialogflow, and Amazon Lex.
 
 {: .important}
 If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.
@@ -47,8 +47,16 @@ There are two steps to setting up a new bot connector.
 
 ### Limitations
 
-Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the AgentManager role to create new Bots.
-However they are still able to start and stop existing Bots.
+Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the AgentManager Profile to create new Bots or start Bots.
+However they are still able to stop, edit and delete existing Bots.
+If you want to enable creating and starting Bots for Agent and Agent Manager, you need to create a new Profile, which derives from Campaign Manager or Admin and enable the
+needed permissions only. Afterwards you need to assign the new Profile to the Agent/Agent Manager who should be able to start/create Bots.
+
+<img style="width:600px" src="img/botconnectordashboard/campaign_manager_bot_permissions.png">
+Minimal set of permissions for creating and starting Bots for Campaign Manager Profile
+
+<img style="width:600px" src="img/botconnectordashboard/administrator_bot_permissions.png">
+Minimal set of permissions for creating and starting Bots for Administrator Profile
 
 ### Create Bot User in LiveEngage
 
@@ -66,7 +74,7 @@ However they are still able to start and stop existing Bots.
 
     * If Chat in the drop down select  - Value > 1.
 
-    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Converversations to Custom Setting and enter a value greater than 0**
+    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Conversations to Custom Setting and enter a value greater than 0**
 
 5. Find api key name in bot user profile
 
@@ -76,7 +84,7 @@ However they are still able to start and stop existing Bots.
 
 ### Provision connector in the Bot Connector dashboard
 
-To access the Bot Connector dashboard, contact your Account Manager to enable the Automation Area in LiveEngage for your account.
+To access the Bot Connector dashboard, contact your Account Manager to enable the Bot Connectors in LiveEngage for your account.
 
 Upon logging in to LiveEngage, you will see the Automation Tab:
 
