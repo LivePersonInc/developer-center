@@ -1,10 +1,10 @@
 ---
-pagename: Google Dialog Flow
+pagename: Google Dialogflow
 redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
-permalink: bot-connectors-google-dialog-flow.html
+permalink: bot-connectors-google-dialogflow.html
 indicator:
 ---
 
@@ -44,7 +44,7 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>vendor</td>
-    <td>Name of the AI engine. “DialogFlow”</td>
+    <td>Name of the AI engine. “Dialogflow”</td>
   </tr>
   <tr>
     <td>BotAuth</td>
@@ -90,7 +90,7 @@ The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/
     "timezone": "America/New_York"   
 }
 ```
-Figure 2.1 DialogFlow Response JSON with action
+Figure 2.1 Dialogflow Response JSON with action
 
 
 **Sample Dialogflow Error Response**
@@ -107,7 +107,7 @@ Figure 2.1 DialogFlow Response JSON with action
     }
 }
 ```
-Figure 2.2 DialogFlow Response JSON with action
+Figure 2.2 Dialogflow Response JSON with action
 
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
@@ -275,12 +275,12 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "sessionId": "424a204941d6849819ab4b8a6389K8390791"
 }
 ```
-Figure 4.2 DialogFlow Response JSON with action
+Figure 4.2 Dialogflow Response JSON with action
 
 
 ### Send Rich Content (Structured content)
 
-Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via Dialogflow, use the Dialogflow option to send a *custom payload* via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the DialogFlow console.
+Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via Dialogflow, use the Dialogflow option to send a *custom payload* via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
 <img style="width:600px" src="img/dialogflow/image_10.png">
 
@@ -371,3 +371,4 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 }
 ```
 Figure 6.2 DialogFlow JSON response for closing conversation
+
