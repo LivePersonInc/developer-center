@@ -30,11 +30,11 @@ The following Dialogflow information should be provided to LivePerson.
   <tbody>
   <tr>
     <td>Client access token</td>
-    <td>Access token for the dialogflow API</td>
+    <td>Access token for the Dialogflow API</td>
   </tr>
   <tr>
     <td>Dialogflow query url</td>
-    <td>Query url for sending Diealogflow querys</td>
+    <td>Query url for sending Dielogflow querys</td>
   </tr>
   </tbody>
 </table>

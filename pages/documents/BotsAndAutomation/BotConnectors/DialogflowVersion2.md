@@ -55,7 +55,7 @@ Figure 1.1
   <tbody>
   <tr>
     <td>Language code</td>
-    <td>Language code for dialogflow</td>
+    <td>Language code for Dialogflow</td>
     <td>en-US</td>
   </tr>
   <tr>
