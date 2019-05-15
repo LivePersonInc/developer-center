@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Add Agent Widgets
-
 permalink: add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html
 root-link: true
 level-order: 3

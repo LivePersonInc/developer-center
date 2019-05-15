@@ -14,8 +14,8 @@
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
 
-- categoryname: Agent Experience & Bots
-  image: agent-experience
+- categoryname: Agent Experience
+  image: agent-experience-new
   documents:
   - documentname: Add Agent Widgets
     pages:
@@ -108,6 +108,11 @@
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
+
+
+- categoryname: Bots & Automation
+  image: agent-experience
+  documents:
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -155,6 +160,7 @@
         subpages:
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
+          - subpagename: Training and Tuning Your Intents and FAQs
       #- pagename: Operations
   - documentname: Custom Third Party Bots
 
@@ -762,6 +768,7 @@
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
           - subpagename: Messaging Skill Segment
+          - subpagename: Messaging Agent Segment
 
       - pagename: Appendix
   - documentname: Operational Realtime API

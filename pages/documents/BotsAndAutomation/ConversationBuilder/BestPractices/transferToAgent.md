@@ -10,7 +10,7 @@ permalink: conversation-builder-best-practices-transfer-to-an-agent-or-bot.html
 indicator: both
 ---
 
-### Preface
+### Introduction
 
 Within your automation, you may need to transfer a conversation to a live agent or perhaps another bot. You can find the basics of how to [Connect your bot to LiveEngage](conversation-builder-getting-started-4-connect-to-liveengage.html) here.
 
@@ -22,7 +22,7 @@ There are a number of reasons why your transfer may be failing. Here are a few o
 
 #### Your transfer API URL may be incorrect for your server environment
 
-There are a few different server environments where you may be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, you may need to change the URL for your escalation. 
+There are a few different server environments where you may be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, you may need to change the URL for your escalation.
 
 | Server Environment | URL endpoint |
 | --- | --- |
@@ -60,4 +60,3 @@ Most often in Chat, but occasionally with Messaging, an attempt at transferring 
 Sometimes you may require multiple bots for your particular user case. Transferring to another bot is exactly the same as transferring to a human agent. The bot needs to be set up as a user agent, assigned a skill and deployed, as you would normally do to connect a bot to LiveEngage. Then when you want to transfer, you use the skillId for the bot, it will transfer after a brief moment.
 
 Keep in mind that because this is a completely different bot it will not have all of the same context (variables, etc) that you may have collected in the original bot. Sharing information between bots is fairly complex and may require the use of SDEs. This will be covered in another document.
-
