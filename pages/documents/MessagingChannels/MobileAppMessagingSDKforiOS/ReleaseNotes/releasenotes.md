@@ -23,7 +23,7 @@ iOS Mobile App SDK v3.8.0 introduces a new feature and contains a fix for a high
 
 #### Environmental Requirements
 
-The iOS Mobile Messaging SDK version 3.8 is compatible with XCode 10.2, Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), and supported on iOS versions 10 through 12.
+The iOS Mobile Messaging SDK version 3.8 is compatible with Xcode 10.2.1, Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), and supported on iOS versions 10 through 12.
 
 
 #### New Feature
