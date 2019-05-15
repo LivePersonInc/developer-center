@@ -1,5 +1,5 @@
 ---
-pagename: Google Dialog Flow Version 2
+pagename: Google Dialogflow Version 2
 redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
@@ -116,7 +116,7 @@ Figure 1.1
 
 #### Dialogflow Query length Limit 
 
-The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in DialogFlow.
+The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
