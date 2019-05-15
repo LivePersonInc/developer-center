@@ -768,6 +768,7 @@
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
           - subpagename: Messaging Skill Segment
+          - subpagename: Messaging Agent Segment
 
       - pagename: Appendix
   - documentname: Operational Realtime API

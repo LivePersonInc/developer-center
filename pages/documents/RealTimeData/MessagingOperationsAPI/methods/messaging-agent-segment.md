@@ -10,26 +10,27 @@ permalink: messaging-operations-api-methods-messaging-agent-segment.html
 indicator: messaging
 ---
 
-Retrieves messaging conversation related metrics at the agent level.
+This method retrieves metrics related to messaging conversations, at the agent level. The method returns data on metrics which are calculated for each agent separately. The logic behind these metrics is based on segments of Messaging conversations, since one conversation can potentially go through many different agents in its lifetime.
 
-This method returns data on metrics which are calculated for each agent separately. The logic behind these metrics is based on segments of Messaging conversations, since one conversation can potentially go through many different agents in its lifetime. 
-
-An agent-segment begins when an agent is assigned to a messaging conversation and once the agent changes (for example, the conversation has been transferred or closed) the segment ends. A segment of a conversation is determined based on the agent assigned to it.
+An agent-segment begins when an agent is assigned to a messaging conversation. Once the agent changes (for example, when the conversation is transferred or closed), the segment ends. A segment of a conversation is determined based on the agent assigned to it.
 
 A single conversation may include more than one segment for each participating agent. This happens when the conversation is transferred to another agent and back to the original agent, for example.
 
 ### Limitations
 
 The following messages are omitted from the calculations:
-    - Responses given to the consumer by users who are not the assigned agent 
-    - Messages provided by the Controller Bot (system) 
-    - In case of resumed conversations - the first message sent by the agent after resuming a conversation is not included in the averages
-    - Takeovers - the first message sent by the manager after taking over a conversation is not included in the averages
 
+  - Responses given to the consumer by users who are not the assigned agent
 
-### Retrieving Messaging segment Data by Account and Agents
+  - Messages provided by the Controller Bot (system messages)
 
-#### Request
+  - In case of resumed conversations - the first message sent by the agent after resuming a conversation is not included in the averages
+
+  - Takeovers - the first message sent by the manager after taking over a conversation is not included in the averages
+
+### Request
+
+In this example request and response, we will look at retrieving messaging segment data by account and by agents.
 
 | Method | URL |
 | :------- | :------ |
@@ -39,21 +40,21 @@ The following messages are omitted from the calculations:
 
 | Name      |  Description | Type / Value | Required |
 | :-----    | :--------------- | :-------------- | :--- |
-| timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time <b>minus</b> the timeframe parameter. The maximum timeframe value is 1440 minutes (24 hours), meaning the maximum amount of time this API allows you to get data from is 24 hours back from the time when you make the call. | numeric | required |
+| timeframe | The time range (in minutes) in which the data will be filtered. Where end time = current time, and start time = end time <b>minus</b> the timeframe parameter. The maximum timeframe value is 1440 minutes (24 hours), meaning the maximum amount of time this API allows you to get data from is 24 hours back from the time when you make the call. | numeric | required |
 | v | Version of API, for example, v=1. | numeric | required |
 | agentIds | When provided, metrics in the response will be grouped by the requested agents. When not provided, metrics in the response will be calculated for all agents. You can provide one or more agentIds. <br> Example: agentIds=4444,15333. To retrieve all agents active for the time period, use agentIds=all, or do not specify this parameter at all. | numeric, comma separated | optional |
-| skillIds | When provided, metrics in the response will be grouped by the requested skills in addition to regular grouping. metrics will be provided per skill and per agent within each skill.  When not provided, metrics in the response will not be grouped by skills at all. You can provide one or more skillIds. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all. | numeric, comma separated | optional |
-| groupIds | When provided, metrics in the response will be filtered by the requested agent's group Ids. When not provided, metrics in the response will be calculated for all groups. You can provide one or more groupIds. <br> Example: groupIds=4444,15333. To retrieve segments from all agent's groups active for the time period, use groupIds=all, or do not specify this parameter at all. | numeric, comma separated | optional |
+| skillIds | When provided, metrics in the response will be grouped by the requested skills in addition to regular grouping. Metrics will be provided per skill and per agent within each skill.  When not provided, metrics in the response will not be grouped by skills at all. You can provide one or more skillIds. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all. | numeric, comma separated | optional |
+| groupIds | When provided, metrics in the response will be filtered by the requested agent's group Ids. When not provided, metrics in the response will be calculated for all groups. You can provide one or more groupIds. <br> Example: groupIds=4444,15333. To retrieve segments from all agent's groups active for the time period, use groupIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
 | interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
-| userType | When provided, metrics in the response will be filtered by the agent's user type (human only, bot only or all). "All" will select both user types. When provided, only segments with relevant user type will be returned. <br> Example: <br> timeframe=60&userType=human <br> timeframe=60&userType=bot <br> timeframe=60&userType=all | string | optional |
-| source | When provided, metrics in the response will be filtered by the integration source - the source which the conversation of this segment has started from (for example: Facebook, SMS, Web, App etc.) To retrieve segments from all sources, use source=all, or do not specify this parameter at all.  <br> Example: <br> timeframe=60&source=APP <br> timeframe=60&source=FACEBOOK <br> timeframe=60&source=all | string | optional |
-| metrics | When provided, only those metrics will be presented within the response. To include all metrics within the response, use metrics=all, or do not specify this parameter at all. totalAgentConversationSegments metric will always be displayed, no matter what is indicated in 'metrics'   <br> Example: <br> timeframe=60&metrics=avgAgentMessagesinAgentSegment <br> timeframe=60&metrics=avgTimetoFirstAgentMessageFromAgentAssignment,interactiveAgentSegments,agentSegmentsWithNonResponsiveConsumers <br> timeframe=60&metrics=all | string, comma separated | optional |
+| userType | When provided, metrics in the response will be filtered by the agent's user type (human only, bot only or all). "All" will select both user types. When provided, only segments with the relevant user type will be returned. <br> Example: <br> timeframe=60&userType=human <br> timeframe=60&userType=bot <br> timeframe=60&userType=all | string | optional |
+| source | When provided, metrics in the response will be filtered by the integration source - the source from which the conversation of this segment was started  (for example: Facebook, SMS, Web, App etc.) To retrieve segments from all sources, use source=all, or do not specify this parameter at all.  <br> Example: <br> timeframe=60&source=APP <br> timeframe=60&source=FACEBOOK <br> timeframe=60&source=all | string | optional |
+| metrics | When provided, only those metrics will be presented within the response. To include all metrics within the response, use metrics=all, or do not specify this parameter at all. totalAgentConversationSegments metric will always be displayed, no matter what is indicated in this parameter   <br> Example: <br> timeframe=60&metrics=avgAgentMessagesinAgentSegment <br> timeframe=60&metrics=avgTimetoFirstAgentMessageFromAgentAssignment,interactiveAgentSegments,agentSegmentsWithNonResponsiveConsumers <br> timeframe=60&metrics=all | string, comma separated | optional |
 
-#### Response
+### Response
 
 **JSON Example**
 
-Request by agentIds=12,13 (no interval), timeframe=180
+**Request using the parameters and values**: `agentIds=12,13` (no interval), `timeframe=180`
 
 ```json
    {
@@ -103,7 +104,8 @@ Request by agentIds=12,13 (no interval), timeframe=180
    }
 ```
 
-Request by agentIds=12,13 and skillIds=333,444 (no interval), timeframe=180
+**Request using the parameters and values**: `agentIds=12,13` and `skillIds=333,444` (no interval), `timeframe=180`
+
 ```json
    {
        "metricsPerSkill": {
@@ -188,7 +190,7 @@ Request by agentIds=12,13 and skillIds=333,444 (no interval), timeframe=180
    }
 ```
 
-Request by agentIds=12,13 and skillIds=333,444 with interval=5, timeframe=60 and metrics = avgTimeToResponseFromAgentAssignment, avgTimetoFirstAgentMessageFromAgentAssignment_AfterTransfer, avgTimetoFirstAgentMessageFromAgentAssignment_NewConversation
+**Request using the parameters and values**: `agentIds=12,13` and `skillIds=333,444` with `interval=5`, `timeframe=60` and `metrics=avgTimeToResponseFromAgentAssignment`, `avgTimetoFirstAgentMessageFromAgentAssignment_AfterTransfer`, `avgTimetoFirstAgentMessageFromAgentAssignment_NewConversation`
 
 
 ```json
