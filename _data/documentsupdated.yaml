@@ -167,23 +167,6 @@
 - categoryname: Client Side Configuration
   image: client-side
   documents:
-    - documentname: Function as a Service
-      pages:
-        - pagename: Overview
-        - pagename: Getting Started
-        - pagename: Developing with FaaS
-          subpages:
-            - subpagename: Overview
-            - subpagename: "Events & Templates"
-            - subpagename: Whitelisting Domains
-            - subpagename: Toolbelt
-            - subpagename: Storing Secrets
-        - pagename: Deploying Functions
-        - pagename: External Invocations
-        - pagename: Use Cases
-          subpages:
-            - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
@@ -494,6 +477,27 @@
             - subpagename: Retrieve Workdays Object by ID
             - subpagename: Retrieve Workdays Objects by List
         - pagename: Appendix
+
+- categoryname: Developer Tools
+  image: developer-tools
+  documents:
+  - documentname: Function as a Service
+    pages:
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Developing with FaaS
+        subpages:
+          - subpagename: Overview
+          - subpagename: "Events & Templates"
+          - subpagename: Whitelisting Domains
+          - subpagename: Toolbelt
+          - subpagename: Storing Secrets
+      - pagename: Deploying Functions
+      - pagename: External Invocations
+      - pagename: Use Cases
+        subpages:
+          - subpagename: Post Chat Survey Transcripts
+          - subpagename: Messaging Conversations
 
 - categoryname: Historical Data
   image: historical-data
