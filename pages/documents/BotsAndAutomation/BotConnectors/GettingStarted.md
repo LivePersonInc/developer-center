@@ -47,10 +47,9 @@ There are two steps to setting up a new bot connector.
 
 ### Limitations
 
-Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the AgentManager Profile to create new Bots or start Bots.
-However they are still able to stop, edit and delete existing Bots.
-If you want to enable creating and starting Bots for Agent and Agent Manager, you need to create a new Profile, which derives from Campaign Manager or Admin and enable the
-needed permissions only. Afterwards you need to assign the new Profile to the Agent/Agent Manager who should be able to start/create Bots.
+Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the Agent Manager Profile to create new Bots or start Bots. However they are still able to stop, edit and delete existing Bots.
+
+If you want to enable creating and starting Bots for the Agent and Agent Manager profiles, you need to create a new custom Profile, which derives its initial permissions from the Campaign Manager or Admin roles and then make sure to enable the relevant bot permissions only. Afterwards, you need to assign this new Profile to the Agent/Agent Manager who you'd like to be able to start/create Bots.
 
 <img style="width:600px" src="img/botconnectordashboard/campaign_manager_bot_permissions.png">
 Minimal set of permissions for creating and starting Bots for Campaign Manager Profile
@@ -102,37 +101,48 @@ Follow the steps below to add a new bot connector.
 
 3. Choose conversation type:  Chat or Messaging
 
-    Settings for Chat:
-    <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
-    
-    * Time until warning: Set up the time span after when the consumer will get an inactivity warning.
-    * Warning message: The warning message the chat consumer gets if he reaches the threshold.
-    * Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
-    * Close message: The message which the consumer will receive prior to closing the conversation 
-    
-    Settings for Messaging:
-    <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
-    
-    * No special setting are needed for messaging bots
+  Settings for Chat:
+  <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
+
+  * Time until warning: Set up the time span after which the consumer will get an inactivity warning.
+
+  * Warning message: The warning message the chat consumer gets if he reaches the threshold.
+
+  * Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
+
+  * Close message: The message which the consumer will receive prior to closing the conversation
+
+  Settings for Messaging:
+  <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
+
+  * No special settings are needed for messaging bots
 
 4. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
 
-    <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
-    
-    * Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
-    * Transfer message to Agent: Message to the Agent from the escalating Bot which will be provided together with the conversation
-    * Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
-    * Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
-    
-    (Note: if no other skills are configured, it might be that the bot will escalate the conversation to himself. However in this case only new messages will be processed.)
+  <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
+
+  * Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
+
+  * Transfer message to Agent: Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
+
+  * Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
+
+  * Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
+
+  **Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.
 
 5. Connect to A.I.: Choose an AI engine from a list. Add the configuration of AI. See [Next Steps](#next-steps).
 
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
+
 * [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
+
 * [Dialogflow V1](bot-connectors-google-dialog-flow.html)
+
 * [Dialogflow V2](bot-connectors-google-dialog-flow-version-2.html)
+
 * [Amazon Lex](bot-connectors-amazon-lex.html)
+
 * [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)

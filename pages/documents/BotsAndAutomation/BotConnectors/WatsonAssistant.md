@@ -17,7 +17,7 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-The following WatsonAssistan information should be provided to LivePerson.
+The following Watson Assistant information should be provided to LivePerson:
 
 #### UserPass authentication
 <table>
@@ -31,22 +31,22 @@ The following WatsonAssistan information should be provided to LivePerson.
   <tbody>
   <tr>
     <td>Workspace URL</td>
-    <td>WatsonAssistant Workspace URL</td>
+    <td>Watson Assistant Workspace URL</td>
     <td>https://gateway.watsonplatform.net/conversation/api</td>
   </tr>
   <tr>
     <td>Workspace ID</td>
-    <td>WatsonAssistan Workspace ID</td>
+    <td>Watson Assistant Workspace ID</td>
     <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
   </tr>
   <tr>
     <td>Conversation Username</td>
-    <td>Username of the WatsonAssistant conversation</td>
+    <td>Username of the Watson Assistant conversation</td>
     <td>de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751</td>
   </tr>
   <tr>
     <td>Conversation Password</td>
-    <td>password for the WatsonAssistant conversation which should be used for the bot</td>
+    <td>password for the Watson Assistant conversation which should be used for the bot</td>
     <td>Dxxxxxxxxxx1</td>
   </tr>
   <tr>
@@ -69,12 +69,12 @@ The following WatsonAssistan information should be provided to LivePerson.
   <tbody>
   <tr>
     <td>Workspace URL</td>
-    <td>WatsonAssistant Workspace URL</td>
+    <td>Watson Assistant Workspace URL</td>
     <td>https://gateway.watsonplatform.net/conversation/api</td>
   </tr>
   <tr>
     <td>Workspace ID</td>
-    <td>WatsonAssistan Workspace ID</td>
+    <td>Watson Assistant Workspace ID</td>
     <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
   </tr>
   <tr>
@@ -84,7 +84,7 @@ The following WatsonAssistan information should be provided to LivePerson.
   </tr>
   <tr>
     <td>Token endpoint url</td>
-    <td>URL for creating/refreshing WatsonAssistant tokens</td>
+    <td>URL for creating/refreshing Watson Assistant tokens</td>
     <td>Dxxxxxxxxxx1</td>
   </tr>
   <tr>
@@ -97,7 +97,7 @@ The following WatsonAssistan information should be provided to LivePerson.
 
 #### Naming Conventions
 
-One thing to note before going into *actions* and *skills* is the naming convention between each. 
+One thing to note before going into *actions* and *skills* is the naming convention between each.
 
 All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by **Watson** needs to be *CLOSE_CONVERSATION*. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
 
@@ -216,7 +216,7 @@ Figure 2.5 Structured Content Watson JSON Example (IAM)
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 ```json
 {
@@ -265,7 +265,7 @@ In the *Then respond with:* JSON editor block, we see the following:
         "name" : "TRANSFER",
         "type" : "CLIENT",               
         "parameters" : {
-          "skill" : "BOT-TRANSFER-OUT" // case sensitive, should be exact the same as in Liveengage
+          "skill" : "BOT-TRANSFER-OUT" // case sensitive, should be exactly the same as in LiveEngage
         },
         "result_variable" : "none"
       }   

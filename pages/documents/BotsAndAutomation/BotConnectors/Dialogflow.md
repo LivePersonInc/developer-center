@@ -18,7 +18,7 @@ Google has deprecated Dialogflow **Version 1** and customers should move to Vers
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-The following Dialogflow information should be provided to LivePerson.
+The following Dialogflow information should be provided to LivePerson:
 
 <table>
   <thead>
@@ -34,7 +34,7 @@ The following Dialogflow information should be provided to LivePerson.
   </tr>
   <tr>
     <td>Dialogflow query url</td>
-    <td>Query url for sending Dielogflow querys</td>
+    <td>Query url for sending Dialogflow queries</td>
   </tr>
   </tbody>
 </table>
@@ -42,16 +42,16 @@ The following Dialogflow information should be provided to LivePerson.
 
 #### Naming Conventions
 
-Few things to note before going into *actions* and *skills* is the naming convention between each. 
+Few things to note before going into *actions* and *skills* is the naming convention between each.
 
 * For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.
 
 
 ### Limitations
 
-#### Dialogflow Query length Limit 
+#### Dialogflow Query length Limit
 
-The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*. 
+The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*.
 
 **Sample Syntax : Dialogflow Request Object**
 
@@ -84,13 +84,13 @@ Figure 2.1 Dialogflow Response JSON with action
 Figure 2.2 Dialogflow Response JSON with action
 
 
-1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
+1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT
 
     <img style="width:600px" src="img/dialogflow/image_6.png">
 
     fig.2.3
 
-2. Do not forget to add a custom response in the **Text response** section. 
+2. Do not forget to add a custom response in the **Text response** section.
 
     <img style="width:600px" src="img/dialogflow/image_7.png">
 
@@ -100,7 +100,7 @@ Figure 2.2 Dialogflow Response JSON with action
 
 The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works and how it is framed with the consumer.
 
-A Messaging interaction qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow and an intent determined . 
+A Messaging interaction qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow and an intent determined .
 
 These docs cover where to configure the initial message on a given platform
 
@@ -137,7 +137,7 @@ Fig 1.1
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **action** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Change the TTR of a conversation based on the **action** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 <img style="width:600px" src="img/dialogflow/image_8.png">
 
@@ -152,7 +152,7 @@ Fig 3.1
     "source": "agent",
     "resolvedQuery": "set priority",
     "action": "CHANGE_TTR",   //Mandatory
-    "actionIncomplete": false, 
+    "actionIncomplete": false,
     "parameters": {
       "ttrType": "CUSTOM",    //Mandatory
       "value": "120"     //Mandatory for CUSTOM only          
@@ -192,7 +192,7 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
 
-Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
+Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
 1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
 
@@ -205,7 +205,7 @@ Transfers and escalations rely on the *action* item in the response object.
 
 Action: **TRANSFER (Case sensitive)**
 
-Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of a skill name (case sensitive) which exists in LiveEngage.
 
 <img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
@@ -249,7 +249,7 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "sessionId": "424a204941d6849819ab4b8a6389K8390791"
 }
 ```
-Figure 4.2 Dialogflow Response JSON with action
+
 
 
 ### Send Rich Content (Structured content)
@@ -302,7 +302,7 @@ In the bot’s flow, there will be times when it is appropriate to end the conve
 
 The method for closing a conversation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
 
-The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
+The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
 <img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
