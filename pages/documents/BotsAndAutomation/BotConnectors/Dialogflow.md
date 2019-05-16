@@ -4,7 +4,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Bot Connectors
-permalink: bot-connectors-google-dialog-flow.html
+permalink: bot-connectors-google-dialogflow.html
 indicator:
 ---
 
