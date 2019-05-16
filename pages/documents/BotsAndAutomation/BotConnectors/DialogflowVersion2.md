@@ -17,11 +17,9 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-The following DialogflowV2 information should be provided to LivePerson.
+The following DialogflowV2 information should be provided to LivePerson:
 
-**NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation.
-Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*.
-A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
+**NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*. A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
 
 The expected output of a service account setup is a JSON file, example below:
 
@@ -31,7 +29,7 @@ The expected output of a service account setup is a JSON file, example below:
 {
     "type": "service_account",
     "project_id": "[PROJECT-ID]",
-    "private_key_id": "[KEY-ID]"
+    "private_key_id": "[KEY-ID]",
     "private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
     "client_email": "[SERVICE-ACCOUNT-EMAIL]",
     "client_id": "[CLIENT-ID]",
@@ -64,8 +62,8 @@ Figure 1.1
     <td>bxx-xxxxxxx-xxx-dialogflow-v2</td>
   </tr>
   <tr>
-    <td>User email adress</td>
-    <td>Email adress of the Google Service account</td>
+    <td>User email address</td>
+    <td>Email address of the Google Service account</td>
     <td>dialogflow-xxxxxx@bxx-xxxxxxx-xxx-dialogflow-v2.iam.gserviceaccount.com</td>
   </tr>
   <tr>
@@ -114,18 +112,18 @@ Figure 1.1
 
 ### Limitations
 
-#### Dialogflow Query length Limit 
+#### Dialogflow Query length Limit
 
 The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
 
-1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT 
+1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT
 
     <img style="width:600px" src="img/dialogflowversion2/image_7.png">
 
     fig.2.1
 
-2. Do not forget to add a custom response in the **Text response** section. 
+2. Do not forget to add a custom response in the **Text response** section.
 
     <img style="width:700px" src="img/dialogflowversion2/image_8.png">
 
@@ -135,7 +133,7 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
-A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow V2 and an intent determined. 
+A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow V2 and an intent determined.
 
 The below documents cover where to configure the initial message on a given platform.
 
@@ -193,7 +191,7 @@ LivePerson Messaging uses 4 different types of priorities:
  “PRIORITIZED”
 “CUSTOM”
 
-Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 <img style="width:600px" src="img/dialogflowversion2/image_9.png">
 
@@ -205,7 +203,7 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
 
-Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
+Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
 1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
 
@@ -235,7 +233,7 @@ To send structured content via Dialogflow V2, send a *custom payload* option via
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
 
-**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload. 
+**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload.
 
 fig.5.1
 
