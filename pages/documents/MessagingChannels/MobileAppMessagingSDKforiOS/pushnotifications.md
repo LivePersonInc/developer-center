@@ -141,7 +141,9 @@ Before you begin, make sure you have configured your LiveEngage account and conn
 
 2. In LiveEngage, click the **Campaigns** tab, and then **Data Sources**.
 
-3. On the **Mobile app management** tab, click **Manage**.
+   ![Data Sources](img/androiddatasources.jpg)
+
+3. On the Integrations tab, under **Mobile app management**, click **Manage**.
 
 4. Click **Add new** to add your app to the mobile campaign.
 
