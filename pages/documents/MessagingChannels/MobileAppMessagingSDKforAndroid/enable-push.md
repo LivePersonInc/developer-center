@@ -18,15 +18,15 @@ Push and local notifications are a key factor that makes the experience better f
 
 ### Prerequisites
 
-- Followed the Quick Start Guide for Android and are now ready to implement and enable features.
+- Followed the [Quick Start Guide for Android](mobile-app-messaging-sdk-for-android-quick-start.html) and are now ready to implement and enable features.
 
-- Added Firebase to your Android project and installed the Firebase Cloud Messaging (FCM) SDk.
+- Added [Firebase](https://firebase.google.com/docs/android/setup) to your Android project and installed the [Firebase Cloud Messaging (FCM) SDk](https://firebase.google.com/docs/cloud-messaging/android/client).
 
 ### Step 1. Register the client app instance
 
 The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity. For a fully interactive notification, the host app needs to provide the implementation.
 
-1. Use the registration token for the client app instance and register it using the registerLPPusher() API call so it knows which device should get each push message.
+1. Use the registration token for the client app instance and register it using the [registerLPPusher() API call](android-registerlppusher.html) so it knows which device should get each push message.
 
 2. Upon receiving a push message to your app, handle it so it is displayed to the customer.
 
@@ -48,7 +48,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
 1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
-2. In LiveEngage, click the Campaigns tab, and then Data Sources.
+2. In LiveEngage, click the **Campaigns** tab, and then **Data Sources**.
 
   ![Data Sources](img/androiddatasources.jpg)
 
@@ -62,7 +62,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
 ### Step 3. Configure the services and classes 
 
-1. Under the **application** tag, add the following services + receiver:
+1. Under the **application** tab, add the following services + receiver:
 
     ```java
     <service
@@ -146,7 +146,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
    - **FirebaseRegistrationIntentService**: registers for the pusher everytime the SDK gets initialized.
 
-   Enter your account number as account, and your package name as appID in order to register to the pusher, as shown in the example. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
+     Enter your account number as account, and your package name as appID in order to register to the pusher, as shown in the example. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
 
 
      ```java
@@ -173,101 +173,101 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
    - **NotificationUI** (or choose your own names for these classes): presents and handles the push to the UI.
 
-      ```java
-      public class NotificationUI {
+     ```java
+     public class NotificationUI {
 
-      private static final String TAG = NotificationUI.class.getSimpleName();
-      public static final int NOTIFICATION_ID = 143434567;
-      public static final String PUSH_NOTIFICATION = "push_notification";
+     private static final String TAG = NotificationUI.class.getSimpleName();
+     public static final int NOTIFICATION_ID = 143434567;
+     public static final String PUSH_NOTIFICATION = "push_notification";
 
-      public static void showNotification(Context ctx, PushMessage pushMessage) {
-          NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx).
-                  setContentIntent(getPendingIntent(ctx)).
-                  setContentTitle(pushMessage.getMessage()).
-                  setAutoCancel(true).
-                  setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_LIGHTS).
-                  setSmallIcon(R.mipmap.ic_launcher).
-                  setStyle(new NotificationCompat.InboxStyle()
+     public static void showNotification(Context ctx, PushMessage pushMessage) {
+         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx).
+                 setContentIntent(getPendingIntent(ctx)).
+                 setContentTitle(pushMessage.getMessage()).
+                 setAutoCancel(true).
+                 setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_LIGHTS).
+                 setSmallIcon(R.mipmap.ic_launcher).
+                 setStyle(new NotificationCompat.InboxStyle()
 
-                          .addLine(pushMessage.getFrom())
-                          .addLine(pushMessage.getBrandId())
-                          .addLine(pushMessage.getConversationId())
-                          .addLine(pushMessage.getBackendService())
-                          .addLine(pushMessage.getCollapseKey())
-                          .addLine("Unread messages : " + LivePerson.getNumUnreadMessages(pushMessage.getBrandId()))
+                         .addLine(pushMessage.getFrom())
+                         .addLine(pushMessage.getBrandId())
+                         .addLine(pushMessage.getConversationId())
+                         .addLine(pushMessage.getBackendService())
+                         .addLine(pushMessage.getCollapseKey())
+                         .addLine("Unread messages : " + LivePerson.getNumUnreadMessages(pushMessage.getBrandId()))
 
-                  );
+                 );
 
-          if (Build.VERSION.SDK_INT >= 21) {
-              builder = builder.
-                      setCategory(Notification.CATEGORY_MESSAGE).
-                      setPriority(Notification.PRIORITY_HIGH);
-          }
-          getNotificationManager(ctx).notify(NOTIFICATION_ID, builder.build());
-      }
-      public static void hideNotification(Context ctx){
-          getNotificationManager(ctx).cancel(NOTIFICATION_ID);
-      }
-      private static NotificationManager getNotificationManager(Context ctx) {
-          return (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
-      }
-      private static PendingIntent getPendingIntent(Context ctx) {
-          Intent showIntent = new Intent(ctx, MainActivity.class);
-          showIntent.putExtra(PUSH_NOTIFICATION, true);
-          return PendingIntent.getActivity(ctx, 0, showIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-      }
+         if (Build.VERSION.SDK_INT >= 21) {
+             builder = builder.
+                     setCategory(Notification.CATEGORY_MESSAGE).
+                     setPriority(Notification.PRIORITY_HIGH);
+         }
+         getNotificationManager(ctx).notify(NOTIFICATION_ID, builder.build());
+     }
+     public static void hideNotification(Context ctx){
+         getNotificationManager(ctx).cancel(NOTIFICATION_ID);
+     }
+     private static NotificationManager getNotificationManager(Context ctx) {
+         return (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
+     }
+     private static PendingIntent getPendingIntent(Context ctx) {
+         Intent showIntent = new Intent(ctx, MainActivity.class);
+         showIntent.putExtra(PUSH_NOTIFICATION, true);
+         return PendingIntent.getActivity(ctx, 0, showIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+     }
 
-      /************************ Example of Icon Badge - For Samsung *******************************/
-      public static void setBadge(Context context, int count) {
+     /************************ Example of Icon Badge - For Samsung *******************************/
+     public static void setBadge(Context context, int count) {
 
-              SharedPreferences.Editor editor = context.getSharedPreferences("liveperson", MODE_PRIVATE).edit();
-              SharedPreferences prefs = context.getSharedPreferences("liveperson", MODE_PRIVATE);
+             SharedPreferences.Editor editor = context.getSharedPreferences("liveperson", MODE_PRIVATE).edit();
+             SharedPreferences prefs = context.getSharedPreferences("liveperson", MODE_PRIVATE);
 
-          int current = prefs.getInt("count", 0);
-          if (current == 0 || count == 1)
-              current += count;
-          else
-              current = count;
-          editor.putInt("count", current);
-          editor.apply();
+         int current = prefs.getInt("count", 0);
+         if (current == 0 || count == 1)
+             current += count;
+         else
+             current = count;
+         editor.putInt("count", current);
+         editor.apply();
 
-          String launcherClassName = getLauncherClassName(context);
-          if (launcherClassName == null) {
-              return;
-          }
-          Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
-          intent.putExtra("badge_count", current);
-          intent.putExtra("badge_count_package_name", context.getPackageName());
-          intent.putExtra("badge_count_class_name", launcherClassName);
-          context.sendBroadcast(intent);
-      }
-      public static String getLauncherClassName(Context context) {
+         String launcherClassName = getLauncherClassName(context);
+         if (launcherClassName == null) {
+             return;
+         }
+         Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
+         intent.putExtra("badge_count", current);
+         intent.putExtra("badge_count_package_name", context.getPackageName());
+         intent.putExtra("badge_count_class_name", launcherClassName);
+         context.sendBroadcast(intent);
+     }
+     public static String getLauncherClassName(Context context) {
 
-          PackageManager pm = context.getPackageManager();
+         PackageManager pm = context.getPackageManager();
 
-          Intent intent = new Intent(Intent.ACTION_MAIN);
-          intent.addCategory(Intent.CATEGORY_LAUNCHER);
+         Intent intent = new Intent(Intent.ACTION_MAIN);
+         intent.addCategory(Intent.CATEGORY_LAUNCHER);
 
-          List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent, 0);
-          for (ResolveInfo resolveInfo : resolveInfos) {
-              String pkgName = resolveInfo.activityInfo.applicationInfo.packageName;
-              if (pkgName.equalsIgnoreCase(context.getPackageName())) {
-                  return resolveInfo.activityInfo.name;
-              }
-          }
-          return null;
-      }
-          /* Listen to changes in unread messages counter and updating icon badge*/
-      public static class BadgeBroadcastReceiver extends BroadcastReceiver{
-          public BadgeBroadcastReceiver(){}
-          @Override
-          public void onReceive(Context context, Intent intent) {
-              int unreadCounter = intent.getIntExtra(LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA, 0);
-              NotificationUI.setBadge(context, unreadCounter);
-          }
-      }
-      }
-      ```
+         List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent, 0);
+         for (ResolveInfo resolveInfo : resolveInfos) {
+             String pkgName = resolveInfo.activityInfo.applicationInfo.packageName;
+             if (pkgName.equalsIgnoreCase(context.getPackageName())) {
+                 return resolveInfo.activityInfo.name;
+             }
+         }
+         return null;
+     }
+         /* Listen to changes in unread messages counter and updating icon badge*/
+     public static class BadgeBroadcastReceiver extends BroadcastReceiver{
+         public BadgeBroadcastReceiver(){}
+         @Override
+         public void onReceive(Context context, Intent intent) {
+             int unreadCounter = intent.getIntExtra(LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA, 0);
+             NotificationUI.setBadge(context, unreadCounter);
+         }
+     }
+     }
+     ```
 
 3. Add the following permission to your app’s AndroidManifest.xml file:
 

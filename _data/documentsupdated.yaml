@@ -683,6 +683,7 @@
       - subpagename: User Data
       - subpagename: Logs and Info
       - subpagename: App Extensions
+      - subpagename: Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -690,7 +691,6 @@
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
     - pagename: Authentication
-    - pagename: Notifications
     - pagename: Customizing Toast Notifications
     - pagename: Customization and Branding
       subpages:
@@ -726,7 +726,6 @@
     - pagename: Appendix
       subpages:
       - subpagename: Security
-      - subpagename: OS Certificate Creation
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
