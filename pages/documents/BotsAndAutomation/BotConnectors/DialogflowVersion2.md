@@ -17,63 +17,7 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
-
-The following information should be provided to LivePerson.
-
-<table>
-  <thead>
-  <tr>
-    <th>Item</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>AccountID</td>
-    <td>LiveEngage Account ID</td>
-  </tr>
-  <tr>
-    <td>Username</td>
-    <td>LiveEngage BOT Username</td>
-  </tr>
-  <tr>
-    <td>Type</td>
-    <td>Using "Chat" or “Messaging”</td>
-  </tr>
-  <tr>
-    <td>vendor</td>
-    <td>Name of the AI engine. “Dialogflow v2”</td>
-  </tr>
-  <tr>
-    <td>BotAuth</td>
-    <td><em>Authentication info for Dialogflow v2:</em><br>
-1. private_key<br>
-2. client_email<br>
-3. project_id</td>
-  </tr>
-  <tr>
-    <td>operatingHours
-(messaging only)</td>
-    <td>On/Off<br>
-Start time<br>
-End time</td>
-  </tr>
-  <tr>
-    <td>offHoursMessage
-(messaging only)</td>
-    <td>message to display to customers when it is off hours</td>
-  </tr>
-  <tr>
-    <td>transferSkill</td>
-    <td>Default transfer skill name</td>
-  </tr>
-  <tr>
-    <td>transferMessage</td>
-    <td>Default transfer message</td>
-  </tr>
-  </tbody>
-</table>
+The following DialogflowV2 information should be provided to LivePerson.
 
 **NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation.
 Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*.
@@ -100,13 +44,69 @@ The expected output of a service account setup is a JSON file, example below:
 Figure 1.1
 
 
-The Bot-platform connector uses the below fields from the JSON content above.
-
-* Client Email
-
-* Private Key
-
-* Project ID
+<table>
+  <thead>
+  <tr>
+    <th>Item</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Language code</td>
+    <td>Language code for Dialogflow</td>
+    <td>en-US</td>
+  </tr>
+  <tr>
+    <td>Project ID</td>
+    <td>Dialogflow project id</td>
+    <td>bxx-xxxxxxx-xxx-dialogflow-v2</td>
+  </tr>
+  <tr>
+    <td>User email adress</td>
+    <td>Email adress of the Google Service account</td>
+    <td>dialogflow-xxxxxx@bxx-xxxxxxx-xxx-dialogflow-v2.iam.gserviceaccount.com</td>
+  </tr>
+  <tr>
+    <td>User private key</td>
+    <td>Private key of the IAM Account, please keep the formatting as provided by Google</td>
+    <td>-----BEGIN PRIVATE KEY-----
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        WQpmxLe3h4XeslUI7Eowz2sypu72Q9+j1xOEtc9asl37wLac/zo0xy7wNxnDau+x
+        rOOTX/VAniuByeZ98mIRZQBxz6qInJ4el8PFT7eJbC0+IMfiljqrMDqy/N4CR2gE
+        qqCVtY4kEWGr6a5IA/IBFENFPlADbY/TRBbInvakA1iqWj5yCOslGo7SmwleuJ6U
+        kUbjdmBI937k0AFWrbKAjNXLuF174Qx7B7NQm9G6iud+nGu0XwH2g2FPEQkvA8YL
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        VZ10hvsFAgMBAAECggEAOEnJpSNijvHCbV1GIBInxpqNiMCENf+ZDMeQqs9Tbdmh
+        CxQrS/pls2bkn6s/VNBNfY7GU9Sn7qgEzUycvu3SpID95vfQ+T4hrk5hLpKijQr9
+        Wv8aM8eqy0/I1ECn6Lb98WUaUfQVj7YctawoNdTjhxij0xCxY1hmVVQ4CdTf0av6
+        irukA5ySYPR3pahSMYwfnCgnRMLtLFX2NqvMFbUvwDpYJGE6h9k+Pv74Uyw3heEN
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        K3ASHyQ9v77+F1KaqR/wog3LUzSJtD0qLRVt0pmyKQKBgQDkvS8a29/dJvlQL+AY
+        NekZpgZ+zNXTPqiXRXyfvDBBJO4eFd4XQlZPCT/Iw5gT9mWzOL9WKxs0ImRrRojZ
+        asOn+BlXfeVZWEpmpvfXYnKwgpm2+sqOjyRhGEovC8yLA8PaDWKgtwPpb+MCzAF3
+        zTMT8UdCE4IFmusDxGIypQjG1wKBgQC4EQMru2806Jadd037TLFY7FoUB5JJPVA1
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        ZSnKi8tBU1u8+JY/sWniyyahFNDMDiKkmEd6M/DsM2N/RQZeqXi5R9HSC3INn175
+        bDP7tpg9gwKBgHtby9ugWMrcCfjE2QY1jNDYSQh5T5ftYt6yCtPameuIDyMKiAvj
+        KsjVJCER2yJo79AH+qht9u3W3nE8SPF4MqyTkJcuvlHA298gjOkLnu6ygFO+TR80
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        lStr0CKK42MErzQxFzO8VMg982DG/mW+TpaaMRP7yxXVLxUh3/d9aoq+fbzVnudr
+        Y13nJnR6+RPj8Qv2zP39ClwCfGx8rkw9SOMl8pL11kD4Zc1VHzzkDytFmOge2cDO
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        IFRnWV9jafiw2t92CY9mRzqF5puk8iRtMiCRjy3u4L+RHdvYkZPqO9CZUPvq9t0q
+        q+J780stgv56BE7TAuIjRPkN+GPcqnm69qQvJdzSPc5dw5ZmM8b5TtIvlipzjU89
+        BSioVh/nHPX2QX2MKSbue+k=
+        -----END PRIVATE KEY-----</td>
+  </tr>
+  <tr>
+    <td>Google Cloud scopes</td>
+    <td>Authentication scopes of the used IAM role</td>
+    <td>https://www.googleapis.com/auth/cloud-platform</td>
+  </tr>
+  </tbody>
+</table>
 
 **NOTE**: The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
 
@@ -204,8 +204,6 @@ Fig 3.1
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
-
-**NOTE**: This implementation branches from the V1 implementation and contains substantial changes.
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
 

@@ -18,9 +18,7 @@ Google has deprecated Dialogflow **Version 1** and customers should move to Vers
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
-
-The following information should be provided to LivePerson.
+The following Dialogflow information should be provided to LivePerson.
 
 <table>
   <thead>
@@ -31,45 +29,12 @@ The following information should be provided to LivePerson.
   </thead>
   <tbody>
   <tr>
-    <td>AccountID</td>
-    <td>LiveEngage Account ID</td>
+    <td>Client access token</td>
+    <td>Access token for the Dialogflow API</td>
   </tr>
   <tr>
-    <td>Username</td>
-    <td>LiveEngage BOT Username</td>
-  </tr>
-  <tr>
-    <td>Type</td>
-    <td>Using "Chat" or “Messaging”</td>
-  </tr>
-  <tr>
-    <td>vendor</td>
-    <td>Name of the AI engine. “Dialogflow”</td>
-  </tr>
-  <tr>
-    <td>BotAuth</td>
-    <td>Authentication info for Dialogflow:<br>
-CLIENT_ACCESS_TOKEN<br>
-    EG: “a1b2c3d4e5f6g8h9j0”</td>
-  </tr>
-  <tr>
-    <td>operatingHours</td>
-    <td>On/Off<br>
-Start time<br>
-End time</td>
-  </tr>
-  <tr>
-    <td>offHoursMessage</td>
-    <td>message to display to customers when it is off hours</td>
-  </tr>
-  <tr>
-    <td>transferSkill</td>
-    <td>Default transfer skill</td>
-  </tr>
-
-  <tr>
-    <td>transferMessage</td>
-    <td>Default transfer message</td>
+    <td>Dialogflow query url</td>
+    <td>Query url for sending Dielogflow querys</td>
   </tr>
   </tbody>
 </table>
@@ -81,7 +46,6 @@ Few things to note before going into *actions* and *skills* is the naming conven
 
 * For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.
 
-* We use the character ‘.’ as a delimiter in the ‘action’ object. We recommend that you do **NOT** use  ‘.’ in a skill name in LiveEngage. Refer page 11, section: *Transfer/Escalations* for an example.
 
 ### Limitations
 
@@ -228,28 +192,22 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using the built in "Actions and Parameters" section of the Dialogflow console.
 
-Multiple scenarios for transfer/escalations exist triggered by the action object or the absence of a response. 
+Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
 
-1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer.bot-escalation)
+1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
 
-2. If the Bot does not have an appropriate answer, it will recognise this as a scenario for a transfer, depending on the connector configuration or the decision making capacity of the bot, the bot  will transfer to a particular skill or default skill  (if agents are available). (Eg, action: transfer.BOT-input-unknown)
+2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
+Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.
 
-3. If there is a internal error and the bot service cannot be reached the connector will transfer to a default skill .
+3. If there is a internal error or the bot service cannot be reached the connector will transfer to a default skill set up during configuration.
 
 Transfers and escalations rely on the *action* item in the response object.
 
-1. Action:      `transfer.<skill-name>`
-    (e.g. transfer.bot-escalation where ‘bot-escalation’ is the skill name)
+Action: **TRANSFER (Case sensitive)**
 
-2. Action:	     Input.unknown
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
 
-The connecter uses the ‘.’ as a delimiter to separate the transfer action and skill to transfer to.
-
-If my skill is named - **BOT-default-escalation**
-
-Then my action will be - **transfer.BOT-default-escalation**
-
-<img style="width:600px" src="img/dialogflow/image_9.png">
+<img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
 fig.4.1
 
@@ -263,9 +221,11 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "result": {
         "source": "agent",
         "resolvedQuery": "transfer",
-        "action": "transfer.BOT-default-escalation",  // Transfer Action 
+        "action": "TRANSFER", // Mandatory
         "actionIncomplete": false,
-        "parameters": {},
+        "parameters": {
+          "skill": "bot-escalation",
+         },
         "contexts": [],
         "metadata": {
             "intentId": "32f76a38-8ec3-4db5-8ab5-6d3bcba88540",
@@ -342,9 +302,9 @@ In the bot’s flow, there will be times when it is appropriate to end the conve
 
 The method for closing a conversation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
 
-The field needs to be set to **closeConversation** to instruct the connector to to close the conversation.
+The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
 
-<img style="width:600px" src="img/dialogflow/image_11.png">
+<img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 fig.6.1
 
@@ -352,13 +312,13 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 
 ```json
 {
-    "id": "c55c8b3f-70c7-4ab3-857f-881c6c7ece82"
+    "id": "c55c8b3f-70c7-4ab3-857f-881c6c7ece82",
     "timestamp": "2018-06-26T00:19:02.249Z",
     "lang": "en",
     "result": {
         "source": "agent",
         "resolvedQuery": "close conversation",
-        "action": "closeConversation",  // Transfer Action 
+        "action": "CLOSE_CONVERSATION",  // Close action
         "actionIncomplete": false,
         "parameters": {},
         "contexts": [],
