@@ -28,9 +28,9 @@ LP Messaging SDK 3.0 uses Gradle 3.0.1.
 
 - gradle-wrapper.properties
 
-    ```
+    ```gradle
     # change to gradle wrapper 4.1
-    distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
+    distributionUrl=https://services.gradle.org/distributions/gradle-4.1-all.zip
     ```
 
 * project-level build.gradle

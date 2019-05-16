@@ -7,7 +7,7 @@ permalink: before-you-get-started-let-s-get-started.html
 indicator: both
 --- 
 
-<br>
+
 Most user actions within LiveEngage can be performed programmatically using the REST API. Since we use a REST model, we recommend you be fluent in:
 
 - JavaScript, and its iterations like Node.JS, as well as JSON. Although most JSON payloads tend to be simple, there are exceptions to this rule, like with Structured Content.
