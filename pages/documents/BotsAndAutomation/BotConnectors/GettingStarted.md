@@ -47,16 +47,25 @@ There are two steps to setting up a new bot connector.
 
 ### Limitations
 
-Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the AgentManager Profile to create new Bots or start Bots.
-However they are still able to stop, edit and delete existing Bots.
-If you want to enable creating and starting Bots for Agent and Agent Manager, you need to create a new Profile, which derives from Campaign Manager or Admin and enable the
-needed permissions only. Afterwards you need to assign the new Profile to the Agent/Agent Manager who should be able to start/create Bots.
+#### Creating and starting Bots
+
+Due to limitations from the LiveEngages permission system it is not possible for an operator with the Agent or the AgentManager 
+Profile to create new Bots or start Bots. However they are still able to stop, edit and delete existing Bots.
+
+If you want to enable creating and starting Bots for Agent and Agent Manager, you need to create a new Profile, which 
+derives from Campaign Manager or Admin and enable theneeded permissions only. Afterwards you need to assign the new Profile 
+to the Agent/Agent Manager who should be able to start/create Bots.
 
 <img style="width:600px" src="img/botconnectordashboard/campaign_manager_bot_permissions.png">
 Minimal set of permissions for creating and starting Bots for Campaign Manager Profile
 
 <img style="width:600px" src="img/botconnectordashboard/administrator_bot_permissions.png">
 Minimal set of permissions for creating and starting Bots for Administrator Profile
+
+#### Intent and actions evaluation
+
+Please note that you AI setup should always return an intent or an action as a response. If you return an intent without 
+actions or messages, or return no intent at all, the bot will consider this an error and escalate to the default escalation skill.
 
 ### Create Bot User in LiveEngage
 
