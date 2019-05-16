@@ -8,9 +8,6 @@ permalink: bot-connectors-amazon-lex.html
 indicator:
 ---
 
-{: .important}
-This bot connector is not yet available.
-
 ### Overview
 
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
@@ -22,9 +19,9 @@ At this time, Lex response cards & audio messages are not supported.
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first.
+See the [Getting Started](bot-connectors-getting-started.html) guide before using this document.
 
-The following Amazon Lex information should be provided to LivePerson.
+The following Amazon Lex information should be provided to LivePerson:
 
 **NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
 Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
@@ -80,7 +77,7 @@ A *service account* is a **prerequisite** for setting up the above config. Docum
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
-A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Lex and an intent determined. 
+A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Lex and an intent determined.
 
 The below documents cover where to configure the initial message on a given platform.
 
@@ -136,7 +133,7 @@ LivePerson Messaging uses 4 different types of priorities:
 “PRIORITIZED”
 “CUSTOM”
 
-Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 ```json
 {
@@ -164,7 +161,7 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using  "Custom Markup" in the Response section of a Lex intent.
 
-Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
+Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
 1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
 
@@ -286,4 +283,3 @@ Figure 6.1 Lex Example Close Conversation Payload
 <img style="width:500px" src="img/lex/image_11.png">
 
 Fig.6.2 - Example in Lex console
-
