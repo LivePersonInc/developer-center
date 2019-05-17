@@ -538,8 +538,8 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Configure **push notifications** and **structured content**. Go to [Notifications](mobile-app-messaging-sdk-for-ios-notifications.html) to finish configuring notifications.
+- Configure **push notifications** so consumers immediately receive notifications as soon as a reply or notice is available for them. Go to [Push Notifications](mobile-app-messaging-sdk-for-ios-configuration-push-notifications.html) to finish configuring notifications.
 
-- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. For more details, see [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html).
+- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. For more details, see [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html). At this time, photo sharing is one-way only (from consumer to agent).
 
 - Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For more details on configuring monitoring, see [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  

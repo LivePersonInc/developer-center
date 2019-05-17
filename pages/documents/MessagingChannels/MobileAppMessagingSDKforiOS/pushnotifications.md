@@ -1,5 +1,5 @@
 ---
-pagename: Notifications
+pagename: Push Notifications
 redirect_from:
   - consumer-experience-ios-sdk-pushnotifications.html
 Keywords:
@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: Configuration
 
 order: 15
-permalink: mobile-app-messaging-sdk-for-ios-configuration-notifications.html
+permalink: mobile-app-messaging-sdk-for-ios-configuration-push-notifications.html
 
 indicator: messaging
 ---
@@ -78,7 +78,7 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
 
 ### Step 2. Create a Certificate Signing Request
 
-In this step, you create a Certificate Signing Request (CSR) file that contains a public/private key pair. With this file, you create a key file with a password (Certificates.p12) file and a certificate (.cer) file using a pem format.
+In this step, you create a Certificate Signing Request (CSR) file that contains a public/private key pair. With this file, you create a key file with a password and a certificate file using a pem format.
 
 1. In the Applications folder, launch **Keychain Access**.
 
@@ -104,7 +104,7 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
 
 3. Click **Download** to download the apps_development.cer file and then click **Done**. 
 
-   You use this .cer file to create the dev-cert.pem file.
+   You use this apps_development.cer file to create the dev-cert.pem file.
 
 ### Step 4. Create the certificate and key .pem files 
 
@@ -129,15 +129,16 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
     openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
     ```
 
-7. Enter a passphrase for the keyWithPassword.pem file, which you for the the RSA .pem key.
+7. Enter a passphrase for the keyWithPassword.pem file, which you use for the the RSA hostkey.pem key.
 
-8. Create the RSA .pem key and enter the passphrase used in the previous step.
+8. Create the RSA hostkey.pem key and enter the passphrase created in the previous step.
 
     ```bash
     openssl rsa -in keyWithPassword.pem -out hostkey.pem
     ```
 
 ### Step 5. Configure push notifications in LiveEngage
+In this step, you add the dev-cert.pem and hostkey.pem to LiveEngage. 
 
 1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
@@ -163,8 +164,3 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
    **Tip:** You have a **50** character limit for your Bundle ID.
 
 7. Click **Close**.
-
-### Next steps
-
-Make sure to test the push notifications.
-

@@ -683,7 +683,7 @@
       - subpagename: User Data
       - subpagename: Logs and Info
       - subpagename: App Extensions
-      - subpagename: Notifications
+      - subpagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API

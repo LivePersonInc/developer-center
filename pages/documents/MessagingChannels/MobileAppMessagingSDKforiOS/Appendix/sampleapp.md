@@ -162,7 +162,9 @@ Before you enable photo sharing, there's a few important things to know about th
 
 ### Step 4: Configure App for Push Notifications
 
-**Note**: In order for the push notification to work, you will need a **Physical Device**, and two .pem files for **LiveEngage**:
+In order for the push notification to work, you will need a **Physical Device**, and two .pem files for **LiveEngage**:
+
+
 
 * **First**, a **certificate file** stored using a **pem format**.
 
