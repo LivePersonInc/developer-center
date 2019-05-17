@@ -662,7 +662,7 @@
       - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
-    - pagename: Appendix
+    - pagename: Resources
       subpages:
       - subpagename: Security
       - subpagename: Authentication
@@ -723,7 +723,7 @@
       - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
-    - pagename: Appendix
+    - pagename: Resources
       subpages:
       - subpagename: Security
       - subpagename: Open Source List

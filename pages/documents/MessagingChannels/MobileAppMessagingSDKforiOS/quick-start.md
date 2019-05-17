@@ -538,12 +538,8 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Turn on **push notifications** and **structured content**. In your Xcode project, under **Capabilities**, flip the toggle on for the following:
-  - **Push**: Notifies the user when a new message from the remote user is received.
-  - **Maps**: Shows location in the map.
+- Configure **push notifications** and **structured content**. Go to [Notifications](mobile-app-messaging-sdk-for-ios-notifications.html) to finish configuring notifications.
 
-    Go to [Notifications](mobile-app-messaging-sdk-for-ios-notifications.html) to finish configuring notifications.
+- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. For more details, see [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html).
 
-- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. Go to [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) to configure photo sharing.
-
-- Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For details on configuring monitoring, refer to [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
+- Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For more details on configuring monitoring, see [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  

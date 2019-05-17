@@ -16,27 +16,30 @@ indicator: messaging
 
 Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
+For push notifications to work, you must have a physical device and two .pem files for LiveEngage. Here, you will set up push notifications in your Xcode project, create your app certificate and key files, and create the required .pem files to implement push notifications.  
+
 ### Prerequisites
 
 Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-start.html) and you are now ready to implement and enable features.
 
-### Step 1. Turn on push notifications
+### Step 1. Set up push notifications in your project
 
-In your Xcode project, under **Capabilities**, flip the toggle on for the following:
+1. In your Xcode project, under **Capabilities**, flip the toggle on for the following:
 
-- **Push:** Notifies the user when a new message from the remote user is received.
+   - **Push:** Notifies the user when a new message from the remote user is received.
 
-- **Maps:** Shows the location on the map.
+   - **Maps:** Shows the location on the map.
 
-### Step 2. Set up in-app push notifications 
+   - **Background Modes + Remote notifications:** Minimizes the amount of time that elapses between when a user sees a push notification and when your app is able to display the content.
 
-1. Pass the user info of a remote push notification to the SDK:
+
+2. Pass the user info of a remote push notification to the SDK:
 
    ```swift
    public func handlePush(userInfo: [NSObject : AnyObject])
    ```
 
-2. Register the device token on LPMesssagingSDK instance:
+3. Register the device token on LPMesssagingSDK instance:
 
    ```swift
    func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)
@@ -44,25 +47,25 @@ In your Xcode project, under **Capabilities**, flip the toggle on for the follow
 
    The SDK receives the device token from the registerPushNotifications but the actual registration occurs only after calling showConversation.
 
-3. Add custom behavior if LivePerson Push Notification was touched:
+4. Add custom behavior if LivePerson Push Notification was touched:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(didReceivePushNotification notification: LPNotification)
    ```
 
-4. Hide or show the In-App Push Notification:
+5. Hide or show the In-App Push Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool
    ```
 
-5. Override LPMessagingSDK - In-App Push Notification:
+6. Override LPMessagingSDK - In-App Push Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView
    ```
 
-6. Add custom tap behavior to LPMessagingSDK - In-App Notification:
+7. Add custom tap behavior to LPMessagingSDK - In-App Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(notificationTapped notification: LPNotification)
@@ -73,9 +76,9 @@ In your Xcode project, under **Capabilities**, flip the toggle on for the follow
    {:.important}
    The proprietary SDK notification is only for display purposes, interacting with it launches the app, but does not navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
-### Step 3. Create your app certificate and key file
+### Step 2. Create a Certificate Signing Request
 
-In this step, you create a Certificate Signing Request (CSR) file that contains a public/private key pair. With this file, you create a key file without a password (.p12) file and a certificate (.crt) file using a pem format.
+In this step, you create a Certificate Signing Request (CSR) file that contains a public/private key pair. With this file, you create a key file with a password (Certificates.p12) file and a certificate (.cer) file using a pem format.
 
 1. In the Applications folder, launch **Keychain Access**.
 
@@ -93,50 +96,48 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
 
 5. Click **Save**. 
 
-6. Go to your Apple Developer Portal, under Push Notification, select **Apple Push Notifications service SSL Certificates** and then click **Create Certificate** for either Development or Production.
+### Step 3. Create the SSL certificate
 
-7. Under Upload CSR file, click **Choose File**, select the CSR file you created earlier, and then click **Generate**.
+1. Go to your Apple Developer Portal, under Push Notification, select **Apple Push Notifications service SSL Certificates** and then click **Create Certificate** for either Development or Production.
 
-8. Click **Download** to download a .cer file and then click **Done**. 
+2. Under Upload CSR file, click **Choose File**, select the CSR file you created earlier, and then click **Generate**.
 
-   You use this file to create the .pem file certificate.
+3. Click **Download** to download the apps_development.cer file and then click **Done**. 
 
-9. Locate the downloaded **.cer** file and double-click it to install in Keychain Access.
+   You use this .cer file to create the dev-cert.pem file.
 
-10. In Keychain Access, right-click on your new push certificate and select **Export**.
+### Step 4. Create the certificate and key .pem files 
 
-11. Enter a certificate name, for example **key**.
+1. Locate the downloaded **apps_development.cer** file and double-click it to install it in Keychain Access.
 
-12. Ensure the file type selected is **Personal Information Exchange (.p12)** and then click **Save**.
+2. In Keychain Access, right-click on your new push certificate and select **Export**.
 
-13. (Optional) Enter a password when prompted.  
+3. Save the certificate as **Certificates.p12**.
 
-    You use the cert.pem and key.pem files when you configure push notifications in LiveEngage.
+4. (Optional) Enter a password when prompted.  
 
-14. Open a terminal and navigate to the folder where you want to save the file.
-
-15. Run the following command to **create the cert.pem file**:
+5. Open a terminal and navigate to the folder where you saved the **apps_developement.cer** file and convert it to **dev-cert.pem**:
 
     ```bash
     openssl x509 -in aps_development.cer -inform der -out dev-cert.pem
     ```
 
-16. Run the following commands to **convert the private key.p12 file** into a .pem file:
+6. Convert the private keys .p12 file to **keyWithPassword.pem**:
 
     ```bash
     cp Certificates.p12 key.p12
     openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
     ```
 
-16. Enter a passphrase for the key pem file and then enter any password the RSA .pem key.
+7. Enter a passphrase for the keyWithPassword.pem file, which you for the the RSA .pem key.
+
+8. Create the RSA .pem key and enter the passphrase used in the previous step.
 
     ```bash
     openssl rsa -in keyWithPassword.pem -out hostkey.pem
     ```
 
-### Step 4. Configure push notifications in LiveEngage
-
-Before you begin, make sure you have configured your LiveEngage account and connected it to the SDK.
+### Step 5. Configure push notifications in LiveEngage
 
 1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
@@ -156,9 +157,14 @@ Before you begin, make sure you have configured your LiveEngage account and conn
 
    - **Key file:** hostkey.pem
 
+   {:.notice}
    If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
 
-   **Tip:** You have a 50 character limit for your Bundle ID.
+   **Tip:** You have a **50** character limit for your Bundle ID.
 
 7. Click **Close**.
+
+### Next steps
+
+Make sure to test the push notifications.
 
