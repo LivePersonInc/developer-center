@@ -8,9 +8,6 @@ permalink: bot-connectors-amazon-lex.html
 indicator:
 ---
 
-{: .important}
-This bot connector is not yet available.
-
 ### Overview
 
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
@@ -22,94 +19,65 @@ At this time, Lex response cards & audio messages are not supported.
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first.
+See the [Getting Started](bot-connectors-getting-started.html) guide before using this document.
 
-Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
+The following Amazon Lex information should be provided to LivePerson:
 
-The following information should be provided to LivePerson.
+**NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
+Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
+A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
+
 
 <table>
   <thead>
     <tr>
     <th>Item</th>
     <th>Description</th>
+    <th>Example</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>AccountID</td>
-    <td>LiveEngage Account ID</td>
+    <td>API Version</td>
+    <td>Lex API version</td>
+    <td>2016-11-28</td>
   </tr>
   <tr>
-    <td>Username</td>
-    <td>LiveEngage BOT Username</td>
+    <td>AWS Region</td>
+    <td>AWS region of the lex bot</td>
+    <td>us-east-1</td>
   </tr>
   <tr>
-    <td>Type</td>
-    <td>Using "Chat" or “Messaging”</td>
+    <td>IAM Access Key</td>
+    <td>Access Key ID of the IAM role</td>
+    <td>AKIAXXXXXXXXXXXBWN3</td>
   </tr>
   <tr>
-    <td>vendor</td>
-    <td>Name of the AI engine. “Lex”</td>
+    <td>IAM Secret Key</td>
+    <td>IAM secret key of the IAM role</td>
+    <td>lwRQJUxxxxxxxxxxxxRQFpoxxxxxxxdE6JR</td>
   </tr>
   <tr>
-    <td>BotAuth</td>
-    <td><em>Authentication info for Lex:</em><br>
-API Version<br>
-AWS Region<br>
-Access Key ID<br>
-Secret Access Key<br>
-Bot Alias<br>
-Bot Name</td>
+    <td>Bot alias</td>
+    <td>Bots alias of the IAM role</td>
+    <td>botConnectors</td>
   </tr>
   <tr>
-    <td>operatingHours
-(messaging only)</td>
-    <td>On/Off<br>
-Start time<br>
-End time</td>
+    <td>Bot name</td>
+    <td>The bots name in the IAM role</td>
+    <td>botConnectors</td>
   </tr>
-  <tr>
-    <td>offHoursMessage
-(messaging only)</td>
-    <td>message to display to customers when it is off hours</td>
-  </tr>
-  <tr>
-    <td>transferSkill</td>
-    <td>Default transfer skill name</td>
-  </tr>
-  <tr>
-    <td>transferMessage</td>
-    <td>Default transfer message</td>
-  </tr>
-  </tbody>
+ </tbody>
 </table>
 
-**NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
-Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
-A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
 
-The Bot-platform connector uses the below fields from the AWS Environment.
-
-* API Version
-
-* AWS Region
-
-* Access Key ID
-
-* Secret Access Key
-
-* Bot Alias
-
-* Bot Name
-
-<img style="width:600px" src="img/lex/image_5.png">
+<img style="width:600px" src="img/lex/lex-settings.png">
 
 ### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
-A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Lex and an intent determined. 
+A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Lex and an intent determined.
 
 The below documents cover where to configure the initial message on a given platform.
 
@@ -165,7 +133,7 @@ LivePerson Messaging uses 4 different types of priorities:
 “PRIORITIZED”
 “CUSTOM”
 
-Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 ```json
 {
@@ -173,8 +141,8 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
     "params": {
         "action": "CHANGE_TTR",
         "data": {
-            "ttrType": "URGENT"
-            "value": 500,
+            "ttrType": "URGENT",
+            "value": 500
         }
     }
 }
@@ -193,7 +161,7 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 This is achieved using  "Custom Markup" in the Response section of a Lex intent.
 
-Multiple scenarios for transfer/escalations exist triggered by the transfer action object. 
+Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
 1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
 
@@ -210,8 +178,7 @@ Transfers and escalations rely on the *action* item in the response object.
     "params": {
         "action": "TRANSFER",
         "data": {
-            "skillName": "bot-transfer-out",
-            "skillId": "775459351"
+            "skill": "bot-transfer-out"
         }
     }
 }
@@ -316,4 +283,3 @@ Figure 6.1 Lex Example Close Conversation Payload
 <img style="width:500px" src="img/lex/image_11.png">
 
 Fig.6.2 - Example in Lex console
-

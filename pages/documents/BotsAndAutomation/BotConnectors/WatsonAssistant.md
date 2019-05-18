@@ -17,86 +17,87 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first.
 
-Outlined below is a sample bot config object that is used to log the bot into **LiveEngage** as well as pass through any info required for each bot vendor.
+The following Watson Assistant information should be provided to LivePerson:
 
-The following information should be provided to LivePerson.
-
+#### UserPass authentication
 <table>
   <thead>
   <tr>
     <th>Item</th>
     <th>Description</th>
+    <th>Example</th>
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td>AccountID</td>
-    <td>LiveEngage Account ID</td>
+    <td>Workspace URL</td>
+    <td>Watson Assistant Workspace URL</td>
+    <td>https://gateway.watsonplatform.net/conversation/api</td>
   </tr>
   <tr>
-    <td>Username</td>
-    <td>LiveEngage BOT Username</td>
+    <td>Workspace ID</td>
+    <td>Watson Assistant Workspace ID</td>
+    <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
   </tr>
   <tr>
-    <td>Password</td>
-    <td>LiveEngage App Key<br>
-LiveEngage App Secret<br>
-LiveEngage Token<br>
-LiveEngage Token Secret</td>
+    <td>Conversation Username</td>
+    <td>Username of the Watson Assistant conversation</td>
+    <td>de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751</td>
   </tr>
   <tr>
-    <td>Type</td>
-    <td>Using "Chat" or "Messaging"</td>
+    <td>Conversation Password</td>
+    <td>password for the Watson Assistant conversation which should be used for the bot</td>
+    <td>Dxxxxxxxxxx1</td>
   </tr>
   <tr>
-    <td>vendor</td>
-    <td>Name of the AI engine. "WatsonAssistant"</td>
-  </tr>
-  <tr>
-    <td>BotAuth</td>
-    <td><em>User/Pass</em><br>
-Authentication info for Watson, following is example:<br>
-WORKSPACE_URL: https://gateway.watsonplatform.net/conversation/api<br>
-WORKSPACE_ID: 8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74<br>
-CONVERSATION_USERNAME: de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751<br>
-CONVERSATION_PASSWORD: Dxxxxxxxxxx1<br>
-VERSION_DATE: 201X-xx-xx<br><br><br>
-
-<em>IAM</em><br>
-WORKSPACE_URL: https://gateway.watsonplatform.net/conversation/api<br>
-WORKSPACE_ID: 8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74<br>
-VERSION_DATE: 201X-xx-xx<br>
-API_KEY: xxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxxxxZG<br>
-TOKEN_ENDPOINT_URL: https://iam.bluemix.net/identity/token<br>
-DEFAULT_REFRESH_TIME: 300000<br>
-MAX_RETRIES: 0<br>
-AUTH_HEADER: Basic Yng6Yng=</td>
-  </tr>
-  <tr>
-    <td>operatingHours</td>
-    <td>On/Off<br>
-Start time<br>
-End time</td>
-  </tr>
-  <tr>
-    <td>offHoursMessage</td>
-    <td>message to display to customers when it is off hours</td>
-  </tr>
-  <tr>
-    <td>transferSkill</td>
-    <td>Default transfer skill</td>
-  </tr>
-  <tr>
-    <td>transferMessage</td>
-    <td>Default transfer message</td>
+    <td>Version Date</td>
+    <td>Version Date of the Watson API</td>
+    <td>201X-xx-xx<br><br><br></td>
   </tr>
   </tbody>
 </table>
 
+#### IAM authentication
+<table>
+  <thead>
+  <tr>
+    <th>Item</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Workspace URL</td>
+    <td>Watson Assistant Workspace URL</td>
+    <td>https://gateway.watsonplatform.net/conversation/api</td>
+  </tr>
+  <tr>
+    <td>Workspace ID</td>
+    <td>Watson Assistant Workspace ID</td>
+    <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
+  </tr>
+  <tr>
+    <td>API key</td>
+    <td>API key which will be used for the Bot's authentication in Watson</td>
+    <td>xxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxxxxZG</td>
+  </tr>
+  <tr>
+    <td>Token endpoint url</td>
+    <td>URL for creating/refreshing Watson Assistant tokens</td>
+    <td>Dxxxxxxxxxx1</td>
+  </tr>
+  <tr>
+    <td>Version Date</td>
+    <td>Version Date of the Watson API</td>
+    <td>201X-xx-xx<br><br><br></td>
+  </tr>
+  </tbody>
+</table>
 
 #### Naming Conventions
 
-One thing to note before going into *actions* and *skills* is the naming convention between each. 
+One thing to note before going into *actions* and *skills* is the naming convention between each.
 
 All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by **Watson** needs to be *CLOSE_CONVERSATION*. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
 
@@ -215,7 +216,7 @@ Figure 2.5 Structured Content Watson JSON Example (IAM)
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace. 
+Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 ```json
 {
@@ -264,7 +265,7 @@ In the *Then respond with:* JSON editor block, we see the following:
         "name" : "TRANSFER",
         "type" : "CLIENT",               
         "parameters" : {
-          "skill" : "BOT-TRANSFER-OUT"
+          "skill" : "BOT-TRANSFER-OUT" // case sensitive, should be exactly the same as in LiveEngage
         },
         "result_variable" : "none"
       }   

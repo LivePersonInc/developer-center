@@ -27,7 +27,7 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
 1. Copy the `LPABCSDK.framework` to your XCode project, make sure it is included in the **Embedded Binaries** section, under the **project settings/General** tab for the iMessageApp Target (and any other implementing target).
 
-2. In project settings, navigate to the Build Phases tab, and click the + button to paste the following:
+2. In project settings of host app target, navigate to the Build Phases tab, and click the + button to paste the following:
 
     `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/LPABCSDKStrippingScript.sh`
 
@@ -41,12 +41,14 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
 5. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
 
-6. In the iMessage app/extension's  `MessagesViewController` class,  please override the following two methods:
+6. In the iMessage app/extension's  `MessagesViewController` class,  please make sure to override the following two methods:
 
     - `override func didBecomeActive(with conversation: MSConversation)`	 
     - `override func didReceive(_ message: MSMessage, conversation: MSConversation)`
 
-    In the implementation of these methods, add the following code: `lpabcsdk.updateWithIncomingInteractiveMessage(with: conversation, message: message)`
+    In the implementation of these methods, add the following code: 
+    `lpabcsdk.update(with: conversation)`
+    `lpabcsdk.update(with: conversation, message: message)`
 
     Example:
 
@@ -58,11 +60,11 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
         var lpabcsdk = LPABCSDK.initializeSDK()
 
         override func didBecomeActive(with conversation: MSConversation) {
-            lpabcsdk.update(withIncomingInteractiveMessage: conversation)
+            lpabcsdk.update(with: conversation)
         }
 
         override func didReceive(_ message: MSMessage, conversation: MSConversation) {
-            lpabcsdk.update(withIncomingInteractiveMessage: conversation, message: message)
+            lpabcsdk.update(with: conversation, message: message)
         }
 
     }

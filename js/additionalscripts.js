@@ -479,8 +479,9 @@ function searchFunction() {
 //very similar to the search function above, just for the capabilities comparison table
 function capabilitiesSearch() {
 	var $title = $('.h1').text();
-	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
+	if ($title.indexOf('Rich Messaging Channel Capabilities') > -1) {
 		// Declare variables
+		console.log('run');
 		var input, filter, table, tr, categorytr, td, i;
 		input = document.getElementById("capabilitiesSearch");
 		table = document.getElementById("featurestable");

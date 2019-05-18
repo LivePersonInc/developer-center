@@ -18,7 +18,7 @@ The LiveEngage platform helps orchestrate the flow of messages back and forth be
 
 * Conversation Builder, a LivePerson product (in Beta), which allows customers to build and deploy bots directly within LiveEngage (Support for this channel is coming soon).
 
-* Enterprise customers can build and deploy bots using different frameworks and products and then enable them through LiveEngage. Some of these products include IBM Watson, Microsoft Bot framework, Google Dialog Flow, Amazon Lex or any other niche bot platforms customers want to use to build bots.
+* Enterprise customers can build and deploy bots using different frameworks and products and then enable them through LiveEngage. Some of these products include IBM Watson, Microsoft Bot framework, Google Dialogflow, Amazon Lex or any other niche bot platforms customers want to use to build bots.
 
 This guide helps you with steps required to deploy bots developed via such third party platforms on the LiveEngage platform. Deploying bots in LiveEngage enables all the messages to go through LiveEngage Hub, routing them to the bots based on the skills assigned to them.
 
@@ -28,7 +28,7 @@ This document covers the following different scenarios with regards to deploying
 
 1. IBM Watson (Watson Assistant)
 
-2. Google Dialog Flow 1.0 (support for more recent versions coming soon)
+2. Google Dialogflow 1.0 (support for more recent versions coming soon)
 
 4. Microsoft Bot Framework (LUIS)
 
@@ -133,13 +133,13 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 3.  Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service.
 
-4. Connect Google Dialog Flow Bot
+4. Connect Google Dialogflow Bot
 
-    1. Select Dialog Flow as AI provider
+    1. Select Dialogflow as AI provider
 
     2. Configure Client Access Tokens
 
-    3. Configure Google Dialog Flow URL
+    3. Configure Google Dialogflow URL
 
 ![image alt text](img/bot-guide-dialogflow0.png)
 
@@ -148,7 +148,7 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 ### Google Dialog V2.0 Flow
 
-The Google Dialog Flow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
+The Google Dialogflow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
 
 1. Create a User Account on LiveEngage and set the type as "Bot".  (Your account manager or CSM should be able to help with user account creation)
 
@@ -175,13 +175,13 @@ The Google Dialog Flow v2.0 connector will be available by mid December. Below a
 
 3. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service.
 
-4. Connect Google Dialog Flow Bot:
+4. Connect Google Dialogflow Bot:
 
-    1. Select Dialog Flow as AI provider
+    1. Select Dialogflow as AI provider
 
     2. Select V2 as Authentication Flow
 
-    3. Configure Google Dialog Flow URL
+    3. Configure Google Dialogflow URL
 
     4. Configure Client Email
 

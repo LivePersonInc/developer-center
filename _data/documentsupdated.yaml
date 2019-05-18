@@ -14,8 +14,8 @@
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
 
-- categoryname: Agent Experience & Bots
-  image: agent-experience
+- categoryname: Agent Experience
+  image: agent-experience-new
   documents:
   - documentname: Add Agent Widgets
     pages:
@@ -108,6 +108,11 @@
       - pagename: System Messages
       - pagename: Sample App
       - pagename: Postman Resources
+
+
+- categoryname: Bots & Automation
+  image: agent-experience
+  documents:
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -120,8 +125,7 @@
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
-      #- pagename: Amazon Lex
-      - pagename: Custom Third Party Bots
+      - pagename: Amazon Lex
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
@@ -156,28 +160,13 @@
         subpages:
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
+          - subpagename: Training and Tuning Your Intents and FAQs
       #- pagename: Operations
+  - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
   image: client-side
   documents:
-    - documentname: Function as a Service
-      pages:
-        - pagename: Overview
-        - pagename: Getting Started
-        - pagename: Developing with FaaS
-          subpages:
-            - subpagename: Overview
-            - subpagename: "Events & Templates"
-            - subpagename: Whitelisting Domains
-            - subpagename: Toolbelt
-            - subpagename: Storing Secrets
-        - pagename: Deploying Functions
-        - pagename: External Invocations
-        - pagename: Use Cases
-          subpages:
-            - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations
     - documentname: Customized Chat Windows
       pages:
       - pagename: Overview
@@ -489,6 +478,27 @@
             - subpagename: Retrieve Workdays Objects by List
         - pagename: Appendix
 
+- categoryname: Developer Tools
+  image: developer-tools
+  documents:
+  - documentname: Function as a Service
+    pages:
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Developing with FaaS
+        subpages:
+          - subpagename: Overview
+          - subpagename: "Events & Templates"
+          - subpagename: Whitelisting Domains
+          - subpagename: Toolbelt
+          - subpagename: Storing Secrets
+      - pagename: Deploying Functions
+      - pagename: External Invocations
+      - pagename: Use Cases
+        subpages:
+          - subpagename: Post Chat Survey Transcripts
+          - subpagename: Messaging Conversations
+
 - categoryname: Historical Data
   image: historical-data
   documents:
@@ -765,6 +775,7 @@
           - subpagename: Messaging Estimated Wait Time
           - subpagename: Messaging CSAT Distribution
           - subpagename: Messaging Skill Segment
+          - subpagename: Messaging Agent Segment
 
       - pagename: Appendix
   - documentname: Operational Realtime API
