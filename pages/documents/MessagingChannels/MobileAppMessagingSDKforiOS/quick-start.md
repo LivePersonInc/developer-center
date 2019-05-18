@@ -140,16 +140,20 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 ### Step 3: Initialize the LPMessagingSDK
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
-1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the `accountID` constant and a unique JSON Web Token (JWT) in the `jwt` constant. We have provided an example to use for this quick start process.  
+1. **Set up your account information.** 
+   1. Provide your LiveEngage account number as a string in the `accountID` constant.
+   2. Provide a unique JSON Web Token (JWT) in the `jwt` constant.   
 
-2. **Sets up and initializes the SDK instance** for the accountID provided.
+2. **Set up instance of LPMessagingSDK** for the accountID provided.
 
-3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
-4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
+4. **Release the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
-
-We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](#unauthenticated), and [Signup](#signup).
+ We have provided an example to use for this quick start process:   
+   - [Authenticated](#authenticated)
+   - [Unauthenticated](#unauthenticated)
+   - [Signup](#signup)
 
 #### Authenticated
 
@@ -161,7 +165,7 @@ import LPInfra
 
 class DocumentationViewController: UIViewController {
 
-    // MARK: - Setup Account information.
+    // MARK: - Set up Account information.
 
     /// Account ID is your LiveEngage Account Number.
     let accountID: String = "14800077"
@@ -171,7 +175,7 @@ class DocumentationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // MARK: - Setup instance of LPMessagingSDK
+        // MARK: - Set up instance of LPMessagingSDK
 
         /*
          Adding the following code initializes the SDK instance.

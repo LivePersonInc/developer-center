@@ -14,7 +14,7 @@ indicator: messaging
 
 Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
-You can configure the Welcome message as a simple text message with or without quick replies. Quick replies run through a bot flow, allowing the bot to respond with relevant and accurate answers, reducing reply times for consumers, for example: 
+You can configure the Welcome message as a simple text message with or without quick replies, for example: 
 
 > *Welcome to our support! What can we help you with today?*   
 > 
@@ -35,6 +35,23 @@ lpWelcomeMessage.setNumberOfItemsPerRow(8);
 conversationViewParams.setLpWelcomeMessage(lpWelcomeMessage);
 LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewParams);
 ```
+
+If set empty String in constructor `LPWelcomeMessage(String welcomeMessage)`, the welcome message with quick reply feature will be disabled. It shows the default welcome message, which is set up in the String resources `lp_first_message`.
+
+There are two parameters in the MessageOption class constructor.
+
+```java
+public MessageOption(@NonNull String displayText, @NonNull String value)
+```
+
+- **displayText** is the text displayed in the quick reply button.
+- **value** is the content that is sent to the agent. Default value is displayText if set to empty String.
+
+
+There are two message frequencies: 
+- **FIRST_TIME_CONVERSATION:** Shows the welcome message for first conversation only.
+- **EVERY_CONVERSATION:** Shows welcome a message for every new conversation.
+
 
 ### Limitations  
 

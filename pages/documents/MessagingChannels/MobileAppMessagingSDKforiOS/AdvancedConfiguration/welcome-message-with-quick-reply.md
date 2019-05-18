@@ -14,7 +14,7 @@ indicator: messaging
 
 Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
-You can configure the Welcome message as a simple text message with or without quick replies. Quick replies run through a bot flow, allowing the bot to respond with relevant and accurate answers, reducing reply times for consumers, for example: 
+You can configure the Welcome message as a simple text message with or without quick replies, for example: 
 
 > *Welcome to our support! What can we help you with today?*   
 > 
