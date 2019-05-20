@@ -59,7 +59,7 @@ There are two message frequencies:
 
 - By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
 
-- When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again. The message frequency should be set to `EVERY_CONVERSATION`.
 
 - Quick reply messages do not get recorded in the conversation history.
 
