@@ -16,6 +16,80 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+
+### iOS Messaging SDK - Version 3.8.0
+
+iOS Mobile App SDK v3.8.0 introduces a new feature and contains a fix for a high priority bug reported.
+
+#### Environmental Requirements
+
+The iOS Mobile Messaging SDK version 3.8 is compatible with Xcode 10.2.1, Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), and supported on iOS versions 10 through 12.
+
+
+#### New Feature
+
+##### Welcome message with quick rely options
+
+Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+
+You can configure the Welcome message as a simple text message with or without quick replies, for example: 
+
+> *Welcome to our support! What can we help you with today?*   
+> 
+> *[Questions about existing account] [open a new account] [tech support]*
+
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
+
+**How to enable**
+
+```swift
+        //Welcome message
+let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
+
+        //adding options
+        let options: [LPWelcomeMessage.MessageOption] = [
+            LPWelcomeMessage.MessageOption(value: "music", displayName: "awesome tunes"),
+            LPWelcomeMessage.MessageOption(value: "food", displayName: "Delicious food "),
+        ]
+        do {
+            try welcomeMessageParam.set(options: options)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        //ConversationViewParams
+        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
+                                                              containerViewController: nil,
+                                                              isViewOnly: false,
+                                                              conversationHistoryControlParam: conversationHistoryControlParam,
+                                                              welcomeMessage: welcomeMessageParam)
+//show conversation
+LPMessagingSDK.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
+```
+
+**Limitations**
+- You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+- By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+- Quick reply messages do not get recorded in the conversation history.
+- The conversational metadata (ExternalId) does not get populated.
+   ```
+   "metadata": [
+   {
+   "type": "ExternalId",
+   "id": "Yes-1234"
+   }
+   ]
+   ```
+
+
+
+#### Bug Fixes
+
+When the `configurations.unreadMessagesDividerEnabled` attribute equals **false** the conversation window did not jump/scroll to the latest messages received by the agent as expected.
+
+By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+
 ### iOS Messaging SDK - Version 3.7.1
 
 
