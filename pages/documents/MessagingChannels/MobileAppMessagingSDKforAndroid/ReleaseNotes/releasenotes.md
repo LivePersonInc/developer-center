@@ -24,7 +24,7 @@ The Android Mobile Messaging SDK version 3.8 requires the minimum Android API ve
 
 #### New Feature
 
-##### Welcome message with quick rely options
+##### Welcome message with quick reply options
 
 Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
