@@ -12,7 +12,9 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-wi
 indicator: messaging
 ---
 
-Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+**Supported versions:** 3.8 and higher
+
+When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
 You can configure the Welcome message as a simple text message with or without quick replies, for example: 
 

@@ -616,7 +616,6 @@
     - pagename: Quick Start
     - pagename: Configuration
       subpages:
-      - subpagename: Initialization
       - subpagename: LivePerson Callbacks Interface
       - subpagename: Conversations Lifecycle
       - subpagename: UI
