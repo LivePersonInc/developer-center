@@ -1,5 +1,5 @@
 ---
-pagename: Notifications
+pagename: Push Notifications
 redirect_from:
   - android-push-notifications.html
 Keywords:
@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Configuration
 
 order: 140
-permalink: mobile-app-messaging-sdk-for-android-configuration-notifications.html
+permalink: mobile-app-messaging-sdk-for-android-configuration-push-notifications.html
 
 indicator: messaging
 ---

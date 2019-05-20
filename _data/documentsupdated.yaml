@@ -625,7 +625,7 @@
       - subpagename: Proguard Configuration
       - subpagename: Android Automatic Restore
       - subpagename: Google Maps Key
-      - subpagename: Notifications
+      - subpagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
