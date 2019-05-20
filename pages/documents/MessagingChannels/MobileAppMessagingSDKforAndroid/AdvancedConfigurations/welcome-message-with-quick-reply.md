@@ -12,7 +12,9 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-welcome-messag
 indicator: messaging
 ---
 
-Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+**Supported versions:** 3.8
+
+When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
 You can configure the Welcome message as a simple text message with or without quick replies, for example: 
 
@@ -26,14 +28,20 @@ A consumer’s quick reply selection or answer gets inserted as their first mess
 
 ```java
 LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
-List<MessageOption> optionItems = new ArrayList<MessageOption>();
+List<MessageOption> optionItems = new ArrayList<>();
 optionItems.add(new MessageOption("bill", "bill"));
 optionItems.add(new MessageOption("sales", "sales"));
 optionItems.add(new MessageOption("support", "support"));
-lpWelcomeMessage.setMessageOptions(optionItems);
+try {
+       lpWelcomeMessage.setMessageOptions(optionItems);
+} catch (Exception e) {
+       e.printStackTrace();
+}
 lpWelcomeMessage.setNumberOfItemsPerRow(8);
+lpWelcomeMessage.setMessageFrequency(LPWelcomeMessage.MessageFrequency.EVERY_CONVERSATION);
 conversationViewParams.setLpWelcomeMessage(lpWelcomeMessage);
 LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewParams);
+
 ```
 
 If set empty String in constructor `LPWelcomeMessage(String welcomeMessage)`, the welcome message with quick reply feature will be disabled. It shows the default welcome message, which is set up in the String resources `lp_first_message`.

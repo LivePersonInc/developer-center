@@ -12,7 +12,9 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-wi
 indicator: messaging
 ---
 
-Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+**Supported versions:** 3.8
+
+When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
 You can configure the Welcome message as a simple text message with or without quick replies, for example: 
 
@@ -51,10 +53,15 @@ LPMessagingSDK.instance.showConversation(conversationViewParams,  authentication
 
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+
 - By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+
 - When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+
 - Quick reply messages do not get recorded in the conversation history.
+
 - The conversational metadata (ExternalId) does not get populated.
+
    ```
    "metadata": [
    {
