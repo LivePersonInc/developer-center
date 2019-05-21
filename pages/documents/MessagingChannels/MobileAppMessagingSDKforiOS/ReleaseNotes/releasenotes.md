@@ -86,9 +86,67 @@ LPMessagingSDK.instance.showConversation(conversationViewParams,  authentication
 
 #### Bug Fixes
 
-When the `configurations.unreadMessagesDividerEnabled` attribute equals **false** the conversation window did not jump/scroll to the latest messages received by the agent as expected.
+- When the `unreadMessagesDividerEnabled` attribute equaled **false**, the conversation window did not jump/scroll to the latest messages received by the agent as expected.
 
-By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+
+- Fallback to Signup Flow still exists.
+- Send Image (From Gallery) failed.
+- On iOS 12.2 Swift 5, the conversation screen UI broke and hid the sent/received messages.
+- Accessibility: voice over read old conversations.
+- An invalid JWT warning showed a black bar through a continuous conversation.
+- Before the token expires, one or more messages did not arrive to the agent resulting in data loss.
+- **For iOS versions lower than 12.** Could not resume unauth conversation after background then foreground app.
+
+#### iOS API Updates
+
+##### LPAMSFacade / LPMessagingAPI
+
+**New for 3.8**  
+
+```swift
+public class func createWelcomeLocalMessage(_ dialog: Dialog, welcomeMessage: LPWelcomeMessage, overrideTime: Date = Date()) -> Message?
+```
+
+**Changes for 3.7.1 (DEPRECATED)**  
+
+```swift
+public class func createWelcomeLocalMessage(_ dialog: Dialog, overrideTime: Date = Date()) -> Message?
+```
+
+##### LPConversationViewParams
+
+**New for 3.8**  
+
+```swift
+public init(conversationQuery: ConversationParamProtocol,
+                containerViewController: UIViewController? = nil,
+                isViewOnly: Bool = false,
+                conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none),
+                welcomeMessage: LPWelcomeMessage = LPWelcomeMessage(message: nil))
+```
+
+**Changes for 3.7.1 (DEPRECATED)**  
+
+```swift
+public init(conversationQuery: ConversationParamProtocol,
+                containerViewController: UIViewController? = nil,
+                isViewOnly: Bool = false,
+		conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none))
+)})
+```
+
+##### MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE
+
+**New for 3.8**  
+
+MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE = **5MB** 
+
+
+**Changes for 3.7.1**
+
+MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
+
 
 ### iOS Messaging SDK - Version 3.7.1
 
