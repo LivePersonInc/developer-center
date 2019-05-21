@@ -90,13 +90,13 @@ LPMessagingSDK.instance.showConversation(conversationViewParams,  authentication
 
    By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
 
-- Fallback to Signup Flow still exists.
-- Send Image (From Gallery) failed.
-- On iOS 12.2 Swift 5, the conversation screen UI broke and hid the sent/received messages.
-- Accessibility: voice over read old conversations.
-- An invalid JWT warning showed a black bar through a continuous conversation.
-- Before the token expires, one or more messages did not arrive to the agent resulting in data loss.
-- **For iOS versions lower than 12.** Could not resume unauth conversation after background then foreground app.
+- Fallback to Signup Flow still existed. The bug prevented users from starting an authenticated conversation, and instead, the conversation started an unauthenticated visitor mode chat.
+- Send Image (From Gallery) failed. The bug prevented images larger than 3MB to upload, resulting in a ‘file too large’ message. 
+- On iOS 12.2 Swift 5, the conversation screen UI broke and hid the sent/received messages. The bug prevented the sent/received messages to always show, resulting in sent messages not showing and the margins appearing between messages.
+- Accessibility: voice over read old conversations.  The bug prevented the voice over feature, when enabled, to read the current conversation, and instead, skipping back to old conversations. 
+- An invalid JWT warning showed even though the conversation continued. When trying to reconnect with a JWT after the initial token expires, an INVALID JWT warning appeared and showed a black bar even though the conversation continued without error.  
+- Before the token expired, the agent did not receive one or more messages resulting in data loss. The bug prevented messages from being sent regardless of the token expiration.
+- **For iOS versions lower than 12.** Could not resume unauth conversation after background then foreground app. When starting an unauthenticated conversation then background the app then foreground it again, the loading screen remains displayed. The bug prevented users from going in and out of the conversation without issue.
 
 #### iOS API Updates
 
@@ -184,8 +184,8 @@ public class func resolveConversation(_ conversation: Conversation)
 
 ```swift
 public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol)
+``` 
 
-```
 ##### LPConversationViewParams.swift
 
 **New for 3.7**
