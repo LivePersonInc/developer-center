@@ -36,18 +36,24 @@ You can configure the Welcome message as a simple text message with or without q
 
 A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
 
-**How to enable**
+##### How to enable
 
 ```java
 LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
-List<MessageOption> optionItems = new ArrayList<MessageOption>();
+List<MessageOption> optionItems = new ArrayList<>();
 optionItems.add(new MessageOption("bill", "bill"));
 optionItems.add(new MessageOption("sales", "sales"));
 optionItems.add(new MessageOption("support", "support"));
-lpWelcomeMessage.setMessageOptions(optionItems);
+try {
+       lpWelcomeMessage.setMessageOptions(optionItems);
+} catch (Exception e) {
+       e.printStackTrace();
+}
 lpWelcomeMessage.setNumberOfItemsPerRow(8);
+lpWelcomeMessage.setMessageFrequency(LPWelcomeMessage.MessageFrequency.EVERY_CONVERSATION);
 conversationViewParams.setLpWelcomeMessage(lpWelcomeMessage);
 LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewParams);
+
 ```
 
 If set empty String in constructor `LPWelcomeMessage(String welcomeMessage)`, the welcome message with quick reply feature will be disabled. It shows the default welcome message, which is set up in the String resources `lp_first_message`.
@@ -64,16 +70,16 @@ public MessageOption(@NonNull String displayText, @NonNull String value)
 
 There are two message frequencies: 
 - **FIRST_TIME_CONVERSATION:** Shows the welcome message for first conversation only.
-- **EVERY_CONVERSATION:** Shows a welcome message for every new conversation.
+- **EVERY_CONVERSATION:** Shows welcome a message for every new conversation.
 
 
-### Limitations  
+##### Limitations  
 
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
 
 - By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
 
-- When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again. The message frequency should be set to `EVERY_CONVERSATION`.
 
 - Quick reply messages do not get recorded in the conversation history.
 
@@ -85,10 +91,20 @@ There are two message frequencies:
    "id": "Yes-1234"
    }
    ]
-   ```
+   ```  
 
+#### Bug Fixes
+- **For Android 9 only.** Calling `hideConversation()` while app is in the background caused the app to come to the foreground. When having multiple apps and the consumer has one CustID across all apps, the consumer could not log out of all apps bringing the other app to the foreground.
 
+- Data masking message displayed after sending SecureForm. When setting the `enable_client_only_masking` bool to **true**, and the customer sent a SecureForm, the “Your personal data has been masked to protect your security. Only the agent can read it.” system message appeared. 
 
+- The Unread Message Divider separator appeared after the agent resumed conversation. If the agent closed the conversation but reopened it by sending a new message, the Unread divider appeared above the new message when it should not appear.  
+   
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+
+- Scroll bar did not scroll to the bottom with specific branding settings. When setting the `enable_conversation_resolved_separator` and `enable_conversation_resolved_message` bool to **false** the scroll bar did not scroll to the bottom. The bug prevented users from scrolling to the bottom of the message. 
+
+- Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form. 
 
 ### Android Messaging SDK - Version 3.7.0
 

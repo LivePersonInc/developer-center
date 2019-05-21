@@ -12,7 +12,11 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-wi
 indicator: messaging
 ---
 
+<<<<<<< HEAD
 **Supported versions:** 3.8 and higher
+=======
+**Supported versions:** 3.8
+>>>>>>> a976a90b0b41bbed939a9e9595b44e8ae726521a
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
@@ -53,10 +57,15 @@ LPMessagingSDK.instance.showConversation(conversationViewParams,  authentication
 
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+
 - By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+
 - When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+
 - Quick reply messages do not get recorded in the conversation history.
+
 - The conversational metadata (ExternalId) does not get populated.
+
    ```
    "metadata": [
    {
