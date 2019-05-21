@@ -94,12 +94,11 @@ There are two message frequencies:
    ```  
 
 #### Bug Fixes
-
-- **For Android 9 only.** Call `hideConversation()` while app is in the background caused the app to come to the foreground.
-- Data masking message displayed after sending SecureForm.
-- Scroll bar did not scroll to the bottom with specific branding settings.
-- Unread divider appears after the agent resumed conversation.
-- Skipping PCS showed Quick play JSON.
+- **For Android 9 only.** Calling `hideConversation()` while app is in the background caused the app to come to the foreground. When having multiple apps and the consumer has one CustID across all apps, the consumer could not log out of all apps bringing the other app to the foreground.
+- Data masking message displayed after sending SecureForm. When setting the `enable_client_only_masking` bool to **true**, and the customer sent a SecureForm, the “Your personal data has been masked to protect your security. Only the agent can read it.” system message appeared. 
+- Unread divider appeared after the agent resumed conversation. If the agent closed the conversation but reopened it by sending a new message, the Unread divider appeared above the new message when it should not appear.
+- Scroll bar did not scroll to the bottom with specific branding settings. When setting the `enable_conversation_resolved_separator` and `enable_conversation_resolved_message` bool to **false** the scroll bar did not scroll to the bottom. The bug prevented users from scrolling to the bottom of the message. 
+- Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form. 
 
 ### Android Messaging SDK - Version 3.7.0
 
