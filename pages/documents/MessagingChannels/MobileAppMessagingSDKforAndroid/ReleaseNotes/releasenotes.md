@@ -93,7 +93,13 @@ There are two message frequencies:
    ]
    ```  
 
+#### Bug Fixes
 
+- **For Android 9 only.** Call `hideConversation()` while app is in the background caused the app to come to the foreground.
+- Data masking message displayed after sending SecureForm.
+- Scroll bar did not scroll to the bottom with specific branding settings.
+- Unread divider appears after the agent resumed conversation.
+- Skipping PCS showed Quick play JSON.
 
 ### Android Messaging SDK - Version 3.7.0
 
