@@ -6,10 +6,10 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Appendix
+subfoldername: Resources
 
 order: 341
-permalink: mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html
+permalink: mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html
 
 indicator: messaging
 ---
@@ -234,71 +234,56 @@ LivePerson.setUserProfile(consumerProfile);
 }
 ```
 
-### Step 5 - Configure push notifications
+### Step 5 - Configure push notifications  
+Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
+#### Prerequisites
 
-#### Firebase Configuration
+- Followed the [Quick Start Guide for Android](mobile-app-messaging-sdk-for-android-quick-start.html) and are now ready to implement and enable features.
 
-![Firebase Config](img/firebase1.jpg)
+- Added [Firebase](https://firebase.google.com/docs/android/setup) to your Android project and installed the [Firebase Cloud Messaging (FCM) SDk](https://firebase.google.com/docs/cloud-messaging/android/client).
 
-1. Got to [Google Firebase console](https://firebase.google.com/).
+#### Step 1. Register the client app instance
 
-2. Enter your app’s package name and click **Register App**.
+The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity. For a fully interactive notification, the host app needs to provide the implementation.
 
-   ![Register App](img/registerapp.png)
+1. Use the registration token for the client app instance and register it using the [registerLPPusher() API call](android-registerlppusher.html) so it knows which device should get each push message.
 
-   <p><br> </p>
+2. Upon receiving a push message to your app, handle it so it is displayed to the customer.
 
-   ![Register App](img/registerapp2.png)
+   ```java
+   public class MyFirebase extends FirebaseMessagingService {
+     /**
+     * Called when a message is received.
+     * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
+     */
+     @Override
+     public void onMessageReceived(RemoteMessage remoteMessage) {
+       // Sends the message into the SDK
+       LivePerson.handlePushMessage(this, remoteMessage.getData(), lpAccount, true);
+     }
+   }
+   ```
 
-3. Download the JSON config file and drag it into your project level in Android studio.
+#### Step 2. Configure push notifications in LiveEngage
 
-4. Add Firebase to your app using the Gradle instruction:
+1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
-   ![Gradle Setup](img/gradle.png)
+2. In LiveEngage, click the **Campaigns** tab, and then **Data Sources**.
 
-   **Add the following lines in your app.gradle dependencies section:**
+  ![Data Sources](img/androiddatasources.jpg)
 
-    ```java
-    compile "com.google.firebase:firebase-messaging:11.6.0"
-    compile "com.google.firebase:firebase-core:11.6.0"
-    ```
+3. On the Integrations tab, under **Mobile app management**, click **Manage**.
 
-   **Change the 'multiDexEnabled' under the android tag to true:**
+4. Click **Add new** to add your app to the mobile campaign.
 
-    ```java
-    multiDexEnabled true
-    ```
-5.  Make sure you have no duplicates and then click **Finish**.
+5. Enter your mobile package name and the Google Firebase Legacy API key, then click **Create app**.
 
-#### LiveEngage Configuration
+   **Tip:** You can find the **Package Name** on the Firebase console under **General**, and the **Legacy Key** on the Firebase console under **Cloud Messaging**.
 
-1. Connect to your account via LiveEngage, click on the **Campaigns** tab, and then choose **Data Sources**.
+#### Step 3. Configure the services and classes 
 
-   ![Data Sources](img/androiddatasources.jpg)
-
-   <p><br> </p>  
-
-   ![Data Sources Step 2](img/androiddatasources2.png)
-
-
-2. On the Mobile app management tab, click **Manage**.
-
-3. Click **Add new** to add your app to the mobile campaign.
-
-4. Enter your mobile package name and the Google Firebase Legacy API key, then click **Create app**.
-
-   **Tip:** You can find the **Package Name** on the Firebase console under **General**:
-
-   ![Firebase General](img/firebasegeneral.jpg)
-
-   You can find the **Legacy Key** on the Firebase console under **Cloud Messaging**:
-
-   ![Firebase Key](img/firebasekey.jpeg)
-
-#### Project Configuration
-
-1. Under the **application** tag, add the following services + receiver:
+1. Under the **application** tab, add the following services + receiver:
 
     ```java
     <service
@@ -326,22 +311,193 @@ LivePerson.setUserProfile(consumerProfile);
         </receiver>
     ```
 
-2. After you've added the services, you need to create the classes to fit those services. Create new classes called: 
+2. Now, create the classes to fit those services and change the path according to the classes you created.
 
-   - MyFirebaseMessagingService 
-   - MyFirebaseInstanceIDService
-   - Firebase registrationintentservice
-   - NotificationUI (or choose your own names for these classes)  
+   The following services are an extension of Google’s Firebase cloud messaging services. For more details, see [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-3. Change the path of the services according to the classes you created.
+   - **MyFirebaseMessagingService**: runs in the background and handles incoming messages.
 
-4. Add the following permission to your app’s AndroidManifest.xml file:
+     ```java
+     public class MyFirebaseMessagingService extends FirebaseMessagingService {
+
+        private static final String TAG = "MyFirebaseMsgService";
+
+         @Override
+        public void onMessageReceived(RemoteMessage remoteMessage) {
+                  // TODO(developer): Handle FCM messages here.
+            Log.d(TAG, "From: " + remoteMessage.getFrom());
+            // Check if message contains a data payload.
+            if (remoteMessage.getData().size() > 0) {
+                Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+
+                // Send the data into the SDK
+                String account = "82055668";
+                PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
+
+                //Code snippet to add push UI notification
+                if (message != null){
+                    NotificationUI.showNotification(this, message);
+                }
+            }
+            // Check if message contains a notification payload.
+            if (remoteMessage.getNotification() != null) {
+                Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+            }
+        }
+     }
+     ```
+
+
+   - **MyFirebaseInstanceIDService**: allows you to re-register to the push service everytime the Google’s token refreshes.
+
+     ```java
+     public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
+
+       private static final String TAG = "MyFirebaseIIDService";
+
+       @Override
+       public void onTokenRefresh() {
+          // Get updated InstanceID token.
+          Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
+          startService(intent);
+
+       }
+     }
+     ```
+
+   - **FirebaseRegistrationIntentService**: registers for the pusher everytime the SDK gets initialized.
+
+     Enter your account number as account, and your package name as appID in order to register to the pusher, as shown in the example. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
+
+
+     ```java
+     public class FirebaseRegistrationIntentService extends IntentService {
+
+        public static final String TAG = FirebaseRegistrationIntentService.class.getSimpleName();
+
+        public FirebaseRegistrationIntentService() {
+            super(TAG);
+        }
+
+       @Override
+        protected void onHandleIntent(Intent intent) {
+            Log.d(TAG, "onHandleIntent: registering the token to pusher");
+            String token = FirebaseInstanceId.getInstance().getToken();
+            // Register to Liveperson Pusher
+            String account = "82055668";
+            String appID = "com.shaym.sdk28";
+            LivePerson.registerLPPusher(account, appID, token);
+        }
+     }
+     ```
+
+
+   - **NotificationUI** (or choose your own names for these classes): presents and handles the push to the UI.
+
+     ```java
+     public class NotificationUI {
+
+     private static final String TAG = NotificationUI.class.getSimpleName();
+     public static final int NOTIFICATION_ID = 143434567;
+     public static final String PUSH_NOTIFICATION = "push_notification";
+
+     public static void showNotification(Context ctx, PushMessage pushMessage) {
+         NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx).
+                 setContentIntent(getPendingIntent(ctx)).
+                 setContentTitle(pushMessage.getMessage()).
+                 setAutoCancel(true).
+                 setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_LIGHTS).
+                 setSmallIcon(R.mipmap.ic_launcher).
+                 setStyle(new NotificationCompat.InboxStyle()
+
+                         .addLine(pushMessage.getFrom())
+                         .addLine(pushMessage.getBrandId())
+                         .addLine(pushMessage.getConversationId())
+                         .addLine(pushMessage.getBackendService())
+                         .addLine(pushMessage.getCollapseKey())
+                         .addLine("Unread messages : " + LivePerson.getNumUnreadMessages(pushMessage.getBrandId()))
+
+                 );
+
+         if (Build.VERSION.SDK_INT >= 21) {
+             builder = builder.
+                     setCategory(Notification.CATEGORY_MESSAGE).
+                     setPriority(Notification.PRIORITY_HIGH);
+         }
+         getNotificationManager(ctx).notify(NOTIFICATION_ID, builder.build());
+     }
+     public static void hideNotification(Context ctx){
+         getNotificationManager(ctx).cancel(NOTIFICATION_ID);
+     }
+     private static NotificationManager getNotificationManager(Context ctx) {
+         return (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
+     }
+     private static PendingIntent getPendingIntent(Context ctx) {
+         Intent showIntent = new Intent(ctx, MainActivity.class);
+         showIntent.putExtra(PUSH_NOTIFICATION, true);
+         return PendingIntent.getActivity(ctx, 0, showIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+     }
+
+     /************************ Example of Icon Badge - For Samsung *******************************/
+     public static void setBadge(Context context, int count) {
+
+             SharedPreferences.Editor editor = context.getSharedPreferences("liveperson", MODE_PRIVATE).edit();
+             SharedPreferences prefs = context.getSharedPreferences("liveperson", MODE_PRIVATE);
+
+         int current = prefs.getInt("count", 0);
+         if (current == 0 || count == 1)
+             current += count;
+         else
+             current = count;
+         editor.putInt("count", current);
+         editor.apply();
+
+         String launcherClassName = getLauncherClassName(context);
+         if (launcherClassName == null) {
+             return;
+         }
+         Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
+         intent.putExtra("badge_count", current);
+         intent.putExtra("badge_count_package_name", context.getPackageName());
+         intent.putExtra("badge_count_class_name", launcherClassName);
+         context.sendBroadcast(intent);
+     }
+     public static String getLauncherClassName(Context context) {
+
+         PackageManager pm = context.getPackageManager();
+
+         Intent intent = new Intent(Intent.ACTION_MAIN);
+         intent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+         List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent, 0);
+         for (ResolveInfo resolveInfo : resolveInfos) {
+             String pkgName = resolveInfo.activityInfo.applicationInfo.packageName;
+             if (pkgName.equalsIgnoreCase(context.getPackageName())) {
+                 return resolveInfo.activityInfo.name;
+             }
+         }
+         return null;
+     }
+         /* Listen to changes in unread messages counter and updating icon badge*/
+     public static class BadgeBroadcastReceiver extends BroadcastReceiver{
+         public BadgeBroadcastReceiver(){}
+         @Override
+         public void onReceive(Context context, Intent intent) {
+             int unreadCounter = intent.getIntExtra(LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA, 0);
+             NotificationUI.setBadge(context, unreadCounter);
+         }
+     }
+     }
+     ```
+
+3. Add the following permission to your app’s AndroidManifest.xml file:
 
     ```java
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     ```
-5. After the `handleGCMRegistration(MainActivity.this);` call added at the `init` stage, add the function to your messaging activity call to register to the pusher:
+
+4. After the `handleGCMRegistration(MainActivity.this);` call added at the `init` stage, add the function to your messaging activity call to register to the pusher:
 
     ```java
     private void handleGCMRegistration(Context ctx) {
@@ -350,7 +506,7 @@ LivePerson.setUserProfile(consumerProfile);
     }
     ```
 
-6. After the `removeNotification();` call added at the `Showconversation` stage, add the following function to hide the push message when entering the conversation view:
+5. After the `removeNotification();` call added at the `Showconversation` stage, add the following function to hide the push message when entering the conversation view:
 
     ```java
     private void removeNotification() {
@@ -358,203 +514,7 @@ LivePerson.setUserProfile(consumerProfile);
     }
     ```
 
-   **NotificationUI** presents and handles the push to the UI.  
-
-    **Simple example:**  
-
-    ```java
-    public class NotificationUI {
-
-    private static final String TAG = NotificationUI.class.getSimpleName();
-    public static final int NOTIFICATION_ID = 143434567;
-    public static final String PUSH_NOTIFICATION = "push_notification";
-
-    public static void showNotification(Context ctx, PushMessage pushMessage) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(ctx).
-                setContentIntent(getPendingIntent(ctx)).
-                setContentTitle(pushMessage.getMessage()).
-                setAutoCancel(true).
-                setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_LIGHTS).
-                setSmallIcon(R.mipmap.ic_launcher).
-                setStyle(new NotificationCompat.InboxStyle()
-
-                        .addLine(pushMessage.getFrom())
-                        .addLine(pushMessage.getBrandId())
-                        .addLine(pushMessage.getConversationId())
-                        .addLine(pushMessage.getBackendService())
-                        .addLine(pushMessage.getCollapseKey())
-                        .addLine("Unread messages : " + LivePerson.getNumUnreadMessages(pushMessage.getBrandId()))
-
-                );
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            builder = builder.
-                    setCategory(Notification.CATEGORY_MESSAGE).
-                    setPriority(Notification.PRIORITY_HIGH);
-        }
-        getNotificationManager(ctx).notify(NOTIFICATION_ID, builder.build());
-    }
-
-    public static void hideNotification(Context ctx){
-        getNotificationManager(ctx).cancel(NOTIFICATION_ID);
-
-    }
-    private static NotificationManager getNotificationManager(Context ctx) {
-        return (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
-    }
-
-    private static PendingIntent getPendingIntent(Context ctx) {
-        Intent showIntent = new Intent(ctx, MainActivity.class);
-        showIntent.putExtra(PUSH_NOTIFICATION, true);
-
-        return PendingIntent.getActivity(ctx, 0, showIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-    }
-
-    /************************ Example of Icon Badge - For Samsung *******************************/
-    public static void setBadge(Context context, int count) {
-
-            SharedPreferences.Editor editor = context.getSharedPreferences("liveperson", MODE_PRIVATE).edit();
-            SharedPreferences prefs = context.getSharedPreferences("liveperson", MODE_PRIVATE);
-
-        int current = prefs.getInt("count", 0);
-        if (current == 0 || count == 1)
-            current += count;
-        else
-            current = count;
-        editor.putInt("count", current);
-        editor.apply();
-
-        String launcherClassName = getLauncherClassName(context);
-        if (launcherClassName == null) {
-            return;
-        }
-        Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
-        intent.putExtra("badge_count", current);
-        intent.putExtra("badge_count_package_name", context.getPackageName());
-        intent.putExtra("badge_count_class_name", launcherClassName);
-        context.sendBroadcast(intent);
-    }
-
-    public static String getLauncherClassName(Context context) {
-
-        PackageManager pm = context.getPackageManager();
-
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-
-        List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent, 0);
-        for (ResolveInfo resolveInfo : resolveInfos) {
-            String pkgName = resolveInfo.activityInfo.applicationInfo.packageName;
-            if (pkgName.equalsIgnoreCase(context.getPackageName())) {
-                return resolveInfo.activityInfo.name;
-            }
-        }
-        return null;
-    }
-        /* Listen to changes in unread messages counter and updating icon badge*/
-    public static class BadgeBroadcastReceiver extends BroadcastReceiver{
-
-        public BadgeBroadcastReceiver(){}
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            int unreadCounter = intent.getIntExtra(LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_EXTRA, 0);
-            NotificationUI.setBadge(context, unreadCounter);
-        }
-    }
-    }
-    ```
-
-#### Services Classes
-
-The following services are an extension of Google’s Firebase cloud messaging services, you can read more about them [here](https://firebase.google.com/docs/cloud-messaging/).
-
-`FirebaseRegistrationIntentService`
-
-We call this service from our messaging activity when we `init` the SDK and want to register for the pusher for the first time (or every time we `init`), here is a simple example:
-
-```java
-public class FirebaseRegistrationIntentService extends IntentService {
-
-   public static final String TAG = FirebaseRegistrationIntentService.class.getSimpleName();
-
-   public FirebaseRegistrationIntentService() {
-       super(TAG);
-   }
-
-  @Override
-   protected void onHandleIntent(Intent intent) {
-       Log.d(TAG, "onHandleIntent: registering the token to pusher");
-       String token = FirebaseInstanceId.getInstance().getToken();
-       // Register to Liveperson Pusher
-       String account = "82055668";
-       String appID = "com.shaym.sdk28";
-       LivePerson.registerLPPusher(account, appID, token);
-   }
-}
-```
-
-Enter your account number as account, and your package name as appID in order to register to the pusher, as seen in the example above. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
-
-`MyFirebaseMessagingService`
-
-This service is always running in the background and handles incoming messages, here's a simple example:
-
-```java
-public class MyFirebaseMessagingService extends FirebaseMessagingService {
-
-   private static final String TAG = "MyFirebaseMsgService";
-
-   @Override
-   public void onMessageReceived(RemoteMessage remoteMessage) {
-             // TODO(developer): Handle FCM messages here.
-       Log.d(TAG, "From: " + remoteMessage.getFrom());
-       // Check if message contains a data payload.
-       if (remoteMessage.getData().size() > 0) {
-           Log.d(TAG, "Message data payload: " + remoteMessage.getData());
-
-           // Send the data into the SDK
-           String account = "82055668";
-           PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
-
-           //Code snippet to add push UI notification
-           if (message != null){
-               NotificationUI.showNotification(this, message);
-           }
-
-       }
-       // Check if message contains a notification payload.
-       if (remoteMessage.getNotification() != null) {
-           Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-       }
-
-   }
-
-}
-```
-
-`MyFirebaseInstanceIDService`
-
-This is a pretty simple service that will be called every time Google’s token is refreshed so you can re-register to the push service.
-
-Simple example:
-
-```java
-public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
-
-  private static final String TAG = "MyFirebaseIIDService";
-
-  @Override
-  public void onTokenRefresh() {
-     // Get updated InstanceID token.
-     Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
-     startService(intent);
-
-  }
-}
-```
-
-#### Handle Push
+#### Step 4. Implement a push handler
 
 To handle a scenario when a push message is clicked, you need to implement a push handler on our messaging activity’s `onCreate` function.
 

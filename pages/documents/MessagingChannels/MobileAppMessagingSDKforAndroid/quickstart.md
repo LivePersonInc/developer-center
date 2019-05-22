@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start
+pagename: Android Quick Start
 redirect_from:
   - android-quickstart.html
 Keywords:
@@ -11,7 +11,7 @@ order: 11
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 
 ---
-<br>
+
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.
@@ -20,11 +20,9 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured. 
-  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
-- Read or are familiar with the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
 
 
 ### Step 1: Install the Messaging SDK into your project
@@ -194,6 +192,9 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
+{:.important}
+If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
+
 1. **Set your app ID and view controller.** Provide your `APP_ID` as a string your application's class.
    
    ```java
@@ -206,15 +207,67 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    }
    ```
 
-2. **Initialize your application and show the conversation.**  Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
-   1. Select your chose of authentication using either **CodeFlow**, **ImplicitFlow**, **UnauthFlow**, or **SignupFlow** for initializing the SDK instance. For details, see [Authentication](mobile-app-messaging-sdk-for-android-authentication.html).
-   2. Provide your LivePerson account number as a string in the `brandID` constant. 
-   3. Depending on the authentication method you chose, you must provide your `authCode`, `jwt`, or `appInstallID`.  If you chose **SignupFlow**, you only need to provide the `brandID`.  We have provided examples to use to help you get started. 
+2. **Select your choice of authentication** for initializing the SDK instance: 
 
-   <div class="important">The demo account that we have provided has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.</div>
+   - **[Code Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated) 
+
+     The LivePerson back-end verifies the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
+
+     ```java
+     LPAuthenticationParams().setAuthKey("yourAuthCode").
+     ```
+
+     **Tip:** Alternatively, when using this method, you can also set a special redirect URL when authenticating by calling:
+
+     ```java
+     lpAuthenticationParams.setHostAppRedirectUri("yourRedirectUrl")
+     ```
+
+   - **[Implicit Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-implicit-flow)** (authenticated)  
+
+      ```java
+      LPAuthenticationParams().setHostAppJWT("yourJwt")
+      ```
+
+      Once the Authentication key expires, you get notified with a callback / local intent [`void onTokenExpired()`](android-callbacks-index.html#token-expired).
+
+      To re-connect with a new Authentication key, use [`reconnect(LPAuthenticationParams lpAuthenticationParams)`](android-methods.html#reconnect)
 
 
-   - **CodeFlow (authenticated)**
+      {:.important}
+      Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
+
+   - **[Unauth Flow](mobile-app-messaging-sdk-for-android-advanced-features-unauthenticated-in-app-messaging.html)**
+
+     ```java
+      String brandID = "53949244";
+      String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
+     ```
+
+   - **Signup Flow**  
+
+     ```java
+     String brandID = "62219232";
+     ```
+
+
+3. **Show the conversation view.**  If your system implementation involves an authentication step, you must call our `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. Choose an authentication method:
+
+   - **Activity mode**
+     ```java
+     LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+     ```
+
+   - **Fragment mode (Attach the returned fragment to a container in your activity)**
+     ```java
+     LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+     ```
+     When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.
+
+
+   - **CodeFlow**
      ```java
      public void startCodeFlow(View v) {
          String brandID = "62219232";
@@ -233,7 +286,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
          }));
      }
      ```
-   - **ImplicitFlow (authenticated)**
+   - **ImplicitFlow**
    
      ```java
      public void startImplicitFlow(View v) {
@@ -334,7 +387,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    }
    ```
    
-   <div class="notice">Make sure that the init process, from the onInitSucceed callback, finished successfully.</div>
+   <div class="notice">Make sure that the init process, from the <code>onInitSucceed</code> callback, finished successfully.</div>
 
 
 ### Next Steps
@@ -342,8 +395,8 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 Congratulations!  You're all set.  
 
 You can now do any of the following:
-- [Implement and enable push notifications](enable-push.md). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
-- If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (**onInitSucceed**), you can call LivePerson methods.
+- [Configure push notifications](mobile-app-messaging-sdk-for-android-configuration-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add the following to your app's AndroidManifest.xml file.  
+- [Add LivePerson events](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-3---add-liveperson-events) to handle basic messaging events via BroadcastReceiver and responds via callback.
+- [Add messaging activity](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-4---add-messaging-activity) that launches the activity session. 
 
-{:.important}
-For more details and guidance on app configuration and SDK step-by-step usage, see [Use the LivePerson SDK for Android](/mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html).

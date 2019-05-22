@@ -625,14 +625,15 @@
       - subpagename: Proguard Configuration
       - subpagename: Android Automatic Restore
       - subpagename: Google Maps Key
+      - subpagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Authentication
-    - pagename: Notifications
+
+
     - pagename: Customization and Branding
       subpages:
       - subpagename: Customizing the SDK
@@ -658,6 +659,7 @@
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs
     - pagename: Voice and Video for Android SDK (BETA)
       subpages:
@@ -670,9 +672,10 @@
       - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
-    - pagename: Appendix
+    - pagename: Resources
       subpages:
       - subpagename: Security
+      - subpagename: Authentication
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
       - subpagename: Use the LivePerson SDK - Android
@@ -690,6 +693,7 @@
       - subpagename: User Data
       - subpagename: Logs and Info
       - subpagename: App Extensions
+      - subpagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -697,7 +701,6 @@
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
     - pagename: Authentication
-    - pagename: Notifications
     - pagename: Customizing Toast Notifications
     - pagename: Customization and Branding
       subpages:
@@ -717,6 +720,7 @@
       - subpagename: Audio Messages
       - subpagename: Photo Sharing
       - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:
@@ -729,10 +733,9 @@
       - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
-    - pagename: Appendix
+    - pagename: Resources
       subpages:
       - subpagename: Security
-      - subpagename: OS Certificate Creation
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS

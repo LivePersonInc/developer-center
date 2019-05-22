@@ -7,11 +7,11 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Appendix
+subfoldername: Resources
 
 order: 244
 
-permalink: mobile-app-messaging-sdk-for-ios-appendix-security.html
+permalink: mobile-app-messaging-sdk-for-ios-resources-security.html
 
 indicator: messaging
 ---
