@@ -393,7 +393,7 @@ All incoming push messages are received by the host app. The host app can choose
 
 In case a host app decides to show its own custom notification, it can call handlePushMessage() with showNotification parameter set to false. That will parse and return a PushMessage object. In a case where the push message is not related to the SDK, it will return null.
 
-_**Note: To get unread messages feature will work properly - host app must call this method upon receiving SDK push messages (whether showing custom notification or not).**_
+_**Note: To get the unread messages feature to work properly the host app must call this method upon receiving SDK push messages, whether showing custom notification or not.**_
 
 ```java
 public static PushMessage handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)

@@ -257,7 +257,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
          }
          return null;
      }
-         /* Listen to changes in unread messages counter and updating icon badge*/
+         /* Listen to changes in unread messages counter and update icon badge*/
      public static class BadgeBroadcastReceiver extends BroadcastReceiver{
          public BadgeBroadcastReceiver(){}
          @Override
