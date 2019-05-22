@@ -6,6 +6,8 @@ categoryname: "Agent Experience & Bots"
 documentname:
 permalink: custom-third-party-bots.html
 indicator: both
+redirect_from:
+  - bot-connectors-custom-third-party-bots.html
 ---
 
 <div class="important">This document explains how to connect external bots to LivePerson if there is not an already pre-built and supported Connector. However, several configurations will need to be enabled on your account before you can use the below solutions. Please check with your LivePerson account team before using this document.</div>
