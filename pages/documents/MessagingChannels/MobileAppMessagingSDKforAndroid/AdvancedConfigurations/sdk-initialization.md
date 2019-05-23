@@ -14,39 +14,13 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-initialization.htm
 indicator: messaging
 ---
 
-### Initialize the Messaging SDK
-
-```java
-String brandID = "Your-Liveperson-Account-Id-String";
-String appID = "your-app-package-name"
-LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
-  new InitLivePersonCallBack() {
-    @Override
-    public void onInitSucceed() {
-    }
-
-    @Override
-    public void onInitFailed(Exception e) {
-    }
-  }
-));
-```
-
-| Element | Description |
-| :--- | :--- |
-| brandID | Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative. |
-| appID | Your app ID, used for registering LP pusher service. |
-| onInitSuccess | Callback that indicates the init process has finished successfully. |
-| onInitFailed | Callback that indicates the init process has failed. <br> *Note: You can call initialize before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK in your app's Application class.* |
-
->**NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](#initialize-the-messaging-sdk-with-monitoring-params). Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
 
 
 ### Initialize the Messaging SDK with Monitoring Params
 
-<div class="important">
+{:.important}
 To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage. For more information about it, contact your Account Team.
-</div>
+
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
 

@@ -347,7 +347,25 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      }
      ```
 
-   
+   ### Initialize the Messaging SDK
+
+```java
+String brandID = "Your-Liveperson-Account-Id-String";
+String appID = "your-app-package-name"
+LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
+  new InitLivePersonCallBack() {
+    @Override
+    public void onInitSucceed() {
+    }
+
+    @Override
+    public void onInitFailed(Exception e) {
+    }
+  }
+));
+```
+
+
    |Element  |Description  |
    |---------|---------|
    |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
