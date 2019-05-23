@@ -273,6 +273,9 @@
         - subpagename: Init Connection
         - subpagename: Generate Upload URL
         - subpagename: Generate Download URL
+    - documentname: Messaging Window SDK
+      pages:
+      - pagename: Overview
     - documentname: Server Chat API
       basedomain: https://{domain}/api/account/{accountId}/chat
       pages:
