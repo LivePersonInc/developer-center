@@ -347,24 +347,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      }
      ```
 
-   ### Initialize the Messaging SDK
-
-```java
-String brandID = "Your-Liveperson-Account-Id-String";
-String appID = "your-app-package-name"
-LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
-  new InitLivePersonCallBack() {
-    @Override
-    public void onInitSucceed() {
-    }
-
-    @Override
-    public void onInitFailed(Exception e) {
-    }
-  }
-));
-```
-
 
    |Element  |Description  |
    |---------|---------|
@@ -405,7 +387,8 @@ LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
    }
    ```
    
-   <div class="notice">Make sure that the init process, from the <code>onInitSucceed</code> callback, finished successfully.</div>
+   {:.notice}
+   Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
 
 ### Next Steps
