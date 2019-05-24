@@ -617,18 +617,8 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Configuration
-      subpages:
-      - subpagename: Initialization
-      - subpagename: LivePerson Callbacks Interface
-      - subpagename: Conversations Lifecycle
-      - subpagename: UI
-      - subpagename: User Data
-      - subpagename: Logs and Info
-      - subpagename: Proguard Configuration
-      - subpagename: Android Automatic Restore
-      - subpagename: Google Maps Key
-      - subpagename: Push Notifications
+    - pagename: Configure the Android SDK
+    - pagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API

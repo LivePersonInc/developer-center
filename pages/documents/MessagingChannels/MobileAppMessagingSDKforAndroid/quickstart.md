@@ -193,7 +193,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
 {:.important}
-If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
+If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params).  
 
 1. **Set your app ID and view controller.** Provide your `APP_ID` as a string your application's class.
    
@@ -207,7 +207,9 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
    }
    ```
 
-2. **Select your choice of authentication** for initializing the SDK instance: 
+2. **Select your choice of authentication** for initializing the SDK instance.
+
+   For more details on Code Flow and Implicit Flow for the Mobile SDK, see [How It Works](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow). 
 
    - **[Code Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated) 
 
@@ -251,7 +253,9 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      ```
 
 
-3. **Show the conversation view.**  If your system implementation involves an authentication step, you must call our `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. Choose an authentication method:
+3. **Show the conversation view.**  If your system implementation involves an authentication step, you must call our `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. For more details on Activity mode and Fragment mode, see [Authentication](mobile-app-messaging-sdk-for-android-resources-authentication.html).  
+
+   Choose an authentication method:
 
    - **Activity mode**
      ```java
@@ -262,12 +266,14 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      ```java
      LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
      ```
-     When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+     **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.  
+
 
 4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.
 
 
-   - **CodeFlow**
+   - **Code Flow**
      ```java
      public void startCodeFlow(View v) {
          String brandID = "62219232";
@@ -286,7 +292,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
          }));
      }
      ```
-   - **ImplicitFlow**
+   - **Implicit Flow**
    
      ```java
      public void startImplicitFlow(View v) {
@@ -307,7 +313,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      }
      ```
 
-   - **UnauthFlow**
+   - **Unauth Flow**
 
      ```java
      public void startUnauthFlow(View v) {
@@ -328,7 +334,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      }
      ```
 
-   - **SignupFlow**
+   - **Signup Flow**
 
      ```java
      public void startSignupFlow(View v) {
@@ -396,8 +402,8 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 Congratulations!  You're all set.  
 
 You can now do any of the following:
-- [Configure push notifications](mobile-app-messaging-sdk-for-android-configuration-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
 - [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add the following to your app's AndroidManifest.xml file.  
-- [Add LivePerson events](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-3---add-liveperson-events) to handle basic messaging events via BroadcastReceiver and responds via callback.
-- [Add messaging activity](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-4---add-messaging-activity) that launches the activity session. 
+
 

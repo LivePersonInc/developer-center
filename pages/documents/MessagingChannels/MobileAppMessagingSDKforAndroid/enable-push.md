@@ -6,11 +6,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Configuration
 
-order: 140
-permalink: mobile-app-messaging-sdk-for-android-configuration-push-notifications.html
-
+permalink: mobile-app-messaging-sdk-for-android-push-notifications.html
 indicator: messaging
 ---
 
