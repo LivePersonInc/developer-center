@@ -402,8 +402,8 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 Congratulations!  You're all set.  
 
 You can now do any of the following:
-- [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 - [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
+- [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 - [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add the following to your app's AndroidManifest.xml file.  
 
 

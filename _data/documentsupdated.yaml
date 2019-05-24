@@ -632,9 +632,6 @@
       - subpagename: Customizing the SDK
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
-      - subpagename: Modifying Resources
-      - subpagename: Configuring the Message's Edit Text
-      - subpagename: Changing Fonts
     - pagename: String Localization
       subpages:
       - subpagename: Modifying Strings
