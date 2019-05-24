@@ -44,6 +44,48 @@ We define three configurable formatting resources:
    ```xml
    <string name="lp_date_time_format"></string>
    ```
+### Bubble timestamp
+
+Bubble timestamps contain only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to device setting.
+
+- If the device is set to 12-hour format : "3:30pm"
+- If the device is set to 24-hour format : "15:30"
+- If you the bubble time format, override the resource ID with any **time** format, for example, "hh:mm a" or "HH:mm":
+
+   ```xml
+   <string name="lp_time_format"></string>
+   ```
+
+   This will apply to all bubble’s timestamp.
+
+### Separator timestamp
+
+Separator timestamps contain only date in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) date format, according to the locale (default or custom) and to device setting.
+
+- "9/25/16" for US locale / "2016/9/25" for JP locale
+- If you the separator time format, override the resource id, with any **date** format, for example, "MMM d, yyyy" or "EEEE dd/mm/yy":
+
+   ```xml
+   <string name="lp_date_format"></string>
+   ```
+
+### Resolve message
+
+Resolve message use default SHORT date and SHORT time according to the locale (default or custom) and to device setting.
+
+- If the device is set to 12-hour format (US locale):
+
+  *"Conversation resolved by [agent name] \n 9/25/16, 3:30pm"*
+
+- If the device is set to 24-hour format (US locale):
+  
+  *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
+
+- If you want special date/hour format, use with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
+
+   ```java
+   <string name="lp_date_time_format"></string>
+   ```
 
 
 ### Today and tomorrow off hours 
@@ -97,46 +139,4 @@ You can find a list of timezone IDs [here](https://garygregory.wordpress.com/201
 
 **Example**: _"US/Pacific", "Europe/Berlin"_
 
-### Bubble timestamp
-
-Bubble timestamps contain only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to device setting.
-
-- If the device is set to 12-hour format : "3:30pm"
-- If the device is set to 24-hour format : "15:30"
-- If you the bubble time format, override the resource ID with any **time** format, for example, "hh:mm a" or "HH:mm":
-
-   ```xml
-   <string name="lp_time_format"></string>
-   ```
-
-   This will apply to all bubble’s timestamp.
-
-### Separator timestamp
-
-Separator timestamps contain only date in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) date format, according to the locale (default or custom) and to device setting.
-
-- "9/25/16" for US locale / "2016/9/25" for JP locale
-- If you the separator time format, override the resource id, with any **date** format, for example, "MMM d, yyyy" or "EEEE dd/mm/yy":
-
-   ```xml
-   <string name="lp_date_format"></string>
-   ```
-
-### Resolve message
-
-Resolve message use default SHORT date and SHORT time according to the locale (default or custom) and to device setting.
-
-- If the device is set to 12-hour format (US locale):
-
-  *"Conversation resolved by [agent name] \n 9/25/16, 3:30pm"*
-
-- If the device is set to 24-hour format (US locale):
-  
-  *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
-
-- If you want special date/hour format, use with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
-
-   ```java
-   <string name="lp_date_time_format"></string>
-   ```
 
