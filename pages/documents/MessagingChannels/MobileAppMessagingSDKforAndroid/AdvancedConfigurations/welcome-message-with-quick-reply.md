@@ -63,9 +63,11 @@ There are two message frequencies:
 
 ### Limitations  
 
-- You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+You can configure up to 24 quick reply options for the user to chose.
 
-- By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+- You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
+
+- Once you set 'itemsPerRow' (max 8), the number of rows calculate automatically (up to 3 rows). If the number of replies exceeds `itemsPerRow` times 3, the extra replies get added to the last row.
 
 - When the consumer ends the conversation, the window remains open, and the Welcome message appears again. The message frequency should be set to `EVERY_CONVERSATION`.
 
