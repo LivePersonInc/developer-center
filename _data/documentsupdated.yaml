@@ -636,10 +636,7 @@
       subpages:
       - subpagename: Modifying Strings
       - subpagename: Plural String resource Example
-      - subpagename: Timestamps Formatting
       - subpagename: Date and Time
-      - subpagename: Bubble Timestamp
-      - subpagename: Separator Timestamp
       - subpagename: Override SDK Strings
       - subpagename: Resolve Message
     - pagename: Advanced Features
