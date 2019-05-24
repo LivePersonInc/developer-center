@@ -10,9 +10,10 @@ subfoldername: Advanced Features
 permalink: mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html
 
 indicator: messaging
----
+---   
 
-**Supported versions:** 3.8
+
+>**Supported versions: 3.8**
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
@@ -63,7 +64,7 @@ There are two message frequencies:
 
 ### Limitations  
 
-You can configure up to 24 quick reply options for the user to chose.
+- You can configure up to 24 quick reply options for the user to chose.
 
 - You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
 
