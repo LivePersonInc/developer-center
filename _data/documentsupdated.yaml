@@ -638,7 +638,6 @@
       - subpagename: Plural String resource Example
       - subpagename: Date and Time
       - subpagename: Override SDK Strings
-      - subpagename: Resolve Message
     - pagename: Advanced Features
       subpages:
       - subpagename: Unauthenticated In-App Messaging

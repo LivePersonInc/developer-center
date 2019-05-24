@@ -121,3 +121,22 @@ Separator timestamps contain only date in [SHORT](https://developer.android.com/
    ```xml
    <string name="lp_date_format"></string>
    ```
+
+### Resolve message
+
+Resolve message use default SHORT date and SHORT time according to the locale (default or custom) and to device setting.
+
+- If the device is set to 12 hours format (US locale):
+
+  *"Conversation resolved by [agent name] \n 9/25/16, 3:30pm"*
+
+- If the device is set to 24 hours format (US locale):
+  
+  *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
+
+- If you want special date/hour format, use with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
+
+   ```java
+   <string name="lp_date_time_format"></string>
+   ```
+
