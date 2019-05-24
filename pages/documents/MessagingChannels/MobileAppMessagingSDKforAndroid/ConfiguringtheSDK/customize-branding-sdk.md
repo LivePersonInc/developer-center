@@ -8,7 +8,7 @@ categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Customization and Branding
 
-permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-customize-the-sdk.html
+permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
 
 indicator: messaging
 ---
@@ -19,12 +19,12 @@ You can customize the look and feel of the conversation screen with your brandin
 
 1. In your Android Studio project, right-click your app, and select **New > XML > Values XML File**.
 
-2. **Add design attributes to your branding.xml file.** The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
+2. Add design attributes to your branding.xml file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
    {:.important}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-3. **Add resources to your project.** The SDK utilizes several resources as part of its GUI. 
+3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
    
    | Resource name | Description |
    |---|---|
@@ -44,7 +44,7 @@ You can customize the look and feel of the conversation screen with your brandin
    </style>
    ```
 
-2. **Change the font of the elements in the conversation view.** You can do this with two separate settings: 
+2. Change the font of the elements in the conversation view with two separate settings: 
 
    - **custom_font_name_conversation_feed** - the font name (standard Android font name, such as *san-serif-thin*) for all conversation feed’s element. By default, the value is empty. 
 
