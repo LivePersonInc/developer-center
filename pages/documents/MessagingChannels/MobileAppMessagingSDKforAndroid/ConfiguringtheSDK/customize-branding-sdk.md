@@ -17,7 +17,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
 ### Step 1. Create your branding.xml file and add design attributes
 
-1. In your Android Studio project, right-click your app, and select **New > XML > Values XML File**.
+1. In your Android Studio project, right-click your app and select **New > XML > Values XML File**.
 
 2. Add design attributes to your branding.xml file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 

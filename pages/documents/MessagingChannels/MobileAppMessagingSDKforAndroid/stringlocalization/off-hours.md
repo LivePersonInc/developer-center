@@ -14,35 +14,44 @@ permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-tim
 indicator: messaging
 ---
 
-Today and tomorrow off hours message use default SHORT time without date according to the locale (default or custom) and to device setting.
+### Today and tomorrow off hours 
+Today and tomorrow off hours messages use the default SHORT time without date according to the locale (default or custom) and to device setting.
 
-- If device is set to 12 hours format :
-  **"Thanks for your message. We will be back online today/tomorrow at 3:30pm"**
-- If device is set to 24 hours format :
-  **"Thanks for your message. We will be back online today/tomorrow at 15:30"**
+- If the device is set to 12 hours format:
+  
+   *"Thanks for your message. We will be back online today/tomorrow at 3:30pm"*
 
-In case you want special hour format, you can use:
+- If the device is set to 24 hours format:
+  
+   *"Thanks for your message. We will be back online today/tomorrow at 15:30"*
+
+If you want special hour format, use:
 
 ```xml
 <string name="lp_time_format"></string>
 ```
 
-With any **time** format. For ex. - "hh:mm a", "HH:mm" etc..
+With any **time** format, for example, "hh:mm a" or "HH:mm".
 
-**Date off hours message** (not today/tomorrow) use default LONG date and SHORT time according to the locale (default or custom) and to device setting.
+### Date off hours
 
-- If device is set to 12 hours format :
-  **"Thanks for your message. We will be back online January 12, 2017 at 3:30pm"**
-- If device is set to 24 hours format :
-  **"Thanks for your message. We will be back online January 12, 2017 at 15:30"**
+Date off hours messages (not today/tomorrow) use the default LONG date and SHORT time according to the locale (default or custom) and to device setting.
 
-In case you want special date/hour format, you can use:
+- If the device is set to 12 hours format:
+  
+   *"Thanks for your message. We will be back online January 12, 2017 at 3:30pm"*
+
+- If the device is set to 24 hours format:
+  
+   *"Thanks for your message. We will be back online January 12, 2017 at 15:30"*
+
+If you want special date/hour format, use:
 
 ```xml
 <string name="lp_date_time_format"></string>
 ```
 
-With any **date & time format**. For ex. - "MMM d, yyyy hh:mm a", "EEEE dd/mm/yy HH:mm" etc..
+With any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
 
 ###  Timezone
 
@@ -54,4 +63,4 @@ Off hours can appear in different time zone with this resource ID:
 
 You can find a list of timezone IDs [here](https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/).
 
-_**Example**: "US/Pacific", "Europe/Berlin"._
+**Example**: _"US/Pacific", "Europe/Berlin"_
