@@ -108,5 +108,9 @@ Additionally, FaaS offers a number of templates that are not connected to events
     <td>Secret Storage Template</td>
     <td>An example of how to use the Secret Storage.</td>
   </tr>
+  <tr>
+    <td>Email Client Template</td>
+    <td>An example of how to use SMTP client.</td>
+  </tr>
 </tbody>
 </table>
