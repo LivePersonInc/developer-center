@@ -273,6 +273,9 @@
         - subpagename: Init Connection
         - subpagename: Generate Upload URL
         - subpagename: Generate Download URL
+    - documentname: Messaging Window SDK
+      pages:
+      - pagename: Overview
     - documentname: Server Chat API
       basedomain: https://{domain}/api/account/{accountId}/chat
       pages:
@@ -614,17 +617,8 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Configuration
-      subpages:
-      - subpagename: LivePerson Callbacks Interface
-      - subpagename: Conversations Lifecycle
-      - subpagename: UI
-      - subpagename: User Data
-      - subpagename: Logs and Info
-      - subpagename: Proguard Configuration
-      - subpagename: Android Automatic Restore
-      - subpagename: Google Maps Key
-      - subpagename: Push Notifications
+    - pagename: Configure the Android SDK
+    - pagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -638,22 +632,14 @@
       - subpagename: Customizing the SDK
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
-      - subpagename: Modifying Resources
-      - subpagename: Configuring the Message's Edit Text
-      - subpagename: Changing Fonts
     - pagename: String Localization
       subpages:
       - subpagename: Modifying Strings
       - subpagename: Plural String resource Example
-      - subpagename: Timestamps Formatting
       - subpagename: Date and Time
-      - subpagename: Bubble Timestamp
-      - subpagename: Separator Timestamp
       - subpagename: Override SDK Strings
-      - subpagename: Resolve Message
     - pagename: Advanced Features
       subpages:
-      - subpagename: Unauthenticated In-App Messaging
       - subpagename: Photo Sharing
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
@@ -673,8 +659,7 @@
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Security
-      - subpagename: Authentication
+      - subpagename: Authentication 
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
       - subpagename: Use the LivePerson SDK - Android

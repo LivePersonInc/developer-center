@@ -6,11 +6,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Configuration
 
-order: 140
-permalink: mobile-app-messaging-sdk-for-android-configuration-push-notifications.html
-
+permalink: mobile-app-messaging-sdk-for-android-push-notifications.html
 indicator: messaging
 ---
 
@@ -257,7 +254,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
          }
          return null;
      }
-         /* Listen to changes in unread messages counter and updating icon badge*/
+         /* Listen to changes in unread messages counter and update icon badge*/
      public static class BadgeBroadcastReceiver extends BroadcastReceiver{
          public BadgeBroadcastReceiver(){}
          @Override
