@@ -133,7 +133,7 @@ Figure 1.4 Showing the success case of the valid credentials
 
 Figure 1.5 Showing the fail case of the invalid credentials
 
-Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Google DialogFlow V2 bot connector.
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Google DialogFlow V2 bot.
 
 
 {: .important}
