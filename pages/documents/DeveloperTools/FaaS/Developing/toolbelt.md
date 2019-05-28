@@ -120,8 +120,9 @@ secretClient.readSecret('my_Secret-Key')
 ### SMTP Client:
 
 SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client
-is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares the interface. Important note, it will
-use a unique connection per email sent, it will also release it after sending.
+is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
+
+<div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
 
 
 **Sample Usage**
