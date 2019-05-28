@@ -22,7 +22,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 
 <img style="width:600px" src="img/dialogflow/vendor.png">
 
-Fig.2.1.1 Showing the configuration that needed to be filled in order to 
+Fig.2.1.1 Showing the configuration that needed to be filled
 
 In order to complete the configuration you have to provide following credential information:
 
@@ -58,7 +58,7 @@ Figure 2.1.2 Showing the success case of the valid credentials
 
 <img style="width:600px" src="img/dialogflow/connection-failed.png">
 
-Figure 2.1.3 Showing the fail case of the valid credentials
+Figure 2.1.3 Showing the fail case of the invalid credentials
 
 Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Google DialogFlow bot connector.
 
@@ -66,7 +66,7 @@ Once you are done with providing configuration you can save it by pressing on "D
 ### Customization of the Google Dialogflow V1 
 
 {: .important}
-Following guide is going to present customization for the Google Dialogflow V1 behavior for Advance users. Continue if you are familiar with customization of Dialogflow V1."
+Following guide is going to present customization for the Google Dialogflow V1 behavior. It is intended for advance users who are familiar with customization of Dialogflow V2.
 
 <div class="notice">
 The Dialogflow service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property of Dialogflow request Object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*.
