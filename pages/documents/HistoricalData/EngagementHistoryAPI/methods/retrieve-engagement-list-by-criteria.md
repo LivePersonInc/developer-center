@@ -327,6 +327,7 @@ Example:
              {
                "cartStatus": {
                  "serverTimeStamp": "1435764972045",
+		 "originalTimeStamp": "1435801272063",
                  "total": "11.7",
                  "numItems": "6",
                  "products": [
@@ -345,6 +346,7 @@ Example:
              {
                "customerInfo": {
                  "serverTimeStamp": "1436258709564",
+		 "originalTimeStamp": "1435801272063",
                  "customerInfo": {
                    "customerStatus": "cancelled",
                    "customerType": "vip",
@@ -370,12 +372,14 @@ Example:
                    "value": "22.22",
                    "leadId": "xyz123"
                  },
-                 "serverTimeStamp": "1435780135906"
+                 "serverTimeStamp": "1435780135906",
+		 "originalTimeStamp": "1435801272063"
                }
              },
              {
                "marketingCampaignInfo": {
                  "serverTimeStamp": "1436703809351",
+		 "originalTimeStamp": "1435801272063",
                  "marketingCampaignInfo": {
                    "originatingChannel": "1",
                    "affiliate": "Yahoo",
@@ -386,6 +390,7 @@ Example:
              {
                "personalInfo": {
                  "serverTimeStamp": "1436436923641",
+		 "originalTimeStamp": "1435801272063",
                  "name": "ELI",
                  "surname": "leibovitz",
                  "gender": "MALE",
@@ -410,6 +415,7 @@ Example:
                "purchase": {
                  "total": "11.7",
                  "serverTimeStamp": "1434394476705",
+		 "originalTimeStamp": "1435801272063",
                  "cart": {
                    "total": "17.8",
                    "serverTimeStamp": null,
@@ -432,6 +438,7 @@ Example:
              {
                "serviceActivity": {
                  "serverTimeStamp": "1435780135922",
+		 "originalTimeStamp": "1435801272063",
                  "serviceActivity": {
                    "topic": "order checkbook",
                    "status": "0",
@@ -443,6 +450,7 @@ Example:
              {
                "viewProduct": {
                  "serverTimeStamp": "1434394466093",
+		 "originalTimeStamp": "1435801272063",
                  "products": [
                    {
                      "quantity": null,
@@ -459,6 +467,7 @@ Example:
              {
                "formFillingError": {
                  "serverTimeStamp": "1435764972047",
+		 "originalTimeStamp": "1435801272063",
                  "visitorError": {
                    "contextId": "context.id",
                    "message": {
@@ -835,6 +844,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                   "total": "77.0",
                   "currency": null,
                   "serverTimeStamp": "1485969113673",
+		  "originalTimeStamp": "1485969113673",
                   "cart": {
                     "total": null,
                     "serverTimeStamp": null,
@@ -854,6 +864,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                   "total": "77.0",
                   "currency": null,
                   "serverTimeStamp": "1485970063032",
+		  "originalTimeStamp": "1485969113673",
                   "cart": {
                     "total": null,
                     "serverTimeStamp": null,
