@@ -1,20 +1,16 @@
 ---
-pagename: External Invocations
+pagename: Authorization Code
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-external-invocations.html
+permalink: function-as-a-service-external-invocations-authorization-code.html
 indicator: both
 ---
 
-To give brands the option to call their FaaS functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth 2.0.
+This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call FaaS on behalf a LiveEngeage user such as an Agent or Administrator.
 
-Further information about OAuth 2.0 and how we use it:
-
-* OAuth 2.0 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
-
-* Official Liveperson OAuth 2.0 flow documentation: [link](authorizing-liveengage-applications-overview.html)
+**Note**: This grant type is redirection based. Only use this if a real user like an Agent is involved.
 
 ### Step 1: Generate client-id & client-secret:
 
@@ -135,7 +131,5 @@ Retrieved data:
   * **Callback-URL** Application’s callback URL is available and accessible.
 
   * **Authorization-Server + FaaS - domain** is available.
-
-**Note:** When integrating FaaS into your own systems, **Step 6** should be executed in advance of the FaaS invocation request. This is a one time operation which retrieves the generated tokens and maintains them in your systems. These tokens are required before executing the invocation against FaaS. Please make sure to use separate users/tokens for every system that is going to call FaaS, to maintain security.
 
 While calling FaaS with the access-token, you should also make sure to refresh the token before it expires. During **Step 6** you retrieved not only an access-token but also a refresh-token. Please follow [this](https://developers.liveperson.com/authorizing-liveengage-applications-methods-refresh-request.html) guide to execute a refresh request for your token.
