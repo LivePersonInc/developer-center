@@ -8,7 +8,7 @@ permalink: bot-connectors-google-dialogflow.html
 indicator:
 ---
 
-The following documentation outlines the step of configuring bot connector and gives introduction on how to implement functions specifically for **Google Dialogflow Version 1**.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **Google Dialogflow Version 1**.
 
 {: .important}
 Google has deprecated Dialogflow **Version 1** and customers should move to Version 2 if they have not already planned to do so by October 2019
@@ -18,13 +18,13 @@ Google has deprecated Dialogflow **Version 1** and customers should move to Vers
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
-You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
+You will be presented with following screen to complete the Vendor Settings in order to add bot.
 
 <img style="width:600px" src="img/dialogflow/vendor.png">
 
-Fig.2.1.1 Showing the configuration that needed to be filled
+Figure 1.1 Showing the configuration that needed to be filled
 
-In order to complete the configuration you have to provide following credential information:
+The following Dialogflow information should be provided to LivePerson:
 
 <table>
   <thead>
@@ -40,33 +40,34 @@ In order to complete the configuration you have to provide following credential 
   </tr>
   <tr>
     <td>Dialogflow query url</td>
-    <td>Query url for sending Dialogflow queries. (in Figure 2.1.1 mentioned as "API Version")</td>
+    <td>Query url for sending Dialogflow queries</td>
   </tr>
   </tbody>
 </table>
 
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 2.1.2 and 2.1.3 respectively.
-
-
 {: .important}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
 
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
+
 <img style="width:600px" src="img/dialogflow/connection-success.png">
 
-Figure 2.1.2 Showing the success case of the valid credentials
+Figure 1.2 Showing the success case of the valid credentials
 
 <img style="width:600px" src="img/dialogflow/connection-failed.png">
 
-Figure 2.1.3 Showing the fail case of the invalid credentials
+Figure 1.3 Showing the fail case of the invalid credentials
 
-Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Google DialogFlow bot connector.
-
-
-### Customization of the Google Dialogflow V1 
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Amazon Lex bot.
 
 {: .important}
-Following guide is going to present customization for the Google Dialogflow V1 behavior. It is intended for advance users who are familiar with customization of Dialogflow V2.
+Following guide is going to introduce how to implement functions specifically for **Dialogflow V1**  using using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/)
+
+
+### Limitations
+
+#### Dialogflow Query length Limit
 
 <div class="notice">
 The Dialogflow service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property of Dialogflow request Object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*.
@@ -84,7 +85,7 @@ The Dialogflow service has a <a href="https://dialogflow.com/docs/reference/agen
     "timezone": "America/New_York"   
 }
 ```
-Figure 2.2.1 Dialogflow Response JSON with action
+Figure 2.1 Dialogflow Response JSON with action
 
 
 **Sample Dialogflow Error Response**
@@ -101,22 +102,22 @@ Figure 2.2.1 Dialogflow Response JSON with action
     }
 }
 ```
-Figure 2.2.2 Dialogflow Response JSON with action
+Figure 2.2 Dialogflow Response JSON with action
 
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT
 
     <img style="width:600px" src="img/dialogflow/image_6.png">
 
-    Figure 2.2.3
+    Figure 2.3
 
 2. Do not forget to add a custom response in the **Text response** section.
 
     <img style="width:600px" src="img/dialogflow/image_7.png">
 
-    Figure 2.2.4
+    Figure 2.4
 
-#### Welcome Event
+### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works and how it is framed with the consumer.
 
@@ -153,15 +154,15 @@ As such, ensure you have an ‘entry point’ intent that utilises the default �
 
 <img style="width:600px" src="img/dialogflow/image_5.png">
 
-Figure 2.2.5
+Figure 2.1
 
-#### Change Time To Response of Conversation
+### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **action** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 <img style="width:600px" src="img/dialogflow/image_8.png">
 
-Fig 2.2.6
+Figure 3.1
 
 ```json
 {
@@ -203,10 +204,10 @@ Fig 2.2.6
   "sessionId": "afce013a-addd-63d6-aea0-d561bdf382db"
 }
 ```
-Figure 2.2.7 JSON response for changing TTR
+Figure 3.2 JSON response for changing TTR
 
 
-#### Transfer / Escalations
+### Transfer / Escalations
 
 <div class="notice">
 <strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each.
@@ -215,6 +216,7 @@ Figure 2.2.7 JSON response for changing TTR
 <li>For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.</li>
 </ul>
 </div>
+
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
@@ -237,7 +239,7 @@ Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of a skill name (c
 
 <img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
-Figure 2.2.8
+Figure 4.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a transfer action.
 
@@ -277,16 +279,16 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "sessionId": "424a204941d6849819ab4b8a6389K8390791"
 }
 ```
-Figure 2.2.9
 
 
-#### Send Rich Content (Structured content)
+
+### Send Rich Content (Structured content)
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via Dialogflow, use the Dialogflow option to send a *custom payload* via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
 <img style="width:600px" src="img/dialogflow/image_10.png">
 
-Figure 2.2.10
+Figure 5.1
 
 ```json
 {
@@ -321,10 +323,10 @@ Figure 2.2.10
    }
 }
 ```
-Figure 2.2.11 Dialogflow Example Custom Payload
+Figure 5.2 Dialogflow Example Custom Payload
 
 
-#### Close Chat/Conversation
+### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation with the consumer without escalating to a live agent. If a query has been answered, or the brand has determined that no escalation is available for a given query, then you will need to have the bot end the conversation.
 
@@ -334,7 +336,7 @@ The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to
 
 <img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
-Figure 2.2.12
+Figure 6.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a closeConversation action.
 
@@ -372,4 +374,4 @@ Below is an example of what the response JSON from Dialogflow will look like, an
     "sessionId": "38732e1449b1a34a50ec85dde16bK8390792"
 }
 ```
-Figure 2.2.13 Dialogflow JSON response for closing conversation
+Figure 6.2 Dialogflow JSON response for closing conversation
