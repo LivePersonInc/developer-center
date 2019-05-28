@@ -419,6 +419,7 @@ Example:
                  "cart": {
                    "total": "17.8",
                    "serverTimeStamp": null,
+                   "originalTimeStamp": null,
                    "products": [
                      {
                        "quantity": "3",
@@ -848,6 +849,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                   "cart": {
                     "total": null,
                     "serverTimeStamp": null,
+                    "originalTimeStamp": null,
                     "products": [
 
                     ],
@@ -868,6 +870,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                   "cart": {
                     "total": null,
                     "serverTimeStamp": null,
+                    "originalTimeStamp": null,
                     "products": [
 
                     ],
@@ -1202,6 +1205,7 @@ Example:
 							"cart": {
 								"total": null,
 								"serverTimeStamp": null,
+								"originalTimeStamp": null,
 								"products": [],
 								"numItems": null
 							},
@@ -1219,6 +1223,7 @@ Example:
 							"cart": {
 								"total": null,
 								"serverTimeStamp": null,
+								"originalTimeStamp": null,
 								"products": [],
 								"numItems": null
 							},
