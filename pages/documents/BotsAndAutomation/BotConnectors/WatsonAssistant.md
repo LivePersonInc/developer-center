@@ -17,12 +17,11 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
-{: .important}
-You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer
-
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration. 
 
 #### UserPass authentication
+You will be presented with following screen to complete the Vendor Settings in order to add bot connector using UserPass authentication.
+
 <img style="width:600px" src="img/watsonassistant/userpass-based-auth.png">
 
 Figure 1.1 Showing the configuration that needed to be filled using UserPass authentication
@@ -67,6 +66,8 @@ Following information needs to be completed for LivePerson:
 
 
 #### IAM authentication
+You will be presented with following screen to complete the Vendor Settings in order to add bot connector using IAM authentication.
+
 <img style="width:600px" src="img/watsonassistant/token-based-auth.png">
 
 Figure 1.2 Showing the configuration that needed to be filled using IAM authentication authentication
@@ -110,6 +111,10 @@ Following information needs to be completed for LivePerson:
 </table>
 
 #### Test Connection
+
+{: .important}
+You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer
+
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
 <img style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
@@ -132,7 +137,7 @@ Once you are done with providing configuration you can save it by pressing on "D
 
 
 {: .important}
-Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for advance users who are familiar with IBM Watson cloud dashboard.
+Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
 
 
 ### Sending Rich Content (Structured Content)

@@ -24,7 +24,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 
 Figure 1.1 Showing the configuration that needed to be filled
 
-The following Dialogflow information should be provided to LivePerson:
+The following Dialogflow V1 information should be provided to LivePerson:
 
 <table>
   <thead>
@@ -40,7 +40,7 @@ The following Dialogflow information should be provided to LivePerson:
   </tr>
   <tr>
     <td>Dialogflow query url</td>
-    <td>Query url for sending Dialogflow queries</td>
+    <td>Query url for sending Dialogflow queries (API Version in Figure 1.1)</td>
   </tr>
   </tbody>
 </table>
@@ -59,15 +59,15 @@ Figure 1.2 Showing the success case of the valid credentials
 
 Figure 1.3 Showing the fail case of the invalid credentials
 
-Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Amazon Lex bot.
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Dialogflow V1 bot.
 
 {: .important}
-Following guide is going to introduce how to implement functions specifically for **Dialogflow V1**  using using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/)
+Following guide is going to introduce how to implement functions specifically for **Dialogflow V1** using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/)
 
 
 ### Limitations
 
-#### Dialogflow Query length Limit
+#### Dialogflow V1 Query length Limit
 
 <div class="notice">
 The Dialogflow service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property of Dialogflow request Object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*.

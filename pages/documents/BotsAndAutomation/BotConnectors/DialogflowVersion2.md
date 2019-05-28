@@ -24,7 +24,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 Figure 1.1 Showing the configuration that needed to be filled
 
 
-The following DialogflowV2 information should be provided to LivePerson:
+The following Dialogflow V2 information should be provided to LivePerson:
 
 
 <table>
@@ -137,11 +137,11 @@ Once you are done with providing configuration you can save it by pressing on "D
 
 
 {: .important}
-Following guide is going to present customization for the Google Dialogflow V2 behavior (intended for advance users) using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/).
+Following guide is going to introduce how to implement functions specifically for **Dialogflow V2** using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/).
 
 ### Limitations
 
-#### Dialogflow Query length Limit
+#### Dialogflow V2 Query length Limit
 
 <div class="notice">
 The Dialogflow V2 service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow.
