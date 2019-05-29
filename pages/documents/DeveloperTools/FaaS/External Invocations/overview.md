@@ -15,5 +15,5 @@ Here is a short OAuth 2.0 introduction video: [link](https://www.youtube.com/wat
 ### Grant Types
 OAuth2.0 offers several [grant types](https://oauth.net/2/grant-types/) for different use cases. FaaS supports the following two grant types:
 
-- Client Credentials: This is the preferred way to authorize for machine-to-machine communication. Choose this option if you want to call FaaS functions from an external system such as a cron job (see here for more infomation on [Client Credentials](https://oauth.net/2/grant-types/client-credentials/)).
-- Authorization Code: This is a redirect based flow. Use this grant type if you want to call FaaS on behalf a LiveEngeage user such as an Agent or Administrator(see here for more infomation on [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). 
+1. [Client Credentials](function-as-a-service-external-invocations-client-credentials.html): This is the preferred way to authorize for machine-to-machine communication. Choose this option if you want to call FaaS functions from an external system such as a cron job (see here for more infomation on [Client Credentials](https://oauth.net/2/grant-types/client-credentials/)).
+2. [Authorization Code](function-as-a-service-external-invocations-authorization-code.html): This is a redirect based flow. Use this grant type if you want to call FaaS on behalf a LiveEngeage user such as an Agent or Administrator(see here for more infomation on [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). 
