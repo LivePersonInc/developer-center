@@ -31,6 +31,15 @@ The Simple Router template provides an easy framework for the creation of a rout
 
 - Escalation
     - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
+    - In the Integrations area, there should be a pre-configured integration named “Transfer” and “Liveperson Agent Escalation” should be selected in the Integration Type menu.
+    
+    <img style="width:400px" src="img/ConvoBuilder/template_simplerouter_3.png">
+
+    - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
+    
+    <img style="width:450px" src="img/ConvoBuilder/template_simplerouter_4.png">
+
+
 
 ### Configuration Needed
 
@@ -100,6 +109,9 @@ For each of your skill options:
 - Edit the `transferMessage` to match the name of your skills. 
 
 - Edit the `skillId` to match that of your skills. The skill ID is displayed in the URL in LiveEngage when you click on an individual skill.
+
+- The `skillName` is being set to the name of the intent, but if you want to customize it you can.
+
 
 You may add or remove `case` branches as needed for the number of your skills.
 
