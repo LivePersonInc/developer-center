@@ -668,7 +668,7 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Configuration
+    - pagename: Configure the iOS SDK
       subpages:
       - subpagename: Initialization
       - subpagename: SDK Delegates
