@@ -6,10 +6,10 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Appendix
+subfoldername: Resources
 
 order: 320
-permalink: mobile-app-messaging-sdk-for-android-appendix-security.html
+permalink: mobile-app-messaging-sdk-for-android-resources-security.html
 
 indicator: messaging
 ---
