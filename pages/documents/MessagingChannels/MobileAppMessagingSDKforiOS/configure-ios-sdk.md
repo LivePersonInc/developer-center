@@ -9,112 +9,27 @@ permalink: mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html
 
 ---
 
-You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
 
-### Initialize the Messaging SDK with Monitoring Params
-
-{:.important}
-To get the App key or `appInstallationId`, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team.
+You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. 
 
 
-1. Inside **viewController** add the following imports:
-
-   ```swift
-   import LPMessagingSDK
-   import LPInfra
-   import LPMonitoring
-   ```
-
-2. Also inside **ViewController**, under **viewDidLoad**, add the following code:
-
-   ```swift
-   do {
-     let monitoringParams = LPMonitoringInitParams(appInstallID: "appInstallationId")
-     try LPMessagingSDK.instance.initialize("Your account ID", monitoringInitParams: monitoringParams)
-   } catch {
-     return
-   }
-   ```
-
-3. Create **LPMonitoringParams**. The entry points and engagement attributes used here are dummies:
-
-   ```swift
-     let entryPoints = ["tel://972737004000",
-                       "http://www.liveperson.com",
-                       "sec://Sport",
-                       "lang://Eng"]
-
-     let engagementAttributes = [
-       ["type": "purchase", "total": 20.0],
-       ["type": "lead",
-       "lead": ["topic": "luxury car test drive 2015",
-             "value": 22.22,
-             "leadId": "xyz123"]]
-     ]
-
-     let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAttributes: engagementAttributes)
-   ```
 
 
-4. Using the **LPMonitoringParams**, get the Engagement for the User, which is needed to start a new conversation with a specific campaign.
+### Functions
 
-   ```swift
-   LPMonitoringAPI.instance.getEngagement(consumerID: self.consumerID, monitoringParams: monitoringParams, completion: {
-         if let first = engagement.engagementDetails?.first {
-           let campaign = first.campaignId
-           let id = first.engagementId
-           let context : String = first.contextId!
-           self.campaignInfo = LPCampaignInfo(campaignId: campaign, engagementId: id, contextId: context)
-         } else {
-           self.campaignInfo = nil
-         }
-       }) { (error) in
-         self.campaignInfo = nil
-       }
-     }
-   ```
-
-5. Set up and call the conversation view. You’ll provide your LivePerson account number, a container view controller, and the campaign information.
-
-   ```swift
-   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("Your account ID", campaignInfo: campaignInfo)
-   let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
-   LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: nil)
-   ```
-
-6. Remove the conversation view when your container is deallocated:
-
-   ```swift
-   let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
-   LPMessagingSDK.instance.removeConversation(conversationQuery)
-   ```
-
-   <div class="important">When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.</div>
-
-   ```swift
-   if (self.conversationQuery != nil && self.isMovingToParentViewController){
-     LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
-   }
-   ```
-
-**Note**: When using ViewController Mode, on the Navigation Bar Back Button, you can call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
-
-
-#### Supporting functions:
-
-1. Get ’filter’ for the conversation screen, determining which of the conversations display in the Conversation Window:
+1. Get the conversation screen and determine which of the conversations to display in the Conversation Window.
 
    ```swift
    public func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol
    ```
 
-2. Get ’filter’ for the conversation screen, determining which of the conversations display in the Conversation Window, using the **Consumer ID**:
+2. Get the conversation screen and determine which of the conversations to display in the Conversation Window, using the **Consumer ID**:
 
    ```swift
    public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol
    ```
 
-3. Returns a boolean flag, with **Ready** when the Brand is connected and conversation can be processed:
+3. Return a boolean flag, with **Ready** when the Brand is connected and conversation can be processed:
 
    ```swift
    public func isBrandReady(brandID: String) -> Bool
@@ -144,33 +59,35 @@ During the course of the conversation, consumers can take several actions such a
 
 #### Methods
 
-**Note: for the complete information about the methods, refer to this [link](consumer-experience-ios-sdk-messaging-methods.html)**
+For information about the methods, see to [Messaging API](consumer-experience-ios-sdk-messaging-methods.html).
 
-1. This method checks for an active conversation, **True** - there is an active conversation. **False** - there is no active conversation
+1. Check for an active conversation.
+   - **True** - Active conversation 
+   - **False** - No active conversation
 
    ```swift
    public func checkActiveConversation(conversationQuery: ConversationParamProtocol) -> Bool
    ```
 
-2. This method marks the current conversation as Urgent.
+2. Mark the current conversation as Urgent.
 
    ```swift
    public func markAsUrgent(conversationQuery: ConversationParamProtocol)
    ```
 
-3. This method checks if the current conversation is marked as Urgent.
+3. Check if the current conversation is marked as Urgent.
 
    ```swift
    public func isUrgent(conversationQuery: ConversationParamProtocol) -> Bool
    ```
 
-4. This method marks an urgent conversation as normal.
+4. Mark an urgent conversation as normal.
 
    ```swift
    public func dismissUrgent(conversationQuery: ConversationParamProtocol)
    ```
 
-5. This method resolves the current conversation.
+5. Resolve the current conversation.
 
    ```swift
    public class func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})
@@ -181,7 +98,7 @@ During the course of the conversation, consumers can take several actions such a
    ```
 
 
-6. This method clears the conversation history.
+6. Clear the conversation history.
 
    ```swift
    public func clearHistory(conversationQuery: ConversationParamProtocol) throws
@@ -189,13 +106,13 @@ During the course of the conversation, consumers can take several actions such a
 
    **Note:** Use clear history only if there is no open/active conversation.
 
-7. This method will logout Current User from LPMessagingSDK
+7. Logout Current User from LPMessagingSDK.
 
    ```swift
    public func logout()
    ```
 
-8. This method is typically used to stop and clear all the metadata of the SDK
+8. Stop and clear all the metadata of the SDK.
 
    ```swift
    public func destruct()
@@ -203,37 +120,37 @@ During the course of the conversation, consumers can take several actions such a
 
 #### Delegates
 
-1. Will be triggered when the customer satisfaction survey is dismissed after the user has submitted the survey
+1. Triggered when the the user submits the survey and dismisses the customer satisfaction survey.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationCSATDismissedOnSubmittion(conversationID: String?)
    ```
 
-2. Will be triggered after the customer satisfaction page is submitted with a score.
+2. Triggered after the user submits the customer satisfaction with a score.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKCSATScoreSubmissionDidFinish(brandID: String, rating: Int)
    ```
 
-3. Will be triggered when a new conversation has started, from the agent or from the consumer side.
+3. Triggered when a new conversation has started, from the agent or from the consumer side.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationStarted(conversationID: String?)
    ```
 
-4. Will be triggered when a conversation has ended, from the agent or from the consumer side.
+4. Triggered when a conversation has ended, from the agent or from the consumer side.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationEnded(_ conversationID: String?, closeReason: LPConversationCloseReason)
    ```
 
-5. Will be triggered when the conversation view controller removed from its container view controller or window.
+5. Triggered when the conversation view controller is removed from its container view controller or window.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationViewControllerDidDismiss()
    ```
 
-6. Will be triggered each time the agent typing state changes.
+6. Triggered each time the agent typing state changes.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentIsTypingStateChanged(isTyping: Bool)
@@ -245,13 +162,16 @@ To determine the layout of messaging within the app, you can utilize various act
 
 **Note:** The following methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode).
 
-1. The **[toggleChatActions](consumer-experience-ios-sdk-messaging-methods.html#togglechatactions)** method changes the state of the action menu of the conversation for brandID.
+1. Change the state of the action menu of the conversation for brandID.
 
    ```swift
    public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
    ```
 
-2. The **LPMessagingSDKActionsMenuToggled** nethod triggers each time the SDK menu is opened/closed.
+   **Note:** Refer to [[Messaging API](consumer-experience-ios-sdk-messaging-methods.html#togglechatactions) to learn more about `toggleChatActions`.
+
+
+2. Triggered each time the SDK menu is opened/closed.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKActionsMenuToggled(toggled: Bool)
@@ -263,8 +183,91 @@ To determine the layout of messaging within the app, you can utilize various act
    <LPMessagingSDKdelegate> optional func LPMessagingSDKCustomButtonTapped()
    ```
 
-4. The **LPMessagingSDKOffHoursStateChanged** method triggers if Off-Hours state changed.
+4. Triggered if Off-Hours state changed.
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
+   ```  
+
+### User Data
+
+Pass and display consumer information to agents, and agent information to consumers.
+
+**Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
+
+1. Set the user profile on LiveEngage.
+
+   ```swift
+   public func setUserProfile(lpuser: LPUser, brandID: String)
    ```
+
+2. Return Previously Assigned Agent, if any.
+
+   ```swift
+   public func getAssignedAgent(conversationQuery: ConversationParamProtocol) -> LPUser?
+   ```
+
+3. Triggered each time the SDK receives info about the agent from the Server.
+
+   ```swift
+   <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentDetails(agent: LPUser?)
+   ```
+
+### Logs and Info
+
+
+Send logs from LiveEngage to your app. Logs include different severity levels of errors and warnings.  
+
+1. Subscribe the host app to receive log events from a specific log level and above.
+
+   ```swift
+   public func subscribeLogEvents(logLevel: LogLevel)
+   ```
+
+    **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LogLevel` object.
+
+2. Triggered when the SDK version you're using is obselete and needs an update.
+
+   ```swift
+   <LPMessagingSDKdelegate> func LPMessagingSDKObseleteVersion(error: NSError)
+   ```
+
+3. Return the SDK current version.
+
+   ```swift
+   public func getSDKVersion() -> String?
+   ```
+
+4. Print all the keys that can be localized on the SDK.
+
+   ```swift
+   public func printAllLocalizedKeys()
+   ```
+
+5. Print all supported languages on the SDK.
+
+   ```swift
+   public func printSupportedLanguages()
+   ```
+
+6. Return all supported languages on the SDK.
+
+   ```swift
+   public func getAllSupportedLanguages() -> [String : String]
+   ```
+
+### App Extensions
+
+To make sure the SDK uses the iOS keyboard only, and not third party ones, disable app extensions for keyboard as follows:
+
+In your **AppDelegate**, add the method application(_:shouldAllowExtensionPointIdentifier:)
+ with the implementation of:
+
+```swift
+func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplicationExtensionPointIdentifier) -> Bool {
+    return extensionPointIdentifier != UIApplicationExtensionPointIdentifier.keyboard
+ }
+```
+
+
+

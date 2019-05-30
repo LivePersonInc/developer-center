@@ -669,15 +669,7 @@
     - pagename: Overview
     - pagename: Quick Start
     - pagename: Configure the iOS SDK
-      subpages:
-      - subpagename: Initialization
-      - subpagename: SDK Delegates
-      - subpagename: Conversations Lifecycle
-      - subpagename: UI
-      - subpagename: User Data
-      - subpagename: Logs and Info
-      - subpagename: App Extensions
-      - subpagename: Push Notifications
+    - pagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
