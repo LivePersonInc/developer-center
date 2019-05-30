@@ -135,6 +135,31 @@ In order to search for a specific phrase within the messages, summary or engagem
 
 ### Response
 
+**General Characterizations**
+
+_Field Types - Max number of digits posibble_ 
+
+Field Type|   Size | Max number of digits                       
+:-------- | :----- | :---------------------
+Long      | 64 bit |   19 digits
+Double    | 64 bit |   16 digits
+Integer   | 32 bit |   10 digits
+
+
+_Boolean possible values_ 
+
+true | false
+:-------- | :---------
+
+
+_Decimal fractions_
+
+The max length for double fields is **16 digits**. for Decimal fractions,
+The max possible length the right of the decimal is **11 digits**, whereas 
+The max length the left of the decimal is **16 digits** .
+
+
+
 **Elements in the Response**
 
 _Metadata info_
@@ -187,7 +212,7 @@ alertedMCS           | Divides the MCS score into 3 groups: Positive, Neutral, N
 source               | Source origin (Facebook, app, etc).                                        | string     |
 device               | Device origin (desktop, smartphone, etc.).                                 | string     |
 deviceModel          | The model of the mobile device that opened the connection | string     | For example: "Iphone9,4"
-latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation is started, assigned to an agent or transferred to a skill.                       | long       |
+latestSkillId        | Most recent skill id of the conversation, will be updated after the conversation is started, assigned to an agent or transferred to a skill.                       | long       | Default value is "-1"
 latestSkillName      | Most recent skill name that the conversation was assigned to.                | string     |
 latestAgentId        | Most recent agent ID the conversation was assigned to.                     | long       |
 latestAgentLoginName | The agent's login name.                                                    | string     |
@@ -229,10 +254,10 @@ Name                 | Description                                              
 | engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
 | visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available). | numeric  | |
 | visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50) | |
-| engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | |
-| engagementApplicationName | Engagement's application name. | alphanumeric | |
-| engagementApplicationTypeId | Engagement's application type id | alphanumeric | |
-| engagementApplicationTypeName | Engagement's application type name | alphanumeric | |
+| engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | The Selected Engagement that triggered the conversation|
+| engagementApplicationName | Engagement's application name. | alphanumeric | The Selected Engagement that triggered the conversation |
+| engagementApplicationTypeId | Engagement's application type id | alphanumeric | The Selected Engagement that triggered the conversation |
+| engagementApplicationTypeName | Engagement's application type name | alphanumeric | The Selected Engagement that triggered the conversation |
 | visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
 | visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) | |
 | lobId | ID of the line of business of the campaign. | numeric(long) | |
@@ -520,7 +545,7 @@ _Summary info_
 
 Name            | Description                                       | Type/Value
 :-------------- | :------------------------------------------------ | :---------
-text            | Conversation's summary text.                      | string
+text            | Conversation's summary text, written by the Agent | string
 lastUpdatedTime | Time the conversation's summary was last updated. | long
 
 _Sdes info_
@@ -555,7 +580,7 @@ endTime      | The dialog end time, readable format.           | string     |
 endTimeL     | The dialog end time, epoch time in milliseconds.| long – epoch time in milliseconds |
 closeReason  | The dialog close reason.                        | string     |
 closeReasonDescription | The dialog close reason description.  | string     |
-skillId      | The skill ID associated with the dialog.        | string     |
+skillId      | The skill ID associated with the dialog.        | string     | Default value is "-1"
 skillName    | The name of the skill associated with the dialog.| string     |
 
 
