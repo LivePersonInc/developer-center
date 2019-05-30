@@ -137,7 +137,7 @@ In order to search for a specific phrase within the messages, summary or engagem
 
 **General Characterizations**
 
-_Field Types - Max number of digits posibble_ 
+_Field Types - Max number of digits possible
 
 Field Type|   Size | Max number of digits                       
 :-------- | :----- | :---------------------
@@ -146,18 +146,9 @@ Double    | 64 bit |   16 digits
 Integer   | 32 bit |   10 digits
 
 
-_Boolean possible values_ 
-
-true | false
-:-------- | :---------
-
-
 _Decimal fractions_
 
-The max length for double fields is **16 digits**. for Decimal fractions,
-The max possible length the right of the decimal is **11 digits**, whereas 
-The max length the left of the decimal is **16 digits** .
-
+The max length for double fields is **16 digits**. For Decimal fractions, the max possible length to the right of the decimal is **11 digits**, whereas the max length to the left of the decimal is **16 digits**.
 
 
 **Elements in the Response**
@@ -254,10 +245,10 @@ Name                 | Description                                              
 | engagementSource | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc. | alphanumeric  | |
 | visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available). | numeric  | |
 | visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50) | |
-| engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | The Selected Engagement that triggered the conversation|
-| engagementApplicationName | Engagement's application name. | alphanumeric | The Selected Engagement that triggered the conversation |
-| engagementApplicationTypeId | Engagement's application type id | alphanumeric | The Selected Engagement that triggered the conversation |
-| engagementApplicationTypeName | Engagement's application type name | alphanumeric | The Selected Engagement that triggered the conversation |
+| engagementApplicationId | Engagement's application ID. | alphanumeric - UUID | The engagement which triggered the conversation|
+| engagementApplicationName | Engagement's application name. | alphanumeric | The engagement which triggered the conversation |
+| engagementApplicationTypeId | Engagement's application type id | alphanumeric | The engagement which triggered the conversation |
+| engagementApplicationTypeName | Engagement's application type name | alphanumeric | The engagement which triggered the conversation |
 | visitorProfileId | ID of the visitor profile defined for the campaign. | numeric | |
 | visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) | |
 | lobId | ID of the line of business of the campaign. | numeric(long) | |
