@@ -15,11 +15,18 @@ The following documentation outlines the configuration for the connector and how
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first.
+See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
-The following Watson Assistant information should be provided to LivePerson:
+With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration. 
 
 #### UserPass authentication
+You will be presented with following screen to complete the Vendor Settings in order to add bot connector using UserPass authentication.
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-based-auth.png">
+
+Figure 1.1 Showing the configuration that needed to be filled using UserPass authentication
+
+Following information needs to be completed for LivePerson:
 <table>
   <thead>
   <tr>
@@ -57,7 +64,15 @@ The following Watson Assistant information should be provided to LivePerson:
   </tbody>
 </table>
 
+
 #### IAM authentication
+You will be presented with following screen to complete the Vendor Settings in order to add bot connector using IAM authentication.
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-based-auth.png">
+
+Figure 1.2 Showing the configuration that needed to be filled using IAM authentication authentication
+
+Following information needs to be completed for LivePerson:
 <table>
   <thead>
   <tr>
@@ -95,13 +110,35 @@ The following Watson Assistant information should be provided to LivePerson:
   </tbody>
 </table>
 
-#### Naming Conventions
+#### Test Connection
 
-One thing to note before going into *actions* and *skills* is the naming convention between each.
+{: .important}
+You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer
 
-All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by **Watson** needs to be *CLOSE_CONVERSATION*. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
-For escalations, the naming convention for these skills should use a "-" instead of "_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
+
+Figure 1.3 Showing the success case of the valid credentials for UserPass authentication
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-failed.png">
+
+Figure 1.4 Showing the fail case of the invalid credentials for UserPass authentication
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-success.png">
+
+Figure 1.5 Showing the success case of the valid credentials for IAM authentication
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-failed.png">
+
+Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
+
+
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Watson Assistant bot.
+
+
+{: .important}
+Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
+
 
 ### Sending Rich Content (Structured Content)
 
@@ -110,21 +147,21 @@ The core LiveEngage platform supports the use of rich/structured content. For mo
 To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 2.1).
 
 
-<img style="width:850px" src="img/watsonassistant/dialognode.png">
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png">
 
 Figure 2.1 Watson Dialog Node
 
 
 From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.2)
 
-<img style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
+<img class="fancyimage" style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
 
 Figure 2.2 Watson Assistant Dialog JSON Editor
 
 
 In the JSON Editor you will need to add your custom JSON response (Figure 2.3).
 
-<img style="width:500px" src="img/watsonassistant/jsoneditor.png">
+<img class="fancyimage" style="width:500px" src="img/watsonassistant/jsoneditor.png">
 
 Figure 2.3 Watson Assistant JSON Editor
 
@@ -191,7 +228,7 @@ Figure 2.4 Structured Content Watson JSON Example
 
 For new IAM workspaces that have a new Watson response, *Then respond with* text:
 
-<img style="width:400px" src="img/watsonassistant/image_5.png">
+<img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png">
 
 Put the structured content objects with the metadata in the text field for the response.
 
@@ -245,9 +282,18 @@ Figure 2.6 Watson JSON response for changing TTR
 
 ### Transfer/Escalations
 
+<div class="notice">
+<strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each.
+
+All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
+
+For escalations, the naming convention for these skills should use a "-" instead of "_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
+
+</div>
+
 Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
-<img style="width:850px" src="img/watsonassistant/image_6.png">
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png">
 
 In the *Then respond with:* JSON editor block, we see the following:
 
