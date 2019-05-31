@@ -12,11 +12,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-wi
 indicator: messaging
 ---
 
-<<<<<<< HEAD
-**Supported versions:** 3.8 and higher
-=======
 **Supported versions:** 3.8
->>>>>>> a976a90b0b41bbed939a9e9595b44e8ae726521a
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 

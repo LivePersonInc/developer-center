@@ -33,11 +33,7 @@ Use this API method to report on engagement attributes (SDEs) for a consumer in 
 
 ### getEngagement
 
-<<<<<<< HEAD
 Use this API method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the SDEs, and other parameters based on the messaging concept determine the decisions. 
-=======
-Use this API method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
->>>>>>> 3401f9fb404bd1cce51b3c10c7b50a617e0fdba1
 
 As an optional parameter, you can pass SDE Data, which includes Entry Points and Engagement Attributes for routing the conversation.
 
