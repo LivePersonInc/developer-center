@@ -116,10 +116,6 @@ Figure 1.2
 
 **NOTE**: The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
 
-<img style="width:600px" src="img/dialogflowversion2/credentials.png">
-
-Figure 1.3
-
 {: .important}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
 
