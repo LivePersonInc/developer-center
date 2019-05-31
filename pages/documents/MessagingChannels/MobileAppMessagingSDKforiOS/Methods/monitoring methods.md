@@ -19,21 +19,25 @@ Monitoring API is enabled only when the SDK is initialized with [LPMonitoringPar
 
 ### sendSDE
 
-Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
+Use this API method to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 
 `func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
 
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
-| identities | Mandatory array of identity objects of type LPMonitoringIdentity which includes the details on the consumer and issuer | Yes |
-| monitoringParams | An mandatory [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
-| completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
-| failure | A Failure callback with an error in case the request fails |  Yes |
+| identities | Mandatory array of identity objects of type LPMonitoringIdentity which includes the details on the consumer and issuer. | Yes |
+| monitoringParams | An mandatory [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with mandatory Engagement Attributes and optional PageId and entry points array.  | Yes |
+| completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use. |  Yes |
+| failure | A Failure callback with an error in case the request fails. |  Yes |
 
 ### getEngagement
 
+<<<<<<< HEAD
 Use this API method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the SDEs, and other parameters based on the messaging concept determine the decisions. 
+=======
+Use this API method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
+>>>>>>> 3401f9fb404bd1cce51b3c10c7b50a617e0fdba1
 
 As an optional parameter, you can pass SDE Data, which includes Entry Points and Engagement Attributes for routing the conversation.
 
