@@ -6,9 +6,9 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
+subfolder: Resources
 
-order: 14
-permalink: mobile-app-messaging-sdk-for-ios-authentication.html
+permalink: mobile-app-messaging-sdk-for-ios-resources-authentication.html
 
 indicator: messaging
 ---

@@ -14,27 +14,26 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
 
-<div class="important">
-Monitoring API is enabled only when the SDK is initialized with <a href="consumer-experience-ios-sdk-interfacedefinitions.html">LPMonitoringParams</a>, to use this initialization refer to the following <a href="consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params">steps</a>.
-</div>
+{:.important}
+Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the [Quick Start](mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk) guide.
 
 ### sendSDE
 
-Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
+Use this API method to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 
 `func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
 
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
-| identities | Mandatory array of identity objects of type LPMonitoringIdentity which includes the details on the consumer and issuer | Yes |
-| monitoringParams | An mandatory [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
-| completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
-| failure | A Failure callback with an error in case the request fails |  Yes |
+| identities | Mandatory array of identity objects of type LPMonitoringIdentity which includes the details on the consumer and issuer. | Yes |
+| monitoringParams | An mandatory [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with mandatory Engagement Attributes and optional PageId and entry points array.  | Yes |
+| completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use. |  Yes |
+| failure | A Failure callback with an error in case the request fails. |  Yes |
 
 ### getEngagement
 
-Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
+Use this API method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
 
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 
