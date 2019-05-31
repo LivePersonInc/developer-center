@@ -15,31 +15,16 @@ The following documentation outlines the configuration for the connector and how
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first.
+See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
-The following DialogflowV2 information should be provided to LivePerson:
+You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-**NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*. A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
+<img style="width:600px" src="img/dialogflowversion2/vendor.png">
 
-The expected output of a service account setup is a JSON file, example below:
+Figure 1.1 Showing the configuration that needed to be filled
 
-**Format of JSON file containing credentials**
 
-```json
-{
-    "type": "service_account",
-    "project_id": "[PROJECT-ID]",
-    "private_key_id": "[KEY-ID]",
-    "private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
-    "client_email": "[SERVICE-ACCOUNT-EMAIL]",
-    "client_id": "[CLIENT-ID]",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://accounts.google.com/o/oauth2/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
-}
-```
-Figure 1.1
+The following Dialogflow V2 information should be provided to LivePerson:
 
 
 <table>
@@ -106,28 +91,71 @@ Figure 1.1
   </tbody>
 </table>
 
+**NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*. A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
+
+The expected output of a service account setup is a JSON file, example below:
+
+**Format of JSON file containing credentials**
+
+```json
+{
+    "type": "service_account",
+    "project_id": "[PROJECT-ID]",
+    "private_key_id": "[KEY-ID]",
+    "private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
+    "client_email": "[SERVICE-ACCOUNT-EMAIL]",
+    "client_id": "[CLIENT-ID]",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
+}
+```
+Figure 1.2
+
+
 **NOTE**: The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
 
-<img style="width:600px" src="img/dialogflowversion2/image_5.png">
+{: .important}
+You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
+
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively.
+
+<img style="width:600px" src="img/dialogflowversion2/connection-success.png">
+
+Figure 1.4 Showing the success case of the valid credentials
+
+<img style="width:600px" src="img/dialogflowversion2/connection-failed.png">
+
+Figure 1.5 Showing the fail case of the invalid credentials
+
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Google DialogFlow V2 bot.
+
+
+{: .important}
+Following guide is going to introduce how to implement functions specifically for **Dialogflow V2** using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/).
 
 ### Limitations
 
-#### Dialogflow Query length Limit
+#### Dialogflow V2 Query length Limit
 
-The Dialogflow V2 service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters will invoke a custom event in Dialogflow.
+<div class="notice">
+The Dialogflow V2 service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
+</div>
+
 
 1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT
 
     <img style="width:600px" src="img/dialogflowversion2/image_7.png">
 
-    fig.2.1
+    Figure 2.1
 
 2. Do not forget to add a custom response in the **Text response** section.
 
     <img style="width:700px" src="img/dialogflowversion2/image_8.png">
 
-    fig.2.2
+    Figure 2.2
 
 ### Welcome Event
 
@@ -177,7 +205,7 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
   <img style="width:550px" src="img/dialogflowversion2/image_6.png">
 
-  Fig 1.1
+  Figure 3.1
 
 
 
@@ -195,7 +223,7 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
 
 <img style="width:600px" src="img/dialogflowversion2/image_9.png">
 
-Fig 3.1
+Figure 3.2
 
 ### Transfer / Escalations
 
@@ -220,7 +248,7 @@ Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (cas
 
 <img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
-fig.4.1
+Figure 4.1
 
 ### Send Rich Content (Structured Content)
 
@@ -230,12 +258,13 @@ To send structured content via Dialogflow V2, send a *custom payload* option via
 
 <img style="width:800px" src="img/dialogflowversion2/image_11.png">
 
+Figure 5.1
+
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
 
 **NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload.
 
-fig.5.1
 
 Example Metadata
 
@@ -285,4 +314,4 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 
 <img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
-fig.6.1
+Figure 6.1

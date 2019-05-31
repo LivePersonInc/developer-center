@@ -16,9 +16,15 @@ Google has deprecated Dialogflow **Version 1** and customers should move to Vers
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first.
+See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
-The following Dialogflow information should be provided to LivePerson:
+You will be presented with following screen to complete the Vendor Settings in order to add bot.
+
+<img style="width:600px" src="img/dialogflow/vendor.png">
+
+Figure 1.1 Showing the configuration that needed to be filled
+
+The following Dialogflow V1 information should be provided to LivePerson:
 
 <table>
   <thead>
@@ -34,24 +40,39 @@ The following Dialogflow information should be provided to LivePerson:
   </tr>
   <tr>
     <td>Dialogflow query url</td>
-    <td>Query url for sending Dialogflow queries</td>
+    <td>Query url for sending Dialogflow queries (API Version in Figure 1.1)</td>
   </tr>
   </tbody>
 </table>
 
 
-#### Naming Conventions
+{: .important}
+You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
 
-Few things to note before going into *actions* and *skills* is the naming convention between each.
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
 
-* For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.
+<img style="width:600px" src="img/dialogflow/connection-success.png">
+
+Figure 1.2 Showing the success case of the valid credentials
+
+<img style="width:600px" src="img/dialogflow/connection-failed.png">
+
+Figure 1.3 Showing the fail case of the invalid credentials
+
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Dialogflow V1 bot.
+
+{: .important}
+Following guide is going to introduce how to implement functions specifically for **Dialogflow V1** using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/)
 
 
 ### Limitations
 
-#### Dialogflow Query length Limit
+#### Dialogflow V1 Query length Limit
 
-The Dialogflow service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*.
+<div class="notice">
+The Dialogflow service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property of Dialogflow request Object. Any query longer than 255 characters invokes a standard response as below. To handle this gracefully, we recommend building a simple intent that handles a DIALOGFLOW_CHAR_LIMIT’ *event*.
+</div>
+
 
 **Sample Syntax : Dialogflow Request Object**
 
@@ -88,13 +109,13 @@ Figure 2.2 Dialogflow Response JSON with action
 
     <img style="width:600px" src="img/dialogflow/image_6.png">
 
-    fig.2.3
+    Figure 2.3
 
 2. Do not forget to add a custom response in the **Text response** section.
 
     <img style="width:600px" src="img/dialogflow/image_7.png">
 
-    fig.2.4
+    Figure 2.4
 
 ### Welcome Event
 
@@ -133,7 +154,7 @@ As such, ensure you have an ‘entry point’ intent that utilises the default �
 
 <img style="width:600px" src="img/dialogflow/image_5.png">
 
-Fig 1.1
+Figure 2.1
 
 ### Change Time To Response of Conversation
 
@@ -141,7 +162,7 @@ Change the TTR of a conversation based on the **action** value in the response o
 
 <img style="width:600px" src="img/dialogflow/image_8.png">
 
-Fig 3.1
+Figure 3.1
 
 ```json
 {
@@ -183,10 +204,19 @@ Fig 3.1
   "sessionId": "afce013a-addd-63d6-aea0-d561bdf382db"
 }
 ```
-Figure 3.1 JSON response for changing TTR
+Figure 3.2 JSON response for changing TTR
 
 
 ### Transfer / Escalations
+
+<div class="notice">
+<strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each.
+
+<ul>
+<li>For escalations, the naming convention for these skills should use a "-" instead of “_”. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with “BOT-” within LiveEngage.</li>
+</ul>
+</div>
+
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
@@ -209,7 +239,7 @@ Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of a skill name (c
 
 <img style="width:600px" src="img/dialogflowversion2/image_10.png">
 
-fig.4.1
+Figure 4.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a transfer action.
 
@@ -258,7 +288,7 @@ Structured content/Rich Content is supported by the core LivePerson platform. Do
 
 <img style="width:600px" src="img/dialogflow/image_10.png">
 
-fig.5.1
+Figure 5.1
 
 ```json
 {
@@ -306,7 +336,7 @@ The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to
 
 <img style="width:800px" src="img/dialogflowversion2/image_12.png">
 
-fig.6.1
+Figure 6.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a closeConversation action.
 

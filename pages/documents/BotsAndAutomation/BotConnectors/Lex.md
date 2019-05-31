@@ -19,14 +19,15 @@ At this time, Lex response cards & audio messages are not supported.
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide before using this document.
+See the [Getting Started](bot-connectors-getting-started.html) guide before using this document to complete pre-requisite steps.
+
+You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
+
+<img style="width:600px" src="img/lex/vendor.png">
+
+Figure 1.1 Showing the configuration that needed to be filled
 
 The following Amazon Lex information should be provided to LivePerson:
-
-**NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
-Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
-A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
-
 
 <table>
   <thead>
@@ -70,12 +71,32 @@ A *service account* is a **prerequisite** for setting up the above config. Docum
  </tbody>
 </table>
 
+**NOTE**: Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
+Some degree of familiarity with AWS  IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with *Read Only API Key access*.
+A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
 
-<img style="width:600px" src="img/lex/lex-settings.png">
+
+{: .important}
+You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
+
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
+
+<img style="width:600px" src="img/lex/connection-success.png">
+
+Figure 1.2 Showing the success case of the valid credentials
+
+<img style="width:600px" src="img/lex/connection-failed.png">
+
+Figure 1.3 Showing the fail case of the invalid credentials
+
+Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Amazon Lex bot.
+
+{: .important}
+Following guide is going to introduce how to implement functions specifically for **Amazon Lex**  using Amazon Console. Continue if you are familiar and have access to Amazon Console.
 
 ### Welcome Event
 
-The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
+The behavior of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual LivePerson product works.
 
 A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Lex and an intent determined.
 
