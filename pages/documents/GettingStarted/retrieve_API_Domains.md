@@ -1,26 +1,25 @@
 ---
-pagename: Using the Domain API
+pagename: Domain API
 redirect_from:
   - agent-domain-domain-api.html
 Keywords:
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Retrieve API Domains
+documentname: Essential Resources
 
-level-order: 2
-order: 10
-permalink: retrieve-api-domains-using-the-domain-api.html
+permalink: essential-resources-domain-api.html
 root-link: true
 indicator:
 ---
+<br>
+A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs.
 
-### Overview
-
-This is a read-only API that returns the base domain of LivePerson that should be used in the APIs outlined in this document.
-
-**Note**: The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are _case sensitive_. Please make sure to input serviceName as it is provided in each document's overview.
+{:.notice}
+The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are *case sensitive*. Please make sure to input serviceName as it is provided in each document's overview.
 
 ###  Request
+
+The GET method used returns the base URI for the specified account ID and serviceName.
 
 | Method | URL |
 | :--- | :--- |
@@ -39,19 +38,24 @@ JSON Example:
 
 ```json
 {
- "service": "agentVep",
- "account": "1234",
- "baseURI": "exampleDomain.liveperson.net"
-}
+    "baseURIs": [
+        {
+            "service": "liveEngageUI",
+            "account": "EXAMPLE123",
+            "baseURI": "lo.le1.liveperson.net"
+        },
+        {
+            "service": "visitorFeed",
+            "account": "EXAMPLE123",
+            "baseURI": "lo.v-feed.liveperson.net"
+        },
+        {
+            "service": "etool",
+            "account": "EXAMPLE123",
+            "baseURI": "z2.etool.liveperson.net"
+        },
 ```
 
-**Elements in the Response**
-
-| Name | Description  | Type / Value |
-| :--- | :--- | :--- |
-| service | AgentVep | string |
-| account | LivePerson Account ID | string |
-| baseURI | LivePerson domain to be used in the APIs outlined in this document | string |
 
 **Optional Response Status Codes**
 

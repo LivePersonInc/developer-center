@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start
+pagename: Android Quick Start
 redirect_from:
   - android-quickstart.html
 Keywords:
@@ -11,7 +11,7 @@ order: 11
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 
 ---
-<br>
+
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.
@@ -20,149 +20,164 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured. 
-  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
-- Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide. 
 
 
 ### Step 1: Install the Messaging SDK into your project
-You can install LivePerson Mobile App Messaging SDK using a couple of different methods:
+You can install the Mobile App Messaging SDK using a couple of different methods:
 
-- [Automatically using Gradle](#option-1-automatically-using-gradle)
-- [Manually coping SDK files to your project](#option-2-manually) 
+* [Automatically add the SDK files using Gradle](#option-1-automatically-add-the-sdk-files-using-gradle)
 
-#### Option 1: Automatically using Gradle
+* [Manually copy the SDK files to your project](#option-2-manually-copy-the-sdk-files-to-your-project)
+
+<br/>
+#### Option 1: Automatically add the SDK files using Gradle
+
 You can use Gradle, an automation tool, to scale your projects effortlessly. 
 
 1. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
    
    ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
 
-2. In the dependencies section, add:
-   ```gradle
+2. In the **dependencies** section, add:
+   ```java
    dependencies {
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.0'
+     implementation  "com.liveperson.android:lp_messaging_sdk:3.7.0"
    }
    ```
-   **Example of the build.gradle (Module: app) file**
 
-   ```gradle 
-   apply plugin: 'com.android.application'
+   **Example: Build.gradle (Module: app) file**
 
-   android { 
-     compileSdkVersion 26
-     defaultConfig {
-       applicationId "com.shaym.liveperson.androidsdk"
+   ```java
+   apply plugin: "com.android.application"
+
+   android {
+       compileSdkVersion 26
+       defaultConfig {
+       applicationId "com.mybrand.app"
        minSdkVersion 19
-       targetSdkVersion 26
+       targetSdkVersion 27
        versionCode 1
        versionName "1.0"
-       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-     }
-     buildTypes {
-       release {
-         minifyEnabled false
-         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
        }
-     } 
+       buildTypes {
+           release {
+               minifyEnabled false
+               proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+           }
+       }
    }
 
    dependencies {
-     implementation fileTree(dir: 'libs', include: ['*.jar'])
-     implementation 'com.android.support:appcompat-v7:26.1.0'
-     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-     testImplementation 'junit:junit:4.12'
-     androidTestImplementation 'com.android.support.test:runner:1.0.1'
-     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-     // LivePerson SDK
-     implementation  'com.liveperson.android:lp_messaging_sdk:3.7.0'
+       implementation fileTree(dir: "libs", include: ["*.jar"])
+       implementation "com.android.support:appcompat-v7:26.1.0"
+       implementation "com.android.support.constraint:constraint-layout:1.0.2"
+       testImplementation "junit:junit:4.12"
+       androidTestImplementation "com.android.support.test:runner:1.0.1"
+       androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
+       // LivePerson SDK
+       implementation  "com.liveperson.android:lp_messaging_sdk:3.7.0"
    }
    ```
-   
-#### Option 2: Manually 
+
+#### Option 2: Manually copying the SDK files to your project
 
 1. [Download](https://github.com/LP-Messaging/Android-Messaging-SDK) the latest SDK package.
-
-2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project.  Also in the package, you get a sample app that demonstrates how to use the SDK. 
-
-3. In your Android Studio project, go to **File > New > Import module**. 
-
-4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk** module, and then click **Finish**. 
-
-5. In your build.gradle of your app, make sure that the following is at least version **23**:
-
-   ```gradle
+2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project. Also in the package, you get a sample app that demonstrates how to use the SDK.
+3. In your Android Studio project, go to **File > New > Import module**.
+4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk module**, and then click **Finish**. 
+5. In your build.gradle of your app, and in the android section, make sure the *compileSdkVersion* is at least version **26**:
+   ```java
    android {
-      compileSdkVersion 23
-      buildToolsVersion "23.0.0"
-
-   }   
-   ```
-
-6. Under the **Android** section, add:  
-
-   ```gradle
+      compileSdkVersion 26
+      buildToolsVersion "26.0.0"
    repositories {
-     flatDir {
-       dirs project(':lp_messaging_sdk').file('aars')
-     }
+     	flatDir {
+       	   dirs project(":lp_messaging_sdk").file("aars")
+      }
    }
-   ```  
-
-7. Under the **Dependencies** section, add:  
-   
-   ```gradle
-   compile project(':lp_messaging_sdk')
-   ```  
-   
-   
-   **Example of the build.gradle file**
-   
-   ```gradle
-   apply plugin: 'com.android.application'
-   android {
-     compileSdkVersion 24
-     buildToolsVersion "24.0.3"
-
-     repositories {
-       flatDir {
-         dirs project(':lp_messaging_sdk').file('aars')
-       }
-     }
-
-     defaultConfig {
-       applicationId "xxx"
-       minSdkVersion xx
-       targetSdkVersion xx
+   ```
+6. In the **defaultConfig** section, make sure the *minSDKVersion* is set **19**:
+   ```java
+   defaultConfig {
+       applicationId "com.mybrand.app"
+       minSdkVersion 19
+       targetSdkVersion 27
        versionCode 1
        versionName "1.0"
-     }
-     buildTypes {
-       release {
-         minifyEnabled false
-         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+   testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+   }
+   ```
+7. In the **dependencies** section, add:
+   ```java
+   compile project(":lp_messaging_sdk")
+   ```
+
+   **Build.gradle file example:**
+   ```java
+   apply plugin: "com.android.application"
+
+   android {
+       repositories {
+           flatDir {
+               dirs project(":lp_messaging_sdk").file("aars")
+           }
        }
-     }
+      compileSdkVersion 26
+      buildToolsVersion "26.0.0"
+       defaultConfig {
+           applicationId "com.mybrand.app"
+           minSdkVersion 19
+           targetSdkVersion 27
+           versionCode 1
+           versionName "1.0"
+           testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+           multiDexEnabled true
+
+       }
+       buildTypes {
+           release {
+               minifyEnabled false
+               proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+           }
+       }
    }
 
-   dependencies {   
-     compile project(':lp_messaging_sdk')
+   dependencies {
+       compile fileTree(dir: "libs", include: ["*.jar"])
+       androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
+           exclude group: "com.android.support", module: "support-annotations"
+       })
+       compile "com.android.support.constraint:constraint-layout:1.0.2"
+       compile "com.google.firebase:firebase-messaging:11.6.0"
+       compile "com.google.firebase:firebase-core:11.6.0"
+
+
+       testCompile "junit:junit:4.12"
+       //Liveperson SDK
+       compile project(path: ":lp_messaging_sdk")
    }
 
+   apply plugin: "com.google.gms.google-services"
+   ```
+
+8. In your **settings.gradle** of your app, add:
+   ```java
+   include ":lp_messaging_sdk"
    ```
 
 ### Step 2: Integrate code for basic deployment
 
-1. Add the following permissions to your app’s AndroidManifest.xml file:
+1. Add permissions to your app’s AndroidManifest.xml file:
 
    ```xml
    <uses-permission android:name="android.permission.INTERNET" />
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    ```
 
-2. Add the following imports to your class imports section:
+2. Add imports to your class imports section:
 
    ```java 
    import com.liveperson.api.LivePersonCallback;
@@ -177,6 +192,9 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
+{:.important}
+If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params).  
+
 1. **Set your app ID and view controller.** Provide your `APP_ID` as a string your application's class.
    
    ```java
@@ -189,15 +207,73 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    }
    ```
 
-2. **Initialize your application and show the conversation.**  Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
-   1. Select your chose of authentication using either **CodeFlow**, **ImplicitFlow**, **UnauthFlow**, or **SignupFlow** for initializing the SDK instance. For details, see [Authentication](mobile-app-messaging-sdk-for-android-authentication.html).
-   2. Provide your LivePerson account number as a string in the `brandID` constant. 
-   3. Depending on the authentication method you chose, you must provide your `authCode`, `jwt`, or `appInstallID`.  If you chose **SignupFlow**, you only need to provide the `brandID`.  We have provided examples to use to help you get started. 
+2. **Select your choice of authentication** for initializing the SDK instance.
 
-   <div class="important">The demo account that we have provided has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.</div>
+   For more details on Code Flow and Implicit Flow for the Mobile SDK, see [How It Works](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow). 
+
+   - **[Code Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated) 
+
+     The LivePerson back-end verifies the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
+
+     ```java
+     LPAuthenticationParams().setAuthKey("yourAuthCode").
+     ```
+
+     **Tip:** Alternatively, when using this method, you can also set a special redirect URL when authenticating by calling:
+
+     ```java
+     lpAuthenticationParams.setHostAppRedirectUri("yourRedirectUrl")
+     ```
+
+   - **[Implicit Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-implicit-flow)** (authenticated)  
+
+      ```java
+      LPAuthenticationParams().setHostAppJWT("yourJwt")
+      ```
+
+      Once the Authentication key expires, you get notified with a callback / local intent [`void onTokenExpired()`](android-callbacks-index.html#token-expired).
+
+      To re-connect with a new Authentication key, use [`reconnect(LPAuthenticationParams lpAuthenticationParams)`](android-methods.html#reconnect)
 
 
-   - **CodeFlow (authenticated)**
+      {:.important}
+      Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
+
+   - **[Unauth Flow](mobile-app-messaging-sdk-for-android-advanced-features-unauthenticated-in-app-messaging.html)**
+
+     ```java
+      String brandID = "53949244";
+      String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
+     ```
+
+   - **Signup Flow**  
+
+     ```java
+     String brandID = "62219232";
+     ```
+
+
+3. **Show the conversation view.**  If your system implementation involves an authentication step, you must call our `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. For more details on Activity mode and Fragment mode, see [Authentication](mobile-app-messaging-sdk-for-android-resources-authentication.html).  
+
+   Choose an authentication method:
+
+   - **Activity mode**
+     ```java
+     LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+     ```
+
+   - **Fragment mode (Attach the returned fragment to a container in your activity)**
+     ```java
+     LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+     ```
+
+     **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.  
+
+
+4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.
+
+
+   - **Code Flow**
      ```java
      public void startCodeFlow(View v) {
          String brandID = "62219232";
@@ -216,7 +292,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
          }));
      }
      ```
-   - **ImplicitFlow (authenticated)**
+   - **Implicit Flow**
    
      ```java
      public void startImplicitFlow(View v) {
@@ -237,7 +313,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
      }
      ```
 
-   - **UnauthFlow**
+   - **Unauth Flow**
 
      ```java
      public void startUnauthFlow(View v) {
@@ -258,7 +334,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
      }
      ```
 
-   - **SignupFlow**
+   - **Signup Flow**
 
      ```java
      public void startSignupFlow(View v) {
@@ -277,7 +353,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
      }
      ```
 
-   
+
    |Element  |Description  |
    |---------|---------|
    |brandID     |Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative.         |
@@ -317,7 +393,8 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    }
    ```
    
-   <div class="notice">Make sure that the init process, from the onInitSucceed callback, finished successfully.</div>
+   {:.notice}
+   Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
 
 ### Next Steps
@@ -325,10 +402,9 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 Congratulations!  You're all set.  
 
 You can now do any of the following:
-- [Implement and enable push notifications](enable-push.md). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
-- If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](AdvancedConfigurations/sdk-initialization.md).  Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
+- [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
+- [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add the following to your app's AndroidManifest.xml file.  
+- [Customize and brand the SDK](mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html). You can customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file. 
 
 
-<div class="important">
-For guidance on app configuration and SDK step-by-step usage, see the <a href="https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-appendix-using-liveperson-sdk-android-manual.html">Using LivePerson SDK - Android</a> guide.
-</div>

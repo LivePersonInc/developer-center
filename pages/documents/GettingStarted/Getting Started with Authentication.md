@@ -1,9 +1,9 @@
 ---
-pagename: Getting Started with Authentication
+pagename: Authentication
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources
-permalink: essential-resources-getting-started-with-authentication.html
+permalink: essential-resources-authentication.html
 order: 10
 indicator: both
 ---

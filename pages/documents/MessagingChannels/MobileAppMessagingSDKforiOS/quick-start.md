@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start
+pagename: iOS Quick Start
 redirect_from:
   - consumer-experience-ios-sdk-quick-start.html
 Keywords:
@@ -19,9 +19,12 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- **LiveEngage account** information (account ID and login credentials), messaging enabled, and the mobile app configured.
-  <div class="notice">If you don't know your account information, you can get it from your LivePerson account team.</div>
-- **Version 3.3 and newer**
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
+- Bundle ID registered in an Apple developer account.
+- **Version 3.7.1 or newer**
+  - Xcode 10.2 or newer
+  - Swift version 5, or Objective-C
+- **Version 3.3 and 3.7.0**
     - Xcode 10 or newer
     - Swift version 4.2, or Objective-C
 - **Version 3.1.1 - 3.3.0**
@@ -30,7 +33,6 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - **Version 3.1 and older**
     - Xcode 9.2 or older
     - Swift 4.0 or older, or Objective-C
-- Read or are familiar with the **supported operating systems and devices**.  For more information, see the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
 
 
 ### Step 1: Install the SDK into your project
@@ -138,16 +140,20 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 ### Step 3: Initialize the LPMessagingSDK
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
-1. **Sets up your account information.** You must provide your LiveEngage account number as a string in the `accountID` constant and a unique JSON Web Token (JWT) in the `jwt` constant. We have provided an example to use for the this quick start process.  
+1. **Set up your account information.** 
+   1. Provide your LiveEngage account number as a string in the `accountID` constant.
+   2. Provide a unique JSON Web Token (JWT) in the `jwt` constant.   
 
-2. **Sets up and initializes the SDK instance** for the accountID provided.
+2. **Set up instance of LPMessagingSDK** for the accountID provided.
 
-3. **Sets up and calls the conversation view.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The LiveEngage console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
-4. **Removes the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
+4. **Release the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
-
-We have provided code snippets for [Authenticated](#authenticated), [Unauthenticated](#unauthenticated), and [Signup](#signup).
+ We have provided an example to use for this quick start process:   
+   - [Authenticated](#authenticated)
+   - [Unauthenticated](#unauthenticated)
+   - [Signup](#signup)
 
 #### Authenticated
 
@@ -159,7 +165,7 @@ import LPInfra
 
 class DocumentationViewController: UIViewController {
 
-    // MARK: - Setup Account information.
+    // MARK: - Set up Account information.
 
     /// Account ID is your LiveEngage Account Number.
     let accountID: String = "14800077"
@@ -169,7 +175,7 @@ class DocumentationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // MARK: - Setup instance of LPMessagingSDK
+        // MARK: - Set up instance of LPMessagingSDK
 
         /*
          Adding the following code initializes the SDK instance.
@@ -205,7 +211,7 @@ class DocumentationViewController: UIViewController {
 
 ```
 
-```c
+```objc
 
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
@@ -335,7 +341,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```c
+```objc
 
 #import "DocumentationViewController.h"
 #import <LPInfra/LPInfra.h>
@@ -461,7 +467,7 @@ class DocumentationViewController: UIViewController {
 }
 ```
 
-```c
+```objc
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
@@ -536,12 +542,8 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Turn on **push notifications** and **structured content**. In your Xcode project, under **Capabilities**, flip the toggle on for the following:
-  - **Push**: Notifies the user when a new message from the remote user is received.
-  - **Maps**: Shows location in the map.
+- Configure **push notifications** so consumers immediately receive notifications as soon as a reply or notice is available for them. Go to [Push Notifications](mobile-app-messaging-sdk-for-ios-configuration-push-notifications.html) to finish configuring notifications.
 
-    Go to [Notifications](mobile-app-messaging-sdk-for-ios-notifications.html) to finish configuring notifications.
+- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. For more details, see [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html). At this time, photo sharing is one-way only (from consumer to agent).
 
-- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. Go to [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) to configure photo sharing.
-
-- Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For details on configuring monitoring, refer to [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
+- Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For more details on configuring monitoring, see [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
