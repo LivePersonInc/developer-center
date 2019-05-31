@@ -23,7 +23,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide before usin
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img style="width:600px" src="img/lex/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/lex/vendor.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -81,11 +81,11 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
 
-<img style="width:600px" src="img/lex/connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/lex/connection-success.png">
 
 Figure 1.2 Showing the success case of the valid credentials
 
-<img style="width:600px" src="img/lex/connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/lex/connection-failed.png">
 
 Figure 1.3 Showing the fail case of the invalid credentials
 
@@ -140,7 +140,7 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME-INTENT’ event.
 
-<img style="width:600px" src="img/lex/image_6.png">
+<img class="fancyimage" style="width:600px" src="img/lex/image_6.png">
 
 Fig 1.1
 
@@ -172,7 +172,7 @@ Figure 3.1 Lex Example Change TTR Payload
 
 
 
-<img style="width:500px" src="img/lex/image_7.png">
+<img class="fancyimage" style="width:500px" src="img/lex/image_7.png">
 
 Fig 3.1 - Example in Lex console
 
@@ -207,13 +207,13 @@ Transfers and escalations rely on the *action* item in the response object.
 Figure 4.1 Lex Example Transfer Payload
 
 
-<img style="width:500px" src="img/lex/image_8.png">
+<img class="fancyimage" style="width:500px" src="img/lex/image_8.png">
 
 Fig.4.2 - Example in Lex console
 
 **NOTE**: Additionally, if the Lex error handling "maximum number of retries" is reached the bot connector will also initiate a “default escalation” transfer action.
 
-<img style="width:550px" src="img/lex/image_9.png">
+<img class="fancyimage" style="width:550px" src="img/lex/image_9.png">
 
 fig.4.2
 
@@ -272,7 +272,7 @@ To send structured content via Lex, send a *custom payload* option via an intent
 ```
 Figure 5.1 Lex Example Rich Content Payload
 
-<img style="width:500px" src="img/lex/image_10.png">
+<img class="fancyimage" style="width:500px" src="img/lex/image_10.png">
 
 Fig.5.2 - Example in Lex console
 
@@ -301,6 +301,6 @@ The action field needs to be set to **CLOSE_CONVERSATION **to instruct the conne
 ```
 Figure 6.1 Lex Example Close Conversation Payload
 
-<img style="width:500px" src="img/lex/image_11.png">
+<img class="fancyimage" style="width:500px" src="img/lex/image_11.png">
 
 Fig.6.2 - Example in Lex console

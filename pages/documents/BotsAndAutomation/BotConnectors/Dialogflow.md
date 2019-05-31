@@ -20,7 +20,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot.
 
-<img style="width:600px" src="img/dialogflow/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/vendor.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -51,11 +51,11 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
 
-<img style="width:600px" src="img/dialogflow/connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/connection-success.png">
 
 Figure 1.2 Showing the success case of the valid credentials
 
-<img style="width:600px" src="img/dialogflow/connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/connection-failed.png">
 
 Figure 1.3 Showing the fail case of the invalid credentials
 
@@ -152,7 +152,7 @@ A Chat interaction on the other hand is considered started when the chat is rout
 
 As such, ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event, so the event fired is utilised.
 
-<img style="width:600px" src="img/dialogflow/image_5.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/image_5.png">
 
 Figure 2.1
 
@@ -160,7 +160,7 @@ Figure 2.1
 
 Change the TTR of a conversation based on the **action** value in the response object. LP uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
-<img style="width:600px" src="img/dialogflow/image_8.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/image_8.png">
 
 Figure 3.1
 
@@ -237,7 +237,7 @@ Action: **TRANSFER (Case sensitive)**
 
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of a skill name (case sensitive) which exists in LiveEngage.
 
-<img style="width:600px" src="img/dialogflowversion2/image_10.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_10.png">
 
 Figure 4.1
 
@@ -286,7 +286,7 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via Dialogflow, use the Dialogflow option to send a *custom payload* via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
-<img style="width:600px" src="img/dialogflow/image_10.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/image_10.png">
 
 Figure 5.1
 
@@ -334,7 +334,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-<img style="width:800px" src="img/dialogflowversion2/image_12.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 Figure 6.1
 

@@ -22,7 +22,7 @@ With watson there are two ways of authentication that currently our system suppo
 #### UserPass authentication
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector using UserPass authentication.
 
-<img style="width:600px" src="img/watsonassistant/userpass-based-auth.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-based-auth.png">
 
 Figure 1.1 Showing the configuration that needed to be filled using UserPass authentication
 
@@ -68,7 +68,7 @@ Following information needs to be completed for LivePerson:
 #### IAM authentication
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector using IAM authentication.
 
-<img style="width:600px" src="img/watsonassistant/token-based-auth.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-based-auth.png">
 
 Figure 1.2 Showing the configuration that needed to be filled using IAM authentication authentication
 
@@ -117,18 +117,18 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
-<img style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
 
 Figure 1.3 Showing the success case of the valid credentials for UserPass authentication
 
-<img style="width:600px" src="img/watsonassistant/userpass-connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-failed.png">
 
 Figure 1.4 Showing the fail case of the invalid credentials for UserPass authentication
-<img style="width:600px" src="img/watsonassistant/token-connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-success.png">
 
 Figure 1.5 Showing the success case of the valid credentials for IAM authentication
 
-<img style="width:600px" src="img/watsonassistant/token-connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-failed.png">
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
@@ -147,21 +147,21 @@ The core LiveEngage platform supports the use of rich/structured content. For mo
 To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 2.1).
 
 
-<img style="width:850px" src="img/watsonassistant/dialognode.png">
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png">
 
 Figure 2.1 Watson Dialog Node
 
 
 From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.2)
 
-<img style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
+<img class="fancyimage" style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
 
 Figure 2.2 Watson Assistant Dialog JSON Editor
 
 
 In the JSON Editor you will need to add your custom JSON response (Figure 2.3).
 
-<img style="width:500px" src="img/watsonassistant/jsoneditor.png">
+<img class="fancyimage" style="width:500px" src="img/watsonassistant/jsoneditor.png">
 
 Figure 2.3 Watson Assistant JSON Editor
 
@@ -228,7 +228,7 @@ Figure 2.4 Structured Content Watson JSON Example
 
 For new IAM workspaces that have a new Watson response, *Then respond with* text:
 
-<img style="width:400px" src="img/watsonassistant/image_5.png">
+<img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png">
 
 Put the structured content objects with the metadata in the text field for the response.
 
@@ -293,7 +293,7 @@ For escalations, the naming convention for these skills should use a "-" instead
 
 Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
-<img style="width:850px" src="img/watsonassistant/image_6.png">
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png">
 
 In the *Then respond with:* JSON editor block, we see the following:
 

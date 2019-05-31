@@ -19,7 +19,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img style="width:600px" src="img/dialogflowversion2/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/vendor.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -121,11 +121,11 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively.
 
-<img style="width:600px" src="img/dialogflowversion2/connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/connection-success.png">
 
 Figure 1.4 Showing the success case of the valid credentials
 
-<img style="width:600px" src="img/dialogflowversion2/connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/connection-failed.png">
 
 Figure 1.5 Showing the fail case of the invalid credentials
 
@@ -203,9 +203,9 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event.
 
-  <img style="width:550px" src="img/dialogflowversion2/image_6.png">
+<img class="fancyimage" style="width:550px" src="img/dialogflowversion2/image_6.png">
 
-  Figure 3.1
+Figure 3.1
 
 
 
@@ -221,7 +221,7 @@ LivePerson Messaging uses 4 different types of priorities:
 
 Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
-<img style="width:600px" src="img/dialogflowversion2/image_9.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_9.png">
 
 Figure 3.2
 
@@ -246,7 +246,7 @@ Action: **TRANSFER (Case sensitive)**
 
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
 
-<img style="width:600px" src="img/dialogflowversion2/image_10.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_10.png">
 
 Figure 4.1
 
@@ -256,7 +256,7 @@ Structured content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content via Dialogflow V2, send a *custom payload* option via an intent.
 
-<img style="width:800px" src="img/dialogflowversion2/image_11.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_11.png">
 
 Figure 5.1
 
@@ -312,6 +312,6 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
 
-<img style="width:800px" src="img/dialogflowversion2/image_12.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 Figure 6.1
