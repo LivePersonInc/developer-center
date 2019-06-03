@@ -541,11 +541,12 @@ lastUpdatedTime | Time the conversation's summary was last updated. | long
 
 _Sdes info_
 
-Name            | Description                                 | Type/Value
-:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-events          | The SDEs that were received from the brand. | Container (see [Appendix](/data-messaging-interactions-appendix.html))
-serverTimeStamp | Event time stamp.                           | long – epoch time in milliseconds
-sdeType         | Type of SDE.                                | enum
+Name            | Description                                 | Type/Value                                                              | Notes
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :---------------------------
+events          | The SDEs that were received from the brand. | Container (see [Appendix](/data-messaging-interactions-appendix.html))  |
+originalTimeStamp | Event creation time stamp.                | long – epoch time in milliseconds                                       |
+serverTimeStamp | Event processing time stamp.                | long – epoch time in milliseconds                                       | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+sdeType         | Type of SDE.                                | enum                                                                    |
 
 [Here](/data-messaging-interactions-appendix.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
 
@@ -1005,6 +1006,7 @@ modelVersion | The version of the model. | string
           {
             "customerInfo": {
               "serverTimeStamp": "1497871291351",
+               "originalTimeStamp": "1497871291351",
               "customerInfo": {
                 "customerId": "12345678",
                 "companyBranch": "dummyCompanyBranch"
@@ -1016,6 +1018,7 @@ modelVersion | The version of the model. | string
           {
             "personalInfo": {
               "serverTimeStamp": "1497871291351",
+               "originalTimeStamp": "1497871291351",
               "personalInfo": {
                 "name": "dummyName",
                 "surname": "dummySurename",
