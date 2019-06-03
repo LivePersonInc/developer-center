@@ -6,10 +6,10 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Appendix
+subfoldername: Resources
 
 order: 246
-permalink: mobile-app-messaging-sdk-for-ios-appendix-open-source-list.html
+permalink: mobile-app-messaging-sdk-for-ios-resources-open-source-list.html
 
 indicator: messaging
 ---

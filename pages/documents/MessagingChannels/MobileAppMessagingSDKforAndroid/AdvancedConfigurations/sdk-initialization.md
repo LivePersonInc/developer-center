@@ -14,38 +14,13 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-initialization.htm
 indicator: messaging
 ---
 
-### Initialize the Messaging SDK
-
-```java
-String brandID = "Your-Liveperson-Account-Id-String";
-String appID = "your-app-package-name"
-LivePerson.initialize(context, new InitLivePersonProperties( brandID, appID,
-  new InitLivePersonCallBack() {
-    @Override
-    public void onInitSucceed() {
-    }
-
-    @Override
-    public void onInitFailed(Exception e) {
-    }
-  }
-));
-```
-
-| Element | Description |
-| :--- | :--- |
-| brandID | Your LivePerson account ID. If you don’t have one, please contact your LivePerson representative. |
-| appID | Your app ID, used for registering LP pusher service. |
-| onInitSuccess | Callback that indicates the init process has finished successfully. |
-| onInitFailed | Callback that indicates the init process has failed. <br> *Note: You can call initialize before showing LivePerson's Activity/Fragment, but it is recommended to initialize the SDK in your app's Application class.* |
-
->**NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](#initialize-the-messaging-sdk-with-monitoring-params). Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
 
 
 ### Initialize the Messaging SDK with Monitoring Params
-<div class="important">
+
+{:.important}
 To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage. For more information about it, contact your Account Team.
-</div>
+
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
 
@@ -83,7 +58,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    JSONArray engagementAttributes = null;
    try {
      // Try to Create JSON Array
-   jsonArray = new JSONArray("[{\"type\": \"purchase\", \"total\": \"20.0\"},{\"type\": \"lead\",\"lead\": {\"topic\": \"luxury car test drive 2015\",\"value\": \"22.22\",\"leadId\": \"xyz123\"}}]")
+   jsonArray = new JSONArray("[{"type": "purchase", "total": "20.0"},{"type": "lead","lead": {"topic": "luxury car test drive 2015","value": "22.22","leadId": "xyz123"}}]")
    } catch (JSONException e) {
      // Log Error
      Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());
@@ -147,58 +122,30 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    params.setReadOnlyMode(false);
    ```
 
-5. Start a new Conversation:
+5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. Choose an authentication method:
+
+   - **Activity mode**
+     ```java
+     LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+     ```
+
+   - **Fragment mode (Attach the returned fragment to a container in your activity)**
+     ```java
+     LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+     ```
+
+     When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+6. **Shutdown the SDK and remove the footprint of the user session from local memory.** After shutdown, the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
 
    ```java
-   // Show Conversation - Activity Mode
-   LivePerson.showConversation(MessagingActivity.this, authParams, params);
-   
-   // or when using a fragment
-
-   // Show Conversation - Fragment Mode
-   mConversationFragment = (ConversationFragment) LivePerson.getConversationFragment(authParams, params);
+   public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
    ```
- 
+   For more details, see the [shutDown](android-shutdown.html) method.
 
-The SDK supports two operation modes:
+7. **Clear LivePerson Messaging SDK data and unregister push.** Calls [unregisterLPPusher](android-unregisterlppusher.html), [shutDown](android-shutdown.html) and, in addition, deletes all messages and user details from the device. The `logOut` method does not end the current messaging conversation.
 
-* Activity.
-
-* Fragment.
-
-_**Note: For more information about each mode, refer to [Step 3: Code integration for basic deployment](android-quickstart.html#step-3-code-integration-for-basic-deployment).**_
-
-To start LivePerson's Activity mode:
-
-```java
-LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-```
-
-To start LivePerson's Fragment mode: (Attach the returned fragment to a container in your activity) :
-
-```java
-LivePerson.getConversationFragment( LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-```
-
-When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
-
-
-**Shut Down**
-
-Close LivePerson Messaging SDK- Uninitialized SDK without cleaning data.
-
-```java
-public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
-```
-
-Click [here](android-shutdown.html) for more information.
-
-**Logout**
-
-Close LivePerson Messaging SDK- Clear LivePerson Messaging SDK data and unregister push.
-
-```java
-public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)
-```
-
-Click [here](android-logout.html) for more information.
+   ```java
+   public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)
+   ```
+   For more details, see the [logOut](android-logout.html) method.

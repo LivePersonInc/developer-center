@@ -22,7 +22,7 @@ Using Local Intents, you can register to a specific Action or to all of them. Al
 
 LivePersonIntents class provides several methods that help get the data out of the intent, without dealing with the Extras. For a full list of all possible Intents, click [here](android-callbacks-index.html#livepersonintents).
 
-To easily register to all the intent Actions, we provide an `IntentFilter` that already contains them all in `LivePersonIntents.getIntentFilterForAllEvents()`.
+To easily register to all the intent Actions, we provide an `IntentFilter` that contains them all in `LivePersonIntents.getIntentFilterForAllEvents()`.
 
 **Note**: These Intents are local only and must by registered via LocalBroadcastManager.
 

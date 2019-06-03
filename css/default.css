@@ -772,6 +772,11 @@ table tbody td img {
   margin-right: 10px;
 }
 
+.lowerimage img {
+  width: 25px;
+  height: 47px;
+}
+
 .sidebarimage {
   align-self: center;
 }

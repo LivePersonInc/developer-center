@@ -6,7 +6,7 @@ permalink: index.html
 ---
 
 {: .important}
-At the end of Q1 2019, **LivePerson plans to deprecate all support for TLS 1.0 and 1.1**. If you still use these protocols, an upgrade to TLS 1.2 or higher on your end is required to ensure continued support of all LivePerson services.
+We've started to roll out our new, exciting developer tool! Function as a Service (FaaS) is a LivePerson feature which enables brands to develop custom behaviors within the LiveEngage platform to better tailor the system to their specific needs. Get started with a hosted function in less than 60 seconds. We can't let everyone in at the same time but you can <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot or [check out the FaaS documentation to get acquainted with this powerful new feature](function-as-a-service-overview.html).
 
 The LiveEngage platform offers a messaging solution that you can harness and enhance by integrating LiveEngage with your native app, customizing LiveEngage reports or creating new reports, and building or integrating workspace widgets. This can be achieved using our various APIs and SDKs.  
 
