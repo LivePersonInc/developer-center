@@ -8,11 +8,11 @@ permalink: function-as-a-service-external-invocations-client-credentials.html
 indicator: both
 ---
 
-This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/)). This is the preferred way to authorize for machine-to-machine communication.
+This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/)). This is the preferred way to authorize machine-to-machine communication.
 
 ### Step 1: Generate client_id & client_secret:
 
-* Execute the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation :
+Begin by executing the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation :
 
 ```json
 {
@@ -100,7 +100,7 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 ### Step 6: Calling the invocation API directly from your systems
 
-After executing the above steps you should have all data needed to execute calls against FaaS from your own systems.
+After executing the above steps you should have all the data needed to execute calls against FaaS from your own systems.
 
 Retrieved data:
 
@@ -112,4 +112,4 @@ Retrieved data:
 
   * **Authorization-Server + FaaS - domain** is available.
 
-While calling FaaS with the access-token, you should also make sure to request a new token before it expires. 
+While calling FaaS with the access-token, you should also make sure to request a new token before it expires.
