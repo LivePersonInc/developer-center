@@ -71,22 +71,22 @@ module.exports = (data, cb) => {
   let allSurveyEmails = [];
 
   //csatRank value range: 1-5, 1=very dissatisfied, 5=very satisified
-  let csatRank = data.payaload.csatRank > -1 ? data.payload.csatRank : null;
+  let csatRank = data.payload.csatRank > -1 ? data.payload.csatRank : null;
   let skillName = data.payload.skillName;
   let agentName = data.payload.agentName;
   let questionsAndAnswers = data.payload.questionWithAnswers;
 
-  if(castRank && castRank <= 3 && data.payload.skillName.match(/CustomerCare/i) !== null && data.payload.agentName.match(/John Doe/i) !== null){
+  if(csatRank && csatRank <= 3 && data.payload.skillName.match(/CustomerCare/i) !== null && data.payload.agentName.match(/John Doe/i) !== null){
     let surveyEmail = {};
     surveyEmail.targetEmail = "ReplaceMe@company.com";
     surveyEmail.senderName = "Sender X";
     surveyEmail.senderEmail = "ReplaceMe@company.com";
-    surveryEmail.subject = "Email Transcript Notification";
-    allSurveryEmails.push(surveyEmail);
+    surveyEmail.subject = "Email Transcript Notification";
+    allSurveyEmails.push(surveyEmail);
   }
 
   //return result
-  cb(null, allSurveryEmails);
+  cb(null, allSurveyEmails);
 };
 ```
 
