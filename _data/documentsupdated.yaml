@@ -676,7 +676,6 @@
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Customizing Toast Notifications
     - pagename: Customization and Branding
       subpages:
       - subpagename: Customizing the SDK
