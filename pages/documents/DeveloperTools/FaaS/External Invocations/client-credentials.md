@@ -8,7 +8,7 @@ permalink: function-as-a-service-external-invocations-client-credentials.html
 indicator: both
 ---
 
-This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/)). This is the preferred way to authorize for machine-to-machine communication.
+This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/). This is the preferred way to authorize for machine-to-machine communication.
 
 ### Step 1: Generate client_id & client_secret:
 
