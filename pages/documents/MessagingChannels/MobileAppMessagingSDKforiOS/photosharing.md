@@ -14,26 +14,38 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
 indicator: messaging
 ---
 
-This section describes the photo sharing behavior and configurations in the Messaging SDK.
+Version 3.9 of the Mobile Messaging SDK added the ability for agents to share photos with consumers (two-way photo sharing). The feature allows agents or bots within LiveEngage to send images, in PNG, JPG/JPEG, and GIF (non-animated) formats, to consumers within a conversation. Once sent, the consumer can tap the image thumbnail to view it, but they cannot download it. 
 
-You can find all the related configurations in the [resources ID table](consumer-experience-ios-sdk-attributes.html), under Photo Sharing.
 
-*Notes*:
 
-- *This feature is available only for the Mobile App Messaging SDK*.
-- *This features enables photo sharing only (not video/files).*
-- *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
-- *Device storage includes up to 20 images - this is configurable.*
-- *Supported formats: .png, .jpg, .gif (non-animated).*
-- *Photo size reduction: image size needs to be smaller than 3MB. Images larger than 3MBs will be resized down. The generated thumbnail from this image (base64-encoded) will be up to 30KBs in size.*
-- *App Privacy settings are needed:*
-    - Key: **NSPhotoLibraryUsageDescription**, Value: "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS",
-    - Key: **NSCameraUsageDescription**, Value: "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
-    - **Important:** Values for these descriptions are up to the brand to define, these are only examples.
 
-<div class="important">
-When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-</div>
+
+### Prerequisites
+
+
+### Supported file formats
+
+- PNG
+- JPG/JPEG
+- GIF (non-animated) - previewed as a static image only
+
+
+
+
+### Photo size reductions
+
+- Thumbnail - 30 KB (base64-encoded)
+- Max upload size allowed - 5 MB uncompressed (if larger, the SDK resizes to 800x600)
+   **For SDKs previous to 3.8.** The max upload size allowed is 3 MB. 
+
+### Notes
+
+**For SDKs previous to 3.8.** Photo-sharing is one-way only (from consumer to agent, but not vice versa) and available for the Mobile Message SDK only.
+
+
+
+### Custom View Controller Mode requirements
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView,:
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -41,19 +53,60 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 }
 ```
 
-**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+When using ViewController Mode, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
-### Enable Photo Sharing
+### Step 1. Add app privacy settings
 
-To enable/disable photo sharing you can change the boolean value:
+1. Set the photo library privacy settings:
+   - **Key:** NSPhotoLibraryUsageDescription
+   - **Value:** "Photo Library Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
 
-```swift
-LPConfig.defaultConfiguration.enablePhotoSharing
-```
+2. Set the camera privacy settings:
+   - **Key:** NSCameraUsageDescription
+   - **Value:** "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
 
-By default this value is set to false.
+{:.important}
+Values for these descriptions are up to the brand to define, these are only examples.
 
-**Note that you will need to contact your Account Team in order to enable the feature on your account**.
+### Step 2. Enable or disable photo sharing
+
+1. Change the boolean value:
+
+   ```swift
+   LPConfig.defaultConfiguration.enablePhotoSharing
+   ```
+
+   By default this value is set to **false**.
+
+2. Contact your Account Team to have the feature enabled on your account.
+
+### Step 3. Change the button text and color
+
+- Change the background color of attachment menu:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuBackgroundColor
+   ```
+
+- Change the text of buttons:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor
+   ```
+
+- Change the menu button's background color:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor
+   ```
+
+- Change the menu button's tint color:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
+   ```
+
+You can find all the related configurations in the [resources ID table](consumer-experience-ios-sdk-attributes.html), under Photo Sharing.
 
 ### Upload Photo
 
@@ -61,32 +114,8 @@ To upload a photo, click the "attach" button next to "enter message" edit text.
 
 ![uploadphoto1](img/uploadphoto1.png)
 
-A menu will open with 2 options: Photo Library and Camera.
+A menu opens with 2 options: Photo Library and Camera.
 
 ![uploadphoto2](img/uploadphoto2.png)
 
-Changing the background color of attachment menu is available with configuration:
 
-```swift
-LPConfig.defaultConfiguration.photosharingMenuBackgroundColor
-```
-
-Changing the text of buttons:
-
-```swift
-LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor
-```
-
-Changing the menu button's background color:
-
-```swift
-LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor
-```
-
-Changing the menu button's tint color:
-
-```swift
-LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
-```
-
-**Note: for the list of all configurable attributes, click [here](consumer-experience-ios-sdk-attributes.html#photo-sharing)**
