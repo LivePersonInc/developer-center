@@ -10,6 +10,8 @@ indicator: both
 
 This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/). This is the preferred way to authorize for machine-to-machine communication.
 
+Under the hood FaaS uses JSON Web Tokens (JWTs) to authorize requests ([here](https://jwt.io/introduction/) is a good introduction on JWTs).
+
 ### Step 1: Generate client_id & client_secret:
 
 * Execute the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation :
@@ -112,4 +114,4 @@ Retrieved data:
 
   * **Authorization-Server + FaaS - domain** is available.
 
-While calling FaaS with the access-token, you should also make sure to request a new token before it expires. 
+While calling FaaS with the access-token, you should also make sure to request a new token before it expires. You can find out if a token is expired by checking the `exp` field of the JWT. You can enter your access-token into the [JWT debugger](https://jwt.io/#debugger) in order to see how the JWT looks like.
