@@ -14,19 +14,28 @@ permalink: mobile-app-messaging-sdk-for-android-configuration-liveperson-callbac
 indicator: messaging
 ---
 
-The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. There are two ways to register to LivePerson events via Local Intents (Recommended) or via Callbacks.
+The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. 
+
+You have two ways to register to LivePerson events:
+* Local Intents (Recommended)
+* Callbacks
 
 ### Local Intents
 
-Using Local Intents, you can register to a specific Action or to all of them. All the Actions are defined in the `LivePersonIntents.ILivePersonIntentAction` Interface. All the additional data provided using Extras on the intents is defined in the ``LivePersonIntents.ILivePersonIntentExtras`` Interface.
+With Local Intents, you can register to a specific Action or all of them. 
 
-LivePersonIntents class provides several methods that help get the data out of the intent, without dealing with the Extras. For a full list of all possible Intents, click [here](android-callbacks-index.html#livepersonintents).
+**Tip:** You can file all Actions defined in the Interface.  You can find all the additional data for using Extras on the intents defined in the `LivePersonIntents.ILivePersonIntentExtras` Interface.
+
+The `LivePersonIntents` class provides several methods that help get the data out of the intent, without dealing with the Extras. For a full list of all possible Intents, see [livepersonintents in Android Callbacks](android-callbacks-index.html#livepersonintents).
+
+We have provided an `IntentFilter` that contains all the intent Actions so that you can easily register to all of them.  
 
 To easily register to all the intent Actions, we provide an `IntentFilter` that contains them all in `LivePersonIntents.getIntentFilterForAllEvents()`.
 
-**Note**: These Intents are local only and must by registered via LocalBroadcastManager.
+{:.important}
+These Intents are local only and, therefore, you must register them via `LocalBroadcastManager`.
 
-To register `BroadcastReceiver` for all Intents, use this code::
+#### Register `BroadcastReceiver` for all Intents:
 
 ```java
 LocalBroadcastManager.getInstance(
@@ -35,7 +44,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-To register `BroadcastReceiver` for a specific set of Intents, use this example:
+#### Register `BroadcastReceiver` for a specific set of Intents:
 
 ```java
 IntentFilter filter = new IntentFilter();
@@ -47,8 +56,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-Then,to catch the Broadcast:
-
+#### Catch the Broadcast:
 
 
 ```java
@@ -64,20 +72,20 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
 };
 ```
 
-**Note**: if you registered for multiple **Intents**, you'll have to filter each one, using a **switch**.
+**Note**: if you registered for multiple **Intents**, you must filter each one, using a **switch**.
 
 ### Callbacks
 
-To register the callback call:
+#### Register the callback:
 
 ```java
 public static void setCallback(final LivePersonCallback listener)
 ```
 
-To remove a callback call:
+#### Remove a callback:
 
 ```java
 public static void removeCallBack()
 ```
 
-Click [here](android-callbacks-index.html) for more information.
+For more details, see [Android Callbacks](android-callbacks-index.html).

@@ -12,8 +12,8 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-welcome-messag
 indicator: messaging
 ---   
 
+**Supported versions:** 3.8
 
->**Supported versions: 3.8**
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 

@@ -644,7 +644,6 @@
       - subpagename: Override SDK Strings
     - pagename: Advanced Features
       subpages:
-      - subpagename: Unauthenticated In-App Messaging
       - subpagename: Photo Sharing
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
@@ -664,8 +663,7 @@
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Security
-      - subpagename: Authentication
+      - subpagename: Authentication 
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
       - subpagename: Use the LivePerson SDK - Android
@@ -674,23 +672,14 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Configuration
-      subpages:
-      - subpagename: Initialization
-      - subpagename: SDK Delegates
-      - subpagename: Conversations Lifecycle
-      - subpagename: UI
-      - subpagename: User Data
-      - subpagename: Logs and Info
-      - subpagename: App Extensions
-      - subpagename: Push Notifications
+    - pagename: Configure the iOS SDK
+    - pagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Authentication
     - pagename: Customizing Toast Notifications
     - pagename: Customization and Branding
       subpages:
@@ -725,7 +714,7 @@
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Security
+      - subpagename: Authentication
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
@@ -842,6 +831,7 @@
       pages:
       - pagename: Introduction
       - pagename: Major Components
+      - pagename: Security
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API

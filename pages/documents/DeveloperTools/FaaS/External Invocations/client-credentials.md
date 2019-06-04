@@ -8,7 +8,9 @@ permalink: function-as-a-service-external-invocations-client-credentials.html
 indicator: both
 ---
 
-This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/)). This is the preferred way to authorize machine-to-machine communication.
+This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/). This is the preferred way to authorize for machine-to-machine communication.
+
+Under the hood, FaaS uses JSON Web Tokens (JWTs) to authorize requests ([here](https://jwt.io/introduction/) is a good introduction on JWTs).
 
 ### Step 1: Generate client_id & client_secret:
 
@@ -112,4 +114,4 @@ Retrieved data:
 
   * **Authorization-Server + FaaS - domain** is available.
 
-While calling FaaS with the access-token, you should also make sure to request a new token before it expires.
+While calling FaaS with the access-token, you should also make sure to request a new token before it expires. You can find out if a token is expired by checking the `exp` field of the JWT. You can enter your access-token into the [JWT debugger](https://jwt.io/#debugger) in order to see what the JWT looks like.
