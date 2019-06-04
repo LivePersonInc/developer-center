@@ -19,7 +19,7 @@ Android Mobile App SDK v3.8.0 introduces a new feature.
 
 #### Environmental Requirements
 
-The Android Mobile Messaging SDK version 3.8 requires the minimum Android API version 19, SDK is compiled against API 26, and targeted API is 27.
+The Android Mobile Messaging SDK version 3.8 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
 
 #### New Feature
@@ -75,16 +75,18 @@ There are two message frequencies:
 
 ##### Limitations  
 
-- You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+You can configure up to 24 quick reply options for the user to chose.
 
-- By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
+- You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
+
+- Once you set `itemsPerRow` (max 8), the number of rows calculate automatically (up to 3 rows). If the number of replies exceeds `itemsPerRow` times 3, the extra replies get added to the last row.
 
 - When the consumer ends the conversation, the window remains open, and the Welcome message appears again. The message frequency should be set to `EVERY_CONVERSATION`.
 
 - Quick reply messages do not get recorded in the conversation history.
 
 - The conversational metadata (ExternalId) does not get populated.
-   ```
+   ```json
    "metadata": [
    {
    "type": "ExternalId",
@@ -94,6 +96,7 @@ There are two message frequencies:
    ```  
 
 #### Bug Fixes
+
 - **For Android 9 only.** Calling `hideConversation()` while app is in the background caused the app to come to the foreground. When having multiple apps and the consumer has one CustID across all apps, the consumer could not log out of all apps bringing the other app to the foreground.
 
 - Data masking message displayed after sending SecureForm. When setting the `enable_client_only_masking` bool to **true**, and the customer sent a SecureForm, the “Your personal data has been masked to protect your security. Only the agent can read it.” system message appeared. 
@@ -105,6 +108,7 @@ There are two message frequencies:
 - Scroll bar did not scroll to the bottom with specific branding settings. When setting the `enable_conversation_resolved_separator` and `enable_conversation_resolved_message` bool to **false** the scroll bar did not scroll to the bottom. The bug prevented users from scrolling to the bottom of the message. 
 
 - Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form. 
+
 
 ### Android Messaging SDK - Version 3.7.0
 
