@@ -544,8 +544,12 @@ You can now do any of the following:
 
 - [Configure the SDK](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. 
 
+- [Configure Welcome message quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
+
 - [Configure push notifications](mobile-app-messaging-sdk-for-ios-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 - [Configure photo sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html). At this time, photo sharing is one-way only (from consumer to agent).  Make sure to contact your account team to have photo sharing enabled. 
+
+- [Configure file sharing](). 
  
 - [Customize and brand the SDK](mobile-app-messaging-sdk-for-ios-customization-and-branding-customizing-the-sdk.html). You can customize the look and feel look and feel of your app using LPConfig object. You can also create your own configuration instance and assign the attributes you want to customize.

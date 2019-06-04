@@ -33,7 +33,7 @@ We have provided an `IntentFilter` that contains all the intent Actions so that 
 To easily register to all the intent Actions, we provide an `IntentFilter` that contains them all in `LivePersonIntents.getIntentFilterForAllEvents()`.
 
 {:.important}
-These Intents are local only and, therefore, you must register them via LocalBroadcastManager.
+These Intents are local only and, therefore, you must register them via `LocalBroadcastManager`.
 
 #### Register `BroadcastReceiver` for all Intents:
 
@@ -72,7 +72,7 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
 };
 ```
 
-**Note**: if you registered for multiple **Intents**, you'll have to filter each one, using a **switch**.
+**Note**: if you registered for multiple **Intents**, you must filter each one, using a **switch**.
 
 ### Callbacks
 
