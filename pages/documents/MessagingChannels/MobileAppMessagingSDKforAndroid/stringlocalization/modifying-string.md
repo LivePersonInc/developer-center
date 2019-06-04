@@ -513,7 +513,7 @@ Example</td>
   <th>Default value</th>
 </tr>
 </thead>
-<tbody>s
+<tbody>
 <tr>
   <td>lp_system_message_real_time_masked</td>
   <td>Text of system message, added after detecting a real time masked message (if this feature is enabled).</td>
