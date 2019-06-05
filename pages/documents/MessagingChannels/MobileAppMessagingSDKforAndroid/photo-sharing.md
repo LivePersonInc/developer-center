@@ -53,7 +53,7 @@ Consumers cannot download images, but they can download files through the picker
 
 - Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent to consumer). 
 
-   **For SDKs previous to 3.8.** Photo-sharing is one-way only (from consumer to agent, but not vice versa) and available for the Mobile Message SDK only.
+   **For SDKs previous to 3.8.** Photo-sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
 
 - The default value for photos and files stored on the device is 20, which is configurable.  If exceeding the max value of downloaded photos or files, the  SDK deletes the oldest file download.
 
