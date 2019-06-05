@@ -497,6 +497,10 @@
           - subpagename: Storing Secrets
       - pagename: Deploying Functions
       - pagename: External Invocations
+        subpages:
+          - subpagename: Overview
+          - subpagename: Client Credentials
+          - subpagename: Authorization Code
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
