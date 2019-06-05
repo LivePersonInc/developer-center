@@ -14,14 +14,18 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
 indicator: messaging
 ---
 
-Version 3.9 of the Mobile Messaging SDK added the ability for agents to share photos and files with consumers. The feature allows agents or bots within LiveEngage to send images and files to consumers within a conversation. Once sent, the consumer can tap the thumbnail to view it or share it through the default app on the device. 
+Version 3.9 of the Mobile Messaging SDK added the ability for agents or bots within LiveEngage to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
 
-With version 3.9, agents can share a reference photo or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. Agents can also share detailed information with the consumer, such as mortgage documents or a product catalog.  If an agent resolves a conversation, they can resume it by sharing a photo or file. For the consumer, they can return to a resolved conversation to view the files, as long as the files are part of the conversation history.
+Agents can share:
 
-When an agent sends a photo or file to the consumer, they get a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. After the consumer downloads the file, they can tap it to view it full screen, which shows a share, action, and back buttons. 
+- A reference photo or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. The consumer can tap it to view it full screen, which shows a share, action, and back options. 
 
+- Detailed documents or files to provide the consumer with more information, such as mortgage documents or a product catalog.  After the consumer downloads the file, they can tap it to view it full screen, which shows a share and action options. 
 
-### Prerequisites
+- A photo or file in a resolved conversation to resume the conversation with the consumer. 
+
+{:.important}
+Consumers cannot download images, but they can download files through the picker application to a location on their device (internal or external). 
 
 
 ### Supported file formats
@@ -45,15 +49,19 @@ When an agent sends a photo or file to the consumer, they get a notification onl
 
 ### Notes and limitations
 
+- Consumers cannot download images, but they can download files through the picker application to a location on their device (internal or external). 
+
 - Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent to consumer). 
 
    **For SDKs previous to 3.8.** Photo-sharing is one-way only (from consumer to agent, but not vice versa) and available for the Mobile Message SDK only.
 
 - The default value for photos and files stored on the device is 20, which is configurable.  If exceeding the max value of downloaded photos or files, the  SDK deletes the oldest file download.
 
-- Consumers cannot download images, but they can download files through the picker application to a location on their device (internal or external). 
-
 - If a download attempt is unsuccessful, an error icon covers the thumbnail.  If clicked the file attempts to download again.
+
+- The consumer can return to a resolved conversation to view the files, as long as the files are part of the conversation history.
+
+- If an agent sends an unsupported file, a message displays indicating the file type shared with the consumer is not supported, and the agent should retry sending a supported file format.
 
 - For authenticated users, backgrounding the app file or photo while downloading does not interrupt the download process. 
 
@@ -127,15 +135,4 @@ Values for these descriptions are up to the brand to define, these are only exam
    ```
 
 You can find all the related configurations in the [resources ID table](consumer-experience-ios-sdk-attributes.html), under Photo Sharing.
-
-### How to upload photos and files
-
-Click the **attach** button next to the _enter message_ edit text.
-
-![uploadphoto1](img/uploadphoto1.png)
-
-A menu opens with 2 options: Photo Library and Camera.
-
-![uploadphoto2](img/uploadphoto2.png)
-
 
