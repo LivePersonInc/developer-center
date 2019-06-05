@@ -640,7 +640,7 @@
       - subpagename: Override SDK Strings
     - pagename: Advanced Features
       subpages:
-      - subpagename: Photo Sharing
+      - subpagename: Photo and file sharing
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
@@ -692,7 +692,7 @@
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: CSAT Behavior
       - subpagename: Audio Messages
-      - subpagename: Photo Sharing
+      - subpagename: Photo and file sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs

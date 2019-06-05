@@ -1,5 +1,5 @@
 ---
-pagename: Photo Sharing
+pagename: Photo and file sharing
 redirect_from:
   - consumer-experience-ios-sdk-photosharing.html
 Keywords:
@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
 
 order: 234
-permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sharing.html
 
 indicator: messaging
 ---
