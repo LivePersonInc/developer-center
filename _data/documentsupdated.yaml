@@ -527,7 +527,6 @@
           - subpagename: Survey
           - subpagename: Schema
       - pagename: PGP Encryption
-      - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
     basedomain: https://{domain}/interaction_history/api/account/{accountID}/interactions
@@ -612,7 +611,6 @@
     - pagename: Methods
       subpages:
         - subpagename: External Engagement
-    - pagename: Changelog
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
@@ -704,7 +702,6 @@
       - subpagename: Customizing
       - subpagename: LiveEngage Configuration
       - subpagename: Sample App
-      - subpagename: Changelog
       - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
@@ -869,7 +866,6 @@
             - subpagename: Create Session
             - subpagename: Update Session
         - pagename: Impression Events Body Example
-        - pagename: Changelog
     - documentname: Engagement Attributes
       pages:
       - pagename: Overview
@@ -881,7 +877,6 @@
       pages:
         - pagename: Overview
         - pagename: Engagement Attributes
-        - pagename: Changelog
     - documentname: Engagement Trigger API
       pages:
         - pagename: Overview
@@ -890,7 +885,6 @@
             - subpagename: Click
             - subpagename: getEngagementInfo
             - subpagename: getEngagementState
-        - pagename: Changelog
     - documentname: LE-Tag
       pages:
         - pagename: Overview
@@ -900,7 +894,6 @@
             - subpagename: Visitor Flow Events
             - subpagename: Engagement Events
             - subpagename: Engagement Window Events
-        - pagename: Changelog
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
@@ -911,16 +904,10 @@
           subpages:
             - subpagename: Engagement
             - subpagename: Report
-    - documentname: Validate Engagement API
-      pages:
-        - pagename: Overview
-        - pagename: Validate Engagement
-        - pagename: Changelog
     - documentname: Visit Information API
       pages:
         - pagename: Overview
         - pagename: Visit Information
-        - pagename: Changelog
 
 - categoryname: Solutions
   image: mcs-toolkit
