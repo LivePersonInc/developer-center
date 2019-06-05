@@ -14,35 +14,84 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.
 indicator: messaging
 ---
 
-### Overview
+Version 3.9 of the Mobile Messaging SDK added the ability for agents to share photos and files with consumers. The feature allows agents or bots within LiveEngage to send images and files to consumers within a conversation. Once sent, the consumer can tap the thumbnail to view it or share it through the default app on the device. 
 
-This section describes the photo sharing behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under Photo Sharing.
+With version 3.9, agents can share a reference photo or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. Agents can also share detailed information with the consumer, such as mortgage documents or a product catalog.  If an agent resolves a conversation, they can resume it by sharing a photo or file. For the consumer, they can return to a resolved conversation to view the files, as long as the files are part of the conversation history.
 
-**Notes:**
+When an agent sends a photo or file to the consumer, they get a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. After the consumer downloads the file, they can tap it to view it full screen, which shows a share, action, and back buttons. 
 
-- *This feature is available only for the Mobile App Messaging SDK.*
-- *This feature enables photo sharing only (not video/files).*
-- *Photo-sharing is one-way only: Photos can be sent from consumer to agent, but not vice versa.*
-- *Device storage includes up to 20 images - this is configurable.*
-- *Supported formats: .png, .jpg, .gif (non-animated).*
-- *Photo size reduction: Thumbnail - 30 KB, Preview -3 MB.*
-- *The SDK version contains a beta version of the Photo sharing feature. For now the SDK doesn’t support continuous uploading photos outside the conversation screen. Full-blown solution is under construction.*
 
-### Enable Photo Sharing
+### Prerequisites
 
-To enable/disable photo sharing you can change the boolean value:
 
-```xml
-<bool name="enable_photo_sharing">
-```
+### Supported file formats
 
-By default this value is set to false.
+- PNG
+- JPG/JPEG
+- GIF (non-animated) - previewed as a static image only
+- PDF
+- DOCX
+- PPTX
+- XSLX
 
-**Note that you will need to contact your Account Team in order to enable the feature on your account**.
 
-**Note:**
+### Photo/file sizes
 
-- *if using SDK 3.0 on an Oreo Device (8.0 & 8.1) support for Notification Channel needs to be added.*
+- Thumbnail - 30 KB (base64-encoded)
+
+- Max upload size allowed - 5 MB uncompressed 
+
+   **For SDKs previous to 3.8.** The max upload size allowed is 3 MB. 
+
+### Notes and limitations
+
+- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent to consumer). 
+
+   **For SDKs previous to 3.8.** Photo-sharing is one-way only (from consumer to agent, but not vice versa) and available for the Mobile Message SDK only.
+
+- The default value for photos and files stored on the device is 20, which is configurable.  If exceeding the max value of downloaded photos or files, the  SDK deletes the oldest file download.
+
+- Consumers cannot download images, but they can download files through the picker application to a location on their device (internal or external). 
+
+- If a download attempt is unsuccessful, an error icon covers the thumbnail.  If clicked the file attempts to download again.
+
+- For authenticated users, backgrounding the app file or photo while downloading does not interrupt the download process. 
+
+- For unauthenticated sessions, consumers must download the file again with each visit or refresh of the conversation because the history gets cleared when a session expires or logs the consumer out. 
+
+- **For Android SDK 3.0 on an Oreo Device (8.0 & 8.1).** Add support for Notification Channel.
+
+- The Android SDK supports preview only for PDF files but supports opening other file types through the picker application.
+
+---
+
+
+### Step 1. Enable or disable photo sharing
+
+1. Change the boolean value:
+
+   ```xml
+   <bool name="enable_photo_sharing">
+   ```
+
+   By default this value is set to **false**.
+
+2. Contact your Account Team to have the feature enabled on your account.
+
+### Step 2. Change the button text and color
+
+1. Change the background color of the attachment menu:
+
+   ```xml
+   <color name="attachment_menu_item_background_color">
+   ```
+
+2. Change the text of buttons:
+
+   ```xml
+   <string name="lp_accessibility_gallery">
+   <string name="lp_accessibility_camera">
+   ```
 
 ###  Upload Photo
 
@@ -54,18 +103,7 @@ A menu will open with 2 options: Gallery and Camera. If the user had set a defau
 
 ![Photosharing2](img/photosharing2.png)
 
-Changing the background color of the attachment menu is available with configuration :
 
-```xml
-<color name="attachment_menu_item_background_color">
-```
-
-Changing the text of Gallery/Camera:
-
-```xml
-<string name="lp_accessibility_gallery">
-<string name="lp_accessibility_camera">
-```
 
 ### Advanced features
 
