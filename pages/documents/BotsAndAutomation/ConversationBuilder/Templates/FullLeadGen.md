@@ -20,87 +20,53 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
 
 ### Included Items
 
-#### **Dialogs**
+#### Dialogs
 
 * Welcome
-
- * The Welcome dialog greets the user and then navigates to the first interaction in the LeadGen dialog. You should customize the greeting with your appropriate brand message.
-
+    * The Welcome dialog greets the user and then navigates to the first interaction in the LeadGen dialog. You should customize the greeting with your appropriate brand message.
 * Lead Gen
-
- * This is the main dialog for collecting the user’s contact information.
-
- * By default this dialog collects (and attempts to validate) the user’s name, email address and phone number. There is also an interaction to collect a description of their interest.
-
- * Feel free to modify the language used in the lead gen interactions to suit your brand.
-
+    * This is the main dialog for collecting the user’s contact information.
+    * By default this dialog collects (and attempts to validate) the user’s name, email address and phone number. There is also an interaction to collect a description of their interest.
+    * Feel free to modify the language used in the lead gen interactions to suit your brand.
 * Options for ABC
-
- * If you are deploying to Apple Business Chat, you can use this List Picker driven dialog to display your product or service offerings.
-
- * You can add rich images to the List Picker (though recommended to keep them small for faster loading).
-
+    * If you are deploying to Apple Business Chat, you can use this List Picker driven dialog to display your product or service offerings.
+    * You can add rich images to the List Picker (though recommended to keep them small for faster loading).
 * Options for SMS
-
- * If you are deploying to SMS (or WhatsApp), you can use this text driven dialog to display your product or service offerings.
-
- * This Text Question will display as an A, B, C… style menu.
-
+    * If you are deploying to SMS (or WhatsApp), you can use this text driven dialog to display your product or service offerings.
+    * This Text Question will display as an A, B, C… style menu.
 * Options for Web Buttons
-
- * If you are deploying to Web (or FB Messenger), you can use this button driven dialog to display your product or service offerings.
-
+    * If you are deploying to Web (or FB Messenger), you can use this button driven dialog to display your product or service offerings.
 * Options for Web Gallery
-
- * If you are deploying to Web (or FB Messenger), you can use this Gallery driven dialog to display your product or service offerings. 
-
- * This gallery can be populated manually with images and content. If you would like a dynamically populated gallery, use the Options for Web Gallery API dialog.
-
+    * If you are deploying to Web (or FB Messenger), you can use this Gallery driven dialog to display your product or service offerings. 
+    * This gallery can be populated manually with images and content. If you would like a dynamically populated gallery, use the Options for Web Gallery API dialog.
 * Options for Web Gallery API
-
- * If you are deploying to Web (or FB Messenger), you can use this dynamically populated Gallery driven dialog to display your product or service offerings. 
-
- * This gallery is connected to an integration for Shopify, but you could use any API that returns an array of results.
-
+    * If you are deploying to Web (or FB Messenger), you can use this dynamically populated Gallery driven dialog to display your product or service offerings. 
+    * This gallery is connected to an integration for Shopify, but you could use any API that returns an array of results.
 * Fallback
-
- * Will display when the user enters an utterance that is not recognized.
-
+    * Will display when the user enters an utterance that is not recognized.
 * EscalateLiveAgent
+    * This will perform a transfer to a particular LiveEngage skill.
 
- * This will perform a transfer to a particular LiveEngage skill.
-
-#### **Integrations**
+#### Integrations
 
 * Agent_Transfer
-
- * As you would expect, this will perform a transfer to a LiveEngage skill.
-
- * You will need to configure the skill name, id and transfer message in the Global Functions.
-
+    * As you would expect, this will perform a transfer to a LiveEngage skill.
+    * You will need to configure the skill name, id and transfer message in the Global Functions.
 * Get_Categories
-
- * For the API driven options gallery, this integration with Shopify will return the title and image URL from your Shopify account.
-
- * You will need to configure your Shopify account information in the Global Functions.
-
+    * For the API driven options gallery, this integration with Shopify will return the title and image URL from your Shopify account.
+    * You will need to configure your Shopify account information in the Global Functions.
 * Send_Email
-
- * This integration will send an email to the ownerEmail address supplied which contains all of the collected fields from the LeadGen dialog.
-
- * You will need to configure your email address, subject and other information in the Global Functions.
-
+    * This integration will send an email to the ownerEmail address supplied which contains all of the collected fields from the LeadGen dialog.
+    * You will need to configure your email address, subject and other information in the Global Functions.
 * Send_SMS
-
- * This integration will send the LeadGen results to an SMS number using your Twilio account information.
-
- * You will need to configure your Twilio account information in the Global Functions.
+    * This integration will send the LeadGen results to an SMS number using your Twilio account information.
+    * You will need to configure your Twilio account information in the Global Functions.
 
 ### Configuration Needed
 
 To customize this template, you will need to do the following.
 
-#### **General Dialog Customization**
+#### General Dialog Customization
 
 As noted previously, you will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details.
 
@@ -108,27 +74,28 @@ This is done simply by editing the text copy of the interactions and hitting Ent
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_2.png">
 
-#### **Lead Gen Dialog **
+#### Lead Gen Dialog
 
 The name, email and phone number steps of the LeadGen dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
 For email address and phone number capture, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
-  // Max count of fail user inputs 
-
-  setVariable('maxEmailInvalidAttempts', 2);
-
-  setVariable('maxPhoneInvalidAttempts', 2);
+```javascript
+// Max count of fail user inputs 
+setVariable('maxEmailInvalidAttempts', 2);
+setVariable('maxPhoneInvalidAttempts', 2);
+```
 
 If you want to remove some of the lead gen capture interactions (eg: phone number), you will need to be sure to review the **Next Step** navigation so that the previous interaction will go to the next interaction in the dialog. 
 
 Also, if you are using SMS as opposed to Email to send out the results, you will need to change the appropriate variables from "true" to “false” in Global Functions.
 
+```javascript
 setVariable('sendEmail', 'true');
-
 setVariable('sendSMS', 'false');
+```
 
-#### **Options Dialogs**
+#### Options Dialogs
 
 The Options dialogs are offered for a few different channels:
 
@@ -168,7 +135,7 @@ If you are supporting a web client and want to show your options as a button til
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_6.png">
 
-#### **Global Functions**
+#### Global Functions
 
 As mentioned previously, there are some variables that must be configured to get the most out of this template. Click on the "Global Functions" button to access all the Global functions & variables to be configured.
 
@@ -191,10 +158,13 @@ setVariable('channel', channel);
 If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a Liveperson Agent.
 
 <table>
+<thead>
  <tr>
- <td>Variable Name</td>
- <td>Description</td>
+ <th>Variable Name</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>escalationBotMessage</td>
  <td>What the bot should say prior to hand off </td>
@@ -207,6 +177,7 @@ If the user requests an agent or if they reach the max invalid attempts on email
  <td>botAgentSkillName</td>
  <td>The skill name you will transfer to</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -215,10 +186,13 @@ If the user requests an agent or if they reach the max invalid attempts on email
 The Send to Email integration is enabled by default. If you would like to use this, modify the following values.
 
 <table>
+<thead>
  <tr>
- <td>Variable Name</td>
- <td>Description</td>
+ <th>Variable Name</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>sendEmail</td>
  <td>If you want to send the user’s info to an email address, set to ‘true’, otherwise set to ‘false’</td>
@@ -239,18 +213,22 @@ The Send to Email integration is enabled by default. If you would like to use th
  <td>emailText</td>
  <td>Initial email text, instead of "Lead Gen Form Results" value </td>
  </tr>
+ </tbody>
 </table>
 
 
-**SMS Integration **
+**SMS Integration**
 
 If you are going to use the SMS integration instead of email, setup your Twilio account information. 
 
 <table>
+<thead>
  <tr>
- <td>Variable Name</td>
- <td>Description</td>
+ <th>Variable Name</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>sendSMS</td>
  <td>If you want to send the user’s info to an SMS number, set to ‘true’ (this is set to ‘false’ by default)</td>
@@ -275,6 +253,7 @@ If you are going to use the SMS integration instead of email, setup your Twilio 
  <td>twilioAuthorization</td>
  <td>Generated Bearer token (see below)</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -314,7 +293,7 @@ When this has been set up in Postman, hit Send. This will hit the API, sending a
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_10.png">
 
-**Product and Services ****Options**** modification. **
+**Product and Services - Options modification.**
 
 Your lead gen bot can display a list or gallery of product/service options which your customer can choose from. These can be turned on or off depending on your needs in the Global Functions.
 
@@ -323,10 +302,13 @@ Your lead gen bot can display a list or gallery of product/service options which
 Options are set to be shown by default, but If you don’t want them to be shown in your bot flow just type ‘off’ value for 'enableOptions' variable:
 
 <table>
+<thead>
  <tr>
- <td>Variable Name</td>
- <td>Description</td>
+ <th>Variable Name</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>enableOptions</td>
  <td>If you want to display the Product or Service options to your customer, set this to "on". Otherwise, set to “off”. </td>
@@ -343,6 +325,7 @@ Options are set to be shown by default, but If you don’t want them to be shown
  <td>galleryWebOptionsView</td>
  <td>If you’d like to display your content as a scrolling gallery, set this to “on”. If you’d prefer to use a button tile, set this to “off”.</td>
  </tr>
+ </tbody>
 </table>
 
 
@@ -356,17 +339,20 @@ Options are set to be shown by default, but If you don’t want them to be shown
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_12.png"><img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_13.png">
 
-**Shopify integration settings. **
+**Shopify integration settings.**
 
 You can populate the **Options for Web Gallery API** dialog with products from your Shopify store. 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_14.png">
 
 <table>
+<thead>
  <tr>
- <td>Variable Name</td>
- <td>Description</td>
+ <th>Variable Name</th>
+ <th>Description</th>
  </tr>
+ </thead>
+ <tbody>
  <tr>
  <td>shopifyAPILink</td>
  <td>Middleware Link where sms will be sent
@@ -380,6 +366,7 @@ https://SHOPIFY_API_KEY:SHOPIFY_API_SECRET@STORE_DOMAIN/ENDPOINT</td>
  <td>shopifyHost</td>
  <td>Your store’s Host name</td>
  </tr>
+ </tbody>
 </table>
 
 
