@@ -139,3 +139,5 @@ Request by skillIds=12,13 and overdueConversations=true
 | overdueConversationsInQueue | The number of overdue conversations that are in the queue. | long |
 | overdueConversationsAssigned | The number of overdue conversations that are assigned to an agent. | long |
 | overdueConversationsTotal | The total number of conversations that are overdue (sum of inQueue + assigned). | long |
+|avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation is waiting in the queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
+|maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation is waiting in the queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|
