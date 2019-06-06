@@ -50,7 +50,7 @@ As noted previously, you will want to review each of the dialogs, starting with 
 
 This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simple_lead_image_1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_simple_lead_image_1.png">
 
 #### Lead Gen Dialog
 

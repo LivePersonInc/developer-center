@@ -14,9 +14,7 @@ The Lead Gen template is designed to capture contact information from a customer
 
 The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp and Facebook Messenger. Escalation to an agent is also included.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_0.png">
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_1.png">
+<img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_0.png"> <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_1.png">
 
 ### Included Items
 
@@ -72,7 +70,7 @@ As noted previously, you will want to review each of the dialogs, starting with 
 
 This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_2.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_2.png">
 
 #### Lead Gen Dialog
 
@@ -337,13 +335,13 @@ Options are set to be shown by default, but If you don’t want them to be shown
 </table>
 
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_12.png"><img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_13.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_12.png"><img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_13.png">
 
 **Shopify integration settings.**
 
 You can populate the **Options for Web Gallery API** dialog with products from your Shopify store. 
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_14.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_14.png">
 
 <table>
 <thead>
