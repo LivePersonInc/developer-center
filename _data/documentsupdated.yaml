@@ -676,10 +676,9 @@
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Customization and Branding
+    - pagename: SDK Attributes
       subpages:
-      - subpagename: Customizing the SDK
-      - subpagename: Attributes
+      - subpagename: Attributes  
       - subpagename: Attributes Design Sheet
       - subpagename: Deprecated Attributes
     - pagename: String Localization
