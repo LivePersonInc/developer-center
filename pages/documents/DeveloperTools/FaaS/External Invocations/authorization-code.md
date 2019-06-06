@@ -14,7 +14,7 @@ This section describes how to call FaaS functions from outside of LivePerson's p
 
 ### Step 1: Generate client-id & client-secret:
 
-Begin by executing the **App Installation** process in order to generate a `client-id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
+* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
 
 ### Step 2: Create User
 
