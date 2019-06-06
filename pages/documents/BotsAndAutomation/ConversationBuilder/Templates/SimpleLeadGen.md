@@ -59,12 +59,12 @@ The name, email and phone number steps of the LeadGen dialog are performing some
 For email address and phone number capture, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
 ```javascript
-// Max count of fail user inputs 
+// Max count of fail user inputs
 setVariable('maxEmailInvalidAttempts', 2);
 setVariable('maxPhoneInvalidAttempts', 2);
 ```
 
-If you want to remove some of the lead gen capture interactions (eg: phone number), you will need to be sure to review the **Next Step** navigation so that the previous interaction will go to the next interaction in the dialog. 
+If you want to remove some of the lead gen capture interactions (eg: phone number), you will need to be sure to review the **Next Step** navigation so that the previous interaction will go to the next interaction in the dialog.
 
 #### Global Functions
 
@@ -77,30 +77,30 @@ As mentioned previously, there are some variables that must be configured to get
 The Send to Email integration is enabled by default. If you would like to use this, modify the following values.
 
 <table>
- <thead>
+<thead>
  <tr>
- <th>Variable Name</th>
- <th>Description</th>
+  <th>Variable Name</th>
+  <th>Description</th>
  </tr>
- </thead>
- <tbody>
+</thead>
+<tbody>
  <tr>
- <td>ownerEmail</td>
- <td>Email to send information collected by bot</td>
- </tr>
- <tr>
- <td>replyEmail</td>
- <td>Reply To email address, displayed to the user in their email program</td>
+  <td>ownerEmail</td>
+  <td>Email to send information collected by bot</td>
  </tr>
  <tr>
- <td>emailSubject</td>
- <td>Email subject </td>
+  <td>replyEmail</td>
+  <td>Reply To email address, displayed to the user in their email program</td>
  </tr>
  <tr>
- <td>emailText</td>
- <td>Initial email text, instead of "Lead Gen Form Results" value </td>
+  <td>emailSubject</td>
+  <td>Email subject </td>
  </tr>
- </tbody>
+ <tr>
+  <td>emailText</td>
+  <td>Initial email text, instead of "Lead Gen Form Results" value </td>
+ </tr>
+</tbody>
 </table>
 
 ##### Agent Escalation
@@ -110,10 +110,10 @@ If the user requests an agent or if they reach the max invalid attempts on email
 <table>
 <thead>
  <tr>
- <th>Variable Name</th>
- <th>Description</th>
+  <th>Variable Name</th>
+  <th>Description</th>
  </tr>
- <thead>
+ </thead>
  <tbody>
  <tr>
  <td>escalationBotMessage</td>
