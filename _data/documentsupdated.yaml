@@ -497,6 +497,10 @@
           - subpagename: Storing Secrets
       - pagename: Deploying Functions
       - pagename: External Invocations
+        subpages:
+          - subpagename: Overview
+          - subpagename: Client Credentials
+          - subpagename: Authorization Code
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
@@ -527,7 +531,6 @@
           - subpagename: Survey
           - subpagename: Schema
       - pagename: PGP Encryption
-      - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
     basedomain: https://{domain}/interaction_history/api/account/{accountID}/interactions
@@ -612,7 +615,6 @@
     - pagename: Methods
       subpages:
         - subpagename: External Engagement
-    - pagename: Changelog
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
@@ -640,7 +642,6 @@
       - subpagename: Override SDK Strings
     - pagename: Advanced Features
       subpages:
-      - subpagename: Unauthenticated In-App Messaging
       - subpagename: Photo Sharing
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
@@ -660,8 +661,7 @@
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Security
-      - subpagename: Authentication
+      - subpagename: Authentication 
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
       - subpagename: Use the LivePerson SDK - Android
@@ -670,23 +670,14 @@
     pages:
     - pagename: Overview
     - pagename: Quick Start
-    - pagename: Configuration
-      subpages:
-      - subpagename: Initialization
-      - subpagename: SDK Delegates
-      - subpagename: Conversations Lifecycle
-      - subpagename: UI
-      - subpagename: User Data
-      - subpagename: Logs and Info
-      - subpagename: App Extensions
-      - subpagename: Push Notifications
+    - pagename: Configure the iOS SDK
+    - pagename: Push Notifications
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Authentication
     - pagename: Customizing Toast Notifications
     - pagename: Customization and Branding
       subpages:
@@ -715,13 +706,12 @@
       - subpagename: Customizing
       - subpagename: LiveEngage Configuration
       - subpagename: Sample App
-      - subpagename: Changelog
       - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Security
+      - subpagename: Authentication
       - subpagename: Open Source List
       - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
@@ -838,6 +828,7 @@
       pages:
       - pagename: Introduction
       - pagename: Major Components
+      - pagename: Security
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
@@ -879,7 +870,6 @@
             - subpagename: Create Session
             - subpagename: Update Session
         - pagename: Impression Events Body Example
-        - pagename: Changelog
     - documentname: Engagement Attributes
       pages:
       - pagename: Overview
@@ -891,7 +881,6 @@
       pages:
         - pagename: Overview
         - pagename: Engagement Attributes
-        - pagename: Changelog
     - documentname: Engagement Trigger API
       pages:
         - pagename: Overview
@@ -900,7 +889,6 @@
             - subpagename: Click
             - subpagename: getEngagementInfo
             - subpagename: getEngagementState
-        - pagename: Changelog
     - documentname: LE-Tag
       pages:
         - pagename: Overview
@@ -910,7 +898,6 @@
             - subpagename: Visitor Flow Events
             - subpagename: Engagement Events
             - subpagename: Engagement Window Events
-        - pagename: Changelog
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
@@ -921,16 +908,10 @@
           subpages:
             - subpagename: Engagement
             - subpagename: Report
-    - documentname: Validate Engagement API
-      pages:
-        - pagename: Overview
-        - pagename: Validate Engagement
-        - pagename: Changelog
     - documentname: Visit Information API
       pages:
         - pagename: Overview
         - pagename: Visit Information
-        - pagename: Changelog
 
 - categoryname: Solutions
   image: mcs-toolkit

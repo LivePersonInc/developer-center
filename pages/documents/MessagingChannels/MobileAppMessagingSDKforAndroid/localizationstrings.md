@@ -14,11 +14,11 @@ permalink: mobile-app-messaging-sdk-for-android-string-localization-override-sdk
 indicator: messaging
 ---
 
-**Android resources introduction:**
+### Android resources introduction
 
-Android resources are: Strings, drawables, layouts etc. During compile time, all resources are moved to the same location. App resources receive higher priority, and, due to this, in case the SDK and the App share the same resource name, the value of the App will be used. This is under OS responsibility.
+Android resources include Strings, drawables, layouts, and so on. When compiled, all resources are moved to the same location. App resources receive higher priority, and, due to this, in case the SDK and the App share the same resource name, the value of the App will be used. This is under OS responsibility.
 
-**Language implementation:**
+### Language implementation
 
 SDK language support is split into two scenarios:
 
@@ -45,26 +45,10 @@ If you want to change the Brand name, when using the SDK on Activity Mode, you'l
 
 ### Create new Localization File
 
-* **Step 1:** Using **Android View**, right-click over the **res** folder, select **new**, then **Android Resource Directory**
+1. Using **Android View**, right-click **res** and select **new** > **Android Resource Directory**.
+2. Under **Available qualifiers** of the New Resource Directory window, select **Locale** and move (\>\>) to **Chosen qualifiers**.
+3. Under **Languages**, select the Language or Region and click **OK**.
+4. Using **Project View**, right-click the values folder you just created and then select **new** > **Values Resource File**.
+5. In the New Values Resources File dialog, type **strings.xml** and click **OK**.
 
-![Authentication Setup](img/android_string_locale_step1.png)
-    
-* **Step 2:** On the **New Resouce Directory**Screen, select **Locale** ,and click on the **>>**:
 
-![Authentication Setup](img/android_string_locale_step2.png)
-
-* **Step 3:** Now select the Language or Region you're trying to create:
-
-![Authentication Setup](img/android_string_locale_step3.png)
-
-_**Note:** Now that you have a new **Resource Directory**, you'll have to create a new **strings.xml** file to define the new strings_
-
-![Authentication Setup](img/android_string_locale_step4.png)
-
-* **Step 4:** Using **Project View**, right-click over the values folder you just created, select **new**, then **Values Resource File**
-
-![Authentication Setup](img/android_string_locale_step5.png)
-
-* **Step 5:** On the pop up window, type: **strings.xml**, this file will define all the strings for that Locale:
-
-![Authentication Setup](img/android_string_locale_step6.png)

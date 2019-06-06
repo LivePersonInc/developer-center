@@ -16,6 +16,7 @@ indicator: messaging
 
 ### Introduction
 Campaigns are the cornerstone of LiveEngage - the place where every digital engagement is created and organized.
+
 By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
 
 Using the Monitoring APIs, brands can:
@@ -97,9 +98,9 @@ LPMessagingSDK.instance.showConversation(conversationViewParam)
 
 * Please follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf) **before** adding the implementation to a mobile app.
 
-* In order to use the APIs, the SDK should be initialized with the ```LPMonitoringInitParams``` object.
+* In order to use the APIs, the SDK should be initialized with the `LPMonitoringInitParams` object.
 
-* In order to start a conversation with a specific campaign and engagement, a ```LPCampaignInfo``` object should be provided to the ```LPConversationViewParams``` object
+* In order to start a conversation with a specific campaign and engagement, a `LPCampaignInfo` object should be provided to the `LPConversationViewParams` object
 
 * A monitoring session lasts for a 6 hours window. All SDEs which will be reported during the session will be aggregated.
 

@@ -42,7 +42,8 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
 2. Create **MonitoringParams**. 
 
-   <div class="notice">The entry points and engagement attributes used here are dummies.</div>
+   {:.notice}
+   The entry points and engagement attributes used here are dummies.
 
    ```java
    // Create Entry Points JSON
