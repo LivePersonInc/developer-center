@@ -22,308 +22,630 @@ The goal of the following document is to enumerate the different fields controll
 #### remoteUserBubbleBackgroundColor
 Color code for the background of the remote user's bubble.
 
-   - **Type:** UIColor    
-   - **Default:** \#004DC9  
- 
-   ![remoteuserbubblebackgroundcolor](img/remoteuserbubblebackgroundcolor.png)
+<div style="float: left; width: 35%;padding-bottom: 15px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #004DC9</li>
+   </ul>
+</div>
 
---- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserBubbleBorderColor
 Color code for the outline color.
 
-   - **Type:** UIColor    
-   - **Default:** \#004DC9 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #004DC9</li>
+   </ul>
+</div>
 
-   ![remoteuserbubblebordercolor](img/remoteuserbubblebordercolor.png)
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor">
+   </figure>
+</div>
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserBubbleLinkColor
 Color code for links in the text of the remote user's bubble.
 
-   - **Type:** UIColor    
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-   ![remoteuserbubblelinkcolor](img/remoteuserbubblelinkcolor.png)
-
---- 
-
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor">
+   </figure>
+</div>
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserBubbleTextColor
 Color code for the text of the remote user's bubble.
 
-   - **Type:** UIColor    
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-   ![remoteuserbubbletextcolor](img/remoteuserbubbletextcolor.png)
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### remoteUserBubbleBorderWidth
 Double number for the outline width. 
 
-   - **Type:** Double    
-   - **Default:**  2  
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Double</li>
+      <li><b>Default:</b> 2</li>
+   </ul>
+</div>
 
-   ![remoteuserbubbleborderwidth](img/remoteuserbubbleborderwidth.png)
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteuserbubbleborderwidth.png" alt="remoteuserbubbleborderwidth">
+   </figure>
+</div>
 
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### remoteUserBubbleTimestampColor
 Color code for the timestamp of the remote user's bubble. 
 
-   - **Type:** UIColor    
-   - **Default:**  #5B5C5E
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #5B5C5E</li>
+   </ul>
+</div>
 
-   ![remoteuserbubbletimestampcolor](img/remoteuserbubbletimestampcolor.png)
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserTypingTintColor
 Color of the remote user typing bubbles animation.  
 
-   - **Type:** UIColor    
-   - **Default:**  UIColor.white
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-   ![remoteusertypingtintcolor](img/remoteusertypingtintcolor.png)
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### remoteUserBubbleLongPressOverlayColor
 Color of the remote user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.
 
-   - **Type:** UIColor    
-   - **Default:**  UIColor.black
+<div style="float: left; width: 35%;height: 150px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
    <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserBubbleLongPressOverlayAlpha
 Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
-   - **Type:** Float    
-   - **Default:**  0.3
+<div style="float: left; width: 35%;height: 150px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 0.3</li>
+   </ul>
+</div>
 
-<img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserBubbleTopLeftCornerRadius  
 Top left Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float    
-   - **Default:**  8
 
+<div style="float: left; width: 35%;height: 125px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
    <img src="img/remoteTopLeft.png" alt="remoteTopLeft">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### remoteUserBubbleTopRightCornerRadius
 Top right Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float    
-   - **Default:**  8
+<div style="float: left; width: 35%;height: 125px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
-<img src="img/remoteTopRight.png" alt="remoteTopRight">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteTopRight.png" alt="remoteTopRight">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### remoteUserBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float    
-   - **Default:** 8
+<div style="float: left; width: 35%;height: 125px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
    <img src="img/remoteBottomLeft.png" alt="remoteBottomLeft">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### remoteUserBubbleBottomRightCornerRadius
 Bottom right Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float    
-   - **Default:** 8
+<div style="float: left; width: 35%;height: 125px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
    <img src="img/remoteBottomRight.png" alt="remoteBottomRight">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleBackgroundColor
 Color code for the background of the visitor bubble.
 
-   - **Type:** UIColor    
-   - **Default:** #EDEDED
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #EDEDED</li>
+   </ul>
+</div>
 
-<img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### userBubbleBorderColor
 Color code for the outline color.
 
-   - **Type:** UIColor    
-   - **Default:** #EDEDED
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #EDEDED</li>
+   </ul>
+</div>
 
-<img src="img/userbubblebordercolor.png" alt="userbubblebordercolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+  <img src="img/userbubblebordercolor.png" alt="userbubblebordercolor">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleLinkColor
 Color code for links in the text of the visitor bubble.
 
-   - **Type:** UIColor    
-   - **Default:** #0000ee
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #0000ee</li>
+   </ul>
+</div>
 
-<img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleTextColor
 Color code for the text of the visitor bubble.
 
-   - **Type:** UIColor    
-   - **Default:** UIColor.black
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black</li>
+   </ul>
+</div>
 
-<img src="img/userbubbletextcolor.png" alt="userbubbletextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubbletextcolor.png" alt="userbubbletextcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 
 #### userBubbleBorderWidth
 Double number for the outline width.
 
-   - **Type:** Double    
-   - **Default:** 1
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Double</li>
+      <li><b>Default:</b> 1</li>
+   </ul>
+</div>
 
-<img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleTimestampColor
 Color code for the timestamp of the visitor bubble.
 
-   - **Type:** UIColor    
-   - **Default:** #5B5C5E
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #5B5C5E</li>
+   </ul>
+</div>
 
-<img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleSendStatusTextColor
 Color code for the send status text of the visitor bubble.
 
-   - **Type:** UIColor    
-   - **Default:** #5B5C5E
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #5B5C5E</li>
+   </ul>
+</div>
 
-<img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### userBubbleErrorTextColor
 Color code for the error view text of the visitor bubble. 
 
-   - **Type:** UIColor    
-   - **Default:** #DE0A23
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #DE0A23</li>
+   </ul>
+</div>
 
-<img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### userBubbleErrorBorderColor
 Color code for the error view border of the visitor bubble.
 
-   - **Type:** UIColor    
-   - **Default:** #DE0A23
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #DE0A23</li>
+   </ul>
+</div>
 
-<img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleLongPressOverlayColor
 Color of the user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
-   - **Type:** UIColor    
-   - **Default:** UIColor.black
 
-<img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
+<div style="float: left; width: 35%;height: 150px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black</li>
+   </ul>
+</div>
 
---- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
+   </figure>
+</div>
 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleLongPressOverlayAlpha
 Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
 
-   - **Type:** Float    
-   - **Default:** 0.3
+<div style="float: left; width: 35%;height: 150px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 0.3</li>
+   </ul>
+</div>
 
-<img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### userBubbleTopLeftCornerRadius
 Top left Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.
 
-   - **Type:** Float    
-   - **Default:** 8
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
-<img src="img/userTopLeft.png" alt="userTopLeft">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userTopLeft.png" alt="userTopLeft">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### userBubbleTopRightCornerRadius
 Top right Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float    
-   - **Default:** 8
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
-<img src="img/userTopRight.png" alt="userTopRight">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userTopRight.png" alt="userTopRight">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### userBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float    
-   - **Default:** 8
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
-<img src="img/userBottomLeft.png" alt="userBottomLeft">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userBottomLeft.png" alt="userBottomLeft">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### userBubbleBottomRightCornerRadius
 Bottom right Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
-   - **Type:** Float   
-   - **Default:** 8
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
-<img src="img/userBottomRight.png" alt="userBottomRight">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/userBottomRight.png" alt="userBottomRight">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### bubbleEmailLinksRegex
@@ -332,8 +654,9 @@ Regular expression for email hyperlinks in users messages (consumer and agent). 
    - **Type:** String?    
    - **Default:** nil
 
---- 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### bubbleUrlLinksRegex
 Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
@@ -341,7 +664,9 @@ Regular expression for url hyperlinks in users messages (consumer and agent). Th
    - **Type:** String?  
    - **Default:** nil
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### bubblePhoneLinksRegex
@@ -350,84 +675,171 @@ Regular expression for phone hyperlinks in users messages (consumer and agent). 
    - **Type:** String?  
    - **Default:** nil 
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### bubbleTopPadding
 Define the bubble Top Padding.
 
-   - **Type:** Float  
-   - **Default:** 10
+<div style="float: left; width: 35%;height: 75px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 10</li>
+   </ul>
+</div>
 
-<img src="img/bubbleTopPadding.png" alt="bubbleTopPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/bubbleTopPadding.png" alt="bubbleTopPadding">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 
 #### bubbleBottomPadding
 Define the bubble bottom Padding.
 
-   - **Type:** Float  
-   - **Default:** 10
+<div style="float: left; width: 35%;height: 75px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 10</li>
+   </ul>
+</div>
 
-<img src="img/bubbleBottomPadding.png" alt="bubbleBottomPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/bubbleBottomPadding.png" alt="bubbleBottomPadding">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### bubbleLeadingPadding
 Define the bubble Leading Padding.
 
-   - **Type:** Float  
-   - **Default:** 10
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 10</li>
+   </ul>
+</div>
 
-<img src="img/bubbleLeadingPadding.png" alt="bubbleLeadingPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/bubbleLeadingPadding.png" alt="bubbleLeadingPadding">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### bubbleTrailingPadding
 Define the bubble Trailing Padding.
 
-   - **Type:** Float   
-   - **Default:** 10
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 10</li>
+   </ul>
+</div>
 
-<img src="img/bubbleTrailingPadding.png" alt="bubbleTrailingPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/bubbleTrailingPadding.png" alt="bubbleTrailingPadding">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### bubbleTimestampBottomPadding
 Define the bubble Trailing Padding.
 
-   - **Type:** Float    
-   - **Default:** 5
+<div style="float: left; width: 35%;height: 75px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 5</li>
+   </ul>
+</div>
 
-<img src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding">
+   </figure>
+</div>
 
---- 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### bubbleTimestampTopPadding
 Define the bubble Timestamp Top Padding.
 
-   - **Type:** Float  
-   - **Default:** 5
+<div style="float: left; width: 35%;height: 75px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 5</li>
+   </ul>
+</div>
 
-<img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### enableEnlargeEmojis
 When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.
 
-   - **Type:** Bool  
-   - **Default:** false
+<div style="float: left; width: 35%;height: 300px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false</li>
+   </ul>
+</div>
 
-<img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis" style="width: auto; height: 300px;">
+   </figure>
+</div>
 
----   
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+<hr>   
 
 ### Link Preview
 
@@ -437,8 +849,10 @@ Enable or disable link preview feature. If disabled, user will not see site's li
    - **Type:** Bool
    - **Default:** true
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
---- 
 
 #### linkPreviewBackgroundColor 
 Color code for the background of the link preview area inside cell.
@@ -446,7 +860,9 @@ Color code for the background of the link preview area inside cell.
    - **Type:** UIColor
    - **Default:** UIColor.white 
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### linkPreviewTitleTextColor
 Color code for the title text inside link preview area inside cell.
@@ -454,7 +870,9 @@ Color code for the title text inside link preview area inside cell.
    - **Type:** UIColor
    - **Default:** UIColor.black  
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### linkPreviewDescriptionTextColor 
 Color code for the description text inside link preview area inside cell.
@@ -462,7 +880,9 @@ Color code for the description text inside link preview area inside cell.
    - **Type:** UIColor
    - **Default:** #5B5C5E  
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### linkPreviewSiteNameTextColor  
 Color code for the description site name link preview area inside cell.
@@ -470,7 +890,9 @@ Color code for the description site name link preview area inside cell.
    - **Type:** UIColor
    - **Default:** #E2E3E3
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### linkPreviewBorderWidth 
 Double number for the outline width of link preview area inside cell.
@@ -478,7 +900,9 @@ Double number for the outline width of link preview area inside cell.
    - **Type:** Double
    - **Default:** 1.0  
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### linkPreviewStyle 
 Refers to the style in which the link preview cell will be displayed.
@@ -486,12 +910,25 @@ Refers to the style in which the link preview cell will be displayed.
    - **Type:** LPUrlPreviewStyle
    - **Default:** LPUrlPreviewStyle.slim  
 
-Slim: <img src="img/linkpreviewstyleslim.png" alt="linkpreviewslim"> 
 
-Large: <img src="img/linkpreviewstylelarge.png" alt="linkpreviewlarge"> 
+<div style="float: left; width: 35%;height: 250px;">
+   <figure>
+   <figcaption>Slim</figcaption>
+   <img src="img/linkpreviewstyleslim.png" alt="linkpreviewslim">
+   </figure>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption>Large</figcaption>
+   <img src="img/linkpreviewstylelarge.png" alt="linkpreviewlarge">
+   </figure>
+</div>
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 #### linkPreviewSiteNameTextColor  
 Color code for the description site name link preview area inside cell.
@@ -499,59 +936,123 @@ Color code for the description site name link preview area inside cell.
    - **Type:** UIColor
    - **Default:**  
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 #### urlRealTimePreviewBackgroundColor 
 The background color of the url real time preview.
 
-   - **Type:** UIColor
-   - **Default:**  UIColor.white
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/realtimepreviewbackgroundcolor.png" alt="realtimepreviewbackgroundcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/realtimepreviewbackgroundcolor.png" alt="realtimepreviewbackgroundcolor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 #### urlRealTimePreviewBorderColor 
 The border color of the url real time preview.
 
-   - **Type:** UIColor
-   - **Default:**  
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> </li>
+   </ul>
+</div>
 
-<img src="img/realtimepreviewbordercolor.png" alt="realtimepreviewbordercolor"> 
- 
---- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/realtimepreviewbordercolor.png" alt="realtimepreviewbordercolor">
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### urlRealTimePreviewBorderWidth
 The border width of the url real time preview.
-
-   - **Type:** Float
-   - **Default:**  
-
-<img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth"> 
  
+<div style="float: left; width: 35%;height: 50px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> </li>
+   </ul>
+</div>
 
---- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth">
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 #### urlRealTimePreviewTitleTextColor  
 The title text color of the url real time preview.
 
-   - **Type:** UIColor
-   - **Default:**  
+<div style="float: left; width: 35%;height: 50px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> </li>
+   </ul>
+</div>
 
-<img src="img/urlrealtimepreviewtitletextcolor.png" alt="urlRealTimePreviewTitleTextColor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/urlrealtimepreviewtitletextcolor.png" alt="urlRealTimePreviewTitleTextColor">
+   </figure>
+</div>
 
---- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### urlRealTimePreviewDescriptionTextColor  
 The description text color of the url real time preview.
 
-   - **Type:** UIColor
-   - **Default:**  
+<div style="float: left; width: 35%;height: 50px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> </li>
+   </ul>
+</div>
 
-<img src="img/urlrealtimepreviewdescriptiontextcolor.png" alt="urlrealtimepreviewdescriptiontextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/urlrealtimepreviewdescriptiontextcolor.png" alt="urlrealtimepreviewdescriptiontextcolor">
+   </figure>
+</div>
 
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 #### useNonOGTagsForLinkPreview  
 The urlPreview attribute also uses non-OG tags to parse urls instead of using only OG tags if useNonOGTagsForLinkPreview is true.
@@ -559,7 +1060,11 @@ The urlPreview attribute also uses non-OG tags to parse urls instead of using on
    - **Type:** Bool
    - **Default:**  true
 
---- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+<hr>
 
 ### Photo and file sharing
 
@@ -569,7 +1074,8 @@ True - Enables Photo Sharing feature, False - Disables Photo Sharing.
    - **Type:** Bool
    - **Default:**  false
 
---- 
+
+
 
 #### maxNumberOfSavedFilesOnDisk 
 This number represents how many files will be saved on the disk. Exceeding files are deleted when the app closes. 
@@ -577,7 +1083,8 @@ This number represents how many files will be saved on the disk. Exceeding files
    - **Type:** Int
    - **Default:** 20 
 
---- 
+
+
 
 #### photosharingMenuBackgroundColor  
 Photo Sharing menu background color.
@@ -587,7 +1094,8 @@ Photo Sharing menu background color.
 
 <img src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor"> 
 
---- 
+
+
 
 #### photosharingMenuButtonsBackgroundColor  
 Photo Sharing menu buttons background color. 
@@ -597,7 +1105,8 @@ Photo Sharing menu buttons background color.
 
 <img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
 
---- 
+
+
 
 #### photosharingMenuButtonsTintColor  
 Photo Sharing menu buttons tint color.
@@ -607,7 +1116,8 @@ Photo Sharing menu buttons tint color.
 
 <img src="img/photosharingmenubuttonstintcolor.png" alt="photosharingmenubuttonstintcolor"> 
 
---- 
+
+
 
 #### photosharingMenuButtonsTextColor  
 Photo Sharing menu buttons text color.
@@ -617,7 +1127,8 @@ Photo Sharing menu buttons text color.
 
 <img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor">  
 
---- 
+
+
 
 #### cameraButtonEnabledColor  
 Photo Sharing Camera button color in enabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled.
@@ -627,7 +1138,8 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 
 <img src="img/cameraButtonColor.png" alt="cameraButtonColor">  
 
---- 
+
+
 
 ####  cameraButtonDisabledColor  
 Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled. 
@@ -637,7 +1149,8 @@ Photo Sharing Camera button color in disabled mode in the conversation screen. W
 
 <img src="img/cameraButtonColor.png" alt="cameraButtonColor">
 
---- 
+
+
 
 #### fileCellLoaderFillColor 
 Radial loader fill color.
@@ -647,7 +1160,8 @@ Radial loader fill color.
 
 <img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor">
 
---- 
+
+
 
 #### fileCellLoaderRingProgressColor  
 Radial loader progress color.
@@ -657,7 +1171,8 @@ Radial loader progress color.
 
 <img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor">
 
---- 
+
+
 
 #### fileCellLoaderRingBackgroundColor  
 Radial loader progress background color.
@@ -680,7 +1195,8 @@ Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.
    - **Type:** UIColor
    - **Default:** #AAAAAA 
 
---- 
+
+
 
 #### sendButtonEnabledColor  
 Color code for Send and Camera (of Photo Sharing) buttons in disabled mode. 
@@ -688,7 +1204,8 @@ Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.
    - **Type:** UIColor
    - **Default:** #0362AC 
 
---- 
+
+
 
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
@@ -701,7 +1218,8 @@ You must follow the guidelines in the [Custom Icon documentation](https://develo
 
 <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
 
---- 
+
+
 
 #### isSendMessageButtonInTextMode  
 You have two options for the send message button mode: **text mode** (taken from localized resources) and **icon mode**.  
@@ -744,7 +1262,8 @@ Checkmark visibility of the following options (type CheckmarksState): SentOnly -
    - **Type:** CheckmarksState(Integer Enum)
    - **Default:** CheckmarksState.All 
 
---- 
+
+
 
 #### checkmarkReadColor  
 Color of checkmark indication signs of Read messages. 
@@ -754,7 +1273,8 @@ Color of checkmark indication signs of Read messages.
  
 <img src="img/checkmarkreadcolor.png" alt="checkmarkreadcolor">
 
---- 
+
+
 
 #### checkmarkDistributedColor  
 Color of checkmark indication signs of Distributed messages.  
@@ -764,7 +1284,8 @@ Color of checkmark indication signs of Distributed messages.
 
 <img src="img/checkmarkdistributedcolor.png" alt="checkmarkdistributedcolor"> 
 
---- 
+
+
 
 ####  checkmarkSentColor  
 Color of checkmark indication signs of Sent messages. 
@@ -772,7 +1293,8 @@ Color of checkmark indication signs of Sent messages.
    - **Type:** UIColor
    - **Default:** #5B5C5E 
 
---- 
+
+
 
 #### isReadReceiptTextMode  
 Two options for read indication: Read Receipt with Text Mode Read. Receipt with Icon Mode. If the parameter set as true the mode will be Text. If the parameter set as false the mode will be Icon. 
@@ -782,7 +1304,8 @@ Two options for read indication: Read Receipt with Text Mode Read. Receipt with 
 
 <img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode"> 
 
---- 
+
+
 
 #### messageStatusNumericTimestampOnly  
 When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'  
@@ -804,7 +1327,8 @@ Corner radius of the Submit button.
 
 <img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"> 
 
---- 
+
+
 
 #### csatYesNoButtonsCornerRadius  
 Corner radius of the resolution Yes/No buttons.  
@@ -814,7 +1338,8 @@ Corner radius of the resolution Yes/No buttons.
 
 <img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius"> 
 
---- 
+
+
 
 ####  csatSubmitButtonBackgroundColor  
 Background color code of the Submit button.  
@@ -824,7 +1349,8 @@ Background color code of the Submit button.
 
 <img src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor"> 
 
---- 
+
+
 
 #### csatSubmitButtonTextColor  
 Text color code of the Submit button.  
@@ -834,7 +1360,8 @@ Text color code of the Submit button.
 
 <img src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor"> 
 
---- 
+
+
 
 #### csatRatingButtonSelectedColor  
 Background Color code of the rating buttons.  
@@ -844,7 +1371,8 @@ Background Color code of the rating buttons.
 
 <img src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor"> 
 
---- 
+
+
 
 #### csatResolutionButtonSelectedColor  
 Color code for the FCR survey buttons (YES/NO) when selected.  
@@ -854,7 +1382,8 @@ Color code for the FCR survey buttons (YES/NO) when selected.
 
 <img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor"> 
 
---- 
+
+
 
 #### csatAllTitlesTextColor  
 Title text color for all labels.  
@@ -864,7 +1393,8 @@ Title text color for all labels.
 
 <img src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor"> 
 
---- 
+
+
 
 #### csatResolutionHidden  
 Hides the FCR survey (YES/NO) question.  
@@ -874,7 +1404,8 @@ Hides the FCR survey (YES/NO) question.
 
 <img src="img/csatresolutionhidden.png" alt="csatResolutionHidden"> 
 
---- 
+
+
 
 #### csatAgentViewHidden  
 Hides the view of agent avatar and name. 
@@ -884,7 +1415,8 @@ Hides the view of agent avatar and name.
 
 <img src="img/csatagentviewhidden.png" alt="csatagentviewhidden"> 
 
---- 
+
+
 
 #### csatThankYouScreenHidden 
 Hides the Thank You screen after tapping Submit button.   
@@ -894,7 +1426,8 @@ Hides the Thank You screen after tapping Submit button.
 
 <img src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden"> 
 
---- 
+
+
 
 #### csatNavigationBackgroundColor 
 Background color of the navigation of the survey.  
@@ -904,7 +1437,8 @@ Background color of the navigation of the survey.
 
 <img src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor"> 
 
---- 
+
+
 
 #### csatNavigationTitleColor  
 Text color of the title in the survey navigation. |
@@ -912,7 +1446,8 @@ Text color of the title in the survey navigation. |
    - **Type:** UIColor
    - **Default:** UIColor.white 
 
---- 
+
+
 
 #### csatSkipButtonColor  
 Skip survey button color. 
@@ -920,7 +1455,8 @@ Skip survey button color.
    - **Type:** UIColor
    - **Default:** UIColor.black 
 
---- 
+
+
 
 #### csatUIStatusBarStyleLightContent  
 Allow the UI status bar to take the color of the survey navigation bar color. 
@@ -928,7 +1464,8 @@ Allow the UI status bar to take the color of the survey navigation bar color.
    - **Type:** Bool
    - **Default:** true 
 
---- 
+
+
 
 #### csatShowSurveyView 
 Hides the whole survey view and disables it. 
@@ -936,7 +1473,8 @@ Hides the whole survey view and disables it.
    - **Type:** Bool
    - **Default:** true 
 
---- 
+
+
 
 #### csatSurveyExpirationInMinutes  
 Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it does not get presented to the user.  
@@ -954,7 +1492,8 @@ Number of conversations to show in advance.
    - **Type:** UInt
    - **Default:** 2 
 
---- 
+
+
 
 #### deleteClosedConversationOlderThanMonths  
 Upon SDK initialization, all closed conversations with an end date older than X months get deleted from the database. Setting 0 deletes all closed conversations. 
@@ -962,7 +1501,8 @@ Upon SDK initialization, all closed conversations with an end date older than X 
    - **Type:** UInt
    - **Default:** 13 
 
---- 
+
+
 
 #### sendingMessageTimeoutInMinutes  
 Maximum number of minutes to send the message. 
@@ -970,7 +1510,8 @@ Maximum number of minutes to send the message.
    - **Type:** UInt
    - **Default:** 60 
 
---- 
+
+
 
 #### conversationSeparatorTextColor  
 Conversation separator text and line color.
@@ -980,7 +1521,8 @@ Conversation separator text and line color.
 
 <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
 
---- 
+
+
 
 #### enableConversationSeparatorTextMessage 
 Toggle conversation separator text message when conversation resolved from agent or consumer.
@@ -990,7 +1532,8 @@ Toggle conversation separator text message when conversation resolved from agent
 
 <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
 
---- 
+
+
 
 #### enableConversationSeparatorLine  
 Toggle conversation separator line when conversation resolved from agent or consumer.
@@ -1000,7 +1543,8 @@ Toggle conversation separator line when conversation resolved from agent or cons
 
 <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
 
---- 
+
+
 
 #### conversationSeparatorFontSize 
 Define the conversation closed separator font size.
@@ -1010,7 +1554,8 @@ Define the conversation closed separator font size.
 
 <img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"> 
 
---- 
+
+
 
 #### conversationSeparatorBottomPadding 
 Define the conversation Closed label to separator line padding.
@@ -1020,7 +1565,8 @@ Define the conversation Closed label to separator line padding.
 
 <img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding">
 
---- 
+
+
 
 #### conversationSeparatorFontName 
 Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in App's Info.plist.
@@ -1030,7 +1576,8 @@ Custom font name for conversation closed separator. Fonts that are not part of t
 
 <img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"> 
 
---- 
+
+
 
 #### conversationSeparatorViewBottomPadding  
 Define the conversation separator view bottom padding.
@@ -1040,7 +1587,8 @@ Define the conversation separator view bottom padding.
 
 <img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
 
---- 
+
+
 
 #### conversationClosedSeparatorTopPadding 
 Define the conversation Closed Separator Top padding.
@@ -1050,7 +1598,8 @@ Define the conversation Closed Separator Top padding.
 
 <img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
 
---- 
+
+
 
 #### enableVibrationOnMessageFromRemoteUser 
 Toggle vibration sound when a remote user sends a new message.
@@ -1058,7 +1607,8 @@ Toggle vibration sound when a remote user sends a new message.
    - **Type:** Bool
    - **Default:** false 
 
---- 
+
+
 
 #### announceAgentTyping  
 If true, show agent is typing indicator in selected position and accessibility will announce when agent is typing a message to the consumer. If false, will not show any indication, and will not announce when agent is typing a message. 
@@ -1066,7 +1616,8 @@ If true, show agent is typing indicator in selected position and accessibility w
    - **Type:** Bool
    - **Default:**  true 
 
---- 
+
+
 
 #### showAgentTypingInMessageBubble  
 If true, shows agent is typing indicator in a message bubble. If false, show indicator under Agent label in navigator bar. if announceAgentTyping is false, will not show any "is typing" indicator regardless of current value. 
@@ -1086,7 +1637,8 @@ Scroll to bottom button background color of the whole button.
 
 <img src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor"> 
 
---- 
+
+
 
 #### scrollToBottomButtonMessagePreviewTextColor 
 Scroll to bottom button text color of the last unread message preview.
@@ -1096,7 +1648,8 @@ Scroll to bottom button text color of the last unread message preview.
 
 <img src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
 
---- 
+
+
 
 #### scrollToBottomButtonBadgeBackgroundColor  
 Scroll to bottom button unread message badge background color.
@@ -1106,7 +1659,8 @@ Scroll to bottom button unread message badge background color.
 
 <img src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor"> 
 
---- 
+
+
 
 #### scrollToBottomButtonBadgeTextColor 
 Scroll to bottom button unread message badge text color.
@@ -1116,7 +1670,8 @@ Scroll to bottom button unread message badge text color.
 
 <img src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor"> 
 
---- 
+
+
 
 #### scrollToBottomButtonArrowColor 
 Scroll to bottom button arrow tint color.
@@ -1126,7 +1681,8 @@ Scroll to bottom button arrow tint color.
 
 <img src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
 
---- 
+
+
 
 #### unreadMessagesDividerBackgroundColor 
 Unread Messages divider background color.
@@ -1136,7 +1692,8 @@ Unread Messages divider background color.
 
 <img src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
 
---- 
+
+
 
 #### unreadMessagesDividerTextColor 
 Unread Messages divider text color.
@@ -1146,7 +1703,8 @@ Unread Messages divider text color.
 
 <img src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor"> 
 
---- 
+
+
 
 #### scrollToBottomButtonEnabled
 Toggle the mode of the Scroll to bottom button. 
@@ -1154,7 +1712,8 @@ Toggle the mode of the Scroll to bottom button.
    - **Type:** Bool
    - **Default:** true 
 
---- 
+
+
 
 #### scrollToBottomButtonMessagePreviewEnabled  
 Toggle the mode of the Scroll to bottom unread message text preview. 
@@ -1163,7 +1722,8 @@ Toggle the mode of the Scroll to bottom unread message text preview.
    - **Type:** Bool
    - **Default:** true 
 
---- 
+
+
 
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom button scrolls to bottom although we can have new messages and don't show the badge at all nor "new message preview." 
@@ -1171,7 +1731,8 @@ Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom bu
    - **Type:** Bool
    - **Default:** true 
 
---- 
+
+
 
 #### unreadMessagesCornersRadius 
 Define the corners radius of the unread messages bubble.  
@@ -1181,7 +1742,8 @@ Define the corners radius of the unread messages bubble.
 
 <img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">  
 
---- 
+
+
 
 #### scrollToBottomButtonCornerRadius  
 Define the left top and left bottom corner radius of the scroll down indicator.  
@@ -1193,1175 +1755,846 @@ Define the corner radius for the left top
 
 <img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius"> 
 
---- 
 
-#### 
 
-     | scrollToBottomButtonBadgeCornerRadius | 
-     | Float | 
-     | Define the corners radius of the unread messages counter inside the scroll down indicator. | 
-     | <img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"> | 
-     | 12 for all the corners	 | 
+
+#### scrollToBottomButtonBadgeCornerRadius  
+Define the corners radius of the unread messages counter inside the scroll down indicator.  
+
+   - **Type:** Float
+   - **Default:**  12 for all the corners
+  
+<img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"> 
 
 --- 
 
 ### Localization
 
 #### country  
-     | String? | 
-     | Country code: When it is not nil, it will be combined with 'language' ("language_country", for example: en_US) and used instead of device default locale when formatting date and time. If no value is provided, the SDK will use the country according to the device's locale. | 
-     |  | 
-     | nil | 
+Country code: When it is not nil, it will be combined with 'language' ("language_country", for example: en_US) and used instead of device default locale when formatting date and time. If no value is provided, the SDK will use the country according to the device's locale.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** String?
+   - **Default:** nil 
 
---- 
 
-#### 
 
-     | language | 
-     | LPLanguage | 
-     | Language that will be used instead of default device language.
-Its type is LPLanguage enum that contains all the languages that are supported by MessagingSDK.
-It will affect the following areas:
-     1. Will be used when getting localized strings
-     2. Will be combined with 'country' ("language_country", for example: en_US) and used instead of default device locale when formatting time and date. If no value is provided, the SDK will use the device's language as default. | 
-     |  | 
-     | DeviceLanguage | 
 
-   - **Type:** 
-   - **Default:**  
+#### language  
+Language used instead of default device language.
+
+The LPLanguage enum contains all languages supported by the MessagingSDK, and affects the following areas:
+
+1. Used when getting localized strings.
+   
+2. Combined with 'country' ("language_country", for example: en_US) and used instead of default device locale when formatting time and date. If no value is provided, the SDK uses the device's language as default. 
+
+   - **Type:** LPLanguage
+   - **Default:** DeviceLanguage 
 
 --- 
 
 ### Brand
 
 #### brandName  
-     | String | 
-     | The brand name will be shown as a title on toolbar when there is no active conversation.  | 
-     |  | 
-     | "" (Empty String) | 
+The brand name will be shown as a title on toolbar when there is no active conversation.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** String
+   - **Default:** "" (Empty String) 
 
---- 
 
-#### 
+ 
 
-     | conversationBackgroundColor | 
-     | UIColor | 
-     | Color code for the entire view background. | 
-     |  | 
-     | UIColor.white | 
+#### conversationBackgroundColor  
+Color code for the entire view background. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** UIColor.white 
 
---- 
 
-#### 
+ 
 
-     | customFontNameConversationFeed | 
-     | String? | 
-     |  Custom font name for conversation feed. This font will affect all Messages, Timestamp and Separators. Fonts that are not part of the iOS families, must be defined in App's Info.plist | 
-     | <img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed"> | 
-     | nil | 
+#### customFontNameConversationFeed  
+Custom font name for conversation feed, which affects all messages, timestamps and separators. If the fonts are not part of the iOS families, you must define them in App's Info.plist. 
+ 
+   - **Type:** String?
+   - **Default:** nil 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed"> 
 
---- 
 
-#### 
 
-     | customFontNameNonConversationFeed | 
-     | String? | 
-     |  Custom font name for all non conversation feed controls. Such as: Buttons, Alerts, Banners, Menu and External Windows.
-    Fonts that are not part of the iOS families, must be defined in App's Info.plist | 
-     | <img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed"> | 
-     | nil | 
 
-   - **Type:** 
-   - **Default:**  
+#### customFontNameNonConversationFeed  
+Custom font name for all non conversation feed controls. Such as: Buttons, Alerts, Banners, Menu and External Windows. If the fonts are not part of the iOS families, you must define them in App's Info.plist. 
 
---- 
+   - **Type:** String?
+   - **Default:**  nil
 
-#### 
+<img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed"> |
 
-     | customRefreshControllerImagesArray | 
-     | &lt;ArrayUIImage&gt;? | 
-     | Array of images for creating the custom refresh controller the controller will loop the images from the array need two or more images in the array for take effect | 
-     | <img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"> | 
-     | nil | 
 
-   - **Type:** 
-   - **Default:**  
+ 
 
---- 
+#### customRefreshControllerImagesArray  
+Array of images for creating the custom refresh controller that loops the images from the array.  You must have two or more images in the array for it to work properly.
 
-#### 
+   - **Type:** <ArrayUIImage>?
+   - **Default:** nil 
 
-     | customRefreshControllerAnimationSpeed | 
-     | Float&lt;UIImage&gt; | 
-     | custom refresh controller speed animation define the full images loop time. Smaller value will create high speed animation  | 
-     |  | 
-     | 2 | 
+<img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"> 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
+ 
 
-#### 
+#### customRefreshControllerAnimationSpeed  
+Custom refresh controller speed animation define the full images loop time. Smaller values create high speed animation.
 
-     | conversationBackgroundPortraitImage | 
-     | UIImage; | 
-     | When not nil, will be used as the conversation portrait background image. When an image is shown it is recommended to set dateSeparatorBackgroundColor config to clear. | 
-     |  | 
-     | nil | 
+   - **Type:** Float<UIImage>
+   - **Default:** 2 
 
-   - **Type:** 
-   - **Default:**  
+ 
 
---- 
+#### conversationBackgroundPortraitImage  
+When not nil, use this attribute as the conversation portrait background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
 
-#### 
+   - **Type:** UIImage;
+   - **Default:**  nil
 
-     | conversationBackgroundLandscapeImage | 
-     | UIImage; | 
-     |  When not nil, will be used as the conversation landscape background image. When an image is shown it is recommended to set dateSeparatorBackgroundColor config to clear. | 
-     |  | 
-     | nil | 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
+#### conversationBackgroundLandscapeImage  
+When not nil, use this attibute as the conversation landscape background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
 
-#### 
+   - **Type:** UIImage;
+   - **Default:**  nil
 
-     | conversationBackgroundImageContentMode | 
-     | UIViewContentMode; | 
-     | Defines the content mode of the conversation background image.  | 
-     |  | 
-     | scaleToFill | 
 
-   - **Type:** 
-   - **Default:**  
+
+#### conversationBackgroundImageContentMode  
+Defines the content mode of the conversation background image.  
+
+   - **Type:** UIViewContentMode;
+   - **Default:** scaleToFill 
 
 --- 
 
 ### Date Separator
 
 #### dateSeparatorTitleBackgroundColor  
-			 | UIColor | 
-			 | Color code for date separator title background color. | 
-			 | <img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"> | 
-			 | UIColor.white | 
+Color code for date separator title background color. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:**  UIColor.white
 
---- 
+<img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"> |
 
-#### 
+ 
 
-			 | dateSeparatorTextColor | 
-			 | UIColor | 
-			 | Color code for date separator text color. | 
-			 | <img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"> | 
-			 | #46474A | 
+#### dateSeparatorTextColor  
+Color code for date separator text color. 
+ 
+   - **Type:** UIColor
+   - **Default:** #46474A 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"> 
+ 
 
---- 
 
-#### 
+#### dateSeparatorLineBackgroundColor 
+Color code for date separator line background color. 
 
-			 | dateSeparatorLineBackgroundColor | 
-			 | UIColor | 
-			 | Color code for date separator line background color. | 
-			 | <img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"> | 
-			 | UIColor.clear | 
+   - **Type:** UIColor
+   - **Default:** UIColor.clear 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"> 
 
---- 
 
-#### 
 
-			 | dateSeparatorBackgroundColor | 
-			 | UIColor | 
-			 | Color code for date separator background color. | 
-			 | <img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"> | 
-			 | #FFFFFF | 
+#### dateSeparatorBackgroundColor  
+Color code for date separator background color. 
+ 
+   - **Type:** UIColor
+   - **Default:** #FFFFFF  
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"> 
 
---- 
+ 
 
-#### 
+#### dateSeparatorFontSize  
+Define the Date Separator font text style. 
+ 
+   - **Type:** UIFontTextStyle
+   - **Default:** UIFontTextStyle.footnote 
 
-			 | dateSeparatorFontSize | 
-			 | UIFontTextStyle | 
-			 | Define the Date Separator font text style. | 
-			 | <img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize"> | 
-			 | UIFontTextStyle.footnote | 
+<img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
 
-   - **Type:** 
-   - **Default:**  
+ 
 
---- 
+#### customFontNameDateSeparator  
+Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist. 
 
-#### 
+   - **Type:** String
+   - **Default:** nil 
 
-			 | customFontNameDateSeparator | 
-			 | String | 
-			 | Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist. | 
-			 | <img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"> | 
-			 | nil | 
+<img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"> 
 
-   - **Type:** 
-   - **Default:**  
+ 
 
---- 
+#### dateSeparatorTopPadding  
+Define the Date Separator Top padding. 
+ 
+   - **Type:** Float
+   - **Default:** 0 
 
-#### 
+<img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"> 
 
-			 | dateSeparatorTopPadding | 
-			 | Float | 
-			 | Define the Date Separator Top padding. | 
-			 | <img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"> | 
-			 | 0 | 
+ 
 
-   - **Type:** 
-   - **Default:**  
+#### dateSeparatorBottomPadding  
+Define the Date Separator bottom padding.  
 
---- 
+   - **Type:** Float
+   - **Default:** 0 
 
-#### 
-
-			 | dateSeparatorBottomPadding | 
-			 | Float | 
-			 | Define the Date Separator bottom padding. | 
-			 | <img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"> | 
-			 | 0 | 
-
-   - **Type:** 
-   - **Default:**  
+<img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"> 
 
 --- 
 
 ### User input view
 
 #### inputTextViewContainerBackgroundColor  
-     | UIColor | 
-     | User Input TextView container background color. | 
-     | <img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"> | 
-     | #F5F5F5 | 
+User Input TextView container background color.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #F5F5F5 
 
---- 
+<img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"> 
 
-#### 
+ 
 
-     | inputTextViewCornerRadius | 
-     | Double | 
-     | User Input TextView corner radius. | 
-     | <img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius"> | 
-     | 20.0 | 
+#### inputTextViewCornerRadius  
+User Input TextView corner radius.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Double
+   - **Default:** 20.0 
+
+<img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius"> 
 
 --- 
 
 ### Agent Assignment
 
 #### retrieveAssignedAgentFromLastClosedConversation  
-     | Bool | 
-     | When using "getAssignedAgent" method, this option lets you decide whether to get assigned agents from active conversations only, or also from the last closed conversation in case there is no active conversation. If no assigned agent is available this method will return nil. | 
-     |  | 
-     | true | 
+When using `getAssignedAgent` method, lets you get assigned agents from active conversations only, or from the last closed conversation in case there is no active conversation. If no assigned agent is available, this method returns nil. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** true 
 
 --- 
 
 ### Duration of Local Notifications
 
 #### notificationShowDurationInSeconds  
-     | Double | 
-     | Display duration of the local notification in seconds.
-Examples: TimeToRespond notification, local notification, etc.
-Note: this parameter will be extended to 60sec when in VoiceOver mode. | 
-     |  | 
-     | 3 (60 when in VoiceOver mode) | 
+Display duration of the local notification in seconds.  When in VoiceOver mode it gets extended to 60 sec.
 
-   - **Type:** 
-   - **Default:**  
+Examples: TimeToRespond notification, local notification, etc.
+
+   - **Type:** Double
+   - **Default:**  3 (60 when in VoiceOver mode)
 
 --- 
 
 ### Time To Response and Off hours
 
 #### ttrShouldShow  
-    | Bool | 
-    | Toggling this on will show TTR notifications including off hours. When the auto messages feature is enabled, TTR notifications will not be displayed regardless of this parameter.’) | 
-    |  | 
-    | true | 
+When set to **true**, the TTR notifications show with off hours.  When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** true  
 
---- 
 
-#### 
 
-     | ttrShowShiftBanner | 
-     | Bool | 
-     | Ability to enable/disable shift toaster ('An agent will respond...’) | 
-     |  | 
-     | true | 
+#### ttrShowShiftBanner  
+Enable or disable shift toaster ('An agent will respond...’).
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** true 
 
---- 
 
-#### 
 
-     | ttrFirstTimeDelay | 
-     | Double | 
-     | TTR - Time To Respond. Number of seconds before the first TTR notification appears. | 
-     |  | 
-     | 10 | 
+#### ttrFirstTimeDelay  
+Number of seconds before the first Time to Respond (TTR) notification appears. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Double
+   - **Default:** 10 
 
---- 
 
-#### 
 
-     | ttrShouldShowTimestamp | 
-     | Bool | 
-     | TTR - Time To Respond. <b>Enable</b>: Displays a time stamp in the TTR notification. <b>Disable</b>: Displays: "An agent will respond shortly". | 
-     | <img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp"><br><img src="img/ttrshouldshowtimestamp1.png" alt="ttrShouldShowTimestamp"> | 
-     | false | 
+#### ttrShouldShowTimestamp  
+When set to **true**, the timestamp of the TTR notification displays. Otherwise, the "An agent will respond shortly" message displays.   
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** false 
 
---- 
+<img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp"><br><img src="img/ttrshouldshowtimestamp1.png" alt="ttrShouldShowTimestamp"> 
 
-#### 
+ 
 
-     | ttrShowFrequencyInSeconds | 
-     | UInt | 
-     | Controls the TTR frequency: Don’t show the TTR more than once in X seconds. | 
-     |  | 
-     | 8 | 
+#### ttrShowFrequencyInSeconds  
+Controls the TTR frequency, for example, don’t show the TTR more than once in 8 seconds. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UInt
+   - **Default:** 8 
 
---- 
 
-#### 
 
-     | showUrgentButtonInTTRNotification | 
-     | Bool | 
-     | TTR - Time To Respond. Enable presentation of Urgent button in the TTR notification. | 
-     | <img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification"><br><img src="img/showurgentbuttoninttrnotification1.png" alt="showurgentbuttoninttrnotification"> | 
-     | false | 
+#### showUrgentButtonInTTRNotification  
+When set to **true**, the Urgent button shows in the TTR notification.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** false 
 
---- 
+<img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification"><br><img src="img/showurgentbuttoninttrnotification1.png" alt="showurgentbuttoninttrnotification"> 
 
-#### 
 
-     | showOffHoursBanner | 
-     | Bool | 
-     | Ability to disable/enable the off-hours toaster. | 
-     | <img src="img/showoffhoursbanner.png" alt="showoffhoursbanner"> | 
-     | true | 
 
-   - **Type:** 
-   - **Default:**  
+#### showOffHoursBanner  
+Enable or disable the off-hours toaster. 
 
---- 
+   - **Type:** Bool
+   - **Default:** true 
 
-#### 
+<img src="img/showoffhoursbanner.png" alt="showoffhoursbanner"> 
 
-     | ttrBannerBackgroundColor | 
-     | UIColor | 
-     | Color of background for banner. | 
-     | <img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> | 
-     | #52A742 | 
+ 
 
-   - **Type:** 
-   - **Default:**  
+#### ttrBannerBackgroundColor  
+Background color for banner. 
+ 
+   - **Type:** UIColor
+   - **Default:** #52A742 
 
---- 
+<img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> 
 
-#### 
 
-     | ttrBannerTextColor | 
-     | UIColor | 
-     | Text color of the banner. | 
-     | <img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> | 
-     | #52A742 | 
 
-   - **Type:** 
-   - **Default:**  
+#### ttrBannerTextColor  
+Text color of the banner. 
 
---- 
+   - **Type:** UIColor
+   - **Default:** #52A742 
 
-#### 
+<img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> 
 
-     | ttrBannerOpacityAlpha | 
-     | Double | 
-     | Opacity level of the banner background (values: 0.0 - 1.0). | 
-     | <img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha"> | 
-     | 0.8 | 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
+#### ttrBannerOpacityAlpha  
+Opacity level of the banner background (values: 0.0 - 1.0). 
+ 
+   - **Type:** Double
+   - **Default:** 0.8 
 
-#### 
+<img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha"> 
 
-     | offHoursTimeZoneName | 
-     | String | 
-     | Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time). | 
-     |  | 
-     | "" (Empty String) | 
 
-   - **Type:** 
-   - **Default:**  
+
+#### offHoursTimeZoneName  
+Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time). 
+
+   - **Type:** String
+   - **Default:** "" (Empty String) 
 
 --- 
 
 ### Date and Time
 
 #### lpDateFormat  
-     | String? | 
-     | Custom formatting for date string (day, year..), for example: 'd MMM'. If not defined, one of the default styles will be used (see timestamps formatting). | 
-     |  | 
-     | nil | 
+Custom formatting for date string (day, year..), for example, 'd MMM'. If not defined, one of the default styles will be used (see timestamps formatting). 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** String?
+   - **Default:** nil 
 
---- 
 
-#### 
 
-     | lpTimeFormat | 
-     | String? | 
-     | Custom formatting for time string (hours, lpDateTimeFormat minutes..), for example: 'hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). | 
-     |  | 
-     | nil | 
+#### lpTimeFormat  
+Custom formatting for time string (hours, lpDateTimeFormat minutes..), for example, 'hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** String?
+   - **Default:** nil 
 
---- 
 
-#### 
 
-     | lpDateTimeFormat | 
-     | String? | 
-     | Custom formatting for date and time string, for example: 'EEEE MM/dd/YY hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). | 
-     |  | 
-     | nil | 
+#### lpDateTimeFormat  
+Custom formatting for date and time string, for example, 'EEEE MM/dd/YY hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). 
+     
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** String?
+   - **Default:** nil 
 
 --- 
 
 ### User Avatar
 
 #### remoteUserAvatarBackgroundColor  
-     | UIColor | 
-     | Background color of the remote user’s avatar. | 
-     |  | 
-     | #004DC9 | 
+Background color of the remote user’s avatar. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #004DC9 
 
---- 
 
-#### 
 
-     | remoteUserAvatarLeading | 
-     | Float | 
-     | Define the remote avatar Leading padding (left edge to avatar). | 
-     | <img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"> | 
-     | 8 | 
+#### remoteUserAvatarLeading  
+Define the remote avatar Leading padding (left edge to avatar). 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Float
+   - **Default:** 8 
 
---- 
+<img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"> 
 
-#### 
 
-     | remoteUserAvatarTrailingPadding | 
-     | Float | 
-     | Define the remote avatar Trailing padding (Avatar to bubble). | 
-     | <img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"> | 
-     | 8 | 
 
-   - **Type:** 
-   - **Default:**  
+#### remoteUserAvatarTrailingPadding  
+Define the remote avatar Trailing padding (Avatar to bubble). 
+ 
+   - **Type:** Float
+   - **Default:** 8 
 
---- 
+<img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"> 
 
-#### 
+ 
 
-     | remoteUserAvatarIconColor | 
-     | UIColor | 
-     | Icon color of default remoteUser avatar. | 
-     | #0362AC | 
-     | #FFFFFF | 
+#### remoteUserAvatarIconColor  
+Icon color of default remoteUser avatar.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:**  #FFFFFF
 
---- 
 
-#### 
 
-     | remoteUserDefaultAvatarImage | 
-     | UIImage? | 
-     | Default Avatar image of the remote user. When assigned, this image will disable remoteUserAvatarBackgroundColor and remoteUserAvatarIconColor configurations.  If remote user has an avatar image in his profile, this attribute will be ignored. | 
-     | <img src="img/remoteUserDefaultAvatarImage.png"> | 
-     | nil | 
+#### remoteUserDefaultAvatarImage  
+Default Avatar image of the remote user. When assigned, image disables the `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor` configurations.  If remote user has an avatar image in his profile, this attribute gets ignored. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIImage?
+   - **Default:** nil 
 
---- 
+<img src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage"> 
 
-#### 
+ 
 
-     | brandAvatarImage | 
-     | UIImage? | 
-     | Set avatar image for brand. This is an optional UIImage that if is set to nil a default avatar will be presented. Image ratio should be 1:1 (square) and at least 50x50 pixels. | 
-     |  | 
-     | nil | 
+#### brandAvatarImage  
+Set avatar image for the brand, and is an optional UIImage that if set to **nil** a default avatar displays. Image ratio must be 1:1 (square) and at least 50x50 pixels. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIImage?
+   - **Default:** nil 
 
---- 
 
-#### 
 
-     | csatAgentAvatarBackgroundColor | 
-     | UIColor | 
-     | Background color of agent's default avatar in CSAT. | 
-     | <img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"> | 
-     | #004DC9 | 
+#### csatAgentAvatarBackgroundColor 
+Background color of agent's default avatar in CSAT. 
+ 
+   - **Type:** UIColor
+   - **Default:** #004DC9 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"> 
 
---- 
 
-#### 
 
-     | csatAgentAvatarIconColor | 
-     | UIColor | 
-     | Icon color of agent's default avatar in CSAT. | 
-     | <img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor"> | 
-     | #FFFFFF | 
+#### csatAgentAvatarIconColor  
+Icon color of agent's default avatar in CSAT.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #FFFFFF 
+
+<img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor"> 
 
 --- 
 
 ### Data Masking
 
-#### enableClientOnlyMasking | 
-     | Bool | 
-     | Determines whether to enable using regular expression to control which part of the text to mask, all masked data will appear as asterisks, will be saved to local db masked and will be sent to the server unmasked. | 
-     |  | 
-     | false | 
+#### enableClientOnlyMasking  
+When set to **true**, you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** false 
 
---- 
+ 
 
-#### 
+#### enableRealTimeMasking  
+When set to **true**, you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
 
-     | enableRealTimeMasking | 
-     | Bool | 
-     | Determines whether to enable using regular expression to control which part of the text to mask, all masked data will appear as asterisks, will be saved to local db masked and sent to the server masked.  | 
-     |  | 
-     | false | 
+   - **Type:** Bool
+   - **Default:** false 
 
-   - **Type:** 
-   - **Default:**  
+ 
 
---- 
+#### clientOnlyMaskingRegex  
+A regular expression string that lets you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
 
-#### 
+The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. 
 
-     | clientOnlyMaskingRegex | 
-     | String | 
-     | Regular expression string to control which part of the text to mask, all masked data will appear as asterisks, will be saved to local db masked and will be sent to the server unmasked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.  | 
-     |  | 
-     | "" (Empty String) | 
+   - **Type:** String
+   - **Default:** "" (Empty String) - no regex
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### realTimeMaskingRegex  
+A regular expression string that lets you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
 
-     | realTimeMaskingRegex | 
-     | String | 
-     | Regular expression string to control which part of the text to mask. All masked data will appear as asterisks, will be saved to local db masked, and will be sent to the server masked. Default is empty, meaning no regex. The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.  | 
-     |  | 
-     | "" (Empty String) | 
+The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** String
+   - **Default:** "" (Empty String) - no regex
 
 --- 
 
 ### Navigation
 
 #### conversationNavigationBackgroundColor  
-     | UIColor | 
-     | Background color of navigation bar in conversation screen. | 
-     |  | 
-     | #0362AC | 
+Background color of navigation bar in conversation screen. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #0362AC 
 
---- 
 
-#### 
 
-     | conversationNavigationTitleColor | 
-     | UIColor | 
-     | Navigation title color in conversation screen. | 
-     |  | 
-     | #FFFFFF | 
+#### conversationNavigationTitleColor  
+Navigation title color in conversation screen. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #FFFFFF  
 
---- 
 
-#### 
 
-     | conversationStatusBarStyle | 
-     | UIStatusBarStyle | 
-     | Status bar style in conversation screen. | 
-     |  | 
-     | .LightContent | 
+#### conversationStatusBarStyle  
+Status bar style in conversation screen.  
 
-   - **Type:** 
-   - **Default:**  
+
+   - **Type:** UIStatusBarStyle
+   - **Default:** .LightContent 
 
 ---  
 
 ### Secure Form
 
 #### secureFormBackButtonColor  
-     | UIColor | 
-     | Back button color in secure form screen | 
-     |  | 
-     | UIColor.black | 
+Back button color in secure form screen. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** UIColor.black 
 
---- 
+ 
 
-#### 
+#### secureFormUIStatusBarStyleLightContent  
+Should display status bar of the secure form screen in Light Content Mode (UIStatusBarStyle).
 
-     | secureFormUIStatusBarStyleLightContent | 
-     | Bool | 
-     | Should display status bar of the secure form screen in Light Content Mode (UIStatusBarStyle) | 
-     |  | 
-     | true | 
+   - **Type:** Bool
+   - **Default:** true 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### secureFormNavigationBackgroundColor  
+Background color of navigation bar in secure form screen. 
 
-     | secureFormNavigationBackgroundColor | 
-     | UIColor | 
-     | Background color of navigation bar in secure form screen | 
-     |  | 
-     | #0362AC | 
+   - **Type:** UIColor
+   - **Default:** #0362AC 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### secureFormNavigationTitleColor  
+Navigation title color in secure form screen.
 
-     | secureFormNavigationTitleColor | 
-     | UIColor | 
-     | Navigation title color in secure form screen | 
-     |  | 
-     | UIColor.white | 
+   - **Type:** UIColor
+   - **Default:** UIColor.white 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### secureFormBubbleBackgroundColor  
+Secure form bubble background color.
 
-     | secureFormBubbleBackgroundColor | 
-     | UIColor | 
-     | Secure form bubble background color | 
-     |  | 
-     | UIColor.white | 
+   - **Type:** UIColor
+   - **Default:** UIColor.white 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### secureFormBubbleBorderColor  
+Secure form bubble border color.
 
-     | secureFormBubbleBorderColor | 
-     | UIColor | 
-     | Secure form bubble border color | 
-     |  | 
-     | #d4d4d5 | 
+   - **Type:** UIColor
+   - **Default:** #d4d4d5 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### secureFormBubbleBorderWidth  
+Secure form bubble border width in pixels.
 
-     | secureFormBubbleBorderWidth | 
-     | Double | 
-     | Secure form bubble border width in pixels | 
-     |  | 
-     | 2.0 | 
+   - **Type:** Double
+   - **Default:**  2.0
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### secureFormBubbleTitleColor  
+Secure form bubble form title color.
 
-     | secureFormBubbleTitleColor | 
-     | UIColor | 
-     | Secure form bubble form title color | 
-     |  | 
-     | UIColor.black | 
+   - **Type:** UIColor
+   - **Default:** UIColor.black 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
-     | secureFormBubbleDescriptionColor | 
-     | UIColor | 
-     | Secure form bubble fill form text button color | 
-     |  | 
-     | #5b5c5e | 
+#### secureFormBubbleDescriptionColor 
+Secure form bubble fill form text button color.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #5b5c5e  
 
---- 
 
-#### 
 
-     | secureFormBubbleFillFormButtonTextColor | 
-     | UIColor | 
-     | Secure form bubble fill form text button color | 
-     |  | 
-     | #004dc9 | 
+#### secureFormBubbleFillFormButtonTextColor  
+Secure form bubble fill form text button color.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #004dc9 
 
---- 
 
-#### 
 
-     | secureFormBubbleFillFormButtonBackgroundColor | 
-     | UIColor | 
-     | Secure form bubble fill form button background color | 
-     |  | 
-     | UIColor.clear | 
+#### secureFormBubbleFillFormButtonBackgroundColor  
+Secure form bubble fill form button background color.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:**  UIColor.clear
 
---- 
 
-#### 
 
-     | secureFormBubbleFormImageTintColor | 
-     | UIColor | 
-     | Secure form bubble form image tint color | 
-     |  | 
-     | #004dc9 | 
+#### secureFormBubbleFormImageTintColor 
+Secure form bubble form image tint color.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** #004dc9 
 
---- 
 
-#### 
 
-     | secureFormCustomFontName | 
-     | String | 
-     | Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica. | 
-     | <img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"> | 
-     | Helvetica | 
+#### secureFormCustomFontName 
+ Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica. 
+  
+   - **Type:** String
+   - **Default:** Helvetica 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"> 
 
---- 
 
-#### 
 
-     | secureFormHideLogo | 
-     | Bool | 
-     | Secure form flag for hiding the secure form logo in the top of the form. | 
-     | <img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"> | 
-     | false | 
+#### secureFormHideLogo  
+Secure form flag for hiding the secure form logo in the top of the form.  
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** false 
 
---- 
+<img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"> |
 
-#### 
 
-     | secureFormBubbleLoadingIndicatorColor | 
-     | UIColor | 
-     | Secure form loading indicator color while loading form before opening. | 
-     | <img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"> | 
-     | #46474a | 
 
-   - **Type:** 
-   - **Default:**  
+#### secureFormBubbleLoadingIndicatorColor  
+Secure form loading indicator color while loading form before opening. 
+ 
+   - **Type:** UIColor
+   - **Default:** #46474a 
+
+<img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"> 
 
 --- 
 
 ### Structured Content
 
 #### enableStrucutredContent  
-   | Bool | 
-   | Enable or Disable toggle for Structured Content feature in conversations | 
-   |  | 
-   | false | 
+Enable or Disable toggle for Structured Content feature in conversations.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Bool
+   - **Default:** false 
 
---- 
 
-#### 
 
-     | structuredContentBubbleBorderWidth | 
-     | Double | 
-     | Structured Content bubble border width in pixels. | 
-     |  | 
-     | 0.3 | 
+#### structuredContentBubbleBorderWidth 
+Structured Content bubble border width in pixels.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Double
+   - **Default:** 0.3 
 
---- 
 
-#### 
 
-     | structuredContentBubbleBorderColor | 
-     | UIColor | 
-     | Structured Content bubble border color. | 
-     |  | 
-     | nil | 
+#### structuredContentBubbleBorderColor  
+Structured Content bubble border color.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** UIColor
+   - **Default:** nil 
 
---- 
 
-#### 
 
-     | structuredContentBubbleTopLeftCornerRadius | 
-     | Float | 
-     | Structured Content bubble top left corner radius in pixels. | 
-     |  | 
-     | 0.0 | 
+#### structuredContentBubbleTopLeftCornerRadius 
+Structured Content bubble top left corner radius in pixels. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Float
+   - **Default:** 0.0 
 
---- 
 
-#### 
 
-     | structuredContentBubbleTopRightCornerRadius | 
-     | Float | 
-     | Structured Content bubble top right corner radius in pixels. | 
-     |  | 
-     | 0.0 | 
+#### structuredContentBubbleTopRightCornerRadius 
+Structured Content bubble top right corner radius in pixels.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Float
+   - **Default:** 0.0 
 
---- 
+ 
 
-#### 
+#### structuredContentBubbleBottomLeftCornerRadius  
+Structured Content bubble bottom left corner radius in pixels.
 
-     | structuredContentBubbleBottomLeftCornerRadius | 
-     | Float | 
-     | Structured Content bubble bottom left corner radius in pixels. | 
-     |  | 
-     | 0.0 | 
+   - **Type:** Float
+   - **Default:** 0.0  
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### structuredContentBubbleBottomRightCornerRadius 
+Structured Content bubble bottom right corner radius in pixels.
 
-     | structuredContentBubbleBottomRightCornerRadius | 
-     | Float | 
-     | Structured Content bubble bottom right corner radius in pixels. | 
-     |  | 
-     | 0.0 | 
+   - **Type:** Float
+   - **Default:** 0.0 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
 
-#### 
+#### structuredContentMapLatitudeDeltaDeltaSpan  
+Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must also set `structuredContentMapLongitudeDeltaSpan`. This parameter is used to create an [MKCoordinateSpan](https://developer.apple.com/documentation/mapkit/mkcoordinatespan). 
 
-     | structuredContentMapLatitudeDeltaDeltaSpan | 
-     | Double | 
-     | Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLongitudeDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan">click here</a>. | 
-     |  | 
-     | 0.01 | 
+   - **Type:** Double
+   - **Default:** 0.01 
 
-   - **Type:** 
-   - **Default:**  
+ 
 
---- 
+#### structuredContentMapLongitudeDeltaSpan  
+Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must also set `structuredContentMapLatitudeDeltaDeltaSpan`. This parameter is used to create an [MKCoordinateSpan](https://developer.apple.com/documentation/mapkit/mkcoordinatespan). 
 
-#### 
-
-     | structuredContentMapLongitudeDeltaSpan | 
-     | Double | 
-     | Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must set structuredContentMapLatitudeDeltaDeltaSpan as well. This parameter is used to create an MKCoordinateSpan.
-    For more info, <a href="https://developer.apple.com/documentation/mapkit/mkcoordinatespan">click here</a>. | 
-     |  | 
-     | 0.01 | 
-
-   - **Type:** 
-   - **Default:**  
+   - **Type:** Double
+   - **Default:** 0.01 
 
 --- 
 
 ### Quick Reply
 
 #### quickReplyButtonVerticalPadding  
-   | CGFloat | 
-   | Distance between the bottom and top edges of the button to the bottom and top edges of the text | 
-   |  | 
-   | 10.0 | 
+Distance between the bottom and top edges of the button to the bottom and top edges of the text.
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** CGFloat
+   - **Default:** 10.0 
 
---- 
 
-#### 
 
-     | quickReplyButtonHorizontalPadding | 
-     | CGFloat | 
-     | Distance between the right and left edges of the button to the right and left edges of the text | 
-     |  | 
-     | 15.0 | 
+#### quickReplyButtonHorizontalPadding  
+Distance between the right and left edges of the button to the right and left edges of the text. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** CGFloat
+   - **Default:** 15.0 
 
---- 
 
-#### 
 
-     | quickReplyVerticalPadding | 
-     | CGFloat | 
-     | Vertical padding between quick reply buttons | 
-     |  | 
-     | 10.0 | 
+#### quickReplyVerticalPadding  
+Vertical padding between quick reply buttons. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** CGFloat
+   - **Default:** 10.0 
 
---- 
 
-#### 
 
-     | quickReplyHorizontalPadding | 
-     | CGFloat | 
-     | Horizontal padding between quick reply buttons | 
-     |  | 
-     | 10.0 | 
+#### quickReplyHorizontalPadding  
+Horizontal padding between quick reply buttons. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** CGFloat
+   - **Default:** 10.0 
 
---- 
 
-#### 
 
-     | quickReplyButtonBorderWidth | 
-     | CGFloat | 
-     | Border size of Quick Reply buttons | 
-     |  | 
-     | 1.0 | 
+#### quickReplyButtonBorderWidth  
+Border size of Quick Reply buttons. 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** CGFloat
+   - **Default:** 1.0 
 
 --- 
 
 ### Connection Status Bar
 
 #### connectionStatusConnectingBackgroundColor  
-     | UIColor | 
-     | Color code for the background of the connection status bar while connecting. | 
-     | <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> | 
-     | #f5f5f5f2 | 
+Color code for the background of the connection status bar while connecting.
+ 
+   - **Type:** UIColor
+   - **Default:** #f5f5f5f2 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
 
---- 
 
-#### 
 
-     | connectionStatusConnectingTextColor | 
-     | UIColor | 
-     | Color code for the text of the connection status bar while connecting. | 
-     | <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> | 
-     | #46474a | 
+#### connectionStatusConnectingTextColor 
+Color code for the text of the connection status bar while connecting. 
+ 
+   - **Type:** UIColor
+   - **Default:**  #46474a
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
 
---- 
+ 
 
-#### 
+#### connectionStatusFailedToConnectBackgroundColor  
+Color code for the background of the connection status bar when connection failed.
 
-     | connectionStatusFailedToConnectBackgroundColor | 
-     | UIColor | 
-     | Color code for the background of the connection status bar when connection failed. | 
-     | <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> | 
-     | #000000cc | 
+   - **Type:** UIColor
+   - **Default:** #000000cc 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
 
---- 
 
-#### 
 
-     | connectionStatusFailedToConnectTextColor | 
-     | UIColor | 
-     | Color code for the text of the connection status bar when connection failed. | 
-     | <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> | 
-     | UIColor.white | 
+#### connectionStatusFailedToConnectTextColor  
+Color code for the text of the connection status bar when connection failed. 
+ 
+   - **Type:** UIColor 
+   - **Default:** UIColor.white 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
 
 --- 
 
 ### Controller message
 
 #### controllerBubbleTextColor  
-     | UIColor | 
-     | Color code for the text of the controller bubble. | 
-     | <img src="img/controllerbubletextcolor.png" alt="controller bubble text color"> | 
-     | #5b5c5e | 
+Color code for the text of the controller bubble. 
+ 
+   - **Type:** UIColor
+   - **Default:** #5b5c5e 
 
-   - **Type:** 
-   - **Default:**  
+<img src="img/controllerbubletextcolor.png" alt="controller bubble text color"> 
 
 --- 
 
 ### Audio support
 
 #### recordingDurationLimit  
-     | TimeInterval (Double) | 
-     | Maximum time frame for recording audio message (in seconds). | 
-     |  | 
-     | 120 | 
+Maximum time frame for recording audio message (in seconds). 
 
-   - **Type:** 
-   - **Default:**  
+   - **Type:** TimeInterval (Double)
+   - **Default:** 120 
 
---- 
 
-#### 
 
-     | enableAudioSharing | 
-     | Bool | 
-     | True - Enables Audio Sharing feature, False - Disables Audio Sharing | 
-     |  | 
-     | false | 
+#### enableAudioSharing 
+When set to **true**, the audio sharing features gets enabled. 
 
-   - **Type:** 
-   - **Default:**  
 
---- 
+   - **Type:** Bool
+   - **Default:** false (disabled)
 
-#### 
 
-     | maxNumberOfSavedAudioFilesOnDisk | 
-     | Int | 
-     | This number represents how many audio files will be saved on the disk. Exceeding files are deleted when the app closes. | 
-     |  | 
-     | 20 | 
+
+#### maxNumberOfSavedAudioFilesOnDisk  
+Number representing how many audio files saved on the disk. Exceeding the max value of files get deleted when the app closes. 
+
+
+   - **Type:** Int
+   - **Default:** 20
 

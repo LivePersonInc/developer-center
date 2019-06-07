@@ -691,7 +691,8 @@
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: CSAT Behavior
       - subpagename: Audio Messages
-      - subpagename: Photo and file sharing
+      - subpagename: Photo Sharing
+      - subpagename: File Sharing
       - subpagename: Campaigns for Mobile App Messaging
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs
