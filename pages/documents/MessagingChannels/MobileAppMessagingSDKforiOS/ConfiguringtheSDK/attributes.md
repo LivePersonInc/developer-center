@@ -654,9 +654,7 @@ Regular expression for email hyperlinks in users messages (consumer and agent). 
    - **Type:** String?    
    - **Default:** nil
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 #### bubbleUrlLinksRegex
 Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
@@ -664,9 +662,7 @@ Regular expression for url hyperlinks in users messages (consumer and agent). Th
    - **Type:** String?  
    - **Default:** nil
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 
 #### bubblePhoneLinksRegex
@@ -674,10 +670,6 @@ Regular expression for phone hyperlinks in users messages (consumer and agent). 
 
    - **Type:** String?  
    - **Default:** nil 
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
 
 
 #### bubbleTopPadding
@@ -849,9 +841,6 @@ Enable or disable link preview feature. If disabled, user will not see site's li
    - **Type:** Bool
    - **Default:** true
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
 
 
 #### linkPreviewBackgroundColor 
@@ -860,9 +849,6 @@ Color code for the background of the link preview area inside cell.
    - **Type:** UIColor
    - **Default:** UIColor.white 
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
 
 #### linkPreviewTitleTextColor
 Color code for the title text inside link preview area inside cell.
@@ -870,9 +856,7 @@ Color code for the title text inside link preview area inside cell.
    - **Type:** UIColor
    - **Default:** UIColor.black  
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 #### linkPreviewDescriptionTextColor 
 Color code for the description text inside link preview area inside cell.
@@ -880,9 +864,7 @@ Color code for the description text inside link preview area inside cell.
    - **Type:** UIColor
    - **Default:** #5B5C5E  
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 #### linkPreviewSiteNameTextColor  
 Color code for the description site name link preview area inside cell.
@@ -890,9 +872,7 @@ Color code for the description site name link preview area inside cell.
    - **Type:** UIColor
    - **Default:** #E2E3E3
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 #### linkPreviewBorderWidth 
 Double number for the outline width of link preview area inside cell.
@@ -900,9 +880,7 @@ Double number for the outline width of link preview area inside cell.
    - **Type:** Double
    - **Default:** 1.0  
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 #### linkPreviewStyle 
 Refers to the style in which the link preview cell will be displayed.
@@ -935,10 +913,6 @@ Color code for the description site name link preview area inside cell.
 
    - **Type:** UIColor
    - **Default:**  
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
 
 
 #### urlRealTimePreviewBackgroundColor 
@@ -1060,9 +1034,7 @@ The urlPreview attribute also uses non-OG tags to parse urls instead of using on
    - **Type:** Bool
    - **Default:**  true
 
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+
 
 <hr>
 
@@ -1089,101 +1061,207 @@ This number represents how many files will be saved on the disk. Exceeding files
 #### photosharingMenuBackgroundColor  
 Photo Sharing menu background color.
 
-   - **Type:** UIColor
-   - **Default:**  #0362AC
+<div style="float: left; width: 35%;height: 165px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #0362AC</li>
+   </ul>
+</div>
 
-<img src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### photosharingMenuButtonsBackgroundColor  
 Photo Sharing menu buttons background color. 
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 165px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### photosharingMenuButtonsTintColor  
 Photo Sharing menu buttons tint color.
 
-   - **Type:** UIColor
-   - **Default:** #0362AC 
+<div style="float: left; width: 35%;height: 165px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #0362AC</li>
+   </ul>
+</div>
 
-<img src="img/photosharingmenubuttonstintcolor.png" alt="photosharingmenubuttonstintcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/photosharingmenubuttonstintcolor.png" alt="photosharingmenubuttonstintcolor">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### photosharingMenuButtonsTextColor  
 Photo Sharing menu buttons text color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 165px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor">  
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### cameraButtonEnabledColor  
 Photo Sharing Camera button color in enabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled.
 
-   - **Type:** UIColor
-   - **Default:** #0362AC 
+<div style="float: left; width: 35%;height: 75px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #0362AC</li>
+   </ul>
+</div>
 
-<img src="img/cameraButtonColor.png" alt="cameraButtonColor">  
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 ####  cameraButtonDisabledColor  
 Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled. 
 
-   - **Type:** UIColor
-   - **Default:** #8B8A8F 
+<div style="float: left; width: 35%;height: 75px">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #8B8A8F</li>
+   </ul>
+</div>
 
-<img src="img/cameraButtonColor.png" alt="cameraButtonColor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+  <img src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### fileCellLoaderFillColor 
 Radial loader fill color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor(white: 0.0, alpha: 0.5) 
+<div style="float: left; width: 35%;height: 70px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor(white: 0.0, alpha: 0.5)</li>
+   </ul>
+</div>
 
-<img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### fileCellLoaderRingProgressColor  
 Radial loader progress color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 70px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white </li>
+   </ul>
+</div>
 
-<img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### fileCellLoaderRingBackgroundColor  
 Radial loader progress background color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.lightGray 
+<div style="float: left; width: 35%;height: 85px;padding-bottom: 10px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.lightGray </li>
+   </ul>
+   
+</div>
 
-<img src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor">
-
-{:.notice}
-The disabled/enabled color of the Camera button, which is in the input text view, changes according to the `sendButtonDisabledTextColor` and `sendButtonEnabledTextColor` parameters. 
+<div style="float: right; width: 65%;height: 70px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor">
+   </figure>
+</div>
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+<div class="important">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
 
 --- 
 
@@ -1210,16 +1288,24 @@ Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 
-{:.important}
-You must follow the guidelines in the [Custom Icon documentation](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
+<div style="float: left; width: 45%;height: 50px;">
+   <ul>
+      <li><b>Type:</b> UIImage</li>
+      <li><b>Default:</b> SDK bundle sendMessageIcon Icon</li>
+   </ul>
+  
+</div>
 
-   - **Type:** UIImage
-   - **Default:** SDK bundle sendMessageIcon Icon 
-
-<img src="img/DefaultSendButton.png" alt="DefaultSendButton">
-
-
-
+<div style="float: right; width: 55%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
+   </figure>
+</div>
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+ 
 
 #### isSendMessageButtonInTextMode  
 You have two options for the send message button mode: **text mode** (taken from localized resources) and **icon mode**.  
@@ -1234,10 +1320,24 @@ You have two options for the send message button mode: **text mode** (taken from
 #### systemBubbleTextColor  
 Color code for the text of the system messages. 
 
-   - **Type:** UIColor
-   - **Default:** UIColor.black 
+<div style="float: left; width: 45%;height: 50px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black</li>
+   </ul>
+  
+</div>
 
-<img src="img/systembubbletextcolor.png" alt="systemBubbleTextColor"> 
+<div style="float: right; width: 55%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 --- 
 
@@ -1247,10 +1347,24 @@ Color code for the text of the system messages.
 *(Window mode only)* Custom button icon image that displays on the navigation bar.
 When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdkcustombuttontapped) callback gets invoked.
 
-   - **Type:** UIImage
-   - **Default:** nil 
+<div style="float: left; width: 35%;height: 70px;">
+   <ul>
+      <li><b>Type:</b> UIImage</li>
+      <li><b>Default:</b> nil </li>
+   </ul>
+</div>
 
-<img src="img/custombuttonimage.png" alt="custombuttonimage"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/custombuttonimage.png" alt="custombuttonimage">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
  
 --- 
 
@@ -1262,58 +1376,114 @@ Checkmark visibility of the following options (type CheckmarksState): SentOnly -
    - **Type:** CheckmarksState(Integer Enum)
    - **Default:** CheckmarksState.All 
 
-
-
-
 #### checkmarkReadColor  
 Color of checkmark indication signs of Read messages. 
 
-   - **Type:** UIColor
-   - **Default:** #004DC9 
+<div style="float: left; width: 35%;height: 75px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #004DC9 </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/checkmarkreadcolor.png" alt="checkmarkreadcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
  
-<img src="img/checkmarkreadcolor.png" alt="checkmarkreadcolor">
-
-
-
 
 #### checkmarkDistributedColor  
 Color of checkmark indication signs of Distributed messages.  
 
-   - **Type:** UIColor
-   - **Default:** #5B5C5E 
+<div style="float: left; width: 35%;height: 70px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #5B5C5E </li>
+   </ul>
+</div>
 
-<img src="img/checkmarkdistributedcolor.png" alt="checkmarkdistributedcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/checkmarkdistributedcolor.png" alt="checkmarkdistributedcolor">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 ####  checkmarkSentColor  
 Color of checkmark indication signs of Sent messages. 
 
-   - **Type:** UIColor
-   - **Default:** #5B5C5E 
+<div style="float: left; width: 35%;height: 70px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #5B5C5E </li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/checkmarksentcolor.png" alt="checkmarksentcolor">
+   </figure>
+</div>
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### isReadReceiptTextMode  
 Two options for read indication: Read Receipt with Text Mode Read. Receipt with Icon Mode. If the parameter set as true the mode will be Text. If the parameter set as false the mode will be Icon. 
 
-   - **Type:** Bool
-   - **Default:** true 
+<div style="float: left; width: 35%;height: 156px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> true </li>
+   </ul>
+</div>
 
-<img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### messageStatusNumericTimestampOnly  
-When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'  
+When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'   
 
-   - **Type:** Bool
-   - **Default:** false 
+<div style="float: left; width: 35%;height: 530px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false </li>
+   </ul>
+</div>
 
-<img src="img/messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 --- 
 
@@ -1321,127 +1491,245 @@ When false (default), time stamps displays information relative to when sent/dis
 
 #### csatSubmitButtonCornerRadius   
 Corner radius of the Submit button.  
+ 
+<div style="float: left; width: 35%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> Double</li>
+      <li><b>Default:</b> 30 </li>
+   </ul>
+</div>
 
-   - **Type:** Double
-   - **Default:** 30 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius">
+   </figure>
+</div>
 
-<img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius"> 
-
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### csatYesNoButtonsCornerRadius  
 Corner radius of the resolution Yes/No buttons.  
 
-   - **Type:** Double
-   - **Default:** 25 
+ 
 
-<img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius"> 
+<div style="float: left; width: 35%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> Double</li>
+      <li><b>Default:</b> 25 </li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius">
+   </figure>
+</div>
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 ####  csatSubmitButtonBackgroundColor  
 Background color code of the Submit button.  
 
-   - **Type:** UIColor
-   - **Default:** #229A49 
+<div style="float: left; width: 35%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #229A49 </li>
+   </ul>
+</div>
 
-<img src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### csatSubmitButtonTextColor  
 Text color code of the Submit button.  
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white </li>
+   </ul>
+</div>
 
-<img src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor"> 
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### csatRatingButtonSelectedColor  
 Background Color code of the rating buttons.  
 
-   - **Type:** UIColor
-   - **Default:** #229A49 
+<div style="float: left; width: 35%;height: 64px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #229A49 </li>
+   </ul>
+</div>
 
-<img src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### csatResolutionButtonSelectedColor  
 Color code for the FCR survey buttons (YES/NO) when selected.  
 
-   - **Type:** UIColor
-   - **Default:** #229A49 
+<div style="float: left; width: 35%;height: 69px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #229A49 </li>
+   </ul>
+</div>
 
-<img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor"> 
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### csatAllTitlesTextColor  
 Title text color for all labels.  
 
-   - **Type:** UIColor
-   - **Default:** UIColor.black 
+<div style="float: left; width: 35%;height: 473px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black </li>
+   </ul>
+</div>
 
-<img src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor">  
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### csatResolutionHidden  
 Hides the FCR survey (YES/NO) question.  
 
-   - **Type:** Bool
-   - **Default:** false 
+<div style="float: left; width: 35%;height: 69px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false</li>
+   </ul>
+</div>
 
-<img src="img/csatresolutionhidden.png" alt="csatResolutionHidden"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatresolutionhidden.png" alt="csatResolutionHidden">  
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### csatAgentViewHidden  
 Hides the view of agent avatar and name. 
- 
-   - **Type:** Bool
-   - **Default:** true 
 
-<img src="img/csatagentviewhidden.png" alt="csatagentviewhidden"> 
+<div style="float: left; width: 35%;height: 115px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> true</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatagentviewhidden.png" alt="csatagentviewhidden"> 
+   </figure>
+</div>
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### csatThankYouScreenHidden 
 Hides the Thank You screen after tapping Submit button.   
 
-   - **Type:** Bool
-   - **Default:** false 
+<div style="float: left; width: 35%;height: 157px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false</li>
+   </ul>
+</div>
 
-<img src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### csatNavigationBackgroundColor 
 Background color of the navigation of the survey.  
 
-   - **Type:** UIColor
-   - **Default:** #229A49 
+<div style="float: left; width: 35%;height: 57px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #229A49</li>
+   </ul>
+</div>
 
-<img src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### csatNavigationTitleColor  
-Text color of the title in the survey navigation. |
+Text color of the title in the survey navigation.  
 
    - **Type:** UIColor
    - **Default:** UIColor.white 
@@ -1482,6 +1770,7 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
    - **Type:** UInt
    - **Default:** 1440 
 
+
 --- 
 
 ### Conversations
@@ -1516,89 +1805,174 @@ Maximum number of minutes to send the message.
 #### conversationSeparatorTextColor  
 Conversation separator text and line color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.black 
+<div style="float: left; width: 35%;height: 52px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black</li>
+   </ul>
+</div>
 
-<img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### enableConversationSeparatorTextMessage 
 Toggle conversation separator text message when conversation resolved from agent or consumer.
 
-   - **Type:** Bool
-   - **Default:** true 
+<div style="float: left; width: 35%;height: 62px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> true</li>
+   </ul>
+</div>
 
-<img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### enableConversationSeparatorLine  
 Toggle conversation separator line when conversation resolved from agent or consumer.
 
-   - **Type:** Bool
-   - **Default:** true 
+<div style="float: left; width: 35%;height: 62px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> true</li>
+   </ul>
+</div>
 
-<img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### conversationSeparatorFontSize 
 Define the conversation closed separator font size.
 
-   - **Type:** UIFontTextStyle
-   - **Default:** UIFontTextStyle.caption1 
+<div style="float: left; width: 35%;height: 79px;">
+   <ul>
+      <li><b>Type:</b> UIFontTextStyle</li>
+      <li><b>Default:</b> UIFontTextStyle.caption1</li>
+   </ul>
+</div>
 
-<img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"> 
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### conversationSeparatorBottomPadding 
 Define the conversation Closed label to separator line padding.
 
-   - **Type:** Float
-   - **Default:**  7
+<div style="float: left; width: 35%;height: 109px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 7</li>
+   </ul>
+</div>
 
-<img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding"> 
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### conversationSeparatorFontName 
 Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in App's Info.plist.
 
-   - **Type:** Float
-   - **Default:** 7 
+<div style="float: left; width: 35%;height: 79px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 7</li>
+   </ul>
+</div>
 
-<img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"> 
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### conversationSeparatorViewBottomPadding  
 Define the conversation separator view bottom padding.
 
-   - **Type:** String
-   - **Default:** nil 
+<div style="float: left; width: 35%;height: 62px;">
+   <ul>
+      <li><b>Type:</b> String</li>
+      <li><b>Default:</b> nil</li>
+   </ul>
+</div>
 
-<img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### conversationClosedSeparatorTopPadding 
 Define the conversation Closed Separator Top padding.
 
-   - **Type:** Float
-   - **Default:** 5 
+<div style="float: left; width: 35%;height: 108px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 5</li>
+   </ul>
+</div>
 
-<img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### enableVibrationOnMessageFromRemoteUser 
@@ -1625,6 +1999,8 @@ If true, shows agent is typing indicator in a message bubble. If false, show ind
    - **Type:** Bool
    - **Default:** true 
 
+
+
 --- 
 
 ### Unread Messages
@@ -1632,78 +2008,155 @@ If true, shows agent is typing indicator in a message bubble. If false, show ind
 #### scrollToBottomButtonBackgroundColor  
 Scroll to bottom button background color of the whole button.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.black 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.black</li>
+   </ul>
+</div>
 
-<img src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor">
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### scrollToBottomButtonMessagePreviewTextColor 
 Scroll to bottom button text color of the last unread message preview.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
+   </figure>
+</div>
 
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### scrollToBottomButtonBadgeBackgroundColor  
 Scroll to bottom button unread message badge background color.
 
-   - **Type:** UIColor
-   - **Default:** #E7242D 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #E7242D</li>
+   </ul>
+</div>
 
-<img src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### scrollToBottomButtonBadgeTextColor 
 Scroll to bottom button unread message badge text color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor">
+   </figure>
+</div>
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 
 #### scrollToBottomButtonArrowColor 
 Scroll to bottom button arrow tint color.
 
-   - **Type:** UIColor
-   - **Default:** UIColor.white 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
+   </figure>
+</div>
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 
 #### unreadMessagesDividerBackgroundColor 
 Unread Messages divider background color.
 
-   - **Type:** UIColor
-   - **Default:** #F5F5F5 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #F5F5F5</li>
+   </ul>
+</div>
 
-<img src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### unreadMessagesDividerTextColor 
 Unread Messages divider text color.
 
-   - **Type:** UIColor
-   - **Default:** #004DC9 
+<div style="float: left; width: 35%;height: 71px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #004DC9</li>
+   </ul>
+</div>
 
-<img src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### scrollToBottomButtonEnabled
@@ -1724,7 +2177,6 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 
 
 
-
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom button scrolls to bottom although we can have new messages and don't show the badge at all nor "new message preview." 
 
@@ -1733,40 +2185,72 @@ Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom bu
 
 
 
-
 #### unreadMessagesCornersRadius 
 Define the corners radius of the unread messages bubble.  
 
-   - **Type:** Float
-   - **Default:** 8 for all the corners 
+<div style="float: left; width: 35%;height: 120px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8 for all the corners</li>
+   </ul>
+</div>
 
-<img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">  
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### scrollToBottomButtonCornerRadius  
-Define the left top and left bottom corner radius of the scroll down indicator.  
+Define the corner radius for the left top and left bottom of the scroll down indicator. 
 
-Define the corner radius for the left top
+<div style="float: left; width: 35%;height: 120px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 20 for left top and the left bottom corners</li>
+   </ul>
+</div>
 
-   - **Type:** Float
-   - **Default:**  20 for left top and the left bottom corners
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius">
+   </figure>
+</div>
 
-<img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius"> 
-
-
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### scrollToBottomButtonBadgeCornerRadius  
 Define the corners radius of the unread messages counter inside the scroll down indicator.  
 
-   - **Type:** Float
-   - **Default:**  12 for all the corners
-  
-<img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius"> 
+<div style="float: left; width: 35%;height: 69px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 12 for all the corners</li>
+   </ul>
+</div>
 
---- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+---  
+  
 
 ### Localization
 
@@ -1775,7 +2259,6 @@ Country code: When it is not nil, it will be combined with 'language' ("language
 
    - **Type:** String?
    - **Default:** nil 
-
 
 
 
@@ -1790,6 +2273,8 @@ The LPLanguage enum contains all languages supported by the MessagingSDK, and af
 
    - **Type:** LPLanguage
    - **Default:** DeviceLanguage 
+
+
 
 --- 
 
@@ -1815,36 +2300,67 @@ Color code for the entire view background.
 
 #### customFontNameConversationFeed  
 Custom font name for conversation feed, which affects all messages, timestamps and separators. If the fonts are not part of the iOS families, you must define them in App's Info.plist. 
- 
-   - **Type:** String?
-   - **Default:** nil 
 
-<img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed"> 
+<div style="float: left; width: 35%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> String?</li>
+      <li><b>Default:</b> nil</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed" style="width: 324px;">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### customFontNameNonConversationFeed  
 Custom font name for all non conversation feed controls. Such as: Buttons, Alerts, Banners, Menu and External Windows. If the fonts are not part of the iOS families, you must define them in App's Info.plist. 
 
-   - **Type:** String?
-   - **Default:**  nil
+<div style="float: left; width: 35%;height: 69px;">
+   <ul>
+      <li><b>Type:</b> String?</li>
+      <li><b>Default:</b> nil</li>
+   </ul>
+</div>
 
-<img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed"> |
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed" style="width: 324px;">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
  
 
 #### customRefreshControllerImagesArray  
 Array of images for creating the custom refresh controller that loops the images from the array.  You must have two or more images in the array for it to work properly.
 
-   - **Type:** <ArrayUIImage>?
-   - **Default:** nil 
+<div style="float: left; width: 35%;height: 136px;">
+   <ul>
+      <li><b>Type:</b> &#060;ArrayUIImage&#062;?</li>
+      <li><b>Default:</b> nil</li>
+   </ul>
+</div>
 
-<img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray">
+   </figure>
+</div>
 
-
- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### customRefreshControllerAnimationSpeed  
 Custom refresh controller speed animation define the full images loop time. Smaller values create high speed animation.
@@ -1852,7 +2368,6 @@ Custom refresh controller speed animation define the full images loop time. Smal
    - **Type:** Float<UIImage>
    - **Default:** 2 
 
- 
 
 #### conversationBackgroundPortraitImage  
 When not nil, use this attribute as the conversation portrait background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
@@ -1868,13 +2383,17 @@ When not nil, use this attibute as the conversation landscape background image. 
    - **Type:** UIImage;
    - **Default:**  nil
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### conversationBackgroundImageContentMode  
 Defines the content mode of the conversation background image.  
 
    - **Type:** UIViewContentMode;
    - **Default:** scaleToFill 
+
+
 
 --- 
 
@@ -1883,80 +2402,171 @@ Defines the content mode of the conversation background image.
 #### dateSeparatorTitleBackgroundColor  
 Color code for date separator title background color. 
 
-   - **Type:** UIColor
-   - **Default:**  UIColor.white
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
 
-<img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground"> |
+<div style="float: right; width: 65%;height: 42px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground">
+   </figure>
+</div>
 
- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### dateSeparatorTextColor  
 Color code for date separator text color. 
  
-   - **Type:** UIColor
-   - **Default:** #46474A 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #46474A</li>
+   </ul>
+</div>
 
-<img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor"> 
- 
+<div style="float: right; width: 65%;height: 42px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor">
+   </figure>
+</div>
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### dateSeparatorLineBackgroundColor 
 Color code for date separator line background color. 
 
-   - **Type:** UIColor
-   - **Default:** UIColor.clear 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.clear</li>
+   </ul>
+</div>
 
-<img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor"> 
+<div style="float: right; width: 65%;height: 42px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
+   </figure>
+</div>
 
-
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### dateSeparatorBackgroundColor  
 Color code for date separator background color. 
- 
-   - **Type:** UIColor
-   - **Default:** #FFFFFF  
 
-<img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor"> 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #FFFFFF</li>
+   </ul>
+</div>
 
- 
+<div style="float: right; width: 65%;height: 42px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div> 
 
 #### dateSeparatorFontSize  
 Define the Date Separator font text style. 
- 
-   - **Type:** UIFontTextStyle
-   - **Default:** UIFontTextStyle.footnote 
 
-<img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
+ <div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> UIFontTextStyle</li>
+      <li><b>Default:</b> UIFontTextStyle.footnote</li>
+   </ul>
+</div>
 
- 
+<div style="float: right; width: 65%;height: 36px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div> 
 
 #### customFontNameDateSeparator  
 Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist. 
 
-   - **Type:** String
-   - **Default:** nil 
+<div style="float: left; width: 35%;">
+   <ul>
+      <li><b>Type:</b> String</li>
+      <li><b>Default:</b> nil</li>
+   </ul>
+</div>
 
-<img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed"> 
+<div style="float: right; width: 65%;height: 39px;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed">
+   </figure>
+</div>
 
- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div> 
 
 #### dateSeparatorTopPadding  
 Define the Date Separator Top padding. 
- 
-   - **Type:** Float
-   - **Default:** 0 
 
-<img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding"> 
+<div style="float: left; width: 35%;height: 78px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 0</li>
+   </ul>
+</div>
 
- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>  
 
 #### dateSeparatorBottomPadding  
 Define the Date Separator bottom padding.  
 
-   - **Type:** Float
-   - **Default:** 0 
+<div style="float: left; width: 35%;height: 78px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 0</li>
+   </ul>
+</div>
 
-<img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 --- 
 
@@ -1965,20 +2575,45 @@ Define the Date Separator bottom padding.
 #### inputTextViewContainerBackgroundColor  
 User Input TextView container background color.  
 
-   - **Type:** UIColor
-   - **Default:** #F5F5F5 
+<div style="float: left; width: 35%;height: 43px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #F5F5F5</li>
+   </ul>
+</div>
 
-<img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor">
+   </figure>
+</div>
 
- 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### inputTextViewCornerRadius  
 User Input TextView corner radius.  
 
-   - **Type:** Double
-   - **Default:** 20.0 
+<div style="float: left; width: 35%;height: 43px;">
+   <ul>
+      <li><b>Type:</b> Double</li>
+      <li><b>Default:</b> 20.0</li>
+   </ul>
+</div>
 
-<img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius">
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 --- 
 
@@ -2033,12 +2668,24 @@ Number of seconds before the first Time to Respond (TTR) notification appears.
 #### ttrShouldShowTimestamp  
 When set to **true**, the timestamp of the TTR notification displays. Otherwise, the "An agent will respond shortly" message displays.   
 
-   - **Type:** Bool
-   - **Default:** false 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false</li>
+   </ul>
+</div>
 
-<img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp"><br><img src="img/ttrshouldshowtimestamp1.png" alt="ttrShouldShowTimestamp"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp">
+   </figure>
+</div>
 
- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### ttrShowFrequencyInSeconds  
 Controls the TTR frequency, for example, don’t show the TTR more than once in 8 seconds. 
@@ -2051,52 +2698,113 @@ Controls the TTR frequency, for example, don’t show the TTR more than once in 
 #### showUrgentButtonInTTRNotification  
 When set to **true**, the Urgent button shows in the TTR notification.
 
-   - **Type:** Bool
-   - **Default:** false 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false</li>
+   </ul>
+</div>
 
-<img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification"><br><img src="img/showurgentbuttoninttrnotification1.png" alt="showurgentbuttoninttrnotification"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification">
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### showOffHoursBanner  
 Enable or disable the off-hours toaster. 
 
-   - **Type:** Bool
-   - **Default:** true 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> true</li>
+   </ul>
+</div>
 
-<img src="img/showoffhoursbanner.png" alt="showoffhoursbanner"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/showoffhoursbanner.png" alt="showoffhoursbanner">
+   </figure>
+</div>
 
- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### ttrBannerBackgroundColor  
 Background color for banner. 
- 
-   - **Type:** UIColor
-   - **Default:** #52A742 
 
-<img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #52A742</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### ttrBannerTextColor  
 Text color of the banner. 
 
-   - **Type:** UIColor
-   - **Default:** #52A742 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #52A742</li>
+   </ul>
+</div>
 
-<img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> 
+   </figure>
+</div>
 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### ttrBannerOpacityAlpha  
 Opacity level of the banner background (values: 0.0 - 1.0). 
- 
-   - **Type:** Double
-   - **Default:** 0.8 
 
-<img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha"> 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> Double</li>
+      <li><b>Default:</b> 0.8</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### offHoursTimeZoneName  
 Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time). 
@@ -2146,22 +2854,46 @@ Background color of the remote user’s avatar.
 #### remoteUserAvatarLeading  
 Define the remote avatar Leading padding (left edge to avatar). 
 
-   - **Type:** Float
-   - **Default:** 8 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
-<img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserAvatarTrailingPadding  
 Define the remote avatar Trailing padding (Avatar to bubble). 
- 
-   - **Type:** Float
-   - **Default:** 8 
 
-<img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"> 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default:</b> 8</li>
+   </ul>
+</div>
 
- 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### remoteUserAvatarIconColor  
 Icon color of default remoteUser avatar.  
@@ -2174,12 +2906,24 @@ Icon color of default remoteUser avatar.
 #### remoteUserDefaultAvatarImage  
 Default Avatar image of the remote user. When assigned, image disables the `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor` configurations.  If remote user has an avatar image in his profile, this attribute gets ignored. 
 
-   - **Type:** UIImage?
-   - **Default:** nil 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> UIImage?</li>
+      <li><b>Default:</b> nil</li>
+   </ul>
+</div>
 
-<img src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage"> 
+   </figure>
+</div>
 
- 
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### brandAvatarImage  
 Set avatar image for the brand, and is an optional UIImage that if set to **nil** a default avatar displays. Image ratio must be 1:1 (square) and at least 50x50 pixels. 
@@ -2191,21 +2935,47 @@ Set avatar image for the brand, and is an optional UIImage that if set to **nil*
 
 #### csatAgentAvatarBackgroundColor 
 Background color of agent's default avatar in CSAT. 
- 
-   - **Type:** UIColor
-   - **Default:** #004DC9 
 
-<img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"> 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #004DC9</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### csatAgentAvatarIconColor  
 Icon color of agent's default avatar in CSAT.
 
-   - **Type:** UIColor
-   - **Default:** #FFFFFF 
+<div style="float: left; width: 35%;height: 51px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #FFFFFF</li>
+   </ul>
+</div>
 
-<img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 --- 
 
@@ -2374,31 +3144,70 @@ Secure form bubble form image tint color.
 
 #### secureFormCustomFontName 
  Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica. 
-  
-   - **Type:** String
-   - **Default:** Helvetica 
+ 
+<div style="float: left; width: 35%;height: 264px;">
+   <ul>
+      <li><b>Type:</b> String</li>
+      <li><b>Default:</b> Helvetica</li>
+   </ul>
+</div>
 
-<img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### secureFormHideLogo  
 Secure form flag for hiding the secure form logo in the top of the form.  
 
-   - **Type:** Bool
-   - **Default:** false 
+<div style="float: left; width: 35%;height: 240px;">
+   <ul>
+      <li><b>Type:</b> Bool</li>
+      <li><b>Default:</b> false</li>
+   </ul>
+</div>
 
-<img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"> |
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### secureFormBubbleLoadingIndicatorColor  
 Secure form loading indicator color while loading form before opening. 
- 
-   - **Type:** UIColor
-   - **Default:** #46474a 
 
-<img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"> 
+<div style="float: left; width: 35%;height: 155px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #46474a</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 --- 
 
@@ -2522,41 +3331,93 @@ Border size of Quick Reply buttons.
 
 #### connectionStatusConnectingBackgroundColor  
 Color code for the background of the connection status bar while connecting.
- 
-   - **Type:** UIColor
-   - **Default:** #f5f5f5f2 
 
-<img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
+<div style="float: left; width: 35%;height: 34px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #f5f5f5f2</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 
 #### connectionStatusConnectingTextColor 
 Color code for the text of the connection status bar while connecting. 
- 
-   - **Type:** UIColor
-   - **Default:**  #46474a
 
-<img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
+<div style="float: left; width: 35%;height: 34px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #46474a</li>
+   </ul>
+</div>
 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
  
 
 #### connectionStatusFailedToConnectBackgroundColor  
 Color code for the background of the connection status bar when connection failed.
 
-   - **Type:** UIColor
-   - **Default:** #000000cc 
+<div style="float: left; width: 35%;height: 37px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #000000cc</li>
+   </ul>
+</div>
 
-<img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
+   </figure>
+</div>
 
 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### connectionStatusFailedToConnectTextColor  
 Color code for the text of the connection status bar when connection failed. 
- 
-   - **Type:** UIColor 
-   - **Default:** UIColor.white 
 
-<img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
+<div style="float: left; width: 35%;height: 37px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> UIColor.white</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 --- 
 
@@ -2564,11 +3425,26 @@ Color code for the text of the connection status bar when connection failed.
 
 #### controllerBubbleTextColor  
 Color code for the text of the controller bubble. 
- 
-   - **Type:** UIColor
-   - **Default:** #5b5c5e 
 
-<img src="img/controllerbubletextcolor.png" alt="controller bubble text color"> 
+<div style="float: left; width: 35%;height: 90px;">
+   <ul>
+      <li><b>Type:</b> UIColor</li>
+      <li><b>Default:</b> #5b5c5e</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 65%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/controllerbubletextcolor.png" alt="controller bubble text color"> 
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 
 --- 
 
