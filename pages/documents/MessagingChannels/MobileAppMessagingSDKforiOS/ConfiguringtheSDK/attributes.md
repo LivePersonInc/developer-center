@@ -6,7 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Customization and Branding
+subfoldername: SDK Attributes
 
 order: 224
 permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html
@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html
 indicator: messaging
 ---
 
-The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](consumer-experience-ios-sdk-attributes-design-sheet.html).
+The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-sheet.html).
 
 
 ### Agent Assignment

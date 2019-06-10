@@ -6,10 +6,10 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Customization and Branding
+subfoldername: SDK Attributes
 
 order: 226
-permalink: mobile-app-messaging-sdk-for-ios-customization-and-branding-deprecated-attributes.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-deprecated-attributes.html
 
 indicator: messaging
 ---
