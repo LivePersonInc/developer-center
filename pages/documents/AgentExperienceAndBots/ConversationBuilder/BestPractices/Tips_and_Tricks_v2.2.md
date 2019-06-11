@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Best Practices
-permalink: conversation-builder-best-practices-tips-and-tricks.html
+permalink: 
 indicator: both
 ---
 
@@ -20,7 +20,7 @@ indicator: both
  * Environment Variable
     * `{$env.variableName}`
  * API Integration custom data values
-    * `{apiName.variableName}`	
+    * `{apiName.variableName}`
 
 Normal Variable = `{$botContext.**VARIABLE_NAME_GOES_HERE**}`
 
@@ -94,7 +94,7 @@ Would store whatever the user response was to a question in this variable name.
 
     - then if they suddenly enter unrecognised utterances mid-dialog which trigger fallback, your fallback dialog can check this variable before decided what contextual message to show?
 
-    *if* **current_consumer_intent** has a value 
+    *if* **current_consumer_intent** has a value
 
     *then *
 
@@ -130,7 +130,7 @@ This avoids the bot trying and failing to respond with the appropriate tone for 
 
 E.g.
 
-"My partner has passed away" relates to bereavement and should be transferred immediately. 
+"My partner has passed away" relates to bereavement and should be transferred immediately.
 
 Create a dialog with the pattern for the User Says interaction of  "*passed away*" and other variations and have this immediately transfer to agent.
 
@@ -140,7 +140,7 @@ This prevents hitting the fallback or mismatched intent with another dialog.
 
 E.g.
 
-#### should entities be used for variations of "don’t" “can’t” “won’t” ? 
+#### should entities be used for variations of "don’t" “can’t” “won’t” ?
 
 Will this benefit the system NLU in anyway? What about "cannot" “will not” “do not” variations?
 
@@ -152,7 +152,7 @@ Will this benefit the system NLU in anyway? What about "cannot" “will not” �
 
 ### Creating a single "resolve and close" dialog
 
-#### Why? 
+#### Why?
 
 *- *to avoid having to repeatedly design and build the following sequence of questions within every dialog/intent flow
 
@@ -166,7 +166,7 @@ Yes = send goodbye message and close conversation
 
 No = Ask for user input and match intent etc.
 
-#### How? - 
+#### How? -
 
 1- Create a new dialog inside your bot called "Confirm Resolution and Close"
 
@@ -218,7 +218,7 @@ Once I complete balance, I send the consumer back to the confirm resolution dial
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/BestPractices/image_15.png">
 
-**Note**: the red line is added to show the end of balance and below is back in the confirm resolution 
+**Note**: the red line is added to show the end of balance and below is back in the confirm resolution
 
 Now I can type another utterance and allow the system to match me against another known intent and repeat the sequence again…
 
@@ -236,7 +236,7 @@ At various branching points within certain dialogs, users are asked to answer qu
 
 Whilst effort can be made to help them pick certain pre-defined options, there is always a possibility that users will just type their needs separately and not pick from menus of buttons or multi-choice answers.
 
-Unless these types of input are caught, they could allow the user to jump from the current flow into the next dialog. 
+Unless these types of input are caught, they could allow the user to jump from the current flow into the next dialog.
 
 Whilst this may be an OK experience for certain dialogs, others may have specific questions and answers to collect and therefore we need a way to contain them in the current dialog until we have collected answers we need.
 
@@ -268,15 +268,15 @@ You can use this conditon to repeat the same question if you desire or redirect 
 
 Every time the user enters a new utterance in the conversation, this has the chance of matching a new intent and "jumping" you out of one dialog and into another one for the newly matched intent.
 
-**Note**: Depending on if the user’s utterance is in response to 
+**Note**: Depending on if the user’s utterance is in response to
 
-A) open-ended statement 
+A) open-ended statement
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/BestPractices/image_21.png">
 
 … or ...
 
-B) specific question type 
+B) specific question type
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/BestPractices/image_22.png">
 
@@ -302,7 +302,7 @@ Take the following bot automation where there are 2 defined intents - balance an
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/BestPractices/image_25.png">
 
-3) Once the billing question dialog flow ends, ithe user is returned to the next dialog still on the stack in this case : Balance... 
+3) Once the billing question dialog flow ends, ithe user is returned to the next dialog still on the stack in this case : Balance...
 
 **Note**: The last interaction to be presented before leaving is shown again - in this case the "provide email address" question.
 
@@ -403,7 +403,7 @@ If a LiveEngage account has ip login restrictions in place, you must add the bel
 204.236.128.0/18 - 204.236.128.0-204.236.191.255
 216.182.236.0/23 - 216.182.236.0-216.182.237.255
 ```
- 
+
 
 #### LP Cloud:
 ```
@@ -447,7 +447,7 @@ If the bot connector is online but the LE connection status is not up, there is 
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/BestPractices/image_29.png">
 
-You can glean some information from Kibana by using this query param: 
+You can glean some information from Kibana by using this query param:
 
 `{{Account Id}} AND "Login Failed" AND {{Bot login name}}`
 
@@ -627,17 +627,16 @@ Yes - however you must consider the following caveats.
 
 * If your automation uses domains for intents and entities **_you MUST export/import the domain first from AWS into LPPC version_**
 
-* You _MUST_ ensure the name remains the same once imported into LPPC ***_BEFORE_*** you import your automation *- otherwise the import will fail to find its expected domain for all linked dialog response intents and they will become disconnected. 
+* You _MUST_ ensure the name remains the same once imported into LPPC ***_BEFORE_*** you import your automation *- otherwise the import will fail to find its expected domain for all linked dialog response intents and they will become disconnected.
 
 * If you ensure the domain exists with the same name, then the import should be able to find and reconnect dialog conditions to the intents at the new location.
 
 * If you forget, the imported automation will loose any/all response intent connections and you would have to manually rewire them back up to the relevant intents and entities.
 
-### Process Guide : 
+### Process Guide :
 
 [https://docs.google.com/document/d/1d9rbMetEX4DRKgi85XWCg7LFTT1EW3GTHEhDR4dZTyg/edit#](https://docs.google.com/document/d/1d9rbMetEX4DRKgi85XWCg7LFTT1EW3GTHEhDR4dZTyg/edit#)
 
 ### Roles and Permissions
 
 [https://docs.google.com/spreadsheets/d/1C-SXlGbGzs9Pj7sM6r2sDP-pNzqyH6_wRN7qJ-Zk2oI/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1C-SXlGbGzs9Pj7sM6r2sDP-pNzqyH6_wRN7qJ-Zk2oI/edit?usp=sharing)
-
