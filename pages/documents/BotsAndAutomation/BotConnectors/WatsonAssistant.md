@@ -233,20 +233,49 @@ For new IAM workspaces that have a new Watson response, *Then respond with* text
 Put the structured content objects with the metadata in the text field for the response.
 
 ```json
-{
-  "output": {
-    "generic": [
-      {
-        "values": [
-          {
-            "text": "{\n          \"metadata\": {\n            \"id\": \"1234\",\n            \"type\": \"ExternalId\"\n          },\n          \"structuredContent\": {\n            \"type\": \"vertical\",\n            \"elements\": [\n              {\n                \"text\": \"What kind of credit card are you interested in?\",\n                \"type\": \"text\",\n                \"tooltip\": \"text tooltip\"\n              },\n              {\n                \"type\": \"button\",\n                \"click\": {\n                  \"actions\": [\n                    {\n                      \"text\": \"Personal\",\n                      \"type\": \"publishText\"\n                    }\n                  ]\n                },\n                \"title\": \"Personal\",\n                \"tooltip\": \"button tooltip\"\n              },\n              {\n                \"type\": \"button\",\n                \"click\": {\n                  \"actions\": [\n                    {\n                      \"text\": \"Business\",\n                      \"type\": \"publishText\"\n                    }\n                  ]\n                },\n                \"title\": \"Business\",\n                \"tooltip\": \"button tooltip\"\n              },\n              {\n                \"type\": \"button\",\n                \"click\": {\n                  \"actions\": [\n                    {\n                      \"text\": \"Other\",\n                      \"type\": \"publishText\"\n                    }\n                  ]\n                },\n                \"title\": \"Other\",\n                \"tooltip\": \"button tooltip\"\n              }\n            ]\n          }\n        }"
-          }
-        ],
-        "response_type": "text",
-        "selection_policy": "sequential"
-      }
-    ]
-  }
+{  
+   "output":{  
+      "generic":[  
+         {  
+            "values":[  
+               {  
+                  "output":{  
+                     "text":{  
+                        "values":[  
+                           {  
+                              "metadata":{  
+                                 "id":"1234",
+                                 "type":"ExternalId"
+                              },
+                              "structuredContent":{  
+                                 "type":"vertical",
+                                 "elements":[  
+                                    {  
+                                       "type":"button",
+                                       "click":{  
+                                          "actions":[  
+                                             {  
+                                                "text":"Recommend me a movie",
+                                                "type":"publishText"
+                                             }
+                                          ]
+                                       },
+                                       "title":"Recommend a movie"
+                                    }
+                                 ]
+                              }
+                           }
+                        ],
+                        "selection_policy":"sequential"
+                     }
+                  }
+               }
+            ],
+            "response_type":"text",
+            "selection_policy":"sequential"
+         }
+      ]
+   }
 }
 ```
 Figure 2.5 Structured Content Watson JSON Example (IAM)
@@ -256,26 +285,26 @@ Figure 2.5 Structured Content Watson JSON Example (IAM)
 Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 ```json
-{
-    "output" : {
-          "text" : {
-                 "values" : [
-                        "Sure thing! Change the TTR to 50 minutes."
-                  ],
-                  "selection_policy" : "sequential"
-           },
-          "actions" : [
-                 {
-                     "name" : "CHANGE_TTR",
-                     "type" : "CLIENT",               
-                     "parameters" : {
-                        "ttrType" : "CUSTOM",
-                        "value" : 3000  
-                     },
-                     "result_variable" : "none"
-                 }   
-           ]
-     }
+{  
+   "output":{  
+      "text":{  
+         "values":[  
+            "Sure thing! Change the TTR to 50 minutes."
+         ],
+         "selection_policy":"sequential"
+      }
+   },
+   "actions":[  
+      {  
+         "name":"CHANGE_TTR",
+         "type":"CLIENT",
+         "parameters":{  
+            "ttrType":"CUSTOM",
+            "value":3000
+         },
+         "result_variable":"none"
+      }
+   ]
 }
 ```
 Figure 2.6 Watson JSON response for changing TTR
@@ -299,24 +328,23 @@ In the *Then respond with:* JSON editor block, we see the following:
 
 ```json
 {
-  "output" : {
-    "text" : {
-      "values" : [
-            "Sure thing! Escalating you to a live agent now."
-      ],
-      "selection_policy" : "sequential"
-    },
-    "actions" : [
-      {
-        "name" : "TRANSFER",
-        "type" : "CLIENT",               
-        "parameters" : {
-          "skill" : "BOT-TRANSFER-OUT" // case sensitive, should be exactly the same as in LiveEngage
-        },
-        "result_variable" : "none"
-      }   
-    ]
-  }
+ "output": {
+   "text": {
+     "values": [
+       "Escalating to a human"
+     ]
+   }
+ },
+ "actions": [
+   {
+     "name": "TRANSFER",
+     "type": "client",
+     "parameters": {
+       "skill": "human_skill"
+     },
+     "result_variable": "none"
+   }
+ ]
 }
 ```
 Figure 2.7 Watson JSON response for escalation
@@ -330,21 +358,21 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 ```json
 {
-    "output" : {
-          "text" : {
-                 "values" : [
-                        "Thank you for speaking with us today!"
-                  ],
-                  "selection_policy" : "sequential"
-           },
-          "actions" : [
-                 {
-                        "name" : "CLOSE_CONVERSATION",
-                        "type" : "client",
-                        "result_variable" : "none"
-                 }
-           ],
-     }
+ "output": {
+   "text": {
+     "values": [
+       "Thanks for chatting with us today!"
+     ],
+     "selection_policy": "sequential"
+   }
+ },
+ "actions": [
+   {
+     "name": "CLOSE_CONVERSATION",
+     "type": "client",
+     "result_variable": "none"
+   }
+ ]
 }
 ```
 Figure 2.8 Watson Assistant JSON response for closing chat/conversation
