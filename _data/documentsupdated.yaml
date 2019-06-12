@@ -693,7 +693,7 @@
       - subpagename: Audio Messages
       - subpagename: Photo Sharing
       - subpagename: File Sharing
-      - subpagename: Campaigns for Mobile App Messaging
+      - subpagename: Campaigns 
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Control History APIs
     - pagename: Voice and Video for iOS SDK (BETA)
@@ -711,7 +711,6 @@
       subpages:
       - subpagename: Authentication
       - subpagename: Open Source List
-      - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK
     pages:

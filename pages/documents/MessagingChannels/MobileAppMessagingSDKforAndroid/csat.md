@@ -14,7 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-csat-behavior.
 indicator: messaging
 ---
 
-### Overview
 
 This document describes the CSAT behavior and configurations in the Messaging SDK. You can find all the related configurations in the resources ID table, under [Survey Screen](android-attributes.html).
 

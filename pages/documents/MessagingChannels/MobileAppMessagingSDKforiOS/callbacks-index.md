@@ -55,7 +55,7 @@ The SDK uses 2 delegates:
 }
 ```
 
-To use the **LPMessagingSDKDelegate**, you'll need to instantiate it, and conform the protocol with the required methods:
+To use the **LPMessagingSDKDelegate**, you'll need to initiate it, and conform the protocol with the required methods:
 
 ```swift
 LPMessagingSDK.instance.delegate = self

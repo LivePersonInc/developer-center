@@ -287,19 +287,23 @@ Upon errors, we send logs including different severity levels of errors and warn
 
 ### Proguard 
 
-The SDK handles its own obfuscation and all its dependencies according to ProGuard rules. There is no need to add any ProGuard specific rules that relate to the SDK.
+The SDK handles its own obfuscation and all its dependencies according to ProGuard rules. When enabled in the gradle file of your application, ProGuard activates and runs automatically.
 
-The SDK ProGuard will run automatically when the ProGuard option is enabled in the gradle file of your application.
+**For SDK version 3.7 and newer.** If your App supports Android KitKat, add the following rule to ProGuard file. If you don't set this rule, an error message appears in logs.
 
-In case there is no ProGuard activated, the SDK ProGuard will also be disabled.
+```java
+-keepclassmembers class * implements javax.net.ssl.SSLSocketFactory {
+	final javax.net.ssl.SSLSocketFactory delegate;
+}
+```
 
 ### Android Automatic Restore
 
-Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If this feature is enabled on an App, when reinstalling the application all stored data is restored to the device. refer to [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
+Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If enabled on an App, when reinstalling the application, all stored data gets restored to the device. For more details, see [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
 
-Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore and needs to be disabled on the host app if the app enabled Automatic Backup.
+Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore.  If the app has enabled Automatic Backup, you must disable it on the host app. 
 
-Note: the following configuration is relevant only if Automatic Backup is enabled on the manifest of the host app:
+**Note:**  If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
 
 ```xml
 <application

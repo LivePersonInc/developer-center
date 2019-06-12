@@ -94,12 +94,12 @@ Values for these descriptions are up to the brand to define, these are only exam
 
 ### Step 2. Enable or disable photo sharing
 
+
 1. Change the boolean value:
 
    ```swift
-   LPConfig.defaultConfiguration.enablePhotoSharing
+   LPConfig.defaultConfiguration.enablePhotoSharing = true
    ```
-
    By default, the value is set to **false**.
 
 2. Contact your Account Team to have the feature enabled on your account.
@@ -130,5 +130,26 @@ Values for these descriptions are up to the brand to define, these are only exam
    LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
    ```
 
-You can find all the related configurations in the [resources ID table](consumer-experience-ios-sdk-attributes.html), under Photo Sharing.
+- Print the configurations using:
+
+   ```swift
+   LPConfig.printAllConfigurations()
+   ```
+
+For a complete list of attributes, see [Attributes](consumer-experience-ios-sdk-attributes.html#photo-sharing).
+
+**Example code:**  
+
+```swift
+// Enable Photo Sharing
+LPConfig.defaultConfiguration.enablePhotoSharing = true
+// Set the Background Color on Photo Sharing Menu
+LPConfig.defaultConfiguration.photosharingMenuBackgroundColor = UIColor.lightGray
+// Set the text of buttons on Photo Sharing Menu
+LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor = UIColor.white
+// Set Photo Share Menu Button's Background Color
+LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor = UIColor.white
+// Set Photo Sharing Menu Buttons Outline Color
+LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor = UIColor.lightGray
+```
 

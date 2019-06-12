@@ -14,25 +14,23 @@ permalink: mobile-app-messaging-sdk-for-ios-customization-and-branding-customizi
 indicator: messaging
 ---
 
-The SDK allows you to customize the look and feel of your app using LPConfig object. To apply a custom look and feel, create your own configuration instance and assign the attributes you want to customize.
+You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
 
-_**Note: for the list of all the attributes you can configure on the SDK, click [here](consumer-experience-ios-sdk-attributes.html)**_
+The most suitable time to customize configuration is right after the SDK initialization and before calling `showConversation()`.
 
-The most suitable time to customize configuration is right after the SDK initialization and before calling **showConversation()**.
-
-To get the default configuration:
+Default configuration:
 
 ```swift
 let configuration = LPConfig.defaultConfiguration
 ```
 
-To print all configurable attributes and their default values call:
+Print all configurable attributes and their default values:
 
 ```swift
 LPConfig.printAllConfigurations()
 ```
 
-To customize an attribute, follow this example:
+**Example configuration:**   
 
 ```swift
 configuration.remoteUserBubbleBackgroundColor = UIColor.purpleColor()

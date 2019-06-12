@@ -22,7 +22,9 @@ Monitoring API is enabled only when the SDK is initialized with [LPMonitoringPar
 Use this API method to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 
-`func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
+```swift
+func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())
+```
 
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
@@ -54,7 +56,7 @@ func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, c
 Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 ```swift
-`func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())`
+func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())
 ```
 
 | Parameter | Description | Required |
@@ -74,7 +76,9 @@ Use this method to get an engagement for a consumer in an appInstallationId cont
 
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 
-`func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())`
+```swift
+func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->())
+```
 
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
