@@ -19,6 +19,7 @@ Retrieves data api usage audit logs aggregated per account, api type, user id an
 | Method | URL |
 | :------- | :------ |
 | GET | `https://<domain>/lp-auditlogapi/{accountID}?from=<from time>&to=<to_time>&agentId=<agent id or appkey>&api=<API>` |
+|Example | https://va-a.auditlog.liveperson.net/lp-auditlogapi/79316966?from=1560236532288&to=1560411234877&agentId=all&api=msg_search
 
 **URL Parameters**
 
@@ -33,13 +34,12 @@ Retrieves data api usage audit logs aggregated per account, api type, user id an
 
 **JSON Example**
 
-Request by skillIds=12,13 (no interval), timeframe=180
 
 ```json
     {
         "recordslist": [
             {
-                "accountId": "le24257132",
+                "accountId": "79316966",
                 "apiConsumerid": "3447834010",
                 "apiType": "MSG_SEARCH",
                 "time": "1560236400000",
