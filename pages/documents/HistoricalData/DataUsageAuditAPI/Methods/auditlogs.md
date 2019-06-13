@@ -18,7 +18,7 @@ Retrieves data api usage audit logs aggregated per account, api type, user id an
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/auditlogs/{accountID}?from=<from time>&to=<to_time>&agentId=<agent id or appkey>&api=<API>` |
+| GET | `https://<domain>/lp-auditlogapi/{accountID}?from=<from time>&to=<to_time>&agentId=<agent id or appkey>&api=<API>` |
 
 **URL Parameters**
 
