@@ -371,27 +371,6 @@ For more details on the different attributes you are able to customize, refer to
 ### Customer Experience Survey
 
 
-      - Contains agent avatar:
-         - If conversation has assigned agent and its image was downloaded previously using profileUrl, this image will be presented in the view.
-         - If no image available, default avatar is presented. Its background and tint color can be set accordingly to agent bubble.
-
-         - By default the agent's name is an empty label.
-         - If conversation has assigned agent, the agent’s nickName will be used.
-
-Show if:
-
-- CSAT configured to appear according to LPConfig.defaultConfiguration.csatShowSurveyView
-- Conversation has an assigned agent.
-- Conversation’s CSAT wasn’t previously submitted.
-
-
-Dismiss:
-
-- User pressed the submit button (answers are sent to the survey).
-- User choose to skip the CSAT (skipped button is pressed).
-- The CSAT is automatically dismissed if it was filled in any other device.
-- If agent resumed the conversation while csat is visible - it will automatically dismissed.
-
 <div class="important">
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 </div>
