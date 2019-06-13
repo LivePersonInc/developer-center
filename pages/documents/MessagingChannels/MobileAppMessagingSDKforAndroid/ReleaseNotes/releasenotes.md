@@ -13,6 +13,16 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### Android Messaging SDK - Version 3.8.1
+
+Android Mobile App SDK v3.8.1 fixed one bug.
+
+#### Environmental requirements
+The Android Mobile Messaging SDK version 3.8.1 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+#### Bug fixed
+Reported in SDK 3.8.0 on Android. When the conversation history for an authenticated user has the SUGGESTED_ASSIGNED_AGENT role assigned in it, the app crashed.
+
 ### Android Messaging SDK - Version 3.8.0
 
 Android Mobile App SDK v3.8.0 introduces a new feature.
