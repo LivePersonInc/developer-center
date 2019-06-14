@@ -158,9 +158,7 @@ Options are set to be shown by default, but if you don’t want them to be shown
 
 ##### Configure Options Dialogs
 
-Each of the Options dialogs are displaying a number of products or services to the user and, based on their selection, setting the result to a variable called **selectedProduct**. When you add your own products and services to these interactions, be sure to configure the Conditions and Patterns so that your products and services will be matched and sent to the variable.
-
-For more information on using Conditions, [please review](https://developers.liveperson.com/conversation-builder-conversation-builder-conditions.html) the following.
+Each of the Options dialogs are displaying a number of products or services to the user and, based on their selection, setting the result to a variable called **selectedProduct**. When you add your own products and services to these interactions, be sure to configure the [Conditions and Patterns](conversation-builder-conversation-builder-conditions.html) so that your products and services will be matched and sent to the variable.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_3.png">
 
