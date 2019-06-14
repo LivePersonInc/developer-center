@@ -10,7 +10,7 @@ permalink: conversation-builder-templates-full-lead-gen.html
 indicator: both
 ---
 
-The Lead Gen template is designed to capture contact information from a customer and send the results to either an email address or SMS number. In addition, there is an option (if desired) to display products or services to the customer as a channel specific gallery or list. The products could come from a Shopify collection if available.
+The Lead Gen template is designed to capture contact information from a customer and send the results to either an email address or SMS number. In addition, there is an option to display products or services to the customer as a channel specific gallery or list. The products could come from a Shopify collection if available.
 
 The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp and Facebook Messenger. Escalation to an agent is also included.
 
@@ -21,11 +21,10 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
 #### Dialogs
 
 * Welcome
-    * The Welcome dialog greets the user and then navigates to the first interaction in the LeadGen dialog. You should customize the greeting with your appropriate brand message.
+    * The Welcome dialog greets the user and then navigates to the first interaction in the LeadGen dialog.
 * Lead Gen
     * This is the main dialog for collecting the user’s contact information.
     * By default this dialog collects (and attempts to validate) the user’s name, email address and phone number. There is also an interaction to collect a description of their interest.
-    * Feel free to modify the language used in the lead gen interactions to suit your brand.
 * Options for ABC
     * If you are deploying to Apple Business Chat, you can use this List Picker driven dialog to display your product or service offerings.
     * You can add rich images to the List Picker (though recommended to keep them small for faster loading).
@@ -66,11 +65,11 @@ To customize this template, you will need to do the following.
 
 #### General Dialog Customization
 
-As noted previously, you will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details.
+You will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details.
 
 This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_2.png">
+<img class="fancyimage" style="width:600px" src="/img/ConvoBuilder/template_full_lead_image_2.png">
 
 #### Lead Gen Dialog
 
@@ -93,6 +92,21 @@ setVariable('sendEmail', 'true');
 setVariable('sendSMS', 'false');
 ```
 
+#### Channel Detection
+
+Navigate to the Global Functions. 
+
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png">
+
+The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the ABC or SMS option dialogs appear, you can set the channel variable to the following:
+
+```javascript
+//var channel = botContext.getChannel(); // use this by default
+var channel = "CustomContext"; // set this to "CustomContext" for ABC or "sms" for SMS
+botContext.printDebugMessage("=====> USER CHANNEL IS: " + channel);
+setVariable('channel', channel);
+```
+
 #### Options Dialogs
 
 The Options dialogs are offered for a few different channels:
@@ -103,7 +117,46 @@ The Options dialogs are offered for a few different channels:
 
 * Text card with buttons OR product gallery for Web.
 
-To configure the display (or not) of these options, please review the [Global Functions](#heading=h.bwxw4hy6i8jj).
+##### Enable or Disable Options Dialogs
+
+To configure the display (or not) of these options, navigate to the Global Functions.
+
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_11.png">
+
+Options are set to be shown by default, but if you don’t want them to be shown in your bot flow just type ‘off’ value for the 'enableOptions' variable:
+
+<table>
+<thead>
+ <tr>
+ <th>Variable Name</th>
+ <th>Description</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>enableOptions</td>
+ <td>If you want to display the Product or Service options to your customer, set this to "on". Otherwise, set to “off”. </td>
+ </tr>
+ <tr>
+ <td>The following are for web client users only. ABC and SMS will be shown automatically.</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>manualGallery</td>
+ <td>If you want to manually populate the content for this gallery, set this to “on”. If you’d like to dynamically populate your products or services using an API (currently set to Shopify), set this to “off”.</td>
+ </tr>
+ <tr>
+ <td>galleryWebOptionsView</td>
+ <td>If you’d like to display your content as a scrolling gallery, set this to “on”. If you’d prefer to use a button tile, set this to “off”.</td>
+ </tr>
+ </tbody>
+</table>
+
+
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_12.png"><img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_13.png">
+
+
+##### Configure Options Dialogs
 
 Each of the Options dialogs are displaying a number of products or services to the user and, based on their selection, setting the result to a variable called **selectedProduct**. When you add your own products and services to these interactions, be sure to configure the Conditions and Patterns so that your products and services will be matched and sent to the variable.
 
@@ -133,27 +186,11 @@ If you are supporting a web client and want to show your options as a button til
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_6.png">
 
-#### Global Functions
-
-As mentioned previously, there are some variables that must be configured to get the most out of this template. Click on the "Global Functions" button to access all the Global functions & variables to be configured.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png">
-
-**Channels**
-
-The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the ABC or SMS option dialogs appear, you can set the channel variable to the following:
-
-//var channel = botContext.getChannel(); // use this by default
-
-var channel = "CustomContext"; // set this to "CustomContext" for ABC or "sms" for SMS
-
-botContext.printDebugMessage("=====> USER CHANNEL IS: " + channel);
-
-setVariable('channel', channel);
-
-**Agent Escalation**
+#### Agent Escalation Integration
 
 If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a Liveperson Agent.
+
+In Global Functions, customize the following values:
 
 <table>
 <thead>
@@ -179,9 +216,11 @@ If the user requests an agent or if they reach the max invalid attempts on email
 </table>
 
 
-**Email Integration**
+#### Email Integration
 
-The Send to Email integration is enabled by default. If you would like to use this, modify the following values.
+The Send to Email integration is enabled by default. 
+
+If you would like to use this, modify the following values in Global Functions:
 
 <table>
 <thead>
@@ -215,9 +254,9 @@ The Send to Email integration is enabled by default. If you would like to use th
 </table>
 
 
-**SMS Integration**
+#### SMS Integration
 
-If you are going to use the SMS integration instead of email, setup your Twilio account information. 
+If you are going to use the SMS integration instead of email, setup your Twilio account information in the Global Functions.
 
 <table>
 <thead>
@@ -259,7 +298,7 @@ If you are going to use the SMS integration instead of email, setup your Twilio 
 
 You can find both your account SID and auth token in the[ Twilio Console](https://www.twilio.com/console) after[ signing up for a free Twilio trial account](http://twilio.com/try-twilio).  [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account) 
 
-**How to generate a Bearer Token**
+##### How to generate a Bearer Token
 
 In order to use the Twilio API, the standard Account SID and Auth Token are not enough. A Bearer token must be generated by calling the API using Postman once.
 
@@ -291,57 +330,13 @@ When this has been set up in Postman, hit Send. This will hit the API, sending a
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_10.png">
 
-**Product and Services - Options modification.**
-
-Your lead gen bot can display a list or gallery of product/service options which your customer can choose from. These can be turned on or off depending on your needs in the Global Functions.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_11.png">
-
-Options are set to be shown by default, but If you don’t want them to be shown in your bot flow just type ‘off’ value for 'enableOptions' variable:
-
-<table>
-<thead>
- <tr>
- <th>Variable Name</th>
- <th>Description</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>enableOptions</td>
- <td>If you want to display the Product or Service options to your customer, set this to "on". Otherwise, set to “off”. </td>
- </tr>
- <tr>
- <td>The following are for web client users only. ABC and SMS will be shown automatically.</td>
- <td></td>
- </tr>
- <tr>
- <td>manualGallery</td>
- <td>If you want to manually populate the content for this gallery, set this to “on”. If you’d like to dynamically populate your products or services using an API (currently set to Shopify), set this to “off”.</td>
- </tr>
- <tr>
- <td>galleryWebOptionsView</td>
- <td>If you’d like to display your content as a scrolling gallery, set this to “on”. If you’d prefer to use a button tile, set this to “off”.</td>
- </tr>
- </tbody>
-</table>
-
-
-<table>
- <tr>
- <td>Example of the Web Options Gallery</td>
- <td>Example Button Tile</td>
- </tr>
-</table>
-
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_12.png"><img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_13.png">
-
-**Shopify integration settings.**
+#### Shopify Integration
 
 You can populate the **Options for Web Gallery API** dialog with products from your Shopify store. 
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_14.png">
+
+In the Global Functions, edit the following values:
 
 <table>
 <thead>
@@ -367,6 +362,4 @@ https://SHOPIFY_API_KEY:SHOPIFY_API_SECRET@STORE_DOMAIN/ENDPOINT</td>
  </tbody>
 </table>
 
-
-More info how to generate a Shopify Access Token is described [here](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
-
+More info on how to generate a Shopify Access Token is described [here](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
