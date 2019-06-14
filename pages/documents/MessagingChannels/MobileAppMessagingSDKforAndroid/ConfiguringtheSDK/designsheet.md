@@ -2,13 +2,14 @@
 pagename: Attributes Design Sheet
 redirect_from:
   - android-attributes-designsheet.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Customization and Branding
+subfoldername: SDK Attributes
 order: 170
-permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
+permalink: mobile-app-messaging-sdk-for-android-sdk-attributes-attributes-design-sheet.html
 indicator: messaging
 ---
 

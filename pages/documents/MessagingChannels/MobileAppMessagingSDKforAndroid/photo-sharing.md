@@ -1,5 +1,5 @@
 ---
-pagename: Photo and file sharing
+pagename: Photo Sharing
 redirect_from:
   - android-photo-sharing.html
 Keywords:
@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Advanced Features
 
 order: 285
-permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html
 
 indicator: messaging
 ---

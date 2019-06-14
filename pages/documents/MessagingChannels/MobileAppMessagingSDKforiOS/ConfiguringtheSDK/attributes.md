@@ -1605,23 +1605,11 @@ Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 
-<div style="float: left; width: 45%;height: 50px;">
-   <ul>
-      <li><b>Type:</b> UIImage</li>
-      <li><b>Default value:</b> SDK bundle sendMessageIcon Icon</li>
-   </ul>
-  
-</div>
+* **Type:** UIImage
+* **Default value:** SDK bundle sendMessageIcon Icon
 
-<div style="float: right; width: 55%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
-   </figure>
-</div>
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+<img src="img/DefaultSendButton.png" alt="DefaultSendButton">
+ 
  
 
 #### isSendMessageButtonInTextMode  

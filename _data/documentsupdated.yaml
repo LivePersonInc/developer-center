@@ -625,9 +625,8 @@
       - subpagename: Callbacks Index
 
 
-    - pagename: Customization and Branding
+    - pagename: SDK Attributes
       subpages:
-      - subpagename: Customizing the SDK
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
@@ -638,7 +637,8 @@
       - subpagename: Override SDK Strings
     - pagename: Advanced Features
       subpages:
-      - subpagename: Photo and file sharing
+      - subpagename: Photo Sharing
+      - subpagename: File Sharing
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
       - subpagename: Campaigns for Mobile App Messaging
