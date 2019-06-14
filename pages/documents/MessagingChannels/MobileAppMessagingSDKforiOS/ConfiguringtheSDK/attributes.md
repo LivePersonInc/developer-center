@@ -23,7 +23,7 @@ The goal of the following document is to enumerate the different fields controll
 When using `getAssignedAgent` method, lets you get assigned agents from active conversations only, or from the last closed conversation in case there is no active conversation. If no assigned agent is available, this method returns nil. 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 --- 
 
@@ -33,7 +33,7 @@ When using `getAssignedAgent` method, lets you get assigned agents from active c
 Maximum time frame for recording audio message (in seconds). 
 
    - **Type:** TimeInterval (Double)
-   - **Default:** 120 
+   - **Default value:** 120 
 
 
 
@@ -42,7 +42,7 @@ When set to **true**, the audio sharing features gets enabled.
 
 
    - **Type:** Bool
-   - **Default:** false (disabled)
+   - **Default value:** false (disabled)
 
 
 
@@ -51,7 +51,7 @@ Number representing how many audio files saved on the disk. Exceeding the max va
 
 
    - **Type:** Int
-   - **Default:** 20
+   - **Default value:** 20
 
 ---  
 
@@ -61,7 +61,7 @@ Number representing how many audio files saved on the disk. Exceeding the max va
 The brand name will be shown as a title on toolbar when there is no active conversation.  
 
    - **Type:** String
-   - **Default:** "" (Empty String) 
+   - **Default value:** "" (Empty String) 
 
 
  
@@ -70,7 +70,7 @@ The brand name will be shown as a title on toolbar when there is no active conve
 Color code for the entire view background. 
 
    - **Type:** UIColor
-   - **Default:** UIColor.white 
+   - **Default value:** UIColor.white 
 
 
  
@@ -81,7 +81,7 @@ Custom font name for conversation feed, which affects all messages, timestamps a
 <div style="float: left; width: 35%;height: 140px;">
    <ul>
       <li><b>Type:</b> String?</li>
-      <li><b>Default:</b> nil</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div>
 
@@ -102,7 +102,7 @@ Custom font name for all non conversation feed controls. Such as: Buttons, Alert
 <div style="float: left; width: 35%;height: 69px;">
    <ul>
       <li><b>Type:</b> String?</li>
-      <li><b>Default:</b> nil</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div>
 
@@ -124,7 +124,7 @@ Array of images for creating the custom refresh controller that loops the images
 <div style="float: left; width: 35%;height: 136px;">
    <ul>
       <li><b>Type:</b> &#060;ArrayUIImage&#062;?</li>
-      <li><b>Default:</b> nil</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div>
 
@@ -143,14 +143,14 @@ Array of images for creating the custom refresh controller that loops the images
 Custom refresh controller speed animation define the full images loop time. Smaller values create high speed animation.
 
    - **Type:** Float<UIImage>
-   - **Default:** 2 
+   - **Default value:** 2 
 
 
 #### conversationBackgroundPortraitImage  
 When not nil, use this attribute as the conversation portrait background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
 
    - **Type:** UIImage;
-   - **Default:**  nil
+   - **Default value:**  nil
 
 
 
@@ -158,14 +158,14 @@ When not nil, use this attribute as the conversation portrait background image. 
 When not nil, use this attibute as the conversation landscape background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
 
    - **Type:** UIImage;
-   - **Default:**  nil
+   - **Default value:**  nil
 
 
 #### conversationBackgroundImageContentMode  
 Defines the content mode of the conversation background image.  
 
    - **Type:** UIViewContentMode;
-   - **Default:** scaleToFill 
+   - **Default value:** scaleToFill 
 
 
 
@@ -179,7 +179,7 @@ Color code for the background of the connection status bar while connecting.
 <div style="float: left; width: 35%;height: 34px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #f5f5f5f2</li>
+      <li><b>Default value:</b> #f5f5f5f2</li>
    </ul>
 </div>
 
@@ -202,7 +202,7 @@ Color code for the text of the connection status bar while connecting.
 <div style="float: left; width: 35%;height: 34px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #46474a</li>
+      <li><b>Default value:</b> #46474a</li>
    </ul>
 </div>
 
@@ -225,7 +225,7 @@ Color code for the background of the connection status bar when connection faile
 <div style="float: left; width: 35%;height: 37px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #000000cc</li>
+      <li><b>Default value:</b> #000000cc</li>
    </ul>
 </div>
 
@@ -247,7 +247,7 @@ Color code for the text of the connection status bar when connection failed.
 <div style="float: left; width: 35%;height: 37px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -273,7 +273,7 @@ Color code for the text of the controller bubble.
 <div style="float: left; width: 35%;height: 90px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #5b5c5e</li>
+      <li><b>Default value:</b> #5b5c5e</li>
    </ul>
 </div>
 
@@ -298,7 +298,7 @@ Color code for the text of the controller bubble.
 Number of conversations to show in advance. 
 
    - **Type:** UInt
-   - **Default:** 2 
+   - **Default value:** 2 
 
 
 
@@ -307,7 +307,7 @@ Number of conversations to show in advance.
 Upon SDK initialization, all closed conversations with an end date older than X months get deleted from the database. Setting 0 deletes all closed conversations. 
 
    - **Type:** UInt
-   - **Default:** 13 
+   - **Default value:** 13 
 
 
 
@@ -316,7 +316,7 @@ Upon SDK initialization, all closed conversations with an end date older than X 
 Maximum number of minutes to send the message. 
 
    - **Type:** UInt
-   - **Default:** 60 
+   - **Default value:** 60 
 
 
 
@@ -327,7 +327,7 @@ Conversation separator text and line color.
 <div style="float: left; width: 35%;height: 52px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black</li>
+      <li><b>Default value:</b> UIColor.black</li>
    </ul>
 </div>
 
@@ -348,7 +348,7 @@ Toggle conversation separator text message when conversation resolved from agent
 <div style="float: left; width: 35%;height: 62px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> true</li>
+      <li><b>Default value:</b> true</li>
    </ul>
 </div>
 
@@ -370,7 +370,7 @@ Toggle conversation separator line when conversation resolved from agent or cons
 <div style="float: left; width: 35%;height: 62px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> true</li>
+      <li><b>Default value:</b> true</li>
    </ul>
 </div>
 
@@ -391,7 +391,7 @@ Define the conversation closed separator font size.
 <div style="float: left; width: 35%;height: 79px;">
    <ul>
       <li><b>Type:</b> UIFontTextStyle</li>
-      <li><b>Default:</b> UIFontTextStyle.caption1</li>
+      <li><b>Default value:</b> UIFontTextStyle.caption1</li>
    </ul>
 </div>
 
@@ -413,7 +413,7 @@ Define the conversation Closed label to separator line padding.
 <div style="float: left; width: 35%;height: 109px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 7</li>
+      <li><b>Default value:</b> 7</li>
    </ul>
 </div>
 
@@ -434,7 +434,7 @@ Custom font name for conversation closed separator. Fonts that are not part of t
 <div style="float: left; width: 35%;height: 79px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 7</li>
+      <li><b>Default value:</b> 7</li>
    </ul>
 </div>
 
@@ -456,7 +456,7 @@ Define the conversation separator view bottom padding.
 <div style="float: left; width: 35%;height: 62px;">
    <ul>
       <li><b>Type:</b> String</li>
-      <li><b>Default:</b> nil</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div>
 
@@ -478,7 +478,7 @@ Define the conversation Closed Separator Top padding.
 <div style="float: left; width: 35%;height: 108px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 5</li>
+      <li><b>Default value:</b> 5</li>
    </ul>
 </div>
 
@@ -498,7 +498,7 @@ Define the conversation Closed Separator Top padding.
 Toggle vibration sound when a remote user sends a new message.
 
    - **Type:** Bool
-   - **Default:** false 
+   - **Default value:** false 
 
 
 
@@ -507,7 +507,7 @@ Toggle vibration sound when a remote user sends a new message.
 If true, show agent is typing indicator in selected position and accessibility will announce when agent is typing a message to the consumer. If false, will not show any indication, and will not announce when agent is typing a message. 
 
    - **Type:** Bool
-   - **Default:**  true 
+   - **Default value:**  true 
 
 
 
@@ -516,7 +516,7 @@ If true, show agent is typing indicator in selected position and accessibility w
 If true, shows agent is typing indicator in a message bubble. If false, show indicator under Agent label in navigator bar. if announceAgentTyping is false, will not show any "is typing" indicator regardless of current value. 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 --- 
 
@@ -526,7 +526,7 @@ If true, shows agent is typing indicator in a message bubble. If false, show ind
 When set to **true**, you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
 
    - **Type:** Bool
-   - **Default:** false 
+   - **Default value:** false 
 
  
 
@@ -534,7 +534,7 @@ When set to **true**, you can control which part of the text to mask. All masked
 When set to **true**, you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
 
    - **Type:** Bool
-   - **Default:** false 
+   - **Default value:** false 
 
  
 
@@ -544,7 +544,7 @@ A regular expression string that lets you can control which part of the text to 
 The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. 
 
    - **Type:** String
-   - **Default:** "" (Empty String) - no regex
+   - **Default value:** "" (Empty String) - no regex
 
 
 
@@ -554,7 +554,7 @@ A regular expression string that lets you can control which part of the text to 
 The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.  
 
    - **Type:** String
-   - **Default:** "" (Empty String) - no regex
+   - **Default value:** "" (Empty String) - no regex
 
 
 --- 
@@ -566,7 +566,7 @@ The regular expression patterns and behavior are based on Perl's regular express
 Custom formatting for date string (day, year..), for example, 'd MMM'. If not defined, one of the default styles will be used (see timestamps formatting). 
 
    - **Type:** String?
-   - **Default:** nil 
+   - **Default value:** nil 
 
 
 
@@ -574,7 +574,7 @@ Custom formatting for date string (day, year..), for example, 'd MMM'. If not de
 Custom formatting for time string (hours, lpDateTimeFormat minutes..), for example, 'hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). 
 
    - **Type:** String?
-   - **Default:** nil 
+   - **Default value:** nil 
 
 
 
@@ -583,7 +583,7 @@ Custom formatting for date and time string, for example, 'EEEE MM/dd/YY hh:mm a'
      
 
    - **Type:** String?
-   - **Default:** nil 
+   - **Default value:** nil 
 
 --- 
 
@@ -596,7 +596,7 @@ Color code for date separator title background color.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -617,7 +617,7 @@ Color code for date separator text color.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #46474A</li>
+      <li><b>Default value:</b> #46474A</li>
    </ul>
 </div>
 
@@ -638,7 +638,7 @@ Color code for date separator line background color.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.clear</li>
+      <li><b>Default value:</b> UIColor.clear</li>
    </ul>
 </div>
 
@@ -659,7 +659,7 @@ Color code for date separator background color.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #FFFFFF</li>
+      <li><b>Default value:</b> #FFFFFF</li>
    </ul>
 </div>
 
@@ -680,7 +680,7 @@ Define the Date Separator font text style.
  <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIFontTextStyle</li>
-      <li><b>Default:</b> UIFontTextStyle.footnote</li>
+      <li><b>Default value:</b> UIFontTextStyle.footnote</li>
    </ul>
 </div>
 
@@ -701,7 +701,7 @@ Custom font name for Timestamp. Fonts that are not part of the iOS families, mus
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> String</li>
-      <li><b>Default:</b> nil</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div>
 
@@ -722,7 +722,7 @@ Define the Date Separator Top padding.
 <div style="float: left; width: 35%;height: 78px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 0</li>
+      <li><b>Default value:</b> 0</li>
    </ul>
 </div>
 
@@ -743,7 +743,7 @@ Define the Date Separator bottom padding.
 <div style="float: left; width: 35%;height: 78px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 0</li>
+      <li><b>Default value:</b> 0</li>
    </ul>
 </div>
 
@@ -767,7 +767,7 @@ Define the Date Separator bottom padding.
 Checkmark visibility of the following options (type CheckmarksState): SentOnly - Show checkmarks for only Sent messages. SentAndAccepted - Show checkmarks for only Sent and Accepted messages. All - Show checkmarks for Sent, Accepted and Read messages. 
 
    - **Type:** CheckmarksState(Integer Enum)
-   - **Default:** CheckmarksState.All 
+   - **Default value:** CheckmarksState.All 
 
 #### checkmarkReadColor  
 Color of checkmark indication signs of Read messages. 
@@ -775,7 +775,7 @@ Color of checkmark indication signs of Read messages.
 <div style="float: left; width: 35%;height: 75px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #004DC9 </li>
+      <li><b>Default value:</b> #004DC9 </li>
    </ul>
 </div>
 
@@ -797,7 +797,7 @@ Color of checkmark indication signs of Distributed messages.
 <div style="float: left; width: 35%;height: 70px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #5B5C5E </li>
+      <li><b>Default value:</b> #5B5C5E </li>
    </ul>
 </div>
 
@@ -819,7 +819,7 @@ Color of checkmark indication signs of Sent messages.
 <div style="float: left; width: 35%;height: 70px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #5B5C5E </li>
+      <li><b>Default value:</b> #5B5C5E </li>
    </ul>
 </div>
 
@@ -841,7 +841,7 @@ Two options for read indication: Read Receipt with Text Mode Read. Receipt with 
 <div style="float: left; width: 35%;height: 156px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> true </li>
+      <li><b>Default value:</b> true </li>
    </ul>
 </div>
 
@@ -860,10 +860,10 @@ Two options for read indication: Read Receipt with Text Mode Read. Receipt with 
 #### messageStatusNumericTimestampOnly  
 When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'   
 
-<div style="float: left; width: 35%;height: 530px;">
+<div style="float: left; width: 35%;height: 515px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false </li>
+      <li><b>Default value:</b> false </li>
    </ul>
 </div>
 
@@ -888,7 +888,7 @@ Display duration of the local notification in seconds.  When in VoiceOver mode i
 Examples: TimeToRespond notification, local notification, etc.
 
    - **Type:** Double
-   - **Default:**  3 (60 when in VoiceOver mode)
+   - **Default value:**  3 (60 when in VoiceOver mode)
 
 --- 
 
@@ -898,7 +898,7 @@ Examples: TimeToRespond notification, local notification, etc.
 Enable or disable link preview feature. If disabled, user will not see site's link preview or link preview.  
 
    - **Type:** Bool
-   - **Default:** true
+   - **Default value:** true
 
 
 
@@ -906,14 +906,14 @@ Enable or disable link preview feature. If disabled, user will not see site's li
 Color code for the background of the link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default:** UIColor.white 
+   - **Default value:** UIColor.white 
 
 
 #### linkPreviewTitleTextColor
 Color code for the title text inside link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default:** UIColor.black  
+   - **Default value:** UIColor.black  
 
 
 
@@ -921,7 +921,7 @@ Color code for the title text inside link preview area inside cell.
 Color code for the description text inside link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default:** #5B5C5E  
+   - **Default value:** #5B5C5E  
 
 
 
@@ -929,7 +929,7 @@ Color code for the description text inside link preview area inside cell.
 Color code for the description site name link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default:** #E2E3E3
+   - **Default value:** #E2E3E3
 
 
 
@@ -937,7 +937,7 @@ Color code for the description site name link preview area inside cell.
 Double number for the outline width of link preview area inside cell.
 
    - **Type:** Double
-   - **Default:** 1.0  
+   - **Default value:** 1.0  
 
 
 
@@ -945,7 +945,7 @@ Double number for the outline width of link preview area inside cell.
 Refers to the style in which the link preview cell will be displayed.
 
    - **Type:** LPUrlPreviewStyle
-   - **Default:** LPUrlPreviewStyle.slim  
+   - **Default value:** LPUrlPreviewStyle.slim  
 
 
 <div style="float: left; width: 35%;height: 250px;">
@@ -971,7 +971,7 @@ Refers to the style in which the link preview cell will be displayed.
 Color code for the description site name link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default:**  
+   - **Default value:**  
 
 
 #### urlRealTimePreviewBackgroundColor 
@@ -980,7 +980,7 @@ The background color of the url real time preview.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -1003,7 +1003,7 @@ The border color of the url real time preview.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> </li>
+      <li><b>Default value:</b> </li>
    </ul>
 </div>
 
@@ -1025,7 +1025,7 @@ The border width of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> </li>
+      <li><b>Default value:</b> </li>
    </ul>
 </div>
 
@@ -1048,7 +1048,7 @@ The title text color of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> </li>
+      <li><b>Default value:</b> </li>
    </ul>
 </div>
 
@@ -1070,7 +1070,7 @@ The description text color of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> </li>
+      <li><b>Default value:</b> </li>
    </ul>
 </div>
 
@@ -1091,7 +1091,7 @@ The description text color of the url real time preview.
 The urlPreview attribute also uses non-OG tags to parse urls instead of using only OG tags if useNonOGTagsForLinkPreview is true.
 
    - **Type:** Bool
-   - **Default:**  true
+   - **Default value:**  true
 
 ---   
 
@@ -1101,7 +1101,7 @@ The urlPreview attribute also uses non-OG tags to parse urls instead of using on
 Country code: When it is not nil, it will be combined with 'language' ("language_country", for example: en_US) and used instead of device default locale when formatting date and time. If no value is provided, the SDK will use the country according to the device's locale.  
 
    - **Type:** String?
-   - **Default:** nil 
+   - **Default value:** nil 
 
 
 
@@ -1115,7 +1115,7 @@ The LPLanguage enum contains all languages supported by the MessagingSDK, and af
 2. Combined with 'country' ("language_country", for example: en_US) and used instead of default device locale when formatting time and date. If no value is provided, the SDK uses the device's language as default. 
 
    - **Type:** LPLanguage
-   - **Default:** DeviceLanguage 
+   - **Default value:** DeviceLanguage 
 
 --- 
 
@@ -1125,7 +1125,7 @@ The LPLanguage enum contains all languages supported by the MessagingSDK, and af
 Background color of navigation bar in conversation screen. 
 
    - **Type:** UIColor
-   - **Default:** #0362AC 
+   - **Default value:** #0362AC 
 
 
 
@@ -1133,7 +1133,7 @@ Background color of navigation bar in conversation screen.
 Navigation title color in conversation screen. 
 
    - **Type:** UIColor
-   - **Default:** #FFFFFF  
+   - **Default value:** #FFFFFF  
 
 
 
@@ -1142,7 +1142,7 @@ Status bar style in conversation screen.
 
 
    - **Type:** UIStatusBarStyle
-   - **Default:** .LightContent 
+   - **Default value:** .LightContent 
 
 ---  
 
@@ -1152,7 +1152,7 @@ Status bar style in conversation screen.
 True - Enables Photo Sharing feature, False - Disables Photo Sharing. 
 
    - **Type:** Bool
-   - **Default:**  false
+   - **Default value:**  false
 
 
 
@@ -1161,7 +1161,7 @@ True - Enables Photo Sharing feature, False - Disables Photo Sharing.
 This number represents how many files will be saved on the disk. Exceeding files are deleted when the app closes. 
 
    - **Type:** Int
-   - **Default:** 20 
+   - **Default value:** 20 
 
 
 
@@ -1172,7 +1172,7 @@ Photo Sharing menu background color.
 <div style="float: left; width: 35%;height: 165px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #0362AC</li>
+      <li><b>Default value:</b> #0362AC</li>
    </ul>
 </div>
 
@@ -1195,7 +1195,7 @@ Photo Sharing menu buttons background color.
 <div style="float: left; width: 35%;height: 165px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -1218,7 +1218,7 @@ Photo Sharing menu buttons tint color.
 <div style="float: left; width: 35%;height: 165px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #0362AC</li>
+      <li><b>Default value:</b> #0362AC</li>
    </ul>
 </div>
 
@@ -1241,7 +1241,7 @@ Photo Sharing menu buttons text color.
 <div style="float: left; width: 35%;height: 165px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -1264,7 +1264,7 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 <div style="float: left; width: 35%;height: 75px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #0362AC</li>
+      <li><b>Default value:</b> #0362AC</li>
    </ul>
 </div>
 
@@ -1287,7 +1287,7 @@ Photo Sharing Camera button color in disabled mode in the conversation screen. W
 <div style="float: left; width: 35%;height: 75px">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #8B8A8F</li>
+      <li><b>Default value:</b> #8B8A8F</li>
    </ul>
 </div>
 
@@ -1310,7 +1310,7 @@ Radial loader fill color.
 <div style="float: left; width: 35%;height: 70px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor(white: 0.0, alpha: 0.5)</li>
+      <li><b>Default value:</b> UIColor(white: 0.0, alpha: 0.5)</li>
    </ul>
 </div>
 
@@ -1333,7 +1333,7 @@ Radial loader progress color.
 <div style="float: left; width: 35%;height: 70px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white </li>
+      <li><b>Default value:</b> UIColor.white </li>
    </ul>
 </div>
 
@@ -1355,7 +1355,7 @@ Radial loader progress background color.
 <div style="float: left; width: 35%;height: 85px;padding-bottom: 10px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.lightGray </li>
+      <li><b>Default value:</b> UIColor.lightGray </li>
    </ul>
    
 </div>
@@ -1379,7 +1379,7 @@ Radial loader progress background color.
 Distance between the bottom and top edges of the button to the bottom and top edges of the text.
 
    - **Type:** CGFloat
-   - **Default:** 10.0 
+   - **Default value:** 10.0 
 
 
 
@@ -1387,7 +1387,7 @@ Distance between the bottom and top edges of the button to the bottom and top ed
 Distance between the right and left edges of the button to the right and left edges of the text. 
 
    - **Type:** CGFloat
-   - **Default:** 15.0 
+   - **Default value:** 15.0 
 
 
 
@@ -1395,7 +1395,7 @@ Distance between the right and left edges of the button to the right and left ed
 Vertical padding between quick reply buttons. 
 
    - **Type:** CGFloat
-   - **Default:** 10.0 
+   - **Default value:** 10.0 
 
 
 
@@ -1403,7 +1403,7 @@ Vertical padding between quick reply buttons.
 Horizontal padding between quick reply buttons. 
 
    - **Type:** CGFloat
-   - **Default:** 10.0 
+   - **Default value:** 10.0 
 
 
 
@@ -1411,7 +1411,7 @@ Horizontal padding between quick reply buttons.
 Border size of Quick Reply buttons. 
 
    - **Type:** CGFloat
-   - **Default:** 1.0 
+   - **Default value:** 1.0 
 
 --- 
 
@@ -1421,7 +1421,7 @@ Border size of Quick Reply buttons.
 Back button color in secure form screen. 
 
    - **Type:** UIColor
-   - **Default:** UIColor.black 
+   - **Default value:** UIColor.black 
 
  
 
@@ -1429,7 +1429,7 @@ Back button color in secure form screen.
 Should display status bar of the secure form screen in Light Content Mode (UIStatusBarStyle).
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -1437,7 +1437,7 @@ Should display status bar of the secure form screen in Light Content Mode (UISta
 Background color of navigation bar in secure form screen. 
 
    - **Type:** UIColor
-   - **Default:** #0362AC 
+   - **Default value:** #0362AC 
 
 
 
@@ -1445,7 +1445,7 @@ Background color of navigation bar in secure form screen.
 Navigation title color in secure form screen.
 
    - **Type:** UIColor
-   - **Default:** UIColor.white 
+   - **Default value:** UIColor.white 
 
 
 
@@ -1453,7 +1453,7 @@ Navigation title color in secure form screen.
 Secure form bubble background color.
 
    - **Type:** UIColor
-   - **Default:** UIColor.white 
+   - **Default value:** UIColor.white 
 
 
 
@@ -1461,7 +1461,7 @@ Secure form bubble background color.
 Secure form bubble border color.
 
    - **Type:** UIColor
-   - **Default:** #d4d4d5 
+   - **Default value:** #d4d4d5 
 
 
 
@@ -1469,7 +1469,7 @@ Secure form bubble border color.
 Secure form bubble border width in pixels.
 
    - **Type:** Double
-   - **Default:**  2.0
+   - **Default value:**  2.0
 
 
 
@@ -1477,7 +1477,7 @@ Secure form bubble border width in pixels.
 Secure form bubble form title color.
 
    - **Type:** UIColor
-   - **Default:** UIColor.black 
+   - **Default value:** UIColor.black 
 
 
 
@@ -1485,7 +1485,7 @@ Secure form bubble form title color.
 Secure form bubble fill form text button color.
 
    - **Type:** UIColor
-   - **Default:** #5b5c5e  
+   - **Default value:** #5b5c5e  
 
 
 
@@ -1493,7 +1493,7 @@ Secure form bubble fill form text button color.
 Secure form bubble fill form text button color.
 
    - **Type:** UIColor
-   - **Default:** #004dc9 
+   - **Default value:** #004dc9 
 
 
 
@@ -1501,7 +1501,7 @@ Secure form bubble fill form text button color.
 Secure form bubble fill form button background color.
 
    - **Type:** UIColor
-   - **Default:**  UIColor.clear
+   - **Default value:**  UIColor.clear
 
 
 
@@ -1509,7 +1509,7 @@ Secure form bubble fill form button background color.
 Secure form bubble form image tint color.
 
    - **Type:** UIColor
-   - **Default:** #004dc9 
+   - **Default value:** #004dc9 
 
 
 
@@ -1519,7 +1519,7 @@ Secure form bubble form image tint color.
 <div style="float: left; width: 35%;height: 264px;">
    <ul>
       <li><b>Type:</b> String</li>
-      <li><b>Default:</b> Helvetica</li>
+      <li><b>Default value:</b> Helvetica</li>
    </ul>
 </div>
 
@@ -1541,7 +1541,7 @@ Secure form flag for hiding the secure form logo in the top of the form.
 <div style="float: left; width: 35%;height: 240px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false</li>
+      <li><b>Default value:</b> false</li>
    </ul>
 </div>
 
@@ -1563,7 +1563,7 @@ Secure form loading indicator color while loading form before opening.
 <div style="float: left; width: 35%;height: 155px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #46474a</li>
+      <li><b>Default value:</b> #46474a</li>
    </ul>
 </div>
 
@@ -1588,7 +1588,7 @@ Secure form loading indicator color while loading form before opening.
 Color code for Send and Camera (of Photo Sharing) buttons in disabled mode. 
 
    - **Type:** UIColor
-   - **Default:** #AAAAAA 
+   - **Default value:** #AAAAAA 
 
 
 
@@ -1597,7 +1597,7 @@ Color code for Send and Camera (of Photo Sharing) buttons in disabled mode.
 Color code for Send and Camera (of Photo Sharing) buttons in disabled mode. 
 
    - **Type:** UIColor
-   - **Default:** #0362AC 
+   - **Default value:** #0362AC 
 
 
 
@@ -1608,7 +1608,7 @@ Send button Image in the conversation screen. The custom image changes only if `
 <div style="float: left; width: 45%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIImage</li>
-      <li><b>Default:</b> SDK bundle sendMessageIcon Icon</li>
+      <li><b>Default value:</b> SDK bundle sendMessageIcon Icon</li>
    </ul>
   
 </div>
@@ -1628,7 +1628,7 @@ Send button Image in the conversation screen. The custom image changes only if `
 You have two options for the send message button mode: **text mode** (taken from localized resources) and **icon mode**.  
  
    - **Type:** Bool
-   - **Default:** text mode 
+   - **Default value:** text mode 
 
 --- 
 
@@ -1638,7 +1638,7 @@ You have two options for the send message button mode: **text mode** (taken from
 Enable or Disable toggle for Structured Content feature in conversations.
 
    - **Type:** Bool
-   - **Default:** false 
+   - **Default value:** false 
 
 
 
@@ -1646,7 +1646,7 @@ Enable or Disable toggle for Structured Content feature in conversations.
 Structured Content bubble border width in pixels.
 
    - **Type:** Double
-   - **Default:** 0.3 
+   - **Default value:** 0.3 
 
 
 
@@ -1654,7 +1654,7 @@ Structured Content bubble border width in pixels.
 Structured Content bubble border color.
 
    - **Type:** UIColor
-   - **Default:** nil 
+   - **Default value:** nil 
 
 
 
@@ -1662,7 +1662,7 @@ Structured Content bubble border color.
 Structured Content bubble top left corner radius in pixels. 
 
    - **Type:** Float
-   - **Default:** 0.0 
+   - **Default value:** 0.0 
 
 
 
@@ -1670,7 +1670,7 @@ Structured Content bubble top left corner radius in pixels.
 Structured Content bubble top right corner radius in pixels.
 
    - **Type:** Float
-   - **Default:** 0.0 
+   - **Default value:** 0.0 
 
  
 
@@ -1678,7 +1678,7 @@ Structured Content bubble top right corner radius in pixels.
 Structured Content bubble bottom left corner radius in pixels.
 
    - **Type:** Float
-   - **Default:** 0.0  
+   - **Default value:** 0.0  
 
 
 
@@ -1686,7 +1686,7 @@ Structured Content bubble bottom left corner radius in pixels.
 Structured Content bubble bottom right corner radius in pixels.
 
    - **Type:** Float
-   - **Default:** 0.0 
+   - **Default value:** 0.0 
 
 
 
@@ -1694,7 +1694,7 @@ Structured Content bubble bottom right corner radius in pixels.
 Structured Content Latitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must also set `structuredContentMapLongitudeDeltaSpan`. This parameter is used to create an [MKCoordinateSpan](https://developer.apple.com/documentation/mapkit/mkcoordinatespan). 
 
    - **Type:** Double
-   - **Default:** 0.01 
+   - **Default value:** 0.01 
 
  
 
@@ -1702,7 +1702,7 @@ Structured Content Latitude Delta Span. Used to determine which area of the map 
 Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must also set `structuredContentMapLatitudeDeltaDeltaSpan`. This parameter is used to create an [MKCoordinateSpan](https://developer.apple.com/documentation/mapkit/mkcoordinatespan). 
 
    - **Type:** Double
-   - **Default:** 0.01 
+   - **Default value:** 0.01 
 
 --- 
 
@@ -1714,7 +1714,7 @@ Corner radius of the Submit button.
 <div style="float: left; width: 35%;height: 73px;">
    <ul>
       <li><b>Type:</b> Double</li>
-      <li><b>Default:</b> 30 </li>
+      <li><b>Default value:</b> 30 </li>
    </ul>
 </div>
 
@@ -1737,7 +1737,7 @@ Corner radius of the resolution Yes/No buttons.
 <div style="float: left; width: 35%;height: 80px;">
    <ul>
       <li><b>Type:</b> Double</li>
-      <li><b>Default:</b> 25 </li>
+      <li><b>Default value:</b> 25 </li>
    </ul>
 </div>
 
@@ -1759,7 +1759,7 @@ Background color code of the Submit button.
 <div style="float: left; width: 35%;height: 73px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #229A49 </li>
+      <li><b>Default value:</b> #229A49 </li>
    </ul>
 </div>
 
@@ -1780,7 +1780,7 @@ Text color code of the Submit button.
 <div style="float: left; width: 35%;height: 73px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white </li>
+      <li><b>Default value:</b> UIColor.white </li>
    </ul>
 </div>
 
@@ -1802,7 +1802,7 @@ Background Color code of the rating buttons.
 <div style="float: left; width: 35%;height: 64px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #229A49 </li>
+      <li><b>Default value:</b> #229A49 </li>
    </ul>
 </div>
 
@@ -1823,7 +1823,7 @@ Color code for the FCR survey buttons (YES/NO) when selected.
 <div style="float: left; width: 35%;height: 69px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #229A49 </li>
+      <li><b>Default value:</b> #229A49 </li>
    </ul>
 </div>
 
@@ -1845,7 +1845,7 @@ Title text color for all labels.
 <div style="float: left; width: 35%;height: 473px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black </li>
+      <li><b>Default value:</b> UIColor.black </li>
    </ul>
 </div>
 
@@ -1867,7 +1867,7 @@ Hides the FCR survey (YES/NO) question.
 <div style="float: left; width: 35%;height: 69px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false</li>
+      <li><b>Default value:</b> false</li>
    </ul>
 </div>
 
@@ -1889,7 +1889,7 @@ Hides the view of agent avatar and name.
 <div style="float: left; width: 35%;height: 115px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> true</li>
+      <li><b>Default value:</b> true</li>
    </ul>
 </div>
 
@@ -1911,7 +1911,7 @@ Hides the Thank You screen after tapping Submit button.
 <div style="float: left; width: 35%;height: 157px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false</li>
+      <li><b>Default value:</b> false</li>
    </ul>
 </div>
 
@@ -1932,7 +1932,7 @@ Background color of the navigation of the survey.
 <div style="float: left; width: 35%;height: 57px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #229A49</li>
+      <li><b>Default value:</b> #229A49</li>
    </ul>
 </div>
 
@@ -1951,7 +1951,7 @@ Background color of the navigation of the survey.
 Text color of the title in the survey navigation.  
 
    - **Type:** UIColor
-   - **Default:** UIColor.white 
+   - **Default value:** UIColor.white 
 
 
 
@@ -1960,7 +1960,7 @@ Text color of the title in the survey navigation.
 Skip survey button color. 
 
    - **Type:** UIColor
-   - **Default:** UIColor.black 
+   - **Default value:** UIColor.black 
 
 
 
@@ -1969,7 +1969,7 @@ Skip survey button color.
 Allow the UI status bar to take the color of the survey navigation bar color. 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -1978,7 +1978,7 @@ Allow the UI status bar to take the color of the survey navigation bar color.
 Hides the whole survey view and disables it. 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -1987,7 +1987,7 @@ Hides the whole survey view and disables it.
 Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it does not get presented to the user.  
 
    - **Type:** UInt
-   - **Default:** 1440 
+   - **Default value:** 1440 
 
 
 --- 
@@ -2001,7 +2001,7 @@ Color code for the text of the system messages.
 <div style="float: left; width: 45%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black</li>
+      <li><b>Default value:</b> UIColor.black</li>
    </ul>
   
 </div>
@@ -2025,7 +2025,7 @@ Color code for the text of the system messages.
 When set to **true**, the TTR notifications show with off hours.  When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute. 
 
    - **Type:** Bool
-   - **Default:** true  
+   - **Default value:** true  
 
 
 
@@ -2033,7 +2033,7 @@ When set to **true**, the TTR notifications show with off hours.  When the auto 
 Enable or disable shift toaster ('An agent will respond...’).
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -2041,7 +2041,7 @@ Enable or disable shift toaster ('An agent will respond...’).
 Number of seconds before the first Time to Respond (TTR) notification appears. 
 
    - **Type:** Double
-   - **Default:** 10 
+   - **Default value:** 10 
 
 
 
@@ -2051,7 +2051,7 @@ When set to **true**, the timestamp of the TTR notification displays. Otherwise,
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false</li>
+      <li><b>Default value:</b> false</li>
    </ul>
 </div>
 
@@ -2071,7 +2071,7 @@ When set to **true**, the timestamp of the TTR notification displays. Otherwise,
 Controls the TTR frequency, for example, don’t show the TTR more than once in 8 seconds. 
 
    - **Type:** UInt
-   - **Default:** 8 
+   - **Default value:** 8 
 
 
 
@@ -2081,7 +2081,7 @@ When set to **true**, the Urgent button shows in the TTR notification.
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false</li>
+      <li><b>Default value:</b> false</li>
    </ul>
 </div>
 
@@ -2103,7 +2103,7 @@ Enable or disable the off-hours toaster.
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> true</li>
+      <li><b>Default value:</b> true</li>
    </ul>
 </div>
 
@@ -2125,7 +2125,7 @@ Background color for banner.
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #52A742</li>
+      <li><b>Default value:</b> #52A742</li>
    </ul>
 </div>
 
@@ -2147,7 +2147,7 @@ Text color of the banner.
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #52A742</li>
+      <li><b>Default value:</b> #52A742</li>
    </ul>
 </div>
 
@@ -2170,7 +2170,7 @@ Opacity level of the banner background (values: 0.0 - 1.0).
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Double</li>
-      <li><b>Default:</b> 0.8</li>
+      <li><b>Default value:</b> 0.8</li>
    </ul>
 </div>
 
@@ -2190,7 +2190,7 @@ Opacity level of the banner background (values: 0.0 - 1.0).
 Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time). 
 
    - **Type:** String
-   - **Default:** "" (Empty String) 
+   - **Default value:** "" (Empty String) 
 
 --- 
 
@@ -2202,7 +2202,7 @@ Scroll to bottom button background color of the whole button.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black</li>
+      <li><b>Default value:</b> UIColor.black</li>
    </ul>
 </div>
 
@@ -2223,7 +2223,7 @@ Scroll to bottom button text color of the last unread message preview.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -2244,7 +2244,7 @@ Scroll to bottom button unread message badge background color.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #E7242D</li>
+      <li><b>Default value:</b> #E7242D</li>
    </ul>
 </div>
 
@@ -2266,7 +2266,7 @@ Scroll to bottom button unread message badge text color.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -2289,7 +2289,7 @@ Scroll to bottom button arrow tint color.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -2312,7 +2312,7 @@ Unread Messages divider background color.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #F5F5F5</li>
+      <li><b>Default value:</b> #F5F5F5</li>
    </ul>
 </div>
 
@@ -2334,7 +2334,7 @@ Unread Messages divider text color.
 <div style="float: left; width: 35%;height: 71px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #004DC9</li>
+      <li><b>Default value:</b> #004DC9</li>
    </ul>
 </div>
 
@@ -2354,7 +2354,7 @@ Unread Messages divider text color.
 Toggle the mode of the Scroll to bottom button. 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -2364,7 +2364,7 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -2372,7 +2372,7 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom button scrolls to bottom although we can have new messages and don't show the badge at all nor "new message preview." 
 
    - **Type:** Bool
-   - **Default:** true 
+   - **Default value:** true 
 
 
 
@@ -2382,7 +2382,7 @@ Define the corners radius of the unread messages bubble.
 <div style="float: left; width: 35%;height: 120px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8 for all the corners</li>
+      <li><b>Default value:</b> 8 for all the corners</li>
    </ul>
 </div>
 
@@ -2404,7 +2404,7 @@ Define the corner radius for the left top and left bottom of the scroll down ind
 <div style="float: left; width: 35%;height: 120px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 20 for left top and the left bottom corners</li>
+      <li><b>Default value:</b> 20 for left top and the left bottom corners</li>
    </ul>
 </div>
 
@@ -2425,7 +2425,7 @@ Define the corners radius of the unread messages counter inside the scroll down 
 <div style="float: left; width: 35%;height: 69px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 12 for all the corners</li>
+      <li><b>Default value:</b> 12 for all the corners</li>
    </ul>
 </div>
 
@@ -2448,7 +2448,7 @@ Define the corners radius of the unread messages counter inside the scroll down 
 Background color of the remote user’s avatar. 
 
    - **Type:** UIColor
-   - **Default:** #004DC9 
+   - **Default value:** #004DC9 
 
 
 
@@ -2458,7 +2458,7 @@ Define the remote avatar Leading padding (left edge to avatar).
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -2480,7 +2480,7 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -2500,7 +2500,7 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 Icon color of default remoteUser avatar.  
 
    - **Type:** UIColor
-   - **Default:**  #FFFFFF
+   - **Default value:**  #FFFFFF
 
 
 
@@ -2510,7 +2510,7 @@ Default Avatar image of the remote user. When assigned, image disables the `remo
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIImage?</li>
-      <li><b>Default:</b> nil</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div>
 
@@ -2530,7 +2530,7 @@ Default Avatar image of the remote user. When assigned, image disables the `remo
 Set avatar image for the brand, and is an optional UIImage that if set to **nil** a default avatar displays. Image ratio must be 1:1 (square) and at least 50x50 pixels. 
 
    - **Type:** UIImage?
-   - **Default:** nil 
+   - **Default value:** nil 
 
 
 
@@ -2540,7 +2540,7 @@ Background color of agent's default avatar in CSAT.
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #004DC9</li>
+      <li><b>Default value:</b> #004DC9</li>
    </ul>
 </div>
 
@@ -2562,7 +2562,7 @@ Icon color of agent's default avatar in CSAT.
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #FFFFFF</li>
+      <li><b>Default value:</b> #FFFFFF</li>
    </ul>
 </div>
 
@@ -2588,7 +2588,7 @@ User Input TextView container background color.
 <div style="float: left; width: 35%;height: 43px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #F5F5F5</li>
+      <li><b>Default value:</b> #F5F5F5</li>
    </ul>
 </div>
 
@@ -2609,7 +2609,7 @@ User Input TextView corner radius.
 <div style="float: left; width: 35%;height: 43px;">
    <ul>
       <li><b>Type:</b> Double</li>
-      <li><b>Default:</b> 20.0</li>
+      <li><b>Default value:</b> 20.0</li>
    </ul>
 </div>
 
@@ -2635,7 +2635,7 @@ Color code for the background of the remote user's bubble.
 <div style="float: left; width: 35%;padding-bottom: 15px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #004DC9</li>
+      <li><b>Default value:</b> #004DC9</li>
    </ul>
 </div>
 
@@ -2656,7 +2656,7 @@ Color code for the outline color.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #004DC9</li>
+      <li><b>Default value:</b> #004DC9</li>
    </ul>
 </div>
 
@@ -2677,7 +2677,7 @@ Color code for links in the text of the remote user's bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -2697,7 +2697,7 @@ Color code for the text of the remote user's bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -2720,7 +2720,7 @@ Double number for the outline width.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Double</li>
-      <li><b>Default:</b> 2</li>
+      <li><b>Default value:</b> 2</li>
    </ul>
 </div>
 
@@ -2743,7 +2743,7 @@ Color code for the timestamp of the remote user's bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #5B5C5E</li>
+      <li><b>Default value:</b> #5B5C5E</li>
    </ul>
 </div>
 
@@ -2765,7 +2765,7 @@ Color of the remote user typing bubbles animation.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.white</li>
+      <li><b>Default value:</b> UIColor.white</li>
    </ul>
 </div>
 
@@ -2788,7 +2788,7 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 <div style="float: left; width: 35%;height: 150px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black</li>
+      <li><b>Default value:</b> UIColor.black</li>
    </ul>
 </div>
 
@@ -2810,7 +2810,7 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 <div style="float: left; width: 35%;height: 150px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 0.3</li>
+      <li><b>Default value:</b> 0.3</li>
    </ul>
 </div>
 
@@ -2833,7 +2833,7 @@ Top left Radius corner on the Remote bubble. Setting the radius to a value great
 <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -2856,7 +2856,7 @@ Top right Radius corner on the Remote bubble. Setting the radius to a value grea
 <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -2879,7 +2879,7 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -2902,7 +2902,7 @@ Bottom right Radius corner on the Remote bubble. Setting the radius to a value g
 <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -2924,7 +2924,7 @@ Color code for the background of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #EDEDED</li>
+      <li><b>Default value:</b> #EDEDED</li>
    </ul>
 </div>
 
@@ -2947,7 +2947,7 @@ Color code for the outline color.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #EDEDED</li>
+      <li><b>Default value:</b> #EDEDED</li>
    </ul>
 </div>
 
@@ -2969,7 +2969,7 @@ Color code for links in the text of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #0000ee</li>
+      <li><b>Default value:</b> #0000ee</li>
    </ul>
 </div>
 
@@ -2991,7 +2991,7 @@ Color code for the text of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black</li>
+      <li><b>Default value:</b> UIColor.black</li>
    </ul>
 </div>
 
@@ -3015,7 +3015,7 @@ Double number for the outline width.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Double</li>
-      <li><b>Default:</b> 1</li>
+      <li><b>Default value:</b> 1</li>
    </ul>
 </div>
 
@@ -3037,7 +3037,7 @@ Color code for the timestamp of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #5B5C5E</li>
+      <li><b>Default value:</b> #5B5C5E</li>
    </ul>
 </div>
 
@@ -3059,7 +3059,7 @@ Color code for the send status text of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #5B5C5E</li>
+      <li><b>Default value:</b> #5B5C5E</li>
    </ul>
 </div>
 
@@ -3082,7 +3082,7 @@ Color code for the error view text of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #DE0A23</li>
+      <li><b>Default value:</b> #DE0A23</li>
    </ul>
 </div>
 
@@ -3105,7 +3105,7 @@ Color code for the error view border of the visitor bubble.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> #DE0A23</li>
+      <li><b>Default value:</b> #DE0A23</li>
    </ul>
 </div>
 
@@ -3128,7 +3128,7 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 <div style="float: left; width: 35%;height: 150px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default:</b> UIColor.black</li>
+      <li><b>Default value:</b> UIColor.black</li>
    </ul>
 </div>
 
@@ -3150,7 +3150,7 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 <div style="float: left; width: 35%;height: 150px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 0.3</li>
+      <li><b>Default value:</b> 0.3</li>
    </ul>
 </div>
 
@@ -3173,7 +3173,7 @@ Top left Radius corner on the user's bubble. Setting the radius to a value great
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -3196,7 +3196,7 @@ Top right Radius corner on the user's bubble. Setting the radius to a value grea
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -3218,7 +3218,7 @@ Bottom left Radius corner on the user's bubble. Setting the radius to a value gr
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -3241,7 +3241,7 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 8</li>
+      <li><b>Default value:</b> 8</li>
    </ul>
 </div>
 
@@ -3262,7 +3262,7 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 Regular expression for email hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled
 
    - **Type:** String?    
-   - **Default:** nil
+   - **Default value:** nil
 
 
 
@@ -3270,7 +3270,7 @@ Regular expression for email hyperlinks in users messages (consumer and agent). 
 Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
 
    - **Type:** String?  
-   - **Default:** nil
+   - **Default value:** nil
 
 
 
@@ -3279,7 +3279,7 @@ Regular expression for url hyperlinks in users messages (consumer and agent). Th
 Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
 
    - **Type:** String?  
-   - **Default:** nil 
+   - **Default value:** nil 
 
 
 #### bubbleTopPadding
@@ -3288,7 +3288,7 @@ Define the bubble Top Padding.
 <div style="float: left; width: 35%;height: 75px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 10</li>
+      <li><b>Default value:</b> 10</li>
    </ul>
 </div>
 
@@ -3312,7 +3312,7 @@ Define the bubble bottom Padding.
 <div style="float: left; width: 35%;height: 75px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 10</li>
+      <li><b>Default value:</b> 10</li>
    </ul>
 </div>
 
@@ -3335,7 +3335,7 @@ Define the bubble Leading Padding.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 10</li>
+      <li><b>Default value:</b> 10</li>
    </ul>
 </div>
 
@@ -3358,7 +3358,7 @@ Define the bubble Trailing Padding.
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 10</li>
+      <li><b>Default value:</b> 10</li>
    </ul>
 </div>
 
@@ -3381,7 +3381,7 @@ Define the bubble Trailing Padding.
 <div style="float: left; width: 35%;height: 75px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 5</li>
+      <li><b>Default value:</b> 5</li>
    </ul>
 </div>
 
@@ -3403,7 +3403,7 @@ Define the bubble Timestamp Top Padding.
 <div style="float: left; width: 35%;height: 75px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default:</b> 5</li>
+      <li><b>Default value:</b> 5</li>
    </ul>
 </div>
 
@@ -3426,7 +3426,7 @@ When true, user and remote user messages containing one or two emojis will be en
 <div style="float: left; width: 35%;height: 300px;">
    <ul>
       <li><b>Type:</b> Bool</li>
-      <li><b>Default:</b> false</li>
+      <li><b>Default value:</b> false</li>
    </ul>
 </div>
 
@@ -3452,7 +3452,7 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
 <div style="float: left; width: 35%;height: 70px;">
    <ul>
       <li><b>Type:</b> UIImage</li>
-      <li><b>Default:</b> nil </li>
+      <li><b>Default value:</b> nil </li>
    </ul>
 </div>
 

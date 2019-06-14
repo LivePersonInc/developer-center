@@ -369,11 +369,12 @@ You can customize the messaging screen by adding more options to the LPMessaging
 For more details on the different attributes you are able to customize, refer to [Customizing and Branding](consumer-experience-ios-sdk-attributes.html).
 
 ### Customer Experience Survey
+The Customer Experience Survey contains the agent avatar, and by default, the agent's name is empty.  If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image displays in the view.  Also, if the conversation has an assigned agent, the agent's nickName is used.  If no avatar image, then the default avatar image displays with the background and tint color configuration for the agent bubble.
 
+The survey only shows if the CSAT configured to appear according to LPConfig.defaultConfiguration.csatShowSurveyView, the conversation has an assigned agent, or the CSAT wasn't previously submitted.  The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT.  The CSAT gets automatically dismissed if the consumer filled it in on another device.  If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.  
 
-<div class="important">
+**Notes:** 
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-</div>
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -381,13 +382,13 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 }
 ```
 
-**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call `LPMessagingSDK.instance.removeConversation(self.conversationQuery!)`.
+
+You must customize your Customer Experience Survey before initializing a conversation (calling `LPMessagingSDK.instance.showAgentConversation()`).
 
 
-{:.important}
-You must customize your Customer Experience Survey before initializing a conversation (calling **LPMessagingSDK.instance.showAgentConversation()**).
 
-1. Get the object containing the default configurations:
+* Get the object containing the default configurations:
 
    ```swift
    let configuration = LPConfig.defaultConfiguration
@@ -433,10 +434,6 @@ configuration.csatResolutionButtonSelectedColor = UIColor.lightGray
 configuration.csatAllTitlesTextColor = UIColor.lightGray
 configuration.csatNavigationBackgroundColor = UIColor.lightGray
 ```
-
-
-
-
 
 * Hide or don't use the agent avatar and agent name:
 
@@ -497,13 +494,13 @@ Audio Messaging allows consumers to send audio messages to agents.
 
    When the system prompts the user to approve access to the microphone, it displays as part of the alert.
 
-2. Enable the feature:  
+3. Enable the feature:  
 
    `LPConfig.defaultConfiguration.enableAudioSharing`  
 
    By default, the value is *false* (disabled).  
 
-3. Define the max length of an audio message:
+4. Define the max length of an audio message:
 
    `LPConfig.defaultConfiguration.recordingDurationLimit`  
 
@@ -511,13 +508,13 @@ Audio Messaging allows consumers to send audio messages to agents.
    
    The minimum value is 15 seconds; the maximum and the default value is *120* seconds.
 
-4. Define the max number of audio messages saved on the device:  
+5. Define the max number of audio messages saved on the device:  
 
    `LPConfig.defaultConfiguration.maxNumberOfSavedAudioFilesOnDisk`  
 
    The default value is *20*.  
 
-5. Modify and localize the following strings:  
+6. Modify and localize the following strings:  
 
    * **Short tap tooltip**  
 

@@ -48,6 +48,8 @@ public class InitLivePersonProperties{
 }
 ```
 
+The SDK can be initialized once without MonitoringInitParams and then have another initialize call using these params.
+
 
 ### ConsumerProfile
 
@@ -121,6 +123,21 @@ public class ConversationViewParams{
   int mHistoryConversationsMaxDays = -1; //no limit
 }
 ```
+
+* CampaignInfo - Use this object to pass new campaign information to the conversation. The campaign includes Engagement info, which allows the control of the consumer's routing.  The CampaignInfo has three mandatory members:
+
+   * campaignId
+
+   * engagementId
+
+   * engagementContextId
+
+   If constructing CampaignInfo with one of these members as null or empty, the SDK throws a BadArgumentException.
+
+* LPConversationsHistoryStateToDisplay - 
+
+* LPConversationHistoryMaxDaysDateType - 
+
 
 ### LPConversationsHistoryStateToDisplay
 

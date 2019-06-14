@@ -16,7 +16,10 @@ indicator: messaging
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
 _**Note:** for things like Brand name, which is a string, refer to the [string Localization](android-modifying-string.html)._
-### Brand
+
+
+
+### Date Separator
 
 <table class="bigtable">
 <thead>
@@ -26,630 +29,65 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
     <th>Default</th>
     <th>Example</th>
   </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;integer name=&quot;message_receive_icons&quot;&gt;
+ </thead>
+ <tbody>
+ <tr>
+ <td>&lt;dimen name="sticky_timestamp_text_size"&gt;@dimen/small_text_size</dimen></td>
+ <td>Defines the Date Separator font text size.</td>
+ <td><img src="img/android_sticky_timestamp_text_size.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
+ <td>Defines the Date Separator top spacing.</td>
+ <td><img src="img/android_sticky_timestamp_margin_top.png"></td>
+ </tr>
+ 
+ <tr>
+ <td>
+  &lt;color name="enter_message_top_separator_color"&gt;@android:color/darker_gray&lt;/color&gt;</td>
+ <td>Input TextView top border color. The default color is clear.</td>
+ <td><img src="img/android_enter_message_top_separator_color.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;bool name="enter_message_divider_visible"&gt;false&lt;/bool&gt;
 </td>
-    <td>For each message, there are three indicators available: Message sent, Message received, Message read. You can customize the indicators according to your needs, by using a number between 1 and 3:<br>0 - text (sent, delivered etc.) instead of icons<br>1 - Sent only<br>2 - Sent+received<br>3 - Sent+received+read</td>
-  <td></td>
-  <td><img src="img/receiveicons.png" alt="receiveicons"></td>
-  </tr>
-  <tr>
-    <td>&lt;string-array name=&quot;message_receive_text&quot;&gt;
+ <td>Determine if the Enter Message edit text divider is visible or not.</td>
+ <td><img src="img/android_enter_message_divider_visible.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size</dimen>
 </td>
-    <td>If you set 0 in the resource message_receive_icons, you can specify what texts appears for each state. You must have 4 items, in the following order: <br>1st item -message sent<br>2nd item - message delivered<br>3rd item - message read<br>4th item - message not delivered<br>5th item - message sending</td>
-  <td></td>
-  <td><img src="img/receivetext.png" alt="receivetext"></td>
-  </tr>
-  <tr>
-    <td>&lt;bool name=&quot;clear_history_show_confirm_dialog&quot;&gt;
+ <td>Defines the Resolved system message text size.</td>
+ <td><img src="img/android_bubble_system_resolved_text_size.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half</dimen></td>
+ <td>Defines the Resolved system message padding.</td>
+ <td><img src="img/android_bubble_system_resolved_padding.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
 </td>
-    <td>Define if to show confirm dialog before clearing history or not. True by default.</td>
-    <td>true</td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
-
-
-### Brand Message Bubble - the first brand message
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;dimen name=&quot;brand_bubble_stroke_width&quot;&gt;
+ <td>Defines the Resolved system message line spacing.</td>
+ <td><img src="img/android_bubble_system_resolved_line_spacing.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;dimen name="bubble_system_resolved_separator_padding_bottom"&gt;@dimen/margin_half</dimen>
 </td>
-    <td>Int number for the outline width.</td>
-    <td>0dp</td>
-    <td><img src="img/strokewidth.png" alt="strokewidth"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;brand_bubble_stroke_color&quot;&gt;
-</td>
-    <td>Color code for the outline color.</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/strokecolor.png" alt="strokecolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;brand_bubble_message_text_color&quot;&gt;
-</td>
-    <td>Color code for the text of the brand bubble</td>
-    <td>@android:color/white</td>
-    <td><img src="img/textcolor.png" alt="textcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;brand_bubble_message_link_text_color&quot;&gt;
-</td>
-    <td>Color code for links in the text of the brand bubble.</td>
-    <td>@android:color/white</td>
-    <td><img src="img/linktextcolor.png" alt="linktextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;brand_bubble_timestamp_text_color&quot;&gt;
-</td>
-    <td>Color code for the timestamp of the brand bubble.</td>
-    <td>#46474A (dark gray)</td>
-    <td><img src="img/timestamptextcolor.png" alt="timestamptextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;brand_bubble_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the brand bubble.</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/backgroundcolor.png" alt="backgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;brand_logo_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the default brand logo next to the bubble.</td>
-    <td>#007AFF (light blue)</td>
-    <td><img src="img/logobackgroundcolor.png" alt="logobackgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;brand_bubble_padding_right&quot;&gt;</td>
-    <td>Brand's welcome message bubble right padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_brand_bubble_right_padding.png" alt="brand_bubble_right_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;brand_bubble_padding_left&quot;&gt;</td>
-    <td>Brand's welcome message bubble left padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_brand_bubble_left_padding.png" alt="brand_bubble_left_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;brand_bubble_padding_top&quot;&gt;</td>
-    <td>Brand's welcome message bubble top padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_brand_bubble_top_padding.png" alt="brand_bubble_top_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;brand_bubble_padding_bottom&quot;&gt;</td>
-    <td>Brand's welcome message bubble bottom padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding"></td>
-  </tr>
-</tbody>
-</table>
-
-
-### Agent Message Bubbles
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;dimen name=&quot;agent_bubble_stroke_width&quot;&gt;
-</td>
-    <td>Int number for the outline width.</td>
-    <td>0dp</td>
-    <td><img src="img/agent_bubble_stroke_width.png" alt="strokewidth"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_stroke_color&quot;&gt;
-</td>
-    <td>Color code for the outline color.</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/agent_bubble_stroke_color.png" alt="strokecolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_message_text_color&quot;&gt;
-</td>
-    <td>Color code for the text of the agent bubble.</td>
-    <td>white</td>
-    <td><img src="img/agent_bubble_message_link_text_color.png" alt="textcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_message_link_text_color&quot;&gt;
-</td>
-    <td>Color code for links in the text of the agent bubble.</td>
-    <td>white</td>
-    <td><img src="img/agent_bubble_message_link_text_color.png" alt="linktextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_timestamp_text_color&quot;&gt;
-</td>
-    <td>Color code for the timestamp of the agent bubble.</td>
-    <td>#46474A (dark gray)</td>
-    <td><img src="img/agent_bubble_timestamp_text_color.png" alt="timestamptextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the agent bubble.</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/agentbubblebackgroundcolor.png" alt="backgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_avatar_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the agent default avatar next to the bubble</td>
-    <td>#949596 (gray)</td>
-    <td><img src="img/agentavatarbackgroundcolor.png" alt="agentavatarbackgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_avatar_icon_color&quot;&gt;
-</td>
-    <td>Color code for the agent default icon in the avatar next to the bubble.</td>
-    <td>#ffffffff></td>
-    <td><img src="img/agent_avatar_icon_color.png" alt="iconcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_link_preview_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the agent bubble when url is presented</td>
-    <td>#ffffffff</td>
-    <td><img src="img/agent_bubble_link_preview_background_color.png" alt="previewbackgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_link_preview_title_text_color&quot;&gt;
-</td>
-    <td>Color code for the background of the agent title text color when url is presented</td>
-    <td>#ffffffff</td>
-    <td><img src="img/agent_bubble_link_preview_title_text_color.png" alt="titletextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_link_preview_description_text_color&quot;&gt;
-</td>
-    <td>Color code for the background of the agent description text color when url is presented</td>
-    <td>#555555 (gray)</td>
-    <td><img src="img/agent_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_background_color&quot;&gt;
-</td>
-    <td>background color of the form invitation bubble</td>
-    <td>#ffffffff</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_background_color.png" alt="invitationbackgroundcolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_background_btn_color&quot;&gt;
-</td>
-    <td>background color of the form invitation button only</td>
-    <td>#ffffffff</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="buttontextcolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_stroke_color&quot;&gt;
-</td>
-    <td>color of the stroke (border) of the form invitation bubble</td>
-    <td>#949596 (gray)</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_stroke_color.png" alt="strokecolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_button_text_color&quot;&gt;
-</td>
-    <td>color of the text on the button  </td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="invitationbuttoncolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_description_text_color&quot;&gt;
-</td>
-    <td>Text color on the description in the form invitation bubble</td>
-    <td>#949596 (gray)</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_description_text_color.png" alt="descriptiontextcolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_title_text_color&quot;&gt;
- </td>
-    <td>text color on the title in the form invitation bubble</td>
-    <td>#ff000000</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_title_text_color.png" alt="titletextcolor"></td>
-  </tr>
-    <tr>
-    <td>&lt;color name=&quot;agent_bubble_pci_form_invitation_icon_tint_color&quot;&gt;
- </td>
-    <td>color of the icon in the form invitation bubble</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_right&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble right padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_agent_bubble_right_padding.png" alt="agent_bubble_right_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_left&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble left padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_agent_bubble_left_padding.png" alt="agent_bubble_left_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_top&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble top padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_agent_bubble_top_padding.png" alt="agent_bubble_top_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_bottom&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble bottom padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;agent_bubble_link_preview_background_stroke_color&quot;&gt;</td>
-    <td>The border color of the link preview bubble sent by the agent.</td>
-    <td>#EDEDED</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;agent_bubble_link_preview_background_stroke_width&quot;&gt;</td>
-    <td>The border width of the link preview bubble sent by the agent.</td>
-    <td>1dp</td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
-
-
-### Consumer Bubbles
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;dimen name=&quot;consumer_bubble_stroke_width&quot;&gt;
-</td>
-    <td>integer in dp for the bubble stroke width of the consumer bubble.</td>
-    <td>1dp</td>
-    <td><img src="img/consumer_bubble_stroke_width.png" alt="strokewidth"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_message_text_color&quot;&gt;
-</td>
-    <td>Color code for the text of the consumer bubble.</td>
-    <td>@android:color/black</td>
-    <td><img src="img/consumer_bubble_message_text_color.png" alt="messagetextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_message_link_text_color&quot;&gt;
-</td>
-    <td>Color code for links in the text of the consumer bubble.</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/consumer_bubble_message_link_text_color.png" alt="linktextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_timestamp_text_color&quot;&gt;
-</td>
-    <td>Color code for the timestamp of the consumer bubble.</td>
-    <td>#46474A (dark gray)</td>
-    <td><img src="img/consumer_bubble_timestamp_text_color.png" alt="timestamptextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the consumer bubble.</td>
-    <td>#EDEDED (light gray)</td>
-    <td><img src="img/consumer_bubble_background_color.png" alt="bubblebackgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_state_text_color&quot;&gt;
-</td>
-    <td>Color code for state text next to the consumer bubble.</td>
-    <td>#46474A (dark gray)</td>
-    <td><img src="img/consumer_bubble_state_text_color.png" alt="statetextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_stroke_color&quot;&gt;
-</td>
-    <td>Color code for the stroke of the consumer bubble.</td>
-    <td>#EDEDED (light gray)</td>
-    <td><img src="img/consumer_bubble_stroke_color.png" alt="strokecolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_link_preview_background_color&quot;&gt;
-</td>
-    <td>Color code for the background of the consumer bubble when url is presented</td>
-    <td>white</td>
-    <td><img src="img/consumer_bubble_link_preview_background_color.png" alt="previewbackgroundcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_link_preview_title_text_color&quot;&gt;
-</td>
-    <td>Color code for the background of the consumer title text color when url is presented</td>
-    <td>black</td>
-    <td><img src="img/consumer_bubble_link_preview_title_text_color.png" alt="titletextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_link_preview_description_text_color&quot;&gt;
-</td>
-    <td>Color code for the background of the consumer description text color when url is presented</td>
-    <td>#555555 (gray)</td>
-    <td><img src="img/consumer_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_read_status_color&quot;&gt;
-</td>
-    <td>Color code for the read status icon (if enable)</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/consumer_bubble_read_status_color.png" alt="readstatuscolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_received_status_color&quot;&gt;
-</td>
-    <td>Color code for the received status icon (if enable)</td>
-    <td>#CECECE</td>
-    <td><img src="img/consumer_bubble_received_status_color.png" alt="statuscolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_sent_status_color&quot;&gt;
-</td>
-    <td>Color code for the sent status icon (if enable)</td>
-    <td>#CECECE</td>
-    <td><img src="img/consumer_bubble_sent_status_color.png" alt="sentstatuscolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_sending_status_color&quot;&gt;
-</td>
-    <td>Color code for the sending status icon (if enable)</td>
-    <td>#949596 (gray)</td>
-    <td><img src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_right&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble right padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_consumer_bubble_right_padding.png" alt="consumer_bubble_right_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_left&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble left padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_consumer_bubble_left_padding.png" alt="consumer_bubble_left_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_top&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble top padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_consumer_bubble_top_padding.png" alt="consumer_bubble_top_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;chat_bubble_padding_bottom&quot;&gt;</td>
-    <td>Chat message (agent/consumer) bubble bottom padding.</td>
-    <td>8dp</td>
-    <td><img src="img/android_consumer_bubble_bottom_padding.png" alt="consumer_bubble_bottom_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;consumer_bubble_link_preview_background_stroke_color&quot;&gt;</td>
-    <td>The border color of the link preview bubble sent by the consumer.</td>
-    <td>#EDEDED</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;consumer_bubble_link_preview_background_stroke_width&quot;&gt;</td>
-    <td>The border width of the link preview bubble sent by the consumer.</td>
-    <td>1dp</td>
-    <td></td>
-  </tr>
-  </tbody>
-</table>
-
-
-### System messages
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;color name=&quot;system_bubble_text_color&quot;&gt;</td>
-    <td>Color code for the text of the system messages.</td>
-    <td>#46474A (dark gray)</td>
-    <td><img src="img/conversation_separator_text_color.png" alt="separatortextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;bubble_system_resolved_text_size&quot;&gt;</td>
-    <td>Conversation resolved message text size.</td>
-    <td>12sp</td>
-    <td><img src="img/android_resolved_message_text_size.png" alt="resolved_message_text_size"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;bubble_system_resolved_padding&quot;&gt;</td>
-    <td>Conversation resolved message padding.</td>
-    <td>4sp</td>
-    <td><img src="img/android_resolved_message_padding.png" alt="resolved_message_padding"></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;bubble_system_resolved_line_spacing&quot;&gt;</td>
-    <td>Conversation resolved message line spacing.</td>
-    <td>0dp</td>
-    <td><img src="img/android_resolved_message_line_spacing.png" alt="resolved_message_line_spacing"></td>
-  </tr>
-  <tr>
-    <td>&lt;bool name=&quot;enable_conversation_resolved_message&quot;&gt;</td>
-    <td>Enable/disable the conversation resolved message</td>
-    <td>true</td>
-    <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
-  </tr>
-  <tr>
-    <td>&lt;bool name=&quot;enable_conversation_resolved_separator&quot;&gt;
-</td>
-    <td>Enable/disable separators between conversations</td>
-    <td>true</td>
-    <td><img src="img/enable_conversation_resolved_separator.png" alt="conversationresolvedseparator"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;conversation_separator_text_color&quot;&gt;
-</td>
-    <td>Color code for the conversation resolved message and separator</td>
-    <td>#555555 (gray)</td>
-    <td><img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage"></td>
-  </tr>
-</tbody>
-</table>
-
-### Automatic Messages
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;color name=&quot;conversation_controller_message_text_color&quot;&gt;
-</td>
-    <td>Color code for the text of the automatic messages.</td>
-    <td>#5b5c5e (dark gray)</td>
-    <td><img src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller"></td>
-  </tr>
-</tbody>
-</table>
-
-
-### Unread messages indicator Bubbles
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>&lt;bool name=&quot;unread_indicator_bubble_enable&quot;&gt;</td>
-    <td>Enable/disable the unread message indicator (shown or invisible) - true by default.</td>
-    <td>true</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;unread_indicator_bubble_text_color&quot;&gt;</td>
-    <td>Enable/disable the unread message indicator (shown or invisible) - true by default.</td>
-    <td>#004DC9 (blue)</td>
-    <td><img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor"></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;unread_indicator_bubble_background_color&quot;&gt;</td>
-    <td>Color code for the background of the unread messages bubble.</td>
-    <td>#EDEDED (light gray)</td>
-    <td><img src="img/unread_indicator_bubble_background_color.png" alt="unread_indicator_bubble_background_color"></td>
-  </tr>
-</tbody>
+ <td>Defines the Resolved system message Separator padding.</td>
+ <td><img src="img/android_bubble_system_resolved_separator_padding_bottom.png"></td>
+ </tr>
+ <tr>
+ <td>&lt;drawable name="lp_progress_bar_image"&gt;&lt;/drawable&gt;</td>
+ <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
+ <td><img src="img/android_lp_progress_bar_image.png"></td>
+ </tr>
+ </tbody>
 </table>
 
 
 
-### Bubbles Corner Radius
 
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>
-    &lt;dimen name=&quot;end_bubble_bottom_left_radius&quot;&gt; <br />
-    &lt;dimen name=&quot;end_bubble_top_left_radius&quot;&gt;   <br />
-    &lt;dimen name=&quot;end_bubble_top_right_radius&quot;&gt;   <br />
-    &lt;dimen name=&quot;end_bubble_bottom_right_radius&quot;&gt;   
-    </td>
-    <td>Define the corners radius of all the consumer bubbles (on the right side) </td>
-    <td>10dp, bottom_right is 0dp </td>
-    <td><img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer"></td>
-
-  </tr>
-  <tr>
-    <td>
-    &lt;dimen name=&quot;start_bubble_bottom_left_radius&quot;&gt; <br />
-    &lt;dimen name=&quot;start_bubble_top_left_radius&quot;&gt;   <br />
-    &lt;dimen name=&quot;start_bubble_top_right_radius&quot;&gt;   <br />
-    &lt;dimen name=&quot;start_bubble_bottom_right_radius&quot;&gt;   
-    </td>
-    <td>Define the corners radius of all the agent/brand bubbles (on the left side) </td>
-    <td>10dp, bottom_left is 0dp </td>
-    <td><img src="img/strokewidth.png" alt="strokewidth_agnet"></td>
-
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;unread_indicator_bubble_radius&quot;&gt; </td>
-    <td>Define the corners radius of the unread messages bubble.</td>
-    <td>20dp for all the corners</td>  
-    <td><img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor"></td>  
-
-  </tr>
-
-  <tr>
-    <td>&lt;dimen name=&quot;scroll_down_indicator_radius&quot;&gt;
-     </td>
-    <td>Define the left top and the left bottom corners radius of the scroll down indicator.</td>
-    <td>20dp for left top and the left bottom the corners</td>
-    <td><img src="img/indicatorenabled.png" alt="indicatorenabled"></td>
-
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;scroll_down_indicator_counter_radius&quot;&gt;
-     </td>
-    <td>Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
-    <td>20dp for all the corners</td>  
-    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"></td>
-
-  </tr>
-
-</tbody>
-</table>
 
 ### Date Headers
 
@@ -858,7 +296,13 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
     <td>true</td>
     <td></td>
   </tr>
-
+   <tr>
+ <td>&lt;dimen name="button_corner_radius"&gt;30dp&lt;/dimen&gt;
+</td>
+ <td>Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimens.xml).</td>
+ <td>30dp</td>
+ <td><img src="img/android_csat_yesno_radius.png"></td>
+ </tr>
 </tbody>
 </table>
 
@@ -1097,42 +541,40 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
     <td>#F5F5F5 (light gray)</td>
     <td><img src="img/menuitemiconcolor.png" alt="menuitemiconcolor"></td>
   </tr>
+   <tr>
+ <td>lpmessaging_ui_ic_gallery.xml
+</td>
+ <td> In order to replace the existing add image from library button (photo sharing). The brand may create a drawable file named "lpmessaging_ui_ic_gallery.xml" which will override the SDK's default drawable.</td>
+ <td>LivePerson image</td>
+ <td><img src="img/android_gallery_button.png"></td>
+ </tr>
+ <tr>
+ <td>lpmessaging_ui_ic_camera.xml
+</td>
+ <td>In Order to replace the add image from camera button (photo sharing), the brand may create a drawable file named "lpmessaging_ui_ic_camera.xml" which will override the SDK's default drawable.
+</td>
+ <td>LivePerson image</td>
+ <td><img src="img/android_camera_button.png"></td>
+ </tr>
+ <tr>
+ <td>lpinfra_ui_ic_attach.xml
+</td>
+ <td>In case the brand wants to display a different drawable for opening the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_attach.xml" which will override the SDK's default drawable.
+</td>
+ <td>LivePerson image</td>
+ <td><img src="img/android_attach_button.png"></td>
+ </tr>
+ <tr>
+ <td>lpinfra_ui_ic_close.xml</td>
+ <td>In case the brand wants to display a different drawable for closing the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_close.xml" which will override the SDK's default drawable.</td>
+ <td>LivePerson image</td>
+ <td><img src="img/android_ps_close_button.png"></td>
+ </tr>
 </tbody>
 </table>
 
 
-### Audio Messaging
 
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-  <tr>
-    <td>&lt;bool name=&quot;enable_voice_sharing&quot;&gt;</td>
-    <td>Enable/disable the audio messaging feature. </td>
-    <td>false</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;integer name=&quot;lp_record_max_time_seconds&quot;&gt;</td>
-    <td>Maximum voice recording time in seconds.</td>
-    <td>120</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;integer name=&quot;max_number_stored_voice_files&quot;&gt;</td>
-    <td>Maximum number of voice files stored on the device</td>
-    <td>20</td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
 
 ### Quick Replies
 
@@ -1191,7 +633,15 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
     <th>Example</th>
   </tr>
 </thead>
-<tbody>  
+<tbody>
+<tr>
+ <td>&lt;color name="lp_brand_header_text_color"&gt;@android:color/black&lt;/color&gt;
+</td>
+ <td>The configuration to change the Brand name / Agent name text color in the header
+</td>
+ <td>Black</td>
+ <td><img src="img/android_brandname_color.png"></td>
+ </tr>  
   <tr>
     <td>&lt;color name=&quot;conversation_background&quot;&gt;
 </td>
@@ -1225,6 +675,17 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
     <td></td>
     <td></td>
   </tr>
+ <tr>
+ <td>lpinfra_ui_ic_send_disabled.xml</td>
+ <td>In case the brand wants to display a different drawable to represent sending a message.
+The brand create a drawable file named "lpinfra_ui_ic_send_disabled.xml" which will override the SDK's default drawable.
+</td>
+ <td>The default image is the one from the screenshot to the to the right.
+Please notice that in order to display an image instead of a text the boolean
+use_send_image_button
+should be set to true</td>
+ <td><img src="img/android_disabled_send_button.png"></td>
+ </tr>
 </tbody>
 </table>
 
@@ -1293,118 +754,7 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
 </tbody>
 </table>
 
-### Custom Fonts
 
-<table class="bigtable">
-<thead>
- <tr>
-   <th>Name</th>
-   <th>Description</th>
-   <th>Default</th>
-   <th>Example</th>
- </tr>
-</thead>
-<tbody>  
-   <tr>
-     <td>&lt;string name=&quot;custom_font_name_conversation_feed&quot;&gt;</td>
-     <td>The font name for all conversation feed’s element.</td>
-     <td>Empty (use the device font)</td>
-     <td>sans-serif-thin</td>
-  </tr>
-  <tr>
-    <td>&lt;string name=&quot;custom_font_name_non_conversation_feed&quot;&gt;</td>
-    <td>The font name for all elements that are not in the conversation feed.</td>
-    <td>Empty (use the device font)</td>
-    <td>customFont.ttf</td>
-  </tr>
-</tbody>
-</table>
-
-### Structured Content
-
-<table class="bigtable">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Default</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>  
-
-<tr>
-  <td>&lt;bool name=&quot;enable_structured_content&quot;&gt;
-</td>
-  <td>Enable/Disable structured content feature</td>
-  <td>false</td>
-  <td></td>
-</tr>
-
-  <tr>
-    <td>&lt;color name=&quot;structured_content_border_color&quot;&gt;
-</td>
-    <td>Color code for the structured content bubble outline color.</td>
-    <td>#EDEDED (light gray)</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;structured_content_border_width&quot;&gt;
-  </td>
-    <td>Integer in dp for the bubble stroke width of the structured content bubble.</td>
-    <td>1dp</td>
-    <td></td>
-  </tr>  
-  <tr>
-    <td>&lt;integer name=&quot;structured_content_map_zoom&quot;&gt;</td>
-    <td>Integer that defines the zoom level of the structured content map view. Refer to <a href="https://developers.google.com/maps/documentation/android-api/views#zoom" target="_blank">[Google map API]</a> for details)</td>
-    <td>18</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;bool name=&quot;structured_content_link_as_callback&quot;&gt;</td>
-    <td>Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent)</td>
-    <td>false</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;string name=&quot;lp_google_maps_key&quot;&gt;</td>
-    <td>Set the host app's Google Map key to enable map views in Structured Content</td>
-    <td>no value</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;color name=&quot;structured_content_background_color&quot;&gt;</td>
-    <td>The color of the background of structured content elements. Default color is set to White</td>
-    <td>#FFFFFF</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;structured_content_bottom_right_radius&quot;&gt;</td>
-    <td>Configuration for bottom right corner radius of structured content card.</td>
-    <td>0dp</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;structured_content_bottom_right_radius&quot;&gt;</td>
-    <td>Configuration for top left corner radius of structured content card.</td>
-    <td>0dp</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;structured_content_top_right_radius&quot;&gt;</td>
-    <td>Configuration for top right corner radius of structured content card. </td>
-    <td>0dp</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&lt;dimen name=&quot;structured_content_bottom_left_radius&quot;&gt;</td>
-    <td>Configuration for bottom left corner radius of structured content card.</td>
-    <td>0dp</td>
-    <td></td>
-  </tr>
-  </tbody>
-</table>
 
 
 ### Miscellaneous
@@ -1479,12 +829,7 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
     <td>10</td>
     <td></td>
     </tr>
-  <tr>
-    <td>&lt;bool name=&quot;send_agent_profile_updates_when_conversation_closed&quot;&gt;</td>
-    <td>When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. </td>
-    <td>true</td>
-    <td></td>
-  </tr>
+  
   <tr>
     <td>&lt;bool name=&quot;ttr_message_off_hours_enabled&quot;&gt;</td>
     <td>Defines whether to show the off hours snackbar popup (true=enable).</td>
@@ -1626,3 +971,1748 @@ _**Note:** for things like Brand name, which is a string, refer to the [string L
   </tr>
 </tbody>
 </table>
+
+
+### Agent Assignment
+
+#### send_agent_profile_updates_when_conversation_closed
+When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. 
+
+* **Type:** bool  
+* **Default value:** true 
+
+---  
+
+### Agent Message Bubbles
+
+
+#### agent_bubble_stroke_width
+Int number for the outline width.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 0dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_stroke_width.png" alt="strokewidth">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_stroke_color
+Color code for the outline color.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_stroke_color.png" alt="strokecolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_message_text_color
+Color code for the text of the agent bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> white</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_message_link_text_color.png" alt="textcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_message_link_text_color
+Color code for links in the text of the agent bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> white</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_message_link_text_color.png" alt="linktextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_timestamp_text_color
+Color code for the timestamp of the agent bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_timestamp_text_color.png" alt="timestamptextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_background_color
+Color code for the background of the agent bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agentbubblebackgroundcolor.png" alt="backgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_avatar_background_color
+Color code for the background of the agent default avatar next to the bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agentavatarbackgroundcolor.png" alt="agentavatarbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_avatar_icon_color
+Color code for the agent default icon in the avatar next to the bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_avatar_icon_color.png" alt="iconcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_link_preview_background_color
+Color code for the background of the agent bubble when url is presented.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_link_preview_background_color.png" alt="previewbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_link_preview_title_text_color
+Color code for the background of the agent title text color when url is presented.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_link_preview_title_text_color.png" alt="titletextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_link_preview_description_text_color
+Color code for the background of the agent description text color when url is presented.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #555555 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+
+#### agent_bubble_pci_form_invitation_background_color
+background color of the form invitation bubble
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_background_color.png" alt="invitationbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_pci_form_invitation_background_btn_color
+background color of the form invitation button only
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="buttontextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### agent_bubble_pci_form_invitation_stroke_color
+color of the stroke (border) of the form invitation bubble.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_stroke_color.png" alt="strokecolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_pci_form_invitation_button_text_color
+color of the text on the button  
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="invitationbuttoncolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_pci_form_invitation_description_text_color
+Text color on the description in the form invitation bubble.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_description_text_color.png" alt="descriptiontextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### agent_bubble_pci_form_invitation_title_text_color
+text color on the title in the form invitation bubble.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ff000000</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_title_text_color.png" alt="titletextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### agent_bubble_pci_form_invitation_icon_tint_color
+color of the icon in the form invitation bubble.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+
+#### chat_bubble_padding_right
+Chat message (agent/consumer) bubble right padding.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_agent_bubble_right_padding.png" alt="agent_bubble_right_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_left
+Chat message (agent/consumer) bubble left padding.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_agent_bubble_left_padding.png" alt="agent_bubble_left_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_top
+Chat message (agent/consumer) bubble top padding.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_agent_bubble_top_padding.png" alt="agent_bubble_top_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_bottom
+Chat message (agent/consumer) bubble bottom padding.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### show_agent_typing_in_message_bubble
+
+True - the agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
+
+False - the agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
+
+Only available as long as the announce_agent_typing configuration is on (set as true).
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> bool</li>
+      <li><b>Default value:</b> false</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <td><img src="img/android_agent_typing_bubble.png"></td>
+   </figure>
+</div>
+
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+{:.important}
+If you want to present a different animation or image, create a file and name it *lp_messaging_ui_typing_animation_frames.xml* to override the SDK's original animation.<br><br>**Default value:** LivePerson animation
+
+
+#### agent_bubble_link_preview_background_stroke_color
+The border color of the link preview bubble sent by the agent.
+
+* **Type:** color
+* **Default value:** #EDEDED
+
+#### agent_bubble_link_preview_background_stroke_width
+The border width of the link preview bubble sent by the agent.
+
+* **Type:** dimen
+* **Default value:** 1dp
+
+--- 
+
+### Audio Messaging
+
+#### enable_voice_sharing&quot
+Enable/disable the audio messaging feature. 
+
+* **Type:** bool  
+* **Default value:** false
+
+#### lp_record_max_time_seconds
+Maximum voice recording time in seconds.
+
+* **Type:** int  
+* **Default value:** 120
+
+#### max_number_stored_voice_files
+Maximum number of voice files stored on the device.
+
+* **Type:** int  
+* **Default value:** 120
+
+---  
+
+### Avatars
+
+
+#### avatar_margin_leading
+Defines the remote avatar leading spacing (from the left edge to the avatar).
+ 
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> @dimen/margin_regular </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_avatar_margin_leading.png">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+
+#### avatar_margin_trailing
+Defines the remote avatar Trailing spacing (from the avatar to the bubble).
+ 
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> @dimen/margin_regular </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_avatar_margin_trailing.png">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+---  
+
+### Brand
+
+#### brand_bubble_stroke_width
+Int number for the outline width.
+
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 0dp </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/strokewidth.png" alt="strokewidth">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_bubble_stroke_color
+Color code for the outline color.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/strokecolor.png" alt="strokecolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### brand_bubble_message_text_color
+Color code for the text of the brand bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> @android:color/white</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/textcolor.png" alt="textcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_bubble_message_link_text_color
+Color code for links in the text of the brand bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> @android:color/white</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/linktextcolor.png" alt="linktextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+    
+    
+    
+#### brand_bubble_timestamp_text_color
+Color code for the timestamp of the brand bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/timestamptextcolor.png" alt="timestamptextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### brand_bubble_background_color
+Color code for the background of the brand bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/backgroundcolor.png" alt="backgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_logo_background_color
+Color code for the background of the default brand logo next to the bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #007AFF (light blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/logobackgroundcolor.png" alt="logobackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_bubble_padding_right
+Brand's welcome message bubble right padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_brand_bubble_right_padding.png" alt="brand_bubble_right_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_bubble_padding_left
+Brand's welcome message bubble left padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_brand_bubble_left_padding.png" alt="brand_bubble_left_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_bubble_padding_top
+Brand's welcome message bubble top padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_brand_bubble_top_padding.png" alt="brand_bubble_top_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### brand_bubble_padding_bottom
+Brand's welcome message bubble bottom padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### custom_font_name_conversation_feed
+The font name for all conversation feed’s element.
+
+* **Type:** string
+* **Default value:** Empty (use the device font)
+* **Example:** sans-serif-thin
+
+#### custom_font_name_non_conversation_feed
+The font name for all elements that are not in the conversation feed.
+
+* **Type:** string
+* **Default value:** Empty (use the device font)
+* **Example:** customFont.ttf
+
+---  
+
+### Bubbles Corner Radius
+
+<table class="bigtable">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Default</th>
+    <th>Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+    &lt;dimen name=&quot;end_bubble_bottom_left_radius&quot;&gt; <br />
+    &lt;dimen name=&quot;end_bubble_top_left_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;end_bubble_top_right_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;end_bubble_bottom_right_radius&quot;&gt;   
+    </td>
+    <td>Define the corners radius of all the consumer bubbles (on the right side) </td>
+    <td>10dp, bottom_right is 0dp </td>
+    <td><img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer"></td>
+
+  </tr>
+  <tr>
+    <td>
+    &lt;dimen name=&quot;start_bubble_bottom_left_radius&quot;&gt; <br />
+    &lt;dimen name=&quot;start_bubble_top_left_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;start_bubble_top_right_radius&quot;&gt;   <br />
+    &lt;dimen name=&quot;start_bubble_bottom_right_radius&quot;&gt;   
+    </td>
+    <td>Define the corners radius of all the agent/brand bubbles (on the left side) </td>
+    <td>10dp, bottom_left is 0dp </td>
+    <td><img src="img/strokewidth.png" alt="strokewidth_agnet"></td>
+
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;unread_indicator_bubble_radius&quot;&gt; </td>
+    <td>Define the corners radius of the unread messages bubble.</td>
+    <td>20dp for all the corners</td>  
+    <td><img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor"></td>  
+
+  </tr>
+
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_radius&quot;&gt;
+     </td>
+    <td>Define the left top and the left bottom corners radius of the scroll down indicator.</td>
+    <td>20dp for left top and the left bottom the corners</td>
+    <td><img src="img/indicatorenabled.png" alt="indicatorenabled"></td>
+
+  </tr>
+  <tr>
+    <td>&lt;dimen name=&quot;scroll_down_indicator_counter_radius&quot;&gt;
+     </td>
+    <td>Define the corners radius of the unread messages counter inside the scroll down indicator.</td>
+    <td>20dp for all the corners</td>  
+    <td><img src="img/summaryenabled1.png" alt="summaryenabled1"></td>
+
+  </tr>
+
+</tbody>
+</table>
+
+
+---  
+
+### Consumer Bubbles
+
+
+#### consumer_bubble_stroke_width
+integer in dp for the bubble stroke width of the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 1dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_stroke_width.png" alt="strokewidth">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_message_text_color
+Color code for the text of the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> @android:color/black</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_message_text_color.png" alt="messagetextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_message_link_text_color
+Color code for links in the text of the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_message_link_text_color.png" alt="linktextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_timestamp_text_color
+Color code for the timestamp of the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_timestamp_text_color.png" alt="timestamptextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_background_color
+Color code for the background of the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #EDEDED (light gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_background_color.png" alt="bubblebackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_state_text_color
+Color code for state text next to the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_state_text_color.png" alt="statetextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_stroke_color
+Color code for the stroke of the consumer bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #EDEDED (light gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_stroke_color.png" alt="strokecolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_link_preview_background_color
+Color code for the background of the consumer bubble when url is presented.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> white</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_link_preview_background_color.png" alt="previewbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_link_preview_title_text_color
+Color code for the background of the consumer title text color when url is presented.
+
+<div style="float: left; width: 50%;height: 125px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> black</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_link_preview_title_text_color.png" alt="titletextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_link_preview_description_text_color
+Color code for the background of the consumer description text color when url is presented.
+
+<div style="float: left; width: 50%;height: 140px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #555555 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_read_status_color
+Color code for the read status icon (if enable).
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_read_status_color.png" alt="readstatuscolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+ 
+ 
+#### consumer_bubble_received_status_color
+Color code for the received status icon (if enable).
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #CECECE</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_received_status_color.png" alt="statuscolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### consumer_bubble_sent_status_color
+Color code for the sent status icon (if enable).
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #CECECE</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_sent_status_color.png" alt="sentstatuscolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_sending_status_color
+Color code for the sending status icon (if enable).
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_right
+Chat message (agent/consumer) bubble right padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_consumer_bubble_right_padding.png" alt="consumer_bubble_right_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_left
+Chat message (agent/consumer) bubble left padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_consumer_bubble_left_padding.png" alt="consumer_bubble_left_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_top
+Chat message (agent/consumer) bubble top padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_consumer_bubble_top_padding.png" alt="consumer_bubble_top_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### chat_bubble_padding_bottom
+Chat message (agent/consumer) bubble bottom padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 8dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_consumer_bubble_bottom_padding.png" alt="consumer_bubble_bottom_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### consumer_bubble_link_preview_background_stroke_color
+The border color of the link preview bubble sent by the consumer.
+
+* **Type:** color
+* **Default value:** #EDEDED
+
+
+
+#### consumer_bubble_link_preview_background_stroke_width
+The border width of the link preview bubble sent by the consumer.
+
+* **Type:** dimen
+* **Default value:** 1dp
+
+
+---  
+
+### Delivery Notifications
+
+#### message_receive_icons
+For each message, there are three indicators available: Message sent, Message received, and Message read.
+  
+You can customize the indicators according to your needs, by using a number between 1 and 3.
+
+**Type:** integer
+
+
+<div style="float: left; width: 50%;height: 220px;">
+   <ul>
+      <li><b>0:</b>  text (sent, delivered etc.) instead of icons</li>
+      <li><b>1:</b> Sent only</li>
+      <li><b>2:</b>  Sent+received</li>
+      <li><b>3:</b>  Sent+received+read</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/receiveicons.png" alt="receiveicons">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### message_receive_text
+If you set 0 in the resource message_receive_icons, you can specify what texts appears for each state. 
+
+**Type:** string-array
+
+<div style="float: left; width: 50%;height: 220px;">
+   You must have 4 items, in the following order: 
+   <ul>
+      <li><b>1st item:</b> message sent</li>
+      <li><b>2nd item:</b> message delivered</li>
+      <li><b>3rd item:</b> message read</li>
+      <li><b>4th item:</b> message not delivered</li>
+      <li><b>5th item:</b> message sending</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/receivetext.png" alt="receivetext" right>
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### clear_history_show_confirm_dialog
+Define if to show confirm dialog before clearing history or not. True by default.
+
+* **Type:** bool
+* **Default value:** true
+
+---  
+
+### Controller Message
+
+#### conversation_controller_message_text_color
+Color code for the text of the automatic messages.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #5b5c5e (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+---   
+
+
+### Conversations
+
+
+#### bubble_system_resolved_text_size
+Conversation resolved message text size.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 12sp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_resolved_message_text_size.png" alt="resolved_message_text_size">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### bubble_system_resolved_padding
+Conversation resolved message padding.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 4sp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_resolved_message_padding.png" alt="resolved_message_padding">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### bubble_system_resolved_line_spacing
+Conversation resolved message line spacing.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> dimen</li>
+      <li><b>Default value:</b> 0dp</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_resolved_message_line_spacing.png" alt="resolved_message_line_spacing">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### enable_conversation_resolved_message
+Enable/disable the conversation resolved message.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> bool</li>
+      <li><b>Default value:</b> true</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### enable_conversation_resolved_separator
+Enable/disable separators between conversations.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> bool </li>
+      <li><b>Default value:</b> true</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/enable_conversation_resolved_separator.png" alt="conversationresolvedseparator">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### conversation_separator_text_color
+Color code for the conversation resolved message and separator.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #555555 (gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+---  
+
+### Structured Content
+
+
+#### enable_structured_content
+Enable/Disable structured content feature.
+
+* **Type:** bool
+* **Default value:** false
+
+
+#### structured_content_border_color
+Color code for the structured content bubble outline color.
+
+* **Type:** color 
+* **Default value:** #EDEDED (light gray)
+
+
+#### structured_content_border_width
+Integer in dp for the bubble stroke width of the structured content bubble.
+
+* **Type:** dimen 
+* **Default value:** 1dp
+
+
+#### structured_content_map_zoom&
+Integer that defines the zoom level of the structured content map view. For more details, see [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom).
+
+* **Type:** integer
+* **Default value:** 18
+
+
+#### structured_content_link_as_callback
+Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent).
+
+* **Type:** bool
+* **Default value:** false
+
+
+#### lp_google_maps_key
+Set the host app's Google Map key to enable map views in Structured Content.
+
+* **Type:** string
+* **Default value:** no value
+
+
+#### structured_content_background_color
+The color of the background of structured content elements. Default color is set to White.
+
+* **Type:** color
+* **Default value:** #FFFFFF
+
+
+#### structured_content_bottom_right_radius
+Configuration for bottom right corner radius of structured content card.
+
+* **Type:** dimen 
+* **Default value:** 0dp
+
+
+#### structured_content_bottom_right_radius
+Configuration for top left corner radius of structured content card.
+
+* **Type:** dimen 
+* **Default value:** 0dp
+ 
+ 
+#### structured_content_top_right_radius
+Configuration for top right corner radius of structured content card. 
+
+* **Type:** dimen 
+* **Default value:** 0dp
+
+
+#### structured_content_bottom_left_radius
+Configuration for bottom left corner radius of structured content card.
+
+* **Type:** dimen 
+* **Default value:** 0dp
+
+
+---  
+
+### System messages
+
+#### system_bubble_text_color
+Color code for the text of the system messages.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/conversation_separator_text_color.png" alt="separatortextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+---  
+
+### Unread Messages
+
+
+#### unread_indicator_bubble_enable
+Enable/disable the unread message indicator (shown or invisible) - true by default.
+
+* **Type:** bool 
+* **Default value:** true
+
+#### unread_indicator_bubble_text_color
+Enable/disable the unread message indicator (shown or invisible) - true by default.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### unread_indicator_bubble_background_color
+Color code for the background of the unread messages bubble.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #EDEDED (light gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/unread_indicator_bubble_background_color.png" alt="unread_indicator_bubble_background_color">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+---  
+
+

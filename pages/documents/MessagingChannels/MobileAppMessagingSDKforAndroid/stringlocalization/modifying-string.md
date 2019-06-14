@@ -499,6 +499,10 @@ Example</td>
   <td>Message text displayed when trying to clear history and the conversation is not resolved</td>
   <td>Please resolve the conversation first.</td>
 </tr>
+<tr>
+ <td>lp_history_control_api_empty_state</td>
+ <td>There are currently no conversations at this time</td>
+ </tr>
 </tbody>
 </table>
 

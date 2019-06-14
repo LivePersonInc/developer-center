@@ -50,6 +50,10 @@ public enum LPConversationsHistoryStateToDisplay {
 }
 ```
 
+* `mHistoryConversationsStateToDisplay` - Is of type LPConversationsHistoryStateToDisplay ENUM which has the following values: OPEN, CLOSE , ALL.
+
+* `mHistoryConversationMaxDaysType` - Is of type `LPConversationHistoryMaxDaysDateType` ENUM, which has the following values: `startConversationDate` and `endConversationDate`. When using `mHistoryConversationsMaxDays`, LPConversationHistoryMaxDaysDateType decides if to filter by the conversations' start date or end date. When not providing a value, `startConversationDate` is the default. 
+
 * `mHistoryConversationsMaxDays` - Using this parameter, brands can choose how much conversation history will be presented to the consumer by days. Not providing a value will allow consumers to see the entire history stored on LivePerson's servers (by scrolling down to see additional conversations).
 
 * `LPConversationHistoryMaxDaysDateType`
