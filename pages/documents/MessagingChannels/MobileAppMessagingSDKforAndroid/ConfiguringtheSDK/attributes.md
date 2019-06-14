@@ -53,7 +53,7 @@ When true the callback LivePersonCallback#onAgentDetailsChanged will be called w
 
 ### Audio Messaging
 
-#### enable_voice_sharing&quot
+#### enable_voice_sharing
 Enable/disable the audio messaging feature. 
 
 * **Type:** bool  
