@@ -39,7 +39,7 @@ Each line in the following table represents one possible response body, includin
 
 | Error Code | Title | Details | Comment |
 | :--- | :--- | :--- | :--- | :--- |
-| 40001 | Missing parameter | Brand Id is missing | **Note:** Title and details are misleading. This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `Sentinel`. In the future, title and details will change to reflect missing claims. Your code is save when it relies on the error code and does not parse the title and/or details. | 
+| 40001 | Missing parameter | Brand Id is missing | **Note:** Title and details are misleading. This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `Sentinel`. In the future, title and details will change to reflect missing claims. Your code is saved when it relies on the error code and does not parse the title and/or details. | 
 | 40102 | Invalid AppJWT  | AppJWT has expired or is invalid | |
 | 40103 | Invalid ConsumerJWS  | ConsumerJWS is invalid  | |
 | 40104 | ConsumerJWS is missing  | X_ON_BEHALF_HEADER is not present |
