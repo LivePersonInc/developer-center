@@ -1,5 +1,5 @@
 ---
-pagename: Campaigns for Mobile App Messaging
+pagename: Campaigns
 redirect_from:
   - consumer-experience-android-sdk-advanced-campaigns.html
 Keywords:
@@ -9,7 +9,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Advanced Features
 
 order: 291
-permalink: mobile-app-messaging-sdk-for-android-advanced-features-campaigns-for-mobile-app-messaging.html
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-campaigns.html
 
 indicator: messaging
 ---

@@ -42,12 +42,9 @@ To successfully deploy messaging within your mobile app, it’s important to und
    - Customize the window: Window mode
    - Full control of window: ViewController mode
 
-5. **Customization and branding.** Review the list of default configurations available for [iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html) to determine the features to enable.  
+5. **Customization and branding.** Review the list of default configurations available for [iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html#branding) to determine the features to enable.  
 
-6. **Callback behavior.**  Utilize LivePerson’s callbacks and APIs to control or change the behaviors and actions of the messaging app. The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. The SDK provides APIs to establish the server connection for messaging. Review the list to determine what actions or flows you’d like to change:  
-
-   - [Callbacks](consumer-experience-ios-sdk-callbacks-index.html)
-   - [APIs](consumer-experience-ios-sdk-initialize.html)
+6. **Callback behavior.**  Utilize LivePerson’s [Callbacks](consumer-experience-ios-sdk-callbacks-index.html) and APIs to control or change the behaviors and actions of the messaging app. The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. The SDK provides APIs to establish the server connection for messaging.   
 
 
 7. **Messaging in multiple languages.** Utilize LivePerson’s default translations or override them with your own text and language adjustments.  Language settings are based on the user’s phone language settings and app language settings. Override all settings and maintain your default language at all times. 
@@ -59,14 +56,14 @@ To successfully deploy messaging within your mobile app, it’s important to und
 
 9.  **Accessibility.** Not all features available in the SDK support accessibility. You may need to turn off various features to be fully compliant.  
 
-   - Enter timeout and expiration controls:
-     - endingMessageTimeoutInMinutes (60)
-     - csatSurveyExpirationInMinutes (1440)
-   - Disable shortcut to new messages feature:
-     - scrollToBottomButtonEnabled (false)
-     - scrollToBottomButtonMessagePreviewEnabled (false)
-     - unreadMessagesDividerEnabled (false)
-   - Disable link preview: enableLinkPreview (false)
+    - Enter timeout and expiration controls:
+        - endingMessageTimeoutInMinutes (60)
+        - csatSurveyExpirationInMinutes (1440)
+    - Disable shortcut to new messages feature:
+        - scrollToBottomButtonEnabled (false)
+        - scrollToBottomButtonMessagePreviewEnabled (false)
+        - unreadMessagesDividerEnabled (false)
+    - Disable link preview: enableLinkPreview (false)
 
 
 <p style="text-align: right">

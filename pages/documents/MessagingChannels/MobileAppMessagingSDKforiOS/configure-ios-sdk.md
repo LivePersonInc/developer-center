@@ -1,5 +1,9 @@
 ---
 pagename: Configure the iOS SDK
+redirect_from:
+  - consumer-experience-ios-sdk-configuring-the-sdk.html
+  - mobile-app-messaging-sdk-for-ios-customization-and-branding-customizing-the-sdk.html
+
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -26,6 +30,22 @@ The most suitable time to customize configuration is right after the SDK initial
    ```swift
    LPConfig.printAllConfigurations()
    ```
+
+
+### Branding
+
+You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
+
+
+**Example configuration:**   
+
+```swift
+configuration.remoteUserBubbleBackgroundColor = UIColor.purpleColor()
+configuration.brandName = "Brand Name"
+configuration.remoteUserBubbleBorderWidth = 0.5
+```
+
+
 
 ### Functions
 

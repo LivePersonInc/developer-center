@@ -617,6 +617,15 @@
     - pagename: Quick Start
     - pagename: Configure the Android SDK
     - pagename: Push Notifications
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Photo Sharing
+      - subpagename: File Sharing
+      - subpagename: Audio Messages
+      - subpagename: CSAT Behavior
+      - subpagename: Campaigns 
+      - subpagename: Welcome Message with Quick Replies
+      - subpagename: Control History APIs
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -635,15 +644,7 @@
       - subpagename: Plural String resource Example
       - subpagename: Date and Time
       - subpagename: Override SDK Strings
-    - pagename: Advanced Features
-      subpages:
-      - subpagename: Photo Sharing
-      - subpagename: File Sharing
-      - subpagename: Audio Messages
-      - subpagename: CSAT Behavior
-      - subpagename: Campaigns for Mobile App Messaging
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+
     - pagename: Voice and Video for Android SDK (BETA)
       subpages:
       - subpagename: Overview

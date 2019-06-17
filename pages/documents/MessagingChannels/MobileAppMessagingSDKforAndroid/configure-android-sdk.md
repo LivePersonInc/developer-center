@@ -1,5 +1,28 @@
 ---
 pagename: Configure the Android SDK
+
+redirect_from:
+  - android-initialization.html
+  - mobile-app-messaging-sdk-for-android-configuration-initialization.html
+  - android-conversations-lifecycle.html
+  - mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
+  - android-callbacks-interface.html
+  - mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
+  - android-conversations-lifecycle.html
+  - mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
+  - android-logs.html
+  - mobile-app-messaging-sdk-for-android-configuration-logs-and-info.html
+  - android-UI.html
+  - mobile-app-messaging-sdk-for-android-configuration-ui.html
+  - android-user-data.html
+  - mobile-app-messaging-sdk-for-android-configuration-user-data.html
+  - android-configuring-changing-fonts.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-changing-fonts.html
+  - android-configuring-edittext.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edit-text.html
+  - android-configuring-sdk.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
+
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -117,19 +140,89 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    params.setReadOnlyMode(false);
    ```
 
-5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. Choose an authentication method:
+5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
 
-   - **Activity mode**
-     ```java
-     LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-     ```
+   Choose an authentication method:
 
-   - **Fragment mode (Attach the returned fragment to a container in your activity)**
-     ```java
-     LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-     ```
+   * **Activity mode** - Implements the toolbar that displays the agent name to the consumer. The 'Is Typing' indicator displays when the agent is typing.
 
-     When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+      Start a new conversation activity to open the conversation window in a separate activity:
+
+      ```java
+      LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+      The SDK implements the controls on the action bar.
+
+
+   * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
+
+      **Note:** Make sure the init process finished successfully.   Call from the onInitSucceed callback.
+
+      Open conversation window in a fragment to return a conversation fragment and place it in a container in your activity:
+
+      ```java
+      LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+      **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+   * **Fragment mode - Handle CSAT (feedback)**  - Implements notifications of the CSAT screen state (**visible**/**invisible**).  For example, you can show a different title on the toolbar or show a close CSAT button. 
+
+      The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
+
+      ```java
+      public interface ConversationFragmentCallbacks {
+
+        void setFeedBackMode(boolean on, IFeedbackActions actions);
+
+        // boolean on-Notify whether feedback (csat) screen is visible or dismisses.
+        // IFeedbackActions actions - provides set of actions for the feedback screen.
+        void onSurveySubmitted(IFeedbackActions actions);
+
+        void setSecureFormMode(boolean on, String formTitle) {}
+      }
+
+      // IFeedbackActions actions-provides a set of actions for the feedback screen.
+      public interface IFeedbackActions {
+
+        void closeFeedBackScreen();
+
+        //close the screen, for example-after submitting the CSAT. When showing the "thank you" screen.
+
+        void skipFeedBackScreen();
+
+        //skip and close the whole feedback process.
+      }
+      ```
+
+
+      Once the CSAT screen is visible, **setFeedBackMode** will be called with **true** value, when the CSAT is not visible anymore (skip/submitted) - **setFeedBackMode** will be called with **false** value.
+
+      Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+
+      ```java
+      class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
+        @Override
+        public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
+          toolbar.setTitle("Csat mode: " + ( on ? "on!" : "off!" ));
+          toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              if (actions != null){
+                actions.closeFeedBackScreen();
+              }
+            }
+          });
+        }
+
+        @Override
+        public void onSurveySubmitted(IFeedbackActions actions) {
+          toolbar.setTitle("survey submitted");
+        }
+      }
+      ```  
+
 
 6. **Shutdown the SDK and remove the footprint of the user session from local memory.** After shutdown, the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
 
@@ -328,6 +421,14 @@ public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 ### Logs and Info
 
 Upon errors, we send logs including different severity levels of errors and warnings.
+
+**For SDK 3.6.1 and newer.** Use `setIsDebuggable` to enable or disable SDK logs. By default, logging is disabled. To enable it, use:
+
+```java
+public static void setIsDebuggable(boolean isDebuggable)
+```
+
+**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
 
 ### Proguard 
 

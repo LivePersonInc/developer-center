@@ -85,7 +85,7 @@ indicator: messaging
     <td><img src="img/in page navigation - scroll down indicator (17).png"></td>
   </tr>
   <tr>
-    <td> <div class="designsheetnumber">18</div> &lt;color name=&quot;attachment_menu_item_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_text_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_icon_color&quot;&gt;</td>
+    <td> <div class="designsheetnumber">18</div> &lt;color name=&quot;attachment_menu_item_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_text_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_icon_color&quot;&gt;lpinfra_ui_ic_attach.xml</td>
     <td><img src="img/Photo sharing (18).png"/></td>
   </tr>
   <tr>

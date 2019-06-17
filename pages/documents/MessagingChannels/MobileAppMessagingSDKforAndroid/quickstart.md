@@ -253,21 +253,89 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      ```
 
 
-3. **Show the conversation view.**  If your system implementation involves an authentication step, you must call our `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. For more details on Activity mode and Fragment mode, see [Authentication](mobile-app-messaging-sdk-for-android-resources-authentication.html).  
+3. **Show the conversation view.** If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
 
    Choose an authentication method:
 
-   - **Activity mode**
-     ```java
-     LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-     ```
+   * **Activity mode** - Implements the toolbar that displays the agent name to the consumer. The 'Is Typing' indicator displays when the agent is typing.
 
-   - **Fragment mode (Attach the returned fragment to a container in your activity)**
-     ```java
-     LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-     ```
+      Start a new conversation activity to open the conversation window in a separate activity:
 
-     **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.  
+      ```java
+      LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+      The SDK implements the controls on the action bar.
+
+
+   * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
+
+      {:.notice}
+      Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
+
+      Open conversation window in a fragment to return a conversation fragment and place it in a container in your activity:
+
+      ```java
+      LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+      **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+   * **Fragment mode - Handle CSAT (feedback)**  - Implements notifications of the CSAT screen state (**visible**/**invisible**).  For example, you can show a different title on the toolbar or show a close CSAT button. 
+
+      The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
+
+      ```java
+      public interface ConversationFragmentCallbacks {
+
+        void setFeedBackMode(boolean on, IFeedbackActions actions);
+
+        // boolean on-Notify whether feedback (csat) screen is visible or dismisses.
+        // IFeedbackActions actions - provides set of actions for the feedback screen.
+        void onSurveySubmitted(IFeedbackActions actions);
+
+        void setSecureFormMode(boolean on, String formTitle) {}
+      }
+
+      // IFeedbackActions actions-provides a set of actions for the feedback screen.
+      public interface IFeedbackActions {
+
+        void closeFeedBackScreen();
+
+        //close the screen, for example-after submitting the CSAT. When showing the "thank you" screen.
+
+        void skipFeedBackScreen();
+
+        //skip and close the whole feedback process.
+      }
+      ```
+
+
+      Once the CSAT screen is visible, **setFeedBackMode** will be called with **true** value, when the CSAT is not visible anymore (skip/submitted) - **setFeedBackMode** will be called with **false** value.
+
+      Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+
+      ```java
+      class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
+        @Override
+        public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
+          toolbar.setTitle("Csat mode: " + ( on ? "on!" : "off!" ));
+          toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              if (actions != null){
+                actions.closeFeedBackScreen();
+              }
+            }
+          });
+        }
+
+        @Override
+        public void onSurveySubmitted(IFeedbackActions actions) {
+          toolbar.setTitle("survey submitted");
+        }
+      }
+      ```  
 
 
 4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.
@@ -397,14 +465,33 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
    Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
 
+### Step 4: Screen orientation
+
+#### Activity mode
+Override in your application's AndroidManifest.xml with the ConversationActivity definition:
+
+```javascript
+<activity
+  android:name="com.liveperson.infra.messaging_ui.ConversationActivity"
+  android:screenOrientation="your screen orientation"/>
+```
+
+
+#### Fragment mode
+Set the desired orientation in your container Activity definition in AndroidManifest.xml. For a list of Activity elements to add to your manifest, see [android:screenOrientation](https://developer.android.com/guide/topics/manifest/activity-element.html#screen).
+
+
 ### Next Steps
 
 Congratulations!  You're all set.  
 
 You can now do any of the following:
-- [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
-- [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+- [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore.  You can also customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file. 
+
 - [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add the following to your app's AndroidManifest.xml file.  
-- [Customize and brand the SDK](mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html). You can customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file. 
 
+- [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
+- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html). Mobile Messaging SDK added the ability for agents or bots within LiveEngage to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
+
+- [Configure quick replies](mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents. 

@@ -77,9 +77,9 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 #### Related Classes, Parameters & APIs
 
-The ```LPAuthenticationParams``` object contains an authentication type which should be passed in the ctor. An empty ctor is also available and the default authentication type will be SIGN_UP (will be deprecated on July 2019).
+The `LPAuthenticationParams` object contains an authentication type which should be passed in the ctor. An empty ctor is also available and the default authentication type will be SIGN_UP (will be deprecated on July 2019).
 
-_Note: if you call any methods in LPAuthenticationParams that support authentication (for ex. - ```setHostAppJWT()```) - it will automatically set the authentication type to LPAuthenticationType.AUTH_
+_Note: if you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH_
 
 ```java
 public class LPAuthenticationParams {

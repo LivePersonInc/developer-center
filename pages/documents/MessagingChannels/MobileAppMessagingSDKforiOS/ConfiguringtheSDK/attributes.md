@@ -1371,6 +1371,120 @@ Radial loader progress background color.
 </div>
 <div class="important">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
 
+#### photoSharingMenuCameraImage  
+Custom camera image in the photo sharing menu.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> UIImage 
+</li>
+      <li><b>Default value:</b>  </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption>Default image:</figcaption>
+   <img src="img/ios_camera_button.png" style="width: 64px;">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### photoSharingMenuLibraryImage
+Custom Library image in the photo sharing menu.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> UIImage 
+</li>
+      <li><b>Default value:</b>  </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption>Default image:</figcaption>
+   <img src="img/ios_gallery_button.png" style="width: 64px;">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### photoSharingOpenMenuImageButton
+Photo sharing open menu custom button.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> UIImage 
+</li>
+      <li><b>Default value:</b>  </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption>Default image:</figcaption>
+   <img src="img/ios_attach_button.png" style="width: 64px;">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### photoSharingCloseMenuImageButton
+Photo sharing close menu custom button.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> UIImage 
+</li>
+      <li><b>Default value:</b>  </li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption>Default image:</figcaption>
+   <img src="img/ios_ps_close_button.png" style="width: 64px;">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### conversationEmptyStateTextColor
+Color code for the empty state label.
+
+<div style="float: left; width: 50%;height: 80px;">
+   <ul>
+      <li><b>Type:</b> UIColor() 
+</li>
+      <li><b>Default value:</b>  black</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption>Default image:</figcaption>
+   <img src="img/ios_empty_state_no_conversations.png" style="width: 64px;">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
 --- 
 
 ### Quick Reply

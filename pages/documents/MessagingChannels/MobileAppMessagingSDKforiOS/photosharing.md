@@ -43,7 +43,7 @@ Consumers cannot download images; they can only preview or share images.
 
 - Consumers cannot download images; they can only preview or share images.  
 
-- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent to consumer). 
+- Photo sharing is two way (agent-to-consumer and consumer-to-agent). 
 
    **For SDKs previous to 3.8:** Photo-sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
 
@@ -61,8 +61,9 @@ Consumers cannot download images; they can only preview or share images.
 
 - iOS supports the preview of file types per iOS operating system.
 
+---
 
-### Custom View Controller Mode requirements
+### Step 1. Set the requirements for Custom View Controller Mode 
 When using Custom View Controller Mode, you must remove the Conversation view when leaving the App. To avoid dismissing the View when presenting CSAT/SecureForms/PhotoSharing View, you should only dismiss the Conversation view if Moving From ParentView:
 
 ```swift
@@ -73,9 +74,9 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 
 When using ViewController Mode, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
----
 
-### Step 1. Add app privacy settings
+
+### Step 2. Add app privacy settings
 
 1. Set the photo library privacy settings:
    
@@ -92,7 +93,7 @@ When using ViewController Mode, on the Navigation Bar Back Button, you can simpl
 {:.important}
 Values for these descriptions are up to the brand to define, these are only examples.
 
-### Step 2. Enable or disable photo sharing
+### Step 3. Enable or disable photo sharing
 
 
 1. Change the boolean value:
@@ -104,7 +105,7 @@ Values for these descriptions are up to the brand to define, these are only exam
 
 2. Contact your Account Team to have the feature enabled on your account.
 
-### Step 3. Change the button text and color
+### Step 4. Change the button text and color
 
 - Change the background color of attachment menu:
 
