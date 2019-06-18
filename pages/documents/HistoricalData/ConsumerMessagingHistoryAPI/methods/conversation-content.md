@@ -17,7 +17,7 @@ This method retrieves the content of specific conversations as a message events 
 
 |Method | URL |
 |------|-----|
-|GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157`|
+|GET   | https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/conversation/content/search?conversationId=4a6ce154-a086-4bfb-8ab2-2658fd88157|
 
 **URL Parameters**
 

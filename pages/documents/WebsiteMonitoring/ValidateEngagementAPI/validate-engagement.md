@@ -16,9 +16,9 @@ indicator: both
 
 | Method     | URL |
 | :--- | :--- |
-| GET | https://{LivePerson domain}/api/account/{account}/monitoring/visitors/{visitor}/visits/current/campaigns/{campaign}/engagements/{engagement}/contexts/{context}?v=1&sid={sessionid} |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{account}/monitoring/visitors/{visitor}/visits/current/campaigns/{campaign}/engagements/{engagement}/contexts/{context}?v=1&sid={sessionid} |
 
-**OAuth** 
+**OAuth**
 
 This API supports OAuth 1.0.
 
@@ -50,23 +50,23 @@ This API supports OAuth 1.0.
 **Request Example**
 
 `http status 200 OK`
-    
+
 ### Response
-  
+
   **Response Codes**
 
-| Code     | Description | 
-| :------ | :------- | 
+| Code     | Description |
+| :------ | :------- |
 | 200 | OK; Engagement is valid |
 | 401 | Unauthorized (no permissions) |  
 | 404 | Engagement is not valid or resource not found |
 | 422 | Invalid Account ID |      
 | 500 | Internal Server Error |
-| 503 | Service Unavailable | 
+| 503 | Service Unavailable |
 
 **Retry Policy Recommendation**
 
 | Name     | Description | Recommendation |
-| :------: | :------- | :-------- | 
-| 4xx | Client side error |  Do not retry, fix problem in code or appKey    | 
-| 5xx | Server side error |  Retry 3 times with a 5 second pause between retries | 
+| :------: | :------- | :-------- |
+| 4xx | Client side error |  Do not retry, fix problem in code or appKey    |
+| 5xx | Server side error |  Retry 3 times with a 5 second pause between retries |

@@ -17,7 +17,7 @@ Get an account's audit trail records.
 
 | Method | URL |
 | :-------- | :------ |
-| POST | /api/account/{accountId}/configuration/metadata/audit |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/metadata/audit |
 
 **Request Headers**
 

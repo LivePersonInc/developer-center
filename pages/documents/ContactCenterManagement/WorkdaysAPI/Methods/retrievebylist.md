@@ -17,7 +17,7 @@ Get a list of all workday objects of an account.
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/workinghours|
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/workinghours|
 
 ### Path Parameters
 

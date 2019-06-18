@@ -29,7 +29,7 @@ Retrieves the information about the current messaging queue state (and all its r
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgqueuehealth/current/?skillIds=<skillIDs>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgqueuehealth/current/?skillIds=<skillIDs>&v=<version> |
 
 **URL Parameters**
 

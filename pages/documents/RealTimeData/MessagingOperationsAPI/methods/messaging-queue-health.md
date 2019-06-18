@@ -27,7 +27,7 @@ Retrieves information about the state of the queue (with all related metrics) fo
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgqueuehealth?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&interval=<interval size in minutes>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgqueuehealth?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&interval=<interval size in minutes>&v=<version> |
 
 **URL Parameters**
 

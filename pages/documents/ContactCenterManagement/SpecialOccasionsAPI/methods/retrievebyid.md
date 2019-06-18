@@ -17,7 +17,7 @@ Get a single special occasion by id
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialOccasionId} |
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialOccasionId} |
 
 **Path Parameters**
 

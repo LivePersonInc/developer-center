@@ -19,7 +19,7 @@ Create new status reason for an account. It is possible to create several items 
 
 | Method | URL |
 | :-------- | :------ |
-| POST | /api/account/{accountId}/configuration/le-agents/status-reasons |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons |
 
 
 ### Path Parameters
