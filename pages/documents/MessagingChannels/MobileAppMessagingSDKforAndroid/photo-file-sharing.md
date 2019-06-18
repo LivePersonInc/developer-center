@@ -66,7 +66,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### How photo and file sharing works
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;">
+<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 
 ---   
