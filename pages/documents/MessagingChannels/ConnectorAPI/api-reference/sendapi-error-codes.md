@@ -29,7 +29,7 @@ The SEND API returns an error response for every authorization or authentication
 | body | JSON body detailing the error. | See example *body* above.| Object | See below for the full list of possible values. |
 | body.title | Title of the error response. | *AppJWT is missing* | string | See below for the full list of possible values. |
 | body.details | Details about the error. | *AUTHORIZATION header is not present* | string | See below for the full list of possible values. |
-| body.errorCode | A unique code identifying each possible error response. | *40104* | integer | The first three digits represent the HTTP status code and the last two digits are a changing number. See below for the full list of possible values. |
+| body.errorCode | A unique code identifying each possible error response. | *40104* | integer | The first three digits represent the HTTP status code and the last two digits are a changing number. When writing code for error detection and/or recovery, it should rely on the error code as it won't change over time. See below for the full list of possible values. |
 | type | The type of the response. | *.ReqBody$ErrorResp* | string | Always *.ReqBody$ErrorResp* for error response. |
 
 
@@ -39,7 +39,7 @@ Each line in the following table represents one possible response body, includin
 
 | Error Code | Title | Details | Comment |
 | :--- | :--- | :--- | :--- | :--- |
-| 40001 | Missing parameter | Brand Id is missing | **Note:** Title and details are misleading. This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `Sentinel`. In the future, title and details will change to reflect missing claims. Your code is saved when it relies on the error code and does not parse the title and/or details. | 
+| 40001 | Missing parameter | Brand Id is missing | **Note:** This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `Sentinel`. Title and details will be adapted in a future release to reflect missing claims. The error code won't change. | 
 | 40102 | Invalid AppJWT  | AppJWT has expired or is invalid | |
 | 40103 | Invalid ConsumerJWS  | ConsumerJWS is invalid  | |
 | 40104 | ConsumerJWS is missing  | X_ON_BEHALF_HEADER is not present |
