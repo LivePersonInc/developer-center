@@ -619,8 +619,7 @@
     - pagename: Push Notifications
     - pagename: Advanced Features
       subpages:
-      - subpagename: Photo Sharing
-      - subpagename: File Sharing
+      - subpagename: Photo and File Sharing
       - subpagename: Audio Messages
       - subpagename: CSAT Behavior
       - subpagename: Campaigns 
@@ -669,6 +668,15 @@
     - pagename: Quick Start
     - pagename: Configure the iOS SDK
     - pagename: Push Notifications
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Photo and File Sharing
+      - subpagename: CSAT Behavior
+      - subpagename: Audio Messages
+      - subpagename: Campaigns 
+      - subpagename: Welcome Message with Quick Replies
+      - subpagename: Control History APIs
+      - subpagename: Unauthenticated In-App Messaging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -685,16 +693,7 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Timestamps Formatting
-    - pagename: Advanced Features
-      subpages:
-      - subpagename: Unauthenticated In-App Messaging
-      - subpagename: CSAT Behavior
-      - subpagename: Audio Messages
-      - subpagename: Photo Sharing
-      - subpagename: File Sharing
-      - subpagename: Campaigns 
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:
       - subpagename: Overview

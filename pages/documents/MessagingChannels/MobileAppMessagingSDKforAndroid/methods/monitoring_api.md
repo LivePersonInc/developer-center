@@ -21,7 +21,7 @@ indicator: messaging
 
 ### sendSde
 
-Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
+Use to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
 ```java
 public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> identities, @NonNull MonitoringParams monitoringParams, SdeCallback callback)
@@ -37,7 +37,7 @@ public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> 
 
 ### getEngagement
 
-Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
+Use to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
 
 As an optional parameter, you can pass SDE Data which includes Entry Points and Engagement Attributes for routing the conversation.
 

@@ -44,7 +44,7 @@ Announce when the agent is typing. This is applicable only in Activity mode.
 ### Agent Assignment
 
 #### send_agent_profile_updates_when_conversation_closed
-When true the callback LivePersonCallback#onAgentDetailsChanged will be called with the agent details updates even if the last conversation is closed (in this case it will provide the assigned agent of the last conversation). If false, this callback will be called only when the current conversation is active. 
+When set to **true** the callback [LivePersonCallback](lp_messaging_ui_brand_logo) `onAgentDetailsChanged` calls with the agent detail updates even if the last conversation is closed. In this case, it provides the assigned agent of the last conversation. If **false**, this callback is only called when the current conversation is active. 
 
 * **Type:** bool  
 * **Default value:** true 
@@ -54,7 +54,7 @@ When true the callback LivePersonCallback#onAgentDetailsChanged will be called w
 ### Audio Messaging
 
 #### enable_voice_sharing
-Enable/disable the audio messaging feature. 
+Enable or disable the audio messaging feature. 
 
 * **Type:** bool  
 * **Default value:** false
@@ -405,7 +405,7 @@ The font name for all elements that are not in the conversation feed.
 ### Connection status bar
 
 #### connection_status_connecting_bg_color
-Define the color of statusbar background color while trying to connect.
+Define the color of status bar background color while trying to connect.
 
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
@@ -427,7 +427,7 @@ Define the color of statusbar background color while trying to connect.
 
 
 #### connection_status_not_connected_bg_color
-Define the color of statusbar background color when connection is unavailable.
+Define the color of status bar background color when connection is unavailable.
 
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
@@ -449,7 +449,7 @@ Define the color of statusbar background color when connection is unavailable.
 
 
 #### connection_status_connecting_text_color
-Define the color of statusbar text color while trying to connect.
+Define the color of status bar text color while trying to connect.
 
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
@@ -471,7 +471,7 @@ Define the color of statusbar text color while trying to connect.
 
 
 #### connection_status_not_connected_text_color
-Define the color of statusbar text color when connection is unavailable.
+Define the color of status bar text color when connection is unavailable.
 
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
@@ -645,7 +645,7 @@ Conversation resolved message line spacing.
 
 
 #### enable_conversation_resolved_message
-Enable/disable the conversation resolved message.
+Enable or disable the conversation resolved message.
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
@@ -667,7 +667,7 @@ Enable/disable the conversation resolved message.
 
 
 #### enable_conversation_resolved_separator
-Enable/disable separators between conversations.
+Enable or disable separators between conversations.
 
 <div style="float: left; width: 50%;height: 50px;">
    <ul>
@@ -925,7 +925,7 @@ Top border color for the Input TextView.
 
 
 #### enter_message_divider_visible
-Determine if the Enter Message edit text divider is visible or not.
+Enable (visible) or disable (hidden) the Enter Message edit text divider.
 
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
@@ -1058,6 +1058,10 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 </div>
 
 
+#### lpmessaging_ui_image_progress_bar.xml	
+Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+
+
 ---  
 
 ### Delivery Notifications
@@ -1092,7 +1096,7 @@ You can customize the indicators according to your needs, by using a number betw
 
 
 #### message_receive_text
-If you set 0 in the resource message_receive_icons, you can specify what texts appears for each state. 
+If you set the resource [message_receive_icons](#message_receive_icons) to **0**, you can specify what texts appear for each state. 
 
 **Type:** string-array
 
@@ -1120,7 +1124,7 @@ If you set 0 in the resource message_receive_icons, you can specify what texts a
 
 
 #### clear_history_show_confirm_dialog
-Define if to show confirm dialog before clearing history or not. True by default.
+Define if to show confirm dialog before clearing history or not. 
 
 * **Type:** bool
 * **Default value:** true
@@ -1130,13 +1134,13 @@ Define if to show confirm dialog before clearing history or not. True by default
 ### General Style
 
 #### is_enable_enlarge_emojis
-When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.
+When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and three or more will be displayed as normal text.
 
 * **Type:** bool
 * **Default value:** false
 
 #### vibrate_enabled
-Enable/Disable vibrate upon receiving messages from agent while conversation screen is in foreground. false by default.
+Enable or disable vibrate upon receiving messages from agent while conversation screen is in foreground. false by default.
 
 * **Type:** bool
 * **Default value:** false
@@ -1192,13 +1196,13 @@ When user is authenticated, this indicates the number of recent conversations to
 * **Default value:** 2
 
 #### lp_bubble_phone_links_regex
-Defines the java regex for phone links in bubble messages. By default does not contain any value.
+Defines the java regex for phone links in bubble messages. 
 
 * **Type:** string
 * **Default value:** No value
 
 #### lp_bubble_url_links_regex
-Defines the java regex for url links in bubble messages. By default does not contain any value.
+Defines the java regex for url links in bubble messages. 
 
 * **Type:** string
 * **Default value:** No value
@@ -1210,7 +1214,7 @@ Defines the java regex for email links in bubble messages. By default does not c
 * **Default value:** No value
 
 #### lpinfra_ui_ic_send_disabled.xml
-You can display a different drawable to represent sending a message. Create a drawable file named "lpinfra_ui_ic_send_disabled.xml." The XML file overrides the SDK's default drawable.
+You can display a different drawable to represent sending a message. Create a drawable file named **lpinfra_ui_ic_send_disabled.xml**, which overrides the SDK's default drawable.
 
 To display an image instead of text, set the `use_send_image_button` boolean to true.
 
@@ -1233,7 +1237,7 @@ To display an image instead of text, set the `use_send_image_button` boolean to 
 </div>
 
 #### lpmessaging_ui_ic_gallery.xml
-You can replace the existing Gallery image button. Create a drawable file named "lpmessaging_ui_ic_gallery.xml." The XML file overrides the SDK's default drawable.
+You can replace the existing Gallery image button. Create a drawable file named **lpmessaging_ui_ic_gallery.xml**, which overrides the SDK's default drawable.
 
 
 <div style="float: left; width: 50%;height: 82px;">
@@ -1257,7 +1261,7 @@ You can replace the existing Gallery image button. Create a drawable file named 
 
 
 #### lpmessaging_ui_ic_camera.xml
-You can replace the existing Library image button. Create a drawable file named "lpmessaging_ui_ic_camera.xml." The XML file overrides the SDK's default drawable.
+You can replace the existing Library image button. Create a drawable file named **lpmessaging_ui_ic_camera.xml**, which overrides the SDK's default drawable.
 
 <div style="float: left; width: 50%;height: 80px;">
    <ul>
@@ -1280,7 +1284,7 @@ You can replace the existing Library image button. Create a drawable file named 
 
 
 #### lpinfra_ui_ic_attach.xml
-You can replace the existing Attach image. Create a drawable file named "lpinfra_ui_ic_attach.xml." The XML file overrides the SDK's default drawable.
+You can replace the existing Attach image. Create a drawable file named **lpinfra_ui_ic_attach.xml**, which overrides the SDK's default drawable.
 
 <div style="float: left; width: 50%;height: 64px;">
    <ul>
@@ -1303,7 +1307,7 @@ You can replace the existing Attach image. Create a drawable file named "lpinfra
 
 
 #### lpinfra_ui_ic_close.xml
-You can replace the existing Close image. Create a drawable file named "lpinfra_ui_ic_close.xml." The XML file overrides the SDK's default drawable.
+You can replace the existing Close image. Create a drawable file named **lpinfra_ui_ic_close.xml**, which overrides the SDK's default drawable.
 
 <div style="float: left; width: 50%;height: 64px;">
    <ul>
@@ -1520,7 +1524,7 @@ Enable or disable the scroll down indicator (shown or invisible).
 
  
 #### scroll_down_indicator_unread_summary_enabled
-Enable or disable the summary in scroll down indicator (shown or invisible). If `unread_indicator_bubble_enable` is false, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
+Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
 
 * **Type:** bool  
 * **Default value:** true
@@ -1754,7 +1758,7 @@ Corner radius of the unread messages counter inside the scroll down indicator.
 
 
 #### enable_photo_sharing
-Enable/disable the photo sharing feature. 
+Enable or disable the photo sharing feature. 
 
 * **Type:** bool 
 * **Default value:** false
@@ -1930,10 +1934,14 @@ Define if to hide logo inside the pci secure form web view.
 
 
 #### pci_form_font_name
-Define the font of the pci secure form, by default - empty, use device's default.
+Define the font of the pci secure form.
 
 * **Type:** string
 * **Default value:** No value (use device's default)
+
+
+#### lpmessaging_ui_secure_form_progress_bar.xml	
+Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 
 ---  
@@ -1942,7 +1950,7 @@ Define the font of the pci secure form, by default - empty, use device's default
 
 
 #### csatSurveyExpirationInMinutes
-Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it will not be presented to the user.
+Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it does not present to the user.
 
 * **Type:** integer
 * **Default value:** 1440
@@ -2446,7 +2454,7 @@ Feedback dialog submit button stroke width size when disabled.
 
 
 #### feedback_fragment_agent_details_name
-Define the color of the agent name on agent details section in feedback dialog.Visible only if `show_agent_details_csat` is true.
+Define the color of the agent name on agent details section in feedback dialog.Visible only if [show_agent_details_csat](#show_agent_details_csat) is set to **true**.
 
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
@@ -2478,15 +2486,15 @@ Defines whether to show the feedback dialog.
 </div>
 
 #### show_agent_details_csat
-Define if the agent’s name and avatar are visible on top of feedback dialog.(true=show, false=hide).
+Define if the agent’s name and avatar are visible on top of feedback dialog.
 
 {:.notice}
-If both `show_yes_no_question` and `show_agent_details_csat` are set to true, `show_yes_no_question` will be ignored and will not be visible.
+If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> bool</li>
-      <li><b>Default value:</b> true</li>
+      <li><b>Default value:</b> true (show)</li>
    </ul>
 </div>
 
@@ -2506,8 +2514,9 @@ If both `show_yes_no_question` and `show_agent_details_csat` are set to true, `s
 #### show_yes_no_question
 Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide).
 
+
 {:.notice}
-If both `show_yes_no_question` and `show_agent_details_csat` are set to true, `show_yes_no_question` will be ignored and will not be visible.
+If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
@@ -2529,10 +2538,10 @@ If both `show_yes_no_question` and `show_agent_details_csat` are set to true, `s
 
 
 #### show_csat_thank_you
-Define if "thank you" screen will appear after submitting the survey. (true=show, false=hide).
+Define if "thank you" screen will appear after submitting the survey. 
 
 * **Type:** bool  
-* **Default value:** true
+* **Default value:** true (show)
 
 <div style="width: 85%;padding: 5px;">
 &nbsp;
@@ -2568,7 +2577,7 @@ Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimen
 
 
 #### enable_structured_content
-Enable/Disable structured content feature.
+Enable or disable structured content feature.
 
 * **Type:** bool
 * **Default value:** false
@@ -2596,10 +2605,10 @@ Integer that defines the zoom level of the structured content map view. For more
 
 
 #### structured_content_link_as_callback
-Enable/Disable sending the Structured Content link as a callback instead of a deep link intent (true - use callback, false - deep link intent).
+Set the Structured Content link as a callback (true) instead of a deep link intent (false).
 
 * **Type:** bool
-* **Default value:** false
+* **Default value:** false (deep link intent)
 
 
 #### lp_google_maps_key
@@ -2610,7 +2619,7 @@ Set the host app's Google Map key to enable map views in Structured Content.
 
 
 #### structured_content_background_color
-The color of the background of structured content elements. Default color is set to White.
+The color of the background of structured content elements. 
 
 * **Type:** color
 * **Default value:** #FFFFFF
@@ -2717,13 +2726,13 @@ Define the frequency of the TTR (time to response) messages.
 
 
 #### unread_indicator_bubble_enable
-Enable/disable the unread message indicator (shown or invisible) - true by default.
+Enable or disable the unread message indicator (shown or invisible) - true by default.
 
 * **Type:** bool 
 * **Default value:** true
 
 #### unread_indicator_bubble_text_color
-Enable/disable the unread message indicator (shown or invisible) - true by default.
+Enable or disable the unread message indicator (shown or invisible) - true by default.
 
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
@@ -2943,6 +2952,20 @@ Color code for the agent default icon in the avatar next to the bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
+
+
+#### lp_messaging_ui_ic_agent_avatar	
+Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar. 
+
+If you want to define the background color for this avatar, override [agent_avatar_background_color](#agent_avatar_background_color) resource ID.
+
+
+#### lp_messaging_ui_brand_logo	
+Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned. 
+
+If you want to define the background color for this avatar, override [brand_logo_background_color](#brand_logo_background_color) resource ID. Only relevant for bubble brand’s avatar. 
+
+Background color of the agent avatar on action bar is [agent_avatar_background_color](#agent_avatar_background_color).
 
 
 #### agent_bubble_link_preview_background_color

@@ -1,17 +1,20 @@
-### Environmental Requirements
+---
+pagename: Photo and File Sharing
+redirect_from:
+  - consumer-experience-ios-sdk-photosharing.html
+Keywords:
+sitesection: Documents
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for iOS
+subfoldername: Advanced Features
 
-The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+order: 234
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sharing.html
 
+indicator: messaging
+---
 
-### Bug fixed
-
-**Reported in SDK 3.7.1 on iOS.** When the customer sent messages just before their current token expires, the agent did not receive one or more of the messages, resulting in data loss.  After the initial token expires, the system should issue another token to reconnect and send all messages regardless if the token expires or not.
-
-### New Feature
-
-#### Photo and File sharing 
-
-Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.  
+Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
 
 Agents can share:
 
@@ -59,7 +62,8 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### How photo and file sharing works
 
-<img src="../../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;">
+<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;">
+
 
 ---   
 
@@ -165,22 +169,13 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
    - conversationNavigationTintColor colors the L &amp; R bar buttons as well as the title color.
 
-   <img src="../../../../../img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;">
+   <img src="../../../../img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;">
 
    **View Controller Mode:**
 
    Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
 
-   <img src="../../../../../img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;">
+   <img src="../../../../img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;">
 
 
 You can find all the related configurations in the [resources ID table](http://localhost:4000/consumer-experience-ios-sdk-attributes.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.
-
-
-  
-
-
-
-<br>
-<p style="text-align: left">
-<a href="mobile-app-messaging-sdk-for-ios-all-release-notes.html" center><img src="../img/back-to-all-release-notes.png" style="height: 30px; width: auto;"></a></p>

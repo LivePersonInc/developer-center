@@ -197,7 +197,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
       ```
 
 
-      Once the CSAT screen is visible, **setFeedBackMode** will be called with **true** value, when the CSAT is not visible anymore (skip/submitted) - **setFeedBackMode** will be called with **false** value.
+      Once the CSAT screen is visible, `setFeedBackMode` is called with **true** value. When the CSAT is not visible anymore (skip/submitted), `setFeedBackMode` calls with **false** value.
 
       Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
 

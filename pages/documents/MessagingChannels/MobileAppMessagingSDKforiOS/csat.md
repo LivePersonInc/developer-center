@@ -14,29 +14,43 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-csat-behavior.html
 indicator: messaging
 ---
 
-This document describes the CSAT behaviour and configurations in the Messaging SDK.
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
-### Show CSAT flow
 
-Show if:
+Show CSAT if:
 
-- CSAT configured to appear according to LPConfig.defaultConfiguration.csatShowSurveyView
+- CSAT configured to appear according to: 
+
+   ```swift
+   LPConfig.defaultConfiguration.csatShowSurveyView
+   ```
+
 - Conversation has an assigned agent.
+
 - Conversation’s CSAT wasn’t previously submitted.
 
-### Dismiss CSAT
+Dismiss CSAT if:
 
-The CSAT view is dismissed in one of four cases:
+- User presses the submit button (answers are sent to the survey).
 
-- User pressed the submit button (answers are sent to the survey).
-- User choose to skip the CSAT (skipped button is pressed).
-- The CSAT is automatically dismissed if it was filled in any other device.
-- If agent resumed the conversation while csat is visible - it will automatically dismissed.
+- User chooses to skip the CSAT (skipped button is pressed).
 
-<div class="important">
+- User fills in the CSAT details on another device.
+
+- If the CSAT is visible and the agent resumed the conversation.
+
+The CSAT screen includes several content containers:
+
+* [csatAgentViewHidden (avatar and agent name)](#csatagentviewhidden-avatar-and-agent-name)
+
+* [csatRatingButtonSelectedColor (stars)](#csatratingbuttonselectedcolor-stars)
+
+* [csatResolutionHidden (yes/no)](#csatresolutionhidden-yesno)
+
+
+### Custom View Controller Mode requirements
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-</div>
+
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -46,21 +60,19 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 
 **Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
-### CSAT UI content
 
-CSAT screen includes several content containers:
 
-**Agent View (avatar and agent name)**
+### csatAgentViewHidden (avatar and agent name)
 
-- Could be hidden or not using:
+You can either hide or show the agent avatar.
 
 ```swift
 LPConfig.defaultConfiguration.csatAgentViewHidden
 ```
 
-- Contains agent avatar:
-	- If conversation has assigned agent and its image was downloaded previously using profileUrl, this image will be presented in the view.
-	- If no image available, default avatar is presented. Its background and tint color can be set accordingly to agent bubble using:
+- If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
+
+- If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble using:
 
 ```swift
 LPConfig.defaultConfiguration.csatAgentAvatarBackgroundColor
@@ -71,7 +83,7 @@ LPConfig.defaultConfiguration.csatAgentAvatarIconColor
 	- By default it’s an empty label.
 	- If conversation has assigned agent, the agent’s nickName will be used.
 
-**Rating Question View (stars)**
+### csatRatingButtonSelectedColor (stars)
 
 - Always visible - can’t configure its visibility.
 - Stars color is defined by:
@@ -82,7 +94,7 @@ LPConfig.defaultConfiguration.csatRatingButtonSelectedColor
 
 - Rating question includes 'Agent’ by default in the text. If conversation has assigned agent and the agent’s nickName is not empty, this nickName will be used instead.
 
-**Resolution Confirmation View (yes/no)**
+### csatResolutionHidden (yes/no)
 
 - Could be hidden or not using:
 

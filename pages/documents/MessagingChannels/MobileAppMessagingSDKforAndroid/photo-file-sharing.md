@@ -1,9 +1,18 @@
-### Environmental requirements
-The Android Mobile Messaging SDK version 3.9 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+---
+pagename: Photo and File Sharing
+redirect_from:
+  - android-photo-sharing.html
+Keywords:
+sitesection: Documents
+categoryname: "Messaging Channels"
+documentname: Mobile App Messaging SDK for Android
+subfoldername: Advanced Features
 
-### New features
+order: 285
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html
 
-#### Photo and File sharing
+indicator: messaging
+---
 
 Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
 
@@ -57,7 +66,8 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### How photo and file sharing works
 
-<img src="../../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;">
+<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;">
+
 
 ---   
 
@@ -154,7 +164,3 @@ When the agent shares any supported file type from the LE, if the consumer isn't
    The default compression rate is 50.
 
 Other configurations can be found in the [Attributes](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html) section of the Dev Community.
-
-<br> 
-<p style="text-align: left">
-<a href="mobile-app-messaging-sdk-for-android-all-release-notes.html" center><img src="../img/back-to-all-release-notes.png" style="height: 30px; width: auto;"></a></p>

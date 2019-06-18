@@ -20,15 +20,23 @@ You can find all the related configurations in the resources ID table, under Sur
 Show CSAT if:
 
 - CSAT configured to appear according to:
+   
+   ```xml
    <bool name="show_feedback">
+   ```
+
 - Conversation has an assigned agent.
+
 - Conversation’s CSAT wasn’t previously submitted.
 
 Dismiss CSAT if:
 
 - User presses the submit button (answers get sent to the survey).
+
 - User chooses to skip the CSAT (skipped button pressed).
+
 - User fills in the CSAT details on another device.
+
 - If the CSAT is visible and the agent resumed the conversation.
 
 
@@ -38,9 +46,7 @@ The CSAT screen includes several content containers:
 
 * [ratingQuestionView (stars)](#ratingquestionview-stars)
 
-- [agentView (avatar and agent name)](#agentview-avatar-and-agent-name)
-- [ratingQuestionView (stars)](#ratingquestionview-stars)
-- [resolutionConfirmationView (yes/no)](#resolutionconfirmationview-yesno)
+* [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
 
 
 ### agentView (avatar and agent name)
@@ -51,9 +57,9 @@ You can either hide or show the agent avatar.
 <bool name="show_agent_details_csat">
 ```
 
-- If the conversation has assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
+- If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
 
-- If no image available, the default avatar displays. Its background and tint color is according to the agent bubble with `lp_messaging_ui_ic_agent_avatar` and `agent_avatar_background_color`.
+- If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble with `lp_messaging_ui_ic_agent_avatar` and [agent_avatar_background_color](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#agent_avatar_background_color).
 
 - If the conversation has assigned agent, the SDK uses the agent’s nickName.
 
