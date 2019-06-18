@@ -54,3 +54,121 @@ public static void getEngagement(Context context, @Nullable List<LPMonitoringIde
 
 
 *Please refer to the [Interface and Class Definitions](android-interface-definitions.html) section for parameter classes.*
+
+
+### Monitoring API Related Classes
+
+#### EngagementCallback
+
+```java
+public interface EngagementCallback {
+  void onSuccess(LPEngagementResponse engagementResponse);
+  void onError(MonitoringErrorType errorType, Exception e);
+}
+```
+
+#### EngagementDetails
+
+```java
+public final class EngagementDetails {
+  @NotNull
+  private  String campaignId;
+  @NotNull
+  private  String engagementId;
+  @NotNull
+  private  String engagementRevision;
+  @NotNull
+  private  String contextId;
+  @Nullable
+  private String conversationId;
+  @Nullable
+  private String status;
+}
+```
+
+
+#### LPEngagementResponse
+
+```java
+
+public final class LPEngagementResponse {
+  @NotNull
+  private String pageId;
+  @Nullable
+  private String sessionId;
+  @Nullable
+  private String visitorId;
+  @Nullable
+  private List<EngagementDetails> engagementDetailsList;
+}
+```
+
+#### LPMonitoringIdentity (Kotlin syntax)
+
+A class that contains data on the consumer identity.
+
+consumerId - unique and non-guessable identifier of the consumer (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and move between consumers).
+
+issuer - Issuer, who identified the consumer - usually the brand.
+
+```java
+class LPMonitoringIdentity(val consumerId: String? = "", val issuer: String? = ""){
+}
+```
+
+#### LPSdeResponse
+
+```java
+public class LPSdeResponse {
+  @NotNull
+  private String pageId;
+  @Nullable
+  private final String sessionId;
+  @Nullable
+  private final String visitorId;
+}
+```
+
+#### MonitoringErrorType
+
+```java
+enum class MonitoringErrorType {
+  NOT_INITIALIZED,
+  INITIALIZATION_ERROR,
+  LOGOUT_ERROR,
+  PARAMETER_MISSING,
+  NO_NETWORK,
+  REQUEST_ERROR,
+  CSDS_ERROR
+}
+```
+
+
+#### MonitoringInitParams
+
+```java
+public class MonitoringInitParams {
+  private String mAppInstallId;
+}
+```
+
+#### MonitoringParams
+
+```java
+public class MonitoringParams {
+  private String pageId;
+  private JSONArray entryPoints;
+  private JSONArray engagementAttributes;
+}
+```
+
+
+
+#### SdeCallback
+
+```java
+public interface SdeCallback {
+  void onSuccess(LPSdeResponse sdeResponse);
+  void onError(MonitoringErrorType errorType, Exception e);
+}
+```

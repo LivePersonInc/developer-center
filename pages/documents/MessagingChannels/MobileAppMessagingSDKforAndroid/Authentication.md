@@ -36,6 +36,9 @@ LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenti
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
 
+
+
+
 #### Authenticated connection methods
 
 ##### AuthenticationKey

@@ -150,6 +150,8 @@ There are 2 authenticated connection methods:
    | LPAuthenticationParams | authentication params |
    | ConversationViewParams | view params |
 
+* 
+
 ### getNumUnreadMessages
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
@@ -474,6 +476,15 @@ There are 2 authenticated connection methods:
    ```java
     new ConversationViewParams().setHistoryConversationMaxDaysType(LPConversationHistoryMaxDaysDateType.endConversationDate);
    ```
+
+* **LPWelcomeMessage** 
+
+   ```java
+   LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
+   new ConversationViewParams().setLpWelcomeMessage(lpWelcomeMessage);
+   ```
+
+   For details on implementing, see [Welcome Message with Quick Replies](mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html).
 
 * **HistoryConversationsMaxDays**
 

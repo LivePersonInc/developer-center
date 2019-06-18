@@ -254,13 +254,35 @@ You can customize the look and feel of the conversation screen with your brandin
 
 3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
    
-   | Resource name | Description |
-   |---|---|
-   | lp_messaging_ui_brand_logo | Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned. In case you want to define the background color for this avatar - override "brand_logo_background_color" resource id. (This is relevant for bubble brand’s avatar only. Background color of agent avatar on action bar is "agent_avatar_background_color"). |
-   | lp_messaging_ui_ic_agent_avatar | Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar. In case you want to define the background color for this avatar, override "agent_avatar_background_color" resource id. |
-   | lpmessaging_ui_secure_form_progress_bar.xml | Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource - create your own vector drawable under the android drawable folder with the same resource name. |
-   | lpmessaging_ui_image_progress_bar.xml | Default progress bar vector drawable for downloading \ uploading an image. It will appear on the image, inside the bubble, until progress is done. To Override this resource - create your own vector drawable under the android drawable folder with the same resource name. |
-   | lpinfra_ui_ic_send_disabled.xml | Default send button icon vector drawable. It will appear on the send button. The drawable is colored when the send button is enabled. The color configuration used is R.color.lp_send_button_text_enable. When the send button is disabled, we color it by the color configuration R.color.lp_send_button_text_disable. See more here: [Configuring the SDK](android-attributes.html#Message Edit Text) To Override this resource - create your own vector drawable under the android drawable folder with the same resource name. |
+   - [lp_messaging_ui_brand_logo](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_brand_logo) 
+      Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned.
+
+      If you want to define the background color for this avatar, override brand_logo_background_color resource ID. Only relevant for bubble brand’s avatar.
+
+      Background color of the agent avatar on action bar is agent_avatar_background_color.
+
+  
+   - [lp_messaging_ui_ic_agent_avatar](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_ic_agent_avatar) 
+
+      Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.
+
+      If you want to define the background color for this avatar, override agent_avatar_background_color resource ID.
+
+
+   - [lpmessaging_ui_secure_form_progress_bar.xml](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)
+
+      Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+
+
+   - [lpmessaging_ui_image_progress_bar.xml](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml)
+
+       Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+
+   - [lpinfra_ui_ic_send_disabled.xml](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpinfra_ui_ic_send_disabledxml)
+
+      You can display a different drawable to represent sending a message. Create a drawable file named lpinfra_ui_ic_send_disabled.xml, which overrides the SDK's default drawable.
+
+      To display an image instead of text, set the use_send_image_button boolean to true.
 
 #### Step 2. Configure the message EditText in your styles.xml file
 

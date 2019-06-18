@@ -13,18 +13,20 @@ indicator: messaging
 ---
 
 
-Use the Control History APIs when calling the method `showConversation` to control which historical or current conversations present to the consumer when opening the conversation screen.
+The Control History APIs allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen. For example, brands can choose to present only the last 180 days of conversation history.  Use these APIs when calling `showConversation`.
 
-The conversations can be filtered by:
+You can use these APIs together with `getEngagement` (Monitoring APIs) to determine how to present conversations history according to whether there is an open conversation or not. For example, if there is no open conversation, brands can present a **View conversation history** button that displays only if the closed conversations are from the time specified, for example the last 180 days.
 
-* Conversation status (open, closed, all)
+The APIs lets brands:
 
-* Conversation date - by days (for example, conversations from the past 14 days)
+- Get an indication if there is an open conversation or not (Monitoring APIs).
+
+- Control which conversations will be presented by status (open\closed).
+
+- Control the time frame of presented conversations (by days).
 
 
-### Using the APIs
-
-#### Parameters
+### Parameters
 
 LPConversationViewParams includes LPConversationHistoryControlParam:
 
@@ -36,9 +38,11 @@ class LPConversationHistoryControlParam: NSObject {
 }
 ```
 
-LPConversationHistoryControlParam contains 3 fields:
+You have three relevant parameters for `LPConversationHistoryControlParam`:
 
-* **LPConversationsHistoryStateToDisplay** - Use to present open conversations or closed conversations or all conversations. To present all conversations, do not provide a value.
+### LPConversationsHistoryStateToDisplay
+
+Use to present open conversations or closed conversations or all conversations. To present all conversations, do not provide a value.
 
    ```swift
    enum LPConversationsHistoryStateToDisplay: Int {
@@ -47,12 +51,14 @@ LPConversationHistoryControlParam contains 3 fields:
    }
    ```
 
-* `historyConversationsMaxDays` - Use to choose how much conversation history presents to the consumer by days. Not providing a value allows consumers to see the entire history stored on LivePerson's servers (by scrolling down to see additional conversations).  
+### historyConversationsMaxDays
+Use to choose how much conversation history presents to the consumer by days. Not providing a value allows consumers to see the entire history stored on LivePerson's servers (by scrolling down to see additional conversations).  
 
    {:.important}
    When using this, you must also use `LPConversationHistoryMaxDaysDateType`.
 
-* `LPConversationHistoryMaxDaysDateType` - Use to decide whether to count the days from the conversation start date or end date. If not providing a value, the start date is the default. 
+### LPConversationHistoryMaxDaysDateType
+Use to decide whether to count the days from the conversation start date or end date. If not providing a value, the start date is the default. 
 
    ```swift
    enum LPConversationHistoryMaxDaysDateType: Int {
