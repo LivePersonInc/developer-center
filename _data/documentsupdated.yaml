@@ -143,6 +143,8 @@
         subpages:
           - subpagename: Overview
           - subpagename: Simple Router
+          - subpagename: Full Lead Gen
+          - subpagename: Simple Lead Gen
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
