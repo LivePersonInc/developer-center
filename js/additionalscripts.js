@@ -576,6 +576,7 @@ const retrieveDomains = (account) => {
           },
           dataType: "json",
           success: function(data) {
+						html = '';
 						console.log(data);
               if (data.baseURIs.length > 0) {
 									html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
@@ -583,7 +584,8 @@ const retrieveDomains = (account) => {
                           html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
                       });
 									html += '</tbody>'
-                      csdsResult.innerHTML = html;
+									csdsResult.innerHTML = '';
+                  csdsResult.innerHTML = html;
               } else {
                   csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
               }
