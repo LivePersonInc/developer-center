@@ -21,7 +21,7 @@ Instead of using the API below yourself, you can use a simple tool that we built
 To use the tool, simply input your account number below and hit the button!
 
 <input type="text" id="account" placeholder="Type your account number here">
-<input type="button" id="csds-button" value="Get CSDS Domains">
+<input type="button" id="csds-button" value="Get Base URIs">
 <table id="csds-result">
 </table>
 
