@@ -35,7 +35,7 @@ While web messaging allows automatic capturing of events (using the LE Tag), whe
 
 ### Notes & Best Practices
 
-* To start a conversation with a specific campaign and engagement, a `CampaignInfo` object should be provided to the `ConversationViewParams` object.
+* To start a conversation with a specific campaign and engagement, provide a `CampaignInfo` object to the `ConversationViewParams` object.
 
 * A monitoring session is a 6-hours window. All SDEs that report during the session get aggregated.
 

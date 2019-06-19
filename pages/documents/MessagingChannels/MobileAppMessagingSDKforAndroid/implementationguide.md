@@ -226,15 +226,16 @@ Here, you use the LivePerson SDK’s `showConversation` method.
 
 ```java
 private void openActivity() {
-LivePerson.showConversation(MainActivity.this,  new LPAuthenticationParams().setAuthKey(""), new ConversationViewParams(false));
-ConsumerProfile consumerProfile = new ConsumerProfile.Builder()
-        .setFirstName(fnameInput.getText().toString())
-        .setLastName(lnameInput.getText().toString())
-        .setPhoneNumber("")
-        .build();
-LivePerson.setUserProfile(consumerProfile);
-}
+   LivePerson.showConversation(MainActivity.this,  new LPAuthenticationParams().setAuthKey(""), new ConversationViewParams(false));
+   ConsumerProfile consumerProfile = new ConsumerProfile.Builder()
+           .setFirstName(fnameInput.getText().toString())
+           .setLastName(lnameInput.getText().toString())
+           .setPhoneNumber("")
+           .build();
+   LivePerson.setUserProfile(consumerProfile);
+   }
 ```
+
 
 ### Step 5 - Configure push notifications  
 Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
@@ -480,7 +481,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
          }
          return null;
      }
-         /* Listen to changes in unread messages counter and updating icon badge*/
+         /* Listen to changes in unread messages counter and update icon badge*/
      public static class BadgeBroadcastReceiver extends BroadcastReceiver{
          public BadgeBroadcastReceiver(){}
          @Override

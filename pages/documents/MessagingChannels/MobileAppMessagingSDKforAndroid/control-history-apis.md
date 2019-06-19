@@ -29,7 +29,13 @@ The APIs lets brands:
 
 - Control the time frame of presented conversations (by days).
 
+### Important Notes
 
+* In no conversations match the provided filter, an empty state presents with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured. To change the text, change the value of `lp_history_control_api_empty_state` parameters. 
+
+* When opening the window with closed conversations only, the window opens as a view only mode.
+
+* Every message that arrives from the agent or sent by the consumer removes the filter and the conversations present as if no filter was applied.
 
 ### Parameters 
 
@@ -125,10 +131,4 @@ LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(bran
 }));
 ```
 
-### Important Notes
 
-* In no conversations match the provided filter, an empty state presents with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured. To change the text, change the value of `lp_history_control_api_empty_state` parameters. 
-
-* When opening the window with closed conversations only, the window opens as a view only mode.
-
-* Every message that arrives from the agent or sent by the consumer removes the filter and the conversations present as if no filter was applied.
