@@ -12,7 +12,7 @@ indicator: both
 
 ### Introduction
 
-Within your automation, you may be using intents and entities to trigger a dialog OR you may be using a Knowledge Base (KB) to return articles. Both of these require the use of our Natural Language Understanding (NLU) algorithms. You can find the basics of how to [Use Intents](https://developers.liveperson.com/conversation-builder-getting-started-2-intents.html) and  [Train & Tune KBs](https://developers.liveperson.com/conversation-builder-knowledge-base.html#training-and-tuning-your-knowledge-base) on our Developers' Community.
+Within your automation, you may be using intents and entities to trigger a dialog OR you may be using a Knowledge Base (KB) to return articles. Both of these require the use of our Natural Language Understanding (NLU) algorithms. You can find the basics of how to [Use Intents](conversation-builder-getting-started-2-intents.html) and  [Train & Tune KBs](conversation-builder-knowledge-base.html#training-and-tuning-your-knowledge-base) on our Developers' Community.
 
 In this document we will outline some best practices to keep in mind while using intents, entities, the Knowledge Base and troubleshooting any issues that may occur.
 
