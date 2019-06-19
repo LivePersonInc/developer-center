@@ -626,15 +626,14 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns 
       - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+      
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
+      - subpagename: Control History APIs
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-
-
     - pagename: SDK Attributes
       subpages:
       - subpagename: Attributes
