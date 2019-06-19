@@ -3,13 +3,19 @@ pagename: Configure the iOS SDK
 redirect_from:
   - consumer-experience-ios-sdk-configuring-the-sdk.html
   - mobile-app-messaging-sdk-for-ios-customization-and-branding-customizing-the-sdk.html
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - consumer-experience-ios-sdk-app-extensions.html
+  - consumer-experience-ios-sdk-initialization.html
+  - mobile-app-messaging-sdk-for-ios-configuration-initialization.html
+  - consumer-experience-ios-sdk-lifecycle.html
+  - mobile-app-messaging-sdk-for-ios-configuration-conversations-lifecycle.html
+  - consumer-experience-ios-sdk-delegates.html
+  - mobile-app-messaging-sdk-for-ios-configuration-sdk-delegates.html
+  - consumer-experience-ios-sdk-logs-info.html
+  - mobile-app-messaging-sdk-for-ios-configuration-logs-and-info.html
+  - consumer-experience-ios-sdk-UI.html
+  - mobile-app-messaging-sdk-for-ios-configuration-ui.html
+  - consumer-experience-ios-sdk-user-data.html
+  - mobile-app-messaging-sdk-for-ios-configuration-user-data.html
 
 Keywords:
 sitesection: Documents
@@ -19,7 +25,7 @@ documentname: Mobile App Messaging SDK for iOS
 permalink: mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html
 
 ---
-
+ 
 
 You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. 
 
@@ -59,6 +65,7 @@ func application(_ application: UIApplication, shouldAllowExtensionPointIdentifi
 You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
 
 
+
 **Example configuration:**   
 
 ```swift
@@ -69,25 +76,7 @@ configuration.remoteUserBubbleBorderWidth = 0.5
 
 
 
-### Conversation Functions
 
-* Get the conversation screen and determine which of the conversations to display in the Conversation Window.
-
-   ```swift
-   public func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol
-   ```
-
-* Get the conversation screen and determine which of the conversations to display in the Conversation Window, using the **Consumer ID**:
-
-   ```swift
-   public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol
-   ```
-
-* Return a boolean flag, with **Ready** when the Brand is connected and conversation can be processed:
-
-   ```swift
-   public func isBrandReady(brandID: String) -> Bool
-   ```
 
 ### Conversations Lifecycle
 
@@ -196,7 +185,7 @@ For information about the methods, see to [Messaging API](consumer-experience-io
 ### Customer Experience Survey
 The Customer Experience Survey contains the agent avatar, and by default, the agent's name is empty.  If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image displays in the view.  Also, if the conversation has an assigned agent, the agent's nickName is used.  If no avatar image, then the default avatar image displays with the background and tint color configuration for the agent bubble.
 
-The survey only shows if the CSAT configured to appear according to LPConfig.defaultConfiguration.csatShowSurveyView, the conversation has an assigned agent, or the CSAT wasn't previously submitted.  The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT.  The CSAT gets automatically dismissed if the consumer filled it in on another device.  If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.  
+The survey only shows if the CSAT configured to appear according to `LPConfig.defaultConfiguration.csatShowSurveyView`, the conversation has an assigned agent, or the CSAT wasn't previously submitted.  The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT.  The CSAT gets automatically dismissed if the consumer filled it in on another device.  If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.  
 
 **Notes:** 
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
@@ -350,18 +339,7 @@ Send logs from LiveEngage to your app. Logs include different severity levels of
    public func getAllSupportedLanguages() -> [String : String]
    ```
 
-### Look and feel (branding)
 
-You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
-
-
-**Example configuration:**   
-
-```swift
-configuration.remoteUserBubbleBackgroundColor = UIColor.purpleColor()
-configuration.brandName = "Brand Name"
-configuration.remoteUserBubbleBorderWidth = 0.5
-```
 
 
 ### LPMessagingSDK Delegates
@@ -381,6 +359,27 @@ The SDK uses 2 delegates:
    ```
 
 You should implement and set the **LPMessagingSDKNotificationDelegate**, in order to receive Push Notifications from the SDK.
+
+
+#### Conversation Functions
+
+* Get the conversation screen and determine which of the conversations to display in the Conversation Window.
+
+   ```swift
+   public func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol
+   ```
+
+* Get the conversation screen and determine which of the conversations to display in the Conversation Window, using the **Consumer ID**:
+
+   ```swift
+   public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol
+   ```
+
+* Return a boolean flag, with **Ready** when the Brand is connected and conversation can be processed:
+
+   ```swift
+   public func isBrandReady(brandID: String) -> Bool
+   ```
 
 
 
