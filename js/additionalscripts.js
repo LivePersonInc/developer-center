@@ -584,7 +584,6 @@ const retrieveDomains = (account) => {
                           html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
                       });
 									html += '</tbody>'
-									csdsResult.innerHTML = '';
                   csdsResult.innerHTML = html;
               } else {
                   csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
