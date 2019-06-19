@@ -145,6 +145,7 @@
           - subpagename: Simple Router
           - subpagename: Full Lead Gen
           - subpagename: Simple Lead Gen
+          - subpagename: Simple FAQ
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
