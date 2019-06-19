@@ -17,10 +17,10 @@ indicator: messaging
 
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
-<div style="float: left; width: 50%;height: 200px;">
+<div style="float: left; width: 50%;height: 175px;">
 <p><b>Show CSAT if:</b></p>
    <ul>
-      <li>CSAT configured to appear according to:<br><code lang="java">&#060;bool name=&quot;show_feedback&quot;&#062;</code></li>
+      <li>CSAT configured to appear according to:<br><code>&#060;bool name=&quot;show_feedback&quot;&#062;</code></li>
       <li>Conversation has an assigned agent.</li>
       <li>Conversation’s CSAT wasn’t previously submitted.</li>
    </ul>
@@ -40,7 +40,7 @@ You can find all the related configurations in the resources ID table, under Sur
 &nbsp;
 </div>
 
-
+---  
 
 The CSAT screen includes several content containers:
 

@@ -16,7 +16,7 @@ indicator: messaging
 
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
-<div style="float: left; width: 50%;height: 200px;">
+<div style="float: left; width: 50%;height: 175px;">
 <p><b>Show CSAT if:</b></p>
    <ul>
       <li>CSAT configured to appear according to: <br><code>LPConfig.defaultConfiguration.csatShowSurveyView</code></li>
@@ -40,7 +40,7 @@ You can find all the related configurations in the resources ID table, under Sur
 </div>
 
 
-
+---   
 
 The CSAT screen includes several content containers:
 

@@ -2,13 +2,17 @@
 pagename: Control History APIs
 redirect_from:
   - consumer-experience-ios-sdk-advanced-control-history-android.html
+  - mobile-app-messaging-sdk-for-android-advanced-features-control-history-apis.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Advanced Features
+subfoldername: SDK APIs
+
 order: 292
-permalink: mobile-app-messaging-sdk-for-android-advanced-features-control-history-apis.html
+
+permalink: mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html
+
 indicator: messaging
 ---
 

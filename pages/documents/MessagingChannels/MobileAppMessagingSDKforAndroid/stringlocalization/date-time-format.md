@@ -53,6 +53,8 @@ We define three configurable formatting resources:
    ```xml
    <string name="lp_date_time_format"></string>
    ```
+
+
 ### Bubble timestamp
 
 Bubble timestamps contain only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to device setting.
@@ -136,7 +138,7 @@ If you want special date/hour format, use:
 
 With any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
 
-###  Timezone
+### Timezone
 
 Off hours can appear in different time zone with this resource ID:
 
