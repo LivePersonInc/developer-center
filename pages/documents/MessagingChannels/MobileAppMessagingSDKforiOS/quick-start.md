@@ -2,10 +2,7 @@
 pagename: iOS Quick Start
 redirect_from:
   - consumer-experience-ios-sdk-quick-start.html
-  - Initialization with Monitoring Params
-  - mobile-app-messaging-sdk-for-ios-initializing-with-monitoring-params.html
-K
-eywords:
+Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
