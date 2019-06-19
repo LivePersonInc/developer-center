@@ -221,7 +221,7 @@ isPartial            | Indicates whether the conversation's data is partial.    
 sessionId | Session ID in LP system. | string |
 interactionContextId | Session ID in LP system. | string |
 timeZone | Visitor's time zone. | string |
-features | The features that the connection is using | list of strings | For example: ["PHOTOSHARING","QUICKREPLIES","COAPP","AUTOMESSAGES","RICHCONTENT","SECUREFORMS"]
+features | The features that the connection is using | list of strings | For example: PHOTOSHARING,QUICKREPLIES,COAPP,AUTOMESSAGES,RICHCONTENT,SECUREFORMS
 language | Language of the conversation's context | string |
 integration | The integration type: mobile-sdk, web-sdk, brand-sdk | string |
 integrationVersion | The version of the integration | string |
