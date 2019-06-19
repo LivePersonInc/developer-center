@@ -208,7 +208,7 @@ You can find all the related configurations in the [resources ID table](http://l
 
 #### Environmental Requirements
 
-The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2 Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C, and supported on iOS versions 10 through 12.
 
 
 #### Bug fixed

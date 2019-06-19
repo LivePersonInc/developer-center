@@ -40,6 +40,12 @@ class LPConversationHistoryControlParam: NSObject {
 
 You have three relevant parameters for `LPConversationHistoryControlParam`:
 
+* [LPConversationsHistoryStateToDisplay](#lpconversationshistorystatetodisplay)
+
+* [historyConversationsMaxDays](#historyconversationsmaxdays)
+
+* [LPConversationHistoryMaxDaysDateType](#lpconversationhistorymaxdaysdatetype)
+
 ### LPConversationsHistoryStateToDisplay
 
 Use to present open conversations or closed conversations or all conversations. To present all conversations, do not provide a value.
@@ -94,11 +100,11 @@ Use to decide whether to count the days from the conversation start date or end 
 
 ### Important Notes
 
-* In case no conversations are matching the provided filter, an empty state presents with a message. The default message is *"There are no conversations at this time."* The UI elements of the state can be configured.  
+* If no conversations match the provided filter, an empty state presents with a message. The default message is *"There are no conversations at this time."* You can configure the UI elements of the state.  
 
-   - Change the text: change the value of `conversationEmptyState`. 
+   - **Change the text:** change the value of `conversationEmptyState`. 
 
-   - Change the text color:  change `LPConfig → conversationEmptyStateTextColor`.
+   - **Change the text color:**  change `LPConfig → conversationEmptyStateTextColor`.
 
 * When opening the window with closed conversations only, the window opens as a view only mode.
 

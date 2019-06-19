@@ -2,6 +2,15 @@
 pagename: Date and Time
 redirect_from:
   - android-off-hours.html
+  - android-bubble.html
+  - mobile-app-messaging-sdk-for-android-string-localization-bubble-timestamp.html
+  - android-separator.html
+  - mobile-app-messaging-sdk-for-android-string-localization-separator-timestamp.html
+  - android-timestamps.html
+  - mobile-app-messaging-sdk-for-android-string-localization-timestamps-formatting.html
+  - android-resolve.html
+  - mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html
+  - 
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

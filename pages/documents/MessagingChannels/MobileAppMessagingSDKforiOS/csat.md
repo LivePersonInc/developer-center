@@ -16,28 +16,31 @@ indicator: messaging
 
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
+<div style="float: left; width: 50%;height: 200px;">
+<p><b>Show CSAT if:</b></p>
+   <ul>
+      <li>CSAT configured to appear according to: <br><code>LPConfig.defaultConfiguration.csatShowSurveyView</code></li>
+      <li>Conversation has an assigned agent.</li>
+      <li>Conversation’s CSAT wasn’t previously submitted.</li>
+   </ul>
+</div>
 
-Show CSAT if:
+<div style="float: right; width: 50%;">
+<p><b>Dismiss CSAT if:</b></p>
+   <ul>
+      <li>User presses the submit button (answers get sent to the survey).</li>
+      <li>User chooses to skip the CSAT (skipped button pressed).</li>
+      <li>User fills in the CSAT details on another device.</li>
+      <li>If the CSAT is visible and the agent resumed the conversation.</li>
+   </ul>
+</div>
 
-- CSAT configured to appear according to: 
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
-   ```swift
-   LPConfig.defaultConfiguration.csatShowSurveyView
-   ```
 
-- Conversation has an assigned agent.
 
-- Conversation’s CSAT wasn’t previously submitted.
-
-Dismiss CSAT if:
-
-- User presses the submit button (answers are sent to the survey).
-
-- User chooses to skip the CSAT (skipped button is pressed).
-
-- User fills in the CSAT details on another device.
-
-- If the CSAT is visible and the agent resumed the conversation.
 
 The CSAT screen includes several content containers:
 

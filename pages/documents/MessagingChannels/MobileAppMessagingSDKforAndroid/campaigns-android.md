@@ -29,6 +29,20 @@ Using the Monitoring APIs, brands can:
 
 While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs as will be explained in this guide.
 
+### Prerequisites
+
+- Follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf) **before** adding the implementation to a mobile app.
+
+- The SDK must be initialized with the `MonitoringInitParams` object.
+
+### Notes & Best Practices
+
+* To start a conversation with a specific campaign and engagement, a `CampaignInfo` object should be provided to the `ConversationViewParams` object.
+
+* A monitoring session is a 6-hours window. All SDEs that report during the session get aggregated.
+
+* If not reporting any SDEs (idle) for 30 minutes, a new session starts when reporting the next SDE.
+
 ### Monitoring APIs
 
 The Monitoring APIs provide brands access to the LivePerson monitoring system. The APIs can be used for reporting engagement attributes and to retrieve engagements. The eligibility for an engagement is based on campaigns and an engagement's definitions.
@@ -39,7 +53,7 @@ Monitoring APIs include two APIs:
 
 * [getEngagement](android-monitoring_api.html) - In case that there are a matching campaign and engagement, getEngagement returns an engagement.  
 
-#### Code Samples
+### Code Samples
 
 **Initialize SDK with Monitoring**
 
@@ -62,7 +76,7 @@ LivePerson.initialize(context, new InitLivePersonProperties(brandId, appId, moni
 }));
 ```
 
-**Monitoring parameters example**
+#### Monitoring parameters example
 
 ```java
 // Creating Identities array.
@@ -96,7 +110,7 @@ engagementAttriutes.put(lead);
 MonitoringParams monitoringParams = new MonitoringParams("PageId", entryPoints, engagementAttriutes);
 ```
 
-**GetEngagement API**
+#### getEngagement API
 
 Use this API to send engagement attributes (as part of the request body).  As an optional parameter, you can pass MontoringParams, which includes PageId, Entry Points, and Engagement Attributes for routing the conversation. Available parameters include:
 
@@ -126,7 +140,7 @@ LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new 
 
 
 
-**SendSde API**
+#### sendSde API
 
 Use this API to report engagement attributes (SDEs).  Available parameters include:
 
@@ -154,7 +168,7 @@ LivepersonMonitoring.sendSde(context, identityList, monitoringParams, new SdeCal
 });
 ```
 
-**Open conversation with CampaignInfo**
+#### Open conversation with CampaignInfo
 
 ```java
 ConversationViewParams conversationViewParams = new ConversationViewParams();
@@ -170,14 +184,4 @@ lpAuthenticationParams.setAuthKey(authCode);
 LivePerson.showConversation(activity, lpAuthenticationParams, conversationViewParams);
 ```
 
-### Notes & Best Practices
 
-* Please follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf) **before** adding the implementation to a mobile app.
-
-* In order to use the APIs, the SDK should be initialized with the `MonitoringInitParams` object.
-
-* In order to start a conversation with a specific campaign and engagement, a `CampaignInfo` object should be provided to the `ConversationViewParams` object.
-
-* A monitoring session is a 6 hours window. All SDEs which will be reported during the session will be aggregated.
-
-* In case of not reporting any SDEs (idle) for 30 minutes, a new session will be started when reporting the next SDE.
