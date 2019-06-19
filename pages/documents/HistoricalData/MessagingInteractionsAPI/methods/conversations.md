@@ -220,8 +220,8 @@ latestQueueState     | Indicates if the conversation is assigned to an agent or 
 isPartial            | Indicates whether the conversation's data is partial.                      | Boolean    | In order to retrieve its full data, use single conversation method (by conversation ID).
 sessionId | Session ID in LP system. | string |
 interactionContextId | Session ID in LP system. | string |
-timeZone | The time zone. | string |
-features | The features that the connection is using | list of strings | For example: PHOTO_SHARING, QUICK_REPLIES, CO_APP, AUTO_MESSAGES, RICH_CONTENT, SECURE_FORMS
+timeZone | Visitor's time zone. | string |
+features | The features that the connection is using | list of strings | For example: ["PHOTOSHARING","QUICKREPLIES","COAPP","AUTOMESSAGES","RICHCONTENT","SECUREFORMS"]
 language | Language of the conversation's context | string |
 integration | The integration type: mobile-sdk, web-sdk, brand-sdk | string |
 integrationVersion | The version of the integration | string |
