@@ -12,34 +12,61 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-audio-messages.htm
 indicator: messaging
 ---
 
-### Introduction
 
-Audio Messaging allows consumers to send audio messages to agents. This page describes the functionality of the feature and what needs to be done by brands in order to activate and configure the feature.
+Audio Messaging allows consumers to send audio messages to agents. 
 
-### Enabling & Configuring Audio Messages
+1. Contact your Account Team to activate the feature on the LivePerson server side.
 
-#### Server side
+2. Open the Info.plist and add the required permission to access the microphone. 
 
-Brands who wish to use the feature should contact their Account Team in order to activate the feature on the LivePerson server side.
+   * **Key:** `NSMicrophoneUsageDescription`
 
-#### Client side
+   * **Value:** "Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"   
 
-1. **Permissions** - Required permission to microphone access. Add a new key ```NSMicrophoneUsageDescription``` with a value ("Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS") to Info.plist. When the system prompts the user to approve access to the microphone, it will be displayed as part of the alert.
+   When the system prompts the user to approve access to the microphone, it displays as part of the alert.
 
-2. **Enable\disable the feature** - The feature can be enabled/disabled on the client side by modifying the value of ```LPConfig.defaultConfiguration.enableAudioSharing```.
+2. Enable the feature:  
 
-By default, this value is set to false.
+   `LPConfig.defaultConfiguration.enableAudioSharing`  
 
-3. **Max message length** The max length of an audio message can be configure by modifying the value of ```LPConfig.defaultConfiguration.recordingDurationLimit```.
+   By default, the value is *false* (disabled).  
 
-The values are in seconds. The minimum value is 15 seconds, the maximum and default value is 120 seconds.
+3. Define the max length of an audio message:
 
-4. **Number of files on device** The number of audio messages that will be saved on the device. Can be configured by modifying the value of ```LPConfig.defaultConfiguration.maxNumberOfSavedAudioFilesOnDisk```. The default value is 20.
+   `LPConfig.defaultConfiguration.recordingDurationLimit`  
 
-5. The following strings can be modified and localized:
+   The values are in seconds. 
+   
+   The minimum value is 15 seconds; the maximum and the default value is *120* seconds.
 
- * **Short tap tooltip** - Presented when the consumer used a shorttap instead of a long tap. The string's key is ```toolTipLongTapToRecord```. The default text is "Long tap to record".
+4. Define the max number of audio messages saved on the device:  
 
- * **Release microphone tooltip** - Presented when the consumer doesn't release the microphone icon. The string's key is ```toolTipReleaseButtonForRecording```. The default text is "Release for recording".
+   `LPConfig.defaultConfiguration.maxNumberOfSavedAudioFilesOnDisk`  
 
- * **Maximum length reached tooltip** - Presented when the message length reached to the maximum length. The string's key is ```toolTipRecordLimitReached```. The default text is "Recording limit has been reached, click to send".
+   The default value is *20*.  
+
+5. Modify and localize the following strings:  
+
+   * **Short tap tooltip**  
+
+     Presented when the consumer used a shorttap instead of a long tap.  
+     
+     **Key:** `toolTipLongTapToRecord`
+     
+     The default text is *"Long tap to record."*
+
+   * **Release microphone tooltip**
+
+     Presented when the consumer doesn't release the microphone icon. 
+     
+     **Key:** `toolTipReleaseButtonForRecording` 
+     
+     The default text is *"Release for recording."*
+
+   * **Maximum length reached tooltip**
+
+     Presented when the message length reached to the maximum length. 
+     
+     **Key:** `toolTipRecordLimitReached`
+     
+     The default text is *"Recording limit has been reached, click to send."*

@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Special Occasions API
 subfoldername: Methods
-permalink: special-occasions-api-methods-retrieve-special-occasions-by-id.html
+permalink: special-occasions-api-methods-retrieve-special-occasions-by-list.html
 indicator: messaging
 ---
 

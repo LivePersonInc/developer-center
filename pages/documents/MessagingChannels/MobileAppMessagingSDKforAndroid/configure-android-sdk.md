@@ -1,5 +1,28 @@
 ---
 pagename: Configure the Android SDK
+
+redirect_from:
+  - android-initialization.html
+  - mobile-app-messaging-sdk-for-android-configuration-initialization.html
+  - android-conversations-lifecycle.html
+  - mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
+  - android-callbacks-interface.html
+  - mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
+  - android-conversations-lifecycle.html
+  - mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
+  - android-logs.html
+  - mobile-app-messaging-sdk-for-android-configuration-logs-and-info.html
+  - android-UI.html
+  - mobile-app-messaging-sdk-for-android-configuration-ui.html
+  - android-user-data.html
+  - mobile-app-messaging-sdk-for-android-configuration-user-data.html
+  - android-configuring-changing-fonts.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-changing-fonts.html
+  - android-configuring-edittext.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edit-text.html
+  - android-configuring-sdk.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
+
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -117,19 +140,89 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    params.setReadOnlyMode(false);
    ```
 
-5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. Choose an authentication method:
+5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
 
-   - **Activity mode**
-     ```java
-     LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-     ```
+   Choose an authentication method:
 
-   - **Fragment mode (Attach the returned fragment to a container in your activity)**
-     ```java
-     LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
-     ```
+   * **Activity mode** - Implements the toolbar that displays the agent name to the consumer. The 'Is Typing' indicator displays when the agent is typing.
 
-     When using fragment mode, you could use the provided SDK callbacks in your app in order to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+      Start a new conversation activity to open the conversation window in a separate activity:
+
+      ```java
+      LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+      The SDK implements the controls on the action bar.
+
+
+   * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
+
+      **Note:** Make sure the init process finished successfully.   Call from the onInitSucceed callback.
+
+      Open conversation window in a fragment to return a conversation fragment and place it in a container in your activity:
+
+      ```java
+      LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
+      ```
+
+      **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
+
+   * **Fragment mode - Handle CSAT (feedback)**  - Implements notifications of the CSAT screen state (**visible**/**invisible**).  For example, you can show a different title on the toolbar or show a close CSAT button. 
+
+      The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
+
+      ```java
+      public interface ConversationFragmentCallbacks {
+
+        void setFeedBackMode(boolean on, IFeedbackActions actions);
+
+        // boolean on-Notify whether feedback (csat) screen is visible or dismisses.
+        // IFeedbackActions actions - provides set of actions for the feedback screen.
+        void onSurveySubmitted(IFeedbackActions actions);
+
+        void setSecureFormMode(boolean on, String formTitle) {}
+      }
+
+      // IFeedbackActions actions-provides a set of actions for the feedback screen.
+      public interface IFeedbackActions {
+
+        void closeFeedBackScreen();
+
+        //close the screen, for example-after submitting the CSAT. When showing the "thank you" screen.
+
+        void skipFeedBackScreen();
+
+        //skip and close the whole feedback process.
+      }
+      ```
+
+
+      Once the CSAT screen is visible, `setFeedBackMode` is called with **true** value. When the CSAT is not visible anymore (skip/submitted), `setFeedBackMode` calls with **false** value.
+
+      Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+
+      ```java
+      class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
+        @Override
+        public void setFeedBackMode(boolean on, final IFeedbackActions actions) {
+          toolbar.setTitle("Csat mode: " + ( on ? "on!" : "off!" ));
+          toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              if (actions != null){
+                actions.closeFeedBackScreen();
+              }
+            }
+          });
+        }
+
+        @Override
+        public void onSurveySubmitted(IFeedbackActions actions) {
+          toolbar.setTitle("survey submitted");
+        }
+      }
+      ```  
+
 
 6. **Shutdown the SDK and remove the footprint of the user session from local memory.** After shutdown, the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
 
@@ -144,6 +237,72 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    public static void logOut(final Context context, final String brandId, final String appId, final LogoutLivePersonCallback logoutCallback)
    ```
    For more details, see the [logOut](android-logout.html) method.
+
+
+### Branding
+
+You can customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file.
+
+#### Step 1. Create your branding.xml file and add design attributes
+
+1. In your Android Studio project, right-click your app and select **New > XML > Values XML File**.
+
+2. Add design attributes to your branding.xml file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
+
+   {:.important}
+   If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
+
+3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
+   
+   - [lp_messaging_ui_brand_logo](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_brand_logo) 
+      Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned.
+
+      If you want to define the background color for this avatar, override brand_logo_background_color resource ID. Only relevant for bubble brand’s avatar.
+
+      Background color of the agent avatar on action bar is agent_avatar_background_color.
+
+  
+   - [lp_messaging_ui_ic_agent_avatar](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_ic_agent_avatar) 
+
+      Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.
+
+      If you want to define the background color for this avatar, override agent_avatar_background_color resource ID.
+
+
+   - [lpmessaging_ui_secure_form_progress_bar.xml](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)
+
+      Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+
+
+   - [lpmessaging_ui_image_progress_bar.xml](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml)
+
+       Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+
+   - [lpinfra_ui_ic_send_disabled.xml](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpinfra_ui_ic_send_disabledxml)
+
+      You can display a different drawable to represent sending a message. Create a drawable file named lpinfra_ui_ic_send_disabled.xml, which overrides the SDK's default drawable.
+
+      To display an image instead of text, set the use_send_image_button boolean to true.
+
+#### Step 2. Configure the message EditText in your styles.xml file
+
+1. In the app’s styles.xml file, override the `lp_enter_message_style` with the required style.
+
+   ```xml
+   <style name="lp_enter_message_style" parent="Theme.AppCompat.Light.NoActionBar">
+   <item name="colorControlActivated">#F8BBD0</item>
+   </style>
+   ```
+
+2. Change the font of the elements in the conversation view with two separate settings: 
+
+   - **custom_font_name_conversation_feed** - the font name (standard Android font name, such as *san-serif-thin*) for all conversation feed’s element. By default, the value is empty. 
+
+   - **custom_font_name_non_conversation_feed** - the font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
+
+     {:.important}
+     The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).
+
 
 ### Callbacks interface
 
@@ -285,21 +444,33 @@ public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 
 Upon errors, we send logs including different severity levels of errors and warnings.
 
+**For SDK 3.6.1 and newer.** Use `setIsDebuggable` to enable or disable SDK logs. By default, logging is disabled. To enable it, use:
+
+```java
+public static void setIsDebuggable(boolean isDebuggable)
+```
+
+**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
+
 ### Proguard 
 
-The SDK handles its own obfuscation and all its dependencies according to ProGuard rules. There is no need to add any ProGuard specific rules that relate to the SDK.
+The SDK handles its own obfuscation and all its dependencies according to ProGuard rules. When enabled in the gradle file of your application, ProGuard activates and runs automatically.
 
-The SDK ProGuard will run automatically when the ProGuard option is enabled in the gradle file of your application.
+**For SDK version 3.7 and newer.** If your App supports Android KitKat, add the following rule to ProGuard file. If you don't set this rule, an error message appears in logs.
 
-In case there is no ProGuard activated, the SDK ProGuard will also be disabled.
+```java
+-keepclassmembers class * implements javax.net.ssl.SSLSocketFactory {
+	final javax.net.ssl.SSLSocketFactory delegate;
+}
+```
 
 ### Android Automatic Restore
 
-Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If this feature is enabled on an App, when reinstalling the application all stored data is restored to the device. refer to [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
+Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If enabled on an App, when reinstalling the application, all stored data gets restored to the device. For more details, see [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
 
-Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore and needs to be disabled on the host app if the app enabled Automatic Backup.
+Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore.  If the app has enabled Automatic Backup, you must disable it on the host app. 
 
-Note: the following configuration is relevant only if Automatic Backup is enabled on the manifest of the host app:
+**Note:**  If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
 
 ```xml
 <application
@@ -345,3 +516,4 @@ For example:
   android:value="WIdew3245ERsdfsdgretwemyMgF5"
   tools:replace = "value"/>
 ```
+

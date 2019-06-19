@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Conversation Builder
 subfoldername: Best Practices
-permalink: conversation-builder-best-practices-tips-and-tricks.html
+permalink: 
 indicator: both
 ---
 
@@ -449,7 +449,7 @@ If the bot connector is online but the LE connection status is not up, there is 
 
 You can glean some information from Kibana by using this query param:
 
-&#123;&#123;Account Id&#125;&#125; AND "Login Failed" AND &#123;&#123;Bot login name&#125;&#125;
+`{{Account Id}} AND "Login Failed" AND {{Bot login name}}`
 
 ### Avoiding False Positives (How to Optimise / Train NLU Intent Detection)
 

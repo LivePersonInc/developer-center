@@ -4,6 +4,13 @@
 
 This repository generates LivePerson's Developers' Community, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible!
 
+**Table of Contents**
+
+[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)<br>
+[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)<br>
+[Template](https://github.com/LivePersonInc/developers-community#template)<br>
+[Licensing](https://github.com/LivePersonInc/developers-community#licensing)<br>
+
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside the "pages" folder, under the "documents" folder. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
@@ -70,6 +77,30 @@ Once you have installed Ruby, clone this repository to your machine. Once done, 
 All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit "save"). When `--incremental` is used, Jekyll won't rebuild the entire site on every save, only the affected sections. If you'd like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
 
 **Note**: changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply "kill" the build and run `bundle exec jekyll serve` without the suffix.
+
+### Template
+
+Since LivePerson maintains a few types of developer products, this template only applies to REST APIs. Other documents' structure will be determined on a case by case basis. For REST based APIs, the following template **must** be followed while it is only recommended for non-REST based products (for example, you're probably going to include an overview with any document but your product might not have methods).
+
+#### Overview
+
+The overview will contain a textual summary of what the API is capable of, including at least three use cases for the API. It will also describe the authentication method needed for the API, if one exists, and list any known limitations, if they exist.
+
+[Here is a good example](https://github.com/LivePersonInc/developers-community/blob/master/pages/documents/ContactCenterManagement/AgentGroupsAPI/Introduction/overview.md) of an overview document which follows this template.
+
+#### Methods
+
+Each method for the API will have [its own page](https://github.com/LivePersonInc/developers-community/tree/master/pages/documents/ContactCenterManagement/AgentGroupsAPI/methods). Each page will contain a short description of what the method does.
+
+It will then list the request format, including the method, the endpoint URL for it, any requisite headers, and the query parameters of the URL, if they exist. It will the list the request body and its format, breaking down each element in the body in a table and explaining what it does, whether its mandatory and if any notes exist for it.
+
+It will then list an example of the response, breaking down its headers, body, and error codes, if they exist, in a table below the example.
+
+[See this page](https://github.com/LivePersonInc/developers-community/blob/master/pages/documents/ContactCenterManagement/AgentGroupsAPI/methods/create-agent-groups.md) for an example of a method page which follows this template (though note that since all methods in this API share very similar body and entity structures, they are referred to commonly in an appendix).
+
+#### Miscellaneous
+
+Any other considerations, like special security measures, considerations, further limitations, example apps, and the such will be included in their own sections following the methods.
 
 ### Licensing
 

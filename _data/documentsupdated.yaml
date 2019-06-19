@@ -143,6 +143,8 @@
         subpages:
           - subpagename: Overview
           - subpagename: Simple Router
+          - subpagename: Full Lead Gen
+          - subpagename: Simple Lead Gen
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
@@ -497,10 +499,6 @@
           - subpagename: Storing Secrets
       - pagename: Deploying Functions
       - pagename: External Invocations
-        subpages:
-          - subpagename: Overview
-          - subpagename: Client Credentials
-          - subpagename: Authorization Code
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
@@ -531,7 +529,6 @@
           - subpagename: Survey
           - subpagename: Schema
       - pagename: PGP Encryption
-      - pagename: Changelog
       - pagename: Appendix
   - documentname: Engagement History API
     basedomain: https://{domain}/interaction_history/api/account/{accountID}/interactions
@@ -616,13 +613,20 @@
     - pagename: Methods
       subpages:
         - subpagename: External Engagement
-    - pagename: Changelog
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
     - pagename: Quick Start
     - pagename: Configure the Android SDK
     - pagename: Push Notifications
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Photo and File Sharing
+      - subpagename: Audio Messages
+      - subpagename: CSAT Behavior
+      - subpagename: Campaigns 
+      - subpagename: Welcome Message with Quick Replies
+      - subpagename: Control History APIs
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -631,9 +635,8 @@
       - subpagename: Callbacks Index
 
 
-    - pagename: Customization and Branding
+    - pagename: SDK Attributes
       subpages:
-      - subpagename: Customizing the SDK
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
@@ -642,14 +645,7 @@
       - subpagename: Plural String resource Example
       - subpagename: Date and Time
       - subpagename: Override SDK Strings
-    - pagename: Advanced Features
-      subpages:
-      - subpagename: Photo Sharing
-      - subpagename: Audio Messages
-      - subpagename: CSAT Behavior
-      - subpagename: Campaigns for Mobile App Messaging
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+
     - pagename: Voice and Video for Android SDK (BETA)
       subpages:
       - subpagename: Overview
@@ -674,17 +670,24 @@
     - pagename: Quick Start
     - pagename: Configure the iOS SDK
     - pagename: Push Notifications
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Photo and File Sharing
+      - subpagename: CSAT Behavior
+      - subpagename: Audio Messages
+      - subpagename: Campaigns 
+      - subpagename: Welcome Message with Quick Replies
+      - subpagename: Control History APIs
+      - subpagename: Unauthenticated In-App Messaging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Customizing Toast Notifications
-    - pagename: Customization and Branding
+    - pagename: SDK Attributes
       subpages:
-      - subpagename: Customizing the SDK
-      - subpagename: Attributes
+      - subpagename: Attributes  
       - subpagename: Attributes Design Sheet
       - subpagename: Deprecated Attributes
     - pagename: String Localization
@@ -692,15 +695,7 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Timestamps Formatting
-    - pagename: Advanced Features
-      subpages:
-      - subpagename: Unauthenticated In-App Messaging
-      - subpagename: CSAT Behavior
-      - subpagename: Audio Messages
-      - subpagename: Photo Sharing
-      - subpagename: Campaigns for Mobile App Messaging
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:
       - subpagename: Overview
@@ -708,7 +703,6 @@
       - subpagename: Customizing
       - subpagename: LiveEngage Configuration
       - subpagename: Sample App
-      - subpagename: Changelog
       - subpagename: Appendix
     - pagename: Latest Release Notes
     - pagename: All Release Notes
@@ -716,7 +710,6 @@
       subpages:
       - subpagename: Authentication
       - subpagename: Open Source List
-      - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK
     pages:
@@ -873,7 +866,6 @@
             - subpagename: Create Session
             - subpagename: Update Session
         - pagename: Impression Events Body Example
-        - pagename: Changelog
     - documentname: Engagement Attributes
       pages:
       - pagename: Overview
@@ -885,7 +877,6 @@
       pages:
         - pagename: Overview
         - pagename: Engagement Attributes
-        - pagename: Changelog
     - documentname: Engagement Trigger API
       pages:
         - pagename: Overview
@@ -894,7 +885,6 @@
             - subpagename: Click
             - subpagename: getEngagementInfo
             - subpagename: getEngagementState
-        - pagename: Changelog
     - documentname: LE-Tag
       pages:
         - pagename: Overview
@@ -904,7 +894,6 @@
             - subpagename: Visitor Flow Events
             - subpagename: Engagement Events
             - subpagename: Engagement Window Events
-        - pagename: Changelog
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
@@ -915,16 +904,10 @@
           subpages:
             - subpagename: Engagement
             - subpagename: Report
-    - documentname: Validate Engagement API
-      pages:
-        - pagename: Overview
-        - pagename: Validate Engagement
-        - pagename: Changelog
     - documentname: Visit Information API
       pages:
         - pagename: Overview
         - pagename: Visit Information
-        - pagename: Changelog
 
 - categoryname: Solutions
   image: mcs-toolkit

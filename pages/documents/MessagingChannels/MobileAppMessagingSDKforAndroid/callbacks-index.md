@@ -18,6 +18,176 @@ The SDK provides a callback mechanism to keep the host app updated on events rel
 
 _**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](android-callbacks-interface.html)._
 
+
+###  Agent avatar tapped
+
+Called when the user taps on the agent avatar.
+
+The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode)
+
+Parameters:      
+agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html#agentdata)
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION.  
+
+To get the _agentData_ param from the Intent use method: ILivePersonIntent.getAgentData(intent)
+
+__Callback:__ onAgentAvatarTapped (AgentData agentData) method.
+
+
+###  Agent details changed
+
+Called when the assigned agent of the current conversation has changed or their details are updated.
+
+This callback is also called with null value when there is no agent that is associated with the conversation, for instance when the consumer is returned to queue. You need to check for null value before using the agentData object.
+
+Parameters:    
+agentData - contains first name, last name, avatar url and employee ID.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION.  
+
+To get the _agentData_ param from the Intent use method: ILivePersonIntent.getAgentData(intent)
+
+__Callback:__ onAgentDetailsChanged (AgentData agentData) method.
+
+###  Agent typing
+
+Called when the assigned agent is typing a message. When there is 2 seconds of idle time, this method is called again to notify with isTyping false to indicate that the agent stopped typing.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION.  
+
+To get the _isTyping_ param from the Intent use method: ILivePersonIntent.getAgentTypingValue(intent)
+
+__Callback:__ onAgentTyping(boolean isTyping) method.
+
+
+
+
+
+###  Conversation started
+
+Called whenever a new conversation is started by either the consumer or the agent.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CONVERSATION_STARTED_INTENT_ACTION.
+
+__Callback:__ onConversationStarted() method
+
+###  Conversation resolved
+
+Called when the current conversation is marked as resolved by either the consumer or the agent.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION.
+
+__Callback:__ onConversationResolved() method.  
+
+_Note : onConversationResolved() and onConversationResolved(CloseReason reason) are deprecated._
+
+###  Connection state has changed
+
+Called when the connection to the conversation server has been established or disconnected.
+
+Parameters:  
+isConnected - indicates the connection state. true - connection establish, false - disconnected.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CONNECTION_CHANGED_INTENT_ACTION.  
+
+To get the _isConnected_ param from the Intent use method: ILivePersonIntent.getConnectedValue(intent)
+
+__Callback:__ onConnectionChanged(boolean isConnected) method.
+
+
+
+###  CSAT Screen launched
+
+Called when the feedback screen is launched.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_LAUNCHED_INTENT_ACTION.
+
+__Callback:__ onCsatLaunched() method.
+
+###  CSAT Screen dismissed
+
+Called when the feedback screen is dismissed (user clicked Submit button, user clicked Back button, etc.).
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_DISMISSED_INTENT_ACTION.
+
+__Callback:__ onCsatDismissed() method.
+
+###  CSAT Screen skipped
+
+Called when the feedback screen is skipped (user clicked Skip button, user clicked Back button, etc.).
+
+Note that in case CSAT screen is skipped, both onCsatSkipped() and onCsatDismissed() are called.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SKIPPED_INTENT_ACTION.
+
+__Callback:__ onCsatSkipped() method.
+
+
+###  CSAT Screen submitted
+
+Called when the user clicked the Submit button on the feedback screen.
+
+conversationId - The id of the conversation the survey is related to.
+
+This callback comes in addition to the onCsatDismissed callback when clicking Submit .
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION.  
+
+To get the _conversationId_ param from the Intent use method: ILivePersonIntent.getConversationID(intent)
+
+__Callback:__ onCsatSubmitted(String conversationId) method.
+
+
+
+
+### Error indication
+
+Called to indicate that an internal SDK error has occurred.
+
+__Intent Action:__ ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION.
+<br>
+To get the params from the Intent use methods: ILivePersonIntent.getOnErrorTaskType(intent) and ILivePersonIntent.getOnErrorMessage(intent).
+
+__Callback:__ onError(TaskType type, String message) method.
+
+ | Parameter | Description                                                                  |   |
+|-----------|------------------------------------------------------------------------------|---|
+| type      | The type of error. Indicates the category of the error. See the table below. |   |
+| Message   | A detailed message on the error.                                             |   |
+
+
+
+### LivePersonCallback
+
+Definition:
+
+```java
+public interface LivePersonCallback{
+  void onError(TaskType type, String message);
+  void onTokenExpired();
+  void onConversationStarted(LPConversationData convData);
+  void onConversationResolved(LPConversationData convData);
+  void onConversationResolved();
+  void onConnectionChanged(boolean isConnected);
+  void onAgentTyping(boolean isTyping);
+  void onAgentDetailsChanged(AgentData agentData);
+  void onCsatLaunched();
+  void onCsatDismissed();
+  void onCsatSubmitted(String conversationId);
+  void onCsatSkipped();
+  void onConversationMarkedAsUrgent();
+  void onConversationMarkedAsNormal();
+  void onOfflineHoursChanges(boolean isOfflineHoursOn);
+  void onAgentAvatarTapped(AgentData agentData);
+  void onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);
+  void onUserActionOnPreventedPermission(PermissionType permissionType);
+  void onStructuredContentLinkClicked(String uri);
+}
+```
+
+
+
 ### LivePersonIntents
 Definition:  
 
@@ -91,49 +261,7 @@ public interface ILivePersonIntentExtras{
 }
 ```
 
-### LivePersonCallback
 
-Definition:
-
-```java
-public interface LivePersonCallback{
-  void onError(TaskType type, String message);
-  void onTokenExpired();
-  void onConversationStarted(LPConversationData convData);
-  void onConversationResolved(LPConversationData convData);
-  void onConversationResolved();
-  void onConnectionChanged(boolean isConnected);
-  void onAgentTyping(boolean isTyping);
-  void onAgentDetailsChanged(AgentData agentData);
-  void onCsatLaunched();
-  void onCsatDismissed();
-  void onCsatSubmitted(String conversationId);
-  void onCsatSkipped();
-  void onConversationMarkedAsUrgent();
-  void onConversationMarkedAsNormal();
-  void onOfflineHoursChanges(boolean isOfflineHoursOn);
-  void onAgentAvatarTapped(AgentData agentData);
-  void onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);
-  void onUserActionOnPreventedPermission(PermissionType permissionType);
-  void onStructuredContentLinkClicked(String uri);
-}
-```
-
-
-###  Error indication
-
-Called to indicate that an internal SDK error has occurred.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION.
-<br>
-To get the params from the Intent use methods: ILivePersonIntent.getOnErrorTaskType(intent) and ILivePersonIntent.getOnErrorMessage(intent).
-
-__Callback:__ onError(TaskType type, String message) method.
-
- | Parameter | Description                                                                  |   |
-|-----------|------------------------------------------------------------------------------|---|
-| type      | The type of error. Indicates the category of the error. See the table below. |   |
-| Message   | A detailed message on the error.                                             |   |
 
 ###  TaskType enum:
 
@@ -146,8 +274,8 @@ enum TaskType {
 }
 ```
 
- | Type                 | Description                                                                                                        |   |
-|----------------------|--------------------------------------------------------------------------------------------------------------------|---|
+ | Type                 | Description   |   |
+|--------|----|---|
 | CSDS                 | Internal server error.                                                                                             |   |
 | IDP                  | An error occurred during the authentication process. This is usually due to a wrong or expired authentication key. |   |
 | VERSION              | Your host app is using an old SDK version and cannot be initialized.                                               |   |
@@ -161,117 +289,7 @@ __Intent Action:__ ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION.
 
 __Callback:__ onTokenExpired() method
 
-###  Conversation started
 
-Called whenever a new conversation is started by either the consumer or the agent.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CONVERSATION_STARTED_INTENT_ACTION.
-
-__Callback:__ onConversationStarted() method
-
-###  Conversation resolved
-
-Called when the current conversation is marked as resolved by either the consumer or the agent.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION.
-
-__Callback:__ onConversationResolved() method.  
-
-_Note : onConversationResolved() and onConversationResolved(CloseReason reason) are deprecated._
-
-###  Connection state has changed
-
-Called when the connection to the conversation server has been established or disconnected.
-
-Parameters:  
-isConnected - indicates the connection state. true - connection establish, false - disconnected.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CONNECTION_CHANGED_INTENT_ACTION.  
-
-To get the _isConnected_ param from the Intent use method: ILivePersonIntent.getConnectedValue(intent)
-
-__Callback:__ onConnectionChanged(boolean isConnected) method.
-
-###  Agent avatar tapped
-
-Called when the user taps on the agent avatar.
-
-The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode)
-
-Parameters:      
-agentData - contains first name, last name, avatar url and employee ID. See [AgentData](android-interface-definitions.html#agentdata)
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION.  
-
-To get the _agentData_ param from the Intent use method: ILivePersonIntent.getAgentData(intent)
-
-__Callback:__ onAgentAvatarTapped (AgentData agentData) method.
-
-
-###  Agent details changed
-
-Called when the assigned agent of the current conversation has changed or their details are updated.
-
-This callback is also called with null value when there is no agent that is associated with the conversation, for instance when the consumer is returned to queue. You need to check for null value before using the agentData object.
-
-Parameters:    
-agentData - contains first name, last name, avatar url and employee ID.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION.  
-
-To get the _agentData_ param from the Intent use method: ILivePersonIntent.getAgentData(intent)
-
-__Callback:__ onAgentDetailsChanged (AgentData agentData) method.
-
-###  Agent typing
-
-Called when the assigned agent is typing a message. When there is 2 seconds of idle time, this method is called again to notify with isTyping false to indicate that the agent stopped typing.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION.  
-
-To get the _isTyping_ param from the Intent use method: ILivePersonIntent.getAgentTypingValue(intent)
-
-__Callback:__ onAgentTyping(boolean isTyping) method.
-
-###  CSAT Screen launched
-
-Called when the feedback screen is launched.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_LAUNCHED_INTENT_ACTION.
-
-__Callback:__ onCsatLaunched() method.
-
-###  CSAT Screen dismissed
-
-Called when the feedback screen is dismissed (user clicked Submit button, user clicked Back button, etc.).
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_DISMISSED_INTENT_ACTION.
-
-__Callback:__ onCsatDismissed() method.
-
-###  CSAT Screen submitted
-
-Called when the user clicked the Submit button on the feedback screen.
-
-conversationId - The id of the conversation the survey is related to.
-
-This callback comes in addition to the onCsatDismissed callback when clicking Submit .
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION.  
-
-To get the _conversationId_ param from the Intent use method: ILivePersonIntent.getConversationID(intent)
-
-__Callback:__ onCsatSubmitted(String conversationId) method.
-
-###  CSAT Screen skipped
-
-Called when the feedback screen is skipped (user clicked Skip button, user clicked Back button, etc.).
-
-Note that in case CSAT screen is skipped, both onCsatSkipped() and onCsatDismissed() are called.
-
-__Intent Action:__ ILivePersonIntentAction.LP_ON_CSAT_SKIPPED_INTENT_ACTION.
-
-__Callback:__ onCsatSkipped() method.
 
 ###  Conversation marked as urgent
 

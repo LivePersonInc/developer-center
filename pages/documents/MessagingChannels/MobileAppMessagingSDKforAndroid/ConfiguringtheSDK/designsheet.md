@@ -2,13 +2,14 @@
 pagename: Attributes Design Sheet
 redirect_from:
   - android-attributes-designsheet.html
+  - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Customization and Branding
+subfoldername: SDK Attributes
 order: 170
-permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
+permalink: mobile-app-messaging-sdk-for-android-sdk-attributes-attributes-design-sheet.html
 indicator: messaging
 ---
 
@@ -84,7 +85,7 @@ indicator: messaging
     <td><img src="img/in page navigation - scroll down indicator (17).png"></td>
   </tr>
   <tr>
-    <td> <div class="designsheetnumber">18</div> &lt;color name=&quot;attachment_menu_item_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_text_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_icon_color&quot;&gt;</td>
+    <td> <div class="designsheetnumber">18</div> &lt;color name=&quot;attachment_menu_item_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_background_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_text_color&quot;&gt; , &lt;color name=&quot;lp_attachment_menu_item_icon_color&quot;&gt;lpinfra_ui_ic_attach.xml</td>
     <td><img src="img/Photo sharing (18).png"/></td>
   </tr>
   <tr>
