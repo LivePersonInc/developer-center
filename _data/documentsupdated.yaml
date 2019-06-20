@@ -640,7 +640,7 @@
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
-      - subpagename: Date and Time
+      - subpagename: Date and Time Formats
       - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String resource Example

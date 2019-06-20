@@ -2,6 +2,7 @@
 pagename: Date and Time Styles
 redirect_from:
   - consumer-experience-ios-sdk-timestamps.html
+  - mobile-app-messaging-sdk-for-ios-string-localization-timestamps-formatting.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -9,7 +10,7 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: String Localization
 
 order: 229
-permalink: mobile-app-messaging-sdk-for-ios-string-localization-timestamps-formatting.html
+permalink: mobile-app-messaging-sdk-for-ios-string-localization-date-and-time-styles.html
 
 indicator: messaging
 ---

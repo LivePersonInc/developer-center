@@ -1,5 +1,5 @@
 ---
-pagename: Date and Time
+pagename: Date and Time Formats
 redirect_from:
   - android-off-hours.html
   - android-bubble.html
@@ -10,7 +10,7 @@ redirect_from:
   - mobile-app-messaging-sdk-for-android-string-localization-timestamps-formatting.html
   - android-resolve.html
   - mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html
-  - 
+  - mobile-app-messaging-sdk-for-android-string-localization-date-and-time.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -18,7 +18,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
 
 order: 240
-permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-time.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-time-formats.html
 
 indicator: messaging
 ---
