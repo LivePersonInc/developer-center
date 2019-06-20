@@ -14,27 +14,20 @@ permalink: mobile-app-messaging-sdk-for-ios-string-localization-timestamps-forma
 indicator: messaging
 ---
 
-### Time/Date Styles
+### Date and time styles
 
 The iOS platform provides four different default types of date and time styles:
 
-- [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) is completely numeric.
-- [MEDIUM](https://developer.android.com/reference/java/text/DateFormat.html#MEDIUM) is longer and contains the first 3 letters of the month.
-- [LONG](https://developer.android.com/reference/java/text/DateFormat.html#LONG) is longer and contains the full month name.
-- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL) specifies the complete time and date.
+- SHORT is completely numeric (12/13/52 or 3:30 PM)
+- MEDIUM is longer and contains the first 3 letters of the month (Jan 12, 1952)
+- LONG is longer and contains the full month name (January 12, 1952 or 3:30:32 PM)
+- FULL specifies the complete time and date (Tuesday, April 12, 1952 AD or 3:30:42 PM PST)
 
-*iOS examples:*
-
-- SHORT  12/13/52 or 3:30 PM
-- MEDIUM  Jan 12, 1952
-- LONG January 12, 1952 or 3:30:32 PM
-- FULL Tuesday, April 12, 1952 AD or 3:30:42 PM PST.
-
-The LPMessagingSDK uses default styles. Each feature has its own style. The style is flexible and adapts the 'locale’ configuration of the device.
+The LPMessagingSDK uses default styles. Each feature has a style, which is flexible and adapts the 'locale’ configuration of the device.
 
 _**Example**: US locale SHORT date is displayed as "9/25/16", whereas Japanese locale SHORT date is displayed as "2016/9/25"._
 
-A specific 'locale’ which is different from the device locale can be set through the language and country configurations.
+A specific 'locale’ that is different from the device locale can be set through the language and country configurations.
 
 _**Example**: country: String?,  language: String?_
 
