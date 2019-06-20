@@ -80,6 +80,7 @@ To edit the `ConnectorPaymentRequest` and `BusinessChatMessage` metadata templat
   },
   {
     "type": "ConnectorPaymentRequest",
+    "signature":"<SIGNATURE>",
     "apple": {
       "data": {
         "version": "1.0",
@@ -237,8 +238,14 @@ This object defines how the Apple Pay template is displayed on the consumer devi
     <th>Required</th>
   </thead>
   <tbody>
-  <tr>
-    <td>Apple</td>
+   <tr>
+    <td>signature</td>
+     <td>This is where you specify the "signature" value. For more information, see <a href="">Apple Pay Signature Flow Guide</a></td>
+    <td>String</td>
+    <td>N</td>
+   </tr>
+   <tr>
+    <td>apple</td>
     <td>This is where you specify the "data" object  </td>
     <td>object</td>
     <td>Y</td>
