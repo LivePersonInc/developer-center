@@ -17,7 +17,7 @@ Get list of all special occasions of an account
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
 **Path Parameters**
 

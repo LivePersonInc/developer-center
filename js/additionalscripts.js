@@ -14,6 +14,7 @@ $(document).ready(function () {
 	searchHighlight();
 	allArticlesClick();
 	scrollToHash();
+	domainTool();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -85,6 +86,7 @@ function navigateContent(url) {
 			searchHighlight();
 			allArticlesClick();
 			scrollToHash();
+			domainTool();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -554,6 +556,44 @@ function scrollToHash () {
 		);
 		}
 	}, 1000);
+}
+
+function domainTool() {
+let input;
+let accountInput;
+const csdsButton = document.getElementById("csds-button");
+const csdsResult = document.getElementById("csds-result");
+let csdsUrl;
+let html = "";
+csdsButton.addEventListener("click", event => {
+		input = document.getElementById("account");
+		accountInput = input.value;
+		csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
+    retrieveDomains(accountInput);
+});
+const retrieveDomains = (account) => {
+      $.ajax({
+          url: csdsUrl,
+          headers: {
+            'Accept': 'application/json'
+          },
+          dataType: "json",
+          success: function(data) {
+						html = '';
+						console.log(data);
+              if (data.baseURIs.length > 0) {
+									html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+                  data.baseURIs.forEach((entry) => {
+                          html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
+                      });
+									html += '</tbody>'
+                  csdsResult.innerHTML = html;
+              } else {
+                  csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
+              }
+          }
+      });
+  }
 }
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special

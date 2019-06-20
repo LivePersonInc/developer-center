@@ -20,7 +20,7 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 
 | Method | URL |
 | :-------- | :------ |
-| GET | api/account/{accountId}/configuration/engagement-window/unified-auto-messages |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/unified-auto-messages |
 
 **Request Headers**
 

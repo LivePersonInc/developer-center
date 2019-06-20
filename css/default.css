@@ -1292,6 +1292,20 @@ a.anchoritem {
   width: 80%;
 }
 
+#account {
+  width: 25%;
+  background-color: #f8f8f8;
+  color: #666;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 5px;
+}
+
+input#csds-button {
+  border-radius: 15px;
+  color: #fff;
+  background-color: #5879DA;
+}
 
 /* Media Queries Begin */
 

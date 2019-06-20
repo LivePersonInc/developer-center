@@ -17,7 +17,7 @@ Delete an existing special occasion.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE  |/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialoccasionId} |
+| DELETE  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialoccasionId} |
 
 **Request Headers**
 

@@ -20,7 +20,7 @@ Updates an existing Unified Automatic Message for a specific account.
 
 | Method | URL |
 | :-------- | :----- |
-| PUT | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
+| PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
 
 **Path Parameters**
 
