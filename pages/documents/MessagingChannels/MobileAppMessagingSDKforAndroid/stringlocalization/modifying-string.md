@@ -15,9 +15,9 @@ permalink: mobile-app-messaging-sdk-for-android-string-localization-string-value
 indicator: messaging
 ---
 
-You may change every string appearing on the SDK interface by overriding the respective string key.
+You can change strings appearing on the SDK interface by overriding the respective string key.
 
-**Note:** for how to create a new locale file, click [here](android-localization-strings.html#create-new-localization-file)
+**Note:** To create a new locale file, see [Override SDK Strings](mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
 
 ### General
 
@@ -454,8 +454,8 @@ Example</td>
 </tbody>
 </table>
 
-| String name                                           | Used in                                                                 | Default value                                                                                       |
-|-------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| String name    | Used in        | Default value  |
+|----------------|----------------|----------------|
 | lpmessaging_ui_pci_leave_dialog_title                 | Title of the PCI dialog before leaving unfilled form.                   | Are you sure?                                                                                       |
 | lpmessaging_ui_pci_leave_dialog_description           | Body message of the PCI dialog before leaving unfilled form.            | Once you leave the secure form, you will not be able to access it again.                            |
 | lpmessaging_ui_pci_leave_dialog_btn_positive          | Positive button text of the PCI dialog before leaving unfilled form.    | OK                                                                                                  |
