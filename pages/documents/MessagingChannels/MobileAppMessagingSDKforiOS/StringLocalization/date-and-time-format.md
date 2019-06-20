@@ -1,5 +1,5 @@
 ---
-pagename: Timestamps Formatting
+pagename: Date and Time Styles
 redirect_from:
   - consumer-experience-ios-sdk-timestamps.html
 Keywords:

@@ -691,7 +691,7 @@
       subpages:
       - subpagename: Localization Keys
       - subpagename: String Localization
-      - subpagename: Timestamps Formatting
+      - subpagename: Date and Time Styles
 
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:
