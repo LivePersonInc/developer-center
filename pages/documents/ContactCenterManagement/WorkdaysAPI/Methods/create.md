@@ -17,7 +17,7 @@ Create new workday object(s) for an account. It is possible to create several it
 
 | Method | URL |
 | :-------- | :------ |
-| POST  |/api/account/{accountId}/configuration/ac-common/workinghours|
+| POST  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/workinghours|
 
 **Path Parameters**
 

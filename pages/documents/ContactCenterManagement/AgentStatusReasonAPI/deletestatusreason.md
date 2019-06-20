@@ -19,7 +19,7 @@ Delete an existing status reason.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE | /api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
+| DELETE | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
 
 ### Path Parameters
 

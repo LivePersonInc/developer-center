@@ -20,7 +20,7 @@ Deletes an existing Unified Automatic Message for a specific account.
 
 | Method | URL |
 | :-------- | :----- |
-| DELETE | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
+| DELETE | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
 
 **Request Headers**
 

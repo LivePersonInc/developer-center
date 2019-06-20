@@ -34,7 +34,7 @@ In this example request and response, we will look at retrieving messaging segme
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgagentsegments?timeframe=<timeframe in minutes>&agentIds=<agentIds>&interval=<interval size in minutes>&skillIds=<skillIds>&groupIds=<agentGroupIds>&userType=<segment's user type>&source=<segment's integration source>&v=<version>&metrics=<desired metrics to be represented>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgagentsegments?timeframe=<timeframe in minutes>&agentIds=<agentIds>&interval=<interval size in minutes>&skillIds=<skillIds>&groupIds=<agentGroupIds>&userType=<segment's user type>&source=<segment's integration source>&v=<version>&metrics=<desired metrics to be represented> |
 
 **URL Parameters**
 

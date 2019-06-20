@@ -33,7 +33,7 @@ If no custom Away state reasons are configured, the 'reasons' field will be retu
 
 | Method | URL |
 | :------ | :---- |
-| GET | `https://<domain>/operations/api/account/{accountID}/agentactivity?timeframe=<timeframe in minutes>&agentIds=<comma seperated agent ids list>&interval=<interval size in minutes>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/agentactivity?timeframe=<timeframe in minutes>&agentIds=<comma seperated agent ids list>&interval=<interval size in minutes>&v=<version> |
 
  - Use POST request to pass long list of agentIds
 
