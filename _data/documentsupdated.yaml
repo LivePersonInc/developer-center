@@ -641,7 +641,7 @@
     - pagename: String Localization
       subpages:
       - subpagename: Date and Time
-      - subpagename: Modifying Strings
+      - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String resource Example
     - pagename: Voice and Video for Android SDK (BETA)

@@ -1,7 +1,8 @@
 ---
-pagename: Modifying Strings
+pagename: String Values
 redirect_from:
   - android-modifying-string.html
+  - mobile-app-messaging-sdk-for-android-string-localization-modifying-strings.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -9,7 +10,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
 
 order: 210
-permalink: mobile-app-messaging-sdk-for-android-string-localization-modifying-strings.html
+permalink: mobile-app-messaging-sdk-for-android-string-localization-string-values.html
 
 indicator: messaging
 ---
