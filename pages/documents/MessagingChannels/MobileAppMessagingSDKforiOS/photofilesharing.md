@@ -99,7 +99,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
    - **Key:** LSSupportsOpeningDocumentsInPlace: Supports opening documents in place
 
-   - **Value:** YES
+   - **Value:** NO
 
       **Warning:** If this functionality is important to your user flow, enable at the user's risk. If you enable this setting, the consumer can save documents or photos to a directory belonging to the host app.  However, we recommend not enabling this feature due to a current limitation within the LivePerson SDK, the SQL files are also made public if this setting is enabled.
 

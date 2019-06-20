@@ -627,7 +627,6 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns 
       - subpagename: Welcome Message with Quick Replies
-      
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
