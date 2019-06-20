@@ -145,6 +145,7 @@
           - subpagename: Simple Router
           - subpagename: Full Lead Gen
           - subpagename: Simple Lead Gen
+          - subpagename: Simple FAQ
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
@@ -626,26 +627,24 @@
       - subpagename: CSAT Behavior
       - subpagename: Campaigns 
       - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+      
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
+      - subpagename: Control History APIs
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-
-
     - pagename: SDK Attributes
       subpages:
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
-      - subpagename: Modifying Strings
-      - subpagename: Plural String resource Example
       - subpagename: Date and Time
+      - subpagename: Modifying Strings
       - subpagename: Override SDK Strings
-
+      - subpagename: Plural String resource Example
     - pagename: Voice and Video for Android SDK (BETA)
       subpages:
       - subpagename: Overview
@@ -662,7 +661,6 @@
       - subpagename: Authentication 
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
-      - subpagename: Use the LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
   - documentname: Mobile App Messaging SDK for iOS
     pages:
@@ -672,17 +670,17 @@
     - pagename: Push Notifications
     - pagename: Advanced Features
       subpages:
-      - subpagename: Photo and File Sharing
-      - subpagename: CSAT Behavior
       - subpagename: Audio Messages
+      - subpagename: CSAT Behavior
       - subpagename: Campaigns 
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+      - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
+      - subpagename: Welcome Message with Quick Replies
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
+      - subpagename: Control History APIs
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
     - pagename: SDK Attributes

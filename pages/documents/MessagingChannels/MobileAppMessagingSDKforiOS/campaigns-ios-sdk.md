@@ -29,6 +29,21 @@ Use the Monitoring APIs to:
 
 While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs.
 
+### Prerequisites
+
+- Follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf) **before** adding the implementation to a mobile app.
+
+- The SDK must be initialized with the `LPMonitoringInitParams` object.
+
+### Notes & Best Practices
+
+* To start a conversation with a specific campaign and engagement, provide an `LPCampaignInfo` object to the `LPConversationViewParams` object.
+
+* A monitoring session is a 6-hours window. All SDEs that report during the session get aggregated.
+
+* If not reporting any SDEs (idle) for 30 minutes, a new session starts when reporting the next SDE.
+
+
 ### Monitoring APIs
 
 The Monitoring APIs provide brands access to the LivePerson monitoring system. The eligibility of an engagement is based on campaigns and an engagement's definitions.  Monitoring APIs include:
@@ -92,14 +107,4 @@ let conversationViewParam = LPConversationViewParams(conversationQuery: conversa
 LPMessagingSDK.instance.showConversation(conversationViewParam)
 ```
 
-### Notes & Best Practices
 
-* Before adding the implementation to a mobile app, follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf).
-
-* To use the APIs, initialize the SDK with the `LPMonitoringInitParams` object.
-
-* To start a conversation with a specific campaign and engagement, provide an `LPCampaignInfo` object to the `LPConversationViewParams` object.
-
-* A monitoring session lasts for a 6-hour window. All SDEs that report during the session get aggregated.
-
-* In case SDEs aren't reported (idle) for 30 minutes, a new session starts when reporting the next SDE.

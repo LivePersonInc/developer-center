@@ -1,252 +1,25 @@
 ---
-pagename: Use the LivePerson SDK - Android
+pagename: Push Notifications
 redirect_from:
-  - android-integration-guide.html
+  - android-push-notifications.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Resources
 
-order: 341
-permalink: mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html
-
+permalink: mobile-app-messaging-sdk-for-android-push-notifications.html
 indicator: messaging
 ---
 
-### Prerequisites
-It is important that you have followed the [Quick Start guide](/mobile-app-messaging-sdk-for-android-quick-start.html).  If not, make sure to install the LivePerson Mobile App Messaging SDK before proceeding. 
-
-### Step 1 - Create initial views
-
-In this step, you'll use some basic name features to create some initial views on our main activity / an activity of your choosing. 
-
-![initialview](img/initialview.png)
-
-
-### Step 2 - Add enabled features to your AndroidManifest.xml file
-If you have any of these features enabled, you must add the following to your app's AndroidManifest.xml file:
-
-#### Vibrate on new incoming msg
-
-```xml
-<uses-permission android:name="android.permission.VIBRATE"/>
-```
-
-#### Photo Sharing
-
-```xml
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-```
-
-#### Audio Messaging
-
-```xml
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-```
-
-### Step 3 - Add Liveperson events
-In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
-
-
-1. Create a class named **IntentsHandler**.  
-
-   **Tip:** You can use any name of your choosing.
-
-    ```java
-    public class IntentsHandler {
-
-    private Context mContext;
-    private BroadcastReceiver mLivePersonReceiver;
-
-    public IntentsHandler(Context ctx){
-        this.mContext = ctx;
-        registerToLivePersonEvents();
-    }
-    }
-    ```
-
-2. Create a function named **registerToLivePersonEvents** and initialize the broadcast receiver.
-
-    ```java
-    public void registerToLivePersonEvents(){
-    createLivePersonReceiver();
-    LocalBroadcastManager.getInstance(mContext.getApplicationContext())
-            .registerReceiver(mLivePersonReceiver, LivePersonIntents.getIntentFilterForAllEvents());
-    }
-    ```
-
-   In this example, you listen to all events via the **intentfilter**. 
-   
-   **Tip:** You can create your own specific intent filter.
-
-3. Create a function named `createLivePersonReceiver` to handle the events.  
-
-   **Note:** Here we provide you with a wide example of handling most events. For more information, see [Liveperson events](android-callbacks-index.html).
-
-   Here is an example of a function which handles some LivePerson events:
-
-    ```java
-    private void createLivePersonReceiver() {
-    if (mLivePersonReceiver != null){
-        return;
-    }
-    mLivePersonReceiver = new BroadcastReceiver(){
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-
-            Log.d(TAG, "Got LP intent event with action " + intent.getAction());
-            switch (intent.getAction()){
-                case LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION:
-                    onAgentAvatarTapped(LivePersonIntents.getAgentData(intent));
-                    break;
-
-                case LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION:
-                    AgentData agentData = LivePersonIntents.getAgentData(intent);
-                    onAgentDetailsChanged(agentData);
-                    break;
-            }
-
-        }
-    };
-    }
-    ```
-
-4. Add a function that acts according to the specific use-case, for example:
-
-    ```java
-    private void onAgentAvatarTapped(AgentData agentData) {
-    showToast("on Agent Avatar Tapped - " + agentData.mFirstName + " " + agentData.mLastName);
-    }
-    ```
-
-   For more details about this function, see [Agent Avatar Tapped](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#agent-avatar-tapped).
-
-### Step 4 - Add messaging activity
-
-In this step, you create a messaging activity that launches the activity session. Here we provide you with a basic initialization of the LivePerson SDK in *Activity mode*.  You can also initialize it in *Fragment mode* and use different features.
-
-#### Basic members
-
-```java
-public class MainActivity extends AppCompatActivity {
-// Consumer name inputs
-private EditText fnameInput;
-private EditText lnameInput;
-private Button startConvBtn;
-// Brand login details
-private final String brandID = "82055668";
-// Project’s package
-private final String appID = "com.shaym.sdk28";
-// Intent Handler
-private IntentsHandler mIntentsHandler;
-}
-```
-
-#### onCreate
-
-```java
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-super.onCreate(savedInstanceState);
-setContentView(R.layout.activity_main);
-// IntentsHandler is the object we introduced in the previous section of this tutorial
-mIntentsHandler = new IntentsHandler(this);
-// init basic UI views
-initViews();
-// Init the button listener
-initOpenConversationButton();
-}
-```
-
-#### initOpenConversationButton
-
-```java
-private void initOpenConversationButton() {
-startConvBtn = (Button) findViewById(R.id.startcnvbtn);
-startConvBtn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        // This will check if we already in a conversation
-        if (LivePerson.isValidState()) {
-            openActivity();
-        }
-        else {
-// Push - later in this tutorial
-            removeNotification();
-            initActivityConversation(); // The conversation activity
-        }
-    }
-});
-}
-```
-
-#### initActivityConversation
-You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
-
-**TIP** If the initialization succeeds, the `openActivity` method is called.
-
-```java
-private void  initActivityConversation() {
-
-    LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
-        @Override
-        public void onInitSucceed() {
-            // you can't register pusher before initialization
-            handleGCMRegistration(MainActivity.this);
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    openActivity();
-                }
-            });
-        }
-        @Override
-        public void onInitFailed(Exception e) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(MainActivity.this, "Init Failed", Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    }));
-}
-```
-
-#### openActivity function
-
-Here, you use the LivePerson SDK’s `showConversation` method. 
-
-**Tip:** In the example below, we do not use an authentication parameter.  If you need to use an authentication paramenter, use `setPhoneNumber`.
-
-```java
-private void openActivity() {
-   LivePerson.showConversation(MainActivity.this,  new LPAuthenticationParams().setAuthKey(""), new ConversationViewParams(false));
-   ConsumerProfile consumerProfile = new ConsumerProfile.Builder()
-           .setFirstName(fnameInput.getText().toString())
-           .setLastName(lnameInput.getText().toString())
-           .setPhoneNumber("")
-           .build();
-   LivePerson.setUserProfile(consumerProfile);
-   }
-```
-
-
-### Step 5 - Configure push notifications  
 Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
-#### Prerequisites
+### Prerequisites
 
 - Followed the [Quick Start Guide for Android](mobile-app-messaging-sdk-for-android-quick-start.html) and are now ready to implement and enable features.
 
 - Added [Firebase](https://firebase.google.com/docs/android/setup) to your Android project and installed the [Firebase Cloud Messaging (FCM) SDk](https://firebase.google.com/docs/cloud-messaging/android/client).
 
-#### Step 1. Register the client app instance
+### Step 1. Register the client app instance
 
 The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity. For a fully interactive notification, the host app needs to provide the implementation.
 
@@ -268,7 +41,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
    }
    ```
 
-#### Step 2. Configure push notifications in LiveEngage
+### Step 2. Configure push notifications in LiveEngage
 
 1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
@@ -284,7 +57,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
    **Tip:** You can find the **Package Name** on the Firebase console under **General**, and the **Legacy Key** on the Firebase console under **Cloud Messaging**.
 
-#### Step 3. Configure the services and classes 
+### Step 3. Configure the services and classes 
 
 1. Under the **application** tab, add the following services + receiver:
 
@@ -517,7 +290,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
     }
     ```
 
-#### Step 4. Implement a push handler
+### Step 4. Implement a push handler
 
 To handle a scenario when a push message is clicked, you need to implement a push handler on our messaging activity’s `onCreate` function.
 

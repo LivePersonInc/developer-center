@@ -151,7 +151,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 **Note**: When using ViewController Mode, on the Navigation Bar Back Button, you can call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
 
 
-### Supporting functions:
+#### Supporting functions:
 
 1. Get ’filter’ for the conversation screen, determining which of the conversations display in the Conversation Window:
 

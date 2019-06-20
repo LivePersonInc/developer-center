@@ -2,6 +2,15 @@
 pagename: Date and Time
 redirect_from:
   - android-off-hours.html
+  - android-bubble.html
+  - mobile-app-messaging-sdk-for-android-string-localization-bubble-timestamp.html
+  - android-separator.html
+  - mobile-app-messaging-sdk-for-android-string-localization-separator-timestamp.html
+  - android-timestamps.html
+  - mobile-app-messaging-sdk-for-android-string-localization-timestamps-formatting.html
+  - android-resolve.html
+  - mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html
+  - 
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -44,6 +53,8 @@ We define three configurable formatting resources:
    ```xml
    <string name="lp_date_time_format"></string>
    ```
+
+
 ### Bubble timestamp
 
 Bubble timestamps contain only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to device setting.
@@ -127,7 +138,7 @@ If you want special date/hour format, use:
 
 With any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
 
-###  Timezone
+### Timezone
 
 Off hours can appear in different time zone with this resource ID:
 
