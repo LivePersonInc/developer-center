@@ -622,18 +622,18 @@
     - pagename: Push Notifications
     - pagename: Advanced Features
       subpages:
-      - subpagename: Photo and File Sharing
       - subpagename: Audio Messages
+      - subpagename: Campaigns
       - subpagename: CSAT Behavior
-      - subpagename: Campaigns 
+      - subpagename: Photo and File Sharing
       - subpagename: Welcome Message with Quick Replies
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
       - subpagename: Control History APIs
-      - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
+      - subpagename: Interface and Class Definitions
     - pagename: SDK Attributes
       subpages:
       - subpagename: Attributes
@@ -670,8 +670,8 @@
     - pagename: Advanced Features
       subpages:
       - subpagename: Audio Messages
-      - subpagename: CSAT Behavior
-      - subpagename: Campaigns 
+      - subpagename: Campaigns
+      - subpagename: CSAT Behavior 
       - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
