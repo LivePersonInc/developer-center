@@ -50,7 +50,7 @@ Called when the assigned agent of the current conversation has changed, or their
 
 <p><b>Intent Action:</b> </p>
 <p>ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION</p>
-<p>To get the  agentData param from the Intent, use ILivePersonIntent.getAgentData(intent).</p>
+<p>To get the agentData param from the Intent, use ILivePersonIntent.getAgentData(intent).</p>
 
 <p><b>Callback:</b> </p>
 <p>onAgentDetailsChanged (AgentData agentData)</p>
@@ -65,7 +65,7 @@ Called when the assigned agent is typing a message. When there are 2 seconds of 
 <div style="margin-left: 20px;">
 <p><b>Intent Action:</b> </p>
 <p>ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION</p>
-<p>To get the isTyping param from the Intent, use  ILivePersonIntent.getAgentTypingValue(intent).</p>
+<p>To get the isTyping param from the Intent, use ILivePersonIntent.getAgentTypingValue(intent).</p>
 
 <p><b>Callback:</b> </p>
 <p>onAgentTyping(boolean isTyping)</p>
@@ -148,7 +148,7 @@ Called when the feedback screen gets dismissed, for example, when the user click
 
 ###  CSAT Screen skipped
 
-Called when the feedback screen gets skipped, for example, when the user clicks the **Skip** button or the **Back** button.  If skipping the CSAT screen,  both onCsatSkipped() and onCsatDismissed() are called.
+Called when the feedback screen gets skipped, for example, when the user clicks the **Skip** button or the **Back** button.  If skipping the CSAT screen, both onCsatSkipped() and onCsatDismissed() are called.
 
 <div style="margin-left: 20px;">
 <p><b>Intent Action:</b> </p>
@@ -323,11 +323,6 @@ enum TaskType {
 ###  Token Expired
 
 Called if the token used in the session has expired and is no longer valid. The host app needs to <a href="android-methods.html#reconnect">reconnect</a> with a new authentication key.
-
-__Intent Action:__ .
-
-__Callback:__  method
-
 
 <div style="margin-left: 20px;">
 <p><b>Intent Action:</b> </p>
