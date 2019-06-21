@@ -27,13 +27,17 @@ Audio Messaging allows consumers to send audio messages to agents.
 
 2. Enable the feature:  
 
-   `LPConfig.defaultConfiguration.enableAudioSharing`  
+   ```swift
+   LPConfig.defaultConfiguration.enableAudioSharing
+   ```  
 
    By default, the value is *false* (disabled).  
 
 3. Define the max length of an audio message:
 
-   `LPConfig.defaultConfiguration.recordingDurationLimit`  
+   ```swift
+   LPConfig.defaultConfiguration.recordingDurationLimit
+   ```  
 
    The values are in seconds. 
    
@@ -41,7 +45,9 @@ Audio Messaging allows consumers to send audio messages to agents.
 
 4. Define the max number of audio messages saved on the device:  
 
-   `LPConfig.defaultConfiguration.maxNumberOfSavedAudioFilesOnDisk`  
+   ```swift
+   LPConfig.defaultConfiguration.maxNumberOfSavedAudioFilesOnDisk
+   ```  
 
    The default value is *20*.  
 

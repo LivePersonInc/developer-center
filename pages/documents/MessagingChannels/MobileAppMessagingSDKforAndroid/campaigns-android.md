@@ -53,6 +53,52 @@ Monitoring APIs include two APIs:
 
 ### Code Samples
 
+#### conversationViewParams
+
+```java
+ConversationViewParams conversationViewParams = new ConversationViewParams();
+// Creating a campaignInfo object
+CampaignInfo campaignInfo = new CampaignInfo(campaignId, engagementId, engagementContextId, sessionId, visitorId);
+// Adding the created CampaignInfo to the conversationViewParams
+conversationViewParams.setCampaignInfo(campaignInfo);
+
+LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+lpAuthenticationParams.setAuthKey(authCode);
+
+// Presenting the conversation window. If a new conversation starts, it will be routed according to the engagement in campaignInfo
+LivePerson.showConversation(activity, lpAuthenticationParams, conversationViewParams);
+```
+
+#### getEngagement API
+
+Use this API to send engagement attributes (as part of the request body).  As an optional parameter, you can pass MontoringParams, which includes PageId, Entry Points, and Engagement Attributes for routing the conversation. Available parameters include:
+
+   - context: application context
+
+   - consumerID: an optional brand app consumer ID 
+
+   - monitoringParams: an instance of includes optional PageId, JSONArray of Entry Points and a JSONArray of Engagement Attributes
+
+   - EngagementCallback: operation callback: onSuccess() response with LPEngagementResponse that contains pageId, sessionId, visitorId and engagementDetailsList onError() response with the MonitoringErrorType 
+
+
+```java
+// Calling getEngagement and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
+LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new EngagementCallback() {
+			@Override
+			public void onSuccess(@NotNull LPEngagementResponse lpEngagementResponse) {
+				...
+			}
+
+			@Override
+			public void onError(@NotNull MonitoringErrorType errorType, @Nullable Exception exception) {
+				...
+			}
+		});
+```
+
+
+
 #### Initialize SDK with Monitoring
 
 ```java
@@ -108,33 +154,6 @@ engagementAttriutes.put(lead);
 MonitoringParams monitoringParams = new MonitoringParams("PageId", entryPoints, engagementAttriutes);
 ```
 
-#### getEngagement API
-
-Use this API to send engagement attributes (as part of the request body).  As an optional parameter, you can pass MontoringParams, which includes PageId, Entry Points, and Engagement Attributes for routing the conversation. Available parameters include:
-
-   - context: application context
-
-   - consumerID: an optional brand app consumer ID 
-
-   - monitoringParams: an instance of includes optional PageId, JSONArray of Entry Points and a JSONArray of Engagement Attributes
-
-   - EngagementCallback: operation callback: onSuccess() response with LPEngagementResponse that contains pageId, sessionId, visitorId and engagementDetailsList onError() response with the MonitoringErrorType 
-
-
-```java
-// Calling getEngagement and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
-LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new EngagementCallback() {
-			@Override
-			public void onSuccess(@NotNull LPEngagementResponse lpEngagementResponse) {
-				...
-			}
-
-			@Override
-			public void onError(@NotNull MonitoringErrorType errorType, @Nullable Exception exception) {
-				...
-			}
-		});
-```
 
 
 
@@ -164,22 +183,6 @@ LivepersonMonitoring.sendSde(context, identityList, monitoringParams, new SdeCal
     ...
   }
 });
-```
-
-#### Open conversation with CampaignInfo
-
-```java
-ConversationViewParams conversationViewParams = new ConversationViewParams();
-// Creating a campaignInfo object
-CampaignInfo campaignInfo = new CampaignInfo(campaignId, engagementId, engagementContextId, sessionId, visitorId);
-// Adding the created CampaignInfo to the conversationViewParams
-conversationViewParams.setCampaignInfo(campaignInfo);
-
-LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
-lpAuthenticationParams.setAuthKey(authCode);
-
-// Presenting the conversation window. If a new conversation starts, it will be routed according to the engagement in campaignInfo
-LivePerson.showConversation(activity, lpAuthenticationParams, conversationViewParams);
 ```
 
 
