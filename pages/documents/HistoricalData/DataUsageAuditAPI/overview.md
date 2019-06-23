@@ -1,23 +1,18 @@
 ---
 pagename: Overview
-redirect_from:
-  - data-usage-audit-api-overview.html
 sitesection: Documents
 categoryname: "Historical Data"
 documentname: Data Usage Audit API
-
-level-order: 3
-order: 1
 permalink: data-usage-audit-api-overview.html
 root-link: true
-indicator: auditlogs
+indicator: both
 ---
+
 ### Introduction
 
-The LiveEngage Data Usage Audit API retrieves the most up to date information available about transcript searches and exports usage via history APIs. This API makes it possible to understand
- what data was exposed by history API user.
+The LiveEngage Data Usage Audit API retrieves the most up to date information available about transcript searches and exports usage via LivePerson's other historical data APIs. This API makes it possible to understand what data were exposed and to which API user.
 
-This API supports the HTTP GET functionality (data retrieval), and all auditing logs are returned in JSON format aggregated per account, api type, user id and per hour.
+This API supports the HTTP GET functionality (for data retrieval). All auditing logs are returned in a JSON format, aggregated per account, API type, user id (which accessed the API) and hour.
 
 
 ### Getting Started
@@ -38,9 +33,6 @@ A few things you'll need to get started with this API:
 
 ### Use Cases
 
-* Retrieve audit logs of chat transcripts data exposing
-* Retrieve audit logs of messaging transcripts data exposing
-* Retrieve audit logs of chat transcript exports requests
-
-
-
+* Retrieve audit logs of which chat transcripts were exposed, when, and to which user.
+* Retrieve audit logs of which messaging transcripts were exposed, when, and to which user.
+* Retrieve audit logs of requests to expose transcripts, when they were made, and which user made them.

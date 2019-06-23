@@ -1,56 +1,53 @@
 ---
-pagename: Data Usage Audit API
-redirect_from:
-  - data-usage-audit-api-methods-auditlogs.html
+pagename: Retrieve Data Usage Logs
 sitesection: Documents
 categoryname: "Historical Data"
 documentname: Data Usage Audit API
 subfoldername: Methods
 order: 20
-permalink: data-usage-audit-api-methods-auditlogs.html
+permalink: data-usage-audit-api-methods-retrieve-data-usage-logs.html
 
-indicator: auditlog
+indicator: both
 ---
 
-Retrieves data api usage audit logs aggregated per account, api type, user id and per hour.
+All auditing logs are returned in a JSON format, aggregated per account, API type, user id (which accessed the API) and hour.
 
 ### Request
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/lp-auditlogapi/{accountID}?from=<from time>&to=<to_time>&agentId=<agent id or appkey>&api=<API>` |
-|Example | https://va-a.auditlog.liveperson.net/lp-auditlogapi/79316966?from=1560236532288&to=1560411234877&agentId=all&api=msg_search
+| GET | https://[{domain}](/agent-domain-domain-api.html)/lp-auditlogapi/{accountID}?from=<from time>&to=<to_time>&agentId=<agent id or appkey>&api=<API> |
+|Example URL | https://va-a.auditlog.liveperson.net/lp-auditlogapi/79316966?from=1560236532288&to=1560411234877&agentId=all&api=msg_search
 
 **URL Parameters**
 
 | Name      |  Description | Type / Value | Required |
 | :-----    | :--------------- | :-------------- | :--- |
-| from | The from time (epoch time) low time limit in which the data can be filtered.| numeric | required |
-| end| The end time (epoch time) high time limit in which the data can be filtered. Max time range supported is one month | numeric | required |
-| agentId | agentId in a case of using History API from LE or AppKey in a case of external  History API usage<br> Example: agentId=4153. To retrieve all user 4153 audit logs, use agentId=all for all. | numeric | required |
+| from | The starting time (in epoch time) from which the data will be filtered.| numeric | required |
+| end| The end time (in epoch time) until which the data will be filtered. Max time range supported is one month | numeric | required |
+| agentId | If the data was accessed from LiveEngage's UI, this is the agentId of the user who did so. In case the data wa accessed using a historical data API, this is the AppKey used <br> Example: agentId=4153. To retrieve all user 4153 audit logs, use agentId=all for all. | numeric | required |
 | api | History API type. Use msg_search for messaging transcripts expose, chat_search for chat transcripts expose  and chat_export for chat export requests<br> Example: api=msg_search<br> | string | optional |
 
 ### Response
 
 **JSON Example**
 
-
 ```json
-    {
-        "recordslist": [
-            {
-                "accountId": "79316966",
-                "apiConsumerid": "3447834010",
-                "apiType": "MSG_SEARCH",
-                "time": "1560236400000",
-                "interactions": [
-                    "4ea1b927-4cdc-4b64-b811-dcc35baf9e7a",
-                    "5ae24644-af69-43db-b58c-4938c111edfe",
-                    "83005425-fa45-45c7-b627-bb1de818c57c"
-                ]
-            }
+{
+  "recordslist": [
+      {
+        "accountId": "79316966",
+        "apiConsumerid": "3447834010",
+        "apiType": "MSG_SEARCH",
+        "time": "1560236400000",
+        "interactions": [
+            "4ea1b927-4cdc-4b64-b811-dcc35baf9e7a",
+            "5ae24644-af69-43db-b58c-4938c111edfe",
+            "83005425-fa45-45c7-b627-bb1de818c57c"
         ]
-    }
+      }
+  ]
+}
 ```
 
 
@@ -61,5 +58,5 @@ Retrieves data api usage audit logs aggregated per account, api type, user id an
 | :------ | :------------- | :------------- |
 | accountId | API user account id<br>|string|
 | apiConsumerid | Agent id  or AppKey of History API consumer<br>|string|
-| time | Low limit of hourly time interval<br> For example:  1560236400000  means time interval from Tuesday, June 11, 2019 7:00:00 AM  to Tuesday, June 11, 2019 7:59:59 AM| string |
-| interactions | List of interaction ids that were exposed  by API consumer<br> | string array |
+| time | Start time of data accessed in an hourly time interval<br> For example:  1560236400000  means the data was accessed within an interval between Tuesday, June 11, 2019 7:00:00 AM and Tuesday, June 11, 2019 7:59:59 AM| string |
+| interactions | List of interaction ids that were exposed to the API consumer<br> | string array |

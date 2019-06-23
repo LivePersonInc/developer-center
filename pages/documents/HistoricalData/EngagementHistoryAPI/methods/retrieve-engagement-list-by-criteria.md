@@ -21,7 +21,7 @@ This returns a list of engagements with all their metadata and related transcrip
 
 | Method | URL |
 | :------- | :---------- |
-| POST | `https://<domain>/interaction_history/api/account/{accountID}/interactions/search?<url_parameters>` |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/interaction_history/api/account/{accountID}/interactions/search?<url_parameters> |
 
 **URL Parameters**
 
