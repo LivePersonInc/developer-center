@@ -1293,8 +1293,8 @@ a.anchoritem {
 }
 
 #account {
-  width: 25%;
-  background-color: #f8f8f8;
+  width: 35%;
+  background-color: #f2f1f2;
   color: #666;
   -webkit-appearance: none;
   border: 0;
@@ -1305,6 +1305,13 @@ input#csds-button {
   border-radius: 15px;
   color: #fff;
   background-color: #5879DA;
+  border: 0;
+  height: 32px;
+  padding: 0 10px 0 10px;
+}
+
+#csds-result {
+  display: none;
 }
 
 /* Media Queries Begin */
