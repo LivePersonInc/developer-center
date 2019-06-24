@@ -163,6 +163,9 @@ JSON Example
                                    },
                                    "agentGroupID": {
                                        "long": -1
+                                   },
+                                   "userProfileIDs": {
+                                       "array": [2438730312,2438730212,2438730512,2438730412]
                                    }
                                }
                            ]
@@ -238,6 +241,9 @@ JSON Example
                                    },
                                    "agentGroupID": {
                                        "long": -1
+                                   },
+                                   "userProfileIDs": {
+                                       "array": [2438730312,2438730212,2438730512,2438730412]
                                    }
                                }
                            ]
@@ -274,3 +280,4 @@ The following table describes the information that is available in the agent act
 | concurrentEng | How many chats were handled concurrently at the time of state change. | long |
 | maxConcurrentEng | The maximum amount of chats the agent can take at one time. In cases of agent login / logout the value is -9. | long |
 | agentGroupID | Agent group’s ID. | long |
+| userProfileIDs | User's profile IDs. | array[long] |
