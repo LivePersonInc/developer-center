@@ -580,9 +580,16 @@ const retrieveDomains = (account) => {
           dataType: "json",
           success: function(data) {
 						html = '';
-						console.log(data);
+						$(csdsResult).css('display', 'table');
               if (data.baseURIs.length > 0) {
 									html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+									data.baseURIs.sort(function(a, b){
+						        var m1 = a.service.toLowerCase();
+						        var m2 = b.service.toLowerCase();
+						        if(m1< m2) return -1;
+						        if(m1> m2) return 1;
+						        return 0;
+						    	})
                   data.baseURIs.forEach((entry) => {
                           html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
                       });
