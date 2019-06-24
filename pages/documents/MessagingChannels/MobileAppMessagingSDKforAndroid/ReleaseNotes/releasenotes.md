@@ -15,6 +15,8 @@ indicator: messaging
 
 ### Android Messaging SDK - Version 3.9.0
 
+**Release date:** June 18, 2019
+
 #### Environmental requirements
 The Android Mobile Messaging SDK version 3.9 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
@@ -176,6 +178,8 @@ Other configurations can be found in the [Attributes](mobile-app-messaging-sdk-f
 
 ### Android Messaging SDK - Version 3.8.1
 
+**Release date:** June 13, 2019
+
 Android Mobile App SDK v3.8.1 fixed one bug.
 
 #### Environmental requirements
@@ -185,6 +189,8 @@ The Android Mobile Messaging SDK version 3.8.1 requires the minimum Android API 
 Reported in SDK 3.8.0 on Android. When the conversation history for an authenticated user has the SUGGESTED_ASSIGNED_AGENT role assigned in it, the app crashed.
 
 ### Android Messaging SDK - Version 3.8.0
+
+**Release date:** May 17, 2019
 
 Android Mobile App SDK v3.8.0 introduces a new feature.
 
@@ -283,6 +289,8 @@ You can configure up to 24 quick reply options for the user to chose.
 
 ### Android Messaging SDK - Version 3.7.0
 
+**Release date:** April 1, 2019
+
 
 Android Mobile App SDK v3.7.0 contains fixes for high priority bugs reported by customers.
 
@@ -317,6 +325,8 @@ Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK i
 
 ### Android Messaging SDK - Version 3.6.1
 
+**Release date:** March 8, 2019
+
 Android Mobile App SDK v3.6.1 contains a new API call to enable/disable SDK logs.
 
 #### Environmental Requirements
@@ -341,6 +351,7 @@ Example:
 
 ### Android Messaging SDK - Version 3.6.0
 
+**Release date:** February 12, 2019
 
 Android Mobile App SDK v3.6.0 contains fixes for high priority bugs reported by customers.
 
