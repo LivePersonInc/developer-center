@@ -17,7 +17,7 @@ Create new special occasion(s) for an account. It is possible to create several 
 
 | Method | URL |
 | :-------- | :------ |
-| POST  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| POST  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
 **Request Headers**
 

@@ -20,7 +20,7 @@ Updates an existing Predefined Content item for a specific account.
 
 | Method  |  URL  |  
 | :------- | :----- |
- |PUT   |    /api/account/{accountId}/configuration/engagement-window/canned-responses/{pre-defined-content-id} |
+ |PUT   |    https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/canned-responses/{pre-defined-content-id} |
 
 **Path Parameters**
 
@@ -41,7 +41,7 @@ Updates an existing Predefined Content item for a specific account.
 
 **Request Headers**
 
-| Header|   Description|  Notes| 
+| Header|   Description|  Notes|
  |:-------|   :-----------  |:--- |
  |Authorization|  Contains token string to allow request authentication and authorization.  |
  |X-HTTP-Method-Override=PUT|  Overrides unsupported HTTP methods.|  To be used with the PUT value. |

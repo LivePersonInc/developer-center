@@ -991,9 +991,12 @@ table tbody td img {
   padding-left: 0;
   background-color: #f2f1f2;
   margin-left: -10px;
-  padding: 10px;
-  margin-bottom: 0px;
+  padding: 10px 0px 10px 7px;
+  margin-bottom: 0;
+  max-height: 360px;
+  overflow-y: auto;
 }
+
 
 .anchorlist a {
   color: #a2a2a2;
@@ -1008,10 +1011,12 @@ table tbody td img {
   align-self: flex-end;
   flex: 1;
   text-align: right;
+  margin-right: 3px;
 }
 
 .anchorlist li {
   margin-bottom: 10px;
+  display: flex;
 }
 
 .anchorlist li:last-of-type {
@@ -1020,6 +1025,16 @@ table tbody td img {
 
 .anchorlist li a {
   color: #5879DA !important;
+}
+
+.anchorlist li:before {
+  content: "\f0c1";
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 13px;
+  opacity: 0.25;
 }
 
 a.anchoritem {
@@ -1277,6 +1292,27 @@ a.anchoritem {
   width: 80%;
 }
 
+#account {
+  width: 35%;
+  background-color: #f2f1f2;
+  color: #666;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 5px;
+}
+
+input#csds-button {
+  border-radius: 15px;
+  color: #fff;
+  background-color: #5879DA;
+  border: 0;
+  height: 32px;
+  padding: 0 10px 0 10px;
+}
+
+#csds-result {
+  display: none;
+}
 
 /* Media Queries Begin */
 

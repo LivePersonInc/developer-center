@@ -17,7 +17,7 @@ Delete an existing workday object.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId}|
+| DELETE  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId}|
 
 **Path Parameters**
 

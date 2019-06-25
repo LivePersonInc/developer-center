@@ -22,7 +22,7 @@ A single conversation may include more than one segment for each participating s
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgskillsegments?timeframe=<timeframe in minutes>&skillIds=<skillIds>&interval=<interval size in minutes>&userType=<segment user type>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgskillsegments?timeframe=<timeframe in minutes>&skillIds=<skillIds>&interval=<interval size in minutes>&userType=<segment user type>&v=<version> |
 
 **URL Parameters**
 

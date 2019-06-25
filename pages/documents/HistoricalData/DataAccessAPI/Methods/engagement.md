@@ -19,7 +19,7 @@ Engagement retrieves all engagement data in .zip format files. The engagement da
 
 | Method | URL |
 | :------ | :-------- |
-| GET | `https://<domain>/data_access_le/account/{accountID}/le/engagement?startTime=<startTime>&endTime=<endTime>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/data_access_le/account/{accountID}/le/engagement?startTime=<startTime>&endTime=<endTime> |
 
 **URL Parameters**
 

@@ -124,6 +124,8 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
     }
     ```
 
+   For more details about this function, see [Agent Avatar Tapped](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#agent-avatar-tapped).
+
 ### Step 4 - Add messaging activity
 
 In this step, you create a messaging activity that launches the activity session. Here we provide you with a basic initialization of the LivePerson SDK in *Activity mode*.  You can also initialize it in *Fragment mode* and use different features.
@@ -161,7 +163,7 @@ initOpenConversationButton();
 }
 ```
 
-#### init Button function
+#### initOpenConversationButton
 
 ```java
 private void initOpenConversationButton() {
@@ -183,8 +185,8 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
 }
 ```
 
-#### init Activity conversation
-Here, you initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
+#### initActivityConversation
+You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
 
 **TIP** If the initialization succeeds, the `openActivity` method is called.
 
@@ -224,15 +226,16 @@ Here, you use the LivePerson SDK’s `showConversation` method.
 
 ```java
 private void openActivity() {
-LivePerson.showConversation(MainActivity.this,  new LPAuthenticationParams().setAuthKey(""), new ConversationViewParams(false));
-ConsumerProfile consumerProfile = new ConsumerProfile.Builder()
-        .setFirstName(fnameInput.getText().toString())
-        .setLastName(lnameInput.getText().toString())
-        .setPhoneNumber("")
-        .build();
-LivePerson.setUserProfile(consumerProfile);
-}
+   LivePerson.showConversation(MainActivity.this,  new LPAuthenticationParams().setAuthKey(""), new ConversationViewParams(false));
+   ConsumerProfile consumerProfile = new ConsumerProfile.Builder()
+           .setFirstName(fnameInput.getText().toString())
+           .setLastName(lnameInput.getText().toString())
+           .setPhoneNumber("")
+           .build();
+   LivePerson.setUserProfile(consumerProfile);
+   }
 ```
+
 
 ### Step 5 - Configure push notifications  
 Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
@@ -478,7 +481,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
          }
          return null;
      }
-         /* Listen to changes in unread messages counter and updating icon badge*/
+         /* Listen to changes in unread messages counter and update icon badge*/
      public static class BadgeBroadcastReceiver extends BroadcastReceiver{
          public BadgeBroadcastReceiver(){}
          @Override

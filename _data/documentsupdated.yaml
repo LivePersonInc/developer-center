@@ -145,6 +145,7 @@
           - subpagename: Simple Router
           - subpagename: Full Lead Gen
           - subpagename: Simple Lead Gen
+          - subpagename: Simple FAQ
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
@@ -499,10 +500,6 @@
           - subpagename: Storing Secrets
       - pagename: Deploying Functions
       - pagename: External Invocations
-        subpages:
-          - subpagename: Overview
-          - subpagename: Client Credentials
-          - subpagename: Authorization Code
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
@@ -560,6 +557,12 @@
           - subpagename: Create Deletion Request
           - subpagename: Cancel Deletion Request
           - subpagename: Get Deletion Request
+  - documentname: Data Usage Audit API
+    pages:
+    - pagename: Overview
+    - pagename: Methods
+      subpages:
+        - subpagename: Retrieve Data Usage Logs
 
 - categoryname: Messaging Channels
   image: agent-interaction
@@ -623,33 +626,30 @@
     - pagename: Quick Start
     - pagename: Configure the Android SDK
     - pagename: Push Notifications
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Audio Messages
+      - subpagename: Campaigns
+      - subpagename: CSAT Behavior
+      - subpagename: Photo and File Sharing
+      - subpagename: Welcome Message with Quick Replies
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
-      - subpagename: Interface and Class Definitions
+      - subpagename: Control History APIs
       - subpagename: Callbacks Index
-
-
-    - pagename: Customization and Branding
+      - subpagename: Interface and Class Definitions
+    - pagename: SDK Attributes
       subpages:
-      - subpagename: Customizing the SDK
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
-      - subpagename: Modifying Strings
-      - subpagename: Plural String resource Example
-      - subpagename: Date and Time
+      - subpagename: Date and Time Formats
+      - subpagename: String Values
       - subpagename: Override SDK Strings
-    - pagename: Advanced Features
-      subpages:
-      - subpagename: Photo Sharing
-      - subpagename: Audio Messages
-      - subpagename: CSAT Behavior
-      - subpagename: Campaigns for Mobile App Messaging
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+      - subpagename: Plural String resource Example
     - pagename: Voice and Video for Android SDK (BETA)
       subpages:
       - subpagename: Overview
@@ -663,10 +663,9 @@
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Authentication 
+      - subpagename: Authentication
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
-      - subpagename: Use the LivePerson SDK - Android
       - subpagename: Upgrade Guide - Android
   - documentname: Mobile App Messaging SDK for iOS
     pages:
@@ -674,16 +673,23 @@
     - pagename: Quick Start
     - pagename: Configure the iOS SDK
     - pagename: Push Notifications
+    - pagename: Advanced Features
+      subpages:
+      - subpagename: Audio Messages
+      - subpagename: Campaigns
+      - subpagename: CSAT Behavior
+      - subpagename: Photo and File Sharing
+      - subpagename: Unauthenticated In-App Messaging
+      - subpagename: Welcome Message with Quick Replies
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
+      - subpagename: Control History APIs
       - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
-    - pagename: Customizing Toast Notifications
-    - pagename: Customization and Branding
+    - pagename: SDK Attributes
       subpages:
-      - subpagename: Customizing the SDK
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
       - subpagename: Deprecated Attributes
@@ -691,16 +697,8 @@
       subpages:
       - subpagename: Localization Keys
       - subpagename: String Localization
-      - subpagename: Timestamps Formatting
-    - pagename: Advanced Features
-      subpages:
-      - subpagename: Unauthenticated In-App Messaging
-      - subpagename: CSAT Behavior
-      - subpagename: Audio Messages
-      - subpagename: Photo Sharing
-      - subpagename: Campaigns for Mobile App Messaging
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Control History APIs
+      - subpagename: Date and Time Styles
+
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:
       - subpagename: Overview
@@ -715,7 +713,6 @@
       subpages:
       - subpagename: Authentication
       - subpagename: Open Source List
-      - subpagename: Using LivePerson SDK - iOS
       - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK
     pages:

@@ -17,7 +17,7 @@ Update existing workday object(s).
 
 | Method | URL |
 | :-------- | :------ |
-| PUT  |/api/account/{accountId}/configuration/ac-common/workinghours |
+| PUT  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/workinghours |
 
 **Path Parameters**
 

@@ -12,7 +12,7 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-welcome-messag
 indicator: messaging
 ---   
 
-**Supported versions:** 3.8
+**Supported versions:** 3.8 and newer
 
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
@@ -29,6 +29,7 @@ A consumer’s quick reply selection or answer gets inserted as their first mess
 
 ```java
 LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
+new ConversationViewParams().setLpWelcomeMessage(lpWelcomeMessage); // june 12 2019: new - needs validated
 List<MessageOption> optionItems = new ArrayList<>();
 optionItems.add(new MessageOption("bill", "bill"));
 optionItems.add(new MessageOption("sales", "sales"));
@@ -47,14 +48,14 @@ LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewPa
 
 If set empty String in constructor `LPWelcomeMessage(String welcomeMessage)`, the welcome message with quick reply feature will be disabled. It shows the default welcome message, which is set up in the String resources `lp_first_message`.
 
-There are two parameters in the MessageOption class constructor.
+There are two parameters in the `MessageOption` class constructor.
 
 ```java
 public MessageOption(@NonNull String displayText, @NonNull String value)
 ```
 
 - **displayText** is the text displayed in the quick reply button.
-- **value** is the content that is sent to the agent. Default value is displayText if set to empty String.
+- **value** is the content that is sent to the agent. Default value is `displayText` if set to empty String.
 
 
 There are two message frequencies: 
@@ -68,13 +69,14 @@ There are two message frequencies:
 
 - You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
 
-- Once you set 'itemsPerRow' (max 8), the number of rows calculate automatically (up to 3 rows). If the number of replies exceeds `itemsPerRow` times 3, the extra replies get added to the last row.
+- Once you set `itemsPerRow` (max 8), the number of rows calculate automatically (up to 3 rows). If the number of replies exceeds `itemsPerRow` times 3, the extra replies get added to the last row.
 
 - When the consumer ends the conversation, the window remains open, and the Welcome message appears again. The message frequency should be set to `EVERY_CONVERSATION`.
 
 - Quick reply messages do not get recorded in the conversation history.
 
 - The conversational metadata (ExternalId) does not get populated.
+
    ```
    "metadata": [
    {

@@ -19,14 +19,14 @@ Updates existing Predefined Content items for a specific account.
 ### Request
 
  |Method|    URL|    
- |:-------  |:-----| 
- |PUT|       /api/account/{accountId}/configuration/engagement-window/canned-responses/ |
+ |:-------  |:-----|
+ |PUT|       https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/canned-responses/ |
 
 **Path Parameters**
 
- |Parameter|  Description|  Type|  Notes| 
- |:----------|  :--------------|  :--------------|  :---| 
- |accountId|  LP site ID|  string |  Validation fail error code: 400| 
+ |Parameter|  Description|  Type|  Notes|
+ |:----------|  :--------------|  :--------------|  :---|
+ |accountId|  LP site ID|  string |  Validation fail error code: 400|
 
 ### Query Parameters
 
@@ -40,7 +40,7 @@ Updates existing Predefined Content items for a specific account.
 
 **Request Headers**
 
- |Header  | Description|  Notes| 
+ |Header  | Description|  Notes|
  |:-------|   :-----------|  :--- |
  |Authorization|  Contains token string to allow request authentication and authorization.  |
  |X-HTTP-Method-Override=PUT|  Overrides unsupported HTTP methods.|  To be used with the PUT value. |
@@ -65,8 +65,8 @@ JSON array of valid Predefined Content objects.
 ### Response Headers
 
 | Header|  Description |
- |:-------  | :----- | 
- |ac-revision | Account config object type collection revision. | 
+ |:-------  | :----- |
+ |ac-revision | Account config object type collection revision. |
 
 **Response Body**
 

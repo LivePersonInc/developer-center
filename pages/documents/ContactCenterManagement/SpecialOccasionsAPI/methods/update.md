@@ -17,7 +17,7 @@ Update existing special occasions.
 
 | Method | URL |
 | :-------- | :------ |
-| PUT  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| PUT  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
 
 

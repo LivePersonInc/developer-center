@@ -2,6 +2,8 @@
 pagename: Push Notifications
 redirect_from:
   - consumer-experience-ios-sdk-pushnotifications.html
+  - mobile-app-messaging-sdk-for-ios-appendix-os-certificate-creation.html
+  - consumer-experience-ios-sdk-createcertificate.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

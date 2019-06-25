@@ -1,7 +1,8 @@
 ---
-pagename: Campaigns for Mobile App Messaging
+pagename: Campaigns 
 redirect_from:
   - consumer-experience-ios-sdk-advanced-campaigns.html
+  - mobile-app-messaging-sdk-for-ios-advanced-features-campaigns-for-mobile-app-messaging.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -9,37 +10,49 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
 
 order: 235
-permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns-for-mobile-app-messaging.html
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns.html
 
 indicator: messaging
 ---
 
-### Introduction
-Campaigns are the cornerstone of LiveEngage - the place where every digital engagement is created and organized.
+Campaigns are the cornerstone of LiveEngage - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
 
-By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
+Use the Monitoring APIs to:
 
-Using the Monitoring APIs, brands can:
+* Report on the customer's journey inside the app
 
-* Report on the customer’s journey inside the app
+* Retrieve engagements based on the reported SDEs
 
-* Get engagements based on the reported SDEs
+* Report on engagement attributes
 
 * Route conversations to a specific skill (based on engagements)
 
-While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs as will be explained in this guide.
+While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs.
+
+### Prerequisites
+
+- Follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf) **before** adding the implementation to a mobile app.
+
+- The SDK must be initialized with the `LPMonitoringInitParams` object.
+
+### Notes & Best Practices
+
+* To start a conversation with a specific campaign and engagement, provide an `LPCampaignInfo` object to the `LPConversationViewParams` object.
+
+* A monitoring session is a 6-hours window. All SDEs that report during the session get aggregated.
+
+* If not reporting any SDEs (idle) for 30 minutes, a new session starts when reporting the next SDE.
+
 
 ### Monitoring APIs
 
-The Monitoring APIs provide brands access to the LivePerson monitoring system. The APIs can be used for reporting on engagement attributes and to retrieve an engagement. The eligibility of an engagement is based on campaigns and an engagement's definitions.
+The Monitoring APIs provide brands access to the LivePerson monitoring system. The eligibility of an engagement is based on campaigns and an engagement's definitions.  Monitoring APIs include:
 
-Monitoring APIs include two APIs:
+* [sendSDE](consumer-experience-ios-sdk-monitoring-methods.html) - Sends engagement attributes to LivePerson. Use whenever the app would like to report on an engagement attribute.
 
-* [sendSDE](consumer-experience-ios-sdk-monitoring-methods.html) - Sends engagement attributes to LivePerson. Should be used whenever the app would like to report on an engagement attribute.
+* [getEngagement](consumer-experience-ios-sdk-monitoring-methods.html) - Returns an engagement if there is a matching campaign and engagement. Use to send engagement attributes (as part of the request body) as well. 
 
-* [getEngagement](consumer-experience-ios-sdk-monitoring-methods.html) - In case that there is a matching campaign and engagement, getEngagement will return an engagement. The method can be used to send engagement attributes (as part of the request body) as well.
-
-#### Code Samples
+### Code Samples
 
 ```swift
 // 1. Init SDK with Monitoring
@@ -94,14 +107,4 @@ let conversationViewParam = LPConversationViewParams(conversationQuery: conversa
 LPMessagingSDK.instance.showConversation(conversationViewParam)
 ```
 
-### Notes & Best Practices
 
-* Please follow the steps in the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf) **before** adding the implementation to a mobile app.
-
-* In order to use the APIs, the SDK should be initialized with the `LPMonitoringInitParams` object.
-
-* In order to start a conversation with a specific campaign and engagement, a `LPCampaignInfo` object should be provided to the `LPConversationViewParams` object
-
-* A monitoring session lasts for a 6 hours window. All SDEs which will be reported during the session will be aggregated.
-
-* In case SDEs aren't reported (idle) for 30 minutes, a new session will be started when reporting the next SDE.

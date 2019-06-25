@@ -14,8 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-string-localization-override-sdk
 indicator: messaging
 ---
 
-### Android resources introduction
-
 Android resources include Strings, drawables, layouts, and so on. When compiled, all resources are moved to the same location. App resources receive higher priority, and, due to this, in case the SDK and the App share the same resource name, the value of the App will be used. This is under OS responsibility.
 
 ### Language implementation
