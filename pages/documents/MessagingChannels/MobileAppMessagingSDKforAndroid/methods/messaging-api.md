@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html
 indicator: messaging
 ---
 
-**(Liveperson.java class)**
+**(Liveperson.java class)** 
 
 
 
@@ -72,7 +72,11 @@ public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Ex
 | :--- | :--- |
 | callback | An [ICallback](android-callbacks-index.html) implementation |
 
+**openFragmentContainer method** 
+Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
 
+**FragmentContainerActivity class** 
+This is an activity class that has a fragment container. It gets the conversation fragment from the SDK (`LivePerson.getConversationFragment()`) and attach it to the container.
 
 ### getConversationFragment (with full authentication support)
 
@@ -229,6 +233,43 @@ public static void hideConversation(Activity activity)
 
 
 
+**initActivityConversation method** 
+Opens the conversation view in Activity mode.
+
+You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
+
+**TIP** If the initialization succeeds, the `openActivity` method is called.
+
+```java
+private void  initActivityConversation() {
+
+    LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
+        @Override
+        public void onInitSucceed() {
+            // you can't register pusher before initialization
+            handleGCMRegistration(MainActivity.this);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    openActivity();
+                }
+            });
+        }
+        @Override
+        public void onInitFailed(Exception e) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(MainActivity.this, "Init Failed", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }));
+}
+```
+
+
+
 ### initialize (with SDK properties object)
 
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePushMessage, assume that the SDK has been initialized.
@@ -245,6 +286,29 @@ public static void initialize (Context context, InitLivePersonProperties initPro
 | :--- | :--- |
 | context | A context from the host app |
 | initProperties | An object with all the properties needed to initialize the SDK |
+
+
+#### initOpenConversationButton
+
+```java
+private void initOpenConversationButton() {
+startConvBtn = (Button) findViewById(R.id.startcnvbtn);
+startConvBtn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        // This will check if we already in a conversation
+        if (LivePerson.isValidState()) {
+            openActivity();
+        }
+        else {
+// Push - later in this tutorial
+            removeNotification();
+            initActivityConversation(); // The conversation activity
+        }
+    }
+});
+}
+```
 
 
 
@@ -292,6 +356,45 @@ Marks the current conversation as urgent.
 ```java
 public static void markConversationAsUrgent()
 ```
+
+#### openActivity function
+
+Here, you use the LivePerson SDK’s `showConversation` method. 
+
+**Tip:** In the example below, we do not use an authentication parameter.  If you need to use an authentication paramenter, use `setPhoneNumber`.
+
+```java
+private void openActivity() {
+LivePerson.showConversation(MainActivity.this,  new LPAuthenticationParams().setAuthKey(""), new ConversationViewParams(false));
+ConsumerProfile consumerProfile = new ConsumerProfile.Builder()
+        .setFirstName(fnameInput.getText().toString())
+        .setLastName(lnameInput.getText().toString())
+        .setPhoneNumber("")
+        .build();
+LivePerson.setUserProfile(consumerProfile);
+}
+```
+
+#### onCreate
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
+// IntentsHandler is the object we introduced in the previous section of this tutorial
+mIntentsHandler = new IntentsHandler(this);
+// init basic UI views
+initViews();
+// Init the button listener
+initOpenConversationButton();
+}
+```
+
+
+
+### openFragmentContainer method 
+Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
 
 
 ### reconnect

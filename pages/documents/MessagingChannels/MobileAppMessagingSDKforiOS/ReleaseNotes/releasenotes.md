@@ -21,6 +21,8 @@ indicator: messaging
 
 ### iOS Messaging SDK - Version 3.9.1
 
+**Release date:** June 18, 2019
+
 #### Environmental Requirements
 
 The iOS Mobile Messaging SDK version 3.9.1 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
@@ -206,9 +208,11 @@ You can find all the related configurations in the [resources ID table](http://l
 
 ### iOS Messaging SDK - Version 3.9.0
 
+**Release date:** June 18, 2019
+
 #### Environmental Requirements
 
-The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2 Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C, and supported on iOS versions 10 through 12.
 
 
 #### Bug fixed
@@ -390,6 +394,8 @@ You can find all the related configurations in the [resources ID table](http://l
 
 ### iOS Messaging SDK - Version 3.8.2
 
+**Release date:** May 17, 2019
+
 #### Environmental Requirements
 
 The iOS Mobile Messaging SDK version 3.8.2 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
@@ -528,6 +534,8 @@ MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE = **5MB**
 MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
 
 ### iOS Messaging SDK - Version 3.8.1
+
+**Release date:** May 17, 2019
 
 #### Environmental Requirements
 
@@ -669,6 +677,8 @@ MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
 
 ### iOS Messaging SDK - Version 3.8.0
 
+**Release date:** May 17, 2019
+
 iOS Mobile App SDK v3.8.0 introduces a new feature and contains a fix for a high priority bug reported.
 
 #### Environmental Requirements
@@ -809,11 +819,15 @@ MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
 
 ### iOS Messaging SDK - Version 3.7.1
 
+**Release date:** April 2, 2019
+
 
 Supports Xcode 10.2 and Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C.
 
 
 ### iOS Messaging SDK - Version 3.7.0
+
+**Release date:** April 2, 2019
 
 iOS Mobile App SDK v3.7 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
@@ -886,6 +900,8 @@ Namespacing for SR dependency.
 
 ### iOS Messaging SDK - Version 3.6.1
 
+**Release date:** March 8, 2019
+
 iOS Mobile App SDK v3.6.1 contains fixes for high priority bugs reported by customers.
 
 #### Environmental Requirements
@@ -899,6 +915,8 @@ iOS Mobile App SDK v3.6.1 is compatible with XCode 10, Swift version 4.2.1 (swif
 
 
 ### iOS Messaging SDK - Version 3.6
+
+**Release date:** February 12, 2019
 
 iOS Mobile App SDK v3.6 contains fixes for high priority bugs reported by customers.
 

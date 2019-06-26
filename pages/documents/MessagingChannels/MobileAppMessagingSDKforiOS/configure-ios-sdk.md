@@ -3,6 +3,19 @@ pagename: Configure the iOS SDK
 redirect_from:
   - consumer-experience-ios-sdk-configuring-the-sdk.html
   - mobile-app-messaging-sdk-for-ios-customization-and-branding-customizing-the-sdk.html
+  - consumer-experience-ios-sdk-app-extensions.html
+  - consumer-experience-ios-sdk-initialization.html
+  - mobile-app-messaging-sdk-for-ios-configuration-initialization.html
+  - consumer-experience-ios-sdk-lifecycle.html
+  - mobile-app-messaging-sdk-for-ios-configuration-conversations-lifecycle.html
+  - consumer-experience-ios-sdk-delegates.html
+  - mobile-app-messaging-sdk-for-ios-configuration-sdk-delegates.html
+  - consumer-experience-ios-sdk-logs-info.html
+  - mobile-app-messaging-sdk-for-ios-configuration-logs-and-info.html
+  - consumer-experience-ios-sdk-UI.html
+  - mobile-app-messaging-sdk-for-ios-configuration-ui.html
+  - consumer-experience-ios-sdk-user-data.html
+  - mobile-app-messaging-sdk-for-ios-configuration-user-data.html
 
 Keywords:
 sitesection: Documents
@@ -12,7 +25,7 @@ documentname: Mobile App Messaging SDK for iOS
 permalink: mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html
 
 ---
-
+ 
 
 You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. 
 
@@ -32,9 +45,25 @@ The most suitable time to customize configuration is right after the SDK initial
    ```
 
 
+### App Extensions
+
+To make sure the SDK uses the iOS keyboard only, and not third party ones, disable app extensions for keyboard as follows:
+
+In your **AppDelegate**, add the method application(_:shouldAllowExtensionPointIdentifier:)
+ with the implementation of:
+
+```swift
+func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplicationExtensionPointIdentifier) -> Bool {
+    return extensionPointIdentifier != UIApplicationExtensionPointIdentifier.keyboard
+ }
+```
+
+
+
 ### Branding
 
 You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
+
 
 
 **Example configuration:**   
@@ -47,43 +76,7 @@ configuration.remoteUserBubbleBorderWidth = 0.5
 
 
 
-### Functions
 
-* Get the conversation screen and determine which of the conversations to display in the Conversation Window.
-
-   ```swift
-   public func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol
-   ```
-
-* Get the conversation screen and determine which of the conversations to display in the Conversation Window, using the **Consumer ID**:
-
-   ```swift
-   public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol
-   ```
-
-* Return a boolean flag, with **Ready** when the Brand is connected and conversation can be processed:
-
-   ```swift
-   public func isBrandReady(brandID: String) -> Bool
-   ```
-
-### SDK Delegates
-
-The SDK uses 2 delegates:
-
-1. **LPMessagingSDKDelegate** - for lifecycle and connectivity events:
-
-   ```swift
-   LPMessagingSDK.instance.delegate = self
-   ```
-
-2. **LPMessagingSDKNotificationDelegate** - for handling Push and In-App Notifications:
-
-   ```swift
-   LPMessagingSDK.instance.registerPushNotifications(token: deviceToken, notificationDelegate: self)
-   ```
-
-You should implement and set the **LPMessagingSDKNotificationDelegate**, in order to receive Push Notifications from the SDK.
 
 ### Conversations Lifecycle
 
@@ -188,210 +181,11 @@ For information about the methods, see to [Messaging API](consumer-experience-io
    <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentIsTypingStateChanged(isTyping: Bool)
    ```
 
-### UI
-
-To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, custom buttons, typing indication, etc.
-
-**Note:** The following methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode).
-
-* Change the state of the action menu of the conversation for brandID:
-
-   ```swift
-   public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
-   ```
-
-   **Note:** Refer to [[Messaging API](consumer-experience-ios-sdk-messaging-methods.html#togglechatactions) to learn more about `toggleChatActions`.
-
-
-* Triggered each time the SDK menu is opened/closed:
-
-   ```swift
-   <LPMessagingSDKdelegate> optional func LPMessagingSDKActionsMenuToggled(toggled: Bool)
-   ```
-
-* If you set a custom button, the **LPMessagingSDKCustomButtonTapped** method gets called when clicking the custom button:
-
-   ```swift
-   <LPMessagingSDKdelegate> optional func LPMessagingSDKCustomButtonTapped()
-   ```
-
-* Triggered if Off-Hours state changed:
-
-   ```swift
-   <LPMessagingSDKdelegate> optional func LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
-   ```  
-
-### User Data
-
-Pass and display consumer information to agents, and agent information to consumers.
-
-**Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
-
-* Set the user profile on LiveEngage:
-
-   ```swift
-   public func setUserProfile(lpuser: LPUser, brandID: String)
-   ```
-
-* Return Previously Assigned Agent, if any:
-
-   ```swift
-   public func getAssignedAgent(conversationQuery: ConversationParamProtocol) -> LPUser?
-   ```
-
-* Triggered each time the SDK receives info about the agent from the Server:
-
-   ```swift
-   <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentDetails(agent: LPUser?)
-   ```
-
-### Logs and Info
-
-
-Send logs from LiveEngage to your app. Logs include different severity levels of errors and warnings.  
-
-* Subscribe the host app to receive log events from a specific log level and above:
-
-   ```swift
-   public func subscribeLogEvents(logLevel: LogLevel)
-   ```
-
-    **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LogLevel` object.
-
-* Triggered when the SDK version you're using is obselete and needs an update:
-
-   ```swift
-   <LPMessagingSDKdelegate> func LPMessagingSDKObseleteVersion(error: NSError)
-   ```
-
-* Return the SDK current version:
-
-   ```swift
-   public func getSDKVersion() -> String?
-   ```
-
-* Print all the keys that can be localized on the SDK:
-
-   ```swift
-   public func printAllLocalizedKeys()
-   ```
-
-* Print all supported languages on the SDK:
-
-   ```swift
-   public func printSupportedLanguages()
-   ```
-
-* Return all supported languages on the SDK:
-
-   ```swift
-   public func getAllSupportedLanguages() -> [String : String]
-   ```
-
-### App Extensions
-
-To make sure the SDK uses the iOS keyboard only, and not third party ones, disable app extensions for keyboard as follows:
-
-In your **AppDelegate**, add the method application(_:shouldAllowExtensionPointIdentifier:)
- with the implementation of:
-
-```swift
-func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplicationExtensionPointIdentifier) -> Bool {
-    return extensionPointIdentifier != UIApplicationExtensionPointIdentifier.keyboard
- }
-```
-
-
-### Look and feel (branding)
-
-You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
-
-
-**Example configuration:**   
-
-```swift
-configuration.remoteUserBubbleBackgroundColor = UIColor.purpleColor()
-configuration.brandName = "Brand Name"
-configuration.remoteUserBubbleBorderWidth = 0.5
-```
-
-### Message screen
-
-You can customize the messaging screen by adding more options to the LPMessagingSDK menu, such as **Mark as urgent**, **Clear history**, and **Resolve the conversation**.
-
-* Add options to the messaging menu:
-
-   ```swift
-   LPMessagingSDK.instance.toggleChatActions("Your Account Number")
-   ```
-
-* Get the object containing the default configurations:
-
-   ```swift
-   let configuration = LPConfig.defaultConfiguration
-   ```
-
-* Set Agent User Bubble Background Color:
-   
-   ```swift
-   configuration.remoteUserBubbleBackgroundColor = UIColor.lightGray
-   ```
-
-* Set Agent User Bubble Border Color:
-
-   ```swift
-   configuration.remoteUserBubbleBorderColor = UIColor.lightGray
-   ```
-
-* Set Agent Avatar Silhouette Color:
-
-   ```swift
-   configuration.remoteUserAvatarIconColor = UIColor.white
-   ```
-
-* Set Agent Avatar Background Color: 
-
-   ```swift
-   configuration.remoteUserAvatarBackgroundColor = UIColor.lightGray
-   ```
-
-* Set User Bubble Background Color: 
-
-   ```swift
-   configuration.userBubbleBackgroundColor = UIColor.white
-   ```
-
-* Set User Bubble Border Color:
-
-   ```swift
-   configuration.userBubbleBorderColor = UIColor.lightGray
-   ```
-
-* Set User Bubble Border Width:
-
-   ```swift
-   configuration.userBubbleBorderWidth = 1.0
-   ```
-
-* Set User Text Color:
-
-   ```swift
-   configuration.userBubbleTextColor = tangerine
-   ```
-
-* Set Scroll to Bottom Button Background Color:  
-
-   ```swift
-   configuration.scrollToBottomButtonBackgroundColor = tangerine
-   ```
-
-
-For more details on the different attributes you are able to customize, refer to [Customizing and Branding](consumer-experience-ios-sdk-attributes.html).
 
 ### Customer Experience Survey
 The Customer Experience Survey contains the agent avatar, and by default, the agent's name is empty.  If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image displays in the view.  Also, if the conversation has an assigned agent, the agent's nickName is used.  If no avatar image, then the default avatar image displays with the background and tint color configuration for the agent bubble.
 
-The survey only shows if the CSAT configured to appear according to LPConfig.defaultConfiguration.csatShowSurveyView, the conversation has an assigned agent, or the CSAT wasn't previously submitted.  The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT.  The CSAT gets automatically dismissed if the consumer filled it in on another device.  If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.  
+The survey only shows if the CSAT configured to appear according to `LPConfig.defaultConfiguration.csatShowSurveyView`, the conversation has an assigned agent, or the CSAT wasn't previously submitted.  The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT.  The CSAT gets automatically dismissed if the consumer filled it in on another device.  If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.  
 
 **Notes:** 
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
@@ -500,62 +294,224 @@ configuration.csatNavigationBackgroundColor = UIColor.lightGray
 For more details on the different attributes you are able to customize, refer to [Attributes](mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html#surveys-buttons-csat-and-fcr).
 
 
-### Audio
 
-Audio Messaging allows consumers to send audio messages to agents. 
 
-1. Contact your Account Team to activate the feature on the LivePerson server side.
+### Logs and Info
 
-2. Open the Info.plist and add the required permission to access the microphone. 
 
-   * **Key:** `NSMicrophoneUsageDescription`
+Send logs from LiveEngage to your app. Logs include different severity levels of errors and warnings.  
 
-   * **Value:** "Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"   
+* Subscribe the host app to receive log events from a specific log level and above:
 
-   When the system prompts the user to approve access to the microphone, it displays as part of the alert.
+   ```swift
+   public func subscribeLogEvents(logLevel: LogLevel)
+   ```
 
-3. Enable the feature:  
+    **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LogLevel` object.
 
-   `LPConfig.defaultConfiguration.enableAudioSharing`  
+* Triggered when the SDK version you're using is obselete and needs an update:
 
-   By default, the value is *false* (disabled).  
+   ```swift
+   <LPMessagingSDKdelegate> func LPMessagingSDKObseleteVersion(error: NSError)
+   ```
 
-4. Define the max length of an audio message:
+* Return the SDK current version:
 
-   `LPConfig.defaultConfiguration.recordingDurationLimit`  
+   ```swift
+   public func getSDKVersion() -> String?
+   ```
 
-   The values are in seconds. 
+* Print all the keys that can be localized on the SDK:
+
+   ```swift
+   public func printAllLocalizedKeys()
+   ```
+
+* Print all supported languages on the SDK:
+
+   ```swift
+   public func printSupportedLanguages()
+   ```
+
+* Return all supported languages on the SDK:
+
+   ```swift
+   public func getAllSupportedLanguages() -> [String : String]
+   ```
+
+
+
+
+### LPMessagingSDK Delegates
+
+The SDK uses 2 delegates:
+
+1. **LPMessagingSDKDelegate** - for lifecycle and connectivity events:
+
+   ```swift
+   LPMessagingSDK.instance.delegate = self
+   ```
+
+2. **LPMessagingSDKNotificationDelegate** - for handling Push and In-App Notifications:
+
+   ```swift
+   LPMessagingSDK.instance.registerPushNotifications(token: deviceToken, notificationDelegate: self)
+   ```
+
+You should implement and set the **LPMessagingSDKNotificationDelegate**, in order to receive Push Notifications from the SDK.
+
+
+#### Conversation Functions
+
+* Get the conversation screen and determine which of the conversations to display in the Conversation Window.
+
+   ```swift
+   public func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? = nil) -> ConversationParamProtocol
+   ```
+
+* Get the conversation screen and determine which of the conversations to display in the Conversation Window, using the **Consumer ID**:
+
+   ```swift
+   public func getConversationConsumerQuery(consumerID: String?, brandID: String, agentToken: String) -> ConversationParamProtocol
+   ```
+
+* Return a boolean flag, with **Ready** when the Brand is connected and conversation can be processed:
+
+   ```swift
+   public func isBrandReady(brandID: String) -> Bool
+   ```
+
+
+
+### Message screen
+
+You can customize the messaging screen by adding more options to the LPMessagingSDK menu, such as **Mark as urgent**, **Clear history**, and **Resolve the conversation**.
+
+* Add options to the messaging menu:
+
+   ```swift
+   LPMessagingSDK.instance.toggleChatActions("Your Account Number")
+   ```
+
+* Get the object containing the default configurations:
+
+   ```swift
+   let configuration = LPConfig.defaultConfiguration
+   ```
+
+* Set Agent User Bubble Background Color:
    
-   The minimum value is 15 seconds; the maximum and the default value is *120* seconds.
+   ```swift
+   configuration.remoteUserBubbleBackgroundColor = UIColor.lightGray
+   ```
 
-5. Define the max number of audio messages saved on the device:  
+* Set Agent User Bubble Border Color:
 
-   `LPConfig.defaultConfiguration.maxNumberOfSavedAudioFilesOnDisk`  
+   ```swift
+   configuration.remoteUserBubbleBorderColor = UIColor.lightGray
+   ```
 
-   The default value is *20*.  
+* Set Agent Avatar Silhouette Color:
 
-6. Modify and localize the following strings:  
+   ```swift
+   configuration.remoteUserAvatarIconColor = UIColor.white
+   ```
 
-   * **Short tap tooltip**  
+* Set Agent Avatar Background Color: 
 
-     Presented when the consumer used a shorttap instead of a long tap.  
-     
-     **Key:** `toolTipLongTapToRecord`
-     
-     The default text is *"Long tap to record."*
+   ```swift
+   configuration.remoteUserAvatarBackgroundColor = UIColor.lightGray
+   ```
 
-   * **Release microphone tooltip**
+* Set User Bubble Background Color: 
 
-     Presented when the consumer doesn't release the microphone icon. 
-     
-     **Key:** `toolTipReleaseButtonForRecording` 
-     
-     The default text is *"Release for recording."*
+   ```swift
+   configuration.userBubbleBackgroundColor = UIColor.white
+   ```
 
-   * **Maximum length reached tooltip**
+* Set User Bubble Border Color:
 
-     Presented when the message length reached to the maximum length. 
-     
-     **Key:** `toolTipRecordLimitReached`
-     
-     The default text is *"Recording limit has been reached, click to send."*
+   ```swift
+   configuration.userBubbleBorderColor = UIColor.lightGray
+   ```
+
+* Set User Bubble Border Width:
+
+   ```swift
+   configuration.userBubbleBorderWidth = 1.0
+   ```
+
+* Set User Text Color:
+
+   ```swift
+   configuration.userBubbleTextColor = tangerine
+   ```
+
+* Set Scroll to Bottom Button Background Color:  
+
+   ```swift
+   configuration.scrollToBottomButtonBackgroundColor = tangerine
+   ```
+
+
+For more details on the different attributes you are able to customize, refer to [Customizing and Branding](consumer-experience-ios-sdk-attributes.html).
+
+
+
+
+### UI
+
+To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, custom buttons, typing indication, etc.
+
+**Note:** The following methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode).
+
+* Change the state of the action menu of the conversation for brandID:
+
+   ```swift
+   public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
+   ```
+
+   **Note:** Refer to [[Messaging API](consumer-experience-ios-sdk-messaging-methods.html#togglechatactions) to learn more about `toggleChatActions`.
+
+
+* Triggered each time the SDK menu is opened/closed:
+
+   ```swift
+   <LPMessagingSDKdelegate> optional func LPMessagingSDKActionsMenuToggled(toggled: Bool)
+   ```
+
+* If you set a custom button, the **LPMessagingSDKCustomButtonTapped** method gets called when clicking the custom button:
+
+   ```swift
+   <LPMessagingSDKdelegate> optional func LPMessagingSDKCustomButtonTapped()
+   ```
+
+* Triggered if Off-Hours state changed:
+
+   ```swift
+   <LPMessagingSDKdelegate> optional func LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
+   ```  
+
+### User Data
+
+Pass and display consumer information to agents, and agent information to consumers.
+
+**Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
+
+* Set the user profile on LiveEngage:
+
+   ```swift
+   public func setUserProfile(lpuser: LPUser, brandID: String)
+   ```
+
+* Return Previously Assigned Agent, if any:
+
+   ```swift
+   public func getAssignedAgent(conversationQuery: ConversationParamProtocol) -> LPUser?
+   ```
+
+* Triggered each time the SDK receives info about the agent from the Server:
+
+   ```swift
+   <LPMessagingSDKdelegate> optional func LPMessagingSDKAgentDetails(agent: LPUser?)
+   ```

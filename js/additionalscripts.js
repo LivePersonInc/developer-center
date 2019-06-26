@@ -245,17 +245,20 @@ function populateAnchors() {
 	$(".anchoritem").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = $('.anchorlist ul');
+	var anchorlist = document.getElementById('inneranchors');
+	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
+		html = '';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			$(anchorlist).append('<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>');
+			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
 		});
+		anchorlist.innerHTML = html;
 	};
 };
 
@@ -577,9 +580,16 @@ const retrieveDomains = (account) => {
           dataType: "json",
           success: function(data) {
 						html = '';
-						console.log(data);
+						$(csdsResult).css('display', 'table');
               if (data.baseURIs.length > 0) {
 									html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+									data.baseURIs.sort(function(a, b){
+						        var m1 = a.service.toLowerCase();
+						        var m2 = b.service.toLowerCase();
+						        if(m1< m2) return -1;
+						        if(m1> m2) return 1;
+						        return 0;
+						    	})
                   data.baseURIs.forEach((entry) => {
                           html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
                       });

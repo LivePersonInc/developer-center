@@ -21,32 +21,38 @@ Audio Messaging allows a consumer to send audio messages to agents.
 
 2. Add the required Android permissions to access the microphone:
 
-   * `<uses-permission android:name="android.permission.RECORD_AUDIO" />` - to record audio
-
-   * `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />` - to save voice files to internal storage
-
-   * `<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />` - to read voice files stored in internal storage
+   ```java
+   <uses-permission android:name="android.permission.RECORD_AUDIO" /> //to record audio
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> //to save voice files to internal storage
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> // to read voice files stored in internal storage
+   ```
 
 3. Enable the feature:
 
-   `<bool name="enable_voice_sharing">`
+   ```java
+   <bool name="enable_voice_sharing">
+   ```
 
-   By default, the value is *false* (disabled).
+   By default, the value is **false** (disabled).
 
 
 4. Define the max length of an audio message:
 
-   `<integer name="lp_record_max_time_seconds">`
+   ```java
+   <integer name="lp_record_max_time_seconds">
+   ```
 
    The values are in seconds.  
 
-   The minimum value is 15 seconds; the maximum and the default value is *120* seconds.
+   The minimum value is 15 seconds; the maximum and the default value is **120** seconds.
 
 5. Define the max number of audio messages saved on the device:
 
-   `<integer name="max_number_stored_voice_files">`
+   ```java
+   <integer name="max_number_stored_voice_files">
+   ```
 
-   The default value is *20*.
+   The default value is **20**.
 
 6. Modify and localize the following strings:
 
