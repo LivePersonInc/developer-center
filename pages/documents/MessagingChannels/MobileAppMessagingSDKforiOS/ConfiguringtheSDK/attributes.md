@@ -677,14 +677,14 @@ Color code for date separator background color.
 #### dateSeparatorFontSize  
 Define the Date Separator font text style. 
 
- <div style="float: left; width: 35%;">
+ <div style="float: left; width: 35%;height: 65px;">
    <ul>
       <li><b>Type:</b> UIFontTextStyle</li>
       <li><b>Default value:</b> UIFontTextStyle.footnote</li>
    </ul>
 </div>
 
-<div style="float: right; width: 65%;height: 36px;">
+<div style="float: right; width: 65%;height: 65px;">
    <figure>
    <figcaption></figcaption>
    <img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
@@ -2150,7 +2150,7 @@ Number of seconds before the first Time to Respond (TTR) notification appears.
 #### ttrShouldShowTimestamp  
 When set to **true**, the timestamp of the TTR notification displays. Otherwise, the "An agent will respond shortly" message displays.   
 
-<div style="float: left; width: 35%;height: 51px;">
+<div style="float: left; width: 35%;height: 30px;">
    <ul>
       <li><b>Type:</b> Bool</li>
       <li><b>Default value:</b> false</li>
@@ -2180,7 +2180,7 @@ Controls the TTR frequency, for example, don’t show the TTR more than once in 
 #### showUrgentButtonInTTRNotification  
 When set to **true**, the Urgent button shows in the TTR notification.
 
-<div style="float: left; width: 35%;height: 51px;">
+<div style="float: left; width: 35%;height: 30px;">
    <ul>
       <li><b>Type:</b> Bool</li>
       <li><b>Default value:</b> false</li>
@@ -2202,7 +2202,7 @@ When set to **true**, the Urgent button shows in the TTR notification.
 #### showOffHoursBanner  
 Enable or disable the off-hours toaster. 
 
-<div style="float: left; width: 35%;height: 51px;">
+<div style="float: left; width: 35%;height: 30px;">
    <ul>
       <li><b>Type:</b> Bool</li>
       <li><b>Default value:</b> true</li>
@@ -2224,7 +2224,7 @@ Enable or disable the off-hours toaster.
 #### ttrBannerBackgroundColor  
 Background color for banner. 
 
-<div style="float: left; width: 35%;height: 51px;">
+<div style="float: left; width: 35%;height: 30px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
       <li><b>Default value:</b> #52A742</li>
@@ -2246,7 +2246,7 @@ Background color for banner.
 #### ttrBannerTextColor  
 Text color of the banner. 
 
-<div style="float: left; width: 35%;height: 51px;">
+<div style="float: left; width: 35%;height: 30px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
       <li><b>Default value:</b> #52A742</li>
@@ -2269,7 +2269,7 @@ Text color of the banner.
 #### ttrBannerOpacityAlpha  
 Opacity level of the banner background (values: 0.0 - 1.0). 
 
-<div style="float: left; width: 35%;height: 51px;">
+<div style="float: left; width: 35%;height: 30px;">
    <ul>
       <li><b>Type:</b> Double</li>
       <li><b>Default value:</b> 0.8</li>
