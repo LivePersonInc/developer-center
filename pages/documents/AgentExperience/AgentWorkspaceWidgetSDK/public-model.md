@@ -348,6 +348,44 @@ Structure example:
 }
 ```
 
+### metadata.connectorPaymentResponse
+
+<table>
+  <thead>
+    <th>Property</th>
+    <th>Description</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>status</td>
+    <td>Status of the consumer payment - can be only true (successful) or false (failed) </td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>requestIdentifier</td>
+    <td>Matches the identifier in the payment request that you sent.</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>errors</td>
+    <td>Type of payment error as received from Apple - will be available only when payment failed </td>
+    <td>Array</td>
+  </tr>
+  </tbody>
+</table>
+
+Structure example:
+
+```json
+{
+    "requestIdentifier" : "Request Identifier Unique Key",
+    "status"            : true,
+    "errors" : [{
+      "message": "Optional Error Message"
+    }]
+}
+```
 
 ### surveyQuestions.preChat.customizedQuestions, surveyQuestions.postChat, surveyQuestions.agentSurvey, customVariables, splitSession.customVariables
 
