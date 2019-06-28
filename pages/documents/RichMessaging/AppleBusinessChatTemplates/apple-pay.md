@@ -44,14 +44,13 @@ See [how to send Structured Content](structured-content-introduction-to-structur
 
 The **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
-**Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on LiveEngage)**
+<img style="width:300px" src="img/apple_pay_consumer1.png"> <img style="width:300px" src="img/apple_pay_consumer2.png">
 
-![](img/apple_pay_consumer1.png) ![](img/apple_pay_consumer2.png)
+_Agent/bot sends Apple Pay Interactive Message to consumer_
 
+<img style="width:400px" src="img/apple_pay_agentworkspace2.png">
 
-**In the interim, consumer completes payment process and receives the reply message bubble with the payment status. Agent views Apple Pay Request in LiveEngage Agent Workspace**
-
-![](img/apple_pay_agentworkspace2.png)
+_Agent views Apple Pay Request in LiveEngage Agent Workspace_
 
 #### Request Metadata
 
@@ -80,6 +79,7 @@ To edit the `ConnectorPaymentRequest` and `BusinessChatMessage` metadata templat
   },
   {
     "type": "ConnectorPaymentRequest",
+    "signature":"<SIGNATURE>",
     "apple": {
       "data": {
         "version": "1.0",
@@ -237,8 +237,14 @@ This object defines how the Apple Pay template is displayed on the consumer devi
     <th>Required</th>
   </thead>
   <tbody>
-  <tr>
-    <td>Apple</td>
+   <tr>
+    <td>signature</td>
+     <td>This is where you specify the "signature" value. For more information, see <a href="#apple-pay-signature-flow">Apple Pay Signature Flow Guide</a></td>
+    <td>String</td>
+    <td>N</td>
+   </tr>
+   <tr>
+    <td>apple</td>
     <td>This is where you specify the "data" object  </td>
     <td>object</td>
     <td>Y</td>
@@ -353,15 +359,43 @@ A very simple, basic structured content template for Apple Pay would be an image
 }
 ```
 
+#### Apple Pay Signature Flow
+
+{: .important}
+In order to use the Signature enhanced security flow, you must contact your account manager.
+
+The Apple Pay Signature Flow is an extra layer of validation for Apple Pay transactions.
+
+The Apple Business Chat connector takes the signature and does verification and compares to what the developer sent. It's a way to stop rogue requests from bad actors.
+
+The new flow will provide a way for brands to Enhanced security sign the payload, which will be verified by the connector before sending out to Apple.
+
+If the payment fails, brands will be able to expose the failed response via the Agent Widget SDK and present the error response to the agent while allowing the agent to help the consumer to perform the payment successfully.
+
+This verification flow is optional. For brands who would like to opt in for this additional security verification flow must contact LivePerson account manager to help them on board.
+
+
+{: .important}
+You must use the same secret key that was given to LP when onboarding for this verification flow.
+
+To generate the signed payload to include in the Apple Pay payload for verification:
+
+1. Generate signature value
+    1. Generate the Apple Pay payload
+    2. Generate SHA1 Hash of the payload from step A
+    3. Generate the signature, sign the generated hash from step B using the secret key & preferred algorithm required during onboarding to opt in with this verification flow
+2. Add signature to payload
+    1. Add “signature” property and the value generated from step 1C to [the original payload](#connectorpaymentrequest-object-properties)
+
+
 ### Receiving an Apple Pay Response from a Consumer
 
-After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered to LiveEngage using [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html).
+After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered back to LiveEngage.
 
-Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
+If you are sending a payment request with a **bot**, you can listen for the payment response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
 
-Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
+If you are sending a payment request with a **human agent**, you can listen for the payment response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorPaymentResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorpaymentresponse).
 
-<div class="important">Only a bot can listen for Conversational Metadata at this time.</div>
 
 #### Response Metadata
 
@@ -438,6 +472,4 @@ Apple Pay response metadata is contextual information about the consumer payment
 
 <div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in LiveEngage. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
 
-### Limitations
 
-* In the current version of the Apple Pay template, only a bot in LiveEngage (using the Messaging Agent SDK) will be able to receive the payment response (using the Conversation Metadata). A Human Agent is currently not exposed to these events. There will be an option to receive payment response data without the Messaging Agent SDK in the near future.
