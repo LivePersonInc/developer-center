@@ -9,7 +9,7 @@ info:
     This is documentation of the API capabilites. This api can be consumed currently only via the
     [node-agent-sdk](https://github.com/LivePersonInc/node-agent-sdk)
     # Happy Flow
-    1. An agent creates a connection using username password.
+    1. An agent creates a connection using username and password.
     2. The agent subscribes to get notification rings on new conversation tasks from the routing service (``subscribeRoutingTasks``).
     3. The agent subscribes to get his list of existing assigned conversations (``subscribeExConversations``).
     3. The agent sets his availablity to online (``setAgentState``)
@@ -77,7 +77,7 @@ paths:
         - infra
       summary: Keep Alive
       description: |
-        Keeps the connection open for Browsers that cannots use the native websocket ping/pong mechanism.
+        Keeps the connection open for Browsers that cannot use the native websocket ping/pong mechanism.
       responses:
         200:
           description: Success
@@ -274,10 +274,10 @@ paths:
         - Conversation
       summary: Subscribe Conversations Metadata
       description: |
-        Subscribes to any changes in the medata of the conversations of this user.
+        Subscribes to any changes in the metadata of the conversations of this user.
         Note:
         1. metadata is fetched for the first 1000 conversations that were viewed or changed (ascending by date). After that, changes for any conversation will be provided on an on-going basis.
-        2. Notification order is not guaranteed. If notification order is needed in your application, use the timestamp supplied for each notification and ignore notifications with an older timestamp. You can use the `metaDataLastUpdateTs` parameter to do check for the notification timestamp and filter according to it. 
+        2. Notification order is not guaranteed. If notification order is needed in your application, use the timestamp supplied for each notification and ignore notifications with an older timestamp. You can use the `metaDataLastUpdateTs` parameter to do check for the notification timestamp and filter according to it.
       parameters:
         - name: body
           in: body
@@ -343,7 +343,7 @@ paths:
         - Conversation
       summary: Update Conversation Field (Participants)
       description: |
-        Change agent participation on a conversation. Agent can join by adding himself to the participants set,
+        Change agent participation in a conversation. Agent can join by adding himself to the participants set,
         or return the conversation to queue by deleting himself from this set.
       parameters:
         - name: body
@@ -370,7 +370,7 @@ paths:
         - Conversation
       summary: Update Conversation Field (Skill)
       description: |
-        Changing the skill of the conversation. The change will affect the routing process when the no assigned
+        Changing the skill of the conversation. The change will affect the routing process when the newly assigned
         agent is present on the coversation.
       parameters:
         - name: body

@@ -59,6 +59,7 @@ Request by skillIds=12,13 (no interval), timeframe=180
                 "unassignedConversationsAndFirstTimeConsumer": 4,
                 "avgWaitTimeForAgentAssignment_NewConversation": 159,
                 "avgWaitTimeForAgentAssignment_AfterTransfer": 171,
+                "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 130,
                 "maxWaitTimeForAgentAssignment": 274,
                 "waitTimeForAgentAssignment_50thPercentile": 160,
                 "waitTimeForAgentAssignment_90thPercentile": 150
@@ -76,6 +77,7 @@ Request by skillIds=12,13 (no interval), timeframe=180
                 "unassignedConversationsAndFirstTimeConsumer": 0,
                 "avgWaitTimeForAgentAssignment_NewConversation": 300,
                 "avgWaitTimeForAgentAssignment_AfterTransfer": 245,
+                "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 170,
                 "maxWaitTimeForAgentAssignment": 370,
                 "waitTimeForAgentAssignment_50thPercentile": 220,
                 "waitTimeForAgentAssignment_90thPercentile": 240
@@ -94,6 +96,7 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "unassignedConversationsAndFirstTimeConsumer": 4,
             "avgWaitTimeForAgentAssignment_NewConversation":272,
             "avgWaitTimeForAgentAssignment_AfterTransfer": 233 ,
+            "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 200 ,
             "maxWaitTimeForAgentAssignment": 370,
             "waitTimeForAgentAssignment_50thPercentile":  170,
             "waitTimeForAgentAssignment_90thPercentile": 224
@@ -124,6 +127,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "unassignedConversationsAndFirstTimeConsumer": 30,
                                "avgWaitTimeForAgentAssignment_NewConversation": 33,
                                "avgWaitTimeForAgentAssignment_AfterTransfer": 483,
+                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 354,
                                "maxWaitTimeForAgentAssignment": 999,
                                "waitTimeForAgentAssignment_50thPercentile": 340,
                                "waitTimeForAgentAssignment_90thPercentile": 420                       
@@ -140,6 +144,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "unassignedConversationsAndFirstTimeConsumer": 4,
                                "avgWaitTimeForAgentAssignment_NewConversation": 234,
                                "avgWaitTimeForAgentAssignment_AfterTransfer": 765,
+                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 138,
                                "maxWaitTimeForAgentAssignment": 1011,
                                "waitTimeForAgentAssignment_50thPercentile": 520,
                                "waitTimeForAgentAssignment_90thPercentile": 670                                 
@@ -157,6 +162,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "unassignedConversationsAndFirstTimeConsumer": 34,
                            "avgWaitTimeForAgentAssignment_NewConversation": 62,
                            "avgWaitTimeForAgentAssignment_AfterTransfer": 320,
+                           "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 247,
                            "maxWaitTimeForAgentAssignment": 1011,
                            "waitTimeForAgentAssignment_50thPercentile": 420,
                            "waitTimeForAgentAssignment_90thPercentile": 550                             
@@ -177,6 +183,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "unassignedConversationsAndFirstTimeConsumer": 0,
                                "avgWaitTimeForAgentAssignment_NewConversation":123,
                                "avgWaitTimeForAgentAssignment_AfterTransfer": 344 ,
+                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 115 ,
                                "maxWaitTimeForAgentAssignment": 555,
                                "waitTimeForAgentAssignment_50thPercentile":  160,
                                "waitTimeForAgentAssignment_90thPercentile": 220                       
@@ -194,6 +201,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "unassignedConversationsAndFirstTimeConsumer": 0,
                                "avgWaitTimeForAgentAssignment_NewConversation":12,
                                "avgWaitTimeForAgentAssignment_AfterTransfer": 34 ,
+                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 12 ,
                                "maxWaitTimeForAgentAssignment": 55,
                                "waitTimeForAgentAssignment_50thPercentile":  16,
                                "waitTimeForAgentAssignment_90thPercentile": 22                                  
@@ -211,6 +219,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "unassignedConversationsAndFirstTimeConsumer": 0,
                            "avgWaitTimeForAgentAssignment_NewConversation":70,
                            "avgWaitTimeForAgentAssignment_AfterTransfer": 160 ,
+                           "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 62 ,
                            "maxWaitTimeForAgentAssignment": 555,
                            "waitTimeForAgentAssignment_50thPercentile":  99,
                            "waitTimeForAgentAssignment_90thPercentile": 130                              
@@ -232,6 +241,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "unassignedConversationsAndFirstTimeConsumer": 0,
                         "avgWaitTimeForAgentAssignment_NewConversation":700,
                         "avgWaitTimeForAgentAssignment_AfterTransfer": 1600,
+                        "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 800,
                         "maxWaitTimeForAgentAssignment": 5550,
                         "waitTimeForAgentAssignment_50thPercentile":  990,
                         "waitTimeForAgentAssignment_90thPercentile": 870                           
@@ -249,7 +259,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                         "unassignedConversationsAndFirstTimeConsumer": 0,
                         "avgWaitTimeForAgentAssignment_NewConversation":333,
                         "avgWaitTimeForAgentAssignment_AfterTransfer": 444,
-                        "maxWaitTimeForAgentAssignment": 555,
+                        "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 344,                        "maxWaitTimeForAgentAssignment": 555,
                         "waitTimeForAgentAssignment_50thPercentile":  333,
                         "waitTimeForAgentAssignment_90thPercentile": 384                         
                     }
@@ -266,6 +276,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                     "unassignedConversationsAndFirstTimeConsumer": 0,
                     "avgWaitTimeForAgentAssignment_NewConversation":520,
                     "avgWaitTimeForAgentAssignment_AfterTransfer": 490,
+                    "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 547,
                     "maxWaitTimeForAgentAssignment": 5550,
                     "waitTimeForAgentAssignment_50thPercentile":  500,
                     "waitTimeForAgentAssignment_90thPercentile": 600                      
@@ -288,6 +299,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "unassignedConversationsAndFirstTimeConsumer": 4,
                        "avgWaitTimeForAgentAssignment_NewConversation":622,
                        "avgWaitTimeForAgentAssignment_AfterTransfer": 576,
+                       "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 224,
                        "maxWaitTimeForAgentAssignment": 5550,
                        "waitTimeForAgentAssignment_50thPercentile":  655,
                        "waitTimeForAgentAssignment_90thPercentile": 734                            
@@ -305,6 +317,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                        "unassignedConversationsAndFirstTimeConsumer": 0,
                        "avgWaitTimeForAgentAssignment_NewConversation":700,
                        "avgWaitTimeForAgentAssignment_AfterTransfer": 676,
+                       "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 384,
                        "maxWaitTimeForAgentAssignment": 1011,
                        "waitTimeForAgentAssignment_50thPercentile":  588,
                        "waitTimeForAgentAssignment_90thPercentile": 797                        
@@ -322,6 +335,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
                    "unassignedConversationsAndFirstTimeConsumer": 4,
                    "avgWaitTimeForAgentAssignment_NewConversation":723,
                    "avgWaitTimeForAgentAssignment_AfterTransfer": 721,
+                   "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 342,
                    "maxWaitTimeForAgentAssignment": 5550,
                    "waitTimeForAgentAssignment_50thPercentile":  600,
                    "waitTimeForAgentAssignment_90thPercentile": 785                      
@@ -349,8 +363,11 @@ Request by skillIds=12,13 interval=60, timeframe=180
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. | double |
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. | double |  
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. | double |
-| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation is waiting in the queue (unassigned) for the first agent to be assigned to it.|long|
-| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation is waiting in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
-| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in the queue (unassigned) for an agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation waited in the queue (unassigned) for the first agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
+| avgWaitTimeForAgentAssignment_AfterTransferFromBot | The average number of milliseconds a transferred conversation waited in the queue (unassigned), after it was transferred by a bot, for the next agent to be assigned to it.|long|
+| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waited in the queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
+|avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
+|maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation waited in the queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|

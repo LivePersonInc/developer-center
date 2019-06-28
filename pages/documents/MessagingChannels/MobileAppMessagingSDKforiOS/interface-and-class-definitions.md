@@ -42,39 +42,49 @@ enum ConversationQueryType: String {
 }
 ```
 
-### LPUser
+
+### LPAuthenticationParams
 
 ```swift
-class LPUser: NSObject {
-    var firstName: String?
-    var lastName: String?
-    var profileImageURL: String?
-    var phoneNumber: String?
-    var employeeID: String?
-    var uid: String?
+class LPAuthenticationParams: NSObject {
+  var authenticationCode: String? // Code Flow authentication
+  var jwt: String? // Implicit Flow authentication
+  var redirectURI: String? // Code Flow authentication
+  var certPinningPublicKeys: [String]? //Cert pining validation public keys
+  var type: LPAuthenticationType = .signup // User authentication type with 'signup' as default
 }
 ```
 
-### LPLog
-
-```swift
-class LPLog: NSObject {
-    var timestamp: String?
-    var className: String?
-    var funcName: String?
-    var text: String?
-    var logLevel: LogLevel?
+### LPAuthenticationType
+```javascript
+enum LPAuthenticationType: Int {
+    case signup // Old unauthenticated method
+    case unauthenticated // New unauthenticated method for users without identity
+    case authenticated // Authenticated users
 }
 ```
 
-### LPConversationViewParams
+
+### LPCampaignInfo
 
 ```swift
-class LPConversationViewParams: NSObject {
-  var conversationQuery: ConversationParamProtocol!
-  var containerViewController: UIViewController? // nil = WindowMode
-  var isViewOnly = false
-  var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
+class LPCampaignInfo: NSObject {
+    var campaignId: Int
+    var engagementId: Int
+    var sessionId: String? // if 'nil' SDE will not be sent to Agent
+    var visitorId: String? // if 'nil' SDE will not be sent to Agent
+    var contextId: String
+}
+```
+
+
+### LPConversationCloseReason
+
+```swift
+enum LPConversationCloseReason: Int {
+    case agent = 0
+    case consumer
+    case system
 }
 ```
 
@@ -89,14 +99,7 @@ class LPConversationHistoryControlParam: NSObject {
 }
 ```
 
-### LPConversationsHistoryStateToDisplay
 
-```swift
-enum LPConversationsHistoryStateToDisplay: Int {
-    case open
-    case close
-}
-```
 
 ### LPConversationHistoryMaxDaysDateType
 
@@ -107,98 +110,24 @@ enum LPConversationHistoryMaxDaysDateType: Int {
 }
 ```
 
-### LPAuthenticationParams
+### LPConversationsHistoryStateToDisplay
 
 ```swift
-class LPAuthenticationParams: NSObject {
-  var authenticationCode: String? // Code Flow authentication
-  var jwt: String? // Implicit Flow authentication
-  var redirectURI: String? // Code Flow authentication
-  var certPinningPublicKeys: [String]? //Cert pining validation public keys
-  var type: LPAuthenticationType = .signup // User authentication type with 'signup' as default
-}
-```
-
-### LPNotification
-
-```swift
-class LPNotification: NSObject {
-    var text: String
-    var user: LPUser
-    var accountID: String
-    var isRemote: Bool
-    var toString : String
-}
-```
-
-### LogLevel
-
-```swift
-enum LogLevel: Int {
-    case TRACE
-    case DEBUG
-    case INFO
-    case WARNING
-    case ERROR
-    case OFF
-}
-```
-
-### LPConversationCloseReason
-
-```swift
-enum LPConversationCloseReason: Int {
-    case agent = 0
-    case consumer
-    case system
-}
-```
-
-### LPCampaignInfo
-
-```swift
-class LPCampaignInfo: NSObject {
-    var campaignId: Int
-    var engagementId: Int
-    var sessionId: String? // if 'nil' SDE will not be sent to Agent
-    var visitorId: String? // if 'nil' SDE will not be sent to Agent
-    var contextId: String
-}
-```
-
-### LPMonitoringInitParams
-```swift
-class : NSObject {
-    var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
+enum LPConversationsHistoryStateToDisplay: Int {
+    case open
+    case close
 }
 ```
 
 
-### LPMonitoringParams
-```swift
-class : NSObject {
-    var entryPoints: [String]? // Entry points array of the Mobile App
-    var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes
-    var pageId: String? // PageID to send the SDEs for
-}
-```
+### LPConversationViewParams
 
-### LPGetEngagementResponse
 ```swift
-class : NSObject {
-    var engagementDetails: [LPEngagementDetails]? // Optional Engagement Details response in case received from the server, per the Engagement's request
-    var sessionId: String?
-    var visitorId: String?
-    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
-}
-```
-
-### LPSendSDEResponse
-```swift
-class : NSObject {
-    var sessionId: String?
-    var visitorId: String?
-    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
+class LPConversationViewParams: NSObject {
+  var conversationQuery: ConversationParamProtocol!
+  var containerViewController: UIViewController? // nil = WindowMode
+  var isViewOnly = false
+  var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
 }
 ```
 
@@ -215,11 +144,92 @@ class : NSObject {
 }
 ```
 
-### LPAuthenticationType
-```javascript
-enum LPAuthenticationType: Int {
-    case signup // Old unauthenticated method
-    case unauthenticated // New unauthenticated method for users without identity
-    case authenticated // Authenticated users
+### LPGetEngagementResponse
+```swift
+class : NSObject {
+    var engagementDetails: [LPEngagementDetails]? // Optional Engagement Details response in case received from the server, per the Engagement's request
+    var sessionId: String?
+    var visitorId: String?
+    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
 }
 ```
+
+
+### LPLog
+
+```swift
+class LPLog: NSObject {
+    var timestamp: String?
+    var className: String?
+    var funcName: String?
+    var text: String?
+    var logLevel: LogLevel?
+}
+```
+
+
+### LPMonitoringInitParams
+```swift
+class : NSObject {
+    var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
+}
+```
+
+
+### LPMonitoringParams
+```swift
+class : NSObject {
+    var entryPoints: [String]? // Entry points array of the Mobile App
+    var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes.  SDE will not be sent to Agent if seesionID and visitorID are nil.
+    var pageId: String? // PageID to send the SDEs for
+}
+```
+
+
+### LPNotification
+
+```swift
+class LPNotification: NSObject {
+    var text: String
+    var user: LPUser
+    var accountID: String
+    var isRemote: Bool
+    var toString : String
+}
+```
+
+### LPSendSDEResponse
+```swift
+class : NSObject {
+    var sessionId: String?
+    var visitorId: String?
+    var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
+}
+```
+
+### LPUser
+
+```swift
+class LPUser: NSObject {
+    var firstName: String?
+    var lastName: String?
+    var profileImageURL: String?
+    var phoneNumber: String?
+    var employeeID: String?
+    var uid: String?
+}
+```
+
+### LogLevel
+
+```swift
+enum LogLevel: Int {
+    case TRACE
+    case DEBUG
+    case INFO
+    case WARNING
+    case ERROR
+    case OFF
+}
+```
+

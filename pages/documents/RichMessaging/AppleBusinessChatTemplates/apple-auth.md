@@ -18,11 +18,11 @@ See the message flow below:
 
 1. Agent or bot is notified via an engagement attribute if consumer device supports the Apple Auth feature.
 
-2. Send the Apple Auth template via an agent or bot with the Structured Content framework and configuration (similar to Apple list and time picker templates).
+2. Send the Apple Auth template via an agent or bot with a Structured Content template.
 
 3. Authentication is done by your OAuth 2.0 provider.
 
-4. Upon successful or failed authentication, LiveEngage passes the authentication details back to the LiveEngage Conversational Metadata (via the [Messaging Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation.
+4. Upon successful or failed authentication, LiveEngage passes the authentication details back so that you may perform validation.
 
 ### Setup
 
@@ -100,7 +100,10 @@ The `BusinessChatMessage` object contains the `receivedMessage` and `replyMessag
 
 **ConnectorAuthenticationRequest**
 
-The `ConnectorAuthenticationRequest` object holds the `requestIdentifier` object, which allows the brand to identify the authentication request and map the OAuth token in the response to the request originator.
+The `ConnectorAuthenticationRequest` object holds the `requestIdentifier` and `responseEncryptionKey` (public key), which allows you to identify the authentication request and map the OAuth token in the response to the request originator.
+
+{: .important}
+The requestIdentifier and responseEncryptionKey is optional, but the responseEncryptionKey is required to view the auth response from an agent widget.
 
 Please use the metadata template with the relevant fields, as presented in the example below:
 
@@ -123,9 +126,14 @@ Please use the metadata template with the relevant fields, as presented in the e
       "style":"small"
     }
   },
-  {  
-    "type":"ConnectorAuthenticationRequest",
-    "requestIdentifier":"insert the request UUID here"
+  {
+    "type": "ConnectorAuthenticationRequest",
+    "requestIdentifier": "Insert Your Unique Request Key Here",
+    "apple": {
+      "oauth2": {
+        "responseEncryptionKey": "Insert Your Public Key Here"
+      }
+    }
   }
 ]
 ```
@@ -158,6 +166,7 @@ Please use the metadata template with the relevant fields, as presented in the e
 
 ###### `ConnectorAuthenticationRequest` Object Properties
 
+
 <table>
   <thead>
     <th>Property Name</th>
@@ -168,12 +177,20 @@ Please use the metadata template with the relevant fields, as presented in the e
   <tbody>
   <tr>
     <td>requestIdentifier</td>
-    <td>identify the authentication request and map the to the request originator.</td>
+    <td>Must be unique in every message. Used to identify the authentication request and map the to the request originator.</td>
+    <td>string</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>apple.oauth2.responseEncryptionKey</td>
+    <td>responseEncryptionKey is a public key which will be used to encrypt the oauth2 token. In order to decrypt the token you should have the corresponding private key to decrypt the token. If this is not sent, LivePerson will supply a public key for you. In order to view the auth response in the agent widget you must supply your own key.</td>
     <td>string</td>
     <td>N</td>
   </tr>
   </tbody>
 </table>
+
+For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschat/enhancing_the_customer_s_user_experience/sending_an_authentication_message).
 
 
 ###### `receivedMessage` Object Properties  
@@ -281,41 +298,42 @@ A very simple, basic structured content template for Apple Auth would be just an
 
 ### Receiving an Apple Authentication Response from a Consumer
 
-After the consumer submits their Apple Auth details in the form, the Apple Auth response is delivered to LiveEngage using [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html).
+After the consumer submits their Apple Auth details in the form, the Apple Auth response is delivered back to LiveEngage.
 
-Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html).
+If you are authenticating the consumer with a **bot**, you can listen for the auth response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
 
-Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
+If you are authenticating the consumer with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorAuthResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorauthresponse).
 
-<div class="important">Only a bot can listen for Conversational Metadata at this time.</div>
+{: .important}
+If reading the auth response in an Agent Widget, you **must** initially send a public key.
 
 #### Response Metadata
 
-The authentication response metadata is contextual information about the consumer authentication response status. This information should be used to allow the bot to validate the authentication status of the consumer, as well as to enable the bot to report the auth response token back to the OAuth service in order to validate user identity.
+The authentication response metadata is contextual information about the consumer authentication response status. This information should be used to validate the authentication status of the consumer, as well as to report the auth response token back to the OAuth service in order to validate user identity.
 
 ##### Example Conversational Metadata response:
 
 **Success example response**:
 
 ```json
-{  
-  "type":"ConnectorAuthenticationResponse",
-  "status":true,
-  "token":"Token String"
+{
+    "encrypted"         : true,
+    "status"            : true,
+    "token"             : "token encrypted string",
+    "requestIdentifier" : "Request Identifier Unique Key",
 }
 ```
 
 **Failure example response**:
 
 ```json
-{  
-  "type":"ConnectorAuthenticationResponse",
-  "status":false,
-  "errors":[  
-    {  
-      "message":"applicable apple error codes"
-    }
-  ]
+{
+    "encrypted"         : true,
+    "status"            : false, 
+    "requestIdentifier" : "Request Identifier Unique Key",
+    "errors"            : [{
+        "message" : "Optional Error Message"    
+    }]
 }
 ```
 
@@ -329,13 +347,23 @@ The authentication response metadata is contextual information about the consume
   </thead>
   <tbody>
   <tr>
-    <td>Status</td>
+    <td>encrypted</td>
+    <td>True if you have provided the responseEncryptionKey, False if you have not</td>
+    <td>Boolean </td>
+  </tr>
+  <tr>
+    <td>status</td>
     <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
     <td>Boolean </td>
   </tr>
   <tr>
     <td>token</td>
     <td>Token string - will be available only when authentication was successful </td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>requestIdentifier</td>
+    <td>Matches the authentication request that you sent.</td>
     <td>String</td>
   </tr>
   <tr>
@@ -364,8 +392,6 @@ The authentication response metadata is contextual information about the consume
 
 ### Limitations
 
-* In the current version of Apple Auth support, only a bot in LiveEngage (using the [Messaging Agent SDK](messaging-agent-sdk-overview.html)) will be able to receive the authentication response (using the [Conversation Metadata](messaging-agent-sdk-conversation-metadata-guide.html)). A human Agent is currently not exposed to these events. There will be an option to receive authentication response data without the Messaging Agent SDK in Q1 2019 (and thus as a human agent).
-
-* Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned for 2019.
+* Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned.
 
 * Touch/Face ID is not currently supported in Apple's authentication solution
