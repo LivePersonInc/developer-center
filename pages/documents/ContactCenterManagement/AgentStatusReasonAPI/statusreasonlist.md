@@ -19,7 +19,7 @@ Get list of all status reasons of an account, for all statuses.
 
 | Method | URL |
 | :-------- | :------ |
-| GET | /api/account/{accountId}/configuration/le-agents/status-reasons |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons |
 
 ### Path Parameters
 

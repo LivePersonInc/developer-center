@@ -17,7 +17,7 @@ indicator: both
 
 | Method    | URL |
 | :------ | :------- |
-| POST | https://{LivePerson domain}/api/account/{account}/monitoring/visitors/{visitor}/visits/current/events |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{account}/monitoring/visitors/{visitor}/visits/current/events |
 
 **OAuth**
 

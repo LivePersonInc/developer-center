@@ -16,23 +16,8 @@ indicator: messaging
 **(LivepersonMonitoring.java class)**
 
 
-> **NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](#initialize-the-messaging-sdk-with-monitoring-params). Once initialization is completed (<b>onInitSucceed</b>), you can call LivePerson methods.
+> **NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params). Once initialization is completed (`onInitSucceed`), you can call LivePerson methods.
 
-
-### sendSde
-
-Use to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
-
-```java
-public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> identities, @NonNull MonitoringParams monitoringParams, SdeCallback callback)
-```
-
-| Parameter | Description | Required |
-| :--- | :--- | :--- |
-| context | A context from the host app | Yes |
-| identities | A list of LPMonitoringIdentity objects with the consumer identities | Yes |
-| monitoringParams | An mandatory MonitoringParams with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
-| callback | A callback of type [SdeCallback](android-interface-definitions.html#sdecallback). This response includes SessionId, VisitorId and PageId for future use | Yes |
 
 
 ### getEngagement
@@ -54,6 +39,22 @@ public static void getEngagement(Context context, @Nullable List<LPMonitoringIde
 
 
 *Please refer to the [Interface and Class Definitions](android-interface-definitions.html) section for parameter classes.*
+
+
+### sendSde
+
+Use to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
+
+```java
+public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> identities, @NonNull MonitoringParams monitoringParams, SdeCallback callback)
+```
+
+| Parameter | Description | Required |
+| :--- | :--- | :--- |
+| context | A context from the host app | Yes |
+| identities | A list of LPMonitoringIdentity objects with the consumer identities | Yes |
+| monitoringParams | An mandatory MonitoringParams with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
+| callback | A callback of type [SdeCallback](android-interface-definitions.html#sdecallback). This response includes SessionId, VisitorId and PageId for future use | Yes |
 
 
 ### Monitoring API Related Classes

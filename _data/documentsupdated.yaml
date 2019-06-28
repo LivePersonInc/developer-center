@@ -557,6 +557,12 @@
           - subpagename: Create Deletion Request
           - subpagename: Cancel Deletion Request
           - subpagename: Get Deletion Request
+  - documentname: Data Usage Audit API
+    pages:
+    - pagename: Overview
+    - pagename: Methods
+      subpages:
+        - subpagename: Retrieve Data Usage Logs
 
 - categoryname: Messaging Channels
   image: agent-interaction
@@ -622,27 +628,26 @@
     - pagename: Push Notifications
     - pagename: Advanced Features
       subpages:
-      - subpagename: Photo and File Sharing
       - subpagename: Audio Messages
+      - subpagename: Campaigns
       - subpagename: CSAT Behavior
-      - subpagename: Campaigns 
+      - subpagename: Photo and File Sharing
       - subpagename: Welcome Message with Quick Replies
-      
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
       - subpagename: Monitoring API
       - subpagename: Control History APIs
-      - subpagename: Interface and Class Definitions
       - subpagename: Callbacks Index
+      - subpagename: Interface and Class Definitions
     - pagename: SDK Attributes
       subpages:
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
-      - subpagename: Date and Time
-      - subpagename: Modifying Strings
+      - subpagename: Date and Time Formats
+      - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String resource Example
     - pagename: Voice and Video for Android SDK (BETA)
@@ -658,7 +663,7 @@
     - pagename: All Release Notes
     - pagename: Resources
       subpages:
-      - subpagename: Authentication 
+      - subpagename: Authentication
       - subpagename: Sample App
       - subpagename: Open Source List and Dependencies
       - subpagename: Upgrade Guide - Android
@@ -671,8 +676,8 @@
     - pagename: Advanced Features
       subpages:
       - subpagename: Audio Messages
+      - subpagename: Campaigns
       - subpagename: CSAT Behavior
-      - subpagename: Campaigns 
       - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
@@ -685,14 +690,14 @@
       - subpagename: Callbacks Index
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes  
+      - subpagename: Attributes
       - subpagename: Attributes Design Sheet
       - subpagename: Deprecated Attributes
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys
       - subpagename: String Localization
-      - subpagename: Timestamps Formatting
+      - subpagename: Date and Time Styles
 
     - pagename: Voice and Video for iOS SDK (BETA)
       subpages:

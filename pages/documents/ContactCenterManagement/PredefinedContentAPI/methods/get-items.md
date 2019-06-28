@@ -20,7 +20,7 @@ Retrieves a list of Predefined Content items from a specific account.
 
 | Method  |URL|
  |:--------|  :------|
- |GET|  /api/account/{accountId}/configuration/engagement-window/canned-responses |
+ |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/canned-responses |
 
 **Path Parameters**
 
