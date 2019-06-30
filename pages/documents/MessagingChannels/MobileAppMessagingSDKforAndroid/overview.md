@@ -41,12 +41,9 @@ To successfully deploy messaging within your mobile app, it’s important to und
    - Customize the window: Activity mode
    - Full control of window: Fragment mode
 
-5. **Customization and branding.** Review the list of default configurations available for [Android](/mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html) to determine the features to enable.  
+5. **Customization and branding.** Review the list of default configurations available for [Android](/mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#branding) to determine the features to enable.  
 
-6. **Callback behavior.**  Utilize LivePerson’s callbacks and APIs to control or change the behaviors and actions of the messaging app. The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. The SDK provides APIs to establish the server connection for messaging. Review the list to determine what actions or flows you’d like to change:  
-
-   - [Callbacks](/android-callbacks-index.html)
-   - [APIs](/android-initializeproperties.html)
+6. **Callback behavior.**  Utilize LivePerson’s [Callbacks](/android-callbacks-index.html) and APIs to control or change the behaviors and actions of the messaging app. The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. The SDK provides APIs to establish the server connection for messaging. 
 
 7. **Messaging in multiple languages.** Utilize LivePerson’s default translations or override them with your own text and language adjustments.  Language settings are based on the user’s phone language settings and app language settings. Override all settings and maintain your default language at all times. 
 

@@ -11,13 +11,673 @@ documentname: Mobile App Messaging SDK for iOS
 permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
 indicator: messaging
 ---
-<br>
+
 
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
 
+
+
+### iOS Messaging SDK - Version 3.9.1
+
+**Release date:** June 18, 2019
+
+#### Environmental Requirements
+
+The iOS Mobile Messaging SDK version 3.9.1 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+
+
+#### Bug fixed
+
+**Reported in SDK 3.7.1 on iOS.** When the customer sent messages just before their current token expires, the agent did not receive one or more of the messages, resulting in data loss.  After the initial token expires, the system should issue another token to reconnect and send all messages regardless if the token expires or not.
+
+#### New Feature
+
+##### Photo and File sharing 
+
+Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.  
+
+Agents can share:
+
+- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. They can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.   
+
+- **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. The agent can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
+
+{:.important}
+The iOS SDK supports previewing all the supported file types on the device as per the iOS operating system by double-clicking on the thumbnail image.
+
+When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.
+
+##### Supported formats
+
+- PNG
+- JPG/JPEG
+- GIF (non-animated) - previewed as a static image only
+- PDF
+- DOCX
+- PPTX
+- XLSX
+
+##### Photo and file sizes
+
+- Thumbnail - 30 KB (base64-encoded)
+- Max upload size allowed - 5 MB uncompressed
+
+   **For SDKs previous to 3.8.** The max upload size allowed is 3 MB.
+
+##### Notes and limitations
+
+- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent-to-consumer) for now.
+
+   **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
+
+- If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.
+
+- The consumer can return to a resolved conversation to view the photos, as long as the photos are part of the conversation history.
+
+- If an agent sends an unsupported file, a message displays indicating the file type shared with the consumer is not supported, and the agent should retry sending a supported file format. On the consumer side, they see an empty message with no content.
+
+- For authenticated users, backgrounding the app while loading the photo does not get interrupted.
+
+- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
+
+
+##### How photo and file sharing works
+
+<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+
+---   
+
+##### Step 1. Set app permissions
+
+1. Set the photo library privacy settings:
+
+   - **Key:** NSPhotoLibraryUsageDescription
+
+   - **Value:** "A message that tells the user why the app is requesting access to the user's photo library."
+
+   - **Key:** NSPhotoLibraryAddUsageDescription
+
+      Supported on iOS 11 and newer. Use if not sharing photos from consumer to agent.
+
+   - **Value:** A message that tells the user why the app is requesting write only access to the user's photo library.
+
+      **Important:** The user must explicitly grant permission for your app to access Photos. Prepare your app for this requirement by providing justification strings. The justification string is a localizable message that you add to your app's Info.plist file to tell the user why your app needs access to the user's photo library. For more details, see [Requesting Authorization to Access Photos](https://developer.apple.com/documentation/photokit/requesting_authorization_to_access_photos).
+
+2. Set the camera privacy settings:
+
+   - **Key:** NSCameraUsageDescription
+
+   - **Value:** "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
+
+3. Set the file sharing privacy settings:
+
+   iOS supports the preview of file types per iOS operating system and requires some configurations to be enabled within the Host App's plist file. Enabling supports file sharing, and the export and saving of photos.
+
+   - **Key:** UIFileSharingEnabled: Application supports iTunes file sharing
+
+   - **Value:** YES
+
+   - **Key:** LSSupportsOpeningDocumentsInPlace: Supports opening documents in place
+
+   - **Value:** YES
+
+      **Warning:** If this functionality is important to your user flow, enable at the user's risk. If you enable this setting, the consumer can save documents or photos to a directory belonging to the host app.  However, we recommend not enabling this feature due to a current limitation within the LivePerson SDK, the SQL files are also made public if this setting is enabled.
+
+##### Step 2. Enable or disable photo and file sharing within the SDK
+
+1. Change the boolean value:
+
+   ```swift
+   LPConfig.defaultConfiguration.enablePhotoSharing
+   ```
+
+   By default, the value is set to **false**.
+
+   ```swift
+   LPConfig.defaultConfiguration.enableFileSharing
+   ```
+
+   By default, the value is set to **true**.
+
+2. Contact your Account Team to have the feature enabled on your account.
+
+#### Step 3. Change the settings
+
+1. Set the max number of photos or files to save on disk (each is configured separately):
+
+   ```swift
+   // photos
+   LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk    
+
+   // document files
+   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
+   ```
+
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+
+2. Change the background color of attachment menu:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuBackgroundColor
+   ```
+
+3. Change the text of buttons:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor
+   ```
+
+4. Change the menu button's background color:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor
+   ```
+
+5. Change the menu button's tint color:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
+   ```
+
+6. Customize the navigation bar on UIDocumentationInteractionController:
+
+   **Window Mode:**
+
+   The UIDocumentationInteractionController adopts applicable branding customizations that have been set, for example:
+
+   - conversationNavigationBackgroundColor sets the NavController tint color with translucence set to false.
+
+   - conversationNavigationTintColor colors the L &amp; R bar buttons as well as the title color.
+
+   <img src="../../../../../img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;padding: 20px;">
+
+   **View Controller Mode:**
+
+   Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
+
+   <img src="../../../../../img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding: 20px;">
+
+
+You can find all the related configurations in the [resources ID table](http://localhost:4000/consumer-experience-ios-sdk-attributes.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.
+
+
+
+
+
+### iOS Messaging SDK - Version 3.9.0
+
+**Release date:** June 18, 2019
+
+#### Environmental Requirements
+
+The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2 Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C, and supported on iOS versions 10 through 12.
+
+
+#### Bug fixed
+
+**Reported in SDK 3.7.1 on iOS.** When the customer sent messages just before their current token expires, the agent did not receive one or more of the messages, resulting in data loss.  After the initial token expires, the system should issue another token to reconnect and send all messages regardless if the token expires or not.
+
+#### New Feature
+
+##### Photo and File sharing 
+
+Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.  
+
+Agents can share:
+
+- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. They can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.   
+
+- **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. The agent can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
+
+{:.important}
+The iOS SDK supports previewing all the supported file types on the device as per the iOS operating system by double-clicking on the thumbnail image.
+
+When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.
+
+##### Supported formats
+
+- PNG
+- JPG/JPEG
+- GIF (non-animated) - previewed as a static image only
+- PDF
+- DOCX
+- PPTX
+- XLSX
+
+##### Photo and file sizes
+
+- Thumbnail - 30 KB (base64-encoded)
+- Max upload size allowed - 5 MB uncompressed
+
+   **For SDKs previous to 3.8.** The max upload size allowed is 3 MB.
+
+##### Notes and limitations
+
+- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent-to-consumer) for now.
+
+   **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
+
+- If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.
+
+- The consumer can return to a resolved conversation to view the photos, as long as the photos are part of the conversation history.
+
+- If an agent sends an unsupported file, a message displays indicating the file type shared with the consumer is not supported, and the agent should retry sending a supported file format. On the consumer side, they see an empty message with no content.
+
+- For authenticated users, backgrounding the app while loading the photo does not get interrupted.
+
+- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
+
+
+##### How photo and file sharing works
+
+<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+
+---   
+
+##### Step 1. Set app permissions
+
+1. Set the photo library privacy settings:
+
+   - **Key:** NSPhotoLibraryUsageDescription
+
+   - **Value:** "A message that tells the user why the app is requesting access to the user's photo library."
+
+   - **Key:** NSPhotoLibraryAddUsageDescription
+
+      Supported on iOS 11 and newer. Use if not sharing photos from consumer to agent.
+
+   - **Value:** A message that tells the user why the app is requesting write only access to the user's photo library.
+
+      **Important:** The user must explicitly grant permission for your app to access Photos. Prepare your app for this requirement by providing justification strings. The justification string is a localizable message that you add to your app's Info.plist file to tell the user why your app needs access to the user's photo library. For more details, see [Requesting Authorization to Access Photos](https://developer.apple.com/documentation/photokit/requesting_authorization_to_access_photos).
+
+2. Set the camera privacy settings:
+
+   - **Key:** NSCameraUsageDescription
+
+   - **Value:** "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
+
+3. Set the file sharing privacy settings:
+
+   iOS supports the preview of file types per iOS operating system and requires some configurations to be enabled within the Host App's plist file. Enabling supports file sharing, and the export and saving of photos.
+
+   - **Key:** UIFileSharingEnabled: Application supports iTunes file sharing
+
+   - **Value:** YES
+
+   - **Key:** LSSupportsOpeningDocumentsInPlace: Supports opening documents in place
+
+   - **Value:** YES
+
+      **Warning:** If this functionality is important to your user flow, enable at the user's risk. If you enable this setting, the consumer can save documents or photos to a directory belonging to the host app.  However, we recommend not enabling this feature due to a current limitation within the LivePerson SDK, the SQL files are also made public if this setting is enabled.
+
+##### Step 2. Enable or disable photo and file sharing within the SDK
+
+1. Change the boolean value:
+
+   ```swift
+   LPConfig.defaultConfiguration.enablePhotoSharing
+   ```
+
+   By default, the value is set to **false**.
+
+   ```swift
+   LPConfig.defaultConfiguration.enableFileSharing
+   ```
+
+   By default, the value is set to **true**.
+
+2. Contact your Account Team to have the feature enabled on your account.
+
+#### Step 3. Change the settings
+
+1. Set the max number of photos or files to save on disk (each is configured separately):
+
+   ```swift
+   // photos
+   LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk    
+
+   // document files
+   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
+   ```
+
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+
+2. Change the background color of attachment menu:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuBackgroundColor
+   ```
+
+3. Change the text of buttons:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor
+   ```
+
+4. Change the menu button's background color:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor
+   ```
+
+5. Change the menu button's tint color:
+
+   ```swift
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
+   ```
+
+6. Customize the navigation bar on UIDocumentationInteractionController:
+
+   **Window Mode:**
+
+   The UIDocumentationInteractionController adopts applicable branding customizations that have been set, for example:
+
+   - conversationNavigationBackgroundColor sets the NavController tint color with translucence set to false.
+
+   - conversationNavigationTintColor colors the L &amp; R bar buttons as well as the title color.
+
+   <img src="../../../../../img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;padding: 20px;">
+
+   **View Controller Mode:**
+
+   Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
+
+   <img src="../../../../../img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding: 20px;">
+
+
+You can find all the related configurations in the [resources ID table](http://localhost:4000/consumer-experience-ios-sdk-attributes.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.
+
+
+
+
+### iOS Messaging SDK - Version 3.8.2
+
+**Release date:** May 17, 2019
+
+#### Environmental Requirements
+
+The iOS Mobile Messaging SDK version 3.8.2 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+
+
+#### New Feature
+
+##### Welcome message with quick reply options
+
+Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+
+You can configure the Welcome message as a simple text message with or without quick replies, for example:
+
+> *Welcome to our support! What can we help you with today?*   
+>
+> *[Questions about existing account] [open a new account] [tech support]*
+
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace.
+
+###### How to enable
+
+```swift
+        //Welcome message
+let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
+
+        //adding options
+        let options: [LPWelcomeMessage.MessageOption] = [
+            LPWelcomeMessage.MessageOption(value: "music", displayName: "awesome tunes"),
+            LPWelcomeMessage.MessageOption(value: "food", displayName: "Delicious food "),
+        ]
+        do {
+            try welcomeMessageParam.set(options: options)
+        } catch {
+            print(error.localizedDescription)
+        }
+
+        //ConversationViewParams
+        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
+                                                              containerViewController: nil,
+                                                              isViewOnly: false,
+                                                              conversationHistoryControlParam: conversationHistoryControlParam,
+                                                              welcomeMessage: welcomeMessageParam)
+//show conversation
+LPMessagingSDK.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
+```
+
+**Limitations**
+You can configure up to 24 quick reply options for the user to chose.
+
+- You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
+
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+
+- Quick reply messages do not get recorded in the conversation history.
+
+- The conversational metadata (ExternalId) does not get populated.
+
+```json
+"metadata": [
+  {
+    "type": "ExternalId",
+    "id": "Yes-1234"
+  }
+]
+```
+
+
+
+#### Bug Fixes
+
+- When the `unreadMessagesDividerEnabled` attribute equaled **false**, the conversation window did not jump/scroll to the latest messages received by the agent as expected.
+
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button.
+
+- Fallback to Signup Flow still existed. The bug prevented users from starting an authenticated conversation, and instead, the conversation started an unauthenticated visitor mode chat.
+
+- Send Image (From Gallery) failed. The bug prevented users from uploading images larger than 3MB, resulting in a ‘file too large’ message. Version 3.8 of the Mobile Messaging SDK increased the size limit to 5MB.
+
+- **On iOS 12.2 Swift 5**, the conversation screen did not show the sent or received messages and the margins appeared between messages.
+
+- Accessibility: voice over read old conversations.  The bug prevented the voice over feature, when enabled, to read the current conversation, and instead, skipping back to old conversations.
+
+- When trying to reconnect with a JWT after the initial token expired, an INVALID JWT warning appeared and showed a black bar even though the conversation continued without error.  
+
+- Before the token expired, the agent did not receive one or more messages resulting in data loss. The bug prevented messages from being sent regardless of the token expiration.
+
+- **For iOS versions lower than 12.** When starting an unauthenticated conversation then backgrounding the app and then foregrounding it again, the loading screen remained displayed. The bug prevented users from going in and out of the conversation without issue.
+
+
+#### iOS API Updates
+
+##### LPAMSFacade / LPMessagingAPI
+
+**New for 3.8**  
+
+```swift
+public class func createWelcomeLocalMessage(_ dialog: Dialog, welcomeMessage: LPWelcomeMessage, overrideTime: Date = Date()) -> Message?
+```
+
+**Changes for 3.7.1 (DEPRECATED)**  
+
+```swift
+public class func createWelcomeLocalMessage(_ dialog: Dialog, overrideTime: Date = Date()) -> Message?
+```
+##### LPConversationViewParams
+
+**New for 3.8**  
+
+```swift
+public init(conversationQuery: ConversationParamProtocol,
+                containerViewController: UIViewController? = nil,
+                isViewOnly: Bool = false,
+                conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none),
+                welcomeMessage: LPWelcomeMessage = LPWelcomeMessage(message: nil))
+```
+
+**Changes for 3.7.1 (DEPRECATED)**  
+
+```swift
+public init(conversationQuery: ConversationParamProtocol,
+                containerViewController: UIViewController? = nil,
+                isViewOnly: Bool = false,
+		conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none))
+)})
+```
+
+##### MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE
+
+**New for 3.8**  
+
+MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE = **5MB**
+
+
+**Changes for 3.7.1**
+
+MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
+
+### iOS Messaging SDK - Version 3.8.1
+
+**Release date:** May 17, 2019
+
+#### Environmental Requirements
+
+The iOS Mobile Messaging SDK version 3.8.1 is compatible with Xcode 10.2.0, Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), and supported on iOS versions 10 through 12.
+
+
+
+#### New Feature
+
+##### Welcome message with quick reply options
+
+Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+
+You can configure the Welcome message as a simple text message with or without quick replies, for example:
+
+> *Welcome to our support! What can we help you with today?*   
+>
+> *[Questions about existing account] [open a new account] [tech support]*
+
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace.
+
+###### How to enable
+
+```swift
+        //Welcome message
+let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
+
+        //adding options
+        let options: [LPWelcomeMessage.MessageOption] = [
+            LPWelcomeMessage.MessageOption(value: "music", displayName: "awesome tunes"),
+            LPWelcomeMessage.MessageOption(value: "food", displayName: "Delicious food "),
+        ]
+        do {
+            try welcomeMessageParam.set(options: options)
+        } catch {
+            print(error.localizedDescription)
+        }
+
+        //ConversationViewParams
+        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
+                                                              containerViewController: nil,
+                                                              isViewOnly: false,
+                                                              conversationHistoryControlParam: conversationHistoryControlParam,
+                                                              welcomeMessage: welcomeMessageParam)
+//show conversation
+LPMessagingSDK.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
+```
+
+**Limitations**
+You can configure up to 24 quick reply options for the user to chose.
+
+- You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
+
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again.
+
+- Quick reply messages do not get recorded in the conversation history.
+
+- The conversational metadata (ExternalId) does not get populated.
+
+```json
+"metadata": [
+  {
+    "type": "ExternalId",
+    "id": "Yes-1234"
+  }
+]
+```
+
+
+
+#### Bug Fixes
+
+- When the `unreadMessagesDividerEnabled` attribute equaled **false**, the conversation window did not jump/scroll to the latest messages received by the agent as expected.
+
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button.
+
+- Fallback to Signup Flow still existed. The bug prevented users from starting an authenticated conversation, and instead, the conversation started an unauthenticated visitor mode chat.
+
+- Send Image (From Gallery) failed. The bug prevented users from uploading images larger than 3MB, resulting in a ‘file too large’ message. Version 3.8 of the Mobile Messaging SDK increased the size limit to 5MB.
+
+- **On iOS 12.2 Swift 5**, the conversation screen did not show the sent or received messages and the margins appeared between messages.
+
+- Accessibility: voice over read old conversations.  The bug prevented the voice over feature, when enabled, to read the current conversation, and instead, skipping back to old conversations.
+
+- When trying to reconnect with a JWT after the initial token expired, an INVALID JWT warning appeared and showed a black bar even though the conversation continued without error.  
+
+- Before the token expired, the agent did not receive one or more messages resulting in data loss. The bug prevented messages from being sent regardless of the token expiration.
+
+- **For iOS versions lower than 12.** When starting an unauthenticated conversation then backgrounding the app and then foregrounding it again, the loading screen remained displayed. The bug prevented users from going in and out of the conversation without issue.
+
+
+#### iOS API Updates
+
+##### LPAMSFacade / LPMessagingAPI
+
+**New for 3.8**  
+
+```swift
+public class func createWelcomeLocalMessage(_ dialog: Dialog, welcomeMessage: LPWelcomeMessage, overrideTime: Date = Date()) -> Message?
+```
+
+**Changes for 3.7.1 (DEPRECATED)**  
+
+```swift
+public class func createWelcomeLocalMessage(_ dialog: Dialog, overrideTime: Date = Date()) -> Message?
+```
+##### LPConversationViewParams
+
+**New for 3.8**  
+
+```swift
+public init(conversationQuery: ConversationParamProtocol,
+                containerViewController: UIViewController? = nil,
+                isViewOnly: Bool = false,
+                conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none),
+                welcomeMessage: LPWelcomeMessage = LPWelcomeMessage(message: nil))
+```
+
+**Changes for 3.7.1 (DEPRECATED)**  
+
+```swift
+public init(conversationQuery: ConversationParamProtocol,
+                containerViewController: UIViewController? = nil,
+                isViewOnly: Bool = false,
+		conversationHistoryControlParam: LPConversationHistoryControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none))
+)})
+```
+
+##### MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE
+
+**New for 3.8**  
+
+MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE = **5MB**
+
+
+**Changes for 3.7.1**
+
+MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
+
 ### iOS Messaging SDK - Version 3.8.0
+
+**Release date:** May 17, 2019
 
 iOS Mobile App SDK v3.8.0 introduces a new feature and contains a fix for a high priority bug reported.
 
@@ -159,11 +819,15 @@ MAX_ALLOWED_UPLOAD_PHOTO_SIZE_IN_MB = **3MB**
 
 ### iOS Messaging SDK - Version 3.7.1
 
+**Release date:** April 2, 2019
+
 
 Supports Xcode 10.2 and Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C.
 
 
 ### iOS Messaging SDK - Version 3.7.0
+
+**Release date:** April 2, 2019
 
 iOS Mobile App SDK v3.7 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
@@ -236,6 +900,8 @@ Namespacing for SR dependency.
 
 ### iOS Messaging SDK - Version 3.6.1
 
+**Release date:** March 8, 2019
+
 iOS Mobile App SDK v3.6.1 contains fixes for high priority bugs reported by customers.
 
 #### Environmental Requirements
@@ -249,6 +915,8 @@ iOS Mobile App SDK v3.6.1 is compatible with XCode 10, Swift version 4.2.1 (swif
 
 
 ### iOS Messaging SDK - Version 3.6
+
+**Release date:** February 12, 2019
 
 iOS Mobile App SDK v3.6 contains fixes for high priority bugs reported by customers.
 

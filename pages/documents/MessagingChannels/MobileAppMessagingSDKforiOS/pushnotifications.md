@@ -2,14 +2,15 @@
 pagename: Push Notifications
 redirect_from:
   - consumer-experience-ios-sdk-pushnotifications.html
+  - mobile-app-messaging-sdk-for-ios-appendix-os-certificate-creation.html
+  - consumer-experience-ios-sdk-createcertificate.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Configuration
 
 order: 15
-permalink: mobile-app-messaging-sdk-for-ios-configuration-push-notifications.html
+permalink: mobile-app-messaging-sdk-for-ios-push-notifications.html
 
 indicator: messaging
 ---
@@ -159,7 +160,7 @@ In this step, you add the dev-cert.pem and hostkey.pem to LiveEngage.
    - **Key file:** hostkey.pem
 
    {:.notice}
-   If you are using a development certificate you should uncheck the Production checkbox and add DEV postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
+   If you are using a development certificate you should uncheck the Production checkbox and add 'Dev' postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
 
    **Tip:** You have a **50** character limit for your Bundle ID.
 

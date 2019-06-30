@@ -17,7 +17,7 @@ Get a single workday object by ID.
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId}
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/workinghours/{workdayId} |
 
 **Path Parameters**
 

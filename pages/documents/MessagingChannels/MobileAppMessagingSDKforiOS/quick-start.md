@@ -2,6 +2,9 @@
 pagename: iOS Quick Start
 redirect_from:
   - consumer-experience-ios-sdk-quick-start.html
+  - mobile-app-messaging-sdk-for-ios-initializing-with-monitoring-params.html
+  - initialization-with-monitoring-params.html
+
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -155,7 +158,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
    - [Unauthenticated](#unauthenticated)
    - [Signup](#signup)
 
-#### Authenticated
+#### Authenticated 
 
 ```swift
 import UIKit
@@ -542,8 +545,13 @@ Congratulations!  You're all set.
 
 You can now do any of the following:
 
-- Configure **push notifications** so consumers immediately receive notifications as soon as a reply or notice is available for them. Go to [Push Notifications](mobile-app-messaging-sdk-for-ios-configuration-push-notifications.html) to finish configuring notifications.
+- [Configure the SDK](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. You can also customize the look and feel look and feel of your app using LPConfig object. You can also create your own configuration instance and assign the attributes you want to customize.
 
-- Configure **photo sharing**. Make sure to contact your account team to have photo sharing enabled. For more details, see [Photo Sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html). At this time, photo sharing is one-way only (from consumer to agent).
+- [Configure push notifications](mobile-app-messaging-sdk-for-ios-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers. They never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
-- Configure the **monitoring parameters** to get the engagement for the user, which is needed to start a new conversation with a specific campaign.  For more details on configuring monitoring, see [Initialization with Monitoring Params](mobile-app-messaging-sdk-for-ios-configuration-initialization.html#initialize-the-messaging-sdk-with-monitoring-params).  
+- Configure [Photo sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-ios-advanced-features-file-sharing.html). Agents within LiveEngage to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device.  
+
+- [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
+
+
+
