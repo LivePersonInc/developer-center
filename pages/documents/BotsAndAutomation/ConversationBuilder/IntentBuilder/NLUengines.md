@@ -12,9 +12,9 @@ indicator: both
 
 One of the essential tools of the Conversation Builder platform is Natural Language Understanding (NLU). This is what allows Intent Builder to analyze consumer input and assign accurate intents.
 
-Through LivePerson's Fire API, Conversation Builder allows you to choose your preferred NLU Engine for analyzing text.
+Conversation Builder allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. 
 
-Conversation Builder routes all NLU analysis and training through an API. This provides a layer of abstraction that allows you to choose your preferred NLU engine:
+This API layer of abstraction allows you to choose from the following NLU engines:
 
 - LivePerson's native NLU
 - Google DialogFlow
@@ -59,35 +59,37 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 1. Click on ‘NLU Provider Credentials’ on domain dashboard
 
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
+    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
 
 2. Create a new NLU provider credential
 
-*Give a name for the credential, select the NLU Provider that you want to set the credential for, and copy the credentials downloaded from Watson / Google Dialog Flow*
+* Give a name for the credential
+* Select the NLU Provider that you want to set the credential for
+* Copy the credentials downloaded from Watson / Google Dialog Flow
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_1.png">
 
 #### Step 4: Add a domain for your NLU Provider
 
-*import your intents and entities or add them later manually before Step 4*
+Import your intents and entities or add them later manually before Step 5.
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_2.png">
 
 #### Step 5: Train the domain
 
-A. Click on the train button in the right icon menu
+1. Click on the train button in the right icon menu
 
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_3.png">
+    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_3.png">
 
-B. Select the NLU provider credential from the list in the train modal
+2. Select the NLU provider credential from the list in the train modal
 
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_4.png">
+    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_4.png">
 
-C. Wait till the training is completed. Click on refresh button to see the latest training status for the version.
+3. Wait till the training is completed. Click on the refresh button to see the latest training status for the version.
 
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
+    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
 
-D. Once training is completed, you can start testing with the modal version in the intent tester.
+4. Once training is completed, you can start testing with the modal version in the intent tester.
 
 
 ### Limitations
