@@ -74,7 +74,7 @@ After all options are completed, you can click **Create task** to save the task 
 
 #### LP Cloud
 
-This option allows you to securely save files to our existing LP servers - to retrieve files saved here, you must login to Transporter and download the completed reports from the HISTORY section - files saved to this destination will automatically be removed after 15 days.
+This option allows you to securely save files to our existing LP servers - to retrieve files saved here, you must login to Transporter and download the completed reports from the HISTORY section - files saved to this destination will automatically be removed after 28 days.
 
 #### SFTP
 

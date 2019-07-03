@@ -13,7 +13,7 @@ The Transporter 2.0 enable brands and internal users alike to schedule raw and f
 
 Many brands seek to regularly receive data from and integrate with our Data APIs, especially raw non-aggregated data such as messaging interactions or chat engagement history.  However, often these types of API integration projects can be costly, difficult and time consuming since the Data APIs retrieve large and varied amounts of information. In addition, security is paramount when making these API calls and developing encryption or working with our out of the box solutions can be challenging.
 
-Transporter 2.0 solves this problem by providing the connection to the Data APIs without the need to develop on top of them - a user will log-in with their secure credentials, select the report they wish to receive, and pick the destination. The task will then run on the selected schedule and provide the user with a log of the calls made, their responses, and the ability to retrieve the file with the data in it right within the interface.
+Transporter 2.0 solves this problem by providing the connection to the Data APIs without the need to develop on top of them - a user will log-in with their secure credentials, select the report they wish to receive, and pick the destination. The task will then run on the selected schedule and provide the user with a log of the calls made, their respon ses, and the ability to retrieve the file with the data in it right within the interface.
 
 <div class="important">For more information on how to setup and configure the Transporter, please see the <a href="transporter-getting-started.html">Transporter Getting Started document</a>.</div>
 
@@ -37,7 +37,7 @@ Transporter 2.0 solves this problem by providing the connection to the Data APIs
 
 **Send files to the following destinations**:
 
-* LE Store (internal storage on LP production servers, encrypted at rest, deleted after 15 days)
+* LE Store (internal storage on LP production servers, encrypted at rest, deleted after 28 days)
 
 * Amazon S3
 
