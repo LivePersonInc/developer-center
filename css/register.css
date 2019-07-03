@@ -96,6 +96,24 @@ body {
   font-size: 18px;
 }
 
+#country {
+  border: solid 1px #d6d6d6;
+  background-color: #ffffff;
+  height: 62px;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  font-size: 18px;
+  font-family: OpenSans;
+  font-weight: normal;
+  font-style: italic;
+  color: #666666;
+}
+
+select {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .mandatory:before {
   content: "*";
   color: red;
