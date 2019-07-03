@@ -58,7 +58,7 @@ body {
 }
 
 #registerTitle {
-  font-family: RobotoSlab;
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 300;
   color: #ff720b;
@@ -66,7 +66,7 @@ body {
 }
 
 #registerSub {
-  font-family: RobotoSlab;
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 21px;
   font-weight: 300;
   color: #162036;
@@ -103,7 +103,7 @@ body {
   margin-bottom: 20px;
   padding: 10px 14px;
   font-size: 18px;
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-weight: normal;
   font-style: italic;
   color: #666666;
@@ -120,20 +120,20 @@ select {
 }
 
 #passwordReq {
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-size: 14px;
   color: #666666;
 }
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
 }
 input::-moz-placeholder { /* Firefox 19+ */
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: normal;
   font-style: italic;
@@ -141,7 +141,7 @@ input::-moz-placeholder { /* Firefox 19+ */
 }
 
 input:-ms-input-placeholder { /* IE 10+ */
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: normal;
   font-style: italic;
@@ -149,7 +149,7 @@ input:-ms-input-placeholder { /* IE 10+ */
 }
 
 input:-moz-placeholder { /* Firefox 18- */
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: normal;
   font-style: italic;
@@ -184,6 +184,10 @@ input:-moz-placeholder { /* Firefox 18- */
   margin-top: 10px;
 }
 
+#byClicking span {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
 #registerButton {
   border-radius: 5px;
   background-color: #ff720b;
@@ -196,7 +200,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #registerButton span {
-  font-family: OpenSans;
+  font-family: "Open Sans";
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
