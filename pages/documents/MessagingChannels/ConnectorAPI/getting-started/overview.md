@@ -12,6 +12,15 @@ root-link: true
 indicator: messaging
 permalink: connector-api-first-steps-overview.html
 ---
+
+<div class="alert alert-warning" role="alert">
+  <h2>New developer resources available</h2>
+  <p>In addition to the following API reference, we have published a new how-to guide and a demo tool. The how-to guide provides step-by-step instructions for your first connector application. The demo tool enables you to experience the API on your developer account. You can open the resources in a new tab by clicking on the buttons below.</p>
+  <hr>
+  <a class="btn btn-primary btn-m active" href="https://livepersoninc.github.io/lp-devassist-connectors/" target="_blank" role="button">Go to How-to Guide</a>
+  <a class="btn btn-primary btn-m active" href="https://connector-api.dev.liveperson.net/" target="_blank"  role="button">Go to Demo Tool</a>
+</div>
+
 ### Introduction
 
 The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.

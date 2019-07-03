@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
-	anchors.add('h3');
+	anchors.add('h3, h4');
 	linkload();
 	sidebarClick();
 	populateAnchors();
@@ -12,7 +12,9 @@ $(document).ready(function () {
 	searchFunction();
 	capabilitiesSearch();
 	searchHighlight();
-	allArticlesClick()
+	allArticlesClick();
+	scrollToHash();
+	domainTool();
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -75,14 +77,16 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
-			anchors.add('h3');
+			anchors.add('h3, h4');
 			populateAnchors();
 			codeButtons();
 			replaceTitle();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
-			allArticlesClick()
+			allArticlesClick();
+			scrollToHash();
+			domainTool();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -104,7 +108,10 @@ function navigateContent(url) {
 				$('.innerpageitem').removeClass("activeitem");
 			}
 			//jump to top when page loads
-			window.scrollTo(0, 0);
+			var hash = window.location.hash;
+			if (!hash) {
+				window.scrollTo(0, 0);
+			}
 			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
 				$('#mysidebar').slideUp(400);
 				$('#mysidebar').data("expanded", "false");
@@ -238,17 +245,20 @@ function populateAnchors() {
 	$(".anchoritem").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = $('.anchorlist ul');
+	var anchorlist = document.getElementById('inneranchors');
+	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
+		html = '';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			$(anchorlist).append('<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>');
+			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
 		});
+		anchorlist.innerHTML = html;
 	};
 };
 
@@ -474,8 +484,9 @@ function searchFunction() {
 //very similar to the search function above, just for the capabilities comparison table
 function capabilitiesSearch() {
 	var $title = $('.h1').text();
-	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
+	if ($title.indexOf('Rich Messaging Channel Capabilities') > -1) {
 		// Declare variables
+		console.log('run');
 		var input, filter, table, tr, categorytr, td, i;
 		input = document.getElementById("capabilitiesSearch");
 		table = document.getElementById("featurestable");
@@ -513,7 +524,7 @@ function capabilitiesSearch() {
 };
 
 function searchHighlight() {
-	//grab the filter element from local storage. We define this element in the inline script on the default oage.
+	//grab the filter element from local storage. We define this element in the inline script on the default page.
 	var toHighlight = localStorage.getItem('filter');
 	//if the element has been created
 	if (toHighlight) {
@@ -524,6 +535,72 @@ function searchHighlight() {
 	};
 	//set the filter element to empty so that filtering doesn't "carry over" to future navigation
 	localStorage.setItem('filter', '');
+}
+
+function scrollToHash () {
+	setTimeout(function () {
+		if (window.location.hash && window.location.hash != "#top") {
+		var hash = window.location.hash;
+		var linkScroll = $('a[href*="' + hash + '"]');
+		if (linkScroll.length > 1) {
+			var linkOffset = $(linkScroll[1]).offset().top;
+		} else {
+			var linkOffset = $(linkScroll).offset().top;
+		}
+		$("body, html").animate(
+			{
+				scrollTop: linkOffset,
+			},
+			1000,
+			"swing"
+		);
+		}
+	}, 1000);
+}
+
+function domainTool() {
+let input;
+let accountInput;
+const csdsButton = document.getElementById("csds-button");
+const csdsResult = document.getElementById("csds-result");
+let csdsUrl;
+let html = "";
+csdsButton.addEventListener("click", event => {
+		input = document.getElementById("account");
+		accountInput = input.value;
+		csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
+    retrieveDomains(accountInput);
+});
+const retrieveDomains = (account) => {
+      $.ajax({
+          url: csdsUrl,
+          headers: {
+            'Accept': 'application/json'
+          },
+          dataType: "json",
+          success: function(data) {
+						html = '';
+						$(csdsResult).css('display', 'table');
+              if (data.baseURIs.length > 0) {
+									html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+									data.baseURIs.sort(function(a, b){
+						        var m1 = a.service.toLowerCase();
+						        var m2 = b.service.toLowerCase();
+						        if(m1< m2) return -1;
+						        if(m1> m2) return 1;
+						        return 0;
+						    	})
+                  data.baseURIs.forEach((entry) => {
+                          html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
+                      });
+									html += '</tbody>'
+                  csdsResult.innerHTML = html;
+              } else {
+                  csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
+              }
+          }
+      });
+  }
 }
 
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special

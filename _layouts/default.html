@@ -46,7 +46,7 @@
   <hr class="pagehr" />
   <div id="anchorlist" class="anchorlist">
     <a class="anchormain" href=""><span>Jump to</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-    <ul></ul>
+    <ul id="inneranchors"></ul>
   </div>
   </div>
 
@@ -55,7 +55,7 @@
     {{ content | extlinks }}
   </div>
   <div id="defaultfooter" class="defaultfooter">
-    <span>LivePerson Inc 2018 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
+    <span>LivePerson Inc 2019 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
     </span>
   </div>
 <!-- /.container -->
@@ -123,6 +123,7 @@ search.autocomplete.on({
       footer.classList.remove('overlayvisible');
 }}});
 </script>
+{% include tag.html %}
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}

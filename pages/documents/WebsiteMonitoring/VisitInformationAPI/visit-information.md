@@ -16,7 +16,7 @@ indicator: chat
 
 | Method    | URL |
 | :------ | :------- |
-| GET | https://{LivePerson domain}/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
 
 **OAuth**
 

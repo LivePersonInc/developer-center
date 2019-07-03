@@ -20,7 +20,7 @@ Updates an existing Automatic Message for a specific account.
 
 | Method | URL |
 | :-------- | :----- |
-| PUT | /api/account/{accountId}/configuration/engagement-window/auto-messages/{autoMessageId} |
+| PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/auto-messages/{autoMessageId} |
 
 **Request Headers**
 

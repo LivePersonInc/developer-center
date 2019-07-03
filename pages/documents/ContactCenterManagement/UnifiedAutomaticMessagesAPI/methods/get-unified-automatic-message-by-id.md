@@ -20,7 +20,7 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 
 | Method | URL |
 | :-------- | :---- |
-| GET | /api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/unified-auto-messages/{unifiedAutoMessageId} |
 
 **Request Headers**
 

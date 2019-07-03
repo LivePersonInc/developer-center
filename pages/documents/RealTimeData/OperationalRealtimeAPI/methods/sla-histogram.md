@@ -24,7 +24,7 @@ Retrieves the distribution of visitors’ wait time in the queue, before an agen
 
 | Method | URL |
 | :-------- | :----- |
-| GET | `https://<domain>/operations/api/account/{accountID}/sla?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&groupIds=<groupIds>&histogram=<histogram bucket list>&v=<version>`
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/sla?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&groupIds=<groupIds>&histogram=<histogram bucket list>&v=<version>`
 
 URL Parameters
 

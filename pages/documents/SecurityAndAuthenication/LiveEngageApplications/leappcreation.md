@@ -20,7 +20,7 @@ Once the application has been installed, the LivePerson resource will send you y
 ### LiveEngage Application Manifest Schema - Parameters
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| ---| ---|
 |client_name | Choose the name for your Connector application | string| Yes | Can be internationalized by adding 5646 language tag after hash chararcter. <br /> Max length: 128|
 |description | App description | string | No| max length: 256|
 |grant_types | Authorization grant according to OAuth 2.0 | array | No | supported values: "client_credentials"<br />"authorization_code"<br />"refresh_token"|
@@ -34,7 +34,7 @@ Once the application has been installed, the LivePerson resource will send you y
 #### webhooks (optional object within capabilities object)
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| ---| ---|
 |ms.MessagingEventNotification .ContentEvent | Indicates the HTTPS configuration endpoint of your server to receive notifications of type ContentEvent. | webhook | No | |
 |ms.MessagingEventNotification .RichContentEvent |  Indicates the HTTPS configuration endpoint of your server to receive notifications of type RichContentEvent. | webhook | No | |
 |ms.MessagingEventNotification .AcceptStatusEvent |Indicates the HTTPS configuration endpoint of your server to receive notifications of type AcceptStatusEvent. |  webhook | No | |
@@ -44,7 +44,7 @@ Once the application has been installed, the LivePerson resource will send you y
 #### webhook (optional object within webhooks object)
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| --- | ---|
 |endpoint | The url to send the notification to, including query parameters | string| Yes |Starts by "https://"|
 |max_retries | The max number of retry attempts to send the notification if it fails | integer| No| minimum value: 0, maximum value: 5|
 |headers | List of http headers to add to the notification request | array of headers | No| Example value:  [{"header_name": "NAME1", "header_value": "VALUE1"},{"header_name": "NAME2", "header_value": "VALUE2"}]|
@@ -52,7 +52,7 @@ Once the application has been installed, the LivePerson resource will send you y
 #### engagements
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| ---| ---|
 |design_engagement |Toggles the ability to design the engagement button and apparence | boolean |Yes | |
 |design_window | Toggles the ability to add an engagement window | boolean | Yes | |
 |entry_point |  Indicates where to display the engagement which invites consumers to engage with you | array| Yes | supported values: section, url|

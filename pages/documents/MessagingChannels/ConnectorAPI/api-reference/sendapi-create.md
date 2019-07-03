@@ -201,7 +201,7 @@ The connector can then use the above properties in the CONVERSATION request body
 | lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to LiveEngage | "ctmrinfo" / "personal" | string | true |
 | info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagement-attributes-types.html#customer-info) |
-| socialId | Social Media ID of your choice e.g.: FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
+| socialId | Social Media ID of your choice e.g., FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
 | ctype | Customer type/tier (case insensitive) | "Gold" | string | false |
 | personal | A list of Personal Info SDEs | {"firstname": "John", "lastname": "Doe", "gender": "MALE"} | strings | false | [Click here to see the full list of Personal Info SDEs](engagement-attributes-types.html#personal-info) |
 | firstname | Visitor's first name | "John" | string | false |

@@ -18,7 +18,7 @@ The Schema is the JSON format blueprint for creating Data Access files. Specific
 
 | Method | URL |
 | :------ | :------- |
-| GET | `https://<domain>/data_access_le/account/{accountID}/le/schema?schemaId=<schemaId>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/data_access_le/account/{accountID}/le/schema?schemaId=<schemaId> |
 
 **URL Parameters**
 

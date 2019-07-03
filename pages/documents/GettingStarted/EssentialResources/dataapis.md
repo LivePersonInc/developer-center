@@ -1,13 +1,13 @@
 ---
-pagename: Getting Started with Data APIs
+pagename: Data APIs
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources
-permalink: essential-resources-getting-started-with-data-apis.html
+permalink: essential-resources-data-apis.html
 order: 30
 indicator: both
 ---
-
+<br>
 LivePerson offers a variety of Data APIs that are available for our customers to use in order to retrieve their contact center’s information. Each API has its own specific attributes and can be used for different use cases. The purpose of this document is to give an overview of the different APIs and when they should both be used; for more detailed information on how to use them, please see each API's documentation.
 
 **Note**: not all APIs work with both Messaging and Chat; the type of interactions that a certain API works with is listed next to its title. In addition, the **Personal Data Deletion API** is not covered in this document since it functions differently than the rest of the Data APIs. Please see [its documentation](/personal-data-deletion-overview.html) for more info.
@@ -62,7 +62,7 @@ This API exposes the current state of the messaging agents who are online, inclu
 
 ### Messaging Operations API
 
-[Documentation](data-messaging-agent-metrics-overview.html)
+[Documentation](messaging-operations-api-overview.html)
 
 This API exposes information about the contact center at the account, skill, and agent level. This data includes closed conversations and their associated attributes, such as customer satisfaction, average conversation length, resolved status and the current queue state.
 

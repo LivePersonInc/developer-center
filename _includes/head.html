@@ -9,7 +9,7 @@
 <title> {{ page.pagename }} | {{ site.site_title }}</title>
 {% endif %}
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
-<link rel="stylesheet" href="{{ "css/default.css" }}">
+<link rel="stylesheet" href="{{ "css/default.min.css" }}">
 <link rel="stylesheet" href="{{ "css/404.css" }}">
 <link rel="stylesheet" href="{{ "css/hamburgers.css" }}">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,600,700,300" >
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400italic,700,700italic,300,600" >
 
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script  src="{{ "js/jquery.linkunderanim.min.js" }}"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.8.3/jquery.mark.js" ></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
@@ -36,3 +36,14 @@
 <script src="{{ "js/pace.min.js" }}"></script>
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
+<!-- Hotjar Tracking Code for developers.liveperson.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1377445,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>

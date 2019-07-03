@@ -18,7 +18,7 @@ Exports an account's audit trail to CSV file.
 
 | Method | URL |
 | :-------- | :------ |
-| GET | /api/account/{accountId}/configuration/metadata/audit/export |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/metadata/audit/export |
 
 **Request Headers**
 

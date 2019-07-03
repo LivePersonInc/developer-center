@@ -20,7 +20,7 @@ Update an existing status reason.
 
 | Method | URL |
 | :-------- | :------ |
-| PUT | /api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
+| PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
 
 
 ### Path Parameters

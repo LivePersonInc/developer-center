@@ -19,8 +19,8 @@ Retrieves a single, default Predefined Content item by template ID from a specif
 ### Request
 
 | Method | URL |
- |:-------- | :-----| 
-| GET | /api/configuration/defaults/engagement-window/canned-responses/{templateId} |
+ |:-------- | :-----|
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/configuration/defaults/engagement-window/canned-responses/{templateId} |
 
 **Path Parameters**
 
@@ -34,7 +34,7 @@ Retrieves a single, default Predefined Content item by template ID from a specif
 
 | Code  |Description |
  |:-----  |:------------- |
-| 200|  OK| 
+| 200|  OK|
 | 404 | Data Not Found |
 
 **Response Body**

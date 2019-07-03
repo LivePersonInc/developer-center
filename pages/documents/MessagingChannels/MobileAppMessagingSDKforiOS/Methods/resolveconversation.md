@@ -16,7 +16,9 @@ indicator: messaging
 
 This API enables a conversation to be resolved. The API will request the server to mark the active conversation as resolved. If there is no active conversation, an alert will be displayed. 
 
-`func resolveConversation(_ conversationQuery: ConversationParamProtocol)`
+`func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})`
+
+`public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol, completion: (() -> Void)? = {()})`
 
 
 | Parameter | Description | Notes |

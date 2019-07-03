@@ -15,7 +15,7 @@
 {% for category in site.data.documentsupdated %}
   {% if forloop.last == true %}
   <hr class="sidebarhr lessbottom" />
-  <li class="folder topfolder">
+  <li class="folder topfolder lowerimage">
     <img src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
@@ -53,7 +53,7 @@
     </ul>
   </li>
   {% else %}
-  <li class="folder topfolder">
+  <li class="folder topfolder lowerimage">
     <img src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
@@ -96,7 +96,7 @@
     <div class="sidebarbuttoncontainer">
       <li class="folder topfolder ">
         <img src="img/support-icon.png" />
-        <a target="_blank" class="bottombuttons" href="https://support.liveperson.com/ask-question/">Looking for Support?</a>
+        <a target="_blank" class="bottombuttons" href="http://knowledge.liveperson.com">Knowledge Center</a>
       </li>
     <li class="folder topfolder bottombuttons">
       <img src="img/create-account-icon.png" />

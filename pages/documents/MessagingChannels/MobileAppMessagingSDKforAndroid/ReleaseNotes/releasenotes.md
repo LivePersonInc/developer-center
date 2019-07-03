@@ -9,13 +9,382 @@ documentname: Mobile App Messaging SDK for Android
 permalink: mobile-app-messaging-sdk-for-android-release-notes.html
 indicator: messaging
 ---
-<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">click here to subscribe to any further changes!</a> When the Release Notes are updated, you'll get a notification straight to your email of choice!</div>
-<br>
 <br>
 
-### Android Messaging SDK - Version 3.5
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
-### Overview
+### Android Messaging SDK - Version 3.9.0
+
+**Release date:** June 18, 2019
+
+#### Environmental requirements
+The Android Mobile Messaging SDK version 3.9 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+#### New feature
+
+##### Photo and File sharing
+
+Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
+
+Agents can share:
+
+- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. The agent can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.   
+
+- **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. They can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
+
+   {:.important}
+   The Android SDK supports opening any file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
+
+
+When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.
+
+
+##### Supported formats
+
+- PNG
+- JPG/JPEG
+- GIF (non-animated) - previewed as a static image only
+- PDF
+- DOCX
+- PPTX
+- XLSX
+
+##### Photo and file sizes
+
+- Thumbnail - 30 KB (base64-encoded)
+- Max upload size allowed - 5 MB uncompressed
+
+   **For SDKs previous to 3.8.** The max upload size allowed is 3 MB.
+
+##### Notes and limitations
+
+- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent-to-consumer) for now.
+
+   **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
+
+- If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.
+
+- The consumer can return to a resolved conversation to view the photos, as long as the photos are part of the conversation history.
+
+- If an agent sends an unsupported file, a message displays indicating the file type shared with the consumer is not supported, and the agent should retry sending a supported file format. On the consumer side, they see an empty message with no content.
+
+- For authenticated users, backgrounding the app while loading the photo does not get interrupted.
+
+- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
+
+- **For Android SDK 3.0 on an Oreo Device (8.0 &amp; 8.1).** Add support for Notification Channel.
+
+##### How photo and file sharing works
+
+<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+
+---   
+
+##### Step 1. Enable or disable 
+
+1. Change the boolean value:
+
+   ```java
+   <bool name="enable_photo_sharing">
+   ```
+   
+   By default, this value is set to **false**.
+
+   ```java
+   <bool name="enable_file_sharing">
+   ```
+
+   Starting in v3.9, the default value is set to **true**.
+
+2. Contact your Account Team to have the feature enabled on your account.
+
+##### Step 2. Change settings
+
+1. Set the max number of photos or files to save on disk:
+
+   ```java
+   <integer name="max_number_stored_images">
+
+   <integer name="max_number_stored_documents">
+
+   <integer name="max_number_stored_voice_files">
+   ```
+
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+
+2. Set the max image size:
+
+   ```java
+   <integername="max_image_size_kb">
+   ```
+
+   The default max image is 3000kb.
+
+   **Important:** At this time, you can only set the max image size.
+
+3. Change the color of the attachment menu:
+
+   ```java
+   <colorname="attachment_menu_item_background_color">
+
+   <colorname="lp_attachment_menu_background_color">
+
+   <colorname="lp_attachment_menu_item_text_color">
+
+   <colorname="lp_attachment_menu_item_icon_color">
+   ```
+
+4. Change the text of buttons:
+
+   ```java
+   <stringname="lp_accessibility_gallery">
+
+   <stringname="lp_accessibility_camera">
+   ```
+
+5. Define the max number of stored images allowed locally.
+
+   ```java
+   <integername="max_number_stored_images">
+   ```
+
+   The default max number is 20.
+
+6. Define the resize dimensions:
+
+   ```java
+   <integername="thumbnail_longer_dimension_resize">
+   ```
+
+   The default thumbnail dimension is 100.
+
+   ```java
+   <integername="full_image_longer_dimension_resize">
+   ```
+
+   The default full image dimension is 800.
+
+7. Set the compression rate (percentage) for full images:
+
+   ```java
+   <integername="full_image_compression_rate">
+   ```
+
+   The default compression rate is 50.
+
+Other configurations can be found in the [Attributes](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html) section of the Dev Community.
+
+
+
+### Android Messaging SDK - Version 3.8.1
+
+**Release date:** June 13, 2019
+
+Android Mobile App SDK v3.8.1 fixed one bug.
+
+#### Environmental requirements
+The Android Mobile Messaging SDK version 3.8.1 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+#### Bug fixed
+Reported in SDK 3.8.0 on Android. When the conversation history for an authenticated user has the SUGGESTED_ASSIGNED_AGENT role assigned in it, the app crashed.
+
+### Android Messaging SDK - Version 3.8.0
+
+**Release date:** May 17, 2019
+
+Android Mobile App SDK v3.8.0 introduces a new feature.
+
+#### Environmental Requirements
+
+The Android Mobile Messaging SDK version 3.8 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+
+#### New Feature
+
+##### Welcome message with quick reply options
+
+Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
+
+You can configure the Welcome message as a simple text message with or without quick replies, for example: 
+
+> *Welcome to our support! What can we help you with today?*   
+> 
+> *[Questions about existing account] [open a new account] [tech support]*
+
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
+
+##### How to enable
+
+```java
+LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
+List<MessageOption> optionItems = new ArrayList<>();
+optionItems.add(new MessageOption("bill", "bill"));
+optionItems.add(new MessageOption("sales", "sales"));
+optionItems.add(new MessageOption("support", "support"));
+try {
+       lpWelcomeMessage.setMessageOptions(optionItems);
+} catch (Exception e) {
+       e.printStackTrace();
+}
+lpWelcomeMessage.setNumberOfItemsPerRow(8);
+lpWelcomeMessage.setMessageFrequency(LPWelcomeMessage.MessageFrequency.EVERY_CONVERSATION);
+conversationViewParams.setLpWelcomeMessage(lpWelcomeMessage);
+LivePerson.showConversation(Activity, LPAuthenticationParams, conversationViewParams);
+
+```
+
+If set empty String in constructor `LPWelcomeMessage(String welcomeMessage)`, the welcome message with quick reply feature will be disabled. It shows the default welcome message, which is set up in the String resources `lp_first_message`.
+
+There are two parameters in the MessageOption class constructor.
+
+```java
+public MessageOption(@NonNull String displayText, @NonNull String value)
+```
+
+- **displayText** is the text displayed in the quick reply button.
+- **value** is the content that is sent to the agent. Default value is displayText if set to empty String.
+
+
+There are two message frequencies: 
+- **FIRST_TIME_CONVERSATION:** Shows the welcome message for first conversation only.
+- **EVERY_CONVERSATION:** Shows welcome a message for every new conversation.
+
+
+##### Limitations  
+
+You can configure up to 24 quick reply options for the user to chose.
+
+- You have a maximum of 25 characters for your title, but anything over displays an ellipsis after the 22nd  character.  When building your client, you have control over the character limit for the title.
+
+- Once you set `itemsPerRow` (max 8), the number of rows calculate automatically (up to 3 rows). If the number of replies exceeds `itemsPerRow` times 3, the extra replies get added to the last row.
+
+- When the consumer ends the conversation, the window remains open, and the Welcome message appears again. The message frequency should be set to `EVERY_CONVERSATION`.
+
+- Quick reply messages do not get recorded in the conversation history.
+
+- The conversational metadata (ExternalId) does not get populated.
+   ```json
+   "metadata": [
+   {
+   "type": "ExternalId",
+   "id": "Yes-1234"
+   }
+   ]
+   ```  
+
+#### Bug Fixes
+
+- **For Android 9 only.** Calling `hideConversation()` while app is in the background caused the app to come to the foreground. When having multiple apps and the consumer has one CustID across all apps, the consumer could not log out of all apps bringing the other app to the foreground.
+
+- Data masking message displayed after sending SecureForm. When setting the `enable_client_only_masking` bool to **true**, and the customer sent a SecureForm, the “Your personal data has been masked to protect your security. Only the agent can read it.” system message appeared. 
+
+- The Unread Message Divider separator appeared after the agent resumed conversation. If the agent closed the conversation but reopened it by sending a new message, the Unread divider appeared above the new message when it should not appear.  
+   
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+
+- Scroll bar did not scroll to the bottom with specific branding settings. When setting the `enable_conversation_resolved_separator` and `enable_conversation_resolved_message` bool to **false** the scroll bar did not scroll to the bottom. The bug prevented users from scrolling to the bottom of the message. 
+
+- Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form. 
+
+
+### Android Messaging SDK - Version 3.7.0
+
+**Release date:** April 1, 2019
+
+
+Android Mobile App SDK v3.7.0 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+#### Bug Fixes
+
+* Android SDK crashed with ClassCastException.
+
+* Client Masking Ignored when Logged out from Authenticated conversation and Logged back in as UnAuthenticated user.
+
+* Conversation bubble is empty if the agent sends empty structured content.
+
+* TalkBack was reading hidden conversation content behind a Secure Form.
+
+* Secure Form was not announced to the consumer in TalkBack.
+
+* TalkBack did not announce out of view contents from Structured Content.
+
+* CSAT question sent via PCS was not visible in the LiveEngage UI conversation info widget.
+
+* Android SDK crashed with IllegalArgumentException.
+
+* Android SDK failed while trying to send an image via photo sharing.
+
+* Android KitKat did not support TLSv1.2.
+
+* TalkBack did not announce all elements in Secure Form upon arrival.
+
+
+### Android Messaging SDK - Version 3.6.1
+
+**Release date:** March 8, 2019
+
+Android Mobile App SDK v3.6.1 contains a new API call to enable/disable SDK logs.
+
+#### Environmental Requirements
+
+Android Mobile App SDK v3.6.1 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
+
+
+#### Bug Fixes
+
+SDK logging information is not available while the host application is running in debug mode.
+
+#### New APIs
+
+|     API      | Description |
+| ------------ | ------------ |
+| public static void setIsDebuggable(boolean isDebuggable) | Use this api to enable/disable the SDK logs. |
+
+Note: SDK logging is disabled by default. To Enable it, use the above method.
+
+Example:
+`Liveperson.setIsDebuggable(BuildConfig.DEBUG)`
+
+### Android Messaging SDK - Version 3.6.0
+
+**Release date:** February 12, 2019
+
+Android Mobile App SDK v3.6.0 contains fixes for high priority bugs reported by customers.
+
+#### Environmental Requirements
+
+Android Mobile App SDK v3.6 requires the minimum Android API version 19 and targeted API is 27.
+
+
+#### Bug Fixes
+
+* Unauthenticated user failed to connect when passing campaign information.
+
+* Loading spinner is stuck even when conversation History is loaded.
+
+* Failed to establish conversation when airplane mode was enabled or disabled multiple times while network connection was poor.
+
+* TalkBack does not read agent name when a message was clicked.
+
+* Resumed conversation with unauthenticated user does not show campaign info on agent side when `contextId` is null.
+
+* "http://" was appended as prefix for customized links (Deep Links).
+
+* Wrong value for unread message count on scroll down indicator.
+
+* Entire structured content component receives focus when tapped.
+
+* Released SDK build displays debug, info and warning logs.
+
+* Links and text in agent message truncated on changing chat_bubble_padding to non-default values.
+
+
+### Android Messaging SDK - Version 3.5.0
+
 
 Android Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
 
@@ -23,7 +392,6 @@ Android Mobile App SDK v3.5 contains fixes for high priority bugs reported by cu
 
 The SDK’s minimum API is 19 and the target API is 27.
 
-### Bugs
 
 #### Bug Fixes
 
@@ -42,9 +410,8 @@ The SDK’s minimum API is 19 and the target API is 27.
 * Multiple "Missing current dialog" appear in the logs after a consumer clears history resulting a slow connection establishment.
 
 
-### Android Messaging SDK - Version 3.4
+### Android Messaging SDK - Version 3.4.0
 
-### Overview
 
 Android Mobile App SDK v3.4 contains fixes for high priority bugs reported by customers and a new call back for leaving the conversation screen. There is one API change which will be explained in this document.
 
@@ -52,7 +419,7 @@ Android Mobile App SDK v3.4 contains fixes for high priority bugs reported by cu
 
 The SDK’s minimum API is 19 and the target API is 27.
 
-### Main Features
+#### Main Features
 
 The `onConversationFragmentClosed` callback is returned when a consumer leaves the conversation screen.
 
@@ -62,7 +429,6 @@ The `onConversationFragmentClosed` callback is returned when a consumer leaves t
 
 When a consumer leaves the conversation screen, the call back `onConversationFragmentClosed` will be returned.
 
-### Bugs
 
 #### Bug Fixes
 
@@ -90,9 +456,9 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 * In some cases, when the consumer went into the conversation via push notification and then out multiple times, the app could crash with IndexOutOfBounds exception.
 
-### API Changes
+#### API Changes
 
-#### updateTokenInBackground
+##### updateTokenInBackground
 
 **Description**: When using registerLPPusher with authentication parameters for JWT renewal (JWT renewal when in background) the authentication process will go into an infinite loop. In order to solve the issue we’ve introduced a new API to separate the register to push and updating the token when in background.
 
@@ -100,7 +466,7 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 **Note**: No change in cases where the screen is in foreground - host app should call `reconnect()` to renew the JWT.
 
-#### Code sample
+##### Code sample
 
 ```java
 
@@ -116,7 +482,7 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 ### Android Messaging SDK -  Version 3.3.0
 
-Android Mobile App SDK v3.3 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
+Android Mobile App SDK v3.3.0 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
 
 #### Environment Requirements
 
@@ -150,9 +516,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 * Brands who specify the the Maps API key meta tag in the app’s Manifest.xml as `com.google.android.maps.v2.API_KEY` should change it to `com.google.android.geo.API_KEY`.
 
-#### Bugs
-
-**Fixed Bugs**
+#### Bug Fixes
 
 * Improper exception handling would cause the host application to freeze.
 
@@ -172,7 +536,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 * The host app crashed when it tried to access the application context, after process is killed by Android OS.
 
-**Known Issues**
+#### Known Issues
 
 * When using `registerLPPusher` with authentication parameters and opening the conversation screen before JWT renewal was completed, the authentication process will go into an infinite loop.
 
@@ -194,7 +558,7 @@ This release of the Android Mobile App SDK v3.2.2 is primarily focused on assess
 #### Environment Requirements
 The SDK’s minimum API is 19 and the target API is 27.
 
-#### Issues that have been addressed in this release:
+#### Bug Fixes
 
 1. Improper exception handling would cause the host application to freeze.
 
@@ -224,9 +588,9 @@ The following issues are still being investigated & have been prioritized for a 
 
 **Version 3.2 release: July 1st 2018**
 
-### Main Features
+#### Main Features
 
-#### Audio Messaging
+##### Audio Messaging
 
 **Type:** Consumer Experience Feature  
 
@@ -244,7 +608,7 @@ In Audio messages the Brands can configure:
 
 4. Tooltips text
 
-#### Unauthenticated In-App Messaging
+##### Unauthenticated In-App Messaging
 
 **Type:** Developer Experience Feature
 
@@ -260,7 +624,7 @@ Unauthenticated messaging allows brands to:
 
 3. The ability to use Campaigns for Messaging while having unauthenticated conversations
 
-#### Quick Replies
+##### Quick Replies
 
 **Type:** Consumer Experience Feature
 
@@ -278,7 +642,7 @@ The quick replies can contain the same actions as Structured Content buttons:
 
 As Quick Replies contain predefined values, it can dramatically improve communication with Bots and improve both consumer experience and operational efficiency.
 
-#### Structured Content Carousel
+##### Structured Content Carousel
 
 **Type:** Consumer Experience Feature
 
@@ -288,7 +652,7 @@ Structured Contend experience is enriched with the Carousel allowing more capabi
 
 The Carousel consists of more than one card at a time, side by side and the consumer can swipe between cards.
 
-#### New Devices Certification
+##### New Devices Certification
 
 The following devices are now also supported and/or certified to host our In-App Messaging SDK:
 
@@ -330,7 +694,7 @@ The following devices are now also supported and/or certified to host our In-App
 
 * **Photo Sharing functionality is limited on the device. Only photos which were <strong>not</strong> taken by the device can be shared**
 
-#### Experience and Branding Enhancements
+##### Experience and Branding Enhancements
 
 **Type:** Consumer Experience Feature
 
@@ -352,7 +716,6 @@ When using Emojis in a conversation:
 
 A new way for Brands to set their own background to conversation to add a more personal touch. As in fragment mode, LivePerson does not have control over the Activity which contains the conversation window fragment, this feature works only in Activity mode. In Fragment mode, brands can add the background picture on the Activity window.
 
-### APIs
 
 #### New APIs
 
@@ -437,9 +800,9 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-### Configurations
+#### Configurations
 
-#### Experience and Branding Enhancements
+##### Experience and Branding Enhancements
 
 <table>
 <thead>
@@ -464,7 +827,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Link Preview
+##### Link Preview
 
 <table>
 <thead>
@@ -502,7 +865,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Structured Content
+##### Structured Content
 
 <table>
 <thead>
@@ -549,7 +912,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Audio Messaging
+##### Audio Messaging
 
 <table>
 <thead>
@@ -579,7 +942,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Quick Replies
+##### Quick Replies
 
 <table>
 <thead>
@@ -619,7 +982,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Deprecated Configurations
+##### Deprecated Configurations
 
 <table>
 <thead>
@@ -639,9 +1002,9 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-### Strings Localization
+#### Strings Localization
 
-#### Audio Messaging
+##### Audio Messaging
 
 <table>
 <thead>
@@ -676,7 +1039,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Unauthenticated In-App Messaging
+##### Unauthenticated In-App Messaging
 
 <table>
 <thead>
@@ -709,7 +1072,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-#### Quick Replies
+##### Quick Replies
 
 <table>
 <thead>
@@ -736,7 +1099,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </table>
 
 
-### Features Enablement Chart
+#### Features Enablement Chart
 
 <table>
 <thead>

@@ -13,52 +13,57 @@ permalink: mobile-app-messaging-add-messaging-to-your-app.html
 indicator:
 ---
 
-### Overview
+When you add messaging to your app, you enable your consumers to communicate with your agents through their channel of choice: Android or iOS.
 
-Add messaging to your app in order to enable consumers to communicate with your agents through their channel of choice, on either Android or iOS.
 
-**Benefits:**
+### Benefits
+* Increased customer satisfaction with an ideal customer experience through an always connected, ongoing conversation.
 
-* Mobile App Messaging provides consumers with the ideal customer experience through an always connected, ongoing conversation.
+* Increased customer retention and engagement (stickiness of your app).
 
-* Increase the stickiness of your app through the added value of Mobile App Messaging.
-
-* Push notifications ensure your consumers never miss a new message.
+* Consumers never miss a new message with push notifications.
 
 * Fully customizable customer experience including look and feel.
 
-* Optimized for the network bandwidth as well as battery usage.
+* Optimized for network bandwidth and battery usage.
+
 
 <img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> <img src="img/inapp2.png" style="max-width:230px;max-height:700px;"> <img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
 
 
 ### Prerequisites
 
-The following prerequisites are required:
+To begin, you need:
 
-* iOS or Android native app
+* LiveEngage account with messaging enabled.
+  
+  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'all connections’ when you log in, your account has messaging enabled.</div>
 
-* LiveEngage account with messaging enabled (contact your LivePerson representative to enable messaging on your account.  (hint: if you see 'all connections’ when you login, your account has messaging)
+* LivePerson only supports OAuth2.0 authentication. For more information, please see [Getting Started with Authentication](../../documents/GettingStarted/Getting Started with Authentication.md).
 
-* iOS Apps must have a bundle ID, registered in an Apple developer account
+* iOS native app with:
 
-* Developer environment for iOS: Xcode with the latest GA version.
+   * Bundle ID registered in an Apple developer account
 
-* Android Apps must have a package name.
+   * Xcode with the latest GA version
 
-* Developer environment for Android: Android Studio (any version).
+* Android native app with:
 
-*See [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices. (LiveEngage Enterprise In-App Messenger SDK Supported Devices section)
+   * Package name 
+
+   * Android Studio (any version)
+
+*For more information, refer to the LiveEngage Enterprise In-App Messaging SDK Supported Devices section of [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices.* 
 
 ### Implementation overview
 
-In order to have a successful deployment of messaging within your iOS or Android app, there are three main components you must
+For a successful deployment of messaging within your iOS or Android app, you must implement three main components:
 
-* Follow the guide for the Mobile App Messaging SDK and deploy all the customization you require. Using the deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html) or [Android](android-quickstart.html).
+* Deploy all customization you require using the Mobile App Messaging SDK deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html) or [Android](android-quickstart.html). 
 
 * Configure Push Notifications
 
-* Configure Authentication
+* Configure Authentication [what authentication is supported?  OAuth or API keys or both? What ever is supported should be mentioned in the prerequisites section above.]
 
 ### Considerations
 
@@ -114,38 +119,36 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * The following is the list of features that need to be configured in order to be completely accessible:
 
-    * IOS:
+    **iOS:**
 
-* Enter timeout & expiration controls:
-
-            * sendingMessageTimeoutInMinutes (60)
-
-            * csatSurveyExpirationInMinutes (1440)
-
-* Disable shortcut to new messages feature:
-
-            * scrollToBottomButtonEnabled (false)
-
-            * scrollToBottomButtonMessagePreviewEnabled (false)
-
-            * unreadMessagesDividerEnabled (false)
-
-* Disable link preview
-
-            * enablelinkPreview (false)
-
-    * Android
-
-        * Snackbar duration: <integer name = snachbar_duration_for_accessibility> 60000 </integer>
-
-        * Disable: Link preview -
-
-            * <bool name ="link_preview_enable_real_time_preview" > false </bool>
-
-            * <bool name ="link_preview_enable_feature" > false </bool>
-
-        * Disable In-conversation shortcut to new messages
-
-            * <bool name ="scroll_down_indicator_enabled" > false </bool>
-
-            * <bool name ="scroll_down_indicator_unread_summary_enabled" > false </bool>
+    1. Enter timeout & expiration controls: 
+    
+       * `sendingMessageTimeoutInMinutes (60)`  
+    
+       * `csatSurveyExpirationInMinutes (1440)`
+    
+    2. Disable shortcut to new messages feature:
+    
+       * `scrollToBottomButtonEnabled (false)`
+    
+       * `scrollToBottomButtonMessagePreviewEnabled (false)`
+    
+       * `unreadMessagesDividerEnabled (false)`
+    
+     3. Disable link preview `enablelinkPreview (false)`
+    
+     **Android:**
+    
+     1. Set the Snackbar duration: `<integer name = snachbar_duration_for_accessibility> 60000 </integer>`
+    
+     2. Disable Link preview:
+    
+       * `<bool name ="link_preview_enable_real_time_preview"> false </bool>`
+    
+       * `<bool name ="link_preview_enable_feature"> false </bool>`
+    
+     3. Disable In-conversation shortcut to new messages:
+    
+       * `<bool name ="scroll_down_indicator_enabled"> false </bool>`
+    
+       * `<bool name ="scroll_down_indicator_unread_summary_enabled"> false </bool>`

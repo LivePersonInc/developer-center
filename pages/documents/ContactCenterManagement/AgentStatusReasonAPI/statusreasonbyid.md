@@ -20,7 +20,7 @@ Get one Status reason by ID.
 
 | Method | URL |
 | :-------- | :------ |
-| GET | /api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
 
 ### Parameters
 
