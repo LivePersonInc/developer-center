@@ -9,7 +9,7 @@ permalink: function-as-a-service-developing-with-faas-events-templates.html
 indicator: both
 ---
 
-FaaS functions can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`. **Note** that the amount of lambdas connected to a specific event is restricted and can be seen in the table below.
+LivePerson Functions `lambdas` can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`. **Note** that the amount of lambdas connected to a specific event is restricted and can be seen in the table below.
 
 
 Currently the following events are supported:
@@ -78,7 +78,7 @@ Currently the following events are supported:
 
 Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
 
-Additionally, FaaS offers a number of templates that are not connected to events and can be used as a sample to kick-start the development of custom scenarios:
+Additionally, Functions offers a number of templates that are not connected to events and can be used as a sample to kick-start the development of custom scenarios:
 
 <table>
 <thead>

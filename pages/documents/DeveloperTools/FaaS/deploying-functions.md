@@ -11,7 +11,7 @@ Now that you have created and edited the function, let's talk about how you can 
 
 1. Using the "Create deployment" button in the **Deployment** tab allows you to start deployment. Proceed by selecting a function you'd like to deploy. If you start typing the function's name, the filter functionality will automatically search the available functions and find the one you need.
 
-2. The shortcut alternative to this process is to deploy from the context menu in the `lambda` itself, in the **Develop** tab (more info on this menu can be found [here](function-as-a-service-developing-with-faas.html#code-completion--context-menu)). The `lambda` will directly forward you to the deployment menu.
+2. The shortcut alternative to this process is to deploy from the context menu in the `lambda` itself, in the **Develop** tab (more info on this menu can be found [here](function-as-a-service-developing-with-functions.html#code-completion--context-menu)). The `lambda` will directly forward you to the deployment menu.
 
 ![](img/faas-deploy.png)
 
@@ -45,11 +45,11 @@ To the right of the "Deployment state" field, you will find the “Actions” fi
 
 **Please note** that you can only invoke functions that have been successfully deployed. When you’re in the "Develop" tab, this is indicated by the status of the function displaying as “Productive”. When in the “Deploy” tab, this will be indicated by the deployment state showing “Deployment successful”.
 
-Pressing the Invoke button will launch the 'Invoke your Fuction' (IyF) screen.
+Pressing the Invoke button will launch the 'Invoke your Function' (IyF) screen.
 
 The IyF screen contains three main items:
 
-The **Input** item contains the parameters with which your function will be called. By default it uses a payload appropriate for your function’s event. This payload can be manually edited to suit your testing scenario. These changes are not permanent and will be removed when reloading the FaaS website.
+The **Input** item contains the parameters with which your function will be called. By default it uses a payload appropriate for your function’s event. This payload can be manually edited to suit your testing scenario. These changes are not permanent and will be removed when reloading the LivePerson Functions website.
 
 The **Output** renders whatever your function produces during an invocation, be it a string, JSON or an exception. Like the Input, the Output is not permanently saved.
 
@@ -61,11 +61,11 @@ The **Logs** display any logging you have included in your function. It can disp
 
 [Missing Screenshot]: <> (Let's add a screenshot of the IyF log result screen here.)
 
-The different log-levels are: debug, info, warn and error. All functions take a string as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log item. An example for a function which is logged can be found in the [FaaS Templates](function-as-a-service-templates.html) (under "*Logging Template*").
+The different log-levels are: debug, info, warn and error. All functions take a string as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log item. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (under "*Logging Template*").
 
 <div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a token or password.
 
-In addition, logs are currently not persistent and are therefore only for debugging purposes in the FaaS UI. We're planning on adding log-storage with an analysis screen in the near future.</div>
+In addition, logs are currently not persistent and are therefore only for debugging purposes in the Functions UI. We're planning on adding log-storage with an analysis screen in the near future.</div>
 
 The template for the logging functions is as follows:
 
