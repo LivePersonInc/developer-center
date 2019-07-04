@@ -4,8 +4,10 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-external-invocations.html
+permalink: functions-external-invocations.html
 indicator: both
+redirect_from:
+  - function-as-a-service-external-invocations.html
 ---
 
 To give brands the option to call their functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth 2.0.

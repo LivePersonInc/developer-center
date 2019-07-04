@@ -5,8 +5,10 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Developing with FaaS
-permalink: function-as-a-service-developing-with-faas-whitelisting-domains.html
+permalink: functions-developing-with-faas-whitelisting-domains.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-whitelisting-domains.html
 ---
 In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. We have a proxy in place which will check incoming requests from functions and see if the requested URL is whitelisted.
 

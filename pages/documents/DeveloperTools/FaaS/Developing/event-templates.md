@@ -5,8 +5,10 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Developing with FaaS
-permalink: function-as-a-service-developing-with-faas-events-templates.html
+permalink: functions-developing-with-faas-events-templates.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-events-templates.html
 ---
 
 LivePerson Functions' `lambdas` can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`. **Note** that the amount of lambdas connected to a specific event is restricted and can be seen in the table below.

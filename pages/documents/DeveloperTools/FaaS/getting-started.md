@@ -4,8 +4,10 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-getting-started.html
+permalink: functions-getting-started.html
 indicator: both
+redirect_from:
+  - function-as-a-service-getting-started.html
 ---
 
 <div class="important">Over the next few months we'll be gradually rolling out LivePerson Functions and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot!</div>

@@ -5,8 +5,10 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Developing with FaaS
-permalink: function-as-a-service-developing-with-faas-overview.html
+permalink: functions-developing-with-faas-overview.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-overview.html
 ---
 
 

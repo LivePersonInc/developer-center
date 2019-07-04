@@ -4,8 +4,10 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-deploying-functions.html
+permalink: functions-deploying-functions.html
 indicator: both
+redirect_from:
+  - function-as-a-service-deploying-functions.html
 ---
 Now that you have created and edited the function, let's talk about how you can deploy it. We offer two deployment methods, although the second is simply a shortcut for the first.
 

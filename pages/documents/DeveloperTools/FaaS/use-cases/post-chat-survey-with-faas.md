@@ -5,8 +5,10 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Use Cases
-permalink: function-as-a-service-use-cases-post-chat-survey-transcripts.html
+permalink: functions-use-cases-post-chat-survey-transcripts.html
 indicator: chat
+redirect_from:
+  - function-as-a-service-use-cases-post-chat-survey-transcripts.html
 ---
 
 This use case showcases how the LivePerson Functions platform can help extend the LiveEngage platform functionality. In this case, we will use Functions to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.

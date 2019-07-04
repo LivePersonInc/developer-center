@@ -4,8 +4,10 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-external-invocations-client-credentials.html
+permalink: functions-external-invocations-client-credentials.html
 indicator: both
+redirect_from:
+  - function-as-a-service-external-invocations-client-credentials.html
 ---
 
 This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/). This is the preferred way to authorize for machine-to-machine communication.

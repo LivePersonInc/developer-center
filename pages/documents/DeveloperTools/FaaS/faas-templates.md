@@ -4,8 +4,10 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
-permalink: function-as-a-service-templates.html
+permalink: functions-templates.html
 indicator: both
+redirect_from:
+  - function-as-a-service-templates.html
 ---
 
 [Conditioned-Based Email Transcript via LiveEngage Chat](function-as-a-service-use-cases-post-conversation-survey-with-functions.html)
