@@ -11,7 +11,7 @@ Now that you have created and edited the function, let's talk about how you can 
 
 1. Using the "Create deployment" button in the **Deployment** tab allows you to start deployment. Proceed by selecting a function you'd like to deploy. If you start typing the function's name, the filter functionality will automatically search the available functions and find the one you need.
 
-2. The shortcut alternative to this process is to deploy from the context menu in the `lambda` itself, in the **Develop** tab (more info on this menu can be found [here](function-as-a-service-developing-with-functions.html#code-completion--context-menu)). The `lambda` will directly forward you to the deployment menu.
+2. The shortcut alternative to this process is to deploy from the context menu in the `lambda` itself, in the **Develop** tab (more info on this menu can be found [here](function-as-a-service-developing-with-faas-overview.html#code-completion--context-menu)). The `lambda` will directly forward you to the deployment menu.
 
 ![](img/faas-deploy.png)
 
