@@ -157,6 +157,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Entities
+          - subpagename: NLU Engines
       - pagename: Knowledge Base
       - pagename: Analytics
       - pagename: Best Practices
