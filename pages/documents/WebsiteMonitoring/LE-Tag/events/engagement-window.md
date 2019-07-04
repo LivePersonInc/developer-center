@@ -73,9 +73,8 @@ This event triggers when the conversation data was changed, for example the conv
    "agentId": 2,
    "conversationId": 4294973105,
    "state": "chatting",
-   "monitoringSessionId":       
-"WIoWBRC_RL6pkcK5fL-3-g.5bb46ddd7ae63b731b5eeb10189b15bc97226af0",
-"visitorId": "UYxShcOtSEWq0oSsuMCrOQ",
+   "monitoringSessionId": "WIoWBRC_RL6pkcK5fL-3-g.5bb46ddd7ae63b731b5eeb10189b15bc97226af0",
+   "visitorId": "UYxShcOtSEWq0oSsuMCrOQ",
    "skill": "MySkill",
    "engagementId": 1346152510,
    "campaignId": 1346152410,
