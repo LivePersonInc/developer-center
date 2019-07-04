@@ -60,14 +60,13 @@ body {
 }
 
 #confirmationHeader img {
-  width: 10%;
+  width: 210px;
   margin-top: 18px;
   margin-bottom: 18px;
   margin-left: 32px;
 }
 
 #heroPanel {
-  grid-row: 2 / span 1;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -111,7 +110,7 @@ body {
   background-color: #ff720b;
   margin-top: 55px;
   height: 40px;
-  width: 8%;
+  width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,6 +143,7 @@ body {
 
 #firstCardRow {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
   width: 100%;
@@ -197,7 +197,7 @@ body {
 .cardLinks {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 13px;
-  align-self: end;
+  align-self: flex-start;
   margin-left: 24px;
   flex: 1;
 }
@@ -214,9 +214,11 @@ body {
 
 #secondCardRow {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .secondConfirmCard {
@@ -322,4 +324,170 @@ body {
   margin-left: 5px;
   margin-right: 5px;
   color: #666666;
+}
+
+/* Media queries begin, don't panic! */
+
+@media screen and (max-width: 1240px) {
+
+  .subjectColumn {
+    flex: 2;
+  }
+}
+
+@media screen and (max-width: 946px) {
+
+  #confirmationWrapper {
+    grid-template-rows: 0.5fr 3fr 7fr 6fr 0.5fr;
+  }
+
+  .confirmCard:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .confirmCard:last-child {
+    margin-top: 36px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+
+  .secondConfirmCard {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .secondConfirmCard:last-child {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .confirmCard:first-child {
+    margin-left: 36px;
+  }
+
+  .confirmCard {
+    margin-bottom: 36px;
+  }
+
+  .confirmCard:last-child {
+    margin-top: 0;
+  }
+
+  .subjectColumn {
+    flex: 3;
+  }
+}
+
+@media screen and (max-width:450px){
+
+  @supports (display: grid) {
+
+    #confirmationWrapper {
+      grid-template-rows: 0.5fr 3fr 7fr 5fr 0.5fr;
+    }
+  }
+
+  #confirmationHeader img {
+    margin-top: 20px;
+  }
+
+  #confirmationTitle {
+    width: 70%;
+    font-size: 32px;
+  }
+
+  #confirmationSub {
+    padding: 0 60px;
+  }
+
+  #loginButton {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #secondTitle {
+    width: 80%;
+  }
+
+  .confirmCard {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+
+  .confirmCard:first-child {
+    margin-left: 0;
+  }
+
+  .secondConfirmCard {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .secondConfirmCard:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .subjectRow {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .subjectColumn {
+    margin-bottom: 10px;
+  }
+
+  .answerRow {
+    margin-left: 0;
+  }
+
+  .answerRow:first-child {
+    margin-top: 23px;
+  }
+
+  #footerText {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footerText a:first-child::before {
+    content: "";
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #666666;
+  }
+
+  .footerbottomspan {
+    margin-bottom: 5px;
+  }
+
+}
+
+@media screen and (max-width:360px){
+  #confirmationWrapper {
+    grid-template-rows: 0.5fr 2fr 6fr 5fr 0.5fr;
+  }
+
+  .confirmCard:last-child {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .secondConfirmCard {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .secondConfirmCard:last-child {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
