@@ -8,7 +8,7 @@ permalink: function-as-a-service-external-invocations-authorization-code.html
 indicator: both
 ---
 
-This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call LivePerson Functions on behalf a LiveEngage user such as an Agent or Administrator.
+This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call LivePerson Functions on behalf of a LiveEngage user such as an Agent or Administrator.
 
 **Note**: This grant type is redirection based. Only use this if a real user like an Agent is involved.
 
