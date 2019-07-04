@@ -188,6 +188,10 @@ input:-moz-placeholder { /* Firefox 18- */
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
+#byClicking span a {
+  text-decoration: none;
+}
+
 #registerButton {
   border-radius: 5px;
   background-color: #ff720b;
