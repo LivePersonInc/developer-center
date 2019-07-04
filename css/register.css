@@ -45,7 +45,7 @@ body {
 }
 
 #registerHeader img {
-  width: 10%;
+  width: 210px;
   margin-top: 18px;
   margin-bottom: 18px;
   margin-left: 32px;
@@ -204,4 +204,59 @@ input:-moz-placeholder { /* Firefox 18- */
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
+}
+
+/* Media queries begin, don't panic! */
+
+@media screen and (max-width: 1400px) {
+
+  #byClicking {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 824px) {
+  #formContainer {
+    flex-direction: column;
+  }
+
+  #formContainer hr {
+    height: 40px;
+    width: 95%;
+    margin-top: 40px;
+    border-top: 1px solid #d6d6d6;
+    border-left: none;
+  }
+
+  #captchaContainer {
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #registerContent {
+    align-items: center;
+  }
+
+  #registerTitle {
+    width: 60%;
+  }
+
+  #registerSub {
+    width: 50%;
+  }
+
+  #registerForm {
+    margin-right: 0;
+  }
+
+  #captchaContainer {
+    align-items: center;
+  }
+
+  #byClicking {
+    width: 70%;
+  }
+
 }
