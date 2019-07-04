@@ -24,7 +24,7 @@ Here are usage example, which are taken out of the official templates:
 
 ### Salesforce Client:
 
-Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting FaaS to any Salesforce system.
+Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting LivePerson Functions to any Salesforce system.
 
 ```javascript
 const { Toolbelt } = require('lp-faas-toolbelt');
@@ -119,8 +119,7 @@ secretClient.readSecret('my_Secret-Key')
 
 ### SMTP Client:
 
-SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client
-is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
+SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
 <div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
 
