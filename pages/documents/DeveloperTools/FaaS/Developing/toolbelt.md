@@ -5,8 +5,10 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Function as a Service
 subfoldername: Developing with FaaS
-permalink: function-as-a-service-developing-with-faas-toolbelt.html
+permalink: functions-developing-with-faas-toolbelt.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-toolbelt.html
 ---
 
 As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our `lp-faas-toolbelt` Node.js module, which is a language-specific utility library for lambdas.
@@ -24,7 +26,7 @@ Here are usage example, which are taken out of the official templates:
 
 ### Salesforce Client:
 
-Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting FaaS to any Salesforce system.
+Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting LivePerson Functions to any Salesforce system.
 
 ```javascript
 const { Toolbelt } = require('lp-faas-toolbelt');
@@ -119,8 +121,7 @@ secretClient.readSecret('my_Secret-Key')
 
 ### SMTP Client:
 
-SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client
-is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
+SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
 <div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
 

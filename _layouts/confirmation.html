@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ "css/confirmation.css" }}">
+     <meta name="description" content="LivePerson for Developers. Build on LiveEngage with our powerful digital toolbox">
+     <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
+     <meta name="author" content="LivePerson Inc.">
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,400,500,600,700,300" >
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,600,700,300" >
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400italic,700,700italic,300,600" >
+</head>
+<body>
+  <div id="confirmationWrapper">
+    <div id="confirmationHeader"><img id="confirmationLogo" src="img/liveengage-logo.svg" /></div>
+    <div id="heroPanel">
+      <span id="confirmationTitle">{{ page.pagename }}</span>
+      <span id="confirmationSub">{{ page.subtitle }}:</span>
+      <span id="accountNumber">Account number: <b>[123456]</b></span>
+      <span id="userID">User ID/Email: <b>[mail@email.com]</b></span>
+      <div id="loginButton"><span>Login</span></div>
+    </div>
+    <div id="secondPanel">
+      <span id="secondTitle">Start messaging your customers quickly and easily with our most popular solutions</span>
+      <div id="firstCardRow">
+        <div class="confirmCard">
+          <div class="cardContent">
+            <img class="cardImage" src="img/icon-web.svg">
+            <div class="cardText">
+              <span class="cardTitle">Web Messaging</span>
+              <span class="cardText">Quickly expand the functionality of your website with native messaging.</span>
+            </div>
+          </div>
+          <div class="cardLinks"><a href="">Get started</a></div>
+        </div>
+        <div class="confirmCard"></div>
+        <div class="confirmCard"></div>
+      </div>
+    </div>
+    <div id="confirmationFooter"></div>
+    </div>
+
+</body>
+</html>

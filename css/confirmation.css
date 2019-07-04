@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f6f6f8;
+  margin: 0;
+  padding-top: 0;
+}
+
+@supports (display: grid) {
+  #confirmationWrapper {
+    display: grid;
+    grid-template-rows: 0.5fr 4fr 6fr 6fr 0.5fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    background-color: #f6f6f8;
+  }
+
+  #confirmationHeader {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    background-image: linear-gradient(to right, #151f36, #5779da);
+  }
+
+  #heroPanel {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
+
+  #secondPanel {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+  }
+
+  #confirmationFooter {
+    grid-column: 1 /span 3;
+    grid-row: 5 /span 1;
+    background-color: #e5e5e5;
+  }
+}
+
+#confirmationHeader img {
+  width: 10%;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 32px;
+}
+
+#heroPanel {
+  grid-row: 2 / span 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#confirmationTitle {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: #ff720b;
+  margin-top: 45px;
+}
+
+#confirmationSub {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+  margin-top: 32px;
+}
+
+#accountNumber {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+  margin-top: 32px;
+}
+
+#userID {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+}
+
+#loginButton {
+  border-radius: 5px;
+  background-color: #ff720b;
+  margin-top: 55px;
+  height: 40px;
+  width: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginButton span {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#secondPanel {
+  background-color: #5879da;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#secondTitle {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+#firstCardRow {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  width: 100%;
+}
+
+.confirmCard {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 292px;
+  height: 166px;
+  margin-right: 36px;
+  background-color: #fff;
+  justify-content: center;
+}
+
+.confirmCard:last-child{
+  margin-right: 0;
+}
+
+.cardContent {
+  display: flex;
+  margin-left: 24px;
+  align-items: center;
+}
+
+.cardTitle {
+  
+}
