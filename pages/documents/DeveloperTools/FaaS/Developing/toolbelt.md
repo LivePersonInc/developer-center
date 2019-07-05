@@ -19,6 +19,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
+| Toolbelt.ConversationUtil(apiCredentials) | Returns an Conversation Util instance, which is configured using the provided api credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -153,5 +154,38 @@ is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares it
     text: "You can also send directly a html body by passing it as html."
   })
   .then(response => //TODO: react on the response)
+  .catch(err => //TODO: React to error);
+```
+
+### Conversation Util:
+
+Conversation Util allows to perform actions on conversations. Authorization is configured during instance creation.
+
+#### Get Conversation By ID
+
+This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object. 
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+
+  // set API Key credentials
+  const apiCredentials = {
+    oauthConsumerKey: '...',
+    oauthConsumerSecret: '...',
+    oauthAccessToken: '...',
+    oauthAccessTokenKey: '...',
+  }
+
+  // Create instance with API credentials
+  const conversationUtil = Toolbelt.ConversationUtil(
+    apiCredentials
+  );
+
+  // Get conversation
+  conversationUtil.getConversationById(conversationId)
+  .then(conversation => //TODO: react on the response)
   .catch(err => //TODO: React to error);
 ```
