@@ -19,8 +19,8 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
-| Toolbelt.ConversationUtil(apiCredentials) | Returns an Conversation Util instance, which is configured using the provided api credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
-| Toolbelt.GDPRUtil() | Returns an GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
+| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
+| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -160,7 +160,7 @@ is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares it
 
 ### Conversation Util:
 
-Conversation Util allows to perform actions on conversations. Authorization is configured during instance creation.
+The Conversation Util method allows to perform actions on conversations, which are listed below. Authorization is configured during instance creation.
 
 #### Get Conversation By ID
 
@@ -193,11 +193,11 @@ This method retrieves a conversation from the [Messaging Interactions API](https
 
 ### GDPR Util:
 
-Provides GDPR related functionality, such as replacing files of a conversation.
+This method provides GDPR related functionality, such as deleting transcripts of a conversation.
 
 #### Replace files of a conversation
 
-<div class="important">This will remove all files of conversation a permanently! Contact your Account Manager to get access.</div>
+<div class="important">This will remove all files and transcripts of a conversation permanently! Contact your Account Manager to get access.</div>
 
 This method replaces all files of a conversation from LivePerson's [file storage](https://developers.liveperson.com/file-sharing-file-sharing-for-web-messaging.html#introduction). It expects a conversation, the credentials for the file storage, a callback for filtering files and replacement image.
 
