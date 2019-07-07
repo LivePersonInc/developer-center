@@ -488,7 +488,7 @@
 - categoryname: Developer Tools
   image: developer-tools
   documents:
-  - documentname: Function as a Service
+  - documentname: Functions
     pages:
       - pagename: Overview
       - pagename: Getting Started
