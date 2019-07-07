@@ -20,7 +20,7 @@ Further information about OAuth 2.0 and how we use it:
 
 ### Step 1: Generate client-id & client-secret:
 
-* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information).
+* Execute the **App Installation** process in order to generate a `client-id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/authorizing-liveengage-applications-overview.html#getting-started) guide for more detailed information).
 
 ### Step 2: Create User
 

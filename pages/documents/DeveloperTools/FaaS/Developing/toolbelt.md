@@ -21,6 +21,8 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
+| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
+| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -155,4 +157,92 @@ SMTP Client allows the sending of emails via the SMTP Protocol. It is configured
   })
   .then(response => //TODO: react on the response)
   .catch(err => //TODO: React to error);
+```
+
+### Conversation Util:
+
+The Conversation Util method allows to perform actions on conversations, which are listed below. Authorization is configured during instance creation.
+
+#### Get Conversation By ID
+
+This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object. 
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+
+  // set API Key credentials
+  const apiCredentials = {
+    oauthConsumerKey: '...',
+    oauthConsumerSecret: '...',
+    oauthAccessToken: '...',
+    oauthAccessTokenKey: '...',
+  }
+
+  // Create instance with API credentials
+  const conversationUtil = Toolbelt.ConversationUtil(
+    apiCredentials
+  );
+
+  // Get conversation
+  conversationUtil.getConversationById(conversationId)
+  .then(conversation => //TODO: react on the response)
+  .catch(err => //TODO: React to error);
+```
+
+### GDPR Util:
+
+This method provides GDPR related functionality, such as deleting transcripts of a conversation.
+
+#### Replace files of a conversation
+
+<div class="important">This will remove all files and transcripts of a conversation permanently! Contact your Account Manager to get access.</div>
+
+This method replaces all files of a conversation from LivePerson's [file storage](https://developers.liveperson.com/file-sharing-file-sharing-for-web-messaging.html#introduction). It expects a conversation, the credentials for the file storage, a callback for filtering files and replacement image.
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+
+  // set API Key credentials
+  const apiCredentials = {
+    oauthConsumerKey: '...',
+    oauthConsumerSecret: '...',
+    oauthAccessToken: '...',
+    oauthAccessTokenKey: '...',
+  }
+
+  // set file storage credentials (get from Account Manager)
+  const fileStorageCredentials = {
+    username: '...',
+    password: '...'
+  }
+
+  // Create Conversation Util instance with API credentials
+  const conversationUtil = Toolbelt.ConversationUtil(
+    apiCredentials
+  );
+
+  // Create GDPR Util instance
+  const gdprUtil = Toolbelt.GDPRUtil();
+  const shouldReplace = (filePath) => ... // filter here by returning boolean
+  const replacementFile = {
+    body: Buffer.from('...', 'base64'), // create file from base64
+    contentType: 'image/png',
+  };
+
+  // Get conversation and replace files
+  conversationUtil.getConversationById(conversationId)
+    .then(conversation => gdprUtil.replaceConversationFiles(
+          conversation,
+          fileStorageCredentials,
+          shouldReplace, //(optional) defaults to (path) => true
+          replacementFile, //(optional) defaults to a black 1px*1px png
+    ))
+    .then(replacedFiles => //TODO: react on the response)
+    .catch(err => //TODO: React to error);
 ```
