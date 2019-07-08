@@ -618,12 +618,24 @@ function isExplorer() {
 		var documenttitlecontainer = document.getElementById('documenttitlecontainer');
 		var footer = document.getElementById('defaultfooter');
 		var content = document.getElementById('defaultcontent')
+		var heroPanel = document.getElementById('heroPanel')
+		var cardInnerText = document.getElementsByClassName('cardInnerText');
+		var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
+		var thirdPanel = document.getElementById('thirdPanel');
+		var confirmationFooter = document.getElementById('confirmationFooter');
+		var formContainer = document.getElementById('formContainer');
 		wrapper.classList.add('defaultwrapperexplorer');
 		header.classList.add('defaultheaderexplorer');
 		sidebar.classList.add('defaultsidebarexplorer');
 		documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
 		footer.classList.add('defaultfooterexplorer');
 		content.classList.add('defaultcontentexplorer');
+		heroPanel.classList.add('heroPanelExplorer');
+		cardInnerText.classList.add('cardInnerTextExplorer');
+		secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
+		thirdPanel.classList.add('thirdPanelExplorer');
+		confirmationFooter.classList.add('confirmationFooterExplorer');
+		formContainer.classList.add('formContainerExplorer');
 	}
 };
 
