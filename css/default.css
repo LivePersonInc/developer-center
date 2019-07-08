@@ -1189,6 +1189,31 @@ a.anchoritem {
  margin-left: 400px;
 }
 
+.heroPanelExplorer {
+  margin-bottom: 50px;
+}
+
+.cardInnerTextExplorer {
+  width: 40%;
+}
+
+.secondConfirmCardImgExplorer {
+  display: none;
+}
+
+.thirdPanelExplorer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.confirmationFooterExplorer {
+  height: 50px;
+}
+
+.formContainerExplorer {
+  margin-left: 150px;
+}
+
 #apiList {
   display: none;
   height: 165px;
