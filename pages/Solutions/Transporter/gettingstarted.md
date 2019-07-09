@@ -59,8 +59,7 @@ Once you have scanned your unique QR code with your device, enter the 6 digit ve
 
 ### Single Sign-on
 
-All users of Data Transporter may now login via Single Sign-on instead of regular username / password.
-This provides accounts with Agent SSO enabled to also utilise Data Transporter - in addition, non Agent SSO users can take advantage of the Simultaneous Login feature this provides when using the SSO option.
+All users of Data Transporter may now login via Single Sign-on instead of regular username / password. This provides accounts with Agent SSO enabled to also utilise Data Transporter. In addition, accounts without Agent SSO enabled would normally see their agents logged out when their user was used to log into the transporter. With SSO now a part of transporter, non Agent SSO users can take advantage of the Simultaneous Login feature this provides to avoid that.
 
 **How to Enable**
 
