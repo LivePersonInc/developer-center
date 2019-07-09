@@ -20,7 +20,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |                                                                                                     |
+| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
 | Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
@@ -36,9 +36,9 @@ const sfClient = Toolbelt.SFClient(); // for API docs look @ hhtps://jsforce.git
 
 //This will establish a connection with SF. And leverage Access Token / Refresh Token to login
 const con = sfClient.connectToSalesforce({
-	      loginUrl: "https://test.salesforce.com",
-	      accessToken: "PROVIDE_YOUR_ACCESS_TOKEN", //Obtain it from Secret Store
-	      refreshToken: "PROVIDE_YOUR_REFRESH_TOKEN" // Obtain it from Secret Store
+	loginUrl: "https://test.salesforce.com",
+	accessToken: "PROVIDE_YOUR_ACCESS_TOKEN", //Obtain it from Secret Store
+	refreshToken: "PROVIDE_YOUR_REFRESH_TOKEN" // Obtain it from Secret Store
 });
 
 con.query(query, function(err, queryResult) {
