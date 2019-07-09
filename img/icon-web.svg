@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="57" viewBox="0 0 36 57">
-    <g fill="none" fill-rule="evenodd">
-        <path fill="#FFF" d="M34.537 1.034L1.057 1 1 55.966 34.481 56z"/>
-        <path stroke="#162036" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M34.537 1.034L1.057 1 1 55.966 34.481 56z"/>
-        <path stroke="#162036" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.782 4.31L4.713 5.923 6.78 7.54M1.405 10.489l33.033.034"/>
-        <path stroke="#FF720B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.999 21.252l-13.607-.014a3.045 3.045 0 0 1 .006-6.088l13.607.015a3.044 3.044 0 1 1-.006 6.087z"/>
-        <path stroke="#162036" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M28.15 31.106l-13.607-.014a3.043 3.043 0 0 1 .006-6.087l13.607.014a3.043 3.043 0 1 1-.006 6.087z"/>
-        <path stroke="#FF720B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.979 40.946l-13.607-.014a3.044 3.044 0 0 1 .006-6.087l13.607.014a3.044 3.044 0 0 1-.006 6.087z"/>
-    </g>
-</svg>
+<svg id="desktop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 72"><defs><style>.cls-1{fill:#fff;}.cls-1,.cls-2{stroke:#162036;}.cls-1,.cls-2,.cls-3{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}.cls-2,.cls-3{fill:none;}.cls-3{stroke:#ff720b;}</style></defs><title>icon</title><rect class="cls-1" x="6.53" y="8.52" width="33.94" height="54.97" transform="translate(0.04 -0.02) rotate(0.06)"/><polyline class="cls-2" points="12.36 11.81 10.26 13.42 12.36 15.04"/><line class="cls-2" x1="6.91" y1="17.99" x2="40.4" y2="18.02"/><rect class="cls-3" x="9.9" y="22.66" width="19.97" height="6.09" rx="3.04" transform="translate(0.03 -0.02) rotate(0.06)"/><rect class="cls-2" x="17.15" y="32.51" width="19.97" height="6.09" rx="3.04" transform="translate(0.04 -0.03) rotate(0.06)"/><rect class="cls-3" x="9.88" y="42.35" width="19.97" height="6.09" rx="3.04" transform="translate(0.05 -0.02) rotate(0.06)"/></svg>

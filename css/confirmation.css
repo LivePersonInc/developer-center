@@ -164,6 +164,10 @@ body {
   margin-right: 0;
 }
 
+.cardImage {
+  width: 50px;
+}
+
 .cardContent {
   display: flex;
   margin-left: 24px;
@@ -191,7 +195,7 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 13px;
   color: #666666;
-  padding-right: 35px;
+  padding-right: 15px;
 }
 
 .cardLinks {
