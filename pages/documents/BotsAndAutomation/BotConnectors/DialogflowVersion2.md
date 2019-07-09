@@ -23,9 +23,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 
 Figure 1.1 Showing the configuration that needed to be filled
 
-
 The following Dialogflow V2 information should be provided to LivePerson:
-
 
 <table>
   <thead>
@@ -91,7 +89,7 @@ The following Dialogflow V2 information should be provided to LivePerson:
   </tbody>
 </table>
 
-**NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with *Read Only API access*. A *service account* is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
+**NOTE**: Dialogflow V2 adheres to Google’s oAuth2 unlike the V1 implementation. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow V2 client with _Read Only API access_. A _service account_ is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
 
 The expected output of a service account setup is a JSON file, example below:
 
@@ -99,20 +97,20 @@ The expected output of a service account setup is a JSON file, example below:
 
 ```json
 {
-    "type": "service_account",
-    "project_id": "[PROJECT-ID]",
-    "private_key_id": "[KEY-ID]",
-    "private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
-    "client_email": "[SERVICE-ACCOUNT-EMAIL]",
-    "client_id": "[CLIENT-ID]",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://accounts.google.com/o/oauth2/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
+  "type": "service_account",
+  "project_id": "[PROJECT-ID]",
+  "private_key_id": "[KEY-ID]",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
+  "client_email": "[SERVICE-ACCOUNT-EMAIL]",
+  "client_id": "[CLIENT-ID]",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
 }
 ```
-Figure 1.2
 
+Figure 1.2
 
 **NOTE**: The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
 
@@ -129,8 +127,7 @@ Figure 1.4 Showing the success case of the valid credentials
 
 Figure 1.5 Showing the fail case of the invalid credentials
 
-Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Google DialogFlow V2 bot.
-
+Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Google DialogFlow V2 bot.
 
 {: .important}
 Following guide is going to introduce how to implement functions specifically for **Dialogflow V2** using [Dialogflow console](https://console.dialogflow.com/api-client/). Continue if you are familiar and have access to [Dialogflow console](https://console.dialogflow.com/api-client/).
@@ -144,18 +141,17 @@ The Dialogflow V2 service has a <a href="https://dialogflow.com/docs/reference/a
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
 </div>
 
+1. Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
-1. Create an intent with an event using the string:  DIALOGFLOW_CHAR_LIMIT
+   <img style="width:600px" src="img/dialogflowversion2/image_7.png">
 
-    <img style="width:600px" src="img/dialogflowversion2/image_7.png">
-
-    Figure 2.1
+   Figure 2.1
 
 2. Do not forget to add a custom response in the **Text response** section.
 
-    <img style="width:700px" src="img/dialogflowversion2/image_8.png">
+   <img style="width:700px" src="img/dialogflowversion2/image_8.png">
 
-    Figure 2.2
+   Figure 2.2
 
 ### Welcome Event
 
@@ -197,7 +193,6 @@ The below documents cover where to configure the initial message on a given plat
   </tbody>
 </table>
 
-
 A Chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response.
 In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
 
@@ -207,8 +202,6 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
 Figure 3.1
 
-
-
 ### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **action** value in the response object.
@@ -216,7 +209,7 @@ Change the TTR of a conversation based on the **action** value in the response o
 LivePerson Messaging uses 4 different types of priorities:
 "URGENT",
 “NORMAL”
- “PRIORITIZED”
+“PRIORITIZED”
 “CUSTOM”
 
 Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
@@ -233,14 +226,14 @@ This is achieved using the built in "Actions and Parameters" section of the Dial
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
-1. Explicit request from visitor to transfer to an agent  (Eg, action : transfer)
+1. Explicit request from visitor to transfer to an agent (Eg, action : transfer)
 
 2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
-Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.
+   Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.
 
 3. If there is a internal error or the bot service cannot be reached the connector will transfer to a default skill set up during configuration.
 
-Transfers and escalations rely on the *action* item in the response object.
+Transfers and escalations rely on the _action_ item in the response object.
 
 Action: **TRANSFER (Case sensitive)**
 
@@ -254,7 +247,7 @@ Figure 4.1
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-To send structured content via Dialogflow V2, send a *custom payload* option via an intent.
+To send structured content via Dialogflow V2, send a _custom payload_ option via an intent.
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_11.png">
 
@@ -262,45 +255,48 @@ Figure 5.1
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
-
 **NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload.
-
 
 Example Metadata
 
 ```json
 {
-   "metadata": {      //Mandatory
-      "type": "ExternalId",    //Mandatory
-      "id": "ABCD1234"      //Mandatory
-   },
-   "structuredContent": {     //Mandatory
-      "type": "vertical",
-      "elements": [
-         {
-            "type": "image",
-            "url": "https://i.ytimg.com/vi/zmeByDJ02mQ/hqdefault.jpg",
-            "tooltip": "image tooltip"
-         },
-         {
-            "type": "text",
-            "text": "product name (Title)",
-            "tooltip": "product name (Title)"
-         },
-         {
-            "type": "text",
-            "text": "product category (type)",
-            "tooltip": "product category (type)"
-         },
-         {
-            "type": "text",
-            "text": "$155.99",
-            "tooltip": "$155.99"
-         }
-      ]
-   }
+  "metadata": [
+    {
+      //Mandatory
+      "type": "ExternalId", //Mandatory
+      "id": "ABCD1234" //Mandatory
+    }
+  ],
+  "structuredContent": {
+    //Mandatory
+    "type": "vertical",
+    "elements": [
+      {
+        "type": "image",
+        "url": "https://i.ytimg.com/vi/zmeByDJ02mQ/hqdefault.jpg",
+        "tooltip": "image tooltip"
+      },
+      {
+        "type": "text",
+        "text": "product name (Title)",
+        "tooltip": "product name (Title)"
+      },
+      {
+        "type": "text",
+        "text": "product category (type)",
+        "tooltip": "product category (type)"
+      },
+      {
+        "type": "text",
+        "text": "$155.99",
+        "tooltip": "$155.99"
+      }
+    ]
+  }
 }
 ```
+
 Figure 5.2 Dialogflow Example Custom Payload
 
 ### Close Chat/Conversation
