@@ -194,7 +194,7 @@ This method retrieves a conversation from the [Messaging Interactions API](https
 
 #### Scan Conversation For Keywords
 
-This method scans a conversation that has been retrieved with `getConversationById()` (s. method above) for messages containing certain keywords. Those keywords can be freely determined.
+This method scans a conversation that has been retrieved with `getConversationById()` (s. method above) for messages containing certain keywords. Those keywords can be freely determined and are case insensitive.
 
 **Sample Usage**
 
