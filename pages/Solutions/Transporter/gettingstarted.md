@@ -7,7 +7,7 @@ permalink: transporter-getting-started.html
 indicator: Both
 ---
 
-<div class="important"> Transporter is currently a Beta feature - users must agree to our Data Application Beta terms of use upon login. It is currently only available in our Alpha environment and scheduled to be available in other environments globally in Q1 2019 (as a Beta feature).
+<div class="important"> Transporter is currently a Beta feature - users must agree to our Data Application Beta terms of use upon login.
 <br>
 <br>
 <b>Please be aware that some elements and usability may change as we finalize this feature.</b>
@@ -26,7 +26,7 @@ Login to Transporter requires:
 ### How to access the Transporter
 
 Access to Transporter is strictly by request - speak to your account manager to discuss pricing and availability.
-Once your account is enabled, you can begin by logging into the Alpha environment via [https://va-a.transporter.liveperson.net](https://va-a.transporter.liveperson.net) (access to Alpha subject to be revoked once application is generally available).
+Once your account is enabled, you can begin by logging in via [https://transporter.liveperson.net](https://transporter.liveperson.net)
 
 #### Login Page  
 
@@ -57,6 +57,16 @@ If this is the first time you are logging in, you will need to enroll - simply d
 
 Once you have scanned your unique QR code with your device, enter the 6 digit verification code to continue.  On subsequent logins, you will be prompted to enter a new 6 digit code as shown on your devices Authenticator Application - do not lose your 2FA token.
 
+### Single Sign-on
+
+All users of Data Transporter may now login via Single Sign-on instead of regular username / password. This provides accounts with Agent SSO enabled to also utilise Data Transporter. In addition, accounts without Agent SSO enabled would normally see their agents logged out when their user was used to log into the transporter. With SSO now a part of transporter, non Agent SSO users can take advantage of the Simultaneous Login feature this provides to avoid that.
+
+**How to Enable**
+
+From the main login page (https://transporter.liveperson.net/login), simply enter your account number and then click “Single Sign-on” link below the regular “Sign in” button.
+Alternatively, use the following shortcut:
+https://transporter.liveperson.net/sso/YOUR_ACCOUNT_NUMBER
+
 ### Task Manager
 
 The TASKS page will show each task you have configured in Transporter - if this is your first time logging in, no tasks will have yet been configured.
@@ -76,7 +86,7 @@ To the left of the Task Manager, you'll find the Navigation bar. This bar contai
 
 **SFTP_AMAZON_GOOGLE**: setup your report destination authorization.
 
-**ACCOUNT**: configure your timezone and set your encryption keys.
+**ACCOUNT**: configure your timezone, set your encryption keys, and customize filenames and data delimiters used by Transporter.
 
 ### Initial Configuration
 
