@@ -82,7 +82,7 @@ Searches the secret that belongs to the provided key. Will raise an error if the
 
 | Returns | Description |
 | :------- | :----- |
-| secretEntry | Promise which resolves to an Object with properties `key` & `value` |
+| secretEntry | Object with properties `key` & `value` |
 
 **SecretClient.updateSecret**
 
@@ -94,7 +94,7 @@ Updates the secret with the provided update entry.
 
 | Returns | Description |
 | :------- | :----- |
-| secretEntry | Promise which resolves to the created Secret with properties `key` & `value` |
+| secretEntry | Created entry |
 
 **Sample Usage**
 
