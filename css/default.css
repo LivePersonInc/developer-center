@@ -625,8 +625,16 @@ table tbody td img {
   justify-content: center;
 }
 
-.loginButton {
+.sidebarbuttons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.loginText {
   margin-right: 12px;
+}
+
+.loginButton {
   background-color: #5879DA;
 }
 
