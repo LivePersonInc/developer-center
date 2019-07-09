@@ -488,7 +488,7 @@
 - categoryname: Developer Tools
   image: developer-tools
   documents:
-  - documentname: Functions
+  - documentname: LivePerson Functions
     pages:
       - pagename: Overview
       - pagename: Getting Started
