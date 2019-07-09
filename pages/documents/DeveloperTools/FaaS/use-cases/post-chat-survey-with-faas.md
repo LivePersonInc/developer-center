@@ -3,7 +3,7 @@ pagename: Post Chat Survey Transcripts
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 subfoldername: Use Cases
 permalink: functions-use-cases-post-chat-survey-transcripts.html
 indicator: chat

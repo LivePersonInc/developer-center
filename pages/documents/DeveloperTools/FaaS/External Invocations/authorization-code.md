@@ -3,7 +3,7 @@ pagename: Authorization Code
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 permalink: functions-external-invocations-authorization-code.html
 indicator: both
 redirect_from:

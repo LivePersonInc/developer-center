@@ -3,7 +3,7 @@ pagename: Templates
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 permalink: functions-templates.html
 indicator: both
 redirect_from:

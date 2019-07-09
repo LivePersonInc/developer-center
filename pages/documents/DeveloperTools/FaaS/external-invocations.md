@@ -3,7 +3,7 @@ pagename: External Invocations
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 permalink: functions-external-invocations.html
 indicator: both
 redirect_from:

@@ -3,7 +3,7 @@ pagename: Messaging Conversations
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 subfoldername: Use Cases
 permalink: functions-use-cases-messaging-conversations.html
 indicator: both

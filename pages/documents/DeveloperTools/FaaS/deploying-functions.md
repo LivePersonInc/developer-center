@@ -3,7 +3,7 @@ pagename: Deploying Functions
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 permalink: functions-deploying-functions.html
 indicator: both
 redirect_from:

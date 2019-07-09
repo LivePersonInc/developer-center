@@ -3,7 +3,7 @@ pagename: Toolbelt
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: functions-developing-with-faas-toolbelt.html
 indicator: both

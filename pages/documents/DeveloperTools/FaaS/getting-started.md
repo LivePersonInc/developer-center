@@ -3,7 +3,7 @@ pagename: Getting Started
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 permalink: functions-getting-started.html
 indicator: both
 redirect_from:
