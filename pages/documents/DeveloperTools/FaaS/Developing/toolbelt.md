@@ -15,14 +15,14 @@ As mentioned in the [Getting Started document](function-as-a-service-getting-sta
 
 Currently, the Toolbelt offers the following methods:
 
-| Method | Description |
-| :------- | :----- |
-| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
+| Method                                    | Description                                                                                                                                                                              |
+| :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Toolbelt.SFClient()                       | Returns a Salesforce Client, that is configured to work with the FaaS Proxy.                                                                                                             |
+| Toolbelt.HTTPClient()                     | Returns a HTTP Client, that is configured to work with the FaaS Proxy.                                                                                                                   |
+| Toolbelt.SecretClient()                   | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage.                                                                                               |
+| Toolbelt.SMTPClient(config)               | Returns an SMTP Client instance, which is configured using the provided config.                                                                                                          |
 | Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
-| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
+| Toolbelt.GDPRUtil()                       | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation.                                                                            |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -31,19 +31,17 @@ Here are usage example, which are taken out of the official templates:
 Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting LivePerson Functions to any Salesforce system.
 
 ```javascript
-const { Toolbelt } = require('lp-faas-toolbelt');
+const { Toolbelt } = require("lp-faas-toolbelt");
 const sfClient = Toolbelt.SFClient(); // for API docs look @ hhtps://jsforce.github.io/
 
 //This will establish a connection with SF. And leverage Access Token / Refresh Token to login
 const con = sfClient.connectToSalesforce({
-	loginUrl: "https://test.salesforce.com",
-	accessToken: "PROVIDE_YOUR_ACCESS_TOKEN", //Obtain it from Secret Store
-	refreshToken: "PROVIDE_YOUR_REFRESH_TOKEN" // Obtain it from Secret Store
+  loginUrl: "https://test.salesforce.com",
+  accessToken: "PROVIDE_YOUR_ACCESS_TOKEN", //Obtain it from Secret Store
+  refreshToken: "PROVIDE_YOUR_REFRESH_TOKEN" // Obtain it from Secret Store
 });
 
-con.query(query, function(err, queryResult) {
-
-});
+con.query(query, function(err, queryResult) {});
 ```
 
 ### HTTP Client:
@@ -76,49 +74,50 @@ Storage Client that is able to read & update secret values. The following method
 
 Searches the secret that belongs to the provided key. Will raise an error if there is no secret for the provided key.
 
-| Parameter | Description |
-| :------- | :----- |
-| key | Name of the secret |
+| Parameter | Description        |
+| :-------- | :----------------- |
+| key       | Name of the secret |
 
-| Returns | Description |
-| :------- | :----- |
+| Returns     | Description                                                         |
+| :---------- | :------------------------------------------------------------------ |
 | secretEntry | Promise which resolves to an Object with properties `key` & `value` |
 
 **SecretClient.updateSecret**
 
 Updates the secret with the provided update entry.
 
-| Parameter | Description |
-| :------- | :----- |
-| secretEntry |  Object with properties `key` & `value` |
+| Parameter   | Description                            |
+| :---------- | :------------------------------------- |
+| secretEntry | Object with properties `key` & `value` |
 
-| Returns | Description |
-| :------- | :----- |
+| Returns     | Description                                                                  |
+| :---------- | :--------------------------------------------------------------------------- |
 | secretEntry | Promise which resolves to the created Secret with properties `key` & `value` |
 
 **Sample Usage**
 
 ```javascript
 // import FaaS Toolbelt
-const { Toolbelt } = require('lp-faas-toolbelt');
+const { Toolbelt } = require("lp-faas-toolbelt");
 // obtain SecretClient from Toolbelt
 const secretClient = Toolbelt.SecretClient();
 // this is how you can access your stored secret
-secretClient.readSecret('my_Secret-Key')
-.then(mySecret => {
-  // Fetching the secret value
-  const value = mySecret.value
-  // you can also update your secret e.g. if you received a new OAuth2 token
-  mySecret.value = 'nEw.oaUtH2-tOKeN!!11!';
-  return secretClient.updateSecret(mySecret)
-})
-.then(_ => {
-  callback(null, { message: 'Successfully updated secret' });
-})
-.catch(err => {
-  console.error(`Failed during secret operation with ${err.message}`)
-  callback(err, null);
-});
+secretClient
+  .readSecret("my_Secret-Key")
+  .then(mySecret => {
+    // Fetching the secret value
+    const value = mySecret.value;
+    // you can also update your secret e.g. if you received a new OAuth2 token
+    mySecret.value = "nEw.oaUtH2-tOKeN!!11!";
+    return secretClient.updateSecret(mySecret);
+  })
+  .then(_ => {
+    callback(null, { message: "Successfully updated secret" });
+  })
+  .catch(err => {
+    console.error(`Failed during secret operation with ${err.message}`);
+    callback(err, null);
+  });
 ```
 
 ### SMTP Client:
@@ -126,7 +125,6 @@ secretClient.readSecret('my_Secret-Key')
 SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
 <div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
-
 
 **Sample Usage**
 
@@ -161,11 +159,11 @@ SMTP Client allows the sending of emails via the SMTP Protocol. It is configured
 
 ### Conversation Util:
 
-The Conversation Util method allows to perform actions on conversations, which are listed below. Authorization is configured during instance creation.
+The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation.
 
 #### Get Conversation By ID
 
-This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object. 
+This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object.
 
 **Sample Usage**
 
@@ -190,6 +188,74 @@ This method retrieves a conversation from the [Messaging Interactions API](https
   conversationUtil.getConversationById(conversationId)
   .then(conversation => //TODO: react on the response)
   .catch(err => //TODO: React to error);
+```
+
+#### Scan Conversation For Keywords
+
+This method scans a conversation that has been retrieved with `getConversationById()` (s. method above) for messages containing certain keywords. Those keywords can be freely determined.
+
+**Sample Usage**
+
+```javascript
+// import FaaS Toolbelt
+const { Toolbelt } = require("lp-faas-toolbelt");
+
+// set API Key credentials
+const apiCredentials = {
+  oauthConsumerKey: "...",
+  oauthConsumerSecret: "...",
+  oauthAccessToken: "...",
+  oauthAccessTokenKey: "..."
+};
+
+// Create instance with API credentials
+const conversationUtil = Toolbelt.ConversationUtil(apiCredentials);
+
+// Get conversation
+const conversation = await conversationUtil.getConversationById(conversationId);
+
+// Determine Keywords
+const keywords = ["Keyword", "awesome"];
+
+// Scan Conversation for Keywords
+const scannerResult = conversationUtil.scanConversationForKeywords(
+  conversation,
+  keywords
+);
+```
+
+**Sample Result**
+
+The method collects every message which contains a keyword in an array. It retrieves a timestamp, the information who sent the message and adds a tag because of which keyword the message has been selected. If one message contains more than one keyword it will appear as often in the array. (s. example underneath)
+
+| Attribute     | Description                                                                          | Type/Value |
+| :------------ | :----------------------------------------------------------------------------------- | :--------- |
+| message       | The whole message which is containing at least one keyword                           | string     |
+| sentTimestamp | Timestamp (Current Unix epoch time in milliseconds) when the message was sent        | number     |
+| sentBy        | Who the conversation was sent by                                                     | string     |
+| tag           | Tag stating because of which keyword the message is included in the scanner Results. | string     |
+
+```javascript
+[
+  {
+    message: "Will we use Keywords in this conversation?",
+    sentTimestamp: 1560764690328,
+    sentBy: "Consumer",
+    tag: "keywordRef:Keyword"
+  },
+  {
+    message: "We definetely will, because keywords are awesome!",
+    sentTimestamp: 1560764734592,
+    sentBy: "Agent",
+    tag: "keywordRef:Keyword"
+  },
+  {
+    message: "We definetely will, because keywords are awesome!",
+    sentTimestamp: 1560764734592,
+    sentBy: "Agent",
+    tag: "keywordRef:awesome"
+  }
+];
 ```
 
 ### GDPR Util:
