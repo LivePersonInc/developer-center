@@ -492,14 +492,14 @@
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Developing
+      - pagename: Developing with LivePerson Functions
         subpages:
           - subpagename: Overview
           - subpagename: "Events & Templates"
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
-      - pagename: Deploying
+      - pagename: Deploying LivePerson Functions
       - pagename: External Invocations
       - pagename: Use Cases
         subpages:
