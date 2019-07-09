@@ -152,6 +152,7 @@
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assist
+            - subpagename: Integrations
             - subpagename: Scripting Functions
       - pagename: Intent Builder
         subpages:
