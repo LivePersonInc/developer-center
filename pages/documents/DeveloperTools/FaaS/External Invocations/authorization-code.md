@@ -60,13 +60,9 @@ However, instead of hardcoding the authorization server, it is recommended to us
 
 ### Step 5: Get the **lambda UUID** from LivePerson Functions
 
-Use the Functions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deploy** tab and opening the Invoke your Function screen by clicking "Invoke" on the function.
+Use the Functions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deployments** section and opening the Invoke your Function screen by clicking "Invoke" on the function. The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
 
 ![](img/faas-invokeuuid.png)
-
-The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
-
-![](img/faas-uuid.png)
 
 ### Step 6: Generate OAuth 2.0 token
 

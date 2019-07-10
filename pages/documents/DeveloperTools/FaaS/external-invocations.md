@@ -64,7 +64,7 @@ However, instead of hardcoding the authorization server, it is recommended to us
 
 ### Step 5: Get the **lambda UUID** from Functions
 
-Use the Funtions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deploy** tab and opening the Invoke your Function screen by clicking "Invoke" on the function.
+Use the Funtions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deployments** section and opening the Invoke your Function screen by clicking "Invoke" on the function.
 
 ![](img/faas-invokeuuid.png)
 

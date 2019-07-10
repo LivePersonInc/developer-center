@@ -81,8 +81,6 @@ Create a new function using one of the messaging templates.
 
 Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
-![](img/faas-messaging.png)
-
 #### Step 2 - Edit the Function
 
 Adjust the coding from the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open):
