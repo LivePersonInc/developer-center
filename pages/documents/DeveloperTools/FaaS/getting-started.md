@@ -137,7 +137,7 @@ You can configure these permissions in LiveEngage. More info on adding permissio
 
 In case the [single sign-on (SSO) unified login feature](https://knowledge.liveperson.com/security-regulations-login-sso-unified-login.html) is enabled for your account, then the normal login flow cannot be used to login into LivePerson Functions.
 
-Please follow this steps in order to get SSO unified login working with LivePerson Functions:
+Please follow these steps in order to get SSO unified login working with LivePerson Functions:
 
 * Contact your LivePerson account representative to get SSO Unified Login feature enabled for your account.
 
