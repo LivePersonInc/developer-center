@@ -161,7 +161,7 @@ SMTP Client allows the sending of emails via the SMTP Protocol. It is configured
 
 ### Conversation Util:
 
-The Conversation Util method allows to perform actions on conversations, which are listed below. Authorization is configured during instance creation.
+The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation.
 
 #### Get Conversation By ID
 
@@ -190,6 +190,74 @@ This method retrieves a conversation from the [Messaging Interactions API](https
   conversationUtil.getConversationById(conversationId)
   .then(conversation => //TODO: react on the response)
   .catch(err => //TODO: React to error);
+```
+
+#### Scan Conversation For Keywords
+
+This method scans a conversation that has been retrieved with `getConversationById()` (see method above) for messages containing certain keywords. Those keywords can be freely determined and are case insensitive.
+
+**Sample Usage**
+
+```javascript
+// import FaaS Toolbelt
+const { Toolbelt } = require("lp-faas-toolbelt");
+
+// set API Key credentials
+const apiCredentials = {
+  oauthConsumerKey: "...",
+  oauthConsumerSecret: "...",
+  oauthAccessToken: "...",
+  oauthAccessTokenKey: "..."
+};
+
+// Create instance with API credentials
+const conversationUtil = Toolbelt.ConversationUtil(apiCredentials);
+
+// Get conversation
+const conversation = await conversationUtil.getConversationById(conversationId);
+
+// Determine Keywords
+const keywords = ["Keyword", "awesome"];
+
+// Scan Conversation for Keywords
+const scannerResult = conversationUtil.scanConversationForKeywords(
+  conversation,
+  keywords
+);
+```
+
+**Sample Result**
+
+The method collects every message which contains a keyword in an array. It retrieves a timestamp, information on who sent the message and adds a tag detailing the keyword for which the message has been selected. If one message contains more than one keyword it will appear as often in the array. (see example underneath)
+
+| Attribute     | Description                                                                          | Type/Value |
+| :------------ | :----------------------------------------------------------------------------------- | :--------- |
+| message       | The whole message which is containing at least one keyword                           | string     |
+| sentTimestamp | Timestamp (Current Unix epoch time in milliseconds) when the message was sent        | number     |
+| sentBy        | Who the conversation was sent by                                                     | string     |
+| tag           | Tag stating because of which keyword the message is included in the scanner Results. | string     |
+
+```javascript
+[
+  {
+    message: "Will we use Keywords in this conversation?",
+    sentTimestamp: 1560764690328,
+    sentBy: "Consumer",
+    tag: "keywordRef:Keyword"
+  },
+  {
+    message: "We definetely will, because keywords are awesome!",
+    sentTimestamp: 1560764734592,
+    sentBy: "Agent",
+    tag: "keywordRef:Keyword"
+  },
+  {
+    message: "We definetely will, because keywords are awesome!",
+    sentTimestamp: 1560764734592,
+    sentBy: "Agent",
+    tag: "keywordRef:awesome"
+  }
+];
 ```
 
 ### GDPR Util:
