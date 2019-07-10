@@ -141,7 +141,7 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 * Contact your LivePerson account representative to get SSO Unified Login feature enabled for your account.
 
-* Once SSO Unified Login is enabled for your account, you can use *https://faas.liveperson.net/api/sso/login?accountId=<accountId>* to login into LivePerson Functions.
+* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions.
 
 <div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
 
