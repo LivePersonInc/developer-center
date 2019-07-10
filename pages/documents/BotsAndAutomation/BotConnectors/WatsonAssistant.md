@@ -140,29 +140,97 @@ Once you are done with providing configuration you can save it by pressing on "D
 {: .important}
 Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
 
+### Sending Native Content
+
+Watson Assistant allows user to define some native response types to the dialog nodes. The core LiveEngage platform supports the use of Watson Assistant native types that includes Image, List, Pause and Text. User can define single or multiple native contents per dialog.
+
+{: .important}
+Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Bot Connectors.
+
+#### Image
+
+User can define Image type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that will hold image response. Click on the "Add response type" and select Image from the select box as shown in Figure 2.1.
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Select-Response.png">
+
+Figure 2.1 Response type of Image is highlighted
+
+Once image is selected you will be asked to fill the information. "Image Source" url must be provided. You can also describe the image title and description (example filled form is shown in the Figure 2.2).
+
+**Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Fields-Response.png">
+
+Figure 2.2 Image fields filled example
+
+#### List
+
+User can define List type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that will hold list response. Click on the "Add response type" and select Option from the select box as shown in Figure 2.3.
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Select-Response.png">
+
+Figure 2.3 Response type of List is highlighted
+
+Once the "Option" is selected the form need to be filled will be shown. You must provide "Title" and also "Description". Furthermore, different choices of options can be added via clicking "Add option" button. Once the button is clicked you will be asked to put a label of option and value. Make sure you fill both of them (example filled form shown in Figure 2.4).
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Fields-Response.png">
+
+Figure 2.4 List fields filled example
+
+#### Pause
+
+User can define Pause type if they want to send some delay in responding. For adding this content type, dialog node will need to selected that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Select-Response.png">
+
+Figure 2.5 Response type of Pause is highlighted
+
+Once the "Pause" is selected the form will ask you to provide the duration (unit is in milliseconds). This allows the conversation to be paused for the amount of time defined in "Duration" field. Moreover, If you want to show user a indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.6). This will show a indication like "Agent is typing..." for the amount of time of delay that is set in "Duration".
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png">
+
+Figure 2.6 Pause fields filled example
+
+#### Text
+
+User can define a Text type to send some textual response. For adding this type dialog node will need to selected that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.7
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Select-Response.png">
+
+Figure 2.7 Response type of Text is highlighted
+
+Once the "Text" is selected the form will allow you to add the response texts. You can add multiple responses variation (example filled form is shown in Figure 2.8).
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Fields-Response.png">
+
+Figure 2.8 Text fields filled example
+
 ### Sending Rich Content (Structured Content)
+
+{: .important}
+Please note that Watson assistant API version of `2018-09-20` is used to support the rich content response in Bot Connectors.
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
-To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 2.1).
+To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 3.1).
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png">
 
-Figure 2.1 Watson Dialog Node
+Figure 3.1 Watson Dialog Node
 
-From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.2)
+From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 3.2)
 
 <img class="fancyimage" style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
 
-Figure 2.2 Watson Assistant Dialog JSON Editor
+Figure 3.2 Watson Assistant Dialog JSON Editor
 
-In the JSON Editor you will need to add your custom JSON response (Figure 2.3).
+In the JSON Editor you will need to add your custom JSON response (Figure 3.3).
 
 <img class="fancyimage" style="width:500px" src="img/watsonassistant/jsoneditor.png">
 
-Figure 2.3 Watson Assistant JSON Editor
+Figure 3.3 Watson Assistant JSON Editor
 
-There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 2.4** with a sample JSON example that uses a standard Structured Content card with a button option in **Figure 2.5**.
+There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 3.4** with a sample JSON example that uses a standard Structured Content card with a button option in **Figure 3.5**.
 
 ```json
 {
@@ -185,7 +253,7 @@ There is a strict JSON structure for the response that must be used. The JSON st
 }
 ```
 
-Figure 2.4 Structured Content Watson JSON Structure
+Figure 3.4 Structured Content Watson JSON Structure
 
 ```json
 {
@@ -224,7 +292,7 @@ Figure 2.4 Structured Content Watson JSON Structure
 }
 ```
 
-Figure 2.4 Structured Content Watson JSON Example
+Figure 3.4 Structured Content Watson JSON Example
 
 For new IAM workspaces that have a new Watson response, _Then respond with_ text:
 
@@ -281,7 +349,7 @@ Put the structured content objects with the metadata in the text field for the r
 }
 ```
 
-Figure 2.5 Structured Content Watson JSON Example (IAM)
+Figure 3.5 Structured Content Watson JSON Example (IAM)
 
 ### Change Time To Response of Conversation
 
@@ -309,7 +377,7 @@ Change the TTR of a conversation based on the action response of Watson. There h
 }
 ```
 
-Figure 2.6 Watson JSON response for changing TTR
+Figure 3.6 Watson JSON response for changing TTR
 
 ### Transfer/Escalations
 
@@ -348,13 +416,13 @@ In the _Then respond with:_ JSON editor block, we see the following:
 }
 ```
 
-Figure 2.7 Watson JSON response for escalation
+Figure 3.7 Watson JSON response for escalation
 
 Above is the _actions_ array. Here, we have a escalation skill name in the _skill_ parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
 
 ### Close Chat/Conversation
 
-To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 2.6**). In **Figure 2.7** below, the **Watson Assistant** JSON response should be mirrored as follows:
+To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 3.6**). In **Figure 3.7** below, the **Watson Assistant** JSON response should be mirrored as follows:
 
 ```json
 {
@@ -374,4 +442,4 @@ To close a chat or messaging conversation, we utilize the action object as we di
 }
 ```
 
-Figure 2.8 Watson Assistant JSON response for closing chat/conversation
+Figure 3.8 Watson Assistant JSON response for closing chat/conversation
