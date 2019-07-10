@@ -44,7 +44,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the **dependencies** section, add:
    ```java
    dependencies {
-     implementation  "com.liveperson.android:lp_messaging_sdk:4.0.0"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.0.0"
    }
    ```
 
@@ -56,11 +56,11 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    android {
        compileSdkVersion 28
        defaultConfig {
-       applicationId "com.mybrand.app"
-       minSdkVersion 19
-       targetSdkVersion 28
-       versionCode 1
-       versionName "1.0"
+           applicationId "com.mybrand.app"
+           minSdkVersion 19
+           targetSdkVersion 28
+           versionCode 1
+           versionName "1.0"
        }
        buildTypes {
            release {
@@ -91,12 +91,12 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 5. In your build.gradle of your app, and in the android section, make sure the *compileSdkVersion* is at least version **28**:
    ```java
    android {
-      compileSdkVersion 28
-      buildToolsVersion "28.0.0"
-   repositories {
-     	flatDir {
-       	   dirs project(":lp_messaging_sdk").file("aars")
-      }
+       compileSdkVersion 28
+       repositories {
+           flatDir {
+               dirs project(":lp_messaging_sdk").file("aars")
+           }
+       }
    }
    ```
 6. In the **defaultConfig** section, make sure the *minSDKVersion* is set **19**:
@@ -107,12 +107,12 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        targetSdkVersion 28
        versionCode 1
        versionName "1.0"
-   testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
    }
    ```
 7. In the **dependencies** section, add:
    ```java
-   compile project(":lp_messaging_sdk")
+   implementation project(":lp_messaging_sdk")
    ```
 
    **Build.gradle file example:**
@@ -125,8 +125,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
                dirs project(":lp_messaging_sdk").file("aars")
            }
        }
-      compileSdkVersion 28
-      buildToolsVersion "28.0.0"
+       compileSdkVersion 28
        defaultConfig {
            applicationId "com.mybrand.app"
            minSdkVersion 19
@@ -146,16 +145,16 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    }
 
    dependencies {
-       compile fileTree(dir: "libs", include: ["*.jar"])
+       implementation fileTree(dir: "libs", include: ["*.jar"])
        androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
            exclude group: "com.android.support", module: "support-annotations"
        })
-       compile "com.android.support.constraint:constraint-layout:1.0.2"
-       compile "com.google.firebase:firebase-messaging:18.0.0"
+       implementation "com.android.support.constraint:constraint-layout:1.0.2"
+       implementation "com.google.firebase:firebase-messaging:18.0.0"
 
-       testCompile "junit:junit:4.12"
+       testImplementation "junit:junit:4.12"
        //Liveperson SDK
-       compile project(path: ":lp_messaging_sdk")
+       implementation project(path: ":lp_messaging_sdk")
    }
 
    apply plugin: "com.google.gms.google-services"
