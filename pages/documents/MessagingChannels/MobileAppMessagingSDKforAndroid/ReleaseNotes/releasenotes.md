@@ -13,6 +13,17 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### Android Messaging SDK - Version 4.0.0
+
+**Release date:** July 8, 2019
+
+### Overview
+Android Mobile Messaging SDK version 4.0.0 provides Android P support. 
+Built with Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+### Environmental requirements
+The Android Mobile Messaging SDK version 4.0.0 requires the minimum Android API version 19, SDK is compiled against API 28 and targeted API is 28.
+
 ### Android Messaging SDK - Version 3.9.0
 
 **Release date:** June 18, 2019
