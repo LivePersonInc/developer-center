@@ -23,15 +23,15 @@ To get access to this page, you'll need to ask your LivePerson account team to e
 
 <div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
 
-The Functions UI is divided into three main components. At the top of the UI, you can find tab-based navigation which will allow you to navigate these components. The **Develop** tab (see below) is the default page that will be visible.
+The Functions UI is divided into three main components. At the top of the UI, you can find tab-based navigation which will allow you to navigate these components. The **Functions** tab (see below) is the default page that will be visible.
 
 ![](img/faas-menus.png)
 
-The **Develop** tab contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
+The **Functions** section contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
-The **Deploy** tab provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
+The **Deployments** section provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
 
-The **Settings** tab provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
+The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
 
 Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
 
@@ -155,7 +155,7 @@ function callback(error, result){}
 
 If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds, your function will be killed immediately, regardless of its error state.
 
-In order to get started with a function, start the creation process using the **Create a Function** button that can be found under the **Develop** tab.
+In order to get started with a function, start the creation process using the **Create a Function** button that can be found at the **Functions** section.
 
 ![](img/faas-function.png)
 
