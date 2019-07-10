@@ -4,7 +4,7 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
-permalink: functions-templates.html
+permalink: liveperson-functions-templates.html
 indicator: both
 redirect_from:
   - function-as-a-service-templates.html

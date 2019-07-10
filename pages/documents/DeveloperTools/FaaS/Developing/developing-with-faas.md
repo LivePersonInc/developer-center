@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: functions-developing-with-liveperson-functions.html
+permalink: liveperson-functions-developing-with-liveperson-functions-overview.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-overview.html

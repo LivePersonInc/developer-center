@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Use Cases
-permalink: functions-use-cases-post-chat-survey-transcripts.html
+permalink: liveperson-functions-use-cases-post-chat-survey-transcripts.html
 indicator: chat
 redirect_from:
   - function-as-a-service-use-cases-post-chat-survey-transcripts.html

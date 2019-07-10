@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Use Cases
-permalink: functions-use-cases-messaging-conversations.html
+permalink: liveperson-functions-use-cases-messaging-conversations.html
 indicator: both
 redirect_from:
   - function-as-a-service-use-cases-messaging-conversations.html

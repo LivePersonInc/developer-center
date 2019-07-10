@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: functions-developing-with-faas-storing-secrets.html
+permalink: liveperson-functions-developing-with-liveperson-functions-storing-secrets.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-storing-secrets.html

@@ -4,7 +4,7 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
-permalink: functions-external-invocations-overview.html
+permalink: liveperson-functions-external-invocations-overview.html
 indicator: both
 redirect_from:
   - function-as-a-service-external-invocations-client-credentials.html

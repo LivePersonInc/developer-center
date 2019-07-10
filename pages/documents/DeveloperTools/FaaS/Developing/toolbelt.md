@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: functions-developing-with-faas-toolbelt.html
+permalink: liveperson-functions-developing-with-liveperson-functions-toolbelt.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-toolbelt.html
@@ -165,7 +165,7 @@ The Conversation Util method allows to perform actions on conversations, which a
 
 #### Get Conversation By ID
 
-This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object. 
+This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object.
 
 **Sample Usage**
 
