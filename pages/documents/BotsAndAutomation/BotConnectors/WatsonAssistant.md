@@ -17,9 +17,10 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
-With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration. 
+With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
 #### UserPass authentication
+
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector using UserPass authentication.
 
 <img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-based-auth.png">
@@ -27,6 +28,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 Figure 1.1 Showing the configuration that needed to be filled using UserPass authentication
 
 Following information needs to be completed for LivePerson:
+
 <table>
   <thead>
   <tr>
@@ -64,8 +66,8 @@ Following information needs to be completed for LivePerson:
   </tbody>
 </table>
 
-
 #### IAM authentication
+
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector using IAM authentication.
 
 <img class="fancyimage" style="width:600px" src="img/watsonassistant/token-based-auth.png">
@@ -73,6 +75,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 Figure 1.2 Showing the configuration that needed to be filled using IAM authentication authentication
 
 Following information needs to be completed for LivePerson:
+
 <table>
   <thead>
   <tr>
@@ -132,13 +135,10 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
-
-Once you are done with providing configuration you can save it by pressing on "Done". ***Congratulations!*** You have completed the configuration of the Watson Assistant bot.
-
+Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
 
 {: .important}
 Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
-
 
 ### Sending Rich Content (Structured Content)
 
@@ -146,11 +146,9 @@ The core LiveEngage platform supports the use of rich/structured content. For mo
 
 To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 2.1).
 
-
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png">
 
 Figure 2.1 Watson Dialog Node
-
 
 From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.2)
 
@@ -158,13 +156,11 @@ From there, under the section Then respond with: Click the three vertical dots a
 
 Figure 2.2 Watson Assistant Dialog JSON Editor
 
-
 In the JSON Editor you will need to add your custom JSON response (Figure 2.3).
 
 <img class="fancyimage" style="width:500px" src="img/watsonassistant/jsoneditor.png">
 
 Figure 2.3 Watson Assistant JSON Editor
-
 
 There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 2.4** with a sample JSON example that uses a standard Structured Content card with a button option in **Figure 2.5**.
 
@@ -174,10 +170,12 @@ There is a strict JSON structure for the response that must be used. The JSON st
     "text": {
       "values": [
         {
-          "metadata": {
-            "id": "1234",
-            "type": "ExternalId"
-          },
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
           "structuredContent": {}
         }
       ],
@@ -186,8 +184,8 @@ There is a strict JSON structure for the response that must be used. The JSON st
   }
 }
 ```
-Figure 2.4 Structured Content Watson JSON Structure
 
+Figure 2.4 Structured Content Watson JSON Structure
 
 ```json
 {
@@ -195,10 +193,12 @@ Figure 2.4 Structured Content Watson JSON Structure
     "text": {
       "values": [
         {
-          "metadata": {
-            "id": "1234",
-            "type": "ExternalId"
-          },
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
           "structuredContent": {
             "type": "vertical",
             "elements": [
@@ -223,61 +223,64 @@ Figure 2.4 Structured Content Watson JSON Structure
   }
 }
 ```
+
 Figure 2.4 Structured Content Watson JSON Example
 
-
-For new IAM workspaces that have a new Watson response, *Then respond with* text:
+For new IAM workspaces that have a new Watson response, _Then respond with_ text:
 
 <img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png">
 
 Put the structured content objects with the metadata in the text field for the response.
 
 ```json
-{  
-   "output":{  
-      "generic":[  
-         {  
-            "values":[  
-               {  
-                  "output":{  
-                     "text":{  
-                        "values":[  
-                           {  
-                              "metadata":{  
-                                 "id":"1234",
-                                 "type":"ExternalId"
-                              },
-                              "structuredContent":{  
-                                 "type":"vertical",
-                                 "elements":[  
-                                    {  
-                                       "type":"button",
-                                       "click":{  
-                                          "actions":[  
-                                             {  
-                                                "text":"Recommend me a movie",
-                                                "type":"publishText"
-                                             }
-                                          ]
-                                       },
-                                       "title":"Recommend a movie"
-                                    }
-                                 ]
+{
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+            "output": {
+              "text": {
+                "values": [
+                  {
+                    "metadata": [
+                      {
+                        "id": "1234",
+                        "type": "ExternalId"
+                      }
+                    ],
+                    "structuredContent": {
+                      "type": "vertical",
+                      "elements": [
+                        {
+                          "type": "button",
+                          "click": {
+                            "actions": [
+                              {
+                                "text": "Recommend me a movie",
+                                "type": "publishText"
                               }
-                           }
-                        ],
-                        "selection_policy":"sequential"
-                     }
+                            ]
+                          },
+                          "title": "Recommend a movie"
+                        }
+                      ]
+                    }
                   }
-               }
-            ],
-            "response_type":"text",
-            "selection_policy":"sequential"
-         }
-      ]
-   }
+                ],
+                "selection_policy": "sequential"
+              }
+            }
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
+
 Figure 2.5 Structured Content Watson JSON Example (IAM)
 
 ### Change Time To Response of Conversation
@@ -285,28 +288,27 @@ Figure 2.5 Structured Content Watson JSON Example (IAM)
 Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
 ```json
-{  
-   "output":{  
-      "text":{  
-         "values":[  
-            "Sure thing! Change the TTR to 50 minutes."
-         ],
-         "selection_policy":"sequential"
-      }
-   },
-   "actions":[  
-      {  
-         "name":"CHANGE_TTR",
-         "type":"CLIENT",
-         "parameters":{  
-            "ttrType":"CUSTOM",
-            "value":3000
-         },
-         "result_variable":"none"
-      }
-   ]
+{
+  "output": {
+    "text": {
+      "values": ["Sure thing! Change the TTR to 50 minutes."],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CHANGE_TTR",
+      "type": "CLIENT",
+      "parameters": {
+        "ttrType": "CUSTOM",
+        "value": 3000
+      },
+      "result_variable": "none"
+    }
+  ]
 }
 ```
+
 Figure 2.6 Watson JSON response for changing TTR
 
 ### Transfer/Escalations
@@ -316,7 +318,7 @@ Figure 2.6 Watson JSON response for changing TTR
 
 All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
 
-For escalations, the naming convention for these skills should use a "-" instead of "_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
+For escalations, the naming convention for these skills should use a "-" instead of "\_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within LiveEngage.
 
 </div>
 
@@ -324,33 +326,31 @@ Transfers and escalations are straightforward in both chat and messaging. At the
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png">
 
-In the *Then respond with:* JSON editor block, we see the following:
+In the _Then respond with:_ JSON editor block, we see the following:
 
 ```json
 {
- "output": {
-   "text": {
-     "values": [
-       "Escalating to a human"
-     ]
-   }
- },
- "actions": [
-   {
-     "name": "TRANSFER",
-     "type": "client",
-     "parameters": {
-       "skill": "human_skill"
-     },
-     "result_variable": "none"
-   }
- ]
+  "output": {
+    "text": {
+      "values": ["Escalating to a human"]
+    }
+  },
+  "actions": [
+    {
+      "name": "TRANSFER",
+      "type": "client",
+      "parameters": {
+        "skill": "human_skill"
+      },
+      "result_variable": "none"
+    }
+  ]
 }
 ```
+
 Figure 2.7 Watson JSON response for escalation
 
-
-Above is the *actions* array. Here, we have a escalation skill name in the *skill* parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
+Above is the _actions_ array. Here, we have a escalation skill name in the _skill_ parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
 
 ### Close Chat/Conversation
 
@@ -358,21 +358,20 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 ```json
 {
- "output": {
-   "text": {
-     "values": [
-       "Thanks for chatting with us today!"
-     ],
-     "selection_policy": "sequential"
-   }
- },
- "actions": [
-   {
-     "name": "CLOSE_CONVERSATION",
-     "type": "client",
-     "result_variable": "none"
-   }
- ]
+  "output": {
+    "text": {
+      "values": ["Thanks for chatting with us today!"],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CLOSE_CONVERSATION",
+      "type": "client",
+      "result_variable": "none"
+    }
+  ]
 }
 ```
+
 Figure 2.8 Watson Assistant JSON response for closing chat/conversation
