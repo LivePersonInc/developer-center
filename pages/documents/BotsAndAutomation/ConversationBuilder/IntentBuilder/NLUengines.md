@@ -12,7 +12,7 @@ indicator: both
 
 One of the essential tools of the Conversation Builder platform is Natural Language Understanding (NLU). This is what allows Intent Builder to analyze consumer input and assign accurate intents.
 
-Conversation Builder allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. 
+While LivePerson provides its own propriety NLU out of the box, the Conversation Builder also allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. 
 
 This API layer of abstraction allows you to choose from the following NLU engines:
 
@@ -98,7 +98,7 @@ Import your intents and entities or add them later manually before Step 5.
 
 - Third Party NLU Domain length should not exceed 64 characters. (Watson limitation)
 - Each domain can only support one language and it is available in the settings page.
- 
+
 #### NLU engine API limitations:
 - Knowledge Base does not support 3rd party NLU right now
-- Conversation Builder does not support pulling existing models from IBM Watson and Google DialogFlow into Intent Builder, only model push is supported. 
+- Conversation Builder does not support pulling existing models from IBM Watson and Google DialogFlow into Intent Builder, only model push is supported.
