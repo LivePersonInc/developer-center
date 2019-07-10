@@ -194,7 +194,7 @@ This method retrieves a conversation from the [Messaging Interactions API](https
 
 #### Scan Conversation For Keywords
 
-This method scans a conversation that has been retrieved with `getConversationById()` (s. method above) for messages containing certain keywords. Those keywords can be freely determined and are case insensitive.
+This method scans a conversation that has been retrieved with `getConversationById()` (see method above) for messages containing certain keywords. Those keywords can be freely determined and are case insensitive.
 
 **Sample Usage**
 
@@ -228,7 +228,7 @@ const scannerResult = conversationUtil.scanConversationForKeywords(
 
 **Sample Result**
 
-The method collects every message which contains a keyword in an array. It retrieves a timestamp, the information who sent the message and adds a tag because of which keyword the message has been selected. If one message contains more than one keyword it will appear as often in the array. (s. example underneath)
+The method collects every message which contains a keyword in an array. It retrieves a timestamp, information on who sent the message and adds a tag detailing the keyword for which the message has been selected. If one message contains more than one keyword it will appear as often in the array. (see example underneath)
 
 | Attribute     | Description                                                                          | Type/Value |
 | :------------ | :----------------------------------------------------------------------------------- | :--------- |
