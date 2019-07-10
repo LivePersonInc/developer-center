@@ -488,7 +488,7 @@ Put the structured content objects that is shown in Figure 3.6 with the metadata
 }
 ```
 
-Figure 3.6 Structured Content Watson JSON Example (IAM)
+Figure 3.6 A sample structured content example containing a button and action of response text on click
 
 <img class="fancyimage" style="width:800px" src="img/watsonassistant/structured-content-in-text-response.png">
 
