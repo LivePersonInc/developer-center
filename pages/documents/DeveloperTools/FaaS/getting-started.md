@@ -23,7 +23,7 @@ To get access to this page, you'll need to ask your LivePerson account team to e
 
 <div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
 
-The Functions UI is divided into three main components. At the top of the UI, you can find tab-based navigation which will allow you to navigate these components. The **Functions** tab (see below) is the default page that will be visible.
+The Functions UI is divided into three main components. On the left hand side of the UI, you can the navigation bar which will allow you to navigate these components. The **Functions** screen (see below) is the default page that will be visible.
 
 ![](img/faas-menus.png)
 
