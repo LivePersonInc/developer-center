@@ -15,7 +15,7 @@ The LivePerson Functions' Secrets Storage allows you to centrally store, access 
 
 **Note:** It is recommended to always use access tokens for authentication to external services. Never store **user-credentials** within the Functions' Secrets Storage.
 
-Internally, FaaS uses [HashiCorp Vault](https://www.hashicorp.com/products/vault/) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
+Internally, LivePerson Functions uses [HashiCorp Vault](https://www.hashicorp.com/products/vault/) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
 
 Secrets can be maintained via the **Settings** tab as a key/value storage. Each value can be of type number, string or JSON.
 
