@@ -59,7 +59,7 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 1. Click on ‘NLU Provider Credentials’ on domain dashboard
 
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
+<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
 
 2. Create a new NLU provider credential
 
@@ -71,7 +71,9 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 #### Step 4: Add a domain for your NLU Provider
 
+
 Import your intents and entities or add them later manually before Step 5.
+
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_2.png">
 
@@ -90,6 +92,7 @@ Import your intents and entities or add them later manually before Step 5.
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
 
 4. Once training is completed, you can start testing with the modal version in the intent tester.
+
 
 
 ### Limitations

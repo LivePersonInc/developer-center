@@ -3,15 +3,17 @@ pagename: Messaging Conversations
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 subfoldername: Use Cases
-permalink: function-as-a-service-use-cases-messaging-conversations.html
+permalink: liveperson-functions-use-cases-messaging-conversations.html
 indicator: both
+redirect_from:
+  - function-as-a-service-use-cases-messaging-conversations.html
 ---
 
-This guide explains how to enable FaaS for messaging.
+This guide explains how to enable LivePerson Functions for messaging.
 
-With **FaaS for messaging** you are able to invoke FaaS functions from standard messaging events. For example, a new conversation start event could be chosen as the trigger to invoke a pre-created function.
+With **Functions for messaging** you are able to invoke `lambdas` from standard messaging events. For example, a new conversation start event could be chosen as the trigger to invoke a pre-created function.
 
 Along with the invocation, the function is sent a payload containing metadata related to the conversation which invoked the function. This payload can then be used in the function for further processing and referencing.
 
@@ -19,7 +21,7 @@ Along with the invocation, the function is sent a payload containing metadata re
 
 ### Messaging events for Function Invocation
 
-LiveEngage messaging uses a series of "Conversation State Change Events" which get fired when specific actions or events occur within the conversation. You are able to use theses events to trigger functions within FaaS.
+LiveEngage messaging uses a series of "Conversation State Change Events" which get fired when specific actions or events occur within the conversation. You are able to use theses events to trigger functions within Functions.
 
 The following "Conversation State Change Events" can be used to trigger functions:
 
@@ -69,7 +71,7 @@ With the controller bot as the invoker, as is the case for messaging events, you
 
 If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
 
-Please have a look at [this page](https://developers.liveperson.com/function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the FaaS application itself.
+Please have a look at [this page](function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the LivePerson Functions application itself.
 
 ### Step-by-Step implementation guide
 
@@ -78,8 +80,6 @@ Please have a look at [this page](https://developers.liveperson.com/function-as-
 Create a new function using one of the messaging templates.
 
 Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
-
-![](img/faas-messaging.png)
 
 #### Step 2 - Edit the Function
 
