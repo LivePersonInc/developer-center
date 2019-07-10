@@ -25,9 +25,10 @@ This API wraps and forwards any request according to specified parameters in the
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|    Contains token string to allow request authentication and authorization.  |
- |LP-service-name|  Contains the service name which has the certificate in Hashicorp-Vault.  |
+ |Authorization|    Contains token string to allow request authentication and authorization. it can be done via oAuth1 with     MTLS_READ_INTERNAL/MTLS_WRITE_INTERNAL or via Bearer of administrator user/LPA. |
+ |LP-service-name|  Contains the service name which has the certificate in Hashicorp-Vault. Not required. |
  |LP-forward-url|   Contains the desired endpoint url of the client.  |
+ |LP-authorization-override|  Contains the authorizaion for the desired endpoint url of the client. Not required. |
 
 **Request Body**
 
