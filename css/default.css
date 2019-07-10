@@ -612,7 +612,7 @@ table tbody td img {
   margin-top: 24px;
   margin-left: 30px;
   color: #fff;
-  display: flex;
+  display: none;
 }
 
 .sidebarbuttons div {
