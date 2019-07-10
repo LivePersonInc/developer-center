@@ -12,7 +12,7 @@ redirect_from:
 
 <div class="important">Over the next few months we'll be gradually rolling out LivePerson Functions and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot!</div>
 
-### Accessing the LivePerson Functions' User Interface
+### Accessing the LivePerson Functions User Interface
 
 Our Functions UI allows developers to directly develop, deploy and test new functions.
 
