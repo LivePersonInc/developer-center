@@ -87,7 +87,7 @@ console.<info/debug/warn/error>(<message> [, extras])
   <tr>
     <td>log-level</td>
     <td>Method</td>
-    <td>Method names correspond to the different log-levels and influence in which way the logs are displayed within FaaS. Current levels are:
+    <td>Method names correspond to the different log-levels and influence in which way the logs are displayed within LivePerson Functions. Current levels are:
 console.debug(), console.info(), console.warn() and console.error()</td>
   </tr>
   <tr>

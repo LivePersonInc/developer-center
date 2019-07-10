@@ -133,6 +133,18 @@ You can configure these permissions in LiveEngage. More info on adding permissio
 
 * Create/Edit a profile and add the relevant FaaS-* permission to it
 
+#### Configure SSO unified login
+
+In case the [single sign-on (SSO) unified login feature](https://knowledge.liveperson.com/security-regulations-login-sso-unified-login.html) is enabled for your account, then the normal login flow cannot be used to login into LivePerson Functions.
+
+Please follow this steps in order to get SSO unified login working with LivePerson Functions:
+
+* Contact your LivePerson account representative to get SSO Unified Login feature enabled for your account.
+
+* Once SSO Unified Login is enabled for your account, you can use *https://faas.liveperson.net/api/sso/login?accountId=<accountId>* to login into LivePerson Functions.
+
+<div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
+
 #### Function Layout and Framework
 
 In order for your function to work with LivePerson Functions seamlessly it has to follow a certain pattern. This pattern can be viewed below.
