@@ -17,13 +17,21 @@ While LivePerson provides its own propriety NLU out of the box, the Conversation
 This API layer of abstraction allows you to choose from the following NLU engines:
 
 - LivePerson's native NLU
-- Google DialogFlow
+- Google Dialogflow
 - IBM Watson
 
 {: .important}
-If you choose LivePerson's native NLU, no changes need to be made. This engine is already configured and set up to work with the Platform.
+If you choose LivePerson's native NLU, no changes need to be made in Conversation Builder. This engine is already configured and set up by default.
 
-### Using a 3rd party NLU Engine
+### Language Support
+
+LivePerson NLU supports intent detection for English and Spanish.
+
+[IBW Watson supports](https://cloud.ibm.com/docs/services/natural-language-understanding?topic=natural-language-understanding-language-support#language-support) Arabic, Chinese, Dutch, English, French, German, Italian, Japanese, Korean, Portuguese, Russian, Spanish, and Swedish.
+
+[Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) Cantonese, Chinese, Danish, Dutch, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Ukranian.
+
+### Connecting a 3rd party NLU Engine
 
 #### Step 1: Enable 3rd Party NLU Support
 
@@ -43,7 +51,7 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 4. View and copy the newly created credentials
 
-##### Google DialogFlow
+##### Google Dialogflow
 
 1. Log in to the Dialogflow console
 
@@ -104,4 +112,4 @@ Import your intents and entities or add them later manually before Step 5.
 
 #### NLU engine API limitations:
 - Knowledge Base does not support 3rd party NLU right now
-- Conversation Builder does not support pulling existing models from IBM Watson and Google DialogFlow into Intent Builder, only model push is supported.
+- Conversation Builder does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder, only model push is supported.
