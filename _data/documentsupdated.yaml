@@ -507,7 +507,7 @@
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
-          - subpagename: Post Chat Survey Transcripts
+          - subpagename: Messaging Conversation Survey
 
 - categoryname: Historical Data
   image: historical-data
