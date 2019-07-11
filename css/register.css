@@ -45,7 +45,7 @@ body {
 }
 
 #registerHeader img {
-  width: 210px;
+  width: 136px;
   margin-top: 18px;
   margin-bottom: 18px;
   margin-left: 32px;
@@ -90,7 +90,7 @@ body {
 #registerForm input {
   border: solid 1px #d6d6d6;
   background-color: #ffffff;
-  height: 40px;
+  height: 30px;
   margin-bottom: 20px;
   padding: 10px 14px;
   font-size: 18px;
@@ -170,6 +170,7 @@ input:-moz-placeholder { /* Firefox 18- */
   flex-direction: column;
   justify-content: flex-end;
   padding-left: 35px;
+  padding-bottom: 140px;
 }
 
 #byClicking {
@@ -196,7 +197,7 @@ input:-moz-placeholder { /* Firefox 18- */
   border-radius: 5px;
   background-color: #ff720b;
   margin-top: 45px;
-  height: 40px;
+  height: 50px;
   width: 60%;
   display: flex;
   align-items: center;

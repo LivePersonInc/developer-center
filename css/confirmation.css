@@ -21,7 +21,7 @@ body {
 @supports (display: grid) {
   #confirmationWrapper {
     display: grid;
-    grid-template-rows: 0.5fr 4fr 7fr 6fr 0.5fr;
+    grid-template-rows: 0.5fr 4fr 7fr 6fr 0.8fr;
     grid-template-columns: 1fr 5fr 1fr;
   }
 
@@ -60,7 +60,7 @@ body {
 }
 
 #confirmationHeader img {
-  width: 210px;
+  width: 150px;
   margin-top: 18px;
   margin-bottom: 18px;
   margin-left: 32px;
@@ -109,11 +109,12 @@ body {
   border-radius: 5px;
   background-color: #ff720b;
   margin-top: 55px;
-  height: 40px;
+  height: 50px;
   width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* margin-bottom: 20px; */
 }
 
 #loginButton span {
@@ -162,6 +163,7 @@ body {
 
 .confirmCard:last-child{
   margin-right: 0;
+  padding-right: 0px;
 }
 
 .cardImage {
@@ -179,7 +181,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 24px;
+  margin-left: 17px;
   justify-content: center;
 }
 
