@@ -10,8 +10,7 @@ redirect_from:
   - function-as-a-service-scheduled-invocations.html
 ---
 
-To give brands the option to call their functions on a regular basis, we developed a time-based scheduling for LivePerson Functions.
-Similar to Cron on Unix systems, we allow to define recurring invocation via Cron expression for function that are not connected to any events.
+To give brands the option to call their functions on a regular basis, we developed time-based scheduling for LivePerson Functions. Similar to Cron on Unix systems, we allow to define recurring invocations via Cron expression for functions that are not connected to any events (functions that are connected to events don't need scheduling, since they are invoked whenever the event is fired).
 
 ![](img/faas-schedule.png)
 
@@ -19,7 +18,8 @@ In order to schedule a new function invocation, simply navigate to the **Schedul
 
 ![](img/faas-newschedule.png)
 
-In the **Create a Scheduled Invocation** dialog you are prompted to select a already deployed function and enter a Cron expression for scheduling the execution.
+In the **Create a Scheduled Invocation** dialog you are prompted to select an already deployed function and enter a Cron expression for scheduling the execution.
+
 There are tools that help constructing your cronjobs. You might find [crontab.guru](https://crontab.guru) helpful to create your Cron expression. Please be aware that the highest execution interval for functions is **1 minute**, which means that our Cron expression are limited to 5 digits instead of 6.
 
 When specifying your cron values please make sure that your values fall within the following ranges:
@@ -30,5 +30,5 @@ When specifying your cron values please make sure that your values fall within t
 * Months: 0-11 (Jan-Dec)
 * Day of Week: 0-6 (Sun-Sat)
 
-<div class="important">Only deployed **NO-EVENT* functions will be scheduled. Please note that during undeployment the function schedule will not be removed but marked as warning.</div>
+<div class="important">Only deployed <b>NO-EVENT</b> functions will be scheduled. Please note that during undeployment the function schedule will not be removed but marked as warning.</div>
 
