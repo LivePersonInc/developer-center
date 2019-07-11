@@ -124,19 +124,16 @@ The proprietary SDK notification is only for display purposes, interacting with 
      ```
 
 
-   - **MyFirebaseInstanceIDService**: allows you to re-register to the push service everytime the Google’s token refreshes.
+   - **MyFirebaseInstanceIDService**: allows you to re-register to the push service everytime the device token refreshes.
 
      ```java
-     public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
-
-       private static final String TAG = "MyFirebaseIIDService";
+     public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
 
        @Override
-       public void onTokenRefresh() {
-          // Get updated InstanceID token.
-          Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
-          startService(intent);
-
+       public void onNewToken(String token) {
+         super.onNewToken(token);
+         Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
+         startService(intent);
        }
      }
      ```
@@ -155,14 +152,24 @@ The proprietary SDK notification is only for display purposes, interacting with 
             super(TAG);
         }
 
-       @Override
+        @Override
         protected void onHandleIntent(Intent intent) {
-            Log.d(TAG, "onHandleIntent: registering the token to pusher");
-            String token = FirebaseInstanceId.getInstance().getToken();
-            // Register to Liveperson Pusher
-            String account = "82055668";
-            String appID = "com.shaym.sdk28";
-            LivePerson.registerLPPusher(account, appID, token);
+            FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                @Override
+                public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                    if (!task.isSuccessful()) {
+                        Log.w(TAG, "getInstanceId failed", task.getException());
+                        return;
+                    }
+
+                    // Get new Instance ID token
+                    String token = task.getResult().getToken();
+                    // Register to Liveperson Pusher
+                    String account = "82055668";
+                    String appID = "com.shaym.sdk28";
+                    LivePerson.registerLPPusher(account, appID, token);
+                }
+            });
         }
      }
      ```
