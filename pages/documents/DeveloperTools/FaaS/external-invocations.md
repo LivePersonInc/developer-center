@@ -7,6 +7,7 @@ documentname: LivePerson Functions
 permalink: liveperson-functions-external-invocations.html
 indicator: both
 redirect_from:
+  - function-as-a-service-external-invocations-overview.html
   - function-as-a-service-external-invocations.html
 ---
 
