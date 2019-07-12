@@ -174,10 +174,10 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-      - pagename: AskMaven API
-        subpages:
-          - subpagename: Overview
-          - subpagename: Methods
+      #- pagename: AskMaven API
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Methods
 
   - documentname: Custom Third Party Bots
 
