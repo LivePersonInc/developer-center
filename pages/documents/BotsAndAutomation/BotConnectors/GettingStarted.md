@@ -45,7 +45,37 @@ There are two steps to setting up a new bot connector.
 
 2. Provision connector in the Bot Connector dashboard
 
+### Bot Lifecycle
+
+ The running Bot can have different states based on the health status.
+
+ #### Offline
+
+ The Bot is offline and won't accept any conversations.
+
+ #### Online
+
+ The Bot is online and will accept and process new conversations.
+
+ #### Vendor Interruption
+
+ The Bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the set up AI Vendor is not reachable/working.
+
+ #### Service Interruption
+
+ The Bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within the used Liveperson APIs.
+
+ In this state the bot will try to restart automatically once every minute until the interruption is resolved.
+
+
 ### Limitations
+
+#### Supported customer content
+
+ Currently the BotConnector only support text input from the customer. If the customer send an image or a file to the Bot, the Bot will replace it with an special identifier so the Bot can handle this special usecase.
+
+ The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
+
 
 #### Creating and starting Bots
 
