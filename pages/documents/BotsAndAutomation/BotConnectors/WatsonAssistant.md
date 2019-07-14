@@ -18,7 +18,7 @@ The following documentation outlines the configuration for the connector and how
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
 {: .important}
-Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to the watson via the provided connector.
+Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
