@@ -4,6 +4,8 @@
     "gulp": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "jquery": ">=3.4.0",
-    "jquery-highlight": "^3.5.0"
+    "jquery-highlight": "^3.5.0",
+    "lodash": ">=4.17.13",
+    "lodash.template": ">=4.5.0"
   }
 }

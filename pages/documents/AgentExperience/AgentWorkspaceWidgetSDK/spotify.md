@@ -31,7 +31,7 @@ In order to view the widget in action:
 
 3. Create .env with relevant keys and values (see _Requirements_ section).
 
-4. Run locally and navigate to [http://localhost:3000/agent](http://localhost:3000/agent)
+4. Run locally and navigate to `http://localhost:3000/agent`
 
 ### Requirements
 
