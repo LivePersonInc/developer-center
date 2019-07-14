@@ -47,7 +47,7 @@ There are two steps to setting up a new bot connector.
 
 ### Bot Lifecycle
 
- The running Bot can have different states based on the health status.
+ The running Bot can have different states based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
 
  #### Offline
 
@@ -59,11 +59,11 @@ There are two steps to setting up a new bot connector.
 
  #### Vendor Interruption
 
- The Bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the set up AI Vendor is not reachable/working.
+The Bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the set up AI Vendor is not reachable/working.
 
  #### Service Interruption
 
- The Bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within the used Liveperson APIs.
+ The Bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within Liveperson APIs/servers.
 
  In this state the bot will try to restart automatically once every minute until the interruption is resolved.
 
@@ -72,9 +72,9 @@ There are two steps to setting up a new bot connector.
 
 #### Supported customer content
 
- Currently the BotConnector only support text input from the customer. If the customer send an image or a file to the Bot, the Bot will replace it with an special identifier so the Bot can handle this special usecase.
+Currently the Bot Connector only supports text input from the customer. If the customer sends an image or a file to the Bot, the Bot will replace it with a special identifier so the Bot can handle this special use-case with custom code.
 
- The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
+The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
 
 
 #### Creating and starting Bots
