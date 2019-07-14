@@ -21,7 +21,7 @@ body {
 @supports (display: grid) {
   #confirmationWrapper {
     display: grid;
-    grid-template-rows: 0.5fr 4fr 7fr 6fr 0.8fr;
+    grid-template-rows: 0.5fr 4fr 6.5fr 6fr 0.8fr;
     grid-template-columns: 1fr 5fr 1fr;
   }
 
@@ -114,7 +114,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 20px; */
+  margin-bottom: 60px;
 }
 
 #loginButton span {
@@ -330,6 +330,10 @@ body {
   margin-left: 5px;
   margin-right: 5px;
   color: #666666;
+}
+
+.inlineImage {
+  margin: 0 5px;
 }
 
 /* Media queries begin, don't panic! */
