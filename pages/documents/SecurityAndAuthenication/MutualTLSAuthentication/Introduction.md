@@ -27,11 +27,11 @@ Use cases - Why should I use this?
 
 As a bank, I would like to use MTLS in order for me to be able to be aligned with open banking standards and because I would like my connection to be more secure.
 
-As a brand, I would use the MTLS API to upload a certificate, map an existing certificate, etc’.
+As a brand, I would use the MTLS API to upload a certificate, map an existing certificate, wrap and forward mtls requeses etc’.
 
 Prerequisites - 
 
-In order for MTLS to work, the brand needs to generate a specific MTLS certificate. The brand is doing it by receiving a CSR from the support, filling the CSR with the needed details and signing the certificate with a 3rd party provider.
+In order for MTLS to work, the brand needs to generate a specific MTLS certificate. The brand is doing it by receiving a CSR from the support, filling the CSR with the required details and signing the certificate with a 3rd party provider.
 
 Once the certificate is ready, support needs to upload the new certificate, map the service that will support the MTLS and tie it to a specific URL. The upcoming future solution will allow customers to self-serve the entire process, including uploading the new certificate to store it on Hashicorp vault.
 
@@ -40,7 +40,7 @@ Limitations
 
 Technical limitations:
 
-Eyal and Dorine - can you please elaborate?
+TBD
 
 B. Product limitations:
 
