@@ -17,7 +17,7 @@ indicator: messaging
 
 You can change strings appearing on the SDK interface by overriding the respective string key.
 
-**Note:**  To create a new locale file, see [Override SDK Strings](http://localhost:4000/mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
+**Note:**  To create a new locale file, see [Override SDK Strings](/mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
 
 ### Accessibility strings (used by the Accessibility TalkBack)
 

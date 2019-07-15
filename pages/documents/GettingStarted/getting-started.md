@@ -5,7 +5,7 @@ categoryname: "Getting Started"
 documentname: Before You Get Started
 permalink: before-you-get-started-let-s-get-started.html
 indicator: both
---- 
+---
 
 
 Most user actions within LiveEngage can be performed programmatically using the REST API. Since we use a REST model, we recommend you be fluent in:
@@ -50,7 +50,7 @@ Some features to get started with include:
 Before you get started with any LivePerson API, you must retrieve the base domain of LivePerson using the **Domain API** (a read-only API).
 
 {:.important}
-The different service names can be found in the relevant documentation for the API you're looking to use. 
+The different service names can be found in the relevant documentation for the API you're looking to use.
 
 #### Request
 
@@ -173,16 +173,16 @@ To log in as an application, you must have the _User Type - Bot_ feature activat
 
 ### Step 5. Authorize API Calls
 
-In this step, now that you’ve chosen your login method.  Some of our APIs require authorization before you can use them.  Every API uses either user login credentials or an API key, or both, which you can find in the overview of the API itself. 
+In this step, now that you’ve chosen your login method.  Some of our APIs require authorization before you can use them.  Every API uses either user login credentials or an API key, or both, which you can find in the overview of the API itself.
 
-1. Use the [Login Service API](login-service-api-overview.html) to log into LiveEngage to get a session token (Bearer) to use for other related API calls.  You can log in as a *user* with credentials or an *application* with an API key. 
+1. Use the [Login Service API](login-service-api-overview.html) to log into LiveEngage to get a session token (Bearer) to use for other related API calls.  You can log in as a *user* with credentials or an *application* with an API key.
 
 2. Use this token in your authentication header in the following API calls:
 
    - [Users API](users-api-overview.html) - updates the LiveEngage user list on regular intervals
-   
+
    - [Login Service API](login-service-api-overview.html) - provides endpoints to manage the user session in LiveEngage
-   
+
    - [Domain API](retrieve-api-domains-using-the-domain-api.html) - retrieves the base domain of LivePerson
 
 <p><br></p>
@@ -275,7 +275,7 @@ You use the API key when you create bots.
 
    ![](../../../img/close-window.png)
 
-8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9]([https://oauth.net/core/1.0/#signing\_process](https://oauth.net/core/1.0/#signing_process)).
+8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
 **Example:**
 

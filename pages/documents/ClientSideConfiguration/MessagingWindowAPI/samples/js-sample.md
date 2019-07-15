@@ -18,13 +18,13 @@ This sample demonstrates the usage of the messaging API from browser JavaScript 
 
 
 ### Prerequisites
-* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support. 
+* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Step 1 - Wire the sample to your account.
 
 Open the following [codepen page](https://codepen.io/liveperson/pen/xRzXXd?editors=0010)
 
-<p data-height="498" data-theme-id="0" data-slug-hash="xRzXXd" data-default-tab="js" data-user="liveperson" data-embed-version="2" data-pen-title="UMS js example" class="codepen">See the Pen <a href="https://codepen.io/liveperson/pen/xRzXXd/">UMS js example</a> by liveperson (<a href="http://codepen.io/liveperson" target="_blank">@liveperson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="498" data-theme-id="0" data-slug-hash="xRzXXd" data-default-tab="js" data-user="liveperson" data-embed-version="2" data-pen-title="UMS js example" class="codepen">See the Pen <a href="https://codepen.io/liveperson/pen/xRzXXd/">UMS js example</a> by liveperson (<a href="https://codepen.io/liveperson" target="_blank">@liveperson</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 Type in your account ID in the account textbox.
