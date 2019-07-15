@@ -612,7 +612,7 @@ table tbody td img {
   margin-top: 24px;
   margin-left: 30px;
   color: #fff;
-  display: none;
+  display: flex;
 }
 
 .sidebarbuttons div {
@@ -1375,6 +1375,25 @@ input#csds-button {
   .anchorlist {
     margin-right: initial;
   }
+}
+
+@media screen and (max-width: 1555px) {
+  .sidebarbuttons {
+    flex-direction: column;
+  }
+
+  .sitelogo {
+    margin-top: 8px;
+  }
+
+  .sidebarbuttons {
+    margin-top: 15px;
+  }
+
+  .loginButton {
+    margin-bottom: 10px;
+  }
+}
 
 @media screen and (max-width:1440px){
   .defaultwrapper {
