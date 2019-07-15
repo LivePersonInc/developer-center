@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f6f6f8;
+  margin: 0;
+  padding-top: 0;
+}
+
+@supports (display: grid) {
+  #confirmationWrapper {
+    display: grid;
+    grid-template-rows: 0.5fr 4fr 7fr 6fr 0.5fr;
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+
+  #confirmationHeader {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+  }
+
+  #heroPanel {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
+
+  #secondPanel {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+  }
+
+  #thirdPanel {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  #confirmationFooter {
+    grid-column: 1 /span 3;
+    grid-row: 5 /span 1;
+  }
+}
+
+#confirmationWrapper {
+  background-color: #f6f6f8;
+}
+
+#confirmationHeader {
+  background-image: linear-gradient(to right, #151f36, #5779da);
+}
+
+#confirmationHeader img {
+  width: 210px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 32px;
+}
+
+#heroPanel {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f8;
+}
+
+#confirmationTitle {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: #ff720b;
+  margin-top: 45px;
+}
+
+#confirmationSub {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+  margin-top: 32px;
+}
+
+#accountNumber {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+  margin-top: 32px;
+}
+
+#userID {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+}
+
+#loginButton {
+  border-radius: 5px;
+  background-color: #ff720b;
+  margin-top: 55px;
+  height: 40px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginButton span {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#secondPanel {
+  background-color: #5879da;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#secondTitle {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  width: 40%;
+}
+
+#firstCardRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  width: 100%;
+}
+
+.confirmCard {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 292px;
+  height: 166px;
+  margin-right: 36px;
+  background-color: #fff;
+  justify-content: center;
+  box-shadow: 0 8px 12px 3px rgba(0, 0, 0, 0.24);
+}
+
+.confirmCard:last-child{
+  margin-right: 0;
+}
+
+.cardImage {
+  width: 50px;
+}
+
+.cardContent {
+  display: flex;
+  margin-left: 24px;
+  align-items: center;
+  flex: 4;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 24px;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #162036;
+  margin-bottom: 10px;
+}
+
+.cardInnerText {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
+  padding-right: 15px;
+}
+
+.cardLinks {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  align-self: flex-start;
+  margin-left: 24px;
+  flex: 1;
+}
+
+.cardLinks a {
+  color: #5879da;
+  text-decoration: none;
+}
+
+.cardInnerText a {
+  color: #5879da;
+  text-decoration: none;
+}
+
+#secondCardRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.secondConfirmCard {
+  display: flex;
+  flex-basis: 348px;
+  height: 112px;
+  margin-right: 30px;
+  background-color: #fff;
+  align-content: center;
+  box-shadow: 0 8px 12px 3px rgba(0, 0, 0, 0.24);
+}
+
+.secondConfirmCard:last-child{
+  margin-right: 0;
+}
+
+.secondConfirmCardImg {
+  margin-left: 26px;
+}
+
+#thirdPanel {
+  background-color: #f6f6f8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#thirdTitle {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #162036;
+  margin-top: 54px;
+}
+
+#thirdContentRow {
+  display: flex;
+}
+
+.subjectRow {
+  display: flex;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.subjectColumn {
+  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  color: #162036;
+  flex: 1
+}
+
+.answerColumn {
+  flex: 10;
+}
+
+.faqDivider {
+  border: solid 2px #dddddd;
+}
+
+.answerRow {
+  margin-left: 55px;
+}
+
+.answerRow:first-child {
+  margin-bottom: 18px;
+}
+
+.answerTitle {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666666;
+}
+
+.answerContent {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
+}
+
+#confirmationFooter {
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footerText {
+  display: flex;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 12px;
+  color: #666666;
+}
+
+#footerText a {
+  color: #5879da;
+  text-decoration: none;
+}
+
+#footerText a::before {
+  content: "\2022";
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #666666;
+}
+
+/* Media queries begin, don't panic! */
+
+@media screen and (max-width: 1240px) {
+
+  .subjectColumn {
+    flex: 2;
+  }
+}
+
+@media screen and (max-width: 946px) {
+
+  #confirmationWrapper {
+    grid-template-rows: 0.5fr 3fr 7fr 6fr 0.5fr;
+  }
+
+  .confirmCard:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .confirmCard:last-child {
+    margin-top: 36px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+
+  .secondConfirmCard {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .secondConfirmCard:last-child {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .confirmCard:first-child {
+    margin-left: 36px;
+  }
+
+  .confirmCard {
+    margin-bottom: 36px;
+  }
+
+  .confirmCard:last-child {
+    margin-top: 0;
+  }
+
+  .subjectColumn {
+    flex: 3;
+  }
+}
+
+@media screen and (max-width:450px){
+
+  @supports (display: grid) {
+
+    #confirmationWrapper {
+      grid-template-rows: 0.5fr 3fr 7fr 5fr 0.5fr;
+    }
+  }
+
+  #confirmationHeader img {
+    margin-top: 20px;
+  }
+
+  #confirmationTitle {
+    width: 70%;
+    font-size: 32px;
+  }
+
+  #confirmationSub {
+    padding: 0 60px;
+  }
+
+  #loginButton {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #secondTitle {
+    width: 80%;
+  }
+
+  .confirmCard {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+
+  .confirmCard:first-child {
+    margin-left: 0;
+  }
+
+  .secondConfirmCard {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .secondConfirmCard:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .subjectRow {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .subjectColumn {
+    margin-bottom: 10px;
+  }
+
+  .answerRow {
+    margin-left: 0;
+  }
+
+  .answerRow:first-child {
+    margin-top: 23px;
+  }
+
+  #footerText {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footerText a:first-child::before {
+    content: "";
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #666666;
+  }
+
+  .footerbottomspan {
+    margin-bottom: 5px;
+  }
+
+}
+
+@media screen and (max-width:360px){
+  #confirmationWrapper {
+    grid-template-rows: 0.5fr 2fr 6fr 5fr 0.5fr;
+  }
+
+  .confirmCard:last-child {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .secondConfirmCard {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .secondConfirmCard:last-child {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}

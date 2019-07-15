@@ -152,11 +152,13 @@
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assist
+            - subpagename: Integrations
             - subpagename: Scripting Functions
       - pagename: Intent Builder
         subpages:
           - subpagename: Overview
           - subpagename: Entities
+          - subpagename: NLU Engines
       - pagename: Knowledge Base
       - pagename: Analytics
       - pagename: Best Practices
@@ -487,23 +489,25 @@
 - categoryname: Developer Tools
   image: developer-tools
   documents:
-  - documentname: Function as a Service
+  - documentname: LivePerson Functions
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Developing with FaaS
+      - pagename: Developing with LivePerson Functions
         subpages:
           - subpagename: Overview
           - subpagename: "Events & Templates"
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
-      - pagename: Deploying Functions
+      - pagename: Deploying LivePerson Functions
+      - pagename: Scheduled Invocations
       - pagename: External Invocations
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
+          - subpagename: Messaging Conversation Survey
 
 - categoryname: Historical Data
   image: historical-data
