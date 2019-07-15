@@ -40,7 +40,7 @@ Limitations
 
 Technical limitations:
 
-P12 (private + public) must be Java compliant, created key use suppoted algorithm and key strength, the p12 tester resource exist to make sure that created P12 is fully supported.
+P12 (private + public) must be Java compliant, created key must use suppoted algorithm and key strength, the p12 tester resource exist to make sure that created P12 is fully supported.
 
 Resources support oAuth1 (App key) and oAuth2 (Bearer) as described in Wiki, with a few limitations:
 - Mapping Resource is oAuth1 (not account related operation)
