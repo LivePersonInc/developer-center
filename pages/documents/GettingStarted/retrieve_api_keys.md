@@ -51,7 +51,7 @@ You use the API key when you create bots.
 
    ![](../../../img/close-window.png)
 
-8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9]([https://oauth.net/core/1.0/#signing\_process](https://oauth.net/core/1.0/#signing_process)).
+8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
 **Example:**
 
