@@ -14,14 +14,18 @@ indicator: both
 
 The Context API gives access to inbox contextual attributes (user, conv history, operational context). Define & store custom attributes with static data or CRM integrations via FAAS. Carry over custom context through conversational journey.
 
-Each brand can have multiple namespaces. 
+This API will act as an on-demand repository for metadata about consumers and their conversations. Long-term, it will contain data about each consumer useful to both brands and to Maven, and can receive that data from both the brand and Maven.
+To ensure the contextual service works seamlessly with the Maven platform, the Context API will expose a defined schema for supported properties. All the CRUD operations for the Context information are avaiable.
 
-What is the Context of? Can be a past conversation, a real time conversation?
+Each brand can have multiple namespaces. Each namespace can have severals "groups".
+
 
 ### What can you do with the Context API
 
-* Use Case 1
-* Use Case 2
+* Passing context and customer routing / escalation path from Watson bots to conversation builder bots. 
+
+* Storing temporary notes from agent widgets when conversation is hidden - to be retrieved on auto close event via faas trigger or messaging interactions query to get conversation ids for the namespace 
+
 
 ### Who is the Context API for
 
