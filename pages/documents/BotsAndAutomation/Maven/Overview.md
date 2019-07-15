@@ -13,7 +13,7 @@ Maven is LivePerson’s AI engine. It orchestrates every consumer conversation w
 
 Maven will:
 
-- assess the intent, context, and predict what might happen next
+- assess the intent and context
 
 - suggest optimized next conversational action; including asking clarifying questions, suggesting knowledge base answers, engaging virtual assistants, routing to a particular agent, and more
 
