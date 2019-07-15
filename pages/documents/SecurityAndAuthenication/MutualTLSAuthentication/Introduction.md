@@ -40,7 +40,16 @@ Limitations
 
 Technical limitations:
 
-TBD
+P12 (private + public) must be Java compliant, cannot create any key (algorithm/key strength), the p12 tester resource exist to make sure that created P12 is fully supported.
+
+Resources support oAuth1 (App key) and oAuth2 (Bearer) as described in Wiki, with a few limitations:
+- Mapping Resource is oAuth1 (not account related operation)
+- Certificate Resource "by-file" operations are oAuth2 (Bearer) only operations.
+- P12Tester Resource is oAuth2 (Bearer) only resource.
+
+MTLS service is throttling protected, allowing only 10 request per second (for incoming IP), this is used to limit traffic through the service, as MTLS service proxies both MTLS and TLS traffic this limits the 'bandwidth' for each service.
+
+Uploaded certificates/mappings will reflect to runtime after 5 minutes, this is due to caching mechanism embedded in the runtime resources, Configration (certificate CRUD) resource is not cached.
 
 B. Product limitations:
 
