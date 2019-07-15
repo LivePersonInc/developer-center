@@ -48,7 +48,7 @@ Resources support oAuth1 (App key) and Bearer as described in Wiki, with a few l
 - P12Tester Resource is Bearer authorized only resource.
 - Forwarding resource supports both oAuth1 (app key) and Bearer.
 
-MTLS service is throttling protected, allowing only 10 request per second (for incoming IP), this is used to limit traffic through the service, as MTLS service proxies both MTLS and TLS traffic this limits the 'bandwidth' for each service.
+MTLS service is throttling protected, allowing only 10 requests per second (for incoming IP), this is used to limit traffic through the service, as MTLS service proxies both MTLS and TLS traffic this limits the 'bandwidth' for each service.
 
 Uploaded certificates/mappings will reflect to runtime after 5 minutes, this is due to caching mechanism embedded in the runtime resources, Configration (certificate CRUD) resource is not cached.
 
