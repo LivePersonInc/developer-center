@@ -1586,6 +1586,10 @@ input#csds-button {
   #capabilitiesSearch {
     display: none;
   }
+
+  .sidebarbuttons div {
+    padding: 7px 10px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -1621,6 +1625,10 @@ input#csds-button {
 
   .defaultsidebar {
     width: 125%;
+  }
+
+  .sidebarbuttons div {
+    display: none;
   }
 
   /*.daybtn {
