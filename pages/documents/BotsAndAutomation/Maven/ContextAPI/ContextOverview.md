@@ -29,7 +29,7 @@ Each brand can have multiple namespaces.  Each namespace can have also have seve
 
 ### Who is the Context API for
 
-If you are already using a Maven AI solution, you may want to use the Context API to retrieve and send values between bots. you may use the context API to store information related to conversations.
+If you are already using a Maven AI solution, you may want to use the Context API to retrieve and send values between bots. You may use the context API to store information related to conversations.
 
 ### Getting Started
 
@@ -41,10 +41,10 @@ If you are already using a Maven AI solution, you may want to use the Context AP
 
     You will use the base URL in all API calls.
 
-    * https://z1.context.liveperson.net
+    * Americas: https://z1.context.liveperson.net
 
-    * https://z2.context.liveperson.net
+    * EMEA: https://z2.context.liveperson.net
 
-    * https://z3.context.liveperson.net
+    * APAC: https://z3.context.liveperson.net
 
 3. [Create your namespace](maven-context-api-methods.html#create-a-custom-namespace)
