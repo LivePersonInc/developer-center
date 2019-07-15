@@ -46,6 +46,7 @@ Resources support oAuth1 (App key) and Bearer as described in Wiki, with a few l
 - Mapping Resource is oAuth1 (not account related operation)
 - Certificate Resource "by-file" operations are Bearer only operations.
 - P12Tester Resource is Bearer authorized only resource.
+- Forwarding resource supports both oAuth1 (app key) and Bearer.
 
 MTLS service is throttling protected, allowing only 10 request per second (for incoming IP), this is used to limit traffic through the service, as MTLS service proxies both MTLS and TLS traffic this limits the 'bandwidth' for each service.
 
