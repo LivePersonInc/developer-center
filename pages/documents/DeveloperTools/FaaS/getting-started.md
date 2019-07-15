@@ -25,11 +25,14 @@ To get access to this page, you'll need to ask your LivePerson account team to e
 
 The Functions UI is divided into three main components. On the left hand side of the UI, you can the navigation bar which will allow you to navigate these components. The **Functions** screen (see below) is the default page that will be visible.
 
+
 ![](img/faas-menus.png)
 
 The **Functions** section contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 The **Deployments** section provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
+
+The **Schedules** section allows to define a time-based execution of lambdas via Cron expressions. [More information on scheduling a function can be found here](liveperson-functions-scheduled-invocations.html)
 
 The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
 
