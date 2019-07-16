@@ -12,32 +12,6 @@ redirect_from:
 
 <div class="important">Over the next few months we'll be gradually rolling out LivePerson Functions and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot!</div>
 
-### Accessing the LivePerson Functions User Interface
-
-Our Functions UI allows developers to directly develop, deploy and test new functions.
-
-You can either access this UI via [https://faas.liveperson.net](https://faas.liveperson.net) or
-by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain by providing the service `faasUI` to the Domain API.
-
-To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
-
-<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
-
-The Functions UI is divided into three main components. On the left hand side of the UI, you can the navigation bar which will allow you to navigate these components. The **Functions** screen (see below) is the default page that will be visible.
-
-
-![](img/faas-menus.png)
-
-The **Functions** section contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
-
-The **Deployments** section provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
-
-The **Schedules** section allows to define a time-based execution of lambdas via Cron expressions. [More information on scheduling a function can be found here](liveperson-functions-scheduled-invocations.html)
-
-The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
-
-Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
-
 ### Before getting started
 
 #### Set FaaS Permissions
@@ -148,27 +122,32 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 <div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
 
-#### Function Layout and Framework
+### Accessing the LivePerson Functions User Interface
 
-In order for your function to work with LivePerson Functions seamlessly it has to follow a certain pattern. This pattern can be viewed below.
+Our Functions UI allows developers to directly develop, deploy and test new functions.
 
-<div class="important">Make sure that the following declaration stays as shown and is in the first line of your function. Otherwise, the FaaS backend will reject the function.</div>
+You can either access this UI via [https://faas.liveperson.net](https://faas.liveperson.net) or
+by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain by providing the service `faasUI` to the Domain API.
 
-```javascript
-function lambda(input, callback) {
-   callback(null,`Hello World`);
-}
-```
+To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
-Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 10. Therefore, you have access to all functionality offered by NodeJS.
+<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
 
-As you can see from the example above, during an invocation the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
+The Functions UI is divided into three main components. On the left hand side of the UI, you can the navigation bar which will allow you to navigate these components. The **Functions** screen (see below) is the default page that will be visible.
 
-```javascript
-function callback(error, result){}
-```
+![](img/faas-menus.png)
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds, your function will be killed immediately, regardless of its error state.
+The **Functions** section contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
+
+The **Deployments** section provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
+
+The **Schedules** section allows to define a time-based execution of lambdas via Cron expressions. [More information on scheduling a function can be found here](liveperson-functions-scheduled-invocations.html)
+
+The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
+
+Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
+
+### Creating Your First Function
 
 In order to get started with a function, start the creation process using the **Create a Function** button that can be found at the **Functions** section.
 
@@ -203,6 +182,28 @@ Finally, you are able to name your function and also provide a short description
 ### Step 4: Develop your function
 
 Once you've reached the editor, it is time to develop the actual function, whether this entails editing the template or using it as is. Please see the [Developing with Functions document](function-as-a-service-developing-with-faas-overview.html) for more information on this step.
+
+#### Function Layout and Framework
+
+In order for your function to work with LivePerson Functions seamlessly it has to follow a certain pattern. This pattern can be viewed below.
+
+<div class="important">Make sure that the following declaration stays as shown and is in the first line of your function. Otherwise, the FaaS backend will reject the function.</div>
+
+```javascript
+function lambda(input, callback) {
+   callback(null,`Hello World`);
+}
+```
+
+Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 10. Therefore, you have access to all functionality offered by NodeJS.
+
+As you can see from the example above, during an invocation the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
+
+```javascript
+function callback(error, result){}
+```
+
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds, your function will be killed immediately, regardless of its error state.
 
 ### Step 5: Deploy your function
 
