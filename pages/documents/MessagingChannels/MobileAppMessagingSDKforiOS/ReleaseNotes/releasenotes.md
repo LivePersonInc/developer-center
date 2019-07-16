@@ -16,6 +16,27 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### iOS Messaging SDK - Version 3.9.5
+
+**Release date:** July 15, 2019
+
+### Environmental requirements
+The iOS Mobile Messaging SDK version 3.9.5 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+
+### Bug fix
+On non-window mode,  history is not loaded and pull to refresh is not visible for few iOS 12 devices.
+
+### iOS Messaging SDK - Version 3.9.4
+
+**Release date:** July 15, 2019
+
+### Environmental Requirements
+
+Supports Xcode 10.2 and Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C, and supported on iOS versions 10 through 12.
+
+### Bug fix
+On non-window mode,  history is not loaded and pull to refresh is not visible for few iOS 12 devices.
+
 ### iOS Messaging SDK - Version 3.9.3
 
 **Release date:** July 3 2019
