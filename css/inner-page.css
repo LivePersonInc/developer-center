@@ -325,7 +325,7 @@ ul.mysidebar.nav {
   position: -webkit-sticky;
   position: sticky;
   top: 150px;
-  height: 88vh;
+  height: 78vh;
   overflow-y: auto;
   list-style: none;
 
