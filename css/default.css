@@ -1369,6 +1369,10 @@ input#csds-button {
   display: none;
 }
 
+.sidebarSVG {
+  width: 24px;
+}
+
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){
