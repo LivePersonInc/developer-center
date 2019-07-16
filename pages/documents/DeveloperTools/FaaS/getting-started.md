@@ -14,7 +14,7 @@ redirect_from:
 
 ### Before getting started
 
-#### Set FaaS Permissions
+#### Set User Permissions
 
 Access to the LivePerson Functions platform on your account requires that it has been <strong>enabled</strong> as a feature. Please contact your LivePerson Account Team to have Functions <strong>enabled</strong> on your account. Once <strong>enabled</strong>, access to the interface is restricted to users with the right permission.
 
