@@ -640,6 +640,7 @@ a.loginText {
 
 .trialButton {
   background-color: #ff720b;
+  display: none !important;
 }
 
 .documentsbutton {
