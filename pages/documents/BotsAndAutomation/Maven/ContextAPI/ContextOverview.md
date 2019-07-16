@@ -17,7 +17,7 @@ The Context API gives access to inbox contextual attributes (user, conv history,
 This API will act as an on-demand repository for metadata about consumers and their conversations. Long-term, it will contain data about each consumer useful to both brands and to Maven, and can receive that data from both the brand and Maven.
 To ensure the contextual service works seamlessly with the Maven platform, the Context API will expose a defined schema for supported properties. All the CRUD operations for the Context information are supported.
 
-Each brand can have multiple namespaces.  Each namespace can have also have several "groups" of information. Each namespace can have several key value pairs of data that can be stored either at the namespace level or at the group level.
+Each Brand will have its own Namespaces. Each Namespace can be defined to fulfill their business needs. For example: a Namespace can be associated with a Conversation and the Namespace name in this case can be called conversationID. BrandId and Namespace will be the key. Each namespace can have also have several "groups" of information. Each namespace can have several key value pairs of data that can be stored either at the namespace level or at the group level.
 
 
 ### What can you do with the Context API
