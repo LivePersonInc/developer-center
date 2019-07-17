@@ -55,7 +55,7 @@ Example:
 ```bash
 curl --request POST \
 
-  --url http:///lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964 \
+  --url https://z2.context.liveperson.net/v1/account/le57708964 \
 
   --header 'content-type: application/json' \
 
@@ -71,7 +71,7 @@ curl --request POST \
 ### Delete a custom namespace
 
 {: .important}
-Only do this if _______
+Only do this if you want to delete the namespace
 
 <table>
     <thead>
