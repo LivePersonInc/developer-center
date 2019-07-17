@@ -260,8 +260,9 @@
             <option value="Zimbabwe">Zimbabwe</option>
         </select>
         <input class="mandatory" type="text" id="emailAddress" placeholder="Email Address" />
-        <input class="mandatory" type="text" id="createPassword" placeholder="Create Password" />
-        <input class="mandatory" type="text" id="confirmPassword" placeholder="Confirm Password" />
+        <input class="mandatory passwordField" type="password" id="createPassword" placeholder="Create Password" />
+        <input class="mandatory passwordField" type="password" id="confirmPassword" placeholder="Confirm Password" />
+        <div id="checkboxContainer"><input type="checkbox" onclick="showPassword()"><span>Show Password</span></div>
         <span id="passwordReq"><b>Password requirements</b>:<br>
           Minimum of 8 characters, at least one uppercase letter, one number, <br> and one special character ~!@#$%^&*()<>,.;:/?=+</span>
       </form>
@@ -270,6 +271,8 @@
         <div class="g-recaptcha" data-sitekey="6LfEsasUAAAAAPq4iL8Ayn_9QX7DVy-E7xOG2QeF"></div>
         <div id="byClicking"><input type="radio"><span> By clicking "Start Free Trial", I agree to the <a href="https://www.liveperson.com/policies/partner-terms-and-conditions">Developer Terms of Use</a>, <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, and <a href="https://www.liveperson.com/policies/privacy">Privacy Policy</a></span></div>
         <div id="registerButton"><span>Start Free Trial</span></div>
+        <span id="passwordErrorMatch">Your password and confirmation password don't match!</span>
+        <span id="allFields">Please fill out all the fields.</span>
       </div>
   </div>
   </div>
