@@ -11,18 +11,24 @@ function createAccount () {
 
 function postRequest () {
   console.log('I posted!');
-  const URL = 'https://lijrjpi0t5.execute-api.us-east-2.amazonaws.com/dev/devaccount';
+  const URL = 'https://uohcduank4.execute-api.us-east-2.amazonaws.com/dev/devaccount';
+  //declaring variables from the form
+  let firstName = $('#firstName').val();
+  let lastName = $('#lastName').val();
+  let country = $('#country').val();
+  let emailAddress = $('#emailAddress').val();
+  let password = $('#password').val();
   const user ={
-    firstName: "John",
-    lastName: "Doe",
-    websiteURL: "http://example.org",
-    country: "Canada",
-    email: "stefan@liveperson.com",
-    password: "javascript:alert(null)"
+    firstName: firstName,
+    lastName: lastName,
+    country: country,
+    email: emailAddress,
+    password: password
   }
   axios({
     method: 'post',
     url: URL,
+    headers: {'x-api-key': 'gUi91Xlj5lWOJdOiYttA0jA6EqUTxS626YJ0zW20', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: {
       user
     }
