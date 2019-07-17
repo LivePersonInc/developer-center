@@ -44,7 +44,7 @@ You will use the namespace value that is returned in the response in all other C
               "name": "someCustomNamespace"
             }
             </td>
-            <td>{"cas":"1560823714156052480"}
+            <td>Emoty    ; status code = 204
             </td>
         </tr>
     </tbody>
