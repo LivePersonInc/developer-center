@@ -20,8 +20,6 @@ Every API call to the Maven Context service requires the following Auth Headers 
 
 To use the Maven Context API, you will first need to create a Namespace.
 
-{: .important}
-Save the returned "cas" value
 
 You will use the namespace value that is returned in the response in all other Context API methods.
 
@@ -44,7 +42,7 @@ You will use the namespace value that is returned in the response in all other C
               "name": "someCustomNamespace"
             }
             </td>
-            <td>Emoty    ; status code = 204
+            <td>Empty body; status code = 204
             </td>
         </tr>
     </tbody>
@@ -95,6 +93,13 @@ Only do this if you want to delete the namespace
         </tr>
     </tbody>
 </table>
+
+Example: 
+
+```bash
+curl --request DELETE \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1 \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
 
 ### Get all namespace variables
 
