@@ -364,21 +364,13 @@ A very simple, basic structured content template for Apple Pay would be an image
 {: .important}
 In order to use the Signature enhanced security flow, you must contact your account manager.
 
-The Apple Pay Signature Flow is an extra layer of validation for Apple Pay transactions.
+The Apple Pay Signature Flow is an extra layer of validation for Apple Pay transactions. In the Request Metadata payload, there is a "signature" property that you can include. This signature is set on the account level. The Apple Business Chat connector takes the signature value that you sent and validates that with the signature attached to your account. If the validation fails, agents will see a red warning icon in the conversation window next to the message.
 
-The Apple Business Chat connector takes the signature and does verification and compares to what the developer sent. It's a way to stop rogue requests from bad actors.
+The signature flow provides an extra layer of security before sending the payment request to Apple, but it is optional. 
 
-The new flow will provide a way for brands to Enhanced security sign the payload, which will be verified by the connector before sending out to Apple.
+If you would like to opt in for this additional verification, contact your LivePerson account manager. 
 
-If the payment fails, brands will be able to expose the failed response via the Agent Widget SDK and present the error response to the agent while allowing the agent to help the consumer to perform the payment successfully.
-
-This verification flow is optional. For brands who would like to opt in for this additional security verification flow must contact LivePerson account manager to help them on board.
-
-
-{: .important}
-You must use the same secret key that was given to LP when onboarding for this verification flow.
-
-To generate the signed payload to include in the Apple Pay payload for verification:
+**How to generate the signed payload to include in the Apple Pay payload for verification:**
 
 1. Generate signature value
     1. Generate the Apple Pay payload
@@ -386,7 +378,6 @@ To generate the signed payload to include in the Apple Pay payload for verificat
     3. Generate the signature, sign the generated hash from step B using the secret key & preferred algorithm required during onboarding to opt in with this verification flow
 2. Add signature to payload
     1. Add “signature” property and the value generated from step 1C to [the original payload](#connectorpaymentrequest-object-properties)
-
 
 ### Receiving an Apple Pay Response from a Consumer
 
