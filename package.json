@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.7.1",
+    "jquery": ">=3.4.0",
+    "jquery-highlight": "^3.5.0"
+  }
+}

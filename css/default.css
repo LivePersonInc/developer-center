@@ -159,7 +159,8 @@ code pre {
 
   .sidebartop {
     display: flex;
-    height: 90px;
+    flex-direction: column;
+    height: 150px;
     width: 100%;
     background-color: #162036;
     position: -webkit-sticky;
@@ -606,11 +607,39 @@ table tbody td img {
 }
 
 .sidebarbuttons {
-  display: none;
   flex: 1;
-  align-self: flex-end;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  align-self: flex-start;
+  margin-top: 24px;
+  margin-left: 30px;
+  color: #fff;
+  display: none;
+}
+
+.sidebarbuttons div {
+  border-radius: 25px;
+  padding: 7px 25px;
+  font-size: 12px;
+  height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.sidebarbuttons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.loginText {
+  margin-right: 12px;
+}
+
+.loginButton {
+  background-color: #5879DA;
+}
+
+.trialButton {
+  background-color: #ff720b;
 }
 
 .documentsbutton {
@@ -1187,6 +1216,31 @@ a.anchoritem {
 
 .defaultfooterexplorer span {
  margin-left: 400px;
+}
+
+.heroPanelExplorer {
+  margin-bottom: 50px;
+}
+
+.cardInnerTextExplorer {
+  width: 40%;
+}
+
+.secondConfirmCardImgExplorer {
+  display: none;
+}
+
+.thirdPanelExplorer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.confirmationFooterExplorer {
+  height: 50px;
+}
+
+.formContainerExplorer {
+  margin-left: 150px;
 }
 
 #apiList {
