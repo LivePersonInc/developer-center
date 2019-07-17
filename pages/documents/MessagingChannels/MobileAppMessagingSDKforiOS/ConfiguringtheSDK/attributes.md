@@ -2472,9 +2472,9 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
-If disabled, scroll to bottom button scrolls to bottom although we can have new messages and don't show the badge at all nor "new message preview."
+If **unreadMessagesDividerEnabled**  is disable, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
 
-Note: Regardless of unreadMessagesDividerEnabled value, the conversation screen will always scrolls to the last position where the user left off. 
+Note: Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
 
    - **Type:** Bool
    - **Default value:** true 
