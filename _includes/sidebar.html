@@ -1,4 +1,4 @@
-<div class="sidebartop"><a href="https://developers.liveperson.com/"><img class="sitelogo" src="img/desktop.png" /></a>
+<div class="sidebartop"><a href="https://developers.liveperson.com/"><img alt="LivePerson Knowledge Center" class="sitelogo" src="img/desktop.png" /></a>
 <div class="sidebarbuttons">
   <a target="_blank" href="https://authentication.liveperson.net/login.html" class="loginText">
   <div class="loginButton">Login</div>
@@ -12,7 +12,7 @@
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   <li class="homeitem folder topfolder active">
     <div class="sidebarimage">
-      <img src="img/getting-started.png" />
+      <img alt="LivePerson Knowledge Center" src="img/getting-started.png" />
     </div>
     <a  onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li>
@@ -20,7 +20,7 @@
   {% if forloop.last == true %}
   <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder lowerimage">
-    <img src="img/{{ category.image }}.svg" />
+    <img alt="LivePerson Knowledge Center" src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
@@ -58,7 +58,7 @@
   </li>
   {% else %}
   <li class="folder topfolder lowerimage">
-    <img src="img/{{ category.image }}.svg" />
+    <img alt="LivePerson Knowledge Center" src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
@@ -99,7 +99,7 @@
     <hr class="sidebarhr lesstop" />
     <div class="sidebarbuttoncontainer">
       <li class="folder topfolder ">
-        <img src="img/support-icon.png" />
+        <img alt="LivePerson Knowledge Center" src="img/support-icon.png" />
         <a target="_blank" class="bottombuttons" href="http://knowledge.liveperson.com">Knowledge Center</a>
       </li>
   </div>
