@@ -100,7 +100,7 @@ Example:
 curl --request DELETE \
   --url https://z2.context.liveperson.net/v1/account/36209512/namespace1 \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
-
+```
 ### Get all namespace variables
 
 This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
@@ -212,6 +212,13 @@ curl --request PATCH \
     </tbody>
 </table>
 
+```bash
+curl --request DELETE \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties/isSomething \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+
+```
+
 ### List of namespaces created
 
 <table>
@@ -234,6 +241,14 @@ curl --request PATCH \
         </tr>
     </tbody>
 </table>
+
+```bash
+
+curl --request GET \
+  --url https://z2.context.liveperson.net/v1/account/36209512 \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+
+```
 
 ### Get all properties
 
@@ -261,6 +276,14 @@ You can put anything you want in the entityId. If you want to put consumer and c
     </tbody>
 </table>
 
+```bash
+
+curl --request GET \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/100/properties \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+
+```
+
 ### Get one property
 
 <table>
@@ -284,7 +307,13 @@ You can put anything you want in the entityId. If you want to put consumer and c
     </tbody>
 </table>
 
-### Update multiple properties
+```bash
+
+
+
+```
+
+### Update multiple properties within an entity (group)
 
 <table>
     <thead>
@@ -309,6 +338,21 @@ You can put anything you want in the entityId. If you want to put consumer and c
     </tbody>
 </table>
 
+```bash
+
+curl --request PATCH \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace2/200/properties \
+  --header 'content-type: application/json' \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf' \
+  --data '{
+	"a": 1,
+	"b": 2,
+	"c": 3
+}'
+
+
+```
+
 ### pass multiple propertyName to the GET properties	
 
 <table>
@@ -331,3 +375,11 @@ You can put anything you want in the entityId. If you want to put consumer and c
         </tr>
     </tbody>
 </table>
+
+```bash
+
+curl --request GET \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties?include=minutesSinceLastConversation,salesforceId \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+
+```
