@@ -212,6 +212,8 @@ curl --request PATCH \
     </tbody>
 </table>
 
+Example: 
+
 ```bash
 curl --request DELETE \
   --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties/isSomething \
@@ -241,6 +243,8 @@ curl --request DELETE \
         </tr>
     </tbody>
 </table>
+
+Example: 
 
 ```bash
 
@@ -276,6 +280,8 @@ You can put anything you want in the entityId. If you want to put consumer and c
     </tbody>
 </table>
 
+Example: 
+
 ```bash
 
 curl --request GET \
@@ -307,6 +313,8 @@ curl --request GET \
     </tbody>
 </table>
 
+Example: 
+
 ```bash
 
 
@@ -337,6 +345,8 @@ curl --request GET \
         </tr>
     </tbody>
 </table>
+
+Example: 
 
 ```bash
 
@@ -375,6 +385,8 @@ curl --request PATCH \
         </tr>
     </tbody>
 </table>
+
+Example: 
 
 ```bash
 
