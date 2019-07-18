@@ -206,7 +206,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .activeButton {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 #registerButton span {
