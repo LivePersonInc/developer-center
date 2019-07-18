@@ -15,6 +15,7 @@ $(document).ready(function () {
 	allArticlesClick();
 	scrollToHash();
 	domainTool();
+	searchClick(event);
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -87,6 +88,7 @@ function navigateContent(url) {
 			allArticlesClick();
 			scrollToHash();
 			domainTool();
+			searchClick ();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -637,6 +639,14 @@ function isExplorer() {
 		confirmationFooter.classList.add('confirmationFooterExplorer');
 		formContainer.classList.add('formContainerExplorer');
 	}
+};
+
+function searchClick (event) {
+	console.log('hello');
+	$('.ds-dropdown-menu').on('click', 'a', function (event) {
+	event.preventDefault();
+	linkclick(event, this);
+})
 };
 
 $('#mysidebar').height($(".nav").height());
