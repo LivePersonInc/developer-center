@@ -11,7 +11,6 @@ $(document).ready(function () {
 	isExplorer();
 	searchFunction();
 	capabilitiesSearch();
-	searchHighlight();
 	allArticlesClick();
 	scrollToHash();
 	domainTool();
