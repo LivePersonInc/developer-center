@@ -1,16 +1,16 @@
 ---
-pagename: Detailed API
+pagename: Request Forwarding
 redirect_from:
   - guides-authentication-detailedapi.html
   - authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
-permalink: mutual-tls-authentication-detailed-api.html
+permalink: mutual-tls-authentication-request-forwarding.html
 indicator: both
 ---
 
-This API wraps and forwards any request according to specified parameters in the request headers with the requried certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpont).
+This method wraps and forwards any request according to specified parameters in the request headers with the required certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpoint).
 
 ### Request
 
@@ -42,7 +42,7 @@ same body as the client sends to original endpoint.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|

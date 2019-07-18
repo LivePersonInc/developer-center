@@ -1,12 +1,12 @@
 ---
-pagename: Detailed API
+pagename: P12 Testing Tool
 redirect_from:
   - guides-authentication-detailedapi.html
   - authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
-permalink: mutual-tls-authentication-detailed-api.html
+permalink: mutual-tls-authentication-p12-testing-tool.html
 indicator: both
 ---
 
@@ -19,7 +19,7 @@ The permission associated with this action is MTLS_READ_INTERNAL.
  |Method|      URL|  
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/account/{accountId}/p12-test/multipart  |
- 
+
 
 **Request Headers**
 
@@ -48,7 +48,7 @@ same body as the client sends to original endpoint.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|

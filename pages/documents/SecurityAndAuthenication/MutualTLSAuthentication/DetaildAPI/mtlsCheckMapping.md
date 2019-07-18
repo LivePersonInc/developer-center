@@ -1,16 +1,16 @@
 ---
-pagename: MTLS Check Mapping API
+pagename: Check MTLS Configuration
 redirect_from:
   - guides-authentication-detailedapi.html
   - authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
-permalink: mutual-tls-authentication-detailed-api.html
+permalink: mutual-tls-authentication-check-mtls-configuration.html
 indicator: both
 ---
 
-This API checks for configuration existence for the specified parameters in the request headers.
+This API checks that a configuration exists using specific parameters (account number, URL) providede in the request headers.
 
 ### Request
 
@@ -23,15 +23,17 @@ This API checks for configuration existence for the specified parameters in the 
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
- 
-**Request Body** 
 
+**Request Body**
+
+ ```json
 [
 {"accountId":"test1","serviceName":"test1","url":"https://test.com"},
 {"accountId":"test2","serviceName":"test1","url":"https://test.com"},
 {"accountId":"test3","serviceName":"test1","url":"https://test.com"},
 {"accountId":"test4","serviceName":"test1","url":"https://test.com"}
 ]
+```
 
 **Path Parameters**
 
@@ -40,7 +42,7 @@ This API checks for configuration existence for the specified parameters in the 
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -53,9 +55,11 @@ This API checks for configuration existence for the specified parameters in the 
 
 **Response Body**
 
+ ```json
 {
     "CertificateMappingParamters{serviceName='test1', accountId='test515', url='https://test.com'}": false,
     "CertificateMappingParamters{serviceName='test1', accountId='test7', url='https://test.com'}": false,
     "CertificateMappingParamters{serviceName='test1', accountId='test527', url='https://test.com'}": false,
     "CertificateMappingParamters{serviceName='test1', accountId='test511', url='https://test.com'}": true
 }
+```

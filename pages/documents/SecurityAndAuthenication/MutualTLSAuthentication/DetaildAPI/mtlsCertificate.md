@@ -1,16 +1,16 @@
 ---
-pagename: Detailed API
+pagename: Certificate Management
 redirect_from:
   - guides-authentication-detailedapi.html
   - authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
-permalink: mutual-tls-authentication-detailed-api.html
+permalink: mutual-tls-authentication-certificate-management.html
 indicator: both
 ---
 
-This API is for certificate management according to specified parameters (accountId, name, p12 and password).
+This method allows you manage certificates according to specified parameters (accountId, name, p12 and password).
 
 ### Request
 
@@ -43,7 +43,7 @@ This API is for certificate management according to specified parameters (accoun
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -58,7 +58,7 @@ This API is for certificate management according to specified parameters (accoun
 
 **Response Body**
 
-for example:
+ ```json
 {
     "id": 3515906310,
     "deleted": false,
@@ -68,3 +68,4 @@ for example:
     "status": "UnAvailable",
     "expirationDate": null
 }
+```
