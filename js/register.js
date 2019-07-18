@@ -5,10 +5,10 @@ let country;
 let emailAddress;
 let password;
 let confirmPassword;
-var trialButton = document.getElementById('registerButton');
 
 $(document).ready(function () {
   createAccount();
+  var trialButton = document.getElementById('registerButton');
   trialButton.disabled = true;
 });
 
