@@ -9,9 +9,13 @@ let trialButtton;
 
 $(document).ready(function () {
   createAccount();
+  disableBtn();
+});
+
+function disableBtn () {
   trialButton = document.getElementById('registerButton');
   trialButton.disabled = true;
-});
+}
 
 function enableBtn () {
   trialButton.disabled = false;
