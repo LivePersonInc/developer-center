@@ -6,7 +6,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Mutual TLS Authentication
-permalink: mutual-tls-authentication-detailed-api.html
+permalink: mutual-tls-authentication-introduction.html
 root-link: true
 indicator: both
 ---
