@@ -642,7 +642,6 @@ function isExplorer() {
 };
 
 function searchClick (event) {
-	console.log('hello');
 	$('.ds-dropdown-menu').on('click', 'a', function (event) {
 	event.preventDefault();
 	linkclick(event, this);
