@@ -2728,7 +2728,7 @@ Define the frequency of the TTR (time to response) messages.
 
 #### unread_indicator_bubble_enable
 Toggle the mode of the unread_indicator_bubble_enable. 
-If **unread_indicator_bubble_enable**  is disable, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
+If **unread_indicator_bubble_enable**  is disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
 
 Note: Regardless of **unread_indicator_bubble_enable** value, the conversation screen will always scrolls to the last position where the user left off.
 
