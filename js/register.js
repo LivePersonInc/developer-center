@@ -5,10 +5,17 @@ let country;
 let emailAddress;
 let password;
 let confirmPassword;
+var trialButton = document.getElementById('registerButton');
 
 $(document).ready(function () {
   createAccount();
+  trialButton.disabled = true;
 });
+
+function enableBtn () {
+  trialButton.disabled = false;
+  $(trialButton).addClass('activeButton');
+}
 
 function createAccount () {
     $('#captchaContainer').on('click', '#registerButton', function (event) {

@@ -202,6 +202,11 @@ input:-moz-placeholder { /* Firefox 18- */
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  opacity: 0.5;
+}
+
+#registerButton .activeButton {
+  opacity: 1;
 }
 
 #registerButton span {
