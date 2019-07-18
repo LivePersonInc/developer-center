@@ -2472,7 +2472,7 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
-If **unreadMessagesDividerEnabled**  is disable, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
+If **unreadMessagesDividerEnabled**  is disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
 
 Note: Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
 
