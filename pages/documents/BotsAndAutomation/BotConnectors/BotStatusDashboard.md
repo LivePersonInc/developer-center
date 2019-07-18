@@ -12,9 +12,9 @@ indicator:
 
 The bot status dashboard provides a detailed overview for the most important bot KPIs. It features a chronological history of 
 
-different bot states events, such as online and interruptions and provides a calculated uptime for the bot. To track the impact of the bot,
+different bot states events, such as online and interruptions and provides a calculated uptime for the bot. To track the efficiency of the bot,
 
-the dashboard features an overview for the number of handled conversation in a timeline overview. The dashboard can be accessed by clicking on bot's name (1) as seen in *Figure 1.1*
+the dashboard features an overview for the number of handled conversation in a timeline graph. The dashboard can be accessed by clicking on bot's name (1) as seen in *Figure 1.1*
 
 <img class="fancyimage" style="width:600px" src="img/botstatusdashboard/bot-status-select.png">
 
@@ -22,24 +22,25 @@ Figure 1.1 How to access the bot status dashboard
 
 ### Limitations
 
-If the bot is stopped and then started again, all previous dashboard data is wiped. For a running bot, conversation data storage is limited to max 7 days in the past. 
+If the bot is restarted, all previous dashboard data will be cleared. 
 
+For a running bot, conversation data storage is limited to max 7 days in the past. 
 
 ### Dashboard overview
 
-You will be presented the following screen after clicking on the bot's name. 
+The user will see the following screen after clicking on the bot's name. 
 
 <img class="fancyimage" style="width:600px" src="img/botstatusdashboard/bot-status-overview.png">
 
 Figure 2.1 Dashboard overview
 
-In section 1 as seen in *Figure 2.1* the dashboard provides a short configuration overview for the selected bot. The user can see the type of the bot (messaging/chat),
+In section 1, as seen in *Figure 2.1*, the dashboard provides a short configuration overview for the selected bot. The user can see the connection type to LiveEngage (either Chat or Messaging),
 
-the configured AI Vendor, the failover skill and the skill which are assigned to this bot.
+the configured A.I. Vendor, the failover skill and the skills which are assigned to this bot.
 
 ### Status
 
-In section 2 as seen in *Figure 2.1* the dashboard provides a chronological history of bot states events and an overview of the bot's overall uptime. 
+In section 2, as seen in *Figure 2.1*, the dashboard provides a chronological history of bot states events and an overview of the bot's overall uptime. 
 
 <img class="fancyimage" style="width:600px" src="img/botstatusdashboard/bot-status-online-state.png">
 
@@ -59,7 +60,7 @@ The error details contain a human readable error message, the error code and an 
 
 ### Conversation Metrics
 
-In section 3 as seen in *Figure 2.1* the bot status dashboard provides an overview of specific bot conversation metrics. 
+In section 3, as seen in *Figure 2.1*, the bot status dashboard provides an overview of specific bot conversation metrics. 
 
 <img class="fancyimage" style="width:600px" src="img/botstatusdashboard/bot-status-metrics.png">
 
