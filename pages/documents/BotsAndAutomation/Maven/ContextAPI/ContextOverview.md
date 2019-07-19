@@ -12,30 +12,33 @@ indicator: both
 
 ### What is the Context API
 
-The Context API gives access to inbox contextual attributes (user, conv history, operational context). Define & store custom attributes with static data or CRM integrations via FAAS. Carry over custom context through conversational journey.
+The Context API is an on-demand repository for metadata about consumers and their conversations.
 
-This API will act as an on-demand repository for metadata about consumers and their conversations. Long-term, it will contain data about each consumer useful to both brands and to Maven, and can receive that data from both the brand and Maven.
-To ensure the contextual service works seamlessly with the Maven platform, the Context API will expose a defined schema for supported properties. All the CRUD operations for the Context information are supported.
+In any given conversation, Maven AI analyzes and provides extra contextual metadata about the nature of the conversation and consumer. The Context API is a way to retrieve and store this metadata information.
 
-Each Brand will have its own Namespaces. Each Namespace can be defined to fulfill their business needs. For example: a Namespace can be associated with a Conversation and the Namespace name in this case can be called conversationID. BrandId and Namespace will be the key. Each namespace can have also have several "groups" of information. Each namespace can have several key value pairs of data that can be stored either at the namespace level or at the group level.
+The Context API provides a system of organization that allows you to manage your data. Each brand can have multiple namespaces for different business use cases. Each namespace can have multiple groups of information based on key-value pairs. Key-value pairs can be stored at either the namespace level or the group level.
 
+Define & store custom attributes with static data or CRM integrations via [LivePerson Functions](liveperson-functions-overview.html). Carry over custom context through conversational journey.
 
-### What can you do with the Context API
+In the long-term, the context API will automatically contain data about each consumer useful to both brands and to Maven, and you can receive that data from both the brand and Maven. To ensure the contextual service works seamlessly with the Maven platform, the Context API will expose a defined schema for supported properties. All the CRUD operations for the Context information are supported.
 
-* Passing context and customer routing / escalation path from Watson bots to conversation builder bots. 
-
-* Storing temporary notes from agent widgets when conversation is hidden - to be retrieved on auto close event via faas trigger or messaging interactions query to get conversation ids for the namespace 
-
+Initially, this API is only for custom data that you set and get.
 
 ### Who is the Context API for
 
-If you are already using a Maven AI solution, you may want to use the Context API to retrieve and send values between bots. You may use the context API to store information related to conversations.
+If you are already using a Maven AI solution, you may want to use the Context API to retrieve and send values between bots. You may use the Context API to store information related to conversations.
+
+### Example Use Cases
+
+* Passing context and customer routing / escalation path from Watson bots to conversation builder bots. 
+
+* Storing temporary notes from agent widgets when the conversation is hidden - to be retrieved on auto close event via [FaaS trigger](liveperson-functions-development-events-templates.html) or messaging interactions query to get conversation IDs for the namespace 
 
 ### Getting Started
 
 1. Get your API Key
 
-    You will need to create and use the API key before using Context Service. Contact Live Person Support to create your API Key. Only 1 API key can be active for any given account id at any given time.
+    You will need to create and use the API key before using Context Service. Contact Live Person Support to create your API Key. Only 1 API key can be active for any given account ID at any given time.
 
 2. Get your base URL
 

@@ -20,7 +20,6 @@ Every API call to the Maven Context service requires the following Auth Headers 
 
 To use the Maven Context API, you will first need to create a Namespace.
 
-
 You will use the namespace value that is returned in the response in all other Context API methods.
 
 <table>
