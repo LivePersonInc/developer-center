@@ -69,6 +69,8 @@ for example:
     "expirationDate": null
 }
 
+
+
 id - the certificate ID
 deleted - the certificate is (soft) deleted or not 
 status - the certificate is available/not available/expired (the certificate is available if it exists at both Hashicorp Vault and DB and isn't expired).
