@@ -60,17 +60,26 @@ This API is for certificate management according to specified parameters (accoun
 
 for example:
 {
+    
     "id": 3515906310,
+    
     "deleted": false,
+    
     "name": "Cert1",
+    
     "displayName": "Cert1",
+    
     "siteId": "le1606809",
+    
     "status": "UnAvailable",
+    
     "expirationDate": null
 }
 
 
 
 id - the certificate ID
+
 deleted - the certificate is (soft) deleted or not 
+
 status - the certificate is available/not available/expired (the certificate is available if it exists at both Hashicorp Vault and DB and isn't expired).
