@@ -12,6 +12,14 @@ $(document).ready(function () {
   disableBtn();
 });
 
+//on click on the free trial button
+function createAccount () {
+    $('#captchaContainer').on('click', '#registerButton', function (event) {
+      console.log('registerClicked');
+      validateInfo();
+  })
+};
+
 //disable the free trial button
 function disableBtn () {
   trialButton = document.getElementById('registerButton');
@@ -24,14 +32,6 @@ function enableBtn () {
   trialButton.disabled = false;
   $(trialButton).addClass('activeButton');
 }
-
-//on click on the free trial button
-function createAccount () {
-    $('#captchaContainer').on('click', '#registerButton', function (event) {
-      console.log('registerClicked');
-      validateInfo();
-  })
-};
 
 //make sure all the info submitted to the form is valid
 function validateInfo (){
