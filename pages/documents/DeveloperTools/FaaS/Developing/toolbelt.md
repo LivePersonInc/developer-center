@@ -109,7 +109,7 @@ const options = {
 
 lpClient(
   LpServices.MSG_HIST, // LP service name
-  `/messaging_history/api/account/${process.env.BRAND_ID}/conversations/conversation/search`, // enpoint of the service
+  `/messaging_history/api/account/${process.env.BRAND_ID}/conversations/conversation/search`, // endpoint of the service
   options // options
 )
 .then(response => {
