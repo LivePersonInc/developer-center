@@ -111,3 +111,53 @@ callback(null, result);
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
+
+### Payload Details
+
+<table>
+<thead><tr><th>1. level</th><th>2. level</th><th>3. level</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
+ <tr><td>end</td><td>closeReason</td><td>&nbsp;</td><td>which role closed conversation</td><td>STRING</td><td>AGENT/CONSUMER/SYSTEM</td></tr>
+ <tr><td>general</td><td>type</td><td>&nbsp;</td><td>notification type</td><td>STRING</td><td>UPSERT</td></tr>
+ <tr><td>general</td><td>convId</td><td>&nbsp;</td><td>ID of conversation</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
+ <tr><td>general</td><td>dialogId</td><td>&nbsp;</td><td>ID of dialog</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
+ <tr><td>general</td><td>sessionId</td><td>&nbsp;</td><td>ID of session</td><td>NUMBER</td><td>1528463744580</td></tr>
+ <tr><td>general</td><td>startTs</td><td>&nbsp;</td><td>conversation start time as timestamp</td><td>NUMBER</td><td>1528463744663</td></tr>
+ <tr><td>general</td><td>effectiveTTR</td><td>&nbsp;</td><td>timestamp when agent should be available</td><td>NUMBER</td><td>1528464044687</td></tr>
+ <tr><td>general</td><td>oldConvState</td><td>&nbsp;</td><td>previous state of the dialog</td><td>STRING</td><td>CLOSE</td></tr>
+ <tr><td>general</td><td>newConvState</td><td>&nbsp;</td><td>current state of the dialog</td><td>STRING</td><td>OPEN</td></tr>
+ <tr><td>general</td><td>contexttype</td><td>&nbsp;</td><td>type of cotext</td><td>STRING</td><td>SharkContext</td></tr>
+ <tr><td>general</td><td>campaignInfo</td><td>id</td><td>ID of campaign</td><td>NUMBER</td><td>2327699812</td></tr>
+ <tr><td>general</td><td>campaignInfo</td><td>engangementId</td><td>ID of engangement </td><td>NUMBER</td><td>2327699912</td></tr>
+ <tr><td>general</td><td>clientLanguage</td><td>&nbsp;</td><td>language of the client device</td><td>STRING</td><td>en-US</td></tr>
+ <tr><td>general</td><td>clientFeatures</td><td>&nbsp;</td><td>list of supported client features</td><td>ARRAY</td><td>["AUTO_MESSAGES", "MULTI_DIALOG"]</td></tr>
+ <tr><td>general</td><td>inOffHours</td><td>&nbsp;</td><td>shift-status of the contact center</td><td>BOOLEAN</td><td>TRUE/FALSE</td></tr>
+ <tr><td>general</td><td>visitorId</td><td>&nbsp;</td><td>ID of visitor</td><td>NUMBER</td><td>1528463744580</td></tr>
+ <tr><td>general</td><td>originatorId</td><td>&nbsp;</td><td>ID of originator</td><td>NUMBER</td><td>37607275.23</td></tr>
+ <tr><td>general</td><td>originatorPid</td><td>&nbsp;</td><td>Pid of originator</td><td>STRING</td><td>f39fbc5f-da77-5417-8bc7-7584efdd1a5e</td></tr>
+ <tr><td>general</td><td>originatorMetadata</td><td>id</td><td>Pid of originator of metadata change</td><td>STRING</td><td>f39fbc5f-da77-5417-8bc7-7584efdd1a5e</td></tr>
+ <tr><td>general</td><td>originatorMetadata</td><td>role</td><td>Role of originator of metadata change</td><td>STRING</td><td>CONTROLLER</td></tr>
+ <tr><td>general</td><td>serverTimestamp</td><td>&nbsp;</td><td>timestamp of the server</td><td>NUMBER</td><td>1528463781807</td></tr>
+ <tr><td>general</td><td>clientIpAdress</td><td>&nbsp;</td><td>IP Address of client</td><td>STRING</td><td>172.26.138.38</td></tr>
+ <tr><td>general</td><td>manualETTR</td><td>&nbsp;</td><td>time to response manually updated by agent</td><td>STRING</td><td>1541152938069</td></tr>
+ <tr><td>general</td><td>lastMessageComposer</td><td>&nbsp;</td><td>the role of the last composer</td><td>STRING</td><td>CONSUMER</td></tr>
+ <tr><td>general</td><td>lastMessageTs</td><td>&nbsp;</td><td>timestamp of last message</td><td>NUMBER</td><td>1541152938069</td></tr>
+ <tr><td>general</td><td>lastAgentMsgTs</td><td>&nbsp;</td><td>timestamp of last agent message</td><td>NUMBER</td><td>1541152938069</td></tr>
+ <tr><td>general</td><td>backToQueueTs</td><td>&nbsp;</td><td>timestamp when the conversation was returned to queue</td><td>NUMBER</td><td>1541152938069</td></tr>
+ <tr><td>idle</td><td>lastConsumerMsgTs</td><td>&nbsp;</td><td>timestamp of last consumer message</td><td>NUMBER</td><td>1541152938069</td></tr>
+ <tr><td>idle</td><td>agentNonResponsive</td><td>time</td><td>time that should pass after consumer's last message in order the agent to be non-responsive</td><td>NUMBER</td><td>30</td></tr>
+ <tr><td>idle</td><td>agentNonResponsive</td><td>timeUnits</td><td>time units in which agent non-responsive time should be calculated</td><td>STRING</td><td>minutes</td></tr>
+ <tr><td>idle</td><td>consumserNonResponsive</td><td>time</td><td>time that should pass after agent's last message in order the consumer to be non-responsive</td><td>NUMBER</td><td>30</td></tr>
+ <tr><td>idle</td><td>consumserNonResponsive</td><td>timeUnits</td><td>time units in which consumer non-responsive time should be calculated</td><td>STRING</td><td>minutes</td></tr>
+ <tr><td>idle</td><td>convNotTakenTime</td><td>time</td><td>time units in which conversation idle time should be calculated</td><td>STRING</td><td>minutes</td></tr>
+ <tr><td>idle</td><td>convNotTakenTime</td><td>timeUnits</td><td>how long should the conversation stay in queue in order to be idle</td><td>NUMBER</td><td>30</td></tr>
+ <tr><td>mid</td><td>openedInOffHours</td><td>&nbsp;</td><td>indicator if the conversation was opened in off hours</td><td>BOOLEAN</td><td>TRUE/FALSE</td></tr>
+ <tr><td>participantChange</td><td>oldParticipants</td><td>&nbsp;</td><td>array of the participants of the previous state</td><td>ARRAY</td><td>[{"id": "f9d58c57-c489-45f5-bae4-c5ebd52b3972","role": "ASSIGNED_AGENT"}]</td></tr>
+ <tr><td>participantChange</td><td>newParticipants</td><td>&nbsp;</td><td>array of the participants of the current state</td><td>ARRAY</td><td>[{"id": "f9d58c57-c489-45f5-bae4-c5ebd52b3972","role": "ASSIGNED_AGENT"}, {"id": "f9d58c57-c489-45f5-bae4-c5ebd52b3972","role": "AGENT"}]</td></tr>
+ <tr><td>routing</td><td>oldSkillId</td><td>&nbsp;</td><td>previous skillId of conversation</td><td>STRING</td><td>563268</td></tr>
+ <tr><td>routing</td><td>newSkillId</td><td>&nbsp;</td><td>current skillId of conversation</td><td>STRING</td><td>563267</td></tr>
+ <tr><td>start</td><td>firstConversation</td><td>&nbsp;</td><td>if this is the frist conversation of the consumer ever</td><td>BOOLEAN</td><td>TRUE/ FALSE</td></tr>
+ <tr><td>ttr</td><td>oldTtr</td><td>ttrType</td><td>type of ttr of the previous state</td><td>STRING</td><td>NORMAL</td></tr>
+ <tr><td>ttr</td><td>oldTtr</td><td>value</td><td>value of ttr of the previous state</td><td>NUMBER</td><td>600</td></tr>
+ <tr><td>ttr</td><td>newTtr</td><td>ttrType</td><td>type of ttr of the new state</td><td>STRING</td><td>URGENT</td></tr>
+ <tr><td>ttr</td><td>newTtr</td><td>value</td><td>value of ttr of the new state (after change for example to URGENT)</td><td>NUMBER</td><td>300</td></tr>
+</tbody></table>

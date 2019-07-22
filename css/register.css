@@ -201,6 +201,12 @@ input:-moz-placeholder { /* Firefox 18- */
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.activeButton {
+  opacity: 1 !important;
 }
 
 #registerButton span {
@@ -208,6 +214,40 @@ input:-moz-placeholder { /* Firefox 18- */
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
+}
+
+#checkboxContainer {
+  display: flex;
+  align-items: center;
+}
+
+#checkboxContainer input {
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+#checkboxContainer span {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+#passwordErrorMatch {
+  display: none;
+  color: red;
+  align-self: baseline;
+  margin-top: 5px;
+  font-style: italic;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+#allFields {
+  display: none;
+  color: red;
+  align-self: baseline;
+  margin-top: 5px;
+  font-style: italic;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 15px;
 }
 
 /* Media queries begin, don't panic! */

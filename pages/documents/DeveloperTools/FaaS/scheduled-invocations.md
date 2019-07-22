@@ -6,8 +6,6 @@ categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 permalink: liveperson-functions-scheduled-invocations.html
 indicator: both
-redirect_from:
-  - function-as-a-service-scheduled-invocations.html
 ---
 
 To give brands the option to call their functions on a regular basis, we developed time-based scheduling for LivePerson Functions. Similar to Cron on Unix systems, we allow to define recurring invocations via Cron expression for functions that are not connected to any events (functions that are connected to events don't need scheduling, since they are invoked whenever the event is fired).
@@ -31,4 +29,3 @@ When specifying your cron values please make sure that your values fall within t
 * Day of Week: 0-6 (Sun-Sat)
 
 <div class="important">Only deployed <b>NO-EVENT</b> functions will be scheduled. Please note that during undeployment the function schedule will not be removed but marked as warning.</div>
-

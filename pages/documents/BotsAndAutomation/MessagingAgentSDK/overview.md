@@ -2,7 +2,7 @@
 pagename: Overview
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bot"
+categoryname: "Agent Experience & Bots"
 documentname: Messaging Agent SDK
 
 level-order: 3
@@ -22,4 +22,4 @@ The Messaging Agent SDK (Node.JS) was built in order to help developers and our 
 
 [To access the Messaging Agent SDK, click here](https://github.com/LivePersonInc/node-agent-sdk). Below you can find an overview video describing bots, LiveEngage and the benefits of using them on top of our platform. For more info on the different methods which the SDK uses, please refer to the Repository's readme file. For more info on the different examples, you can refer to the same file or check out the "examples" page of this document.
 
-<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/312512034" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>

@@ -167,6 +167,18 @@
           - subpagename: Using Environment Variables
           - subpagename: Training and Tuning Your Intents and FAQs
       #- pagename: Operations
+  #- documentname: Maven
+    #pages:
+      #- pagename: Overview
+      #- pagename: Context API
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Methods
+      #- pagename: AskMaven API
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Methods
+
   - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
@@ -493,14 +505,14 @@
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Developing with LivePerson Functions
+      - pagename: Development
         subpages:
           - subpagename: Overview
           - subpagename: "Events & Templates"
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
-      - pagename: Deploying LivePerson Functions
+      - pagename: Deployment
       - pagename: Scheduled Invocations
       - pagename: External Invocations
       - pagename: Use Cases
