@@ -7,10 +7,11 @@ documentname: LivePerson Functions
 permalink: liveperson-functions-external-invocations-overview.html
 indicator: both
 redirect_from:
-  - function-as-a-service-external-invocations-client-credentials.html
+  - liveperson-functions-external-invocations.html
+  - function-as-a-service-external-invocations-overview.html
 ---
 
-To give brands the option to call their functions fberom outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth 2.0.
+To give brands the option to call their functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth 2.0.
 
 Here is a short OAuth 2.0 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
 
