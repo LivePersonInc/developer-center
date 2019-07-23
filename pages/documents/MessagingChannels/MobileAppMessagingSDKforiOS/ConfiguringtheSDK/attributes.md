@@ -967,12 +967,6 @@ Refers to the style in which the link preview cell will be displayed.
 </div>
 
 
-#### linkPreviewSiteNameTextColor  
-Color code for the description site name link preview area inside cell.
-
-   - **Type:** UIColor
-   - **Default value:**  
-
 
 #### urlRealTimePreviewBackgroundColor 
 The background color of the url real time preview.
@@ -1025,7 +1019,7 @@ The border width of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> </li>
+      <li><b>Default value:</b> 1.0 </li>
    </ul>
 </div>
 
@@ -1048,7 +1042,7 @@ The title text color of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> </li>
+      <li><b>Default value:</b> UIColor.Black</li>
    </ul>
 </div>
 
@@ -1070,7 +1064,7 @@ The description text color of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> </li>
+      <li><b>Default value:</b> #5b5c5e</li>
    </ul>
 </div>
 
