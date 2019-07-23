@@ -11,7 +11,7 @@ let radioValue;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
-  // disableBtn();
+  disableBtn();
   radioListener();
 });
 
@@ -62,26 +62,20 @@ function validateInfo (){
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
-  //make sure the radio button for conditions was clicked
   if (radioValue != "on") {
     $('#agreeButton').show();
   } else {
     $('#agreeButton').hide();
   }
-  //make sure password and confirmpassword match
   if(password != confirmPassword) {
-    //if they don't match, show an error message on screen
     $('#passwordErrorMatch').show();
   } else {
-    //if they do match, don't show the error message and hide it in case it was displayed previously
       $('#passwordErrorMatch').hide();
     }
     //make sure all fields are filled
   if (firstName && lastName && country && emailAddress && password && confirmPassword) {
-    //if they are filled, don't show an error message and hide it in case it was displayed previously
     $('#allFields').hide();
   } else {
-    //if they aren't filled, show the error message
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
@@ -116,10 +110,10 @@ function postRequest () {
     console.log(response.data);
     //save the account number received from the service so we can display it on the confirmation page
     localStorage.setItem ('accountNumber', response.data.accountId );
+    //load the confirmation page
     window.location = '/confirmation.html';
   })
   .catch(err=>console.log(err))
-  //load the confirmation page
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
