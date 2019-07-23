@@ -1748,7 +1748,7 @@ Enable or Disable toggle for Structured Content feature in conversations.
 Structured Content bubble border width in pixels.
 
    - **Type:** Double
-   - **Default value:** 0.3 
+   - **Default value:** 1.0 
 
 
 
@@ -1764,7 +1764,7 @@ Structured Content bubble border color.
 Structured Content bubble top left corner radius in pixels. 
 
    - **Type:** Float
-   - **Default value:** 0.0 
+   - **Default value:** 8.0 
 
 
 
@@ -1772,7 +1772,7 @@ Structured Content bubble top left corner radius in pixels.
 Structured Content bubble top right corner radius in pixels.
 
    - **Type:** Float
-   - **Default value:** 0.0 
+   - **Default value:** 8.0 
 
  
 
@@ -1780,7 +1780,7 @@ Structured Content bubble top right corner radius in pixels.
 Structured Content bubble bottom left corner radius in pixels.
 
    - **Type:** Float
-   - **Default value:** 0.0  
+   - **Default value:** 8.0  
 
 
 
@@ -1788,7 +1788,7 @@ Structured Content bubble bottom left corner radius in pixels.
 Structured Content bubble bottom right corner radius in pixels.
 
    - **Type:** Float
-   - **Default value:** 0.0 
+   - **Default value:** 8.0 
 
 
 

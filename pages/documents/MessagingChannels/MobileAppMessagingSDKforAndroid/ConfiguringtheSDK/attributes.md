@@ -1,4 +1,3 @@
-
 ---
 pagename: Attributes
 redirect_from:
@@ -2633,7 +2632,7 @@ Configuration for bottom right corner radius of structured content card.
 * **Default value:** 0dp
 
 
-#### structured_content_bottom_right_radius
+#### structured_content_bottom_left_radius
 Configuration for top left corner radius of structured content card.
 
 * **Type:** dimen 
