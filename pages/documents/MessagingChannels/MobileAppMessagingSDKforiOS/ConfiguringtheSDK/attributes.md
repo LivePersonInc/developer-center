@@ -1551,10 +1551,10 @@ Should display status bar of the secure form screen in Light Content Mode (UISta
 Background color of navigation bar in secure form screen. 
 
    - **Type:** UIColor
-   - **Default value:** #0362AC 
-
-
-
+   - **Default value:** #229A49
+   
+   
+   
 #### secureFormNavigationTitleColor  
 Navigation title color in secure form screen.
 
