@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="{{ "css/confirmation.css" }}">
-     <meta name="description" content="LivePerson for Developers. Build on LiveEngage with our powerful digital toolbox">
-     <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
-     <meta name="author" content="LivePerson Inc.">
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,400,500,600,700,300" >
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,600,700,300" >
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400italic,700,700italic,300,600" >
-    <script  src="{{ "js/additionalscripts.js" }}"></script>
+{% include registerHead.html %}
 </head>
 <body>
   <div id="confirmationWrapper">
@@ -41,8 +34,8 @@
               <span class="cardInnerText">Engage your customers where they are.</span>
             </div>
           </div>
-          <div style="margin-bottom: -10px;"class="cardLinks"><a href="https://knowledge.liveperson.com/messaging-channels-sms-sms-connector.html">Get started with SMS <b>></b></a></div>
-          <div class="cardLinks"><a href="https://knowledge.liveperson.com/messaging-channels-facebook-messenger.html">Get started with Facebook Messenger <b>></b></a></div>
+          <div style="margin-bottom: -10px;"class="cardLinks"><a href="https://knowledge.liveperson.com/messaging-channels-sms-twilio-sms-connector-setup.html">Get started with SMS <b>></b></a></div>
+          <div class="cardLinks"><a href="https://knowledge.liveperson.com/messaging-channels-facebook-messenger.html#setup">Get started with Facebook Messenger <b>></b></a></div>
         </div>
         <div class="confirmCard">
           <div class="cardContent">
@@ -76,8 +69,6 @@
     <div id="thirdPanel">
       <div id="thirdTitle">Free Trial Account FAQ</div>
         <div class="subjectRow">
-          <div class="subjectColumn">Account</div>
-          <hr class="faqDivider">
           <div class="answerColumn">
             <div class="answerRow">
               <div class="answerTitle">What are the capabilities and limitations of trial accounts?</div>
@@ -87,33 +78,9 @@
             <div class="answerTitle">How can I upgrade my free trial account?</div>
             <div class="answerContent">If your needs expand or you want to accomplish something that isn’t available on your trial account, you can upgrade at any time. To do so, visit liveperson.com and click on the conversation bubble on the bottom right to start a conversation with our sales team.  <br><br>Alternatively, you can talk with us using the Connection Area/Contact LivePerson tab <img class="inlineImage" src="img/tab-contact-lp.png" /> inside of LiveEngage. We’ll help you to choose and upgrade to the right LiveEngage package for your business.</div>
         </div>
-          <div class="answerRow">
-            <div class="answerTitle"></div>
-            <div class="answerContent"></div>
-        </div>
-        </div>
-      </div>
-      <div class="subjectRow">
-        <div class="subjectColumn">Tools</div>
-        <hr class="faqDivider">
-        <div class="answerColumn">
-          <div class="answerRow">
-            <div class="answerTitle">I'm a developer. What sort of tools does LivePerson provide?</div>
-            <div class="answerContent">LivePerson offers a suite of 40+ APIs and several SDKs that allow you to deeply customize LiveEngage behaviors, create custom integrations, and more. LivePerson's Functions lets you write and deploy serverless code that can trigger off of conversational events.</div>
-        </div>
-      </div>
-    </div>
-    <div class="subjectRow">
-      <div class="subjectColumn">Products</div>
-      <hr class="faqDivider">
-      <div class="answerColumn">
-        <div class="answerRow">
-          <div class="answerTitle">I want to use a mobile channel other than SMS or Facebook. What do I do?</div>
-          <div class="answerContent">We support a variety of mobile channels, such as Apple Business Chat, WhatsApp, and Line, to LiveEngage subscribers. To upgrade your account, contact sales.  </div>
       </div>
     </div>
   </div>
-</div>
 <div id="confirmationFooter">
   <div id="footerText">
     <span class="footerbottomspan">&copy; 2019 LivePerson Inc. All rights reserved.</span>

@@ -969,9 +969,9 @@
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    - documentname: Video Chat
-      pages:
-        - pagename: Add Video to Chat Conversations
-        - pagename: Plan Your Service
-        - pagename: Develop the Service
-        - pagename: Build Your Widgets
+    # - documentname: Video Chat
+    #   pages:
+    #     - pagename: Add Video to Chat Conversations
+    #     - pagename: Plan Your Service
+    #     - pagename: Develop the Service
+    #     - pagename: Build Your Widgets
