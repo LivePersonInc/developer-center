@@ -12,9 +12,31 @@ permalink: mobile-app-messaging-sdk-for-ios-release-notes.html
 indicator: messaging
 ---
 
-
-
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
+
+### iOS Messaging SDK - Version 4.0.0
+
+**Release date:** July 24, 2019
+
+### Environmental requirements
+The iOS Mobile Messaging SDK version 4.0.0 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+
+### Bug fix
+- Certificate pinning failure when renewing certificates
+- Campaign for messaging (C4M) issue where the SDK did not recognize the engagement language
+- HistoryControl API State close marking  messages as read of  an open conversation.
+- Accessibility on background element "older messages"
+- Accessibility on submitted Secure Form element "Fill in form"
+- Accessibility on element when downloading a file 
+- Styled Quick Reply not showing on conversation screen
+- Spacing on top of conversation screen after rotating device
+- Incorrect pluralization for unread message in english
+- Crash on web socket handler
+- Crash when receiving a file without a thumbnail preview
+- Corrected Logging for type Warning
+- Corrected execute permissions on all the files of the sdk 
+- Address potential areas where crashes can occur 
+- migrated tableviewcells from storyboard to xib's
 
 ### iOS Messaging SDK - Version 3.9.5
 
