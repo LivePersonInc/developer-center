@@ -75,21 +75,29 @@ LP Client is wrapper for the [HTTP Client](https://developers.liveperson.com/liv
 
  Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com)](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
  
-Additionally most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to do that it reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. Please also make sure that the provided API Key also has the right permissions for the API. The secret needs to store a JSON of the following structure:
+Additionally most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to do that it reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. 
+
+**Maintaining API Key credentials**
+
+Please follow these steps to maintain API Key credentials:
+
+- Create an API Key like described [here](https://developers.liveperson.com/guides-gettingstarted.html). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`
+- Create a new secret of the JSON to save the API Key credentials created before. The JSON has the following structure:
 
 ```javascript
 {
-    consumerKey: '...',
-    consumerSecret: '...',
-    token: '...',
-    tokenSecret: '...',
+    consumerKey: '...', // App Key
+    consumerSecret: '...', // Secret
+    token: '...', // Access token
+    tokenSecret: '...', // Access token secret
 }
 ```
 
-Here is an example coding:
+**Sample Usage**
 
 ```javascript
 const { Toolbelt, LpServices } = require("lp-faas-toolbelt");
+
 //Obtain an LpClient instance from the Toolbelt
 const lpClient = Toolbelt.LpClient();
 
