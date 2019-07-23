@@ -22,21 +22,23 @@ indicator: messaging
 The iOS Mobile Messaging SDK version 4.0.0 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
 
 ### Bug fix
-- Certificate pinning failure when renewing certificates
-- Campaign for messaging (C4M) issue where the SDK did not recognize the engagement language
-- HistoryControl API State close marking  messages as read of  an open conversation.
-- Accessibility on background element "older messages"
-- Accessibility on submitted Secure Form element "Fill in form"
-- Accessibility on element when downloading a file 
-- Styled Quick Reply not showing on conversation screen
-- Spacing on top of conversation screen after rotating device
-- Incorrect pluralization for unread message in english
-- Crash on web socket handler
-- Crash when receiving a file without a thumbnail preview
-- Corrected Logging for type Warning
-- Corrected execute permissions on all the files of the sdk 
-- Address potential areas where crashes can occur 
-- migrated tableviewcells from storyboard to xib's
+- Fixed issue with login when using certificate pinning while renewing certificates. 
+- SDK not recognizing engagement causing an issue when registering for campaign for messaging (C4M).
+where the SDK did not recognize the engagement language.
+- LPConversationsHistoryStateToDisplay in close state updating message as read for an open. conversation.  
+- Hidden element is read on accessibility mode.
+- Voiceover no longer announces hidden button of submitted secure form. 
+- Accessibility on element corrected when downloading a file.
+- Styled Quick Reply now showing on conversation screen.
+- Spacing on top of conversation view after rotating device.
+- Incorrect pluralization for unread message banner in english.
+- Fixed crash in web socket handler.
+- Fixed crash when receiving a file without a thumbnail preview.
+- Corrected execute permissions  
+
+### Updates
+- Migrated table view cells from storyboard to xibs.
+
 
 ### iOS Messaging SDK - Version 3.9.5
 
