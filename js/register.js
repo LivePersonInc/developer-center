@@ -6,11 +6,13 @@ let emailAddress;
 let password;
 let confirmPassword;
 let trialButtton;
+let radioValue;
 
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
   disableBtn();
+  radioListener();
 });
 
 function dynamicUserDetails () {
@@ -43,6 +45,15 @@ function disableBtn () {
 function enableBtn () {
   trialButton.disabled = false;
   $(trialButton).addClass('activeButton');
+}
+
+function radioListener () {
+  $('#captchaContainer').on('click', 'input', function (event) {
+    radioValue = $('input:checked').val();
+    if (radioValue) {
+      console.log(radioValue);
+    }
+  });
 }
 
 //make sure all the info submitted to the form is valid
