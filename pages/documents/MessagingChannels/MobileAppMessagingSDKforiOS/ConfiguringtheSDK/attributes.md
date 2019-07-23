@@ -2984,7 +2984,7 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
+      <li><b>Default value:</b> 0</li>
    </ul>
 </div>
 
@@ -3346,7 +3346,7 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
+      <li><b>Default value:</b> 0</li>
    </ul>
 </div>
 
