@@ -69,20 +69,20 @@ httpClient(URL, {
 })
 ```
 
-### LP Client:
+### LivePerson Client:
 
-LP Client is wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
+The LivePerson (LP) Client is a wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
 
- Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com)](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
+Every LivePerson API has a service name. This is documented in the API's respective overview on [developers.liveperson.com)](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
  
-Additionally most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to do that it reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. 
+Additionally, most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently, only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to perform this authorization, the API reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default, the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. 
 
 **Maintaining API Key credentials**
 
-Please follow these steps to maintain API Key credentials:
+Please follow these steps to create and maintain API Key credentials:
 
 - Create an API Key like described [here](https://developers.liveperson.com/guides-gettingstarted.html). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`
-- Create a new secret of the JSON to save the API Key credentials created before. The JSON has the following structure:
+- Create a new secret from the JSON to save the API Key credentials created before. The JSON has the following structure:
 
 ```javascript
 {
