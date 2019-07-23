@@ -20,7 +20,7 @@ google_analytics: UA-96175782-1
 
 
 extlinks:
-  attributes: {target: _blank, onclick: "linkclick(event, this)"}
+  attributes: {alt: "LivePerson Knowledge Center", target: _blank, onclick: "linkclick(event, this)"}
 # This tells the extlinks plugin which attribute to add to links
 
 plugins:
@@ -40,6 +40,8 @@ github: [metadata]
 exclude:
   - .idea/
   - .gitignore
+  - node_modules
+  - gulpfile.js
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge

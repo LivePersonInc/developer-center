@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+{% include registerHead.html %}
+</head>
+<body>
+<div id="registerWrapper">
+  <div id="registerHeader"><img id="registerLogo" src="img/liveengage-logo.svg" /></div>
+  <div id="registerContent">
+    <span id="registerTitle">{{ page.pagename }}</span>
+    <span id="registerSub">{{ page.subtitle }}</span>
+    <div id="formContainer">
+      <form id="registerForm">
+        <input class="mandatory" type="text" id="firstName" placeholder="First Name" />
+        <input class="mandatory" type="text" id="lastName" placeholder="Last Name" />
+        <select id="country" name="country" class="form-control">
+            <option value="" disabled selected>Region</option>
+            <option value="Afghanistan">The Americas</option>
+            <option value="Åland Islands">Europe, Middle East, and Africa</option>
+            <option value="Albania">Asia Pacific</option>
+        </select>
+        <input class="mandatory" type="text" id="emailAddress" placeholder="Email Address" />
+        <input class="mandatory passwordField" type="password" id="createPassword" placeholder="Create Password" />
+        <input class="mandatory passwordField" type="password" id="confirmPassword" placeholder="Confirm Password" />
+        <div id="checkboxContainer"><input type="checkbox" onclick="showPassword()"><span>Show Password</span></div>
+        <span id="passwordReq"><b>Password requirements</b>:<br>
+          Minimum of 8 characters, at least one uppercase letter, one number, <br> and one special character ~!@#$%^&*()<>,.;:/?=+</span>
+      </form>
+      <hr class="formDivider" />
+      <div id="captchaContainer">
+        <div class="g-recaptcha" data-sitekey="6LfEsasUAAAAAPq4iL8Ayn_9QX7DVy-E7xOG2QeF" data-callback="enableBtn" data-expired-callback="disableBtn"></div>
+        <div id="byClicking"><input type="radio"><span> By clicking "Start Free Trial", I agree to the <a href="https://www.liveperson.com/policies/partner-terms-and-conditions">Developer Terms of Use</a>, <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, and <a href="https://www.liveperson.com/policies/privacy">Privacy Policy</a></span></div>
+        <div id="registerButton"><span>Start Free Trial</span></div>
+        <span class="conditionButton" id="passwordErrorMatch">Your password and confirmation password don't match!</span>
+        <span class="conditionButton" id="allFields">Please fill out all the fields.</span>
+        <span class="conditionButton" id="agreeButton">Please agree to the terms & conditions by clicking the button above.</span>
+      </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

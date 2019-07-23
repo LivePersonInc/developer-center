@@ -1,14 +1,18 @@
-<div class="sidebartop"><a href="https://developers.liveperson.com/"><img class="sitelogo" src="img/desktop.png" /></a>
+<div class="sidebartop"><a href="https://developers.liveperson.com/"><img alt="LivePerson Knowledge Center" class="sitelogo" src="img/desktop.png" /></a>
 <div class="sidebarbuttons">
-  <div class="documentsbutton underline lined"><img class="documentsbuttonimage" src="img/documents.svg" /><a onclick='sidebarbuttonclick(event)' href="">Documents</a></div>
-  <div id="solutionsbutton" class="solutionsbutton solutionsunderline"><img class="solutionsbuttonimage" src="img/solutions.svg" /><a onclick='solutionsbuttonclick(event)' href="">Solutions</a></div>
+  <a target="_blank" href="https://authentication.liveperson.net/login.html" class="loginText">
+  <div class="loginButton">Login</div>
+  </a>
+    <a target="_blank" href="http://register.liveperson.com/developer/signup" class="trialText">
+  <div class="trialButton">Create Free Trial Account</div>
+  </a>
 </div>
 </div>
 
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   <li class="homeitem folder topfolder active">
     <div class="sidebarimage">
-      <img src="img/getting-started.png" />
+      <img alt="LivePerson Knowledge Center" src="img/getting-started.png" />
     </div>
     <a  onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li>
@@ -16,7 +20,7 @@
   {% if forloop.last == true %}
   <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder lowerimage">
-    <img src="img/{{ category.image }}.svg" />
+    <img alt="LivePerson Knowledge Center" src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
@@ -54,7 +58,7 @@
   </li>
   {% else %}
   <li class="folder topfolder lowerimage">
-    <img src="img/{{ category.image }}.svg" />
+    <img alt="LivePerson Knowledge Center" src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
@@ -95,12 +99,14 @@
     <hr class="sidebarhr lesstop" />
     <div class="sidebarbuttoncontainer">
       <li class="folder topfolder ">
-        <img src="img/support-icon.png" />
+        <img alt="LivePerson Knowledge Center" src="img/support-icon.png" />
         <a target="_blank" class="bottombuttons" href="http://knowledge.liveperson.com">Knowledge Center</a>
       </li>
-    <li class="folder topfolder bottombuttons">
-      <img src="img/create-account-icon.png" />
-      <a target="_blank" class="bottombuttons" href="http://register.liveperson.com/developer/signup">Create Your Account</a>
-    </li>
   </div>
+  <div class="sidebarbuttoncontainer">
+    <li class="folder topfolder ">
+      <img alt="Service Status Dashboard" class="sidebarSVG" src="img/status-dashboard.svg" />
+      <a target="_blank" class="bottombuttons" href="https://status.liveperson.com/">Service Status Dashboard</a>
+    </li>
+</div>
 </ul>

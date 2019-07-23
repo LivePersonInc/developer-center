@@ -71,7 +71,7 @@ Once the application has been installed, the LivePerson resource will send you y
   "grant_types": [
     "client_credentials"
   ],
-  "response_types": "code",
+  "response_types": ["code"],
   "redirect_uris": ["https://www.myredirecturi.com"],
   "scope": "msg.consumer",
   "logo_uri": "/src/modules/campaigns/assets/img/software/Mobile-App.png",

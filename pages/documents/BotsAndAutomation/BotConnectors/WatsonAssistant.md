@@ -17,6 +17,9 @@ The following documentation outlines the configuration for the connector and how
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
+{: .important}
+Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
+
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
 #### UserPass authentication
@@ -488,11 +491,104 @@ Put the structured content objects that is shown in Figure 3.6 with the metadata
 }
 ```
 
-Figure 3.6 A sample structured content example containing a button and action of response text on click
+Figure 3.6 Structured Content Watson JSON Example (IAM)
 
-<img class="fancyimage" style="width:800px" src="img/watsonassistant/structured-content-in-text-response.png">
+For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
+The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
+This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
 
-Figure 3.7 Structured content in IAM workspace pasted in text response.
+```json
+{
+  "structuredContent": {
+    "quickReplies": {
+      // insert quickReplies rich content here as described here
+      //https://developers.liveperson.com/quick-replies-introduction-to-quick-replies.html
+      "type": "quickReplies",
+      "replies": [...],
+      "itemsPerRow": 8
+    },
+    "message": "Message to send before sending QuickReplies content"
+  },
+  "metadata": [
+    {
+      "id": "1234",
+      "type": "ExternalId"
+    }
+  ]
+}
+
+```
+
+Figure 3.7 Quick Replies StructuredContent structure.
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "quickReplies": {
+              "type": "quickReplies",
+              "itemsPerRow": 8,
+              "replies": [
+                {
+                  "type": "button",
+                  "tooltip": "yes i do",
+                  "title": "yes",
+                  "click": {
+                    "actions": [
+                      {
+                        "type": "publishText",
+                        "text": "yep"
+                      }
+                    ],
+                    "metadata": [
+                      {
+                        "type": "ExternalId",
+                        "id": "Yes-1234"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "button",
+                  "tooltip": "No!",
+                  "title": "No!",
+                  "click": {
+                    "actions": [
+                      {
+                        "type": "publishText",
+                        "text": "No!"
+                      }
+                    ],
+                    "metadata": [
+                      {
+                        "type": "ExternalId",
+                        "id": "No-4321"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "message": "Do you like Bots?"
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  }
+}
+```
+
+Figure 3.8 Watson Quick Replies StructuredContent example.
 
 ### Change Time To Response of Conversation
 
@@ -520,7 +616,7 @@ Change the TTR of a conversation based on the action response of Watson. There h
 }
 ```
 
-Figure 3.6 Watson JSON response for changing TTR
+Figure 4.1 Watson JSON response for changing TTR
 
 ### Transfer/Escalations
 
@@ -559,13 +655,13 @@ In the _Then respond with:_ JSON editor block, we see the following:
 }
 ```
 
-Figure 3.7 Watson JSON response for escalation
+Figure 5.1 Watson JSON response for escalation
 
 Above is the _actions_ array. Here, we have a escalation skill name in the _skill_ parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
 
 ### Close Chat/Conversation
 
-To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 3.6**). In **Figure 3.7** below, the **Watson Assistant** JSON response should be mirrored as follows:
+To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 5.1**). In **Figure 6.1** below, the **Watson Assistant** JSON response should be mirrored as follows:
 
 ```json
 {
@@ -585,4 +681,4 @@ To close a chat or messaging conversation, we utilize the action object as we di
 }
 ```
 
-Figure 3.8 Watson Assistant JSON response for closing chat/conversation
+Figure 6.1 Watson Assistant JSON response for closing chat/conversation

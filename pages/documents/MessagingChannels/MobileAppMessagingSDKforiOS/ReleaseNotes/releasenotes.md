@@ -16,6 +16,27 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### iOS Messaging SDK - Version 3.9.5
+
+**Release date:** July 15, 2019
+
+### Environmental requirements
+The iOS Mobile Messaging SDK version 3.9.5 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+
+### Bug fix
+On non-window mode,  history is not loaded and pull to refresh is not visible for few iOS 12 devices.
+
+### iOS Messaging SDK - Version 3.9.4
+
+**Release date:** July 15, 2019
+
+### Environmental Requirements
+
+Supports Xcode 10.2 and Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3), or Objective-C, and supported on iOS versions 10 through 12.
+
+### Bug fix
+On non-window mode,  history is not loaded and pull to refresh is not visible for few iOS 12 devices.
+
 ### iOS Messaging SDK - Version 3.9.3
 
 **Release date:** July 3 2019
@@ -56,7 +77,7 @@ The iOS Mobile Messaging SDK version 3.9.1 is compatible with Xcode 10.2.1, Swif
 
 #### New Feature
 
-##### Photo and File sharing 
+##### Photo and File sharing
 
 Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.  
 
@@ -174,7 +195,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
    LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk    
 
    // document files
-   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
+   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk
    ```
 
    The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
@@ -243,7 +264,7 @@ The iOS Mobile Messaging SDK version 3.9 is compatible with Xcode 10.2 Swift ver
 
 #### New Feature
 
-##### Photo and File sharing 
+##### Photo and File sharing
 
 Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.  
 
@@ -361,7 +382,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
    LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk    
 
    // document files
-   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
+   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk
    ```
 
    The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
@@ -707,7 +728,7 @@ iOS Mobile App SDK v3.8.0 introduces a new feature and contains a fix for a high
 
 The iOS Mobile Messaging SDK version 3.8 is compatible with Xcode 10.2, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
 
-{:.important} 
+{:.important}
 The iOS Mobile Messaging SDK version 3.8 is not compatible with simulators when running in an Objective-C project.
 
 
@@ -717,13 +738,13 @@ The iOS Mobile Messaging SDK version 3.8 is not compatible with simulators when 
 
 Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
-You can configure the Welcome message as a simple text message with or without quick replies, for example: 
+You can configure the Welcome message as a simple text message with or without quick replies, for example:
 
 > *Welcome to our support! What can we help you with today?*   
-> 
+>
 > *[Questions about existing account] [open a new account] [tech support]*
 
-A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace.
 
 **How to enable**
 
@@ -741,7 +762,7 @@ let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
         } catch {
             print(error.localizedDescription)
         }
-        
+
         //ConversationViewParams
         let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
                                                               containerViewController: nil,
@@ -773,15 +794,15 @@ LPMessagingSDK.instance.showConversation(conversationViewParams,  authentication
 
 - When the `unreadMessagesDividerEnabled` attribute equaled **false**, the conversation window did not jump/scroll to the latest messages received by the agent as expected.
 
-   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button.
 
 - Fallback to Signup Flow still existed. The bug prevented users from starting an authenticated conversation, and instead, the conversation started an unauthenticated visitor mode chat.
 
-- Send Image (From Gallery) failed. The bug prevented images larger than 3MB to upload, resulting in a ‘file too large’ message. 
+- Send Image (From Gallery) failed. The bug prevented images larger than 3MB to upload, resulting in a ‘file too large’ message.
 
 - **On iOS 12.2 Swift 5**, the conversation screen UI broke and hid the sent/received messages. The bug prevented the sent/received messages to always show, resulting in sent messages not showing and the margins appearing between messages.
 
-- Accessibility: voice over read old conversations.  The bug prevented the voice over feature, when enabled, to read the current conversation, and instead, skipping back to old conversations. 
+- Accessibility: voice over read old conversations.  The bug prevented the voice over feature, when enabled, to read the current conversation, and instead, skipping back to old conversations.
 
 - An invalid JWT warning showed even though the conversation continued. When trying to reconnect with a JWT after the initial token expires, an INVALID JWT warning appeared and showed a black bar even though the conversation continued without error.  
 
@@ -831,7 +852,7 @@ public init(conversationQuery: ConversationParamProtocol,
 
 **New for 3.8**  
 
-MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE = **5MB** 
+MAX_SWIFT_ALLOWED_UPLOAD_PHOTO_SIZE_IN_BYTE = **5MB**
 
 
 **Changes for 3.7.1**
@@ -854,7 +875,7 @@ Supports Xcode 10.2 and Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46
 iOS Mobile App SDK v3.7 is compatible with XCode 10, Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)  and is supported on iOS versions 10 through 12.
 
 {: .notice}
-iOS SDK 3.7 compatibility with XCode 10.2, Swift 5 will be released as 3.7.1 on or before April 5 2019. 
+iOS SDK 3.7 compatibility with XCode 10.2, Swift 5 will be released as 3.7.1 on or before April 5 2019.
 
 
 #### API Updates
@@ -879,7 +900,7 @@ public class func resolveConversation(_ conversation: Conversation)
 
 ```swift
 public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol)
-``` 
+```
 
 ##### LPConversationViewParams.swift
 
@@ -887,7 +908,7 @@ public class func resolveConversationForConversationQuery(_ conversationQuery: C
 
 LPConversationViewParams **initializer requires** LPConversationHistoryControlParam
 
-**Changes for 3.6.1** 
+**Changes for 3.6.1**
 
 LPConversationViewParams **initializer takes optional** LPConversationHistoryControlParam
 
@@ -898,15 +919,15 @@ LPConversationViewParams **initializer takes optional** LPConversationHistoryCon
 
 LPConversationHistoryControlParam **can no longer be nil for** ConversationViewController
 
-**Changes for 3.6.1** 
+**Changes for 3.6.1**
 
 LPConversationHistoryControlParam **can be nil for** ConversationViewController
 
 
 ##### SocketRocket
 
-**New for 3.7** 
-Namespacing for SR dependency. 
+**New for 3.7**
+Namespacing for SR dependency.
 
 #### Bug Fixes
 
@@ -917,8 +938,8 @@ Namespacing for SR dependency.
 - PCS would not show when the user resolved a conversation using a Custom View.
 - In-app push sometimes showed the real message instead of the masking message.
 - Memory Leaks found in SDK.
-- Local Notification were displayed on alert rather than on top of the screen. 
-- Namespacing internal 3rd party libraries to prevent a collision. 
+- Local Notification were displayed on alert rather than on top of the screen.
+- Namespacing internal 3rd party libraries to prevent a collision.
 
 ### iOS Messaging SDK - Version 3.6.1
 
@@ -2568,7 +2589,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 **Available to all customers?** No - early adopters only.
 
-_The beta version was released in v2.7 (for a full description, refer to the [v2.7 release notes](https://s3-eu-west-1.amazonaws.com/ce-sr/Release+Notes/In-appSDKv2.7_ReleaseNotes-iOS.pdf)). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
+The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK.
 
 The dictionary of template elements can be found [here](structured-content-templates.html).
 

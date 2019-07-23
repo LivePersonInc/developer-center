@@ -279,6 +279,69 @@ This should contain valid structured content, along with any optional metadata r
 
 **NOTE:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
 
+### Send quickReplies (Structured Content)
+
+ Quick Replies is a special type of Structured Content. Is is a message sent with along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html)
+
+ ```json
+{
+  "structuredContent": {
+    "quickReplies": {
+      "type": "quickReplies",
+      "itemsPerRow": 8,
+      "replies": [
+        {
+          "type": "button",
+          "tooltip": "yes i do",
+          "title": "yes",
+          "click": {
+            "actions": [
+              {
+                "type": "publishText",
+                "text": "yep"
+              }
+            ],
+            "metadata": [
+              {
+                "type": "ExternalId",
+                "id": "Yes-1234"
+              }
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "tooltip": "No!",
+          "title": "No!",
+          "click": {
+            "actions": [
+              {
+                "type": "publishText",
+                "text": "No!"
+              }
+            ],
+            "metadata": [
+              {
+                "type": "ExternalId",
+                "id": "No-4321"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "message": "Do you like Bots?"
+  },
+   "metadata": [
+    {
+      "id": "1234",
+      "type": "ExternalId"
+    }
+  ]
+}
+ ```
+Figure 6.1 QuickReplies Structured Content example
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
@@ -297,8 +360,8 @@ The action field needs to be set to **CLOSE_CONVERSATION **to instruct the conne
 }
 ```
 
-Figure 6.1 Lex Example Close Conversation Payload
+Figure 7.1 Lex Example Close Conversation Payload
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_11.png">
 
-Fig.6.2 - Example in Lex console
+Figure 7.2 - Example in Lex console

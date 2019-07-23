@@ -3,10 +3,12 @@ pagename: Toolbelt
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
+documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: function-as-a-service-developing-with-faas-toolbelt.html
+permalink: liveperson-functions-development-toolbelt.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-toolbelt.html
 ---
 
 As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our `lp-faas-toolbelt` Node.js module, which is a language-specific utility library for lambdas.
@@ -19,12 +21,14 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
+| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
+| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
 Here are usage example, which are taken out of the official templates:
 
 ### Salesforce Client:
 
-Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting FaaS to any Salesforce system.
+Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting LivePerson Functions to any Salesforce system.
 
 ```javascript
 const { Toolbelt } = require('lp-faas-toolbelt');
@@ -78,7 +82,7 @@ Searches the secret that belongs to the provided key. Will raise an error if the
 
 | Returns | Description |
 | :------- | :----- |
-| secretEntry | Promise which resolves to an Object with properties `key` & `value` |
+| secretEntry | Object with properties `key` & `value` |
 
 **SecretClient.updateSecret**
 
@@ -90,7 +94,7 @@ Updates the secret with the provided update entry.
 
 | Returns | Description |
 | :------- | :----- |
-| secretEntry | Promise which resolves to the created Secret with properties `key` & `value` |
+| secretEntry | Created entry |
 
 **Sample Usage**
 
@@ -119,8 +123,7 @@ secretClient.readSecret('my_Secret-Key')
 
 ### SMTP Client:
 
-SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client
-is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
+SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
 <div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
 
@@ -154,4 +157,160 @@ is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares it
   })
   .then(response => //TODO: react on the response)
   .catch(err => //TODO: React to error);
+```
+
+### Conversation Util:
+
+The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation.
+
+#### Get Conversation By ID
+
+This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object.
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+
+  // set API Key credentials
+  const apiCredentials = {
+    oauthConsumerKey: '...',
+    oauthConsumerSecret: '...',
+    oauthAccessToken: '...',
+    oauthAccessTokenKey: '...',
+  }
+
+  // Create instance with API credentials
+  const conversationUtil = Toolbelt.ConversationUtil(
+    apiCredentials
+  );
+
+  // Get conversation
+  conversationUtil.getConversationById(conversationId)
+  .then(conversation => //TODO: react on the response)
+  .catch(err => //TODO: React to error);
+```
+
+#### Scan Conversation For Keywords
+
+This method scans a conversation that has been retrieved with `getConversationById()` (see method above) for messages containing certain keywords. Those keywords can be freely determined and are case insensitive.
+
+**Sample Usage**
+
+```javascript
+// import FaaS Toolbelt
+const { Toolbelt } = require("lp-faas-toolbelt");
+
+// set API Key credentials
+const apiCredentials = {
+  oauthConsumerKey: "...",
+  oauthConsumerSecret: "...",
+  oauthAccessToken: "...",
+  oauthAccessTokenKey: "..."
+};
+
+// Create instance with API credentials
+const conversationUtil = Toolbelt.ConversationUtil(apiCredentials);
+
+// Get conversation
+const conversation = await conversationUtil.getConversationById(conversationId);
+
+// Determine Keywords
+const keywords = ["Keyword", "awesome"];
+
+// Scan Conversation for Keywords
+const scannerResult = conversationUtil.scanConversationForKeywords(
+  conversation,
+  keywords
+);
+```
+
+**Sample Result**
+
+The method collects every message which contains a keyword in an array. It retrieves a timestamp, information on who sent the message and adds a tag detailing the keyword for which the message has been selected. If one message contains more than one keyword it will appear as often in the array. (see example underneath)
+
+| Attribute     | Description                                                                          | Type/Value |
+| :------------ | :----------------------------------------------------------------------------------- | :--------- |
+| message       | The whole message which is containing at least one keyword                           | string     |
+| sentTimestamp | Timestamp (Current Unix epoch time in milliseconds) when the message was sent        | number     |
+| sentBy        | Who the conversation was sent by                                                     | string     |
+| tag           | Tag stating because of which keyword the message is included in the scanner Results. | string     |
+
+```javascript
+[
+  {
+    message: "Will we use Keywords in this conversation?",
+    sentTimestamp: 1560764690328,
+    sentBy: "Consumer",
+    tag: "keywordRef:Keyword"
+  },
+  {
+    message: "We definetely will, because keywords are awesome!",
+    sentTimestamp: 1560764734592,
+    sentBy: "Agent",
+    tag: "keywordRef:Keyword"
+  },
+  {
+    message: "We definetely will, because keywords are awesome!",
+    sentTimestamp: 1560764734592,
+    sentBy: "Agent",
+    tag: "keywordRef:awesome"
+  }
+];
+```
+
+### GDPR Util:
+
+This method provides GDPR related functionality, such as deleting transcripts of a conversation.
+
+#### Replace files of a conversation
+
+<div class="important">This will remove all files and transcripts of a conversation permanently! Contact your Account Manager to get access.</div>
+
+This method replaces all files of a conversation from LivePerson's [file storage](https://developers.liveperson.com/file-sharing-file-sharing-for-web-messaging.html#introduction). It expects a conversation, the credentials for the file storage, a callback for filtering files and replacement image.
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+
+  // set API Key credentials
+  const apiCredentials = {
+    oauthConsumerKey: '...',
+    oauthConsumerSecret: '...',
+    oauthAccessToken: '...',
+    oauthAccessTokenKey: '...',
+  }
+
+  // set file storage credentials (get from Account Manager)
+  const fileStorageCredentials = {
+    username: '...',
+    password: '...'
+  }
+
+  // Create Conversation Util instance with API credentials
+  const conversationUtil = Toolbelt.ConversationUtil(
+    apiCredentials
+  );
+
+  // Create GDPR Util instance
+  const gdprUtil = Toolbelt.GDPRUtil();
+  const shouldReplace = (filePath) => ... // filter here by returning boolean
+  const replacementFile = {
+    body: Buffer.from('...', 'base64'), // create file from base64
+    contentType: 'image/png',
+  };
+
+  // Get conversation and replace files
+  conversationUtil.getConversationById(conversationId)
+    .then(conversation => gdprUtil.replaceConversationFiles(
+          conversation,
+          fileStorageCredentials,
+          shouldReplace, //(optional) defaults to (path) => true
+          replacementFile, //(optional) defaults to a black 1px*1px png
+    ))
+    .then(replacedFiles => //TODO: react on the response)
+    .catch(err => //TODO: React to error);
 ```

@@ -152,6 +152,7 @@
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assist
+            - subpagename: Integrations
             - subpagename: Scripting Functions
       - pagename: Intent Builder
         subpages:
@@ -166,6 +167,18 @@
           - subpagename: Using Environment Variables
           - subpagename: Training and Tuning Your Intents and FAQs
       #- pagename: Operations
+  #- documentname: Maven
+    #pages:
+      #- pagename: Overview
+      #- pagename: Context API
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Methods
+      #- pagename: AskMaven API
+        #subpages:
+          #- subpagename: Overview
+          #- subpagename: Methods
+
   - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
@@ -488,23 +501,29 @@
 - categoryname: Developer Tools
   image: developer-tools
   documents:
-  - documentname: Function as a Service
+  - documentname: LivePerson Functions
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Developing with FaaS
+      - pagename: Development
         subpages:
           - subpagename: Overview
           - subpagename: "Events & Templates"
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
-      - pagename: Deploying Functions
+      - pagename: Deployment
+      - pagename: Scheduled Invocations
       - pagename: External Invocations
+        subpages:
+          - subpagename: Overview
+          - subpagename: Client Credentials
+          - subpagename: Authorization Code
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
+          - subpagename: Messaging Conversation Survey
 
 - categoryname: Historical Data
   image: historical-data
@@ -950,9 +969,9 @@
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    - documentname: Video Chat
-      pages:
-        - pagename: Add Video to Chat Conversations
-        - pagename: Plan Your Service
-        - pagename: Develop the Service
-        - pagename: Build Your Widgets
+    # - documentname: Video Chat
+    #   pages:
+    #     - pagename: Add Video to Chat Conversations
+    #     - pagename: Plan Your Service
+    #     - pagename: Develop the Service
+    #     - pagename: Build Your Widgets
