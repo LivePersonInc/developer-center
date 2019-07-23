@@ -8,9 +8,21 @@ let confirmPassword;
 let trialButtton;
 
 $(document).ready(function () {
+  dynamicUserDetails();
   createAccount();
-  disableBtn();
+  // disableBtn();
 });
+
+function dynamicUserDetails () {
+  let accountNumber = localStorage.getItem ('accountNumber');
+  let userEmail = localStorage.getItem ('userEmail');
+  if (accountNumber) {
+    $('#accountNumber').html('Account number: <b>' + accountNumber + '</b>');
+  }
+  if (userEmail) {
+    $('#userID').html('User ID/Email: <b>' + userEmail + '</b>');
+  }
+}
 
 //on click on the free trial button
 function createAccount () {
@@ -61,6 +73,8 @@ function validateInfo (){
   //if all fields were filled and the passwords match, call the request to create an account
   if ((firstName && lastName && country && emailAddress && password && confirmPassword) && (password == confirmPassword)) {
     postRequest();
+    //we're going to need the email for the confirmation page so let's save it
+    localStorage.setItem ('userEmail', emailAddress );
   }
 }
 
@@ -84,8 +98,14 @@ function postRequest () {
       user
     }
   })
-  .then(data=>console.log(data))
+  .then(function (response) {
+    console.log(response.data);
+    //save the account number received from the service so we can display it on the confirmation page
+    localStorage.setItem ('accountNumber', response.data.accountId );
+  })
   .catch(err=>console.log(err))
+  //load the confirmation page
+  window.location = '/confirmation.html';
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
