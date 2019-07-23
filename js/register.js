@@ -10,7 +10,7 @@ let trialButtton;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
-  // disableBtn();
+  disableBtn();
 });
 
 function dynamicUserDetails () {
