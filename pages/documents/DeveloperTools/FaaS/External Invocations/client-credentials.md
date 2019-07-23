@@ -3,14 +3,16 @@ pagename: Client Credentials
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: Function as a Service
-permalink: function-as-a-service-external-invocations-client-credentials.html
+documentname: LivePerson Functions
+permalink: liveperson-functions-external-invocations-client-credentials.html
 indicator: both
+redirect_from:
+  - function-as-a-service-external-invocations-client-credentials.html
 ---
 
-This section describes how to call FaaS functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/). This is the preferred way to authorize for machine-to-machine communication.
+This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/). This is the preferred way to authorize for machine-to-machine communication.
 
-Under the hood FaaS uses JSON Web Tokens (JWTs) to authorize requests ([here](https://jwt.io/introduction/) is a good introduction on JWTs).
+Under the hood LivePerson Functions uses JSON Web Tokens (JWTs) to authorize requests ([here](https://jwt.io/introduction/) is a good introduction on JWTs).
 
 ### Step 1: Generate client_id & client_secret:
 
@@ -28,9 +30,9 @@ Under the hood FaaS uses JSON Web Tokens (JWTs) to authorize requests ([here](ht
 }
 ```
 
-### Step 2: Retrieve domains of the FaaS Invocation Gateway
+### Step 2: Retrieve domains of the Functions Invocation Gateway
 
-The FaaS Invocation Gateway is the main entry-point for invoking `lambdas` in FaaS via its RESTful API. You can use the following hosts for external invocation (the base domain is: `faasGW`):
+The Functions Invocation Gateway is the main entry-point for invoking `lambdas` in Functions via its RESTful API. You can use the following hosts for external invocation (the base domain is: `faasGW`):
 
 * **APAC**: sy.faasgw.liveperson.net
 
@@ -52,19 +54,15 @@ You'll also need to pass your `client_id` and `client_secret` to one of our auth
 
 However, instead of hardcoding the authorization server, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `sentinel` and retrieving the host address **dynamically**.
 
-### Step 4: Get the **lambda UUID** from FaaS
+### Step 4: Get the **lambda UUID** from Functions
 
-Use the FaaS UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deploy** tab and opening the Invoke your Function screen by clicking "Invoke" on the function.
+Use the Functions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deployments** section and opening the "Invoke your Function" screen by clicking "Invoke" on the function. The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
 
 ![](img/faas-invokeuuid.png)
 
-The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
-
-![](img/faas-uuid.png)
-
 ### Step 5: Generate OAuth 2.0 token
 
-Together with the retrieved domain of the authorization server and the `client_id` + `client_secret`, we can now generate an access-token to authenticate against our FaaS Invocation Gateway.
+Together with the retrieved domain of the authorization server and the `client_id` + `client_secret`, we can now generate an access-token to authenticate against our Functions Invocation Gateway.
 
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
@@ -96,13 +94,13 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
   8. Click on **Request Token** to send the request and retrieve your token.
 
-  9.  On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every FaaS invocation.
+  9.  On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every Functions invocation.
 
   10. If you click **Use Token**, the Access Token will be used for your Postman call.
 
 ### Step 6: Calling the invocation API directly from your systems
 
-After executing the above steps you should have all data needed to execute calls against FaaS from your own systems.
+After executing the above steps you should have all data needed to execute calls against Functions from your own systems.
 
 Retrieved data:
 
@@ -112,6 +110,6 @@ Retrieved data:
 
   * **client_id + client_secret** is available after App-Installation.
 
-  * **Authorization-Server + FaaS - domain** is available.
+  * **Authorization-Server + Functions - domain** is available.
 
-While calling FaaS with the access-token, you should also make sure to request a new token before it expires. You can find out if a token is expired by checking the `exp` field of the JWT. You can enter your access-token into the [JWT debugger](https://jwt.io/#debugger) in order to see how the JWT looks like.
+While calling Functions with the access-token, you should also make sure to request a new token before it expires. You can find out if a token is expired by checking the `exp` field of the JWT. You can enter your access-token into the [JWT debugger](https://jwt.io/#debugger) in order to see how the JWT looks like.
