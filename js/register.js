@@ -11,7 +11,7 @@ let radioValue;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
-  disableBtn();
+  // disableBtn();
   radioListener();
 });
 
@@ -50,9 +50,6 @@ function enableBtn () {
 function radioListener () {
   $('#captchaContainer').on('click', 'input', function (event) {
     radioValue = $('input:checked').val();
-    if (radioValue) {
-      console.log(radioValue);
-    }
   });
 }
 
@@ -65,6 +62,12 @@ function validateInfo (){
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
+  //make sure the radio button for conditions was clicked
+  if (radioValue != "on") {
+    $('#agreeButton').show();
+  } else {
+    $('#agreeButton').hide();
+  }
   //make sure password and confirmpassword match
   if(password != confirmPassword) {
     //if they don't match, show an error message on screen
@@ -82,7 +85,7 @@ function validateInfo (){
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && country && emailAddress && password && confirmPassword) && (password == confirmPassword)) {
+  if ((firstName && lastName && country && emailAddress && password && confirmPassword) && (radioValue == "on") && (password == confirmPassword)) {
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
@@ -113,10 +116,10 @@ function postRequest () {
     console.log(response.data);
     //save the account number received from the service so we can display it on the confirmation page
     localStorage.setItem ('accountNumber', response.data.accountId );
+    window.location = '/confirmation.html';
   })
   .catch(err=>console.log(err))
   //load the confirmation page
-  window.location = '/confirmation.html';
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
