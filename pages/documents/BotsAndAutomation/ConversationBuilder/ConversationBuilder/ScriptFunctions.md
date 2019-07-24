@@ -64,6 +64,36 @@ if (count > 10) {
 }
 ```
 
+### Get Current and Previous Skills
+
+Used to add previous and current skillIds to the botContext. If the conversation was transferred to the bot, you can track the previous skill Id that the consumer came from.
+
+{: .important}
+Previous Skill Id only works for Messaging. If used in a Chat conversation, it will be set to the same ID as the current Skill ID.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPEngagementAttribute()` | `"currentSkillId"`, `"previousSkillId"` | skillID (string) |
+
+#### Example
+
+The following example shows how to access current skill and previous skill IDs and set them to a botContext variable.
+
+```javascript
+var currentSkill = botContext.getLPEngagementAttribute("currentSkillId");
+var previousSkill = botContext.getLPEngagementAttribute("previousSkillId");
+
+botContext.setBotVariable("currentSkill", currentSkill, true, false);
+botContext.setBotVariable("previousSkill", previousSkill, true, false);
+```
+
+**Messaging Connector Requirements:**
+- Ensure that the bot is set up with API OAuth login rather than password login
+- Ensure that the OAuth keys have permission to Engagement History
+
+<img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
+
+
 ### Get Environment Variable
 
 Used for getting an environment variable. Environment Variables that are not set will return NULL.
