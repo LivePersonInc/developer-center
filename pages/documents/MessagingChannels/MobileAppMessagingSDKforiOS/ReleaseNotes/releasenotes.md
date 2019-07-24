@@ -19,7 +19,7 @@ indicator: messaging
 **Release date:** July 24, 2019
 
 ### Environmental requirements
-The iOS Mobile Messaging SDK version 4.0.0 is compatible with Xcode 10.2.1, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+The iOS Mobile Messaging SDK version 4.0.0 is compatible with Xcode 10.3, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
 
 ### Bug fix
 - Fixed issue with login when using certificate pinning while renewing certificates. 
