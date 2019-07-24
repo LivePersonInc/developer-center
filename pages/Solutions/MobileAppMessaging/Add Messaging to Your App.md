@@ -141,16 +141,18 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Android
 
-        * Snackbar duration: <integer name = snachbar_duration_for_accessibility> 60000 </integer>
+        * Snackbar duration: `<integer name="snackbar_duration_for_accessibility">60000</integer>`
 
-        * Disable: Link preview -
+            * (Note: This value was previously named 'snachbar_duration_for_accessibility', and its spelling has since been corrected.)
 
-            * <bool name ="link_preview_enable_real_time_preview" > false </bool>
+        * Disable Link preview -
 
-            * <bool name ="link_preview_enable_feature" > false </bool>
+            * `<bool name ="link_preview_enable_real_time_preview">false</bool>`
+
+            * `<bool name="link_preview_enable_feature">false</bool>`
 
         * Disable In-conversation shortcut to new messages
 
-            * <bool name ="scroll_down_indicator_enabled" > false </bool>
+            * `<bool name="scroll_down_indicator_enabled">false</bool>`
 
-            * <bool name ="scroll_down_indicator_unread_summary_enabled" > false </bool>
+            * `<bool name="scroll_down_indicator_unread_summary_enabled">false</bool>`
