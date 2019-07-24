@@ -32,11 +32,11 @@ The Context API is part of the Maven AI solution which can now be used as a stan
 
 * Passing context and customer routing / escalation path from Watson bots to conversation builder bots. 
 
+  <img class="fancyimage" style="width:750px" src="img/maven/mavencontextapiusecase.png">
+
 * Storing temporary notes from agent widgets when the conversation is hidden - to be retrieved on auto close event via [FaaS trigger](liveperson-functions-development-events-templates.html) or messaging interactions query to get conversation IDs for the namespace 
 
-* Calling the API from a FaaS Function
-
-
+* Calling the API from a [FaaS Function](liveperson-functions-developing-with-liveperson-functions-overview.html)
 
 ### Getting Started
 
