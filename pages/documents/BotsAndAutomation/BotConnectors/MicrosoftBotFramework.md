@@ -61,7 +61,7 @@ For this test it is not necessary for the bot to respond with a message.
 ### Limitations
 
 Currently advanced features of the direct line protocol like actions and attachments are not supported.
-The Bot Connector utilizes the channelData property for anything besides plain text.
+The Bot Connector utilizes the **channelData** property for anything besides plain text.
 
 It is expected that a bot responds to every message send by the customer.
 If no response is detected in a certain time frame, Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
@@ -72,7 +72,7 @@ Structured content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content from a bot implemented with the Microsoft Bot Framework, send the richContent in the channelData of the message activity.
 
-This should contain valid structured content, along with any optional metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
+This should contain a valid structured content body, along with an optional property containing metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
 
 ```json
@@ -111,7 +111,7 @@ Figure 4.1 Activity with Structured Content
 
 ### Change Time To Response of Conversation
 
-By providing a specific **action** in the channelData, the bot can change the TTR of a conversation.
+By providing a specific **action** in the **channelData**, the bot can change the TTR of a conversation.
 
 LivePerson Messaging uses 4 different types of priorities:
 "URGENT",
@@ -146,7 +146,7 @@ Transfers and escalations are straightforward in both chat and messaging.
 At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored.
 When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to.
 
-For **Microsoft Bot Framework**, the bot should provide the specific action in the channelData of the message activity.
+For **Microsoft Bot Framework**, the bot should provide the specific action in the **channelData** of the message activity.
 An additional text message can also be provided.
 
 ```json
