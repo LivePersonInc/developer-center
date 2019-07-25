@@ -230,17 +230,8 @@ input:-moz-placeholder { /* Firefox 18- */
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-#passwordErrorMatch {
-  display: none;
-  color: red;
-  align-self: baseline;
-  margin-top: 5px;
-  font-style: italic;
-  font-family: "Open Sans", Helvetica, sans-serif;
-  font-size: 15px;
-}
 
-#allFields {
+.conditionButton {
   display: none;
   color: red;
   align-self: baseline;
