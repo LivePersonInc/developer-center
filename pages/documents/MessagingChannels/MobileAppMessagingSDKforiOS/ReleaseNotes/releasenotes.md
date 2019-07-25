@@ -23,15 +23,15 @@ The iOS Mobile Messaging SDK version 4.0.0 is compatible with Xcode 10.3, Swift 
 
 ### Bug fix
 - Fixed issue with login when using certificate pinning while renewing certificates. 
-- SDK not recognizing engagement causing an issue when registering for campaign for messaging (C4M).
+- SDK not recognizing an engagement, causing an issue when registering for campaign for messaging (C4M)
 where the SDK did not recognize the engagement language.
-- LPConversationsHistoryStateToDisplay in close state updating message as read for an open. conversation.  
+- LPConversationsHistoryStateToDisplay in close state updating message as read for an open conversation.  
 - Hidden element is read on accessibility mode.
 - Voiceover no longer announces hidden button of submitted secure form. 
 - Accessibility on element corrected when downloading a file.
 - Styled Quick Reply now showing on conversation screen.
 - Spacing on top of conversation view after rotating device.
-- Incorrect pluralization for unread message banner in english.
+- Incorrect pluralization for unread message banner in English.
 - Fixed crash in web socket handler.
 - Fixed crash when receiving a file without a thumbnail preview.
 - Corrected execute permissions  
