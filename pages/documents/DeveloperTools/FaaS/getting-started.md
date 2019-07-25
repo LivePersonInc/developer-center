@@ -124,7 +124,7 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 ### Configure your firewall
 
-Please follow [this](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) document to whitelist LivePerson IP ranges for your APIs, that should be used within `lambdas`.
+Please follow [this](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) document to whitelist LivePerson IP ranges for any APIs that will be used within `lambdas`.
 
 ### Accessing the LivePerson Functions User Interface
 
