@@ -49,7 +49,7 @@ Customers can always write their own custom Bot connector using our Messaging Ag
 
 #### Integrating Custom Bots via Chat
 
-There are two options available to you if you're looking to integrate bots into chat. The first is to use the Chat Agent API directly. Its [documentation can be found here](chat-agent-api-overview.html). You can also utilize the JavaScript SDK which LivePerson wrote on top of that API. Starting with the [Sample App](https://github.com/LivePersonInc/chat-js-sdk-sample-app) is a good idea, to get a handle on how it works.
+There are two options available to you if you're looking to integrate bots into chat. The first is to use the Chat Agent API directly. Its [documentation can be found here](chat-agent-api-overview.html). You can also utilize the JavaScript SDK which LivePerson wrote on top of that API. Starting with the [Sample App](https://github.com/LivePersonInc/agent-sample-app) is a good idea, to get a handle on how it works.
 
 In both cases, generally speaking, you will need to use JavaScript from your bot to [post lines to LiveEngage](chat-agent-api-methods-send-lines-and-structured-content.html) and to [listen to new events](chat-agent-api-methods-retrieve-chat-events.html) in the chat (such as consumer text) and react accordingly.
 
