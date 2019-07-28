@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Agent Experience & Bots"
 documentname: Maven
 subfoldername: Context API
-permalink: maven-context-api-overview.html
+permalink: context-api-overview.html
 indicator: both
 ---
 
@@ -14,7 +14,7 @@ indicator: both
 
 The Context API is an on-demand repository for metadata about consumers and their conversations.
 
-In any given conversation, Maven AI analyzes and provides extra contextual metadata about the nature of the conversation and consumer. The Context API is a way to retrieve and store this metadata information.  Context API is part of Maven Context Warehouse, that allows brands to store and retrieve custom attributes that can be carried over through the conversational journey. 
+In any given conversation, Maven AI analyzes and provides extra contextual metadata about the nature of the conversation and consumer. The Context API is a way to retrieve and store this metadata information.  Context API is part of Maven Context Warehouse, that allows brands to store and retrieve custom attributes that can be carried over through the conversational journey.
 
 Even though the Context API is part of the Maven AI solution, it  can also be used as a standalone service. The Context API provides a system of organization that allows you to manage your data. Each brand can have multiple namespaces for different business use cases. Each namespace can have multiple groups of information based on key-value pairs. Key-value pairs can be stored at either the namespace level or the group level.
 
@@ -30,11 +30,11 @@ The Context API is part of the Maven AI solution which can now be used as a stan
 
 ### Example Use Cases
 
-* Passing context and customer routing / escalation path from Watson bots to conversation builder bots. 
+* Passing context and customer routing / escalation path from Watson bots to conversation builder bots.
 
   <img class="fancyimage" style="width:750px" src="img/maven/mavencontextapiusecase.png">
 
-* Storing temporary notes from agent widgets when the conversation is hidden - to be retrieved on auto close event via [FaaS trigger](liveperson-functions-development-events-templates.html) or messaging interactions query to get conversation IDs for the namespace 
+* Storing temporary notes from agent widgets when the conversation is hidden - to be retrieved on auto close event via [FaaS trigger](liveperson-functions-development-events-templates.html) or messaging interactions query to get conversation IDs for the namespace
 
 * Calling the API from a [FaaS Function](liveperson-functions-developing-with-liveperson-functions-overview.html)
 

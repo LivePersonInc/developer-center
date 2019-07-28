@@ -524,6 +524,10 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+  - documentname: Context API
+    pages:
+      - pagename: Overview
+      - pagename: Methods
 
 - categoryname: Historical Data
   image: historical-data
