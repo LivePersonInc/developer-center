@@ -283,7 +283,18 @@ function mobileHamburger() {
 	});
 }
 
-//Inherited this function in all its nightmarish qualities. Will refactor at some point, maybe.
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+	let scrollOnce;
+//Refactored this a bit from its original nightmare-state. Needs improvement.
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
@@ -301,26 +312,14 @@ function sidebarCollapse(url) {
 	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
-	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
-	var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
-	if (toOpen || toOpenHigher) {
-		$(".activepage").parent().parent().show();
-		$(".activepage").parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().parent().parent().show();
-		$(".activepage").parent().show();
-		$(".activepage").parent().parent().prev().data("expanded", "true");
-		$(".activepage").parent().parent().parent().parent().prev().data("expanded", "true");
-		$(".activepage").parent().parent().parent().parent().parent().parent().prev().data("expanded", "true");
+	var toOpen = $(".activepage").parents("folder");
+	if (toOpen) {
+		$(".activepage").parents().show();
+		$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
+		$("a.active").data("expanded", "true");
 		if ($(".activepage").parent().hasClass("innerpageitem")) {
 			$(".activepage").parent().addClass("activeitem");
 		}
-		$(".activepage").parent().parent().prev().addClass("active");
-		$(".activepage").parent().parent().parent().parent().prev().addClass("active");
-		$(".activepage").parent().parent().parent().parent().parent().parent().prev().addClass("active");
-		$(".activepage").parent().prev().data("expanded", "true");
-		$("ul#mysidebar").css("visibility", "visible");
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
@@ -331,10 +330,11 @@ function sidebarCollapse(url) {
 			$(".homeitem > a").removeClass("active");
 			$(".topfolder > a").removeClass("active");
 		});
-		if (currentPage.offset().top > 700) {
+		if (currentPage.isInViewport() && !scrollOnce) {
+		scrollOnce = true;
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
-		}, 1000);
+		}, 2000);
 	};
 	};
 };
