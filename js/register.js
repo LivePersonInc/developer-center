@@ -12,7 +12,7 @@ let radioValue;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
-  // disableBtn();
+  disableBtn();
   radioListener();
 });
 
