@@ -3,10 +3,10 @@ pagename: Methods
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Developer Tools"
 documentname: Maven
 subfoldername: Context API
-permalink: context-api-methods.html
+permalink: maven-context-api-methods.html
 indicator: both
 ---
 

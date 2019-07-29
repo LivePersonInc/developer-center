@@ -524,10 +524,17 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
-  - documentname: Context API
+  - documentname: Maven 
     pages:
-      - pagename: Overview
-      - pagename: Methods
+      - pagename: Context API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Methods
+      - pagename: AskMaven API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Methods
+
 
 - categoryname: Historical Data
   image: historical-data
