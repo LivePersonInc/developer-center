@@ -75,6 +75,10 @@ This section contains API details that are common to every API’s resource and 
 | workingHoursId | working hours ID | Long | Optional ||
 | specialOccasionId | special occasion ID | Long | Optional ||
 | postConversationSurveyAppInstallAssociationId | post conversation survey with app install association ID | String | Optional ||
+| autoCloseInSeconds | Set auto-close per skill in seconds | Integer | Optional ||
+| transferToAgentMaxWaitInSeconds | Maximum wait time for transferred conversation to wait in queue for the assigned agent | Integer | Optional ||
+| fallbackSkill | Allowed fallback skill for this skill | Long | Optional ||
+| fallbackWhenAllAgentsAreAway | Setting per skill whether or not to use fallback skill when all agents are away | Boolean | Optional | Default: true |
 
 ### Entity Example
 
