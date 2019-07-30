@@ -139,7 +139,7 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
 <div class="notice">
-Please note that when you putting your credentials make sure you have selected the right workspace URL. As selecting wrong Watson Assistant gateway causes connection failure.
+Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.
 </div>
 
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
@@ -149,11 +149,11 @@ Following guide is going to present customization for the Watson Assistant on ho
 
 ### Sending Native Content
 
-Watson Assistant allows user to define some native response types to the dialog nodes. The core LiveEngage platform supports the use of Watson Assistant native types that includes Image, List, Pause and Text. User can define single or multiple native contents per dialog. The rich content types can be defined with watson wizard or for advance users it can be created using JSON editor (Figure 2.1 shows how to access both ways in IBM watson website).
+Watson Assistant allows the user to define native response types to the dialog nodes. The supported Watson Assistant native types include Image, List, Pause, and Text. Users can define single or multiple native content per dialog. The native content types can be defined with Watson wizard or using the JSON editor (Figure 2.1 shows how to access both ways in IBM Watson website).
 
 <img class="fancyimage" style="width:100%" src="img/watsonassistant/watson-json-editor.png">
 
-Figure 2.1 Showing how to add native type using wizard or JSON editor
+Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
 Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Bot Connectors.
@@ -255,7 +255,7 @@ An example list filled with two options can be seen below. Please note that with
             }
           },
           {
-            "label": "Andriod",
+            "label": "Android",
             "value": {
               "input": {
                 "text": "2"
@@ -272,7 +272,7 @@ An example list filled with two options can be seen below. Please note that with
 
 #### Pause
 
-User can define Pause type if they want to send some delay in responding. For adding this content type, dialog node will need to selected that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
+Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Select-Response.png">
 
@@ -302,7 +302,7 @@ If you are using **JSON Editor** you can use the following JSON structure to def
 
 #### Text
 
-User can define a Text type to send some textual response. For adding this type dialog node will need to selected that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.7
+Users can define a Text type to send some textual response. For adding this type dialog node will need to select that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.7
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Select-Response.png">
 
@@ -314,7 +314,7 @@ Once the "Text" is selected the form will allow you to add the response texts. Y
 
 Figure 2.8 Text fields filled example
 
-If you are using **JSON Editor** you can use following JSON structure to create text responses. The example below showed two text responses defined that will come sequentially.
+If you are using **JSON Editor** you can use following JSON structure to create text responses. The example below shows two text responses defined that will come sequentially.
 
 ```json
 {
@@ -337,12 +337,9 @@ If you are using **JSON Editor** you can use following JSON structure to create 
 }
 ```
 
-#### Defining multiple/mix Watson Native content
+#### Defining multiple responses with Watson Native content
 
-You can define/mix the different content types together as well following is an example using **JSON Editor** that first sends text, after that make a pause for 5 seconds and finally sends an image.
-
-{: .important}
-Please keep in mind that currently IBM Watson allows **only 5** response types per node.
+Users can define a response with various content types. The following example shows a similar case using **JSON Editor**. The response will First send the text. afterwards, it will make a pause for 5 seconds and then finally sends an image.
 
 ```json
 {
@@ -682,3 +679,9 @@ To close a chat or messaging conversation, we utilize the action object as we di
 ```
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
+
+### Limitations
+
+<ul>
+  <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
+</ul>
