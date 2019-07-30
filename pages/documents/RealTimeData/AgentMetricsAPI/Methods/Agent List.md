@@ -19,7 +19,7 @@ List of eligible agents depends on the conversation skill id and the privileges 
 
 | Method   |      URL      |
 |----------|:-------------:|
-| POST |  https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/agent-view/status |
+| POST |  https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/agent-view/list |
 
 _BODY / POST Parameters_
 
