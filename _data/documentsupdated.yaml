@@ -167,13 +167,14 @@
           - subpagename: Using Environment Variables
           - subpagename: Training and Tuning Your Intents and FAQs
       #- pagename: Operations
-  #- documentname: Maven
-    #pages:
+  - documentname: Maven
+    pages:
       #- pagename: Overview
-      #- pagename: Context API
-        #subpages:
-          #- subpagename: Overview
-          #- subpagename: Methods
+      #- pagename: Getting Started
+      - pagename: Context API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Methods
       #- pagename: AskMaven API
         #subpages:
           #- subpagename: Overview
@@ -524,16 +525,6 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
-  - documentname: Maven 
-    pages:
-      - pagename: Context API
-        subpages:
-          - subpagename: Overview
-          - subpagename: Methods
-      - pagename: AskMaven API
-        subpages:
-          - subpagename: Overview
-          - subpagename: Methods
 
 
 - categoryname: Historical Data
