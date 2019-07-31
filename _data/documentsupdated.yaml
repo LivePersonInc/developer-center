@@ -144,6 +144,7 @@
           - subpagename: Overview
           - subpagename: Simple Router
           - subpagename: Full Lead Gen
+          - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
       - pagename: Conversation Builder
@@ -759,6 +760,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Agent Status
+          - subpagename: Agent List
           - subpagename: Summary
   - documentname: Messaging Operations API
     basedomain: https://{domain}/operations/api/account/{accountID}

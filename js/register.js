@@ -1,6 +1,7 @@
 //declaring variables
 let firstName;
 let lastName;
+let region;
 let country;
 let emailAddress;
 let password;
@@ -58,7 +59,17 @@ function validateInfo (){
   //filling variables from the form
   firstName = $('#firstName').val();
   lastName = $('#lastName').val();
-  country = $('#country').val();
+  region = $('#country').val();
+  //set the country variable, which gets sent to the endpoint, according to the region selected
+  if (region == 'The Americas') {
+      country = 'z1';
+  }
+  if (region == 'Europe, Middle Easy, and Africa') {
+      country = 'z2';
+  }
+  if (region == 'Asia Pacific') {
+      country = 'z3';
+  }
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
@@ -90,20 +101,21 @@ function postRequest () {
 //defining the endpoint for account creation
   const URL = 'https://uohcduank4.execute-api.us-east-2.amazonaws.com/dev/devaccount';
 //filling in request body with variables from the form
-  const user ={
-    firstName: firstName,
-    lastName: lastName,
-    country: country,
-    email: emailAddress,
-    password: password
-  }
+  const user = [
+    firstName,
+    lastName,
+    country,
+    emailAddress,
+    password
+  ]
+  let userFlat = [...user]
   //using the axios module to make the request
   axios({
     method: 'post',
     url: URL,
     headers: {'x-api-key': 'gUi91Xlj5lWOJdOiYttA0jA6EqUTxS626YJ0zW20', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: {
-      user
+      userFlat
     }
   })
   .then(function (response) {
