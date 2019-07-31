@@ -3,7 +3,7 @@ pagename: Methods
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Context API
 permalink: maven-context-api-methods.html

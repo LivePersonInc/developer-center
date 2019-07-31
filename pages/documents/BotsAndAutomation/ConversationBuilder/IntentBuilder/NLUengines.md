@@ -3,7 +3,7 @@ pagename: NLU Engines
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Intent Builder
 permalink: conversation-builder-intent-builder-nlu-engines.html

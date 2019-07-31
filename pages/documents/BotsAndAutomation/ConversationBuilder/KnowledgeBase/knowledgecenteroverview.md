@@ -3,7 +3,7 @@ pagename: Knowledge Base
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 permalink: conversation-builder-knowledge-base.html
 indicator: both

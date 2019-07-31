@@ -110,7 +110,7 @@
       - pagename: Postman Resources
 
 
-- categoryname: Bots & Automation
+- categoryname: Conversational AI
   image: agent-experience
   documents:
   - documentname: Messaging Agent SDK

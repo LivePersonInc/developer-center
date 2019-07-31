@@ -3,7 +3,7 @@ pagename: 3 - Integrations
 redirect_from: conversation-builder-getting-started-getting-started-part-3.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Getting Started
 permalink: conversation-builder-getting-started-3-integrations.html

@@ -2,7 +2,7 @@
 pagename: Custom Third Party Bots
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname:
 permalink: custom-third-party-bots.html
 indicator: both

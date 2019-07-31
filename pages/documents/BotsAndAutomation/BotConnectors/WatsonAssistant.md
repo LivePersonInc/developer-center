@@ -2,7 +2,7 @@
 pagename: IBM Watson Assistant
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-ibm-watson-assistant.html
 indicator:

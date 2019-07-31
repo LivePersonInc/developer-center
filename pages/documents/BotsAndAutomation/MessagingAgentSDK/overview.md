@@ -2,7 +2,7 @@
 pagename: Overview
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Messaging Agent SDK
 
 level-order: 3

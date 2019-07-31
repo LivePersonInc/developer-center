@@ -3,7 +3,7 @@ pagename: Using Environment Variables
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Best Practices
 permalink: conversation-builder-best-practices-using-environment-variables.html
