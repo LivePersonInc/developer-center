@@ -47,7 +47,7 @@ You will use the namespace value that is returned in the response in all other C
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 curl --request POST \
@@ -93,7 +93,7 @@ Only do this if you want to delete the namespace
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 curl --request DELETE \
@@ -211,7 +211,7 @@ curl --request PATCH \
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 curl --request DELETE \
@@ -243,7 +243,7 @@ curl --request DELETE \
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 
@@ -279,7 +279,7 @@ You can put anything you want in the entityId. If you want to put consumer and c
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 
@@ -312,7 +312,7 @@ curl --request GET \
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 
@@ -345,7 +345,7 @@ Example:
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 
@@ -362,7 +362,7 @@ curl --request PATCH \
 
 ```
 
-### pass multiple propertyName to the GET properties	
+### pass multiple propertyName to the GET properties
 
 <table>
     <thead>
@@ -385,7 +385,7 @@ curl --request PATCH \
     </tbody>
 </table>
 
-Example: 
+Example:
 
 ```bash
 
