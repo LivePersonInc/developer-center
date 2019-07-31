@@ -27,7 +27,9 @@ For each state, the following is indicated:
 
 If no custom Away state reasons are configured, the 'reasons' field will be returned as an empty array.
 
-*Note*: this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+*Note*: 
+1. this method is subject to Rate Limiting. This means that the maximum number of concurrent requests is limited on the server side. As most requests are in milliseconds, the likelihood of your requests actually encountering an issue is rare but should that happen, you can expect to receive a 429 Status Code from the server.
+2. agent states are calculated by millisecond but presentation is in second. Therefore, there might be 1 seconds difference between agent states to agent states total.
 
 ### Request
 
