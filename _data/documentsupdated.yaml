@@ -758,6 +758,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Agent Status
+          - subpagename: Agent List
           - subpagename: Summary
   - documentname: Messaging Operations API
     basedomain: https://{domain}/operations/api/account/{accountID}
