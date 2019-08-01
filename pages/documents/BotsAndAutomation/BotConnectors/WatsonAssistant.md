@@ -193,7 +193,7 @@ If you are using **JSON editor** you can add a Image type by posting following J
   "output": {
     "generic": [
       {
-        "source": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
+        "source": "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg",
         "title": "iPhone 8 Concept",
         "description": "iPhone 8 concept image showing initial details about phone",
         "response_type": "image"
