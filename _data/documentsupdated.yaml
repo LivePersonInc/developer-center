@@ -515,6 +515,9 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
       - pagename: Deployment
+      - pagename: Monitoring
+        subpages:
+          - subpagename: Logs
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
