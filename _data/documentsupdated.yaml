@@ -110,7 +110,7 @@
       - pagename: Postman Resources
 
 
-- categoryname: Bots & Automation
+- categoryname: Conversational AI
   image: agent-experience
   documents:
   - documentname: Messaging Agent SDK
@@ -144,6 +144,7 @@
           - subpagename: Overview
           - subpagename: Simple Router
           - subpagename: Full Lead Gen
+          - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
       - pagename: Conversation Builder
@@ -167,13 +168,14 @@
           - subpagename: Using Environment Variables
           - subpagename: Training and Tuning Your Intents and FAQs
       #- pagename: Operations
-  #- documentname: Maven
-    #pages:
+  - documentname: Maven
+    pages:
       #- pagename: Overview
-      #- pagename: Context API
-        #subpages:
-          #- subpagename: Overview
-          #- subpagename: Methods
+      #- pagename: Getting Started
+      - pagename: Context API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Methods
       #- pagename: AskMaven API
         #subpages:
           #- subpagename: Overview
@@ -525,6 +527,7 @@
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
 
+
 - categoryname: Historical Data
   image: historical-data
   documents:
@@ -757,6 +760,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Agent Status
+          - subpagename: Agent List
           - subpagename: Summary
   - documentname: Messaging Operations API
     basedomain: https://{domain}/operations/api/account/{accountID}

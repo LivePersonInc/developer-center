@@ -3,6 +3,8 @@ pagename: Welcome Developers!
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
+redirect_from:
+  - get-started-LE-APIs.html
 ---
 
 {: .notice}

@@ -10,7 +10,7 @@ redirect_from:
   - customer-facing-bots-overview.html
   - customer-facing-bots-prerequisites.html
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-getting-started.html
 indicator:

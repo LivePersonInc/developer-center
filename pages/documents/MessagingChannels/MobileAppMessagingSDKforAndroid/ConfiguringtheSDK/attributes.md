@@ -1,4 +1,3 @@
-
 ---
 pagename: Attributes
 redirect_from:
@@ -25,11 +24,13 @@ For things like Brand name, which is a string, refer to [string Localization](an
 
 ### Accessibility
 
-#### snachbar_duration_for_accessibility
+#### snackbar_duration_for_accessibility
 Number of milliseconds to show the TTR snackbar if the accessibility TalkBack option is on.
 
 * **Type:** integer
 * **Default value:** 60000
+
+Note: This value was previously named `snachbar_duration_for_accessibility`, and its spelling has since been corrected.
 
 
 #### announce_agent_typing
@@ -2633,7 +2634,7 @@ Configuration for bottom right corner radius of structured content card.
 * **Default value:** 0dp
 
 
-#### structured_content_bottom_right_radius
+#### structured_content_bottom_left_radius
 Configuration for top left corner radius of structured content card.
 
 * **Type:** dimen 

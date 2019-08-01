@@ -17,7 +17,7 @@ indicator: both
 
 In order to enable targeting for messaging engagements (authenticated _and_ unauthenticated web messaging), the identity of the consumer must be passed to the API using the identities array and identity function. The information in this array should match the values assigned to the user when they authenticate on your site; this information is _not_ used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor. In essence, this information _identifies_ rather than _authenticates_ a user; it passes unique information to LiveEngage, allowing for targeted engagements and continuity between conversations to apply according to the information passed.
 
-The identity function should be implemented on every authenticated page (the LivePerson tag will set the identity of unauthenticated visitors).
+The identity function should be implemented on every authenticated page (the LivePerson tag will set the identity of unauthenticated visitors, however, you can implement the function but return 'null' in the callback if you wish).
 
 **Code Example**
 
@@ -168,7 +168,7 @@ The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and 
 If an error is encountered during processing, an error message will be returned:
 
 ```
-HTTP/1.1 
+HTTP/1.1
 Status: 400 - Bad Request
 Content-Type: application/json   
 Cache-Control: no-store   

@@ -3,7 +3,7 @@ pagename: Analytics
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 permalink: conversation-builder-analytics.html
 indicator: both

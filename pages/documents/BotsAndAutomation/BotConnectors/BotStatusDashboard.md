@@ -2,7 +2,7 @@
 pagename: Bot Status Dashboard
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-bot-status-dashboard.html
 indicator:

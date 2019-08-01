@@ -14,7 +14,7 @@ This method returns the list of  agents which are eligible to receive conversati
 
 | Method   |      URL      |
 |----------|:-------------:|
-| POST |  https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/agent-view/status |
+| POST |  https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/agent-view/list |
 
 _BODY / POST Parameters_
 
