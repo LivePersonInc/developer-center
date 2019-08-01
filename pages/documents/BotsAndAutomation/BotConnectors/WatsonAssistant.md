@@ -138,6 +138,10 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
+<div class="notice">
+Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.
+</div>
+
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
 
 {: .important}
@@ -145,10 +149,26 @@ Following guide is going to present customization for the Watson Assistant on ho
 
 ### Sending Native Content
 
-Watson Assistant allows user to define some native response types to the dialog nodes. The core LiveEngage platform supports the use of Watson Assistant native types that includes Image, List, Pause and Text. User can define single or multiple native contents per dialog.
+Watson Assistant allows the user to define native response types to the dialog nodes. The supported Watson Assistant native types include Image, List, Pause, and Text. Users can define single or multiple native content per dialog. The native content types can be defined with Watson wizard or using the JSON editor (Figure 2.1 shows how to access both ways in IBM Watson website).
+
+<img class="fancyimage" style="width:100%" src="img/watsonassistant/watson-json-editor.png">
+
+Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
 Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Bot Connectors.
+
+If you use **JSON Editor** then the usual body of the native content is as follows:
+
+```json
+{
+  "output": {
+    "generic": [
+      // Here comes array of objects of different Watson native contents that you can define.
+    ]
+  }
+}
+```
 
 #### Image
 
@@ -166,6 +186,23 @@ Once image is selected you will be asked to fill the information. "Image Source"
 
 Figure 2.2 Image fields filled example
 
+If you are using **JSON editor** you can add a Image type by posting following JSON. Please make sure to change **"source"**, **"title"** and **"description"** property with your data.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "source": "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg",
+        "title": "iPhone 8 Concept",
+        "description": "iPhone 8 concept image showing initial details about phone",
+        "response_type": "image"
+      }
+    ]
+  }
+}
+```
+
 #### List
 
 User can define List type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that will hold list response. Click on the "Add response type" and select Option from the select box as shown in Figure 2.3.
@@ -180,9 +217,62 @@ Once the "Option" is selected the form need to be filled will be shown. You must
 
 Figure 2.4 List fields filled example
 
+If you are using **JSON Editor** then you have following structure of List. Note that **"options"** property is array of objects which holds the items for choosing are presented to user.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "title": "",
+        "description": "",
+        "options": [
+          // Here comes the list of options you want to present to user
+        ],
+        "response_type": "option"
+      }
+    ]
+  }
+}
+```
+
+An example list filled with two options can be seen below. Please note that within options object, "text" **(value->input->text)** is the value that you set for an option.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "title": "Choose your Phone",
+        "description": "Select the phone you like",
+        "options": [
+          {
+            "label": "iOS",
+            "value": {
+              "input": {
+                "text": "1"
+              }
+            }
+          },
+          {
+            "label": "Android",
+            "value": {
+              "input": {
+                "text": "2"
+              }
+            }
+          }
+        ],
+        "response_type": "option"
+      }
+    ]
+  }
+}
+```
+
 #### Pause
 
-User can define Pause type if they want to send some delay in responding. For adding this content type, dialog node will need to selected that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
+Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Select-Response.png">
 
@@ -194,9 +284,25 @@ Once the "Pause" is selected the form will ask you to provide the duration (unit
 
 Figure 2.6 Pause fields filled example
 
+If you are using **JSON Editor** you can use the following JSON structure to define a Pause content type. This example will pause for 5 milliseconds with typing indication on.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "time": 5,
+        "typing": true,
+        "response_type": "pause"
+      }
+    ]
+  }
+}
+```
+
 #### Text
 
-User can define a Text type to send some textual response. For adding this type dialog node will need to selected that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.7
+Users can define a Text type to send some textual response. For adding this type dialog node will need to select that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.7
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Select-Response.png">
 
@@ -207,6 +313,65 @@ Once the "Text" is selected the form will allow you to add the response texts. Y
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Fields-Response.png">
 
 Figure 2.8 Text fields filled example
+
+If you are using **JSON Editor** you can use following JSON structure to create text responses. The example below shows two text responses defined that will come sequentially.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "response_type": "text",
+        "values": [
+          {
+            "text": "Hi Good Morning!"
+          },
+          {
+            "text": "Hi Good Evening!"
+          }
+        ],
+        "selection_policy": "sequential"
+      }
+    ]
+  }
+}
+```
+
+#### Defining multiple responses with Watson Native content
+
+Users can define a response with various content types. The following example shows a similar case using **JSON Editor**. The response will First send the text. afterwards, it will make a pause for 5 seconds and then finally sends an image.
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+            "text": "Hi Good Morning!"
+          },
+          {
+            "text": "Hi Good Evening!"
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      },
+      {
+        "time": 5000,
+        "typing": true,
+        "response_type": "pause"
+      },
+      {
+        "title": "iPhone 8",
+        "source": "https://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
+        "description": "iPhone 8 concept",
+        "response_type": "image"
+      }
+    ]
+  }
+}
+```
 
 ### Sending Rich Content (Structured Content)
 
@@ -233,7 +398,7 @@ In the JSON Editor you will need to add your custom JSON response (Figure 3.3).
 
 Figure 3.3 Watson Assistant JSON Editor
 
-There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 3.4** with a sample JSON example that uses a standard Structured Content card with a button option in **Figure 3.5**.
+There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 3.4**. An example with a sample JSON that uses a standard Structured Content card with a button option in can be seen in **Figure 3.5**.
 
 ```json
 {
@@ -256,7 +421,7 @@ There is a strict JSON structure for the response that must be used. The JSON st
 }
 ```
 
-Figure 3.4 Structured Content Watson JSON Structure
+Figure 3.4 Structured Content Watson JSON Structure (JSON Editor should contain this object structure for Rich Content)
 
 ```json
 {
@@ -295,57 +460,28 @@ Figure 3.4 Structured Content Watson JSON Structure
 }
 ```
 
-Figure 3.5 Structured Content Watson JSON Example
+Figure 3.5 Structured Content Watson JSON Example (JSON Editor should contain this object structure for Rich Content)
 
-For new IAM workspaces that have a new Watson response, _Then respond with_ text:
+For new IAM workspaces that have a new Watson response, _Then respond with_ "text" should be used:
 
 <img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png">
 
-Put the structured content objects with the metadata in the text field for the response.
+Put the structured content objects that is shown in Figure 3.6 with the metadata in the text field. Figure 3.7 shows the final picture of how it should look like.
 
 ```json
 {
-  "output": {
-    "generic": [
+  "metadata": [{ "id": "1234", "type": "ExternalId" }],
+  "structuredContent": {
+    "type": "vertical",
+    "elements": [
       {
-        "values": [
-          {
-            "output": {
-              "text": {
-                "values": [
-                  {
-                    "metadata": [
-                      {
-                        "id": "1234",
-                        "type": "ExternalId"
-                      }
-                    ],
-                    "structuredContent": {
-                      "type": "vertical",
-                      "elements": [
-                        {
-                          "type": "button",
-                          "click": {
-                            "actions": [
-                              {
-                                "text": "Recommend me a movie",
-                                "type": "publishText"
-                              }
-                            ]
-                          },
-                          "title": "Recommend a movie"
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "selection_policy": "sequential"
-              }
-            }
-          }
-        ],
-        "response_type": "text",
-        "selection_policy": "sequential"
+        "type": "button",
+        "click": {
+          "actions": [
+            { "text": "Recommend me a movie, please", "type": "publishText" }
+          ]
+        },
+        "title": "Recommend a movie"
       }
     ]
   }
@@ -543,3 +679,9 @@ To close a chat or messaging conversation, we utilize the action object as we di
 ```
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
+
+### Limitations
+
+<ul>
+  <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
+</ul>
