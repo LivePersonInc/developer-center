@@ -18,13 +18,13 @@ We support the Direct Line API version 3.0.
 ### Bot Configuration
 
 {: .important}
-See the Getting Started guide first to complete pre-requisite steps.
+See the [Getting Started guide](bot-connectors-getting-started.html) first to complete pre-requisite steps.
 
-During the configure you will be presented with the following screen to fill in the vendor data if you've selected **Microsoft Bot Framework**.
+Throughout this document, you will be presented with the following screen to fill in the vendor data if you've selected **Microsoft Bot Framework**.
 
 <img class="fancyimage" style="width:600px" src="img/msbotframework/vendor.png">
 
-Figure 1.1 Showing the configuration that needed to be filled
+Figure 1.1 Showing the configuration that needs to be filled out
 
 The following Microsoft information should be provided to LivePerson:
 
@@ -52,10 +52,10 @@ The following Microsoft information should be provided to LivePerson:
 
 The Direct Line Secret can be found in the Azure Portal if you select the corresponding Web App Bot and edit the Configuration of the Direct Line Channel.
 
-<img class="fancyimage" style="width:600px" src="img/msbotframework/secret.png">
+<img class="fancyimage" style="width:750px" src="img/msbotframework/secret.png">
 Figure 1.2 The Direct Line Secret
 
-For validation of the credentials provided, you can perform a connection test to see if the messages can be send to the channel with the provided secret by clicking on the button "Test Connection".
+For validation of the credentials provided, you can perform a connection test to see if the messages can be sent to the channel with the provided secret by clicking on the button "Test Connection".
 For this test it is not necessary for the bot to respond with a message. 
 
 ### Limitations
@@ -63,14 +63,14 @@ For this test it is not necessary for the bot to respond with a message.
 Currently advanced features of the direct line protocol like actions and attachments are not supported.
 The Bot Connector utilizes the **channelData** property for anything besides plain text.
 
-It is expected that a bot responds to every message send by the customer.
-If no response is detected in a certain time frame, Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
+It is expected that a bot responds to every message sent by the consumer.
+If no response is detected in a certain time frame, the Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
 
 ### Sending Rich Content (Structured Content)
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-To send structured content from a bot implemented with the Microsoft Bot Framework, send the richContent in the channelData of the message activity.
+To send structured content from a bot implemented with the Microsoft Bot Framework, send the rich content in the `channelData` of the message activity.
 
 This should contain a valid structured content body, along with an optional property containing metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
@@ -114,14 +114,15 @@ Figure 4.1 Activity with Structured Content
 By providing a specific **action** in the **channelData**, the bot can change the TTR of a conversation.
 
 LivePerson Messaging uses 4 different types of priorities:
-"URGENT",
-“NORMAL”
-“PRIORITIZED”
-“CUSTOM”
 
-Only the “CUSTOM” can set a value. The unit of the value is second. The values of the other types are defined in the Agent Workspace.
+* "URGENT"
+* “NORMAL”
+* “PRIORITIZED”
+* “CUSTOM”
 
-An text message can also be provided simultaneously in the activity json.
+Only “CUSTOM” can set a value. The unit of the value is in seconds. The values of the other types are defined in the Agent Workspace.
+
+A text message can also be provided simultaneously in the activity json.
 
 ```json
 {
@@ -143,10 +144,13 @@ Figure 5.1 Activity with TTR Change
 ### Transfer / Escalations
 
 Transfers and escalations are straightforward in both chat and messaging.
-At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored.
+
+At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is retrieved, keyed by name and stored.
+
 When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to.
 
 For **Microsoft Bot Framework**, the bot should provide the specific action in the **channelData** of the message activity.
+
 An additional text message can also be provided.
 
 ```json
@@ -167,6 +171,7 @@ Figure 6.1 Activity excerpt for a transfer Request
 
 ### Close Chat/Conversation
 To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.
+
 An additional text message can also be provided.
 
 ```json
@@ -184,7 +189,7 @@ Figure 7.1 Activity excerpt for a close conversation request
 
 ### Welcome Event
 
-The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
+The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works..
 
 A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by the bot and an intent determined.
 
