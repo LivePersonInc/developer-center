@@ -126,6 +126,7 @@
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
+      - pagename: Microsoft Bot Framework
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
