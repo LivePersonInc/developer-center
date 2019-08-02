@@ -14,7 +14,7 @@ Throughout the automation creation lifecycle, it is important to follow good cha
 
 **Versions** are ways of saving your progress at crucial moments during development. When you save a new version, it takes a snapshot of your automation at that moment and saves it. You can then recover your automation to the state of a previous version. This is helpful if you ever make mistakes or break something and need to go back.
 
-**Releases** contain the same snapshot ability of versions, but it also allows you to push the snapshot to a different automation.
+**Releases** are similar to Versions, in that they create a snapshot of your automation. However, Releases are used to push the snapshot to a different automation, updating it with the new automation code.
 
 Use *versions* during the development cycle to take snapshots for different milestones. Use *releases* to push snapshots to different automations, like a Development vs a Production automation.
 
