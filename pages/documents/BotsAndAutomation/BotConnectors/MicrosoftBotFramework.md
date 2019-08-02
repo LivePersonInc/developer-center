@@ -2,7 +2,7 @@
 pagename: Microsoft Bot Framework
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-microsoft-bot-framework.html
 indicator:
