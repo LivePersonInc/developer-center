@@ -122,6 +122,7 @@
   - documentname: Bot Connectors
     pages:
       - pagename: Getting Started
+      - pagename: Bot Status Dashboard
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
