@@ -3,7 +3,7 @@ pagename: Assist
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
 permalink: conversation-builder-conversation-builder-assist.html

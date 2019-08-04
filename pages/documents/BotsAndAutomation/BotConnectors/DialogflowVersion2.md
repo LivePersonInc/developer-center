@@ -2,7 +2,7 @@
 pagename: Google Dialogflow Version 2
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-google-dialogflow-version-2.html
 indicator:

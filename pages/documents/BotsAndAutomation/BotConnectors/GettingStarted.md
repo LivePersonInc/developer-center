@@ -10,7 +10,7 @@ redirect_from:
   - customer-facing-bots-overview.html
   - customer-facing-bots-prerequisites.html
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-getting-started.html
 indicator:
@@ -180,5 +180,7 @@ Move on to the product guides to learn how to connect and configure your specifi
 - [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html)
 
 - [Amazon Lex](bot-connectors-amazon-lex.html)
+
+- [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
 
 - [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)

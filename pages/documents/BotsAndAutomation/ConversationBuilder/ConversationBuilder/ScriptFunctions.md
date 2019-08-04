@@ -3,7 +3,7 @@ pagename: Scripting Functions
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
 permalink: conversation-builder-conversation-builder-scripting-functions.html

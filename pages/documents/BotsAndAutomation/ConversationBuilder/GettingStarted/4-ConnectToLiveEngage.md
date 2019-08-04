@@ -3,7 +3,7 @@ pagename: 4 - Connect to LiveEngage
 redirect_from: conversation-builder-getting-started-getting-started-part-4.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Getting Started
 permalink: conversation-builder-getting-started-4-connect-to-liveengage.html

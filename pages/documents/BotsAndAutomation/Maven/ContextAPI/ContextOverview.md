@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Context API
 permalink: maven-context-api-overview.html
@@ -12,37 +12,45 @@ indicator: both
 
 ### What is the Context API
 
-The Context API is an on-demand repository for metadata about consumers and their conversations.
+The Context Services API is a REST interface to a cloud based repository for storing and retrieving session state attributes that can be carried over and used throughout the conversational journey.
 
-In any given conversation, Maven AI analyzes and provides extra contextual metadata about the nature of the conversation and consumer. The Context API is a way to retrieve and store this metadata information.  Context API is part of Maven Context Warehouse, that allows brands to store and retrieve custom attributes that can be carried over through the conversational journey.
+This allows continuity in conversations because context can be transferred between agents and bots enabling a true warm handoff. The context service can be used for several purposes. For example:
 
-Even though the Context API is part of the Maven AI solution, it  can also be used as a standalone service. The Context API provides a system of organization that allows you to manage your data. Each brand can have multiple namespaces for different business use cases. Each namespace can have multiple groups of information based on key-value pairs. Key-value pairs can be stored at either the namespace level or the group level.
+- Save the conversation session state data in LiveEngage (e.g. agent notes), and then retrieve them later in a different conversation session with a different agent.
 
-Define & store custom attributes with static data or CRM integrations via LivePerson Functions. Carry over custom context through conversational journey.
+- Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill. 
 
-In the long-term, the context API will automatically contain data about each consumer useful to both brands and to Maven, and you can receive that data from both the brand and Maven. To ensure the contextual service works seamlessly with the Maven platform, the Context API will expose a defined schema for supported properties. All the CRUD operations for the Custom Namespace variables are supported. Initially, this API is only for custom data that you set and get.
+The Context API is part of Maven, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
 
+<img class="fancyimage" style="width:500px" src="img/maven/context-data-store.png">
+
+Each brand can have multiple **namespaces** for different business use cases. Typically a namespace may group together related attributes, for example customer information (name, email, phone number, etc.), which are stored as **Key-Value Pairs**. Brands can define as many attributes they need per namespace. 
+
+To group together the attributes in a namespace, for example a conversation session, brands can use the **GroupID**. Each object in the hierarchical structure (Namespace, GroupID, KVPs) comes with CRUD (Create, Read, Update, Delete) operations using the REST API.
 
 ### Who is the Context API for
 
 The Context API is part of the Maven AI solution which can now be used as a standalone service. You may want to use the Context API to retrieve and send values between bots. You may use the Context API to store information related to conversations.
 
-
 ### Example Use Cases
 
-* Passing context and customer routing / escalation path from Watson bots to conversation builder bots.
+* Passing context (intent, customer info) and customer routing / escalation path between bots.
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mavencontextapiusecase.png">
+  <img class="fancyimage" style="width:800px" src="img/maven/context-use-case1.png">
 
-* Storing temporary notes from agent widgets when the conversation is hidden - to be retrieved on auto close event via a [LivePerson Functions event](liveperson-functions-development-events-templates.html) or messaging interactions query to get conversation IDs for the namespace
+* Use shared context across different agents in a single conversation
 
-* Calling the API from a [LivePerson Function](liveperson-functions-development-overview.html)
+  <img class="fancyimage" style="width:800px" src="img/maven/context-use-case2.png">
+
+* Carry over attributes and information collected in a multi-step conversational journey for continuity and warm handoffs between bots and human agents. 
+
+  <img class="fancyimage" style="width:800px" src="img/maven/context-use-case3.png">
 
 ### Getting Started
 
 1. Get your API Key
 
-    You will need to create and use the API key before using Context Service. Contact Live Person Support to create your API Key. Only 1 API key can be active for any given account ID at any given time.
+    You will need to create and use the API key before using Context Service. Contact LivePerson Support to create your API Key. Only 1 API key can be active for any given account ID at any given time.
 
 2. Get your base URL
 
