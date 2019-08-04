@@ -2,7 +2,6 @@
 let firstName;
 let lastName;
 let region;
-let country;
 let emailAddress;
 let password;
 let confirmPassword;
@@ -12,6 +11,7 @@ let radioValue;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
+  //if you're working locally, comment out the next function to bypass captcha
   disableBtn();
   radioListener();
 });
@@ -59,17 +59,7 @@ function validateInfo (){
   //filling variables from the form
   firstName = $('#firstName').val();
   lastName = $('#lastName').val();
-  region = $('#country').val();
-  //set the country variable, which gets sent to the endpoint, according to the region selected
-  if (region == 'The Americas') {
-      country = 'z1';
-  }
-  if (region == 'Europe, Middle Easy, and Africa') {
-      country = 'z2';
-  }
-  if (region == 'Asia Pacific') {
-      country = 'z3';
-  }
+  region = $('#region').val();
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
@@ -84,13 +74,13 @@ function validateInfo (){
       $('#passwordErrorMatch').hide();
     }
     //make sure all fields are filled
-  if (firstName && lastName && country && emailAddress && password && confirmPassword) {
+  if (firstName && lastName && region && emailAddress && password && confirmPassword) {
     $('#allFields').hide();
   } else {
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && country && emailAddress && password && confirmPassword) && (radioValue == "on") && (password == confirmPassword)) {
+  if ((firstName && lastName && region && emailAddress && password && confirmPassword) && (radioValue == "on") && (password == confirmPassword)) {
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
@@ -104,19 +94,16 @@ function postRequest () {
   const user = [
     firstName,
     lastName,
-    country,
+    region,
     emailAddress,
     password
   ]
-  let userFlat = [...user]
   //using the axios module to make the request
   axios({
     method: 'post',
     url: URL,
     headers: {'x-api-key': 'gUi91Xlj5lWOJdOiYttA0jA6EqUTxS626YJ0zW20', 'Content-Type': 'application/json', 'Accept': 'application/json'},
-    data: {
-      userFlat
-    }
+    data: user
   })
   .then(function (response) {
     console.log(response.data);
