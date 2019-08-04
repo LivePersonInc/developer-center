@@ -12,7 +12,7 @@ $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
   //comment out the function below to bypass captcha if you're developing locally
-  // disableBtn();
+  disableBtn();
   radioListener();
 });
 
