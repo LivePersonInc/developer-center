@@ -85,6 +85,7 @@ function validateInfo (){
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
+    $('#loader').css('display', 'block');
   }
 }
 

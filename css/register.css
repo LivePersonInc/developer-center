@@ -192,6 +192,10 @@ input:-moz-placeholder { /* Firefox 18- */
   text-decoration: none;
 }
 
+#registerContainer {
+  display: flex;
+}
+
 #registerButton {
   border-radius: 5px;
   background-color: #ff720b;
@@ -214,6 +218,13 @@ input:-moz-placeholder { /* Firefox 18- */
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
+}
+
+#loader {
+  display: none;
+  align-self: flex-end;
+  margin-bottom: 7px;
+  margin-left: 20px;
 }
 
 #checkboxContainer {
