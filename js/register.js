@@ -93,11 +93,11 @@ function postRequest () {
   const URL = 'https://uohcduank4.execute-api.us-east-2.amazonaws.com/dev/devaccount';
 //filling in request body with variables from the form
   const user = [
-    firstName,
-    lastName,
-    region,
-    emailAddress,
-    password
+    firstName: firstName
+    lastName: lastName,
+    region: region,
+    email: emailAddress,
+    password: password
   ]
   //using the axios module to make the request
   axios({
