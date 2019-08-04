@@ -122,10 +122,12 @@
   - documentname: Bot Connectors
     pages:
       - pagename: Getting Started
+      - pagename: Bot Status Dashboard
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
+      - pagename: Microsoft Bot Framework
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
@@ -167,6 +169,7 @@
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
           - subpagename: Training and Tuning Your Intents and FAQs
+          - subpagename: Versions, Releases, & Change Management
       #- pagename: Operations
   - documentname: Maven
     pages:
