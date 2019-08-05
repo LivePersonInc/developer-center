@@ -15,7 +15,7 @@ redirect_from:
 
 To support developers in analyzing `lambdas` as they work, we support logging functions. This feature gives you the ability to add logs to your `lambdas`, in order to monitor the execution & behaviour of your function.
 
-These logs will be stored after every `lambda` invocation ([except manual invocation](liveperson-functions-deployment.html#testing-your-function)) for 30 days. You are able to view these logs in the [LivePerson Functions UI](#logs-section). How to log is described in the next chapter below [Logging Function behavior](#logging-function-behavior).
+These logs will be stored after every `lambda` invocation (except [manual invocations](liveperson-functions-deployment.html#testing-your-function)) for 30 days. You are able to view these logs in the [LivePerson Functions UI](#logs-section). How to log is described in the next chapter below [Logging Function behavior](#logging-function-behavior).
 
 ### Logging Function behavior
 
