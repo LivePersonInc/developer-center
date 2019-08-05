@@ -14,7 +14,6 @@ let passwordPassed;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
-  //comment out the function below to bypass captcha if you're developing locally
   disableBtn();
   radioListener();
 });
@@ -67,11 +66,13 @@ function validateInfo (){
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
+  //make sure the radio button was clicked
   if (radioValue != "on") {
     $('#agreeButton').show();
   } else {
     $('#agreeButton').hide();
   }
+  //check password length
   if(password.length < 8) {
     $('#passwordTooShort').show();
     passwordLength = false;
@@ -79,11 +80,13 @@ function validateInfo (){
     $('#passwordTooShort').hide();
     passwordLength = true;
   }
+  //check that passwords match
   if(password != confirmPassword) {
     $('#passwordErrorMatch').show();
   } else {
       $('#passwordErrorMatch').hide();
   }
+  //check that password meets requirements
   passwordStrength = new RegExp ('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
   if (password.match(passwordStrength)){
     $('#passwordErrorStrength').hide();
