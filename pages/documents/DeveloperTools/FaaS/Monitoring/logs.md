@@ -14,14 +14,10 @@ redirect_from:
 ### Overview
 
 To support developers in analyzing `lambdas` as they work, we support logging functions.
-
-This feature gives you the ability to add console logs to your `lambdas` to log what's currently happening in your code.
-
+This feature gives you the ability to add logs to your `lambdas`, in order to monitor the execution & behaviour of your function.
 These logs will be stored after every `lambda` invocation (except manual invocation) for 30 days.
-
-You are able to view these logs in the [LivePerson Functions UI](#accessing-persistent-logs).
-
-How you log is described in the chapter [Logging Function behavior](#logging-function-behavior).
+You are able to view these logs in the [LivePerson Functions UI](#logs-section).
+How to log is described in the next chapter below [Logging Function behavior](#logging-function-behavior).
 
 ### Logging Function behavior
 
@@ -86,23 +82,23 @@ function lambda(input, callback) {
 <div class="important">
 <ul>
 <li>This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a token or password.</li>
-<li>Logs are only persistent without a <b>Debug</b> level on external invocation.</li>
-<li>Logs with a <b>Debug</b> level will only be shown on manual invocation</li>
-<li>Logs in external invocations are limited to 10 entries, with an overall maximum of 5000 characters per lambda invocation. If this limit is exceeded, only one error log with the excess information will be shown, alongside the reason for exceeding the limit.</li>
+<li>Logs are only stored without a <b>Debug</b> level on external invocation.</li>
+<li>Logs with a <b>Debug</b> level will only be shown on manual invocation.</li>
+<li>Logs written during external invocation are limited to 10 entries, with an overall maximum of 5000 characters per lambda invocation. If this limit is exceeded, only one error log with information about which limit was reached will be logged.</li>
 <li>Logs are only kept for 30 days. Older logs will be deleted.</li>
 </ul>
 </div>
 
-### Accessing persistent Logs
+### Accessing Logs Storage
 
 Our LivePerson Functions User Interface allows developers to investigate `lambda` logs.
 
-The logs can be accessed via the **Functions** section by clicking on the logs icon, or directly in the **Logs** section in the navigation bar (see second picture below). 
+The logs can be accessed via the **Functions** section by clicking on the logs icon, or directly in the [Logs section](#logs-section) in the navigation bar (see second picture below). 
 
 ![](img/faas-functions.png)
 
-The picture below shows the **Logs** section
-
+### Logs section
+On this page you can search through the stored `lambda` logs (see second picture below).
 ![](img/faas-logs.png)
 
 To see the logs the following parameters must be set:
@@ -114,4 +110,4 @@ To see the logs the following parameters must be set:
 
 After selecting the parameters, a click on the **SEARCH** button will show you the logs for the parameters set.
 
-<div class="important">the maximum timeframe between <b>Start Date</b> and <b>End Date</b> is restricted to 7 days</div>
+<div class="important">the maximum timespan between <b>Start Date</b> and <b>End Date</b> is restricted to 7 days</div>
