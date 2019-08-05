@@ -7,6 +7,9 @@ let password;
 let confirmPassword;
 let trialButtton;
 let radioValue;
+let passwordStrength;
+let passwordLength;
+let passwordPassed;
 
 $(document).ready(function () {
   dynamicUserDetails();
@@ -69,11 +72,26 @@ function validateInfo (){
   } else {
     $('#agreeButton').hide();
   }
+  if(password.length < 8) {
+    $('#passwordTooShort').show();
+    passwordLength = false;
+  } else {
+    $('#passwordTooShort').hide();
+    passwordLength = true;
+  }
   if(password != confirmPassword) {
     $('#passwordErrorMatch').show();
   } else {
       $('#passwordErrorMatch').hide();
-    }
+  }
+  passwordStrength = new RegExp ('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
+  if (password.match(passwordStrength)){
+    $('#passwordErrorStrength').hide();
+    passwordPassed = true;
+  } else {
+    $('#passwordErrorStrength').show();
+    passwordPassed = false
+  }
     //make sure all fields are filled
   if (firstName && lastName && region && emailAddress && password && confirmPassword) {
     $('#allFields').hide();
@@ -81,11 +99,12 @@ function validateInfo (){
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && region && emailAddress && password && confirmPassword) && (radioValue == "on") && (password == confirmPassword)) {
+  if ((firstName && lastName && region && emailAddress && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
     $('#loader').css('display', 'block');
+    $('#successMessage').css('display', 'block');
   }
 }
 

@@ -252,6 +252,10 @@ input:-moz-placeholder { /* Firefox 18- */
   font-size: 15px;
 }
 
+.success {
+  color: #5779da;
+}
+
 /* Media queries begin, don't panic! */
 
 @media screen and (max-width: 1400px) {
