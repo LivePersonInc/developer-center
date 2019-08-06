@@ -13,28 +13,20 @@ redirect_from:
 
 ### Overview
 
-To support developers in analyzing `lambdas` as they work, we support logging functions.
+To support developers in analyzing `lambdas` as they work, we support logging functions. This feature gives you the ability to add logs to your `lambdas`, in order to monitor the execution & behaviour of your function.
 
-<div class="important">
-<ul>
-<li>This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a token or password.</li>
-<li>Logs are only persistent without a <b>Debug</b> level on external invocation.</li>
-<li>Logs with a <b>Debug</b> level will only be shown on manual invocation</li>
-<li>Logs in external invocations are limited to 10 entries, with an overall maximum of 5000 characters per lambda invocation. If this limit is exceeded, only one error log with the excess information will be shown, alongside the reason for exceeding the limit.</li>
-<li>Logs are only kept for 30 days. Older logs will be deleted.</li>
-</ul>
-</div>
+These logs will be stored after every `lambda` invocation (except [manual invocations](liveperson-functions-deployment.html#testing-your-function)) for 30 days. You are able to view these logs at [Investigate Function Logs](#accessing-logs-storage). How to log is described in the next chapter below.
 
 ### Logging Function behavior
 
 [Missing Screenshot]: <> (Let's add a screenshot of the IyF log result screen here.)
 
-The different log-levels are: `debug`, `info`, `warn` and `error`. All functions take a string as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log item. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (under "*Logging Template*").
+The different log-levels are: `debug`, `info`, `warn` and `error`. All functions take a string as a log message and multiple instances of the `extra` parameter. These `extra` parameters are JavaScript objects, providing further insights about the runtime execution. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (at "*Logging Template*").
 
 The template for the logging functions is as follows:
 
 ```javascript
-console.<info/debug/warn/error>(<message> [, extras])
+console.<info/debug/warn/error>(<message> [, extra])
 ```
 
 <table>
@@ -86,23 +78,39 @@ function lambda(input, callback) {
 }
 ```
 
-### Accessing persistent Logs
+After [deployment](liveperson-functions-deployment.html), you should be able to [manually invoke](liveperson-functions-deployment.html#testing-your-function) your `lambda` and see the logs written in the `Logs` section. 
 
-Our LivePerson Functions User Interface allows developers to investigate `lambda` logs.
+![](img/faas-invoke.png)
 
-The logs can be accessed via the **Functions** section by clicking on the logs icon, or directly in the **Logs** section in the navigation bar (see second picture below). 
+{: .notice}
+Be aware that logs written during manual test invocations will not be written into the storage. Logs with a <b>Debug</b> level will only be shown on manual test invocations and not written into the storage.
+
+<div class="important">
+<ul>
+<li>This feature allows you to log sensitive information, since there's no sanitation or limitations on the logged parameters! Please be considerate with your logged values and don't pass any sensitive information to this function, e.g a token or password.</li>
+<li>Logs written during invocation are limited to 10 entries, with an overall maximum of 5000 characters per lambda invocation. If this limit is exceeded, only 1 error log will be stored.</li>
+</ul>
+</div>
+
+### Accessing Logs Storage
+
+LivePerson Functions allows developers to investigate `lambda` logs.
+
+Logs of a certain function can be accessed during development & deployment via the button on the right side. Moreover, our left-hand sidebar allows to also directly navigate to the `Investigate Function Logs` screen.
 
 ![](img/faas-functions.png)
 
-The picture below shows the **Logs** section
+When navigating to the `Investigate Function Logs` screen from a selected function, the search parameters should be pre-defined. In case the left-hand sidebar is used, the relevant `lambda` needs to be selected from the dropdown.
 
 ![](img/faas-logs.png)
 
-To see the logs the following parameters must be set:
+To fine-tune the selected `lambda` logs, the following search parameters can be adjusted:
 
 1. **Function**: The `lambda` the logs should be displayed for
 2. **Log Levels**: The **log levels** you want to see (selecting no **log level will cause all levels to be displayed**)
-3. **Start Date**: The timestamp from which the logs will be shown (only the last 7 days can be selected)
+3. **Start Date**: The timestamp from which the logs will be shown (only the last 30 days can be selected)
 4. **End Date**: The timestamp to which the logs will be shown (must be after **Start Date**)
 
-After selecting the parameters, a click on the **REFRESH** button will show you the logs for the parameters set.
+After selecting the parameters, a click on the **SEARCH** button will show you the logs for the parameters set.
+
+<div class="important">The maximum timespan between <b>Start Date</b> and <b>End Date</b> is restricted to 7 days</div>
