@@ -10,6 +10,8 @@ permalink: conversation-builder-conversation-builder-interactions.html
 indicator: both
 ---
 
+### Overview
+
 The User Interactions section of the [Interactions Toolbar](conversation-builder-conversation-builder-overview.html#the-interactions-toolbar) is made up of only one type of interaction, "User Says". This interaction is the textual prompt to which the automation responds, whether it is the first message which starts the Dialog or some sort of input during it. When you add a "User Says" interaction, you give an example of a question the user might ask at the start of a conversation.
 
 Instead of just looking for the specific phrase you originally defined (which would result in the automation not recognizing many of your user's inputs), you can direct the automation to look for a specific pattern (a method called [pattern matching](conversation-builder-conversation-builder-conditions.html#pattern-matching)) or to look for more broad and flexible [intents](conversation-builder-intent-builder-overview.html) in the user's input, by using our NLU engine.
@@ -49,3 +51,15 @@ The Interactions Toolbar is made up of three different types of automation inter
   * Time Picker. **Note: time picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
 
 * **Integrations**. This type of interaction involves the automation querying an outside API or service and retrieving information from it. For example, you could have your automation search for a certain [entity](conversation-builder-intent-builder-entities.html) and retrieve the matching product's catalogue item from your own API, populating the automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the automation to prompt the user to use Apply Pay to submit a payment. For more information on setting up an integration, see [part 3 of the Getting Started tutorial](conversation-builder-getting-started-3-integrations.html).
+
+### Limitations
+
+The types of content that you can send in a Conversation Builder *text type* interaction varies depending if you are building an automation for **chat** or for **messaging**.
+
+**Messaging** only allows plain text to be sent via the interaction GUI input.
+
+**Chat** allows for plain text as well as a subset of HTML limited to the anchor, paragraph and linebreak tags.
+
+* `<a href=""></a>`
+* `<p></p>`
+* `<br>`
