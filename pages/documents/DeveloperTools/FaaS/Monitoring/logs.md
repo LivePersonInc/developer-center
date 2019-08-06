@@ -78,17 +78,16 @@ function lambda(input, callback) {
 }
 ```
 
-After [deployment](liveperson-functions-deployment.html), you should be able to [manually invoke](liveperson-functions-deployment.html#testing-your-function) your `lambda` and see the logs written at the `Logs` section. 
+After [deployment](liveperson-functions-deployment.html), you should be able to [manually invoke](liveperson-functions-deployment.html#testing-your-function) your `lambda` and see the logs written in the `Logs` section. 
 
 ![](img/faas-invoke.png)
 
-**Note:** Be aware that logs written during manual test invocation will not written into the storage.
-
-**Note:** Logs with a <b>Debug</b> level will only be shown on manual test invocation and not written into the storage.
+{: .notice}
+Be aware that logs written during manual test invocations will not be written into the storage. Logs with a <b>Debug</b> level will only be shown on manual test invocations and not written into the storage.
 
 <div class="important">
 <ul>
-<li>This feature allows you to log sensitive information, since there's no sanitation or limitations on the logged parameters! Please be considerate over your logged values and don't pass any sensitive information to this function, e.g a token or password.</li>
+<li>This feature allows you to log sensitive information, since there's no sanitation or limitations on the logged parameters! Please be considerate with your logged values and don't pass any sensitive information to this function, e.g a token or password.</li>
 <li>Logs written during invocation are limited to 10 entries, with an overall maximum of 5000 characters per lambda invocation. If this limit is exceeded, only 1 error log will be stored.</li>
 </ul>
 </div>
@@ -97,16 +96,15 @@ After [deployment](liveperson-functions-deployment.html), you should be able to 
 
 LivePerson Functions allows developers to investigate `lambda` logs.
 
-Logs of a certain function can be accessed during development & deployment via the button on the right side. Moreover our left-hand sidebar allows also to directly navigate to the `Investigate Function Logs` screen.
+Logs of a certain function can be accessed during development & deployment via the button on the right side. Moreover, our left-hand sidebar allows to also directly navigate to the `Investigate Function Logs` screen.
 
 ![](img/faas-functions.png)
 
-When navigating to the `Investigate Function Logs` screen from a selected function, the search parameters should be pre-defined.
-In case the left-hand sidebare is used the relevant `lambda` needs to be selected from the dropdown.
+When navigating to the `Investigate Function Logs` screen from a selected function, the search parameters should be pre-defined. In case the left-hand sidebar is used, the relevant `lambda` needs to be selected from the dropdown.
 
 ![](img/faas-logs.png)
 
-To fine-tune the selected `lambda` logs the following search parameters can be adjusted:
+To fine-tune the selected `lambda` logs, the following search parameters can be adjusted:
 
 1. **Function**: The `lambda` the logs should be displayed for
 2. **Log Levels**: The **log levels** you want to see (selecting no **log level will cause all levels to be displayed**)
