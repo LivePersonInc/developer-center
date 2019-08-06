@@ -24,7 +24,7 @@ This method returns the agent survey structure. The survey structure is in XML t
 
 | Header | Description |
 | :--- | :--- |
-| Authorization| Bearer {bearer-from-login} |
+| Authorization | Bearer {bearer-from-login} |
 | Content-Type | application/json |
 | Accept | application/json |
 
