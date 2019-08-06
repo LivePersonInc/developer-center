@@ -15,18 +15,18 @@ redirect_from:
 
 To support developers in analyzing `lambdas` as they work, we support logging functions. This feature gives you the ability to add logs to your `lambdas`, in order to monitor the execution & behaviour of your function.
 
-These logs will be stored after every `lambda` invocation (except [manual invocations](liveperson-functions-deployment.html#testing-your-function)) for 30 days. You are able to view these logs in the [LivePerson Functions UI](#logs-section). How to log is described in the next chapter below [Logging Function behavior](#logging-function-behavior).
+These logs will be stored after every `lambda` invocation (except [manual invocations](liveperson-functions-deployment.html#testing-your-function)) for 30 days. You are able to view these logs at [Investigate Function Logs](#accessing-logs-storage). How to log is described in the next chapter below.
 
 ### Logging Function behavior
 
 [Missing Screenshot]: <> (Let's add a screenshot of the IyF log result screen here.)
 
-The different log-levels are: `debug`, `info`, `warn` and `error`. All functions take a string as a log message and multiple instances of the `extras` parameter. These `extras` parameters are JavaScript objects, providing further insights about the runtime execution. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (under "*Logging Template*").
+The different log-levels are: `debug`, `info`, `warn` and `error`. All functions take a string as a log message and multiple instances of the `extra` parameter. These `extra` parameters are JavaScript objects, providing further insights about the runtime execution. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (at "*Logging Template*").
 
 The template for the logging functions is as follows:
 
 ```javascript
-console.<info/debug/warn/error>(<message> [, extras])
+console.<info/debug/warn/error>(<message> [, extra])
 ```
 
 <table>
@@ -113,4 +113,4 @@ To fine-tune the selected `lambda` logs, the following search parameters can be 
 
 After selecting the parameters, a click on the **SEARCH** button will show you the logs for the parameters set.
 
-<div class="important">the maximum timespan between <b>Start Date</b> and <b>End Date</b> is restricted to 7 days</div>
+<div class="important">The maximum timespan between <b>Start Date</b> and <b>End Date</b> is restricted to 7 days</div>
