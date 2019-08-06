@@ -1,12 +1,12 @@
 ---
-pagename: Methods
+pagename: Context API Methods
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
-subfoldername: Context API
-permalink: maven-context-api-methods.html
+subfoldername: Context Warehouse
+permalink: maven-context-warehouse-context-api-methods.html
 indicator: both
 ---
 

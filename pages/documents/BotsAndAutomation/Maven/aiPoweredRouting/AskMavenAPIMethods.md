@@ -1,12 +1,12 @@
 ---
-pagename: Methods
+pagename: Ask Maven API Methods
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
-subfoldername: AskMaven API
-permalink: maven-askmaven-api-methods.html
+subfoldername: AI Powered Routing
+permalink: maven-ai-powered-routing-ask-maven-api-methods.html
 indicator: both
 ---
 

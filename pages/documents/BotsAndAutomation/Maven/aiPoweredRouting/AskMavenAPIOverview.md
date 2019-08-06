@@ -1,12 +1,12 @@
 ---
-pagename: Overview
+pagename: Ask Maven API Overview
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
-subfoldername: AskMaven API
-permalink: maven-askmaven-api-overview.html
+subfoldername: AI Powered Routing
+permalink: maven-ai-powered-routing-ask-maven-api-overview.html
 indicator: both
 ---
 
@@ -21,7 +21,6 @@ At this time, the API only provides interfaces to read and execute policies. Mav
 Use the Ask Maven API to accomplish the following example workflows:
 
 * Channel Switching from Website or App: 
-
      * A brand wants to provide different channels based on customer and Intent. E.g. “For an order cancellation intent send     conversation to messaging involving a bot, unless it’s a high value customer, in that case have them talk on the phone to a human agent”
      * They configure this policy in Maven hub 
      * They use Ask Maven API to return the which routing decision to make
@@ -29,8 +28,8 @@ Use the Ask Maven API to accomplish the following example workflows:
 
  * Get AI Powered Routing Decisions
    * Returns the next action(s) by running all enabled policies in order
-   *Inputs: JSON payload of context variables required to run the policies
-   *Outputs: List of outcomes by running all enabled policies. Should be list of actions with following info
+   * Inputs: JSON payload of context variables required to run the policies
+   * Outputs: List of outcomes by running all enabled policies. Should be list of actions with following info
       * Policy ID
       * Outcome (next action, for example transfer to agent or skill)
 
@@ -41,29 +40,16 @@ This provides a typical implementation of AskMaven API from a bot to handle rout
 
 <img class="fancyimage" style="width:700px" src="img/maven/askmaven2.png">
 
-### Get Started
+## Developer Key
 
-* You will need to create and use the API key before using Ask Maven Service. Contact Live Person Support to create your API Key.  Alternately navigate to Ask Maven section of Maven Hub, where the following tasks can be accomplished:
-     * Get the Maven API key
-     * Links to documentation on how to use API
- 
+To use AskMaven APIs you will need to create and use an API key. To get your unique key:
 
-Go to Settings/Developer Keyin the Maven Hub to get the latest key. 
-Warning:
-Generating new API key overrides the existing value and this would impact any existing integrations using the previous API key. Therefore access to generate/re-generate keys is strictly limited to LP administrators to reduce the risk of brands accidentally calling the “generate API key” service and overriding each other’s API keys!
-  
-<img class="fancyimage" style="width:750px" src="img/maven/askmaven1.png">
+4. Login to Maven with your LiveEngage credentials and then navigate to **Developer Key**.
 
-  
-Only 1 API key can be active for any given account ID at any given time. The API key will be same for all Maven APIs - Context and Ask Maven. This API key is specific for Maven services and is not for Live Engage services. 
+5. Copy and paste the key you see in the experience and use it in your API headers. 
 
-* Get your base URL
+6. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
-    You will use the base URL in all API calls.
+<img class="fancyimage" width="600" src="img/maven/image_47.png">
 
-    * Americas: https://z1.askmaven.liveperson.net
-
-    * EMEA: https://z2.askmaven.liveperson.net
-
-    * APAC: https://z3.askmaven.liveperson.net
-
+5. Sample Policies
