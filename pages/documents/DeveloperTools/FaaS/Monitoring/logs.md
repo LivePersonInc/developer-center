@@ -21,7 +21,7 @@ These logs will be stored after every `lambda` invocation (except [manual invoca
 
 [Missing Screenshot]: <> (Let's add a screenshot of the IyF log result screen here.)
 
-The different log-levels are: `debug`, `info`, `warn` and `error`. All functions take a string as a log message and multiple extras parameter. The extras parameters, are JavaScript object, providing further insights about the runtime execution. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (under "*Logging Template*").
+The different log-levels are: `debug`, `info`, `warn` and `error`. All functions take a string as a log message and multiple instances of the `extras` parameter. These `extras` parameters are JavaScript objects, providing further insights about the runtime execution. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (under "*Logging Template*").
 
 The template for the logging functions is as follows:
 
