@@ -10,7 +10,7 @@ permalink: maven-maven-assist-recommended-actions-for-knowledge-base.html
 indicator: both
 ---
 
-## Setup Recommended Actions - Knowledge Base
+### Setup Recommended Actions - Knowledge Base
 
 1. Enable Recommended Actions Widget in Live Engage
 
@@ -47,7 +47,7 @@ Before Maven can start recommending articles in the widget you need to create so
 
 <img class="fancyimage" width="600" src="img/maven/image_29.png">
 
-## Using Recommended Actions - KB
+### Using Recommended Actions - KB
 
 1. Get relevant KB suggestions
 

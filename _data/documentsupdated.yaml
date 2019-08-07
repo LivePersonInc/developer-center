@@ -175,7 +175,8 @@
           - subpagename: Overview
           - subpagename: Intent & Context Policies
           - subpagename: Ask Maven API
-          - subpagename: Onboarding to AI Powered Routing
+          - subpagename: Setup Maven in LivePerson
+          - subpagename: Use Maven with Your Bot
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview

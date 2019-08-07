@@ -1,38 +1,16 @@
 ---
-pagename: Onboarding to AI Powered Routing
+pagename: Use Maven with Your Bot
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-onboarding-to-ai-powered-routing.html
+permalink: maven-ai-powered-routing-use-maven-with-your-bot.html
 indicator: both
 ---
 
-## Onboarding to Maven AI Powered Routing
-
-Now that you have created some Intent and Context based policies, you want to use them in your conversation pipelines. There are primarily two ways of onboarding and using the policies. 
-
-### Add "Maven" Skill to your campaigns
-
-In this case, you will be sending your conversations to a Maven. Maven will evaluate all the policies and then execute those policies (e.g. transferring the conversation to a skill). This is appropriate if:
-
-1. You are only routing based on Inbox and Custom (FaaS or Static) attributes
-
-2. You don't have a concierge bot
-
-3. You do not need high levels of customizations and therefore programmatic access to Maven capabilities
-
-#### Setup Live Engage
-
-#### Provide Bot User Credentials to Maven 
-
-#### Samples
-
-### Use AskMaven APIs from a concierge bot or app
-
-Alternatively you may also use the AskMaven APIs from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
+You may use the AskMaven APIs from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
 
 1. You already have a concierge bot that handles branded greetings, intents, and dialogs
 
@@ -54,7 +32,7 @@ The following example shows how to use AskMaven and Context session store APIs f
 
 <img class="fancyimage" width="600" src="img/maven/image_48.png">
 
-#### AskMaven from Conversation Builder
+### AskMaven from Conversation Builder
 
 Ask Maven APIs can be used in a Conversation Builder bot using Integrations. For more information on how to use Conversation Builder please refer to documentation.
 
@@ -74,8 +52,6 @@ Ask Maven APIs can be used in a Conversation Builder bot using Integrations. For
 
 3. Use response from AskMaven API to execute a transfer to Skill task
 
-<Content TBD>
+### AskMaven from Google DialogFlow
 
-#### AskMaven from Google DialogFlow
-
-#### AskMaven from Watson
+Todo

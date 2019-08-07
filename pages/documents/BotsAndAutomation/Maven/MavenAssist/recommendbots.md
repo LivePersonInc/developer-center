@@ -10,8 +10,6 @@ permalink: maven-maven-assist-recommended-actions-for-bots.html
 indicator: both
 ---
 
-## Setup Recommended Actions - Bots
-
 Maven can recommend bots that match customer’s intents in the Recommended Actions widget. To use this feature you will need to have created bots that can handle specific intents and workloads. 
 
 1. Create a bot
