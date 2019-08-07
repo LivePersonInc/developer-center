@@ -19,4 +19,4 @@ Maven introduces a self-service, low-code/no-code experience for brands to enabl
 
 4. Access developer features such as AskMaven for next action or Context Services APIs for the context warehouse to customize and integrate Maven AI orchestration into their decision processes 
 
-<img class="fancyimage" width="600" src="img/maven/image_0.png">
+<img class="fancyimage" width="750" src="img/maven/image_0.png">
