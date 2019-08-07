@@ -1,12 +1,12 @@
 ---
-pagename: Ask Maven API Overview
+pagename: Ask Maven API
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-ask-maven-api-overview.html
+permalink: maven-ai-powered-routing-ask-maven-api.html
 indicator: both
 ---
 
@@ -40,7 +40,7 @@ This provides a typical implementation of AskMaven API from a bot to handle rout
 
 <img class="fancyimage" style="width:700px" src="img/maven/askmaven2.png">
 
-## Developer Key
+### Developer Key
 
 To use AskMaven APIs you will need to create and use an API key. To get your unique key:
 
@@ -53,3 +53,86 @@ To use AskMaven APIs you will need to create and use an API key. To get your uni
 <img class="fancyimage" width="600" src="img/maven/image_47.png">
 
 5. Sample Policies
+
+### Methods
+
+Every API call to the Ask Maven service requires the following Auth Headers to be accepted
+
+`Content-Type : application/json`
+
+`maven-api-key : <INSERT YOUR API KEY HERE>`
+
+#### Query Parameters
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>conversationId</td>
+            <td>string</td>
+            <td>Optional - The conversation id of the current conversation</td>
+        </tr>
+        <tr>
+            <td>groupId</td>
+            <td>string</td>
+            <td>Optional - The group id associated with the Context API custom namespace variable call to set values</td>
+        </tr>
+        <tr>
+            <td>conversationId</td>
+            <td>string</td>
+            <td>Optional - The conversation id of the current conversation</td>
+        </tr>
+    </tbody>
+</table>
+
+#### Get Next Actions
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GET</td>
+            <td>/v1/account/{accountId}/next-actions</td>
+            <td>Get maven routing decision based on maven configured policies</td>
+        </tr>
+    </tbody>
+</table>
+
+Response Body: 
+
+```bash
+{
+    nextActionId: ‘UUID’,  // some uuid 
+rule: {
+"id": "12345",
+"name": "This is VIP rule"
+actions: [  
+
+{
+    "type": "TRANSFER_TO_AGENT",
+    "payload": { agentId: ‘g23hasd234’, fallbackSkillId: ‘12345’ }
+  },
+  {
+    "type": "SEND_MESSAGE",
+    "payload": { text: ‘hello from maven” }
+  }
+]
+},
+
+noMatchReason: “NO_MATCHED_RULES” // only added if no rules are matches, rule will be null
+noMatchReason: “NO_POLICIES_ENABLED” 
+}
+```
+

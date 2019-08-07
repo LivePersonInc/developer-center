@@ -167,14 +167,15 @@
       - pagename: Context Warehouse
         subpages:
           - subpagename: Overview
-          - subpagename: Context API Overview
-          - subpagename: Context API Methods 
+          - subpagename: Inbox System Attributes
+          - subpagename: Custom Static or Function
+          - subpagename: Context Session Store
       - pagename: AI Powered Routing
         subpages:
           - subpagename: Overview
-          - subpagename: Getting Started
-          - subpagename: Ask Maven API Overview
-          - subpagename: Ask Maven API Methods
+          - subpagename: Intent & Context Policies
+          - subpagename: Ask Maven API
+          - subpagename: Onboarding to AI Powered Routing
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview

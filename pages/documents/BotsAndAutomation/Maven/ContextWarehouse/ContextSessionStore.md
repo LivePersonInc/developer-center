@@ -1,14 +1,58 @@
 ---
-pagename: Context API Methods
+pagename: Context Session Store
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Context Warehouse
-permalink: maven-context-warehouse-context-api-methods.html
+permalink: maven-context-warehouse-context-session-store.html
 indicator: both
 ---
+
+### Overview
+
+The Context Services API is a REST interface to a cloud based repository for storing and retrieving session state attributes that can be carried over and used throughout the conversational journey. This allows continuity in conversations as context can be transferred between agents and bots enabling a true warm handoff. The context service can be used for several purposes. For example:
+
+1. Save the conversation session state data in LiveEngage (e.g. agent notes), and then retrieve them later in a different conversation session with a different agent.
+
+2. Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill. 
+
+The Context APIs are part of Maven, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
+
+<img class="fancyimage" width="600" src="img/maven/image_37.png">
+
+Each brand can have multiple **namespaces** for different business use cases. Typically a namespace may group together related attributes, for example customer information such as name, email, phone number etc. which are stored as **Key-Value Pairs.** Brands can define as many attributes they need per namespace. To group together the attributes in a namespace for example a conversation session brands can use the **Session ID**. Each object in the hierarchical structure (Namespace, Session ID, KVPs) comes with CRUD (Create, Read, Update, Delete) operations using the REST APIs. 
+
+### Example Use Cases
+
+* Passing context (intent, customer info) and customer routing / escalation path between bots.
+
+<img class="fancyimage" width="600" src="img/maven/image_38.png">
+
+* Use shared context across different agents in a single conversation
+
+<img class="fancyimage" width="600" src="img/maven/image_39.png">
+
+* Carry over attributes and information collected in a multi-step conversational journey for continuity and warm handoffs between bots and human agents. 
+
+<img class="fancyimage" width="600" src="img/maven/image_40.png">
+
+### Developer Key
+
+To use Context Session store APIs you will need to create and use an API key. To get your unique key:
+
+1. Login to Maven with your LiveEngage credentials and then navigate to **Developer Key**.
+
+2. Copy and paste the key you see in the experience and use it in your API headers. 
+
+3. To generate a new key, click on the **Regenerate Key **button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
+
+<img class="fancyimage" width="600" src="img/maven/image_41.png">
+
+3. [Create your namespace](#create-a-custom-namespace)
+
+### Methods
 
 Every API call to the Maven Context service requires the following Auth Headers to be accepted
 
@@ -16,7 +60,7 @@ Every API call to the Maven Context service requires the following Auth Headers 
 
 `maven-api-key : <INSERT YOUR API KEY HERE>`
 
-### Create a custom namespace
+#### Create a custom namespace
 
 To use the Maven Context API, you will first need to create a Namespace.
 
@@ -65,7 +109,7 @@ curl --request POST \
 }'
 ```
 
-### Delete a custom namespace
+#### Delete a custom namespace
 
 {: .important}
 Only do this if you want to delete the namespace
@@ -100,7 +144,8 @@ curl --request DELETE \
   --url https://z2.context.liveperson.net/v1/account/36209512/namespace1 \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
 ```
-### Get all namespace variables
+
+#### Get all namespace variables
 
 This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
 
@@ -136,7 +181,7 @@ curl --request GET \
   --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
 ```
 
-### Set custom namespace properties
+#### Set custom namespace properties
 
 This will override the value if an existing key is used. If a new key is used then it will be added.
 
@@ -186,7 +231,7 @@ curl --request PATCH \
 }'
 ```
 
-### Delete a property
+#### Delete a property
 
 <table>
     <thead>
@@ -220,7 +265,7 @@ curl --request DELETE \
 
 ```
 
-### List of namespaces created
+#### List of namespaces created
 
 <table>
     <thead>
@@ -253,7 +298,7 @@ curl --request GET \
 
 ```
 
-### Get all properties
+#### Get all properties
 
 You can put anything you want in the entityId. If you want to put consumer and conversation data in the same namespace, you can as long as the entityIDs are unique across the two. And it's optional – if omitted, the system will use a default entityId of `__default__`
 
@@ -289,7 +334,7 @@ curl --request GET \
 
 ```
 
-### Get one property
+#### Get one property
 
 <table>
     <thead>
@@ -320,7 +365,7 @@ Example:
 
 ```
 
-### Update multiple properties within an entity (group)
+#### Update multiple properties within an entity (group)
 
 <table>
     <thead>
@@ -362,7 +407,7 @@ curl --request PATCH \
 
 ```
 
-### pass multiple propertyName to the GET properties
+#### pass multiple propertyName to the GET properties
 
 <table>
     <thead>

@@ -1,12 +1,12 @@
 ---
-pagename: Getting Started
+pagename: Onboarding to AI Powered Routing
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-getting-started.html
+permalink: maven-ai-powered-routing-onboarding-to-ai-powered-routing.html
 indicator: both
 ---
 
