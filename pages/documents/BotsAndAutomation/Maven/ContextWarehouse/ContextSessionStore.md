@@ -234,7 +234,7 @@ curl --request GET \
 
 ```
 
-#### Get all namespace variables
+#### Get all namespace variables or properties
 
 This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
 
@@ -273,7 +273,7 @@ curl --request GET \
 
 #### Get all properties within a group
 
-We recommend to use Namespace to group related attributes (KVPs), and use the groupID (aka entityId) to as a session state variable. You can put anything you want in the groupId. If you want to put consumer and conversation data in the same namespace, you can as long as the groupIDs are unique across the two. And it's optional – if omitted, the system will use a default entityId of `__default__`
+We recommend to use Namespace to group related attributes (KVPs), and use the groupID (aka entityId) to as a session state variable. You can put anything you want in the groupId. If you want to put consumer and conversation data in the same namespace, you can as long as the groupIDs are unique across the two. And it's optional – if omitted, the system will use a default groupId of `__default__`
 
 <table>
     <thead>
@@ -338,7 +338,7 @@ Example:
 
 ```
 
-#### Update multiple properties within an entity (group)
+#### Update multiple properties within a group/entity
 
 <table>
     <thead>
