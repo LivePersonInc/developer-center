@@ -264,9 +264,10 @@ curl --request GET \
   --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
 ```
 
+
 #### Get all properties
 
-You can put anything you want in the entityId. If you want to put consumer and conversation data in the same namespace, you can as long as the entityIDs are unique across the two. And it's optional – if omitted, the system will use a default entityId of `__default__`
+We recommend to use Namespace to group related attributes (KVPs), and use the groupID (aka entityId) to as a session state variable. You can put anything you want in the groupId. If you want to put consumer and conversation data in the same namespace, you can as long as the groupIDs are unique across the two. And it's optional – if omitted, the system will use a default entityId of `__default__`
 
 <table>
     <thead>
@@ -281,7 +282,7 @@ You can put anything you want in the entityId. If you want to put consumer and c
     <tbody>
         <tr>
             <td>GET</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{entityId}/properties/</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties/</td>
             <td>Get all properties
             </td>
             <td></td>
@@ -315,7 +316,7 @@ curl --request GET \
     <tbody>
         <tr>
             <td>GET</td>
-            <td> /v1/account/{accountId}/{customNamespace}/{entityId}/properties/{propertyName}</td>
+            <td> /v1/account/{accountId}/{customNamespace}/{groupId}/properties/{propertyName}</td>
             <td>Get one property</td>
             <td></td>
             <td></td>
@@ -346,7 +347,7 @@ Example:
     <tbody>
         <tr>
             <td>PATCH</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{entityId}/properties/
+            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties/
             </td>
             <td>Update multiple properties
             </td>
@@ -388,7 +389,7 @@ curl --request PATCH \
     <tbody>
         <tr>
             <td>GET </td>
-            <td>/v1/brand/{accountID}/{customNamespace}/{entityId}/properties?include=prop1,prop2,prop3</td>
+            <td>/v1/brand/{accountID}/{customNamespace}/{groupId}/properties?include=prop1,prop2,prop3</td>
             <td>pass multiple propertyName to the GET properties</td>
             <td></td>
             <td></td>
@@ -405,9 +406,47 @@ curl --request GET \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
 
 ```
+
+
+#### Delete a Group of properties
+
+Delete groupID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation. 
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DELETE</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties</td>
+            <td>Delete a group of properties </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example: 
+
+```bash
+
+curl --request DELETE \
+ --url https://z2.context.liveperson.net/v1/account/36209512/namespace2/200/properties \
+ --header 'maven-api-key: 04UQXk21ZDmKdN9jTwP8ty1sSoTLFAFQ'
+
+```
 #### Delete a property
 
-We recommend to use Namespace to group related attributes (KVPs), and use the GroupID (aka EntityId) to as a session state variable.
 
 <table>
     <thead>
@@ -440,45 +479,6 @@ curl --request DELETE \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
 
 ```
-
-#### Delete a Group of properties
-
-In this context delete groupID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation. 
-
-
-<table>
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Path</th>
-            <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>DELETE</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{entityId}/properties</td>
-            <td>Delete a group of properties </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-Example: 
-
-```bash
-
-curl --request DELETE \
- --url https://z2.context.liveperson.net/v1/account/36209512/namespace2/200/properties \
- --header 'maven-api-key: 04UQXk21ZDmKdN9jTwP8ty1sSoTLFAFQ'
-
-```
-
 #### Delete a custom namespace
 
 Delete namespace may be used if brand wants to retire a namespace. This would really be quite rare, and may happen if entire set of attributes are not used any more, such as an entire use case is being retired.
