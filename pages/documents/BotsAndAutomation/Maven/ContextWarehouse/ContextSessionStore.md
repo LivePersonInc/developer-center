@@ -142,7 +142,7 @@ Example:
 ```bash
 curl --request PATCH \
 
-  --url http:///lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964/myCoolNamespace/properties \
+  --url https://z3.context.liveperson.net/v1/account/73948358/namespace1/properties \
 
   --header 'content-type: application/json' \
 
@@ -152,14 +152,56 @@ curl --request PATCH \
 
     "minutesSinceLastConversation": 720,
 
-    "salesforceId": "jeff@virtuoz.com",
+    "salesforceId": "jeff@test.com",
 
     "isSomething": true
 
 }'
 ```
 
-#### List of namespaces created
+#### Set custom namespace properties within a group
+
+This will override the value if an existing key is used. If a new key is used then it will be added.
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>PATCH</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties</td>
+            <td>Set custom namespace properties [this will override the value if an existing key is used; if a new key is used then it will be added)]</td>
+            <td>JSON object of properties and values:
+
+{"a":1,"b":"hello","c":true}</td>
+            <td>{"cas":"1560823737328336896"}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+```bash
+curl --request PATCH \
+  --url https://z3.context.liveperson.net/v1/account/73948358/namespace1/100/properties \
+  --header 'content-type: application/json' \
+  --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCver5ll' \
+  --data '{
+	"a": 720,
+	"b": "jeff@test.com",
+	"c": true
+}'
+
+```
+#### Get list of namespaces created
 
 <table>
     <thead>
@@ -222,50 +264,14 @@ Example:
 
 ```bash
 curl --request GET \
+  --url https://z3.context.liveperson.net/v1/account/73948358/namespace1/properties \
+  --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCver5ll'
 
-  --url http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964/myCoolNamespace/properties \
-
-  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
-```
-
-#### Get all namespace variables
-
-This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
-
-<table>
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Path</th>
-            <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>GET</td>
-            <td>/v1/account/{accountId}/{customNamespace}/properties</td>
-            <td>Get all Key/value pairs for all requested properties that are available, prefixed with the namespace</td>
-            <td></td>
-            <td>{"accountID":"le57708964","a":1,"b":"hello","c":true}
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-Example:
-
-```bash
-curl --request GET \
-
-  --url http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964/myCoolNamespace/properties \
-
-  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
 ```
 
 
-#### Get all properties
+
+#### Get all properties within a group
 
 We recommend to use Namespace to group related attributes (KVPs), and use the groupID (aka entityId) to as a session state variable. You can put anything you want in the groupId. If you want to put consumer and conversation data in the same namespace, you can as long as the groupIDs are unique across the two. And it's optional – if omitted, the system will use a default entityId of `__default__`
 
