@@ -91,7 +91,7 @@ You will use the namespace value that is returned in the response in all other C
     </tbody>
 </table>
 
-Example:
+Example: 
 
 ```bash
 curl --request POST \
@@ -107,78 +107,6 @@ curl --request POST \
     "name": "myCoolNamespace"
 
 }'
-```
-
-#### Delete a custom namespace
-
-{: .important}
-Only do this if you want to delete the namespace
-
-<table>
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Path</th>
-            <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>DELETE</td>
-            <td>/v1/account/{accountId}/{customNamespace}</td>
-            <td>Delete a custom namespace</td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-Example:
-
-```bash
-curl --request DELETE \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1 \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
-```
-
-#### Get all namespace variables
-
-This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
-
-<table>
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Path</th>
-            <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>GET</td>
-            <td>/v1/account/{accountId}/{customNamespace}/properties</td>
-            <td>Get all Key/value pairs for all requested properties that are available, prefixed with the namespace</td>
-            <td></td>
-            <td>{"accountID":"le57708964","a":1,"b":"hello","c":true}
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-Example:
-
-```bash
-curl --request GET \
-
-  --url http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964/myCoolNamespace/properties \
-
-  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
 ```
 
 #### Set custom namespace properties
@@ -231,40 +159,6 @@ curl --request PATCH \
 }'
 ```
 
-#### Delete a property
-
-<table>
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Path</th>
-            <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>DELETE</td>
-            <td>/v1/account/{accountId}/{customNamespace}/properties/{propertyName}</td>
-            <td>Delete a property</td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-Example:
-
-```bash
-curl --request DELETE \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties/isSomething \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
-
-```
-
 #### List of namespaces created
 
 <table>
@@ -288,7 +182,7 @@ curl --request DELETE \
     </tbody>
 </table>
 
-Example:
+Example: 
 
 ```bash
 
@@ -296,6 +190,78 @@ curl --request GET \
   --url https://z2.context.liveperson.net/v1/account/36209512 \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
 
+```
+
+#### Get all namespace variables
+
+This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GET</td>
+            <td>/v1/account/{accountId}/{customNamespace}/properties</td>
+            <td>Get all Key/value pairs for all requested properties that are available, prefixed with the namespace</td>
+            <td></td>
+            <td>{"accountID":"le57708964","a":1,"b":"hello","c":true}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+```bash
+curl --request GET \
+
+  --url http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964/myCoolNamespace/properties \
+
+  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
+```
+
+#### Get all namespace variables
+
+This will get all Key/value pairs for all requested properties that are available, prefixed with the namespace.
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GET</td>
+            <td>/v1/account/{accountId}/{customNamespace}/properties</td>
+            <td>Get all Key/value pairs for all requested properties that are available, prefixed with the namespace</td>
+            <td></td>
+            <td>{"accountID":"le57708964","a":1,"b":"hello","c":true}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+```bash
+curl --request GET \
+
+  --url http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le57708964/myCoolNamespace/properties \
+
+  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH'
 ```
 
 #### Get all properties
@@ -324,7 +290,7 @@ You can put anything you want in the entityId. If you want to put consumer and c
     </tbody>
 </table>
 
-Example:
+Example: 
 
 ```bash
 
@@ -357,7 +323,7 @@ curl --request GET \
     </tbody>
 </table>
 
-Example:
+Example: 
 
 ```bash
 
@@ -390,7 +356,7 @@ Example:
     </tbody>
 </table>
 
-Example:
+Example: 
 
 ```bash
 
@@ -407,7 +373,7 @@ curl --request PATCH \
 
 ```
 
-#### pass multiple propertyName to the GET properties
+#### pass multiple propertyName to the GET properties	
 
 <table>
     <thead>
@@ -430,12 +396,121 @@ curl --request PATCH \
     </tbody>
 </table>
 
-Example:
+Example: 
 
 ```bash
 
 curl --request GET \
   --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties?include=minutesSinceLastConversation,salesforceId \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+
+```
+#### Delete a property
+
+We recommend to use Namespace to group related attributes (KVPs), and use the GroupID (aka EntityId) to as a session state variable.
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DELETE</td>
+            <td>/v1/account/{accountId}/{customNamespace}/properties/{propertyName}</td>
+            <td>Delete a property</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example: 
+
+```bash
+curl --request DELETE \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties/isSomething \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+
+```
+
+#### Delete a Group of properties
+
+In this context delete groupID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation. 
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DELETE</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{entityId}/properties</td>
+            <td>Delete a group of properties </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example: 
+
+```bash
+
+curl --request DELETE \
+ --url https://z2.context.liveperson.net/v1/account/36209512/namespace2/200/properties \
+ --header 'maven-api-key: 04UQXk21ZDmKdN9jTwP8ty1sSoTLFAFQ'
+
+```
+
+#### Delete a custom namespace
+
+Delete namespace may be used if brand wants to retire a namespace. This would really be quite rare, and may happen if entire set of attributes are not used any more, such as an entire use case is being retired.
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DELETE</td>
+            <td>/v1/account/{accountId}/{customNamespace}</td>
+            <td>Delete a custom namespace</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example: 
+
+```bash
+curl --request DELETE \
+  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1 \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
 
 ```
