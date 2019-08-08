@@ -10,7 +10,7 @@ redirect_from:
   - function-as-a-service-overview.html
 ---
 
-<div class="important">Over the next few months we'll be gradually rolling out LivePerson Functions and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot!</div>
+<div class="important">LivePerson Functions is now enabled on your account. Log in at https://faas.liveperson.net or click on the Functions link from your LE QuickLaunch menu</div>
 
 [LivePerson Functions](https://faas.liveperson.net) is a Function as a Service (FaaS) platform which enables brands to develop custom behaviors within LivePerson’s conversational platform, to better tailor the system to their specific needs. By offering these capabilities, Functions enables developers to write a simple function, deploy it to LivePerson's infrastructure and make it available to their LivePerson account in minutes. This allows you to create custom logic inside our conversational platform.
 
