@@ -10,7 +10,7 @@ permalink: maven-ai-powered-routing-use-maven-with-your-bot.html
 indicator: messaging
 ---
 
-You may use the AskMaven APIs from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
+You may use the [AskMaven APIs](maven-askmaven-askmaven-api.html) from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
 
 1. You already have a concierge bot that handles branded greetings, intents, and dialogs
 
@@ -34,7 +34,7 @@ The following example shows how to use AskMaven and Context session store APIs f
 
 ### AskMaven from Conversation Builder
 
-Ask Maven APIs can be used in a Conversation Builder bot using Integrations. For more information on how to use Conversation Builder please refer to documentation.
+AskMaven APIs can be used in a Conversation Builder bot using Integrations. For more information on how to use Conversation Builder please refer to documentation.
 
 1. **Add API Integration to Conversation Builder**
 

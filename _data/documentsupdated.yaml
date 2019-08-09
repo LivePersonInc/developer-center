@@ -180,7 +180,7 @@
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
-          - subpagename: AskMaven API
+          - subpagename: Methods
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
