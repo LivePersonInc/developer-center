@@ -79,18 +79,20 @@ Get maven routing decision based on maven configured policies
     </tbody>
 </table>
 
-Example calls:
+#### Example:
+
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 CURL command:
 
 ```bash
 
 curl --request GET \
- --url https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions \
- --header 'maven-api-key:  7egGDDqV7V9oSj6AIDEWW6yQfUwAyuwH'
+ --url https://z1.askmaven.liveperson.net/v1/account/55884/next-actions \
+ --header 'maven-api-key:  7egGDDqV7V9oSj6AIDEWW6yQfUwAyxyz'
  ```
  
- How to call in JavaCcript:
+ How to call in JavaScript:
  
 ```bash
 fetch('https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions', {
@@ -102,8 +104,31 @@ fetch('https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions', {
        }
    })
 
+```
 
+Response body sample:
 
+```bash
+{
+	nextActionId: ‘UUID’,  // some uuid 
+rule: {
+"id": "12345",
+"name": "This is VIP rule"
+actions: [	
 
+{
+    "type": "TRANSFER_TO_AGENT",
+    "payload": { agentId: ‘g23hasd234’, fallbackSkillId: ‘12345’ }
+  },
+  {
+    "type": "SEND_MESSAGE",
+    "payload": { text: ‘hello from maven” }
+  }
+]
+},
+
+noMatchReason: “NO_MATCHED_RULES” // only added if no rules are matches, rule will be null
+noMatchReason: “NO_POLICIES_ENABLED” 
+}
 ```
 
