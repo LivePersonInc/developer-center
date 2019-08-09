@@ -12,9 +12,6 @@ indicator: messaging
 
 Maven can recommend bots that match customer intents in the Recommended Actions widget. 
 
-{: .important}
-To use this feature you will need to have created bots that can handle specific intents and workloads.
-
 Follow along with this guide to set up the feature.
 
 ### Create a bot
