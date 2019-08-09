@@ -50,7 +50,7 @@ To use Context Session store APIs you will need to create and use an API key. To
 
 <img class="fancyimage" width="600" src="img/maven/image_41.png">
 
-3. [Create your namespace](#create-a-custom-namespace)
+
 
 ### Methods
 
@@ -59,6 +59,17 @@ Every API call to the Maven Context service requires the following Auth Headers 
 `Content-Type : application/json`
 
 `maven-api-key : <INSERT YOUR API KEY HERE>`
+
+#### Base URL per environment
+
+QA URL: http://lp-mavencontext-app-qa.dev.lprnd.net
+Alpha URL: https://va-a.context.liveperson.net 
+
+Production URLs: 
+AMERICAS : https://z1.context.liveperson.net  
+EMEA: https://z2.context.liveperson.net  
+APAC: https://z3.context.liveperson.net  
+
 
 #### Create a custom namespace
 
@@ -159,7 +170,7 @@ curl --request PATCH \
 }'
 ```
 
-#### Set custom namespace properties within a group
+#### Set custom namespace properties within a session
 
 This will override the value if an existing key is used. If a new key is used then it will be added.
 
@@ -176,7 +187,7 @@ This will override the value if an existing key is used. If a new key is used th
     <tbody>
         <tr>
             <td>PATCH</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{sessionId}/properties</td>
             <td>Set custom namespace properties [this will override the value if an existing key is used; if a new key is used then it will be added)]</td>
             <td>JSON object of properties and values:
 
@@ -271,9 +282,9 @@ curl --request GET \
 
 
 
-#### Get all properties within a group
+#### Get all properties within a session
 
-We recommend to use Namespace to group related attributes (KVPs), and use the groupID (aka entityId) to as a session state variable. You can put anything you want in the groupId. If you want to put consumer and conversation data in the same namespace, you can as long as the groupIDs are unique across the two. And it's optional – if omitted, the system will use a default groupId of `__default__`
+We recommend to use Namespace to group related attributes (KVPs), and use the sessionID to store as a session state variable. You can put anything you want in the sessionId. If you want to put consumer and conversation data in the same namespace, you can as long as the sessionIDs are unique across the two. And it's optional – if omitted, the system will use a default sessionId of `__default__`
 
 <table>
     <thead>
@@ -288,7 +299,7 @@ We recommend to use Namespace to group related attributes (KVPs), and use the gr
     <tbody>
         <tr>
             <td>GET</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties/</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{sessionId}/properties/</td>
             <td>Get all properties
             </td>
             <td></td>
@@ -322,7 +333,7 @@ curl --request GET \
     <tbody>
         <tr>
             <td>GET</td>
-            <td> /v1/account/{accountId}/{customNamespace}/{groupId}/properties/{propertyName}</td>
+            <td> /v1/account/{accountId}/{customNamespace}/{sessionId}/properties/{propertyName}</td>
             <td>Get one property</td>
             <td></td>
             <td></td>
@@ -338,7 +349,7 @@ Example:
 
 ```
 
-#### Update multiple properties within a group/entity
+#### Update multiple properties within a session group
 
 <table>
     <thead>
@@ -353,7 +364,7 @@ Example:
     <tbody>
         <tr>
             <td>PATCH</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties/
+            <td>/v1/account/{accountId}/{customNamespace}/{sessionId}/properties/
             </td>
             <td>Update multiple properties
             </td>
@@ -380,7 +391,7 @@ curl --request PATCH \
 
 ```
 
-#### pass multiple propertyName to the GET properties	
+#### Pass multiple propertyName to the GET properties	
 
 <table>
     <thead>
@@ -395,7 +406,7 @@ curl --request PATCH \
     <tbody>
         <tr>
             <td>GET </td>
-            <td>/v1/brand/{accountID}/{customNamespace}/{groupId}/properties?include=prop1,prop2,prop3</td>
+            <td>/v1/brand/{accountID}/{customNamespace}/{sessionId}/properties?include=prop1,prop2,prop3</td>
             <td>pass multiple propertyName to the GET properties</td>
             <td></td>
             <td></td>
@@ -414,9 +425,9 @@ curl --request GET \
 ```
 
 
-#### Delete a Group of properties
+#### Delete a sessionID (Group of properties)
 
-Delete groupID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation. 
+Delete sessionID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation. 
 
 
 <table>
@@ -432,7 +443,7 @@ Delete groupID would be used if brands wants to delete a set of session attribut
     <tbody>
         <tr>
             <td>DELETE</td>
-            <td>/v1/account/{accountId}/{customNamespace}/{groupId}/properties</td>
+            <td>/v1/account/{accountId}/{customNamespace}/{sessionId}/properties</td>
             <td>Delete a group of properties </td>
             <td>
             </td>
