@@ -135,7 +135,7 @@ This will override the value if an existing key is used. If a new key is used th
         <tr>
             <td>PATCH</td>
             <td>/v1/account/{accountId}/{customNamespace}/properties</td>
-            <td>Set custom namespace properties [this will override the value if an existing key is used; if a new key is used then it will be added)]</td>
+            <td>Set custom namespace properties </td>
             <td>JSON object of properties and values:
 
 {"a":1,"b":"hello","c":true}</td>
