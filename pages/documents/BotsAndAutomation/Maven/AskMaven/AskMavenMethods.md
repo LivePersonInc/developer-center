@@ -30,7 +30,7 @@ Every API call to the AskMaven service requires the following Auth Headers to be
         <tr>
             <td>conversationId</td>
             <td>string</td>
-            <td>Optional - The conversation id of the current conversation</td>
+            <td>Optional - The conversation ID of the current conversation</td>
         </tr>
          <tr>
             <td>userId</td>
@@ -62,7 +62,7 @@ Get maven routing decision based on maven configured policies
         <tr>
             <td>GET</td>
             <td>/v1/account/{accountId}/next-actions</td>
-            <td>Get maven routing decision based on maven configured policies</td>
+            <td>Get Maven routing decision based on Maven configured policies</td>
         </tr>
     </tbody>
 </table>
