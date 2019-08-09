@@ -20,42 +20,63 @@ Static variables are useful for storing constant data or lists that can be used 
 
 3. Enter the name and the value of the new variable in the text input area. This example shows how to create a list of VIP emails. 
 
-```javascript
-{
-    name: "vipList"
-    type: "static",
-    payload: ["bob@test.com", "tom@test.com", "amy@test.com"]
-}
-```
+    ```javascript
+    {
+        name: "vipList"
+        type: "static",
+        payload: ["bob@test.com", "tom@test.com", "amy@test.com"]
+    }
+    ```
 
 4. Click **Save** button to save the new attribute. 
 
 ### Create a LivePerson Function Variable
 
-You can create a [LivePerson Function](liveperson-functions-overview.html) to fetch a value of the variable at runtime from an external system or a datasource, for example VIP information from Salesforce CRM database. 
+You can create a FaaS function to fetch information from an external source at runtime, for example retrieving customer information from a Salesforce CRM database. 
 
-1. To create a new Function variable login to Maven using your LiveEngage credentials and then navigate to Context Warehouse/Custom
+#### Setup LivePerson Functions
+
+[Create and deploy a FaaS function](liveperson-functions-getting-started.html). 
+
+Next you need to setup an API user to invoke the function.
+
+1. Create an LE API key
+
+2. Create new LE user, and assign it to the API key for login
+
+3. Grant the FaaS invocation permissions (can re-use Administrator, if desired)
+
+#### Create a FaaS attribute in Maven
+
+Once you have created a Function, you can now use that as an attribute in Context Warehouse to fetch external data at runtime. 
+
+1. To create a new FaaS attribute, login to Maven using your LiveEngage credentials and then navigate to Context Warehouse/Custom
 
 2. Click on the **FaaS +** button
 
-3. Enter the name and the payload for the function
+3. Enter the name and the payload for the FaaS function using the user credentials you created. 
 
-```javascript
+```javascript	
 {
     name: "isVIP"
     type: "faas",
-    payload: {
-        "faasId": "47ce7285-bde9-437e-8592-09c3aa9fb6d8",
-        "appKey": {
-            "username": "mavenBot",
-            "appKey": "def3d49f788643d084ac483a400e828f",
-            "secret": "1f6c5a370cb55380",
-            "accessToken": "b7f5d408d68041e88cadcb90b9c0bdaa",
-            "accessTokenSecret": "25b2bb285f37c902"
-        },
-        "includeFields": ["salesforceId"]
+    {
+        "payload": {
+            "faasId": "47ce7285-bde9-437e-8592-09c3aa9fb6d8",
+            "appKey": {
+                "username": "mavenBot",
+                "appKey": "def3d49f788643d084ac483a400e828f",
+                "secret": "1f6c5a370cb55380",
+                "accessToken": "b7f5d408d68041e88cadcb90b9c0bdaa",
+                "accessTokenSecret": "25b2bb285f37c902"
+            },
+            "body": {
+                "headers": [],
+                "payload": "{{namespace1.salesforceId}}"
+            }
+        }
     }
 }
 ```
 
-4. Click **Save** button to save the new attribute. 
+Click Save button to save the new attribute. 

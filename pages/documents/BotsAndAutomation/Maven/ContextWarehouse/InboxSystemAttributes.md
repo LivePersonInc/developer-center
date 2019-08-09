@@ -12,20 +12,16 @@ indicator: messaging
 
 ### Introduction
 
-Inbox system attributes are available out of the box from the LivePerson platform. To view the list of available attributes, please login to Maven using your LiveEngage credentials, and then navigate to Context Warehouse>Conversation. 
+Inbox system attributes are available out of the box from the LivePerson platform. To view the list of available attributes, please login to Maven using your LiveEngage credentials, and then navigate to Context Warehouse/Conversation. 
 
-These attributes can be used in building routing policies. To use them in a policy please copy and paste the name from the list and use in policy. Please see section on AI Powered Routing to learn more how to create such policies.
+These attributes can be used in building routing policies. To use them in a policy please copy and paste the name from the list and use in policy. Please see [AI Powered Routing](maven-ai-powered-routing-overview.html) to learn more on how to create such policies.
 
-<img class="fancyimage" width="600" src="img/maven/image_35.png">
+<img class="fancyimage" width="750" src="img/maven/image_35.png">
 
 ### Setup LiveEngage for Maven to access attributes
 
-For Maven to have access to the system variables, please select these options in LiveEngage
+For Maven to access the system variables, please select these options in LiveEngage
 
-1. Login to LiveEngage using your admin credentials
+1. Log in to LiveEngage using your admin credentials
 
-3. Custom Static or [Function](liveperson-functions-overview.html) Attributes
-
-Maven allows you to create custom static data, or connection to LivePerson Functions. 
-
-<img class="fancyimage" width="600" src="img/maven/image_36.png">
+2. Go to Campaigns tab -> Data source -> Api -> and select Check the Engagement History / Messaging Interactions

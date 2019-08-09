@@ -10,26 +10,22 @@ permalink: maven-context-warehouse-overview.html
 indicator: messaging
 ---
 
-### Overview
+### What is Context Warehouse
 
-The context warehouse is a centralized repository of various context attributes used by the Maven AI engine. 
+The context warehouse is a centralized repository of brand, customer, conversational, session, and custom attributes that can be used to build customized conversation solutions. 
 
 Maven provides three types of Context Attributes:
 
-1. Use Inbox System Attributes (e.g. user, conversation history, and operational context)
+1. Inbox System Attributes (e.g. conversation history)
+2. Custom attributes with static data or external system integrations with [Functions](liveperson-functions-overview.html)
+3. Context session store with APIs to store and retrieve session context and carry them over the conversational journeys
 
-2. Define custom attributes with static data or external system integrations with [Functions](liveperson-functions-overview.html)
+<img class="fancyimage" width="800" src="img/maven/image_34.png">
 
-3. Use APIs to store and retrieve session attributes to carry over custom context throughout the conversational journeys
+### Use Cases
 
-<img class="fancyimage" width="600" src="img/maven/image_34.png">
-
-Context warehouse attributes can be used in several ways. 
-
-Some examples include:
+Context warehouse attributes can be used in several ways:
 
 1. Save conversation session state info in LiveEngage (e.g. agent notes), and retrieve them later in a different conversation session.
-
 2. Save contextual attributes in concierge bot (e.g.) intents and carry over context to another bot or human skill.
-
-3. Use intents and entities from a bot, and use them in conjunction with system inbox attributes, or custom static or [LivePerson Function](liveperson-functions-overview.html) to create complex routing policies. Please see section on AI Powered Routing to learn more how to create such policies. 
+3. Use intents and entities from a bot, and use them in conjunction with system inbox attributes, or custom static or FaaS to create complex routing policies. Please see [AI Powered Routing](maven-ai-powered-routing-overview.html) to learn more about how to create such policies. 
