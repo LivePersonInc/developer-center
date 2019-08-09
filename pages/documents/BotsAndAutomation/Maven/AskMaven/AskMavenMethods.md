@@ -60,7 +60,7 @@ APAC: https://z3.context.liveperson.net
 
 ### Get Next Actions
 
-Get maven routing decision based on maven configured policies
+Get maven routing decision based on maven configured policies.
 
 <table>
     <thead>
@@ -81,7 +81,7 @@ Get maven routing decision based on maven configured policies
 
 #### Example:
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated.
 
 CURL command:
 
