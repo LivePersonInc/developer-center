@@ -176,7 +176,7 @@ curl --request PATCH \
 
 #### Set custom namespace properties within a session
 
-This will override the value if an existing key is used. If a new key is used then it will be added.
+This will override the value if an existing key is used. If a new key is used then it will be added. 
 
 <table>
     <thead>
@@ -192,7 +192,7 @@ This will override the value if an existing key is used. If a new key is used th
         <tr>
             <td>PATCH</td>
             <td>/v1/account/{accountId}/{customNamespace}/{sessionId}/properties</td>
-            <td>Set custom namespace properties [this will override the value if an existing key is used; if a new key is used then it will be added)]</td>
+            <td>Set custom namespace properties </td>
             <td>JSON object of properties and values:
 
 {"a":1,"b":"hello","c":true}</td>
@@ -269,9 +269,9 @@ This will get all Key/value pairs for all requested properties that are availabl
         <tr>
             <td>GET</td>
             <td>/v1/account/{accountId}/{customNamespace}/properties</td>
-            <td>Get all Key/value pairs for all requested properties that are available, prefixed with the namespace</td>
+            <td>Get all Key/value pairs for all requested properties that are available </td>
             <td></td>
-            <td>{"accountID":"577089","a":1,"b":"hello","c":true}
+            <td>
             </td>
         </tr>
     </tbody>
@@ -282,7 +282,7 @@ Note: the accountId and API key in these examples are fake - please replace it w
 
 ```bash
 curl --request GET \
-  --url https://z3.context.liveperson.net/v1/account/739483/namespace1/properties \
+  --url https://z3.context.liveperson.net/v1/account/739483/myCoolNamespace/properties \
   --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCverxyz'
 
 ```
@@ -321,7 +321,7 @@ Note: the accountId and API key in these examples are fake - please replace it w
 ```bash
 
 curl --request GET \
-  --url https://z2.context.liveperson.net/v1/account/362095/namespace1/100/properties \
+  --url https://z2.context.liveperson.net/v1/account/362095/myCoolNamespace/session100/properties \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
@@ -430,7 +430,7 @@ Note: the accountId and API key in these examples are fake - please replace it w
 ```bash
 
 curl --request GET \
-  --url https://z2.context.liveperson.net/v1/account/362095/namespace1/properties?include=minutesSinceLastConversation,salesforceId \
+  --url https://z2.context.liveperson.net/v1/account/362095/myCoolNamespace/properties?include=minutesSinceLastConversation,salesforceId \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
