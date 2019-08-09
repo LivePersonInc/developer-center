@@ -18,12 +18,6 @@ Every API call to the AskMaven service requires the following Auth Headers to be
 
 ### Base URL per environment
 
-QA URL: http://lp-mavencontext-app-qa.dev.lprnd.net
-
-Alpha URL: https://va-a.context.liveperson.net 
-
-Production URLs: 
-
 AMERICAS : https://z1.context.liveperson.net  
 EMEA: https://z2.context.liveperson.net  
 APAC: https://z3.context.liveperson.net  
