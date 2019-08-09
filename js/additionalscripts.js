@@ -26,7 +26,7 @@ $(document).ready(function () {
 			//if there's no refresh, this is a load and linkload will be called
 			linkload();
 		}
-		//if refresh events can't be detected just call the function (enjoy explorer)
+		//refresh events can't be detected just call the function (enjoy explorer)
 	} else {
 		linkload();
 	};
