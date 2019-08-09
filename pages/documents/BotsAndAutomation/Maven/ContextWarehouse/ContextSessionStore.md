@@ -104,16 +104,17 @@ You will use the namespace value that is returned in the response in all other C
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 curl --request POST \
 
-  --url https://z2.context.liveperson.net/v1/account/le57708964 \
+  --url https://z2.context.liveperson.net/v1/account/577089 \
 
   --header 'content-type: application/json' \
 
-  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH' \
+  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4Hxyz' \
 
   --data '{
 
@@ -150,22 +151,23 @@ This will override the value if an existing key is used. If a new key is used th
     </tbody>
 </table>
 
-Example:
+##### Example:
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 curl --request PATCH \
 
-  --url https://z3.context.liveperson.net/v1/account/73948358/namespace1/properties \
+  --url https://z3.context.liveperson.net/v1/account/739483/myCoolNamespace/properties \
 
   --header 'content-type: application/json' \
 
-  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4HUtH' \
+  --header 'maven-api-key: CEl7KSCf59IQEAFTQ1H2uCGv0yr4Hxyz' \
 
   --data '{
 
     "minutesSinceLastConversation": 720,
 
-    "salesforceId": "jeff@test.com",
+    "salesforceId": "xyz@test.com",
 
     "isSomething": true
 
@@ -201,12 +203,13 @@ This will override the value if an existing key is used. If a new key is used th
 </table>
 
 Example:
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 curl --request PATCH \
-  --url https://z3.context.liveperson.net/v1/account/73948358/namespace1/100/properties \
+  --url https://z3.context.liveperson.net/v1/account/739483/myCoolNamespace/session100/properties \
   --header 'content-type: application/json' \
-  --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCver5ll' \
+  --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCverxyz' \
   --data '{
 	"a": 720,
 	"b": "jeff@test.com",
@@ -237,13 +240,14 @@ curl --request PATCH \
     </tbody>
 </table>
 
-Example: 
+##### Example: 
 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 ```bash
 
 curl --request GET \
-  --url https://z2.context.liveperson.net/v1/account/36209512 \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+  --url https://z2.context.liveperson.net/v1/account/362095 \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
 
@@ -267,18 +271,19 @@ This will get all Key/value pairs for all requested properties that are availabl
             <td>/v1/account/{accountId}/{customNamespace}/properties</td>
             <td>Get all Key/value pairs for all requested properties that are available, prefixed with the namespace</td>
             <td></td>
-            <td>{"accountID":"le57708964","a":1,"b":"hello","c":true}
+            <td>{"accountID":"577089","a":1,"b":"hello","c":true}
             </td>
         </tr>
     </tbody>
 </table>
 
-Example:
+##### Example:
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 curl --request GET \
-  --url https://z3.context.liveperson.net/v1/account/73948358/namespace1/properties \
-  --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCver5ll'
+  --url https://z3.context.liveperson.net/v1/account/739483/namespace1/properties \
+  --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCverxyz'
 
 ```
 
@@ -310,17 +315,18 @@ We recommend to use Namespace to group related attributes (KVPs), and use the se
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 
 curl --request GET \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/100/properties \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+  --url https://z2.context.liveperson.net/v1/account/362095/namespace1/100/properties \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
 
-#### Get one property
+#### Get one property 
 
 <table>
     <thead>
@@ -343,7 +349,8 @@ curl --request GET \
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 
@@ -376,14 +383,15 @@ Example:
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 
 curl --request PATCH \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace2/200/properties \
+  --url https://z2.context.liveperson.net/v1/account/362095/myCoolNamespace/session100/properties \
   --header 'content-type: application/json' \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf' \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz' \
   --data '{
 	"a": 1,
 	"b": 2,
@@ -416,13 +424,14 @@ curl --request PATCH \
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 
 curl --request GET \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties?include=minutesSinceLastConversation,salesforceId \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+  --url https://z2.context.liveperson.net/v1/account/362095/namespace1/properties?include=minutesSinceLastConversation,salesforceId \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
 
@@ -455,13 +464,14 @@ Delete sessionID would be used if brands wants to delete a set of session attrib
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 
 curl --request DELETE \
- --url https://z2.context.liveperson.net/v1/account/36209512/namespace2/200/properties \
- --header 'maven-api-key: 04UQXk21ZDmKdN9jTwP8ty1sSoTLFAFQ'
+ --url https://z2.context.liveperson.net/v1/account/362095/myCoolNamespace/session100/properties \
+ --header 'maven-api-key: 04UQXk21ZDmKdN9jTwP8ty1sSoTLFxyz'
 
 ```
 #### Delete a property
@@ -490,12 +500,13 @@ curl --request DELETE \
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 curl --request DELETE \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1/properties/isSomething \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+  --url https://z2.context.liveperson.net/v1/account/362095/myCoolNamespace/properties/isSomething \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
 #### Delete a custom namespace
@@ -525,11 +536,12 @@ Delete namespace may be used if brand wants to retire a namespace. This would re
     </tbody>
 </table>
 
-Example: 
+##### Example: 
+Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
 curl --request DELETE \
-  --url https://z2.context.liveperson.net/v1/account/36209512/namespace1 \
-  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9U2xf'
+  --url https://z2.context.liveperson.net/v1/account/362095/myCoolNamespace \
+  --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
