@@ -20,7 +20,7 @@ You will first need to enable the feature in LiveEngage. Please contact LivePers
 
 ### Create Knowledge Base and Article
 
-Before Maven can start recommending articles in the widget you need to [create a knowledge base](conversation-builder-knowledge-base.html#adding-a-knowledge-base) and then [create an article](http://localhost:4000/conversation-builder-knowledge-base.html#adding-your-first-article). 
+Before Maven can start recommending articles in the widget you need to [create a knowledge base](conversation-builder-knowledge-base.html#adding-a-knowledge-base) and then [create an article](conversation-builder-knowledge-base.html#adding-your-first-article). 
 
 You may continue to add more content at any time after the setup, but it is suggested to create at least one article so you can verify that your setup was completed. 
 
