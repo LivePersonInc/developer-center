@@ -54,9 +54,9 @@ The Interactions Toolbar is made up of three different types of automation inter
 
 ### Limitations
 
-The types of content that you can send in a Conversation Builder *text type* interaction varies depending if you are building an automation for **chat** or for **messaging**.
+The types of text that you can send in a Conversation Builder interaction vary depending if you are building an automation for **chat** or for **messaging**.
 
-**Messaging** only allows plain text to be sent via the interaction GUI input.
+**Messaging** only allows plain text to be sent.
 
 **Chat** allows for plain text as well as a subset of HTML limited to the anchor, paragraph and linebreak tags.
 
