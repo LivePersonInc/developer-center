@@ -32,20 +32,23 @@ Every API call to the AskMaven service requires the following Auth Headers to be
             <td>string</td>
             <td>Optional - The conversation id of the current conversation</td>
         </tr>
+         <tr>
+            <td>userId</td>
+            <td>string</td>
+            <td>Optional - LivePerson consumer ID of the current conversation</td>
+        </tr>
         <tr>
             <td>groupId</td>
             <td>string</td>
-            <td>Optional - The group id associated with the Context API custom namespace variable call to set values</td>
-        </tr>
-        <tr>
-            <td>conversationId</td>
-            <td>string</td>
-            <td>Optional - The conversation id of the current conversation</td>
+            <td>Optional - The group ID associated with the session store variable call to set values.  If no groupId is specified, then the conversationId will be used to associate with the session store variables.
+</td>
         </tr>
     </tbody>
 </table>
 
 ### Get Next Actions
+
+Get maven routing decision based on maven configured policies
 
 <table>
     <thead>
