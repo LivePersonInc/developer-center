@@ -27,9 +27,7 @@ You will first need to enable the feature in LiveEngage. Please contact LivePers
 
 ### Create LiveEngage Skill and User For Bot
 
-<!-- TODO: what is with the server.iad link?? -->
-
-Before adding automations to Maven, you must first properly configure [LiveEngage](https://server.iad.liveperson.net/hc/web/public/pub/ma/lp/login.jsp?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~) by creating a skill and a bot user.
+Before adding automations to Maven, you must first properly configure LiveEngage by creating a skill and a bot user.
 
 The [Conversation Builder Getting Started](conversation-builder-getting-started-4-connect-to-liveengage.html#step-10-configure-liveengage) guide explains how to create a skill and a bot user for each of your automations.
 
@@ -105,7 +103,7 @@ Now use the interface to add the bots to Maven. This enables Maven to suggest th
 
 4. Enter the bot ID. The **Bot ID** is the value saved from the previous [Connect Bots to LiveEngage](#connect-bots-to-liveengage) section above and differs based on which bot platform you are using.
 
-<!-- TODO: explain what this step is for?? -->
+Next you will need to add the credentials from your bot platform into the Maven Setup. If you are using a Conversation Builder bot, see [the next section](#add-credentials-for-conversation-builder). For [DialogFlow go here](#add-credentials-for-dialogflow), and [Watson go here](#add-credentials-for-watson).
 
 ##### Add credentials for Conversation Builder
 

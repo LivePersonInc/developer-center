@@ -177,6 +177,10 @@
           - subpagename: Ask Maven API
           - subpagename: Setup Maven in LivePerson
           - subpagename: Use Maven with Your Bot
+      - pagename: AskMaven
+        subpages:
+          - subpagename: Overview
+          - subpagename: AskMaven API
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview

@@ -1,12 +1,12 @@
 ---
-pagename: Ask Maven API
+pagename: AskMaven API
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
-subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-ask-maven-api.html
+subfoldername: AskMaven
+permalink: maven-askmaven-askmaven-api.html
 indicator: messaging
 ---
 
@@ -18,12 +18,12 @@ At this time, the API only provides interfaces to read and execute policies. Mav
 
 ### Use Cases
 
-Use the Ask Maven API to accomplish the following example workflows:
+Use the AskMaven API to accomplish the following example workflows:
 
 * Channel Switching from Website or App: 
      * A brand wants to provide different channels based on customer and Intent. E.g. “For an order cancellation intent send     conversation to messaging involving a bot, unless it’s a high value customer, in that case have them talk on the phone to a human agent”
      * They configure this policy in Maven hub 
-     * They use Ask Maven API to return the which routing decision to make
+     * They use AskMaven API to return the which routing decision to make
      * Using the decision that Maven API returns, they provide the right experience to the consumer
 
  * Get AI Powered Routing Decisions
@@ -56,7 +56,7 @@ To use AskMaven APIs you will need to create and use an API key. To get your uni
 
 ### Methods
 
-Every API call to the Ask Maven service requires the following Auth Headers to be accepted
+Every API call to the AskMaven service requires the following Auth Headers to be accepted
 
 `Content-Type : application/json`
 
