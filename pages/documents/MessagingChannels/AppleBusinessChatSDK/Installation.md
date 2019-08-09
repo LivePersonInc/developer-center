@@ -11,63 +11,118 @@ indicator: messaging
 
 ### SDK Requirements
 
-- Xcode 9.3 and up
-- Minimum deployment target iOS 11.3
+- Xcode 9.3 and up, (XCode version 10.2.1 and up is highly recommended)
+- Minimum deployment target iOS 11.3 (iOS 12.1 and up is highly recommended).
 - Swift 4.2 and up
 - An iMessage App / Extension target
+- App Groups configured and enabled in 'Capabilities'
 
 ### Apple and LivePerson Configuration
- 
+
 1. Make sure you have an Apple Business Chat business ID.
-2. Contact your LivePerson account representative to enable this SDK on the backend server. 
+2. Contact your LivePerson account representative to enable this SDK on the backend server.
 
 ### SDK Installation in XCode
 
+## Manual installation
+
 See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
-1. Copy the `LPABCSDK.framework` to your XCode project, make sure it is included in the **Embedded Binaries** section, under the **project settings/General** tab for the iMessageApp Target (and any other implementing target).
+1. Copy the `LPABCSDK.framework` to your XCode project, make sure it is included in the **Embedded Binaries** section, under the **project settings/General** tab in the main app target, and in the **Linked Frameworks and Libraries** in the iMessageApp Target, as well as in **Linked Binary With Libraries** under **Build Phases** of each implementing target.
 
-2. In project settings of host app target, navigate to the Build Phases tab, and click the + button to paste the following:
+## CocoaPods installation
 
-    `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/LPABCSDKStrippingScript.sh`
+1. Install CocoaPods:
 
-    This script loops through the frameworks embedded in the application and removes unused architectures.
+```bash
+sudo gem install cocoapods
+```
 
-3. For each implementing target, make sure to enable **App groups** in the capabilities section in XCODE.
+2. Navigate to your project folder and create a Podfile for your project:
 
-4. In the `info.plist` file of each implementing target, create a dictionary with the key `LPABC_PARAMS` and add a key-value pair of `lpabc_appgroup : <your_app_group_id>` 
+```bash
+pod init
+```
 
-    * Your app group id should be the same across all implementing targets.
+3. Open the Podfile.
 
-5. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
+```bash
+open -a Xcode Podfile
+```
 
-6. In the iMessage app/extension's  `MessagesViewController` class,  please make sure to override the following two methods:
+4. Add the LPABCSDK pod to integrate it into your Xcode project. Make sure you change the target name to YOUR target name:
 
-    - `override func didBecomeActive(with conversation: MSConversation)`	 
-    - `override func didReceive(_ message: MSMessage, conversation: MSConversation)`
+```ruby
+target '<Your Target Name>' do
+    platform :ios, '11.3'
+    use_frameworks!
+    pod 'LPABCSDK'
+end
+```
 
-    In the implementation of these methods, add the following code: 
-    `lpabcsdk.update(with: conversation)`
-    `lpabcsdk.update(with: conversation, message: message)`
+### SDK Integration
 
-    Example:
+1. In project settings of host app target, navigate to the Build Phases tab, and click the + button to paste the following:
 
-    ```swift
-    import LPABCSDK
+   `bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/framework-strip.sh"`
 
-    class MessagesViewController : MSMessagesViewController {
+   This script removes unused architectures from the binary. This is pointing to the actual script available in the SDK framework.
 
-        var lpabcsdk = LPABCSDK.initializeSDK()
+2. For each implementing target, make sure to enable **App groups** in the capabilities section in XCODE.
 
-        override func didBecomeActive(with conversation: MSConversation) {
-            lpabcsdk.update(with: conversation)
-        }
+3. In the `info.plist` file of each implementing target, create a dictionary with the key `LPABC_PARAMS` and add a key-value pair of `lpabc_appgroup : <your_app_group_id>`
 
-        override func didReceive(_ message: MSMessage, conversation: MSConversation) {
-            lpabcsdk.update(with: conversation, message: message)
-        }
+   - Your app group id should be the same across all implementing targets.
 
-    }
-    ```
+4. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
 
-    This will enable the SDK to send SDEs ([Engagement Attributes](engagement-attributes-types-of-engagement-attributes.html)) to LiveEngage.
+5. In the iMessage app/extension's `MessagesViewController` class, please make sure to override the following two methods:
+
+   - `override func didBecomeActive(with conversation: MSConversation)`
+   - `override func didSelect(_ message: MSMessage, conversation: MSConversation)`
+   - `override func didReceive(_ message: MSMessage, conversation: MSConversation)`
+
+   For passing in references to the SDK (optional), please use `SDKParams`to reference elements such as `MSMessagesAppViewController`, etc.
+
+   In the implementation of these methods, add the following code:
+
+   `lpabcsdk.update(with: conversation, sdkParams: sdkParams)`
+   `lpabcsdk.update(with: conversation, message: message)`
+   `(with: conversation, message: message, sdkParams: sdkParams)`
+
+   Example:
+
+   ```swift
+   import LPABCSDK
+
+   class MessagesViewController : MSMessagesViewController {
+
+       var lpabcsdk = LPABCSDK.initializeSDK()
+       var sdkParams: SDKParams?
+
+       override func viewDidLoad() {
+           super.viewDidLoad()
+
+           self.sdkParams =
+           SDKParams(messagesViewController: self,
+                secureFormReplyImagee: <Reference to a `UIimage` used for s secure form reply message MSMessageLayout image>,
+                secureFormReplyText: `<Contextual text for you secure form reply message in Live Engage>`)
+       }
+
+       override func didBecomeActive(with conversation: MSConversation) {
+           lpabcsdk.update(with: conversation, sdkParams: sdkParams)
+       }
+
+       override func didReceive(_ message: MSMessage, conversation: MSConversation) {
+           lpabcsdk.update(with: conversation, message: message)
+       }
+
+       override func didSelect(_ message: MSMessage, conversation: MSConversation) {
+           lpabcsdk.update(with: conversation, message: message, sdkParams: sdkParams)
+
+       }
+
+   }
+   ```
+
+   This will enable the SDK to send SDEs ([Engagement Attributes](engagement-attributes-types-of-engagement-attributes.html)) to LiveEngage.
