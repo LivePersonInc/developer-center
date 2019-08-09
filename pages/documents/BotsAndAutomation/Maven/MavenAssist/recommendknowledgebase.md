@@ -7,14 +7,14 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Maven Assist
 permalink: maven-maven-assist-recommended-actions-for-knowledge-base.html
-indicator: both
+indicator: messaging
 ---
 
-### Setup Recommended Actions - Knowledge Base
+### Setup Recommended Actions for Knowledge Base
 
 #### 1. Enable Recommended Actions Widget in Live Engage
 
-You will first need to enable the feature in LiveEngage. Please call LivePerson support or your LivePerson customer representative to enable this feature. 
+You will first need to enable the feature in LiveEngage. Please contact LivePerson support or your LivePerson customer representative to enable this feature. 
 
 #### 2. Create Knowledge Base articles in Conversation Builder
 

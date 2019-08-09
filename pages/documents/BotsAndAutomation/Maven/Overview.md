@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 permalink: maven-overview.html
-indicator: both
+indicator: messaging
 ---
 
 Maven introduces a self-service, low-code/no-code experience for brands to enable or tune Maven capabilities and features. With Maven brands can:

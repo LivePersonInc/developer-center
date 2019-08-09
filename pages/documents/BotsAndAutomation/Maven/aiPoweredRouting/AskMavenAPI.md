@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
 permalink: maven-ai-powered-routing-ask-maven-api.html
-indicator: both
+indicator: messaging
 ---
 
 ### What is the AskMaven API

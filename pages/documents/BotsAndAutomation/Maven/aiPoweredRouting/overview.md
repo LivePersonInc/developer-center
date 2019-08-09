@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
 permalink: maven-ai-powered-routing-overview.html
-indicator: both
+indicator: messaging
 ---
 
 Maven’s AI powered routing provides a centralized experience to create dynamic policies to achieve routing to best human agent (direct, skill) or bot, based on intent and/or context attributes such as consumer profile data, operational context (load, predicted wait times, KPIs), and conversation history. Some examples of policies you can create: 

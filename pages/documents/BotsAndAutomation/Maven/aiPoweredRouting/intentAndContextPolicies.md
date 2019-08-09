@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
 permalink: maven-ai-powered-routing-intent-context-policies.html
-indicator: both
+indicator: messaging
 ---
 
 A policy in Maven comprises of a condition, action, and exception block represented as a JSON block. 

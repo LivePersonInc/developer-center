@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Context Warehouse
 permalink: maven-context-warehouse-custom-static-or-function.html
-indicator: both
+indicator: messaging
 ---
 
 ### Create Static Variable

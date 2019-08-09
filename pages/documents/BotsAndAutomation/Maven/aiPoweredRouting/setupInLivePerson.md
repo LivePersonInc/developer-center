@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
 permalink: maven-ai-powered-routing-setup-maven-in-liveperson.html
-indicator: both
+indicator: messaging
 ---
 
 Now that you have created some Intent and Context based policies, you want to use them in your conversation pipelines. There are primarily two ways of onboarding and using the policies. 

@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Context Warehouse
 permalink: maven-context-warehouse-context-session-store.html
-indicator: both
+indicator: messaging
 ---
 
 ### Overview

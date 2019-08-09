@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
 permalink: maven-ai-powered-routing-use-maven-with-your-bot.html
-indicator: both
+indicator: messaging
 ---
 
 You may use the AskMaven APIs from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
