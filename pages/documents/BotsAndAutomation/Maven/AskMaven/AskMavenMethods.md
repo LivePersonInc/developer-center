@@ -79,29 +79,31 @@ Get maven routing decision based on maven configured policies
     </tbody>
 </table>
 
-Response Body: 
+Example calls:
+
+CURL command:
 
 ```bash
-{
-    nextActionId: ‘UUID’,  // some uuid 
-rule: {
-"id": "12345",
-"name": "This is VIP rule"
-actions: [  
 
-{
-    "type": "TRANSFER_TO_AGENT",
-    "payload": { agentId: ‘g23hasd234’, fallbackSkillId: ‘12345’ }
-  },
-  {
-    "type": "SEND_MESSAGE",
-    "payload": { text: ‘hello from maven” }
-  }
-]
-},
+curl --request GET \
+ --url https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions \
+ --header 'maven-api-key:  7egGDDqV7V9oSj6AIDEWW6yQfUwAyuwH'
+ ```
+ 
+ How to call in JavaCcript:
+ 
+```bash
+fetch('https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions', {
+       method: 'GET',
+       cache: 'no-cache',
+       headers: {
+           'Content-Type': 'application/json',
+           'maven-api-key': '7egGDDqV7V9oSj6AIDEWW6yQfUwAyuwH',
+       }
+   })
 
-noMatchReason: “NO_MATCHED_RULES” // only added if no rules are matches, rule will be null
-noMatchReason: “NO_POLICIES_ENABLED” 
-}
+
+
+
 ```
 
