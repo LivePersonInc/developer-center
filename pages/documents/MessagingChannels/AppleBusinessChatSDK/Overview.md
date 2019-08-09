@@ -25,7 +25,7 @@ After sending a [Custom Interactive Message (CIM)](apple-business-chat-templates
   - Provides human and bot agents with context of the consumer’s iMessage app transactional and activity data, allowing them to have a more meaningful and effective conversation
 - Notify the developer of conversational events so that they can take action with custom SDEs
   - Create data-driven integrations to external systems via the agent widget SDK
-- Provide out of the box UI Solutions incuding PCI compliant secure forms.
+- Provide out of the box UI Solutions incuding PCI compliant secure forms
 
 ### Who is the SDK for?
 
