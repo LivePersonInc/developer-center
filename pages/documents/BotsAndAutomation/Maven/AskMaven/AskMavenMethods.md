@@ -16,7 +16,7 @@ Every API call to the AskMaven service requires the following Auth Headers to be
 
 `maven-api-key : <INSERT YOUR API KEY HERE>`
 
-#### Base URL per environment
+### Base URL per environment
 
 QA URL: http://lp-mavencontext-app-qa.dev.lprnd.net
 
@@ -95,12 +95,12 @@ curl --request GET \
  How to call in JavaScript:
  
 ```bash
-fetch('https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions', {
+fetch('https://z1.askmaven.liveperson.net/v1/account/55884/next-actions', {
        method: 'GET',
        cache: 'no-cache',
        headers: {
            'Content-Type': 'application/json',
-           'maven-api-key': '7egGDDqV7V9oSj6AIDEWW6yQfUwAyuwH',
+           'maven-api-key': '7egGDDqV7V9oSj6AIDEWW6yQfUwAyxyz',
        }
    })
 
