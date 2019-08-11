@@ -47,7 +47,7 @@ Currently the following events are supported:
   </tr>
   <tr>
     <td>Messaging Conversation Idle</td>
-    <td>Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins.</td>
+    <td>Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the LiveEngage UI, via the auto-messages feature.</td>
     <td>1</td>
   </tr>
   <tr>
