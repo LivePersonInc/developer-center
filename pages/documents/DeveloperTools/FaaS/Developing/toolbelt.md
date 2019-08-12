@@ -63,7 +63,7 @@ httpClient(URL, {
 	simple: false, //IF true => Status Code != 2xx & 3xx will throw
 	resolveWithFullResponse: true //IF true => Includes Status Code, Headers etc.
 })
-.then(response ==> {
+.then(response => {
 	...
 })
 ```
