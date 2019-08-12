@@ -56,7 +56,7 @@ If you need more advanced operators, you can also use [Regular Expressions](http
 
 A slot is a container for storing a value so the value can be used in subsequent actions. You can store values in slots based on conditions.
 
-As a simple example, assume you have a Text Question interaction that asks the user for their account number. If the user enters a valid number (the condition), you can store the number in a slot. This allows you to use it later, for example, in an Integration interaction that retrieves the user's balance via an API call to an external system. Here's how that might look in Conversation Builder:
+As a simple example, assume you have a Text Question interaction that asks the user for their account number. If the user enters a valid number (the condition), you can store the number in a slot. This allows you to use it later, for example, in an Integration interaction that retrieves the user's account balance via an API call to an external system. Here's how that might look in Conversation Builder:
 
 [//]: # (Add slots_simple_example.png here after adding arrow in Mac's preview.)
 
