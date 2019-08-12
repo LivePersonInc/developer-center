@@ -1,29 +1,38 @@
 ---
-pagename: Setup Maven in LivePerson
+pagename: Set Up Maven in LivePerson
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-setup-maven-in-liveperson.html
+permalink: maven-ai-powered-routing-set-up-maven-in-liveperson.html
 indicator: messaging
 ---
 
-Now that you have created some Intent and Context based policies, you want to use them in your conversation pipelines. There are primarily two ways of onboarding and using the policies. 
+You can use policies you have created to route conversations by sending conversations to the Maven Skill in LiveEngage. Maven will evaluate all the policies and then execute those policies (e.g. transferring the conversation to a skill). 
 
-### Add "Maven" Skill to your campaigns
+This is appropriate if:
+- You are only routing based on Inbox and Custom (FaaS or Static) attributes
+- You don't have a concierge bot
+- You do not need high levels of customizations and therefore programmatic access to Maven capabilities
 
-In this case, you will be sending your conversations to a Maven. Maven will evaluate all the policies and then execute those policies (e.g. transferring the conversation to a skill). This is appropriate if:
+#### Create a Maven Bot In LiveEngage
 
-1. You are only routing based on Inbox and Custom (FaaS or Static) attributes
+1. Login to LiveEngage, and go to the Users tab, click Action and select Add
 
-2. You don't have a concierge bot
+2. Select bot type and type in a name (e.g. mavenBot)
 
-3. You do not need high levels of customizations and therefore programmatic access to Maven capabilities
+3. Select “Generate API Key”
 
-### Setup Live Engage
+4. Copy the API key for later use
 
-### Provide Bot User Credentials to Maven 
+5. Select the Agent role
 
+
+#### Provide Bot User Credentials to Maven
+
+1. On the Left Navigation, select Intent & Context Policies, and then click the Bot config button
+
+2. Fill out the credentials
 

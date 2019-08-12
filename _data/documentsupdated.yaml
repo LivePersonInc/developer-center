@@ -174,7 +174,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Intent & Routing Policies
-          - subpagename: Setup Maven in LivePerson
+          - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
       - pagename: AskMaven
         subpages:
