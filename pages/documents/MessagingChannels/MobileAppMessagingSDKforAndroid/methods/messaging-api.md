@@ -637,13 +637,14 @@ ShutDownLivePersonCallback callback description:
 Unregister from registered push notification service.
 
 ```java
-public static void unregisterLPPusher(String brandId, String appId)
+public static void unregisterLPPusher(String brandId, String appId, ICallback<Void, Exception> unregisteringCompletedCallback)
 ```
 
 | Parameter | Description |
 | :--- | :--- |
 | brandId | The account ID. |
 | appId | The host app ID. |
+| unregisteringCompletedCallback | A dual-method callback for handling success and failure results. |
 
 
 
@@ -753,6 +754,7 @@ public static void setUserProfile(String appId, String firstName, String lastNam
 | lastName | User’s last name |
 | phone | User’s phone |
 
+
 #### registerLPPusher (deprecated)
 
 Register to LPMessagingSDK push notifications
@@ -770,6 +772,20 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. |
 
 _**Note: If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server.**_
+
+
+#### unregisterLPPusher (deprecated)
+
+Unregister from registered push notification service.
+
+```java
+public static void unregisterLPPusher(String brandId, String appId)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID. |
+| appId | The host app ID. |
 
 
 #### handlePush (Deprecated)
