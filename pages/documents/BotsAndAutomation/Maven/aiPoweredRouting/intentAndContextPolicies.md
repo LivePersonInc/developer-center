@@ -1,16 +1,16 @@
 ---
-pagename: Intent & Routing Policies
+pagename: Intent & Context Policies
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-intent-routing-policies.html
+permalink: maven-ai-powered-routing-intent-context-policies.html
 indicator: messaging
 ---
 
-### What is a Routing Policy
+### What is a Policy
 
 A policy in Maven is comprised of a *condition*, *action*, and *exception*, represented as a JSON block.
 
@@ -111,7 +111,7 @@ Exceptions define conditions and actions when unusual situations may occur. For 
 
 #### Create a new policy
 
-1. Login to Maven and navigate to **AI Powered Routing/Intent & Context Policies**
+1. Log in to Maven and navigate to **AI Powered Routing/Intent & Context Policies**
 
 2. Click on the button "New" 
 

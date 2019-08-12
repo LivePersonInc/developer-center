@@ -173,7 +173,7 @@
       - pagename: AI Powered Routing
         subpages:
           - subpagename: Overview
-          - subpagename: Intent & Routing Policies
+          - subpagename: Intent & Context Policies
           - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
       - pagename: AskMaven
