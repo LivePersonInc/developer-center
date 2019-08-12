@@ -13,7 +13,7 @@ indicator: messaging
 You can use policies you have created to route conversations by sending conversations to the Maven Skill in LiveEngage. Maven will evaluate all the policies and then execute those policies (e.g. transferring the conversation to a skill). 
 
 This is appropriate if:
-- You are only routing based on Inbox and Custom (FaaS or Static) attributes
+- You are only routing based on [Inbox System Attributes](maven-context-warehouse-inbox-system-attributes.html) or [Custom Static or Function attributes](maven-context-warehouse-custom-static-or-function.html)
 - You don't have a concierge bot
 - You do not need high levels of customizations and therefore programmatic access to Maven capabilities
 
