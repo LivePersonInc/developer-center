@@ -18,9 +18,9 @@ Every API call to the AskMaven service requires the following Auth Headers to be
 
 ### Base URL per environment
 
-AMERICAS : https://z1.context.liveperson.net  
-EMEA: https://z2.context.liveperson.net  
-APAC: https://z3.context.liveperson.net  
+AMERICAS : https://z1.askmaven.liveperson.net/ 
+EMEA: https://z2.askmaven.liveperson.net/ 
+APAC: https://z3.askmaven.liveperson.net/
 
 ### Query Parameters
 
