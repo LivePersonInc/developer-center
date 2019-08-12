@@ -105,26 +105,32 @@ fetch('https://z1.askmaven.liveperson.net/v1/account/55884/next-actions', {
 Response body sample:
 
 ```bash
-{
-	nextActionId: ‘UUID’,  // some uuid 
-rule: {
-"id": "12345",
-"name": "This is VIP rule"
-actions: [	
 
 {
-    "type": "TRANSFER_TO_AGENT",
-    "payload": { agentId: ‘g23hasd234’, fallbackSkillId: ‘12345’ }
-  },
-  {
-    "type": "SEND_MESSAGE",
-    "payload": { text: ‘hello from maven” }
-  }
-]
-},
+    nextActionId: ‘UUID’, // some uuid 
+    rule: {
+        "id": "12345",
+        "name": "This is VIP rule"
+        actions: [
 
-noMatchReason: “NO_MATCHED_RULES” // only added if no rules are matches, rule will be null
-noMatchReason: “NO_POLICIES_ENABLED” 
+            {
+                "type": "TRANSFER_TO_AGENT",
+                "payload": {
+                    agentId: ‘g23hasd234’,
+                    fallbackSkillId: ‘12345’
+                }
+            },
+            {
+                "type": "SEND_MESSAGE",
+                "payload": {
+                    text: ‘hello from maven”
+                }
+            }
+        ]
+    },
+
+    noMatchReason: “NO_MATCHED_RULES” // only added if no rules are matches, rule will be null
+    noMatchReason: “NO_POLICIES_ENABLED”
 }
 ```
 
