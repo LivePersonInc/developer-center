@@ -64,7 +64,7 @@ httpClient(URL, {
 	json: true, // Automatically parses the JSON string in the response
 	resolveWithFullResponse: false //IF true => Includes Status Code, Headers etc.
 })
-.then(response ==> {
+.then(response => {
 	...
 })
 ```
