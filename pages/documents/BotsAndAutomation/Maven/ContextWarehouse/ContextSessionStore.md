@@ -229,7 +229,7 @@ curl --request PATCH \
             <td>/v1/account/:accountId</td>
             <td>List of namespaces created</td>
             <td></td>
-            <td></td>
+            <td>[{"name":"myCoolNamespace","createdAt":"2019-08-02T19:41:52.017Z"},{"name":"myTestNamepsace","createdAt":"2019-08-08T06:12:23.204Z"}</td>
         </tr>
     </tbody>
 </table>
