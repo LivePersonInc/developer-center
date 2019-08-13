@@ -18,10 +18,4 @@ These attributes can be used in building routing policies. To use them in a poli
 
 <img class="fancyimage" width="750" src="img/maven/image_35.png">
 
-### Setup LiveEngage for Maven to access attributes
 
-For Maven to access the system variables, please select these options in LiveEngage
-
-1. Log in to LiveEngage using your admin credentials
-
-2. Go to Campaigns tab -> Data source -> Api -> and select Check the Engagement History / Messaging Interactions
