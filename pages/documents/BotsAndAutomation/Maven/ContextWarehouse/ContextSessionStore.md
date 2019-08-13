@@ -371,7 +371,11 @@ curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/my
             </td>
             <td>Update multiple properties
             </td>
-            <td></td>
+            <td>{
+	"a": 1,
+	"b": 2,
+	"c": 3
+}</td>
             <td></td>
         </tr>
     </tbody>
@@ -403,8 +407,6 @@ curl --request PATCH \
             <th>Method</th>
             <th>Path</th>
             <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
         </tr>
     </thead>
     <tbody>
@@ -412,8 +414,6 @@ curl --request PATCH \
             <td>GET </td>
             <td>/v1/brand/{accountID}/{customNamespace}/{sessionId}/properties?include=prop1,prop2,prop3</td>
             <td>pass multiple propertyName to the GET properties</td>
-            <td></td>
-            <td></td>
         </tr>
     </tbody>
 </table>
