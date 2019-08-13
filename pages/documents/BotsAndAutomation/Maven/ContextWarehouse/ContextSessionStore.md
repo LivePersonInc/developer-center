@@ -347,7 +347,7 @@ curl --request GET \
 Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
 
 ```bash
-
+curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/myCoolMamespace2/properties/{propertyName}   --header 'maven-api-key:  BEnAcoA2p4OTAyMzM1Nxyz'
 
 
 ```
