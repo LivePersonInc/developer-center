@@ -52,6 +52,12 @@ AskMaven APIs can be used in a Conversation Builder bot using [Integrations](con
 
 2. Edit Integration Settings for AskMaven APIs
 
+   * **URL**: Use the appropriate URL based on your location
+   - Americas: https://z1.askmaven.liveperson.net
+   - EMEA: https://z2.askmaven.liveperson.net
+   - APAC: https://z3.askmaven.liveperson.net
+
+   
    * **Maven API key** is retrieved from Maven workspace.
 
    * **AccountID**: use your LiveEngage account ID. If you are not sure please contact support or your customer representative to get the account ID.
