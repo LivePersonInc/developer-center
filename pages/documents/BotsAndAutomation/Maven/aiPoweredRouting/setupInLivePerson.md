@@ -19,6 +19,8 @@ This is appropriate if:
 
 #### Create a Maven Bot In LiveEngage
 
+A bot needs to be created in LiveEngage for Maven to receive conversations and then route them to an appropriate skill or agent. We use Maven as the name, but it could be any bot name. 
+
 1. Login to LiveEngage, and go to the Users tab, click Action and select Add
 
 2. Select bot type and type in a name (e.g. mavenBot)
