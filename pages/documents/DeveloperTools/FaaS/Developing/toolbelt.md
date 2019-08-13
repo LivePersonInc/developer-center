@@ -61,7 +61,8 @@ httpClient(URL, {
 	method: "GET", //HTTP VERB
 	headers: {}, //Your headers
 	simple: false, //IF true => Status Code != 2xx & 3xx will throw
-	resolveWithFullResponse: true //IF true => Includes Status Code, Headers etc.
+	json: true, // Automatically parses the JSON string in the response
+	resolveWithFullResponse: false //IF true => Includes Status Code, Headers etc.
 })
 .then(response ==> {
 	...
