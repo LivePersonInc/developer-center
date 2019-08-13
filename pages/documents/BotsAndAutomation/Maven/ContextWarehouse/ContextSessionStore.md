@@ -139,7 +139,7 @@ This will override the value if an existing key is used. If a new key is used th
             <td>JSON object of properties and values:
 
 {"a":1,"b":"hello","c":true}</td>
-            <td>{"cas":"1560823737328336896"}
+            <td>
             </td>
         </tr>
     </tbody>
@@ -190,7 +190,7 @@ This will override the value if an existing key is used. If a new key is used th
             <td>JSON object of properties and values:
 
 {"a":1,"b":"hello","c":true}</td>
-            <td>{"cas":"1560823737328336896"}
+            <td>
             </td>
         </tr>
     </tbody>
@@ -265,7 +265,7 @@ This will get all Key/value pairs for all requested properties that are availabl
             <td>/v1/account/{accountId}/{customNamespace}/properties</td>
             <td>Get all Key/value pairs for all requested properties that are available </td>
             <td></td>
-            <td>
+            <td>{"a":1000,"b":"mm@virtuoz.com","c":false,"d":1000}
             </td>
         </tr>
     </tbody>
@@ -304,7 +304,7 @@ We recommend to use Namespace to group related attributes (KVPs), and use the se
             <td>Get all properties
             </td>
             <td></td>
-            <td></td>
+            <td>{"a":1000,"b":"mm@virtuoz.com","c":false,"d":1000}</td>
         </tr>
     </tbody>
 </table>
@@ -338,7 +338,7 @@ curl --request GET \
             <td> /v1/account/{accountId}/{customNamespace}/{sessionId}/properties/{propertyName}</td>
             <td>Get one property</td>
             <td></td>
-            <td></td>
+            <td>{"d":1000}</td>
         </tr>
     </tbody>
 </table>
@@ -441,8 +441,6 @@ Delete sessionID would be used if brands wants to delete a set of session attrib
             <th>Method</th>
             <th>Path</th>
             <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
         </tr>
     </thead>
     <tbody>
@@ -450,10 +448,6 @@ Delete sessionID would be used if brands wants to delete a set of session attrib
             <td>DELETE</td>
             <td>/v1/account/{accountId}/{customNamespace}/{sessionId}/properties</td>
             <td>Delete a group of properties </td>
-            <td>
-            </td>
-            <td>
-            </td>
         </tr>
     </tbody>
 </table>
@@ -477,8 +471,6 @@ curl --request DELETE \
             <th>Method</th>
             <th>Path</th>
             <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
         </tr>
     </thead>
     <tbody>
@@ -486,10 +478,6 @@ curl --request DELETE \
             <td>DELETE</td>
             <td>/v1/account/{accountId}/{customNamespace}/properties/{propertyName}</td>
             <td>Delete a property</td>
-            <td>
-            </td>
-            <td>
-            </td>
         </tr>
     </tbody>
 </table>
@@ -513,8 +501,6 @@ Delete namespace may be used if brand wants to retire a namespace. This would re
             <th>Method</th>
             <th>Path</th>
             <th>Description</th>
-            <th>Request Payload Example</th>
-            <th>Response Payload Example</th>
         </tr>
     </thead>
     <tbody>
@@ -522,10 +508,6 @@ Delete namespace may be used if brand wants to retire a namespace. This would re
             <td>DELETE</td>
             <td>/v1/account/{accountId}/{customNamespace}</td>
             <td>Delete a custom namespace</td>
-            <td>
-            </td>
-            <td>
-            </td>
         </tr>
     </tbody>
 </table>
