@@ -55,6 +55,8 @@ Once you have created a Function, you can now use that as an attribute in Contex
 2. Click on the **FaaS +** button
 
 3. Enter the name and the payload for the FaaS function using the user credentials you created. 
+    a. Faas ID: Retrieve the ID from the URL of your Function (end part of the URL)
+    b. Keys: Retrieve the username, secret, accessToken, and accessTokenSecret from the API key you created before, and copy and paste them in the JSON. 
 
 ```javascript	
 {
@@ -65,10 +67,10 @@ Once you have created a Function, you can now use that as an attribute in Contex
             "faasId": "47ce7285-bde9-437e-8592-09c3aa9fb6d8",
             "appKey": {
                 "username": "mavenBot",
-                "appKey": "def3d49f788643d084ac483a400e828f",
-                "secret": "1f6c5a370cb55380",
-                "accessToken": "b7f5d408d68041e88cadcb90b9c0bdaa",
-                "accessTokenSecret": "25b2bb285f37c902"
+                "appKey": "<enter app key>",
+                "secret": "<enter secret>",
+                "accessToken": "<enter access token>",
+                "accessTokenSecret": "<enter access token secret"
             },
             "body": {
                 "headers": [],
