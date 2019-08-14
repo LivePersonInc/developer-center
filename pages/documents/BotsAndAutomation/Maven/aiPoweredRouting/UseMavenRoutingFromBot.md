@@ -38,6 +38,11 @@ The following example shows how to use [AskMaven](maven-askmaven-overview.html) 
 
 The conversation id is required for using the AskMaven APIs. This ID is used by the policy to retrieve conversation and session store parameters. 
 
+The variable can be used anywhere in conversation builder using the following variable name: 
+
+{$botContext.conversationId}
+ 
+
 #### Call Session Store APIs
 
 The session store is useful in storing any context information gathered in a bot, that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy.
@@ -53,9 +58,9 @@ AskMaven APIs can be used in a Conversation Builder bot using [Integrations](con
 2. Edit Integration Settings for AskMaven APIs
 
    * **URL**: Use the appropriate URL based on your location
-   - Americas: https://z1.askmaven.liveperson.net
-   - EMEA: https://z2.askmaven.liveperson.net
-   - APAC: https://z3.askmaven.liveperson.net
+      1. Americas: https://z1.askmaven.liveperson.net
+      2. EMEA: https://z2.askmaven.liveperson.net
+      3. APAC: https://z3.askmaven.liveperson.net
 
    
    * **Maven API key** is retrieved from Maven workspace.
