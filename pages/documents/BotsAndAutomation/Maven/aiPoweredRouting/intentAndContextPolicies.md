@@ -39,7 +39,7 @@ Conditions can be applied to each Attribute in Context Warehouse. A condition bl
 ```json
 "conditions": [
     {
-      "property": "conversation.minutesSinceLastMessage",
+      "property": "conversation.minutesSincePreviousMessage",
       "type": "LESS_THAN_OR_EQUAL",
       "value": 1440
     }
