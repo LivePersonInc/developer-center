@@ -35,7 +35,7 @@ Click on the **User Icon** in the top right corner, and select **Settings**.
 
 ### Configure Maven
 
-1. Log in to Maven with your LiveEngage credentials and then navigate to Maven Assist > Recommended Actions - KB. 
+1. Log in to Maven with your LiveEngage credentials and then navigate to Maven Assist > Recommended Actions - Knowledge Base. 
 
 2. Paste the API access key that you copied in the previous step in the API Access Key text field, and then click save. Once you save, you should expect to see the Knowledge base you created previously. 
 

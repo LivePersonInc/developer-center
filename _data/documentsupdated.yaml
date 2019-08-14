@@ -162,7 +162,7 @@
       - pagename: Maven Assist
         subpages:
           - subpagename: Overview
-          - subpagename: Recommended Actions for Bots
+          - subpagename: Recommended Actions for Automations
           - subpagename: Recommended Actions for Knowledge Base
       - pagename: Context Warehouse
         subpages:

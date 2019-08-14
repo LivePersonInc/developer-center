@@ -1,12 +1,13 @@
 ---
-pagename: Recommended Actions for Bots
+pagename: Recommended Actions for Automations
 redirect_from:
+  - maven-maven-assist-recommended-actions-for-bots.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven
 subfoldername: Maven Assist
-permalink: maven-maven-assist-recommended-actions-for-bots.html
+permalink: maven-maven-assist-recommended-actions-for-automations.html
 indicator: messaging
 ---
 
@@ -86,7 +87,7 @@ Now that you have set up LiveEngage, and connected your bot(s), you need to link
 
 #### Log in to Maven
 
-Log in to Maven with your LiveEngage credentials and then navigate to Maven Assist > Recommended Actions - Bots. 
+Log in to Maven with your LiveEngage credentials and then navigate to Maven Assist > Recommended Actions - Automations. 
 
 #### Add the bots 
 
