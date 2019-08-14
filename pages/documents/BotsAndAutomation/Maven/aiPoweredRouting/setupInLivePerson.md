@@ -17,7 +17,7 @@ This is appropriate if:
 - You don't have a concierge bot
 - You do not need high levels of customizations and therefore programmatic access to Maven capabilities
 
-#### Create a Maven Bot In LiveEngage
+#### Create a Maven Bot User In LiveEngage
 
 A bot needs to be created in LiveEngage for Maven to receive conversations and then route them to an appropriate skill or agent. We use Maven as the name, but it could be any bot name. 
 
