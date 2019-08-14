@@ -157,3 +157,10 @@ Maven evaluates policies in the order they are created and shown in the user exp
 1. Select the policy 
 
 2. And then click the **Up** or **Down** buttons to move the policy in the list 
+
+### Using Policies in Conversations
+
+Once you have created some policies there are two ways of using the policies to route conversations:
+1. [Setup Maven in LivePerson](maven-ai-powered-routing-set-up-maven-in-liveperson.html) to send your conversations to the Maven bot. The Maven bot will evaluate all the policies and then route them to the optimal agent, skill, or bot 
+2. [Use Maven with your bot](maven-ai-powered-routing-use-maven-with-your-bot.html) using the AskMaven and Context Warehouse APIs. Your bot will handle branded greetings, intents, and other other attributes and then use AskMaven to get the policy decision. 
+
