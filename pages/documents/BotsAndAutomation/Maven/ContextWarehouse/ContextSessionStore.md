@@ -119,7 +119,8 @@ curl --request POST \
 
 #### Set custom namespace properties
 
-This will override the value if an existing key is used. If a new key is used then it will be added.
+This will override the value if an existing key is used. If a new key is used then it will be added. If a key is omitted it will not be removed.
+
 
 <table>
     <thead>
