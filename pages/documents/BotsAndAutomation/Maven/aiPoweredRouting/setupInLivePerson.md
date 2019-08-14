@@ -17,24 +17,36 @@ This is appropriate if:
 - You don't have a concierge bot
 - You do not need high levels of customizations and therefore programmatic access to Maven capabilities
 
-#### Create a Maven Bot User In LiveEngage
+### Create a Maven Bot User In LiveEngage
 
 A bot needs to be created in LiveEngage for Maven to receive conversations and then route them to an appropriate skill or agent. We use Maven as the name, but it could be any bot name. 
 
 1. Login to LiveEngage, and go to the Users tab, click Action and select Add
 
+    <img class="fancyimage" width="600" src="img/maven/Maven Bot 1.png">
+
 2. Select bot type and type in a name (e.g. mavenBot)
+
+    <img class="fancyimage" width="400" src="img/maven/Maven Bot 2.png">
 
 3. Select “Generate API Key”
 
+    <img class="fancyimage" width="400" src="img/maven/Maven Bot 3.png">
+
 4. Copy the API key for later use
+
+    <img class="fancyimage" width="400" src="img/maven/Maven Bot 4.png">
 
 5. Select the Agent role
 
+    <img class="fancyimage" width="400" src="img/maven/Maven Bot 5.png">
 
-#### Provide Bot User Credentials to Maven
 
-1. On the Left Navigation, select Intent & Context Policies, and then click the Bot config button
+### Provide Bot User Credentials to Maven
 
-2. Fill out the credentials
+1. On the Left Navigation, select Intent & Context Policies, scroll down, and then click the Bot config button
+
+    <img class="fancyimage" width="400" src="img/maven/maven-bot-config.png">
+
+2. Fill out the credentials that you saved during the previous step
 

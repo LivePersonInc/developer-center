@@ -81,12 +81,19 @@ Actions define what to do next if the conditions are valid. An action block may 
 
 Similar to conditions an action such as transferring to a skill can use either a variable or a constant value.
 
-**Get SkillIds from LiveEngage**
-To route to skills, you will need the SkillIds used by LiveEngage. To retrieve all the skill IDs for your campaigns: 
+##### Get SkillIds from LiveEngage
+
+To route to skills, you will need the SkillIds used by LiveEngage. To retrieve all the skill IDs:
+
 1. Login to LiveEngage and then go to Users tab and then Skills
 2. Then click on Actions and then export all
+
+    <img class="fancyimage" width="600" src="img/maven/Get SkillID From LiveEngage.png">
+
 3. Save the zip file and then open Skills.csv 
-4. All Skill IDs with associated skill name should be in this file. Copy and paste the skill IDs into your policy to transfer to a skill.   
+4. All Skill IDs with associated skill name should be in this file. Copy and paste the skill IDs into your policy to transfer to a skill.
+
+
 
 
 The following list of actions will be supported:
@@ -123,6 +130,8 @@ Exceptions define conditions and actions when unusual situations may occur. For 
 
 ### Create and Manage Policies
 
+<img class="fancyimage" width="750" src="img/maven/intent-context-policies.png">
+
 #### Create a new policy
 
 1. Log in to Maven and navigate to **AI Powered Routing/Intent & Context Policies**
@@ -133,8 +142,6 @@ Exceptions define conditions and actions when unusual situations may occur. For 
 
 4. Click Save button to save the new policy configuration
 
-<img class="fancyimage" width="600" src="img/maven/image_43.png">
-
 #### Enable or disable a policy
 
 1. Each policy can be enabled or disabled. A policy will not be executed by Maven if it is disabled. 
@@ -143,8 +150,6 @@ Exceptions define conditions and actions when unusual situations may occur. For 
 
 3. Use the on/off toggle switch to enable or disable a policy
 
-<img class="fancyimage" width="600" src="img/maven/image_44.png"> 
-
 #### Set the policy order
 
 Maven evaluates policies in the order they are created and shown in the user experience. Maven will execute the first policy that satisfies all the conditions. To change the order of a policy
@@ -152,5 +157,3 @@ Maven evaluates policies in the order they are created and shown in the user exp
 1. Select the policy 
 
 2. And then click the **Up** or **Down** buttons to move the policy in the list 
-
-<img class="fancyimage" width="600" src="img/maven/image_45.png">

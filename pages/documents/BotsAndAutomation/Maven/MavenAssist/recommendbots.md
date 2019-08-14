@@ -12,6 +12,8 @@ indicator: messaging
 
 Maven can recommend bots that match customer intents in the Recommended Actions widget. 
 
+<img class="fancyimage" width="750" src="img/maven/RA-bots.png">
+
 Follow along with this guide to set up the feature.
 
 ### Create a bot
@@ -90,8 +92,6 @@ Log in to Maven with your LiveEngage credentials and then navigate to Maven Assi
 
 Now use the interface to add the bots to Maven. This enables Maven to suggest these bots based on customers’ utterances, and add them to the conversation. 
 
-<img class="fancyimage" width="750" src="img/maven/image_17.png">
-
 1. Click the Add bot button to add a new bot
 
 2. Choose a Bot provider (Conversation Builder, Watson, or Dialogflow). Different bots support different types of credentials. For instance, DiaglogFlow uses a json object, whereas Watson provides the credentials in string format. This is reflected in the UI, when you change the bot type. 
@@ -104,13 +104,22 @@ Next you will need to add the credentials from your bot platform into the Maven 
 
 ##### Add credentials for Conversation Builder
 
+Follow the steps below to gather information for the form.
+
+<img class="fancyimage" width="750" src="img/maven/addBot-CB.png">
+
 1. Login to LiveEngage and select the **Automation Tab**
 
 2. Click on the **Account** icon at the top right of the page, and choose **Settings**.
 
 Click on the **API** tab, and copy the value listed for **Your API Access Key**. This should be entered in the **Credentials** field of the *Add Bot* page on *Maven Workspace*.
 
+
 ##### Add credentials for DialogFlow
+
+Follow the steps below to gather information for the form.
+
+<img class="fancyimage" width="750" src="img/maven/addBot-DF.png">
 
 Let’s say that you already have a bot created in [DialogFlow](https://console.dialogflow.com/api-client/) and we want to create a new credential.
 
@@ -140,7 +149,12 @@ Let’s say that you already have a bot created in [DialogFlow](https://console.
 
 	<img class="fancyimage" width="600" src="img/maven/image_21.png">
 
+
 ##### Add credentials for Watson
+
+Follow the steps below to gather information for the form.
+
+<img class="fancyimage" width="750" src="img/maven/addBot-Watson.png">
 
 Create a *service*, which generates a key which can be provided to LivePerson.
 
@@ -157,6 +171,7 @@ The *workspaceId* can be obtained via the *Skill Details*, accessible from the *
 <img class="fancyimage" width="600" src="img/maven/image_25.png"> 
 
 The service can then request responses from Watson.
+
 
 ### Configure Score Threshold
 

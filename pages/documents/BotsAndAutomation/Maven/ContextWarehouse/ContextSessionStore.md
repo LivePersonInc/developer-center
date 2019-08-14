@@ -48,7 +48,7 @@ To use Context Session store APIs you will need to create and use an API key. To
 
 3. To generate a new key, click on the **Regenerate Key **button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
-<img class="fancyimage" width="600" src="img/maven/image_41.png">
+<img class="fancyimage" width="750" src="img/maven/devkey.png">
 
 
 

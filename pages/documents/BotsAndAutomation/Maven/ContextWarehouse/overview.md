@@ -20,7 +20,7 @@ Maven provides three types of Context Attributes:
 2. Custom attributes with static data or external system integrations with [Functions](liveperson-functions-overview.html)
 3. Context session store with APIs to store and retrieve session context and carry them over the conversational journeys
 
-<img class="fancyimage" width="800" src="img/maven/image_34.png">
+<img class="fancyimage" width="800" src="img/maven/Context Warehouse Diagram.png">
 
 ### Use Cases
 

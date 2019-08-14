@@ -12,6 +12,9 @@ indicator: messaging
 
 Maven can recommend [Knowledge Base](conversation-builder-knowledge-base.html) articles that match customer intents in the Recommended Actions widget. 
 
+<img class="fancyimage" width="750" src="img/maven/RA-KB.png">
+
+
 Follow along with this guide to set up the feature.
 
 ### Enable Recommended Actions Widget
@@ -35,8 +38,6 @@ Click on the **User Icon** in the top right corner, and select **Settings**.
 1. Log in to Maven with your LiveEngage credentials and then navigate to Maven Assist > Recommended Actions - KB. 
 
 2. Paste the API access key that you copied in the previous step in the API Access Key text field, and then click save. Once you save, you should expect to see the Knowledge base you created previously. 
-
-<img class="fancyimage" width="750" src="img/maven/image_29.png">
 
 ### Test KB Article Suggestions
 

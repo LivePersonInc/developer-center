@@ -14,6 +14,8 @@ indicator: messaging
 
 The AskMaven API is a REST API that allows you and your bots, web sites, and apps to call Maven capabilities programmatically. You can use the API to ask Maven for the next best actions (route to skill, KB article, etc) for a concierge bot/app.
 
+<img class="fancyimage" width="750" src="img/maven/askmaven.png">
+
 ### Use Cases
 
 A typical use case for using AskMaven APIs is to get a routing decision to transfer to a skill from a Bot or LOB app. 
@@ -35,4 +37,4 @@ To use AskMaven APIs you will need to create and use an API key. To get your uni
 
 6. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
-<img class="fancyimage" width="600" src="img/maven/image_47.png">
+<img class="fancyimage" width="750" src="img/maven/devkey.png">

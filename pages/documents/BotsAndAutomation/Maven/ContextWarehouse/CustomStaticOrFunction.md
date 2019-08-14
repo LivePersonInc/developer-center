@@ -10,6 +10,10 @@ permalink: maven-context-warehouse-custom-static-or-function.html
 indicator: messaging
 ---
 
+Maven allows you to create custom static data, or use LivePerson Functions to connect to external data sources. 
+
+<img class="fancyimage" width="750" src="img/maven/contextWarehouse-custom.png">
+
 ### Create Static Variable
 
 Static variables are useful for storing constant data or lists that can be used in policies. These are used throughout the lifecycle of the policy, and do not change at runtime. The common use case for this would be creating a list, for example a list of VIPs, and then using the condition (CONTAINS or IS_IN) in a policy. 
@@ -42,9 +46,22 @@ Next you need to setup an API user to invoke the function.
 
 1. Create an LE API key
 
+    <img class="fancyimage" width="500" src="img/maven/Create FaaS API 1.png">
+
+    <img class="fancyimage" width="500" src="img/maven/Create FaaS API 2.png">
+
+    <img class="fancyimage" width="500" src="img/maven/Create FaaS API 3.png">
+
 2. Create new LE user, and assign it to the API key for login
 
+    <img class="fancyimage" width="500" src="img/maven/Create FaaS User.png">
+
 3. Grant the FaaS invocation permissions (can re-use Administrator, if desired)
+
+    <img class="fancyimage" width="500" src="img/maven/Faas invocation permissions 1.png">
+
+    <img class="fancyimage" width="500" src="img/maven/Faas invocation permissions 2.png">
+
 
 #### Create a FaaS attribute in Maven
 
@@ -55,8 +72,12 @@ Once you have created a Function, you can now use that as an attribute in Contex
 2. Click on the **FaaS +** button
 
 3. Enter the name and the payload for the FaaS function using the user credentials you created. 
-    a. Faas ID: Retrieve the ID from the URL of your Function (end part of the URL)
-    b. Keys: Retrieve the username, secret, accessToken, and accessTokenSecret from the API key you created before, and copy and paste them in the JSON. 
+    1. Faas ID: Retrieve the ID from the URL of your Function (end part of the URL)
+        <img class="fancyimage" width="500" src="img/maven/Get FaasID.png">
+
+    2. Keys: Retrieve the username, secret, accessToken, and accessTokenSecret from the API key you created before, and copy and paste them in the JSON. 
+        <img class="fancyimage" width="500" src="img/maven/Faas keys.png">
+
 
 ```javascript	
 {

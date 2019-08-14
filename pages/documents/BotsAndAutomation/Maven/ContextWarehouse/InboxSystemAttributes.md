@@ -16,6 +16,6 @@ Inbox system attributes are available out of the box from the LivePerson platfor
 
 These attributes can be used in building routing policies. To use them in a policy please copy and paste the name from the list and use in policy. Please see [AI Powered Routing](maven-ai-powered-routing-overview.html) to learn more on how to create such policies.
 
-<img class="fancyimage" width="750" src="img/maven/image_35.png">
+<img class="fancyimage" width="750" src="img/maven/contextWarehouse-inbox.png">
 
 
