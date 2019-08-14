@@ -41,6 +41,24 @@ A bot needs to be created in LiveEngage for Maven to receive conversations and t
 
     <img class="fancyimage" width="400" src="img/maven/Maven bot 5.png">
 
+6. Set the Max no. of live chats to Unlimited
+
+### Setup Campaign and Skills in LiveEngage
+
+To route your conversations to Maven, you need to create at least one skill
+1. Create a new skill called **“Maven”** and assign the Maven bot user to this skill. We have used Maven as the skill name, but any name is acceptable. 
+2. Assign the Maven bot user to this skill.
+3. In the Engagement Settings under the Routing section, select Specific skill and then set it to maven.   
+
+####Optional 
+
+If you want to combine your existing skills with Maven please setup the following  
+
+1. For each skill in your campaign that you want Maven to handle routing create a new skill with the name **"maven:{skill name}"**. For example if there is a skill called **“Billing”** that has agents handling billing inquiries create a new skill called **“maven:Billing”**
+2. Assign the Maven bot user to this skill.
+3. In the Engagement Settings under the Routing section, select Specific skill and then set it to this skill. 
+
+This allows Maven to handle incoming conversations and also keep a track of the original skill that was set by the brand. If no policy is executed, Maven uses this to transfer the conversation to the original skill, for example “Billing”.
 
 ### Provide Bot User Credentials to Maven
 
