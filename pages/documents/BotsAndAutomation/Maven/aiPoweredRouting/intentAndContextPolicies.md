@@ -45,6 +45,10 @@ Conditions can be applied to each Attribute in Context Warehouse. A condition bl
     }
 ]
 ```
+Conditions can compare both named attributes as well as constant values:
+1. **Attributes**: Attributes can be used with their qualified names, for example **custom.vipList** above
+2. **Constants**: use the value directly with a number or string, for example time in minutes **1440** in above
+
 
 Maven will support the following conditional operators:
 
@@ -74,6 +78,16 @@ Actions define what to do next if the conditions are valid. An action block may 
     }
 ]
 ```
+
+Similar to conditions an action such as transferring to a skill can use either a variable or a constant value.
+
+**Get SkillIds from LiveEngage**
+To route to skills, you will need the SkillIds used by LiveEngage. To retrieve all the skill IDs for your campaigns: 
+1. Login to LiveEngage and then go to Users tab and then Skills
+2. Then click on Actions and then export all
+3. Save the zip file and then open Skills.csv 
+4. All Skill IDs with associated skill name should be in this file. Copy and paste the skill IDs into your policy to transfer to a skill.   
+
 
 The following list of actions will be supported:
 
