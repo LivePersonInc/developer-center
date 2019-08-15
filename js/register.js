@@ -14,6 +14,7 @@ let passwordPassed;
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
+  //if you're working locally, comment out the next function to bypass captcha
   disableBtn();
   radioListener();
 });
@@ -62,7 +63,6 @@ function validateInfo (){
   firstName = $('#firstName').val();
   lastName = $('#lastName').val();
   region = $('#region').val();
-  //set the country variable, which gets sent to the endpoint, according to the region selected
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
@@ -103,6 +103,7 @@ function validateInfo (){
   }
   //if all fields were filled and the passwords match, call the request to create an account
   if ((firstName && lastName && region && emailAddress && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
+
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
@@ -122,6 +123,7 @@ function postRequest () {
     email: emailAddress,
     password: password
   }
+
   //using the axios module to make the request
   axios({
     method: 'post',
