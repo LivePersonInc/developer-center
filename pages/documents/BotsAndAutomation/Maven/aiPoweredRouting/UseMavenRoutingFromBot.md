@@ -36,7 +36,7 @@ The following example shows how to use [AskMaven](maven-askmaven-overview.html) 
 
 #### Get The Conversation ID
 
-The conversation id is required for using the AskMaven APIs. This ID is used by the policy to retrieve conversation and session store parameters. 
+The conversation id is required for using the AskMaven APIs if your policies use Inbox System Attributes. 
 
 The variable can be used anywhere in conversation builder using the following variable name: 
 
@@ -47,7 +47,7 @@ The variable can be used anywhere in conversation builder using the following va
 
 The session store is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy.
 
-You can call the session store API by setting up an [Integration](conversation-builder-conversation-builder-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details.
+You can call the session store API by setting up an [Integration](conversation-builder-conversation-builder-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the AskMaven call. 
 
 <img class="fancyimage" width="500" src="img/maven/Call Session Store APIs from CB.png">
 
