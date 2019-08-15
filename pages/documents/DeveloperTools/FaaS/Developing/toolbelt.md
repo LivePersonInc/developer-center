@@ -19,7 +19,6 @@ Currently, the Toolbelt offers the following methods:
 | :------- | :----- |
 | Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.LpClient() | Returns a LP Client, that can be used to simplify HTTP calls to LivePerson APIs. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
 | Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
@@ -62,7 +61,8 @@ httpClient(URL, {
 	method: "GET", //HTTP VERB
 	headers: {}, //Your headers
 	simple: false, //IF true => Status Code != 2xx & 3xx will throw
-	resolveWithFullResponse: true //IF true => Includes Status Code, Headers etc.
+	json: true, // Automatically parses the JSON string in the response
+	resolveWithFullResponse: false //IF true => Includes Status Code, Headers etc.
 })
 .then(response ==> {
 	...

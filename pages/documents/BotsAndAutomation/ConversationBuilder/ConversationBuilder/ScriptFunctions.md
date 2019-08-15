@@ -252,6 +252,9 @@ botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just
 
 Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
@@ -268,6 +271,9 @@ botContext.sendImmediateReply('I think you said, ' + response);
 ### Send Message
 
 Used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
+
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send multiple messages use the [sendMessages()](#send-messages) function.
@@ -288,6 +294,9 @@ if(count > 10){
 ### Send Messages
 
 Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
+
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send a single message use the [sendMessage()](#send-message) function.

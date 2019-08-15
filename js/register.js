@@ -7,6 +7,9 @@ let password;
 let confirmPassword;
 let trialButtton;
 let radioValue;
+let passwordStrength;
+let passwordLength;
+let passwordPassed;
 
 $(document).ready(function () {
   dynamicUserDetails();
@@ -63,16 +66,35 @@ function validateInfo (){
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
+  //make sure the radio button was clicked
   if (radioValue != "on") {
     $('#agreeButton').show();
   } else {
     $('#agreeButton').hide();
   }
+  //check password length
+  if(password.length < 8) {
+    $('#passwordTooShort').show();
+    passwordLength = false;
+  } else {
+    $('#passwordTooShort').hide();
+    passwordLength = true;
+  }
+  //check that passwords match
   if(password != confirmPassword) {
     $('#passwordErrorMatch').show();
   } else {
       $('#passwordErrorMatch').hide();
-    }
+  }
+  //check that password meets requirements
+  passwordStrength = new RegExp ('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
+  if (password.match(passwordStrength)){
+    $('#passwordErrorStrength').hide();
+    passwordPassed = true;
+  } else {
+    $('#passwordErrorStrength').show();
+    passwordPassed = false
+  }
     //make sure all fields are filled
   if (firstName && lastName && region && emailAddress && password && confirmPassword) {
     $('#allFields').hide();
@@ -80,29 +102,33 @@ function validateInfo (){
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && region && emailAddress && password && confirmPassword) && (radioValue == "on") && (password == confirmPassword)) {
+  if ((firstName && lastName && region && emailAddress && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
+
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
+    $('#loader').css('display', 'block');
+    $('#successMessage').css('display', 'block');
   }
 }
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://uohcduank4.execute-api.us-east-2.amazonaws.com/dev/devaccount';
+  const URL = 'https://ssuw1fkby4.execute-api.us-east-2.amazonaws.com/prod/devaccount';
 //filling in request body with variables from the form
-  const user = [
-    firstName,
-    lastName,
-    region,
-    emailAddress,
-    password
-  ]
+  const user = {
+    firstName: firstName,
+    lastName: lastName,
+    region: region,
+    email: emailAddress,
+    password: password
+  }
+
   //using the axios module to make the request
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'gUi91Xlj5lWOJdOiYttA0jA6EqUTxS626YJ0zW20', 'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {'x-api-key': 'WOhfspRcQX2rXsYhdkFSU5LBAy87mw78VdEus7ej', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: user
   })
   .then(function (response) {
