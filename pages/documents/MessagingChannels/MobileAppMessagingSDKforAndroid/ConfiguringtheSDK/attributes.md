@@ -1192,7 +1192,7 @@ For vanity URL purposes.
 
 
 #### idp_num_history_conversation
-When user is authenticated, this indicates the number of recent conversations to reload from the server (including their messages) when running for the first time.
+Defines the number of recent conversations (including messages) to fetch from the server when loading more conversations. Only for authenticated account.
 
 * **Type:** integer 
 * **Default value:** 2
