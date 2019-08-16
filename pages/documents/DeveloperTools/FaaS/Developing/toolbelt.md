@@ -77,7 +77,7 @@ The LivePerson (LP) Client is a wrapper for the [HTTP Client](https://developers
  
 Additionally, most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently, only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to perform this authorization, the API reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default, the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. 
 
-####Using the LP Client
+**Using the LP Client**
 In order to use the LP Client you have to execute the following steps:
  1. Create and maintain API Key credentials (see below).
  2. Whitelist `api.liveperson.net`
