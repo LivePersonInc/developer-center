@@ -14,46 +14,6 @@ This document is a collection of useful information, tips and tricks accumulated
 
 There is no set order to the document - each heading is meant to be a single defined topic taken on its own.
 
-### Interactions
-
-#### How do I show a variable inside a text interaction?
-
-* `{}` used for inserting dynamic values inside text interactions
-
-  * Bot Variable: `{$botContext.variableName}`
-
-  * Slot Variable: `{$botContext.slot.slotName}`
-
-  * Environment Variable: `{$env.variableName}`
-
-  * API Integration custom data values: `{apiName.variableName}`
-
-Normal Variable = `{$botContext.VARIABLE_NAME_GOES_HERE}`
-
-Slot Variable = `{$botContext.slot.SLOT_VARIABLE_NAME_GOES_HERE}`
-
-Environment Variable = `{$env.ENV_VARIABLE_NAME_GOES_HERE}`
-
-#### How do I add line breaks inside text interaction?
-
-CTRL+ENTER command
-
-**_Note_**: does not render when using the the Preview tool inside CBuilder. You will not see line breaks in the preview tool.
-
-#### What is the character limit on a single text interaction before it gets split into 2 parts?
-
-320 characters on word boundary
-
-#### How to specify the break point within a large block of text
-
-Add the following special tag inline inside your text interaction to force a break into 2 separate blocks of text.
-
-The delay value is in milliseconds = 1000 = 1 second.
-
-tag::breakWithDelay=1000
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
-
 ### Accessing Data
 
 #### How do I get the conversation id?

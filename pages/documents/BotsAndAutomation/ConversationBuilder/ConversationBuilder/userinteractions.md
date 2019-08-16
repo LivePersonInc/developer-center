@@ -52,6 +52,42 @@ The Interactions Toolbar is made up of three different types of automation inter
 
 * **Integrations**. This type of interaction involves the automation querying an outside API or service and retrieving information from it. For example, you could have your automation search for a certain [entity](conversation-builder-intent-builder-entities.html) and retrieve the matching product's catalogue item from your own API, populating the automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the automation to prompt the user to use Apply Pay to submit a payment. For more information on setting up an integration, see [part 3 of the Getting Started tutorial](conversation-builder-getting-started-3-integrations.html).
 
+### Formatting
+
+#### How do I show a variable inside a text interaction?
+
+* `{}` is used for inserting dynamic values inside of text interactions
+
+  * Bot Variable: `{$botContext.botVariableName}`
+
+  * Slot Variable: `{$botContext.slot.slotName}`
+
+  * Environment Variable: `{$env.envVariableName}`
+
+  * API Integration custom data values: `{apiName.variableName}`
+
+#### How do I add line breaks inside text interactions?
+
+CTRL+ENTER - Hold control and hit enter/return.
+
+{: .important}
+This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
+
+#### What is the character limit on a single text interaction before it gets split into 2 parts?
+
+320 characters on word boundary
+
+#### How to specify the break point within a large block of text
+
+Add the following special tag inline inside your text interaction to force a break into 2 separate blocks of text.
+
+`tag::breakWithDelay=1000`
+
+<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
+
+{: .important}
+The delay value is in milliseconds. 1000 = 1 second.
+
 ### Limitations
 
 The types of text that you can send in a Conversation Builder interaction vary depending if you are building an automation for **chat** or for **messaging**.
