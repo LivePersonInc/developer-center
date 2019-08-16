@@ -16,42 +16,6 @@ There is no set order to the document - each heading is meant to be a single def
 
 ### Accessing Data
 
-#### How do I get the conversation id?
-
-```javascript
-var convId = botContext.getConversationId();
-```
-
-Will store the conversation id in a variable inside your current pre/post process code call "convId".
-
-You can then save this in a bot session variable using the following code…
-
-```javascript
-botContext.setBotVariable("conversationId", convId, true, false);
-```
-
-Which can then be accessed inside subsequent interactions or integrations using the following syntax:
-
-`{$botContext.conversationId}`
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_0.png">
-
-#### How do I get previous/current skill id information?
-
-[https://developers.liveperson.com/conversation-builder-conversation-builder-scripting-functions.html#get-current-and-previous-skills](https://developers.liveperson.com/conversation-builder-conversation-builder-scripting-functions.html#get-current-and-previous-skills)
-
-*****NOTE*** Previous Skill Id does not work in ****Chat**** for now, it is set to the same ID as the current Skill ID.**
-
-**Messaging Bot Agent API Key / Connector Requirements:**
-
-Insure that the bot is setup with API OAuth login rather than PW, and the OAuth keys have permission to *Engagement History*
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_1.png">
-
-*If you apply these changes to an existing bot already logged in, you will need to restart the bot agent(s) to make these changes take effect and then be able to access previousSkill information inside your dialogs.*
-
-##### [Walkthrough: How to build a bot that returns the conversation to the previous agent skill dynamically](https://drive.google.com/file/d/1mUaSyJI9DD-Ifa7oHXqLrNlGjBh0ESQG/view?usp=sharing)
-
 #### How do I capture/use consumer response to a question?  
 
 The following special syntax can be used to capture consumer submissions to last asked question into a variable:
@@ -59,18 +23,6 @@ The following special syntax can be used to capture consumer submissions to last
 `{$query}`
 
 This is special syntax - used during **Response Conditions** for a question where you want to save the response from the consumer into a variable.
-
-#### How do I access authenticated customer info?
-
-There are two built in methods to return this information - *if it exists!*
-
-```javascript
-botContext.getLPUserPersonalInfo();
-
-botContext.getLPCustomerInfo();
-```
-
-You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, which typically they would set personal or customer info being logged in, you can access the Personal Info or Customer Info object array.
 
 #### How do I capture the user response to a question in a variable?
 
