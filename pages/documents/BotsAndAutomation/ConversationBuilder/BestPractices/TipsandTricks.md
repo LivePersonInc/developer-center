@@ -14,22 +14,6 @@ This document is a collection of useful information, tips and tricks accumulated
 
 There is no set order to the document - each heading is meant to be a single defined topic taken on its own.
 
-### Accessing Data
-
-#### How do I capture/use consumer response to a question?  
-
-The following special syntax can be used to capture consumer submissions to last asked question into a variable:
-
-`{$query}`
-
-This is special syntax - used during **Response Conditions** for a question where you want to save the response from the consumer into a variable.
-
-#### How do I capture the user response to a question in a variable?
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_7.png">
-
-Would store whatever the user response was to a question in this variable name.
-
 ### Conversation Flow
 
 #### How do I get the bot to close the conversation?
