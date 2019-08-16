@@ -31,6 +31,11 @@ Currently the following events are supported:
     <td>10</td>
   </tr>
   <tr>
+    <td>Conversational Command</td>
+    <td>Use this event to implement a Conversational Command that can be invoked from within the agent workspace in LiveEngage by typing "/".</td>
+    <td>30</td>
+  </tr>
+  <tr>
     <td>Messaging New Conversation</td>
     <td>Triggered for every new messaging conversation.</td>
     <td>1</td>
