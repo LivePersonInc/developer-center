@@ -113,21 +113,6 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Messaging Agent SDK
-    pages:
-      - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-  - documentname: Bot Connectors
-    pages:
-      - pagename: Getting Started
-      - pagename: Bot Status Dashboard
-      - pagename: Google Dialogflow
-      - pagename: Google Dialogflow Version 2
-      - pagename: IBM Watson Assistant
-      - pagename: Amazon Lex
-      - pagename: Microsoft Bot Framework
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
@@ -152,11 +137,13 @@
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
+            - subpagename: Dialogs
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assist
             - subpagename: Integrations
             - subpagename: Scripting Functions
+            - subpagename: Keyword Triggers
       - pagename: Intent Builder
         subpages:
           - subpagename: Overview
@@ -173,17 +160,43 @@
       #- pagename: Operations
   - documentname: Maven
     pages:
-      #- pagename: Overview
-      #- pagename: Getting Started
-      - pagename: Context API
+      - pagename: Overview
+      - pagename: Maven Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Recommended Actions for Automations
+          - subpagename: Recommended Actions for Knowledge Base
+      - pagename: Context Warehouse
+        subpages:
+          - subpagename: Overview
+          - subpagename: Inbox System Attributes
+          - subpagename: Custom Static or Function
+          - subpagename: Context Session Store
+      - pagename: AI Powered Routing
+        subpages:
+          - subpagename: Overview
+          - subpagename: Intent & Context Policies
+          - subpagename: Set Up Maven in LivePerson
+          - subpagename: Use Maven with Your Bot
+      - pagename: AskMaven
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-      #- pagename: AskMaven API
-        #subpages:
-          #- subpagename: Overview
-          #- subpagename: Methods
-
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
+  - documentname: Bot Connectors
+    pages:
+      - pagename: Getting Started
+      - pagename: Bot Status Dashboard
+      - pagename: Google Dialogflow
+      - pagename: Google Dialogflow Version 2
+      - pagename: IBM Watson Assistant
+      - pagename: Amazon Lex
+      - pagename: Microsoft Bot Framework
   - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
@@ -518,6 +531,9 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
       - pagename: Deployment
+      - pagename: Monitoring
+        subpages:
+          - subpagename: Logs
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:

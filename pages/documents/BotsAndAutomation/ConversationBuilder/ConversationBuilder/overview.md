@@ -33,21 +33,17 @@ The conversation builder supports the creation of automations for all the LiveEn
 
 When you first open an automation, you will be in the **Dialogs** view.
 
-On the left-hand side of the window, you can find the **Interactions Toolbar**. This toolbar contains the different types of interactions which can be used in a dialog.
-
-A Dialog may be triggered by a user statement, either via simple [pattern matching](conversation-builder-conversation-builder-conditions.html#pattern-matching) or via [intents](conversation-builder-intent-builder-overview.html). It may also be triggered by an Interaction via a Next Step action. Once the automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog. The Dialog Workspace displays a diagram of the interactions which make up a Dialog, from the initial User Statement to the last interaction in it.
+On the left-hand side of the window, you can find the [Interactions Toolbar](#the-interactions-toolbar). This toolbar contains the different types of interactions which can be used in a dialog.
 
 Clicking on any of the interactions in the Dialog will allow you to configure them. See below for the different configuration options and requirements for each interaction type.
 
 #### The Dialog List
 
-At the bottom of the Dialog Viewer, you'll find a view listing all your different Dialogs. Click the **+** icon at the bottom left corner of the Dialog Viewer to add a new Dialog. You'll be prompted to enter a new name for the Dialog (**we recommend using standard naming conventions to name your Dialogs, to make them more sortable and easy to find**) and choose between two options:
-
-* Dialog - the default choice is a standard dialog, as described above.
-
-* Fallback dialog - the second choice is a fallback dialog, which gets triggered when the automation cannot recognize a user's input and has to fallback to an escalation/troubleshooting conversation (For example, "I didn't quite understand you. Let me transfer this conversation to a human agent").
+At the bottom of the Dialog Viewer, you'll find a view listing all your different Dialogs.
 
 You can use the hamburger icon right next to the **+** icon to see a list of your different dialogs. Otherwise, they are displayed horizontally, in chronological order.
+
+Learn more about [dialogs here](conversation-builder-conversation-builder-dialogs.html).
 
 ### The Interactions Toolbar
 

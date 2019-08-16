@@ -18,11 +18,11 @@ Instead of just looking for the specific phrase you originally defined (which wo
 
 For more information on Pattern Matching, see the link above. For more information on setting up and using intents, see either [part 2 of the Getting Started tutorial](conversation-builder-getting-started-2-intents.html) or a more in-depth [breakdown of the Intent Builder](conversation-builder-intent-builder-overview.html).
 
-### Automation Interactions
+The Interactions Toolbar is made up of different types of interactions including the following:
 
-The Interactions Toolbar is made up of three different types of automation interactions:
+### Statements 
 
-* **Statements**. This type of interaction is a straight-forward declaration by the automation which does not expect a response from the user. There are four different types of statements available to you:
+This type of interaction is a straight-forward declaration by the automation which does not expect a response from the user. There are four different types of statements available to you:
 
   * Text. For example, "Thank you for taking our survey!"
 
@@ -32,7 +32,9 @@ The Interactions Toolbar is made up of three different types of automation inter
 
   * Video. A pre-recorded video file that the automation will send.
 
-* **Questions**. This type of interaction is interactive and meant to be answered by the user. It can also be used to fill [slots](conversation-builder-conversation-builder-conditions.html#slots) with key information based on the user's answer, making it available for future use. The different types of question interactions available to you are:
+### Questions
+
+This type of interaction is interactive and meant to be answered by the user. The different types of question interactions available to you are:
 
   * Multiple Choice. A simple and standard multiple choice question allowing the user to select from a list of predefined answers (although the automation can be configured to respond to answers not appearing in the list through the use of [entities](conversation-builder-intent-builder-entities.html)).
 
@@ -50,7 +52,61 @@ The Interactions Toolbar is made up of three different types of automation inter
 
   * Time Picker. **Note: time picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
 
-* **Integrations**. This type of interaction involves the automation querying an outside API or service and retrieving information from it. For example, you could have your automation search for a certain [entity](conversation-builder-intent-builder-entities.html) and retrieve the matching product's catalogue item from your own API, populating the automation's next reply with the info. You could also set up an Apple Pay interaction, allowing the automation to prompt the user to use Apply Pay to submit a payment. For more information on setting up an integration, see [part 3 of the Getting Started tutorial](conversation-builder-getting-started-3-integrations.html).
+#### Capture and Use Consumer Response to a Question 
+
+Question interactions can be used to fill [slots](conversation-builder-conversation-builder-conditions.html#slots) with key information based on the user's response, making it available for future use.
+
+The following special syntax can also be used to access and save responses into a variable: 
+
+`{$query}`
+
+This is special syntax - used during **Response Conditions** for a question where you want to save the response from the consumer into a variable.
+
+The below would store whatever the user response was to a question in this variable name.
+
+<img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/tips_image_7.png">
+
+### Integrations
+
+This type of interaction involves the automation querying an outside API or service and retrieving information from it. 
+
+See [Integrations](conversation-builder-conversation-builder-integrations.html) for more information.
+
+### Formatting
+
+#### How do I show a variable inside a text interaction?
+
+* `{}` is used for inserting dynamic values inside of text interactions
+
+  * Bot Variable: `{$botContext.botVariableName}`
+
+  * [Slot Variable](conversation-builder-conversation-builder-conditions.html): `{$botContext.slot.slotName}`
+
+  * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
+
+  * API Integration custom data values: `{apiName.variableName}`
+
+#### How do I add line breaks inside text interactions?
+
+CTRL+ENTER - Hold control and hit enter/return.
+
+{: .important}
+This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
+
+#### What is the character limit on a single text interaction before it gets split into 2 parts?
+
+320 characters on word boundary
+
+#### How to specify the break point within a large block of text
+
+Add the following special tag inline inside your text interaction to force a break into 2 separate blocks of text.
+
+`tag::breakWithDelay=1000`
+
+<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
+
+{: .important}
+The delay value is in milliseconds. 1000 = 1 second.
 
 ### Limitations
 
